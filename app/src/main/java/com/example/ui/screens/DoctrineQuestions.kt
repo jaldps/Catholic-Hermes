@@ -86,13 +86,13 @@ import java.util.Calendar
 /** One guided itinerary: a contiguous question range (1-based numbers). */
 internal data class LearningTrack(val index: Int, val startQuestion: Int, val endQuestion: Int) {
     val total: Int get() = endQuestion - startQuestion + 1
-    fun completedCount(reachedQuestion: Int): Int = (reachedQuestion - startQuestion + 1).coerceIn(0, total)
+    fun completedCount(visited: Set<Int>): Int = visited.count { it in startQuestion..endQuestion }
 }
 
 internal val LEARNING_TRACKS = listOf(
-    LearningTrack(0, 1, 30),
+    LearningTrack(0, 1, 40),
     LearningTrack(1, 41, 60),
-    LearningTrack(2, 61, 100)
+    LearningTrack(2, 61, 101)
 )
 
 private fun trackTitle(track: LearningTrack, language: AppLanguage): String = when (track.index) {
@@ -102,10 +102,8 @@ private fun trackTitle(track: LearningTrack, language: AppLanguage): String = wh
 }
 
 /** Where tapping an itinerary resumes: the first unread question, or the start. */
-internal fun trackResumeIndex(track: LearningTrack, reached: Int): Int {
-    val done = track.completedCount(reached)
-    return if (done in 1 until track.total) reached else track.startQuestion - 1
-}
+internal fun trackResumeIndex(track: LearningTrack, visited: Set<Int>): Int =
+    ((track.startQuestion..track.endQuestion).firstOrNull { it !in visited } ?: track.startQuestion) - 1
 
 private fun trackQuizQuestions(trivia: List<TriviaQuestion>, trackIndex: Int): List<TriviaQuestion> {
     if (trivia.isEmpty()) return emptyList()
@@ -142,7 +140,8 @@ internal fun QuestionsRoot(
     val answers = decodeAnswers(answersCode)
 
     val store = remember { UserPreferencesStore(context) }
-    val trackProgress by store.trackProgress.collectAsState(initial = emptyMap())
+    val visitedQuestions by store.visitedQuestions.collectAsState(initial = emptySet())
+    val lastReadQuestion by store.lastReadQuestion.collectAsState(initial = null)
 
     val themes = remember(questions) { questionThemes(questions) }
     val dayIndex = remember(questions) {
@@ -252,17 +251,14 @@ internal fun QuestionsRoot(
         }
 
         // ---- continue where you left off
-        val continueTarget = trackProgress.entries
-            .mapNotNull { (trackIndex, reached) ->
-                val track = LEARNING_TRACKS.firstOrNull { it.index == trackIndex } ?: return@mapNotNull null
-                if (reached >= track.startQuestion) track to reached else null
-            }
-            .maxByOrNull { it.second }
+        val continueTarget = lastReadQuestion?.let { number ->
+            LEARNING_TRACKS.firstOrNull { number in it.startQuestion..it.endQuestion }?.let { it to number }
+        }
         if (continueTarget != null && continueTarget.second - 1 in questions.indices) item(key = "continue") {
             val qi = continueTarget.second - 1
             val q = questions[qi]
             val total = continueTarget.first.total
-            val done = continueTarget.first.completedCount(continueTarget.second)
+            val done = continueTarget.first.completedCount(visitedQuestions)
             Spacer(Modifier.height(12.dp))
             GlassCard(onClick = { nav.open("qa:$qi") }, modifier = Modifier.testTag("qa_track_continue")) {
                 Text(
@@ -288,8 +284,7 @@ internal fun QuestionsRoot(
             SectionHeader(language.tr("Itinerarios", "Itineraries", "Itinerários"))
             AppListGroup {
                 LEARNING_TRACKS.forEach { track ->
-                    val reached = trackProgress[track.index] ?: 0
-                    val completed = track.completedCount(reached)
+                    val completed = track.completedCount(visitedQuestions)
                     val fraction = if (track.total > 0) completed.toFloat() / track.total else 0f
                     val progressLabel = language.tr(
                         "$completed de ${track.total} preguntas",
@@ -321,7 +316,7 @@ internal fun QuestionsRoot(
                             }
                         },
                         leadingWidth = 44.dp,
-                        onClick = { nav.open("qa:${trackResumeIndex(track, reached)}") },
+                        onClick = { nav.open("qa:${trackResumeIndex(track, visitedQuestions)}") },
                         tag = "qa_track_${track.index}"
                     )
                 }
@@ -330,8 +325,7 @@ internal fun QuestionsRoot(
 
         // ---- quiz for each finished itinerary
         LEARNING_TRACKS.forEach { track ->
-            val reached = trackProgress[track.index] ?: 0
-            if (track.completedCount(reached) >= track.total) {
+            if (track.completedCount(visitedQuestions) >= track.total) {
                 val quiz = trackQuizQuestions(repository.triviaQuestions, track.index)
                 if (quiz.isNotEmpty()) item(key = "quiz_${track.index}") {
                     Spacer(Modifier.height(16.dp))
@@ -610,7 +604,9 @@ private fun QuestionPage(
 
     // Guided itineraries: reading a question raises its itinerary's reached mark.
     val store = remember { UserPreferencesStore(context) }
-    LaunchedEffect(index) { store.recordTrackProgress(question.number) }
+    LaunchedEffect(index) {
+        com.example.data.persistence.PersonalDataCommands.submit("question:${question.number}") { store.recordTrackProgress(question.number) }
+    }
     LaunchedEffect(Unit) { nav.voice.prepare() }
 
     val answerLabel = language.tr("Respuesta", "Answer", "Resposta")

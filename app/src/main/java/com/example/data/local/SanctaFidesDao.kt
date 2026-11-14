@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
+import androidx.room.Transaction
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -120,6 +121,24 @@ interface SanctaFidesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveScriptureProgress(progress: ScriptureStudyProgressEntity)
+
+    @Query("SELECT * FROM scripture_study_progress WHERE lessonId = :lessonId LIMIT 1")
+    suspend fun scriptureProgressOnce(lessonId: String): ScriptureStudyProgressEntity?
+
+    @Transaction
+    suspend fun saveScriptureNotes(lessonId: String, trackId: String, notes: String) {
+        val previous = scriptureProgressOnce(lessonId)
+        saveScriptureProgress((previous ?: ScriptureStudyProgressEntity(lessonId, trackId)).copy(personalNotes = notes))
+    }
+
+    @Transaction
+    suspend fun setScriptureCompletion(lessonId: String, trackId: String, notes: String, completed: Boolean) {
+        val previous = scriptureProgressOnce(lessonId)
+        saveScriptureProgress((previous ?: ScriptureStudyProgressEntity(lessonId, trackId)).copy(
+            personalNotes = notes, isCompleted = completed,
+            completedTimestamp = if (!completed) 0L else previous?.completedTimestamp?.takeIf { it > 0L } ?: System.currentTimeMillis()
+        ))
+    }
 
     // App Preferences
     @Query("SELECT * FROM app_preferences WHERE id = :id LIMIT 1")

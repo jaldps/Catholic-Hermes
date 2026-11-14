@@ -90,6 +90,8 @@ import com.example.ui.design.lumenGlass
 import com.example.ui.design.lumenPress
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import com.example.data.persistence.PersonalDataCommands
+import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -129,7 +131,8 @@ fun ScriptureStudyScreen(
     val completedLessonIds = remember(allProgress) {
         allProgress.filter { it.isCompleted }.map { it.lessonId }.toSet()
     }
-    val scope = rememberCoroutineScope()
+    val lessonState = rememberSaveableStateHolder()
+    val writes by PersonalDataCommands.states.collectAsState()
     val bottom = appScreenInsets().calculateBottomPadding() + 32.dp
 
     Box(modifier.fillMaxSize().testTag("scripture_study_screen")) {
@@ -171,6 +174,7 @@ fun ScriptureStudyScreen(
                 selectedTrackIndex = tracks.indexOfFirst { it.id == lesson.trackId }.coerceAtLeast(0)
                 activeLessonId = null
             }
+            lessonState.SaveableStateProvider(lesson.id) {
             LessonDetailView(
                 lesson = lesson,
                 passage = remember(lesson.id, currentLanguage) { repository.studyScriptureText(lesson, currentLanguage) },
@@ -183,35 +187,19 @@ fun ScriptureStudyScreen(
                 existingNotes = currentEntity?.personalNotes ?: "",
                 ttsManager = ttsManager,
                 currentLanguage = currentLanguage,
+                saveStatus = writes["study:${lesson.id}"]?.status,
                 onToggleComplete = { notes ->
-                    scope.launch {
-                        dao.saveScriptureProgress(
-                            ScriptureStudyProgressEntity(
-                                lessonId = lesson.id,
-                                trackId = lesson.trackId,
-                                isCompleted = !isLessonDone,
-                                completedTimestamp = if (!isLessonDone) System.currentTimeMillis() else 0L,
-                                personalNotes = notes
-                            )
-                        )
+                    PersonalDataCommands.submit("study:${lesson.id}") {
+                        dao.setScriptureCompletion(lesson.id, lesson.trackId, notes, !isLessonDone)
                     }
                 },
-                // Saving the notes of a lesson already marked done must not
-                // un-mark it, nor re-date when it was completed.
                 onSaveNotes = { notes ->
-                    scope.launch {
-                        dao.saveScriptureProgress(
-                            ScriptureStudyProgressEntity(
-                                lessonId = lesson.id,
-                                trackId = lesson.trackId,
-                                isCompleted = isLessonDone,
-                                completedTimestamp = currentEntity?.completedTimestamp ?: 0L,
-                                personalNotes = notes
-                            )
-                        )
+                    PersonalDataCommands.submit("study:${lesson.id}") {
+                        dao.saveScriptureNotes(lesson.id, lesson.trackId, notes)
                     }
                 }
             )
+            }
         }
     }
 }
@@ -470,6 +458,7 @@ private fun LessonDetailView(
     onNextLesson: (ScriptureLesson) -> Unit,
     isCompleted: Boolean,
     existingNotes: String,
+    saveStatus: PersonalDataCommands.Status?,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
     onToggleComplete: (notes: String) -> Unit,
@@ -687,9 +676,18 @@ private fun LessonDetailView(
                 Spacer(Modifier.height(12.dp))
                 NotesField(
                     value = notesText,
-                    onValueChange = { notesText = it; notesEdited = true },
+                    onValueChange = { notesText = it; notesEdited = true; onSaveNotes(it) },
                     placeholder = currentLanguage.pick("Mi resolución de hoy…", "My resolution for today…", "A minha resolução de hoje…"),
                     modifier = Modifier.testTag("lesson_notes_field")
+                )
+                Text(
+                    when (saveStatus) {
+                        PersonalDataCommands.Status.SAVING -> currentLanguage.pick("Guardando notas…", "Saving notes…", "Guardando notas…")
+                        PersonalDataCommands.Status.ERROR -> currentLanguage.pick("No se pudieron guardar. Pulsa Guardar para reintentar.", "Could not save. Tap Save to retry.", "Não foi possível guardar. Toque em Guardar para tentar novamente.")
+                        else -> currentLanguage.pick("Tus notas se guardan automáticamente.", "Your notes save automatically.", "Suas notas são guardadas automaticamente.")
+                    },
+                    style = styles.footnote, color = p.textSecondary,
+                    modifier = Modifier.padding(top = 8.dp).testTag("study_notes_save_status")
                 )
                 Spacer(Modifier.height(16.dp))
                 AppPrimaryCapsule(
@@ -701,7 +699,7 @@ private fun LessonDetailView(
                     },
                     tag = "save_lesson_button"
                 )
-                AnimatedVisibility(savedFlash > 0, enter = fadeIn(), exit = fadeOut()) {
+                AnimatedVisibility(savedFlash > 0 && saveStatus == PersonalDataCommands.Status.SAVED, enter = fadeIn(), exit = fadeOut()) {
                     Row(Modifier.fillMaxWidth().padding(top = 10.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
                         Icon(Icons.Filled.Check, null, tint = p.success, modifier = Modifier.size(16.dp))
                         Spacer(Modifier.width(6.dp))

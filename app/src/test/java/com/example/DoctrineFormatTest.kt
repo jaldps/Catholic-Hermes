@@ -202,9 +202,9 @@ class DoctrineFormatTest {
     @Test
     fun itinerariesResumeAtTheFirstUnreadQuestion() {
         val t = LEARNING_TRACKS[0]
-        assertEquals(0, trackResumeIndex(t, 0))
-        assertEquals(12, trackResumeIndex(t, 12))
+        assertEquals(0, trackResumeIndex(t, emptySet()))
+        assertEquals(12, trackResumeIndex(t, (1..12).toSet()))
         // Complete: start again.
-        assertEquals(0, trackResumeIndex(t, 30))
+        assertEquals(0, trackResumeIndex(t, (t.startQuestion..t.endQuestion).toSet()))
     }
 }

@@ -8,6 +8,8 @@ import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.core.stringSetPreferencesKey
+import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.data.models.AppLanguage
 import kotlinx.coroutines.flow.Flow
@@ -69,15 +71,17 @@ class UserPreferencesStore(
         /** Guided learning tracks: highest reached question number per track,
          *  encoded "trackIndex:questionNumber,trackIndex:questionNumber". */
         val TRACK_PROGRESS = stringPreferencesKey("track_progress")
+        val READ_QUESTIONS = stringSetPreferencesKey("read_questions_v2")
+        val LAST_QUESTION = intPreferencesKey("last_read_question")
     }
 
     /** Track index for a 1-based question number in the three guided tracks
-     *  (Fundamentos Q1-30, Iglesia y sacramentos Q41-60, Vida y moral Q61-100);
+     *  (Fundamentos Q1-40, Iglesia y sacramentos Q41-60, Vida y moral Q61-101);
      *  null when the question is outside every track. */
     fun trackIndexForQuestion(questionNumber: Int): Int? = when (questionNumber) {
-        in 1..30 -> 0
+        in 1..40 -> 0
         in 41..60 -> 1
-        in 61..100 -> 2
+        in 61..101 -> 2
         else -> null
     }
 
@@ -97,10 +101,22 @@ class UserPreferencesStore(
         }
         .map { parseTrackProgress(it[Keys.TRACK_PROGRESS]) }
 
+    /** Legacy high-water marks prove their endpoint was opened, not all earlier questions. */
+    private fun readQuestions(prefs: Preferences): Set<Int> =
+        prefs[Keys.READ_QUESTIONS]?.mapNotNull { it.toIntOrNull()?.takeIf { n -> n in 1..101 } }?.toSet()
+            ?: parseTrackProgress(prefs[Keys.TRACK_PROGRESS]).values.filter { it in 1..101 }.toSet()
+
+    val visitedQuestions: Flow<Set<Int>> = dataStore.data.map { readQuestions(it) }
+    val lastReadQuestion: Flow<Int?> = dataStore.data.map {
+        it[Keys.LAST_QUESTION] ?: parseTrackProgress(it[Keys.TRACK_PROGRESS]).values.maxOrNull()
+    }
+
     /** Records [questionNumber] (1-based) as reached for its track, never lowering it. */
     suspend fun recordTrackProgress(questionNumber: Int) {
         val track = trackIndexForQuestion(questionNumber) ?: return
         dataStore.edit { prefs ->
+            prefs[Keys.READ_QUESTIONS] = (readQuestions(prefs) + questionNumber).map { it.toString() }.toSet()
+            prefs[Keys.LAST_QUESTION] = questionNumber
             val current = parseTrackProgress(prefs[Keys.TRACK_PROGRESS])
             val merged = current.toMutableMap()
             merged[track] = maxOf(merged[track] ?: 0, questionNumber)
@@ -112,7 +128,10 @@ class UserPreferencesStore(
 
     /** Direct setter for one track's reached question number (never lowers it). */
     suspend fun setTrackProgress(trackIndex: Int, questionNumber: Int) {
+        require(trackIndexForQuestion(questionNumber) == trackIndex)
         dataStore.edit { prefs ->
+            prefs[Keys.READ_QUESTIONS] = (readQuestions(prefs) + questionNumber).map { it.toString() }.toSet()
+            prefs[Keys.LAST_QUESTION] = questionNumber
             val current = parseTrackProgress(prefs[Keys.TRACK_PROGRESS])
             val merged = current.toMutableMap()
             merged[trackIndex] = maxOf(merged[trackIndex] ?: 0, questionNumber)

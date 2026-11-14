@@ -40,6 +40,7 @@ class StudyJourneyTest {
     @After fun close() {
         compose.runOnUiThread { compose.activity.setContent {} }
         compose.waitForIdle()
+        runBlocking { com.example.data.persistence.PersonalDataCommands.awaitIdle() }
         narration?.release(); repository?.close(); database?.close()
     }
 
@@ -64,6 +65,22 @@ class StudyJourneyTest {
         }
         compose.onNodeWithTag("study_overview_page").performScrollToNode(hasTestTag("study_continue_button"))
         compose.onNodeWithTag("study_continue_button").performClick()
+    }
+
+    @Test fun draftSurvivesCourseBackAndIsPersistedWithoutCompletingLesson() {
+        launch()
+        compose.onNodeWithTag("study_lesson_page").performScrollToNode(hasTestTag("lesson_notes_field"))
+        compose.onNodeWithTag("lesson_notes_field").performTextInput("Una nota que quiero conservar")
+        compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
+        compose.onNodeWithTag("study_overview_page").performScrollToNode(hasTestTag("study_continue_button"))
+        compose.onNodeWithTag("study_continue_button").performClick()
+        compose.onNodeWithTag("study_lesson_page").performScrollToNode(hasTestTag("lesson_notes_field"))
+        compose.onNodeWithTag("lesson_notes_field").assertTextContains("Una nota que quiero conservar")
+        runBlocking { com.example.data.persistence.PersonalDataCommands.awaitIdle() }
+        val saved = runBlocking { database!!.dao().scriptureProgressOnce("bible_1_word_tradition") }!!
+        assertEquals("Una nota que quiero conservar", saved.personalNotes)
+        assertFalse(saved.isCompleted)
+        assertEquals(0L, saved.completedTimestamp)
     }
 
     @Test fun answersAndUnsavedNotesSurviveCatechismRoundTrip() {
