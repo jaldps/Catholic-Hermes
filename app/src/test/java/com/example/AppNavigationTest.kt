@@ -20,6 +20,7 @@ import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
@@ -113,6 +114,13 @@ class AppNavigationTest(private val identity: DesignLanguage) {
                 compose.onNodeWithTag("bible_continue_reading").assertIsDisplayed()
                 compose.onNodeWithTag("bible_canon_filter").performScrollTo().performClick()
                 compose.onNodeWithTag("bible_canon_2").performClick()
+                compose.waitUntil(15_000) {
+                    compose.runOnUiThread { androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications() }
+                    runCatching {
+                        compose.onNodeWithTag("bible_book_directory").performScrollToNode(hasText("Matthew"))
+                        compose.onNodeWithText("Matthew").assertIsDisplayed()
+                    }.isSuccess
+                }
                 compose.onNodeWithText("Matthew").assertIsDisplayed()
             }
         }
@@ -171,6 +179,10 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("bible_canon_filter").performScrollTo().performClick()
         compose.onNodeWithTag("bible_canon_0").performClick()
         compose.onNodeWithTag("book_item_gen").performScrollTo().performClick()
+        compose.waitUntil(15_000) {
+            compose.runOnUiThread { androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications() }
+            compose.onAllNodesWithTag("bible_reader").fetchSemanticsNodes().isNotEmpty()
+        }
         compose.onNodeWithTag("verse_1").performScrollTo()
         fun assertReadingFamily(expected: FontFamily) {
             compose.onNode(hasText("created", substring = true, ignoreCase = true) and

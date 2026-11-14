@@ -68,6 +68,8 @@ import androidx.compose.ui.unit.dp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
 import com.example.data.local.ScriptureStudyProgressEntity
+import com.example.ui.components.rememberIoContent
+import com.example.ui.components.ContentLoadNotice
 import com.example.data.models.AppLanguage
 import com.example.data.models.ScriptureCourseTrack
 import com.example.data.models.ScriptureLesson
@@ -168,6 +170,7 @@ fun ScriptureStudyScreen(
                 onSelectLesson = { activeLessonId = it.id }
             )
         } else {
+            val passage = rememberIoContent(listOf(repository, lesson.id, currentLanguage)) { repository.studyScriptureText(lesson, currentLanguage) }
             val isLessonDone = completedLessonIds.contains(lesson.id)
             val currentEntity = allProgress.firstOrNull { it.lessonId == lesson.id }
             AppBackHandler {
@@ -177,7 +180,10 @@ fun ScriptureStudyScreen(
             lessonState.SaveableStateProvider(lesson.id) {
             LessonDetailView(
                 lesson = lesson,
-                passage = remember(lesson.id, currentLanguage) { repository.studyScriptureText(lesson, currentLanguage) },
+                passage = passage.data.orEmpty(),
+                passageLoading = passage.loading,
+                passageFailed = passage.failed,
+                onRetryPassage = passage.retry,
                 edition = if (lesson.scriptureReferences.isNotEmpty()) repository.studyBibleEdition(currentLanguage) else null,
                 scriptureLabel = if (lesson.scriptureReferences.isNotEmpty()) lesson.scriptureReferences.joinToString(" · ") { repository.studyScriptureLabel(it, currentLanguage) } else lesson.biblicalReference,
                 onOpenCatechism = onOpenCatechism,
@@ -451,6 +457,9 @@ private fun LessonRow(
 private fun LessonDetailView(
     lesson: ScriptureLesson,
     passage: String,
+    passageLoading: Boolean,
+    passageFailed: Boolean,
+    onRetryPassage: () -> Unit,
     edition: String?,
     scriptureLabel: String,
     onOpenCatechism: ((Int) -> Unit)?,
@@ -557,7 +566,8 @@ private fun LessonDetailView(
                 title = currentLanguage.pick("Lectura de la Escritura", "Reading of Scripture", "Leitura da Escritura")
             ) {
                 edition?.let { Text(it, style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(bottom = 12.dp)) }
-                Text(
+                if (passageLoading || passageFailed) ContentLoadNotice(currentLanguage, passageFailed, onRetryPassage)
+                else Text(
                     passage.ifBlank { currentLanguage.pick("El pasaje no está disponible aquí; consulta la referencia en la Biblia incluida.", "The passage is unavailable here; consult the reference in the included Bible.", "A passagem não está disponível aqui; consulte a referência na Bíblia incluída.") }, style = styles.reading, color = p.textPrimary,
                     modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                 )

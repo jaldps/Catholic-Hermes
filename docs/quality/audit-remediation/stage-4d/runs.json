@@ -1,0 +1,12 @@
+{
+  "fullDirectedBatch": {
+    "tests": 41,
+    "failures": 1,
+    "reason": "Native test advanced frames on a thread without an Android Looper; production IO source unchanged afterward"
+  },
+  "nativeRerun": {
+    "tests": 6,
+    "failures": 0
+  },
+  "uniquePassingCases": 42
+}

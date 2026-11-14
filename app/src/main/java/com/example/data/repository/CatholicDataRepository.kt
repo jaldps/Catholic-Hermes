@@ -245,9 +245,10 @@ class CatholicDataRepository(
     fun getChapter(
         bookId: String,
         chapterNumber: Int,
-        language: AppLanguage = _currentLanguage.value
+        language: AppLanguage = _currentLanguage.value,
+        editionId: String = _activeBibleEditionId.value
     ): BibleChapter {
-        val verses = bibleProvider?.getVerses(bookId, chapterNumber, language, _activeBibleEditionId.value)
+        val verses = bibleProvider?.getVerses(bookId, chapterNumber, language, editionId)
             ?: BibleData.getVersesForBookAndChapter(bookId, chapterNumber)
         return BibleChapter(
             bookId = bookId,
@@ -257,8 +258,7 @@ class CatholicDataRepository(
     }
 
     /** Chapters actually available for [bookId], falling back to the declared count. */
-    fun getChapterCount(bookId: String, language: AppLanguage = _currentLanguage.value): Int {
-        val editionId = _activeBibleEditionId.value
+    fun getChapterCount(bookId: String, language: AppLanguage = _currentLanguage.value, editionId: String = _activeBibleEditionId.value): Int {
         val fromAssets = bibleProvider?.chapterCount(bookId, language, editionId) ?: 0
         if (editionId != "bundled") return fromAssets
         if (fromAssets > 0) return fromAssets
@@ -268,9 +268,10 @@ class CatholicDataRepository(
     fun searchBible(
         query: String,
         limit: Int = 50,
-        language: AppLanguage = _currentLanguage.value
+        language: AppLanguage = _currentLanguage.value,
+        editionId: String = _activeBibleEditionId.value
     ): List<Triple<String, Int, com.example.data.models.BibleVerse>> {
-        return bibleProvider?.search(query, language, limit, _activeBibleEditionId.value) ?: emptyList()
+        return bibleProvider?.search(query, language, limit, editionId) ?: emptyList()
     }
 
     // Rosary & Divine Mercy

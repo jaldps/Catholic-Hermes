@@ -32,7 +32,7 @@ class CalendarPickerInteractionTest {
             CalendarPickerSheet(AppLanguage.ES,null,{chosen=it},{})
         }}
         try {
-            compose.waitUntil(10_000) {org.robolectric.shadows.ShadowLooper.idleMainLooper(); androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications(); compose.mainClock.advanceTimeByFrame(); compose.onAllNodesWithTag("calendar_option_2").fetchSemanticsNodes().isNotEmpty()}
+            compose.waitUntil(10_000) {compose.runOnUiThread { androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications() }; compose.onAllNodesWithTag("calendar_option_2").fetchSemanticsNodes().isNotEmpty()}
         } catch (error: Throwable) {
             compose.onNodeWithTag("calendar_picker_sheet", useUnmergedTree = true).printToLog("CalendarPicker")
             println(compose.onNodeWithTag("calendar_picker_sheet", useUnmergedTree = true).printToString())

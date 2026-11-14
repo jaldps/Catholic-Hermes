@@ -57,6 +57,8 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import com.example.data.liturgy.FoundationRef
 import com.example.data.liturgy.parseFoundation
+import com.example.ui.components.rememberIoContent
+import com.example.ui.components.ContentLoadNotice
 import com.example.data.models.AppLanguage
 import com.example.data.models.ApologeticsQuestion
 import com.example.data.models.TriviaQuestion
@@ -763,7 +765,9 @@ private fun PassageCard(
         when (ref) {
             is FoundationRef.BibleRef -> {
                 val r = ref.reference
-                val verses = repository.referenceVerses(r, language)
+                val passage = rememberIoContent(listOf(repository, r, language)) { repository.referenceVerses(r, language) }
+                val verses = passage.data.orEmpty()
+                if (passage.loading || passage.failed) ContentLoadNotice(language, passage.failed, passage.retry)
                 if (verses.isNotEmpty()) {
                     Spacer(Modifier.height(12.dp))
                     Text(

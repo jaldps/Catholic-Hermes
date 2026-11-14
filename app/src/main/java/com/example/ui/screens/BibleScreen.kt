@@ -128,6 +128,8 @@ import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.liturgy.LiturgicalCalendar
 import com.example.data.local.SanctaFidesDao
+import com.example.ui.components.rememberIoContent
+import com.example.ui.components.ContentLoadNotice
 import com.example.data.models.AppLanguage
 import com.example.data.models.BibleBook
 import com.example.data.models.BibleVerse
@@ -384,6 +386,7 @@ fun BibleScreen(
     onExitContext: (() -> Unit)? = null,
     onOpenCatechism: ((Int) -> Unit)? = null
 ) {
+    var pendingListen by remember { mutableStateOf<Triple<BibleBook, Int, Int?>?>(null) }
     val context = LocalContext.current
     val insets = AppEdgeToEdge()
     val activeEdition by repository.activeBibleEditionId.collectAsState()
@@ -413,6 +416,23 @@ fun BibleScreen(
         BibleReaderStore.save(context, it)
     }
     val speech = rememberSpeechQueue(ttsManager)
+    LaunchedEffect(pendingListen, currentLanguage, activeEdition, selectedBookId, selectedChapterNumber, selectedMainTab) {
+        val (target, requestedChapter, requestedVerse) = pendingListen ?: return@LaunchedEffect
+        if (selectedMainTab != 0 || selectedBookId != target.id || selectedChapterNumber != requestedChapter) {
+            pendingListen = null
+            return@LaunchedEffect
+        }
+        try {
+            val verses = withContext(Dispatchers.IO) { repository.getChapter(target.id, requestedChapter, currentLanguage, activeEdition).verses }
+            val from = requestedVerse?.let { verse -> verses.indexOfFirst { it.number == verse }.coerceAtLeast(0) } ?: 0
+            speech.play("${target.id}:$requestedChapter", verses.map { it.text.get(currentLanguage) }, from)
+        } catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled }
+        catch (_: Exception) {
+            android.widget.Toast.makeText(context, currentLanguage.pick("No se pudo cargar el capítulo para escucharlo. Inténtalo de nuevo.", "The chapter could not load for narration. Try again.", "Não foi possível carregar o capítulo para ouvir. Tente novamente."), android.widget.Toast.LENGTH_LONG).show()
+        }
+        pendingListen = null
+    }
+
 
     val selectedBook = selectedBookId?.let { id -> BibleData.catholicCanonBooks.firstOrNull { it.id == id } }
 
@@ -577,9 +597,7 @@ fun BibleScreen(
                             onOpenBook = openBook,
                             onListen = { b, chapter, verse ->
                                 openBook(b, chapter, null, verse)
-                                val verses = repository.getChapter(b.id, chapter, currentLanguage).verses
-                                val start = verse?.let { v -> verses.indexOfFirst { it.number == v } }?.coerceAtLeast(0) ?: 0
-                                speech.play("${b.id}:$chapter", verses.map { it.text.get(currentLanguage) }, start)
+                                pendingListen = Triple(b, chapter, verse)
                             }
                         )
                     }
@@ -613,9 +631,10 @@ private fun BookDirectory(
     // The declared chapter count and the one actually present in the assets can
     // differ, so the directory reports what the repaired data really holds.
     val activeEdition by repository.activeBibleEditionId.collectAsState()
-    val chapterCounts = remember(currentLanguage, activeEdition) {
-        repository.catholicBooks.associate { it.id to repository.getChapterCount(it.id, currentLanguage) }
+    val counts = rememberIoContent(listOf(repository, currentLanguage, activeEdition)) {
+        repository.catholicBooks.associate { it.id to repository.getChapterCount(it.id, currentLanguage, activeEdition) }
     }
+    val chapterCounts = counts.data.orEmpty()
     val booksById = remember { repository.catholicBooks.associateBy { it.id } }
     val lastPosition = remember { ReadingPosition.load(context) }
     val resume = lastPosition?.let { pos -> booksById[pos.bookId]?.let { it to pos.chapter } }
@@ -623,7 +642,7 @@ private fun BookDirectory(
 
     val query = searchQuery.trim()
     val searching = query.isNotEmpty()
-    val filteredBooks = remember(query, selectedFilter, currentLanguage, activeEdition) {
+    val filteredBooks = remember(query, selectedFilter, currentLanguage, activeEdition, chapterCounts) {
         repository.catholicBooks.filter { book ->
             val testamentName = if (book.testament == Testament.OLD) {
                 currentLanguage.pick("Antiguo Testamento", "Old Testament", "Antigo Testamento")
@@ -649,18 +668,22 @@ private fun BookDirectory(
 
     // Full-text search runs off the composition thread: it walks the whole
     // bundled bible and would otherwise stall every keystroke.
-    val verseMatchesState by produceState<List<Triple<String, Int, BibleVerse>>?>(null, query, currentLanguage, activeEdition) {
-        value = null
-        value = if (query.length < MinSearchLength) emptyList()
-        else withContext(Dispatchers.Default) { repository.searchBible(query, 20, currentLanguage) }
+    var searchLimit by remember(query, currentLanguage, activeEdition) { mutableIntStateOf(20) }
+    val matches = rememberIoContent(listOf(repository, query, currentLanguage, activeEdition), searchLimit, retainOnReload = true) {
+        if (query.length < MinSearchLength) emptyList<Triple<String, Int, BibleVerse>>()
+        else {
+            delay(220)
+            repository.searchBible(query, searchLimit + 1, currentLanguage, activeEdition)
+        }
     }
-    val verseMatches = verseMatchesState ?: emptyList()
-    val versesLoading = verseMatchesState == null && query.length >= MinSearchLength
+    val verseMatches = matches.data.orEmpty().take(searchLimit)
+    val versesLoading = matches.loading && query.length >= MinSearchLength
+    val moreMatches = matches.data.orEmpty().size > searchLimit
 
     val chaptersLabel: (Int) -> String = { n -> currentLanguage.pick("$n capítulos", "$n chapters", "$n capítulos") }
     val deuteroLabel = currentLanguage.pick("Deuterocanónico", "Deuterocanonical", "Deuterocanônico")
 
-    LazyColumn(Modifier.fillMaxSize(), contentPadding = contentPadding) {
+    LazyColumn(Modifier.fillMaxSize().testTag("bible_book_directory"), contentPadding = contentPadding) {
         header()
 
         if (!searching) {
@@ -746,7 +769,10 @@ private fun BookDirectory(
             }
         }
 
-        if (filteredBooks.isEmpty() && verseMatches.isEmpty() && !versesLoading) {
+        if (counts.loading || counts.failed || (matches.failed && query.length >= MinSearchLength)) {
+            item(key = "bible_load_state") { ContentLoadNotice(currentLanguage, counts.failed || matches.failed) { if (counts.failed) counts.retry() else matches.retry() } }
+        }
+        if (filteredBooks.isEmpty() && verseMatches.isEmpty() && !versesLoading && !counts.loading && !counts.failed && !matches.failed) {
             item(key = "bible_empty") {
                 AppEmptyState(
                     title = currentLanguage.pick("Sin resultados", "Nothing found", "Sem resultados"),
@@ -844,6 +870,15 @@ private fun BookDirectory(
                     onClick = { onOpenBook(book, chapter, verse.number, null) },
                     tag = "bible_verse_result_$index"
                 )
+            }
+            if (moreMatches) item(key = "bible_more_results") {
+                Box(Modifier.fillMaxWidth().padding(16.dp), contentAlignment = Alignment.Center) {
+                    AppSecondaryCapsule(
+                        label = if (versesLoading) currentLanguage.pick("Cargando…", "Loading…", "Carregando…") else currentLanguage.pick("Ver más versículos", "Load more verses", "Ver mais versículos"),
+                        onClick = { if (!versesLoading) searchLimit += 20 },
+                        tag = "bible_load_more_results"
+                    )
+                }
             }
         }
     }
@@ -1056,9 +1091,17 @@ private fun ReaderHost(
 ) {
     val context = LocalContext.current
     val landscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
-    val countOf: (String) -> Int = { id -> repository.getChapterCount(id, currentLanguage) }
     val activeEdition by repository.activeBibleEditionId.collectAsState()
-    val availableChapters = remember(book.id, currentLanguage, activeEdition) { countOf(book.id) }
+    val counts = rememberIoContent(listOf(repository, currentLanguage, activeEdition)) {
+        repository.catholicBooks.associate { it.id to repository.getChapterCount(it.id, currentLanguage, activeEdition) }
+    }
+    if (counts.data == null) {
+        AppBackHandler(onBack = onBack)
+        ContentLoadNotice(currentLanguage, counts.failed, counts.retry)
+        return
+    }
+    val countOf: (String) -> Int = { id -> counts.data[id] ?: 0 }
+    val availableChapters = countOf(book.id)
     if (availableChapters == 0) {
         AppBackHandler(onBack = onBack)
         Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
@@ -1071,9 +1114,15 @@ private fun ReaderHost(
     }
     val chapterCount = availableChapters
     val chapterNumber = chapterRequest.coerceIn(1, chapterCount)
-    val verses = remember(book.id, chapterNumber, currentLanguage, activeEdition) {
-        repository.getChapter(book.id, chapterNumber, currentLanguage).verses
+    val chapter = rememberIoContent(listOf(repository, book.id, chapterNumber, currentLanguage, activeEdition)) {
+        repository.getChapter(book.id, chapterNumber, currentLanguage, activeEdition).verses
     }
+    if (chapter.data == null) {
+        AppBackHandler(onBack = onBack)
+        ContentLoadNotice(currentLanguage, chapter.failed, chapter.retry)
+        return
+    }
+    val verses = chapter.data
     var verseForSheet by remember { mutableStateOf<BibleVerse?>(null) }
     var showChapters by remember { mutableStateOf(false) }
     var showText by remember { mutableStateOf(false) }
@@ -2413,8 +2462,9 @@ fun OfflineBibleDownloadsView(
                 var status by remember(spec.id) { mutableStateOf("") }
                 var revision by remember(spec.id) { mutableIntStateOf(0) }
                 var downloadJob by remember(spec.id) { mutableStateOf<kotlinx.coroutines.Job?>(null) }
-                val downloadStatus = remember(spec.id, downloading, revision) { manager.status(spec.id) }
-                val downloaded = downloadStatus.complete
+                val validation = rememberIoContent(manager to spec.id, downloading to revision) { manager.status(spec.id) }
+                val downloadStatus = validation.data ?: BibleDownloadManager.DownloadStatus(0, spec.bookCount)
+                val downloaded = validation.data?.complete == true
                 Column {
                     Row(
                         Modifier.fillMaxWidth().heightIn(min = 64.dp).padding(start = 18.dp, end = 10.dp, top = 10.dp, bottom = 10.dp),
@@ -2425,6 +2475,8 @@ fun OfflineBibleDownloadsView(
                             Spacer(Modifier.height(2.dp))
                             Text(
                                 if (downloaded) currentLanguage.pick("Descargado · disponible sin conexión", "Downloaded · available offline", "Baixado · disponível offline")
+                                else if (validation.loading) currentLanguage.pick("Comprobando descarga…", "Checking download…", "Verificando download…")
+                                else if (validation.failed) currentLanguage.pick("No se pudo verificar la descarga", "Could not verify download", "Não foi possível verificar o download")
                                 else status.ifBlank { if (downloadStatus.partial) currentLanguage.pick("Parcial: ${downloadStatus.completedBooks}/${downloadStatus.totalBooks} libros", "Partial: ${downloadStatus.completedBooks}/${downloadStatus.totalBooks} books", "Parcial: ${downloadStatus.completedBooks}/${downloadStatus.totalBooks} livros") else currentLanguage.pick("No descargado", "Not downloaded", "Não baixado") },
                                 style = styles.footnote, color = p.textSecondary
                             )
@@ -2440,6 +2492,8 @@ fun OfflineBibleDownloadsView(
                             downloading -> Box(Modifier.size(44.dp), contentAlignment = Alignment.Center) {
                                 AppProgressRing(progress = progress, size = 28.dp, stroke = 3.dp)
                             }
+                            validation.loading -> Box(Modifier.size(44.dp), contentAlignment = Alignment.Center) { AppProgressRing(progress = 0f, size = 28.dp, stroke = 3.dp) }
+                            validation.failed -> AppSecondaryCapsule(currentLanguage.pick("Reintentar", "Retry", "Tentar novamente"), validation.retry)
                             else -> AppGlassIconButton(
                                 icon = Icons.Outlined.Download,
                                 contentDescription = currentLanguage.pick("Descargar", "Download", "Baixar") + " " + spec.name,
