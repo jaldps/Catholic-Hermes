@@ -26,6 +26,15 @@ class LectionaryEditionTest {
      * chapter omits the title counted in Spanish/Portuguese, so the English
      * verse indices are one lower. Verify the actual words, not just a number.
      */
+    @Test fun holyFamilySelectionIncludesCareForElderlyParentsInVulgateNumbering() {
+        val entry = LectionaryData.entryFor("holy_family", com.example.data.liturgy.SundayCycle.A)!!
+        val expected = mapOf(AppLanguage.EN to "old age of thy father", AppLanguage.ES to "vejez de tu padre", AppLanguage.PT to "velhice de teu pai")
+        for (lang in AppLanguage.entries) {
+            val text = resolver.passage(entry.firstReading, lang)!!
+            assertTrue(lang.name, text.contains(expected.getValue(lang)))
+        }
+    }
+
     @Test fun goodFridayPsalmSelectsEightVersesInEachEditionWithoutItsTitle() {
         val entry = LectionaryData.fixed.getValue("good_friday")
         val opening = mapOf(AppLanguage.EN to "In thee, O Lord", AppLanguage.ES to "En Ti, Yahvé", AppLanguage.PT to "A ti recorro")

@@ -40,7 +40,7 @@ object LectionaryData {
         "christmas_day" to LectionaryEntry("isa 52:7-10", "psa 97:1-6", "heb 1:1-6", "joh 1:1-18", sourceUrl = "https://bible.usccb.org/bible/readings/122524-day.cfm"),
         "st_stephen" to LectionaryEntry("act 7:54-59", "psa 30", null, "mat 10:17-22"),
         "st_john" to LectionaryEntry("1jo 1:1-4", "psa 96", null, "joh 20:2-8"),
-        "holy_innocents" to LectionaryEntry("1jo 1:5-10", "psa 123", null, "mat 2:13-18"),
+        "holy_innocents" to LectionaryEntry("1jo 1:5-2:2", "psa 123", null, "mat 2:13-18"),
         "mary_mother_of_god" to LectionaryEntry("num 6:22-27", "psa 66", "gal 4:4-7", "luk 2:16-21"),
         "epiphany" to LectionaryEntry("isa 60:1-6", "psa 71", "eph 3:2-3,5-6", "mat 2:1-12"),
         // The Baptism takes the Year A set; its Gospel alone varies by cycle.
@@ -61,6 +61,18 @@ object LectionaryData {
         "easter_sunday" to LectionaryEntry("act 10:34-43", "psa 117", "col 3:1-4", "joh 20:1-9"),
 
         // Solemnities and Feasts of the Lord and of the Blessed Virgin Mary
+        // Explicit devotional selections for these services/celebrations. Whole Psalms
+        // remain expanded selections, not a claimed approved responsorial text.
+        "holy_thursday_evening" to LectionaryEntry("exo 12:1-8,11-14", "psa 115", "1co 11:23-26", "joh 13:1-15"),
+        "christmas_0_sunday" to LectionaryEntry("sir 24", "psa 147", "eph 1:3-6,15-18", "joh 1:1-18"),
+        "mary_mother_of_church" to LectionaryEntry("gen 3:9-15,20", "psa 86", null, "joh 19:25-34"),
+        "visitation" to LectionaryEntry("zep 3:14-18", "isa 12", null, "luk 1:39-56"),
+        "easter_octave_day1" to LectionaryEntry("act 2:14,22-33", "psa 15", null, "mat 28:8-15"),
+        "easter_octave_day2" to LectionaryEntry("act 2:36-41", "psa 32", null, "joh 20:11-18"),
+        "easter_octave_day3" to LectionaryEntry("act 3:1-10", "psa 104", null, "luk 24:13-35"),
+        "easter_octave_day4" to LectionaryEntry("act 3:11-26", "psa 8", null, "luk 24:35-48"),
+        "easter_octave_day5" to LectionaryEntry("act 4:1-12", "psa 117", null, "joh 21:1-14"),
+        "easter_octave_day6" to LectionaryEntry("act 4:13-21", "psa 117", null, "mar 16:9-15"),
         "presentation" to LectionaryEntry("mal 3:1-4", "psa 23", "heb 2:14-18", "luk 2:22-40"),
         "st_joseph" to LectionaryEntry("2sa 7:4-16", "psa 88", "rom 4:13-22", "mat 1:18-24"),
         "annunciation" to LectionaryEntry("isa 7:10-14; 8:10", "psa 39", "heb 10:4-10", "luk 1:26-38"),
@@ -98,7 +110,8 @@ private val cycleA: Map<String, LectionaryEntry> = mapOf(
     "advent_4_sunday" to LectionaryEntry("isa 7:10-14", "psa 23", "rom 1:1-7", "mat 1:18-24"),
 
     // Christmas
-    "holy_family" to LectionaryEntry("sir 3:3-7", "psa 127", "col 3:12-21", "mat 2:13-23"),
+    // Vulgate/Douay-Rheims numbering: parental old-age passage is 14–17, not NAB 12–14.
+    "holy_family" to LectionaryEntry("sir 3:3-7,14-17", "psa 127", "col 3:12-21", "mat 2:13-23"),
 
     // Lent
     "lent_1_sunday" to LectionaryEntry("gen 3:1-7", "psa 50", "rom 5:12-19", "mat 4:1-11"),
@@ -162,6 +175,9 @@ private val cycleA: Map<String, LectionaryEntry> = mapOf(
 )
 
 private val cycleB: Map<String, LectionaryEntry> = mapOf(
+    "baptism_of_the_lord" to LectionaryEntry("isa 42:1-4,6-7", "psa 28", "act 10:34-38", "mar 1:7-11"),
+    "transfiguration" to LectionaryEntry("dan 7:9-10,13-14", "psa 96", "2pe 1:16-19", "mar 9:2-10"),
+    "sacred_heart" to LectionaryEntry("hos 11:1,3-4,8-9", "isa 12", "eph 3:8-12,14-19", "joh 19:31-37"),
     // Advent
     "advent_1_sunday" to LectionaryEntry("isa 64:1-8", "psa 79", "1co 1:3-9", "mar 13:33-37"),
     "advent_2_sunday" to LectionaryEntry("isa 40:1-11", "psa 84", "2pe 3:8-14", "mar 1:1-8"),
@@ -190,7 +206,7 @@ private val cycleB: Map<String, LectionaryEntry> = mapOf(
     "easter_6_sunday" to LectionaryEntry("act 10:25-48", "psa 97", "1jo 4:7-10", "joh 15:9-17"),
     "easter_7_sunday" to LectionaryEntry("act 1:15-26", "psa 102", "1jo 4:11-16", "joh 17:11-19"),
     "ascension" to LectionaryEntry("act 1:1-11", "psa 46", "eph 1:17-23", "mar 16:15-20"),
-    "pentecost" to LectionaryEntry("act 2:1-11", "psa 103", "gal 5:16-25", "joh 16:12-15"),
+    "pentecost" to LectionaryEntry("act 2:1-11", "psa 103", "gal 5:16-25", "joh 15:26-27; 16:12-15"),
 
     // Solemnities of the Lord in Ordinary Time
     "trinity" to LectionaryEntry("deu 4:32-40", "psa 32", "rom 8:14-17", "mat 28:16-20"),
@@ -234,6 +250,9 @@ private val cycleB: Map<String, LectionaryEntry> = mapOf(
 )
 
 private val cycleC: Map<String, LectionaryEntry> = mapOf(
+    "baptism_of_the_lord" to LectionaryEntry("isa 42:1-4,6-7", "psa 28", "act 10:34-38", "luk 3:15-16,21-22"),
+    "transfiguration" to LectionaryEntry("dan 7:9-10,13-14", "psa 96", "2pe 1:16-19", "luk 9:28-36"),
+    "sacred_heart" to LectionaryEntry("eze 34:11-16", "psa 22", "rom 5:5-11", "luk 15:3-7"),
     // Advent
     "advent_1_sunday" to LectionaryEntry("jer 33:14-16", "psa 24", "1th 3:12-4:2", "luk 21:25-28,34-36"),
     "advent_2_sunday" to LectionaryEntry("bar 5:1-9", "psa 125", "phi 1:4-11", "luk 3:1-6"),
@@ -262,10 +281,10 @@ private val cycleC: Map<String, LectionaryEntry> = mapOf(
     "easter_6_sunday" to LectionaryEntry("act 15:22-29", "psa 66", "rev 21:10-23", "joh 14:23-29"),
     "easter_7_sunday" to LectionaryEntry("act 7:55-59", "psa 96", "rev 22:12-20", "joh 17:20-26"),
     "ascension" to LectionaryEntry("act 1:1-11", "psa 46", "eph 1:17-23", "luk 24:46-53"),
-    "pentecost" to LectionaryEntry("act 2:1-11", "psa 103", "rom 8:8-17", "joh 14:15-26"),
+    "pentecost" to LectionaryEntry("act 2:1-11", "psa 103", "rom 8:8-17", "joh 14:15-16,23-26"),
 
     // Solemnities of the Lord in Ordinary Time
-    "trinity" to LectionaryEntry("pro 8:22-31", "psa 8", "rom 5:1-5", "joh 16:12-15"),
+    "trinity" to LectionaryEntry("pro 8:22-31", "psa 8", "rom 5:1-5", "joh 15:26-27; 16:12-15"),
     "corpus_christi" to LectionaryEntry("gen 14:18-20", "psa 109", "1co 11:23-26", "luk 9:11-17"),
     "christ_the_king" to LectionaryEntry("2sa 5:1-3", "psa 121", "col 1:12-20", "luk 23:35-43"),
 

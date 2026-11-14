@@ -576,7 +576,8 @@ private fun ThemePage(
 private fun refKeyOf(ref: FoundationRef): String = when (ref) {
     is FoundationRef.BibleRef -> {
         val r = ref.reference
-        "bible_${r.bookId}_${r.chapter}_${r.verseStart ?: "all"}_${r.verseEnd ?: ""}"
+        "bible_${r.bookId}_${r.chapter}_${r.verseStart ?: "all"}_${r.verseEnd ?: ""}" +
+            if (r.endChapter != r.chapter || r.additionalRanges.isNotEmpty()) "_${r.ranges.hashCode()}" else ""
     }
     is FoundationRef.CatechismRef -> "ccc_${ref.startParagraph}_${ref.endParagraph ?: ""}"
 }
@@ -728,12 +729,7 @@ private fun QuestionPage(
 
 private fun refLabel(ref: FoundationRef, repository: CatholicDataRepository, language: AppLanguage): String = when (ref) {
     is FoundationRef.BibleRef -> {
-        val r = ref.reference
-        val book = repository.catholicBooks.firstOrNull { it.id == r.bookId }?.name?.get(language) ?: r.bookId
-        val sep = if (language == AppLanguage.EN) ":" else ","
-        book + " " + r.chapter +
-            (r.verseStart?.let { "$sep$it" } ?: "") +
-            (r.verseEnd?.let { "–$it" } ?: "")
+        repository.referenceLabel(ref.reference, language)
     }
     is FoundationRef.CatechismRef ->
         language.tr("Catecismo", "Catechism", "Catecismo") + " " + ref.startParagraph +
@@ -767,10 +763,7 @@ private fun PassageCard(
         when (ref) {
             is FoundationRef.BibleRef -> {
                 val r = ref.reference
-                val chapter = repository.getChapter(r.bookId, r.chapter, language)
-                val verses = r.verseStart?.let { start ->
-                    chapter.verses.filter { it.number in start..(r.verseEnd ?: start) }
-                } ?: chapter.verses
+                val verses = repository.referenceVerses(r, language)
                 if (verses.isNotEmpty()) {
                     Spacer(Modifier.height(12.dp))
                     Text(

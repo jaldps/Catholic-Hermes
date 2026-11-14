@@ -712,6 +712,13 @@ class CatholicDataRepository(
 
     fun studyScriptureLabel(raw: String, language: AppLanguage): String = scriptureResolver.display(raw, language)
 
+    fun referenceLabel(reference: com.example.data.liturgy.ScriptureReference, language: AppLanguage): String =
+        scriptureResolver.display(reference, language)
+
+    fun referenceVerses(reference: com.example.data.liturgy.ScriptureReference, language: AppLanguage) =
+        scriptureResolver.verses(reference, language)
+
+
     fun studyBibleEdition(language: AppLanguage): String = when (language) {
         AppLanguage.ES -> "Biblia Platense · edición incluida"
         AppLanguage.EN -> "Douay-Rheims-Challoner · included edition"

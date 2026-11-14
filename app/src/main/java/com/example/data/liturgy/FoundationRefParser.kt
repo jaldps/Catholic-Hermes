@@ -28,7 +28,7 @@ private fun fold(text: String): String {
     for (ch in text) {
         val decomposed = Normalizer.normalize(ch.toString(), Normalizer.Form.NFD)
         val base = decomposed.firstOrNull { Character.getType(it) != Character.NON_SPACING_MARK.toInt() }
-        out.append(base?.lowercaseChar() ?: ' ')
+        out.append(if (ch == '–' || ch == '—') '-' else base?.lowercaseChar() ?: ' ')
     }
     return out.toString()
 }
@@ -43,7 +43,21 @@ private fun singular(word: String): String? = when {
  *  honorific-stripped form, short head-token form, singular, and the abbreviation. */
 private fun aliasForms(book: BibleBook): Set<String> {
     val out = mutableSetOf<String>()
-    val rawNames = listOf(book.name.es, book.name.en, book.name.pt, book.abbreviation)
+    val common = mapOf(
+        "psa" to listOf("Ps", "Pss", "Sl", "Sal"), "joh" to listOf("Jn", "Jo"),
+        "luk" to listOf("Lk", "Lc"), "mar" to listOf("Mk", "Mc"), "mat" to listOf("Mt"),
+        "1co" to listOf("1 Cor"), "2co" to listOf("2 Cor"),
+        "1sa" to listOf("1 Sam"), "2sa" to listOf("2 Sam"),
+        "1ki" to listOf("1 Kgs"), "2ki" to listOf("2 Kgs"),
+        "1ch" to listOf("1 Chr"), "2ch" to listOf("2 Chr"),
+        "1th" to listOf("1 Thess"), "2th" to listOf("2 Thess"),
+        "1ti" to listOf("1 Tim"), "2ti" to listOf("2 Tim"),
+        "1pe" to listOf("1 Pet"), "2pe" to listOf("2 Pet"),
+        "1jo" to listOf("1 Jn"), "2jo" to listOf("2 Jn"), "3jo" to listOf("3 Jn"),
+        "1ma" to listOf("1 Macc"), "2ma" to listOf("2 Macc"), "heb" to listOf("Heb"),
+        "phi" to listOf("Phil"), "rev" to listOf("Rev"), "jam" to listOf("Jas")
+    )
+    val rawNames = listOf(book.name.es, book.name.en, book.name.pt, book.abbreviation, book.id) + common[book.id].orEmpty()
     for (raw in rawNames) {
         val name = fold(raw).trim()
         if (name.isEmpty()) continue
@@ -75,17 +89,22 @@ private fun compileBiblePattern(books: List<BibleBook>): BiblePattern? {
     val aliasToBook = LinkedHashMap<String, String>()
     for (book in books) {
         for (alias in aliasForms(book)) {
-            aliasToBook.putIfAbsent(alias, book.id)
+            aliasToBook.putIfAbsent(alias.replace(Regex("^([1-3])\\s*"), "$1"), book.id)
         }
     }
     if (aliasToBook.isEmpty()) return null
     // Longest first so "1 juan" wins over "juan" and "san juan" over "juan".
     val alternation = aliasToBook.keys
         .sortedWith(compareByDescending<String> { it.length }.thenBy { it })
-        .joinToString("|") { Regex.escape(it).replace("\\ ", "\\s+") }
+        .joinToString("|") { alias ->
+            val numbered = alias.firstOrNull()?.isDigit() == true
+            if (numbered) Regex.escape(alias.take(1)) + "\\s*" +
+                alias.drop(1).split(' ').joinToString("\\s+") { Regex.escape(it) }
+            else alias.split(' ').joinToString("\\s+") { Regex.escape(it) }
+        }
     return BiblePattern(
         regex = Regex(
-            """(?<![a-z0-9])(?<book>$alternation)\s+(?<chap>\d{1,3})\s*(?:,|:)\s*(?<vs>\d{1,3})(?:\s*-\s*(?<ve>\d{1,3}))?(?!\d)"""
+            """(?<![a-z0-9])(?<book>$alternation)\.?\s+(?<citation>\d{1,3}\s*[:,]\s*\d{1,3}[a-d]?(?:\s*[-,:;]\s*\d{1,3}[a-d]?)*)(?!(?:\s*[-,:;]\s*\d)|[a-z0-9:,-])"""
         ),
         aliasToBook = aliasToBook
     )
@@ -116,13 +135,17 @@ fun parseFoundation(text: String, language: AppLanguage, books: List<BibleBook>)
 
     compileBiblePattern(books)?.let { pattern ->
         pattern.regex.findAll(folded).forEach { match ->
-            val bookId = pattern.aliasToBook[match.groups["book"]!!.value] ?: return@forEach
-            val chapter = match.groups["chap"]!!.value.toIntOrNull() ?: return@forEach
-            val verseStart = match.groups["vs"]!!.value.toIntOrNull() ?: return@forEach
-            val verseEnd = match.groups["ve"]?.value?.toIntOrNull()
-            hits += match.range.first to FoundationRef.BibleRef(
-                ScriptureReference(bookId = bookId, chapter = chapter, verseStart = verseStart, verseEnd = verseEnd)
-            )
+            val alias = match.groups["book"]!!.value.replace(Regex("\\s+"), " ")
+                .replace(Regex("^([1-3])\\s*"), "$1")
+            val bookId = pattern.aliasToBook[alias] ?: return@forEach
+            val citation = match.groups["citation"]!!.value.replace(Regex("\\s+"), "")
+                .replaceFirst(Regex("^(\\d+),"), "$1:")
+            val parsed = ScriptureReference.parse("$bookId $citation") ?: return@forEach
+            val limit = books.first { it.id == bookId }.chaptersCount
+            if (parsed.ranges.any { it.chapter > limit || it.endChapter > limit }) return@forEach
+            val reference = if (parsed.endChapter == parsed.chapter && parsed.additionalRanges.isEmpty() &&
+                parsed.verseEnd == parsed.verseStart) parsed.copy(verseEnd = null) else parsed
+            hits += match.range.first to FoundationRef.BibleRef(reference)
         }
     }
 
@@ -137,6 +160,7 @@ fun parseFoundation(text: String, language: AppLanguage, books: List<BibleBook>)
             val cont = CCC_CONTINUATION.matchAt(folded, pos) ?: break
             val from = cont.groups["from"]!!.value.toIntOrNull() ?: break
             val to = cont.groups["to"]?.value?.toIntOrNull()
+            if (from !in 1..2865 || (to != null && to !in from..2865)) break
             hits += cont.range.first to FoundationRef.CatechismRef(from, to)
             pos = cont.range.last + 1
         }

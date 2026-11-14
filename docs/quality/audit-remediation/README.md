@@ -16,3 +16,11 @@ Each stage records actual checks and remaining limits. No physical-device or ecc
 Application-owned serial writes, transactional lesson notes/completion, automatic draft saving, per-lesson saved UI state and visible write status. Questions persist actual visited IDs and last-opened question separately. Legacy marks import only known endpoints; all 101 questions have exactly one itinerary.
 
 Validation: StudyJourneyTest (3), LearningProgressReliabilityTest (4), DoctrineFormatTest (17): **24 passed**, zero failures/errors. Includes course back/reopen with unsaved notes, no accidental completion, out-of-order visits and non-destructive legacy import. Quiz alignment remains for the editorial stage.
+
+## Stage 2a
+
+Complete human citation ranges and common aliases, strict rejection of malformed/verse-part citations, full-range passage rendering; Easter octave rank/penitential exception, 219 fixed General Roman Calendar definitions plus movable Mother of Church, optional memorial collisions/seasonal precedence, rose/violet alternatives, corrected Gospel cycles and missing local selections. Vulgate Sirach numbering is preserved (elderly-parent passage 14–17). Holy Saturday no longer claims a daytime Vigil.
+
+Validation: **41 passed**, zero failures/errors across five classes (counts in stage-2a/tests.json). The previous November 3 test expected a plain feria; it now verifies St Martin de Porres as optional while preserving Ordinary Time week 31 and the ferial reading key.
+
+Calendar facts/localizations: Romcal MIT, pinned 0671305334e0a5ae7eec8f50a46c7a21e3e40347, https://github.com/romcal/romcal. The import script executes no external code; its license is bundled. Cross-check fixtures: USCCB 2025/2027 calendars and GNLY 24/CIC 1251. This is contemporary general calendar support, not historical calendars or complete diocesan propers. The devotional selections remain explicitly distinct from an approved complete lectionary; full ferial I/II and Vigil services remain expansion work.

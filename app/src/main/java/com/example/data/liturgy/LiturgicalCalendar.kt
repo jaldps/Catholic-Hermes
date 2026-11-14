@@ -74,6 +74,7 @@ enum class CelebrationRank(val displayName: LocalizedText) {
     /** All Souls: a day of its own kind, ranked with the solemnities. */
     COMMEMORATION(LocalizedText("Conmemoración", "Commemoration", "Comemoração")),
     MEMORIAL(LocalizedText("Memoria", "Memorial", "Memória")),
+    OPTIONAL_MEMORIAL(LocalizedText("Memoria opcional", "Optional memorial", "Memória facultativa")),
     SUNDAY(LocalizedText("Domingo", "Sunday", "Domingo")),
     FERIAL(LocalizedText("Feria", "Weekday", "Féria"))
 }
@@ -114,7 +115,9 @@ data class LiturgicalDayInfo(
     val lectionaryKey: String,
     /** Canon 1246 list: a candidate, not a determination of local obligation. */
     val isUniversalHolyDayCandidate: Boolean = false,
-    val calendarNeedsLocalConfirmation: Boolean = true
+    val calendarNeedsLocalConfirmation: Boolean = true,
+    val permittedColors: Set<LiturgicalColor> = setOf(color),
+    val optionalCelebrations: List<LocalizedText> = emptyList()
 )
 
 /**
@@ -224,7 +227,9 @@ object LiturgicalCalendar {
         val rank: CelebrationRank,
         val color: LiturgicalColor,
         val obligation: Boolean = false,
-        val key: String
+        val key: String,
+        val options: List<LocalizedText> = emptyList(),
+        val colors: Set<LiturgicalColor> = setOf(color)
     )
 
     private val fixedDays: Map<Pair<Int, Int>, Fixed> = mapOf(
@@ -298,6 +303,16 @@ object LiturgicalCalendar {
         )
     )
 
+    private val additionalFixedDays = GeneralRomanSanctoral.fixed.groupBy { it.month to it.day }
+    private val additionalLordFeasts = GeneralRomanSanctoral.fixed.filter { it.isLordFeast }.map { it.key }.toSet()
+
+    private fun importedFixed(key: Pair<Int, Int>): Fixed? {
+        val entries = additionalFixedDays[key] ?: return null
+        val primary = entries.minBy { it.rank.ordinal }
+        return Fixed(primary.title, primary.rank, primary.color, key = primary.key,
+            options = entries.map { it.title }, colors = entries.map { it.color }.toSet())
+    }
+
     /** UNLYC 5, 60 and the proper March solemnity transfer rubrics. */
     private fun fixedFor(date: CalendarDate, rules: CalendarRules): Fixed? {
         val year = date.year
@@ -328,7 +343,7 @@ object LiturgicalCalendar {
         )
         transfers.entries.firstOrNull { it.value == date }?.let { return fixedDays[it.key] }
         val key = date.month to date.day
-        return if (key in transfers) null else fixedDays[key]
+        return if (key in transfers) null else fixedDays[key] ?: importedFixed(key)
     }
 
     private val ordinals = mapOf(
@@ -439,10 +454,31 @@ object LiturgicalCalendar {
         val adventStart = firstSundayOfAdvent(year)
         val baptism = baptismOfTheLord(year, rules)
 
+        // UNLYC 24: octave weekdays are celebrated as solemnities of the Lord.
+        if (date > easter && date < easter.plusDays(7)) {
+            val weekday = date.isoDayOfWeek - 1
+            val es = listOf("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado")[weekday]
+            val en = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")[weekday]
+            val pt = listOf("Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado")[weekday]
+            return LiturgicalDayInfo(date, LiturgicalSeason.EASTER, LiturgicalColor.WHITE,
+                CelebrationRank.SOLEMNITY, LocalizedText("$es de la octava de Pascua", "$en within the Octave of Easter", "$pt na Oitava da Páscoa"),
+                1, liturgicalYear, sundayCycle, weekdayCycle, false, false, false, "easter_octave_day${date.isoDayOfWeek}")
+        }
         // Movable celebrations outrank the seasonal day they fall on.
         val fixedToday = fixedFor(date, rules)
+        if (date == immaculateHeart(year) && fixedToday?.rank == CelebrationRank.MEMORIAL) {
+            val heart = movableFor(date, year, rules)!!
+            return heart.copy(rank = CelebrationRank.OPTIONAL_MEMORIAL,
+                title = LocalizedText("Memorias opcionales: ${heart.title.es} / ${fixedToday.title.es}",
+                    "Optional memorials: ${heart.title.en} / ${fixedToday.title.en}",
+                    "Memórias facultativas: ${heart.title.pt} / ${fixedToday.title.pt}"), color = LiturgicalColor.GREEN)
+                .toInfo(date, liturgicalYear, sundayCycle, weekdayCycle,
+                    weekOfSeason(date, year, heart.season, rules))
+                .copy(optionalCelebrations = listOf(heart.title, fixedToday.title),
+                    permittedColors = setOf(LiturgicalColor.GREEN, LiturgicalColor.WHITE, fixedToday.color))
+        }
         movableFor(date, year, rules)?.takeUnless {
-            it.rank == CelebrationRank.MEMORIAL && fixedToday != null
+            it.rank == CelebrationRank.MEMORIAL && fixedToday?.rank in setOf(CelebrationRank.SOLEMNITY, CelebrationRank.FEAST, CelebrationRank.COMMEMORATION)
         }?.let { movable ->
             return movable.toInfo(
                 date, liturgicalYear, sundayCycle, weekdayCycle,
@@ -455,17 +491,33 @@ object LiturgicalCalendar {
         val season = seasonOf(date, year, rules)
         val protectedDay = (date >= palm && date <= easter.plusDays(7)) || date == ash ||
             (date.isSunday && season in setOf(LiturgicalSeason.ADVENT, LiturgicalSeason.LENT, LiturgicalSeason.EASTER))
-        val lordFeasts = setOf("presentation", "transfiguration", "holy_cross")
+        val lordFeasts = setOf("presentation", "transfiguration", "holy_cross") + additionalLordFeasts
         if (!protectedDay) {
             fixedToday?.takeUnless {
-                date.isSunday && it.rank == CelebrationRank.FEAST && it.key !in lordFeasts
-            }?.let { fixed ->
+                date.isSunday && (it.rank in setOf(CelebrationRank.MEMORIAL, CelebrationRank.OPTIONAL_MEMORIAL) ||
+                    (it.rank == CelebrationRank.FEAST && it.key !in lordFeasts))
+            }?.let { original ->
+                val privilegedWeekday = season == LiturgicalSeason.LENT ||
+                    (season == LiturgicalSeason.ADVENT && date.day >= 17) ||
+                    (season == LiturgicalSeason.CHRISTMAS && date.month == 12 && date.day >= 25)
+                val reduced = privilegedWeekday && original.rank in setOf(CelebrationRank.MEMORIAL, CelebrationRank.OPTIONAL_MEMORIAL)
+                val fixed = if (reduced) original.copy(rank = CelebrationRank.OPTIONAL_MEMORIAL) else original
+                val optional = fixed.rank == CelebrationRank.OPTIONAL_MEMORIAL
+                val weekdayColor = when (season) {
+                    LiturgicalSeason.LENT, LiturgicalSeason.ADVENT -> LiturgicalColor.VIOLET
+                    LiturgicalSeason.CHRISTMAS, LiturgicalSeason.EASTER -> LiturgicalColor.WHITE
+                    else -> LiturgicalColor.GREEN
+                }
                 return LiturgicalDayInfo(
                     date = date,
                     season = seasonOf(date, year, rules),
-                    color = fixed.color,
+                    color = if (optional) weekdayColor else fixed.color,
                     rank = fixed.rank,
-                    title = fixed.title,
+                    title = if (optional) LocalizedText(
+                        "Memoria opcional: " + fixed.options.ifEmpty { listOf(fixed.title) }.joinToString(" / ") { it.es },
+                        "Optional memorial: " + fixed.options.ifEmpty { listOf(fixed.title) }.joinToString(" / ") { it.en },
+                        "Memória facultativa: " + fixed.options.ifEmpty { listOf(fixed.title) }.joinToString(" / ") { it.pt }
+                    ) else fixed.title,
                     weekOfSeason = weekOfSeason(date, year, season, rules),
                     liturgicalYear = liturgicalYear,
                     sundayCycle = sundayCycle,
@@ -474,7 +526,11 @@ object LiturgicalCalendar {
                     isUniversalHolyDayCandidate = fixed.obligation,
                     isFastDay = false,
                     isAbstinenceDay = date.isFriday && fixed.rank != CelebrationRank.SOLEMNITY,
-                    lectionaryKey = fixed.key
+                    lectionaryKey = if (optional || fixed.rank == CelebrationRank.MEMORIAL)
+                        lectionaryKey(season, weekOfSeason(date, year, season, rules), date, easter, adventStart, baptism, pentecost)
+                        else fixed.key,
+                    permittedColors = if (optional) fixed.colors + weekdayColor else setOf(fixed.color),
+                    optionalCelebrations = if (optional) fixed.options.ifEmpty { listOf(fixed.title) } else emptyList()
                 )
             }
         }
@@ -504,10 +560,10 @@ object LiturgicalCalendar {
                 "Domingo de Ramos na Paixão do Senhor"
             )
             date == holyThu -> LocalizedText(
-                "Jueves Santo — Cena del Señor", "Holy Thursday — The Lord's Supper", "Quinta-feira Santa — Ceia do Senhor"
+                "Jueves Santo", "Holy Thursday", "Quinta-feira Santa"
             )
             date == holySat -> LocalizedText(
-                "Sábado Santo — Vigilia Pascual", "Holy Saturday — The Easter Vigil", "Sábado Santo — Vigília Pascal"
+                "Sábado Santo", "Holy Saturday", "Sábado Santo"
             )
             season == LiturgicalSeason.HOLY_WEEK -> weekdayTitle(season, 0, date)
             date.isSunday -> seasonSundayTitle(season, week)
@@ -527,7 +583,12 @@ object LiturgicalCalendar {
             isHolyDayOfObligation = date.isSunday,
             isFastDay = date == ash,
             isAbstinenceDay = date == ash || date.isFriday,
-            lectionaryKey = lectionaryKey(season, week, date, easter, adventStart, baptism, pentecost)
+            lectionaryKey = when (date) {
+                holyThu -> "holy_thursday_evening"
+                holySat -> "holy_saturday_no_daytime_mass"
+                else -> lectionaryKey(season, week, date, easter, adventStart, baptism, pentecost)
+            },
+            permittedColors = if (color == LiturgicalColor.ROSE) setOf(LiturgicalColor.VIOLET, LiturgicalColor.ROSE) else setOf(color)
         )
     }
 
@@ -603,6 +664,10 @@ object LiturgicalCalendar {
         sacredHeart(year) -> Movable(
             LocalizedText("Sagrado Corazón de Jesús", "The Most Sacred Heart of Jesus", "Sagrado Coração de Jesus"),
             CelebrationRank.SOLEMNITY, LiturgicalColor.WHITE, LiturgicalSeason.ORDINARY_TIME, "sacred_heart"
+        )
+        pentecost(year).plusDays(1) -> Movable(
+            LocalizedText("María, Madre de la Iglesia", "Mary, Mother of the Church", "Maria, Mãe da Igreja"),
+            CelebrationRank.MEMORIAL, LiturgicalColor.WHITE, LiturgicalSeason.ORDINARY_TIME, "mary_mother_of_church"
         )
         immaculateHeart(year) -> Movable(
             LocalizedText("Inmaculado Corazón de María", "The Immaculate Heart of the Blessed Virgin Mary", "Imaculado Coração de Maria"),

@@ -189,7 +189,9 @@ class LiturgicalCalendarTest {
             assertEquals(day.toString(), expectedWeek, info.weekOfSeason)
         }
         val novemberThird = LiturgicalCalendar.dayInfo(date(2026, 11, 3))
-        assertEquals("Tuesday of the Thirty-first Week in Ordinary Time", novemberThird.title.en)
+        assertTrue(novemberThird.title.en.contains("Martin de Porres"))
+        assertEquals(CelebrationRank.OPTIONAL_MEMORIAL, novemberThird.rank)
+        assertEquals(31, novemberThird.weekOfSeason)
         assertEquals("ot_31_day2", novemberThird.lectionaryKey)
         assertEquals("all_saints", LiturgicalCalendar.dayInfo(date(2026, 11, 1)).lectionaryKey)
         assertEquals("all_souls", LiturgicalCalendar.dayInfo(date(2026, 11, 2)).lectionaryKey)
