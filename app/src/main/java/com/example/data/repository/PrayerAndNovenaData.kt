@@ -371,7 +371,7 @@ object PrayerAndNovenaData {
         )
     )
 
-    val officialNovenas: List<Novena> = CrawledNovenasData.allNovenas
+    val officialNovenas: List<Novena> by lazy { CrawledNovenasData.allNovenas }
 
     val vaticanOfficialPrayers: List<VaticanPrayer> = listOf(
         VaticanPrayer(

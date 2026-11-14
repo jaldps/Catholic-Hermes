@@ -57,6 +57,7 @@ import androidx.compose.material.icons.outlined.WbSunny
 import androidx.compose.material.icons.outlined.WbTwilight
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -115,6 +116,7 @@ import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppHeroHeader
 import com.example.ui.design.AppGlassSurface
+import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppGrid
 import com.example.ui.design.AppGroupedRow
 import com.example.ui.design.AppHideTabBar
@@ -149,8 +151,10 @@ import com.example.ui.theme.LocalAppTextStyles
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
+import com.example.data.repository.dayNumbers
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.ensureActive
 
 /*
  * Prayers, novenas and the night office — Lumen.
@@ -278,6 +282,10 @@ fun PrayersAndNovenasScreen(
         mutableIntStateOf(if (initialTab == 2) initialNightOfficeTab.coerceIn(0, 2) else -1)
     }
 
+    val catalog by repository.novenaCatalog.collectAsState()
+    val catalogError by repository.novenaCatalogError.collectAsState()
+    val novenas = catalog.orEmpty()
+
     // ---- Novena progress (Room + a parallel store for days beyond 31)
     val extraStore = remember(context) { NovenaExtraDaysStore(context.applicationContext) }
     var extraDays by remember { mutableStateOf(extraStore.all()) }
@@ -345,7 +353,7 @@ fun PrayersAndNovenasScreen(
         1 -> {
             val id = novenaId
             when {
-                id == null || repository.officialNovenas.none { it.id == id } -> PrayersRoute.NovenaIndex
+                id == null || novenas.none { it.id == id } -> PrayersRoute.NovenaIndex
                 novenaReaderDay > 0 -> PrayersRoute.NovenaDay(id, novenaReaderDay)
                 else -> PrayersRoute.NovenaOverview(id)
             }
@@ -500,13 +508,13 @@ fun PrayersAndNovenasScreen(
                     DivineMercyChapletView(
                         ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
-                        novenaArtUrl = repository.officialNovenas.firstOrNull { it.id == DivineMercyNovenaId }?.imageUrl,
+                        novenaArtUrl = novenas.firstOrNull { it.id == DivineMercyNovenaId }?.imageUrl,
                         onOpenNovena = {
                             showChaplet = false
                             selectedTab = 1
-                            novenaId = repository.officialNovenas
+                            novenaId = novenas
                                 .firstOrNull { it.id == DivineMercyNovenaId }?.id
-                                ?: repository.officialNovenas.firstOrNull {
+                                ?: novenas.firstOrNull {
                                     it.title.es.contains("Misericordia", ignoreCase = true)
                                 }?.id
                             novenaReaderDay = 0
@@ -535,7 +543,7 @@ fun PrayersAndNovenasScreen(
 
                 PrayersRoute.NovenaIndex -> NovenaIndexView(
                     header = header,
-                    novenas = repository.officialNovenas,
+                    novenas = novenas,
                     currentLanguage = currentLanguage,
                     searchQuery = novenaSearchQuery,
                     onSearchQueryChange = { novenaSearchQuery = it },
@@ -549,12 +557,15 @@ fun PrayersAndNovenasScreen(
                         novenaId = it.id
                         novenaReaderDay = 0
                     },
-                    bottomPadding = bottomPadding
+                    bottomPadding = bottomPadding,
+                    isLoading = catalog == null && !catalogError,
+                    hasError = catalogError,
+                    onRetry = repository::reloadNovenas
                 )
 
                 is PrayersRoute.NovenaOverview -> {
-                    val novena = repository.officialNovenas.first { it.id == r.id }
                     AppBackHandler { novenaId = null }
+                    NovenaBodyContent(repository, r.id, currentLanguage) { novena ->
                     NovenaOverviewView(
                         novena = novena,
                         currentLanguage = currentLanguage,
@@ -565,11 +576,12 @@ fun PrayersAndNovenasScreen(
                         onReset = { resetNovena(novena) },
                         bottomPadding = bottomPadding
                     )
+                    }
                 }
 
                 is PrayersRoute.NovenaDay -> {
-                    val novena = repository.officialNovenas.first { it.id == r.id }
                     AppBackHandler { novenaReaderDay = 0 }
+                    NovenaBodyContent(repository, r.id, currentLanguage) { novena ->
                     NovenaDayView(
                         novena = novena,
                         currentLanguage = currentLanguage,
@@ -581,6 +593,7 @@ fun PrayersAndNovenasScreen(
                         onStop = { ttsManager.stop() },
                         onToggleDay = { toggleNovenaDay(novena, it) }
                     )
+                    }
                 }
 
                 PrayersRoute.Night -> NightPrayersScreen(
@@ -1815,7 +1828,10 @@ private fun NovenaIndexView(
     daysPrayed: Map<String, Set<Int>>,
     startedOn: Map<String, Long>,
     onOpenNovena: (Novena) -> Unit,
-    bottomPadding: Dp
+    bottomPadding: Dp,
+    isLoading: Boolean,
+    hasError: Boolean,
+    onRetry: () -> Unit
 ) {
     val design = LocalAppDesign.current
 
@@ -1844,8 +1860,12 @@ private fun NovenaIndexView(
     }
     val kinds = remember(novenas.size) { novenas.associate { it.id to novenaKindOf(it) } }
 
-    val filtered = remember(novenas.size, searchQuery, selectedTag, kind, currentLanguage) {
+    val searchResult by androidx.compose.runtime.key(novenas.size, searchQuery, selectedTag, kind, currentLanguage) {
+        produceState<List<Novena>?>(null) {
+            if (searchQuery.isNotBlank()) kotlinx.coroutines.delay(180)
+            value = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
         val base = novenas.filter { novena ->
+            kotlinx.coroutines.currentCoroutineContext().ensureActive()
             val matchesSearch = searchQuery.isBlank() || listOf(
                 novena.title.get(currentLanguage),
                 novena.patron.get(currentLanguage),
@@ -1864,11 +1884,25 @@ private fun NovenaIndexView(
             matchesSearch && matchesTag && matchesKind
         }
         if (kind == NovenaKind.POPULAR) base.sortedBy { PopularNovenaIds.indexOf(it.id) } else base
+            }
+        }
     }
+    val filtered = searchResult.orEmpty()
+
     val filtering = searchQuery.isNotBlank() || selectedTag != null || kind != NovenaKind.ALL
 
-    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = bottomPadding)) {
+    LazyColumn(Modifier.fillMaxSize().testTag("novena_index"), contentPadding = PaddingValues(bottom = bottomPadding)) {
         header()
+
+        if (isLoading || hasError || searchResult == null) item(key = "novena_loading") {
+            AppEmptyState(
+                title = if (hasError) currentLanguage.pick("No se pudo cargar la biblioteca", "Could not load library", "Não foi possível carregar a biblioteca")
+                    else currentLanguage.pick("Cargando novenas…", "Loading novenas…", "Carregando novenas…")
+            )
+            if (hasError) Box(Modifier.padding(horizontal = design.spacing.gutter)) {
+                AppSecondaryCapsule(currentLanguage.pick("Reintentar", "Retry", "Tentar novamente"),onRetry)
+            }
+        }
 
         item(key = "novena_filters") {
             Spacer(Modifier.height(16.dp))
@@ -1971,7 +2005,7 @@ private fun NovenaIndexView(
             )
         }
 
-        if (filtered.isEmpty()) {
+        if (filtered.isEmpty() && searchResult != null && !isLoading && !hasError) {
             item(key = "novena_empty") {
                 EmptyCard(
                     title = currentLanguage.pick("Ninguna novena coincide", "No matching novenas", "Nenhuma novena corresponde"),
@@ -2800,12 +2834,11 @@ internal class NovenaExtraDaysStore(context: Context) {
 }
 
 private fun isNovenaFinished(novena: Novena, prayed: Set<Int>): Boolean =
-    novena.days.isNotEmpty() && novena.days.all { prayed.contains(it.dayNumber) }
+    novena.dayNumbers().isNotEmpty() && novena.dayNumbers().all { it in prayed }
 
 /** The first day not yet prayed, or the first day once the novena is finished. */
 private fun nextNovenaDay(novena: Novena, prayed: Set<Int>): Int =
-    novena.days.firstOrNull { !prayed.contains(it.dayNumber) }?.dayNumber
-        ?: novena.days.firstOrNull()?.dayNumber
+    novena.dayNumbers().firstOrNull { it !in prayed } ?: novena.dayNumbers().firstOrNull()
         ?: 1
 
 private fun novenaDayOf(language: AppLanguage, day: Int, of: Int): String = language.pick(
@@ -2813,3 +2846,28 @@ private fun novenaDayOf(language: AppLanguage, day: Int, of: Int): String = lang
     "Day $day of $of",
     "Dia $day de $of"
 )
+
+
+@Composable
+private fun NovenaBodyContent(
+    repository: CatholicDataRepository,
+    id: String,
+    language: AppLanguage,
+    content: @Composable (Novena) -> Unit
+) {
+    var attempt by remember(id) { mutableIntStateOf(0) }
+    val loaded by androidx.compose.runtime.key(id, attempt) {
+        produceState<Result<Novena>?>(null) {
+            value = try { Result.success(repository.loadNovena(id)) }
+                catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled }
+                catch (error: Exception) { Result.failure(error) }
+        }
+    }
+    val result = loaded
+    if (result?.isSuccess == true) content(result.getOrThrow())
+    else Column(Modifier.fillMaxWidth().padding(24.dp)) {
+        AppEmptyState(if (result == null) language.pick("Cargando oración…", "Loading prayer…", "Carregando oração…")
+            else language.pick("No se pudo abrir la oración", "Could not open prayer", "Não foi possível abrir a oração"))
+        if (result != null) AppSecondaryCapsule(language.pick("Reintentar", "Retry", "Tentar novamente"), { attempt++ })
+    }
+}

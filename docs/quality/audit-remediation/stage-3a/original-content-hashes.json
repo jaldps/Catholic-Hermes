@@ -1,0 +1,1724 @@
+[
+  {
+    "sourceClass": "NovenaData000",
+    "id": "novena-a-cristo-rey",
+    "dayCount": 9,
+    "sha256": "9d764cc21ae0e883b3317cd83c81ae86389d2e4b2c6c2eb215eadc2a470c2e61",
+    "bodySha256": "460937828a4935bac9768931ca56e65605a24e7cf6f0247281b235c41df943a6"
+  },
+  {
+    "sourceClass": "NovenaData001",
+    "id": "novena-a-la-beata-chiara-badano",
+    "dayCount": 9,
+    "sha256": "da663778982ad46b3ed618cdd6afc57f9b99f1326b4fc5970fe7af1c364cfc01",
+    "bodySha256": "88fd1c10a7ef3b527698a9acc5eb7038a8ab11fb58d087f56b40f03279f9ceef"
+  },
+  {
+    "sourceClass": "NovenaData002",
+    "id": "novena-a-la-divina-misericordia",
+    "dayCount": 9,
+    "sha256": "5949d403e2288612d100b2857779a803699c760ad04fb1d5da981e595362e3cb",
+    "bodySha256": "6c3bb1a5bb8d3619c69ded051dba4b5a86617eedf2cdf2b59aeeff76ddfa3bf5"
+  },
+  {
+    "sourceClass": "NovenaData003",
+    "id": "novena-a-la-inmaculada-concepcion",
+    "dayCount": 9,
+    "sha256": "60ccd91f1607346a76ae8e35ea041706ebfa5aed5fb13029da9a63e0e2658f39",
+    "bodySha256": "5918f6324a0f18080777b4d77b949f3dee0a31e2e0fb48fb74500a05e54d22b1"
+  },
+  {
+    "sourceClass": "NovenaData004",
+    "id": "novena-a-la-medalla-milagrosa",
+    "dayCount": 9,
+    "sha256": "7bd52f77e9e99134a0b595e01516750bb2882804a2d3a90b4ed7440c8c214065",
+    "bodySha256": "3997df3ceea20aa66f06930ca75833e4646f83238291acd0c942f02c25605bc7"
+  },
+  {
+    "sourceClass": "NovenaData005",
+    "id": "novena-a-la-natividad-de-la-virgen-maria",
+    "dayCount": 9,
+    "sha256": "f5a564bde2552a22e3daa9ec66a9026ecb8d6c6ce5d06e8ba26564d4a3f2b3ea",
+    "bodySha256": "c3af3c2bb32cb9c214a7b2b577dbbfed606499ecc21a8444f57a7448b6c2b8f2"
+  },
+  {
+    "sourceClass": "NovenaData006",
+    "id": "novena-a-la-preciosa-sangre",
+    "dayCount": 9,
+    "sha256": "281e1d6bebff368cb3c6743cd01c3a744702940cf7069a07eeca71ce42aaae3f",
+    "bodySha256": "0d78c8a4cae756852807c149acb8f4ef6385b51cc0c274d975af665d6c2a7e0c"
+  },
+  {
+    "sourceClass": "NovenaData007",
+    "id": "novena-a-la-sagrada-familia",
+    "dayCount": 9,
+    "sha256": "bd7a22bb9d9bcdceaec5afcf378ea80a16e08fa8b04c291383baed6e1673a2de",
+    "bodySha256": "f72f8d2c4428cb27b9967beb8e5ec3eaea847287118e03b56a3823cfce11d900"
+  },
+  {
+    "sourceClass": "NovenaData008",
+    "id": "novena-a-la-santa-cruz",
+    "dayCount": 9,
+    "sha256": "39d3cd0d185aae956766ea9a24cf5a9aff5c73f7d5b5493bc9d180e9bb00ab1a",
+    "bodySha256": "2f9a2d899d5335bd572d92a0f06c4b9164e6a611b664c954ddc0470ff21c1415"
+  },
+  {
+    "sourceClass": "NovenaData009",
+    "id": "novena-a-la-virgen-de-fatima",
+    "dayCount": 9,
+    "sha256": "4e35955b3e6c98c05d2ddcab969390753b1eaa6d6e70f94aa8fc7f75f59e0645",
+    "bodySha256": "8f10c46fef2e1e2091dd7b3b36d5d82c64a2b60a35a8a96be96fb30794276e64"
+  },
+  {
+    "sourceClass": "NovenaData010",
+    "id": "novena-a-la-virgen-de-guadalupe",
+    "dayCount": 9,
+    "sha256": "3e0ebd6846428c261a02978ac3c066e70c699d888c628b69961732aedd2bdbb7",
+    "bodySha256": "2b91da437776ca3d0b9111ccfce611d0a1610e62620631e7e1d3c3851578d464"
+  },
+  {
+    "sourceClass": "NovenaData011",
+    "id": "novena-a-la-virgen-de-la-caridad-de-cobre",
+    "dayCount": 9,
+    "sha256": "2eccd9f065d0ad3248b655b7b874d25eb68b9da2672f06b440695035831b6106",
+    "bodySha256": "6b7592c4d5d6a8ee59491e53951e0238f50eaa7273b492bd3d6995934ab2c896"
+  },
+  {
+    "sourceClass": "NovenaData012",
+    "id": "novena-a-la-virgen-de-la-revelacion",
+    "dayCount": 9,
+    "sha256": "66c117061546eeb1dd56bfd39cef27917cfdadc21a30adba4ae044f4c8a622fc",
+    "bodySha256": "084634c1463f7efaf4aff519fa40d95d7ab7736c738b00f514f5b54cc2835c99"
+  },
+  {
+    "sourceClass": "NovenaData013",
+    "id": "novena-a-la-virgen-de-los-desamparados",
+    "dayCount": 9,
+    "sha256": "fc618850a62b0b570a5bd68a5d1d9964236de9e7ad47c2a9e590edd2a4673cf7",
+    "bodySha256": "8b26403bcfdf7e65fcb1fc1823c4cb3233d52982e2a297312dd58dfa3bd5c6ac"
+  },
+  {
+    "sourceClass": "NovenaData014",
+    "id": "novena-a-la-virgen-de-los-dolores",
+    "dayCount": 9,
+    "sha256": "7ba64041f06d46c9923f127eaf840c66c8d6f7e3cc5d907d0bb7cca2cd1dfaf7",
+    "bodySha256": "918e32996ee217b0fbe1a2c382522234144d2f88c6117e7b388348fcc23638a4"
+  },
+  {
+    "sourceClass": "NovenaData015",
+    "id": "novena-a-la-virgen-del-carmen",
+    "dayCount": 9,
+    "sha256": "bd2001a584cefa0dae1affead23093c1b6aedbb99060399916aec278c79d4322",
+    "bodySha256": "7684a735c977949560c1fac085a8b082aed8cc30b1a65bfabaf7f52dbfe23343"
+  },
+  {
+    "sourceClass": "NovenaData016",
+    "id": "novena-a-la-virgen-del-rosario",
+    "dayCount": 9,
+    "sha256": "7dd9f3ca587d83dce00dfa9129bc926c397fb7af1fda73b0eef67d80a16e3be1",
+    "bodySha256": "e03a08d616875609a2d11490f05d460c6750795f60df4766287622641a2ec048"
+  },
+  {
+    "sourceClass": "NovenaData017",
+    "id": "novena-a-los-catorce-santos-auxiliadores",
+    "dayCount": 9,
+    "sha256": "e7482e8051f3d9917fb03062c64d6ba41c2d9f408e1095e230343296acc5d27c",
+    "bodySha256": "e0d1577350aa69bff2b9ab209d4f7073391fa497157db75627d85186ba2315f6"
+  },
+  {
+    "sourceClass": "NovenaData018",
+    "id": "novena-a-los-martires-de-norteamerica",
+    "dayCount": 9,
+    "sha256": "3430fd62f381dfa66a39ad420ef0efd69aa2d1e0b58f7f265636143161f42a9e",
+    "bodySha256": "f6885bd3845341217d8bc2a95d046574d42783de1dbba15fc279b2717644543f"
+  },
+  {
+    "sourceClass": "NovenaData019",
+    "id": "novena-a-los-martires-ingleses",
+    "dayCount": 9,
+    "sha256": "523ec861236865143bbeabe70dc2b5fc4bb2645116b4c63e174051837eed4aca",
+    "bodySha256": "9d25d2f5fc4effda82b114d33f728951da8f41b552c17126b59258499e64bc4f"
+  },
+  {
+    "sourceClass": "NovenaData020",
+    "id": "novena-a-los-santos-cosme-y-damian",
+    "dayCount": 9,
+    "sha256": "a1745b6ec92b258f2bfb792050e914bb38715e58a0e8ce18017605d8667e0019",
+    "bodySha256": "8f85c0cd90406d3bea9e749c03b22b668b2be06bde50a7700fa173f5015bbf70"
+  },
+  {
+    "sourceClass": "NovenaData021",
+    "id": "novena-a-los-santos-felipe-y-santiago",
+    "dayCount": 9,
+    "sha256": "e1fd1ca567e482de2d404149f532e920eb4fe1e8968cab881d99e0a0d9776016",
+    "bodySha256": "73a05ac07120e6b92974fdda1ba00fa6089f7c7d33d2a938cc1078180cd25359"
+  },
+  {
+    "sourceClass": "NovenaData022",
+    "id": "novena-a-los-santos-inocentes",
+    "dayCount": 9,
+    "sha256": "6c2a960de9a61a7ecdacd30cfa0f54522c1c44caf78eebe7da70fd27e5ec406a",
+    "bodySha256": "e9b9d3c3399cab88c719ff5e7f8d84f9acf8a46f2dd0f4a3bccd6834b455387f"
+  },
+  {
+    "sourceClass": "NovenaData023",
+    "id": "novena-a-maria-auxiliadora",
+    "dayCount": 9,
+    "sha256": "6674f3acf0ecb448ed47549a9e6c2f2502061f7d4f71ac4f8e3ba3e5173a0490",
+    "bodySha256": "b9b80cc69c76989e9e4b411371e00d561f57e7b6f9f31f47d56892a250826e4d"
+  },
+  {
+    "sourceClass": "NovenaData024",
+    "id": "novena-a-maria-desatanudos",
+    "dayCount": 9,
+    "sha256": "9a395be276053267d8c32a938549ebd66c1a13706e91c07a7f68e4fb2adfc8e8",
+    "bodySha256": "16a8bc7f9092326a111c195cc2da1477977068bfcb0c68ea420108ca82c0d930"
+  },
+  {
+    "sourceClass": "NovenaData025",
+    "id": "novena-a-maria-reina-de-los-apostoles",
+    "dayCount": 9,
+    "sha256": "2f6806bd822b3282511a358933e26522af551ee7c2d834aec85530cd0ba15c37",
+    "bodySha256": "d112997c58e9db3e040a30389a80bd3b3dfde8836971cb0f0ea30be771845d0f"
+  },
+  {
+    "sourceClass": "NovenaData026",
+    "id": "novena-a-maria-reina",
+    "dayCount": 9,
+    "sha256": "17c59f1b22da005a394234fa7722ef5dbd0d282fef4fc2c1d90ad20ee2d937fa",
+    "bodySha256": "813edc45ef2e1081466824392be3ca250ebde950fab5579f75eb18867d02ec90"
+  },
+  {
+    "sourceClass": "NovenaData027",
+    "id": "novena-a-nuestra-senora-de-champion",
+    "dayCount": 9,
+    "sha256": "3732cf5ca58bfa0028639bcca354066b334abf7a4ba671f3dd3523060eba5bd9",
+    "bodySha256": "b3498a954c03c25638e6642180c6f95fb17e641b42aa14d9b53ae3681a7917d2"
+  },
+  {
+    "sourceClass": "NovenaData028",
+    "id": "novena-a-nuestra-senora-de-czestochowa",
+    "dayCount": 9,
+    "sha256": "6666255ba9af25eb0b38200c2bcb176f7c7c43bb7198afa40c1301c4aa2b4854",
+    "bodySha256": "ad799a07dea2dfaae5205a1536d64690dfb321ec6f05d5fd1cbad74e17432006"
+  },
+  {
+    "sourceClass": "NovenaData029",
+    "id": "novena-a-nuestra-senora-de-knock",
+    "dayCount": 9,
+    "sha256": "41f43bdece8f94fb600061c5418beb1fb18e8d7a03ac800ef2fe79f5047209e3",
+    "bodySha256": "faf445e1e48888f25637537f86c9dc23dac497c91bd32c5218d83a19fc2e9c7d"
+  },
+  {
+    "sourceClass": "NovenaData030",
+    "id": "novena-a-nuestra-senora-de-la-buena-salud",
+    "dayCount": 9,
+    "sha256": "a7cb2cc876f94dfdd8af325ad524f0d198388d026c44a9d9c3242721978e0779",
+    "bodySha256": "621be163f4ca2816f247a0520974438a531a1e3d43dd53f83fbbee5f0ad30136"
+  },
+  {
+    "sourceClass": "NovenaData031",
+    "id": "novena-a-nuestra-senora-de-la-esperanza",
+    "dayCount": 9,
+    "sha256": "94f5376a9c044e1c383add5c7d7a8bb002c2a1139554d9068c5b98c4d3174332",
+    "bodySha256": "657c333e6ea4fa4a31e6c94dc04ae46139d7a13bd3ba5866492762d4534da003"
+  },
+  {
+    "sourceClass": "NovenaData032",
+    "id": "novena-a-nuestra-senora-de-la-leche",
+    "dayCount": 9,
+    "sha256": "22079b0f2b61fed0d463041aa072a9ec41f9477bbc0369e28614366a3614a917",
+    "bodySha256": "f9f5bf19de86f49d6cf8af475bd7045ee426934b2de31328e9dcd0d5b298aca4"
+  },
+  {
+    "sourceClass": "NovenaData033",
+    "id": "novena-a-nuestra-senora-de-la-paz",
+    "dayCount": 9,
+    "sha256": "3de50a59472cfb081625608c3cbed834ecab6957c8040acca2471d8a273c33d7",
+    "bodySha256": "6bfec37a6b35bde8a576d4f8256e5aab3f4638875ef5244a2d70ed51b0e7ec84"
+  },
+  {
+    "sourceClass": "NovenaData034",
+    "id": "novena-a-nuestra-senora-de-la-salette",
+    "dayCount": 9,
+    "sha256": "95da3b569e24743f46319b792fbb8df5c877eac2240a5ea4c78ba0d7c4b57523",
+    "bodySha256": "83f97c3ad897f238b0cca7b96b1eea98aa79ae481e33c1e01b09a5845eae6a6d"
+  },
+  {
+    "sourceClass": "NovenaData035",
+    "id": "novena-a-nuestra-senora-de-las-gracias",
+    "dayCount": 9,
+    "sha256": "630456c89d2c0f127bfddbbccd960bad788b189ab79f62d7b26d72cee380a642",
+    "bodySha256": "5869c49c86025bbe3d71f591e7eb55ec404267a930ce62bb2cf6d6929e5166bc"
+  },
+  {
+    "sourceClass": "NovenaData036",
+    "id": "novena-a-nuestra-senora-de-las-nieves",
+    "dayCount": 9,
+    "sha256": "e71d00aab7e35270dc0a11d06fb2af4e1db598699c572e219441894eae24cec3",
+    "bodySha256": "b7825039e006e2de225e9f7f7e9b3a4e5f079c849d80c9f4f50545de2dfe9673"
+  },
+  {
+    "sourceClass": "NovenaData037",
+    "id": "novena-a-nuestra-senora-de-lourdes",
+    "dayCount": 9,
+    "sha256": "660dcd0f16da18117da2e944d6160525eab8fab57acb22c1c4cfadb42d585325",
+    "bodySha256": "c80559c3fd88ed89df71083af81cf0f522eefe66f1fdd2e2b3b76cc28bb64b68"
+  },
+  {
+    "sourceClass": "NovenaData038",
+    "id": "novena-a-nuestra-senora-de-monte-berico",
+    "dayCount": 9,
+    "sha256": "6fcbb2da543776aa6b00b4867d3b2dee85bab75def8c481b30e3b7cf52996822",
+    "bodySha256": "9fbb901eef81716a6c629acad5359d52c425efc8dbf926b4d7ba82996a1c38a0"
+  },
+  {
+    "sourceClass": "NovenaData039",
+    "id": "novena-a-nuestra-senora-de-walsingham",
+    "dayCount": 9,
+    "sha256": "c09a3658028693d5eff6f304c89121ca9226648ddced4e43da7a5b0d06cb1e04",
+    "bodySha256": "fd83397deaa992f826361fde34c1ab4a051e2cdec5671156594c7079843fd79b"
+  },
+  {
+    "sourceClass": "NovenaData040",
+    "id": "novena-a-nuestra-senora-del-buen-consejo",
+    "dayCount": 9,
+    "sha256": "72729ce55eff1e9aaab8a419bf9c2eba2a71ecb2978e750fd2508297b13b2872",
+    "bodySha256": "5019c93f68746ccc4a706f973360ab404bc1d91af9a80d7766d05c8f9c51a2a5"
+  },
+  {
+    "sourceClass": "NovenaData041",
+    "id": "novena-a-nuestra-senora-del-buen-remedio",
+    "dayCount": 9,
+    "sha256": "16f6d50d50694703c4951a0d362f01d0e79e82e5f7829ee66f92dbb3abcf28a4",
+    "bodySha256": "20af52c786ea5a889dd49a7abcd297eb750c8835e582c7ddfb908f1deb9c5cd3"
+  },
+  {
+    "sourceClass": "NovenaData042",
+    "id": "novena-a-nuestra-senora-del-buen-suceso",
+    "dayCount": 9,
+    "sha256": "794c1e88c7842ba6cf7ebf78d76eb2b5cb66e99872100b0c1fc1dd86c76b8a50",
+    "bodySha256": "046cbccc06c32366cd3e981472c3724fe0d47dc81afdf383430d7859b415a255"
+  },
+  {
+    "sourceClass": "NovenaData043",
+    "id": "novena-a-nuestra-senora-del-perpetuo-socorro",
+    "dayCount": 9,
+    "sha256": "0604fdb75cccccd33b339a6d182c90db3b2da7585d15ba733ce6a192bb4a0a59",
+    "bodySha256": "e49fec4dfaa5d6e22dd3e411e63b3947c8716a55404160a8049ff0c7c6462d7d"
+  },
+  {
+    "sourceClass": "NovenaData044",
+    "id": "novena-a-nuestra-senora-estrella-del-mar",
+    "dayCount": 9,
+    "sha256": "627fb34ab59b14684fa3bae071977882cae5d5376fddaa9b72a5c70cd6a59563",
+    "bodySha256": "30b7bfbeb40a0928a1b014eca148684d0cd5ba9779b4a963fb59cdb5eacd6bfb"
+  },
+  {
+    "sourceClass": "NovenaData045",
+    "id": "novena-a-padre-pio",
+    "dayCount": 9,
+    "sha256": "861382cadf54681e1fd9b1ef2a4ce0bc64ad0f22b686c6b9c0da67fd8dd8097b",
+    "bodySha256": "ef4840540e8ea7f036421951e3b75744079d98be4a2278def93652995aa5410b"
+  },
+  {
+    "sourceClass": "NovenaData046",
+    "id": "novena-a-san-agustin",
+    "dayCount": 9,
+    "sha256": "ee41b3b11a80aea818779c65e46c714fb632aa6f386110ab84bc877363b79bcb",
+    "bodySha256": "1671dc3caf5de091387ef4079f928c68e901078ca12b772779af7ca9cd8f2f1d"
+  },
+  {
+    "sourceClass": "NovenaData047",
+    "id": "novena-a-san-alberto-magno",
+    "dayCount": 9,
+    "sha256": "2520dc2c072592b809a5c47bb5274b2d8901cb59819423c8517370c84502857b",
+    "bodySha256": "20d49a42da02f4d6ca281504a4a570597713c112e32dbf0d036c673db0aa3f75"
+  },
+  {
+    "sourceClass": "NovenaData048",
+    "id": "novena-a-san-alfonso-maria-de-ligorio",
+    "dayCount": 9,
+    "sha256": "20d83f29d2b87cde5af96eaf60a963a6f2dc839881e4a83e43f3d9f0a3cb3d31",
+    "bodySha256": "461e43ab9759ec96bf422e6df3015ca6b5f982b72c2e8abc6fcbc6a0d0645862"
+  },
+  {
+    "sourceClass": "NovenaData049",
+    "id": "novena-a-san-ambrosio",
+    "dayCount": 9,
+    "sha256": "50e05906825d5293257b5bd9f5f332fc8a8c965388a3f98d53f341a9af8a5159",
+    "bodySha256": "8a562c4240e1c0c8753c285cc5ce2a6867e90fcc11a07f5d40c92470ed840ce1"
+  },
+  {
+    "sourceClass": "NovenaData050",
+    "id": "novena-a-san-andres-apostol",
+    "dayCount": 9,
+    "sha256": "240f46f353422658d356a845af4911e3744a05f13d308ece1d4389afeb9da900",
+    "bodySha256": "49425ac2d02911eb0cd5383c214a5a62251680e51cf70449c16c26ddd8aabf93"
+  },
+  {
+    "sourceClass": "NovenaData051",
+    "id": "novena-a-san-andres-avelino",
+    "dayCount": 9,
+    "sha256": "e31fb476a7a2ce6175ccd065202367d6a12752f6d43b4749da4cddfdaf0db951",
+    "bodySha256": "ec2e5f6bf779b5d9b2f397d6b072101141f9969af99add5cb710d41f46297d8a"
+  },
+  {
+    "sourceClass": "NovenaData052",
+    "id": "novena-a-san-andres-bessette",
+    "dayCount": 9,
+    "sha256": "b99938265133cf5f1ff8efbd46e24cbcecdfd032192c9d32a627c0138536fbd8",
+    "bodySha256": "950539af33b9e443b56ae8f49c71a829a225892696a3cabc4cf6b2ee6f248ee4"
+  },
+  {
+    "sourceClass": "NovenaData053",
+    "id": "novena-a-san-antonio-de-padua",
+    "dayCount": 9,
+    "sha256": "1f9a7b027d6add89394fcae19d43dc725760a064d25e43da536b3594a97ba268",
+    "bodySha256": "6ab54d5213fadcb73c590ee99d391f678068211700e6de118202775f17e3bca0"
+  },
+  {
+    "sourceClass": "NovenaData054",
+    "id": "novena-a-san-antonio-maria-claret",
+    "dayCount": 9,
+    "sha256": "4f61e672f2649347965d1a0a3143a0abc5c2df1e891f5389e6d5a8cbeee3950d",
+    "bodySha256": "ba7fcd8a60ff53a73d0f2ea9e972b1f887a3023253d617562b351b4cf2d740e6"
+  },
+  {
+    "sourceClass": "NovenaData055",
+    "id": "novena-a-san-benito-de-nursia",
+    "dayCount": 9,
+    "sha256": "0b09715ba30b6612765045034fe9e68b786ad882a611a0ca803d75a64faca858",
+    "bodySha256": "f72b5f0b84a7a1da31f5effffb82c49fae7451a3902179754a9dad5c7481b291"
+  },
+  {
+    "sourceClass": "NovenaData056",
+    "id": "novena-a-san-benito-jose-labre",
+    "dayCount": 9,
+    "sha256": "a62a699933d31aa164ca20ad1ae2e5da9d19fcc34f828f1434fee898f2c34366",
+    "bodySha256": "bf81580ca6f053918a2f61b53ca50734f92f71422ec7f0e7ca67cdbf7802c72e"
+  },
+  {
+    "sourceClass": "NovenaData057",
+    "id": "novena-a-san-bernardino-de-siena",
+    "dayCount": 9,
+    "sha256": "789ae1da3e7e7f7e52521c00369aa075fdeedb2a074a2dcfed9786fdea8c606d",
+    "bodySha256": "864ba05aebf464360ab4416ea6af84c4228c614615405b02e8bb2de0052c043e"
+  },
+  {
+    "sourceClass": "NovenaData058",
+    "id": "novena-a-san-bernardo-de-claraval",
+    "dayCount": 9,
+    "sha256": "7ace4274647ee382d3cdb0ce1a260e35c367e719325b314d90080823493798e9",
+    "bodySha256": "a6048dc03f59901cabf8fab830c59c4fd0d669c14e03f9796dbe6bf38ae4a0a1"
+  },
+  {
+    "sourceClass": "NovenaData059",
+    "id": "novena-a-san-blas",
+    "dayCount": 9,
+    "sha256": "e73897eab0181f0743e5e9fb2887de6ac25d8ae71f3a38cebf850252f4cf7e78",
+    "bodySha256": "f8ababb5ea9d19c6082aab0c533fb5975eb62e6c41b18cfaea594b9d6bdb7bd3"
+  },
+  {
+    "sourceClass": "NovenaData060",
+    "id": "novena-a-san-brandan",
+    "dayCount": 9,
+    "sha256": "f27ec44de35c627f70676f2ed795f259e4f58503e52a5f990f9404e6998f019d",
+    "bodySha256": "79e72986d761fa211391db3e231c4d7cdeb48556b2c2b7d76d4e42e983e9065c"
+  },
+  {
+    "sourceClass": "NovenaData061",
+    "id": "novena-a-san-carlo-acutis",
+    "dayCount": 9,
+    "sha256": "a7475863eee4bb5feb08888f8fe8bf6e866558b93842006a09a17e8c7fe1581b",
+    "bodySha256": "7fb0eac53b4113c93be278872bcfe6d2b3db9bb0dc7aef1cd246f4b61769e084"
+  },
+  {
+    "sourceClass": "NovenaData062",
+    "id": "novena-a-san-carlos-borromeo",
+    "dayCount": 9,
+    "sha256": "8e5ca38345647c101a7ce1aa8436d47886aae81035472acba3d86197635db3a5",
+    "bodySha256": "c61a1f6a3c001c43a9aa660ecd7331f484f6a24bbfb4e7834bcf51721111737e"
+  },
+  {
+    "sourceClass": "NovenaData063",
+    "id": "novena-a-san-cayetano",
+    "dayCount": 9,
+    "sha256": "5244aacd70cea67bf39e93396a9d766a98a0a1d39fba0bba410ccedb5177b61c",
+    "bodySha256": "313fbb20f159082bd3d573e6c845d88a5765b473f5608a873599c1b2485f6cc0"
+  },
+  {
+    "sourceClass": "NovenaData064",
+    "id": "novena-a-san-charbel",
+    "dayCount": 9,
+    "sha256": "58aa29a4b5a2e20f484e83af70e5147065b37885324ae74e67877dfc9d7c443d",
+    "bodySha256": "4f594a7a69fe8d47f27983e64a0066faa8888786ff40c17145c76ee493375025"
+  },
+  {
+    "sourceClass": "NovenaData065",
+    "id": "novena-a-san-cirilo-de-jerusalen",
+    "dayCount": 9,
+    "sha256": "0b7f9bf1751f6043ef0251cfd00536df9a25a979906674f7c862db5204b05355",
+    "bodySha256": "95f33f966ee81a626ad2dd632543d8859810bce61fcebd9185cae81236c1476e"
+  },
+  {
+    "sourceClass": "NovenaData066",
+    "id": "novena-a-san-cristobal",
+    "dayCount": 9,
+    "sha256": "932c3226480c941b1ffc04841c67702907c9abae397bd30f5b03af4f4559c2b7",
+    "bodySha256": "65d7748ecc8c7f7f4f535c6afe6b4980aaaf6e7a108bc1137a88f0ca04e41368"
+  },
+  {
+    "sourceClass": "NovenaData067",
+    "id": "novena-a-san-damian-de-molokai",
+    "dayCount": 9,
+    "sha256": "3103f3fd5357e0e7e127de81a98ac8b16ae98cca2dd9a2a0df96b2c0d0877057",
+    "bodySha256": "c650ff419e148045d4097f5dc4972cd0a515806839eba9be5375fc880fe64417"
+  },
+  {
+    "sourceClass": "NovenaData068",
+    "id": "novena-a-san-dionisio",
+    "dayCount": 9,
+    "sha256": "aae4a83196d7943d74ee93c651fb2ce784b504fa26ac7849f93d3a8e53f75529",
+    "bodySha256": "2b1cf76270e6cfc279c90fc95cb463b6b4e9148c6fb140d9fa8e7bc096d0f3d5"
+  },
+  {
+    "sourceClass": "NovenaData069",
+    "id": "novena-a-san-edmundo-campion",
+    "dayCount": 9,
+    "sha256": "91250195d731a49ed024ad06b9f2bdbaa5510fa6997468ff67428a7e81dc7501",
+    "bodySha256": "79da656a53354b700ea6af6fb69a4e07e579c80220e48e7b0d346aaf097dbfea"
+  },
+  {
+    "sourceClass": "NovenaData070",
+    "id": "novena-a-san-enrique-ii",
+    "dayCount": 9,
+    "sha256": "fd4dbf40afe5cc10d30c4d255300c0692df4a6586d13e41fcf1c7bc43da47353",
+    "bodySha256": "a7c8b1dfaee7f6e1701ef2e881e1a7734111ed4385a3d2e2180f85c6b251bbb9"
+  },
+  {
+    "sourceClass": "NovenaData071",
+    "id": "novena-a-san-esteban",
+    "dayCount": 9,
+    "sha256": "52d76a301636ff6552f66a7e2a03e9c10effadde8de714cae4902cbc28bf6884",
+    "bodySha256": "827c96a0d10f1c6d773b7fffd5af69f0a416287a944dde40640427102528d6b5"
+  },
+  {
+    "sourceClass": "NovenaData072",
+    "id": "novena-a-san-expedito",
+    "dayCount": 9,
+    "sha256": "327d3beced64c1740827de172abd6956cf1b3db665c9ddf8f5b7c63dac43f90b",
+    "bodySha256": "5409031d82da5683e624ece985649631dca3f17732a8676e68beb51f720a5c03"
+  },
+  {
+    "sourceClass": "NovenaData073",
+    "id": "novena-a-san-felipe-neri",
+    "dayCount": 9,
+    "sha256": "e0061d8c1391a819f93b9c35e4e259c305ead5f4209b42cdbf0ec1eb74ed5520",
+    "bodySha256": "f334e1159bb4fcdc6b85741d0241f9a41b2c1eaa4c1830d1589a21e5e0483cd4"
+  },
+  {
+    "sourceClass": "NovenaData074",
+    "id": "novena-a-san-francisco-de-asis",
+    "dayCount": 9,
+    "sha256": "95b71fded8e12e5dd6d1e327d6c2b877b6bd08df04ac92583fa69bb4b0147745",
+    "bodySha256": "2d4bb4e88da880e1cfa359901e92eaec92592eafbdfa8e2790426f1e1ae8b62a"
+  },
+  {
+    "sourceClass": "NovenaData075",
+    "id": "novena-a-san-francisco-de-sales",
+    "dayCount": 9,
+    "sha256": "98f2dfdf034c398e920022d7c66ae8ec9fcbbe7b5fa422aba30958843ead2d70",
+    "bodySha256": "f14bda933411a9ed272c697275f9d44c382c9a9f2204e67604706b728540fa43"
+  },
+  {
+    "sourceClass": "NovenaData076",
+    "id": "novena-a-san-francisco-y-santa-jacinta-marto",
+    "dayCount": 9,
+    "sha256": "b2843cac0c0ebf54fb31cbd26ff93838c45e2df7194934f011cc679485d267ed",
+    "bodySha256": "8d5354c5b9f40754dd6f43d9ebfd14e5ccb723560453d4844fcb67969100e2c6"
+  },
+  {
+    "sourceClass": "NovenaData077",
+    "id": "novena-a-san-gabriel-arcangel",
+    "dayCount": 9,
+    "sha256": "29cfd8f7c7c81820d454e05727d8ac9d7392cbb6159d1259434c26469caba2d0",
+    "bodySha256": "78386e3105c5179dcdc8fedfe1819b49c1be9ea006dc0cd0275ef6c199d68255"
+  },
+  {
+    "sourceClass": "NovenaData078",
+    "id": "novena-a-san-gabriel-de-la-dolorosa",
+    "dayCount": 9,
+    "sha256": "e35290f40cb65851639f9043e677762830612a26f3b883987f6f3d9621f69cc7",
+    "bodySha256": "e130a0481829aa918838980ed4d77974d2109aa602081ffc554a97911ed1c1d5"
+  },
+  {
+    "sourceClass": "NovenaData079",
+    "id": "novena-a-san-gerardo-mayela",
+    "dayCount": 9,
+    "sha256": "31c32d60aec1c516b6b532b92669068ed2a6ca57ab359dd2dd2ba622a0e041d0",
+    "bodySha256": "c22c74a2a317361a23e0f8cbcc5de0cf7ad2a8d89894c37e1bb1583e2dec892d"
+  },
+  {
+    "sourceClass": "NovenaData080",
+    "id": "novena-a-san-gregorio-magno",
+    "dayCount": 9,
+    "sha256": "41b7e4bd53783a2e27b5c6239c684bc7c97ff9fd37a4ae8d8d162439e1ca980c",
+    "bodySha256": "044dd26560f7233ed83bc12455964e0a107c4d79343457e8ba20200adfe0a828"
+  },
+  {
+    "sourceClass": "NovenaData081",
+    "id": "novena-a-san-homobono",
+    "dayCount": 9,
+    "sha256": "02d8b7e788bdef59d1bf3d47cbdf7ad4340c92c885b1aa66e9b47ef1c692719b",
+    "bodySha256": "da100124093ceecaa4f16b5ac6acb5ba16c69e8f50a7e42ed107860acfae565e"
+  },
+  {
+    "sourceClass": "NovenaData082",
+    "id": "novena-a-san-ignacio-de-loyola",
+    "dayCount": 9,
+    "sha256": "2cb0fea1f0106f9d5fa7ba2a84ebedf4512970ea4355acfee25d47706aa67165",
+    "bodySha256": "d7e1880604b1a20e644d44126772257b6d95432c862ef886227e6d36cc4f4d3e"
+  },
+  {
+    "sourceClass": "NovenaData083",
+    "id": "novena-a-san-isidoro-de-sevilla",
+    "dayCount": 9,
+    "sha256": "b64797856d59339aa81903a60ac08630ffb8f2c133334010963854881976aec8",
+    "bodySha256": "db9212d873d79b1b3069192562a521de0eccf8eff2d57e5401d1206b686f69b1"
+  },
+  {
+    "sourceClass": "NovenaData084",
+    "id": "novena-a-san-isidro-labrador",
+    "dayCount": 9,
+    "sha256": "d685648574d5d2189ad9ab4fa6aeb4e99affd3c75e1b9dbdf709f9e95b566b7b",
+    "bodySha256": "327a19af9ecad6b419c3e7a39210192a4cc32f8012300a3ff843db4ecb61d2b8"
+  },
+  {
+    "sourceClass": "NovenaData085",
+    "id": "novena-a-san-joaquin-y-santa-ana",
+    "dayCount": 9,
+    "sha256": "a36e2f56ec205c445e198384682683f3972c5c76756e5c4145229ad6168815ef",
+    "bodySha256": "04ce87a0ad849d15d1e8148811aadd290ab268f99c797a7ae714acaa5cec63e5"
+  },
+  {
+    "sourceClass": "NovenaData086",
+    "id": "novena-a-san-john-henry-newman",
+    "dayCount": 9,
+    "sha256": "cc290a925ce19ca96d2e4c7166a9c3043d70f96fced35b79505d3ab3d9982e9d",
+    "bodySha256": "0ece3abd281130541bad842f25ab2971aa90033b2faef7188f33ef6af33b8cc8"
+  },
+  {
+    "sourceClass": "NovenaData087",
+    "id": "novena-a-san-jorge",
+    "dayCount": 9,
+    "sha256": "edf19e6b715e843fb79ac12236a8fd68ab36aea297c957d86183b6129f97985f",
+    "bodySha256": "e482cc81eb33ecf3b1bdebbd3a4bfc0f79a1bc74223a33c13b3ec293918bdec7"
+  },
+  {
+    "sourceClass": "NovenaData088",
+    "id": "novena-a-san-jose-de-cupertino",
+    "dayCount": 9,
+    "sha256": "32c95bb618275af9f16bfbdce94f0fffbecbb64c31c38e0b3904efc6ed9038b9",
+    "bodySha256": "0aa60110af9a529a0599ba8d639d041eac36ab631411214915a2e80eb05686d6"
+  },
+  {
+    "sourceClass": "NovenaData089",
+    "id": "novena-a-san-jose-luis-sanchez-del-rio",
+    "dayCount": 9,
+    "sha256": "e7c991707637b39da120fc5984568c99e006c36d40ddbc55e122d7aed36d0cf2",
+    "bodySha256": "dd25bfcaa622a0b9d78c1ca34d9ae4fd71968e536278a0e661e4e26827b7d6cc"
+  },
+  {
+    "sourceClass": "NovenaData090",
+    "id": "novena-a-san-jose-moscati",
+    "dayCount": 9,
+    "sha256": "dda548de331e66cafd398c5122b7c5fb9ca440591d15844a541a0b1cb3921172",
+    "bodySha256": "b1188072b2c7a9a2b404872067d4fa200cedcb464a15c695d0ef5c4c181fcc08"
+  },
+  {
+    "sourceClass": "NovenaData091",
+    "id": "novena-a-san-jose-obrero",
+    "dayCount": 9,
+    "sha256": "ad78579bc961e983de38d8db53c4c5ab8bb4e80db5a9dcada1fea6f762470c32",
+    "bodySha256": "d28045db71a69a9e16cd339cfefee0bfa976926c283a789974baf7e23729a295"
+  },
+  {
+    "sourceClass": "NovenaData092",
+    "id": "novena-a-san-jose",
+    "dayCount": 9,
+    "sha256": "dcb1dc967e2364733d44041a64a0e301831b6a80ac363a8e05c9fc155b71cd9d",
+    "bodySha256": "5c4c490275cbadd4953eebe965a93523a42e584f3dcffc8275cfa6e5a108754b"
+  },
+  {
+    "sourceClass": "NovenaData093",
+    "id": "novena-a-san-josemaria-escriva",
+    "dayCount": 9,
+    "sha256": "5a310d175bb8b123fce3900f0ac7e7eff8a6aeaffeb701332a4aacbf35a6909b",
+    "bodySha256": "9ea4b607946c12d994391b796c0d02fb357e33a29a9c65cd813f5387230170e8"
+  },
+  {
+    "sourceClass": "NovenaData094",
+    "id": "novena-a-san-juan-apostol",
+    "dayCount": 9,
+    "sha256": "a94206eddf32d1a4558da081e25f0619b9059cb19d0560ac84135256a7fb2245",
+    "bodySha256": "6b2534b04d81617ff6d577ec02a34b1f8fe026db16e4f5ef2228067230a8731f"
+  },
+  {
+    "sourceClass": "NovenaData095",
+    "id": "novena-a-san-juan-bautista",
+    "dayCount": 9,
+    "sha256": "88de358a22d7acd32c94de2e6637ab43013797b837a9ad9836e13a8891a0690b",
+    "bodySha256": "2648c3e790e2835b1da386edd6b9fd7779dd21fd1b8e6777e816946e97084bb6"
+  },
+  {
+    "sourceClass": "NovenaData096",
+    "id": "novena-a-san-juan-bosco",
+    "dayCount": 9,
+    "sha256": "b994f93940a1be5e39390d46bbb2460f0f350ad11877e88008dcadec7b22bef2",
+    "bodySha256": "89f5ced6d165a473a4b06e88931f46abf9c88c1304e1ba258abf3bad3a67b347"
+  },
+  {
+    "sourceClass": "NovenaData097",
+    "id": "novena-a-san-juan-damasceno",
+    "dayCount": 9,
+    "sha256": "e5c6bd305c0ced9a2a83edc800e5588814db5ba3f6cc7578a4b2341b690dc046",
+    "bodySha256": "1e072477bb830036206a841b87587dc2926c7e0e2eabaea40e289da877ce2663"
+  },
+  {
+    "sourceClass": "NovenaData098",
+    "id": "novena-a-san-juan-de-dios",
+    "dayCount": 9,
+    "sha256": "0b50749b057d643881ca7f7d5cfb68b94174c68976aef02d77b8e4427646e6ac",
+    "bodySha256": "c0d87c14a3d0426c995494b652c2c621b56817daab06d167f4dc2065cc16c50a"
+  },
+  {
+    "sourceClass": "NovenaData099",
+    "id": "novena-a-san-juan-de-la-cruz",
+    "dayCount": 9,
+    "sha256": "da5c7e8171bde18c11b173934ba38f2f4e993b419c402c7dbc8e54a5bf994624",
+    "bodySha256": "15ee2977f8c745ed6a68978b1e0a7a9ae3943d0580a1983a25da13e2ea146596"
+  },
+  {
+    "sourceClass": "NovenaData100",
+    "id": "novena-a-san-juan-diego",
+    "dayCount": 9,
+    "sha256": "d076285b158c1e249c2df5035f266acff253692a73b2177a0117a12ecf2da7f5",
+    "bodySha256": "1fbfb1c7327270ad9c3f576067abc9a79278ad8daaea7ac2c4bdd3c0af02b435"
+  },
+  {
+    "sourceClass": "NovenaData101",
+    "id": "novena-a-san-juan-maria-vianney",
+    "dayCount": 9,
+    "sha256": "b719535c0b94170e1dd11e9320fad33cce526def2bf5944f51af46a66c4b58b8",
+    "bodySha256": "1ca7bb65d780116ce0572ab42cea26809b4b3e144a512303a63b183b199c828b"
+  },
+  {
+    "sourceClass": "NovenaData102",
+    "id": "novena-a-san-juan-neumann",
+    "dayCount": 9,
+    "sha256": "d857adb348ea1002460dfbf83ee874b155da864e295fe365e6707dce907b4502",
+    "bodySha256": "3b97a2291910cca5a49707a933a85f25e4af23bbd22dac13c22f050af6cd85d5"
+  },
+  {
+    "sourceClass": "NovenaData103",
+    "id": "novena-a-san-juan-pablo-ii",
+    "dayCount": 9,
+    "sha256": "03cd82199f051145c8f32177a1902eb433a9de07164f635d65961c3077e89015",
+    "bodySha256": "bdc01b38f79af2f43b609756cb4ddf890f4fe16bd8c340b8dc8057d5dce50539"
+  },
+  {
+    "sourceClass": "NovenaData104",
+    "id": "novena-a-san-judas-tadeo",
+    "dayCount": 9,
+    "sha256": "c5472cbc5fa8a807450002e5ede147d2191aa6fcacf7a7416cfcac62e0706985",
+    "bodySha256": "ff73f6b1c96ed619b543e492b9452885e8e2ca961a543d6a56aa011f1a086395"
+  },
+  {
+    "sourceClass": "NovenaData105",
+    "id": "novena-a-san-justino-martir",
+    "dayCount": 9,
+    "sha256": "aec1fcb15652d4a45e12991f525c5af2d56151520dce7032165e902b542cf467",
+    "bodySha256": "d25db7adb176f7f1bef8781bf670e01dd8c1c17651e70845cd843933c4d1ca33"
+  },
+  {
+    "sourceClass": "NovenaData106",
+    "id": "novena-a-san-leon-magno",
+    "dayCount": 9,
+    "sha256": "ca2a7a4a3a02b190bff07e906b876cedcdcba4d611bb2d47a7fb38402e574863",
+    "bodySha256": "7273507e7efe9f4db62e81a39971c8e93dba4e5fd0ba6a7027e4683857680497"
+  },
+  {
+    "sourceClass": "NovenaData107",
+    "id": "novena-a-san-lorenzo",
+    "dayCount": 9,
+    "sha256": "de80cd973f0016003e3bde890c027bafe79512ac12e2d3c43b33fc37bb9c3236",
+    "bodySha256": "66d6b03a9b61a506dc6372660aeac665e268098210b6d603709bf4e562fe462a"
+  },
+  {
+    "sourceClass": "NovenaData108",
+    "id": "novena-a-san-lucas",
+    "dayCount": 9,
+    "sha256": "66ef39c53bf3665af72083e0fb61506b92d4a4e5584508891b3e9f3aee718063",
+    "bodySha256": "d52c0a937093bbcb9df91a497d531c1dfe0a59d14848df2c2ba122ea3390d84b"
+  },
+  {
+    "sourceClass": "NovenaData109",
+    "id": "novena-a-san-luis-gonzaga",
+    "dayCount": 9,
+    "sha256": "4f381fc2023753fdad53c18b0af51a59e60fa9b5bf355476d65a4b090e8843e2",
+    "bodySha256": "cde8e92abbd1830af30b7f0e4eb9788b2592fe38e94fba95bf417c0e4ce8491d"
+  },
+  {
+    "sourceClass": "NovenaData110",
+    "id": "novena-a-san-luis-maria-de-montfort",
+    "dayCount": 9,
+    "sha256": "4318febf21bd0d50469f18d5c812468f073b409106a8fc726e5ae4b04a19bee9",
+    "bodySha256": "846f4193bdc9a253bb687309b8c48b7c0ae9b73f974f8bc4e01868f78b3c54e4"
+  },
+  {
+    "sourceClass": "NovenaData111",
+    "id": "novena-a-san-luis-rey-de-francia",
+    "dayCount": 9,
+    "sha256": "94a0ece360b0cddd38df3b168d9cc0b96aec26142ba3784778c194d1e7a42675",
+    "bodySha256": "73316e233332e041cc3ff1d8271929a2d9ad022d26bf3b5c59e845e8f79f2f0d"
+  },
+  {
+    "sourceClass": "NovenaData112",
+    "id": "novena-a-san-luis-y-santa-celia-martin",
+    "dayCount": 9,
+    "sha256": "0a11fdf085131a51bba430f12593468c1e88e3fe0c1c322529058e493b11abfa",
+    "bodySha256": "cdcda88696036fb40bff3a3628b6ee4b551ef6b91d8611515af9d63d84a62220"
+  },
+  {
+    "sourceClass": "NovenaData113",
+    "id": "novena-a-san-martin-de-porres",
+    "dayCount": 9,
+    "sha256": "ae98f9b863d6e869a252ad858d3062e6270d83f8ea12c0e2fe226f8bcc7e1c6a",
+    "bodySha256": "47b10aebb41290fdb743c729636ba9acbc229114df2c710a86a6e42618dad9a4"
+  },
+  {
+    "sourceClass": "NovenaData114",
+    "id": "novena-a-san-martin-de-tours",
+    "dayCount": 9,
+    "sha256": "82462d04b1d3855bc1226b0b73455cc2eed923a6a9de2dbc74ff9af85cb65ad7",
+    "bodySha256": "af7bc51f74a528f80fadb318ca880811c770004f7b9b64ee2e2c0a87545b3ad6"
+  },
+  {
+    "sourceClass": "NovenaData115",
+    "id": "novena-a-san-mateo",
+    "dayCount": 9,
+    "sha256": "7bcb519f516c877a3771cafb5727ec227c2dfec0291537d250eb16e27d4c7bf3",
+    "bodySha256": "b15681dae5402362a250bc2dfaa57b8ef838762d6a5fcc20853c4c57d2d47068"
+  },
+  {
+    "sourceClass": "NovenaData116",
+    "id": "novena-a-san-matias-apostol",
+    "dayCount": 9,
+    "sha256": "58e0803091b6c56a063c32c6def7233e51dce3b3b47504b8a524a162c27fb278",
+    "bodySha256": "6de284e934756cf528329d18b4f8c6adc66b4834f1c6cb4680014e0e65b261ba"
+  },
+  {
+    "sourceClass": "NovenaData117",
+    "id": "novena-a-san-maximiliano-kolbe",
+    "dayCount": 9,
+    "sha256": "e1e26a0cb9e109bf685f90a6b1948adea54aab666e85a1fb6087b72d51ad1684",
+    "bodySha256": "0fa067c77531fa04af21547036e3f22ddd5602ec8a2c9354305b5afb990bffe2"
+  },
+  {
+    "sourceClass": "NovenaData118",
+    "id": "novena-a-san-miguel-arcangel",
+    "dayCount": 9,
+    "sha256": "97b7808adb61428c4dea9f09380d575f24cf64398167c0ba7b95992d38a90aa1",
+    "bodySha256": "610baed1ac0831bfacd786fe87a5e1332b31ad37b0adbd81ec68aad24afa8207"
+  },
+  {
+    "sourceClass": "NovenaData119",
+    "id": "novena-a-san-nicolas",
+    "dayCount": 9,
+    "sha256": "915415f91d1c6c1d19bb300ed50b6396a57ad65fc36c45311bc460e43c0bb272",
+    "bodySha256": "9b77908d41a236e3d68cdc7937a6b708f89df0de4ea307eec3a94dd4ad73ea30"
+  },
+  {
+    "sourceClass": "NovenaData120",
+    "id": "novena-a-san-pablo-de-la-cruz",
+    "dayCount": 9,
+    "sha256": "ade6a8b252be661336c3ff1d58513912fbf4280f55d7e2d9d8ea3ffdda10f0a5",
+    "bodySha256": "1d60ad1da0eb5056f3948b9c98eb096c1bf723fd066f4791f188a9f35b7f37c5"
+  },
+  {
+    "sourceClass": "NovenaData121",
+    "id": "novena-a-san-patricio",
+    "dayCount": 9,
+    "sha256": "d74308fad595a37c702a5633ba9bf3d39b30f3080d60a31a49a94b0839abbb0d",
+    "bodySha256": "6181b37ef8311b57bfad40fb0f80398773fa10a70cc660f7a31d7829aa1941d7"
+  },
+  {
+    "sourceClass": "NovenaData122",
+    "id": "novena-a-san-pedro-calungsod",
+    "dayCount": 9,
+    "sha256": "e548d0c52ce7016de619b4a8d1aa7b72f4d50bd90ea8e01e52961e4a9da3a96b",
+    "bodySha256": "a7c14896aa10084d6685d91106fe3dbf7bf9a195f929b8399d40677438da163d"
+  },
+  {
+    "sourceClass": "NovenaData123",
+    "id": "novena-a-san-pedro-chanel",
+    "dayCount": 9,
+    "sha256": "b50218c09b41906540662910d64f48056561166c1ad4d6a78f01cb58593690be",
+    "bodySha256": "5493aec6e16485e09e1a8dae24ee9f94e7e60729bef83476922f017fef8bae9e"
+  },
+  {
+    "sourceClass": "NovenaData124",
+    "id": "novena-a-san-pedro-julian-eymard",
+    "dayCount": 9,
+    "sha256": "8ca30b342ba8946886bc79250f07016362688e7f843facbe769916472c49ef1f",
+    "bodySha256": "4e2d7919503e53a120bca1dd68b6979b10677de1863e0b931b3f392b3b241732"
+  },
+  {
+    "sourceClass": "NovenaData125",
+    "id": "novena-a-san-pedro-y-san-pablo",
+    "dayCount": 9,
+    "sha256": "63985a47ded3eee8e7e9658fd46004bf6091e9d2ed6c834d0cd2603d56d6b382",
+    "bodySha256": "af6ca92b504e6113a8774c197d52f6098408a45d89345eda352f866c027bb56f"
+  },
+  {
+    "sourceClass": "NovenaData126",
+    "id": "novena-a-san-peregrino",
+    "dayCount": 9,
+    "sha256": "1020e8d5c71df802ff95b90a31204a94e7dfc4fb050c4fe4d98f6599d865e9ba",
+    "bodySha256": "99557bf8204154fa78866b69801d3ddc611102ad3b507a768c01dccbe94e79b5"
+  },
+  {
+    "sourceClass": "NovenaData127",
+    "id": "novena-a-san-pier-giorgio-frassati",
+    "dayCount": 9,
+    "sha256": "54bf656dbbfe7b4e0a712ec7f05b201f9d39c8966561923c6e4a7bd74f184be7",
+    "bodySha256": "71d0d00d6c10157485c02e5a10213105976e84f5f23542fd17031e43bf8fb52b"
+  },
+  {
+    "sourceClass": "NovenaData128",
+    "id": "novena-a-san-rafael-arcangel",
+    "dayCount": 9,
+    "sha256": "82fec6e3e6631017c9eac67a6990e0a74374ca23ca9f2b3f8be55928fbb05c9d",
+    "bodySha256": "b92195c8c2f6be7199981d0b6baf8e73be5ba2bc61984da5de70175a70444301"
+  },
+  {
+    "sourceClass": "NovenaData129",
+    "id": "novena-a-san-rafael-para-solteros",
+    "dayCount": 9,
+    "sha256": "66b10995ad510a5e3bc66cef14184537b3dbaa03397dbb3e7baf4dc5ff3bacb2",
+    "bodySha256": "a833f4428ad743bafceb491538aa26a6f810d32f85b7ef940b3fa77fc5a2f651"
+  },
+  {
+    "sourceClass": "NovenaData130",
+    "id": "novena-a-san-roberto-belarmino",
+    "dayCount": 9,
+    "sha256": "c40bad451589864a1913013089705f5e676bbef18fb7787e1b2f941155f8125b",
+    "bodySha256": "710256f35f0375c12298b2c223c2c9843983105e0c5fbe0a48374e9c1374c40e"
+  },
+  {
+    "sourceClass": "NovenaData131",
+    "id": "novena-a-san-roque",
+    "dayCount": 9,
+    "sha256": "c89d32a9a55bee869178bf50ea4d0293d17ab5f1685f7deb81a98bbd6024ebba",
+    "bodySha256": "2aa2d438457313b0c94385b4a71e8d07b108c6760f8968037c1a00523a1aa493"
+  },
+  {
+    "sourceClass": "NovenaData132",
+    "id": "novena-a-san-sebastian",
+    "dayCount": 9,
+    "sha256": "dcbb537ecf28aafece06df7ddad19f0d38680ceb30946d15f26688065511b2ce",
+    "bodySha256": "6f23457a6640554178af66ff37868f2fa78c57a21a8088186ce4cc76d7745fdf"
+  },
+  {
+    "sourceClass": "NovenaData133",
+    "id": "novena-a-san-valentin",
+    "dayCount": 9,
+    "sha256": "bdce4b79e1aeac5f3cf675050ec2169fe00827aab3e283d4491033baa1bca090",
+    "bodySha256": "ae6344f257febbf391b21deb09583f54bb1b09f71ba9b2fe7ab8e7b74155f8db"
+  },
+  {
+    "sourceClass": "NovenaData134",
+    "id": "novena-a-san-vicente-de-paul",
+    "dayCount": 9,
+    "sha256": "d47407d186ea746f4a86485414bb4285681f089e3a872187ca66f5f7c5806f8d",
+    "bodySha256": "eeac41208b5372a72af193aee3771e90d2c2f76998275178c13458e3284f66eb"
+  },
+  {
+    "sourceClass": "NovenaData135",
+    "id": "novena-a-san-vicente-ferrer",
+    "dayCount": 9,
+    "sha256": "b63da83e292c4cd8803e0d6c7505a25b8dbc94fbe4b776c2a5e549867c68fa18",
+    "bodySha256": "39229582d0d5df8319eba8837d584595fdbad2ee13652a47026677546af1d124"
+  },
+  {
+    "sourceClass": "NovenaData136",
+    "id": "novena-a-santa-abigail",
+    "dayCount": 9,
+    "sha256": "0b82388e28bc596fc30ce5470b395b1611c7792063d37c7c03497e4b07993da9",
+    "bodySha256": "8498a3bc46810b66704bf105cd62d6eadc503e59c3949abeef5791cb0a34d0d6"
+  },
+  {
+    "sourceClass": "NovenaData137",
+    "id": "novena-a-santa-adelaida",
+    "dayCount": 9,
+    "sha256": "b276eaaefd88c7931aa3882c1dae1b098cd7439be9f66b12a87704fee2980bd0",
+    "bodySha256": "eb5f0119c71bbeb9daaabd1d17ed01b661851169d6d5eea49587ea9ff932b7f9"
+  },
+  {
+    "sourceClass": "NovenaData138",
+    "id": "novena-a-santa-agueda",
+    "dayCount": 9,
+    "sha256": "d6e89cbcbc0a806f8e3b9b7dc0259726961192af6af392c66315333f7774c6b4",
+    "bodySha256": "0a70b8346b2fb722f2f712c298864c27a4c74eea500d3c91e0af3eb280ff5feb"
+  },
+  {
+    "sourceClass": "NovenaData139",
+    "id": "novena-a-santa-ana",
+    "dayCount": 9,
+    "sha256": "aa22edbb6ae4b1626ec6884c706e8ad704ffb6cc280baed74bce934294576191",
+    "bodySha256": "c5c82b7e894a4bc0dfc587c09ba6de8e701db68f4ee5ca56754344b90bae346d"
+  },
+  {
+    "sourceClass": "NovenaData140",
+    "id": "novena-a-santa-angela-merici",
+    "dayCount": 9,
+    "sha256": "bac818436a43564de6a735fbde4dd877770813eb1370969fdcb165897aca2e5c",
+    "bodySha256": "6806119edc2c498a64bfbce9af3a657feee0f4ae4b6a5ea34784ac7f47ac6aaa"
+  },
+  {
+    "sourceClass": "NovenaData141",
+    "id": "novena-a-santa-bernardita",
+    "dayCount": 9,
+    "sha256": "240812c8264a210d1f897a7ee1458d0635f43800bb80429cd4bd248334ddbd5d",
+    "bodySha256": "54063c91300edae0cabdd5f024f1cb6a52fd411b511b575aff24f030831d79d6"
+  },
+  {
+    "sourceClass": "NovenaData142",
+    "id": "novena-a-santa-brigida-de-irlanda",
+    "dayCount": 9,
+    "sha256": "d86975d2a969a066c7767c718e24c2295a8dcf9a219ba2b1d979452777d3fed2",
+    "bodySha256": "59803809c1cfe059e1e37100cf45f8c350a2067073277e632b745a905c9709ed"
+  },
+  {
+    "sourceClass": "NovenaData143",
+    "id": "novena-a-santa-brigida-de-suecia",
+    "dayCount": 9,
+    "sha256": "291447c9587519ca7d477f8ca66e440f00ade9822001c009495dfeaa9bfe6ed0",
+    "bodySha256": "1c448a791c6f821575e9d8bb4c2c0ce9c1dbe4600ca22f80afeb73c416267a67"
+  },
+  {
+    "sourceClass": "NovenaData144",
+    "id": "novena-a-santa-catalina-de-alejandria",
+    "dayCount": 9,
+    "sha256": "0b72cceb5c323375082c47d771e83e3a657adeaa24bfed8c416b3ba67fb3f47a",
+    "bodySha256": "7e3b1cadeb6606c310101b8cca5e841dc732e02e4f5901a18622fc877e44fa27"
+  },
+  {
+    "sourceClass": "NovenaData145",
+    "id": "novena-a-santa-catalina-de-siena",
+    "dayCount": 9,
+    "sha256": "d0b763e4d1f3a683c81aaf15b73fbb6a1f28e94b2e461a6165467af535f5a6c8",
+    "bodySha256": "596878b51ca593834eb170be2ae2b24c9fcfce5e4fc0f3d4883911a8b87ab5ba"
+  },
+  {
+    "sourceClass": "NovenaData146",
+    "id": "novena-a-santa-catalina-drexel",
+    "dayCount": 9,
+    "sha256": "331ca77280c8ab07abe90bbe159daef2a9516eb9c2f20d74260e79c09e885240",
+    "bodySha256": "61d7c5208a6d4baf37f78225441115509599572f4f6c86ad05ac44547d72fa34"
+  },
+  {
+    "sourceClass": "NovenaData147",
+    "id": "novena-a-santa-cecilia",
+    "dayCount": 9,
+    "sha256": "49ffebb31ba9399c92f928c6f0f2faa695dd7ca36d8664c2bad04e8ac9ed7832",
+    "bodySha256": "3aa7ba4073c144639ec8658067338f05786341b84ac8db12746854b64e4b0b54"
+  },
+  {
+    "sourceClass": "NovenaData148",
+    "id": "novena-a-santa-clara-de-asis",
+    "dayCount": 9,
+    "sha256": "47f60c4aa42401af50907194d2efae5b3067698196dea52ff6d0d599d4327154",
+    "bodySha256": "de6be7a1a945d74ba89777c02503180806e1b705f3edee6a9b46a64c742a23d5"
+  },
+  {
+    "sourceClass": "NovenaData149",
+    "id": "novena-a-santa-coleta",
+    "dayCount": 9,
+    "sha256": "3b41e55b4fc673a3020833cc3626f9c9715446dc85a8b8d161ee346058318cd2",
+    "bodySha256": "ca846a9504eca8528a7477b999058679ab67d7e7af79d1d3b56d30c1a5f0dda9"
+  },
+  {
+    "sourceClass": "NovenaData150",
+    "id": "novena-a-santa-corona",
+    "dayCount": 9,
+    "sha256": "9e1152a7e43c9dd051afd12a70a0231c9fc34da40bfa57d88df49f40d6e5f233",
+    "bodySha256": "9d29ef116513cdfd560b181a37596709e45e97283379afd293afcdbb254fc520"
+  },
+  {
+    "sourceClass": "NovenaData151",
+    "id": "novena-a-santa-cristina-la-admirable",
+    "dayCount": 9,
+    "sha256": "d7a21592654beee74e69cead9356a02aa9de61fb6b9aa966e39bdbe1b2320219",
+    "bodySha256": "950ae7c4de083b8ba82b9bf8ce4b93a1b2fc7ebc2bf02a67df7440d06d3e456f"
+  },
+  {
+    "sourceClass": "NovenaData152",
+    "id": "novena-a-santa-dimpna",
+    "dayCount": 9,
+    "sha256": "f4c32178f456fed363af49a0b5dd9e669808a20dbbfb23dd192c2a53c288157d",
+    "bodySha256": "ed98d2161bd4386daf9fc3a5033459dc796fd3448e9939afdf346f962fe2eed0"
+  },
+  {
+    "sourceClass": "NovenaData153",
+    "id": "novena-a-santa-edith-stein",
+    "dayCount": 9,
+    "sha256": "ba980289cc9c3dfc1a234bd2f8913b0b6fd3c7e3d28f1b3569673c2d0cd02335",
+    "bodySha256": "bfc3a8333b564be3002bcc84247678d7814812351d8d0907d416ce1b94a6f810"
+  },
+  {
+    "sourceClass": "NovenaData154",
+    "id": "novena-a-santa-elena",
+    "dayCount": 9,
+    "sha256": "9f1257e5c651c76bfcf873dba5c02a896b777c9cc110acf6f6a693296addd7e0",
+    "bodySha256": "4333c8ae833d4bbcd08b35c6195ecaf7edbe4c4a65d23cc04c6358c2411616af"
+  },
+  {
+    "sourceClass": "NovenaData155",
+    "id": "novena-a-santa-escolastica",
+    "dayCount": 9,
+    "sha256": "c260e1515c76f9c35e600645b3fe843c29da09f85b7b46703553f393726c3d27",
+    "bodySha256": "54916803b292db22f33bfb1554c2998ea4dc4f8d7fb1af0fd4c1a2ee7ab078a6"
+  },
+  {
+    "sourceClass": "NovenaData156",
+    "id": "novena-a-santa-faustina",
+    "dayCount": 9,
+    "sha256": "3f7643a66e600892668684f1523bd8766ef2974391609222815483b429710c03",
+    "bodySha256": "cbc1f7fbb7dccdbaf416411cbe9e8ca7062c731c9fccb729cabca2784f3246e7"
+  },
+  {
+    "sourceClass": "NovenaData157",
+    "id": "novena-a-santa-filomena",
+    "dayCount": 9,
+    "sha256": "b47642062639f5a21376aa58c80df86a2e7213f6aa2d7a2aa5c578607661e5eb",
+    "bodySha256": "adeb7eeaaf3d83de0264aaa1f7708a22b4e0d1ddc028cbc785eac7f14db12407"
+  },
+  {
+    "sourceClass": "NovenaData158",
+    "id": "novena-a-santa-francisca-javier-cabrini",
+    "dayCount": 9,
+    "sha256": "b714f3f6b61a4fc7539c5dd54bc027e8152b59b256b2789e891cea46615ee6f9",
+    "bodySha256": "e527a4103f8fcf3f5360943e04ecc1c8bf1f65563785daf35336678ff49d6f64"
+  },
+  {
+    "sourceClass": "NovenaData159",
+    "id": "novena-a-santa-francisca-romana",
+    "dayCount": 9,
+    "sha256": "6a07d16a37f794dbfcfe3b380270f93e2ff2728ff33d9942de96387bc8200582",
+    "bodySha256": "b1a6550fbe5286173bec2b72f3a5093a29cb5d3a8d2ec44b4c886228ee709ad5"
+  },
+  {
+    "sourceClass": "NovenaData160",
+    "id": "novena-a-santa-gema-galgani",
+    "dayCount": 9,
+    "sha256": "bab31fb09f547b64359126556827e560b03ee22e3e17f5664d3d80ed86d35588",
+    "bodySha256": "d66b7922b8788424bd18586cae2a46440a3698d1d0352b53f59ed2f93b7e8a96"
+  },
+  {
+    "sourceClass": "NovenaData161",
+    "id": "novena-a-santa-genoveva",
+    "dayCount": 9,
+    "sha256": "dfcbe46198b74d6405d1dd982dfa06900d4882b065f1cfcbf5ce71ec53c7f15e",
+    "bodySha256": "cac1634bf6a62b1968a3d49663b5a24c031d4c1cb081ae7596d773a3102b7746"
+  },
+  {
+    "sourceClass": "NovenaData162",
+    "id": "novena-a-santa-germana-cousin",
+    "dayCount": 9,
+    "sha256": "d71250fa411a8119075f74dedddbe1df50373805b5b6accab8d1cdc7576d3184",
+    "bodySha256": "1c2bc3bcd027dc306d2e0085efc4c267a5531fff398411c5ae4eed0da0ff58c6"
+  },
+  {
+    "sourceClass": "NovenaData163",
+    "id": "novena-a-santa-gertrudis-la-magna",
+    "dayCount": 9,
+    "sha256": "6c251b4da7b7512869d11fe99d32f7d8e94011bef2712c8d3e7c3719d0b6584c",
+    "bodySha256": "d4cbaed8730c09ad566efce563ba7c71a2bd5afe6146828bb3084c96eed9ceaf"
+  },
+  {
+    "sourceClass": "NovenaData164",
+    "id": "novena-a-santa-gianna-beretta-molla",
+    "dayCount": 9,
+    "sha256": "f27854c4a62d01877e82386b489d5401cc805086acdaa2cc66af569e6fc57e22",
+    "bodySha256": "a5d0a05eb9aa23ab1eb681837b2a50e2c5499a77a8c50c3928638282ed3e4794"
+  },
+  {
+    "sourceClass": "NovenaData165",
+    "id": "novena-a-santa-ines",
+    "dayCount": 9,
+    "sha256": "0db3fd0436a7354070eb858a5c8371203810cd11717b3f77ec1cc250e3254ed1",
+    "bodySha256": "94219fdab5bae72f2bdd4d3d602e311569c3c6d54b2c27005afd3a090a71d04e"
+  },
+  {
+    "sourceClass": "NovenaData166",
+    "id": "novena-a-santa-isabel-ana-seton",
+    "dayCount": 9,
+    "sha256": "7b8bb6e343efbbdb9b2aab68a849a5bd46edcfd51a505ee63b8551a26f6be02e",
+    "bodySha256": "e2753e998c404bdb89e8815714fc89d96d6dc151873cbdb82b0714145db873d5"
+  },
+  {
+    "sourceClass": "NovenaData167",
+    "id": "novena-a-santa-isabel-de-hungria",
+    "dayCount": 9,
+    "sha256": "2770e5599d15c72052c3f7dcba450e81899c249c00f8c4247589e664f4ad5428",
+    "bodySha256": "81d02a99e2580e88200284c12c9c77bcc370894432fb1578386cb1c2d2ee4776"
+  },
+  {
+    "sourceClass": "NovenaData168",
+    "id": "novena-a-santa-isabel-de-la-trinidad",
+    "dayCount": 9,
+    "sha256": "0c435f8024b91f395edfbaab0b12686390a291ae0345c231412446137873874f",
+    "bodySha256": "9d7f621c739c3d5707648171f58159652fade107eb77eb8cd27771ab04f2d36b"
+  },
+  {
+    "sourceClass": "NovenaData169",
+    "id": "novena-a-santa-isabel-de-portugal",
+    "dayCount": 9,
+    "sha256": "f334ef3aa9bc04f32e17e4d49140dcb86d2bfc91f4f618af697c6d76e7ff4a0f",
+    "bodySha256": "8a9b3063084e40822ead9e6e3466719964781d61c0ee387f715d20708592fb2f"
+  },
+  {
+    "sourceClass": "NovenaData170",
+    "id": "novena-a-santa-isabel-madre-de-juan-bautista",
+    "dayCount": 9,
+    "sha256": "9e0969ab5985e62f7ebdf99b215b12f3fc88839e95df425469936970d746e50b",
+    "bodySha256": "d9184eefa4a5b9290a829fba18b3d46311a84039d606de4d75aeba7fea9e2357"
+  },
+  {
+    "sourceClass": "NovenaData171",
+    "id": "novena-a-santa-josefina-bakhita",
+    "dayCount": 9,
+    "sha256": "48a959b84e17fe45577b02049bf4ea3985b141988f84b33939fc8e6980f85282",
+    "bodySha256": "25ab716bf9118ba7828109f6525f7468b5509db64211ed58275cd474cde25d97"
+  },
+  {
+    "sourceClass": "NovenaData172",
+    "id": "novena-a-santa-juana-de-arco",
+    "dayCount": 9,
+    "sha256": "4c54566b8eeef49f81460368bc1b21036a0042dc4f73b439efcd4b49a19e9d94",
+    "bodySha256": "073e16f692462f1ec18777db71e84cec7cd19085ad6695a3ec8d97a7e9fff5c1"
+  },
+  {
+    "sourceClass": "NovenaData173",
+    "id": "novena-a-santa-juana-francisca-de-chantal",
+    "dayCount": 9,
+    "sha256": "b351040314083c5862d0cb4668fb77073c4bda62ea50ebeb8171a35caaf848a4",
+    "bodySha256": "c8edef317d58335db7fe458a649d9d3567b626f2b400d00e73cca20ece6c75d2"
+  },
+  {
+    "sourceClass": "NovenaData174",
+    "id": "novena-a-santa-juliana-falconieri",
+    "dayCount": 9,
+    "sha256": "75130b7e6ab178734676ffe20662a9ead3ec7f2401a13a56cf7c76558a43b56b",
+    "bodySha256": "6d00f43c4653652cc110d15e2e882145ac0a0170eac621aaf28130044a90c079"
+  },
+  {
+    "sourceClass": "NovenaData175",
+    "id": "novena-a-santa-kateri-tekakwitha",
+    "dayCount": 9,
+    "sha256": "8b481fa5e9532d24a65140141582c95156941de2ed805a6a5495150140852f39",
+    "bodySha256": "c951a8df18ca229550d2f59c6d0d3fd4e37cc840662baca55ca71ddff0534479"
+  },
+  {
+    "sourceClass": "NovenaData176",
+    "id": "novena-a-santa-liduvina",
+    "dayCount": 9,
+    "sha256": "e7dbde5738da8adb552c28284b11b80e378dab0d8c98c661c9802b7c0a27cfcf",
+    "bodySha256": "1d2e3d00f761fab862cc917e39be1fadfa6b14e4d948bdcc5030d4540ea5ca09"
+  },
+  {
+    "sourceClass": "NovenaData177",
+    "id": "novena-a-santa-lucia",
+    "dayCount": 9,
+    "sha256": "0a5470ecb1a612182a2fdc65dba1ba4feebddb84f64cc2f1ea3f73401d716cf7",
+    "bodySha256": "d486ae52340ee2d96fbd706a0c5aaaca30ee7cb16eb777a42fef08ba0ff82d84"
+  },
+  {
+    "sourceClass": "NovenaData178",
+    "id": "novena-a-santa-margarita-de-castello",
+    "dayCount": 9,
+    "sha256": "6a294e486207a85832aa07c4bb9af10c656fc16003f3d66ccd336708dc8ce3b0",
+    "bodySha256": "832cf0f926032f02de9fca75956ca146e5122ab5c3bb9ecc1230433db136834e"
+  },
+  {
+    "sourceClass": "NovenaData179",
+    "id": "novena-a-santa-margarita-de-cortona",
+    "dayCount": 9,
+    "sha256": "c8160a8387eb3087ee8bc9d9d4cd5388d81d53e863aeb087518a763ab9abc455",
+    "bodySha256": "41ca7d33929faf9a9e13e57a07850829c384bebac5f09035df1571e6d087e3aa"
+  },
+  {
+    "sourceClass": "NovenaData180",
+    "id": "novena-a-santa-margarita-de-escocia",
+    "dayCount": 9,
+    "sha256": "0747b3f170d8567612fb773c82892f8dc79a191b907d8d22ed012048a8fe81c9",
+    "bodySha256": "5c8d00c10896e2f13cfd85fa6aa0ecf4244ec28db039b321c0b325c4b9aabace"
+  },
+  {
+    "sourceClass": "NovenaData181",
+    "id": "novena-a-santa-margarita-maria",
+    "dayCount": 9,
+    "sha256": "81a481405945445df030b9ec1689cf3d27f4cfb6df79b285e3053d8cbd66194b",
+    "bodySha256": "e786f08567008a92df7535540e91a2a0c2b051b5e4d92a59e84f7e8b54620cc8"
+  },
+  {
+    "sourceClass": "NovenaData182",
+    "id": "novena-a-santa-maria-goretti",
+    "dayCount": 9,
+    "sha256": "91be6aaea5c87a3d3d0366f3ec79ceb8bc58cdc9c009c946f02b8a0fc8d957cb",
+    "bodySha256": "299166d3983e8f9fa8c0457fe74e44804d398fbb734c9e52ccc7d0403e1b0f04"
+  },
+  {
+    "sourceClass": "NovenaData183",
+    "id": "novena-a-santa-maria-mackillop",
+    "dayCount": 9,
+    "sha256": "20832a6ff7853487d6e3e3ee692e010da3573fbd9de3e37e6e851484b89ece76",
+    "bodySha256": "cb8c9b5e316c4c7d489ad8a70df27a34ad327952b6c6ef958ac270990181b89e"
+  },
+  {
+    "sourceClass": "NovenaData184",
+    "id": "novena-a-santa-maria-magdalena-de-pazzi",
+    "dayCount": 9,
+    "sha256": "c67d164b0b3b0da1cd3906a0c9744e2b3f4cee8c634882a7850a13f22e93b453",
+    "bodySha256": "6d7b36283aedbb194ba26f30b3000aa5c8a80f29889419df2a3cff8801933abb"
+  },
+  {
+    "sourceClass": "NovenaData185",
+    "id": "novena-a-santa-maria-magdalena",
+    "dayCount": 9,
+    "sha256": "1683a140ae2c23050cf43587a6bd7a441bc920542d30dc08c934458498af898e",
+    "bodySha256": "b082e1e50c2c382f08a8a66c1557b2ac87586c11f598c25b5ea5138cee5cab32"
+  },
+  {
+    "sourceClass": "NovenaData186",
+    "id": "novena-a-santa-mariana-cope",
+    "dayCount": 9,
+    "sha256": "888333e278982f3571b9a069b20471b3019731926055433dac03c7519abaf63b",
+    "bodySha256": "60a263e2fe695e3a4af38f613259d82a5e1591c79b52bd1c7ecdd452b020106a"
+  },
+  {
+    "sourceClass": "NovenaData187",
+    "id": "novena-a-santa-monica",
+    "dayCount": 9,
+    "sha256": "85d9d386dc79becd9db9da70ef000ac0b817b329d26f282b286d814257ba3175",
+    "bodySha256": "5d7ca1bcedde77c1d69b02019041d35015c1eaa99e4a05e6d79e5cf37a5b0098"
+  },
+  {
+    "sourceClass": "NovenaData188",
+    "id": "novena-a-santa-odilia",
+    "dayCount": 9,
+    "sha256": "3bffeed5de23679cc6c916aa1da688f80df7879e371a4e0167f0d63c1a074f6c",
+    "bodySha256": "714c44354b4740d9c80a50adaf75dd295ebfe2ec92789e6a254c7fea0a0d17c0"
+  },
+  {
+    "sourceClass": "NovenaData189",
+    "id": "novena-a-santa-rita",
+    "dayCount": 9,
+    "sha256": "f2657d8621c7cf2f558cbb8c598668bd07907187a7b4dec3fa8e6e812c6f5831",
+    "bodySha256": "05b4829227b218f25a3b477440ae694c2ee3000cbf85183833811341348df067"
+  },
+  {
+    "sourceClass": "NovenaData190",
+    "id": "novena-a-santa-rosa-de-lima",
+    "dayCount": 9,
+    "sha256": "79a3a994ac3080a2c8fac68413a3902e0fb51b6ff014da768b91fb572144d5ae",
+    "bodySha256": "689d43fd46a38fa47fa2d48dde2abed94fab9219934c9773b7f792269bfa15e4"
+  },
+  {
+    "sourceClass": "NovenaData191",
+    "id": "novena-a-santa-rosa-filipina-duchesne",
+    "dayCount": 9,
+    "sha256": "5da6e65de794808da74b38737e6b49a9751679ca5b1c3eeb1bf015c368da0652",
+    "bodySha256": "98eef0c7d3644b38f5bcc39eae4ff873dc1af91f13706d6d9acfb20ff1f01bf6"
+  },
+  {
+    "sourceClass": "NovenaData192",
+    "id": "novena-a-santa-teresa-de-avila",
+    "dayCount": 9,
+    "sha256": "5c5db64be1d6d5c9e383e4986f4b96b5cde23a3d5ec6016f5f41582d79859756",
+    "bodySha256": "24ecf2c38d7c82aca2c1dcc59da5b0b54ecd2ff2b47b4df8b96486f45afedb27"
+  },
+  {
+    "sourceClass": "NovenaData193",
+    "id": "novena-a-santa-teresa-de-calcuta",
+    "dayCount": 9,
+    "sha256": "57cc43fbff4233ce56d78db65217d30831b98d9a7914edd93a65522f0fcd5849",
+    "bodySha256": "8242aa0dff60a4d56893e0bd8cdedca2e2ac7e11fbe6d7b9e30f01539e18aa21"
+  },
+  {
+    "sourceClass": "NovenaData194",
+    "id": "novena-a-santa-teresa-de-los-andes",
+    "dayCount": 9,
+    "sha256": "615efcba5164a3acb308edc3d118ea58cd219e45af81f5125db74049a8b589a3",
+    "bodySha256": "d5091d3016cf752890487507752ef3f701d5e0d862f2e56795e921e19b470dc3"
+  },
+  {
+    "sourceClass": "NovenaData195",
+    "id": "novena-a-santa-teresita-del-nino-jesus",
+    "dayCount": 9,
+    "sha256": "eed764660e8d7d38c0dbbf3939370c53880daa98d1e02bcb6b2357051ffd0561",
+    "bodySha256": "9864b078a9249d45095a7237c20e815809a5a142e278f3fcd7b66a4d29e17382"
+  },
+  {
+    "sourceClass": "NovenaData196",
+    "id": "novena-a-santa-veronica-giuliani",
+    "dayCount": 9,
+    "sha256": "e9d3121167fa6b1837edda739a1365a5cabf6694b4dc193bd6d3d1ffd09fd8dc",
+    "bodySha256": "fe66ef27349eee7e8c2d0791b08c7840bb3fd9e84b99949eec1716b116967ad7"
+  },
+  {
+    "sourceClass": "NovenaData197",
+    "id": "novena-a-santas-perpetua-y-felicidad",
+    "dayCount": 9,
+    "sha256": "fd2ddfe4ca2e98a666fd6a53a2d6331f823b6f295273367b647f14e398a5a125",
+    "bodySha256": "eae6edfb6619e47665e19d536adee33ab0f4d3114f149cd8eee41dae96cafd84"
+  },
+  {
+    "sourceClass": "NovenaData198",
+    "id": "novena-a-santo-domingo-savio",
+    "dayCount": 9,
+    "sha256": "140aef529867077e1534a86b4d82775cc7a539c2b76598f807481292db5c3257",
+    "bodySha256": "1dd79ea8b0cc05b282937812c2b0ba029ac4c7918d79cc30f4cc2bc297c8adc4"
+  },
+  {
+    "sourceClass": "NovenaData199",
+    "id": "novena-a-santo-domingo",
+    "dayCount": 9,
+    "sha256": "cd640cc2702b63ab051d0e0fa28989374ee7c29adb06eecfc42cd13ae483025b",
+    "bodySha256": "1ba3260b0ab8d660a76562ec1dabd6f86211e77f4faed8272849155b88cc141f"
+  },
+  {
+    "sourceClass": "NovenaData200",
+    "id": "novena-a-santo-tomas-becket",
+    "dayCount": 9,
+    "sha256": "d4037a876fde11af3205e523d87f31154e3557d3f1e55b20286c4b1664c44430",
+    "bodySha256": "a9dd63d5a22a65597c3d335b697896ac2a675afe37dd913165cad2ff203be921"
+  },
+  {
+    "sourceClass": "NovenaData201",
+    "id": "novena-a-santo-tomas-de-aquino",
+    "dayCount": 9,
+    "sha256": "b5c5979a52ffa0a9ee5236f749e418fff103517e3f68fcd819d5a94239f3367c",
+    "bodySha256": "2a31e08e40098123b58f3bc7e7bca888dbf61d368ce3a4b3b47a326518a7d0bd"
+  },
+  {
+    "sourceClass": "NovenaData202",
+    "id": "novena-a-santo-tomas-moro",
+    "dayCount": 9,
+    "sha256": "2f203f34ed83c29f8964b7cea4067bf6b32fbbac702dd5af5b4c6038b10b3705",
+    "bodySha256": "9b83380872947ae041ae506f90671f50e9e27f42d13d47d9f20d961eea87d6f9"
+  },
+  {
+    "sourceClass": "NovenaData203",
+    "id": "novena-al-angel-de-la-guarda",
+    "dayCount": 9,
+    "sha256": "f3a6ab3060e09cf673b80a03285aff008d20e4820d807d33726c9de59e026baf",
+    "bodySha256": "140cf964d6aa7e7b1c5feb858ffe241e6474df38278f595371064880c742fd0f"
+  },
+  {
+    "sourceClass": "NovenaData204",
+    "id": "novena-al-apostol-santiago-el-mayor",
+    "dayCount": 9,
+    "sha256": "6369e0bb75c48177d2b839ff2d5dbc71a7e1cc6ea5a4dbfb56772820bc9151f8",
+    "bodySha256": "999dbcae495fa40a9a633adc1f5dba752ef647afb873eb24a9f48af1c03a132a"
+  },
+  {
+    "sourceClass": "NovenaData205",
+    "id": "novena-al-beato-francisco-javier-seelos",
+    "dayCount": 9,
+    "sha256": "3be09cf9ad8bd8e10f01d6a76ca950520bc83a165045570139e6227c970794a8",
+    "bodySha256": "f9a21ef3cb44f83141f231235fc4aab2986243f848e653a12c89c02dae4d89ed"
+  },
+  {
+    "sourceClass": "NovenaData206",
+    "id": "novena-al-beato-fulton-sheen",
+    "dayCount": 9,
+    "sha256": "1de9e3bf218916f5e57bb38b7ed3c7dfaf5ae75ee6f3f6f3bf7d27efdd98778d",
+    "bodySha256": "f670ad4f75b798ebbbc05c25dd2a57da5dead8eec9f558ec3fe9b6e93884e11d"
+  },
+  {
+    "sourceClass": "NovenaData207",
+    "id": "novena-al-beato-michael-mcgivney",
+    "dayCount": 9,
+    "sha256": "2f9992ba844e9efbb340dda9ed4d0b05eb03fdbe7aa6d30a26652d7dba674526",
+    "bodySha256": "3f5c7f97e8eb3681d570d1db2a82749ecadbb6b398fb3a358db9135e8e829d10"
+  },
+  {
+    "sourceClass": "NovenaData208",
+    "id": "novena-al-beato-miguel-pro",
+    "dayCount": 9,
+    "sha256": "f0895881415625b86f943c0aeb9be058eaea89d9fdc15751a099424052929921",
+    "bodySha256": "4df512a48451958b3887858166c79e1369c772da0760565136d42f89594f9098"
+  },
+  {
+    "sourceClass": "NovenaData209",
+    "id": "novena-al-beato-solanus-casey",
+    "dayCount": 9,
+    "sha256": "2f8babff80904b31252c334f4a6dbb3938569a62c1131f406e23af1641c386f1",
+    "bodySha256": "1796bb905ec5b18b0d2aa9424d91a354dc38215cc0d8b0f8a3957bf6f1b6d22d"
+  },
+  {
+    "sourceClass": "NovenaData210",
+    "id": "novena-al-corazon-sagrado-de-jesus",
+    "dayCount": 9,
+    "sha256": "8773881fa3c417313d86d9a690019603dc3089a946e30a463ed69e494c19cfb3",
+    "bodySha256": "ab71780e35d944b33db107ea12675d771528f374c3634cf3e3393345371ef7b6"
+  },
+  {
+    "sourceClass": "NovenaData211",
+    "id": "novena-al-divino-nino-rey",
+    "dayCount": 9,
+    "sha256": "53be4e0b94f0b39d11175ff911aa74bf6eae4b5fac614d75812f0b66540f0f3e",
+    "bodySha256": "961753ed766fd8ed2ecf68f4893ab83e8044d20652a10e8a41e65b00b5551702"
+  },
+  {
+    "sourceClass": "NovenaData212",
+    "id": "novena-al-espiritu-santo-pentecostes",
+    "dayCount": 9,
+    "sha256": "83d7a4044681f9eaef5368a4898aac816f253b415aaf8e3c972efeb25d0a1f32",
+    "bodySha256": "e96a55137a3f838cb031af0b8fdf9ed90febc90a5140c3fc111ec044ce3fe62c"
+  },
+  {
+    "sourceClass": "NovenaData213",
+    "id": "novena-al-inmaculado-corazon-de-maria",
+    "dayCount": 9,
+    "sha256": "eb7eb0fdc7dff2d52c4b547fed19ad9bff49c2f3cd12f44c4f4f7cc9777aa029",
+    "bodySha256": "92b9efbd2f5bf5e6dfee8919b86bd1b3e696e46ce593f485febd0722d2af4a01"
+  },
+  {
+    "sourceClass": "NovenaData214",
+    "id": "novena-al-nino-jesus-de-praga",
+    "dayCount": 9,
+    "sha256": "b6a921cd1c4d6ca8022896e1052d156ed7243d2a64df3c1ac44c9bb6f12c46d5",
+    "bodySha256": "06d15b56e53b01efeabb477da90d2b1e1b5cc29b29d4aff2953ab9b52329db8d"
+  },
+  {
+    "sourceClass": "NovenaData215",
+    "id": "novena-al-santo-nino-de-atocha",
+    "dayCount": 9,
+    "sha256": "b44f051dc7446a54d5ac6989c6fba6603a2a87bf6075b5111017619d70294e61",
+    "bodySha256": "6a71689a6e7889ab6211052dd80b1d794922e43473f588eb35de6c9024f8b2eb"
+  },
+  {
+    "sourceClass": "NovenaData216",
+    "id": "novena-al-santo-nombre-de-jesus",
+    "dayCount": 9,
+    "sha256": "8880faadbddfc2afc8c48331c395a8bcaf902a625704788d4c9ffe39f0480e5e",
+    "bodySha256": "4b472a776043a87952680bac81cc6cdba54c0bd2682f14091f30616c4658dfdb"
+  },
+  {
+    "sourceClass": "NovenaData217",
+    "id": "novena-al-santo-rostro-de-jesus",
+    "dayCount": 9,
+    "sha256": "9ce0ab704391eb91b0b7a758e9788929090b5429d2e2f324f34974e9b475794f",
+    "bodySha256": "dce9df8a3bb98e563ea7408eed18915a58cabba7cda9b2d3a1a0b46bca347abd"
+  },
+  {
+    "sourceClass": "NovenaData218",
+    "id": "novena-de-30-dias-a-san-jose",
+    "dayCount": 30,
+    "sha256": "5f1cb729fdd681d22ee90233e2ee0c55b6a562fc0cfb65fd94d58739664a4f3c",
+    "bodySha256": "c756ee037994ba10f25a88335cbabec967e8ad71dd6b79dbec70edbb1b6465cf"
+  },
+  {
+    "sourceClass": "NovenaData219",
+    "id": "novena-de-54-dias-de-consagracion-de-las-elecciones",
+    "dayCount": 54,
+    "sha256": "b7c826ab21c7cd80b3f0eb50f5e96e0c8d8700207a033e69fd68096a3a88eb5f",
+    "bodySha256": "4df0fa83540af5267c976a75388b7ab13037229b0406197577597da7e4294083"
+  },
+  {
+    "sourceClass": "NovenaData220",
+    "id": "novena-de-9-meses-de-la-anunciacion",
+    "dayCount": 275,
+    "sha256": "c09c14239c97d2faee398d727d37a9811bf7a7c5e4ce7f15aa94951d9e7c8ea9",
+    "bodySha256": "0b399d2cb29d1bb0f7c2bb3c7e3bb110cf0a60ccc7bbde14e0df6313495437c8"
+  },
+  {
+    "sourceClass": "NovenaData221",
+    "id": "novena-de-abandono",
+    "dayCount": 9,
+    "sha256": "3fb38374dd7476b5fca9c5d3ce459bbfcaecffa5a205fcb5bd41e59b0b8ed903",
+    "bodySha256": "87a8e2e8d87261f5f10836dc741236db312a504f6b09eecdb0d17346f76a5225"
+  },
+  {
+    "sourceClass": "NovenaData222",
+    "id": "novena-de-alguinaldos",
+    "dayCount": 9,
+    "sha256": "168112f14c374e6ad87aefc0fa45aae4b7aa10124beced3249065bace283ae69",
+    "bodySha256": "e21267fce59c9fd2d4fb15c84750174cb7561b43c0262721d0bb01f9fc4167f7"
+  },
+  {
+    "sourceClass": "NovenaData223",
+    "id": "novena-de-corpus-christi",
+    "dayCount": 9,
+    "sha256": "7748fb0dafd182cdfee8c5e41871d034818bdd6fc8ca96c5ea0a5bb0709b362d",
+    "bodySha256": "57b04f3b9d295e4fb138c097833bc8d69d93f43ec578f0a1f301ca14dffce159"
+  },
+  {
+    "sourceClass": "NovenaData224",
+    "id": "novena-de-la-anunciacion",
+    "dayCount": 9,
+    "sha256": "b47cbce04ab76df8b60f9b5c27ddd501eba6e9c40e5ad9904b64c12085574c31",
+    "bodySha256": "ec56c32bb4a7deef377bbe3f13d077c48de76c6d4968c653fb8b7a9cfdfad564"
+  },
+  {
+    "sourceClass": "NovenaData225",
+    "id": "novena-de-la-asuncion",
+    "dayCount": 9,
+    "sha256": "2b3bfbc57f912d00e3cc91535b19f5f0b99204998d5fce2404b95d3b89bc3fe9",
+    "bodySha256": "cf67608df65c935552c99f974740e3c1e27e004664e69ede755a69a839348d8c"
+  },
+  {
+    "sourceClass": "NovenaData226",
+    "id": "novena-de-la-cuaresma-de-san-miguel",
+    "dayCount": 46,
+    "sha256": "d58d169b5a2f526860f00c0d91a99334ba0814528069d2bdfd6565ab138fb282",
+    "bodySha256": "c9849f6befd1e98d38b385a130e039864f9adfaf60d6b0bd53fd6521313603ce"
+  },
+  {
+    "sourceClass": "NovenaData227",
+    "id": "novena-de-la-gracia-a-san-francisco-javier",
+    "dayCount": 9,
+    "sha256": "5cc1ae9c61df4691a440d678b33b6e87098d055d0b40c9212d93b61d4cf0e8fb",
+    "bodySha256": "9b2731f261aad6187e142c90af72a6086b9ccac42ada2c07301bfa85ce0cda7a"
+  },
+  {
+    "sourceClass": "NovenaData228",
+    "id": "novena-de-la-milicia-angelica",
+    "dayCount": 9,
+    "sha256": "aa29c67c507808504a787c3bfde7f60ec3a9b71ea29a6260bc6ef69d328462ec",
+    "bodySha256": "52d763419798d1affae044132206a95a754220ae427c8f81c0bf9102d2d4bc57"
+  },
+  {
+    "sourceClass": "NovenaData229",
+    "id": "novena-de-la-presentacion-de-la-virgen-maria",
+    "dayCount": 9,
+    "sha256": "4dc94b4971f068c43121ffc5bc1d78700ced405ec525316c4a926b90c4d7cccd",
+    "bodySha256": "641fe3e123a8785761dbeb3024e3dd9735066cb308c60ce55fbc39ea3da00d8c"
+  },
+  {
+    "sourceClass": "NovenaData230",
+    "id": "novena-de-la-visitacion",
+    "dayCount": 9,
+    "sha256": "54759ea1d77300bf68d021cbfc60ace74656193b48e12fc1c7ceaf3dca05468b",
+    "bodySha256": "68d848fd993cc9427d6b079dfa855ed47c5e2061af9e96532ea24334001d8177"
+  },
+  {
+    "sourceClass": "NovenaData231",
+    "id": "novena-de-las-tres-avemarias",
+    "dayCount": 9,
+    "sha256": "7e1d040cefe00b69759f888c0eedf2bd479aea1be63679fc722e6ea1ef4705ec",
+    "bodySha256": "4ed1f9f19c523f1ee7e6f5bfeb58488da7543b43f75ad3c7b06780b2b52fd70a"
+  },
+  {
+    "sourceClass": "NovenaData232",
+    "id": "novena-de-liberacion-de-maldiciones-ancestrales",
+    "dayCount": 144,
+    "sha256": "3b6d431cc9d63ce9fa29ebafff751dddd1aa4d371a12c89a190e5638d6a01574",
+    "bodySha256": "2b0531726e9815eff25ba68ef3543e21451c2acb80431b152f5d176396b35a82"
+  },
+  {
+    "sourceClass": "NovenaData233",
+    "id": "novena-de-los-santos-reyes-magos",
+    "dayCount": 9,
+    "sha256": "f2e0e83cc89083fa6971ac315f0aabdff591d39834792ae34a12e0d5872eef86",
+    "bodySha256": "9fbc022d2b2d235ba9c1c393edacf93fb8655c6e2aa6f813337974e4b52e7167"
+  },
+  {
+    "sourceClass": "NovenaData234",
+    "id": "novena-de-los-siete-dolores-y-gozos-de-san-jose",
+    "dayCount": 9,
+    "sha256": "19cdb514b47db3ca5218f9fe5d4c39ccfeb14ee825b567a68f2ee68f21f6b6de",
+    "bodySha256": "902e01c83cc1cedecf6bc88e9e87e16abfc38031555736ec29abbdf261e3414f"
+  },
+  {
+    "sourceClass": "NovenaData235",
+    "id": "novena-de-navidad-de-san-andres",
+    "dayCount": 26,
+    "sha256": "508de6184279cd2cc6adca2c304d00f72677b3db65612bf30cfe100affc4d56b",
+    "bodySha256": "7502e8100389c237bb6e5fb5352483ccde1fedab2ac85745c62267c1ce35634c"
+  },
+  {
+    "sourceClass": "NovenaData236",
+    "id": "novena-de-todos-los-santos",
+    "dayCount": 9,
+    "sha256": "bb1811783649b56b1f1983adb73924b373beff7d3d09d323d7da781ce971e1c3",
+    "bodySha256": "2a97fb4f6cc3388ebabf4fe1e02cf1fdfa1b04d36399b6bdae48f896f9379989"
+  },
+  {
+    "sourceClass": "NovenaData237",
+    "id": "novena-del-acordaos",
+    "dayCount": 10,
+    "sha256": "5693accf248c7fa4ca15328a5e20ce0e766045119cb7bb5cdc72df591ced3f21",
+    "bodySha256": "c7bb7f3a3b20a5b5b0e968ee0c4cfc2b0d69d4989c6c5178ebd70fb791e76496"
+  },
+  {
+    "sourceClass": "NovenaData238",
+    "id": "novena-del-cardenal-burke-a-nuestra-senora-de-guadalupe",
+    "dayCount": 275,
+    "sha256": "1e0c4699d20697794546e133b9027df4005b12646cdfd77635ec60d56ece335c",
+    "bodySha256": "658992860b470b5e2df423fe62790ff3c306bd45f8fc93c3d80412f2ed3df938"
+  },
+  {
+    "sourceClass": "NovenaData239",
+    "id": "novena-del-rosario-de-54-dias",
+    "dayCount": 54,
+    "sha256": "b3584b2c1bca6dbc4994c7f8824a8b2dd278dac446040cff725754ea234ab02c",
+    "bodySha256": "3581c239e66fc5bb1421909828decebbea99ae37dce2194a50ab5b171fe4fa1c"
+  },
+  {
+    "sourceClass": "NovenaData240",
+    "id": "novena-del-santo-manto-de-san-jose",
+    "dayCount": 30,
+    "sha256": "152a6a24895ab30d12d34d267112d95239c7ec2531b1a5fad48231f914dde3a1",
+    "bodySha256": "0372618b79b950d6f9f79549783b85e5acd24871ecf81039d65042a8d928e9bc"
+  },
+  {
+    "sourceClass": "NovenaData241",
+    "id": "novena-por-el-respeto-a-la-vida",
+    "dayCount": 9,
+    "sha256": "83d453eaa154cf619b30035f4517b2984a5d6ff7bd081612c51b99209ceec307",
+    "bodySha256": "7817fc64881f656ee8ba207c085743709ecf2f753ed2e887b94008f4bfc09edc"
+  },
+  {
+    "sourceClass": "NovenaData242",
+    "id": "novena-por-la-fertilidad-para-concebir-un-bebe",
+    "dayCount": 9,
+    "sha256": "ffaea68d4aed6f4e1268b469ddb5212675bea60b8ee352e447894ddb2fd53fd5",
+    "bodySha256": "fa693a60032362e9de9f9a849001e32f12f4cdf94efb44c04af64eb61d60c65a"
+  },
+  {
+    "sourceClass": "NovenaData243",
+    "id": "novena-por-las-almas-del-purgatorio",
+    "dayCount": 9,
+    "sha256": "cf20f81b7a1a9708d18512750f09d3ae2518cc7c8d1cda60de56f6e622e4fabf",
+    "bodySha256": "bdda5f2c7c3cc1bd811fc35d8725f22aec6f468601acdd334ebcaeeccdfbf1db"
+  },
+  {
+    "sourceClass": "NovenaData244",
+    "id": "novena-por-las-elecciones",
+    "dayCount": 9,
+    "sha256": "758b9b80f2a1913b66b5f756381a33f6c32e164c423f2637e87420eff57c3c71",
+    "bodySha256": "3151290caf6e8928cee09b4233ab2435794665f332879b5711a26fa5a955e023"
+  },
+  {
+    "sourceClass": "NovenaData245",
+    "id": "novena-por-los-catolicos-alejados",
+    "dayCount": 9,
+    "sha256": "fe5c6f29840c765da2cdf57e96b1df1d2dfa8aab29774b2f38a86ee35ad7aec2",
+    "bodySha256": "8be8f9a2376a227544443c429e07ce04c831438aeb02272329e6418c36476353"
+  }
+]

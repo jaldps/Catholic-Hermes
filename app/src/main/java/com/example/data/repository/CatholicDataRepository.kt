@@ -288,7 +288,21 @@ class CatholicDataRepository(
     val divineMercySteps: List<DivineMercyStep> get() = PrayerAndNovenaData.divineMercySequence
 
     // Novenas & Vatican Prayers
-    val officialNovenas: List<Novena> get() = PrayerAndNovenaData.officialNovenas
+    private val _novenaCatalog = MutableStateFlow<List<Novena>?>(null)
+    val novenaCatalog: StateFlow<List<Novena>?> = _novenaCatalog.asStateFlow()
+    private val _novenaCatalogError = MutableStateFlow(false)
+    val novenaCatalogError: StateFlow<Boolean> = _novenaCatalogError.asStateFlow()
+    val officialNovenas: List<Novena> get() = NovenaCatalog.default.allNovenas
+    fun reloadNovenas() {
+        scope.launch {
+            _novenaCatalogError.value=false
+            try { _novenaCatalog.value=NovenaCatalog.default.allNovenas }
+            catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled }
+            catch (_: Exception) { _novenaCatalogError.value=true }
+        }
+    }
+    suspend fun loadNovena(id: String): Novena = withContext(Dispatchers.IO) { NovenaCatalog.default.preload(id) }
+
     val vaticanPrayers: List<VaticanPrayer> get() = PrayerAndNovenaData.vaticanOfficialPrayers
 
     fun searchPrayers(query: String, category: PrayerCategory? = null, tag: String? = null): List<VaticanPrayer> {
@@ -324,6 +338,7 @@ class CatholicDataRepository(
     private var saintFetchJob: kotlinx.coroutines.Job? = null
 
     init {
+        reloadNovenas()
         preferencesStore?.let { store ->
             scope.launch {
                 store.preferences.collectLatest { preferences ->
