@@ -490,7 +490,7 @@ fun BibleScreen(
                     currentLanguage = currentLanguage,
                     onBack = { selectedMainTab = 0 },
                     activeEditionId = activeEdition,
-                    onSelectEdition = { repository.selectBibleEdition(it) }
+                    onSelectEdition = { repository.requestBibleEdition(it) }
                 )
 
                 selectedMainTab == 0 && book != null -> ReaderHost(
@@ -1107,7 +1107,7 @@ private fun ReaderHost(
         Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
             Text(currentLanguage.pick("Libro no disponible en esta edición", "Book unavailable in this edition", "Livro indisponível nesta edição"), style = LocalAppTextStyles.current.title2, color = LocalAppDesign.current.palette.textPrimary)
             Text(currentLanguage.pick("Esta edición no contiene este libro. Elige la Biblia católica incluida para leerlo.", "This edition does not contain this book. Choose the included Catholic Bible to read it.", "Esta edição não contém este livro. Escolha a Bíblia católica incluída para lê-lo."), style = LocalAppTextStyles.current.callout, color = LocalAppDesign.current.palette.textSecondary)
-            AppPrimaryCapsule(currentLanguage.pick("Usar Biblia incluida", "Use included Bible", "Usar Bíblia incluída"), onClick = { repository.selectBibleEdition("bundled") }, tag = "bible_use_bundled")
+            AppPrimaryCapsule(currentLanguage.pick("Usar Biblia incluida", "Use included Bible", "Usar Bíblia incluída"), onClick = { repository.requestBibleEdition("bundled") }, tag = "bible_use_bundled")
             AppSecondaryCapsule(currentLanguage.pick("Volver", "Back", "Voltar"), onClick = onBack)
         }
         return
@@ -2047,6 +2047,12 @@ private fun DailyMissalView(
         contentPadding = contentPadding
     ) {
         header()
+        com.example.data.liturgy.LiturgicalServiceGuidance.forDate(date)?.let { guidance ->
+            item(key = "liturgical_service_guidance") {
+                Text(guidance.get(currentLanguage), style = styles.callout, color = p.textPrimary,
+                    modifier = Modifier.padding(horizontal = design.spacing.gutter, vertical = 16.dp).testTag("liturgical_service_guidance"))
+            }
+        }
         item(key = "mass_card") {
             TodayMassCard(reading, currentLanguage, seasonColor)
             if (offline || !useVatican) {

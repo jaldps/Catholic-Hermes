@@ -21,7 +21,7 @@ internal fun PreferencesRecoverySheet(store: UserPreferencesStore, available: Bo
         LumenSheetHeader(pick("Datos y ajustes", "Data and settings", "Dados e ajustes"), pick("Cerrar", "Close", "Fechar"), onDismiss, "close_preferences_recovery")
         Column(Modifier.padding(horizontal = 24.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
             if (!available) {
-                Text(pick("No se pudieron leer todos tus ajustes. Se muestran los últimos valores disponibles o ajustes temporales. Tus archivos no se han restablecido.", "Your settings could not be read. The last available values or temporary settings are shown. Your files have not been reset.", "Não foi possível ler seus ajustes. São exibidos os últimos valores disponíveis ou ajustes temporários. Seus arquivos não foram redefinidos."), style = styles.body, color = palette.textPrimary)
+                Text(pick("No se pudieron leer tus ajustes. La app usa los últimos valores disponibles o ajustes temporales. Puedes volver a intentar la lectura.", "Your settings could not be read. The app uses the last available values or temporary settings. You can try reading them again.", "Não foi possível ler seus ajustes. O app usa os últimos valores disponíveis ou ajustes temporários. Você pode tentar ler novamente."), style = styles.body, color = palette.textPrimary)
                 AppSecondaryCapsule(pick("Reintentar lectura", "Read again", "Ler novamente"), store::retryRead, tag = "retry_preferences_read")
             }
             if (failedKeys.isNotEmpty()) {

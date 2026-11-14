@@ -440,7 +440,7 @@ fun MainApp(
                         onNavigateToHabits = { openHabits() },
                         onOpenTemptations = { openHabits(temptations = true) },
                         onOpenDailyVerse = { bookId, chapter, verseStart ->
-                            repository.selectBibleEdition("bundled")
+                            repository.requestBibleEdition("bundled")
                             onOpenBible(bookId, chapter, verseStart)
                         },
                         dailyVerseCanonicalReference = com.example.data.verse.DailyVerseRotation.referenceFor(java.time.LocalDate.of(today.year, today.month, today.day)),

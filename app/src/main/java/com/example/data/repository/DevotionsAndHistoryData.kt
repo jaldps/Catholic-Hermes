@@ -1123,9 +1123,9 @@ object DevotionsAndHistoryData {
                 "Revelado a Santa Margarida Maria Alacoque na França. Jesus mostrou Seu Coração cercado de espinhos e em chamas de amor por toda a humanidade."
             ),
             promises = LocalizedText(
-                "12 Promesas Solemnes, entre ellas: paz en los hogares, consuelo en las aflicciones, bendición en todas las empresas, y la Gran Promesa de la salvación eterna a quienes comulguen nueve primeros viernes de mes consecutivos.",
-                "The 12 Great Promises: peace in families, comfort in all afflictions, abundant blessing on temporal undertakings, and the grace of final repentance for the Nine First Fridays.",
-                "As doze promessas de Jesus, incluindo paz nos lares, consolo nas aflições e a salvação eterna àqueles que comungarem nas primeiras sextas-feiras do mês."
+                "La tradición de los nueve primeros viernes, difundida por santa Margarita María de Alacoque, expresa confianza en la gracia de la perseverancia y del arrepentimiento final. Requiere una vida de fe y recepción de la Comunión con la debida disposición; no es una garantía automática de salvación por cumplir nueve actos. Las revelaciones privadas no completan la Revelación de Cristo (Catecismo 67, 1385). Para el fundamento de esta devoción: Pío XII, Haurietis aquas (1956); Catecismo 478.",
+                "The Nine First Fridays tradition, spread by Saint Margaret Mary Alacoque, expresses trust in the grace of perseverance and final repentance. It calls for a life of faith and Communion received with proper disposition; nine acts do not automatically guarantee salvation. Private revelations do not complete Christ’s Revelation (Catechism 67, 1385). For the foundation of this devotion: Pius XII, Haurietis aquas (1956); Catechism 478.",
+                "A tradição das nove primeiras sextas-feiras, difundida por santa Margarida Maria Alacoque, expressa confiança na graça da perseverança e do arrependimento final. Requer uma vida de fé e a Comunhão recebida com a devida disposição; nove atos não garantem automaticamente a salvação. As revelações privadas não completam a Revelação de Cristo (Catecismo 67, 1385). Fundamento desta devoção: Pio XII, Haurietis aquas (1956); Catecismo 478."
             ),
             theologicalMeaning = LocalizedText(
                 "El Corazón de Jesús es el símbolo supremo y la fuente real del amor redentor con que el Hijo de Dios amó a su Padre y a todos los hombres hasta el extremo de la Cruz.",
@@ -1141,9 +1141,9 @@ object DevotionsAndHistoryData {
             country = LocalizedText("Universal / Francia", "Universal / France", "Universal / França"),
             primarySanctuary = LocalizedText("Basílica del Sagrado Corazón de Montmartre (París) y Paray-le-Monial", "Sacré-Cœur Basilica (Paris) & Paray-le-Monial", "Basílica de Sacré-Cœur em Paris e Paray-le-Monial"),
             recordedMiracles = LocalizedText(
-                "La consagración de familias que superaron crisis insolubles, la protección de Marsella de la peste en 1720 tras la consagración episcopal, e incontables conversiones en el lecho de muerte.",
-                "The deliverance of Marseille from the plague in 1720, preservation of consecrated religious houses, and miracles of deathbed repentance.",
-                "A proteção de Marselha da grande peste após a consagração da diocese ao Sagrado Coração e incontáveis conversões."
+                "Los testimonios de favores vinculados a esta devoción requieren documentación y discernimiento. Esta ficha no acredita milagros concretos ni promete protección frente a enfermedades, dificultades o muerte.",
+                "Reports of favors associated with this devotion require documentation and discernment. This entry does not authenticate specific miracles or promise protection from illness, hardship or death.",
+                "Os relatos de graças associados a esta devoção requerem documentação e discernimento. Esta ficha não autentica milagres específicos nem promete proteção contra doenças, dificuldades ou morte."
             )
         ),
         ChristManifestation(

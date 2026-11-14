@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
         val database = SanctaFidesDatabase.getInstance(this)
         val dao = database.dao()
 
-        lifecycleScope.launch {
+        com.example.data.persistence.PersonalDataCommands.submit("initial-content") {
             dao.insertDefaultHabits(com.example.data.repository.PilgrimageAndHabitsData.defaultHabitsToSeed)
             dao.insertLiturgicalDays(com.example.data.repository.PilgrimageAndHabitsData.defaultLiturgicalDaysToSeed)
         }

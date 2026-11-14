@@ -672,7 +672,7 @@ fun HomeScreen(
                 !saintTitle.equals(saintName, ignoreCase = true) &&
                 !saintTitle.equals(heading.title, ignoreCase = true) &&
                 !saintTitle.equals(heading.role, ignoreCase = true)
-            val showQuote = saintQuote.isNotBlank() &&
+            val showQuote = !saintOfTheDay.quoteSource.isNullOrBlank() && saintQuote.isNotBlank() &&
                 !saintQuote.equals(saintBiography, ignoreCase = true) &&
                 !saintQuote.equals(saintName, ignoreCase = true) &&
                 !saintQuote.equals(saintTitle, ignoreCase = true)
@@ -717,6 +717,7 @@ fun HomeScreen(
                         if (showQuote) {
                             Spacer(Modifier.height(16.dp))
                             MarginalQuote(text = saintQuote)
+                            Text(saintOfTheDay.quoteSource.orEmpty(), style = styles.footnote, color = palette.textSecondary)
                         }
                     }
                 }

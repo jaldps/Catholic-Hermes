@@ -8,7 +8,9 @@ data class SaintOfTheDay(
     val patronages: LocalizedText,
     val biography: LocalizedText,
     val iconicQuote: LocalizedText,
-    val intercessionPrayer: LocalizedText
+    val intercessionPrayer: LocalizedText,
+    /** A quote is displayed only after an identifiable source has been recorded. */
+    val quoteSource: String? = null
 )
 
 data class MarianApparition(

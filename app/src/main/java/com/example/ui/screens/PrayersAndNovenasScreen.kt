@@ -1863,7 +1863,7 @@ private fun NovenaIndexView(
             val matchesTag = selectedTag == null || novena.tags.contains(selectedTag)
             val matchesKind = when (kind) {
                 NovenaKind.ALL -> true
-                NovenaKind.POPULAR -> novena.id in PopularNovenaIds
+                NovenaKind.POPULAR -> "pastoral_review" !in novena.tags && novena.id in PopularNovenaIds
                 else -> kinds[novena.id] == kind
             }
             matchesSearch && matchesTag && matchesKind
@@ -2528,6 +2528,13 @@ private fun NovenaDayView(
                     onImage = true,
                     tag = "novena_text_settings"
                 )
+            }
+        }
+        if ("pastoral_review" in novena.tags) item(key = "pastoral_context") {
+            Column(Modifier.padding(horizontal = design.spacing.gutter, vertical = 16.dp)) {
+                Text(currentLanguage.pick("Revisión pastoral pendiente", "Pastoral review pending", "Revisão pastoral pendente"), style = styles.headline, color = p.textPrimary)
+                Spacer(Modifier.height(8.dp))
+                Text(novena.description.get(currentLanguage), style = styles.callout, color = p.textSecondary)
             }
         }
         item(key = "strip") {

@@ -107,11 +107,6 @@ private fun trackTitle(track: LearningTrack, language: AppLanguage): String = wh
 internal fun trackResumeIndex(track: LearningTrack, visited: Set<Int>): Int =
     ((track.startQuestion..track.endQuestion).firstOrNull { it !in visited } ?: track.startQuestion) - 1
 
-private fun trackQuizQuestions(trivia: List<TriviaQuestion>, trackIndex: Int): List<TriviaQuestion> {
-    if (trivia.isEmpty()) return emptyList()
-    val start = (trackIndex * 3) % trivia.size
-    return (0 until 3).map { k -> trivia[(start + k) % trivia.size] }
-}
 
 private fun doctrineFold(s: String): String =
     Normalizer.normalize(s.lowercase(), Normalizer.Form.NFD).replace(Regex("\\p{M}+"), "")
@@ -328,7 +323,7 @@ internal fun QuestionsRoot(
         // ---- quiz for each finished itinerary
         LEARNING_TRACKS.forEach { track ->
             if (track.completedCount(visitedQuestions) >= track.total) {
-                val quiz = trackQuizQuestions(repository.triviaQuestions, track.index)
+                val quiz = com.example.data.repository.GuidedReviewData.quiz(track.index)
                 if (quiz.isNotEmpty()) item(key = "quiz_${track.index}") {
                     Spacer(Modifier.height(16.dp))
                     TrackQuiz(
@@ -406,7 +401,7 @@ private fun TrackQuiz(
             modifier = Modifier.semantics { heading() }
         )
         questions.forEachIndexed { qi, trivia ->
-            val key = "${track.index}_$qi"
+            val key = "${track.index}:review:${trivia.id}"
             val answered = answers[key]
             Spacer(Modifier.height(if (qi == 0) 12.dp else 24.dp))
             Text(trivia.question.get(language), style = styles.headline, color = p.textPrimary)

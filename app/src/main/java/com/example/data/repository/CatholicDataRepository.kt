@@ -102,18 +102,22 @@ class CatholicDataRepository(
     private val _currentLanguage = MutableStateFlow(detectInitialLanguage())
     val currentLanguage: StateFlow<AppLanguage> = _currentLanguage.asStateFlow()
 
-    private val _activeBibleEditionId = MutableStateFlow("bundled")
-    val activeBibleEditionId: StateFlow<String> = _activeBibleEditionId.asStateFlow()
+    private val editionSelection = BibleEditionSelection(
+        validate = { id ->
+            id.takeIf { candidate ->
+                bibleDownloadManager?.specs?.any { it.id == candidate } == true &&
+                    bibleDownloadManager.isDownloaded(candidate)
+            } ?: "bundled"
+        },
+        persist = { preferencesStore?.setActiveBibleTranslationId(it) }
+    )
+    private val _activeBibleEditionId = editionSelection.selected
+    val activeBibleEditionId: StateFlow<String> = editionSelection.selected
 
-    /** Reader selection never changes the edition used for liturgical selections. */
-    fun selectBibleEdition(id: String) {
-        val selected = id.takeIf { candidate ->
-            bibleDownloadManager?.specs?.any { it.id == candidate } == true &&
-                bibleDownloadManager.isDownloaded(candidate)
-        } ?: "bundled"
-        _activeBibleEditionId.value = selected
-        preferencesStore?.let { store -> scope.launch { store.setActiveBibleTranslationId(selected) } }
-    }
+    /** Blocking compatibility API for workers; UI uses the application-owned request. */
+    fun selectBibleEdition(id: String) = editionSelection.selectBlocking(id)
+
+    fun requestBibleEdition(id: String) = editionSelection.request(id)
 
     data class DailyContent(
         val date: CalendarDate,
@@ -345,10 +349,7 @@ class CatholicDataRepository(
                 store.preferences.collectLatest { preferences ->
                     _calendarRules.value = preferences.calendarRules
                     val id = preferences.activeBibleTranslationId
-                    _activeBibleEditionId.value = id.takeIf { candidate ->
-                        bibleDownloadManager?.specs?.any { it.id == candidate } == true &&
-                            bibleDownloadManager.isDownloaded(candidate)
-                    } ?: "bundled"
+                    editionSelection.acceptStored(id)
                 }
             }
         }
@@ -427,7 +428,8 @@ class CatholicDataRepository(
             title = if (bundledMatch) bundled.title else localized(vatican.name, LocalizedText("", "", "")),
             patronages = if (bundledMatch) bundled.patronages else LocalizedText("", "", ""),
             biography = localized(vatican.biography, bundled.biography),
-            iconicQuote = if (bundledMatch) bundled.iconicQuote else localized(vatican.biography, LocalizedText("", "", "")),
+            iconicQuote = if (bundledMatch) bundled.iconicQuote else LocalizedText("", "", ""),
+            quoteSource = if (bundledMatch) bundled.quoteSource else null,
             intercessionPrayer = if (bundledMatch) bundled.intercessionPrayer else localized(prayerEn, LocalizedText("", "", ""))
         )
     }
@@ -444,7 +446,7 @@ class CatholicDataRepository(
      *
      * English text comes from the feed: name -> name, era -> title
      * (legacy when era is null), patronage -> patronages (legacy/era
-     * when the list is empty), legacy -> iconicQuote, summary ->
+     * when available), summary ->
      * biography. The feed has no prayer, so the EN intercession is the
      * short invocation "Saint <name>, pray for us." — never presented as
      * a sourced text.
@@ -467,10 +469,7 @@ class CatholicDataRepository(
             else LocalizedText(en, en, en)
 
         val titleEn = selected.era ?: selected.legacy ?: selected.feastDay
-        val patronagesEn = selected.patronage.joinToString(", ").ifBlank {
-            selected.legacy ?: selected.era ?: ""
-        }
-        val quoteEn = selected.legacy ?: selected.summary
+        val patronagesEn = selected.patronage.joinToString(", ")
         val prayerEn = "Saint ${selected.name}, pray for us."
 
         return SaintOfTheDay(
@@ -481,7 +480,8 @@ class CatholicDataRepository(
             title = localized(titleEn, bundled.title),
             patronages = localized(patronagesEn, bundled.patronages),
             biography = localized(selected.summary, bundled.biography),
-            iconicQuote = localized(quoteEn, bundled.iconicQuote),
+            iconicQuote = if (bundledMatch) bundled.iconicQuote else LocalizedText("", "", ""),
+            quoteSource = if (bundledMatch) bundled.quoteSource else null,
             intercessionPrayer = localized(prayerEn, bundled.intercessionPrayer)
         )
     }
