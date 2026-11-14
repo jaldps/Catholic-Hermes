@@ -19,9 +19,11 @@ import androidx.sqlite.db.SupportSQLiteDatabase
         LiturgicalDayEntity::class,
         ScriptureStudyProgressEntity::class,
         AppPreferencesEntity::class,
-        BibleDownloadEntity::class
+        BibleDownloadEntity::class,
+        NovenaDayCompletionEntity::class,
+        PersonalDataMigrationEntity::class
     ],
-    version = 4,
+    version = 5,
     exportSchema = true
 )
 abstract class SanctaFidesDatabase : RoomDatabase() {
@@ -47,6 +49,18 @@ abstract class SanctaFidesDatabase : RoomDatabase() {
             }
         }
 
+        val MIGRATION_4_5 = object : Migration(4, 5) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("""CREATE TABLE IF NOT EXISTS `novena_day_completions` (
+                    `novenaId` TEXT NOT NULL, `dayNumber` INTEGER NOT NULL, `completedAt` INTEGER NOT NULL,
+                    PRIMARY KEY(`novenaId`, `dayNumber`))""")
+                db.execSQL("CREATE TABLE IF NOT EXISTS `personal_data_migrations` (`migrationKey` TEXT NOT NULL, PRIMARY KEY(`migrationKey`))")
+                // Existing statistics already treat a habit/date as a set. Preserve its earliest record.
+                db.execSQL("DELETE FROM habit_completion_logs WHERE id NOT IN (SELECT MIN(id) FROM habit_completion_logs GROUP BY habitId, completionDate)")
+                db.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS `index_habit_completion_logs_habitId_completionDate` ON `habit_completion_logs` (`habitId`, `completionDate`)")
+            }
+        }
+
         @Volatile
         private var INSTANCE: SanctaFidesDatabase? = null
 
@@ -56,7 +70,7 @@ abstract class SanctaFidesDatabase : RoomDatabase() {
                     context.applicationContext,
                     SanctaFidesDatabase::class.java,
                     "sancta_fides_db"
-                ).addMigrations(MIGRATION_3_4).build()
+                ).addMigrations(MIGRATION_3_4, MIGRATION_4_5).build()
                 INSTANCE = instance
                 instance
             }

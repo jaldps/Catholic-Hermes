@@ -674,6 +674,7 @@ private fun LessonDetailView(
                     style = styles.footnote, color = p.textSecondary
                 )
                 Spacer(Modifier.height(12.dp))
+                com.example.ui.components.SaveFailureNotice("study:${lesson.id}",currentLanguage)
                 NotesField(
                     value = notesText,
                     onValueChange = { notesText = it; notesEdited = true; onSaveNotes(it) },

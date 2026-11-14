@@ -418,6 +418,7 @@ fun MainApp(
                         saintOfTheDay = saintOfTheDay,
                         currentLanguage = currentLanguage,
                         liturgicalDay = todayLiturgy,
+                        useOnlineCalendar = repository.vaticanCalendarMatches(today, activeCalendarRules),
                         dao = dao,
                         catholicQuestions = repository.catholicQuestions,
                         onOpenQuestions = { index ->

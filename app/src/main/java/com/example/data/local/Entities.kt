@@ -1,6 +1,7 @@
 package com.example.data.local
 
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "journal_entries")
@@ -60,7 +61,7 @@ data class SpiritualHabitEntity(
     val totalCompletions: Int = 0
 )
 
-@Entity(tableName = "habit_completion_logs")
+@Entity(tableName = "habit_completion_logs", indices = [Index(value = ["habitId", "completionDate"], unique = true)])
 data class HabitCompletionLogEntity(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     val habitId: String,
@@ -134,3 +135,19 @@ data class BibleDownloadEntity(
     val isDownloading: Boolean = false
 )
 
+
+
+@Entity(tableName = "novena_day_completions", primaryKeys = ["novenaId", "dayNumber"])
+data class NovenaDayCompletionEntity(
+    val novenaId: String,
+    val dayNumber: Int,
+    /** Zero for imported legacy completions whose exact date is unknown. */
+    val completedAt: Long = System.currentTimeMillis()
+)
+
+@Entity(tableName = "personal_data_migrations")
+data class PersonalDataMigrationEntity(@PrimaryKey val migrationKey: String)
+
+
+/** One SQL snapshot includes the import marker even when there are no completed days. */
+data class NovenaDaySnapshotRow(val migrationKey: String, val novenaId: String?, val dayNumber: Int?)

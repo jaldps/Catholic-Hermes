@@ -111,6 +111,9 @@ class HomePrayerPrioritiesTest(private val identity: DesignLanguage, private val
         val practices = compose.onNodeWithTag("home_practices_heading").getUnclippedBoundsInRoot()
         assertTrue("The current prayer is directly after the liturgical season", prayer.top >= season.bottom && prayer.top - season.bottom < 72.dp)
         assertTrue("Practices follow the current prayer near the start of Home", practices.top > prayer.bottom)
+        compose.waitUntil(10_000) {
+            runCatching { compose.onNodeWithTag("home_fidelity_count").assertTextEquals("3") }.isSuccess
+        }
         compose.onNodeWithTag("home_fidelity_count").assertTextEquals("3").assertIsDisplayed()
 
         // An earlier ordinary Read visit keeps its own canon selection. The
@@ -146,7 +149,8 @@ class HomePrayerPrioritiesTest(private val identity: DesignLanguage, private val
         // Inspect the actual verse's text, rather than merely arriving at the Bible tab.
         val expected = repository.getChapter(book.id, reference.chapter, AppLanguage.ES).verses.single { it.number == reference.verseStart }
         compose.onNode(hasTestTag("verse_${reference.verseStart}") and hasText(expected.text.get(AppLanguage.ES), substring = true)).assertExists()
-        compose.onNodeWithTag("bible_active_edition").performScrollTo().assertTextEquals("Biblia Platense · Español")
+        compose.onNodeWithTag("bible_reader").performScrollToNode(hasTestTag("bible_active_edition"))
+        compose.onNodeWithTag("bible_active_edition").assertTextEquals("Biblia Platense · Español")
         compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
         compose.onNodeWithTag("home_screen").assertIsDisplayed()
     }

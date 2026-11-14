@@ -151,6 +151,8 @@ import com.example.ui.theme.LocalAppTextStyles
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
+import com.example.data.persistence.PersonalDataCommands
+import com.example.ui.components.SaveFailureNotice
 import com.example.data.repository.dayNumbers
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.launch
@@ -286,57 +288,40 @@ fun PrayersAndNovenasScreen(
     val catalogError by repository.novenaCatalogError.collectAsState()
     val novenas = catalog.orEmpty()
 
-    // ---- Novena progress (Room + a parallel store for days beyond 31)
+    // One Room source of truth; old preferences are read only for the idempotent import.
     val extraStore = remember(context) { NovenaExtraDaysStore(context.applicationContext) }
-    var extraDays by remember { mutableStateOf(extraStore.all()) }
-    var sessionDaysPrayed by remember { mutableStateOf(emptyMap<String, Set<Int>>()) }
-    val persistedProgress by remember(dao) {
-        dao?.getAllNovenaProgress() ?: flowOf(emptyList<NovenaProgressEntity>())
-    }.collectAsState(initial = emptyList())
-    val startedOn = remember(persistedProgress) {
-        persistedProgress.associate { it.novenaId to it.startDate }
+    val legacyExtras = remember { extraStore.all() }
+    val persistedProgress by remember(dao) { dao?.getAllNovenaProgress() ?: flowOf(emptyList()) }.collectAsState(initial = emptyList())
+    val daySnapshot by remember(dao) { dao?.novenaDaySnapshot() ?: flowOf(emptyList()) }.collectAsState(initial = emptyList())
+    val imported = daySnapshot.isNotEmpty()
+    LaunchedEffect(dao) {
+        if (dao != null) PersonalDataCommands.submit("novena-import") { dao.importLegacyNovenaDays(legacyExtras) }
     }
-    val daysPrayed = remember(persistedProgress, sessionDaysPrayed, extraDays) {
-        val stored = persistedProgress.associate { it.novenaId to decodeNovenaDays(it.currentDay) }
-        (stored.keys + sessionDaysPrayed.keys + extraDays.keys).associateWith { id ->
-            // The session's set is the optimistic echo of the last write; it
-            // is authoritative for that novena once it exists.
-            sessionDaysPrayed[id] ?: (stored[id].orEmpty() + extraDays[id].orEmpty())
+    val startedOn = remember(persistedProgress) { persistedProgress.filter { it.startDate > 0L }.associate { it.novenaId to it.startDate } }
+    val daysPrayed = remember(persistedProgress, daySnapshot, imported) {
+        if (imported) daySnapshot.filter { it.novenaId != null && it.dayNumber != null }.groupBy { it.novenaId!! }.mapValues { (_, days) -> days.map { it.dayNumber!! }.toSet() }
+        else {
+            val first = persistedProgress.associate { it.novenaId to decodeNovenaDays(it.currentDay) }
+            (first.keys + legacyExtras.keys).associateWith { first[it].orEmpty() + legacyExtras[it].orEmpty() }
         }
     }
-
-    fun writeNovenaDays(novena: Novena, prayed: Set<Int>) {
-        sessionDaysPrayed = sessionDaysPrayed + (novena.id to prayed)
-        extraStore.put(novena.id, prayed.filter { it > 31 }.toSet())
-        extraDays = extraStore.all()
-        if (dao != null) {
-            scope.launch {
-                val existing = dao.getNovenaProgress(novena.id)
-                val now = System.currentTimeMillis()
-                dao.saveNovenaProgress(
-                    NovenaProgressEntity(
-                        novenaId = novena.id,
-                        currentDay = encodeNovenaDays(prayed),
-                        personalIntention = existing?.personalIntention ?: "",
-                        startDate = existing?.startDate ?: now,
-                        lastUpdated = now,
-                        isCompleted = isNovenaFinished(novena, prayed)
-                    )
-                )
-            }
-        }
-    }
-
     fun toggleNovenaDay(novena: Novena, day: Int) {
-        val current = daysPrayed[novena.id].orEmpty()
-        writeNovenaDays(novena, if (day in current) current - day else current + day)
+        val target = dao ?: return
+        val id = novena.id
+        val required = novena.dayNumbers().toSet()
+        val complete = day !in daysPrayed[id].orEmpty()
+        PersonalDataCommands.submit("novena:$id") {
+            target.importLegacyNovenaDays(legacyExtras)
+            target.setNovenaDay(id,day,complete,required)
+        }
     }
-
     fun resetNovena(novena: Novena) {
-        sessionDaysPrayed = sessionDaysPrayed + (novena.id to emptySet())
-        extraStore.put(novena.id, emptySet())
-        extraDays = extraStore.all()
-        if (dao != null) scope.launch { dao.deleteNovenaProgress(novena.id) }
+        val target = dao ?: return
+        val id = novena.id
+        PersonalDataCommands.submit("novena:$id") {
+            target.importLegacyNovenaDays(legacyExtras)
+            target.resetNovenaDays(id)
+        }
     }
 
     val currentlySpeaking by ttsManager.currentlySpeaking.collectAsState()
@@ -1893,6 +1878,7 @@ private fun NovenaIndexView(
 
     LazyColumn(Modifier.fillMaxSize().testTag("novena_index"), contentPadding = PaddingValues(bottom = bottomPadding)) {
         header()
+        item(key = "novena_import_status") { SaveFailureNotice("novena-import",currentLanguage) }
 
         if (isLoading || hasError || searchResult == null) item(key = "novena_loading") {
             AppEmptyState(
@@ -2864,7 +2850,10 @@ private fun NovenaBodyContent(
         }
     }
     val result = loaded
-    if (result?.isSuccess == true) content(result.getOrThrow())
+    if (result?.isSuccess == true) Column(Modifier.fillMaxSize()) {
+        SaveFailureNotice("novena:$id",language)
+        Box(Modifier.weight(1f)) { content(result.getOrThrow()) }
+    }
     else Column(Modifier.fillMaxWidth().padding(24.dp)) {
         AppEmptyState(if (result == null) language.pick("Cargando oración…", "Loading prayer…", "Carregando oração…")
             else language.pick("No se pudo abrir la oración", "Could not open prayer", "Não foi possível abrir a oração"))

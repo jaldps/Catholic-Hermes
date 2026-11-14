@@ -413,12 +413,8 @@ fun HabitsAndVirtuesScreen(
     }
 
     fun toggle(habitId: String, wasDone: Boolean) {
-        scope.launch {
-            if (wasDone) {
-                dao.deleteCompletionForDate(habitId, todayKey)
-            } else {
-                dao.insertCompletion(HabitCompletionLogEntity(habitId = habitId, completionDate = todayKey))
-            }
+        com.example.data.persistence.PersonalDataCommands.submit("habits:$todayKey") {
+            dao.setHabitCompletion(habitId,todayKey,!wasDone)
         }
     }
 
@@ -506,7 +502,8 @@ fun HabitsAndVirtuesScreen(
                     onOpenTemptation = { page = HabitsPage.TEMPTATION },
                     onVictory = { sheetRootKey = null; sheet = TemptationSheet.VICTORY },
                     onFall = { sheet = TemptationSheet.FALL },
-                    onOpenReminders = { onOpenReminders?.invoke() ?: run { page = HabitsPage.REMINDERS } }
+                    onOpenReminders = { onOpenReminders?.invoke() ?: run { page = HabitsPage.REMINDERS } },
+                    saveNotice = { com.example.ui.components.SaveFailureNotice("habits:$todayKey",lang) }
                 )
                 HabitsPage.TEMPTATION -> TemptationPage(
                     insets = insets,
@@ -603,6 +600,7 @@ private fun HabitsRoot(
     onVictory: () -> Unit,
     onFall: () -> Unit,
     onOpenReminders: () -> Unit,
+    saveNotice: @Composable () -> Unit = {}
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -615,6 +613,7 @@ private fun HabitsRoot(
         modifier = Modifier.fillMaxSize().testTag("tab_habits_rule"),
         contentPadding = PaddingValues(bottom = insets.calculateBottomPadding() + 24.dp)
     ) {
+        item(key = "habit_save_notice") { saveNotice() }
         item(key = "header") {
             AppHeroHeader(
                 assetPath = "heroes/lumen/habits.jpg",

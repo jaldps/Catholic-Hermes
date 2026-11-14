@@ -18,7 +18,7 @@ class DatabaseMigrationPreservationTest {
     private val context: Context = ApplicationProvider.getApplicationContext()
     private val name = "migration-preservation.db"
     private fun open() = Room.databaseBuilder(context, SanctaFidesDatabase::class.java, name)
-        .addMigrations(SanctaFidesDatabase.MIGRATION_3_4).allowMainThreadQueries().build()
+        .addMigrations(SanctaFidesDatabase.MIGRATION_3_4, SanctaFidesDatabase.MIGRATION_4_5).allowMainThreadQueries().build()
 
     private fun oldDatabase(version: Int) {
         context.deleteDatabase(name)
@@ -59,6 +59,41 @@ class DatabaseMigrationPreservationTest {
             sql.execSQL("INSERT INTO app_preferences VALUES ('default', 'LITURGICAL_DYNAMIC', 'SERIF', 1.0, 'SYSTEM', 1.0, 'jerusalem', 0)")
             sql.execSQL("INSERT INTO bible_downloads VALUES ('drc', 'Douay-Rheims', 'en', '', 0, 0, 0)")
             } finally { database.close() }
+        }
+        context.deleteDatabase(name)
+    }
+
+    @Test fun upgradeFourToFivePreservesPrivateDataAndConsolidatesHabitDates() {
+        context.deleteDatabase(name)
+        open().let { database ->
+            try {
+                val sql=database.openHelper.writableDatabase
+                sql.execSQL("INSERT INTO journal_entries VALUES (7, 'Private intention', 'Intention', 'Keep this note', 123, 0, '')")
+                sql.execSQL("INSERT INTO novena_progress VALUES ('long', 5, 'Preserve intention', 10, 20, 0)")
+            } finally { database.close() }
+        }
+        // Reconstruct the actual schema-4 shape: new tables/index are absent.
+        SQLiteDatabase.openDatabase(context.getDatabasePath(name).path,null,SQLiteDatabase.OPEN_READWRITE).use { sql ->
+            sql.execSQL("DROP TABLE novena_day_completions")
+            sql.execSQL("DROP TABLE personal_data_migrations")
+            sql.execSQL("DROP INDEX index_habit_completion_logs_habitId_completionDate")
+            sql.execSQL("INSERT INTO habit_completion_logs VALUES (1,'habit','2026-11-13',111)")
+            sql.execSQL("INSERT INTO habit_completion_logs VALUES (2,'habit','2026-11-13',222)")
+            sql.execSQL("DELETE FROM room_master_table")
+            sql.version=4
+        }
+        open().let { database ->
+            try {
+                val sql=database.openHelper.writableDatabase
+                assertEquals(5,sql.version)
+                sql.query("SELECT content FROM journal_entries WHERE id=7").use { assertTrue(it.moveToFirst());assertEquals("Keep this note",it.getString(0)) }
+                sql.query("SELECT personalIntention FROM novena_progress WHERE novenaId='long'").use { assertTrue(it.moveToFirst());assertEquals("Preserve intention",it.getString(0)) }
+                sql.query("SELECT COUNT(*), MIN(timestamp) FROM habit_completion_logs").use { assertTrue(it.moveToFirst());assertEquals(1,it.getInt(0));assertEquals(111L,it.getLong(1)) }
+                kotlinx.coroutines.runBlocking {
+                    database.dao().importLegacyNovenaDays(mapOf("long" to setOf(32,54,275)))
+                    assertEquals(setOf(1,3,32,54,275),database.dao().novenaDaysOnce("long").map {it.dayNumber}.toSet())
+                }
+            }finally{database.close()}
         }
         context.deleteDatabase(name)
     }

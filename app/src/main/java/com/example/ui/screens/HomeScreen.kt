@@ -174,6 +174,7 @@ fun HomeScreen(
     // compiling; the fidelity card is the only thing gated on it.
     dao: SanctaFidesDao? = null,
     liturgicalDay: LiturgicalCalendarDay = PilgrimageAndHabitsData.upcomingLiturgicalDays.first(),
+    useOnlineCalendar: Boolean = true,
     onOpenReminders: () -> Unit = {},
     onNavigateToChurches: () -> Unit = onNavigateToDoctrine,
     ttsManager: com.example.data.audio.LiturgicalTtsManager? = null,
@@ -214,10 +215,12 @@ fun HomeScreen(
     // falls back to the Vatican's own feed, the source the Mass tab opens.
     val bundledGospel = dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
     val bundledFirst = dailyReading.firstReadingRef.takeIf { it.isNotBlank() }
-    val needsFeed = bundledGospel == null || bundledFirst == null
+    val needsFeed = useOnlineCalendar && (bundledGospel == null || bundledFirst == null)
     val isoToday = now.toLocalDate().toString()
-    val vaticanResult by produceState<ReadingsResult?>(null, currentLanguage, isoToday, needsFeed) {
-        value = if (needsFeed) VaticanGospelFetcher().today(currentLanguage, isoToday) else null
+    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday, needsFeed) {
+        produceState<ReadingsResult?>(null) {
+            if (needsFeed) value = VaticanGospelFetcher().today(currentLanguage, isoToday)
+        }
     }
     val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
     val feedGospel = vatican?.sections?.lastOrNull()
@@ -948,14 +951,14 @@ private fun FidelityCard(
 
     val today = rememberLifecycleClock().toLocalDate()
     val todayKey = FidelityStore.dateKey(today)
-    val completions by dao.getAllCompletions().collectAsState(initial = emptyList())
-    val points = remember(completions, todayKey) { DailyRule.countsFrom(completions)[todayKey] ?: 0 }
+    val completions by dao.getAllCompletions().collectAsState(initial = null)
+    val points = remember(completions, todayKey) { completions?.let { DailyRule.countsFrom(it)[todayKey] ?: 0 } }
     val total = DailyRule.habits.size
     AppSectionHeader(title = strings("Mis prácticas", "My practices", "Minhas práticas"), modifier = Modifier.testTag("home_practices_heading"))
     AppCard(Modifier.padding(horizontal = design.spacing.gutter).testTag("home_fidelity_card")) {
         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.testTag("home_habit_tracker_card")) {
-            AppProgressRing(progress = points.toFloat() / total, size = 76.dp, stroke = 5.dp) {
-                Text("$points", style = styles.title2, color = palette.textPrimary, modifier = Modifier.testTag("home_fidelity_count"))
+            AppProgressRing(progress = (points ?: 0).toFloat() / total, size = 76.dp, stroke = 5.dp) {
+                Text(points?.toString() ?: "…", style = styles.title2, color = palette.textPrimary, modifier = Modifier.testTag("home_fidelity_count"))
             }
             Spacer(Modifier.width(16.dp))
             Column(Modifier.weight(1f)) {

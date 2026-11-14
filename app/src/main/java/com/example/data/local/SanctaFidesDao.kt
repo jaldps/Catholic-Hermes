@@ -37,6 +37,74 @@ interface SanctaFidesDao {
     @Query("DELETE FROM novena_progress WHERE novenaId = :novenaId")
     suspend fun deleteNovenaProgress(novenaId: String)
 
+    @Query("SELECT * FROM novena_progress")
+    suspend fun novenaProgressOnce(): List<NovenaProgressEntity>
+
+    @Query("SELECT * FROM novena_day_completions")
+    fun novenaDays(): Flow<List<NovenaDayCompletionEntity>>
+
+    @Query("SELECT m.migrationKey, d.novenaId, d.dayNumber FROM personal_data_migrations m LEFT JOIN novena_day_completions d ON 1 = 1 WHERE m.migrationKey = 'novena-days-v1'")
+    fun novenaDaySnapshot(): Flow<List<NovenaDaySnapshotRow>>
+
+    @Query("SELECT * FROM novena_day_completions WHERE novenaId = :id")
+    suspend fun novenaDaysOnce(id: String): List<NovenaDayCompletionEntity>
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertNovenaDays(days: List<NovenaDayCompletionEntity>)
+
+    @Query("DELETE FROM novena_day_completions WHERE novenaId = :id AND dayNumber = :day")
+    suspend fun deleteNovenaDay(id: String, day: Int)
+
+    @Query("DELETE FROM novena_day_completions WHERE novenaId = :id")
+    suspend fun clearNovenaDays(id: String)
+
+    @Query("SELECT EXISTS(SELECT 1 FROM personal_data_migrations WHERE migrationKey = :key)")
+    fun migrationApplied(key: String): Flow<Boolean>
+
+    @Query("SELECT EXISTS(SELECT 1 FROM personal_data_migrations WHERE migrationKey = :key)")
+    suspend fun migrationAppliedOnce(key: String): Boolean
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun markMigration(migration: PersonalDataMigrationEntity)
+
+    /** Read-only legacy preferences are imported once, atomically with the durable marker. */
+    @Transaction
+    suspend fun importLegacyNovenaDays(extras: Map<String, Set<Int>>) {
+        if (migrationAppliedOnce("novena-days-v1")) return
+        val progress = novenaProgressOnce().associateBy { it.novenaId }
+        for (id in progress.keys + extras.keys) {
+            val previous = progress[id]
+            val first = (1..31).filter { day -> (previous?.currentDay ?: 0) and (1 shl (day-1)) != 0 }.toSet()
+            val days = first + extras[id].orEmpty().filter { it > 0 }
+            insertNovenaDays(days.map { NovenaDayCompletionEntity(id,it,0L) })
+            val mask = days.filter { it in 1..31 }.fold(0) { value, d -> value or (1 shl(d-1)) }
+            if (previous == null) saveNovenaProgress(NovenaProgressEntity(id,mask,"",0L,0L,false))
+            else if (mask != previous.currentDay) saveNovenaProgress(previous.copy(currentDay=mask))
+        }
+        markMigration(PersonalDataMigrationEntity("novena-days-v1"))
+    }
+
+    @Transaction
+    suspend fun setNovenaDay(id: String, day: Int, completed: Boolean, required: Set<Int>) {
+        require(day in required && day > 0)
+        val hadDays = novenaDaysOnce(id).isNotEmpty()
+        if (completed) insertNovenaDays(listOf(NovenaDayCompletionEntity(id,day))) else deleteNovenaDay(id,day)
+        val days = novenaDaysOnce(id).map { it.dayNumber }.toSet()
+        val previous = getNovenaProgress(id)
+        val now = System.currentTimeMillis()
+        saveNovenaProgress((previous ?: NovenaProgressEntity(id,0,"",now,now,false)).copy(
+            currentDay = days.filter { it in 1..31 }.fold(0) { mask, d -> mask or (1 shl (d-1)) },
+            startDate = previous?.startDate?.takeIf { it > 0L } ?: if (!hadDays) now else 0L,
+            lastUpdated = now, isCompleted = required.isNotEmpty() && required.all { it in days }
+        ))
+    }
+
+    @Transaction
+    suspend fun resetNovenaDays(id: String) {
+        clearNovenaDays(id)
+        getNovenaProgress(id)?.let { saveNovenaProgress(it.copy(currentDay=0,startDate=0L,lastUpdated=System.currentTimeMillis(),isCompleted=false)) }
+    }
+
     // Memorized Verses
     @Query("SELECT * FROM memorized_verses")
     fun getAllMemorizedVerses(): Flow<List<MemorizedVerseEntity>>
@@ -77,11 +145,17 @@ interface SanctaFidesDao {
     @Query("SELECT * FROM habit_completion_logs")
     fun getAllCompletions(): Flow<List<HabitCompletionLogEntity>>
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertCompletion(completion: HabitCompletionLogEntity): Long
 
     @Query("DELETE FROM habit_completion_logs WHERE habitId = :habitId AND completionDate = :date")
     suspend fun deleteCompletionForDate(habitId: String, date: String)
+
+    @Transaction
+    suspend fun setHabitCompletion(habitId: String, date: String, completed: Boolean) {
+        if (completed) insertCompletion(HabitCompletionLogEntity(habitId=habitId,completionDate=date))
+        else deleteCompletionForDate(habitId,date)
+    }
 
     // Sin Overcome Micro-efforts (Grace Antidote)
     @Query("SELECT * FROM sin_overcome_logs ORDER BY timestamp DESC")
