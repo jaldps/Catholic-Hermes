@@ -87,6 +87,7 @@ android {
 
 // JVM tests read the same immutable novena assets as Android.
 android.sourceSets.getByName("test").resources.srcDir("src/main/assets/novenas")
+android.sourceSets.getByName("test").resources.srcDir("src/main/assets/prayers")
 
 // Configure the Secrets Gradle Plugin to use .env and .env.example files
 // to match the convention used in Web projects.

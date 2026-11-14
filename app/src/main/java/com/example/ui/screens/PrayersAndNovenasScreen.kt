@@ -110,6 +110,9 @@ import com.example.data.models.PrayerCategory
 import com.example.data.models.VaticanPrayer
 import com.example.data.prefs.UserPreferences
 import com.example.data.repository.CatholicDataRepository
+import com.example.data.repository.PrayerDetailsCatalog
+import com.example.data.models.PrayerDetails
+import com.example.data.models.NovenaPromise
 import com.example.ui.design.AppActionBar
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
@@ -1167,13 +1170,14 @@ private fun prayerArt(prayer: VaticanPrayer): String = when {
 
 /** A prayer as its own page: art, title, the text to be prayed, actions, notes. */
 @Composable
-private fun PrayerDetailView(
+internal fun PrayerDetailView(
     prayer: VaticanPrayer,
     currentLanguage: AppLanguage,
     currentlySpeaking: String?,
     onPlayAudio: () -> Unit,
     onStopAudio: () -> Unit,
-    bottomPadding: Dp
+    bottomPadding: Dp,
+    details: PrayerDetails? = remember(prayer.id) { PrayerDetailsCatalog.default.detailsById[prayer.id] }
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -1247,6 +1251,7 @@ private fun PrayerDetailView(
                 }
             }
         }
+        if (details != null) item(key = "details") { PrayerDetailsSections(details, currentLanguage) }
         item(key = "about") {
             PrayerSectionHeader(currentLanguage.pick("Acerca de esta oración", "About this prayer", "Sobre esta oração"))
             Column {
@@ -2519,35 +2524,9 @@ private fun NovenaProvenanceSections(provenance: NovenaProvenance, language: App
             }
         }
     }
-    val promise = provenance.promise
     Column(Modifier.fillMaxWidth().testTag("novena_promise")) {
         AppSectionHeader(language.pick("Promesa", "Promise", "Promessa"))
-        Column(gutter) {
-            AppCard(Modifier.fillMaxWidth()) {
-                val kindLabel = when (promise.kind) {
-                    PromiseKind.SOURCED -> language.pick("Promesa con fuente", "Sourced promise", "Promessa com fonte")
-                    PromiseKind.ECCLESIAL_GRANT -> language.pick("Concesión de la Iglesia", "Church grant", "Concessão da Igreja")
-                    PromiseKind.TRADITIONAL -> language.pick("Tradición popular", "Popular tradition", "Tradição popular")
-                    PromiseKind.NONE -> language.pick("Sin promesa asociada", "No associated promise", "Sem promessa associada")
-                }
-                Text(kindLabel, style = styles.footnote, color = p.accent, modifier = Modifier.testTag("novena_promise_kind"))
-                if (promise.kind == PromiseKind.NONE) {
-                    Text(
-                        language.pick(
-                            "Esta novena no tiene una promesa atribuida: se reza con confianza, sin esperar resultados automáticos.",
-                            "This novena has no attributed promise: pray it with trust, not expecting automatic results.",
-                            "Esta novena não tem promessa atribuída: reze-a com confiança, sem esperar resultados automáticos."
-                        ),
-                        style = styles.callout, color = p.textPrimary, modifier = Modifier.padding(top = 8.dp)
-                    )
-                } else {
-                    Text(promise.text.get(language), style = styles.callout, color = p.textPrimary, modifier = Modifier.padding(top = 8.dp))
-                    Labelled(language.pick("Atribución", "Attribution", "Atribuição"), promise.attribution.get(language))
-                    Labelled(language.pick("Fuente", "Source", "Fonte"), promise.source.get(language))
-                    Labelled(language.pick("Condiciones", "Conditions", "Condições"), promise.conditions.get(language))
-                }
-            }
-        }
+        Column(gutter) { PromiseCard(provenance.promise, language) }
     }
     provenance.commercialAdditions.get(language).takeIf { it.isNotBlank() }?.let {
         Spacer(Modifier.height(design.spacing.sectionGap))
@@ -2977,5 +2956,79 @@ private fun NovenaBodyContent(
         AppEmptyState(if (result == null) language.pick("Cargando oración…", "Loading prayer…", "Carregando oração…")
             else language.pick("No se pudo abrir la oración", "Could not open prayer", "Não foi possível abrir a oração"))
         if (result != null) AppSecondaryCapsule(language.pick("Reintentar", "Retry", "Tentar novamente"), { attempt++ })
+    }
+}
+
+@Composable
+internal fun PromiseCard(promise: NovenaPromise, language: AppLanguage) {
+    val styles = LocalAppTextStyles.current
+    val p = LocalAppDesign.current.palette
+    @Composable fun Labelled(label: String, value: String) {
+        if (value.isNotBlank()) Column(Modifier.fillMaxWidth().padding(top = 10.dp)) {
+            Text(label, style = styles.footnote, color = p.textSecondary)
+            Text(value, style = styles.callout, color = p.textPrimary)
+        }
+    }
+    AppCard(Modifier.fillMaxWidth()) {
+        val kindLabel = when (promise.kind) {
+            PromiseKind.SOURCED -> language.pick("Promesa con fuente", "Sourced promise", "Promessa com fonte")
+            PromiseKind.ECCLESIAL_GRANT -> language.pick("Concesión de la Iglesia", "Church grant", "Concessão da Igreja")
+            PromiseKind.TRADITIONAL -> language.pick("Tradición popular", "Popular tradition", "Tradição popular")
+            PromiseKind.NONE -> language.pick("Sin promesa asociada", "No associated promise", "Sem promessa associada")
+        }
+        Text(kindLabel, style = styles.footnote, color = p.accent, modifier = Modifier.testTag("novena_promise_kind"))
+        if (promise.kind == PromiseKind.NONE) {
+            Text(
+                language.pick(
+                    "Esta novena no tiene una promesa atribuida: se reza con confianza, sin esperar resultados automáticos.",
+                    "This novena has no attributed promise: pray it with trust, not expecting automatic results.",
+                    "Esta novena não tem promessa atribuída: reze-a com confiança, sem esperar resultados automáticos."
+                ),
+                style = styles.callout, color = p.textPrimary, modifier = Modifier.padding(top = 8.dp)
+            )
+        } else {
+            Text(promise.text.get(language), style = styles.callout, color = p.textPrimary, modifier = Modifier.padding(top = 8.dp))
+            Labelled(language.pick("Atribución", "Attribution", "Atribuição"), promise.attribution.get(language))
+            Labelled(language.pick("Fuente", "Source", "Fonte"), promise.source.get(language))
+            Labelled(language.pick("Condiciones", "Conditions", "Condições"), promise.conditions.get(language))
+        }
+    }
+}
+
+/** Instructions, history, approval and promise of a prayer; blank fields are skipped. */
+@Composable
+private fun PrayerDetailsSections(details: PrayerDetails, language: AppLanguage) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val p = design.palette
+    val gutter = Modifier.padding(horizontal = design.spacing.gutter)
+    val instructions = details.instructions.get(language)
+    val history = details.history.get(language)
+    val approval = details.approval.get(language)
+    val source = details.source.get(language)
+    val note = details.textNote.get(language)
+    Column(Modifier.fillMaxWidth()) {
+        if (instructions.isNotBlank()) Column(Modifier.fillMaxWidth().testTag("prayer_instructions")) {
+            AppSectionHeader(language.pick("Cómo rezarla", "How to pray it", "Como rezá-la"))
+            Column(gutter) { PrayerReadingParagraphs(instructions) }
+        }
+        if (history.isNotBlank()) Column(Modifier.fillMaxWidth().testTag("prayer_history")) {
+            AppSectionHeader(language.pick("Historia", "History", "História"))
+            Column(gutter) {
+                PrayerReadingParagraphs(history)
+                if (source.isNotBlank()) Text(source, style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(top = 12.dp))
+                if (note.isNotBlank()) Text(note, style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(top = 4.dp))
+            }
+        }
+        if (approval.isNotBlank()) Column(Modifier.fillMaxWidth().testTag("prayer_approval")) {
+            AppSectionHeader(language.pick("Aprobación", "Approval", "Aprovação"))
+            Column(gutter) { PrayerReadingParagraphs(approval) }
+        }
+        details.promise?.let { promise ->
+            Column(Modifier.fillMaxWidth().testTag("prayer_promise")) {
+                AppSectionHeader(language.pick("Promesa", "Promise", "Promessa"))
+                Column(gutter) { PromiseCard(promise, language) }
+            }
+        }
     }
 }

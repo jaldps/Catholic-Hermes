@@ -308,7 +308,9 @@ class CatholicDataRepository(
     }
     suspend fun loadNovena(id: String): Novena = withContext(Dispatchers.IO) { NovenaCatalog.default.preload(id) }
 
-    val vaticanPrayers: List<VaticanPrayer> get() = PrayerAndNovenaData.vaticanOfficialPrayers
+    val vaticanPrayers: List<VaticanPrayer> by lazy {
+        PrayerDetailsCatalog.default.mergeInto(PrayerAndNovenaData.vaticanOfficialPrayers)
+    }
 
     fun searchPrayers(query: String, category: PrayerCategory? = null, tag: String? = null): List<VaticanPrayer> {
         val currentLang = _currentLanguage.value
