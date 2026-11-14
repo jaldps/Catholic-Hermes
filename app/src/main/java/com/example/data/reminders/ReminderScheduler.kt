@@ -18,10 +18,19 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeout
 import kotlinx.coroutines.CancellationException
 import java.util.Calendar
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 const val REMINDER_CHANNEL_ID = "devotion_reminders"
 
 object ReminderScheduler {
+    private val schedulerScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private val reconciliation = Mutex()
+    private val _schedulingError = MutableStateFlow(false)
+    val schedulingError = _schedulingError.asStateFlow()
+
     const val ACTION_OPEN_REMINDER = "com.example.action.OPEN_REMINDER"
     const val ACTION_FIRE = "com.example.action.REMINDER_FIRE"
     const val EXTRA_ID = "reminder_id"
@@ -100,16 +109,25 @@ object ReminderScheduler {
      */
     fun rescheduleAll(context: Context, language: String) {
         val app = context.applicationContext
-        CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
-            runCatching { scheduleEnabled(app, language) }
+        schedulerScope.launch {
+            try { withTimeout(15_000) { scheduleEnabled(app, language) } }
+            catch (cancelled: kotlinx.coroutines.TimeoutCancellationException) { _schedulingError.value = true }
+            catch (cancelled: CancellationException) { throw cancelled }
+            catch (_: Exception) { _schedulingError.value = true }
         }
     }
 
     /** Schedules every enabled reminder now; returns how many were scheduled. */
-    suspend fun scheduleEnabled(context: Context, language: String, store: ReminderStore = ReminderStore(context.applicationContext)): Int {
+    suspend fun scheduleEnabled(context: Context, language: String, store: ReminderStore = ReminderStore(context.applicationContext)): Int = reconciliation.withLock {
         val app = context.applicationContext
         var scheduled = 0
-        for ((id, pref) in store.reminders.first()) {
+        val snapshot = store.reminderSnapshot.first()
+        val preferences = snapshot.reminders
+        if (!snapshot.available) {
+            _schedulingError.value = true
+            throw java.io.IOException("Reminder preferences unavailable")
+        }
+        for ((id, pref) in preferences) {
             val reminder = ReminderCatalog.byId(id) ?: continue
             if (pref.enabled) {
                 schedule(app, reminder, pref.hour, pref.minute, language)
@@ -118,7 +136,17 @@ object ReminderScheduler {
                 cancel(app, reminder, language)
             }
         }
-        return scheduled
+        _schedulingError.value = false
+        scheduled
+    }
+
+    fun notificationsAvailable(context: Context): Boolean {
+        if (!NotificationManagerCompat.from(context).areNotificationsEnabled()) return false
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val manager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            if (manager.getNotificationChannel(REMINDER_CHANNEL_ID)?.importance == NotificationManager.IMPORTANCE_NONE) return false
+        }
+        return true
     }
 
     fun ensureChannel(context: Context) {
@@ -144,6 +172,7 @@ object ReminderScheduler {
      */
     fun sendTestNotification(context: Context, title: String, body: String): Boolean {
         ensureChannel(context)
+        if (!notificationsAvailable(context)) return false
         val notification = NotificationCompat.Builder(context, REMINDER_CHANNEL_ID)
             .setSmallIcon(android.R.drawable.ic_dialog_info)
             .setContentTitle(title)
@@ -212,7 +241,8 @@ class ReminderReceiver : BroadcastReceiver() {
 class ReminderBootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
         if (intent?.action !in setOf(Intent.ACTION_BOOT_COMPLETED, Intent.ACTION_TIME_CHANGED,
-                Intent.ACTION_TIMEZONE_CHANGED, Intent.ACTION_MY_PACKAGE_REPLACED)) return
+                Intent.ACTION_TIMEZONE_CHANGED, Intent.ACTION_MY_PACKAGE_REPLACED,
+                "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED")) return
         val app = context.applicationContext
         finishAsync {
             val language = com.example.data.prefs.UserPreferencesStore(app).preferences.first().language.code

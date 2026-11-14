@@ -1,5 +1,10 @@
 package com.example.data.reminders
 
+import com.example.data.liturgy.CalendarDate
+import com.example.data.liturgy.LiturgicalCalendar
+import com.example.data.liturgy.SeasonalMarianPrayer
+import com.example.data.models.AppLanguage
+
 /** One daily devotion reminder. Titles are trilingual (ES/EN/PT). */
 data class DevotionReminder(
     val id: String,
@@ -12,13 +17,35 @@ data class DevotionReminder(
     val defaultHour: Int,
     val defaultMinute: Int,
 ) {
-    fun title(language: String): String = when (language) {
+    fun title(language: String): String = title(language,LiturgicalCalendar.today())
+
+    fun title(language: String, date: CalendarDate): String = if (id.startsWith("angelus_"))
+        SeasonalMarianPrayer.forDate(date).title.get(AppLanguage.fromCode(language))
+        else when (language) {
         "en" -> titleEn
         "pt" -> titlePt
         else -> titleEs
     }
 
-    fun body(language: String): String = when (language) {
+    /** A daily calendar recurrence spans seasons; never freeze an Easter-only title. */
+    fun calendarTitle(language: String): String = if (id.startsWith("angelus_")) {
+        when(language) { "en" -> "Angelus / Regina Caeli"; "pt" -> "Angelus / Regina Caeli"; else -> "Ángelus / Regina Caeli" }
+    } else title(language)
+    fun calendarBody(language: String): String = if (id.startsWith("angelus_")) {
+        when(language) { "en" -> "Daily Marian prayer: Regina Caeli during Eastertide; Angelus in other seasons.";
+            "pt" -> "Oração mariana diária: Regina Caeli no Tempo Pascal; Angelus nos outros tempos.";
+            else -> "Oración mariana diaria: Regina Caeli en Pascua; Ángelus en los demás tiempos." }
+    } else body(language)
+
+    fun body(language: String): String = body(language,LiturgicalCalendar.today())
+
+    fun body(language: String, date: CalendarDate): String = if (id.startsWith("angelus_") && SeasonalMarianPrayer.forDate(date).id == "regina_caeli") {
+        when (language) {
+            "en" -> "Rejoice, Queen of Heaven. Pray the Regina Caeli during Eastertide."
+            "pt" -> "Alegrai-vos, Rainha do Céu. Reze o Regina Caeli no Tempo Pascal."
+            else -> "Alégrate, Reina del Cielo. Reza el Regina Caeli durante el tiempo de Pascua."
+        }
+    } else when (language) {
         "en" -> bodyEn
         "pt" -> bodyPt
         else -> bodyEs

@@ -23,9 +23,9 @@ fun SaveFailureNotice(commandKey: String, language: AppLanguage) {
     fun pick(es:String,en:String,pt:String)=when(language){AppLanguage.ES->es;AppLanguage.EN->en;AppLanguage.PT->pt}
     AnimatedVisibility(states[commandKey]?.status == PersonalDataCommands.Status.ERROR) {
         Column(Modifier.fillMaxWidth().padding(16.dp).semantics { liveRegion=LiveRegionMode.Polite }) {
-            Text(pick("No se pudieron guardar los últimos cambios.","Could not save the latest changes.","Não foi possível guardar as últimas alterações."),style=styles.body,color=p.textPrimary)
+            Text(pick("No se pudieron aplicar los últimos cambios.","Could not apply the latest changes.","Não foi possível aplicar as últimas alterações."),style=styles.body,color=p.textPrimary)
             Spacer(Modifier.height(8.dp))
-            AppSecondaryCapsule(pick("Reintentar guardado","Retry saving","Tentar guardar novamente"),{PersonalDataCommands.retry(commandKey)})
+            AppSecondaryCapsule(pick("Reintentar","Retry","Tentar novamente"),{PersonalDataCommands.retry(commandKey)})
         }
     }
 }

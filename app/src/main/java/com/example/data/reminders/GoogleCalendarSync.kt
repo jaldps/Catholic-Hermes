@@ -59,8 +59,8 @@ object GoogleCalendarSync {
         val start = ReminderScheduler.nextTriggerMillis(hour, minute)
         // Recurring events take a DURATION, not a DTEND (CalendarContract).
         val values = ContentValues().apply {
-            put(CalendarContract.Events.TITLE, reminder.title(language))
-            put(CalendarContract.Events.DESCRIPTION, reminder.body(language))
+            put(CalendarContract.Events.TITLE, reminder.calendarTitle(language))
+            put(CalendarContract.Events.DESCRIPTION, reminder.calendarBody(language))
             put(CalendarContract.Events.DTSTART, start)
             put(CalendarContract.Events.DURATION, "PT15M")
             put(CalendarContract.Events.EVENT_TIMEZONE, java.util.TimeZone.getDefault().id)

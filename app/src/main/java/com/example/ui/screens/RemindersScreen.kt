@@ -103,6 +103,7 @@ import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.withTimeout
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
@@ -142,6 +143,8 @@ fun RemindersScreen(
 
     val store = remember(app) { ReminderStore(app) }
     val prefs by store.reminders.collectAsState(initial = null)
+    val readFailure by store.readFailure.collectAsState()
+    val schedulingError by ReminderScheduler.schedulingError.collectAsState()
     val novenaState by produceState<Pair<Boolean, NovenaState?>>(false to null, store) {
         store.novena.collect { value = true to it }
     }
@@ -165,9 +168,12 @@ fun RemindersScreen(
     // ---- permissions, re-checked on every resume (returning from Settings).
     var permissionTick by remember { mutableIntStateOf(0) }
     val lifecycle = LocalLifecycleOwner.current.lifecycle
-    DisposableEffect(lifecycle) {
+    DisposableEffect(lifecycle, languageCode) {
         val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_RESUME) permissionTick++
+            if (event == Lifecycle.Event.ON_RESUME) {
+                permissionTick++
+                ReminderScheduler.rescheduleAll(app,languageCode)
+            }
         }
         lifecycle.addObserver(observer)
         onDispose { lifecycle.removeObserver(observer) }
@@ -183,7 +189,7 @@ fun RemindersScreen(
     fun hasCalendarPermissions(): Boolean =
         ContextCompat.checkSelfPermission(context, Manifest.permission.READ_CALENDAR) == PackageManager.PERMISSION_GRANTED &&
             ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_CALENDAR) == PackageManager.PERMISSION_GRANTED
-    val notificationGranted = remember(permissionTick) { hasNotificationPermission() }
+    val notificationGranted = remember(permissionTick) { hasNotificationPermission() && ReminderScheduler.notificationsAvailable(context) }
     val exactAlarmGranted = remember(permissionTick) { hasExactAlarmPermission() }
 
     fun timeOf(r: DevotionReminder): Pair<Int, Int> {
@@ -237,6 +243,7 @@ fun RemindersScreen(
     }
 
     fun onAddToCalendar(reminder: DevotionReminder, hour: Int, minute: Int) {
+        if (readFailure) return
         if (hasCalendarPermissions()) {
             syncToCalendar(reminder, hour, minute)
         } else {
@@ -246,35 +253,26 @@ fun RemindersScreen(
     }
 
     fun onToggle(reminder: DevotionReminder, enabled: Boolean) {
-        val (hour, minute) = timeOf(reminder)
-        scope.launch {
-            store.setEnabled(reminder.id, enabled)
-            if (enabled) {
-                ReminderScheduler.schedule(app, reminder, hour, minute, languageCode)
-                toast = lang.pick3(
-                    "${reminder.title(languageCode)} sonará a las ${clock(hour, minute, is24h, lang)}",
-                    "${reminder.title(languageCode)} will ring at ${clock(hour, minute, is24h, lang)}",
-                    "${reminder.title(languageCode)} vai tocar às ${clock(hour, minute, is24h, lang)}"
-                )
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && !hasNotificationPermission()) {
-                    notificationLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-                }
-            } else {
-                ReminderScheduler.cancel(app, reminder, languageCode)
+        if (readFailure) return
+        if (enabled && Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && !hasNotificationPermission()) {
+            notificationLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
+        com.example.data.persistence.PersonalDataCommands.submit("reminders") {
+            store.setEnabled(reminder.id,enabled)
+            withTimeout(10_000) { ReminderScheduler.scheduleEnabled(app,languageCode,store) }
+            withContext(Dispatchers.Main) {
+                toast = lang.pick3("Recordatorio actualizado.","Reminder updated.","Lembrete atualizado.")
             }
         }
     }
 
     fun saveTime(reminder: DevotionReminder, hour: Int, minute: Int) {
-        scope.launch {
-            store.setTime(reminder.id, hour, minute)
-            if (prefs?.get(reminder.id)?.enabled == true) {
-                ReminderScheduler.schedule(app, reminder, hour, minute, languageCode)
-                toast = lang.pick3(
-                    "Sonará a las ${clock(hour, minute, is24h, lang)}",
-                    "It will ring at ${clock(hour, minute, is24h, lang)}",
-                    "Vai tocar às ${clock(hour, minute, is24h, lang)}"
-                )
+        if (readFailure) return
+        com.example.data.persistence.PersonalDataCommands.submit("reminders") {
+            store.setTime(reminder.id,hour,minute)
+            withTimeout(10_000) { ReminderScheduler.scheduleEnabled(app,languageCode,store) }
+            withContext(Dispatchers.Main) {
+                toast = lang.pick3("Horario actualizado.","Time updated.","Horário atualizado.")
             }
         }
     }
@@ -288,6 +286,7 @@ fun RemindersScreen(
     val enabledCount = prefs?.values?.count { it.enabled }
     val next = remember(prefs) { prefs?.let { nextReminder(it) } }
     val summary = when {
+        readFailure -> lang.pick3("Recordatorios no disponibles", "Reminders unavailable", "Lembretes indisponíveis")
         enabledCount == null -> null
         enabledCount == 0 -> lang.pick3("Ningún recordatorio activo", "No reminders on", "Nenhum lembrete ativo")
         else -> {
@@ -318,6 +317,21 @@ fun RemindersScreen(
                         imageHeight = 230.dp,
                         titleTag = "reminders_title"
                     )
+                }
+            }
+
+            item(key = "reminder_write_status") {
+                com.example.ui.components.SaveFailureNotice("reminders",lang)
+            }
+            if (readFailure || schedulingError) item(key = "reminder_read_error") {
+                Column(Modifier.padding(horizontal = design.spacing.gutter, vertical = 12.dp)) {
+                    Text(lang.pick3("No se pudieron aplicar los recordatorios. Reintenta antes de confiar en su programación.",
+                        "Could not apply reminders. Retry before relying on the schedule.",
+                        "Não foi possível aplicar os lembretes. Tente novamente antes de confiar na programação."),style=styles.body,color=p.textPrimary)
+                    AppSecondaryCapsule(lang.pick3("Reintentar","Retry","Tentar novamente"),{
+                        store.retryRead()
+                        ReminderScheduler.rescheduleAll(app,languageCode)
+                    })
                 }
             }
 
@@ -392,10 +406,10 @@ fun RemindersScreen(
                             languageCode = languageCode,
                             time = clock(hour, minute, is24h, lang),
                             enabled = pref?.enabled ?: false,
-                            loaded = prefs != null,
+                            loaded = prefs != null && !readFailure,
                             inCalendar = reminder.id in calendarEvents,
                             lang = lang,
-                            onOpen = { sheetFor = reminder },
+                            onOpen = { if (!readFailure) sheetFor = reminder },
                             onToggle = { onToggle(reminder, it) },
                             showDivider = i < sorted.lastIndex
                         )
@@ -418,7 +432,7 @@ fun RemindersScreen(
                     SectionTitle("Novena")
                     val (loaded, active) = novenaState
                     if (loaded && active != null) {
-                        ActiveNovena(active, lang, onFinish = { scope.launch { store.clearNovena() } })
+                        ActiveNovena(active, lang, onFinish = { com.example.data.persistence.PersonalDataCommands.submit("reminders") { store.clearNovena() } })
                     } else if (loaded) {
                         Column(Modifier.padding(horizontal = design.spacing.gutter)) {
                             GlassField(
@@ -433,7 +447,7 @@ fun RemindersScreen(
                                 label = lang.pick3("Iniciar novena", "Start novena", "Iniciar novena"),
                                 onClick = {
                                     val name = novenaName.trim()
-                                    if (name.isNotEmpty()) scope.launch { store.startNovena(name); novenaName = "" }
+                                    if (name.isNotEmpty() && !readFailure) com.example.data.persistence.PersonalDataCommands.submit("reminders") { store.startNovena(name); withContext(Dispatchers.Main) { novenaName = "" } }
                                 },
                                 enabled = novenaName.isNotBlank(),
                                 tag = "novena_start"

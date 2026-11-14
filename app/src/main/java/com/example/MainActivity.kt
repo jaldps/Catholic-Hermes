@@ -92,6 +92,11 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        if (appReady) com.example.data.reminders.ReminderScheduler.rescheduleAll(applicationContext, repository.currentLanguage.value.code)
+    }
+
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
