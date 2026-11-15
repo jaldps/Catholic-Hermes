@@ -91,6 +91,18 @@ Se revisaron lugar, fecha y atribución contra las fuentes citadas. Comprobacion
 
 Sin hallazgos nuevos que obliguen a corregir más datos.
 
+## Revisión final (CERRADO) y correcciones de integración
+
+El coordinador cerró T-011 (`fork 7fc7544`, 38/38) y, al integrar en `CatholicGPT`, aplicó tres correcciones más en ES/EN/PT. Las he traído a esta rama con `git merge origin/CatholicGPT` (merge commit en `ext/T-011`):
+
+- **`our_lady_of_lourdes`**: «Bernardette» → «Bernadette»; «El papa Pío IX aprobó el culto» → «En 1862 el obispo de Tarbes reconoció las apariciones» (reconocimiento episcopal, carta pastoral de Mons. Laurence, 18-I-1862).
+- **`joseph_spouse_of_mary`**: se retira el superlativo «una de las más antiguas del calendario» y se precisa que la fiesta del 19 de marzo «se extendió a la Iglesia de Roma con Sixto IV, en el siglo XV» (Catholic Encyclopedia, «St. Joseph»). Se elimina la frase extra del PT que rompía la paridad de idiomas.
+- **`john_bosco_priest`**: se retira el patronazgo «catequistas», no verificado; quedan jóvenes y estudiantes.
+
+Tras el merge, el validador vuelve a dar **38 entries · 0 errors · 0 warnings**.
+
+Lección anotada para próximos encargos: en fechas, reconocimientos y superlativos («de las más antiguas») conviene verificar cada afirmación en la fuente citada antes de escribirla.
+
 ## Entrega
 
 Push a `fork/ext/T-011` en lotes de ~10 fichas (10, 20, 30, 38), más un push con las correcciones de la revisión. Último push: 38 entradas, validación **0 errors · 0 warnings**.
