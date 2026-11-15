@@ -1,5 +1,14 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.10
+
+[Descargar Catholic Hermes 1.8.10](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.10.apk) · versión `1.8.10`, código 19. **Actualiza 1.8.1–1.8.9** y conserva el progreso.
+
+Novedades:
+- **Santos completos**: las 215 celebraciones de santos del Calendario Romano General tienen su ficha, con biografía, patronazgos verificados y fuentes (Explorar → Estudio → Santos). El santo del día usa siempre su ficha.
+
+[Metadatos](../docs/quality/release-1.8.10/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.9
 
 [Descargar Catholic Hermes 1.8.9](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.9.apk) · versión `1.8.9`, código 18. **Actualiza 1.8.1–1.8.8** y conserva el progreso.
