@@ -1,6 +1,6 @@
 # T-014 · Informe de Codex
 
-Entrega: **30/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
+Entrega: **40/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -220,10 +220,82 @@ Se mantienen juntos origen judío, persecución antisemita y lectura católica d
 
 Se comprobó el artículo 09089a, no el arzobispo de Canterbury (09090a). No se transforma el relato tardío de la parrilla o la despedida de Sixto en testimonio contemporáneo. No se inventan frases humorísticas finales ni número de bienes repartidos.
 
+### 31. `clare_of_assisi_virgin` · 11/08
+
+- [Benedicto XVI, audiencia del 15-IX-2010: santa Clara de Asís](https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20100915.html)
+- [Catholic Encyclopedia: St. Clare of Assisi](https://www.newadvent.org/cathen/04004a.htm)
+
+Las fuentes discrepan en el nacimiento (1193/1194) y la salida de casa (1211/1212); se evita fijarlos. No se convierte el relato de la defensa de Asís en una afirmación de milagro verificado. Regla y cartas se describen sin componer ni atribuir citas.
+
+### 32. `jane_frances_de_chantal_religious` · 12/08
+
+- [Catholic Encyclopedia: St. Jane Frances de Chantal](https://www.newadvent.org/cathen/08282c.htm)
+- [Catholic Encyclopedia: Visitation Order](https://www.newadvent.org/cathen/15481a.htm)
+
+Se conserva el dato histórico de la adaptación de las austeridades, sin recomendar mortificaciones físicas. Se omiten visiones, diálogos y escenas familiares hagiográficas. La fecha litúrgica se toma del calendario del encargo, no de la antigua fecha del artículo.
+
+### 33. `pontian_i_pope_and_hippolytus_of_rome_priest` · 13/08
+
+- [Catholic Encyclopedia: Pope St. Pontian](https://www.newadvent.org/cathen/12229b.htm)
+- [Catholic Encyclopedia: St. Hippolytus of Rome](https://www.newadvent.org/cathen/07360c.htm)
+
+Se distinguen la deportación de 235, la renuncia de Ponciano y la tradición de reconciliación. No se asigna indiscriminadamente a Hipólito la Tradición apostólica ni se identifican todas las noticias homónimas. El artículo antiguo sobre Hipólito conserva hipótesis de su época; no se trasladan como certeza.
+
+### 34. `maximilian_mary_raymund_kolbe_priest` · 14/08
+
+- [Juan Pablo II, homilía de canonización de Maximiliano Kolbe, 10-X-1982](https://www.vatican.va/content/john-paul-ii/it/homilies/1982/documents/hf_jp-ii_hom_19821010_canonizzazione-kolbe.html)
+- [Santa Sede, registro de canonizaciones de Juan Pablo II: Maximiliano María Kolbe](https://www.vatican.va/news_services/liturgy/saints/index_saints_en.html)
+
+La homilía documenta el ofrecimiento, la fecha y modo de muerte, Japón y el reconocimiento martirial. Se omite su cifra histórica de víctimas de Auschwitz, hoy superada por la investigación; no se reutiliza esa cifra. No se transcriben palabras atribuidas a Kolbe ni se compone una oración.
+
+### 35. `assumption_of_the_blessed_virgin_mary` · 15/08
+
+- [Pío XII, Munificentissimus Deus, 1-XI-1950, 40–44](https://www.vatican.va/content/pius-xii/en/apost_constitutions/documents/hf_p-xii_apc_19501101_munificentissimus-deus.html)
+- [Catecismo de la Iglesia Católica, 966](https://www.vatican.va/archive/catechism_sp/p123a9p6_sp.html)
+
+Paráfrasis doctrinal propia, no texto litúrgico. Se mantiene la formulación de la definición sobre el término de la vida terrena, sin resolver por conjetura sus circunstancias ni fechar el acontecimiento. Se diferencia la doctrina definida de los relatos sobre la Dormición.
+
+### 36. `stephen_i_of_hungary` · 16/08
+
+- [Catholic Encyclopedia: St. Stephen, rey de Hungría](https://www.newadvent.org/cathen/14287a.htm)
+- [Juan Pablo II, carta apostólica por el Milenio húngaro, 25-VII-2001](https://www.vatican.va/content/john-paul-ii/en/apost_letters/2001/documents/hf_jp-ii_apl_20010725_millennio-hungarico.html)
+- [Juan Pablo II, carta al episcopado húngaro, 2-XII-1978](https://www.vatican.va/content/john-paul-ii/en/letters/1978/documents/hf_jp-ii_let_19781202_vescovi-ungheria.html)
+
+Patronazgo de Hungría explícito en la carta de 1978. La cronología exacta de la coronación discrepa entre fuentes; se usa en torno al año 1000 y se omiten la procedencia material de la corona y el día del bautismo. No se cita literalmente el libro de consejos a Emerico.
+
+### 37. `john_eudes_priest` · 19/08
+
+- [Benedicto XVI, audiencia del 19-VIII-2009: san Juan Eudes](https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20090819.html)
+- [Catholic Encyclopedia: Blessed Jean Eudes, con nota editorial de canonización](https://www.newadvent.org/cathen/05596a.htm)
+
+Se usa sacerdote y fundador sin añadir títulos no establecidos por los documentos consultados. El artículo histórico conserva Blessed en su encabezado, pero incluye nota de canonización. Se describen obras y espiritualidad sin componer citas ni trasladar concesiones antiguas de indulgencias.
+
+### 38. `bernard_of_clairvaux_abbot` · 20/08
+
+- [Benedicto XVI, audiencia del 21-X-2009: san Bernardo de Claraval](https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20091021.html)
+- [Catholic Encyclopedia: St. Bernard of Clairvaux](https://www.newadvent.org/cathen/02498d.htm)
+
+La participación en la segunda cruzada figura en la enciclopedia; no se borra ni se presenta como modelo universal. No se atribuye el Memorare a Bernardo ni se incorporan citas sin obra y pasaje. Se omite el año exacto de entrada en Císter, que varía en las reconstrucciones.
+
+### 39. `pius_x_pope` · 21/08
+
+- [Benedicto XVI, audiencia del 18-VIII-2010: san Pío X](https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20100818.html)
+- [Catholic Encyclopedia: Pope Pius X](https://www.newadvent.org/cathen/12137a.htm)
+
+La catequesis posterior al fallecimiento completa el artículo enciclopédico escrito durante el pontificado. Se distingue inicio de la codificación por Pío X de promulgación por Benedicto XV. No se fija una edad uniforme para cada niño ni se reemplazan las normas pastorales vigentes.
+
+### 40. `queenship_of_the_blessed_virgin_mary` · 22/08
+
+- [Pío XII, Ad caeli Reginam, 11-X-1954](https://www.vatican.va/content/pius-xii/en/encyclicals/documents/hf_p-xii_enc_11101954_ad-caeli-reginam.html)
+- [Benedicto XVI, audiencia del 22-VIII-2012: María Reina](https://www.vatican.va/content/benedict-xvi/en/audiences/2012/documents/hf_ben-xvi_aud_20120822.html)
+- [Catecismo de la Iglesia Católica, 966 y 970](https://www.vatican.va/archive/catechism_sp/p123a9p6_sp.html)
+
+La audiencia documenta expresamente la fecha inicial y el traslado al 22 de agosto. Explicación original, sin una escena inventada de coronación celestial. Se mantiene la dependencia de Cristo que subraya CIC 970, sin presentar a María como diosa.
+
 ## Validación
 
 ```text
-30 entries · 0 errors · 1 warnings
+40 entries · 0 errors · 1 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
