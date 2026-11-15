@@ -35,3 +35,5 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-002](T-002.md) | Codex | ABIERTO | M3 · detalles de 34 oraciones especializadas → `assets/prayers/details-b.json` |
 | [T-003](T-003.md) | Codex | ABIERTO | M3 · ~30 oraciones nuevas, reales y documentadas → `assets/prayers/extra.json` |
 | [T-004](T-004.md) | Codex | ABIERTO | Textos auténticos (no redactados) para las 16 novenas nuevas de 1.8.2 |
+| [T-005](T-005.md) | Codex | ABIERTO | M4 · «Profundizar» de las preguntas 1–51 → `assets/questions/deeper-a.json` |
+| [T-006](T-006.md) | Codex | ABIERTO | M4 · «Profundizar» de las preguntas 52–101 → `assets/questions/deeper-b.json` |
