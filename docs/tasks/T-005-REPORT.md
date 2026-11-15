@@ -1,10 +1,10 @@
 # T-005 · Informe de Codex
 
-**EN CURSO: entrega parcial ordenada, preguntas 1–20 de 51.** No se declara completo el encargo. El siguiente lote empieza en la pregunta 21. Solo se crean `app/src/main/assets/questions/deeper-a.json` y este informe.
+**EN CURSO: entrega parcial ordenada, preguntas 1–30 de 51.** No se declara completo el encargo. El siguiente lote empieza en la pregunta 31. Solo se crean `app/src/main/assets/questions/deeper-a.json` y este informe.
 
 ## Contenido entregado
 
-Veinte bloques completos con `explanation`, `scripture`, `tradition`, `magisterium`, `objection`, `analogy`, `synthesis`, en ES/EN/PT-BR; fuentes en 3–5 entradas por pregunta. Redacción y paráfrasis propias, sin citas extensas de traducciones modernas. No se tocaron la pregunta, respuesta, fundamento ni aclaración existentes.
+Treinta bloques completos con `explanation`, `scripture`, `tradition`, `magisterium`, `objection`, `analogy`, `synthesis`, en ES/EN/PT-BR; fuentes en 3–5 entradas por pregunta. Redacción y paráfrasis propias, sin citas extensas de traducciones modernas. No se tocaron la pregunta, respuesta, fundamento ni aclaración existentes.
 
 Se distinguen sufrimiento físico/moral, conocimiento/coacción, condenación/culpabilidad subjetiva, fe/emoción, razonamiento filosófico/testimonio histórico, gratuidad/necesidad de Dios, petición/garantía, providencia/aprobación del mal, unidad bíblica/lectura literalista y gracia/autosuficiencia moral. Las analogías declaran sus límites; las objeciones no se presentan como si fueran absurdas.
 
@@ -12,8 +12,8 @@ Se distinguen sufrimiento físico/moral, conocimiento/coacción, condenación/cu
 
 ```text
 $ python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-a.json 1 51 --partial
-WARN  partial delivery: 20/51 questions
-20 entries · 0 errors · 1 warnings
+WARN  partial delivery: 30/51 questions
+30 entries · 0 errors · 1 warnings
 ```
 
 La única advertencia es la entrega parcial. Totales de palabras por idioma según el mismo criterio del validador:
@@ -40,6 +40,16 @@ La única advertencia es la entrega parcial. Totales de palabras por idioma seg�
 | 18 | 437 | 426 | 422 |
 | 19 | 424 | 415 | 410 |
 | 20 | 433 | 428 | 419 |
+| 21 | 431 | 413 | 420 |
+| 22 | 418 | 409 | 417 |
+| 23 | 427 | 415 | 416 |
+| 24 | 438 | 426 | 430 |
+| 25 | 429 | 425 | 422 |
+| 26 | 436 | 420 | 418 |
+| 27 | 432 | 412 | 412 |
+| 28 | 427 | 418 | 411 |
+| 29 | 441 | 425 | 420 |
+| 30 | 430 | 408 | 408 |
 
 No se modificó el validador. Incidencia: su patrón `\bTODO\b`, aplicado sin distinguir mayúsculas, también rechaza la palabra española/portuguesa «todo» dentro de una frase terminada. Se reformularon tres apariciones para poder validar; convendría que el coordinador restringiera el patrón a un marcador real. Esto no bloquea la entrega y no se corrigió fuera del alcance autorizado.
 
@@ -92,7 +102,7 @@ Se descargaron las secciones del [índice oficial en inglés](https://www.vatica
 
 ## Dudas y límites
 
-- Las preguntas 21–51 **todavía no están entregadas**. Se leerán sus respuestas actuales y se verificarán las fuentes de cada grupo antes de continuar.
+- Las preguntas 31–51 **todavía no están entregadas**. Se leerán sus respuestas actuales y se verificarán las fuentes de cada grupo antes de continuar.
 - Ninguna teoría filosófica particular sobre presciencia/libertad se presenta como la única explicación dogmática.
 - No se pretende resolver definitivamente el sufrimiento inocente, el ocultamiento divino o cada mandato bélico antiguo. Reconocer el límite no equivale a atribuir contradicciones al Magisterio ni a llamar buenas las atrocidades.
 - No se proporcionan diagnósticos ni garantías de curación. Las indicaciones de protección y ayuda no están condicionadas a aceptar una explicación religiosa.
@@ -125,3 +135,36 @@ Observaciones adicionales sobre las respuestas existentes, sin cambiarlas:
 10. **Pregunta 19:** no conviene sugerir mediante la carta escolar en «papel moderno» que se ha demostrado ya una falsificación concreta de Tomás o María. La ampliación separa atribución, recepción, inspiración y utilidad histórica, y evita una cronología no documentada.
 
 Límites: no se ofrece una armonización exhaustiva de cada diferencia entre Evangelios, una solución científica al pecado original ni un catálogo completo de manuscritos apócrifos. Las explicaciones no reemplazan esos estudios especializados y no presentan esos problemas como ya resueltos.
+
+## Ampliación 21–30: comprobaciones y fuentes añadidas
+
+Se profundiza en Trinidad, oración y muerte de Cristo, conocimiento humano de Jesús, sacrificio redentor, resurrección, unidad cristiana, Espíritu Santo, Judas y parusía. Las distinciones doctrinales no se presentan como una demostración matemática o histórica de los misterios, ni las dificultades como si no admitieran una enseñanza positiva.
+
+Fuentes efectivamente consultadas:
+
+- [CIC 253–255](https://www.vatican.va/archive/ENG0015/__P17.HTM): unidad numérica de la esencia divina y distinción personal, no tres ejemplares de una especie.
+- [CIC 465–475](https://www.vatican.va/archive/ENG0015/__P1J.HTM): leído el texto corrido, incluyendo 472–474 y 475; [CIC 603–604 y 613–616](https://www.vatican.va/archive/ENG0015/__P1O.HTM); [CIC 624–626](https://www.vatican.va/archive/ENG0015/__P1P.HTM).
+- [CIC 639–647](https://www.vatican.va/archive/ENG0015/__P1S.HTM): resurrección real y corporal, signos históricos y dimensión trascendente; el sepulcro vacío no basta por sí solo.
+- [CIC 673 y 675–677](https://www.vatican.va/archive/ENG0015/__P1V.HTM): venida, prueba final y rechazo de una realización meramente política del Reino.
+- [CIC 685](https://www.vatican.va/archive/ENG0015/__P1Y.HTM), [687–688](https://www.vatican.va/archive/ENG0015/__P1Z.HTM), [689–690](https://www.vatican.va/archive/ENG0015/__P20.HTM): divinidad, distinción y misión del Espíritu.
+- [CIC 815–822](https://www.vatican.va/archive/ENG0015/__P29.HTM): vínculos de unidad, afirmación católica, comunión bautismal y ecumenismo.
+- [Agustín, La Trinidad I,4,7](https://www.newadvent.org/fathers/130101.htm), unidad y distinción, misiones sin división divina.
+- [Tomás de Aquino, Suma Teológica III, q. 21, a. 1](https://www.newadvent.org/summa/4021.htm), oración mediante voluntad humana; [III, q. 12, a. 2](https://www.newadvent.org/summa/4012.htm), conocimiento adquirido y progreso; [III, q. 46, a. 2](https://www.newadvent.org/summa/4046.htm), posibilidad de otra forma de salvar y necesidad supuesto el designio libre de Dios.
+- [Cirilo de Alejandría, Tercera carta a Nestorio, anatematismo 12](https://www.newadvent.org/fathers/3810.htm): se distinguió la proposición de Cirilo de la respuesta atribuida a Nestorio que la edición intercala. No se adoptó una contraproposición como si fuera doctrina de Cirilo.
+- [Cirilo de Jerusalén, Catequesis 14,21](https://www.newadvent.org/fathers/310114.htm), corporeidad de la resurrección y apelación a Pablo. No se cuenta a Cirilo como otro testigo ocular ni se reproducen sus polémicas antijudías.
+- [Ignacio de Antioquía, Carta a los esmirniotas 8](https://www.newadvent.org/fathers/0109.htm), comunión visible en torno al obispo/Eucaristía; su alcance no se amplía a demostrar por sí solo cada controversia sobre el primado romano.
+- [Basilio de Cesarea, Sobre el Espíritu Santo 9,22](https://www.newadvent.org/fathers/3203.htm), leído el apartado completo, no confundido con el capítulo 22.
+- [Didaché 16,1–2](https://www.newadvent.org/fathers/0714.htm), vigilancia y reunión; no se convirtió su discurso escatológico en calendario.
+- [Benedicto XVI, audiencia general del 18-10-2006](https://www.vatican.va/content/benedict-xvi/en/audiences/2006/documents/hf_ben-xvi_aud_20061018.html), Judas/Matías: juicio reservado a Dios, responsabilidad y misericordia. No se usan citas textuales extensas ni se convierte la audiencia en definición de la salvación o condenación de Judas.
+- Los pasajes bíblicos de 21–30 se cotejaron con el texto de consulta, incluyendo el contexto del templo en Mt 24,1-3. Las notas editoriales de Douay-Rheims se distinguieron del texto bíblico; no se trasladaron a la app.
+
+Observaciones adicionales sobre la respuesta breve existente:
+
+11. **Pregunta 21:** una familia comparte naturaleza humana específica, pero sus miembros son tres seres humanos; no explica la unidad numérica de la naturaleza divina. La ampliación marca ese límite sin usar agua/hielo/vapor ni tres partes de un objeto, imágenes que introducirían otros errores.
+12. **Pregunta 22:** madre/médica compara papeles o relaciones sociales, no dos naturalezas. Podría sugerir una alternancia de roles, incluso modalismo si se traslada al Padre/Hijo. La ampliación afirma humanidad completa, dos voluntades y Padre realmente distinto, con el límite expreso de la analogía.
+13. **Pregunta 23:** entrar en una novela puede sugerir ficción o mera representación del sufrimiento. La ampliación habla de una humanidad real, una persona y muerte sin aniquilación; el dolor no corresponde a una naturaleza entendida como otro sujeto separado.
+14. **Pregunta 24:** el niño que un día será matemático no representa adecuadamente el conocimiento de Cristo si sugiere ignorancia de identidad o misión. La respuesta cita CIC 471–474 pero no explica la enseñanza positiva de 474. La ampliación distingue crecimiento experimental, conocimiento del Padre y designios salvíficos, y lo que el Hijo no fue enviado a revelar; no dice que fingiera ignorancia ni deja el asunto enteramente sin criterio doctrinal.
+15. **Pregunta 25:** la enumeración de modelos de redención no debe insinuar que sacrificio, expiación, satisfacción o reparación sean meras opiniones prescindibles. CIC 613–616 los afirma; la ampliación los conserva junto con gratuidad, amor y libertad, sin imputación de culpa moral personal a Cristo.
+16. **Pregunta 26:** una lista de apariciones a numerosos testigos no equivale a poseer declaraciones independientes de cada uno. No se inventan testimonios de martirio ni se diagnostican retrospectivamente alucinaciones. La investigación histórica se distingue de repetición experimental y del reconocimiento de intervención divina.
+17. **Pregunta 29:** el remordimiento narrado y su desenlace están en Mt 27,3-5, no en Mt 26,14-25. No se concluye de ellos la sentencia eterna de Judas ni se trivializa la advertencia de Mt 26,24. La ampliación incluye ayuda espiritual/profesional ante desesperación sin diagnóstico.
+18. **Pregunta 30:** distinguir expectativas de las primeras comunidades no autoriza a atribuir sin estudio un error a Jesús ni a ofrecer una interpretación única de «esta generación» como ya demostrada. La ampliación reconoce la dificultad y el contexto, y mantiene la promesa real sin fecharla.

@@ -871,5 +871,436 @@
       "Vicente de Lérins, Commonitorium 23, §§54–59",
       "Jd 3; Jn 16,13; Hch 15,1-29"
     ]
+  },
+  {
+    "number": 21,
+    "explanation": {
+      "es": "La doctrina distingue qué es Dios y quién es Dios. Una sola naturaleza divina no se reparte entre tres individuos: el Padre, el Hijo y el Espíritu son cada uno plenamente Dios, realmente distintos por sus relaciones, sin tres poderes o voluntades divinas rivales. Tampoco son tres máscaras de una persona solitaria. El Hijo no comienza a existir como una criatura y el Espíritu no es una parte desprendida de Dios. Este lenguaje busca mantener juntas la unidad divina y las relaciones reveladas en Cristo. No pretende hacer comprensible exhaustivamente la vida de Dios; sí excluye interpretaciones concretas que destruirían el monoteísmo o convertirían las relaciones del Evangelio en una representación teatral.",
+      "en": "The doctrine distinguishes what God is from who God is. One divine nature is not divided among three individuals: Father, Son and Spirit are each fully God, really distinct through their relations, without three rival divine powers or wills. Nor are they three masks worn by a solitary person. The Son does not begin to exist as a creature, and the Spirit is not a piece detached from God. This language preserves both divine unity and the relationships revealed in Christ. It does not claim exhaustive comprehension of God's life; it excludes interpretations that would destroy monotheism or turn the Gospel's relationships into a theatrical performance.",
+      "pt": "A doutrina distingue o que Deus é e quem Deus é. Uma única natureza divina não se reparte entre três indivíduos: Pai, Filho e Espírito são cada um plenamente Deus, realmente distintos por suas relações, sem três poderes ou vontades divinas rivais. Também não são três máscaras de uma pessoa solitária. O Filho não começa a existir como criatura, e o Espírito não é uma parte separada de Deus. Essa linguagem procura manter juntas a unidade divina e as relações reveladas em Cristo. Não pretende compreender exaustivamente a vida de Deus; exclui interpretações que destruiriam o monoteísmo ou transformariam as relações do Evangelho em representação teatral."
+    },
+    "scripture": {
+      "es": "Dt 6,4 afirma la unidad de Dios; Mt 28,19 reúne Padre, Hijo y Espíritu en el bautismo. Jn 1,1-3 distingue al Verbo de aquel con quien está y le atribuye divinidad y participación en la creación. Hch 5,3-4 relaciona mentir al Espíritu con mentir a Dios. La doctrina surge de leer estos testimonios conjuntamente, no de encontrar una definición técnica aislada.",
+      "en": "Deuteronomy 6:4 affirms God's unity; Matthew 28:19 joins Father, Son and Spirit in baptism. John 1:1–3 distinguishes the Word from the one with whom he is and attributes divinity and participation in creation to him. Acts 5:3–4 connects lying to the Spirit with lying to God. The doctrine reads these testimonies together rather than finding an isolated technical definition.",
+      "pt": "Dt 6,4 afirma a unidade de Deus; Mt 28,19 reúne Pai, Filho e Espírito no batismo. Jo 1,1-3 distingue o Verbo daquele com quem está e lhe atribui divindade e participação na criação. At 5,3-4 relaciona mentir ao Espírito com mentir a Deus. A doutrina nasce da leitura conjunta desses testemunhos, não de encontrar uma definição técnica isolada."
+    },
+    "tradition": {
+      "es": "Agustín, La Trinidad I,4,7, expone unidad indivisible e igualdad divina, junto con la distinción real del Padre, del Hijo y del Espíritu. Aclara además que es el Hijo quien se encarna y padece. No confunde la unidad de la acción divina con que cada persona realice idénticamente cada misión.",
+      "en": "Augustine, On the Trinity I.4.7, explains indivisible unity and divine equality alongside the real distinction of Father, Son and Spirit. He also specifies that the Son becomes incarnate and suffers. He does not confuse unity of divine action with each person having an identical mission in salvation history.",
+      "pt": "Agostinho, A Trindade I,4,7, apresenta unidade indivisível e igualdade divina junto com a distinção real do Pai, do Filho e do Espírito. Esclarece também que é o Filho quem se encarna e sofre. Não confunde a unidade da ação divina com uma missão idêntica de cada pessoa na história da salvação."
+    },
+    "magisterium": {
+      "es": "CIC 253–255 enseña una sola divinidad íntegra, personas realmente distintas y relaciones que no dividen la esencia divina. Por eso naturaleza y persona no se usan como sinónimos. El dogma no afirma un Dios y tres dioses bajo el mismo aspecto: distingue unidad de esencia y trinidad de personas, manteniendo ambas afirmaciones.",
+      "en": "CCC 253–255 teaches one undivided divinity, really distinct persons and relations that do not divide the divine essence. Nature and person are therefore not synonyms. The dogma does not assert one God and three gods in the same respect: it distinguishes unity of essence and trinity of persons while maintaining both affirmations.",
+      "pt": "CIC 253–255 ensina uma única divindade íntegra, pessoas realmente distintas e relações que não dividem a essência divina. Por isso natureza e pessoa não são sinônimos. O dogma não afirma um Deus e três deuses sob o mesmo aspecto: distingue unidade de essência e trindade de pessoas, mantendo ambas as afirmações."
+    },
+    "objection": {
+      "es": "¿No se introduce una distinción verbal para evitar una contradicción? La distinción solo sirve si los términos conservan un sentido estable: tres personas no pueden significar tres seres divinos separados y luego contarse como uno. La teología católica lo rechaza expresamente. Demostrar que una formulación no afirma una contradicción inmediata tampoco demuestra por sí solo su verdad. La Trinidad se recibe por revelación; la razón examina su lenguaje y responde objeciones sin convertir el misterio en una fórmula matemática.",
+      "en": "Is this a verbal distinction introduced to avoid contradiction? It works only if the terms retain a stable meaning: three persons cannot mean three separate divine beings subsequently counted as one. Catholic theology explicitly rejects that. Showing that a formulation does not assert an immediate contradiction does not by itself establish its truth. The Trinity is received through revelation; reason examines its language and addresses objections without turning the mystery into a mathematical formula.",
+      "pt": "Não se introduz uma distinção verbal para evitar contradição? A distinção só serve se os termos conservarem sentido estável: três pessoas não podem significar três seres divinos separados depois contados como um. A teologia católica rejeita isso expressamente. Mostrar que uma formulação não afirma contradição imediata também não demonstra por si só sua verdade. A Trindade é recebida pela revelação; a razão examina sua linguagem e responde a objeções sem transformar o mistério em fórmula matemática."
+    },
+    "analogy": {
+      "es": "La pregunta qué es y la pregunta quién es pueden distinguirse también al hablar de alguien. El límite es decisivo: tres personas humanas son tres seres separados; en Dios no hay tres ejemplares de una especie ni una familia de dioses.",
+      "en": "Questions about what someone is and who someone is can be distinguished in ordinary conversation. The limit is decisive: three human persons are three separate beings; God is neither three instances of a species nor a family of gods.",
+      "pt": "As perguntas sobre o que alguém é e quem alguém é podem ser distinguidas na conversa comum. O limite é decisivo: três pessoas humanas são três seres separados; em Deus não há três exemplares de uma espécie nem uma família de deuses."
+    },
+    "synthesis": {
+      "es": "El cristiano adora a un solo Dios, Padre, Hijo y Espíritu Santo. La distinción personal no divide la divinidad, y la unidad divina no borra las relaciones personales.",
+      "en": "Christians worship one God, Father, Son and Holy Spirit. Personal distinction does not divide divinity, and divine unity does not erase personal relations.",
+      "pt": "O cristão adora um só Deus, Pai, Filho e Espírito Santo. A distinção pessoal não divide a divindade, e a unidade divina não apaga as relações pessoais."
+    },
+    "sources": [
+      "CIC 253–255",
+      "Agustín, La Trinidad I,4,7",
+      "Dt 6,4; Mt 28,19; Jn 1,1-3; Hch 5,3-4"
+    ]
+  },
+  {
+    "number": 22,
+    "explanation": {
+      "es": "Quien ora es el Hijo eterno hecho hombre, no una persona humana separada que convive con otra divina. Su humanidad incluye inteligencia, voluntad y afectividad auténticas; por eso su oración es real y su obediencia no una actuación. El Padre es una persona distinta del Hijo: Jesús no se dirige a sí mismo bajo otro nombre. La igualdad divina tampoco elimina la misión recibida del Padre ni la condición de siervo asumida libremente. Interpretar la expresión sobre el Padre mayor dentro de esa misión permite reconocer su sentido sin convertir al Hijo en una criatura. Hay que conservar conjuntamente lo que los textos dicen de su humillación y de su divinidad.",
+      "en": "The one who prays is the eternal Son made man, not a separate human person living alongside a divine one. His humanity includes real intelligence, will and affection; his prayer is therefore genuine and his obedience no performance. The Father is personally distinct from the Son: Jesus does not address himself under another name. Divine equality does not eliminate the mission received from the Father or the servant's condition freely assumed. Reading the statement about the greater Father within this mission acknowledges its meaning without making the Son a creature. We must retain together what the texts say about his humiliation and his divinity.",
+      "pt": "Quem ora é o Filho eterno feito homem, não uma pessoa humana separada que convive com outra divina. Sua humanidade inclui inteligência, vontade e afetividade autênticas; por isso sua oração é real, e sua obediência não é encenação. O Pai é uma pessoa distinta do Filho: Jesus não se dirige a si mesmo sob outro nome. A igualdade divina também não elimina a missão recebida do Pai nem a condição de servo livremente assumida. Interpretar a expressão sobre o Pai maior dentro dessa missão permite reconhecer seu sentido sem transformar o Filho em criatura. É preciso conservar conjuntamente o que os textos dizem de sua humilhação e de sua divindade."
+    },
+    "scripture": {
+      "es": "Jn 14,28 sitúa la afirmación del Padre mayor en la despedida y el retorno de Jesús. Flp 2,6-11 une condición divina, abajamiento y obediencia humana. Hb 5,7-9 describe súplicas y sufrimiento del Hijo. No presenta dos protagonistas dentro de Jesús: es el mismo Hijo quien vive filialmente una existencia humana verdadera y nos abre el camino de obediencia al Padre.",
+      "en": "John 14:28 places the greater-Father statement within Jesus' farewell and return. Philippians 2:6–11 joins divine status, self-emptying and human obedience. Hebrews 5:7–9 describes the Son's prayers and suffering. It does not present two protagonists inside Jesus: the same Son lives a genuinely human filial existence and opens our path of obedience to the Father.",
+      "pt": "Jo 14,28 situa a afirmação sobre o Pai maior na despedida e no retorno de Jesus. Fl 2,6-11 une condição divina, esvaziamento e obediência humana. Hb 5,7-9 descreve súplicas e sofrimento do Filho. Não apresenta dois protagonistas dentro de Jesus: é o mesmo Filho que vive filialmente uma existência humana verdadeira e nos abre o caminho da obediência ao Pai."
+    },
+    "tradition": {
+      "es": "Tomás de Aquino, Suma Teológica III, q. 21, a. 1, explica la oración de Cristo desde su voluntad humana, distinta de la divina. Su explicación no supone que Jesús carezca de divinidad: muestra por qué asumir humanidad incluye dirigirse al Padre humanamente y enseñarnos también con su propia oración.",
+      "en": "Thomas Aquinas, Summa Theologiae III, question 21, article 1, explains Christ's prayer through his human will, distinct from his divine will. This does not suppose that Jesus lacks divinity: it explains why assuming humanity includes addressing the Father humanly and teaching us through his own prayer as well as his words.",
+      "pt": "Tomás de Aquino, Suma Teológica III, questão 21, artigo 1, explica a oração de Cristo a partir de sua vontade humana, distinta da divina. Não supõe que Jesus careça de divindade: mostra por que assumir humanidade inclui dirigir-se humanamente ao Pai e ensinar-nos também com sua própria oração."
+    },
+    "magisterium": {
+      "es": "CIC 467–469 confiesa un solo Cristo en dos naturalezas, sin confusión ni separación. CIC 475 reconoce dos voluntades y operaciones naturales, divina y humana, sin oposición pecaminosa. Su obediencia humana expresa libremente el designio divino compartido con el Padre y el Espíritu; no enfrenta a un Hijo bueno contra un Padre hostil.",
+      "en": "CCC 467–469 confesses one Christ in two natures, without confusion or separation. CCC 475 recognizes two natural wills and operations, divine and human, without sinful opposition. His human obedience freely expresses the divine plan shared with the Father and Spirit; it does not set a good Son against a hostile Father.",
+      "pt": "CIC 467–469 confessa um só Cristo em duas naturezas, sem confusão nem separação. CIC 475 reconhece duas vontades e operações naturais, divina e humana, sem oposição pecaminosa. Sua obediência humana expressa livremente o desígnio divino compartilhado com o Pai e o Espírito; não opõe um Filho bom a um Pai hostil."
+    },
+    "objection": {
+      "es": "Si necesita pedir al Padre, ¿no queda demostrado que no es Dios? La conclusión sería obligatoria si la doctrina afirmara que Jesús solo posee naturaleza divina. Precisamente afirma una humanidad completa, capaz de dependencia y oración. Queda una dificultad real: comprender su unión personal con la divinidad. La distinción responde a una contradicción formulada sin considerar ambas naturalezas, pero no pretende ofrecer una descripción psicológica exhaustiva de Jesús ni ignorar los textos sobre su dependencia filial.",
+      "en": "If he needs to ask the Father, does that not establish that he is not God? That conclusion would follow if the doctrine claimed Jesus possessed only a divine nature. It instead affirms complete humanity, capable of dependence and prayer. A real difficulty remains: understanding its personal union with divinity. The distinction answers a contradiction formulated without considering both natures, but does not offer an exhaustive psychological description of Jesus or ignore texts concerning his filial dependence.",
+      "pt": "Se precisa pedir ao Pai, isso não demonstra que não é Deus? A conclusão seria obrigatória se a doutrina afirmasse que Jesus possui apenas natureza divina. Ela afirma precisamente uma humanidade completa, capaz de dependência e oração. Permanece uma dificuldade real: compreender sua união pessoal com a divindade. A distinção responde a uma contradição formulada sem considerar ambas as naturezas, mas não pretende descrever exaustivamente a psicologia de Jesus nem ignorar os textos sobre sua dependência filial."
+    },
+    "analogy": {
+      "es": "Un mismo interlocutor puede hacer preguntas distintas según la relación que vive. El límite: Jesús no alterna papeles sociales ni identidades; sus dos naturalezas son reales, y el Padre a quien ora es verdaderamente distinto de él.",
+      "en": "The same speaker can ask different questions within different relationships. The limit: Jesus does not alternate social roles or identities; his two natures are real, and the Father he addresses is truly distinct from him.",
+      "pt": "O mesmo interlocutor pode fazer perguntas diferentes conforme a relação que vive. O limite: Jesus não alterna papéis sociais nem identidades; suas duas naturezas são reais, e o Pai a quem ora é verdadeiramente distinto dele."
+    },
+    "synthesis": {
+      "es": "La oración de Jesús revela su humanidad y su relación real con el Padre. No contradice su divinidad: el Hijo vive humanamente la obediencia que nos enseña.",
+      "en": "Jesus' prayer reveals his humanity and real relationship with the Father. It does not contradict his divinity: the Son lives humanly the obedience he teaches us.",
+      "pt": "A oração de Jesus revela sua humanidade e sua relação real com o Pai. Não contradiz sua divindade: o Filho vive humanamente a obediência que nos ensina."
+    },
+    "sources": [
+      "CIC 467–469 y 475",
+      "Tomás de Aquino, Suma Teológica III, q. 21, a. 1",
+      "Jn 14,28; Flp 2,6-11; Hb 5,7-9"
+    ]
+  },
+  {
+    "number": 23,
+    "explanation": {
+      "es": "Una naturaleza no es otro personaje: quien sufre es una persona mediante su humanidad. El Hijo hace verdaderamente suyos el cuerpo y el alma humanos asumidos; por eso su dolor no pertenece a un hombre externo usado como instrumento. La muerte significa separación de alma y cuerpo, no aniquilación de la persona. En Cristo ambos permanecen unidos al Verbo incluso separados entre sí. Decir que Dios murió es correcto referido al Hijo según la carne, no a una destrucción de la divinidad ni a la muerte del Padre o del Espíritu. Así se evita tanto imaginar una pasión fingida como convertir a Dios en un ser que deja de existir.",
+      "en": "A nature is not another character: a person suffers through human nature. The Son truly makes the assumed human body and soul his own; his pain therefore does not belong to an external man used as an instrument. Death means the separation of soul and body, not the annihilation of the person. In Christ both remain united to the Word even while separated from each other. Saying that God died is correct when referring to the Son according to the flesh, not to destruction of divinity or death of the Father or Spirit. This avoids both an imaginary passion and a God who ceases to exist.",
+      "pt": "Uma natureza não é outro personagem: quem sofre é uma pessoa mediante sua humanidade. O Filho faz verdadeiramente seus o corpo e a alma humanos assumidos; por isso sua dor não pertence a um homem externo usado como instrumento. A morte significa separação de alma e corpo, não aniquilação da pessoa. Em Cristo ambos permanecem unidos ao Verbo mesmo separados entre si. Dizer que Deus morreu é correto quando se refere ao Filho segundo a carne, não à destruição da divindade nem à morte do Pai ou do Espírito. Assim se evita tanto imaginar uma paixão fingida quanto transformar Deus em um ser que deixa de existir."
+    },
+    "scripture": {
+      "es": "Jn 1,14 afirma que el Verbo se hizo carne, no que adoptó una apariencia. Flp 2,6-8 presenta al mismo sujeto en condición divina y obediente hasta la cruz. Hb 2,14-18 explica su solidaridad con nuestra carne y sangre para vencer la muerte. La salvación se realiza mediante una humanidad real, no por una representación en la que el dolor solo parece existir.",
+      "en": "John 1:14 affirms that the Word became flesh rather than adopting an appearance. Philippians 2:6–8 presents the same subject in divine status and obedience unto the cross. Hebrews 2:14–18 explains his solidarity with our flesh and blood to overcome death. Salvation works through real humanity, not a performance in which pain only appears to exist.",
+      "pt": "Jo 1,14 afirma que o Verbo se fez carne, não que adotou uma aparência. Fl 2,6-8 apresenta o mesmo sujeito na condição divina e obediente até a cruz. Hb 2,14-18 explica sua solidariedade com nossa carne e sangue para vencer a morte. A salvação realiza-se mediante humanidade real, não por uma representação em que a dor apenas parece existir."
+    },
+    "tradition": {
+      "es": "Cirilo de Alejandría, Tercera carta a Nestorio, anatematismo 12, atribuye al Verbo el sufrimiento, la crucifixión y la muerte según la carne, sin negar que como Dios es vida y dador de vida. La precisión protege la identidad de quien padece: no otro hijo humano separado del Hijo eterno.",
+      "en": "Cyril of Alexandria, Third Letter to Nestorius, anathema 12, attributes suffering, crucifixion and death according to the flesh to the Word, without denying that as God he is life and gives life. The distinction protects the identity of the sufferer: not another human son separated from the eternal Son.",
+      "pt": "Cirilo de Alexandria, Terceira carta a Nestório, anátema 12, atribui ao Verbo sofrimento, crucificação e morte segundo a carne, sem negar que, como Deus, é vida e dá a vida. A precisão protege a identidade de quem sofre: não outro filho humano separado do Filho eterno."
+    },
+    "magisterium": {
+      "es": "CIC 468 atribuye al sujeto divino las acciones y sufrimientos de su humanidad. CIC 624–626 explica la muerte real y la unión persistente de cuerpo y alma con la persona del Verbo. No son dos personas que vuelven a reunirse al resucitar, ni una divinidad que necesite ser recreada después del Calvario.",
+      "en": "CCC 468 attributes the actions and sufferings of Christ's humanity to the divine subject. CCC 624–626 explains real death and the continuing union of body and soul with the person of the Word. These are not two persons reunited at resurrection, nor a divinity needing to be recreated after Calvary.",
+      "pt": "CIC 468 atribui ao sujeito divino as ações e os sofrimentos de sua humanidade. CIC 624–626 explica a morte real e a união persistente de corpo e alma com a pessoa do Verbo. Não são duas pessoas reunidas na ressurreição, nem uma divindade que precise ser recriada depois do Calvário."
+    },
+    "objection": {
+      "es": "Si su divinidad no sufrió, ¿no quedó protegido de lo peor mientras otros humanos padecen completamente? La objeción supone que sufrir realmente exige sufrir mediante cada dimensión posible del sujeto. Pero la humanidad de Jesús no fue anestesiada por su unión divina: experimentó dolor y muerte reales. La doctrina no mide su dolor mediante una comparación competitiva con otras víctimas. Afirma que quien asume nuestra condición es personalmente el Hijo, y que esa unión no vuelve ficticia ninguna herida humana.",
+      "en": "If his divinity did not suffer, was he not shielded from the worst while other humans suffer completely? The objection assumes that real suffering requires suffering through every possible dimension of the subject. But Jesus' humanity was not anesthetized by divine union: he experienced real pain and death. The doctrine does not measure his pain competitively against other victims. It affirms that the one assuming our condition is personally the Son, and that this union makes no human wound fictitious.",
+      "pt": "Se sua divindade não sofreu, ele não ficou protegido do pior enquanto outros humanos sofrem completamente? A objeção supõe que sofrer realmente exige sofrer mediante cada dimensão possível do sujeito. Mas a humanidade de Jesus não foi anestesiada por sua união divina: experimentou dor e morte reais. A doutrina não mede sua dor por uma comparação competitiva com outras vítimas. Afirma que quem assume nossa condição é pessoalmente o Filho, e que essa união não torna fictícia nenhuma ferida humana."
+    },
+    "analogy": {
+      "es": "Decimos que una persona está herida aunque la lesión afecte una parte de su cuerpo. El límite: las naturalezas de Cristo no son partes corporales; la comparación solo aclara por qué la acción se atribuye al sujeto que la vive.",
+      "en": "We say a person is injured even when a wound affects one bodily part. The limit: Christ's natures are not bodily parts; the comparison only clarifies why an experience is attributed to the subject who undergoes it.",
+      "pt": "Dizemos que uma pessoa está ferida mesmo quando a lesão afeta uma parte do corpo. O limite: as naturezas de Cristo não são partes corporais; a comparação apenas esclarece por que a experiência é atribuída ao sujeito que a vive."
+    },
+    "synthesis": {
+      "es": "El Hijo de Dios murió verdaderamente según su humanidad y permanece Dios. Su solidaridad no fue aparente; su divinidad no fue destruida ni separada de la humanidad asumida.",
+      "en": "The Son of God truly died according to his humanity and remains God. His solidarity was no appearance; his divinity was neither destroyed nor separated from the humanity he assumed.",
+      "pt": "O Filho de Deus morreu verdadeiramente segundo sua humanidade e permanece Deus. Sua solidariedade não foi aparente; sua divindade não foi destruída nem separada da humanidade assumida."
+    },
+    "sources": [
+      "CIC 468 y 624–626",
+      "Cirilo de Alejandría, Tercera carta a Nestorio, anatematismo 12",
+      "Jn 1,14; Flp 2,6-8; Hb 2,14-18"
+    ]
+  },
+  {
+    "number": 24,
+    "explanation": {
+      "es": "La Encarnación no transforma la inteligencia humana de Jesús en una inteligencia infinita por naturaleza. Asume un conocimiento humano que se ejerce en el tiempo y mediante experiencia real. Pero tampoco lo reduce a un aprendiz ajeno a su identidad y misión: la unión personal con el Verbo comunica a su humanidad un conocimiento singular del Padre y del designio salvador. Hay que distinguir conocimiento divino, conocimiento humano y manifestación de lo conocido. Crecer experimentalmente y no revelar un dato no son la misma cosa. La Iglesia mantiene juntas estas afirmaciones sin pretender reconstruir desde fuera cada momento de la conciencia de Cristo ni resolver Marcos eliminando una de sus dos naturalezas.",
+      "en": "The Incarnation does not make Jesus' human intelligence naturally infinite. He assumes human knowledge exercised in time and through genuine experience. Nor is he reduced to an apprentice unaware of his identity and mission: personal union with the Word communicates to his humanity a unique knowledge of the Father and the saving plan. Divine knowledge, human knowledge and the disclosure of what is known must be distinguished. Experiential growth and not revealing a fact are not the same thing. The Church maintains these affirmations together without claiming to reconstruct every moment of Christ's consciousness from outside or resolving Mark by eliminating one of his two natures.",
+      "pt": "A Encarnação não transforma a inteligência humana de Jesus em inteligência infinita por natureza. Ele assume um conhecimento humano exercido no tempo e mediante experiência real. Também não fica reduzido a um aprendiz alheio à sua identidade e missão: a união pessoal com o Verbo comunica à sua humanidade conhecimento singular do Pai e do desígnio salvador. É preciso distinguir conhecimento divino, conhecimento humano e manifestação do conhecido. Crescer experimentalmente e não revelar um dado não são a mesma coisa. A Igreja mantém juntas essas afirmações sem pretender reconstruir de fora cada momento da consciência de Cristo nem resolver Marcos eliminando uma de suas duas naturezas."
+    },
+    "scripture": {
+      "es": "Lc 2,52 habla del crecimiento en sabiduría de Jesús; Mc 13,32 excluye que los discípulos dispongan del día y la hora mediante una revelación del Hijo. Col 2,9 afirma la plenitud de la divinidad en Cristo. Leerlos juntos impide tanto negar su desarrollo humano como deducir que deja de ser Dios. La dificultad exige distinguir el modo humano de conocer y su misión reveladora.",
+      "en": "Luke 2:52 speaks of Jesus' growth in wisdom; Mark 13:32 excludes the disciples obtaining the day and hour through revelation by the Son. Colossians 2:9 affirms the fullness of divinity in Christ. Reading them together excludes denying human development or concluding that he ceases to be God. The difficulty requires distinguishing his human way of knowing and his revealing mission.",
+      "pt": "Lc 2,52 fala do crescimento de Jesus em sabedoria; Mc 13,32 exclui que os discípulos disponham do dia e da hora mediante revelação do Filho. Cl 2,9 afirma a plenitude da divindade em Cristo. A leitura conjunta impede negar seu desenvolvimento humano ou deduzir que deixa de ser Deus. A dificuldade exige distinguir o modo humano de conhecer e sua missão reveladora."
+    },
+    "tradition": {
+      "es": "Tomás de Aquino, Suma Teológica III, q. 12, a. 2, admite crecimiento en el conocimiento adquirido por experiencia, distinguiéndolo de otros modos de conocimiento de Cristo. Su análisis evita identificar cualquier progreso humano con pérdida de divinidad. Es una elaboración teológica precisa; no convierte al niño Jesús en un simple futuro genio todavía inconsciente de su misión.",
+      "en": "Thomas Aquinas, Summa Theologiae III, question 12, article 2, accepts growth in knowledge acquired through experience, distinguishing it from other modes of Christ's knowledge. His analysis avoids identifying human progress with loss of divinity. This is a precise theological account, not a reduction of the child Jesus to a future genius unaware of his mission.",
+      "pt": "Tomás de Aquino, Suma Teológica III, questão 12, artigo 2, admite crescimento no conhecimento adquirido pela experiência, distinguindo-o de outros modos de conhecimento de Cristo. Sua análise evita identificar qualquer progresso humano com perda da divindade. É uma elaboração teológica precisa, não a redução do menino Jesus a um futuro gênio ainda inconsciente de sua missão."
+    },
+    "magisterium": {
+      "es": "CIC 472 afirma el conocimiento humano ejercido en condiciones históricas; CIC 473, su conocimiento inmediato del Padre. CIC 474 enseña la plenitud de comprensión de los designios eternos que vino a revelar y relaciona el no saber mencionado con lo que no fue enviado a revelar. La explicación no puede omitir este último párrafo ni llamarlo fingimiento.",
+      "en": "CCC 472 affirms human knowledge exercised under historical conditions; CCC 473 affirms immediate knowledge of the Father. CCC 474 teaches fullness of understanding of the eternal plans he came to reveal and relates the stated not-knowing to what he was not sent to reveal. An explanation cannot omit this paragraph or describe it as pretending.",
+      "pt": "CIC 472 afirma o conhecimento humano exercido em condições históricas; CIC 473, seu conhecimento imediato do Pai. CIC 474 ensina a plenitude de compreensão dos desígnios eternos que veio revelar e relaciona o não saber mencionado com aquilo que não foi enviado a revelar. A explicação não pode omitir esse último parágrafo nem chamá-lo de fingimento."
+    },
+    "objection": {
+      "es": "¿No cambia el significado normal de no saber cuando aparece un problema doctrinal? La pregunta merece examinar el contexto y la misión del hablante, no una respuesta automática. La interpretación católica distingue conocer y comunicar dentro del conjunto de testimonios sobre Cristo; no sostiene que cualquier negación de conocimiento signifique siempre no revelar. Subsiste una complejidad real acerca del conocer humano del Verbo. Reconocerla exige conservar también la enseñanza positiva del Catecismo, en vez de declarar que no existe ningún criterio doctrinal.",
+      "en": "Does this not change the normal meaning of not knowing whenever doctrine encounters a problem? The question deserves attention to context and the speaker's mission rather than an automatic answer. Catholic interpretation distinguishes knowing and communicating within the full testimony about Christ; it does not claim every denial of knowledge always means not revealing. Real complexity remains concerning the Word's human knowing. Acknowledging it also requires preserving the Catechism's positive teaching rather than saying no doctrinal criteria exist.",
+      "pt": "Isso não muda o significado normal de não saber quando surge um problema doutrinal? A pergunta merece examinar o contexto e a missão de quem fala, não uma resposta automática. A interpretação católica distingue conhecer e comunicar no conjunto dos testemunhos sobre Cristo; não afirma que qualquer negação de conhecimento sempre signifique não revelar. Permanece uma complexidade real acerca do conhecer humano do Verbo. Reconhecê-la exige conservar também o ensinamento positivo do Catecismo, sem declarar inexistente qualquer critério doutrinal."
+    },
+    "analogy": {
+      "es": "Conocer un lugar por un plano y recorrerlo personalmente son modos distintos de conocer. El límite: Jesús no es simplemente un viajero informado; la comparación ilustra experiencia y conocimiento, sin explicar su unión con la sabiduría divina.",
+      "en": "Knowing a place through a plan and walking through it personally are different ways of knowing. The limit: Jesus is not merely an informed traveler; the comparison illustrates experience and knowledge without explaining union with divine wisdom.",
+      "pt": "Conhecer um lugar por uma planta e percorrê-lo pessoalmente são modos diferentes de conhecer. O limite: Jesus não é simplesmente um viajante informado; a comparação ilustra experiência e conhecimento, sem explicar sua união com a sabedoria divina."
+    },
+    "synthesis": {
+      "es": "Jesús conoce y vive humanamente sin dejar de ser el Verbo. Su crecimiento experimental, su conocimiento del Padre y su misión de revelar deben considerarse juntos.",
+      "en": "Jesus knows and lives humanly without ceasing to be the Word. His experiential growth, knowledge of the Father and mission of revelation must be considered together.",
+      "pt": "Jesus conhece e vive humanamente sem deixar de ser o Verbo. Seu crescimento experimental, seu conhecimento do Pai e sua missão de revelar devem ser considerados juntos."
+    },
+    "sources": [
+      "CIC 472–474",
+      "Tomás de Aquino, Suma Teológica III, q. 12, a. 2",
+      "Lc 2,52; Mc 13,32; Col 2,9"
+    ]
+  },
+  {
+    "number": 25,
+    "explanation": {
+      "es": "La cruz no cambia a un Padre que antes carecía de amor: nace del amor divino que toma la iniciativa de salvar. Tampoco es solamente una lección conmovedora. Cristo ofrece realmente su vida, repara la desobediencia humana y nos reconcilia con Dios; sacrificio, satisfacción y victoria expresan dimensiones complementarias de ese misterio. El Hijo no es una víctima ajena a Dios seleccionada contra su voluntad: comparte el único querer divino y se entrega libremente también con voluntad humana. La necesidad de la pasión se entiende dentro del designio libremente querido y anunciado por Dios, no como una ley superior que le impidiera perdonar. La violencia de quienes crucifican sigue siendo injusta, aunque Dios la venza salvadoramente.",
+      "en": "The cross does not change a Father previously lacking love: it arises from divine love taking the initiative to save. Nor is it merely a moving lesson. Christ truly offers his life, repairs human disobedience and reconciles us with God; sacrifice, satisfaction and victory express complementary dimensions of this mystery. The Son is not a victim external to God selected against his will: he shares the one divine will and freely offers himself through his human will too. The passion's necessity belongs within God's freely chosen and announced plan, not a superior law preventing forgiveness. The crucifiers' violence remains unjust even though God overcomes it through salvation.",
+      "pt": "A cruz não transforma um Pai antes desprovido de amor: nasce do amor divino que toma a iniciativa de salvar. Também não é apenas lição comovente. Cristo oferece realmente sua vida, repara a desobediência humana e nos reconcilia com Deus; sacrifício, satisfação e vitória expressam dimensões complementares desse mistério. O Filho não é uma vítima externa a Deus escolhida contra sua vontade: compartilha o único querer divino e se entrega livremente também com vontade humana. A necessidade da paixão pertence ao desígnio livremente querido e anunciado por Deus, não a uma lei superior que impedisse o perdão. A violência dos crucificadores continua injusta, embora Deus a vença salvadoramente."
+    },
+    "scripture": {
+      "es": "Jn 10,17-18 presenta la entrega libre de Jesús. Rm 5,6-11 sitúa su muerte cuando éramos pecadores: el amor precede nuestra reconciliación, no se compra con ella. 2 Co 5,18-21 atribuye a Dios la iniciativa de reconciliar en Cristo. Estos textos impiden separar un Padre exclusivamente airado y un Hijo misericordioso como si defendieran proyectos contrarios sobre la humanidad.",
+      "en": "John 10:17–18 presents Jesus' free self-offering. Romans 5:6–11 places his death while we were sinners: love precedes reconciliation rather than being purchased by it. Second Corinthians 5:18–21 attributes the initiative of reconciliation in Christ to God. These texts exclude separating an exclusively angry Father and a merciful Son as though they pursued opposing plans for humanity.",
+      "pt": "Jo 10,17-18 apresenta a entrega livre de Jesus. Rm 5,6-11 situa sua morte quando éramos pecadores: o amor precede nossa reconciliação, não é comprado por ela. 2Cor 5,18-21 atribui a Deus a iniciativa de reconciliar em Cristo. Esses textos impedem separar um Pai exclusivamente irado e um Filho misericordioso como se defendessem projetos contrários para a humanidade."
+    },
+    "tradition": {
+      "es": "Tomás de Aquino, Suma Teológica III, q. 46, a. 2, distingue posibilidad absoluta y necesidad supuesto el designio divino: Dios podía salvar de otro modo, pero su voluntad y presciencia no fracasan. No deduce que la pasión sea irrelevante; rechaza que una necesidad externa limite la libertad de Dios.",
+      "en": "Thomas Aquinas, Summa Theologiae III, question 46, article 2, distinguishes absolute possibility from necessity given God's plan: God could save otherwise, but his will and foreknowledge do not fail. This does not make the passion irrelevant; it rejects an external necessity limiting divine freedom or compelling God against his will.",
+      "pt": "Tomás de Aquino, Suma Teológica III, questão 46, artigo 2, distingue possibilidade absoluta e necessidade dado o desígnio divino: Deus podia salvar de outro modo, mas sua vontade e presciência não fracassam. Não conclui que a paixão seja irrelevante; rejeita uma necessidade externa que limite a liberdade de Deus."
+    },
+    "magisterium": {
+      "es": "CIC 604 enseña la iniciativa amorosa de Dios; CIC 613–616 afirma sacrificio, reparación, expiación y satisfacción, cuyo valor procede del amor de Cristo. CIC 603 niega que Jesús fuera reprobado como si él hubiese pecado. La cruz vence el pecado sin convertir al Santo en moralmente culpable ni dividir la Trinidad.",
+      "en": "CCC 604 teaches God's loving initiative; CCC 613–616 affirms sacrifice, reparation, expiation and satisfaction, whose value comes from Christ's love. CCC 603 denies that Jesus experienced rejection as though he himself had sinned. The cross overcomes sin without making the Holy One morally guilty or dividing the Trinity against itself.",
+      "pt": "CIC 604 ensina a iniciativa amorosa de Deus; CIC 613–616 afirma sacrifício, reparação, expiação e satisfação, cujo valor procede do amor de Cristo. CIC 603 nega que Jesus fosse reprovado como se ele próprio tivesse pecado. A cruz vence o pecado sem tornar o Santo moralmente culpado nem dividir a Trindade."
+    },
+    "objection": {
+      "es": "¿No sería más justo perdonar sin exigir sangre? La fe no enseña que el dolor sea valioso por sí mismo o que Dios disfrute del castigo. Enseña una entrega amorosa que asume y vence las consecuencias del pecado, no una transferencia ficticia de culpa moral. La objeción recuerda correctamente que no debemos justificar crueldades humanas con la cruz. Por qué Dios quiso precisamente este camino se comprende desde Cristo y su amor, sin pretender demostrar que ningún otro camino fuese posible.",
+      "en": "Would forgiveness without demanding blood not be more just? Faith does not teach that pain has value in itself or that God enjoys punishment. It teaches a loving offering that assumes and overcomes sin's consequences, not a fictitious transfer of moral guilt. The objection rightly reminds us never to justify human cruelty through the cross. Why God chose this particular path is understood through Christ and his love, without claiming to demonstrate that no other path was possible.",
+      "pt": "Não seria mais justo perdoar sem exigir sangue? A fé não ensina que a dor tenha valor em si mesma ou que Deus desfrute do castigo. Ensina uma entrega amorosa que assume e vence as consequências do pecado, não uma transferência fictícia de culpa moral. A objeção recorda corretamente que não devemos justificar crueldades humanas pela cruz. Por que Deus quis precisamente esse caminho se compreende a partir de Cristo e de seu amor, sem pretender demonstrar que nenhum outro caminho fosse possível."
+    },
+    "analogy": {
+      "es": "Reparar una relación rota puede exigir que alguien asuma costos que no causó. El límite: la redención no es una factura pagada a un Padre despiadado; Cristo nos une a su propia entrega y transforma nuestra relación con Dios.",
+      "en": "Repairing a broken relationship can require someone to bear costs they did not cause. The limit: redemption is not a bill paid to a merciless Father; Christ unites us to his own self-offering and transforms our relationship with God.",
+      "pt": "Reparar uma relação rompida pode exigir que alguém assuma custos que não causou. O limite: a redenção não é uma conta paga a um Pai impiedoso; Cristo nos une à sua própria entrega e transforma nossa relação com Deus."
+    },
+    "synthesis": {
+      "es": "Dios no empieza a amarnos después de la cruz: nos da al Hijo porque nos ama. La entrega libre de Cristo realiza reconciliación verdadera, no una simple escenificación.",
+      "en": "God does not begin loving us after the cross: he gives the Son because he loves us. Christ's free self-offering accomplishes real reconciliation rather than a mere demonstration.",
+      "pt": "Deus não começa a nos amar depois da cruz: dá-nos o Filho porque nos ama. A entrega livre de Cristo realiza reconciliação verdadeira, não uma simples encenação."
+    },
+    "sources": [
+      "CIC 603–604 y 613–616",
+      "Tomás de Aquino, Suma Teológica III, q. 46, a. 2",
+      "Jn 10,17-18; Rm 5,6-11; 2 Co 5,18-21"
+    ]
+  },
+  {
+    "number": 26,
+    "explanation": {
+      "es": "Conviene separar los testimonios disponibles, el juicio histórico sobre ellos y la confesión de que Dios resucitó a Jesús. No son compartimentos incomunicados, pero tampoco conclusiones idénticas. Pablo transmite una proclamación recibida y menciona personas y grupos; los Evangelios narran sepulcro vacío y encuentros. Cada testimonio debe estudiarse según su género y relación con otros: una lista que menciona muchos testigos no equivale a conservar declaraciones independientes de cada uno. La afirmación católica es corporal y real, no solamente que Jesús sigue inspirando a sus amigos. Su resurrección tampoco es un regreso temporal a la vida anterior: inaugura una vida gloriosa. La historia investiga signos y testimonios; la fe reconoce su significado divino.",
+      "en": "We should distinguish the available testimony, historical judgments about it and the confession that God raised Jesus. These levels communicate but are not identical conclusions. Paul passes on a received proclamation and names persons and groups; the Gospels narrate an empty tomb and encounters. Each testimony requires study of genre and relationships: a list mentioning many witnesses is not the same as preserving independent statements from each one. The Catholic claim is bodily and real, not merely that Jesus continues inspiring his friends. Nor is his resurrection a temporary return to his former life: it inaugurates glorious life. History investigates signs and testimony; faith recognizes their divine meaning.",
+      "pt": "Convém distinguir os testemunhos disponíveis, o juízo histórico sobre eles e a confissão de que Deus ressuscitou Jesus. Esses planos se comunicam, mas não são conclusões idênticas. Paulo transmite uma proclamação recebida e menciona pessoas e grupos; os Evangelhos narram sepulcro vazio e encontros. Cada testemunho exige estudar gênero e relações com outros: uma lista que menciona muitas testemunhas não equivale a conservar declarações independentes de cada uma. A afirmação católica é corporal e real, não apenas que Jesus continua inspirando seus amigos. Sua ressurreição tampouco é retorno temporário à vida anterior: inaugura vida gloriosa. A história investiga sinais e testemunhos; a fé reconhece seu significado divino."
+    },
+    "scripture": {
+      "es": "1 Co 15,3-8 vincula muerte, sepultura, resurrección y apariciones dentro de una tradición recibida por Pablo. Lc 24,36-43 insiste en la identidad corporal del Resucitado frente a la idea de un fantasma. Jn 20,24-29 presenta la dificultad de Tomás y el encuentro con Jesús. Son fuentes del anuncio pascual, no informes de laboratorio ni descripciones del mecanismo físico de la resurrección.",
+      "en": "First Corinthians 15:3–8 connects death, burial, resurrection and appearances within a tradition received by Paul. Luke 24:36–43 stresses the risen Lord's bodily identity against the idea of a ghost. John 20:24–29 presents Thomas's difficulty and encounter with Jesus. These are sources of Easter proclamation, not laboratory reports or descriptions of the resurrection's physical mechanism.",
+      "pt": "1Cor 15,3-8 vincula morte, sepultura, ressurreição e aparições numa tradição recebida por Paulo. Lc 24,36-43 insiste na identidade corporal do Ressuscitado contra a ideia de um fantasma. Jo 20,24-29 apresenta a dificuldade de Tomé e seu encontro com Jesus. São fontes do anúncio pascal, não relatórios de laboratório nem descrições do mecanismo físico da ressurreição."
+    },
+    "tradition": {
+      "es": "Cirilo de Jerusalén, Catequesis 14,21, apela al testimonio transmitido por Pablo y rechaza una resurrección meramente aparente. Ese texto muestra cómo la catequesis antigua comprendía la afirmación pascual. Cirilo no es un testigo ocular adicional de las apariciones: su explicación depende de los testimonios anteriores que comenta y defiende.",
+      "en": "Cyril of Jerusalem, Catechetical Lecture 14.21, appeals to testimony transmitted by Paul and rejects a merely apparent resurrection. This shows how ancient catechesis understood the Easter claim. Cyril is not an additional eyewitness to the appearances: his explanation depends upon the earlier testimony that he comments on and defends.",
+      "pt": "Cirilo de Jerusalém, Catequese 14,21, recorre ao testemunho transmitido por Paulo e rejeita uma ressurreição meramente aparente. O texto mostra como a catequese antiga compreendia a afirmação pascal. Cirilo não é testemunha ocular adicional das aparições: sua explicação depende dos testemunhos anteriores que comenta e defende."
+    },
+    "magisterium": {
+      "es": "CIC 639–644 trata los signos y encuentros, sin considerar el sepulcro vacío una prueba suficiente por sí sola. CIC 645–647 distingue cuerpo glorioso, regreso a la vida mortal y acontecimiento que supera la historia. Nadie observó el instante mismo de la resurrección; eso no vuelve irreales los encuentros que fundamentan el anuncio apostólico.",
+      "en": "CCC 639–644 addresses signs and encounters without treating the empty tomb as sufficient proof by itself. CCC 645–647 distinguishes the glorious body, a return to mortal life and an event surpassing history. Nobody observed the instant of resurrection itself; this does not make the encounters underlying apostolic proclamation unreal or merely symbolic.",
+      "pt": "CIC 639–644 trata dos sinais e encontros, sem considerar o sepulcro vazio prova suficiente por si só. CIC 645–647 distingue corpo glorioso, retorno à vida mortal e acontecimento que supera a história. Ninguém observou o instante da ressurreição; isso não torna irreais ou meramente simbólicos os encontros que fundamentam o anúncio apostólico."
+    },
+    "objection": {
+      "es": "¿No explican mejor el duelo y la elaboración comunitaria esos relatos? Tales hipótesis deben evaluarse por su capacidad de explicar los datos, sin diagnosticar retrospectivamente a personas de quienes no tenemos una evaluación clínica. La propuesta católica toma en serio la corporalidad, la sorpresa y la continuidad de identidad narradas. Esos rasgos necesitan argumentación histórica, no solo repetición confesional. Tampoco puede exigirse que la historia reproduzca experimentalmente un acontecimiento pasado: trabaja con huellas y testimonios, aunque el reconocimiento de acción divina incluya cuestiones filosóficas y teológicas.",
+      "en": "Do grief and communal elaboration not explain these accounts better? Such hypotheses should be assessed by how they explain the evidence, without retrospectively diagnosing people for whom no clinical assessment exists. The Catholic account takes seriously the narrated bodily reality, surprise and continuity of identity. These features require historical argument, not merely confessional repetition. Nor can history be required to reproduce a past event experimentally: it works with traces and testimony, while recognizing divine action also involves philosophical and theological questions.",
+      "pt": "O luto e a elaboração comunitária não explicam melhor esses relatos? Tais hipóteses devem ser avaliadas por sua capacidade de explicar os dados, sem diagnosticar retrospectivamente pessoas de quem não temos avaliação clínica. A proposta católica leva a sério corporalidade, surpresa e continuidade de identidade narradas. Esses aspectos exigem argumentação histórica, não apenas repetição confessional. Também não se pode exigir que a história reproduza experimentalmente um acontecimento passado: trabalha com vestígios e testemunhos, embora reconhecer ação divina envolva questões filosóficas e teológicas."
+    },
+    "analogy": {
+      "es": "Reconstruir un encuentro requiere contrastar testimonios aunque no podamos repetirlo. El límite: una reconstrucción corriente no demuestra por analogía una intervención divina; ayuda a distinguir investigar un acontecimiento de reproducirlo o disponer de cada testigo personalmente.",
+      "en": "Reconstructing an encounter requires comparing testimony even when we cannot repeat it. The limit: an ordinary reconstruction does not demonstrate divine intervention by analogy; it distinguishes investigating an event from reproducing it or personally accessing every witness.",
+      "pt": "Reconstruir um encontro exige comparar testemunhos mesmo sem poder repeti-lo. O limite: uma reconstrução comum não demonstra por analogia intervenção divina; ajuda a distinguir investigar um acontecimento de reproduzi-lo ou ter acesso pessoal a cada testemunha."
+    },
+    "synthesis": {
+      "es": "La fe pascual afirma que Jesús vive realmente resucitado, no solo en el recuerdo. Sus signos pueden investigarse; su significado salvador no se reduce a una conclusión de laboratorio.",
+      "en": "Easter faith affirms that Jesus truly lives risen, not merely in memory. Its signs can be investigated; its saving meaning cannot be reduced to a laboratory conclusion.",
+      "pt": "A fé pascal afirma que Jesus vive realmente ressuscitado, não apenas na lembrança. Seus sinais podem ser investigados; seu significado salvador não se reduz a uma conclusão de laboratório."
+    },
+    "sources": [
+      "CIC 639–647",
+      "Cirilo de Jerusalén, Catequesis 14,21",
+      "1 Co 15,3-8; Lc 24,36-43; Jn 20,24-29"
+    ]
+  },
+  {
+    "number": 27,
+    "explanation": {
+      "es": "La unidad cristiana no significa que cada comunidad deba tener idéntica cultura, rito o sensibilidad. Significa comunión en la fe apostólica, los sacramentos y el ministerio recibido de Cristo. Las divisiones históricas incluyen desacuerdos doctrinales reales y también conflictos de poder, prejuicios y pecados; no conviene reducirlas a malentendidos ni atribuir cada separación a una maldad personal de quienes nacieron después. El bautismo válido establece una comunión verdadera, aunque todavía imperfecta donde faltan otros vínculos. La Iglesia católica afirma que en ella subsiste la Iglesia de Cristo y reconoce dones de santificación fuera de sus límites visibles. El ecumenismo busca unidad plena mediante conversión, verdad, oración y diálogo, no mediante fingir que las diferencias carecen de importancia.",
+      "en": "Christian unity does not require every community to have identical culture, rite or sensibility. It means communion in apostolic faith, sacraments and the ministry received from Christ. Historical divisions include real doctrinal disagreements alongside conflicts of power, prejudice and sin; they should not be reduced to misunderstandings or attributed to personal wickedness in those born later. Valid baptism establishes true communion, although still imperfect where other bonds are missing. The Catholic Church affirms that Christ's Church subsists in her and recognizes sanctifying gifts beyond her visible boundaries. Ecumenism seeks full unity through conversion, truth, prayer and dialogue rather than pretending differences do not matter.",
+      "pt": "A unidade cristã não exige que cada comunidade tenha cultura, rito ou sensibilidade idênticos. Significa comunhão na fé apostólica, nos sacramentos e no ministério recebido de Cristo. As divisões históricas incluem desacordos doutrinais reais e também conflitos de poder, preconceitos e pecados; não convém reduzi-las a mal-entendidos nem atribuir cada separação à maldade pessoal de quem nasceu depois. O batismo válido estabelece comunhão verdadeira, embora ainda imperfeita onde faltam outros vínculos. A Igreja Católica afirma que nela subsiste a Igreja de Cristo e reconhece dons de santificação fora de seus limites visíveis. O ecumenismo busca unidade plena mediante conversão, verdade, oração e diálogo, sem fingir que as diferenças carecem de importância."
+    },
+    "scripture": {
+      "es": "Jn 17,20-23 relaciona la unidad de los discípulos con el testimonio de la misión de Jesús. 1 Co 1,10-13 denuncia facciones organizadas alrededor de líderes. Ef 4,4-6 fundamenta la comunión en un solo Señor, fe y bautismo. Estos textos muestran la importancia de la unidad, pero no sustituyen investigar por qué surgió cada división ni qué reconciliación requiere hoy.",
+      "en": "John 17:20–23 connects the disciples' unity with testimony to Jesus' mission. First Corinthians 1:10–13 denounces factions organized around leaders. Ephesians 4:4–6 grounds communion in one Lord, faith and baptism. These passages show unity's importance but do not replace investigating why each division arose or what reconciliation now requires, including honest discussion of remaining doctrinal disagreements.",
+      "pt": "Jo 17,20-23 relaciona a unidade dos discípulos com o testemunho da missão de Jesus. 1Cor 1,10-13 denuncia facções organizadas em torno de líderes. Ef 4,4-6 fundamenta a comunhão em um só Senhor, fé e batismo. Esses textos mostram a importância da unidade, mas não substituem investigar por que surgiu cada divisão nem que reconciliação exige hoje."
+    },
+    "tradition": {
+      "es": "Ignacio de Antioquía, Carta a los esmirniotas 8, vincula la asamblea y la Eucaristía con el obispo. Testimonia una comunión visible, no solamente afinidad interior entre creyentes aislados. No ofrece por sí solo una resolución completa de las controversias posteriores sobre el primado romano; su testimonio debe usarse con ese alcance real.",
+      "en": "Ignatius of Antioch, Letter to the Smyrnaeans 8, connects the assembly and Eucharist with the bishop. He witnesses visible communion rather than merely inward affinity among isolated believers. This alone does not provide a complete resolution of later controversies about Roman primacy; his testimony must be used within its actual scope.",
+      "pt": "Inácio de Antioquia, Carta aos esmirniotas 8, vincula a assembleia e a Eucaristia ao bispo. Testemunha comunhão visível, não apenas afinidade interior entre fiéis isolados. Não oferece por si só solução completa para controvérsias posteriores sobre o primado romano; seu testemunho deve ser usado com esse alcance real."
+    },
+    "magisterium": {
+      "es": "CIC 815 identifica los vínculos visibles; CIC 816 explica la afirmación católica sobre la Iglesia de Cristo. CIC 817–819 reconoce responsabilidades históricas compartidas y la comunión bautismal de otros cristianos. CIC 820–822 exige trabajar y orar por la unidad. Respetar a otros creyentes no requiere renunciar a la verdad ni negar esas heridas.",
+      "en": "CCC 815 identifies visible bonds; CCC 816 explains the Catholic claim concerning Christ's Church. CCC 817–819 recognizes shared historical responsibility and other Christians' baptismal communion. CCC 820–822 requires work and prayer for unity. Respecting other believers does not require surrendering truth or denying the wounds and disagreements that still obstruct full communion.",
+      "pt": "CIC 815 identifica os vínculos visíveis; CIC 816 explica a afirmação católica sobre a Igreja de Cristo. CIC 817–819 reconhece responsabilidades históricas compartilhadas e a comunhão batismal de outros cristãos. CIC 820–822 exige trabalho e oração pela unidade. Respeitar outros fiéis não requer renunciar à verdade nem negar essas feridas."
+    },
+    "objection": {
+      "es": "Si la guía de Cristo es real, ¿por qué no impide tantas rupturas? La promesa de asistencia no convierte a los cristianos en incapaces de pecar ni elimina sus conflictos. Pero invocar libertad tampoco basta para probar la pretensión católica: esta necesita argumentos sobre continuidad, doctrina y autoridad. La división es un contraejemplo serio a nuestra fidelidad, no una refutación lógica automática de Cristo. La respuesta debe incluir reforma de conductas y reparación del daño, además de explicar la doctrina de unidad.",
+      "en": "If Christ's guidance is real, why does it not prevent so many ruptures? Promised assistance does not make Christians incapable of sin or eliminate conflict. Invoking freedom also does not establish the Catholic claim: arguments about continuity, doctrine and authority are needed. Division seriously challenges our fidelity without automatically refuting Christ logically. An adequate answer must include reform of conduct and repair of harm alongside explaining the doctrine of unity, rather than treating failures as merely someone else's problem.",
+      "pt": "Se a orientação de Cristo é real, por que não impede tantas rupturas? A assistência prometida não torna os cristãos incapazes de pecar nem elimina seus conflitos. Invocar liberdade também não basta para provar a pretensão católica: ela exige argumentos sobre continuidade, doutrina e autoridade. A divisão questiona seriamente nossa fidelidade, sem refutar logicamente Cristo de forma automática. A resposta deve incluir reforma de condutas e reparação do dano, além de explicar a doutrina da unidade."
+    },
+    "analogy": {
+      "es": "Una orquesta puede acoger instrumentos distintos y necesitar una verdadera armonía común. El límite: las diferencias doctrinales no son simples estilos musicales; la unidad requiere reconciliar afirmaciones y vínculos concretos, sin borrar la diversidad legítima.",
+      "en": "An orchestra can welcome different instruments while needing genuine common harmony. The limit: doctrinal differences are not merely musical styles; unity requires reconciling concrete claims and bonds without erasing legitimate diversity among communities.",
+      "pt": "Uma orquestra pode acolher instrumentos distintos e precisar de verdadeira harmonia comum. O limite: diferenças doutrinais não são simples estilos musicais; a unidade exige reconciliar afirmações e vínculos concretos sem apagar a diversidade legítima."
+    },
+    "synthesis": {
+      "es": "La unidad es don de Cristo y tarea de sus discípulos. Buscarla exige verdad y caridad: reconocer comunión real, afrontar diferencias y reparar nuestras responsabilidades históricas.",
+      "en": "Unity is Christ's gift and his disciples' task. Seeking it requires truth and charity: recognizing real communion, confronting differences and addressing our historical responsibilities.",
+      "pt": "A unidade é dom de Cristo e tarefa de seus discípulos. Buscá-la exige verdade e caridade: reconhecer comunhão real, enfrentar diferenças e reparar nossas responsabilidades históricas."
+    },
+    "sources": [
+      "CIC 815–822",
+      "Ignacio de Antioquía, Carta a los esmirniotas 8",
+      "Jn 17,20-23; 1 Co 1,10-13; Ef 4,4-6"
+    ]
+  },
+  {
+    "number": 28,
+    "explanation": {
+      "es": "Persona no significa aquí un individuo con cuerpo humano ni un ser divino separado. El Espíritu es realmente distinto del Padre y del Hijo y comparte íntegramente la única divinidad. Sus dones y acciones no agotan su identidad: recibir paz o fortaleza no equivale a fabricar una emoción llamada Espíritu. Tampoco una experiencia intensa demuestra por sí sola que una decisión venga de él. La Escritura presenta una relación personal que enseña, envía y santifica; la confesión de la Iglesia reconoce en ese conjunto al Señor dador de vida. Así se puede invocarlo y adorarlo, sin confundirlo con energía manipulable mediante técnicas ni separarlo de Cristo y del Padre.",
+      "en": "Person here does not mean an individual with a human body or a separate divine being. The Spirit is really distinct from Father and Son while sharing the one divinity fully. His gifts and actions do not exhaust his identity: receiving peace or strength is not manufacturing an emotion called Spirit. Nor does an intense experience by itself establish that a decision comes from him. Scripture presents a personal relationship that teaches, sends and sanctifies; the Church's confession recognizes in this whole testimony the Lord and giver of life. We may invoke and worship him without treating him as energy manipulated through techniques or separating him from Christ and the Father.",
+      "pt": "Pessoa não significa aqui um indivíduo com corpo humano nem um ser divino separado. O Espírito é realmente distinto do Pai e do Filho e compartilha integralmente a única divindade. Seus dons e ações não esgotam sua identidade: receber paz ou força não equivale a fabricar uma emoção chamada Espírito. Tampouco uma experiência intensa demonstra por si só que uma decisão venha dele. A Escritura apresenta uma relação pessoal que ensina, envia e santifica; a confissão da Igreja reconhece nesse conjunto o Senhor que dá a vida. Podemos invocá-lo e adorá-lo sem confundi-lo com energia manipulável por técnicas nem separá-lo de Cristo e do Pai."
+    },
+    "scripture": {
+      "es": "Jn 14,16-17.26 presenta al Paráclito enviado para permanecer y enseñar. Hch 13,2 le atribuye iniciativa al llamar a una misión. 1 Co 12,11 habla de su distribución de dones según su voluntad. Hch 5,3-4 relaciona la mentira contra él con mentir a Dios. La convergencia importa más que aislar un verbo o un pronombre y pretender que resuelve por sí solo la cuestión.",
+      "en": "John 14:16–17,26 presents the Paraclete sent to remain and teach. Acts 13:2 attributes initiative to him in calling people to mission. First Corinthians 12:11 speaks of distributing gifts according to his will. Acts 5:3–4 connects lying against him with lying to God. This convergence matters more than isolating a verb or pronoun and claiming it settles the question alone.",
+      "pt": "Jo 14,16-17.26 apresenta o Paráclito enviado para permanecer e ensinar. At 13,2 atribui-lhe iniciativa ao chamar para a missão. 1Cor 12,11 fala de sua distribuição de dons segundo sua vontade. At 5,3-4 relaciona mentir contra ele com mentir a Deus. Essa convergência importa mais que isolar um verbo ou pronome e pretender que resolva sozinho a questão."
+    },
+    "tradition": {
+      "es": "Basilio de Cesarea, Sobre el Espíritu Santo 9,22, describe al Espíritu como inteligente, fuente de santificación y dador de vida, no como criatura necesitada de perfeccionamiento. Su argumentación reúne títulos y acciones bíblicas. La iluminación que comunica no lo convierte en una parte repartida entre quienes reciben sus dones.",
+      "en": "Basil of Caesarea, On the Holy Spirit 9.22, describes the Spirit as intelligent, the source of sanctification and giver of life, not a creature needing perfection. His argument gathers biblical titles and actions. The illumination he communicates does not make him a piece divided among those receiving his gifts.",
+      "pt": "Basílio de Cesareia, Sobre o Espírito Santo 9,22, descreve o Espírito como inteligente, fonte de santificação e doador da vida, não criatura necessitada de aperfeiçoamento. Sua argumentação reúne títulos e ações bíblicas. A iluminação que comunica não o transforma numa parte repartida entre aqueles que recebem seus dons."
+    },
+    "magisterium": {
+      "es": "CIC 685 confiesa al Espíritu consustancial con el Padre y el Hijo, digno de adoración y gloria. CIC 687–690 explica su acción reveladora y su misión inseparable de Cristo. No es una presencia anónima que vuelve innecesario al Hijo ni una tercera divinidad que actúa con un proyecto rival al del Padre.",
+      "en": "CCC 685 confesses the Spirit as consubstantial with Father and Son, worthy of worship and glory. CCC 687–690 explains his revealing action and mission inseparable from Christ. He is not an anonymous presence making the Son unnecessary or a third divinity acting through a plan competing with that of the Father.",
+      "pt": "CIC 685 confessa o Espírito consubstancial ao Pai e ao Filho, digno de adoração e glória. CIC 687–690 explica sua ação reveladora e sua missão inseparável de Cristo. Não é presença anônima que torna o Filho desnecessário nem terceira divindade que atua com projeto rival ao do Pai."
+    },
+    "objection": {
+      "es": "La sabiduría también habla en textos bíblicos: ¿por qué no sería otra personificación? La objeción muestra por qué un verbo personal aislado no basta. La respuesta católica considera la relación estable del Espíritu con Padre e Hijo, el bautismo, la misión y la adoración eclesial, además de las acciones personales. Es un argumento acumulativo, no una prueba gramatical automática. Debe explicarse ese conjunto sin negar que la Biblia emplea personificaciones ni tratar la dificultad del lector como falta de fe.",
+      "en": "Wisdom also speaks in biblical texts: why is this not another personification? The objection shows why an isolated personal verb is insufficient. The Catholic answer considers the Spirit's consistent relationship with Father and Son, baptism, mission and ecclesial worship alongside personal actions. This is a cumulative argument rather than an automatic grammatical proof. That whole pattern must be explained without denying biblical personification or treating a reader's difficulty as a failure of faith.",
+      "pt": "A sabedoria também fala em textos bíblicos: por que não seria outra personificação? A objeção mostra por que um verbo pessoal isolado não basta. A resposta católica considera a relação estável do Espírito com Pai e Filho, o batismo, a missão e a adoração eclesial, além das ações pessoais. É argumento cumulativo, não prova gramatical automática. Esse conjunto precisa ser explicado sem negar personificações bíblicas nem tratar a dificuldade do leitor como falta de fé."
+    },
+    "analogy": {
+      "es": "La luz ayuda a comprender cómo un don ilumina sin agotarse al compartirse. El límite: el Espíritu no es luz física ni energía inconsciente; la imagen explica su don, no sustituye su identidad personal y divina.",
+      "en": "Light helps illustrate how a gift illuminates without being exhausted by sharing. The limit: the Spirit is neither physical light nor unconscious energy; the image explains his gift rather than replacing his personal and divine identity.",
+      "pt": "A luz ajuda a compreender como um dom ilumina sem se esgotar ao ser compartilhado. O limite: o Espírito não é luz física nem energia inconsciente; a imagem explica seu dom, não substitui sua identidade pessoal e divina."
+    },
+    "synthesis": {
+      "es": "El Espíritu Santo es alguien a quien acogemos y adoramos, no algo que controlamos. Sus dones nos unen a Cristo y al Padre dentro de la única vida divina.",
+      "en": "The Holy Spirit is someone we welcome and worship, not something we control. His gifts unite us to Christ and the Father within the one divine life.",
+      "pt": "O Espírito Santo é alguém que acolhemos e adoramos, não algo que controlamos. Seus dons nos unem a Cristo e ao Pai na única vida divina."
+    },
+    "sources": [
+      "CIC 685 y 687–690",
+      "Basilio de Cesarea, Sobre el Espíritu Santo 9,22",
+      "Jn 14,16-17.26; Hch 13,2; 1 Co 12,11; Hch 5,3-4"
+    ]
+  },
+  {
+    "number": 29,
+    "explanation": {
+      "es": "Una profecía no da al mal una autorización moral. Que Dios conozca una decisión y la integre en su providencia no significa que la persona sea obligada a elegirla o que deba agradecerse su pecado. Los textos mantienen simultáneamente cumplimiento del designio y responsabilidad de Judas. La entrega salvadora procede del amor de Cristo; la traición sigue siendo traición. También conviene distinguir remordimiento, conversión y juicio definitivo: el relato de un desenlace trágico no nos concede acceso completo al corazón de una persona. La advertencia evangélica debe tomarse con gravedad, sin convertirla en licencia para dictar sentencias individuales ni para enseñar que una persona desesperada ya está fuera del alcance de la misericordia.",
+      "en": "A prophecy does not authorize evil morally. God's knowledge of a decision and inclusion of it within providence do not mean the person is forced to choose it or that we should thank them for sinning. The texts maintain both fulfillment of God's plan and Judas's responsibility. Christ's saving self-offering proceeds from love; betrayal remains betrayal. Remorse, conversion and definitive judgment must also be distinguished: the narrative of a tragic ending does not grant complete access to a person's heart. The Gospel's warning must be taken seriously without turning it into permission to pronounce individual sentences or teach that a despairing person is already beyond mercy's reach.",
+      "pt": "Uma profecia não dá ao mal autorização moral. Deus conhecer uma decisão e integrá-la em sua providência não significa que a pessoa seja obrigada a escolhê-la ou que se deva agradecer seu pecado. Os textos mantêm simultaneamente cumprimento do desígnio e responsabilidade de Judas. A entrega salvadora procede do amor de Cristo; a traição continua sendo traição. Também convém distinguir remorso, conversão e juízo definitivo: o relato de um desfecho trágico não nos concede acesso completo ao coração de alguém. A advertência evangélica deve ser levada a sério, sem permitir sentenças individuais nem ensinar que uma pessoa desesperada já esteja fora do alcance da misericórdia."
+    },
+    "scripture": {
+      "es": "Mt 26,14-25 muestra la negociación de Judas y la grave advertencia de Jesús. Lc 22,22 une designio y responsabilidad sin decir que el traidor esté coaccionado. Mt 27,3-5 narra su reconocimiento de haber entregado sangre inocente y su final trágico. No es una recomendación de desesperar ni una explicación clínica; invita a buscar misericordia y ayuda, no a imitar ese desenlace.",
+      "en": "Matthew 26:14–25 shows Judas's negotiation and Jesus' grave warning. Luke 22:22 joins divine purpose and responsibility without saying the betrayer is coerced. Matthew 27:3–5 narrates his recognition of betraying innocent blood and his tragic ending. It neither recommends despair nor provides a clinical explanation; it invites seeking mercy and help rather than imitating that outcome.",
+      "pt": "Mt 26,14-25 mostra a negociação de Judas e a grave advertência de Jesus. Lc 22,22 une desígnio e responsabilidade sem dizer que o traidor esteja coagido. Mt 27,3-5 narra seu reconhecimento de ter entregado sangue inocente e seu final trágico. Não recomenda desespero nem oferece explicação clínica; convida a buscar misericórdia e ajuda, não a imitar esse desfecho."
+    },
+    "tradition": {
+      "es": "Agustín, La ciudad de Dios V,9, rechaza la alternativa entre negar la presciencia divina y negar la voluntad humana. Dios conoce también nuestras elecciones como elecciones. Este marco no reconstruye las motivaciones interiores completas de Judas ni elimina el misterio de la providencia; impide deducir fatalismo del solo hecho de que Dios conoce.",
+      "en": "Augustine, City of God V.9, rejects the alternative between denying divine foreknowledge and denying human will. God also knows our choices as choices. This framework neither reconstructs all Judas's inner motives nor eliminates providence's mystery; it prevents deducing fatalism merely from the fact that God knows what we choose.",
+      "pt": "Agostinho, A cidade de Deus V,9, rejeita a alternativa entre negar a presciência divina e negar a vontade humana. Deus conhece também nossas escolhas como escolhas. Esse quadro não reconstrói as motivações interiores completas de Judas nem elimina o mistério da providência; impede deduzir fatalismo apenas porque Deus conhece."
+    },
+    "magisterium": {
+      "es": "CIC 600 incluye las respuestas libres en el designio eterno; CIC 1037 niega que Dios predestine a alguien al infierno. Benedicto XVI, audiencia del 18 de octubre de 2006, reconoce la gravedad de la traición y reserva a Dios el juicio. Ni la providencia vuelve bueno el pecado ni la misericordia autoriza a trivializarlo.",
+      "en": "CCC 600 includes free responses within the eternal plan; CCC 1037 denies that God predestines anyone to hell. Benedict XVI's audience of 18 October 2006 acknowledges betrayal's gravity and leaves judgment to God. Providence does not make sin good, and mercy does not authorize treating betrayal or its consequences as trivial.",
+      "pt": "CIC 600 inclui as respostas livres no desígnio eterno; CIC 1037 nega que Deus predestine alguém ao inferno. Bento XVI, audiência de 18 de outubro de 2006, reconhece a gravidade da traição e reserva a Deus o julgamento. Nem a providência torna bom o pecado nem a misericórdia permite banalizá-lo."
+    },
+    "objection": {
+      "es": "Si el anuncio era infalible, ¿podía Judas actuar de otro modo? Hay que distinguir la certeza de que un hecho libre ocurre y la coacción que anula la libertad. La teología no atribuye a Dios una predicción falible como la de un profesor: su conocimiento no es una conjetura temporal. Esta distinción evita una inferencia fatalista, aunque no explica exhaustivamente la relación entre eternidad y libertad. Nuestra respuesta práctica es arrepentirnos y pedir ayuda, nunca concluir que resistir al mal resulta inútil.",
+      "en": "If the announcement was infallible, could Judas act otherwise? Certainty that a free act occurs must be distinguished from coercion abolishing freedom. Theology does not attribute to God a fallible prediction like a teacher's: his knowledge is not a temporal guess. This distinction blocks a fatalistic inference without explaining exhaustively the relationship between eternity and freedom. Our practical response is repentance and seeking help, never concluding that resisting evil is useless because a predicted outcome removes responsibility.",
+      "pt": "Se o anúncio era infalível, Judas podia agir de outro modo? É preciso distinguir a certeza de que um ato livre ocorre e a coação que anula a liberdade. A teologia não atribui a Deus uma previsão falível como a de um professor: seu conhecimento não é conjectura temporal. Essa distinção evita uma inferência fatalista, embora não explique exaustivamente a relação entre eternidade e liberdade. Nossa resposta prática é arrependimento e busca de ajuda, nunca concluir que resistir ao mal seja inútil."
+    },
+    "analogy": {
+      "es": "Un observador puede conocer una elección sin ser quien la realiza. El límite: ningún observador humano posee la presciencia eterna de Dios; la comparación solo distingue conocimiento y autoría, no resuelve el misterio de la libertad creada.",
+      "en": "An observer can know a choice without being the one who makes it. The limit: no human observer possesses God's eternal foreknowledge; the comparison only distinguishes knowledge from authorship rather than solving created freedom's mystery.",
+      "pt": "Um observador pode conhecer uma escolha sem ser quem a realiza. O limite: nenhum observador humano possui a presciência eterna de Deus; a comparação apenas distingue conhecimento e autoria, não resolve o mistério da liberdade criada."
+    },
+    "synthesis": {
+      "es": "El plan de Dios no convierte la traición en deber ni la desesperación en destino. Si te sientes sin salida, busca acompañamiento espiritual y ayuda profesional; no estás obligado a afrontar la crisis en soledad.",
+      "en": "God's plan makes neither betrayal a duty nor despair a destiny. If you feel trapped, seek spiritual support and professional help; you need not face a crisis alone.",
+      "pt": "O plano de Deus não transforma traição em dever nem desespero em destino. Se você se sente sem saída, busque acompanhamento espiritual e ajuda profissional; não precisa enfrentar a crise sozinho."
+    },
+    "sources": [
+      "CIC 600 y 1037",
+      "Agustín, La ciudad de Dios V,9",
+      "Benedicto XVI, audiencia general, 18-10-2006",
+      "Mt 26,14-25; Lc 22,22; Mt 27,3-5"
+    ]
+  },
+  {
+    "number": 30,
+    "explanation": {
+      "es": "La esperanza cristiana se dirige a una consumación real: Cristo volverá y el mal no tendrá la última palabra. La Iglesia no transforma esa promesa en un calendario ni dispone de una fecha que haya vencido y deba recalcular. Esperar no es suspender la vida: significa conversión, justicia, misión y fidelidad cotidiana. La duración de la historia suscita una dificultad legítima, especialmente ante textos de proximidad. Hay que leer su contexto y distinguir los acontecimientos anunciados, sin declarar que cualquier demora confirma automáticamente la fe. La paciencia divina es una interpretación revelada de este tiempo, no una operación aritmética para convertir días proféticos en años y predecir el fin.",
+      "en": "Christian hope concerns a real consummation: Christ will return and evil will not have the final word. The Church does not turn this promise into a calendar or possess an expired date needing recalculation. Waiting does not mean suspending life: it means conversion, justice, mission and daily fidelity. History's duration raises a legitimate difficulty, especially alongside texts expressing nearness. Their context and the events announced must be distinguished, without declaring that every delay automatically confirms faith. Divine patience is a revealed interpretation of this time, not an arithmetic procedure for converting prophetic days into years and predicting the end of history.",
+      "pt": "A esperança cristã dirige-se a uma consumação real: Cristo voltará, e o mal não terá a última palavra. A Igreja não transforma essa promessa em calendário nem possui data vencida que precise recalcular. Esperar não significa suspender a vida: significa conversão, justiça, missão e fidelidade cotidiana. A duração da história suscita dificuldade legítima, especialmente diante dos textos de proximidade. É preciso ler seu contexto e distinguir os acontecimentos anunciados, sem declarar que qualquer demora confirme automaticamente a fé. A paciência divina é interpretação revelada desse tempo, não operação aritmética para converter dias proféticos em anos e prever o fim."
+    },
+    "scripture": {
+      "es": "Hch 1,6-11 desplaza la pregunta por los tiempos hacia la misión de los testigos, sin negar el retorno. 2 P 3,8-9 responde a la demora mediante la paciencia orientada a la conversión. Mt 24,34-36 reúne proximidad y desconocimiento del día; el discurso comienza con el templo y preguntas sobre la consumación. Interpretarlo requiere distinguir contexto y alcance, no aislar una frase como cronómetro.",
+      "en": "Acts 1:6–11 redirects the question of times toward the witnesses' mission without denying Christ's return. Second Peter 3:8–9 addresses delay through patience directed toward conversion. Matthew 24:34–36 joins nearness and ignorance of the day; the discourse begins with the temple and questions about consummation. Interpretation requires distinguishing context and scope rather than isolating a sentence as a stopwatch.",
+      "pt": "At 1,6-11 desloca a pergunta pelos tempos para a missão das testemunhas, sem negar o retorno. 2Pd 3,8-9 responde à demora pela paciência voltada à conversão. Mt 24,34-36 reúne proximidade e desconhecimento do dia; o discurso começa com o templo e perguntas sobre a consumação. Interpretá-lo exige distinguir contexto e alcance, não isolar uma frase como cronômetro."
+    },
+    "tradition": {
+      "es": "La Didaché 16,1–2 pide vigilancia porque se desconoce la hora y recomienda reunirse para buscar lo que conviene a la vida creyente. Es testimonio de esperanza activa en la tradición antigua, no una fecha alternativa. Su exhortación liga la espera a perseverar y vivir en comunidad, no a abandonar responsabilidades.",
+      "en": "The Didache 16.1–2 urges watchfulness because the hour is unknown and recommends gathering to seek what serves believers' lives. It witnesses active hope in ancient tradition rather than an alternative date. Its exhortation connects waiting with perseverance and communal life, not abandoning responsibilities while expecting the world's imminent end.",
+      "pt": "A Didaqué 16,1–2 pede vigilância porque a hora é desconhecida e recomenda reunir-se para buscar o que convém à vida de fé. Testemunha esperança ativa na tradição antiga, não uma data alternativa. Sua exortação liga a espera à perseverança e à vida comunitária, não ao abandono de responsabilidades."
+    },
+    "magisterium": {
+      "es": "CIC 673 afirma la venida gloriosa sin ofrecer cálculo temporal. CIC 675–677 distingue la prueba final y la victoria de Dios de un progreso histórico que produciría por sí mismo el Reino. La esperanza no permite identificar un poder político con la salvación definitiva ni declarar fechas que la Iglesia no ha recibido.",
+      "en": "CCC 673 affirms the glorious coming without providing a chronological calculation. CCC 675–677 distinguishes final trial and God's victory from historical progress supposedly producing the Kingdom by itself. Hope does not authorize identifying a political power with definitive salvation or declaring dates the Church has not received through revelation.",
+      "pt": "CIC 673 afirma a vinda gloriosa sem oferecer cálculo temporal. CIC 675–677 distingue a provação final e a vitória de Deus de um progresso histórico que produziria por si mesmo o Reino. A esperança não permite identificar um poder político com a salvação definitiva nem declarar datas que a Igreja não recebeu."
+    },
+    "objection": {
+      "es": "¿No vuelve irrefutable una promesa decir que puede cumplirse dentro de cualquier plazo? La objeción señala que no disponemos de una prueba histórica del acontecimiento futuro. La esperanza cristiana se apoya en quién promete y en la Pascua, no en una predicción calculada. Eso no excusa ignorar textos difíciles: hay que estudiar si hablan del templo, del juicio final o de ambos relacionados. Tampoco autoriza a tratar toda expectativa concreta de los primeros creyentes como una definición infalible de fechas.",
+      "en": "Does saying a promise can be fulfilled at any time not make it unfalsifiable? The objection correctly notes that we lack historical proof of the future event. Christian hope rests on the promiser and Easter, not a calculated prediction. This does not excuse ignoring difficult texts: whether they concern the temple, final judgment or both in relation must be studied. Nor does it authorize treating every concrete expectation of early believers as an infallible definition of dates.",
+      "pt": "Dizer que uma promessa pode cumprir-se em qualquer prazo não a torna irrefutável? A objeção observa corretamente que não dispomos de prova histórica do acontecimento futuro. A esperança cristã apoia-se em quem promete e na Páscoa, não numa previsão calculada. Isso não desculpa ignorar textos difíceis: é preciso estudar se falam do templo, do juízo final ou de ambos relacionados. Também não permite tratar cada expectativa concreta dos primeiros fiéis como definição infalível de datas."
+    },
+    "analogy": {
+      "es": "Un vigía cumple su tarea sin conocer la hora de cada llegada. El límite: la venida de Cristo no es un transporte con retraso verificable; la imagen ilumina vigilancia responsable, no demuestra la promesa ni su plazo.",
+      "en": "A watchkeeper does the work without knowing the hour of every arrival. The limit: Christ's coming is not transport with a verifiable delay; the image illustrates responsible vigilance without demonstrating the promise or its timing.",
+      "pt": "Um vigia cumpre sua tarefa sem conhecer a hora de cada chegada. O limite: a vinda de Cristo não é transporte com atraso verificável; a imagem ilumina vigilância responsável, não demonstra a promessa nem seu prazo."
+    },
+    "synthesis": {
+      "es": "Esperar a Cristo es vivir fielmente hoy sin apropiarse del calendario de Dios. La esperanza sostiene la conversión y el servicio, no el miedo a fechas anunciadas por otros.",
+      "en": "Waiting for Christ means living faithfully today without claiming God's calendar. Hope sustains conversion and service rather than fear of dates announced by others.",
+      "pt": "Esperar Cristo é viver fielmente hoje sem se apropriar do calendário de Deus. A esperança sustenta conversão e serviço, não o medo de datas anunciadas por outros."
+    },
+    "sources": [
+      "CIC 673 y 675–677",
+      "Didaché 16,1–2",
+      "Hch 1,6-11; 2 P 3,8-9; Mt 24,34-36"
+    ]
   }
 ]
