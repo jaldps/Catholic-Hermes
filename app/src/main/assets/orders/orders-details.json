@@ -1,0 +1,449 @@
+[
+  {
+    "id": "franciscanos-ofm",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Honorio III, bula Solet annuere, 29-XI-1223: confirmación de la Regla.",
+      "en": "Honorius III, bull Solet annuere, 29 November 1223: confirmation of the Rule.",
+      "pt": "Honório III, bula Solet annuere, 29-XI-1223: confirmação da Regra."
+    },
+    "notableSaints": {
+      "es": [
+        "San Francisco de Asís"
+      ],
+      "en": [
+        "Saint Francis of Assisi"
+      ],
+      "pt": [
+        "São Francisco de Assis"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes sirven en parroquias, misiones y obras de evangelización, organizados en provincias y custodias de distintas regiones.",
+      "en": "The friars serve in parishes, missions and evangelization, organized in provinces and custodies across different regions.",
+      "pt": "Os frades servem em paróquias, missões e obras de evangelização, organizados em províncias e custódias de diferentes regiões."
+    },
+    "sources": [
+      "Orden de Frailes Menores, Honorio III y la Regla de 1223",
+      "OFM, encuentro de la Conferencia Nuestra Señora de Guadalupe",
+      "Catholic Encyclopedia: Franciscan Order"
+    ]
+  },
+  {
+    "id": "jesuitas-sj",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Pablo III, bula Regimini militantis Ecclesiae, 27-IX-1540.",
+      "en": "Paul III, bull Regimini militantis Ecclesiae, 27 September 1540.",
+      "pt": "Paulo III, bula Regimini militantis Ecclesiae, 27-IX-1540."
+    },
+    "notableSaints": {
+      "es": [
+        "San Ignacio de Loyola",
+        "San Francisco Javier"
+      ],
+      "en": [
+        "Saint Ignatius of Loyola",
+        "Saint Francis Xavier"
+      ],
+      "pt": [
+        "Santo Inácio de Loyola",
+        "São Francisco Xavier"
+      ]
+    },
+    "presence": {
+      "es": "Sacerdotes y hermanos desarrollan ministerios educativos, espirituales, sociales y misioneros mediante provincias y redes apostólicas internacionales.",
+      "en": "Priests and brothers undertake educational, spiritual, social and missionary ministries through provinces and international apostolic networks.",
+      "pt": "Sacerdotes e irmãos realizam ministérios educativos, espirituais, sociais e missionários por meio de províncias e redes apostólicas internacionais."
+    },
+    "sources": [
+      "Compañía de Jesús, aprobación pontificia de 1540",
+      "Compañía de Jesús, ministerios y presencia internacional",
+      "Catholic Encyclopedia: The Jesuits"
+    ]
+  },
+  {
+    "id": "opus-dei",
+    "kind": "prelature",
+    "motto": null,
+    "approval": {
+      "es": "Juan Pablo II, constitución apostólica Ut sit, 28-XI-1982: erección como prelatura personal.",
+      "en": "John Paul II, apostolic constitution Ut sit, 28 November 1982: erection as a personal prelature.",
+      "pt": "João Paulo II, constituição apostólica Ut sit, 28-XI-1982: ereção como prelazia pessoal."
+    },
+    "notableSaints": {
+      "es": [
+        "San Josemaría Escrivá"
+      ],
+      "en": [
+        "Saint Josemaría Escrivá"
+      ],
+      "pt": [
+        "São Josemaria Escrivá"
+      ]
+    },
+    "presence": {
+      "es": "La prelatura ofrece formación y atención pastoral para la santificación del trabajo y de la vida familiar y social, con cooperación de laicos.",
+      "en": "The prelature provides formation and pastoral care for holiness in work, family and social life, with the cooperation of lay people.",
+      "pt": "A prelazia oferece formação e cuidado pastoral para a santificação do trabalho e da vida familiar e social, com a cooperação de leigos."
+    },
+    "sources": [
+      "Opus Dei, Prelature of Opus Dei",
+      "Francisco, Ad charisma tuendum, 14-VII-2022"
+    ]
+  },
+  {
+    "id": "dominicos-op",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Honorio III, bula Religiosam vitam, 22-XII-1216.",
+      "en": "Honorius III, bull Religiosam vitam, 22 December 1216.",
+      "pt": "Honório III, bula Religiosam vitam, 22-XII-1216."
+    },
+    "notableSaints": {
+      "es": [
+        "Santo Domingo de Guzmán",
+        "Santo Tomás de Aquino"
+      ],
+      "en": [
+        "Saint Dominic de Guzmán",
+        "Saint Thomas Aquinas"
+      ],
+      "pt": [
+        "São Domingos de Gusmão",
+        "São Tomás de Aquino"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes predican y estudian en comunidades de distintos continentes, con apostolados parroquiales, universitarios y de formación cristiana.",
+      "en": "The friars preach and study in communities across different continents, undertaking parish, university and Christian formation ministries.",
+      "pt": "Os frades pregam e estudam em comunidades de diferentes continentes, com apostolados paroquiais, universitários e de formação cristã."
+    },
+    "sources": [
+      "Orden de Predicadores, Our Story",
+      "Catholic Encyclopedia: Order of Preachers"
+    ]
+  },
+  {
+    "id": "benedictinos-osb",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Benito de Nursia"
+      ],
+      "en": [
+        "Saint Benedict of Nursia"
+      ],
+      "pt": [
+        "São Bento de Núrsia"
+      ]
+    },
+    "presence": {
+      "es": "Los monasterios autónomos se agrupan en congregaciones y en la Confederación Benedictina, con oración litúrgica, hospitalidad y diversos servicios educativos.",
+      "en": "Autonomous monasteries are grouped in congregations and the Benedictine Confederation, sustaining liturgical prayer, hospitality and various educational services.",
+      "pt": "Os mosteiros autônomos se agrupam em congregações e na Confederação Beneditina, mantendo oração litúrgica, hospitalidade e diferentes serviços educativos."
+    },
+    "sources": [
+      "Confederación Benedictina, The Benedictine Confederation",
+      "Catholic Encyclopedia: Benedictine Order"
+    ]
+  },
+  {
+    "id": "carmelitas-oc",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La orden mantiene comunidades de frailes y monjas; sus apostolados incluyen oración contemplativa, servicio pastoral y acompañamiento de la familia carmelita.",
+      "en": "The order maintains communities of friars and nuns; its ministries include contemplative prayer, pastoral service and accompaniment of the Carmelite family.",
+      "pt": "A ordem mantém comunidades de frades e monjas; seus apostolados incluem oração contemplativa, serviço pastoral e acompanhamento da família carmelita."
+    },
+    "sources": [
+      "Curia general O.Carm., identidad y servicio",
+      "Catholic Encyclopedia: The Carmelite Order"
+    ]
+  },
+  {
+    "id": "agustinos-osa",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Alejandro IV, bula Licet ecclesiae catholicae, 1256: confirmación de la Gran Unión.",
+      "en": "Alexander IV, bull Licet ecclesiae catholicae, 1256: confirmation of the Grand Union.",
+      "pt": "Alexandre IV, bula Licet ecclesiae catholicae, 1256: confirmação da Grande União."
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La fraternidad internacional se organiza en provincias y otras circunscripciones, con comunidades dedicadas a la vida común y al servicio de las Iglesias locales.",
+      "en": "The international brotherhood is organized in provinces and other circumscriptions, with communities dedicated to common life and service to local Churches.",
+      "pt": "A fraternidade internacional se organiza em províncias e outras circunscrições, com comunidades dedicadas à vida comum e ao serviço das Igrejas locais."
+    },
+    "sources": [
+      "Orden de San Agustín, Where We Are",
+      "Catholic Encyclopedia: Hermits of St. Augustine"
+    ]
+  },
+  {
+    "id": "trapenses-ocso",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Monjes y monjas viven en monasterios de diversos países, dedicados a oración, lectura espiritual y trabajo, con acogida según las posibilidades de cada casa.",
+      "en": "Monks and nuns live in monasteries in different countries, devoted to prayer, spiritual reading and work, with hospitality adapted to each house.",
+      "pt": "Monges e monjas vivem em mosteiros de diferentes países, dedicados à oração, à leitura espiritual e ao trabalho, com acolhida conforme as possibilidades de cada casa."
+    },
+    "sources": [
+      "OCSO, History: Order of Cistercians of the Strict Observance",
+      "OCSO, monasterios y vida actual",
+      "Catholic Encyclopedia: Trappists"
+    ]
+  },
+  {
+    "id": "salesianos-sdb",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "Pío IX, aprobación definitiva de la Regla y Constituciones, 1874.",
+      "en": "Pius IX, definitive approval of the Rule and Constitutions, 1874.",
+      "pt": "Pio IX, aprovação definitiva da Regra e das Constituições, 1874."
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan Bosco"
+      ],
+      "en": [
+        "Saint John Bosco"
+      ],
+      "pt": [
+        "São João Bosco"
+      ]
+    },
+    "presence": {
+      "es": "La congregación anima escuelas, formación profesional, oratorios y proyectos sociales y misioneros para jóvenes en distintas regiones del mundo.",
+      "en": "The congregation supports schools, vocational training, oratories and social and missionary projects for young people in different world regions.",
+      "pt": "A congregação anima escolas, formação profissional, oratórios e projetos sociais e missionários para jovens em diferentes regiões do mundo."
+    },
+    "sources": [
+      "Salesianos de Don Bosco, sitio general y obras",
+      "Catholic Encyclopedia: The Salesian Society"
+    ]
+  },
+  {
+    "id": "redentoristas-cssr",
+    "kind": "congregation",
+    "motto": {
+      "es": "Copiosa apud eum redemptio",
+      "en": "Copiosa apud eum redemptio",
+      "pt": "Copiosa apud eum redemptio"
+    },
+    "approval": {
+      "es": "Benedicto XIV, carta apostólica Ad pastoralis dignitatis fastigium, 25-II-1749.",
+      "en": "Benedict XIV, apostolic letter Ad pastoralis dignitatis fastigium, 25 February 1749.",
+      "pt": "Bento XIV, carta apostólica Ad pastoralis dignitatis fastigium, 25-II-1749."
+    },
+    "notableSaints": {
+      "es": [
+        "San Alfonso María de Ligorio",
+        "San Gerardo Mayela"
+      ],
+      "en": [
+        "Saint Alphonsus Mary Liguori",
+        "Saint Gerard Majella"
+      ],
+      "pt": [
+        "Santo Afonso Maria de Ligório",
+        "São Geraldo Majela"
+      ]
+    },
+    "presence": {
+      "es": "Los redentoristas trabajan en misiones populares, santuarios, parroquias y formación teológica, con especial atención a personas pobres y comunidades desatendidas.",
+      "en": "Redemptorists serve through popular missions, shrines, parishes and theological formation, with particular attention to poor people and neglected communities.",
+      "pt": "Os redentoristas atuam em missões populares, santuários, paróquias e formação teológica, com atenção especial às pessoas pobres e comunidades desassistidas."
+    },
+    "sources": [
+      "Redentoristas, sitio general Scala News",
+      "Redentoristas, Memorial: Approval of the Congregation",
+      "Catholic Encyclopedia: Redemptorists"
+    ]
+  },
+  {
+    "id": "capuchinos-ofmcap",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Los frailes capuchinos viven en fraternidades y sirven mediante predicación, acompañamiento espiritual, misiones y obras de solidaridad en distintos países.",
+      "en": "Capuchin friars live in fraternities and serve through preaching, spiritual accompaniment, missions and works of solidarity in different countries.",
+      "pt": "Os frades capuchinhos vivem em fraternidades e servem pela pregação, pelo acompanhamento espiritual, pelas missões e por obras de solidariedade em diferentes países."
+    },
+    "sources": [
+      "Orden de Frailes Menores Capuchinos, Curia general",
+      "Catholic Encyclopedia: Capuchin Friars Minor"
+    ]
+  },
+  {
+    "id": "cistercienses-ocist",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Roberto de Molesme",
+        "San Bernardo de Claraval"
+      ],
+      "en": [
+        "Saint Robert of Molesme",
+        "Saint Bernard of Clairvaux"
+      ],
+      "pt": [
+        "São Roberto de Molesme",
+        "São Bernardo de Claraval"
+      ]
+    },
+    "presence": {
+      "es": "Monasterios de monjes y monjas forman congregaciones dentro de la orden, con vida litúrgica, formación monástica y servicios adaptados a cada comunidad.",
+      "en": "Monasteries of monks and nuns form congregations within the order, sustaining liturgical life, monastic formation and services adapted to each community.",
+      "pt": "Mosteiros de monges e monjas formam congregações dentro da ordem, mantendo vida litúrgica, formação monástica e serviços adaptados a cada comunidade."
+    },
+    "sources": [
+      "Orden Cisterciense, Curia general y organización",
+      "Catholic Encyclopedia: Cistercians"
+    ]
+  },
+  {
+    "id": "cartujos-ocart",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Bruno de Colonia"
+      ],
+      "en": [
+        "Saint Bruno of Cologne"
+      ],
+      "pt": [
+        "São Bruno de Colônia"
+      ]
+    },
+    "presence": {
+      "es": "La orden reúne monasterios masculinos y femeninos dedicados a la soledad y la oración, con casas en Europa, América y Asia.",
+      "en": "The order brings together monasteries of men and women devoted to solitude and prayer, with houses in Europe, the Americas and Asia.",
+      "pt": "A ordem reúne mosteiros masculinos e femininos dedicados à solidão e à oração, com casas na Europa, nas Américas e na Ásia."
+    },
+    "sources": [
+      "Orden de la Cartuja, The Carthusian Monks: identidad y monasterios",
+      "Catholic Encyclopedia: The Carthusian Order"
+    ]
+  },
+  {
+    "id": "pasionistas-cp",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "Clemente XIV, bula Supremi apostolatus, 16-XI-1769: confirmación del instituto y sus reglas.",
+      "en": "Clement XIV, bull Supremi apostolatus, 16 November 1769: confirmation of the institute and its rules.",
+      "pt": "Clemente XIV, bula Supremi apostolatus, 16-XI-1769: confirmação do instituto e de suas regras."
+    },
+    "notableSaints": {
+      "es": [
+        "San Pablo de la Cruz"
+      ],
+      "en": [
+        "Saint Paul of the Cross"
+      ],
+      "pt": [
+        "São Paulo da Cruz"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades pasionistas mantienen retiros, predicación, formación espiritual y servicio pastoral, anunciando la pasión de Cristo en diversas regiones.",
+      "en": "Passionist communities offer retreats, preaching, spiritual formation and pastoral service, proclaiming Christ’s Passion in different regions of the world.",
+      "pt": "As comunidades passionistas mantêm retiros, pregação, formação espiritual e serviço pastoral, anunciando a paixão de Cristo em diferentes regiões."
+    },
+    "sources": [
+      "Congregación de la Pasión, Curia general Passio Christi",
+      "Catholic Encyclopedia: Passionists"
+    ]
+  },
+  {
+    "id": "camilianos-mi",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Gregorio XIV, bula Illius qui pro gregis, 1591: erección como orden.",
+      "en": "Gregory XIV, bull Illius qui pro gregis, 1591: erection as an order.",
+      "pt": "Gregório XIV, bula Illius qui pro gregis, 1591: ereção como ordem."
+    },
+    "notableSaints": {
+      "es": [
+        "San Camilo de Lelis"
+      ],
+      "en": [
+        "Saint Camillus de Lellis"
+      ],
+      "pt": [
+        "São Camilo de Lellis"
+      ]
+    },
+    "presence": {
+      "es": "Los camilos sirven a enfermos y familias en instituciones sanitarias y pastorales, y colaboran con profesionales y grupos laicos vinculados a su carisma.",
+      "en": "Camillians serve sick people and families in healthcare and pastoral settings, collaborating with professionals and lay groups associated with their charism.",
+      "pt": "Os camilianos servem a doentes e famílias em instituições de saúde e na pastoral, colaborando com profissionais e grupos leigos ligados ao seu carisma."
+    },
+    "sources": [
+      "Ministros de los Enfermos, sitio general",
+      "Ministros de los Enfermos, relación de la Familia Camiliana Laica con la orden",
+      "Catholic Encyclopedia: St. Camillus de Lellis"
+    ]
+  }
+]
