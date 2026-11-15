@@ -142,7 +142,9 @@ class CatholicDataRepository(
         val info = LiturgicalCalendar.dayInfo(date, _calendarRules.value)
         val empty = LocalizedText("", "", "")
         return BibleData.todayMassReading.copy(
-            dateDisplay = date.toString(), liturgicalSeason = info.season.displayName,
+            dateDisplay = java.text.SimpleDateFormat("EEEE, d MMMM yyyy", java.util.Locale(_currentLanguage.value.code))
+                .format(java.util.GregorianCalendar(date.year, date.month - 1, date.day).time),
+            liturgicalSeason = info.season.displayName,
             liturgicalColorHex = info.color.hex, feastTitle = info.title,
             firstReadingRef = "", firstReadingText = empty, responsorialPsalmRef = "", responsorialPsalmText = empty,
             secondReadingRef = null, secondReadingText = null, gospelRef = "", gospelText = empty,

@@ -553,7 +553,7 @@ fun BibleScreen(
                             header = header,
                             reading = dailyContent?.takeIf { it.date == currentDate && it.language == currentLanguage && it.rules == calendarRules }?.reading ?: repository.emptyMassReading(currentDate),
                             date = currentDate,
-                            useVatican = repository.vaticanCalendarMatches(currentDate, calendarRules),
+                            calendarMatches = repository.vaticanCalendarMatches(currentDate, calendarRules),
                             currentLanguage = currentLanguage,
                             speech = speech,
                             contentPadding = listBottom
@@ -1978,11 +1978,11 @@ private fun shortLessonLabel(heading: String, readingOrdinal: Int, language: App
 }
 
 @Composable
-private fun DailyMissalView(
+internal fun DailyMissalView(
     header: LazyListScope.() -> Unit,
     reading: DailyMassReading,
     date: com.example.data.liturgy.CalendarDate,
-    useVatican: Boolean,
+    calendarMatches: Boolean,
     currentLanguage: AppLanguage,
     speech: SpeechQueue,
     contentPadding: PaddingValues
@@ -1997,14 +1997,20 @@ private fun DailyMissalView(
     // The day's readings come from the Vatican's own feed, read natively; the
     // bundled lectionary is the offline fallback.
     val isoToday = "%04d-%02d-%02d".format(java.util.Locale.ROOT, date.year, date.month, date.day)
-    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday, useVatican) {
+    val injectedLoader = com.example.data.news.LocalReadingsLoader.current
+    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday) {
         produceState<ReadingsResult?>(null) {
-            if (useVatican) value = VaticanGospelFetcher().today(currentLanguage, isoToday)
+            value = injectedLoader?.invoke(currentLanguage, isoToday)
+                ?: VaticanGospelFetcher(cache = com.example.data.news.VaticanReadingsCache.forContext(context))
+                    .today(currentLanguage, isoToday)
         }
     }
+    val choice = com.example.data.news.chooseReadingsSource(vaticanResult, calendarMatches)
     val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
-    val loadingVatican = useVatican && vaticanResult == null
-    val offline = vaticanResult is ReadingsResult.Failure
+    val loadingVatican = choice.source == com.example.data.news.ReadingsSource.LOADING
+    val offline = choice.source == com.example.data.news.ReadingsSource.BUNDLED
+    val showLocalNote = choice.showLocalNote
+    var showLocalSelection by rememberSaveable(isoToday) { mutableStateOf(false) }
 
     // On a ferial weekday the bundled lectionary legitimately has no entry;
     // such a lesson is dropped rather than drawn empty, and nothing is invented.
@@ -2055,20 +2061,36 @@ private fun DailyMissalView(
         }
         item(key = "mass_card") {
             TodayMassCard(reading, currentLanguage, seasonColor)
-            if (offline || !useVatican) {
+            if (offline) {
                 Text(
-                    if (!useVatican) currentLanguage.pick(
-                        "Selecciones de la celebración según los traslados elegidos. El calendario local puede tener otras particularidades.",
-                        "Selections for the celebration under your chosen transfers. Your local calendar may have other propers.",
-                        "Seleções da celebração conforme as transferências escolhidas. O calendário local pode ter outros próprios."
-                    ) else currentLanguage.pick(
+                    currentLanguage.pick(
                         "Lecturas en línea no disponibles · selecciones bíblicas incluidas",
-                                "Online readings unavailable · bundled Scripture selections",
+                        "Online readings unavailable · bundled Scripture selections",
                         "Leituras online indisponíveis · seleções bíblicas incluídas"
                     ),
                     style = styles.footnote, color = p.textSecondary,
                     modifier = Modifier.padding(horizontal = design.spacing.gutter + 4.dp).padding(top = 10.dp)
                 )
+            }
+            if (showLocalNote) {
+                val title = reading.feastTitle.get(currentLanguage)
+                Text(
+                    currentLanguage.pick(
+                        "Lecturas de la Santa Sede (calendario romano general). En tu diócesis hoy puede celebrarse: $title.",
+                        "Readings from the Holy See (General Roman Calendar). In your diocese today the celebration may be: $title.",
+                        "Leituras da Santa Sé (Calendário Romano Geral). Na sua diocese hoje pode celebrar-se: $title."
+                    ),
+                    style = styles.footnote, color = p.textSecondary,
+                    modifier = Modifier.padding(horizontal = design.spacing.gutter + 4.dp).padding(top = 10.dp).testTag("mass_local_note")
+                )
+                Box(Modifier.padding(horizontal = design.spacing.gutter).padding(top = 10.dp)) {
+                    AppSecondaryCapsule(
+                        label = if (showLocalSelection) currentLanguage.pick("Ocultar selección local", "Hide local selection", "Ocultar seleção local")
+                        else currentLanguage.pick("Ver selección de esta celebración", "See this celebration's selection", "Ver seleção desta celebração"),
+                        onClick = { showLocalSelection = !showLocalSelection },
+                        tag = "mass_local_selection"
+                    )
+                }
             }
         }
         item(key = "mass_controls") {
@@ -2143,6 +2165,20 @@ private fun DailyMissalView(
             }
         }
 
+        if (showLocalNote && showLocalSelection) {
+            bundledLessons.forEachIndexed { i, lesson ->
+                item(key = "local_lesson_$i") {
+                    MissalLesson(
+                        shortLabel = lesson.label,
+                        lesson = lesson,
+                        rubric = rubric,
+                        accent = seasonColor,
+                        beingRead = false
+                    )
+                }
+            }
+        }
+
         if (vatican == null && !loadingVatican) item(key = "homily") {
             Column(Modifier.padding(top = 36.dp)) {
                 Text(
@@ -2168,9 +2204,9 @@ private fun DailyMissalView(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    currentLanguage.pick("Fuente: ", "Source: ", "Fonte: ") +
-                        if (vatican != null) "Vatican News · ${vatican.title}" else reading.sourceName,
-                    style = styles.footnote, color = p.textSecondary, textAlign = TextAlign.Center
+                    currentLanguage.pick("Fuente: ", "Source: ", "Fonte: ") + "Vatican News · vaticannews.va",
+                    style = styles.footnote, color = p.textSecondary, textAlign = TextAlign.Center,
+                    modifier = Modifier.testTag("mass_source_attribution")
                 )
                 Spacer(Modifier.height(12.dp))
                 AppSecondaryCapsule(

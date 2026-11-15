@@ -1,5 +1,17 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.4
+
+[Descargar Catholic Hermes 1.8.4](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.4.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.4`, código 13. **Actualiza 1.8.1–1.8.3** y conserva el progreso.
+
+Novedades:
+- **Lecturas de la Misa de la Santa Sede** (Vatican News, ES/EN/PT) siempre, en Misa e Inicio; si tu diócesis traslada una fiesta, una nota lo indica; las lecturas del día quedan guardadas para leerlas sin conexión. Fuente visible.
+- **12 oraciones restauradas con su texto auténtico**: Corona de San Miguel tradicional, Adoro te completo, Letanía lauretana con las invocaciones de 2020, Letanía del Sagrado Corazón, antífonas «O», *Ad te, beate Ioseph*, *Alma Redemptoris Mater* y otras.
+- *Veni Sancte Spiritus* completo y la oración completa del Padre Pío «Quédate conmigo, Señor».
+- **«Profundizar»** en las preguntas 1–51: explicación, Escritura, Padres, Magisterio, objeción, analogía y síntesis.
+
+[Metadatos](../docs/quality/release-1.8.4/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.3
 
 [Descargar Catholic Hermes 1.8.3](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.3.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.3`, código 12. **Actualiza 1.8.1/1.8.2** y conserva el progreso.
