@@ -44,6 +44,6 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-010](T-010.md) | Codex | CERRADO (informe documental) | Identificación y atribución de 6 Biblias católicas (cbt); el dueño declara permiso |
 | [T-011](T-011.md) | Hermes | CERRADO ([revisión](T-011-REVIEW.md)) | M5 · Santos de enero–marzo (38) → `assets/saints/saints-q1.json` |
 | [T-012](T-012.md) | Codex | CERRADO ([revisión](T-012-REVIEW.md)) | M5 · Santos de octubre–diciembre (59) → `assets/saints/saints-q4.json` |
-| [T-013](T-013.md) | Codex | ABIERTO (30/51 integradas, [revisión](T-013-REVIEW.md)) | M5 · Santos de abril–junio (51) → `assets/saints/saints-q2.json` |
-| [T-014](T-014.md) | Codex | ABIERTO (tras T-013) | M5 · Santos de julio–septiembre (67) → `assets/saints/saints-q3.json` |
+| [T-013](T-013.md) | Codex | CERRADO ([revisión](T-013-REVIEW.md)) | M5 · Santos de abril–junio (51) → `assets/saints/saints-q2.json` |
+| [T-014](T-014.md) | Codex | CERRADO ([revisión](T-014-REVIEW.md)) | M5 · Santos de julio–septiembre (67) → `assets/saints/saints-q3.json` |
 | [T-015](T-015.md) | Hermes | CERRADO ([revisión](T-015-REVIEW.md)) | Las 8 novenas pendientes de T-008, con las fuentes elegidas por el usuario (EWTN, CEH, devocionario, ipray…) → cuerpos 269–276 y `provenance/new-d.json` |

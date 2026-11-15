@@ -13,3 +13,12 @@
   - los mártires mexicanos, sin lectura política;
   - en Rita, la tradición biográfica distinguida de lo verificable.
 - **Integración:** merge en `CatholicGPT`. Continúa hasta 51 y después pasa a T-014.
+
+## Revisión final (`557dc48`, 51/51) · CERRADO
+
+- **Validador:** sin `--partial`, 51 entradas, 0 errores y 0 avisos.
+- **Muestreo:**
+  - Carlos Lwanga: 22 mártires, canonizados por Pablo VI en 1964.
+  - Fisher y Moro: procesos y fechas de ejecución distintos; Moro, patrono de los gobernantes desde 2000.
+  - Luis Gonzaga: correcto.
+- **Integración:** merge en `CatholicGPT`. Los tests de santos pasan.
