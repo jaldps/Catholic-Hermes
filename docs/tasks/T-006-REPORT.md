@@ -1,8 +1,8 @@
 # T-006 · Informe de Codex
 
-## Entrega parcial 2: preguntas 52–71
+## Entrega parcial 3: preguntas 52–81
 
-Se añaden **20 de las 50 preguntas**, en orden, con siete secciones completas y fuentes en ES/EN/PT-BR. No se modifican las preguntas, respuestas, fundamentos o aclaraciones de Kotlin. La base es `origin/CatholicGPT` (`ffa8e45`). Primera entrega parcial: `c8df15d`. Las preguntas 72–101 siguen pendientes; esta entrega no las presenta como terminadas.
+Se añaden **30 de las 50 preguntas**, en orden, con siete secciones completas y fuentes en ES/EN/PT-BR. No se modifican las preguntas, respuestas, fundamentos o aclaraciones de Kotlin. La base es `origin/CatholicGPT` (`4f302d7`, incorporado por merge). Primera entrega parcial: `c8df15d`. Las preguntas 82–101 siguen pendientes; esta entrega no las presenta como terminadas.
 
 Son explicaciones originales apoyadas en fuentes leídas, no nuevas oraciones. Las alusiones bíblicas y patrísticas son paráfrasis, sin comillas que simulen citas literales. Las analogías incluyen su límite y no se ofrecen como demostraciones de la eficacia sacramental.
 
@@ -10,11 +10,11 @@ Son explicaciones originales apoyadas en fuentes leídas, no nuevas oraciones. L
 
 ```text
 $ python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-b.json 52 101 --partial
-WARN  partial delivery: 20/50 questions
-20 entries · 0 errors · 1 warnings
+WARN  partial delivery: 30/50 questions
+30 entries · 0 errors · 1 warnings
 ```
 
-El único aviso corresponde al carácter parcial de la entrega. No hay avisos de extensión. Se conserva el contrato JSON y los números 52–71, sin huecos.
+El único aviso corresponde al carácter parcial de la entrega. No hay avisos de extensión. Se conserva el contrato JSON y los números 52–81, sin huecos.
 
 ## Fuentes consultadas
 
@@ -43,6 +43,24 @@ Los números del Catecismo se cotejaron en el [texto oficial del Vaticano](https
 | 69 · Oración por los difuntos | CIC 958 y 1032; 2 M 12,43-46; 1 Co 3,11-15; 2 Tm 1,16-18. [Agustín, *Confesiones* IX,13,35–37](https://www.newadvent.org/fathers/110109.htm): oración por Mónica y Patricio. [Tomás, II-II, q. 83, a. 2](https://www.newadvent.org/summa/3083.htm): providencia, medios y oración; se aplica su argumento general, sin atribuirle una descripción individual de los difuntos. |
 | 70 · Indulgencias | CIC 1471–1473 y 1478–1479; Mt 16,19; 2 Co 2,6-11; 1 Co 12,26. Agustín, *Enquiridión* 110 (enlace arriba): solidaridad espiritual, no concesión actual. [Trento, sesión XXV, decreto de indulgencias, **4-XII-1563**](https://www.papalencyclicals.net/councils/trent/twenty-fifth-session.htm): reconocimiento y mandato de corregir ganancias indebidas y abusos. [*Enchiridion Indulgentiarum*, 1999, norma **20 §1**](https://www.vatican.va/roman_curia/tribunals/apost_penit/documents/rc_trib_appen_doc_20020826_enchiridion-indulgentiarum_lt.html): obra prescrita y condiciones de la plenaria, incluido desapego del pecado venial. No se inventa una nueva concesión. |
 | 71 · Homosexualidad y doctrina moral | CIC 2357–2359, leídos en el texto oficial aunque tres párrafos contiguos no aparecían en el índice local; Gn 1,27; Mt 19,4-6; Rm 1,26-27; Jn 13,34-35. [Tomás, II-II, q. 151, a. 1 y ad 2](https://www.newadvent.org/summa/3151.htm): virtud y consentimiento, sin atribuirle una teoría moderna de orientación sexual. [DDF, *Fiducia supplicans*, **18-XII-2023**, 31 y 38–39](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20231218_fiducia-supplicans_en.html): bendiciones espontáneas de parejas y límites que impiden confundirlas con matrimonio. |
+
+
+### Preguntas 72–81 y revisión del coordinador
+
+Se leyó `T-006-REVIEW.md`: el coordinador aprueba las primeras veinte y pide continuar. Se incorporó la nueva base sin modificar sus Biblias, Kotlin o versiones publicadas.
+
+| Pregunta | Fuentes cotejadas y límites |
+|---|---|
+| 72 · Matrimonio | CIC 1601, 1617, 1643 y 1654; Gn 2,24; Mt 19,4-6; Ef 5,25-32. [Agustín, *El bien del matrimonio*, 3](https://www.newadvent.org/fathers/1309.htm): compañía y matrimonio de ancianos o sin hijos. [Canon 1084 §3](https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann998-1165_en.html): esterilidad no equivale a nulidad. |
+| 73 · Relaciones prematrimoniales | CIC 2337, 2353, 2362 y 1735; Gn 2,24; 1 Co 6,18-20; 1 Ts 4,3-5. Tomás, II-II, q. 151, a. 1, ad 2, ya enlazado: consentimiento y castidad, sin culpabilizar a víctimas de violencia. |
+| 74 · Anticoncepción y regulación natural | CIC 2366 y 2368–2370. [*Humanae vitae* 10–12 y 14–16](https://www.vatican.va/content/paul-vi/en/encyclicals/documents/hf_p-vi_enc_25071968_humanae-vitae.html), leído también el n. 14 que aparece separado tipográficamente en el HTML. [Tomás, I-II, q. 18, a. 2](https://www.newadvent.org/summa/2018.htm): objeto del acto. Gn 1,28; Gn 2,24; 1 Co 7,3-5. Se distingue finalidad, objeto y terapias con efectos no buscados; no se inventa eficacia clínica. |
+| 75 · Fecundación in vitro | CIC 2376–2378; Gn 1,27-28; Sal 139,13-16; Gn 2,24. [*Dignitas personae* 12–16](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081208_dignitas-personae_en.html) y [*Donum vitae* II,5](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19870222_respect-for-human-life_en.html), incluida su afirmación final de la dignidad del hijo nacido. [*Didaché* 2,2](https://www.newadvent.org/fathers/0714.htm): testimonio antiguo, sin atribuirle técnicas actuales. No se usan cifras de 2008 como estadísticas presentes. |
+| 76 · Violencia y separación | CIC 1649, 2383 y 1629; cánones 1153 §1, 1154 y 1085 §2, leídos en el enlace del código anterior. [Tomás, II-II, q. 64, a. 7](https://www.newadvent.org/summa/3064.htm): defensa proporcionada, sin instrucciones tácticas. Ef 5,25-29; Mt 2,13-14; 1 Co 7,10-11. La protección urgente no espera un proceso de nulidad ni autorización pastoral. |
+| 77 · Indisolubilidad | CIC 1640, 1646, 1649, 1651, 2386 y 1629; Agustín, *El bien del matrimonio*, 3. Mt 19,3-9; Mc 10,2-12; 1 Co 7,10-11; Ef 5,25-33. Se mantiene la precisión «rato y consumado» y se distingue vínculo válido de convivencia; no se promete recuperación del afecto. |
+| 78 · Identidad y cuerpo | CIC 364–365. [*Dignitas infinita* 55–60](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_en.html), incluida la distinción expresa del n. 60 sobre anomalías genitales. [Tomás, I, q. 76, a. 1](https://www.newadvent.org/summa/1076.htm): unidad corporal y espiritual, sin atribuirle diagnósticos actuales. Gn 1,27; 1 Co 6,19-20; Ga 3,28. |
+| 79 · Masturbación y consentimiento | CIC 2352, 1735 y 1857. [Agustín, *Confesiones* X,30,41](https://www.newadvent.org/fathers/110110.htm): experiencia durante el sueño y voluntad, sin convertir el pasaje en un estudio clínico. Mt 5,27-28; 1 Co 6,12-20; Ga 5,22-23. No se inventa una prohibición bíblica explícita ni se utiliza el relato de Onán como prueba directa. |
+| 80 · Justicia social | CIC 2424 y 2443–2447; Lc 4,18-19; St 5,1-6; Mt 25,34-40. [Crisóstomo, *Homilías sobre Mateo* **50,4**](https://www.newadvent.org/fathers/200150.htm), cotejado en esta edición: exige ayudar antes y junto a los dones para el culto, sin prohibirlos. Se corrigió la numeración preliminar 50,3 al comprobar el comienzo exacto del apartado. |
+| 81 · Aborto y autonomía | CIC 2270–2273; *Didaché* 2,2; Gn 1,27; Sal 139,13-16; Lc 1,39-44. [*Evangelium vitae* 62 y 99](https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25031995_evangelium-vitae.html): aborto directo y llamada a la misericordia. No se inventan protocolos médicos ni penas canónicas actuales a partir de numeración antigua. |
 
 ## Precisiones doctrinales y pastorales
 
