@@ -1,10 +1,10 @@
 # T-008 · Informe de Codex
 
-## Entrega parcial · 5 de 15 novenas
+## Entrega parcial · 7 de 15 novenas
 
-Cinco novenas recuperadas, **45 días ES/EN/PT**, cuerpos `262.json`–`266.json`: Pilar, San Ramón Nonato, selección histórica de Copacabana, selección de Altagracia 2021 y Chiquinquirá 2012. Esta actualización incorpora los dos PDF aportados por el usuario; los tres cuerpos anteriores permanecen intactos y la revisión penitencial del Pilar sigue aplicada. Base actualizada: `origin/CatholicGPT` (`0cf8491`, publicación 1.8.7), incorporada mediante merge en `ext/T-008`. Se conservan las nuevas notas pastorales que el coordinador añadió a Nonato y Copacabana.
+Siete novenas recuperadas, **63 días ES/EN/PT**, cuerpos `262.json`–`268.json`: Pilar, San Ramón Nonato, selección histórica de Copacabana, selección de Altagracia 2021, Chiquinquirá 2012, Aparecida y Luján. Esta actualización aplica la revisión intermedia 3 e incorpora únicamente los dos últimos cuerpos y sus metadatos. Base: `origin/CatholicGPT` (`3255ce8`), incorporada mediante merge en `ext/T-008`. Los cinco cuerpos ya integrados permanecen intactos, incluida la omisión penitencial del Pilar; se conservan las notas del coordinador para Nonato y Copacabana.
 
-Las meditaciones y oraciones proceden de fuentes identificadas; EN/PT son traducciones propias y fieles. No se han redactado nuevas oraciones, meditaciones ni intenciones para completar campos. Las selecciones se declaran expresamente y requieren revisión del coordinador antes de la integración. Se conserva el formato real del modelo: `scripture` es `String`, mientras los demás campos textuales son ES/EN/PT.
+Las oraciones y las meditaciones presentes proceden de fuentes identificadas. Las traducciones propias y fieles están declaradas: habitualmente EN/PT; en Aparecida el original es PT y se traduce a ES/EN. En Aparecida y Luján la meditación queda vacía conforme a la revisión 3. No se han redactado nuevas oraciones, meditaciones ni intenciones para completar campos. Las selecciones se declaran expresamente y requieren revisión del coordinador antes de la integración. Se conserva el formato real del modelo: `scripture` es `String`, mientras los demás campos textuales son ES/EN/PT.
 
 ## Altagracia y Chiquinquirá: archivos aportados por el usuario
 
@@ -151,11 +151,11 @@ Se continuó la investigación después de aplicar la revisión del Pilar. Estos
 
 ## Alcance técnico de la entrega
 
-El validador Python comprueba JSON válido, nueve días ordenados, `meditation` y `prayer` no vacíos en ES/EN/PT, ids idénticos entre índice y procedencia y cuerpos consecutivos desde 262, además de preservar los campos no autorizados de metadatos. Resultado: **0 errors**. No se usa un indicador ficticio `--partial`: T-008 no entrega un script oficial; la validación Python exigida se ejecuta sobre la entrega parcial existente.
+El validador Python comprueba JSON válido, nueve días ordenados, `prayer` no vacía en ES/EN/PT, campos localizados con las tres claves, ids idénticos entre índice y procedencia y cuerpos consecutivos desde 262, además de preservar los campos no autorizados de metadatos. `meditation` puede estar vacía cuando falta en la fuente, conforme a la revisión intermedia 3. Resultado actual: **7 novenas · 63 trilingual days · matching index/provenance IDs · 0 errors**. No se usa un indicador ficticio `--partial`: T-008 no entrega un script oficial; la validación Python exigida se ejecuta sobre la entrega parcial existente.
 
 Solo se publica en `ext/T-008`, sin force-push. El coordinador integra el índice, revisa las selecciones y compila. T-006 (`561b7ae`) y T-010 (`9008c22`) ya fueron integrados por el coordinador y figuran CERRADO en el protocolo de la base 1.8.7; no se editan aquí ni se tocan otros encargos cerrados.
 
-## Continuación tras la integración de 5/15 (15-XI-2026)
+## Investigación anterior a la revisión 3 · tras la integración de 5/15 (15-XI-2026)
 
 Leída la revisión intermedia 2 e incorporado `origin/CatholicGPT` (`cc02a30`). El coordinador confirma que Altagracia y Chiquinquirá están revisadas e integradas. Se hizo una nueva búsqueda sobre las diez pendientes. No se añaden cuerpos cuya edición, contenido o atribución no se pueda sostener: el resultado continúa en **5/15**, sin convertir las pistas en recuperaciones completas.
 
@@ -175,3 +175,48 @@ Leída la revisión intermedia 2 e incorporado `origin/CatholicGPT` (`cc02a30`).
 **Decisión conforme a la instrucción del usuario:** agotadas por ahora las fuentes adicionales que permitan una entrega completa y verificable sin rellenar campos ni atribuir ediciones por conjetura, se pasa a **T-012** en su propia rama. T-008 permanece ABIERTO, con diez pendientes y las fuentes/limitaciones explícitas. No se afirma que esas novenas no existan ni se añade una reserva de derechos no comprobada. Puede retomarse con un ejemplar íntegro cotejable o con resolución del contrato para formularios sin meditaciones; no se aplica automáticamente a estas diez la excepción consultada para Altagracia.
 
 Validación de los cuerpos existentes antes del push de este informe: **5 novenas · 45 trilingual days · matching index/provenance IDs · 0 errors**. No se modifican los cinco cuerpos integrados.
+
+
+## Revisión intermedia 3 aplicada · Aparecida y Luján (15-XI-2026)
+
+El coordinador resolvió la contradicción del contrato: se permite `meditation: ""` en los tres idiomas cuando no hay meditación separada. No se ha convertido ninguna plegaria en meditación. Esta sección sustituye las limitaciones anteriores sobre esos dos formularios; las observaciones sobre las otras ocho siguen vigentes.
+
+| Novena / cuerpo | Fuente exacta, editor, año y URL | Tipo de fuente | Reserva expresa comprobada | Resultado |
+|---|---|---|---|---|
+| Aparecida · `267.json` | *Novena de Nossa Senhora Aparecida*, [PDF de dos páginas alojado por CEPAR / Misioneros Javerianos](https://ceparms.xaverianos.org/images/PDF/Novena-de-Nossa-Senhora-aparecida.pdf), sin fecha ni autor impresos identificados. Contraste: *The Raccolta*, Burns & Oates / Benziger Brothers, **1910**, n.º **199**, I, pp. impresas **176–182**, [facsímil](https://archive.org/details/theraccoltaorcol00unknuoft). | Formulario tradicional difundido por una institución misionera; contraste del núcleo con un devocionario antiguo. | No se encuentra reserva expresa en las dos páginas examinadas. No se atribuye por ello una licencia pública a la institución ni una fecha al añadido final. | Nueve oraciones diarias, oraciones iniciales, oración común y jaculatoria final con rúbrica, PT transcrito y ES/EN traducidos fielmente. Sin temas, Escritura, meditaciones o intenciones añadidos. |
+| Luján · `268.json` | *Sagrada novena de la Purísima Concepción de Nuestra Señora de Luján*, **Instituto del Verbo Encarnado**, [publicación de 29-IV-2021](https://nuestrocarisma.org/index.php/2021/04/29/novena-a-la-virgen-de-lujan/), [PDF](https://nuestrocarisma.org/wp-content/uploads/2021/04/APRIL-29-Novena-a-la-Virgen-de-Lujan-compressed.pdf). Introducción: pp. **5–6**; oraciones comunes: **7–8**; nueve pares diarios: **9–26**; Letanías Lauretanas, antífona y final: **27–29**. | Reedición institucional con español actualizado de un formulario antiguo publicado por Maqueda en 1812, según su propia introducción. No se presenta como facsímil de 1812. | No se encuentra reserva expresa en el texto y las páginas examinadas del PDF. No se inventa una línea «Derechos» ni se certifica como antigua toda la edición de 2021. | Dieciocho plegarias diarias completas, acto de contrición, oración común, rúbrica de oraciones, letanía lauretana completa y cierre, ES/EN/PT. Las nueve intenciones institucionales van en `intentionGuidance`. Omisiones de bloques institucionales declaradas. |
+
+### Aparecida: alcance, errores del ejemplar y traducción
+
+- Se leyeron y cotejaron visualmente **las dos páginas completas**. La procedencia declara expresamente: «formulario tradicional de la novena de la Inmaculada (Raccolta 1910, n.º 199) con invocación final a Nuestra Señora Aparecida; no es el libro del santuario de 2026».
+- El orden diario reúne lo impreso: oración inicial, oración al Espíritu Santo, oración común, oración del día y jaculatoria con «Pai Nosso, Ave-Maria, Glória». Esos tres últimos nombres son la rúbrica real, no se ha atribuido al PDF una fórmula completa que no imprime. No se agregan aménes a los nueve textos ni se incorpora el cierre distinto de Raccolta.
+- PT conserva las erratas **«tradições»**, **«fazei quem»** (día 3), **«tmepo»**, **«digno e receber»** (día 4), la construcción incompleta **«Ó estrela resplandecente de pureza, Imaculada Conceição causasse…»** (día 6) y **«Redendor»**, **«daí»** (jaculatoria). No son errores del OCR: se ven en el PDF. Se normalizan espacios y el salto tipográfico de **«ver-vos»** del día 9.
+- ES/EN transmiten el sentido sin reproducir inversiones mecánicas de letras. En el día 3, «asechanzas / snares» corresponde al sentido confirmado por *Raccolta* («snare»), no a una doctrina sobre «tradiciones del enemigo». En el día 6 **no se repone** una frase de alegría con María que aparece en Raccolta pero falta en el PDF portugués; se traduce la afirmación conservada sobre el gozo de los ángeles.
+- La jaculatoria final no tiene autor ni fecha documentalmente identificados. Tampoco se atribuye al CEPAR la autoría de los nueve textos tradicionales por alojar el archivo. No se trasladan las antiguas indulgencias expresadas en días de la edición de 1910.
+- La nota pastoral distingue la santidad de María por la gracia de Cristo de consideraciones teológicas no definidas de manera independiente, como el uso de razón desde la concepción. Fuentes comprobadas: [CIC 492–493](https://www.vatican.va/archive/catechism_sp/p122a3p2_sp.html) y [CIC 970](https://www.vatican.va/archive/catechism_sp/p123a9p6_sp.html). La expresión del día 7 sobre preferir morir a pecar no se interpreta como permiso para dañar la propia vida.
+
+### Luján: texto antiguo, añadidos de 2021 y selección declarada
+
+- La introducción de 2021 dice **«al parecer»** y **«aparentemente»** al hablar de fray Antonio Oliver. No se convierte esa atribución tentativa en autoría cierta ni se fija una fecha de composición demostrada. La afirmación sobre publicación por Maqueda en 1812 procede de esta introducción; no se anuncia un cotejo íntegro con un facsímil de 1812 que no se tiene.
+- `origin` declara: «texto publicado por Maqueda en 1812; español actualizado e intenciones añadidas en la edición del Instituto del Verbo Encarnado (2021)». Los encabezamientos de intención del IVE se traducen y conservan como tales, sin atribuirlos al original antiguo.
+- Cada día conserva **sus dos plegarias completas**, desde la invocación mariana hasta el Amén y desde la oración a Dios hasta su Amén, sin recortar peticiones de salud ni de ayuda. Se transcriben del PDF digital, normalizando cortes de renglón; se retiran únicamente las llamadas numéricas a notas, no palabras de las plegarias. Se cotejaron también las imágenes de pp. **7**, **16** y **26** para comprobar construcciones problemáticas; se conservan lecturas impresas como **«nos haz»**, **«y para que»** y **«tu poder bien universal del mundo»**. EN/PT expresan el sentido sin reproducir esas discordancias mecánicas.
+- Conforme a la revisión, se omiten **los bloques de petición añadidos con citas de las Constituciones y Directorios del instituto**, sus referencias y notas explicativas; se conserva la intención del encabezamiento de cada día. No se fabrican frases de enlace para reemplazar citas. La omisión está declarada en descripción y procedencia.
+- Se incluyen íntegros el acto de contrición y la oración común de pp. 7–8. La rúbrica de padrenuestro, avemaría y gloria de los días 2–9 se desarrolla usando exactamente la del día 1, sin componer una fórmula nueva. La remisión a las letanías se cumple incorporando **una de las tres alternativas que el propio impreso ofrece: la lauretana de pp. 27–29**, con sus **52 invocaciones**, respuestas y oración. No se incluyen las dos letanías locales alternativas, y se declara la selección. Se incluyen la antífona y la oración final de p. 29.
+- La nota pastoral no altera las plegarias: explica por separado su vocabulario histórico, la única mediación de Cristo (CIC 970), el sentido de «Divina Madre», la distinción entre el designio eterno de Dios y la existencia creada de María ([CIC 488](https://www.vatican.va/archive/catechism_sp/p122a3p2_sp.html)) y la diferencia entre súplica y resultado garantizado. Las traducciones propias no se presentan como formularios litúrgicos nacionales aprobados.
+
+### Trazabilidad de los dos ejemplares
+
+- Aparecida: **184.177 bytes**, SHA‑256 `0bda7ec8c41daba3b81cdb0d02f5cd7c7372cc44c7ca92316d15d87119b4b449`.
+- Luján: **911.145 bytes**, SHA‑256 `c482f681311622b30797443712e59a696fbcfc5f2c158c9684aee50b35093d8e`.
+- Los PDF y herramientas de extracción son material de cotejo local; no se suben al repositorio. Ambos tamaños y huellas se comprobaron contra los archivos descargados.
+
+### Validación y pendientes actuales
+
+```text
+7 novenas · 63 trilingual days · matching index/provenance IDs · 0 errors
+scripture uses the existing String model; unmodified metadata preserved.
+```
+
+Se comprobó además que `262.json`–`266.json` no difieren de la base integrada, que las nuevas 18 meditaciones están vacías en los tres idiomas y que las 18 plegarias tradicionales de Luján coinciden con sus segmentos de fuente tras normalizar los cortes de renglón. Ningún campo de historia, aprobación o promesa de los metadatos se altera.
+
+**Ocho pendientes**, conforme a la revisión 3: Coromoto, Suyapa, Señor de los Milagros (Lima), Divino Niño del 20 de Julio, San Pancracio, Santa Eduviges, São Benedito de Palermo y José Gregorio Hernández. No se requiere otra búsqueda en esta entrega. Se continúa T-012, ya completada localmente, tras este push. No hay pregunta bloqueante nueva para el coordinador; queda la revisión editorial de las dos transcripciones/traducciones.

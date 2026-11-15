@@ -253,5 +253,107 @@
       8,
       9
     ]
+  },
+  {
+    "id": "novena-a-nuestra-senora-aparecida",
+    "title": {
+      "es": "Novena a Nuestra Señora Aparecida",
+      "en": "Novena to Our Lady of Aparecida",
+      "pt": "Novena a Nossa Senhora Aparecida"
+    },
+    "patron": {
+      "es": "Patrona de Brasil",
+      "en": "Patroness of Brazil",
+      "pt": "Padroeira do Brasil"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve oraciones tradicionales de la Inmaculada Concepción con invocación final a Nuestra Señora Aparecida, según el formulario difundido por CEPAR / Misioneros Javerianos. Sin meditaciones añadidas; no es el libro del santuario de 2026.",
+      "en": "Nine traditional prayers of the Immaculate Conception with a closing invocation to Our Lady of Aparecida, following the form distributed by CEPAR / Xaverian Missionaries. No added meditations; this is not the shrine’s 2026 booklet.",
+      "pt": "Nove orações tradicionais da Imaculada Conceição com invocação final a Nossa Senhora Aparecida, conforme o formulário divulgado pelo CEPAR / Missionários Xaverianos. Sem meditações acrescentadas; não é o livreto do santuário de 2026."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "comfort",
+      "family"
+    ],
+    "bodyFile": "267.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-a-nuestra-senora-de-lujan",
+    "title": {
+      "es": "Novena a Nuestra Señora de Luján",
+      "en": "Novena to Our Lady of Luján",
+      "pt": "Novena a Nossa Senhora de Luján"
+    },
+    "patron": {
+      "es": "Advocación mariana de Argentina",
+      "en": "Marian title venerated in Argentina",
+      "pt": "Invocação mariana da Argentina"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Sagrada novena de la Purísima Concepción de Nuestra Señora de Luján: oraciones tradicionales publicadas por Maqueda en 1812, según la edición del IVE de 2021, con sus nueve intenciones institucionales. Sin meditaciones añadidas; se omiten los bloques de citas institucionales.",
+      "en": "Sacred novena of the Most Pure Conception of Our Lady of Luján: traditional prayers published by Maqueda in 1812, following the IVE’s 2021 edition, with its nine institutional intentions. No added meditations; institutional quotation blocks are omitted.",
+      "pt": "Sagrada novena da Puríssima Conceição de Nossa Senhora de Luján: orações tradicionais publicadas por Maqueda em 1812, conforme a edição do IVE de 2021, com suas nove intenções institucionais. Sem meditações acrescentadas; omitem-se os blocos de citações institucionais."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "family",
+      "comfort"
+    ],
+    "bodyFile": "268.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
   }
 ]
