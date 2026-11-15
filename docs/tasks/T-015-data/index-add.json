@@ -1,0 +1,206 @@
+[
+  {
+    "id": "novena-a-nuestra-senora-de-coromoto",
+    "title": {
+      "es": "Novena a Nuestra Señora de Coromoto",
+      "en": "Novena to Our Lady of Coromoto",
+      "pt": "Novena a Nossa Senhora de Coromoto"
+    },
+    "patron": {
+      "es": "Patrona de Venezuela",
+      "en": "Patroness of Venezuela",
+      "pt": "Padroeira da Venezuela"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días con Nuestra Señora de Coromoto, patrona de Venezuela, con las oraciones y consideraciones de cada día.",
+      "en": "Nine days with Our Lady of Coromoto, patroness of Venezuela, with the prayers and considerations of each day.",
+      "pt": "Nove dias com Nossa Senhora de Coromoto, padroeira da Venezuela, com as orações e considerações de cada dia."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "family",
+      "peace"
+    ],
+    "bodyFile": "269.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-al-divino-nino-jesus-del-20-de-julio",
+    "title": {
+      "es": "Novena al Divino Niño Jesús del 20 de Julio",
+      "en": "Novena to the Divino Niño Jesús of the 20 de Julio",
+      "pt": "Novena ao Divino Menino Jesus do 20 de Julho"
+    },
+    "patron": {
+      "es": "Niño Jesús venerado en Bogotá (Colombia)",
+      "en": "Child Jesus venerated in Bogotá, Colombia",
+      "pt": "Menino Jesus venerado em Bogotá (Colômbia)"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días con el Divino Niño Jesús del 20 de Julio, venerado en Bogotá, con Palabra de Dios, reflexión, propósito y gozos.",
+      "en": "Nine days with the Divino Niño Jesús of the 20 de Julio, venerated in Bogotá, with the Word of God, reflection, resolution and praises.",
+      "pt": "Nove dias com o Divino Menino Jesus do 20 de Julho, venerado em Bogotá, com a Palavra de Deus, reflexão, propósito e louvores."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "family",
+      "love",
+      "blessings"
+    ],
+    "bodyFile": "272.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-a-san-pancracio",
+    "title": {
+      "es": "Novena a San Pancracio",
+      "en": "Novena to Saint Pancras",
+      "pt": "Novena a São Pancrácio"
+    },
+    "patron": {
+      "es": "Mártir romano; invocado por los jóvenes y por el trabajo",
+      "en": "Roman martyr; invoked by the young and for work",
+      "pt": "Mártir romano; invocado pelos jovens e pelo trabalho"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días con san Pancracio, joven mártir romano, con la reflexión de cada día y las oraciones a la Santísima Trinidad.",
+      "en": "Nine days with Saint Pancras, a young Roman martyr, with each day's reflection and the prayers to the Most Holy Trinity.",
+      "pt": "Nove dias com são Pancrácio, jovem mártir romano, com a reflexão de cada dia e as orações à Santíssima Trindade."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "money",
+      "blessings",
+      "peace"
+    ],
+    "bodyFile": "273.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-a-santa-eduviges",
+    "title": {
+      "es": "Novena a Santa Eduviges",
+      "en": "Novena to Saint Hedwig",
+      "pt": "Novena a Santa Edwiges"
+    },
+    "patron": {
+      "es": "Duquesa de Silesia; invocada por los endeudados y los pobres",
+      "en": "Duchess of Silesia; invoked by debtors and the poor",
+      "pt": "Duquesa da Silésia; invocada pelos endividados e pelos pobres"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días con santa Eduviges, duquesa de Silesia, patrona de los endeudados, con reflexiones y oraciones.",
+      "en": "Nine days with Saint Hedwig, Duchess of Silesia, patroness of debtors, with reflections and prayers.",
+      "pt": "Nove dias com santa Edwiges, duquesa da Silésia, padroeira dos endividados, com reflexões e orações."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "money",
+      "family",
+      "comfort"
+    ],
+    "bodyFile": "274.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+]
