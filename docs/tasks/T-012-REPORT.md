@@ -1,6 +1,6 @@
 # T-012 · Informe de Codex
 
-Entrega: **20/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
+Entrega: **30/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Fechas e identificadores se toman de `GeneralRomanSanctoral.kt`. Las biografías son redacción informativa propia, ES/EN/PT, basada en fuentes consultadas; no se presentan como palabras de los santos. `quote` queda `null`: no se añaden citas de memoria ni fórmulas devocionales. Un patronazgo vacío significa que no se incorpora aquí un patronazgo suficientemente comprobado, no que no exista ninguno. Las memorias marianas y otras celebraciones describen su sentido y origen; no se inventa una biografía humana de ángeles o de una fiesta.
 
@@ -20,6 +20,7 @@ Se distinguen la vida documentada y su interpretación espiritual. Patronazgos c
 - [Catecismo de la Iglesia Católica, 328–336](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_5_heaven_and_earth.html)
 - [Directorio sobre la piedad popular y la liturgia (2001), 213–217](https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20020513_vers-direttorio_en.html)
 - [Catholic Encyclopedia, «Feast of Guardian Angels»](https://www.newadvent.org/cathen/07050a.htm)
+- [Catecismo de la Iglesia Católica, 2116](https://www.vatican.va/archive/ENG0015/__P7E.HTM)
 
 Celebración, no biografía. Se verifican criaturas espirituales, providencia y cautela sobre nombres; no se inventan apariencia, nombres personales ni protección automática frente a accidentes. Mateo 18,10 es referencia bíblica de la doctrina.
 
@@ -154,10 +155,81 @@ Fechas y obras verificadas en el perfil oficial. La fecha de memoria es inicio s
 
 Las fuentes dan 1385/1386: se escribe «hacia 1386». Se describe la intervención de 1456 sin glorificar la violencia ni presentar polémicas medievales como norma actual. No se repiten cifras antiguas de multitudes o curaciones como hechos certificados.
 
+### 21. `anthony_mary_claret_bishop` · 24/10
+
+- [Catholic Encyclopedia, «Ven. Antonio Maria Claret y Clara»](https://www.newadvent.org/cathen/16026a.htm)
+- [Misioneros Claretianos, biografía de san Antonio María Claret](https://www.claret.org/our-congregation/st-anthony-mary-claret/)
+
+La fuente antigua lo titula Venerable: canonización de 1950 comprobada en la biografía actual de su congregación. No se inventan apariciones o curaciones. Sin atribuir aprobación religiosa a la política de Isabel II.
+
+### 22. `simon_and_jude_apostles` · 28/10
+
+- [Benedicto XVI, audiencia general de 11-X-2006](https://www.vatican.va/content/benedict-xvi/en/audiences/2006/documents/hf_ben-xvi_aud_20061011.html)
+- [Rosary Shrine of Saint Jude, «Why is Saint Jude the Patron of Hopeless Cases?»](https://www.rosaryshrineofstjude.org/saint-jude-patron-hopeless-cases/)
+
+Jude del evangelio distinguido de Iscariote; no se fija identidad de todos los homónimos como dato histórico indiscutible. Patronazgo tradicional atribuido específicamente a Judas, no a ambos apóstoles.
+
+### 23. `all_saints` · 01/11
+
+- [Catholic Encyclopedia, «All Saints’ Day»](https://www.newadvent.org/cathen/01315a.htm)
+- [Concilio Vaticano II, Lumen gentium, 39–42, 49–51](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html)
+
+Es una solemnidad, no una ficha biográfica ficticia. No se presenta un número cerrado de santos ni se asegura que toda persona fallecida está ya en el cielo. Dedicación del Panteón sin imponer 609 frente a la variante 610.
+
+### 24. `commemoration_of_all_the_faithful_departed` · 02/11
+
+- [Catholic Encyclopedia, «All Souls’ Day»](https://www.newadvent.org/cathen/01315b.htm)
+- [Catecismo de la Iglesia Católica, 1030–1032](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_12/iii_the_final_purification%2C_or_purgatory.html)
+- [Catecismo de la Iglesia Católica, 2116](https://www.vatican.va/archive/ENG0015/__P7E.HTM)
+
+Origen cluniacense expresado sin imponer el año 998: hay discusión cronológica en la bibliografía. No se describen lugares físicos o plazos del purgatorio ni se certifica el destino de personas concretas. No se incluyen indulgencias sin concesión vigente.
+
+### 25. `martin_de_porres_religious` · 03/11
+
+- [Orden de Predicadores, «S. Martini de Porres»](https://es.op.org/saints/s-martini-de-porres/)
+- [Dicasterio para las Causas de los Santos, «Martino de Porres»](https://www.causesanti.va/it/santi-e-beati/martino-de-porres.html)
+
+Se omite día exacto de nacimiento: fuentes actuales dan 9 de noviembre o 9 de diciembre; año concordante 1579. No se certifican bilocaciones, levitación o relatos de animales como milagros reconocidos. Hermano religioso, no sacerdote.
+
+### 26. `charles_borromeo_bishop` · 04/11
+
+- [Catholic Encyclopedia, «St. Charles Borromeo»](https://www.newadvent.org/cathen/03619a.htm)
+- [Estado de la Ciudad del Vaticano, «4 November: Saint Charles Borromeo»](https://www.vaticanstate.va/en/component/content/article/4-november-saint-charles-borromeo.html)
+
+No se presenta el acceso temprano al cardenalato como ordenación sacerdotal. Reforma y atención durante la epidemia verificadas. No se añaden cifras de conversiones o curaciones ni se equiparan conflictos históricos con modelos actuales.
+
+### 27. `leo_i_the_great_pope` · 10/11
+
+- [Catholic Encyclopedia, «Pope St. Leo I (the Great)»](https://www.newadvent.org/cathen/09154b.htm)
+- [Benedicto XVI, audiencia general de 5-III-2008](https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080305.html)
+
+Sin fecha inventada de nacimiento. Encuentro con Atila sin certificar una aparición de Pedro y Pablo. Se conserva la fórmula de Calcedonia: una persona, dos naturalezas, sin confusión con dos personas.
+
+### 28. `martin_of_tours_bishop` · 11/11
+
+- [Catholic Encyclopedia, «St. Martin of Tours»](https://www.newadvent.org/cathen/09732b.htm)
+- [Benedicto XVI, Ángelus de 11-XI-2007](https://www.vatican.va/content/benedict-xvi/en/angelus/2007/documents/hf_ben-xvi_ang_20071111.html)
+
+Se omite año exacto de nacimiento por discusión cronológica. Relato del manto atribuido a la tradición biográfica antigua, sin añadir aparición o diálogo como hecho demostrado. No se repiten juicios peyorativos sobre religiones rurales.
+
+### 29. `josaphat_kuntsevych_bishop` · 12/11
+
+- [Catholic Encyclopedia, «St. Josaphat Kuncevyc»](https://www.newadvent.org/cathen/08503b.htm)
+- [Francisco, Ángelus de 12-XI-2023, cuarto centenario del martirio](https://www.vatican.va/content/francesco/en/angelus/2023/documents/20231112-angelus.html)
+
+Nacimiento aproximado. No se confunde con el rey bíblico Josafat ni el personaje de Barlaam. No se reproduce como lenguaje editorial actual la terminología polémica de la enciclopedia de 1910; comunión oriental no equivale a rito latino.
+
+### 30. `albert_the_great_bishop` · 15/11
+
+- [Catholic Encyclopedia, «St. Albertus Magnus»](https://www.newadvent.org/cathen/01264a.htm)
+- [Benedicto XVI, audiencia general de 24-III-2010](https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20100324.html)
+
+Fecha de nacimiento prudente: las fuentes manejan 1193 o hacia 1200. Canonización/doctorado verificados en la audiencia de 2010, no en la enciclopedia anterior. No se le atribuye la autoría de la Summa de Tomás ni obras apócrifas de magia. Patronazgo de las ciencias naturales comprobado en la audiencia.
+
 ## Validación
 
 ```text
-20 entries · 0 errors · 1 warnings
+30 entries · 0 errors · 1 warnings
 ```
 
 El aviso de las entregas parciales corresponde al prefijo de claves aún incompleto. Se ejecuta el validador oficial con `--partial` en cada entrega parcial y sin esa opción al completar el lote. También se verifica la meta editorial de 120–200 palabras por idioma y `git diff --check`. La compilación e integración corresponden al coordinador. No se publica APK ni se modifica `CatholicGPT`.
