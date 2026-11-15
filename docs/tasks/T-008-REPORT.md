@@ -91,3 +91,18 @@ scripture uses the existing String model; unmodified metadata preserved.
 **Discrepancia de la especificación:** `NovenaDay.scripture` es `String` y los cuerpos reales utilizan una cadena. Un objeto ES/EN/PT allí haría fallar la deserialización. Como esta fuente no proporciona una lectura bíblica diaria, se conserva `scripture: ""`, sin añadir versículos ni cambiar Kotlin. Los demás campos sí son ES/EN/PT.
 
 No se modifica `index.json`, Kotlin, hashes ni APK. La integración y compilación corresponden al coordinador.
+
+
+## Revisión del coordinador aplicada (15-XI-2026)
+
+Leída `T-008-REVIEW.md` e incorporada `origin/CatholicGPT` (`4f302d7`) en `ext/T-008`. Se elimina por completo el obsequio penitencial corporal del día noveno del Pilar (impreso de 1855, p. 49), en ES/EN/PT. El campo `intentionGuidance` de ese día queda vacío; no se sustituye por una oración ni rúbrica redactada. No permanece el texto omitido dentro del cuerpo. La procedencia declara la única omisión permitida por la revisión, y `pastoralNote` recuerda que la penitencia no debe dañar la salud y debe discernirse con el confesor.
+
+Esta corrección actualiza la descripción anterior de la entrega, que conservaba los obsequios históricos: el del día noveno ya no se conserva. La oración, las consideraciones y los demás elementos seleccionados permanecen fieles a la fuente. Para nuevas recuperaciones se aplica el mismo criterio de omitir y declarar prácticas dañinas, sin convertir una omisión en permiso para componer textos.
+
+Validación tras la corrección:
+
+```text
+3 novenas · 27 trilingual days · matching index/provenance IDs · 0 errors
+```
+
+Se comprobó además que el campo omitido está vacío en los tres idiomas, que la nota pastoral es trilingüe y que no se alteraron la oración o la meditación de los nueve días.
