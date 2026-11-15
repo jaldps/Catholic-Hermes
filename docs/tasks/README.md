@@ -44,3 +44,5 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-010](T-010.md) | Codex | CERRADO (informe documental) | Identificación y atribución de 6 Biblias católicas (cbt); el dueño declara permiso |
 | [T-011](T-011.md) | Hermes | ABIERTO | M5 · Santos de enero–marzo (38) → `assets/saints/saints-q1.json` |
 | [T-012](T-012.md) | Codex | ABIERTO (50/59 integradas, [revisión](T-012-REVIEW.md)) | M5 · Santos de octubre–diciembre (59) → `assets/saints/saints-q4.json` |
+| [T-013](T-013.md) | Codex | ABIERTO | M5 · Santos de abril–junio (51) → `assets/saints/saints-q2.json` |
+| [T-014](T-014.md) | Codex | ABIERTO (tras T-013) | M5 · Santos de julio–septiembre (67) → `assets/saints/saints-q3.json` |
