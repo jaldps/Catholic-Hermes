@@ -866,5 +866,228 @@
       "Catholic Encyclopedia, «St. Catherine of Alexandria»",
       "Vatican News, «St. Catherine of Alexandria»"
     ]
+  },
+  {
+    "key": "andrew_apostle",
+    "month": 11,
+    "day": 30,
+    "bio": {
+      "es": "Andrés fue uno de los Doce apóstoles y hermano de Simón Pedro. Los Evangelios lo sitúan en el ambiente de los pescadores de Galilea. Según Juan, había seguido a Juan el Bautista y, después de encontrarse con Jesús, llevó a su hermano hacia él. El mismo Evangelio lo presenta en el relato de los panes y los peces y entre los discípulos que acercan a Jesús la petición de unos griegos que deseaban conocerlo. Estas escenas explican su imagen como apóstol que ayuda a otros a encontrarse con el Señor. La tradición posterior vincula su predicación al mundo griego y sitúa su martirio en Patras. La forma de cruz en aspa pertenece al desarrollo de su iconografía y no está descrita en el Nuevo Testamento. Su memoria tiene particular importancia para el encuentro entre las Iglesias de Roma y Constantinopla. La Iglesia lo celebra como testigo apostólico y servidor del anuncio de Cristo.",
+      "en": "Andrew was one of the Twelve Apostles and the brother of Simon Peter. The Gospels place him among the fishermen of Galilee. According to John, he had followed John the Baptist and, after meeting Jesus, brought his brother to him. The same Gospel presents him in the account of the loaves and fishes and among the disciples who bring Jesus the request of some Greeks wishing to meet him. These scenes explain his image as an apostle who helps others encounter the Lord. Later tradition associates his preaching with the Greek world and places his martyrdom at Patras. The X-shaped cross belongs to the development of his iconography and is not described in the New Testament. His memorial has particular importance for the encounter between the Churches of Rome and Constantinople. The Church celebrates him as an apostolic witness and a servant of the proclamation of Christ, while distinguishing Gospel testimony from later narratives.",
+      "pt": "André foi um dos Doze apóstolos e irmão de Simão Pedro. Os Evangelhos o situam entre os pescadores da Galileia. Segundo João, havia seguido João Batista e, depois de encontrar Jesus, levou seu irmão até ele. O mesmo Evangelho o apresenta no relato dos pães e peixes e entre os discípulos que levam a Jesus o pedido de alguns gregos que desejavam conhecê-lo. Essas cenas explicam sua imagem como apóstolo que ajuda os outros a encontrar o Senhor. A tradição posterior liga sua pregação ao mundo grego e situa seu martírio em Patras. A forma de cruz em aspa pertence ao desenvolvimento de sua iconografia e não está descrita no Novo Testamento. Sua memória tem especial importância para o encontro entre as Igrejas de Roma e Constantinopla. A Igreja o celebra como testemunha apostólica e servidor do anúncio de Cristo."
+    },
+    "patronages": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "quote": null,
+    "sources": [
+      "Catholic Encyclopedia, «St. Andrew»",
+      "Benedicto XVI, audiencia general de 14-VI-2006"
+    ]
+  },
+  {
+    "key": "francis_xavier_priest",
+    "month": 12,
+    "day": 3,
+    "bio": {
+      "es": "Francisco Javier nació en Navarra en 1506 y estudió en París, donde conoció a Ignacio de Loyola. Formó parte del grupo que dio origen a la Compañía de Jesús. Enviado a Asia, llegó a Goa en 1542 y desarrolló su misión en la India, en islas del sudeste asiático y en Japón. Combinó el anuncio de la fe con la enseñanza del catecismo y la atención a enfermos y personas marginadas. Sus cartas permiten conocer tanto su entusiasmo como las dificultades de comunicación, las distancias y los límites de la presencia misionera. Deseaba entrar en China, pero murió en la isla de Shangchuan en diciembre de 1552, antes de lograrlo. Fue canonizado en 1622. En 1927 fue proclamado patrono de las misiones junto con Teresa de Lisieux. Su memoria celebra la disponibilidad para llevar el Evangelio más allá del propio entorno y el compromiso de conocer y servir a las personas encontradas.",
+      "en": "Francis Xavier was born in Navarre in 1506 and studied in Paris, where he met Ignatius of Loyola. He belonged to the group from which the Society of Jesus emerged. Sent to Asia, he reached Goa in 1542 and carried out his mission in India, islands of Southeast Asia and Japan. He combined proclamation of the faith with teaching the catechism and caring for sick and marginalized people. His letters reveal both his enthusiasm and the difficulties of communication, distance and the limitations of missionary presence. He hoped to enter China but died on the island of Shangchuan in December 1552 before achieving that goal. He was canonized in 1622. In 1927 he was proclaimed patron of the missions together with Thérèse of Lisieux. His memorial celebrates readiness to bring the Gospel beyond one’s own surroundings and the commitment to know and serve the people encountered, rather than judging the mission only by numerical results.",
+      "pt": "Francisco Xavier nasceu em Navarra em 1506 e estudou em Paris, onde conheceu Inácio de Loyola. Fez parte do grupo que deu origem à Companhia de Jesus. Enviado à Ásia, chegou a Goa em 1542 e desenvolveu sua missão na Índia, em ilhas do sudeste asiático e no Japão. Combinou o anúncio da fé com o ensino do catecismo e a atenção aos enfermos e às pessoas marginalizadas. Suas cartas permitem conhecer tanto seu entusiasmo como as dificuldades de comunicação, as distâncias e os limites da presença missionária. Desejava entrar na China, mas morreu na ilha de Shangchuan em dezembro de 1552, antes de consegui-lo. Foi canonizado em 1622. Em 1927 foi proclamado padroeiro das missões junto com Teresa de Lisieux. Sua memória celebra a disponibilidade para levar o Evangelho além do próprio meio e o compromisso de conhecer e servir as pessoas encontradas."
+    },
+    "patronages": {
+      "es": [
+        "Misiones"
+      ],
+      "en": [
+        "Missions"
+      ],
+      "pt": [
+        "Missões"
+      ]
+    },
+    "quote": null,
+    "sources": [
+      "Catholic Encyclopedia, «St. Francis Xavier»",
+      "Francisco, audiencia general de 17-V-2023",
+      "Obras Misionales Pontificias, «Saint Francis Xavier, patron of all the Missions together with Saint Therese of Lisieux» (2020)"
+    ]
+  },
+  {
+    "key": "john_damascene_priest",
+    "month": 12,
+    "day": 4,
+    "bio": {
+      "es": "Juan Damasceno nació en Damasco durante el siglo VII y pertenece a la tradición cristiana de lengua griega. Después de una etapa de actividad en su ciudad, abrazó la vida monástica en el entorno de Jerusalén y fue sacerdote. Su obra alcanzó especial importancia durante las controversias sobre las imágenes sagradas. Defendió que la encarnación del Hijo de Dios permite representar a Cristo y distinguió la veneración de las imágenes de la adoración debida solo a Dios. También reunió una amplia síntesis teológica en la Fuente del conocimiento, cuya exposición de la fe ortodoxa tuvo larga influencia en Oriente y Occidente. Su producción incluye homilías y textos vinculados a la oración litúrgica. Murió hacia mediados del siglo VIII. La Iglesia lo venera como padre y doctor. Su memoria ayuda a comprender el sentido cristiano de los iconos: su valor no está en tratar la materia como un dios, sino en orientar hacia la persona representada.",
+      "en": "John Damascene was born in Damascus during the seventh century and belongs to the Greek-speaking Christian tradition. After a period of activity in his city, he embraced monastic life near Jerusalem and became a priest. His work took on particular importance during controversies over sacred images. He defended the view that the incarnation of the Son of God allows Christ to be depicted and distinguished veneration of images from the worship owed to God alone. He also assembled a broad theological synthesis in The Fount of Knowledge, whose exposition of the orthodox faith had a lasting influence in East and West. His writings include homilies and texts connected with liturgical prayer. He died around the middle of the eighth century. The Church venerates him as a Father and Doctor. His memorial helps explain the Christian meaning of icons: their value does not lie in treating matter as a god, but in directing attention toward the person represented.",
+      "pt": "João Damasceno nasceu em Damasco durante o século VII e pertence à tradição cristã de língua grega. Depois de uma etapa de atividade em sua cidade, abraçou a vida monástica perto de Jerusalém e foi sacerdote. Sua obra alcançou especial importância durante as controvérsias sobre as imagens sagradas. Defendeu que a encarnação do Filho de Deus permite representar Cristo e distinguiu a veneração das imagens da adoração devida somente a Deus. Também reuniu uma ampla síntese teológica na Fonte do conhecimento, cuja exposição da fé ortodoxa teve longa influência no Oriente e no Ocidente. Sua produção inclui homilias e textos ligados à oração litúrgica. Morreu por volta de meados do século VIII. A Igreja o venera como padre e doutor. Sua memória ajuda a compreender o sentido cristão dos ícones: seu valor não está em tratar a matéria como um deus, mas em orientar para a pessoa representada."
+    },
+    "patronages": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "quote": null,
+    "sources": [
+      "Catholic Encyclopedia, «St. John Damascene»",
+      "Benedicto XVI, audiencia general de 6-V-2009"
+    ]
+  },
+  {
+    "key": "nicholas_of_myra_bishop",
+    "month": 12,
+    "day": 6,
+    "bio": {
+      "es": "Nicolás fue obispo de Mira, en Licia, una región situada en la actual Turquía, durante los primeros siglos cristianos, tradicionalmente en el siglo IV. Su culto se extendió ampliamente por Oriente y Occidente, aunque los datos seguros de su vida son escasos. Los relatos hagiográficos lo presentan como defensor de personas injustamente acusadas y benefactor de familias pobres. Entre ellos destaca la ayuda secreta a tres jóvenes que no tenían recursos para casarse, episodio que debe reconocerse como tradición biográfica. Parte de sus reliquias fue trasladada a Bari en 1087, y por eso también se lo conoce como Nicolás de Bari. Es venerado como protector de los niños y de los navegantes. Su memoria recuerda la caridad discreta y la responsabilidad pastoral por los vulnerables. No hace falta aceptar como hechos probados cada prodigio o anécdota posterior para comprender la importancia histórica de su culto.",
+      "en": "Nicholas was bishop of Myra in Lycia, a region in present-day Turkey, during the early Christian centuries, traditionally in the fourth century. His cult spread widely through East and West, although secure information about his life is limited. Hagiographical narratives portray him as a defender of people unjustly accused and a benefactor of poor families. Among these is the account of his secret assistance to three young women who lacked the means to marry, an episode that should be recognized as biographical tradition. Some of his relics were transferred to Bari in 1087, which explains why he is also known as Nicholas of Bari. He is venerated as a protector of children and sailors. His memorial recalls discreet charity and pastoral responsibility for vulnerable people. Understanding the historical importance of his cult does not require accepting every later wonder or anecdote as a proven event of his life.",
+      "pt": "Nicolau foi bispo de Mira, na Lícia, região situada na atual Turquia, durante os primeiros séculos cristãos, tradicionalmente no século IV. Seu culto difundiu-se amplamente pelo Oriente e pelo Ocidente, embora os dados seguros de sua vida sejam escassos. Os relatos hagiográficos o apresentam como defensor de pessoas injustamente acusadas e benfeitor de famílias pobres. Entre eles destaca-se a ajuda secreta a três jovens que não tinham recursos para casar, episódio que deve ser reconhecido como tradição biográfica. Parte de suas relíquias foi levada para Bari em 1087, por isso também é conhecido como Nicolau de Bari. É venerado como protetor das crianças e dos navegantes. Sua memória recorda a caridade discreta e a responsabilidade pastoral pelos vulneráveis. Não é necessário aceitar como fatos provados cada prodígio ou anedota posterior para compreender a importância histórica de seu culto."
+    },
+    "patronages": {
+      "es": [
+        "Niños",
+        "Navegantes"
+      ],
+      "en": [
+        "Children",
+        "Sailors"
+      ],
+      "pt": [
+        "Crianças",
+        "Navegantes"
+      ]
+    },
+    "quote": null,
+    "sources": [
+      "Catholic Encyclopedia, «St. Nicholas of Myra»",
+      "Vatican News, «St. Nicholas of Bari, Bishop of Myra»"
+    ]
+  },
+  {
+    "key": "ambrose_of_milan_bishop",
+    "month": 12,
+    "day": 7,
+    "bio": {
+      "es": "Ambrosio nació hacia 340 en una familia vinculada a la administración romana y llegó a ejercer funciones de gobierno en el norte de Italia. En 374 fue elegido obispo de Milán cuando todavía era catecúmeno; recibió el bautismo y la ordenación antes de asumir plenamente su ministerio. Se dedicó al estudio de la Escritura, la predicación y la formación cristiana de su comunidad. Defendió la fe en la divinidad de Cristo durante las controversias arrianas y sostuvo la responsabilidad moral de quienes ejercían el poder. Su enseñanza y la vida litúrgica de Milán influyeron en Agustín, a quien bautizó en 387. Sus obras incluyen comentarios bíblicos, textos sobre los sacramentos y escritos sobre la vida moral. También promovió el canto de himnos en la comunidad. Murió en 397 y es venerado entre los grandes doctores de la Iglesia latina. Su memoria une el servicio pastoral, la inteligencia de la fe y la celebración de los misterios cristianos.",
+      "en": "Ambrose was born around 340 into a family connected with Roman administration and came to hold governmental responsibilities in northern Italy. In 374 he was chosen as bishop of Milan while still a catechumen; he received baptism and ordination before fully assuming his ministry. He devoted himself to studying Scripture, preaching and the Christian formation of his community. He defended faith in Christ’s divinity during the Arian controversies and upheld the moral responsibility of those exercising power. His teaching and Milan’s liturgical life influenced Augustine, whom he baptized in 387. His works include biblical commentaries, writings on the sacraments and texts about the moral life. He also encouraged the community’s singing of hymns. He died in 397 and is venerated among the great Doctors of the Latin Church. His memorial brings together pastoral service, understanding of the faith and celebration of the Christian mysteries, rooted in sustained reading of Scripture.",
+      "pt": "Ambrósio nasceu por volta de 340 numa família ligada à administração romana e chegou a exercer funções de governo no norte da Itália. Em 374 foi escolhido bispo de Milão quando ainda era catecúmeno; recebeu o batismo e a ordenação antes de assumir plenamente seu ministério. Dedicou-se ao estudo da Escritura, à pregação e à formação cristã de sua comunidade. Defendeu a fé na divindade de Cristo durante as controvérsias arianas e sustentou a responsabilidade moral de quem exercia o poder. Seu ensinamento e a vida litúrgica de Milão influenciaram Agostinho, a quem batizou em 387. Suas obras incluem comentários bíblicos, textos sobre os sacramentos e escritos sobre a vida moral. Também incentivou o canto de hinos na comunidade. Morreu em 397 e é venerado entre os grandes doutores da Igreja latina. Sua memória une o serviço pastoral, a inteligência da fé e a celebração dos mistérios cristãos."
+    },
+    "patronages": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "quote": null,
+    "sources": [
+      "Catholic Encyclopedia, «St. Ambrose»",
+      "Benedicto XVI, audiencia general de 24-X-2007"
+    ]
+  },
+  {
+    "key": "immaculate_conception_of_the_blessed_virgin_mary",
+    "month": 12,
+    "day": 8,
+    "bio": {
+      "es": "La solemnidad de la Inmaculada Concepción celebra que María fue preservada del pecado original desde el primer instante de su concepción, por una gracia singular de Dios y en atención a los méritos de Jesucristo, Salvador del género humano. No significa que María no necesitara la redención: la recibió de manera eminente y preventiva por su Hijo. Tampoco debe confundirse con la concepción virginal de Jesús, que se refiere a otro misterio. Pío IX definió solemnemente esta doctrina en 1854 mediante la constitución Ineffabilis Deus, después de una larga historia de reflexión y celebración eclesial. La fiesta del 8 de diciembre dirige la mirada hacia la iniciativa gratuita de Dios y la respuesta libre de María. El Catecismo relaciona esa santidad recibida con su misión de ser Madre del Salvador y con su disponibilidad a la voluntad divina. La Iglesia celebra aquí la victoria de la gracia de Cristo, que prepara una respuesta humana de fe y de amor.",
+      "en": "The solemnity of the Immaculate Conception celebrates Mary’s preservation from original sin from the first instant of her conception, through a singular grace of God and in view of the merits of Jesus Christ, the Saviour of the human race. It does not mean that Mary had no need of redemption: she received it in an eminent and preventive way through her Son. Nor should it be confused with the virginal conception of Jesus, which concerns a different mystery. Pius IX solemnly defined this doctrine in 1854 in the constitution Ineffabilis Deus, following a long history of reflection and ecclesial celebration. The feast of 8 December directs attention to God’s freely given initiative and Mary’s free response. The Catechism connects her received holiness with her mission as Mother of the Saviour and her readiness for God’s will. Here the Church celebrates the victory of Christ’s grace, which prepares a human response of faith and love.",
+      "pt": "A solenidade da Imaculada Conceição celebra que Maria foi preservada do pecado original desde o primeiro instante de sua concepção, por uma graça singular de Deus e em vista dos méritos de Jesus Cristo, Salvador do gênero humano. Não significa que Maria não precisasse da redenção: recebeu-a de maneira eminente e preventiva por seu Filho. Também não deve ser confundida com a concepção virginal de Jesus, que se refere a outro mistério. Pio IX definiu solenemente essa doutrina em 1854, pela constituição Ineffabilis Deus, depois de uma longa história de reflexão e celebração eclesial. A festa de 8 de dezembro dirige o olhar para a iniciativa gratuita de Deus e a resposta livre de Maria. O Catecismo relaciona essa santidade recebida à sua missão de ser Mãe do Salvador e à sua disponibilidade à vontade divina. A Igreja celebra aqui a vitória da graça de Cristo, que prepara uma resposta humana de fé e amor."
+    },
+    "patronages": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "quote": null,
+    "sources": [
+      "Pío IX, Ineffabilis Deus, 8-XII-1854, definición dogmática",
+      "Catecismo de la Iglesia Católica, 490–494"
+    ]
+  },
+  {
+    "key": "juan_diego_cuauhtlatoatzin",
+    "month": 12,
+    "day": 9,
+    "bio": {
+      "es": "Juan Diego Cuauhtlatoatzin fue un laico indígena vinculado a los comienzos del culto de Guadalupe en México. La biografía publicada por la Santa Sede recoge la tradición de su nacimiento en Cuauhtitlán en 1474 y de su muerte en 1548. Recibió el bautismo siendo adulto y vivió una fe sencilla, expresada en su participación en la vida de la Iglesia. El relato guadalupano lo presenta en diciembre de 1531 como mensajero de María ante el obispo Juan de Zumárraga, a quien transmitió la petición de un lugar de culto en el Tepeyac. Su figura está asociada a la humildad del servicio y al encuentro de la evangelización con los pueblos indígenas. Juan Pablo II lo canonizó en 2002. La Iglesia lo celebra como testigo laico, sin que su santidad dependa de una posición social elevada. Los detalles de su vida anterior a la conversión son limitados y no deben completarse con escenas imaginadas.",
+      "en": "Juan Diego Cuauhtlatoatzin was an Indigenous layman associated with the beginnings of devotion to Our Lady of Guadalupe in Mexico. The biography published by the Holy See records the tradition of his birth in Cuauhtitlán in 1474 and his death in 1548. He received baptism as an adult and lived a simple faith expressed in participation in the Church’s life. The Guadalupan narrative presents him in December 1531 as Mary’s messenger to Bishop Juan de Zumárraga, to whom he conveyed the request for a place of worship at Tepeyac. His figure is associated with humble service and the encounter of evangelization with Indigenous peoples. John Paul II canonized him in 2002. The Church celebrates him as a lay witness whose holiness did not depend on elevated social standing. Details of his life before conversion are limited and should not be supplemented with imagined scenes or falsely precise reconstructions of his daily life.",
+      "pt": "Juan Diego Cuauhtlatoatzin foi um leigo indígena ligado aos começos do culto de Guadalupe no México. A biografia publicada pela Santa Sé recolhe a tradição de seu nascimento em Cuauhtitlán em 1474 e de sua morte em 1548. Recebeu o batismo quando adulto e viveu uma fé simples, expressa na participação na vida da Igreja. O relato guadalupano o apresenta em dezembro de 1531 como mensageiro de Maria diante do bispo Juan de Zumárraga, a quem transmitiu o pedido de um lugar de culto no Tepeyac. Sua figura está associada à humildade do serviço e ao encontro da evangelização com os povos indígenas. João Paulo II o canonizou em 2002. A Igreja o celebra como testemunha leiga, sem que sua santidade dependa de uma posição social elevada. Os detalhes de sua vida anterior à conversão são limitados e não devem ser completados com cenas imaginadas."
+    },
+    "patronages": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "quote": null,
+    "sources": [
+      "Santa Sede, biografía de Juan Diego Cuauhtlatoatzin para la canonización, 31-VII-2002",
+      "Basílica de Santa María de Guadalupe, «San Juan Diego»"
+    ]
+  },
+  {
+    "key": "our_lady_of_loreto",
+    "month": 12,
+    "day": 10,
+    "bio": {
+      "es": "La memoria de Nuestra Señora de Loreto está vinculada al santuario de la Santa Casa, en Italia, y al misterio de la encarnación del Hijo de Dios. La tradición identifica las paredes veneradas con la casa de María en Nazaret. Los relatos de su traslado pertenecen a la historia devocional del santuario; no deben convertirse sin más en una demostración arqueológica de cada detalle narrado. El decreto litúrgico de 2019 invita a contemplar allí la anunciación, la respuesta de María y la vida de la Sagrada Familia. Francisco incorporó esta memoria al Calendario Romano General para el 10 de diciembre. Su sentido no depende de imaginar una vida extraordinaria separada de lo cotidiano: recuerda que Dios quiso habitar entre nosotros y que una casa puede ser lugar de escucha, oración y caridad. La celebración ofrece un modelo especialmente cercano a familias, jóvenes y personas consagradas, llamados a responder al Evangelio en sus propias circunstancias.",
+      "en": "The memorial of Our Lady of Loreto is associated with the Shrine of the Holy House in Italy and the mystery of the incarnation of the Son of God. Tradition identifies the venerated walls with Mary’s house at Nazareth. Accounts of their transfer belong to the shrine’s devotional history and should not automatically become archaeological proof of every narrative detail. The liturgical decree of 2019 invites contemplation there of the annunciation, Mary’s response and the life of the Holy Family. Francis added this memorial to the General Roman Calendar on 10 December. Its meaning does not depend on imagining an extraordinary life removed from everyday experience: it recalls that God chose to dwell among us and that a home can become a place of listening, prayer and charity. The celebration offers a particularly accessible model to families, young people and consecrated persons, called to respond to the Gospel in their own circumstances.",
+      "pt": "A memória de Nossa Senhora de Loreto está ligada ao santuário da Santa Casa, na Itália, e ao mistério da encarnação do Filho de Deus. A tradição identifica as paredes veneradas com a casa de Maria em Nazaré. Os relatos de seu traslado pertencem à história devocional do santuário; não devem ser transformados automaticamente numa demonstração arqueológica de cada detalhe narrado. O decreto litúrgico de 2019 convida a contemplar ali a anunciação, a resposta de Maria e a vida da Sagrada Família. Francisco incluiu essa memória no Calendário Romano Geral em 10 de dezembro. Seu sentido não depende de imaginar uma vida extraordinária separada do cotidiano: recorda que Deus quis habitar entre nós e que uma casa pode ser lugar de escuta, oração e caridade. A celebração oferece um modelo especialmente próximo às famílias, aos jovens e às pessoas consagradas, chamados a responder ao Evangelho em suas próprias circunstâncias."
+    },
+    "patronages": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "quote": null,
+    "sources": [
+      "Congregación para el Culto Divino, decreto de inscripción de Nuestra Señora de Loreto, 7-X-2019",
+      "Textos anexos al decreto de Loreto, 7-X-2019, lectura hagiográfica"
+    ]
+  },
+  {
+    "key": "damasus_i_pope",
+    "month": 12,
+    "day": 11,
+    "bio": {
+      "es": "Dámaso I fue obispo de Roma entre 366 y 384. Su elección tuvo lugar en un contexto de divisiones internas y enfrentamientos que las fuentes antiguas describen con dureza. Durante su pontificado defendió la fe nicena y la comunión entre las Iglesias, en medio de controversias sobre la identidad de Cristo y la vida eclesial. Su relación con Jerónimo fue importante para el trabajo sobre el texto latino de la Escritura: alentó la revisión de las traducciones existentes. También promovió el cuidado de los lugares de sepultura de los mártires y compuso inscripciones que conservaron su memoria y facilitaron la peregrinación. Esos epigramas constituyen una fuente para la historia cristiana de Roma, aunque no sustituyen la investigación de cada relato martirial. Murió en 384. La Iglesia lo recuerda como papa, servidor de la fe y promotor de la memoria de los testigos de Cristo. No se le atribuye personalmente la traducción de toda la Biblia latina.",
+      "en": "Damasus I was bishop of Rome from 366 to 384. His election took place amid internal divisions and violent confrontations described starkly in ancient sources. During his pontificate he defended the Nicene faith and communion among Churches amid controversies over Christ’s identity and ecclesial life. His relationship with Jerome was important for work on the Latin text of Scripture: he encouraged revision of existing translations. He also promoted care for the burial places of martyrs and composed inscriptions preserving their memory and assisting pilgrimage. These epigrams are a source for the Christian history of Rome, although they do not replace investigation of each martyrdom narrative. He died in 384. The Church remembers him as a pope, servant of the faith and promoter of remembrance of Christ’s witnesses. He should not personally be credited with translating the entire Latin Bible or with completing every stage of the work later associated with the Vulgate.",
+      "pt": "Dâmaso I foi bispo de Roma entre 366 e 384. Sua eleição ocorreu num contexto de divisões internas e confrontos que as fontes antigas descrevem com dureza. Durante seu pontificado defendeu a fé nicena e a comunhão entre as Igrejas, em meio a controvérsias sobre a identidade de Cristo e a vida eclesial. Sua relação com Jerônimo foi importante para o trabalho sobre o texto latino da Escritura: incentivou a revisão das traduções existentes. Também promoveu o cuidado dos locais de sepultura dos mártires e compôs inscrições que conservaram sua memória e facilitaram a peregrinação. Esses epigramas constituem uma fonte para a história cristã de Roma, embora não substituam a investigação de cada relato de martírio. Morreu em 384. A Igreja o recorda como papa, servidor da fé e promotor da memória das testemunhas de Cristo. Não se atribui a ele pessoalmente a tradução de toda a Bíblia latina."
+    },
+    "patronages": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "quote": null,
+    "sources": [
+      "Catholic Encyclopedia, «Pope St. Damasus I»",
+      "Santa Sede, ficha del pontificado de Dámaso I"
+    ]
+  },
+  {
+    "key": "our_lady_of_guadalupe",
+    "month": 12,
+    "day": 12,
+    "bio": {
+      "es": "Nuestra Señora de Guadalupe es la advocación mariana venerada en el Tepeyac, en México, y celebrada el 12 de diciembre. El relato guadalupano sitúa en diciembre de 1531 las manifestaciones de María a Juan Diego y la presentación de su imagen ante el obispo Juan de Zumárraga. Esa tradición está en el origen del santuario y de una extensa historia de peregrinación, oración y evangelización. La Iglesia reconoce y celebra este culto, que adquirió especial importancia para los pueblos de América. El decreto litúrgico de 2000 dispuso su fiesta en los calendarios del conjunto del continente americano. La celebración presenta a María como Madre de Jesús y madre cercana a los pueblos, particularmente a los pobres y a quienes sufren exclusión. Su mensaje se orienta al encuentro con Cristo y al respeto de la dignidad de cada persona. No exige aceptar supuestos análisis científicos de la imagen, cifras de conversiones o promesas comerciales difundidas sin fuentes verificables.",
+      "en": "Our Lady of Guadalupe is the Marian title venerated at Tepeyac in Mexico and celebrated on 12 December. The Guadalupan narrative places Mary’s manifestations to Juan Diego and the presentation of her image before Bishop Juan de Zumárraga in December 1531. This tradition lies at the origin of the shrine and a long history of pilgrimage, prayer and evangelization. The Church recognizes and celebrates this cult, which acquired particular importance for the peoples of the Americas. A liturgical decree of 2000 established the feast in the calendars of the entire American continent. The celebration presents Mary as the Mother of Jesus and a mother close to peoples, particularly the poor and those suffering exclusion. Its message points toward an encounter with Christ and respect for every person’s dignity. It does not require acceptance of supposed scientific analyses of the image, numbers of conversions or commercial promises circulated without verifiable sources.",
+      "pt": "Nossa Senhora de Guadalupe é a invocação mariana venerada no Tepeyac, no México, e celebrada em 12 de dezembro. O relato guadalupano situa em dezembro de 1531 as manifestações de Maria a Juan Diego e a apresentação de sua imagem diante do bispo Juan de Zumárraga. Essa tradição está na origem do santuário e de uma extensa história de peregrinação, oração e evangelização. A Igreja reconhece e celebra esse culto, que adquiriu especial importância para os povos da América. O decreto litúrgico de 2000 determinou sua festa nos calendários do conjunto do continente americano. A celebração apresenta Maria como Mãe de Jesus e mãe próxima dos povos, particularmente dos pobres e daqueles que sofrem exclusão. Sua mensagem orienta para o encontro com Cristo e o respeito à dignidade de cada pessoa. Não exige aceitar supostas análises científicas da imagem, números de conversões ou promessas comerciais difundidas sem fontes verificáveis."
+    },
+    "patronages": {
+      "es": [
+        "México"
+      ],
+      "en": [
+        "Mexico"
+      ],
+      "pt": [
+        "México"
+      ]
+    },
+    "quote": null,
+    "sources": [
+      "Basílica de Santa María de Guadalupe, «Síntesis de las apariciones»",
+      "Congregación para el Culto Divino, decreto de la fiesta de Guadalupe en América, 28-VI-2000",
+      "Radio Vaticana, «Nuestra Señora de Guadalupe, Patrona de México y Emperatriz de América» (2015)"
+    ]
   }
 ]

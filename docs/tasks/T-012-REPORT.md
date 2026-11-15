@@ -1,6 +1,6 @@
 # T-012 · Informe de Codex
 
-Entrega: **40/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
+Entrega: **50/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Fechas e identificadores se toman de `GeneralRomanSanctoral.kt`. Las biografías son redacción informativa propia, ES/EN/PT, basada en fuentes consultadas; no se presentan como palabras de los santos. `quote` queda `null`: no se añaden citas de memoria ni fórmulas devocionales. Un patronazgo vacío significa que no se incorpora aquí un patronazgo suficientemente comprobado, no que no exista ninguno. Las memorias marianas y otras celebraciones describen su sentido y origen; no se inventa una biografía humana de ángeles o de una fiesta.
 
@@ -299,10 +299,82 @@ Se comprueba 1988 con el registro de canonizaciones: una página italiana de Vat
 
 Sin fecha de nacimiento o martirio inventada. Debates, rueda, traslado angélico y discursos distinguidos de la historia comprobada; no se atribuyen citas legendarias. Patronazgo tradicional de filósofos/estudiosos atestiguado en la enciclopedia.
 
+### 41. `andrew_apostle` · 30/11
+
+- [Catholic Encyclopedia, «St. Andrew»](https://www.newadvent.org/cathen/01471a.htm)
+- [Benedicto XVI, audiencia general de 14-VI-2006](https://www.vatican.va/content/benedict-xvi/en/audiences/2006/documents/hf_ben-xvi_aud_20060614.html)
+
+Datos evangélicos localizados en Jn 1,35–42; 6,8–9; 12,20–22. Martirio en Patras y cruz en aspa distinguidos de la documentación neotestamentaria. No se inventa una fecha de nacimiento o muerte.
+
+### 42. `francis_xavier_priest` · 03/12
+
+- [Catholic Encyclopedia, «St. Francis Xavier»](https://www.newadvent.org/cathen/06233b.htm)
+- [Francisco, audiencia general de 17-V-2023](https://www.vatican.va/content/francesco/en/audiences/2023/documents/20230517-udienza-generale.html)
+- [Obras Misionales Pontificias, «Saint Francis Xavier, patron of all the Missions together with Saint Therese of Lisieux» (2020)](https://www.ppoomm.va/en/notizie-eventi/eventi/2020/saint-francis-xavier-patron-of-all-the-missions1.html)
+
+Muerte expresada por mes/año: la enciclopedia da 2-XII y fuentes actuales 3-XII. Patronazgo de 1927 comprobado en OMP. No se inventan cifras de bautismos ni se afirma que evangelizó el interior de China.
+
+### 43. `john_damascene_priest` · 04/12
+
+- [Catholic Encyclopedia, «St. John Damascene»](https://www.newadvent.org/cathen/08459b.htm)
+- [Benedicto XVI, audiencia general de 6-V-2009](https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20090506.html)
+
+Cronología amplia porque las fechas de nacimiento/muerte tienen variantes. No se certifica la leyenda de la mano cortada. Se distingue adoración a Dios de veneración de imágenes; «ortodoxa» en el título de la obra no se usa como oposición confesional moderna.
+
+### 44. `nicholas_of_myra_bishop` · 06/12
+
+- [Catholic Encyclopedia, «St. Nicholas of Myra»](https://www.newadvent.org/cathen/11063b.htm)
+- [Vatican News, «St. Nicholas of Bari, Bishop of Myra»](https://www.vaticannews.va/en/saints/12/06/saint-nicholas-of-bari--bishop-of-myra.html)
+
+Sin fijar como seguras las fechas 270/343 ni afirmar que golpeó a Arrio. Las tres dotes se presentan como tradición. Traslado de reliquias a Bari distinguido de nacimiento; patronazgos de niños/navegantes verificados.
+
+### 45. `ambrose_of_milan_bishop` · 07/12
+
+- [Catholic Encyclopedia, «St. Ambrose»](https://www.newadvent.org/cathen/01383c.htm)
+- [Benedicto XVI, audiencia general de 24-X-2007](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20071024.html)
+
+Elegido siendo catecúmeno, no obispo sin bautismo u ordenación. Se distingue promoción de himnos de una atribución falsa del Te Deum conjunto con Agustín. Sin convertir a Ambrósio en autor de cada elemento posterior del rito ambrosiano.
+
+### 46. `immaculate_conception_of_the_blessed_virgin_mary` · 08/12
+
+- [Pío IX, Ineffabilis Deus, 8-XII-1854, definición dogmática](https://www.vatican.va/content/pius-ix/it/documents/18541208-costituzione-apostolica-ineffabilis-deus.html)
+- [Catecismo de la Iglesia Católica, 490–494](https://www.vatican.va/archive/catechism_sp/p1s2a3p2_sp.html)
+
+Doctrina, no relato de aparición. Se distingue de la concepción virginal de Jesús y se explica la redención preventiva por Cristo. Sin identificar la solemnidad con el nacimiento de María o con la Anunciación.
+
+### 47. `juan_diego_cuauhtlatoatzin` · 09/12
+
+- [Santa Sede, biografía de Juan Diego Cuauhtlatoatzin para la canonización, 31-VII-2002](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20020731_juan-diego_en.html)
+- [Basílica de Santa María de Guadalupe, «San Juan Diego»](https://virgendeguadalupe.org.mx/san-juan-diego/)
+
+Biografía oficial distingue tradición y documentación limitada anterior a la conversión. No se fija como certeza una etnia discutida, etimología única de su nombre o autoría/fecha exacta del Nican mopohua. Canonización comprobada en el santuario.
+
+### 48. `our_lady_of_loreto` · 10/12
+
+- [Congregación para el Culto Divino, decreto de inscripción de Nuestra Señora de Loreto, 7-X-2019](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2019/10/31/191031e.html)
+- [Textos anexos al decreto de Loreto, 7-X-2019, lectura hagiográfica](https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20191007_decreto-celebrazione-verginediloreto-adnexus_la.html)
+
+Se distingue fecha del decreto (7 de octubre), publicación (31 de octubre) y memoria (10 de diciembre). La crónica de 1465 y el hallazgo tradicional de 1294 no se convierten en pruebas del traslado por ángeles. No se atribuye concesión aeronáutica sin su documento.
+
+### 49. `damasus_i_pope` · 11/12
+
+- [Catholic Encyclopedia, «Pope St. Damasus I»](https://www.newadvent.org/cathen/04613a.htm)
+- [Santa Sede, ficha del pontificado de Dámaso I](https://www.vatican.va/content/vatican/en/holy-father/damaso-i.html)
+
+No se fija origen portugués o español como certeza. Elección conflictiva contextualizada sin repetir propaganda de facciones como hechos neutrales. No se le atribuye traducción de la Vulgata ni un canon bíblico definitivo por conjetura.
+
+### 50. `our_lady_of_guadalupe` · 12/12
+
+- [Basílica de Santa María de Guadalupe, «Síntesis de las apariciones»](https://virgendeguadalupe.org.mx/sintesis-de-las-apariciones/)
+- [Congregación para el Culto Divino, decreto de la fiesta de Guadalupe en América, 28-VI-2000](https://www.vatican.va/content/dam/wss/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20000628_guadalupe_sp.html)
+- [Radio Vaticana, «Nuestra Señora de Guadalupe, Patrona de México y Emperatriz de América» (2015)](https://www.archivioradiovaticana.va/storico/2015/12/11/nuestra_se%C3%B1ora_de_guadalupe%2C_patrona_de_m%C3%A9xico_y_emperatriz_/es-1193617)
+
+Culto reconocido y recepción litúrgica distinguidos de estudios extraordinarios de la tilma no comprobados. La memoria opcional del calendario general no elimina el rango de fiesta/solemnidad donde está concedido. Patronazgo mexicano verificado en Radio Vaticana.
+
 ## Validación
 
 ```text
-40 entries · 0 errors · 1 warnings
+50 entries · 0 errors · 1 warnings
 ```
 
 El aviso de las entregas parciales corresponde al prefijo de claves aún incompleto. Se ejecuta el validador oficial con `--partial` en cada entrega parcial y sin esa opción al completar el lote. También se verifica la meta editorial de 120–200 palabras por idioma y `git diff --check`. La compilación e integración corresponden al coordinador. No se publica APK ni se modifica `CatholicGPT`.
