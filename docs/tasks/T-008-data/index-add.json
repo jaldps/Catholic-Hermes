@@ -1,0 +1,53 @@
+[
+  {
+    "id": "novena-a-la-virgen-del-pilar",
+    "title": {
+      "es": "Novena a la Virgen del Pilar",
+      "en": "Novena to Our Lady of the Pillar",
+      "pt": "Novena a Nossa Senhora do Pilar"
+    },
+    "patron": {
+      "es": "Advocación mariana de Zaragoza (España), venerada en el mundo hispano",
+      "en": "Marian title of Zaragoza (Spain), venerated in the Hispanic world",
+      "pt": "Invocação mariana de Saragoça (Espanha), venerada no mundo hispânico"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días de la edición histórica del Pilar publicada en Nápoles en 1855, con consideraciones sobre María y los coros angélicos, oraciones y obsequios del impreso. Traducción fiel; requiere revisión pastoral de las prácticas corporales antiguas.",
+      "en": "Nine days from the historical Pillar novena published in Naples in 1855, with considerations on Mary and the angelic choirs, prayers and the edition’s offerings. Faithful translation; the historical bodily practices require pastoral review.",
+      "pt": "Nove dias da edição histórica do Pilar publicada em Nápoles em 1855, com considerações sobre Maria e os coros angélicos, orações e obséquios do impresso. Tradução fiel; as práticas corporais antigas precisam de revisão pastoral."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "family",
+      "peace"
+    ],
+    "bodyFile": "262.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+]
