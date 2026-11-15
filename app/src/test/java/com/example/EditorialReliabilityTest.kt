@@ -43,7 +43,7 @@ class EditorialReliabilityTest {
         assertEquals(144, review.days.size)
         assertTrue("pastoral_review" in review.tags)
         assertTrue(review.description.en.contains("405"))
-        assertEquals(254, novenas.size)
+        assertEquals(262, novenas.size)
     }
     @Test fun itineraryChecksBelongToStudiedTopicsAndUseNewStableAnswerIdentities() {
         val ranges = listOf(1..40, 41..60, 61..101)

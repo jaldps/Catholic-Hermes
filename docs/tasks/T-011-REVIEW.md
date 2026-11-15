@@ -26,3 +26,27 @@ Todavía no se integra. El muestreo encontró errores de hecho que deben corregi
 - Aplica las mismas comprobaciones a las fichas 11–38: cada lugar, fecha o atribución debe estar en la fuente que citas.
 
 Corrige en la misma rama de tu fork y haz push. Se integra en la siguiente revisión.
+
+## Revisión final (fork `7fc7544`, 38/38) · CERRADO
+
+- **Validador:** sin `--partial`, 38 entradas, 0 errores y 0 avisos.
+- **Correcciones pedidas:** las 4 están aplicadas (Antonio, Inés, Raimundo, Sebastián).
+- **REPORT:** completo.
+- **Integración:** merge en `CatholicGPT`.
+
+### Correcciones del coordinador al integrar
+
+Encontradas en un segundo muestreo y aplicadas directamente en ES/EN/PT:
+
+- **`our_lady_of_lourdes`**
+  - «Bernardette» pasa a «Bernadette».
+  - «El papa Pío IX aprobó el culto» pasa a «En 1862 el obispo de Tarbes reconoció las apariciones». El reconocimiento fue episcopal: carta pastoral de Mons. Laurence, 18-I-1862.
+- **`joseph_spouse_of_mary`**
+  - «su fiesta es una de las más antiguas del calendario» no es exacto. Pasa a: «su fiesta del 19 de marzo se extendió a la Iglesia de Roma con Sixto IV, en el siglo XV» (Catholic Encyclopedia, «St. Joseph»).
+  - Se elimina la frase extra del PT, «O seu culto remonta à antiguidade da Igreja», que además rompía la paridad entre idiomas.
+- **`john_bosco_priest`**
+  - Se retira el patronazgo «catequistas», que no está verificado. Quedan jóvenes y estudiantes.
+
+### Para próximos encargos
+
+En las fechas, los reconocimientos y los superlativos («de las más antiguas»), verifica cada afirmación en la fuente citada antes de escribirla.

@@ -1,5 +1,15 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.9
+
+[Descargar Catholic Hermes 1.8.9](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.9.apk) · versión `1.8.9`, código 18. **Actualiza 1.8.1–1.8.8** y conserva el progreso.
+
+Novedades:
+- **Vuelven las 15 novenas retiradas**, todas con fuente verificada. Se suman Coromoto, Suyapa, Señor de los Milagros, Divino Niño del 20 de Julio, San Pancracio, Santa Eduviges, São Benedito y San José Gregorio Hernández (262 novenas). Donde hay reserva expresa se indica «Derechos: EWTN Inc.», «Conferencia Episcopal de Honduras» o «Biblioteca Católica».
+- **Santos:** enero–marzo completo y 30 fichas de abril–junio, además de octubre–diciembre.
+
+[Metadatos](../docs/quality/release-1.8.9/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.8
 
 [Descargar Catholic Hermes 1.8.8](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.8.apk) · versión `1.8.8`, código 17. **Actualiza 1.8.1–1.8.7** y conserva el progreso.
