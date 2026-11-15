@@ -62,3 +62,13 @@ Siguen pendientes con las limitaciones de tu informe: Coromoto, Suyapa, Señor d
 
 1. Entrega Aparecida (cuerpo `267.json`) y Luján (cuerpo `268.json`) en `ext/T-008`, en un solo push.
 2. Después sigue con T-012.
+
+## Revisión intermedia 4 (`78ad543`, 7/15)
+
+**Integradas:** Aparecida (267) y Luján (268).
+- Cada una tiene 9 días; la meditación va vacía, como permite la revisión 3.
+- La procedencia declara la fuente, la traducción y las omisiones.
+- El estado queda en `pastoral_review` y las notas pastorales están completas.
+- Índice, hashes y recuentos actualizados: 254 novenas. Los tests de novenas y `EditorialReliabilityTest` pasan.
+
+Las 8 restantes siguen pendientes, con las limitaciones de tu informe. Prioridad ahora: T-013 y T-014.

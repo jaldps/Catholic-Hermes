@@ -1,0 +1,32 @@
+{
+  "version_name": "1.8.8",
+  "version_code": 17,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.8",
+  "sha256": "a680c76f3beb29c67e71ce271837b994ee2a8b631d3fe215bc430b00fbd6689b",
+  "bytes": 84880121,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.7 (same package and key)",
+  "changes": [
+    "New Saints screen (Explore > Study): search, month filter and profile card; the saint of the day uses the profile when available.",
+    "59 sourced profiles for October-December saints of the General Roman Calendar (T-012); quotes only with exact source, patronages only when verified.",
+    "Two more novenas restored with real sources (T-008): Aparecida (traditional Immaculate Conception formulary, Raccolta 1910 no. 199) and Luján (Maqueda 1812, IVE 2021 edition); 254 novenas."
+  ],
+  "tests": [
+    "SaintsCatalogTest",
+    "SaintsScreenTest",
+    "DailyContextReliabilityTest",
+    "Novena* (integrity, catalog, provenance, progress, journey)",
+    "EditorialReliabilityTest",
+    "AppNavigationTest",
+    "DesignNavigationTest"
+  ],
+  "known_limitations": [
+    "Full unit-test suite not run.",
+    "Saints January-September pending (T-011 Hermes, T-013/T-014 Codex).",
+    "8 of the 15 retired novenas still awaiting verified texts (T-008)."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

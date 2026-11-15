@@ -1,5 +1,16 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.8
+
+[Descargar Catholic Hermes 1.8.8](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.8.apk) · versión `1.8.8`, código 17. **Actualiza 1.8.1–1.8.7** y conserva el progreso.
+
+Novedades:
+- **Pantalla Santos** (Explorar → Estudio → Santos): búsqueda, filtro por mes y ficha de cada santo. El santo del día usa la ficha cuando existe.
+- **59 fichas con fuentes** de los santos de octubre a diciembre. Las citas aparecen solo si tienen la obra y el lugar exactos; los patronazgos, solo si están verificados. Enero a septiembre llegarán en próximas versiones.
+- **Dos novenas más con fuente real**: Aparecida y Luján (254 novenas).
+
+[Metadatos](../docs/quality/release-1.8.8/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.7
 
 [Descargar Catholic Hermes 1.8.7](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.7.apk) · versión `1.8.7`, código 16. **Actualiza 1.8.1–1.8.6** y conserva el progreso.
