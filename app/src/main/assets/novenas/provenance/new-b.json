@@ -57,21 +57,21 @@
   },
   {
     "id": "novena-al-cristo-negro-de-esquipulas",
-    "status": "modern",
+    "status": "historical",
     "origin": {
-      "es": "Texto de la novena: redacción propia de Catholic Hermes (2026) basada en la historia de la devoción y la Escritura. Oraciones comunes (Padre nuestro, Avemaría, Gloria): texto tradicional de dominio público.",
-      "en": "Text of the novena: original composition by Catholic Hermes (2026) based on the history of the devotion and on Scripture. Common prayers (Our Father, Hail Mary, Glory Be): traditional public-domain text.",
-      "pt": "Texto da novena: redação própria do Catholic Hermes (2026), baseada em a história da devoção e na Escritura. Orações comuns (Pai-Nosso, Ave-Maria, Glória): texto tradicional de domínio público."
+      "es": "Novena del milagroso SS. Christo de Esquipulas, México, reimpresa por Felipe de Zúñiga y Ontiveros, 1791; autor no identificado en esta edición. Wellcome Collection, b33ek3ts, facsímil b29296110, imágenes IIIF 42–55 (PDF 43–56), sección de la novena. ES: transcripción del impreso; EN/PT: traducciones propias fieles (Catholic Hermes, 2026), no versiones oficiales.",
+      "en": "Novena del milagroso SS. Christo de Esquipulas, Mexico, reprinted by Felipe de Zúñiga y Ontiveros, 1791; author unidentified in this edition. Wellcome Collection, b33ek3ts, facsimile b29296110, IIIF images 42–55 (PDF 43–56), novena section. ES: transcription of the print; EN/PT: faithful original translations (Catholic Hermes, 2026), not official versions.",
+      "pt": "Novena del milagroso SS. Christo de Esquipulas, México, reimpressa por Felipe de Zúñiga y Ontiveros, 1791; autor não identificado nesta edição. Wellcome Collection, b33ek3ts, fac-símile b29296110, imagens IIIF 42–55 (PDF 43–56), seção da novena. ES: transcrição do impresso; EN/PT: traduções próprias fiéis (Catholic Hermes, 2026), sem caráter oficial."
     },
     "history": {
-      "es": "El Cristo de Esquipulas es una imagen de Cristo crucificado tallada en madera en 1594 por el escultor Quirio Cataño, por encargo de los vecinos de Esquipulas, en Guatemala. Su tono oscuro ha recibido distintas explicaciones tradicionales. En el siglo XVIII se levantó la basílica actual, impulsada por el arzobispo Pedro Pardo de Figueroa, y desde entonces acuden peregrinos de toda Centroamérica y México, sobre todo hacia el 15 de enero. Los relatos de favores pertenecen a la tradición piadosa. La novena puede rezarse en preparación de esa fecha o en cualquier momento del año.",
-      "en": "The Christ of Esquipulas is an image of Christ crucified carved in wood in 1594 by the sculptor Quirio Cataño, commissioned by the townspeople of Esquipulas, in Guatemala. Its dark tone has received various traditional explanations. In the eighteenth century the present basilica was built, promoted by Archbishop Pedro Pardo de Figueroa, and since then pilgrims have come from all over Central America and Mexico, especially around 15 January. Accounts of favors belong to pious tradition. The novena may be prayed in preparation for that date or at any time of year.",
-      "pt": "O Cristo de Esquipulas é uma imagem de Cristo crucificado esculpida em madeira em 1594 pelo escultor Quirio Cataño, por encomenda dos moradores de Esquipulas, na Guatemala. Seu tom escuro recebeu diversas explicações tradicionais. No século XVIII foi erguida a atual basílica, impulsionada pelo arcebispo Pedro Pardo de Figueroa, e desde então chegam peregrinos de toda a América Central e do México, sobretudo por volta de 15 de janeiro. Os relatos de favores pertencem à tradição piedosa. A novena pode ser rezada em preparação para essa data ou em qualquer época do ano."
+      "es": "Esta novena histórica de nueve días se documenta en una reimpresión mexicana de 1791. Conserva las consideraciones sobre el cuerpo de Cristo, el soneto, las canciones y las oraciones comunes. No es una composición nueva ni se presenta como el formulario actual de la Basílica. El impreso contiene lenguaje barroco e imágenes del sufrimiento, así como expresiones coloniales sobre pueblos indígenas. Se conservan como testimonio histórico, sin atribuir inferioridad moral a una etnia o color de piel. Los relatos de sudor y curaciones no se han verificado como milagros reconocidos ni conceden un derecho automático a sanar. La oración acompaña, no reemplaza, los sacramentos ni la atención sanitaria. La autoría del soneto no se da por demostrada.",
+      "en": "This historical nine-day novena is documented in a Mexican reprint of 1791. It retains the considerations about Christ’s body, the sonnet, songs and common prayers. It is not a new composition or presented as the Basilica’s current formula. The print contains Baroque language and images of suffering, together with colonial expressions about Indigenous peoples. These are retained as historical testimony, without attributing moral inferiority to an ethnicity or skin colour. Accounts of sweating and cures have not been verified as recognised miracles and confer no automatic right to healing. Prayer accompanies, rather than replaces, the sacraments or healthcare. The sonnet’s authorship is not treated as established.",
+      "pt": "Esta novena histórica de nove dias está documentada numa reimpressão mexicana de 1791. Conserva as considerações sobre o corpo de Cristo, o soneto, os cantos e as orações comuns. Não é composição nova nem se apresenta como formulário atual da Basílica. O impresso contém linguagem barroca e imagens do sofrimento, além de expressões coloniais sobre povos indígenas. São conservadas como testemunho histórico, sem atribuir inferioridade moral a etnia ou cor da pele. Os relatos de suor e curas não foram verificados como milagres reconhecidos e não conferem direito automático à cura. A oração acompanha, sem substituir, os sacramentos e o atendimento de saúde. A autoria do soneto não é dada como demonstrada."
     },
     "approval": {
-      "es": "",
-      "en": "",
-      "pt": ""
+      "es": "No se ha verificado una aprobación actual de este formulario histórico ni indulgencias vigentes propias del texto. La catalogación como dominio público permite su reutilización; no equivale a una aprobación eclesiástica.",
+      "en": "No current approval of this historical formula or current indulgence specific to its text has been verified. Public-domain cataloguing permits reuse; it is not ecclesiastical approval.",
+      "pt": "Não foi verificada aprovação atual deste formulário histórico nem indulgências vigentes próprias do texto. A catalogação em domínio público permite reutilização; não equivale a aprovação eclesiástica."
     },
     "promise": {
       "kind": "NONE",
@@ -107,8 +107,9 @@
       "pt": ""
     },
     "sources": [
-      "Basílica de Esquipulas y Arquidiócesis de Guatemala: historia del santuario",
-      "Catecismo de la Iglesia Católica, 1674-1676 (piedad popular)"
+      "Wellcome Collection, b33ek3ts; México: Felipe de Zúñiga y Ontiveros, 1791; Public Domain Mark.",
+      "Facsímil y manifiesto IIIF: https://iiif.wellcomecollection.org/presentation/b29296110",
+      "PDF: https://iiif.wellcomecollection.org/pdf/b29296110 ; sección de novena, PDF 43–56 (IIIF 42–55)."
     ]
   },
   {
