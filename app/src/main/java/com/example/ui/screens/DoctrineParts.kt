@@ -64,9 +64,11 @@ import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.models.AppLanguage
 import com.example.ui.design.AppChevron
@@ -232,7 +234,8 @@ internal fun EmblemPlate(
     size: Dp,
     modifier: Modifier = Modifier,
     contentDescription: String? = null,
-    tag: String? = null
+    tag: String? = null,
+    abbreviation: String? = null
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -257,6 +260,19 @@ internal fun EmblemPlate(
                 contentScale = ContentScale.Fit,
                 modifier = Modifier.fillMaxSize()
             )
+        } else {
+            val mono = abbreviation?.trim()?.takeIf { it.isNotEmpty() && it != "—" && it != "-" }
+            if (mono != null) {
+                Text(
+                    mono,
+                    style = LocalAppTextStyles.current.headline.copy(fontSize = (size.value * if (mono.length > 4) 0.2f else 0.28f).sp),
+                    color = p.textPrimary,
+                    maxLines = 1,
+                    softWrap = false,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
         }
     }
 }

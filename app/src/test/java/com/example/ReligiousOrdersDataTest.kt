@@ -49,6 +49,7 @@ class ReligiousOrdersDataTest {
 
     @Test
     fun idsUnique() {
+        // Base data only; JSON overlays are covered by OrdersCatalogTest.
         assertEquals(37, ReligiousOrdersData.orders.map { it.id }.distinct().size)
         assertEquals(26, ReligiousOrdersData.offices.map { it.id }.distinct().size)
     }

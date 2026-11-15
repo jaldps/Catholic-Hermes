@@ -102,12 +102,24 @@ data class ReligiousOrder(
     val foundationYear: String,
     val founder: LocalizedText,
     val description: LocalizedText,
-    val charism: LocalizedText
+    val charism: LocalizedText,
+    /** order, congregation, society, secular_institute, prelature or monastic_federation. */
+    val kind: String? = null,
+    val motto: LocalizedText? = null,
+    val approval: LocalizedText? = null,
+    val notableSaints: List<LocalizedText> = emptyList(),
+    val presence: LocalizedText? = null,
+    val sources: List<String> = emptyList(),
+    /** men, women or mixed; only set for orders added from JSON. */
+    val gender: String? = null
 )
 
 /** A rank/office in the Church hierarchy guide. */
 data class ChurchOffice(
     val id: String,
     val name: LocalizedText,
-    val description: LocalizedText
+    val description: LocalizedText,
+    val sources: List<String> = emptyList(),
+    /** altar, clergy, consecrated, mission or governance; only set for offices added from JSON. */
+    val group: String? = null
 )
