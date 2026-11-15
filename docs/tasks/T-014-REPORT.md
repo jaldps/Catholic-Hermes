@@ -1,6 +1,6 @@
 # T-014 · Informe de Codex
 
-Entrega: **40/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
+Entrega: **50/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -292,10 +292,82 @@ La catequesis posterior al fallecimiento completa el artículo enciclopédico es
 
 La audiencia documenta expresamente la fecha inicial y el traslado al 22 de agosto. Explicación original, sin una escena inventada de coronación celestial. Se mantiene la dependencia de Cristo que subraya CIC 970, sin presentar a María como diosa.
 
+### 41. `rose_of_lima_virgin` · 23/08
+
+- [Catholic Encyclopedia: St. Rose of Lima](https://www.newadvent.org/cathen/13192c.htm)
+- [Benedicto XVI, audiencia del 20-VIII-2008](https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080820.html)
+
+Patronazgo de América Latina explícito en Benedicto XVI. La enciclopedia da 30-VIII para la muerte y la audiencia la sitúa en la fiesta de Bartolomé; se conserva únicamente 1617. Se omiten visiones y detalles de penitencia corporal, que no se proponen para imitación. No se copia la frase atribuida en la audiencia sin localizar su obra.
+
+### 42. `bartholomew_apostle` · 24/08
+
+- [Benedicto XVI, audiencia del 4-X-2006: Bartolomé](https://www.vatican.va/content/benedict-xvi/en/audiences/2006/documents/hf_ben-xvi_aud_20061004.html)
+- [Catholic Encyclopedia: St. Bartholomew](https://www.newadvent.org/cathen/02313c.htm)
+
+Identificación con Natanael presentada como tradición. No se afirma un viaje preciso a India o Armenia, ni un modo de ejecución documentado contemporáneamente. La escena de Jn 1 se parafrasea sin inventar palabras del apóstol.
+
+### 43. `louis_ix_of_france` · 25/08
+
+- [Catholic Encyclopedia: St. Louis IX](https://www.newadvent.org/cathen/09368a.htm)
+- [Benedicto XVI, Ángelus del 29-VIII-2010](https://www.vatican.va/content/benedict-xvi/en/angelus/2010/documents/hf_ben-xvi_ang_20100829.html)
+
+Se omite el nacimiento preciso: el artículo antiguo indica 1215, mientras que otras cronologías usan 1214. Las dos cruzadas no se silencian ni se hacen regla pastoral. No se reproducen discursos o consejos a sus hijos sin localizar su texto. No se da un patronazgo sin documento.
+
+### 44. `joseph_of_calasanz_priest` · 25/08
+
+- [Catholic Encyclopedia: St. Joseph Calasanctius](https://www.newadvent.org/cathen/08518d.htm)
+- [León XIV, Diseñar nuevos mapas de esperanza, 27-X-2025, 2.3](https://www.vatican.va/content/leo-xiv/en/apost_letters/documents/20251027-disegnare-nuove-mappe.html)
+
+Se evita la fecha de nacimiento (1556 en la enciclopedia, 1557 en biografías modernas) y la afirmación absoluta de primera escuela de Europa, que depende de la definición usada. Se conserva 1597 y Santa Dorotea. Sin oraciones compuestas ni patronazgos deducidos de su profesión.
+
+### 45. `monica_of_hippo` · 27/08
+
+- [Benedicto XVI, Ángelus del 27-VIII-2006](https://www.vatican.va/content/benedict-xvi/en/angelus/2006/documents/hf_ben-xvi_ang_20060827.html)
+- [Benedicto XVI, Ángelus del 30-VIII-2009](https://www.vatican.va/content/benedict-xvi/en/angelus/2009/documents/hf_ben-xvi_ang_20090830.html)
+- [Catholic Encyclopedia: St. Monica](https://www.newadvent.org/cathen/10482a.htm)
+
+Patronazgo de las madres cristianas explícito en el Ángelus de 2009. Se evita el nacimiento preciso y el nombre de la hija, que la enciclopedia da como Perpetua mientras la catequesis de Agustín indica que se desconoce. No se atribuye a Ambrosio la frase sobre el hijo de las lágrimas ni se prometen conversiones automáticas.
+
+### 46. `augustine_of_hippo_bishop` · 28/08
+
+- [Benedicto XVI, audiencia del 9-I-2008: san Agustín de Hipona](https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080109.html)
+- [Catholic Encyclopedia: Life of St. Augustine of Hippo](https://www.newadvent.org/cathen/02084a.htm)
+
+Se describen obras auténticas sin trasladar frases populares como cita. No se usa una fecha precisa del acceso a la sede, pues se distingue ordenación episcopal de sucesión al obispo Valerio. Los datos de la conversión no se reducen a un cambio instantáneo sin itinerario previo.
+
+### 47. `passion_of_saint_john_the_baptist` · 29/08
+
+- [Benedicto XVI, audiencia del 29-VIII-2012: martirio de Juan Bautista](https://www.vatican.va/content/benedict-xvi/en/audiences/2012/documents/hf_ben-xvi_aud_20120829.html)
+- [Catholic Encyclopedia: St. John the Baptist, relato evangélico y muerte](https://www.newadvent.org/cathen/08486b.htm)
+
+Relato de Mc 6,17–29 en paráfrasis propia. Se omiten el nombre extrabíblico de la hija, una fecha exacta de ejecución y pretensiones exclusivas sobre reliquias. La versión inglesa de la audiencia contiene un error al decir que nacimiento y muerte se celebran el mismo día; no se reproduce y se conservan las dos fechas distintas del calendario.
+
+### 48. `gregory_i_the_great_pope` · 03/09
+
+- [Benedicto XVI, audiencia del 28-V-2008: san Gregorio Magno](https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080528.html)
+- [Catholic Encyclopedia: Pope St. Gregory I (the Great)](https://www.newadvent.org/cathen/06780a.htm)
+
+No se confunde a Agustín de Canterbury con Agustín de Hipona. Se omite la afirmación de que Gregorio compuso personalmente el repertorio gregoriano: la propia enciclopedia señala dificultades históricas. No se convierten los relatos de los Diálogos en biografías modernas sin valoración de género.
+
+### 49. `teresa_of_calcutta_virgin` · 05/09
+
+- [Santa Sede, biografía de Madre Teresa de Calcuta, 2003](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20031019_madre-teresa_en.html)
+- [Sala de Prensa, canonización de Teresa de Calcuta, 4-IX-2016](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2016/09/04/160904a.html)
+- [Dicasterio para el Culto Divino, decreto de 24-XII-2024, publicado 11-II-2025](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/02/11/250211b.html)
+
+La biografía de 2003 se completa con la canonización de 2016 y la memoria facultativa: decreto de 24-XII-2024 publicado en 2025. No se confunden la canonización (4 de septiembre) y la memoria (5). No se convierten las experiencias interiores en diagnóstico clínico ni se atribuyen frases populares sin obra.
+
+### 50. `nativity_of_the_blessed_virgin_mary` · 08/09
+
+- [Catholic Encyclopedia: Feast of the Nativity of the Blessed Virgin Mary](https://www.newadvent.org/cathen/10712b.htm)
+- [Benedicto XVI, discurso al Congreso Mariológico-Mariano, 8-IX-2012](https://www.vatican.va/content/benedict-xvi/en/speeches/2012/september/documents/hf_ben-xvi_spe_20120908_23congr-mariologico.html)
+
+Se distinguen fecha litúrgica e histórica, tradición apócrifa y Evangelios canónicos. No se usa como historia comprobada la leyenda de una revelación sobre el origen de la fiesta. No se confunde la natividad con la concepción de María ni se inventan escenas de infancia.
+
 ## Validación
 
 ```text
-40 entries · 0 errors · 1 warnings
+50 entries · 0 errors · 1 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
