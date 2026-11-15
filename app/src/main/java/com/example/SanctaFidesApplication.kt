@@ -9,5 +9,6 @@ class SanctaFidesApplication : Application() {
         super.onCreate()
         NovenaCatalog.install(this)
         PrayerDetailsCatalog.install(this)
+        com.example.data.repository.QuestionDeeperCatalog.install(this)
     }
 }
