@@ -68,11 +68,29 @@ No se tocó ningún otro archivo salvo este REPORT. Los campos del JSON siguen e
 | 37 | `turibius_of_mogrovejo_bishop` | Martirologio 2004, 23 mar; CE «St. Turibius of Mogrovejo»; J. de Velasco, *Historia del Reino de Quito* | https://en.wikipedia.org/wiki/Turibius_of_Mogrovejo | **Corregido:** beatificado por Inocencio XI (1679) y canonizado por Benedicto XIII (1726), no por Inocencio XI en 1726. Patrono del episcopado latinoamericano (Juan Pablo II, 1983) |
 | 38 | `annunciation_of_the_lord` | Lc 1,26-38; Martirologio 2004, 25 mar; Calendarium Romanum 1969 | https://www.vatican.va/archive/bible/nova_vulgata/documents/bible_luke.html | — |
 
+## Correcciones aplicadas (revisión intermedia 1 del coordinador, fork `39e7390`)
+
+1. `anthony_of_egypt_abbot`: «padre del monacato cristiano» → «padre del monacato **eremítico** cristiano» (la vida cenobítica se atribuye a Pacomio). Se retira «el desierto de la Tebaida» y se indica, según la *Vita* de Atanasio, que vivió en **Pispir** y después en el **monte Colzim**, en el desierto oriental. Se cambia «dieron origen a la vida cenobítica» por «discípulos que vivían como ermitaños».
+2. `agnes_of_rome_virgin`: se elimina «junto al circo de Majencio»; el martirio se sitúa en el **estadio de Domiciano (hoy Piazza Navona)** y la **sepultura** en la **vía Nomentana**. La edad de doce o trece años se presenta como **tradición** (Ambrosio, *De virginibus* I,2).
+3. `raymond_of_penyafort_priest`: se sustituye «se le atribuye también la conversión de judíos y musulmanes» por un hecho verificable: «promovió la formación de predicadores para el diálogo con judíos y musulmanes (*studia linguarum*)».
+4. `sebastian_of_milan_martyr`: se elimina «La Iglesia lo honra como mártir del ejército»; se cita el origen milanés en **Ambrosio (*In Psalmum* 118)**.
+
 ## Correcciones hechas tras la verificación
 
 - `turibius_of_mogrovejo_bishop`: se corrigió el dato de canonización (Inocencio XI **beatificó** en 1679; **Benedicto XIII canonizó** en 1726).
 - `frances_of_rome_religious`: se sustituyó el patronazgo aproximado por el verificado (automovilistas, oblatos benedictinos, viudas).
 
+## Verificación de las fichas 11–38
+
+Se revisaron lugar, fecha y atribución contra las fuentes citadas. Comprobaciones concretas:
+- `gregory_of_narek_abbot`: confirmado doctor de la Iglesia en 2015 y las 95 oraciones del *Libro de los Lamentos* (vatican.va, mensaje de Francisco del 12-04-2015).
+- `blaise_of_sebaste_bishop`: confirmado el patronazgo de garganta y animales (Britannica).
+- `frances_of_rome_religious`: confirmadas las Oblatas del Tor de' Specchi y los patronazgos (Vatican News, 9-03).
+- `turibius_of_mogrovejo_bishop`: confirmadas beatificación/canonización y patronazgo del episcopado latinoamericano (Juan Pablo II, 1983).
+- `joseph_spouse_of_mary`: confirmada la carta apostólica *Patris corde* (2020) como fuente del párrafo sobre Francisco.
+
+Sin hallazgos nuevos que obliguen a corregir más datos.
+
 ## Entrega
 
-Push a `fork/ext/T-011` en lotes de ~10 fichas (10, 20, 30, 38). Último push: 38 entradas, validación 0 errores · 0 avisos.
+Push a `fork/ext/T-011` en lotes de ~10 fichas (10, 20, 30, 38), más un push con las correcciones de la revisión. Último push: 38 entradas, validación **0 errors · 0 warnings**.
