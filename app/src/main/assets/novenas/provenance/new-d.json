@@ -58,6 +58,121 @@
     ]
   },
   {
+    "id": "novena-a-nuestra-senora-de-suyapa",
+    "status": "pastoral_review",
+    "origin": {
+      "es": "Fuente: Conferencia Episcopal de Honduras, «Novena a la Virgen» (https://www.conferenciaepiscopaldehonduras.com/novena-a-la-virgen), consultada el 15-XI-2026. ES: transcripción fiel; EN/PT: traducción fiel. Derechos: Conferencia Episcopal de Honduras («©2026 Conferencia Episcopal de Honduras»). Se reproducen las oraciones iniciales, la reflexión y las peticiones de cada día y los textos del papa Francisco para el Jubileo 2025, conservados tal cual. Las Letanías Lauretanas y el «Bajo tu amparo» finales, que la página pone tras el día 9, se añaden al final de la oración del día 9.",
+      "en": "Source: Conference of Bishops of Honduras, “Novena a la Virgen” (https://www.conferenciaepiscopaldehonduras.com/novena-a-la-virgen), consulted 15 November 2026. ES: faithful transcription; EN/PT: faithful translation. Rights: Conference of Bishops of Honduras (“©2026 Conferencia Episcopal de Honduras”). Reproduced: the opening prayers, each day’s reflection and petitions, and the texts of Pope Francis for the 2025 Jubilee, kept as they are. The Litany of Loreto and the closing “Bajo tu amparo,” which the page places after day 9, are added at the end of day 9’s prayer.",
+      "pt": "Fonte: Conferência Episcopal de Honduras, «Novena a la Virgen» (https://www.conferenciaepiscopaldehonduras.com/novena-a-la-virgen), consultada em 15-XI-2026. ES: transcrição fiel; EN/PT: tradução fiel. Direitos: Conferência Episcopal de Honduras («©2026 Conferencia Episcopal de Honduras»). Reproduzem-se as orações iniciais, a reflexão e as petições de cada dia e os textos do papa Francisco para o Jubileu 2025, conservados tal qual. As Letanias Lauretanas e o «Bajo tu amparo» finais, que a página põe após o dia 9, acrescentam-se no fim da oração do dia 9."
+    },
+    "history": {
+      "es": "Nuestra Señora de Suyapa es una pequeña imagen de la Inmaculada Concepción venerada en la basílica de Suyapa, en Tegucigalpa (Honduras). Según la tradición popular, fue hallada en 1747 por Alejandro Colindres; el relato varía según las fuentes y pertenece a la tradición piadosa. La devoción creció desde entonces hasta convertirse en la principal del país. Su fiesta se celebra el 3 de febrero, aniversario tradicional del hallazgo. La novena sigue la costumbre cristiana de nueve días de oración antes de la fiesta.",
+      "en": "Our Lady of Suyapa is a small image of the Immaculate Conception venerated in the basilica of Suyapa, in Tegucigalpa (Honduras). According to popular tradition it was found in 1747 by Alejandro Colindres; the account varies among sources and belongs to pious tradition. The devotion has grown since then to become the foremost in the country. Her feast is celebrated on February 3, the traditional anniversary of the finding. The novena follows the Christian custom of nine days of prayer before the feast.",
+      "pt": "Nossa Senhora de Suyapa é uma pequena imagem da Imaculada Conceição venerada na basílica de Suyapa, em Tegucigalpa (Honduras). Segundo a tradição popular, foi encontrada em 1747 por Alejandro Colindres; o relato varia conforme as fontes e pertence à tradição piedosa. A devoção cresceu desde então até se tornar a principal do país. Sua festa é celebrada em 3 de fevereiro, aniversário tradicional do achado. A novena segue o costume cristão de nove dias de oração antes da festa."
+    },
+    "approval": {
+      "es": "Declarada patrona de Honduras por Pío XI en 1925; fiesta el 3 de febrero.",
+      "en": "Declared patroness of Honduras by Pius XI in 1925; feast on February 3.",
+      "pt": "Declarada padroeira de Honduras por Pio XI em 1925; festa em 3 de fevereiro."
+    },
+    "promise": {
+      "kind": "NONE",
+      "text": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "attribution": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "source": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "conditions": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      }
+    },
+    "commercialAdditions": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "pastoralNote": {
+      "es": "Los textos del papa Francisco se reproducen tal cual, como cita de la fuente, no como formación doctrinal propia de esta app. La intercesión de María depende enteramente de Cristo, único Mediador (CIC 970).",
+      "en": "Pope Francis’s texts are reproduced as they are, as a quotation from the source, not as this app’s own doctrinal formation. Mary’s intercession depends entirely on Christ, the one Mediator (CCC 970).",
+      "pt": "Os textos do papa Francisco reproduzem-se tal qual, como citação da fonte, não como formação doutrinal própria deste aplicativo. A intercessão de Maria depende inteiramente de Cristo, único Mediador (CIC 970)."
+    },
+    "sources": [
+      "Conferencia Episcopal de Honduras, Novena a la Virgen, consultada 15-XI-2026. Derechos: Conferencia Episcopal de Honduras. https://www.conferenciaepiscopaldehonduras.com/novena-a-la-virgen",
+      "Basílica de Nuestra Señora de Suyapa, Tegucigalpa (sitio oficial)",
+      "Francisco, mensaje para el Jubileo 2025 (textos citados en la fuente)",
+      "Catecismo de la Iglesia Católica, 970. https://www.vatican.va/archive/catechism_sp/p123a9p6_sp.html"
+    ]
+  },
+  {
+    "id": "novena-al-senor-de-los-milagros",
+    "status": "pastoral_review",
+    "origin": {
+      "es": "Fuente: EWTN, «Novena al Señor de los Milagros» (https://www.ewtn.com/es/oracion/novena-al-senor-de-los-milagros), consultada el 15-XI-2026. ES: transcripción fiel; EN/PT: traducción fiel. Derechos: EWTN Inc. («© 2026 EWTN Inc. Todos los derechos reservados.»). Se reproduce, en el orden de la fuente, la señal de la cruz, el acto de contrición, la oración preparatoria, la consideración de cada día, la oración a la Santísima Virgen y la rúbrica final con la súplica «Aplaca Señor tu ira...» y el Gloria. La fuente no trae meditación, tema, lectura ni intención: esos campos van vacíos.",
+      "en": "Source: EWTN, “Novena al Señor de los Milagros” (https://www.ewtn.com/es/oracion/novena-al-senor-de-los-milagros), consulted 15 November 2026. ES: faithful transcription; EN/PT: faithful translation. Rights: EWTN Inc. (“© 2026 EWTN Inc. Todos los derechos reservados.”). Reproduced in the source’s order: the sign of the cross, the act of contrition, the preparatory prayer, each day’s consideration, the prayer to the Most Holy Virgin and the closing rubric with the supplication “Aplaca Señor tu ira...” and the Glory Be. The source has no meditation, theme, reading or intention: those fields are empty.",
+      "pt": "Fonte: EWTN, «Novena al Señor de los Milagros» (https://www.ewtn.com/es/oracion/novena-al-senor-de-los-milagros), consultada em 15-XI-2026. ES: transcrição fiel; EN/PT: tradução fiel. Direitos: EWTN Inc. («© 2026 EWTN Inc. Todos los derechos reservados.»). Reproduz-se, na ordem da fonte, o sinal da cruz, o ato de contrição, a oração preparatória, a consideração de cada dia, a oração à Santíssima Virgem e a rubrica final com a súplica «Aplaca Señor tu ira...» e o Glória. A fonte não traz meditação, tema, leitura nem intenção: esses campos ficam vazios."
+    },
+    "history": {
+      "es": "El Señor de los Milagros es una imagen de Cristo crucificado pintada al fresco en un muro de la zona de Pachacamilla, en Lima, hacia 1651, por un esclavo de origen angoleño. Según la tradición, el muro resistió los grandes terremotos de 1655 y 1687, y desde entonces creció la devoción popular y se organizaron procesiones con una copia de la imagen, que recorren Lima cada octubre. Los relatos de milagros pertenecen a la tradición piadosa y no son objeto de fe obligatoria. La novena prepara estas celebraciones de octubre con oración y meditación sobre la cruz.",
+      "en": "The Lord of Miracles is an image of Christ crucified painted in fresco on a wall in the Pachacamilla district of Lima around 1651 by an enslaved man of Angolan origin. According to tradition, the wall withstood the great earthquakes of 1655 and 1687, after which popular devotion grew and processions were organized with a copy of the image, which passes through Lima every October. Accounts of miracles belong to pious tradition and are not an obligatory object of faith. The novena prepares for these October celebrations with prayer and meditation on the cross.",
+      "pt": "O Senhor dos Milagres é uma imagem de Cristo crucificado pintada a fresco num muro da região de Pachacamilla, em Lima, por volta de 1651, por um escravizado de origem angolana. Segundo a tradição, o muro resistiu aos grandes terremotos de 1655 e 1687, e a partir daí cresceu a devoção popular e organizaram-se procissões com uma cópia da imagem, que percorrem Lima todos os anos em outubro. Os relatos de milagres pertencem à tradição piedosa e não são objeto de fé obrigatório. A novena prepara essas celebrações de outubro com oração e meditação sobre a cruz."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": {
+      "kind": "NONE",
+      "text": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "attribution": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "source": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "conditions": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      }
+    },
+    "commercialAdditions": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "pastoralNote": {
+      "es": "Las consideraciones hablan de milagros como la tradición de la devoción; no son promesas garantizadas. La oración acompaña, no sustituye, la atención médica y la responsabilidad propia.",
+      "en": "The considerations speak of miracles as the tradition of the devotion; they are not guaranteed promises. Prayer accompanies, it does not replace, medical care and one’s own responsibility.",
+      "pt": "As considerações falam de milagres como a tradição da devoção; não são promessas garantidas. A oração acompanha, não substitui, os cuidados médicos e a responsabilidade própria."
+    },
+    "sources": [
+      "EWTN, Novena al Señor de los Milagros, consultada 15-XI-2026. Derechos: EWTN Inc. https://www.ewtn.com/es/oracion/novena-al-senor-de-los-milagros",
+      "Arzobispado de Lima y hermandades del Señor de los Milagros: historia de la devoción",
+      "Catecismo de la Iglesia Católica, 616-618 (la cruz de Cristo)"
+    ]
+  },
+  {
     "id": "novena-al-divino-nino-jesus-del-20-de-julio",
     "status": "pastoral_review",
     "origin": {
@@ -227,6 +342,120 @@
       "Biblioteca Católica, Novena a Santa Edwiges: a padroeira dos endividados, consultada 15-XI-2026. Derechos: Biblioteca Católica. https://bibliotecacatolica.com.br/blog/novenas/novena-a-santa-edwiges",
       "Martirologio Romano (2004), 16 de octubre",
       "Calendario Romano General: 16 de octubre, Santa Eduviges, religiosa (memoria libre)"
+    ]
+  },
+  {
+    "id": "novena-a-sao-benedito",
+    "status": "pastoral_review",
+    "origin": {
+      "es": "Fuente: iPray, «Novena San Benito de Palermo (26 de marzo - 3 de abril)» (https://rosary.ipray.eu/es_novena_san_benito_de_palermo.htm), consultada el 15-XI-2026. ES: transcripción fiel; EN/PT: traducción fiel. Sin aviso de derechos hallado en la página. Se reproducen el acto de contrición, la oración preparatoria, la lectura de cada día (relato hagiográfico del texto antiguo, no verificado como hecho histórico) y las oraciones finales con la antífona.",
+      "en": "Source: iPray, “Novena San Benito de Palermo (26 de marzo - 3 de abril)” (https://rosary.ipray.eu/es_novena_san_benito_de_palermo.htm), consulted 15 November 2026. ES: faithful transcription; EN/PT: faithful translation. No rights notice found on the page. Reproduced: the act of contrition, the preparatory prayer, each day’s reading (a hagiographical account from the ancient text, not verified as historical fact) and the concluding prayers with the antiphon.",
+      "pt": "Fonte: iPray, «Novena San Benito de Palermo (26 de março - 3 de abril)» (https://rosary.ipray.eu/es_novena_san_benito_de_palermo.htm), consultada em 15-XI-2026. ES: transcrição fiel; EN/PT: tradução fiel. Sem aviso de direitos encontrado na página. Reproduzem-se o ato de contrição, a oração preparatória, a leitura de cada dia (relato hagiográfico do texto antigo, não verificado como fato histórico) e as orações finais com a antífona."
+    },
+    "history": {
+      "es": "San Benito de Palermo (Benedetto Manasseri, «el Moro») nació en 1526 en San Fratello, Sicilia, hijo de padres africanos esclavizados; según su biografía, fue liberado siendo joven. Tras vivir entre ermitaños se unió a los franciscanos observantes en Palermo, donde fue cocinero y, por obediencia, superior del convento. Murió el 4 de abril de 1589. Fue beatificado en 1743 y canonizado en 1807. Es muy venerado en Brasil y en América por las comunidades afrodescendientes. Los relatos de milagros son tradición piadosa.",
+      "en": "Saint Benedict of Palermo (Benedetto Manasseri, “the Moor”) was born in 1526 in San Fratello, Sicily, the son of enslaved African parents; according to his biography, he was freed as a young man. After living among hermits he joined the Franciscan Observants in Palermo, where he was cook and, in obedience, superior of the convent. He died on 4 April 1589. He was beatified in 1743 and canonized in 1807. He is widely venerated in Brazil and the Americas by communities of African descent. Accounts of miracles are pious tradition.",
+      "pt": "São Benedito de Palermo (Benedetto Manasseri, “o Mouro”) nasceu em 1526 em San Fratello, na Sicília, filho de pais africanos escravizados; segundo sua biografia, foi libertado ainda jovem. Depois de viver entre eremitas, uniu-se aos franciscanos observantes em Palermo, onde foi cozinheiro e, por obediência, superior do convento. Morreu em 4 de abril de 1589. Foi beatificado em 1743 e canonizado em 1807. É muito venerado no Brasil e na América pelas comunidades afrodescendentes. Os relatos de milagres são tradição piedosa."
+    },
+    "approval": {
+      "es": "Canonizado por Pío VII el 24 de mayo de 1807; su memoria figura en el Martirologio Romano el 4 de abril.",
+      "en": "Canonized by Pius VII on 24 May 1807; his memorial appears in the Roman Martyrology on 4 April.",
+      "pt": "Canonizado por Pio VII em 24 de maio de 1807; sua memória consta do Martirológio Romano em 4 de abril."
+    },
+    "promise": {
+      "kind": "NONE",
+      "text": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "attribution": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "source": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "conditions": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      }
+    },
+    "commercialAdditions": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "pastoralNote": {
+      "es": "Las lecturas son relatos hagiográficos del texto antiguo: se conservan como afirmación de esa fuente, no como hechos verificados. Las prácticas ascéticas que describe (ayunos, mortificaciones) son propias de la vida del santo y no se proponen como práctica para quien reza; la penitencia cristiana nunca debe dañar la salud y se acompaña con el confesor.",
+      "en": "The readings are hagiographical accounts from the ancient text: they are kept as that source’s assertion, not as verified facts. The ascetical practices it describes (fasting, mortifications) belong to the saint’s life and are not proposed as a practice for the one who prays; Christian penance must never harm health and is accompanied with a confessor.",
+      "pt": "As leituras são relatos hagiográficos do texto antigo: conservam-se como afirmação dessa fonte, não como fatos verificados. As práticas ascéticas que descreve (jejuns, mortificações) são próprias da vida do santo e não se propõem como prática para quem reza; a penitência cristã nunca deve ferir a saúde e acompanha-se com o confessor."
+    },
+    "sources": [
+      "iPray, Novena San Benito de Palermo (26 de marzo - 3 de abril), consultada 15-XI-2026. https://rosary.ipray.eu/es_novena_san_benito_de_palermo.htm",
+      "Martirologio Romano (2004), 4 de abril",
+      "Orden de Frailes Menores: biografía de san Benito de Palermo"
+    ]
+  },
+  {
+    "id": "novena-a-san-jose-gregorio-hernandez",
+    "status": "pastoral_review",
+    "origin": {
+      "es": "Fuente: josegregorio.org, «Novena y oraciones» (https://www.josegregorio.org/el-hombre-de-dios/novena-y-oraciones), consultada el 15-XI-2026; página cargada con JavaScript, transcrita desde el navegador. ES: transcripción fiel; EN/PT: traducción fiel. Sin aviso de derechos sobre el contenido (solo avisos de librerías de Google). Se reproduce la oración para todos los días y la oración de cada día, conservando títulos como «Siervo de Dios», «Venerable» o «Beato». Omisión declarada: las otras oraciones de la página (Oración Oficial de la Causa, Oración Diaria y Oración para la pronta Beatificación), la Entronización del Sagrado Corazón y los poemas no forman parte de la novena y no se incluyen.",
+      "en": "Source: josegregorio.org, “Novena y oraciones” (https://www.josegregorio.org/el-hombre-de-dios/novena-y-oraciones), consulted 15 November 2026; JavaScript-rendered page, transcribed from the browser. ES: faithful transcription; EN/PT: faithful translation. No rights notice on the content (only Google library notices). Reproduced: the prayer for every day and each day’s prayer, keeping titles such as “Siervo de Dios,” “Venerable” or “Beato.” Declared omission: the page’s other prayers (Oración Oficial de la Causa, Oración Diaria and Oración para la pronta Beatificación), the Entronización del Sagrado Corazón and the poems are not part of the novena and are not included.",
+      "pt": "Fonte: josegregorio.org, «Novena y oraciones» (https://www.josegregorio.org/el-hombre-de-dios/novena-y-oraciones), consultada em 15-XI-2026; página carregada com JavaScript, transcrita desde o navegador. ES: transcrição fiel; EN/PT: tradução fiel. Sem aviso de direitos sobre o conteúdo (apenas avisos de bibliotecas do Google). Reproduzem-se a oração para todos os dias e a oração de cada dia, conservando títulos como «Siervo de Dios», «Venerable» ou «Beato». Omissão declarada: as outras orações da página (Oración Oficial de la Causa, Oración Diaria e Oración para la pronta Beatificación), a Entronización del Sagrado Corazón e os poemas não fazem parte da novena e não são incluídos."
+    },
+    "history": {
+      "es": "José Gregorio Hernández nació el 26 de octubre de 1864 en Isnotú (Trujillo, Venezuela). Médico y profesor en la Universidad Central de Venezuela, introdujo el microscopio y la bacteriología en el país y fue conocido como «el médico de los pobres». Terciario franciscano, intentó la vida religiosa sin lograrlo por motivos de salud. Murió en Caracas el 29 de junio de 1919, atropellado por un automóvil. Fue beatificado en 2021 y canonizado por León XIV el 19 de octubre de 2025, junto con santa Carmen Rendiles. Se le recuerda cada 26 de octubre.",
+      "en": "José Gregorio Hernández was born on 26 October 1864 in Isnotú (Trujillo, Venezuela). A physician and professor at the Central University of Venezuela, he introduced the microscope and bacteriology to the country and was known as “the doctor of the poor.” A Franciscan tertiary, he attempted religious life without success for health reasons. He died in Caracas on 29 June 1919, struck by a car. He was beatified in 2021 and canonized by Leo XIV on 19 October 2025, together with Saint Carmen Rendiles. He is remembered each 26 October.",
+      "pt": "José Gregório Hernández nasceu em 26 de outubro de 1864 em Isnotú (Trujillo, Venezuela). Médico e professor na Universidade Central da Venezuela, introduziu o microscópio e a bacteriologia no país e foi conhecido como “o médico dos pobres”. Terciário franciscano, tentou a vida religiosa sem consegui-lo por motivos de saúde. Morreu em Caracas em 29 de junho de 1919, atropelado por um automóvel. Foi beatificado em 2021 e canonizado por Leão XIV em 19 de outubro de 2025, junto com santa Carmen Rendiles. É recordado a cada 26 de outubro."
+    },
+    "approval": {
+      "es": "Beatificado el 30 de abril de 2021; canonizado por el papa León XIV el 19 de octubre de 2025.",
+      "en": "Beatified on 30 April 2021; canonized by Pope Leo XIV on 19 October 2025.",
+      "pt": "Beatificado em 30 de abril de 2021; canonizado pelo papa Leão XIV em 19 de outubro de 2025."
+    },
+    "promise": {
+      "kind": "NONE",
+      "text": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "attribution": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "source": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "conditions": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      }
+    },
+    "commercialAdditions": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "pastoralNote": {
+      "es": "La novena pide favores por intercesión del santo; no garantiza curaciones ni resultados. La oración acompaña, no sustituye, la atención médica.",
+      "en": "The novena asks favors through the saint’s intercession; it does not guarantee healings or results. Prayer accompanies, it does not replace, medical care.",
+      "pt": "A novena pede favores pela intercessão do santo; não garante curas nem resultados. A oração acompanha, não substitui, os cuidados médicos."
+    },
+    "sources": [
+      "josegregorio.org, Novena y oraciones, consultada 15-XI-2026. https://www.josegregorio.org/el-hombre-de-dios/novena-y-oraciones",
+      "Santa Sede: canonización de José Gregorio Hernández Cisneros y María del Carmen Rendiles Martínez, 19 de octubre de 2025",
+      "Conferencia Episcopal Venezolana: biografía de José Gregorio Hernández"
     ]
   }
 ]

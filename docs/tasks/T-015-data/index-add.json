@@ -51,6 +51,108 @@
     ]
   },
   {
+    "id": "novena-a-nuestra-senora-de-suyapa",
+    "title": {
+      "es": "Novena a Nuestra Señora de Suyapa",
+      "en": "Novena to Our Lady of Suyapa",
+      "pt": "Novena a Nossa Senhora de Suyapa"
+    },
+    "patron": {
+      "es": "Patrona de Honduras",
+      "en": "Patroness of Honduras",
+      "pt": "Padroeira de Honduras"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días con la Virgen de Suyapa, patrona de Honduras, con reflexiones, peticiones y textos del papa Francisco para el Jubileo.",
+      "en": "Nine days with Our Lady of Suyapa, patroness of Honduras, with reflections, petitions and texts of Pope Francis for the Jubilee.",
+      "pt": "Nove dias com Nossa Senhora de Suyapa, padroeira de Honduras, com reflexões, petições e textos do papa Francisco para o Jubileu."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "family",
+      "peace"
+    ],
+    "bodyFile": "270.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-al-senor-de-los-milagros",
+    "title": {
+      "es": "Novena al Señor de los Milagros",
+      "en": "Novena to the Lord of Miracles",
+      "pt": "Novena ao Senhor dos Milagres"
+    },
+    "patron": {
+      "es": "Cristo crucificado venerado en Lima (Perú)",
+      "en": "Crucified Christ venerated in Lima, Peru",
+      "pt": "Cristo crucificado venerado em Lima (Peru)"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días con el Señor de los Milagros, Cristo crucificado venerado en Lima, con consideraciones y oraciones.",
+      "en": "Nine days with the Lord of Miracles, the crucified Christ venerated in Lima, with considerations and prayers.",
+      "pt": "Nove dias com o Senhor dos Milagres, Cristo crucificado venerado em Lima, com considerações e orações."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "comfort",
+      "peace",
+      "blessings"
+    ],
+    "bodyFile": "271.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
     "id": "novena-al-divino-nino-jesus-del-20-de-julio",
     "title": {
       "es": "Novena al Divino Niño Jesús del 20 de Julio",
@@ -191,6 +293,108 @@
       "comfort"
     ],
     "bodyFile": "274.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-a-sao-benedito",
+    "title": {
+      "es": "Novena a San Benito de Palermo (São Benedito)",
+      "en": "Novena to Saint Benedict the Moor (São Benedito)",
+      "pt": "Novena a São Benedito"
+    },
+    "patron": {
+      "es": "Franciscano; patrono de los afrodescendientes y los cocineros",
+      "en": "Franciscan; patron of people of African descent and of cooks",
+      "pt": "Franciscano; padroeiro dos afrodescendentes e dos cozinheiros"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días con san Benito de Palermo, religioso franciscano, con su lectura diaria y las oraciones finales.",
+      "en": "Nine days with Saint Benedict the Moor, a Franciscan religious, with his daily reading and the concluding prayers.",
+      "pt": "Nove dias com são Benedito, religioso franciscano, com sua leitura diária e as orações finais."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "peace",
+      "health"
+    ],
+    "bodyFile": "275.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-a-san-jose-gregorio-hernandez",
+    "title": {
+      "es": "Novena a San José Gregorio Hernández",
+      "en": "Novena to Saint José Gregorio Hernández",
+      "pt": "Novena a São José Gregório Hernández"
+    },
+    "patron": {
+      "es": "Médico venezolano; patrono de los médicos y los enfermos",
+      "en": "Venezuelan physician; patron of doctors and the sick",
+      "pt": "Médico venezuelano; padroeiro dos médicos e dos doentes"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días con san José Gregorio Hernández, médico venezolano, con la oración para todos los días y la oración de cada día.",
+      "en": "Nine days with Saint José Gregorio Hernández, a Venezuelan physician, with the prayer for every day and each day's prayer.",
+      "pt": "Nove dias com são José Gregório Hernández, médico venezuelano, com a oração de todos os dias e a oração de cada dia."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "health",
+      "comfort",
+      "blessings"
+    ],
+    "bodyFile": "276.json",
     "dayNumbers": [
       1,
       2,
