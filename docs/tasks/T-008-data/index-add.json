@@ -1,0 +1,155 @@
+[
+  {
+    "id": "novena-a-la-virgen-del-pilar",
+    "title": {
+      "es": "Novena a la Virgen del Pilar",
+      "en": "Novena to Our Lady of the Pillar",
+      "pt": "Novena a Nossa Senhora do Pilar"
+    },
+    "patron": {
+      "es": "Advocación mariana de Zaragoza (España), venerada en el mundo hispano",
+      "en": "Marian title of Zaragoza (Spain), venerated in the Hispanic world",
+      "pt": "Invocação mariana de Saragoça (Espanha), venerada no mundo hispânico"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días de la edición histórica del Pilar publicada en Nápoles en 1855, con consideraciones sobre María y los coros angélicos, oraciones y obsequios del impreso. Traducción fiel; requiere revisión pastoral de las prácticas corporales antiguas.",
+      "en": "Nine days from the historical Pillar novena published in Naples in 1855, with considerations on Mary and the angelic choirs, prayers and the edition’s offerings. Faithful translation; the historical bodily practices require pastoral review.",
+      "pt": "Nove dias da edição histórica do Pilar publicada em Nápoles em 1855, com considerações sobre Maria e os coros angélicos, orações e obséquios do impresso. Tradução fiel; as práticas corporais antigas precisam de revisão pastoral."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "family",
+      "peace"
+    ],
+    "bodyFile": "262.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-a-san-ramon-nonato",
+    "title": {
+      "es": "Novena a San Ramón Nonato",
+      "en": "Novena to Saint Raymond Nonnatus",
+      "pt": "Novena a São Raimundo Nonato"
+    },
+    "patron": {
+      "es": "Mercedario; patrono de las gestantes y las parteras",
+      "en": "Mercedarian; patron of expectant mothers and midwives",
+      "pt": "Mercedário; padroeiro das gestantes e das parteiras"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días del novenario histórico mexicano de 1780: oraciones particulares, oración común, gozos, antífona y oración final. La meditación conserva la rúbrica original de reflexionar sobre las virtudes del santo. Edición histórica para revisión pastoral.",
+      "en": "Nine days from the historical Mexican novena of 1780: daily prayers, common prayer, praises, antiphon and concluding prayer. The meditation retains the original rubric to reflect on the saint’s virtues. Historical edition for pastoral review.",
+      "pt": "Nove dias do novenário histórico mexicano de 1780: orações particulares, oração comum, louvores, antífona e oração final. A meditação conserva a rubrica original de refletir sobre as virtudes do santo. Edição histórica para revisão pastoral."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "family",
+      "health",
+      "love"
+    ],
+    "bodyFile": "263.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-a-nuestra-senora-de-copacabana",
+    "title": {
+      "es": "Novena a Nuestra Señora de Copacabana",
+      "en": "Novena to Our Lady of Copacabana",
+      "pt": "Novena a Nossa Senhora de Copacabana"
+    },
+    "patron": {
+      "es": "Patrona de Bolivia",
+      "en": "Patroness of Bolivia",
+      "pt": "Padroeira da Bolívia"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Selección del novenario de Alonso Ramos Gavilán (Lima, 1621): rúbrica de contemplación y oración final íntegra de cada uno de los nueve días. No reproduce todo el libro III. Texto histórico para revisión pastoral.",
+      "en": "Selection from Alonso Ramos Gavilán’s novena (Lima, 1621): contemplation rubric and complete closing prayer for each of the nine days. It does not reproduce all of Book III. Historical text for pastoral review.",
+      "pt": "Seleção do novenário de Alonso Ramos Gavilán (Lima, 1621): rubrica de contemplação e oração final íntegra de cada um dos nove dias. Não reproduz todo o livro III. Texto histórico para revisão pastoral."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "family",
+      "comfort"
+    ],
+    "bodyFile": "264.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+]
