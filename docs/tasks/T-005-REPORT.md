@@ -1,10 +1,10 @@
 # T-005 · Informe de Codex
 
-**EN CURSO: entrega parcial ordenada, preguntas 1–30 de 51.** No se declara completo el encargo. El siguiente lote empieza en la pregunta 31. Solo se crean `app/src/main/assets/questions/deeper-a.json` y este informe.
+**EN CURSO: entrega parcial ordenada, preguntas 1–40 de 51.** No se declara completo el encargo. El siguiente lote empieza en la pregunta 41. Solo se crean `app/src/main/assets/questions/deeper-a.json` y este informe.
 
 ## Contenido entregado
 
-Treinta bloques completos con `explanation`, `scripture`, `tradition`, `magisterium`, `objection`, `analogy`, `synthesis`, en ES/EN/PT-BR; fuentes en 3–5 entradas por pregunta. Redacción y paráfrasis propias, sin citas extensas de traducciones modernas. No se tocaron la pregunta, respuesta, fundamento ni aclaración existentes.
+Cuarenta bloques completos con `explanation`, `scripture`, `tradition`, `magisterium`, `objection`, `analogy`, `synthesis`, en ES/EN/PT-BR; fuentes en 3–5 entradas por pregunta. Redacción y paráfrasis propias, sin citas extensas de traducciones modernas. No se tocaron la pregunta, respuesta, fundamento ni aclaración existentes.
 
 Se distinguen sufrimiento físico/moral, conocimiento/coacción, condenación/culpabilidad subjetiva, fe/emoción, razonamiento filosófico/testimonio histórico, gratuidad/necesidad de Dios, petición/garantía, providencia/aprobación del mal, unidad bíblica/lectura literalista y gracia/autosuficiencia moral. Las analogías declaran sus límites; las objeciones no se presentan como si fueran absurdas.
 
@@ -12,8 +12,8 @@ Se distinguen sufrimiento físico/moral, conocimiento/coacción, condenación/cu
 
 ```text
 $ python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-a.json 1 51 --partial
-WARN  partial delivery: 30/51 questions
-30 entries · 0 errors · 1 warnings
+WARN  partial delivery: 40/51 questions
+40 entries · 0 errors · 1 warnings
 ```
 
 La única advertencia es la entrega parcial. Totales de palabras por idioma según el mismo criterio del validador:
@@ -50,6 +50,16 @@ La única advertencia es la entrega parcial. Totales de palabras por idioma seg�
 | 28 | 427 | 418 | 411 |
 | 29 | 441 | 425 | 420 |
 | 30 | 430 | 408 | 408 |
+| 31 | 437 | 406 | 411 |
+| 32 | 420 | 403 | 406 |
+| 33 | 435 | 417 | 417 |
+| 34 | 434 | 430 | 423 |
+| 35 | 444 | 424 | 419 |
+| 36 | 432 | 418 | 402 |
+| 37 | 432 | 423 | 409 |
+| 38 | 435 | 423 | 406 |
+| 39 | 428 | 409 | 401 |
+| 40 | 443 | 420 | 420 |
 
 No se modificó el validador. Incidencia: su patrón `\bTODO\b`, aplicado sin distinguir mayúsculas, también rechaza la palabra española/portuguesa «todo» dentro de una frase terminada. Se reformularon tres apariciones para poder validar; convendría que el coordinador restringiera el patrón a un marcador real. Esto no bloquea la entrega y no se corrigió fuera del alcance autorizado.
 
@@ -102,7 +112,7 @@ Se descargaron las secciones del [índice oficial en inglés](https://www.vatica
 
 ## Dudas y límites
 
-- Las preguntas 31–51 **todavía no están entregadas**. Se leerán sus respuestas actuales y se verificarán las fuentes de cada grupo antes de continuar.
+- Las preguntas 41–51 **todavía no están entregadas**. Se leerán sus respuestas actuales y se verificarán las fuentes de cada grupo antes de continuar.
 - Ninguna teoría filosófica particular sobre presciencia/libertad se presenta como la única explicación dogmática.
 - No se pretende resolver definitivamente el sufrimiento inocente, el ocultamiento divino o cada mandato bélico antiguo. Reconocer el límite no equivale a atribuir contradicciones al Magisterio ni a llamar buenas las atrocidades.
 - No se proporcionan diagnósticos ni garantías de curación. Las indicaciones de protección y ayuda no están condicionadas a aceptar una explicación religiosa.
@@ -168,3 +178,30 @@ Observaciones adicionales sobre la respuesta breve existente:
 16. **Pregunta 26:** una lista de apariciones a numerosos testigos no equivale a poseer declaraciones independientes de cada uno. No se inventan testimonios de martirio ni se diagnostican retrospectivamente alucinaciones. La investigación histórica se distingue de repetición experimental y del reconocimiento de intervención divina.
 17. **Pregunta 29:** el remordimiento narrado y su desenlace están en Mt 27,3-5, no en Mt 26,14-25. No se concluye de ellos la sentencia eterna de Judas ni se trivializa la advertencia de Mt 26,24. La ampliación incluye ayuda espiritual/profesional ante desesperación sin diagnóstico.
 18. **Pregunta 30:** distinguir expectativas de las primeras comunidades no autoriza a atribuir sin estudio un error a Jesús ni a ofrecer una interpretación única de «esta generación» como ya demostrada. La ampliación reconoce la dificultad y el contexto, y mantiene la promesa real sin fecharla.
+
+## Ampliación 31–40: comprobaciones y fuentes añadidas
+
+Se explican intercesión, imágenes, advocaciones, maternidad divina, Inmaculada Concepción, virginidad perpetua, Asunción, conocimiento de los santos, reliquias y revelaciones privadas. Se distinguen afirmación doctrinal, argumento bíblico acumulativo, elaboración teológica y dato histórico; no se inventan genealogías, mecanismos celestiales ni estatus de apariciones.
+
+Fuentes leídas:
+
+- Catecismo: [954–959](https://www.vatican.va/archive/ENG0015/__P2B.HTM), [966–967 y 970–971](https://www.vatican.va/archive/ENG0015/__P2C.HTM); [490–495 y 499–501](https://www.vatican.va/archive/ENG0015/__P1K.HTM); [1674–1676](https://www.vatican.va/archive/ENG0015/__P58.HTM), [2111](https://www.vatican.va/archive/ENG0015/__P7E.HTM), [2131–2132](https://www.vatican.va/archive/ENG0015/__P7F.HTM), [66–67](https://www.vatican.va/archive/ENG0015/__PH.HTM).
+- [Jerónimo, Contra Vigilancio 5–6](https://www.newadvent.org/fathers/3010.htm): se separó el argumento de la invectiva. No se reproduce su polémica contra personas ni se adopta como omnipresencia natural de los santos su lenguaje sobre estar con el Cordero.
+- [Tomás de Aquino, Suma Teológica II-II, q. 81, a. 3, ad 3](https://www.newadvent.org/summa/3081.htm), imágenes como referencia al representado, con el alcance cristológico de ese pasaje; [I, q. 12, a. 8](https://www.newadvent.org/summa/1012.htm), ver a Dios no implica conocer cuanto Dios puede hacer. No se afirma que estos artículos expliquen físicamente cómo llegan peticiones a los santos.
+- [Ireneo, Contra las herejías III,22,4](https://www.newadvent.org/fathers/0103322.htm), Eva/María y obediencia: no se le atribuye la definición completa de 1854 ni una verificación de relatos posteriores de santuarios.
+- [Cirilo de Alejandría, Tercera carta a Nestorio, anatematismo 1](https://www.newadvent.org/fathers/3810.htm), maternidad según la carne e identidad divina de Emmanuel.
+- [Jerónimo, Contra Helvidio 16](https://www.newadvent.org/fathers/3007.htm), tipos de fraternidad y parentesco. Se cita el apartado realmente leído y se distinguen sus reconstrucciones familiares del contenido dogmático.
+- [Pío XII, Munificentissimus Deus 21, nota 17, y 44](https://www.vatican.va/content/pius-xii/en/apost_constitutions/documents/hf_p-xii_apc_19501101_munificentissimus-deus.html): definición de la Asunción y cita de Juan Damasceno, Segunda homilía sobre la Dormición 14. **La homilía se consultó aquí a través de la cita identificada de Pío XII; no se afirma haber cotejado su edición griega íntegra.** La app usa paráfrasis, no transcripción de traducción moderna.
+- [Juan de la Cruz, Subida del Monte Carmelo II,22,3–5](https://ccel.org/ccel/john_cross/ascent.v.xxii.html), leído el texto completo de esos apartados: centralidad de Cristo, sin atribuirle una prohibición de cualquier ayuda divina posterior.
+- [DDF, Normas del 17-05-2024, I,11–12 y 17](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240517_norme-fenomeni-soprannaturali_en.html): se verificó la diferencia entre juicio pastoral y certeza sobrenatural. La fecha es la del documento; no se recategorizan retrospectivamente Fátima/Lourdes/Guadalupe como si sus decisiones históricas fueran idénticas al nihil obstat del régimen nuevo.
+- [Código de Derecho Canónico, canon 1190 §1](https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1166-1190_en.html), prohibición de vender reliquias sagradas, no solamente falsificaciones.
+- Se cotejaron los pasajes bíblicos del lote en el texto de consulta, incluyendo 1 Ts 5,19-21, 2 R 13,20-21 y los contextos marianos. Se parafrasean sin trasladar notas polémicas de la edición antigua ni resolver variantes textuales de Gn 3,15 con una afirmación dogmática sobre un pronombre.
+
+Observaciones sobre las respuestas breves:
+
+19. **Pregunta 35:** distinguir expresamente Inmaculada Concepción y concepción virginal evita una confusión frecuente. La redención preventiva depende de Cristo; no supone pecado en la generación conyugal ni autosalvación de María. Ireneo no formula íntegramente el dogma de 1854.
+20. **Pregunta 36:** el ejemplo de monjes llamados hermanos ilustra fraternidad espiritual, pero las referencias evangélicas discuten parentesco. La ampliación no lo usa como solución del problema genealógico; no sustituye mecánicamente cada «hermano» por «primo» ni presenta todas las reconstrucciones como consenso académico.
+21. **Pregunta 37:** la familia del general que «no luchó» puede sugerir una María pasiva, cuando CIC 967 afirma su adhesión al designio divino. El dogma es glorificación recibida de Cristo, no honores políticos familiares; se emplea otra imagen y no se inventa una narración bíblica de la Asunción.
+22. **Pregunta 38:** la empresa que filtra correos propone un mecanismo organizativo sin fuente y podría reducir la intercesión a peticiones descartadas. La ampliación distingue conocimiento recibido/omnisciencia y declara expresamente desconocido el mecanismo.
+23. **Pregunta 39:** 2 R 13,20-21 no narra meramente una curación: el hombre muerto vuelve a la vida. Además, el límite sobre comercio no debe restringirse a falsas reliquias: el canon 1190 §1 prohíbe vender reliquias sagradas.
+24. **Pregunta 40:** conviene incorporar la norma de 2024 y el alcance preciso de nihil obstat. El bloque no aporta decretos históricos individuales de Fátima/Lourdes/Guadalupe y por tanto no certifica ni equipara sus fechas o estatus; queda como explicación del criterio doctrinal y de la necesidad de consultar cada pronunciamiento.
