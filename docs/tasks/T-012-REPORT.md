@@ -1,6 +1,6 @@
 # T-012 · Informe de Codex
 
-Entrega: **10/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
+Entrega: **20/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Fechas e identificadores se toman de `GeneralRomanSanctoral.kt`. Las biografías son redacción informativa propia, ES/EN/PT, basada en fuentes consultadas; no se presentan como palabras de los santos. `quote` queda `null`: no se añaden citas de memoria ni fórmulas devocionales. Un patronazgo vacío significa que no se incorpora aquí un patronazgo suficientemente comprobado, no que no exista ninguno. Las memorias marianas y otras celebraciones describen su sentido y origen; no se inventa una biografía humana de ángeles o de una fiesta.
 
@@ -82,10 +82,82 @@ Verificados doctorado y copatronazgo de 2025 y memoria de 9 de octubre mediante 
 
 Se usa el perfil actualizado, que da elección el 28-X-1958: una biografía antigua de la web contiene la errata «20 October». No se repite. No se presenta el 11 de octubre como aniversario de su muerte.
 
+### 11. `callistus_i_pope` · 14/10
+
+- [Catholic Encyclopedia, «Pope Callistus I»](https://www.newadvent.org/cathen/03183d.htm)
+- [Estado de la Ciudad del Vaticano, «October 14: Saint Callistus I, Pope and Martyr»](https://www.vaticanstate.va/en/component/content/article/october-14-saint-callistus-i-pope-and-martyr.html?Itemid=216&catid=51)
+
+Cronología inicial y muerte aproximadas: las fuentes difieren en 217/218 y 222/223. No se convierte en hecho el relato del pozo ni se repiten acusaciones de adversarios como biografía neutral. Culto martirial distinguido de las actas tardías.
+
+### 12. `teresa_of_jesus_of_avila_virgin` · 15/10
+
+- [Catholic Encyclopedia, «St. Teresa of Jesus»](https://www.newadvent.org/cathen/14515b.htm)
+- [Benedicto XVI, audiencia general de 2-II-2011](https://www.vatican.va/content/benedict-xvi/en/audiences/2011/documents/hf_ben-xvi_aud_20110202.html)
+
+Se evita confundirla con Teresa de Lisieux. Año de muerte, sin convertir el cambio de calendario de octubre de 1582 en dos muertes distintas. Títulos de obras identificados; ninguna frase atribuida sin lugar exacto.
+
+### 13. `hedwig_of_silesia_religious` · 16/10
+
+- [Catholic Encyclopedia, «St. Hedwig»](https://www.newadvent.org/cathen/07189a.htm)
+- [Vatican News, «St. Hedwig, Duchesse of Polonia, Religious»](https://www.vaticannews.va/en/saints/10/16/st-hedwig--duchesse-of-polonia--religious.html)
+
+Nacimiento aproximado; no se confunde con Eduviges/Jadwiga, reina de Polonia del siglo XIV. Vivir junto al monasterio no se transforma sin prueba en profesión monástica. No se añaden patronazgos financieros populares ni promesas de pagar deudas.
+
+### 14. `margaret_mary_alacoque_virgin` · 16/10
+
+- [Catholic Encyclopedia, «St. Margaret Mary Alacoque»](https://www.newadvent.org/cathen/09653a.htm)
+- [Compañía de Jesús, «Devotion to the Heart of Jesus, a long history and many Jesuits» (2020)](https://www.jesuits.global/2020/06/18/devotion-to-the-heart-of-jesus-a-long-history-and-many-jesuits/)
+- [Catecismo de la Iglesia Católica, 67](https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_1/iii_christ_jesus_mediator_and_fullness_of_all_revelation.index.html)
+
+No se descartan sus promesas ni se convierten en garantías: esta biografía no transcribe ni resume una promesa particular. Se distinguen desarrollo histórico, testimonio de revelación privada y doctrina. Sin prácticas penitenciales dañinas.
+
+### 15. `ignatius_of_antioch_bishop` · 17/10
+
+- [Benedicto XVI, audiencia general de 14-III-2007](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070314.html)
+- [Ignacio de Antioquía, Carta a los Romanos, 1–10](https://www.newadvent.org/fathers/0109.htm)
+
+La carta primaria se leyó como comprobación de su testimonio; no se cita su imagen del trigo sin una localización textual en quote. Cronología de muerte prudente, sin fijar 107 como certeza absoluta.
+
+### 16. `luke_evangelist` · 18/10
+
+- [Catholic Encyclopedia, «Gospel of Saint Luke»](https://www.newadvent.org/cathen/09420a.htm)
+- [Vatican News, «St. Luke, Evangelist, Physician, Patron of Artists»](https://www.vaticannews.va/en/saints/10/18/st--luke--evangelist--physician---patron-of--artists.html)
+
+Distinguidas atribución eclesial antigua, textos bíblicos (Col 4,14; Flm 24; 2 Tm 4,11) y tradición iconográfica. No se inventan lugar, fecha o forma de muerte ni se lo llama testigo ocular del ministerio de Jesús.
+
+### 17. `john_de_brebeuf_isaac_jogues_priests_and_companions_martyrs` · 19/10
+
+- [Catholic Encyclopedia, «St. Isaac Jogues»](https://www.newadvent.org/cathen/08420b.htm)
+- [Juan Pablo II, liturgia de la Palabra en el santuario de Huronia, 15-IX-1984](https://www.vatican.va/content/john-paul-ii/en/homilies/1984/documents/hf_jp-ii_hom_19840915_santuario-huronia.html)
+- [Martyrs’ Shrine, perfiles de los ocho mártires](https://martyrs-shrine.com/wp-content/uploads/2017/03/output_1489157282.htm)
+
+Se verifican grupo de ocho, dos colaboradores laicos y marco cronológico; el recurso del santuario pudo leerse mediante el buscador aunque la descarga directa devolvió 403. No se convierten las generalizaciones coloniales de fuentes antiguas en descripciones actuales de pueblos indígenas.
+
+### 18. `paul_of_the_cross_priest` · 19/10
+
+- [Catholic Encyclopedia, «St. Paul of the Cross»](https://www.newadvent.org/cathen/11590a.htm)
+- [Congregación de la Pasión de Jesucristo, «Saint Paul of the Cross»](https://www.passiochristi.org/st-paul-of-the-cross/?lang=en)
+
+Se distingue la muerte del 18 de octubre de la memoria del 19 según la clave recibida. Aprobaciones por etapas, sin dar una única fecha ambigua de fundación. No se reproducen prácticas ascéticas dañinas.
+
+### 19. `john_paul_ii_pope` · 22/10
+
+- [Santa Sede, perfil biográfico de Juan Pablo II (2019)](https://www.vatican.va/content/john-paul-ii/en/biografia/documents/hf_jp-ii_spe_20190722_biografia.html)
+- [Francisco, homilía de canonización de Juan XXIII y Juan Pablo II, 27-IV-2014](https://www.vatican.va/content/francesco/en/homilies/2014/documents/papa-francesco_20140427_omelia-canonizzazioni.html)
+
+Fechas y obras verificadas en el perfil oficial. La fecha de memoria es inicio solemne del ministerio, no la elección del 16-X-1978. No se inventan cifras de viajes o canonizaciones ni patronazgos.
+
+### 20. `john_of_capistrano_priest` · 23/10
+
+- [Catholic Encyclopedia, «St. John Capistran»](https://www.newadvent.org/cathen/08452a.htm)
+- [Estado de la Ciudad del Vaticano, «23 de octubre: San Juan de Capistrano»](https://www.vaticanstate.va/es/component/content/article/23-de-octubre-san-juan-de-capistrano.html?Itemid=356&catid=57)
+
+Las fuentes dan 1385/1386: se escribe «hacia 1386». Se describe la intervención de 1456 sin glorificar la violencia ni presentar polémicas medievales como norma actual. No se repiten cifras antiguas de multitudes o curaciones como hechos certificados.
+
 ## Validación
 
 ```text
-10 entries · 0 errors · 1 warnings
+20 entries · 0 errors · 1 warnings
 ```
 
 El aviso de las entregas parciales corresponde al prefijo de claves aún incompleto. Se ejecuta el validador oficial con `--partial` en cada entrega parcial y sin esa opción al completar el lote. También se verifica la meta editorial de 120–200 palabras por idioma y `git diff --check`. La compilación e integración corresponden al coordinador. No se publica APK ni se modifica `CatholicGPT`.
