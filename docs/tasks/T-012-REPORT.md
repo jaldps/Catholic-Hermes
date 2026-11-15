@@ -1,10 +1,10 @@
 # T-012 · Informe de Codex
 
-Entrega: **59/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
+Entrega: **59/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`3255ce8`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Fechas e identificadores se toman de `GeneralRomanSanctoral.kt`. Las biografías son redacción informativa propia, ES/EN/PT, basada en fuentes consultadas; no se presentan como palabras de los santos. `quote` queda `null`: no se añaden citas de memoria ni fórmulas devocionales. Un patronazgo vacío significa que no se incorpora aquí un patronazgo suficientemente comprobado, no que no exista ninguno. Las memorias marianas y otras celebraciones describen su sentido y origen; no se inventa una biografía humana de ángeles o de una fiesta.
 
-T-008 permanece en 5/15. La nueva investigación y sus límites se entregaron por separado en `ext/T-008` (`efebabf`); el usuario autorizó continuar con T-012 al agotarse las fuentes aptas. No se modifican otros lotes ni código.
+T-008 se entregó por separado en `ext/T-008`: **7/15** (`78ad543`), tras aplicar la revisión 3 y recuperar Aparecida y Luján. Las ocho restantes conservan sus límites documentales explícitos, conforme al orden del coordinador. El usuario autorizó continuar con T-012 al agotarse las fuentes aptas. No se modifican otros lotes ni código.
 
 ## Fuentes y límites por ficha
 
@@ -451,3 +451,8 @@ Completadas las 59 fichas y sus 177 biografías. Control adicional: cada biograf
 Se corrigió durante el cotejo el enlace primario de Ignacio: la Carta a los Romanos corresponde a `fathers/0107.htm`, no a la Carta a los Esmirniotas. Se revisaron asimismo los títulos reales de los artículos de la enciclopedia antes de usarlos. La falsa Donación de Constantino tiene una referencia específica adicional. Las diferencias de cronología y límites documentales de cada ficha quedan señalados arriba.
 
 Entregas parciales publicadas: `e522b15` (10), `cf73bb9` (20), `3a07fd8` (30), `4812bd4` (40), `6c55d7d` (50). La entrega final completa el lote sin cambiar claves ni fechas de la aplicación. Solo se modifican `saints-q4.json` y este informe.
+
+
+## Revisión intermedia del coordinador aplicada
+
+Leído `T-012-REVIEW.md` desde `origin/CatholicGPT` (`3255ce8`) e incorporada esa base por merge. Las primeras **50/59** fichas (`6c55d7d`) están aprobadas e integradas por el coordinador, que documenta sus pruebas de catálogo/pantalla y el muestreo de Teresa de Lisieux, Carlos Borromeo y Guadalupe. No se atribuyen esos tests o capturas a esta entrega local. Conforme a la revisión, se completan las nueve claves restantes en el mismo orden y se valida el lote completo **sin `--partial`**, con **0 errores y 0 avisos**. El contenido adicional y las correcciones documentales de esta rama quedan para revisión e integración del coordinador.
