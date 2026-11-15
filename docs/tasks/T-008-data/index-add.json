@@ -100,5 +100,56 @@
       8,
       9
     ]
+  },
+  {
+    "id": "novena-a-nuestra-senora-de-copacabana",
+    "title": {
+      "es": "Novena a Nuestra Señora de Copacabana",
+      "en": "Novena to Our Lady of Copacabana",
+      "pt": "Novena a Nossa Senhora de Copacabana"
+    },
+    "patron": {
+      "es": "Patrona de Bolivia",
+      "en": "Patroness of Bolivia",
+      "pt": "Padroeira da Bolívia"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Selección del novenario de Alonso Ramos Gavilán (Lima, 1621): rúbrica de contemplación y oración final íntegra de cada uno de los nueve días. No reproduce todo el libro III. Texto histórico para revisión pastoral.",
+      "en": "Selection from Alonso Ramos Gavilán’s novena (Lima, 1621): contemplation rubric and complete closing prayer for each of the nine days. It does not reproduce all of Book III. Historical text for pastoral review.",
+      "pt": "Seleção do novenário de Alonso Ramos Gavilán (Lima, 1621): rubrica de contemplação e oração final íntegra de cada um dos nove dias. Não reproduz todo o livro III. Texto histórico para revisão pastoral."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "family",
+      "comfort"
+    ],
+    "bodyFile": "264.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
   }
 ]

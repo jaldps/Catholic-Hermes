@@ -115,5 +115,64 @@
       "Facsímil, PDF pp. 12, 14–32: https://archive.org/download/b29296043/b29296043.pdf",
       "Ejemplar de contraste, Mariano Ontiveros, México, 1825, b29296456: https://archive.org/details/b29296456. Presenta una laguna entre la antífona y el tercer día; no se usa como base del segundo día ni de la colecta."
     ]
+  },
+  {
+    "id": "novena-a-nuestra-senora-de-copacabana",
+    "status": "pastoral_review",
+    "origin": {
+      "es": "Texto: Alonso Ramos Gavilán, Historia del célebre santuario de Nuestra Señora de Copacabana, Lima, Gerónimo de Contreras, 1621, libro III. Selección explícita: las nueve rúbricas de contemplación y las nueve oraciones finales completas; no incluye las largas consideraciones, los puntos para oración mental, la oración separada para casados ni la carta de esclavitud. ES: transcripción cotejada con imágenes originales sin recortar, con ortografía y puntuación normalizadas; EN/PT: traducciones propias y fieles. El día 4 conserva su referencia final a la escritura de consagración separada, que esta selección no reproduce. La expresión el favorable de gracia del día 6 retoma el rayo de luz mencionado antes y se hace explícita en EN/PT. Conserva lenguaje devocional del siglo XVII sobre esclavitud espiritual, lágrimas y penitencia, y explicaciones históricas del autor: no se presentan como etimologías verificadas ni como formulaciones dogmáticas actuales. Requiere contexto pastoral antes de usarse como guía para principiantes; no invita a aceptar abusos ni a ayunos o penitencias dañinos. No se ha compuesto ninguna oración ni añadido una promesa.",
+      "en": "Text: Alonso Ramos Gavilán, Historia del célebre santuario de Nuestra Señora de Copacabana, Lima, Gerónimo de Contreras, 1621, Book III. Explicit selection: the nine contemplation rubrics and nine complete closing prayers; it excludes the lengthy considerations, points for mental prayer, separate prayer for married people and deed of spiritual slavery. ES: transcription checked against uncropped original images, with normalized spelling and punctuation; EN/PT: faithful original translations. Day 4 retains its final reference to the separate deed of consecration, which this selection does not reproduce. The phrase el favorable de gracia in day 6 refers back to the ray of light mentioned earlier and is made explicit in EN/PT. It retains seventeenth-century devotional language about spiritual slavery, tears and penance, and the author’s historical explanations: these are not presented as verified etymologies or current dogmatic formulations. Pastoral context is required before use as a beginner’s guide; it does not invite accepting abuse or harmful fasting or penances. No prayer was composed and no promise added.",
+      "pt": "Texto: Alonso Ramos Gavilán, Historia del célebre santuario de Nuestra Señora de Copacabana, Lima, Gerónimo de Contreras, 1621, livro III. Seleção explícita: as nove rubricas de contemplação e nove orações finais completas; não inclui as longas considerações, os pontos para oração mental, a oração separada para casados nem a carta de escravidão. ES: transcrição conferida com imagens originais sem recorte, com ortografia e pontuação normalizadas; EN/PT: traduções próprias e fiéis. O dia 4 conserva sua referência final à escritura separada de consagração, que esta seleção não reproduz. A expressão el favorable de gracia do dia 6 retoma o raio de luz mencionado antes e fica explícita em EN/PT. Conserva linguagem devocional do século XVII sobre escravidão espiritual, lágrimas e penitência, e explicações históricas do autor: não se apresentam como etimologias verificadas nem como formulações dogmáticas atuais. Exige contexto pastoral antes de ser usada como guia para iniciantes; não convida a aceitar abusos nem a jejuns ou penitências prejudiciais. Não se compôs nenhuma oração nem se acrescentou promessa."
+    },
+    "history": {
+      "es": "La Virgen de Copacabana es una imagen de María venerada en el santuario de Copacabana, a orillas del lago Titicaca (Bolivia). La tradición y las fuentes históricas atribuyen su talla a Francisco Tito Yupanqui, de ascendencia inca, hacia 1583. El culto se extendió por los Andes y hoy es la patrona de Bolivia; su fiesta se celebra el 5 de agosto. Algunas fuentes difieren en detalles (por ejemplo, el año exacto de la talla), por lo que las fechas se dan como aproximadas.",
+      "en": "Our Lady of Copacabana is an image of Mary venerated at the shrine of Copacabana, on the shores of Lake Titicaca (Bolivia). Tradition and historical sources attribute its carving to Francisco Tito Yupanqui, of Inca descent, around 1583. The cult spread across the Andes and she is today the patroness of Bolivia; her feast is celebrated on August 5. Some sources differ on details (for example, the exact year of the carving), so dates are given as approximate.",
+      "pt": "Nossa Senhora de Copacabana é uma imagem de Maria venerada no santuário de Copacabana, às margens do lago Titicaca (Bolívia). A tradição e as fontes históricas atribuem sua escultura a Francisco Tito Yupanqui, de ascendência inca, por volta de 1583. O culto se estendeu pelos Andes e hoje ela é a padroeira da Bolívia; sua festa é celebrada em 5 de agosto. Algumas fontes divergem em detalhes (por exemplo, o ano exato da escultura), e por isso as datas são dadas como aproximadas."
+    },
+    "approval": {
+      "es": "Coronación de la imagen el 1 de agosto de 1925 por monseñor Augusto Sieffert, obispo de La Paz.",
+      "en": "Coronation of the image on August 1, 1925 by Msgr. Augusto Sieffert, bishop of La Paz.",
+      "pt": "Coroação da imagem em 1º de agosto de 1925 por dom Augusto Sieffert, bispo de La Paz."
+    },
+    "promise": {
+      "kind": "NONE",
+      "text": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "attribution": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "source": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "conditions": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      }
+    },
+    "commercialAdditions": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "pastoralNote": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "sources": [
+      "Santuario de Nuestra Señora de Copacabana (Bolivia): historia de la imagen",
+      "Arzobispado de La Paz: coronación de la Virgen de Copacabana (1925)",
+      "Alonso Ramos Gavilán, Historia del célebre santuario de Nuestra Señora de Copacabana, Lima: Gerónimo de Contreras, 1621, libro III, pp. 387–432. John Carter Brown Library: https://archive.org/details/historiadelceleb00ramo",
+      "Originales sin recortar: hojas 393, 397–399, 405–406, 409–410, 416, 419, 423–424, 426–427, 431, 433, 437–438. URL de ejemplo (cambiar el número de cuatro cifras): https://archive.org/download/historiadelceleb00ramo/historiadelceleb00ramo_orig_jp2.tar/historiadelceleb00ramo_orig_jp2/historiadelceleb00ramo_orig_0397.jp2",
+      "Contraste de lecturas: edición de la Academia Boliviana de Historia, La Paz, 1976, libro III, pp. 231–254. Solo se coteja el texto antiguo, no se reproducen estudios ni notas modernos. https://www.larramendi.es/es/catalogo_imagenes/grupo.do?path=1031841"
+    ]
   }
 ]
