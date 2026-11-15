@@ -33,6 +33,7 @@ import com.example.data.verse.DailyVerseRotation
 import com.example.data.models.ViaCrucisStation
 import com.example.data.liturgy.CalendarDate
 import com.example.data.liturgy.CalendarRules
+import com.example.data.liturgy.GeneralRomanSanctoral
 import com.example.data.xref.BibleLine
 import com.example.data.xref.CrossReference
 import com.example.data.xref.CrossReferenceIndex
@@ -70,7 +71,8 @@ class CatholicDataRepository(
     private val scope: CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.IO),
     private val dateProvider: () -> CalendarDate = LiturgicalCalendar::today,
     private val dateChanges: kotlinx.coroutines.flow.Flow<CalendarDate>? = null,
-    private val saintFetcher: DailySaintsFetcher = DailySaintsFetcher()
+    private val saintFetcher: DailySaintsFetcher = DailySaintsFetcher(),
+    private val saintsCatalog: SaintsCatalog = SaintsCatalog.default
 ) {
 
     /** Every Bible edition ships inside the app; there is nothing to download. */
@@ -422,8 +424,39 @@ class CatholicDataRepository(
      */
     private fun calendarFor(date: CalendarDate): Calendar = java.util.GregorianCalendar(date.year, date.month - 1, date.day)
 
+    /**
+     * Today's General Roman Calendar saint (non-Lord celebration actually
+     * kept on [date], so rank, transfers and the calendar rules apply) when
+     * the editorial catalog holds a profile for it; null otherwise.
+     */
+    internal fun profileSaintFor(date: CalendarDate): SaintOfTheDay? {
+        val profiles = saintsCatalog.byKey
+        if (profiles.isEmpty()) return null
+        val info = LiturgicalCalendar.dayInfo(date, _calendarRules.value)
+        val kept = GeneralRomanSanctoral.fixed.filter {
+            !it.isLordFeast && (it.title == info.title || (it.month == date.month && it.day == date.day && it.title in info.optionalCelebrations))
+        }.sortedBy { it.rank.ordinal }
+        val celebration = kept.firstOrNull { it.key in profiles } ?: return null
+        val profile = profiles.getValue(celebration.key)
+        val calendar = calendarFor(date)
+        return SaintOfTheDay(
+            id = "saint_profile_${celebration.key}_${"%04d-%02d-%02d".format(java.util.Locale.ROOT, date.year, date.month, date.day)}",
+            name = celebration.title,
+            feastDate = feastDateForToday(calendar),
+            title = celebration.rank.displayName,
+            patronages = LocalizedText(
+                profile.patronages.es.joinToString(", "), profile.patronages.en.joinToString(", "), profile.patronages.pt.joinToString(", ")
+            ),
+            biography = profile.bio,
+            iconicQuote = profile.quote?.text ?: LocalizedText("", "", ""),
+            intercessionPrayer = LocalizedText("", "", ""),
+            quoteSource = profile.quote?.source
+        )
+    }
+
     private fun refreshSaintOfTheDay(language: AppLanguage, date: CalendarDate) {
         saintFetchJob?.cancel()
+        profileSaintFor(date)?.let { _saintOfTheDay.value = it; return }
         val bundled = DevotionsAndHistoryData.getTodaySaint(calendarFor(date))
         _saintOfTheDay.value = bundled
         saintFetchJob = scope.launch {

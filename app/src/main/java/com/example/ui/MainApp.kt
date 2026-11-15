@@ -99,6 +99,7 @@ enum class AppDestination(
     STUDY_DOCTRINE("Doctrina", "Doctrine", "Doutrina", AppIconSlot.DOCTRINE, "nav_study_doctrine"),
     STUDY_MARY_JESUS("María y Jesús", "Mary & Jesus", "Maria e Jesus", AppIconSlot.DOCTRINE, "nav_study_mary_jesus"),
     STUDY_HISTORY("Historia", "History", "História", AppIconSlot.DOCTRINE, "nav_study_history"),
+    SAINTS("Santos", "Saints", "Santos", AppIconSlot.DOCTRINE, "nav_saints"),
     STUDY_ORDERS("Órdenes y oficios", "Orders & Offices", "Ordens e ofícios", AppIconSlot.DOCTRINE, "nav_study_orders"),
     SPIRITUAL_LIFE("Vida espiritual", "Spiritual Life", "Vida espiritual", AppIconSlot.JOURNAL, "nav_spiritual"),
     REMINDERS("Recordatorios", "Reminders", "Lembretes", AppIconSlot.HABITS, "nav_reminders"),
@@ -629,6 +630,8 @@ fun MainApp(
                         onOpenPrayer = onOpenPrayer
                     )
 
+                    AppDestination.SAINTS -> com.example.ui.screens.SaintsScreen(currentLanguage)
+
                     AppDestination.PARISHES -> ParishFinderScreen(
                         repository = repository,
                         currentLanguage = currentLanguage
@@ -842,6 +845,7 @@ private fun moreSections(
                 entry(AppDestination.STUDY_HISTORY),
                 entry(AppDestination.QUESTIONS),
                 entry(AppDestination.STUDY_ORDERS),
+                entry(AppDestination.SAINTS),
                 entry(AppDestination.CHURCHES_NEWS)
             )
         ),

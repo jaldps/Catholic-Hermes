@@ -41,7 +41,7 @@ class DailyContextReliabilityTest {
         val date=MutableStateFlow(CalendarDate(2026,3,20))
         val paths: MutableList<String> = Collections.synchronizedList(mutableListOf())
         val repo=CatholicDataRepository(ApplicationProvider.getApplicationContext<Application>(),
-            dateProvider={date.value},dateChanges=date,saintFetcher=DailySaintsFetcher(client(paths)))
+            dateProvider={date.value},dateChanges=date,saintFetcher=DailySaintsFetcher(client(paths)),saintsCatalog=com.example.data.repository.SaintsCatalog{throw java.io.FileNotFoundException(it)})
         try {
             repo.applyPersistedLanguage(AppLanguage.EN)
             withTimeout(10_000) { repo.dailyContent.first { it?.date==date.value && it.language==AppLanguage.EN } }
@@ -57,7 +57,7 @@ class DailyContextReliabilityTest {
     }
 
     @Test fun transfersChangeReadingsAndCacheWithoutChangingLanguage() {
-        val repo=CatholicDataRepository(saintFetcher=DailySaintsFetcher(client()))
+        val repo=CatholicDataRepository(saintFetcher=DailySaintsFetcher(client()),saintsCatalog=com.example.data.repository.SaintsCatalog{throw java.io.FileNotFoundException(it)})
         try {
             repo.applyPersistedLanguage(AppLanguage.EN)
             val date=CalendarDate(2026,5,17)
@@ -73,7 +73,7 @@ class DailyContextReliabilityTest {
     }
 
     @Test fun saintMappingUsesCapturedRequestDate() {
-        val repo=CatholicDataRepository(saintFetcher=DailySaintsFetcher(client()),dateProvider={CalendarDate(2026,3,21)})
+        val repo=CatholicDataRepository(saintFetcher=DailySaintsFetcher(client()),saintsCatalog=com.example.data.repository.SaintsCatalog{throw java.io.FileNotFoundException(it)},dateProvider={CalendarDate(2026,3,21)})
         try {
             val saint=repo.mapVaticanSaint(VaticanSaint("St. Audit", "A documented biography"),DevotionsAndHistoryData.saintOfTheDay,AppLanguage.EN,CalendarDate(2026,3,20))
             assertTrue(saint.id.contains("2026-03-20"))

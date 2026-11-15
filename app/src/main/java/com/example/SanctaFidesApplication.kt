@@ -10,5 +10,6 @@ class SanctaFidesApplication : Application() {
         NovenaCatalog.install(this)
         PrayerDetailsCatalog.install(this)
         com.example.data.repository.QuestionDeeperCatalog.install(this)
+        com.example.data.repository.SaintsCatalog.install(this)
     }
 }

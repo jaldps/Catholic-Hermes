@@ -1,0 +1,254 @@
+package com.example.ui.screens
+
+import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.unit.dp
+import com.example.data.liturgy.GeneralCelebration
+import com.example.data.liturgy.GeneralRomanSanctoral
+import com.example.data.models.AppLanguage
+import com.example.data.models.SaintProfile
+import com.example.data.repository.SaintsCatalog
+import com.example.ui.design.AppCard
+import com.example.ui.design.AppChip
+import com.example.ui.design.AppDivider
+import com.example.ui.design.AppEmptyState
+import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppListRow
+import com.example.ui.design.AppMenuChip
+import com.example.ui.design.AppMenuItem
+import com.example.ui.design.AppScreenTitle
+import com.example.ui.design.AppSearchField
+import com.example.ui.design.AppSecondaryButton
+import com.example.ui.design.AppSectionHeader
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
+import java.text.Normalizer
+
+private val monthsEs = listOf("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre")
+private val monthsEn = listOf("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+private val monthsPt = listOf("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
+
+internal fun saintMonthName(month: Int, language: AppLanguage): String {
+    val name = when (language) { AppLanguage.ES -> monthsEs; AppLanguage.EN -> monthsEn; AppLanguage.PT -> monthsPt }[month - 1]
+    return name.replaceFirstChar { it.uppercase() }
+}
+
+internal fun saintDateLabel(month: Int, day: Int, language: AppLanguage): String = when (language) {
+    AppLanguage.ES -> "$day de ${monthsEs[month - 1]}"
+    AppLanguage.EN -> "${monthsEn[month - 1]} $day"
+    AppLanguage.PT -> "$day de ${monthsPt[month - 1]}"
+}
+
+private fun fold(s: String): String =
+    Normalizer.normalize(s, Normalizer.Form.NFD).replace(Regex("\\p{M}+"), "").lowercase()
+
+/** Non-Lord celebrations of the General Roman Calendar, in calendar order. */
+internal fun saintCelebrations(): List<GeneralCelebration> =
+    GeneralRomanSanctoral.fixed.filter { !it.isLordFeast }.sortedWith(compareBy({ it.month }, { it.day }, { it.rank.ordinal }))
+
+/**
+ * Saints of the General Roman Calendar. Every celebration is listed; those
+ * with an editorial profile open a detail page, the others show title and date.
+ */
+@Composable
+fun SaintsScreen(currentLanguage: AppLanguage, modifier: Modifier = Modifier) {
+    val catalog = remember { SaintsCatalog.default }
+    val profiles = catalog.byKey
+    var selectedKey by rememberSaveable { mutableStateOf<String?>(null) }
+    val selected = selectedKey?.let { k -> saintCelebrations().firstOrNull { it.key == k } }
+
+    if (selected != null) {
+        BackHandler { selectedKey = null }
+        SaintDetail(selected, profiles[selected.key], currentLanguage, { selectedKey = null }, modifier)
+    } else {
+        SaintsList(profiles, currentLanguage, { selectedKey = it }, modifier)
+    }
+}
+
+@Composable
+private fun SaintsList(
+    profiles: Map<String, SaintProfile>,
+    language: AppLanguage,
+    onOpen: (String) -> Unit,
+    modifier: Modifier
+) {
+    val design = LocalAppDesign.current
+    val gutter = design.spacing.gutter
+    var query by rememberSaveable { mutableStateOf("") }
+    var month by rememberSaveable { mutableIntStateOf(0) }
+    var profilesOnly by rememberSaveable { mutableStateOf(false) }
+    val all = remember { saintCelebrations() }
+
+    val folded = fold(query.trim())
+    val visible = remember(folded, month, profilesOnly, language, profiles) {
+        all.filter { c ->
+            (month == 0 || c.month == month) &&
+                (!profilesOnly || c.key in profiles) &&
+                (folded.isEmpty() || fold(c.title.get(language)).contains(folded) ||
+                    profiles[c.key]?.let { fold(it.bio.get(language)).contains(folded) } == true)
+        }
+    }
+    fun tr(es: String, en: String, pt: String) = when (language) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
+    val monthLabel = if (month == 0) tr("Todos los meses", "All months", "Todos os meses") else saintMonthName(month, language)
+
+    LazyColumn(
+        modifier = modifier.fillMaxSize().testTag("saints_screen"),
+        contentPadding = PaddingValues(bottom = 96.dp)
+    ) {
+        item(key = "title") {
+            AppScreenTitle(
+                title = tr("Santos", "Saints", "Santos"),
+                subtitle = tr("Calendario Romano General", "General Roman Calendar", "Calendário Romano Geral")
+            )
+        }
+        item(key = "filters") {
+            Column(Modifier.padding(horizontal = gutter), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                AppSearchField(
+                    value = query,
+                    onValueChange = { query = it },
+                    placeholder = tr("Buscar un santo", "Search for a saint", "Buscar um santo"),
+                    modifier = Modifier.fillMaxWidth().testTag("saints_search")
+                )
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    AppMenuChip(
+                        label = monthLabel,
+                        tag = "saints_month_picker",
+                        items = listOf(AppMenuItem(tr("Todos los meses", "All months", "Todos os meses"), selected = month == 0, tag = "saints_month_0") { month = 0 }) +
+                            (1..12).map { m -> AppMenuItem(saintMonthName(m, language), selected = month == m, tag = "saints_month_$m") { month = m } }
+                    )
+                }
+                if (profiles.isNotEmpty()) {
+                    Row {
+                        AppChip(
+                            label = tr("Solo con ficha", "With profile only", "Só com ficha"),
+                            selected = profilesOnly,
+                            onClick = { profilesOnly = !profilesOnly },
+                            modifier = Modifier.testTag("saints_profiles_only")
+                        )
+                    }
+                }
+            }
+        }
+        if (visible.isEmpty()) {
+            item(key = "empty") {
+                AppEmptyState(
+                    title = tr("Sin resultados", "No results", "Sem resultados"),
+                    body = tr("Prueba con otro nombre o mes.", "Try another name or month.", "Tente outro nome ou mês."),
+                    modifier = Modifier.padding(horizontal = gutter, vertical = 32.dp)
+                )
+            }
+        } else {
+            val byMonth = visible.groupBy { it.month }
+            byMonth.forEach { (m, entries) ->
+                item(key = "month_$m") {
+                    AppSectionHeader(title = saintMonthName(m, language), modifier = Modifier.testTag("saints_month_header_$m"))
+                }
+                item(key = "group_$m") {
+                    AppListGroup(Modifier.padding(horizontal = gutter)) {
+                        entries.forEachIndexed { i, c ->
+                            val has = c.key in profiles
+                            AppListRow(
+                                title = c.title.get(language),
+                                subtitle = saintDateLabel(c.month, c.day, language) + " · " + c.rank.displayName.get(language),
+                                showsNavigationAffordance = has,
+                                onClick = if (has) ({ onOpen(c.key) }) else null,
+                                modifier = Modifier.testTag("saint_row_${c.key}")
+                            )
+                            if (i < entries.lastIndex) AppDivider()
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun SaintDetail(
+    celebration: GeneralCelebration,
+    profile: SaintProfile?,
+    language: AppLanguage,
+    onBack: () -> Unit,
+    modifier: Modifier
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val palette = design.palette
+    fun tr(es: String, en: String, pt: String) = when (language) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
+    val bio = profile?.bio?.get(language).orEmpty()
+    val patronages = profile?.patronages?.get(language).orEmpty()
+    val quote = profile?.quote
+    val quoteText = quote?.text?.get(language).orEmpty()
+
+    LazyColumn(
+        modifier = modifier.fillMaxSize().testTag("saint_detail"),
+        contentPadding = PaddingValues(bottom = 96.dp)
+    ) {
+        item {
+            Column(Modifier.padding(horizontal = design.spacing.gutter).widthIn(max = design.spacing.readingMaxWidth)) {
+                Spacer(Modifier.height(8.dp))
+                Row { AppSecondaryButton(tr("Todos los santos", "All saints", "Todos os santos"), onBack, modifier = Modifier.testTag("saint_detail_back")) }
+                Spacer(Modifier.height(16.dp))
+                Text(
+                    celebration.title.get(language), style = styles.title1, color = palette.textPrimary,
+                    modifier = Modifier.semantics { heading() }
+                )
+                Spacer(Modifier.height(6.dp))
+                Text(
+                    saintDateLabel(celebration.month, celebration.day, language) + " · " + celebration.rank.displayName.get(language),
+                    style = styles.subhead, color = palette.textSecondary
+                )
+                if (bio.isNotBlank()) {
+                    Spacer(Modifier.height(20.dp))
+                    Text(bio, style = styles.body, color = palette.textPrimary)
+                }
+                if (patronages.isNotEmpty()) {
+                    Spacer(Modifier.height(20.dp))
+                    Text(tr("Patronazgos", "Patronage", "Padroados"), style = styles.headline, color = palette.textPrimary, modifier = Modifier.semantics { heading() })
+                    Spacer(Modifier.height(6.dp))
+                    Text(patronages.joinToString(" · "), style = styles.callout, color = palette.textSecondary, modifier = Modifier.testTag("saint_patronages"))
+                }
+                if (quote != null && quoteText.isNotBlank()) {
+                    Spacer(Modifier.height(20.dp))
+                    AppCard(Modifier.fillMaxWidth().testTag("saint_quote")) {
+                        Text(quoteText, style = styles.quote, color = palette.textPrimary)
+                        Spacer(Modifier.height(8.dp))
+                        Text(quote.source, style = styles.footnote, color = palette.textSecondary)
+                    }
+                }
+                val sources = profile?.sources.orEmpty()
+                if (sources.isNotEmpty()) {
+                    Spacer(Modifier.height(20.dp))
+                    Text(tr("Fuentes", "Sources", "Fontes"), style = styles.headline, color = palette.textPrimary, modifier = Modifier.semantics { heading() })
+                    Spacer(Modifier.height(6.dp))
+                    Column(Modifier.testTag("saint_sources"), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        sources.forEach { Text(it, style = styles.footnote, color = palette.textSecondary) }
+                    }
+                }
+            }
+        }
+    }
+}
