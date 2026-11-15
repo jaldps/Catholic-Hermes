@@ -17,6 +17,8 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 6. **Entregar.** Haz commit con `T-00N: <resumen>` y `git push -u origin ext/T-00N`. Si no tienes permiso de push en `jaldps/Catholic-Hermes`, haz push de la misma rama a tu fork: el coordinador lo lee desde ahí. Puedes subir entregas parciales: cada push es un punto de revisión.
 7. **Correcciones.** El coordinador responde en `docs/tasks/T-00N-REVIEW.md`, dentro de tu rama o en `CatholicGPT`. Si pide cambios, corrígelos en la misma rama y vuelve a hacer push.
 
+8. **Siguiente encargo.** Al terminar un encargo, o tras aplicar una revisión, haz `git fetch origin` y vuelve a leer este README en `origin/CatholicGPT`. Sigue sin esperar con el siguiente encargo `ABIERTO` asignado a ti, o con un `T-0NN-REVIEW.md` que pida cambios. Si no hay nada, avisa a Jose y para.
+
 ## Reglas fijas
 
 - No hagas push a `CatholicGPT` ni a `main`. No hagas force-push sobre ramas ajenas.
