@@ -151,5 +151,107 @@
       8,
       9
     ]
+  },
+  {
+    "id": "novena-a-nuestra-senora-de-la-altagracia",
+    "title": {
+      "es": "Novena a Nuestra Señora de la Altagracia",
+      "en": "Novena to Our Lady of Altagracia",
+      "pt": "Novena a Nossa Senhora da Altagracia"
+    },
+    "patron": {
+      "es": "Patrona de la República Dominicana",
+      "en": "Patroness of the Dominican Republic",
+      "pt": "Padroeira da República Dominicana"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Selección de los nueve días de la guía pastoral dominicana de enero de 2021: oraciones iniciales completas, preguntas bíblicas, contemplación del cuadro de La Altagracia y rúbrica final. ES original; EN/PT traducciones fieles. Conserva su contexto de solidaridad durante la pandemia.",
+      "en": "A selection from all nine days of the Dominican pastoral guide of January 2021: complete opening prayers, biblical questions, contemplation of the painting of Our Lady of Altagracia and concluding rubric. Original ES; faithful EN/PT translations. Retains its context of solidarity during the pandemic.",
+      "pt": "Seleção dos nove dias do guia pastoral dominicana de janeiro de 2021: orações iniciais completas, perguntas bíblicas, contemplação do quadro de Altagracia e rubrica final. Original ES; traduções fiéis EN/PT. Conserva seu contexto de solidariedade durante a pandemia."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "family",
+      "comfort"
+    ],
+    "bodyFile": "265.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  {
+    "id": "novena-a-nuestra-senora-de-chiquinquira",
+    "title": {
+      "es": "Novena a Nuestra Señora de Chiquinquirá",
+      "en": "Novena to Our Lady of Chiquinquirá",
+      "pt": "Novena a Nossa Senhora de Chiquinquirá"
+    },
+    "patron": {
+      "es": "Advocación mariana venerada en Colombia",
+      "en": "Marian title venerated in Colombia",
+      "pt": "Invocação mariana venerada na Colômbia"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Novena del folleto dominicano impreso en Bogotá en 2012: nueve consideraciones con textos atribuidos a Juan Pablo II, oraciones comunes, doce gozos y oración final. Original español cotejado; traducciones fieles EN/PT. Las expresiones poéticas de los gozos se acompañan de contexto pastoral.",
+      "en": "Novena from the Dominican booklet printed in Bogotá in 2012: nine considerations with texts attributed to John Paul II, common prayers, twelve praises and final prayer. Checked Spanish original; faithful EN/PT translations. The praises’ poetic expressions are accompanied by pastoral context.",
+      "pt": "Novena do folheto dominicano impresso em Bogotá em 2012: nove considerações com textos atribuídos a João Paulo II, orações comuns, doze louvores e oração final. Original espanhol conferido; traduções fiéis EN/PT. As expressões poéticas dos louvores recebem contexto pastoral."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "blessings",
+      "family",
+      "comfort"
+    ],
+    "bodyFile": "266.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
   }
 ]
