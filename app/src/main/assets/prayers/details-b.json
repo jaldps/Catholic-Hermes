@@ -1,0 +1,1098 @@
+[
+  {
+    "prayerId": "laudes",
+    "history": {
+      "es": "Esta ficha contiene una selección devocional inspirada en Laudes, no el oficio litúrgico completo. Reúne la invocación inicial, una estrofa sobre el amanecer, material del salmo invitatorio, fragmentos del Benedictus y el padrenuestro. Laudes es la oración matutina de la Iglesia: santifica el comienzo del día y recuerda la resurrección del Señor. Aquí faltan la salmodia y los textos propios del calendario. Además, el número del salmo necesita distinguir la numeración hebrea de la grecolatina. No se ha localizado una edición que documente el himno y la oración conclusiva de esta selección.",
+      "en": "This entry contains a devotional selection inspired by Lauds, rather than the complete liturgical office. It combines the opening invocation, a verse about daybreak, material from the invitatory psalm, portions of the Benedictus, and the Lord’s Prayer. Lauds is the Church’s morning prayer: it sanctifies the beginning of the day and recalls the Lord’s resurrection. This selection lacks the appointed psalmody and calendar texts. The psalm number also requires a distinction between Hebrew and Greek-Latin numbering. No edition documenting this selection’s hymn and concluding prayer has been identified.",
+      "pt": "Esta ficha contém uma seleção devocional inspirada nas Laudes, não o ofício litúrgico completo. Reúne a invocação inicial, uma estrofe sobre o amanhecer, elementos do salmo invitatório, trechos do Benedictus e o pai-nosso. As Laudes são a oração da manhã da Igreja: santificam o começo do dia e recordam a ressurreição do Senhor. Aqui faltam a salmodia e os textos próprios do calendário. A numeração do salmo também exige distinguir a tradição hebraica da greco-latina. Não foi localizada uma edição que documente o hino e a oração conclusiva desta seleção."
+    },
+    "instructions": {
+      "es": "Úsala para la oración personal al comenzar el día, sentado o de pie según tus posibilidades. En grupo, una persona puede decir V/ y las demás R/; la división restante de la app no es una rúbrica litúrgica. Para celebrar Laudes propiamente, sigue un libro o recurso autorizado con los textos del día.",
+      "en": "Use it for personal prayer at the beginning of the day, sitting or standing as circumstances allow. In a group, one person may say V/ and the others R/; the app’s remaining division is not a liturgical rubric. To celebrate Lauds itself, follow an authorized book or resource containing the appointed daily texts.",
+      "pt": "Use-a na oração pessoal ao começar o dia, sentado ou em pé, conforme suas possibilidades. Em grupo, uma pessoa pode dizer V/ e as demais R/; a divisão restante do aplicativo não constitui rubrica litúrgica. Para celebrar propriamente as Laudes, siga um livro ou recurso autorizado com os textos do dia."
+    },
+    "source": {
+      "es": "Ordenación General de la Liturgia de las Horas, 37–50; Sal 94(95),1–7; Lc 1,68–79. Estos lugares explican los elementos, no documentan una edición de la selección completa.",
+      "en": "General Instruction of the Liturgy of the Hours, 37–50; Ps 95(94):1–7; Luke 1:68–79. These references explain the elements, rather than document an edition of this complete selection.",
+      "pt": "Instrução Geral sobre a Liturgia das Horas, 37–50; Sl 94(95),1–7; Lc 1,68–79. Essas referências explicam os elementos, mas não documentam uma edição da seleção completa."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Selección ya existente; procedencia y derechos de sus adaptaciones pendientes de cotejo. No es una transcripción del oficio aprobado.",
+      "en": "Existing selection; the provenance and rights of its adaptations require checking. It is not a transcription of the approved office.",
+      "pt": "Seleção já existente; a procedência e os direitos de suas adaptações precisam ser conferidos. Não é transcrição do ofício aprovado."
+    }
+  },
+  {
+    "prayerId": "ave_regina_caelorum",
+    "history": {
+      "es": "Ave Regina caelorum pertenece a las grandes antífonas marianas de la tradición latina. Su autor y la fecha exacta de composición no están establecidos; está documentada en manuscritos medievales, entre ellos un testimonio del siglo XII. La imagen de María como raíz y puerta remite a la venida de Cristo al mundo, no a una salvación independiente de él. La tradición del Breviario la vinculó al período anterior a Pascua. Es una oración de alabanza e intercesión: comienza saludando a María y termina pidiendo que ruegue ante Cristo por nosotros.",
+      "en": "Ave Regina caelorum belongs to the great Marian antiphons of the Latin tradition. Neither its author nor its exact date of composition is established; medieval manuscripts document it, including a witness from the twelfth century. Calling Mary a root and gate points to Christ’s coming into the world, rather than to salvation apart from him. The traditional Breviary associated it with the period before Easter. It is a prayer of praise and intercession: it begins by greeting Mary and ends by asking her to pray to Christ for us.",
+      "pt": "Ave Regina caelorum pertence às grandes antífonas marianas da tradição latina. Seu autor e a data exata de composição não estão estabelecidos; há testemunhos em manuscritos medievais, entre eles um do século XII. As imagens de Maria como raiz e porta apontam para a vinda de Cristo ao mundo, não para uma salvação independente dele. A tradição do Breviário associou a antífona ao período anterior à Páscoa. É uma oração de louvor e intercessão: começa saudando Maria e termina pedindo que ela rogue a Cristo por nós."
+    },
+    "instructions": {
+      "es": "Reza o canta seguidas las dos partes que presenta la app. En grupo pueden alternarse, sin convertir esa división en una rúbrica obligatoria. Es apropiada para concluir la oración personal o acompañar la devoción mariana. Si la empleas en Completas, sigue las indicaciones del libro litúrgico y del tiempo celebrado.",
+      "en": "Pray or sing both parts shown in the app together. A group may alternate them without treating that division as a binding rubric. It can conclude personal prayer or accompany Marian devotion. When using it at Compline, follow the directions of the liturgical book and the season being celebrated.",
+      "pt": "Reze ou cante em sequência as duas partes apresentadas no aplicativo. Em grupo, elas podem ser alternadas, sem transformar essa divisão em rubrica obrigatória. A antífona pode concluir a oração pessoal ou acompanhar a devoção mariana. Nas Completas, siga as indicações do livro litúrgico e do tempo celebrado."
+    },
+    "source": {
+      "es": "Liturgia de las Horas, antífonas marianas después de Completas; Hugh Henry, «Ave Regina», The Catholic Encyclopedia, 1907.",
+      "en": "Liturgy of the Hours, Marian antiphons after Compline; Hugh Henry, “Ave Regina,” The Catholic Encyclopedia, 1907.",
+      "pt": "Liturgia das Horas, antífonas marianas após as Completas; Hugh Henry, verbete «Ave Regina», The Catholic Encyclopedia, 1907."
+    },
+    "approval": {
+      "es": "La antífona forma parte de la tradición litúrgica latina. Esto no certifica como oficial cada traducción de la app.",
+      "en": "The antiphon belongs to the Latin liturgical tradition. This does not certify every app translation as official.",
+      "pt": "A antífona integra a tradição litúrgica latina. Isso não certifica como oficial cada tradução do aplicativo."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Original latino medieval; las traducciones ya existentes requieren identificación editorial.",
+      "en": "Medieval Latin original; the existing translations require identification of their editions.",
+      "pt": "Original latino medieval; as traduções já existentes precisam de identificação editorial."
+    }
+  },
+  {
+    "prayerId": "alma_missionum",
+    "history": {
+      "es": "Aunque su nombre recuerda Alma Redemptoris Mater, el contenido de esta ficha es diferente: combina invocaciones a María por los misioneros con súplicas a Cristo y a la Trinidad. No se ha identificado una fuente documental para este formulario ni para su título latino. Por eso no se atribuye a un santo, a una época ni a la liturgia de la Iglesia. La intercesión por la misión pertenece a la vida cristiana, pero esa finalidad no demuestra la antigüedad o aprobación de una redacción particular. El nombre no debe confundirse con la conocida antífona mariana.",
+      "en": "Although its name recalls Alma Redemptoris Mater, this entry has different content: it combines Marian intercession for missionaries with petitions to Christ and the Trinity. No documentary source has been identified for this formula or its Latin title. It is therefore not attributed to a saint, a historical period, or the Church’s liturgy. Intercession for missionary work belongs to Christian life, but that purpose does not establish the age or approval of a particular wording. The name should not be confused with the familiar Marian antiphon found in liturgical books.",
+      "pt": "Embora o nome lembre Alma Redemptoris Mater, esta ficha contém outro texto: combina invocações a Maria pelos missionários com súplicas a Cristo e à Trindade. Não foi identificada uma fonte documental para esse formulário nem para seu título latino. Por isso não se atribui sua composição a um santo, a uma época ou à liturgia da Igreja. A intercessão pela missão faz parte da vida cristã, mas essa finalidade não demonstra a antiguidade ou a aprovação de uma redação específica. O nome não deve ser confundido com a conhecida antífona mariana."
+    },
+    "instructions": {
+      "es": "Esta ficha necesita revisión de procedencia antes de presentarse como oración tradicional. Si la lees, entiende la petición como intercesión por los misioneros, sin atribuirle autoridad litúrgica. Las repeticiones de «Cristo, escúchanos» pertenecen al texto mostrado y no prueban un número ritual obligatorio. Para la antífona auténtica, consulta Alma Redemptoris Mater en un libro litúrgico autorizado.",
+      "en": "This entry needs a provenance review before being presented as a traditional prayer. If you read it, understand its petition as intercession for missionaries, without assigning it liturgical authority. Repeated appeals to Christ belong to the displayed text and do not establish a required ritual count. For the authentic antiphon, consult Alma Redemptoris Mater in an authorized liturgical book.",
+      "pt": "Esta ficha precisa de revisão de procedência antes de ser apresentada como oração tradicional. Ao lê-la, entenda o pedido como intercessão pelos missionários, sem lhe atribuir autoridade litúrgica. As repetições da súplica a Cristo pertencem ao texto exibido e não estabelecem um número ritual obrigatório. Para a antífona autêntica, consulte Alma Redemptoris Mater em um livro litúrgico autorizado."
+    },
+    "source": {
+      "es": "Fuente externa del formulario actual no localizada. Para distinguirlo: Liturgia de las Horas, antífona Alma Redemptoris Mater.",
+      "en": "No external source for the current formula located. For comparison: Liturgy of the Hours, antiphon Alma Redemptoris Mater.",
+      "pt": "Não foi localizada fonte externa do formulário atual. Para distingui-lo: Liturgia das Horas, antífona Alma Redemptoris Mater."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Autoría, fecha y derechos del texto actual no verificados; no es la antífona Alma Redemptoris Mater.",
+      "en": "Authorship, date, and rights of the current text are unverified; it is not the antiphon Alma Redemptoris Mater.",
+      "pt": "Autoria, data e direitos do texto atual não verificados; não é a antífona Alma Redemptoris Mater."
+    }
+  },
+  {
+    "prayerId": "sub_tuum_praesidium",
+    "history": {
+      "es": "Bajo tu amparo es una antigua súplica dirigida a María como Madre de Dios. Su testimonio griego se conserva en el papiro P.Ryl. III 470, de la Biblioteca John Rylands. La datación paleográfica es discutida: las propuestas tempranas de los siglos III–IV no deben presentarse como una fecha definitivamente probada. La oración pasó a distintas tradiciones cristianas y sigue expresando confianza filial en la intercesión de María. Su petición de protección se dirige a ella como madre del Salvador, sin sustituir a Cristo como fuente de la salvación ni imponer una revelación privada al creyente.",
+      "en": "Under your protection is an ancient petition addressed to Mary as Mother of God. A Greek witness survives on papyrus P.Ryl. III 470 in the John Rylands Library. Its palaeographical dating is disputed: early proposals placing it in the third or fourth century should not be presented as a definitively established date. The prayer entered different Christian traditions and continues to express filial confidence in Mary’s intercession. Its request for protection addresses her as the Savior’s mother, without replacing Christ as the source of salvation or imposing a private revelation on believers.",
+      "pt": "Sob a vossa proteção é uma antiga súplica dirigida a Maria como Mãe de Deus. Um testemunho grego foi preservado no papiro P.Ryl. III 470, da Biblioteca John Rylands. Sua datação paleográfica é discutida: as propostas antigas dos séculos III–IV não devem ser apresentadas como uma data definitivamente comprovada. A oração passou a diferentes tradições cristãs e continua exprimindo confiança filial na intercessão de Maria. O pedido de proteção dirige-se à mãe do Salvador, sem substituir Cristo como fonte da salvação nem impor ao fiel uma revelação privada."
+    },
+    "instructions": {
+      "es": "Reza despacio la súplica mariana, especialmente cuando necesites amparo o al terminar otra oración. La invocación posterior «Ruega por nosotros» es un añadido devocional que puede decirse en grupo. No requiere una postura exclusiva ni un número fijo de repeticiones. Ante un peligro real, acompaña la oración con medidas prácticas de protección.",
+      "en": "Pray the Marian petition slowly, particularly when seeking protection or concluding another prayer. The following request to pray for us is a devotional addition that can be used in a group. No exclusive posture or fixed number of repetitions is required. When facing actual danger, accompany prayer with practical protective steps.",
+      "pt": "Reze devagar a súplica mariana, sobretudo quando precisar de amparo ou ao concluir outra oração. A invocação seguinte, pedindo que Maria rogue por nós, é um acréscimo devocional que pode ser usado em grupo. Não há postura exclusiva nem número fixo de repetições. Diante de perigo real, acompanhe a oração com medidas práticas de proteção."
+    },
+    "source": {
+      "es": "Papiro P.Ryl. III 470; Roger Pearse, revisión bibliográfica sobre su datación, 24 de agosto de 2023; Enchiridion Indulgentiarum, 1999, concesión 17.",
+      "en": "Papyrus P.Ryl. III 470; Roger Pearse, bibliographical review of its dating, August 24, 2023; Enchiridion Indulgentiarum, 1999, concession 17.",
+      "pt": "Papiro P.Ryl. III 470; Roger Pearse, revisão bibliográfica de sua datação, 24 de agosto de 2023; Enchiridion Indulgentiarum, 1999, concessão 17."
+    },
+    "approval": {
+      "es": "El Enchiridion de 1999 incluye Sub tuum praesidium entre las invocaciones marianas legítimamente aprobadas.",
+      "en": "The 1999 Enchiridion includes Sub tuum praesidium among legitimately approved Marian invocations.",
+      "pt": "O Enchiridion de 1999 inclui Sub tuum praesidium entre as invocações marianas legitimamente aprovadas."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Original griego antiguo, con tradición latina; no se certifica la procedencia editorial de las traducciones actuales.",
+      "en": "Ancient Greek original with a Latin tradition; the editorial provenance of the current translations is not certified.",
+      "pt": "Original grego antigo, com tradição latina; não se certifica a procedência editorial das traduções atuais."
+    }
+  },
+  {
+    "prayerId": "act_of_spiritual_communion",
+    "history": {
+      "es": "Esta fórmula expresa la fe en la presencia eucarística de Jesús, el amor a él y el deseo de recibirlo. Se difunde bajo el nombre de san Alfonso María de Ligorio; los Redentoristas publican una versión de esa misma oración. La comunión espiritual es un acto de deseo y unión con Cristo, no la recepción sacramental de la Eucaristía. Puede ayudar cuando una persona no puede comulgar, y también alimentar el deseo de participar en la Misa. El texto no concede permiso para omitir los requisitos de la comunión sacramental ni convierte la distancia física en recepción del sacramento.",
+      "en": "This formula expresses faith in Jesus’ Eucharistic presence, love for him, and the desire to receive him. It circulates under the name of Saint Alphonsus Liguori; the Redemptorists publish a version of the same prayer. Spiritual communion is an act of desire and union with Christ, not the sacramental reception of the Eucharist. It can help someone unable to receive Communion and foster the desire to participate in Mass. The text does not dispense with the requirements for sacramental Communion or turn physical absence into reception of the sacrament itself.",
+      "pt": "Esta fórmula exprime a fé na presença eucarística de Jesus, o amor por ele e o desejo de recebê-lo. É difundida sob o nome de santo Afonso Maria de Ligório; os Redentoristas publicam uma versão da mesma oração. A comunhão espiritual é um ato de desejo e união com Cristo, não a recepção sacramental da Eucaristia. Pode ajudar quem não pode comungar e alimentar o desejo de participar da Missa. O texto não dispensa os requisitos da comunhão sacramental nem transforma a distância física em recepção do próprio sacramento."
+    },
+    "instructions": {
+      "es": "Reza las dos partes como una sola oración, dejando un momento de silencio para expresar a Jesús tu amor y tu deseo de unión. Puedes hacerlo ante el sagrario, en casa o cuando no puedas recibir la Comunión. No hace falta simular que recibes una hostia ni repetir un número determinado de veces.",
+      "en": "Pray both parts as a single prayer, leaving a moment of silence to express your love for Jesus and desire for union with him. You may pray before the tabernacle, at home, or when unable to receive Communion. There is no need to imitate receiving a host or repeat it a prescribed number of times.",
+      "pt": "Reze as duas partes como uma única oração, reservando um momento de silêncio para expressar a Jesus seu amor e o desejo de união. Você pode rezar diante do sacrário, em casa ou quando não puder comungar. Não é necessário simular o recebimento de uma hóstia nem repetir a oração um número determinado de vezes."
+    },
+    "source": {
+      "es": "Redentoristas, Provincia de Baltimore, «An act of spiritual Communion», 6 de mayo de 2020; Enchiridion Indulgentiarum, 1999, concesión 8.",
+      "en": "Redemptorists, Baltimore Province, “An act of spiritual Communion,” May 6, 2020; Enchiridion Indulgentiarum, 1999, concession 8.",
+      "pt": "Redentoristas, Província de Baltimore, «An act of spiritual Communion», 6 de maio de 2020; Enchiridion Indulgentiarum, 1999, concessão 8."
+    },
+    "approval": {
+      "es": "El Enchiridion de 1999 reconoce la comunión espiritual con una fórmula piadosa legítimamente aprobada.",
+      "en": "The 1999 Enchiridion recognizes spiritual communion using a legitimately approved devotional formula.",
+      "pt": "O Enchiridion de 1999 reconhece a comunhão espiritual mediante fórmula piedosa legitimamente aprovada."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Fórmula tradicional atribuida a san Alfonso; las traducciones ya incorporadas no se presentan como edición crítica de su original.",
+      "en": "Traditional formula attributed to Saint Alphonsus; the existing translations are not presented as a critical edition of his original.",
+      "pt": "Fórmula tradicional atribuída a santo Afonso; as traduções já incorporadas não são apresentadas como edição crítica do original."
+    }
+  },
+  {
+    "prayerId": "peace_prayer",
+    "history": {
+      "es": "La conocida oración por la paz no fue escrita por san Francisco de Asís. Su primera publicación documentada apareció anónimamente en la revista francesa La Clochette en 1912. La asociación posterior con Francisco se explica por la afinidad de sus peticiones con su testimonio de paz y fraternidad, no por un manuscrito suyo. La investigación histórica difundida por Franciscan Media mantiene desconocida la identidad del autor. Esta oración pide transformar la manera de relacionarse con otras personas: amar, perdonar, comprender y consolar. Puede leerse con provecho sin mantener una atribución literaria que la documentación no sostiene.",
+      "en": "The familiar peace prayer was not written by Saint Francis of Assisi. Its first documented publication appeared anonymously in the French magazine La Clochette in 1912. Its later association with Francis reflects the affinity of its petitions with his witness of peace and fraternity, rather than a manuscript written by him. The historical research presented by Franciscan Media leaves the author’s identity unknown. This prayer asks for a transformed way of relating to others: loving, forgiving, understanding, and consoling. It can be prayed fruitfully without maintaining a literary attribution unsupported by the surviving documentation.",
+      "pt": "A conhecida oração pela paz não foi escrita por são Francisco de Assis. Sua primeira publicação documentada apareceu anonimamente na revista francesa La Clochette, em 1912. A associação posterior com Francisco explica-se pela afinidade das súplicas com seu testemunho de paz e fraternidade, não por um manuscrito de sua autoria. A pesquisa histórica divulgada pela Franciscan Media mantém desconhecida a identidade do autor. A oração pede uma transformação no relacionamento com os outros: amar, perdoar, compreender e consolar. É possível rezá-la com proveito sem conservar uma atribuição literária não sustentada pela documentação."
+    },
+    "instructions": {
+      "es": "Reza las dos partes sin prisa y elige una petición para llevarla a una acción concreta de reconciliación o servicio. En grupo, una persona puede leer la primera parte y todos la segunda. Pedir comprensión y perdón no exige permanecer en situaciones de abuso ni renunciar a buscar protección y ayuda.",
+      "en": "Pray both parts without rushing and choose one petition to carry into a concrete act of reconciliation or service. In a group, one person may read the first part and everyone the second. Asking for understanding and forgiveness does not require remaining in abusive circumstances or giving up protection and help.",
+      "pt": "Reze as duas partes sem pressa e escolha uma súplica para transformar em gesto concreto de reconciliação ou serviço. Em grupo, uma pessoa pode ler a primeira parte e todos a segunda. Pedir compreensão e perdão não obriga ninguém a permanecer em situações de abuso nem a deixar de buscar proteção e ajuda."
+    },
+    "source": {
+      "es": "La Clochette, 1912, publicación anónima; Jack Wintz, OFM, «A Look at the Peace Prayer of St. Francis», Franciscan Media, con la investigación de Christian Renoux.",
+      "en": "La Clochette, 1912, anonymous publication; Jack Wintz, OFM, “A Look at the Peace Prayer of St. Francis,” Franciscan Media, presenting Christian Renoux’s research.",
+      "pt": "La Clochette, 1912, publicação anônima; Jack Wintz, OFM, «A Look at the Peace Prayer of St. Francis», Franciscan Media, com a pesquisa de Christian Renoux."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "No es una obra de san Francisco. No se ha identificado la edición de las traducciones que ya contiene la app.",
+      "en": "Not a work by Saint Francis. The editions underlying the app’s existing translations have not been identified.",
+      "pt": "Não é obra de são Francisco. Não foram identificadas as edições das traduções já presentes no aplicativo."
+    }
+  },
+  {
+    "prayerId": "veni_creator_spiritus",
+    "history": {
+      "es": "Veni Creator Spiritus es un himno latino al Espíritu Santo documentado desde el siglo IX y atribuido habitualmente a Rabano Mauro. La atribución cuenta con argumentos históricos, pero no se presenta como una firma conservada del autor. Su lenguaje reúne imágenes bíblicas: el Espíritu como don, consuelo, fuego y fuente de vida. La Iglesia lo utiliza para implorar la ayuda divina en Pentecostés y en ocasiones solemnes. La versión de esta ficha sigue libremente su contenido, por lo que debe distinguirse de una transcripción completa del original o de una traducción litúrgica oficialmente aprobada.",
+      "en": "Veni Creator Spiritus is a Latin hymn to the Holy Spirit documented from the ninth century and commonly attributed to Rabanus Maurus. Historical arguments support the attribution, but it is not presented as a surviving signature by its author. Its language gathers biblical images: the Spirit as gift, consolation, fire, and source of life. The Church uses it to invoke divine assistance at Pentecost and on solemn occasions. This entry follows the hymn’s content freely, so it must be distinguished from a complete transcription of the original or an officially approved liturgical translation.",
+      "pt": "Veni Creator Spiritus é um hino latino ao Espírito Santo documentado desde o século IX e habitualmente atribuído a Rabano Mauro. Há argumentos históricos em favor dessa atribuição, mas não se trata de uma assinatura preservada do autor. Sua linguagem reúne imagens bíblicas: o Espírito como dom, consolação, fogo e fonte de vida. A Igreja o utiliza para invocar o auxílio divino em Pentecostes e em ocasiões solenes. Esta ficha acompanha livremente seu conteúdo; portanto, deve ser distinguida de uma transcrição completa do original ou de uma tradução litúrgica oficialmente aprovada."
+    },
+    "instructions": {
+      "es": "Reza o canta el himno para pedir luz y fortaleza al Espíritu Santo. La segunda parte de la app funciona como conclusión doxológica, no como diálogo obligatorio. Para una celebración litúrgica o para la indulgencia vinculada al himno, usa el texto aprobado y sigue las indicaciones de quien preside.",
+      "en": "Pray or sing the hymn to ask the Holy Spirit for light and strength. The app’s second part serves as a concluding doxology, rather than a required dialogue. For a liturgical celebration or the indulgence associated with the hymn, use the approved text and follow the directions of the person presiding.",
+      "pt": "Reze ou cante o hino pedindo luz e força ao Espírito Santo. A segunda parte do aplicativo funciona como conclusão doxológica, não como diálogo obrigatório. Para uma celebração litúrgica ou para a indulgência associada ao hino, use o texto aprovado e siga as indicações de quem preside a celebração."
+    },
+    "source": {
+      "es": "Hugh Henry, «Veni Creator Spiritus», The Catholic Encyclopedia, 1912; Enchiridion Indulgentiarum, 1999, concesión 26.",
+      "en": "Hugh Henry, “Veni Creator Spiritus,” The Catholic Encyclopedia, 1912; Enchiridion Indulgentiarum, 1999, concession 26.",
+      "pt": "Hugh Henry, verbete «Veni Creator Spiritus», The Catholic Encyclopedia, 1912; Enchiridion Indulgentiarum, 1999, concessão 26."
+    },
+    "approval": {
+      "es": "Himno de uso litúrgico. La concesión del Enchiridion se refiere al himno aprobado; la redacción de esta ficha necesita cotejo.",
+      "en": "Hymn in liturgical use. The Enchiridion grant concerns the approved hymn; this entry’s wording needs checking.",
+      "pt": "Hino de uso litúrgico. A concessão do Enchiridion refere-se ao hino aprovado; a redação desta ficha precisa ser conferida."
+    },
+    "promise": {
+      "kind": "ECCLESIAL_GRANT",
+      "text": {
+        "es": "Indulgencia plenaria por participar devotamente, en una iglesia u oratorio, en el canto o recitación solemne del himno el 1 de enero o en Pentecostés.",
+        "en": "A plenary indulgence for devout participation, in a church or oratory, in the solemn singing or recitation of the hymn on January 1 or Pentecost.",
+        "pt": "Indulgência plenária pela participação devota, em igreja ou oratório, no canto ou na recitação solene do hino em 1º de janeiro ou em Pentecostes."
+      },
+      "attribution": {
+        "es": "Penitenciaría Apostólica.",
+        "en": "Apostolic Penitentiary.",
+        "pt": "Penitenciaria Apostólica."
+      },
+      "source": {
+        "es": "Enchiridion Indulgentiarum, cuarta edición, 1999, concesión 26, primer apartado.",
+        "en": "Enchiridion Indulgentiarum, fourth edition, 1999, concession 26, first section.",
+        "pt": "Enchiridion Indulgentiarum, quarta edição, 1999, concessão 26, primeiro apartado."
+      },
+      "conditions": {
+        "es": "Usar el himno aprobado y participar en el acto solemne indicado; una lectura privada de esta adaptación no equivale a ese acto. Además del acto indicado: confesión sacramental, Comunión eucarística, oración por las intenciones del Papa y desapego de todo pecado, incluso venial.",
+        "en": "Use the approved hymn and participate in the specified solemn act; a private reading of this adaptation is not that act. Besides the specified act: sacramental confession, Eucharistic Communion, prayer for the Pope’s intentions, and detachment from every sin, including venial sin.",
+        "pt": "Usar o hino aprovado e participar do ato solene indicado; uma leitura particular desta adaptação não equivale a esse ato. Além do ato indicado: confissão sacramental, Comunhão eucarística, oração pelas intenções do Papa e desapego de todo pecado, inclusive venial."
+      }
+    },
+    "textNote": {
+      "es": "Original latino medieval; adaptación ya incorporada, sin edición de traducción verificada.",
+      "en": "Medieval Latin original; existing adaptation without a verified translation edition.",
+      "pt": "Original latino medieval; adaptação já incorporada, sem edição de tradução verificada."
+    }
+  },
+  {
+    "prayerId": "adoro_te_devote",
+    "history": {
+      "es": "Adoro te devote es una oración eucarística medieval tradicionalmente atribuida a santo Tomás de Aquino. Su autoría ha sido discutida por los investigadores; no debe confundirse sin más con los textos del oficio del Corpus Christi encargados al santo. El poema contrapone lo que perciben los sentidos con la confianza en la palabra de Cristo y conduce de la adoración al deseo de verlo. La ficha conserva un texto latino abreviado y alterado en su campo español, con un cierre devocional distinto. Por eso la historia del himno no certifica la fidelidad del texto actualmente mostrado.",
+      "en": "Adoro te devote is a medieval Eucharistic prayer traditionally attributed to Saint Thomas Aquinas. Researchers have debated its authorship; it should not simply be identified with the Corpus Christi office commissioned from the saint. The poem contrasts sensory perception with trust in Christ’s word and leads from adoration to the desire to see him. This entry contains an abridged and altered Latin text in its Spanish field, followed by a different devotional conclusion. The history of the hymn therefore does not certify the accuracy of the text currently displayed by the app.",
+      "pt": "Adoro te devote é uma oração eucarística medieval tradicionalmente atribuída a santo Tomás de Aquino. Sua autoria foi discutida por pesquisadores; não deve ser identificada automaticamente com os textos do ofício de Corpus Christi encomendados ao santo. O poema contrapõe a percepção dos sentidos à confiança na palavra de Cristo e conduz da adoração ao desejo de vê-lo. A ficha apresenta, no campo espanhol, um texto latino abreviado e alterado, seguido de outra conclusão devocional. Assim, a história do hino não certifica a fidelidade do texto atualmente exibido pelo aplicativo."
+    },
+    "instructions": {
+      "es": "Antes de usar esta ficha como texto del himno, consulta una edición fiable del Adoro te devote. Puede acompañar la adoración o la acción de gracias eucarística, con tiempo para meditar. La respuesta añadida en la app no es el final del poema latino. No atribuyas al original las líneas alteradas de esta selección.",
+      "en": "Before using this entry as the hymn’s text, consult a reliable edition of Adoro te devote. It can accompany adoration or Eucharistic thanksgiving, allowing time for meditation. The response added in the app is not the conclusion of the Latin poem. Do not attribute this selection’s altered lines to the original work.",
+      "pt": "Antes de usar esta ficha como texto do hino, consulte uma edição confiável do Adoro te devote. Ele pode acompanhar a adoração ou a ação de graças eucarística, com tempo para meditar. A resposta acrescentada no aplicativo não é o final do poema latino. Não atribua ao original as linhas alteradas desta seleção."
+    },
+    "source": {
+      "es": "«Adoro Te Devote», The Catholic Encyclopedia, 1907; «Adoro Te Devote», New Catholic Encyclopedia, discusión de la autoría; Enchiridion Indulgentiarum, 1999, concesión 7, referencia al himno.",
+      "en": "“Adoro Te Devote,” The Catholic Encyclopedia, 1907; “Adoro Te Devote,” New Catholic Encyclopedia, authorship discussion; Enchiridion Indulgentiarum, 1999, concession 7, reference to the hymn.",
+      "pt": "Verbetes «Adoro Te Devote», The Catholic Encyclopedia, 1907, e New Catholic Encyclopedia, discussão da autoria; Enchiridion Indulgentiarum, 1999, concessão 7, referência ao hino."
+    },
+    "approval": {
+      "es": "El Enchiridion recoge el himno auténtico entre las oraciones eucarísticas. Esto no acredita la transcripción alterada de la app.",
+      "en": "The Enchiridion includes the authentic hymn among Eucharistic prayers. This does not authenticate the app’s altered transcription.",
+      "pt": "O Enchiridion inclui o hino autêntico entre as orações eucarísticas. Isso não autentica a transcrição alterada do aplicativo."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Requiere sustitución por texto auténtico en otro encargo: no es una transcripción íntegra y fiel del himno latino.",
+      "en": "Requires replacement with an authentic text in a separate task: not a complete, faithful transcription of the Latin hymn.",
+      "pt": "Precisa ser substituído por texto autêntico em outro encargo: não é transcrição integral e fiel do hino latino."
+    }
+  },
+  {
+    "prayerId": "o_sacrum_convivium",
+    "history": {
+      "es": "O sacrum convivium es una antífona eucarística de la tradición latina, vinculada al oficio de Corpus Christi asociado con santo Tomás de Aquino. Su breve desarrollo reúne cuatro dimensiones del sacramento: recibir a Cristo, recordar su Pasión, recibir la gracia y esperar la gloria futura. Esa unidad ayuda a comprender que la adoración no separa la presencia eucarística de la entrega de Jesús y de la esperanza cristiana. El Enchiridion conserva el texto latino como oración eucarística. La app añade una respuesta sobre el pan del cielo, que no debe confundirse con la continuación íntegra de un diálogo litúrgico.",
+      "en": "O sacrum convivium is a Eucharistic antiphon in the Latin tradition, linked with the Corpus Christi office associated with Saint Thomas Aquinas. Its short development gathers four dimensions of the sacrament: receiving Christ, remembering his Passion, receiving grace, and awaiting future glory. Their unity helps explain that adoration does not separate Eucharistic presence from Jesus’ self-giving and Christian hope. The Enchiridion preserves the Latin text as a Eucharistic prayer. The app adds a response about bread from heaven, which should not be confused with the complete continuation of a liturgical dialogue.",
+      "pt": "O sacrum convivium é uma antífona eucarística da tradição latina, ligada ao ofício de Corpus Christi associado a santo Tomás de Aquino. Seu breve desenvolvimento reúne quatro dimensões do sacramento: receber Cristo, recordar sua Paixão, receber a graça e esperar a glória futura. Essa unidade ajuda a compreender que a adoração não separa a presença eucarística da entrega de Jesus e da esperança cristã. O Enchiridion conserva o texto latino como oração eucarística. O aplicativo acrescenta uma resposta sobre o pão do céu, que não deve ser confundida com a continuação integral de um diálogo litúrgico."
+    },
+    "instructions": {
+      "es": "Reza la antífona después de comulgar o durante la adoración, deteniéndote en cada una de sus imágenes. Puedes leerla de una vez o alternar las partes de la app en grupo. El aleluya y los diálogos que la acompañen en una celebración dependen del libro litúrgico y del tiempo, no de una repetición automática.",
+      "en": "Pray the antiphon after Communion or during adoration, pausing over each image. You may read it continuously or alternate the app’s parts in a group. The alleluia and any accompanying dialogues in a celebration follow the liturgical book and season, rather than an automatic rule of repetition supplied by the app.",
+      "pt": "Reze a antífona depois da Comunhão ou durante a adoração, detendo-se em cada imagem. Você pode lê-la inteira ou alternar as partes do aplicativo em grupo. O aleluia e os diálogos que a acompanhem numa celebração seguem o livro litúrgico e o tempo celebrado, não uma repetição automática fornecida pelo aplicativo."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, 1999, concesión 7, texto O sacrum convivium; Benedicto XVI, audiencia sobre santa Juliana de Cornillon, 17 de noviembre de 2010, contexto del oficio del Corpus.",
+      "en": "Enchiridion Indulgentiarum, 1999, concession 7, text O sacrum convivium; Benedict XVI, audience on Saint Juliana of Cornillon, November 17, 2010, context of the Corpus Christi office.",
+      "pt": "Enchiridion Indulgentiarum, 1999, concessão 7, texto O sacrum convivium; Bento XVI, audiência sobre santa Juliana de Cornillon, 17 de novembro de 2010, contexto do ofício de Corpus Christi."
+    },
+    "approval": {
+      "es": "Oración eucarística recogida en el Enchiridion de 1999. No se atribuye aprobación editorial a cada traducción o respuesta añadida.",
+      "en": "Eucharistic prayer included in the 1999 Enchiridion. No editorial approval is attributed to every translation or added response.",
+      "pt": "Oração eucarística incluída no Enchiridion de 1999. Não se atribui aprovação editorial a cada tradução ou resposta acrescentada."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Antífona latina tradicional; versión y respuesta ya existentes en la app, sin edición de traducción identificada.",
+      "en": "Traditional Latin antiphon; existing app version and response without an identified translation edition.",
+      "pt": "Antífona latina tradicional; versão e resposta já existentes no aplicativo, sem edição de tradução identificada."
+    }
+  },
+  {
+    "prayerId": "tantum_ergo",
+    "history": {
+      "es": "Tantum ergo reúne las dos últimas estrofas del Pange lingua eucarístico de santo Tomás de Aquino, perteneciente a la tradición del Corpus Christi. No es el Pange lingua sobre la Cruz de Venancio Fortunato. El canto invita a venerar el sacramento y termina alabando al Padre, al Hijo y al Espíritu Santo. Su uso habitual en la exposición y bendición eucarística explica que muchas personas lo conozcan separado del himno completo. La ficha conserva esas estrofas latinas y añade una aclamación española; esa aclamación no es una tercera estrofa del original.",
+      "en": "Tantum ergo brings together the final two stanzas of Saint Thomas Aquinas’s Eucharistic Pange lingua, belonging to the Corpus Christi tradition. It is not Venantius Fortunatus’s Pange lingua about the Cross. The hymn invites worship of the sacrament and concludes by praising the Father, Son, and Holy Spirit. Its customary use during Eucharistic exposition and Benediction explains why many people know it separately from the complete hymn. This entry preserves those Latin stanzas and adds a Spanish acclamation; that acclamation is not a third stanza of the original work.",
+      "pt": "Tantum ergo reúne as duas últimas estrofes do Pange lingua eucarístico de santo Tomás de Aquino, pertencente à tradição de Corpus Christi. Não é o Pange lingua sobre a Cruz, de Venâncio Fortunato. O canto convida a venerar o sacramento e termina louvando o Pai, o Filho e o Espírito Santo. Seu uso habitual na exposição e bênção eucarística explica por que muitas pessoas o conhecem separado do hino completo. Esta ficha conserva as estrofes latinas e acrescenta uma aclamação em espanhol; ela não constitui uma terceira estrofe do original."
+    },
+    "instructions": {
+      "es": "Cántalo o recítalo con reverencia durante la adoración, siguiendo al celebrante cuando forme parte de un rito. La oración personal puede hacerse de rodillas, sentado o según permita la salud. Rezar el himno no faculta para impartir la bendición con el Santísimo Sacramento; esa acción corresponde al ministro autorizado.",
+      "en": "Sing or recite it reverently during adoration, following the celebrant when it forms part of a rite. Personal prayer may be made kneeling, seated, or as health permits. Praying the hymn does not authorize anyone to give Benediction with the Blessed Sacrament; that action belongs to an authorized minister.",
+      "pt": "Cante ou recite com reverência durante a adoração, seguindo o celebrante quando fizer parte de um rito. Na oração pessoal, fique de joelhos, sentado ou conforme permitir a saúde. Rezar o hino não autoriza ninguém a dar a bênção com o Santíssimo Sacramento; essa ação cabe ao ministro autorizado."
+    },
+    "source": {
+      "es": "Santo Tomás de Aquino, Pange lingua eucarístico, estrofas finales; Enchiridion Indulgentiarum, 1999, concesión 7.",
+      "en": "Saint Thomas Aquinas, Eucharistic Pange lingua, final stanzas; Enchiridion Indulgentiarum, 1999, concession 7.",
+      "pt": "Santo Tomás de Aquino, Pange lingua eucarístico, estrofes finais; Enchiridion Indulgentiarum, 1999, concessão 7."
+    },
+    "approval": {
+      "es": "Himno de uso en el culto eucarístico; el Enchiridion distingue la recitación piadosa de los actos solemnes con indulgencia plenaria.",
+      "en": "Hymn used in Eucharistic worship; the Enchiridion distinguishes devout recitation from solemn acts carrying a plenary indulgence.",
+      "pt": "Hino usado no culto eucarístico; o Enchiridion distingue a recitação piedosa dos atos solenes com indulgência plenária."
+    },
+    "promise": {
+      "kind": "ECCLESIAL_GRANT",
+      "text": {
+        "es": "Indulgencia plenaria por recitar piadosamente estas estrofas el Jueves Santo durante la reserva solemne del Santísimo después de la Misa de la Cena del Señor.",
+        "en": "A plenary indulgence for devoutly reciting these stanzas on Holy Thursday during the solemn reservation of the Blessed Sacrament after the Mass of the Lord’s Supper.",
+        "pt": "Indulgência plenária pela recitação piedosa destas estrofes na Quinta-feira Santa, durante a reposição solene do Santíssimo depois da Missa da Ceia do Senhor."
+      },
+      "attribution": {
+        "es": "Penitenciaría Apostólica.",
+        "en": "Apostolic Penitentiary.",
+        "pt": "Penitenciaria Apostólica."
+      },
+      "source": {
+        "es": "Enchiridion Indulgentiarum, cuarta edición, 1999, concesión 7, primer apartado.",
+        "en": "Enchiridion Indulgentiarum, fourth edition, 1999, concession 7, first section.",
+        "pt": "Enchiridion Indulgentiarum, quarta edição, 1999, concessão 7, primeiro apartado."
+      },
+      "conditions": {
+        "es": "Además del acto indicado: confesión sacramental, Comunión eucarística, oración por las intenciones del Papa y desapego de todo pecado, incluso venial.",
+        "en": "Besides the specified act: sacramental confession, Eucharistic Communion, prayer for the Pope’s intentions, and detachment from every sin, including venial sin.",
+        "pt": "Além do ato indicado: confissão sacramental, Comunhão eucarística, oração pelas intenções do Papa e desapego de todo pecado, inclusive venial."
+      }
+    },
+    "textNote": {
+      "es": "Estrofas latinas medievales; la aclamación añadida no pertenece al poema.",
+      "en": "Medieval Latin stanzas; the added acclamation does not belong to the poem.",
+      "pt": "Estrofes latinas medievais; a aclamação acrescentada não pertence ao poema."
+    }
+  },
+  {
+    "prayerId": "laudes_divinas",
+    "history": {
+      "es": "Las Alabanzas divinas se desarrollaron como oración de reparación frente a la blasfemia. Su núcleo se atribuye al jesuita Luis Felici en 1797; la serie se amplió después con otras invocaciones. Bendecir a Dios y honrar a sus santos expresa reconocimiento y amor, no la necesidad de reparar una falta de poder divino. Su uso es conocido en la devoción eucarística y después de la bendición con el Santísimo. El texto de esta app es una selección con repeticiones y fórmulas distintas: no reproduce íntegramente la serie habitual ni puede presentarse como la edición original de Felici.",
+      "en": "The Divine Praises developed as a prayer of reparation for blasphemy. Their core is attributed to the Jesuit Luigi Felici in 1797; further invocations expanded the series afterward. Blessing God and honoring his saints expresses recognition and love, rather than a need to repair any lack of divine power. Their use is familiar in Eucharistic devotion and after Benediction with the Blessed Sacrament. This app contains a selection with repetitions and different formulas: it does not reproduce the customary series completely and cannot be presented as Felici’s original edition.",
+      "pt": "Os Louvores divinos desenvolveram-se como oração de reparação diante da blasfêmia. Seu núcleo é atribuído ao jesuíta Luís Felici em 1797; posteriormente a série recebeu outras invocações. Bendizer a Deus e honrar seus santos exprime reconhecimento e amor, não a necessidade de reparar uma falta de poder divino. Seu uso é conhecido na devoção eucarística e depois da bênção com o Santíssimo. O aplicativo apresenta uma seleção com repetições e fórmulas diferentes: não reproduz integralmente a série habitual nem pode ser apresentado como edição original de Felici."
+    },
+    "instructions": {
+      "es": "Reza cada aclamación con calma, pensando en quién recibe la alabanza. En grupo, una persona puede proponerla y los demás repetirla; la distribución en dos bloques de la app es editorial. Si participas en la adoración pública, sigue el formulario y las indicaciones del ministro, sin añadir repeticiones para obtener resultados especiales.",
+      "en": "Pray each acclamation calmly, attending to whom it praises. In a group, one person may lead and the others repeat it; the app’s division into two blocks is editorial. When participating in public adoration, follow the formula and the minister’s directions, without adding repetitions to obtain special results.",
+      "pt": "Reze cada aclamação com calma, prestando atenção a quem ela louva. Em grupo, uma pessoa pode propô-la e as demais repeti-la; a divisão em dois blocos no aplicativo é editorial. Na adoração pública, siga o formulário e as indicações do ministro, sem acrescentar repetições para obter resultados especiais."
+    },
+    "source": {
+      "es": "The Catholic Weekly, «What is the origin of Divine Praises we say in Benediction?», historia del núcleo de Luis Felici y de las invocaciones añadidas.",
+      "en": "The Catholic Weekly, “What is the origin of Divine Praises we say in Benediction?”, history of Luigi Felici’s core text and subsequent invocations.",
+      "pt": "The Catholic Weekly, «What is the origin of Divine Praises we say in Benediction?», história do núcleo de Luís Felici e das invocações acrescentadas."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "La selección actual no equivale a la serie completa; no se ha identificado una edición que documente exactamente sus variantes.",
+      "en": "The current selection is not the complete series; no edition documenting its exact variants has been identified.",
+      "pt": "A seleção atual não equivale à série completa; não foi identificada uma edição que documente exatamente suas variantes."
+    }
+  },
+  {
+    "prayerId": "sacred_heart_consecration",
+    "history": {
+      "es": "Esta ficha contiene una breve entrega personal al Sagrado Corazón, centrada en amar a Dios y al prójimo y pedir protección. No es la fórmula Iesu dulcissime, Redemptor humani generis asociada a la consagración promovida por León XIII en Annum sacrum, de 1899. La encíclica explica la consagración de la humanidad a Cristo, pero no documenta estas frases concretas. No se ha localizado autor, fecha o edición de la redacción abreviada. Por ello no se le asigna una aprobación papal específica ni se trasladan automáticamente a ella las promesas de otras prácticas del Sagrado Corazón.",
+      "en": "This entry contains a short personal dedication to the Sacred Heart, focused on loving God and neighbor and asking for protection. It is not the formula Iesu dulcissime, Redemptor humani generis associated with the consecration promoted by Leo XIII in Annum sacrum, in 1899. The encyclical explains the consecration of humanity to Christ, but does not document these particular sentences. No author, date, or edition for the abridged wording has been identified. It is therefore not assigned a specific papal approval, and promises attached to other Sacred Heart practices are not automatically transferred to it.",
+      "pt": "Esta ficha contém uma breve entrega pessoal ao Sagrado Coração, centrada no amor a Deus e ao próximo e no pedido de proteção. Não é a fórmula Iesu dulcissime, Redemptor humani generis associada à consagração promovida por Leão XIII em Annum sacrum, de 1899. A encíclica explica a consagração da humanidade a Cristo, mas não documenta estas frases específicas. Não foram localizados autor, data ou edição da redação abreviada. Por isso não se lhe atribui aprovação papal específica nem se transferem automaticamente para ela as promessas de outras práticas do Sagrado Coração."
+    },
+    "instructions": {
+      "es": "Lee las dos partes como una entrega personal y relaciona la petición de amar con una obra concreta de caridad. No hagas de esta fórmula un voto que no has decidido asumir. Si buscas la consagración histórica de León XIII o un acto comunitario oficial, utiliza su texto propio y consulta las indicaciones pastorales.",
+      "en": "Read both parts as a personal dedication and connect the petition for love with a concrete act of charity. Do not treat the formula as a vow you have not deliberately chosen to undertake. If seeking Leo XIII’s historical consecration or an official communal act, use its proper text and consult pastoral guidance.",
+      "pt": "Leia as duas partes como entrega pessoal e ligue o pedido de amar a uma obra concreta de caridade. Não transforme esta fórmula em voto que você não decidiu assumir. Se procura a consagração histórica de Leão XIII ou um ato comunitário oficial, use o texto próprio e consulte as orientações pastorais."
+    },
+    "source": {
+      "es": "Texto actual de procedencia no identificada. Comparación: León XIII, Annum sacrum, 25 de mayo de 1899; Enchiridion Indulgentiarum, 1999, concesión 2.",
+      "en": "Current text of unidentified provenance. Comparison: Leo XIII, Annum sacrum, May 25, 1899; Enchiridion Indulgentiarum, 1999, concession 2.",
+      "pt": "Texto atual de procedência não identificada. Comparação: Leão XIII, Annum sacrum, 25 de maio de 1899; Enchiridion Indulgentiarum, 1999, concessão 2."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "No es el acto de León XIII. Autoría y derechos de esta redacción no verificados.",
+      "en": "Not Leo XIII’s act. Authorship and rights of this wording are unverified.",
+      "pt": "Não é o ato de Leão XIII. Autoria e direitos desta redação não verificados."
+    }
+  },
+  {
+    "prayerId": "st_joseph",
+    "history": {
+      "es": "La oración pide la intercesión de san José como esposo de María, custodio de Jesús y protector de la Iglesia. Son temas presentes en la devoción católica, pero la fórmula breve de esta ficha no es A ti, bienaventurado José, vinculada a León XIII y a Quamquam pluries, de 1889. No se ha identificado una edición o un autor de estas invocaciones concretas. Su contenido puede explicarse desde el cuidado de la Sagrada Familia y la petición por la Iglesia; esa afinidad no permite atribuir a un Papa la composición o aprobación específica de este texto.",
+      "en": "The prayer asks Saint Joseph’s intercession as Mary’s spouse, Jesus’ guardian, and protector of the Church. These themes belong to Catholic devotion, but this entry’s brief formula is not To you, O blessed Joseph, linked with Leo XIII and Quamquam pluries, in 1889. No edition or author for these particular invocations has been identified. Their content can be explained through care for the Holy Family and prayer for the Church; that affinity does not allow a pope to be credited with composing or specifically approving this text.",
+      "pt": "A oração pede a intercessão de são José como esposo de Maria, guardião de Jesus e protetor da Igreja. Esses temas pertencem à devoção católica, mas a fórmula breve desta ficha não é A vós, são José, associada a Leão XIII e a Quamquam pluries, de 1889. Não foi identificada uma edição ou autoria destas invocações específicas. Seu conteúdo pode ser explicado pelo cuidado da Sagrada Família e pela oração pela Igreja; essa afinidade não permite atribuir a um papa a composição ou a aprovação específica deste texto."
+    },
+    "instructions": {
+      "es": "Reza las invocaciones por tu familia, por el trabajo y por la Iglesia, dejando un espacio para tu intención. En grupo pueden alternarse las dos partes. No se establece una repetición obligatoria. Para rezar la oración de León XIII, busca el formulario que comienza A ti, bienaventurado José, que es distinto de esta ficha.",
+      "en": "Pray the invocations for your family, work, and the Church, leaving space for your intention. A group may alternate the two parts. No obligatory repetition is established. To pray Leo XIII’s prayer, use the formula beginning To you, O blessed Joseph, which differs from the text in this entry.",
+      "pt": "Reze as invocações por sua família, pelo trabalho e pela Igreja, reservando espaço para sua intenção. Em grupo, as duas partes podem ser alternadas. Não se estabelece repetição obrigatória. Para rezar a oração de Leão XIII, procure o formulário que começa A vós, são José, diferente do texto desta ficha."
+    },
+    "source": {
+      "es": "Texto actual sin edición localizada. Para el contexto y la distinción: León XIII, Quamquam pluries, 15 de agosto de 1889; Enchiridion Indulgentiarum, 1999, concesión 19, Ad te, beate Ioseph.",
+      "en": "No edition located for the current text. For context and distinction: Leo XIII, Quamquam pluries, August 15, 1889; Enchiridion Indulgentiarum, 1999, concession 19, Ad te, beate Ioseph.",
+      "pt": "Texto atual sem edição localizada. Para o contexto e a distinção: Leão XIII, Quamquam pluries, 15 de agosto de 1889; Enchiridion Indulgentiarum, 1999, concessão 19, Ad te, beate Ioseph."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Invocaciones de procedencia no verificada; no son el formulario Ad te, beate Ioseph.",
+      "en": "Invocations of unverified provenance; not the formula Ad te, beate Ioseph.",
+      "pt": "Invocações de procedência não verificada; não são o formulário Ad te, beate Ioseph."
+    }
+  },
+  {
+    "prayerId": "st_jude_thaddeus",
+    "history": {
+      "es": "La devoción a san Judas Tadeo se dirige al apóstol y no a Judas Iscariote. La oración invoca su amistad con Jesús y su intercesión en circunstancias que parecen no tener salida. Los santuarios dedicados al santo conservan esta tradición de esperanza, aunque no se ha localizado una edición que corresponda exactamente a la abreviación de la app. Tampoco se ha verificado un autor para ella. El patronazgo popular de las causas difíciles no convierte al santo en una alternativa a Dios ni obliga a obtener un resultado concreto. Los añadidos de cadena son ajenos a esta confianza cristiana.",
+      "en": "Devotion to Saint Jude Thaddeus addresses the apostle, not Judas Iscariot. The prayer invokes his friendship with Jesus and his intercession in circumstances that appear hopeless. Shrines dedicated to the saint preserve this tradition of hope, although no edition corresponding exactly to the app’s abridgment has been located. Its author has not been verified either. Popular patronage of difficult causes does not make the saint an alternative to God or require a particular outcome. Chain-message additions do not belong to this Christian trust or establish conditions for receiving help.",
+      "pt": "A devoção a são Judas Tadeu dirige-se ao apóstolo, não a Judas Iscariotes. A oração invoca sua amizade com Jesus e sua intercessão em situações que parecem sem saída. Os santuários dedicados ao santo conservam essa tradição de esperança, embora não tenha sido localizada uma edição correspondente exatamente à abreviação do aplicativo. Sua autoria também não foi verificada. O patronato popular das causas difíceis não transforma o santo em alternativa a Deus nem exige um resultado específico. Acréscimos de corrente são estranhos a essa confiança cristã e não estabelecem condições para receber ajuda."
+    },
+    "instructions": {
+      "es": "Presenta tu necesidad y pide a Dios, por intercesión del apóstol, luz para reconocer los pasos que sí puedes dar. Puedes alternar las dos partes en grupo o rezarlas personalmente. No hay en esta ficha una obligación de publicar agradecimientos, reenviar mensajes o cumplir una cantidad determinada de repeticiones para ser escuchado.",
+      "en": "Present your need and ask God, through the apostle’s intercession, for light to recognize the steps you can take. You may alternate the two parts in a group or pray them privately. This entry establishes no obligation to publish acknowledgments, forward messages, or complete a particular number of repetitions to be heard.",
+      "pt": "Apresente sua necessidade e peça a Deus, pela intercessão do apóstolo, luz para reconhecer os passos que você pode dar. É possível alternar as duas partes em grupo ou rezá-las pessoalmente. Esta ficha não estabelece obrigação de divulgar agradecimentos, encaminhar mensagens ou cumprir uma quantidade determinada de repetições para ser ouvido."
+    },
+    "source": {
+      "es": "Lc 6,16; Santuario Nacional de San Judas de los Claretianos, tradición de oración al patrono de la esperanza; Diócesis de Saint Petersburg, Prayer to St. Jude. No se verificó la edición de la abreviación.",
+      "en": "Luke 6:16; Claretian National Shrine of Saint Jude, prayer tradition honoring the patron of hope; Diocese of Saint Petersburg, Prayer to St. Jude. The abridgment’s edition was not verified.",
+      "pt": "Lc 6,16; Santuário Nacional de São Judas dos Claretianos, tradição de oração ao padroeiro da esperança; Diocese de Saint Petersburg, Prayer to St. Jude. Não se verificou a edição da abreviação."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Fórmula abreviada ya existente; autor, fecha y edición de traducción no identificados.",
+      "en": "Existing abridged formula; author, date, and translation edition unidentified.",
+      "pt": "Fórmula abreviada já existente; autor, data e edição de tradução não identificados."
+    }
+  },
+  {
+    "prayerId": "st_anthony",
+    "history": {
+      "es": "La oración se inserta en la devoción a san Antonio de Padua y pide ayuda para encontrar lo perdido y volver a la gracia de Dios. No es el responsorio medieval Si quaeris miracula ni puede recibir sin prueba su autoría o su historia editorial. La tradición antoniana relaciona la búsqueda de cosas perdidas con una invitación más amplia a la conversión y al servicio del prójimo. No se ha identificado el autor o la primera edición de esta fórmula breve. Pedir un favor al santo significa solicitar su intercesión ante Dios, sin tratar las palabras como un mecanismo para producir milagros.",
+      "en": "The prayer belongs to devotion to Saint Anthony of Padua and asks for help in finding what is lost and returning to God’s grace. It is not the medieval responsory Si quaeris miracula and cannot simply inherit that work’s authorship or editorial history. The Antonian tradition connects searching for lost things with a wider invitation to conversion and service of others. No author or first edition of this brief formula has been identified. Asking the saint for a favor means seeking his intercession before God, without treating the words as a mechanism for producing miracles.",
+      "pt": "A oração faz parte da devoção a santo Antônio de Pádua e pede ajuda para encontrar o que foi perdido e voltar à graça de Deus. Não é o responsório medieval Si quaeris miracula, nem pode receber sem prova sua autoria ou história editorial. A tradição antoniana relaciona a busca de objetos perdidos com um convite mais amplo à conversão e ao serviço ao próximo. Não foram identificados o autor ou a primeira edição desta fórmula breve. Pedir uma graça ao santo significa solicitar sua intercessão diante de Deus, sem tratar as palavras como mecanismo para produzir milagres."
+    },
+    "instructions": {
+      "es": "Puedes rezarla mientras buscas algo perdido, procurando hacerlo también de manera ordenada y responsable. Une la petición a una intención por alguien necesitado y a la disposición de reconciliarte con Dios. La respuesta de la app puede decirse en común; no requiere un ritual con objetos, dinero o imágenes para obtener el favor.",
+      "en": "You may pray it while searching for something lost, also searching in an orderly and responsible way. Join the petition to an intention for someone in need and a willingness to be reconciled with God. The app’s response may be said together; no ritual involving objects, money, or images is required to obtain the favor.",
+      "pt": "Você pode rezá-la ao procurar algo perdido, buscando também de maneira organizada e responsável. Una o pedido a uma intenção por alguém necessitado e à disposição de se reconciliar com Deus. A resposta do aplicativo pode ser dita em conjunto; não é exigido ritual com objetos, dinheiro ou imagens para obter a graça."
+    },
+    "source": {
+      "es": "Texto actual sin edición identificada. Para distinguirlo del responsorio histórico: Si quaeris miracula, tradición del oficio de san Antonio, presentado por Preces Latinae.",
+      "en": "Current text without an identified edition. For distinction from the historical responsory: Si quaeris miracula, tradition of Saint Anthony’s office, presented by Preces Latinae.",
+      "pt": "Texto atual sem edição identificada. Para distingui-lo do responsório histórico: Si quaeris miracula, tradição do ofício de santo Antônio, apresentado por Preces Latinae."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "La fórmula breve no se atribuye al autor del responsorio medieval; su procedencia textual sigue pendiente.",
+      "en": "The brief formula is not attributed to the author of the medieval responsory; its textual provenance remains unresolved.",
+      "pt": "A fórmula breve não é atribuída ao autor do responsório medieval; sua procedência textual continua pendente."
+    }
+  },
+  {
+    "prayerId": "suscipe_prayer",
+    "history": {
+      "es": "El Suscipe procede del número 234 de los Ejercicios espirituales de san Ignacio de Loyola, dentro de la contemplación para alcanzar amor. La persona reconoce los dones recibidos y ofrece a Dios su libertad, memoria, entendimiento y voluntad. El texto auténtico termina pidiendo el amor y la gracia de Dios como suficientes. La ficha actual recoge parte de la entrega, pero la respuesta que añade no es ese cierre y no se ha verificado como frase de Ignacio. La espiritualidad de esta oración es una respuesta agradecida al amor recibido, no la anulación de la conciencia o la responsabilidad personal.",
+      "en": "The Suscipe comes from number 234 of Saint Ignatius of Loyola’s Spiritual Exercises, within the Contemplation to Attain Love. The person acknowledges gifts received and offers God freedom, memory, understanding, and will. The authentic text ends by asking for God’s love and grace as sufficient. The current entry preserves part of the offering, but its added response is not that conclusion and has not been verified as a statement by Ignatius. The prayer’s spirituality is a grateful response to received love, rather than the removal of conscience or personal responsibility.",
+      "pt": "O Suscipe procede do número 234 dos Exercícios Espirituais de santo Inácio de Loyola, na contemplação para alcançar amor. A pessoa reconhece os dons recebidos e oferece a Deus sua liberdade, memória, entendimento e vontade. O texto autêntico termina pedindo o amor e a graça de Deus como suficientes. A ficha atual conserva parte da entrega, mas a resposta acrescentada não é esse final e não foi verificada como frase de Inácio. A espiritualidade desta oração é uma resposta agradecida ao amor recebido, não a anulação da consciência ou da responsabilidade pessoal."
+    },
+    "instructions": {
+      "es": "Antes de rezar, recuerda un don concreto y agradece a Dios. Lee la entrega lentamente, dejando silencio para comprender lo que ofreces. Para usar el Suscipe completo, consulta el número 234 de los Ejercicios. No atribuyas a san Ignacio el cierre añadido en la app; la entrega a Dios no obliga a obedecer peticiones abusivas de otras personas.",
+      "en": "Before praying, remember a concrete gift and thank God for it. Read the offering slowly, leaving silence to understand what you offer. For the complete Suscipe, consult number 234 of the Exercises. Do not attribute the app’s added conclusion to Saint Ignatius; surrender to God does not require obeying abusive demands from other people.",
+      "pt": "Antes de rezar, recorde um dom concreto e agradeça a Deus. Leia a entrega devagar, reservando silêncio para compreender o que oferece. Para usar o Suscipe completo, consulte o número 234 dos Exercícios. Não atribua a santo Inácio o final acrescentado no aplicativo; a entrega a Deus não obriga a obedecer exigências abusivas de outras pessoas."
+    },
+    "source": {
+      "es": "San Ignacio de Loyola, Ejercicios espirituales, 234; Xavier University, Jesuit Resource, Ignatian Prayers, sección Suscipe, para cotejar la conclusión.",
+      "en": "Saint Ignatius of Loyola, Spiritual Exercises, 234; Xavier University, Jesuit Resource, Ignatian Prayers, Suscipe section, for checking the conclusion.",
+      "pt": "Santo Inácio de Loyola, Exercícios Espirituais, 234; Xavier University, Jesuit Resource, Ignatian Prayers, seção Suscipe, para conferir a conclusão."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Texto actual incompleto respecto de EE 234; la respuesta añadida no se atribuye al santo. Las traducciones existentes requieren cotejo editorial.",
+      "en": "Current text incomplete against Exercises 234; the added response is not attributed to the saint. Existing translations need editorial checking.",
+      "pt": "Texto atual incompleto em relação a EE 234; a resposta acrescentada não é atribuída ao santo. As traduções existentes precisam de conferência editorial."
+    }
+  },
+  {
+    "prayerId": "immaculate_conception",
+    "history": {
+      "es": "La invocación principal es conocida por la Medalla Milagrosa. La capilla de la rue du Bac la vincula con el relato de Catalina Labouré en 1830; no se ha examinado aquí un decreto de reconocimiento de esas apariciones. Debe distinguirse esa tradición devocional del dogma de la Inmaculada Concepción, proclamado por Pío IX en 1854. El dogma se refiere a María, preservada del pecado original desde su concepción por la gracia de Cristo, no a la concepción virginal de Jesús. La respuesta añadida por la app es otra súplica mariana y no una parte de la inscripción de la medalla.",
+      "en": "The principal invocation is familiar from the Miraculous Medal. The chapel on the rue du Bac links it with Catherine Labouré’s account in 1830; no decree recognizing those apparitions has been examined here. This devotional tradition must be distinguished from the dogma of the Immaculate Conception, proclaimed by Pius IX in 1854. The dogma concerns Mary, preserved from original sin from her conception through Christ’s grace, rather than Jesus’ virginal conception. The app’s added response is another Marian petition and is not part of the inscription appearing on the medal.",
+      "pt": "A invocação principal é conhecida pela Medalha Milagrosa. A capela da rue du Bac a relaciona ao relato de Catarina Labouré em 1830; não foi examinado aqui um decreto de reconhecimento dessas aparições. Essa tradição devocional deve ser distinguida do dogma da Imaculada Conceição, proclamado por Pio IX em 1854. O dogma refere-se a Maria, preservada do pecado original desde sua concepção pela graça de Cristo, não à concepção virginal de Jesus. A resposta acrescentada pelo aplicativo é outra súplica mariana, e não parte da inscrição presente na medalha."
+    },
+    "instructions": {
+      "es": "Reza la invocación como una petición de intercesión, especialmente al recordar la Inmaculada Concepción. Puedes añadir tu intención y un momento de silencio. No necesitas llevar una medalla para pronunciarla ni atribuir un poder automático al objeto. La segunda parte de la app puede acompañar la oración personal, sin presentarse como inscripción original.",
+      "en": "Pray the invocation as a request for intercession, especially when remembering the Immaculate Conception. You may add your intention and a moment of silence. Wearing a medal is not required to say it, and the object should not be assigned automatic power. The app’s second part may accompany personal prayer without being presented as the original inscription.",
+      "pt": "Reze a invocação como pedido de intercessão, sobretudo ao recordar a Imaculada Conceição. Você pode acrescentar sua intenção e um momento de silêncio. Não é necessário usar uma medalha para pronunciá-la, nem atribuir poder automático ao objeto. A segunda parte do aplicativo pode acompanhar a oração pessoal sem ser apresentada como inscrição original."
+    },
+    "source": {
+      "es": "Capilla de Nuestra Señora de la Medalla Milagrosa, París, «The apparitions and the Miraculous Medal», inscripción y explicación del dogma; la respuesta añadida carece de edición identificada.",
+      "en": "Chapel of Our Lady of the Miraculous Medal, Paris, “The apparitions and the Miraculous Medal,” inscription and explanation of the dogma; no edition identified for the added response.",
+      "pt": "Capela de Nossa Senhora da Medalha Milagrosa, Paris, «The apparitions and the Miraculous Medal», inscrição e explicação do dogma; a resposta acrescentada não tem edição identificada."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Invocación de la medalla, con respuesta adicional de la app; no se ha verificado la edición de sus traducciones.",
+      "en": "Invocation from the medal with an additional app response; the editions of its translations have not been verified.",
+      "pt": "Invocação da medalha, com resposta adicional do aplicativo; não se verificou a edição de suas traduções."
+    }
+  },
+  {
+    "prayerId": "bendita_sea_tu_pureza",
+    "history": {
+      "es": "Bendita sea tu pureza es una oración mariana de tradición española, escrita en forma de décima. Su difusión devocional está documentada, entre otras fuentes, por una carta pastoral del obispo de Jaén que comenta sus versos. No se ha verificado aquí un autor ni una fecha de composición que permita fijarla con seguridad en un siglo concreto. La oración alaba la pureza de María y ofrece la vida del creyente a su cuidado maternal. Esa pureza se comprende en relación con la gracia de Dios, la caridad y la fidelidad, no como desprecio del cuerpo o del matrimonio.",
+      "en": "Bendita sea tu pureza is a Marian prayer in the Spanish tradition, written as a ten-line verse. Its devotional circulation is documented, among other sources, by a pastoral letter from the bishop of Jaén commenting on its lines. No author or date of composition has been verified here that would securely place it in a particular century. The prayer praises Mary’s purity and offers the believer’s life to her maternal care. That purity is understood in relation to God’s grace, charity, and faithfulness, rather than as contempt for the body or marriage.",
+      "pt": "Bendita sea tu pureza é uma oração mariana da tradição espanhola, escrita em forma de décima. Sua difusão devocional está documentada, entre outras fontes, numa carta pastoral do bispo de Jaén que comenta seus versos. Não foram verificados aqui um autor ou uma data de composição que permitam situá-la com segurança num século específico. A oração louva a pureza de Maria e oferece a vida do fiel a seu cuidado materno. Essa pureza deve ser compreendida em relação à graça de Deus, à caridade e à fidelidade, não como desprezo do corpo ou do matrimônio."
+    },
+    "instructions": {
+      "es": "Reza los versos despacio, por la mañana o al concluir una devoción mariana, y piensa en cómo ofrecer a Dios tu jornada. No exige una postura determinada ni repetirla un número fijo de veces. En grupo puede decirse toda en común; la forma poética ayuda a memorizarla sin convertir la memoria en obligación.",
+      "en": "Pray the verses slowly, in the morning or when concluding a Marian devotion, considering how to offer your day to God. No particular posture or fixed repetition count is required. A group may say the whole prayer together; its poetic form can help memorization without turning memorization into an obligation.",
+      "pt": "Reze os versos devagar, pela manhã ou ao concluir uma devoção mariana, pensando em como oferecer sua jornada a Deus. Não se exige postura específica nem número fixo de repetições. Em grupo, a oração pode ser dita toda em conjunto; a forma poética ajuda a memorizar sem transformar a memorização em obrigação."
+    },
+    "source": {
+      "es": "Diócesis de Jaén, «Carta del Obispo: ¡Bendita sea tu pureza!», 7 de diciembre de 2018. Testimonio del uso devocional, no prueba de la autoría original.",
+      "en": "Diocese of Jaén, “Carta del Obispo: ¡Bendita sea tu pureza!”, December 7, 2018. Witness to devotional use, not evidence establishing the original author.",
+      "pt": "Diocese de Jaén, «Carta del Obispo: ¡Bendita sea tu pureza!», 7 de dezembro de 2018. Testemunho do uso devocional, não prova da autoria original."
+    },
+    "approval": {
+      "es": "Uso devocional documentado por una enseñanza pastoral episcopal; no se afirma una aprobación formal del texto o de sus traducciones.",
+      "en": "Devotional use documented by episcopal pastoral teaching; no formal approval of the text or its translations is asserted.",
+      "pt": "Uso devocional documentado por ensinamento pastoral episcopal; não se afirma aprovação formal do texto ou de suas traduções."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Texto español de transmisión tradicional; no se identificaron autor, primera edición ni procedencia de las traducciones existentes.",
+      "en": "Traditionally transmitted Spanish text; author, first edition, and provenance of existing translations were not identified.",
+      "pt": "Texto espanhol de transmissão tradicional; não foram identificados autor, primeira edição ou procedência das traduções existentes."
+    }
+  },
+  {
+    "prayerId": "advent_antiphons",
+    "history": {
+      "es": "La ficha contiene estrofas del himno Ven, ven, Emmanuel, inspirado en las antífonas mayores de Adviento; no contiene las siete antífonas litúrgicas completas. Estas acompañan el Magnificat en Vísperas del 17 al 23 de diciembre y presentan títulos bíblicos de Cristo. La conferencia episcopal estadounidense documenta su uso en la Iglesia romana desde al menos el siglo VIII. El himno transforma parte de esas invocaciones en estrofas con estribillo. Distinguir ambos géneros permite rezar esta selección sin confundirla con los textos propios de cada día de la Liturgia de las Horas.",
+      "en": "The entry contains verses from O Come, O Come, Emmanuel, inspired by the great Advent antiphons; it does not contain the seven complete liturgical antiphons. These accompany the Magnificat at Vespers from December 17 through 23 and present biblical titles of Christ. The United States bishops document their use in the Roman Church from at least the eighth century. The hymn transforms some of those invocations into verses with a refrain. Distinguishing the two forms allows this selection to be prayed without confusing it with the appointed daily texts of the Liturgy of the Hours.",
+      "pt": "A ficha contém estrofes do hino Vem, vem, Emanuel, inspirado nas grandes antífonas do Advento; não contém as sete antífonas litúrgicas completas. Elas acompanham o Magnificat nas Vésperas de 17 a 23 de dezembro e apresentam títulos bíblicos de Cristo. A conferência episcopal dos Estados Unidos documenta seu uso na Igreja romana desde pelo menos o século VIII. O hino transforma parte dessas invocações em estrofes com refrão. Distinguir os dois gêneros permite rezar esta seleção sem confundi-la com os textos próprios de cada dia da Liturgia das Horas."
+    },
+    "instructions": {
+      "es": "Reza o canta las estrofas como preparación devocional para Navidad, meditando en la esperanza de Israel y en Cristo que viene. El estribillo puede responderse en grupo después de cada estrofa. Para las antífonas litúrgicas del 17 al 23 de diciembre, consulta el formulario propio de Vísperas; esta selección no lo sustituye.",
+      "en": "Pray or sing the verses as devotional preparation for Christmas, reflecting on Israel’s hope and the coming of Christ. A group may respond with the refrain after each verse. For the liturgical antiphons of December 17 through 23, consult the proper Vespers texts; this selection does not replace them.",
+      "pt": "Reze ou cante as estrofes como preparação devocional para o Natal, meditando na esperança de Israel e em Cristo que vem. Em grupo, o refrão pode ser respondido após cada estrofe. Para as antífonas litúrgicas de 17 a 23 de dezembro, consulte os textos próprios das Vésperas; esta seleção não os substitui."
+    },
+    "source": {
+      "es": "USCCB, «The O Antiphons of Advent» y «Reflection: The O Antiphons of Advent»; Liturgia de las Horas, Vísperas del 17–23 de diciembre. La edición concreta de las estrofas traducidas no fue identificada.",
+      "en": "USCCB, “The O Antiphons of Advent” and “Reflection: The O Antiphons of Advent”; Liturgy of the Hours, Vespers for December 17–23. The specific edition of the translated hymn verses was not identified.",
+      "pt": "USCCB, «The O Antiphons of Advent» e «Reflection: The O Antiphons of Advent»; Liturgia das Horas, Vésperas de 17–23 de dezembro. Não foi identificada a edição específica das estrofes traduzidas."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Selección de un himno inspirado en las antífonas; no es su texto litúrgico completo. Derechos y edición de las traducciones pendientes de verificar.",
+      "en": "Selection from a hymn inspired by the antiphons, not their complete liturgical text. Translation editions and rights remain unverified.",
+      "pt": "Seleção de um hino inspirado nas antífonas, não o texto litúrgico integral. Edições e direitos das traduções ainda não verificados."
+    }
+  },
+  {
+    "prayerId": "chaplet_of_st_michael",
+    "history": {
+      "es": "La corona tradicional de san Miguel honra a los nueve coros angélicos. Publicaciones devocionales relacionan su origen con Antonia d’Astonac y refieren una aprobación de Pío IX en 1851; aquí no se ha examinado el decreto original ni se certifica una aparición. El texto de la app no coincide con la secuencia tradicional: reúne otras invocaciones y un pasaje extenso relacionado con fórmulas de exorcismo. La carta Inde ab aliquot annis recuerda que no toda fórmula de ese género está permitida a los fieles. Por eso esta ficha requiere revisión antes de presentarse como corona auténtica aprobada.",
+      "en": "The traditional chaplet of Saint Michael honors the nine angelic choirs. Devotional publications link its origin with Antonia d’Astonac and report approval by Pius IX in 1851; the original decree has not been examined here, nor is an apparition certified. The app’s text differs from the traditional sequence: it combines other invocations with an extended passage related to exorcism formulas. The letter Inde ab aliquot annis recalls that not every formula of that kind is permitted to the faithful. This entry therefore requires review before being presented as an authentic approved chaplet.",
+      "pt": "A coroa tradicional de são Miguel honra os nove coros angélicos. Publicações devocionais relacionam sua origem a Antonia d’Astonac e mencionam aprovação de Pio IX em 1851; o decreto original não foi examinado aqui, nem se certifica uma aparição. O texto do aplicativo difere da sequência tradicional: reúne outras invocações e um trecho extenso relacionado a fórmulas de exorcismo. A carta Inde ab aliquot annis recorda que nem toda fórmula desse gênero é permitida aos fiéis. Assim, esta ficha precisa de revisão antes de ser apresentada como coroa autêntica aprovada."
+    },
+    "instructions": {
+      "es": "Para rezar la corona, utiliza un formulario tradicional verificado con las salutaciones y las oraciones indicadas para cada coro. No trates el texto compuesto de esta ficha como un rito de exorcismo ni uses fórmulas reservadas al ministro autorizado. Ante dudas, consulta a un sacerdote; pedir protección a Dios y la intercesión de los ángeles sigue siendo oración cristiana legítima.",
+      "en": "To pray the chaplet, use a verified traditional formula with the salutations and prayers appointed for each choir. Do not treat this entry’s composite text as an exorcism rite or use formulas reserved to an authorized minister. Ask a priest when uncertain; requesting God’s protection and the angels’ intercession remains legitimate Christian prayer.",
+      "pt": "Para rezar a coroa, use um formulário tradicional verificado, com as saudações e orações indicadas para cada coro. Não trate o texto composto desta ficha como rito de exorcismo nem use fórmulas reservadas ao ministro autorizado. Na dúvida, consulte um sacerdote; pedir a proteção de Deus e a intercessão dos anjos continua sendo oração cristã legítima."
+    },
+    "source": {
+      "es": "St. Michael Center, «The Chaplet of St. Michael», reproducción atribuida a EWTN; Congregación para la Doctrina de la Fe, Inde ab aliquot annis, AAS 77 (1985), 1169–1170.",
+      "en": "St. Michael Center, “The Chaplet of St. Michael,” reproduction credited to EWTN; Congregation for the Doctrine of the Faith, Inde ab aliquot annis, AAS 77 (1985), 1169–1170.",
+      "pt": "St. Michael Center, «The Chaplet of St. Michael», reprodução atribuída à EWTN; Congregação para a Doutrina da Fé, Inde ab aliquot annis, AAS 77 (1985), 1169–1170."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Texto actual compuesto y distinto de la corona tradicional. No se acredita para él la aprobación histórica referida a otra fórmula.",
+      "en": "Current composite text differs from the traditional chaplet. The historical approval reported for another formula is not credited to it.",
+      "pt": "Texto atual composto e diferente da coroa tradicional. Não se lhe atribui a aprovação histórica mencionada para outro formulário."
+    }
+  },
+  {
+    "prayerId": "confiteor",
+    "history": {
+      "es": "Confiteor es el comienzo latino de la confesión general de los pecados. Esta ficha corresponde sustancialmente a la fórmula de la Misa romana actual: reconoce pecados de pensamiento, palabra, obra y omisión, y pide la intercesión de María, los ángeles, los santos y la comunidad. En la Misa pertenece al acto penitencial de los ritos iniciales, no al momento inmediatamente anterior a comulgar. La petición de perdón que sigue en la celebración no sustituye la absolución sacramental. La oración ayuda a reconocer la propia responsabilidad ante Dios y ante los demás, sin exigir una exposición pública de pecados particulares.",
+      "en": "Confiteor is the Latin opening of the general confession of sins. This entry substantially follows the formula of the current Roman Mass: it acknowledges sins in thought, word, action, and omission, and asks the intercession of Mary, the angels, the saints, and the community. At Mass it belongs to the Penitential Act in the introductory rites, not the moment immediately before Communion. The prayer for forgiveness following it in the celebration does not replace sacramental absolution. It helps people acknowledge responsibility before God and others, without requiring public disclosure of particular sins.",
+      "pt": "Confiteor é o início latino da confissão geral dos pecados. Esta ficha corresponde substancialmente à fórmula da Missa romana atual: reconhece pecados por pensamentos, palavras, atos e omissões, e pede a intercessão de Maria, dos anjos, dos santos e da comunidade. Na Missa, pertence ao ato penitencial dos ritos iniciais, não ao momento imediatamente anterior à Comunhão. O pedido de perdão que se segue na celebração não substitui a absolvição sacramental. A oração ajuda a reconhecer a própria responsabilidade diante de Deus e dos outros, sem exigir exposição pública de pecados particulares."
+    },
+    "instructions": {
+      "es": "En la Misa, sigue la invitación y el breve silencio del sacerdote; reza con toda la asamblea y golpea el pecho al reconocer la propia culpa, según la rúbrica. Para la oración personal, puedes usarla en el examen de conciencia. No sustituye la confesión sacramental cuando esta es necesaria antes de comulgar.",
+      "en": "At Mass, follow the priest’s invitation and brief silence; pray with the whole assembly and strike your breast when acknowledging your fault, according to the rubric. In personal prayer, it can accompany an examination of conscience. It does not replace sacramental confession when that is required before receiving Communion.",
+      "pt": "Na Missa, acompanhe o convite e o breve silêncio do sacerdote; reze com toda a assembleia e bata no peito ao reconhecer sua culpa, conforme a rubrica. Na oração pessoal, pode acompanhar o exame de consciência. Não substitui a confissão sacramental quando ela é necessária antes de receber a Comunhão."
+    },
+    "source": {
+      "es": "Misal Romano, Ordinario de la Misa, acto penitencial; Ordenación General del Misal Romano, 51; USCCB, Newsletter del Comité de Culto Divino, julio de 2011, comentario del Confiteor.",
+      "en": "Roman Missal, Order of Mass, Penitential Act; General Instruction of the Roman Missal, 51; USCCB Committee on Divine Worship Newsletter, July 2011, commentary on the Confiteor.",
+      "pt": "Missal Romano, Ordinário da Missa, ato penitencial; Instrução Geral do Missal Romano, 51; USCCB, boletim do Comitê para o Culto Divino, julho de 2011, comentário ao Confiteor."
+    },
+    "approval": {
+      "es": "Fórmula del Ordinario de la Misa romana; no se certifica aquí la edición ni los derechos de cada traducción incorporada.",
+      "en": "Formula from the Order of the Roman Mass; the edition and rights of each existing translation are not certified here.",
+      "pt": "Fórmula do Ordinário da Missa romana; não se certificam aqui a edição e os direitos de cada tradução incorporada."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Forma posconciliar; sus traducciones deben cotejarse con las ediciones autorizadas y sus permisos de reproducción.",
+      "en": "Postconciliar form; its translations require checking against authorized editions and their reproduction permissions.",
+      "pt": "Forma pós-conciliar; suas traduções precisam ser conferidas com as edições autorizadas e as respectivas permissões de reprodução."
+    }
+  },
+  {
+    "prayerId": "divine_mercy_opening_prayer",
+    "history": {
+      "es": "La apertura reúne dos oraciones de santa Faustina: la súplica a Jesús que acaba de expirar, en el Diario 1319, y la invocación a la Sangre y al Agua, en el 84. Son añadidos opcionales al esquema de la Coronilla, no palabras que deban anteponerse obligatoriamente a cada decena. La imagen de la Sangre y el Agua remite al costado de Cristo en Jn 19,34. El Diario también vincula esta invocación breve con una promesa de conversión, en los números 186–187, bajo condiciones de fe y contrición. Esa atribución pertenece a la revelación privada, no a una obligación dogmática.",
+      "en": "The opening combines two prayers by Saint Faustina: the petition to Jesus who has just expired, in Diary 1319, and the invocation to the Blood and Water, in 84. They are optional additions to the Chaplet’s structure, not words that must precede every decade. The image of Blood and Water recalls Christ’s pierced side in John 19:34. The Diary also connects the short invocation with a promise of conversion, in entries 186–187, subject to faith and contrition. That attribution belongs to private revelation, rather than a dogmatic obligation imposed on believers.",
+      "pt": "A abertura reúne duas orações de santa Faustina: a súplica a Jesus que acaba de expirar, no Diário 1319, e a invocação ao Sangue e à Água, no 84. São acréscimos opcionais ao esquema do Terço da Misericórdia, não palavras que devam preceder obrigatoriamente cada dezena. A imagem do Sangue e da Água remete ao lado de Cristo em Jo 19,34. O Diário também relaciona essa breve invocação a uma promessa de conversão, nos números 186–187, com condições de fé e contrição. Essa atribuição pertence à revelação privada, não a uma obrigação dogmática."
+    },
+    "instructions": {
+      "es": "Puedes rezar la primera súplica una vez y repetir tres veces la invocación a la Sangre y al Agua, como propone la guía devocional consultada. Después continúa con el padrenuestro, el avemaría y el credo. Estas oraciones iniciales son opcionales; omitirlas no altera el esquema básico de la Coronilla.",
+      "en": "You may pray the first petition once and repeat the invocation to the Blood and Water three times, as the consulted devotional guide suggests. Then continue with the Lord’s Prayer, Hail Mary, and Creed. These opening prayers are optional; omitting them does not change the basic structure of the Chaplet.",
+      "pt": "Você pode rezar a primeira súplica uma vez e repetir três vezes a invocação ao Sangue e à Água, como propõe o guia devocional consultado. Depois continue com o pai-nosso, a ave-maria e o credo. Essas orações iniciais são opcionais; omiti-las não altera o esquema básico do Terço da Misericórdia."
+    },
+    "source": {
+      "es": "Santa Faustina, Diario, 84, 186–187 y 1319; USCCB, Chaplet of Divine Mercy; Padres Marianos, All-Occasion Prayers y Our Hope is in the Divine Mercy.",
+      "en": "Saint Faustina, Diary, 84, 186–187, and 1319; USCCB, Chaplet of Divine Mercy; Marian Fathers, All-Occasion Prayers and Our Hope is in the Divine Mercy.",
+      "pt": "Santa Faustina, Diário, 84, 186–187 e 1319; USCCB, Chaplet of Divine Mercy; Padres Marianos, All-Occasion Prayers e Our Hope is in the Divine Mercy."
+    },
+    "approval": {
+      "es": "Uso devocional documentado por la USCCB y los Padres Marianos. No se presenta como parte obligatoria del rito de la Misa.",
+      "en": "Devotional use documented by the USCCB and Marian Fathers. It is not presented as an obligatory part of the rite of Mass.",
+      "pt": "Uso devocional documentado pela USCCB e pelos Padres Marianos. Não é apresentado como parte obrigatória do rito da Missa."
+    },
+    "promise": {
+      "kind": "SOURCED",
+      "text": {
+        "es": "Gracia de conversión para el pecador por quien se pronuncia con fe y corazón contrito la invocación a la Sangre y al Agua.",
+        "en": "Grace of conversion for the sinner on whose behalf the Blood and Water invocation is prayed with faith and a contrite heart.",
+        "pt": "Graça de conversão para o pecador por quem se reza a invocação ao Sangue e à Água com fé e coração contrito."
+      },
+      "attribution": {
+        "es": "Atribuida a Jesús por santa Faustina en su Diario.",
+        "en": "Attributed to Jesus by Saint Faustina in her Diary.",
+        "pt": "Atribuída a Jesus por santa Faustina em seu Diário."
+      },
+      "source": {
+        "es": "Diario, 186–187: promesa e invocación; no corresponde indiscriminadamente a cualquier oración de apertura.",
+        "en": "Diary, 186–187: promise and invocation; it does not apply indiscriminately to every opening prayer.",
+        "pt": "Diário, 186–187: promessa e invocação; não se aplica indistintamente a qualquer oração de abertura."
+      },
+      "conditions": {
+        "es": "Rezar esa invocación por un pecador, con fe y corazón contrito. Se presenta como revelación privada, distinta de una indulgencia; véase CIC 67.",
+        "en": "Pray that invocation on behalf of a sinner, with faith and a contrite heart. Presented as private revelation, distinct from an indulgence; see CCC 67.",
+        "pt": "Rezar essa invocação por um pecador, com fé e coração contrito. Apresenta-se como revelação privada, distinta de indulgência; veja CIC 67."
+      }
+    },
+    "textNote": {
+      "es": "Textos del Diario con traducciones modernas ya existentes en la app; no se han verificado sus permisos de reproducción.",
+      "en": "Diary texts with modern translations already in the app; their reproduction permissions have not been verified.",
+      "pt": "Textos do Diário com traduções modernas já presentes no aplicativo; não se verificaram suas permissões de reprodução."
+    }
+  },
+  {
+    "prayerId": "divine_mercy_closing_prayer",
+    "history": {
+      "es": "Dios eterno, en quien la misericordia es infinita procede del número 950 del Diario de santa Faustina. Los Padres Marianos la presentan como conclusión opcional de la Coronilla. Su centro es la confianza en Dios durante la dificultad: pide no caer en desesperación o desánimo y aprender a acoger su voluntad de amor y misericordia. No es la fórmula que sustituye a las diez avemarías de cada decena ni debe confundirse con Dios Santo, repetido tres veces al final. La fuente documenta la oración, pero no una promesa autónoma de resultados materiales por añadir esta conclusión.",
+      "en": "Eternal God, in whom mercy is endless comes from number 950 of Saint Faustina’s Diary. The Marian Fathers present it as an optional conclusion to the Chaplet. Its center is trust in God during difficulty: it asks for protection from despair and discouragement and for acceptance of his will of love and mercy. It is not the formula replacing the ten Hail Marys of each decade and should not be confused with Holy God, repeated three times at the end. The source documents the prayer, but not a separate promise of material results from adding this conclusion.",
+      "pt": "Deus eterno, em quem a misericórdia é infinita procede do número 950 do Diário de santa Faustina. Os Padres Marianos a apresentam como conclusão opcional do Terço da Misericórdia. Seu centro é a confiança em Deus nas dificuldades: pede que não se caia no desespero ou desânimo e que se acolha sua vontade de amor e misericórdia. Não é a fórmula que substitui as dez ave-marias de cada dezena, nem deve ser confundida com Deus Santo, repetido três vezes ao final. A fonte documenta a oração, mas não uma promessa autônoma de resultados materiais por acrescentar esta conclusão."
+    },
+    "instructions": {
+      "es": "Puedes rezarla una vez al terminar la Coronilla, después de la triple invocación Dios Santo, o como oración personal en una dificultad. Lee despacio las palabras sobre confianza y misericordia. En grupo puede decirse toda en común. Si atraviesas una crisis persistente, acompaña la oración con apoyo humano, pastoral y profesional adecuado.",
+      "en": "You may pray it once at the end of the Chaplet, after the threefold Holy God invocation, or as personal prayer during difficulty. Read the words about trust and mercy slowly. A group may say the whole prayer together. During a persistent crisis, accompany prayer with appropriate human, pastoral, and professional support.",
+      "pt": "Você pode rezá-la uma vez ao concluir o Terço da Misericórdia, depois da invocação tríplice Deus Santo, ou como oração pessoal numa dificuldade. Leia devagar as palavras sobre confiança e misericórdia. Em grupo, todos podem rezá-la juntos. Numa crise persistente, acompanhe a oração com apoio humano, pastoral e profissional adequado."
+    },
+    "source": {
+      "es": "Santa Faustina, Diario, 950; Padres Marianos, The Chaplet of Divine Mercy, sección Optional Concluding Prayer.",
+      "en": "Saint Faustina, Diary, 950; Marian Fathers, The Chaplet of Divine Mercy, Optional Concluding Prayer section.",
+      "pt": "Santa Faustina, Diário, 950; Padres Marianos, The Chaplet of Divine Mercy, seção Optional Concluding Prayer."
+    },
+    "approval": {
+      "es": "Oración devocional publicada por los Padres Marianos como cierre opcional de la Coronilla.",
+      "en": "Devotional prayer published by the Marian Fathers as an optional conclusion to the Chaplet.",
+      "pt": "Oração devocional publicada pelos Padres Marianos como conclusão opcional do Terço da Misericórdia."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducciones modernas del Diario ya incorporadas; permisos y edición exacta pendientes de cotejo.",
+      "en": "Existing modern Diary translations; permissions and exact edition still require checking.",
+      "pt": "Traduções modernas do Diário já incorporadas; permissões e edição exata ainda precisam ser conferidas."
+    }
+  },
+  {
+    "prayerId": "holy_god",
+    "history": {
+      "es": "La invocación tiene la estructura del Trisagio oriental: Dios Santo, Dios fuerte, Dios inmortal. No debe confundirse con el Santo, Santo, Santo de la plegaria eucarística. La versión de esta ficha añade la petición por el mundo entero propia de la Coronilla de la Divina Misericordia. El número 476 del Diario de santa Faustina incluye su repetición triple al terminar esa devoción. Se dirige a Dios para pedir misericordia y no atribuye poder independiente a los santos. Reconocer su contexto evita tratarla como una fórmula que deba repetirse incesantemente para que Dios escuche.",
+      "en": "The invocation follows the structure of the Eastern Trisagion: Holy God, Holy Mighty One, Holy Immortal One. It should not be confused with the Holy, Holy, Holy of the Eucharistic Prayer. This entry adds the petition for the whole world used in the Divine Mercy Chaplet. Number 476 of Saint Faustina’s Diary includes its threefold repetition at the conclusion of that devotion. It addresses God to ask for mercy and assigns no independent power to saints. Recognizing its context prevents treating it as a formula requiring endless repetition before God will listen.",
+      "pt": "A invocação segue a estrutura do Triságio oriental: Deus Santo, Deus forte, Deus imortal. Não deve ser confundida com o Santo, Santo, Santo da oração eucarística. A versão desta ficha acrescenta o pedido pelo mundo inteiro usado no Terço da Misericórdia. O número 476 do Diário de santa Faustina inclui sua repetição tríplice ao terminar essa devoção. A súplica dirige-se a Deus para pedir misericórdia, sem atribuir poder independente aos santos. Conhecer seu contexto evita tratá-la como fórmula que precise ser repetida incessantemente para que Deus escute."
+    },
+    "instructions": {
+      "es": "Al concluir las cinco decenas de la Coronilla, reza la invocación completa tres veces. Puedes decirla personalmente o con todos los presentes a una voz. En la oración fuera de la Coronilla no necesitas adoptar una postura o número de repeticiones exclusivo. Mantén el sentido de súplica confiada, sin convertir la cuenta en una obligación escrupulosa.",
+      "en": "After the Chaplet’s five decades, pray the complete invocation three times. You may say it privately or together with everyone present. Outside the Chaplet, no exclusive posture or repetition count is required. Preserve its meaning as a trusting petition, without turning the counting into a scrupulous obligation or a condition for God’s attention.",
+      "pt": "Ao concluir as cinco dezenas do Terço da Misericórdia, reze a invocação completa três vezes. Você pode rezá-la pessoalmente ou com todos os presentes a uma só voz. Fora do Terço, não é necessário adotar postura ou número exclusivo de repetições. Preserve o sentido de súplica confiante, sem transformar a contagem em obrigação escrupulosa."
+    },
+    "source": {
+      "es": "Santa Faustina, Diario, 476; Padres Marianos, The Chaplet of Divine Mercy, invocación conclusiva; para el Trisagio oriental, Enchiridion Indulgentiarum, 1999, concesión 23.",
+      "en": "Saint Faustina, Diary, 476; Marian Fathers, The Chaplet of Divine Mercy, concluding invocation; for the Eastern Trisagion, Enchiridion Indulgentiarum, 1999, concession 23.",
+      "pt": "Santa Faustina, Diário, 476; Padres Marianos, The Chaplet of Divine Mercy, invocação conclusiva; para o Triságio oriental, Enchiridion Indulgentiarum, 1999, concessão 23."
+    },
+    "approval": {
+      "es": "Uso devocional de la fórmula de la Coronilla documentado por los Padres Marianos; no se identifica sin más con una traducción litúrgica oriental.",
+      "en": "Devotional use of the Chaplet formula documented by the Marian Fathers; not simply identified with an Eastern liturgical translation.",
+      "pt": "Uso devocional da fórmula do Terço documentado pelos Padres Marianos; não se identifica automaticamente com uma tradução litúrgica oriental."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Fórmula de la Coronilla con traducciones ya existentes; su procedencia editorial requiere verificación.",
+      "en": "Chaplet formula with existing translations; their editorial provenance requires verification.",
+      "pt": "Fórmula do Terço com traduções já existentes; sua procedência editorial precisa de verificação."
+    }
+  },
+  {
+    "prayerId": "litany_of_loreto",
+    "history": {
+      "es": "La letanía lauretana reúne títulos de María en una súplica repetida de intercesión. Su historia se vincula al santuario de Loreto; la aprobación de Sixto V en 1587 está documentada en la historia de la letanía. El formulario ha recibido añadidos posteriores. En 2020 se incorporaron Madre de misericordia, Madre de la esperanza y Consuelo de los migrantes, según la carta de la Congregación para el Culto Divino. Esas invocaciones no aparecen en el texto actual de la app, que además repite una invocación española. Esta ficha necesita cotejo con el formulario actualizado antes de presentarse como reproducción completa.",
+      "en": "The Litany of Loreto gathers Marian titles into a repeated petition for intercession. Its history is linked to the shrine of Loreto; Sixtus V’s approval in 1587 is documented in accounts of the litany’s history. The formula has received subsequent additions. In 2020, Mother of mercy, Mother of hope, and Comfort of migrants were inserted, according to the Congregation for Divine Worship’s letter. These invocations are absent from the app’s current text, which also repeats a Spanish invocation. The entry needs checking against the updated formula before being presented as a complete reproduction.",
+      "pt": "A ladainha lauretana reúne títulos de Maria numa súplica repetida de intercessão. Sua história está ligada ao santuário de Loreto; a aprovação de Sisto V em 1587 é documentada na história da ladainha. O formulário recebeu acréscimos posteriores. Em 2020 foram incluídas Mãe de misericórdia, Mãe da esperança e Consolo dos migrantes, conforme a carta da Congregação para o Culto Divino. Essas invocações não aparecem no texto atual do aplicativo, que também repete uma invocação em espanhol. A ficha precisa ser conferida com o formulário atualizado antes de ser apresentada como reprodução completa."
+    },
+    "instructions": {
+      "es": "En grupo, una persona propone cada título y los demás responden ruega por nosotros; las peticiones iniciales a Dios tienen su respuesta propia. En privado puedes decir todas las líneas. Usa un formulario actualizado y aprobado para el rezo comunitario. La conclusión presentada por la app pertenece al Rosario y no identifica por sí sola la oración propia de la letanía.",
+      "en": "In a group, one person leads each title and the others respond pray for us; the opening petitions to God have their own response. In private, you may say every line. Use an updated approved formula for communal prayer. The app’s concluding prayer belongs to the Rosary and does not itself identify the litany’s proper concluding prayer.",
+      "pt": "Em grupo, uma pessoa propõe cada título e as demais respondem rogai por nós; os pedidos iniciais a Deus têm resposta própria. Na oração pessoal, você pode dizer todas as linhas. Use um formulário atualizado e aprovado no uso comunitário. A conclusão apresentada pelo aplicativo pertence ao Rosário e não identifica, por si só, a oração própria da ladainha."
+    },
+    "source": {
+      "es": "The Catholic Encyclopedia, «Litany of Loreto»; Congregación para el Culto Divino, carta a las conferencias episcopales sobre las tres invocaciones, 20 de junio de 2020; Enchiridion Indulgentiarum, 1999, concesión 22.",
+      "en": "The Catholic Encyclopedia, “Litany of Loreto”; Congregation for Divine Worship, letter to episcopal conferences on the three invocations, June 20, 2020; Enchiridion Indulgentiarum, 1999, concession 22.",
+      "pt": "The Catholic Encyclopedia, verbete «Litany of Loreto»; Congregação para o Culto Divino, carta às conferências episcopais sobre as três invocações, 20 de junho de 2020; Enchiridion Indulgentiarum, 1999, concessão 22."
+    },
+    "approval": {
+      "es": "Letanía aprobada para la oración eclesial. El Enchiridion concede indulgencia parcial a la recitación piadosa de letanías aprobadas; el texto actual de la app requiere corrección y actualización.",
+      "en": "Litany approved for ecclesial prayer. The Enchiridion grants a partial indulgence for devout recitation of approved litanies; the current app text requires correction and updating.",
+      "pt": "Ladainha aprovada para a oração eclesial. O Enchiridion concede indulgência parcial à recitação piedosa de ladainhas aprovadas; o texto atual do aplicativo precisa de correção e atualização."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Faltan las tres invocaciones añadidas en 2020; hay una repetición en español. Las traducciones requieren cotejo con las ediciones autorizadas.",
+      "en": "The three invocations added in 2020 are missing; there is a repetition in Spanish. Translations require checking against authorized editions.",
+      "pt": "Faltam as três invocações acrescentadas em 2020; há uma repetição em espanhol. As traduções precisam ser conferidas com as edições autorizadas."
+    }
+  },
+  {
+    "prayerId": "litany_of_the_sacred_heart",
+    "history": {
+      "es": "La letanía del Sagrado Corazón contempla a Jesús a través de títulos bíblicos y teológicos referidos a su Corazón. La aprobación para el uso público por León XIII en 1899 está recogida en devocionarios históricos, entre ellos la recopilación de Bonaventure Hammer publicada en 1909. La serie habitual contiene treinta y tres invocaciones al Corazón de Jesús. La versión española de esta app tiene treinta y dos: falta la invocación al Corazón en quien el Padre se complace, y varias frases necesitan cotejo. La aprobación del formulario tradicional no acredita automáticamente cada abreviación o alteración posterior.",
+      "en": "The Litany of the Sacred Heart contemplates Jesus through biblical and theological titles referring to his Heart. Leo XIII’s approval for public use in 1899 is recorded in historical prayer books, including Bonaventure Hammer’s collection published in 1909. The customary series contains thirty-three invocations to the Heart of Jesus. This app’s Spanish version has thirty-two: it lacks the invocation to the Heart in whom the Father is well pleased, and several phrases need checking. Approval of the traditional formula does not automatically authenticate every later abridgment or alteration in an application.",
+      "pt": "A ladainha do Sagrado Coração contempla Jesus por meio de títulos bíblicos e teológicos relacionados a seu Coração. A aprovação para o uso público por Leão XIII em 1899 consta de devocionários históricos, entre eles a coletânea de Bonaventure Hammer publicada em 1909. A série habitual contém trinta e três invocações ao Coração de Jesus. A versão espanhola do aplicativo tem trinta e duas: falta a invocação ao Coração em quem o Pai se compraz, e várias frases precisam ser conferidas. A aprovação do formulário tradicional não autentica automaticamente cada abreviação ou alteração posterior."
+    },
+    "instructions": {
+      "es": "Quien dirige puede proclamar cada invocación; todos responden ten piedad de nosotros. Las súplicas a Jesús se distinguen de las dirigidas a los santos, cuya intercesión pedimos. Reza sin prisa y usa un formulario completo cotejado si participas en una celebración. La lectura personal no requiere un gesto o una cantidad de repeticiones añadida.",
+      "en": "The leader may proclaim each invocation while everyone responds have mercy on us. Petitions to Jesus differ from those addressed to saints, whose intercession we ask. Pray without rushing and use a checked complete formula when taking part in a celebration. Personal recitation requires no additional gesture or repetition count.",
+      "pt": "Quem dirige pode proclamar cada invocação; todos respondem tende piedade de nós. As súplicas a Jesus distinguem-se das dirigidas aos santos, de quem pedimos a intercessão. Reze sem pressa e use um formulário completo e conferido numa celebração. A leitura pessoal não exige gesto ou quantidade adicional de repetições."
+    },
+    "source": {
+      "es": "Bonaventure Hammer, General Catholic Devotions, 1909, «Litany of the Sacred Heart of Jesus», edición digital de Project Gutenberg 33676; Enchiridion Indulgentiarum, 1999, concesión 22.",
+      "en": "Bonaventure Hammer, General Catholic Devotions, 1909, “Litany of the Sacred Heart of Jesus,” Project Gutenberg digital edition 33676; Enchiridion Indulgentiarum, 1999, concession 22.",
+      "pt": "Bonaventure Hammer, General Catholic Devotions, 1909, seção «Litany of the Sacred Heart of Jesus», edição digital Project Gutenberg 33676; Enchiridion Indulgentiarum, 1999, concessão 22."
+    },
+    "approval": {
+      "es": "Aprobación histórica del formulario tradicional bajo León XIII; indulgencia parcial por recitar piadosamente letanías aprobadas según el Enchiridion de 1999. La ficha necesita cotejo.",
+      "en": "Historical approval of the traditional formula under Leo XIII; a partial indulgence for devoutly reciting approved litanies under the 1999 Enchiridion. The entry needs checking.",
+      "pt": "Aprovação histórica do formulário tradicional sob Leão XIII; indulgência parcial pela recitação piedosa de ladainhas aprovadas segundo o Enchiridion de 1999. A ficha precisa ser conferida."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "La versión española omite una invocación del formulario de referencia. No se certifica la fidelidad o licencia de las traducciones existentes.",
+      "en": "The Spanish version omits an invocation from the reference formula. The accuracy or licensing of existing translations is not certified.",
+      "pt": "A versão espanhola omite uma invocação do formulário de referência. Não se certificam a fidelidade ou a licença das traduções existentes."
+    }
+  },
+  {
+    "prayerId": "prayer_before_crucifix",
+    "history": {
+      "es": "La oración comienza en latín En ego, o bone et dulcissime Iesu. El Enchiridion la reproduce entre las oraciones de acción de gracias después de la Misa y la vincula a la meditación de las cinco llagas de Cristo. El creyente pide fe, esperanza, caridad, arrepentimiento y voluntad de enmienda; no se trata únicamente de contemplar un sufrimiento físico. El final recoge una imagen del salmo 22 sobre las manos y los pies traspasados. No se ha verificado aquí su autor original. Su indulgencia cuaresmal está documentada y tiene un acto y unas condiciones precisas.",
+      "en": "The prayer begins in Latin En ego, o bone et dulcissime Iesu. The Enchiridion reproduces it among prayers of thanksgiving after Mass and connects it with meditation on Christ’s five wounds. The believer asks for faith, hope, charity, repentance, and resolve to amend life; the prayer is not simply contemplation of physical suffering. Its conclusion draws on an image from Psalm 22 concerning pierced hands and feet. The original author has not been verified here. Its Lenten indulgence is documented and has a specified devotional act and precise conditions.",
+      "pt": "A oração começa em latim En ego, o bone et dulcissime Iesu. O Enchiridion a reproduz entre as orações de ação de graças depois da Missa e a relaciona à meditação das cinco chagas de Cristo. O fiel pede fé, esperança, caridade, arrependimento e propósito de emenda; não se trata apenas de contemplar sofrimento físico. O final retoma uma imagem do salmo 22 sobre as mãos e os pés traspassados. Não foi verificado aqui seu autor original. Sua indulgência quaresmal é documentada e tem um ato devocional e condições precisas."
+    },
+    "instructions": {
+      "es": "Reza ante una imagen de Jesús crucificado, meditando en sus llagas y en tu deseo de conversión. Puedes arrodillarte si tu salud lo permite; la oración personal no depende de forzar una postura dolorosa. Para la indulgencia plenaria, el acto se realiza después de comulgar en un viernes de Cuaresma, con las condiciones habituales.",
+      "en": "Pray before an image of the crucified Jesus, reflecting on his wounds and your desire for conversion. You may kneel if health permits; personal prayer does not depend on forcing a painful posture. For the plenary indulgence, perform the act after receiving Communion on a Friday of Lent, with the usual conditions.",
+      "pt": "Reze diante de uma imagem de Jesus crucificado, meditando em suas chagas e no desejo de conversão. Você pode ajoelhar-se se a saúde permitir; a oração pessoal não depende de forçar uma postura dolorosa. Para a indulgência plenária, o ato é realizado depois da Comunhão, numa sexta-feira da Quaresma, com as condições habituais."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, cuarta edición, 1999, concesión 8, texto En ego, o bone et dulcissime Iesu; Sal 22(21),17–18.",
+      "en": "Enchiridion Indulgentiarum, fourth edition, 1999, concession 8, text En ego, o bone et dulcissime Iesu; Ps 22(21):17–18.",
+      "pt": "Enchiridion Indulgentiarum, quarta edição, 1999, concessão 8, texto En ego, o bone et dulcissime Iesu; Sl 22(21),17–18."
+    },
+    "approval": {
+      "es": "Oración recogida en el Enchiridion de 1999 para la acción de gracias eucarística.",
+      "en": "Prayer included in the 1999 Enchiridion for Eucharistic thanksgiving.",
+      "pt": "Oração incluída no Enchiridion de 1999 para a ação de graças eucarística."
+    },
+    "promise": {
+      "kind": "ECCLESIAL_GRANT",
+      "text": {
+        "es": "Indulgencia plenaria por rezar piadosamente En ego, o bone et dulcissime Iesu ante una imagen de Cristo crucificado, después de comulgar, en cualquier viernes de Cuaresma.",
+        "en": "A plenary indulgence for devoutly praying En ego, o bone et dulcissime Iesu before an image of the crucified Christ, after Communion, on any Friday of Lent.",
+        "pt": "Indulgência plenária por rezar piedosamente En ego, o bone et dulcissime Iesu diante de uma imagem de Cristo crucificado, depois da Comunhão, em qualquer sexta-feira da Quaresma."
+      },
+      "attribution": {
+        "es": "Penitenciaría Apostólica.",
+        "en": "Apostolic Penitentiary.",
+        "pt": "Penitenciaria Apostólica."
+      },
+      "source": {
+        "es": "Enchiridion Indulgentiarum, 1999, concesión 8, primer apartado, segundo acto.",
+        "en": "Enchiridion Indulgentiarum, 1999, concession 8, first section, second act.",
+        "pt": "Enchiridion Indulgentiarum, 1999, concessão 8, primeiro apartado, segundo ato."
+      },
+      "conditions": {
+        "es": "Además del acto indicado: confesión sacramental, Comunión eucarística, oración por las intenciones del Papa y desapego de todo pecado, incluso venial.",
+        "en": "Besides the specified act: sacramental confession, Eucharistic Communion, prayer for the Pope’s intentions, and detachment from every sin, including venial sin.",
+        "pt": "Além do ato indicado: confissão sacramental, Comunhão eucarística, oração pelas intenções do Papa e desapego de todo pecado, inclusive venial."
+      }
+    },
+    "textNote": {
+      "es": "Original latino tradicional; la edición de las traducciones existentes no ha sido identificada.",
+      "en": "Traditional Latin original; the edition of the existing translations has not been identified.",
+      "pt": "Original latino tradicional; a edição das traduções existentes não foi identificada."
+    }
+  },
+  {
+    "prayerId": "prayer_for_the_dead",
+    "history": {
+      "es": "La oración pide a Dios, creador y redentor, misericordia para los fieles difuntos. Corresponde a la familia de la colecta latina Fidelium, Deus, omnium conditor et redemptor, aunque la edición exacta de esta traducción no ha sido localizada. La oración por los muertos se apoya en la comunión de los santos y en la esperanza de la resurrección, no en intentar controlar el destino de una persona fallecida. La Iglesia encomienda a los difuntos a la misericordia divina y ofrece sufragios por ellos. La ficha no documenta un número de almas liberadas ni una promesa particular por repetirla.",
+      "en": "The prayer asks God, creator and redeemer, for mercy on the faithful departed. It belongs to the family of the Latin collect Fidelium, Deus, omnium conditor et redemptor, although the exact edition of this translation has not been located. Prayer for the dead rests on the communion of saints and hope of resurrection, not an attempt to control a deceased person’s destiny. The Church entrusts the departed to divine mercy and offers prayers on their behalf. This entry documents neither a number of souls released nor a particular promise attached to repeating it.",
+      "pt": "A oração pede a Deus, criador e redentor, misericórdia pelos fiéis falecidos. Corresponde à família da coleta latina Fidelium, Deus, omnium conditor et redemptor, embora não tenha sido localizada a edição exata desta tradução. A oração pelos mortos fundamenta-se na comunhão dos santos e na esperança da ressurreição, não na tentativa de controlar o destino de alguém que morreu. A Igreja confia os falecidos à misericórdia divina e oferece sufrágios por eles. A ficha não documenta um número de almas libertadas nem uma promessa particular ligada à repetição da oração."
+    },
+    "instructions": {
+      "es": "Reza por una persona fallecida o por todos los fieles difuntos, sin necesidad de conocer su situación ante Dios. Puedes recordar su nombre en silencio y unir la oración a una Misa o a una obra de caridad. La pérdida de un ser querido no obliga a mantener cuentas angustiosas de repeticiones.",
+      "en": "Pray for a deceased person or all the faithful departed, without needing to know their standing before God. You may recall a name silently and join the prayer to a Mass or an act of charity. Losing someone dear does not impose an obligation to keep distressing counts of repeated prayers.",
+      "pt": "Reze por uma pessoa falecida ou por todos os fiéis falecidos, sem precisar conhecer sua situação diante de Deus. Você pode recordar um nome em silêncio e unir a oração a uma Missa ou obra de caridade. Perder alguém querido não impõe a obrigação de manter contagens angustiantes de orações repetidas."
+    },
+    "source": {
+      "es": "Bonaventure Hammer, General Catholic Devotions, 1909, oraciones tras la Letanía de Todos los Santos; colecta Fidelium, Deus, omnium conditor et redemptor; 2 Mac 12,44–46; CIC 1032. La edición de las traducciones de la app sigue sin identificar.",
+      "en": "Bonaventure Hammer, General Catholic Devotions, 1909, prayers following the Litany of All Saints; collect Fidelium, Deus, omnium conditor et redemptor; 2 Macc 12:44–46; CCC 1032. The editions of the app translations remain unidentified.",
+      "pt": "Bonaventure Hammer, General Catholic Devotions, 1909, orações após a Ladainha de Todos os Santos; coleta Fidelium, Deus, omnium conditor et redemptor; 2Mc 12,44–46; CIC 1032. As edições das traduções do aplicativo continuam não identificadas."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Familia textual tradicional; fuente editorial y derechos de las traducciones actuales pendientes de verificación.",
+      "en": "Traditional textual family; editorial source and rights of the current translations remain unverified.",
+      "pt": "Família textual tradicional; fonte editorial e direitos das traduções atuais ainda não verificados."
+    }
+  },
+  {
+    "prayerId": "prayer_to_st_patrick",
+    "history": {
+      "es": "La ficha es una invocación dirigida a san Patricio, pidiendo imitar su oración, fe, esperanza y caridad. No es la Coraza o Lorica que suele asociarse a su nombre, ni un pasaje de su Confesión. Por tanto, la discusión sobre la autoría de aquella Coraza no demuestra la procedencia de estas frases. No se han localizado un autor o una edición histórica de esta oración. Presentarla como una petición de intercesión evita atribuir al propio santo palabras escritas para dirigirse a él. Su contenido invita a una vida cristiana perseverante, no solamente a buscar protección extraordinaria.",
+      "en": "The entry is an invocation addressed to Saint Patrick, asking to imitate his prayer, faith, hope, and charity. It is not the Breastplate or Lorica commonly associated with his name, nor a passage from his Confession. Debate about the Breastplate’s authorship therefore does not establish the provenance of these sentences. No author or historical edition of this prayer has been located. Presenting it as a request for intercession avoids attributing to the saint words written to address him. Its content invites a persevering Christian life, rather than simply a search for extraordinary protection.",
+      "pt": "A ficha é uma invocação dirigida a são Patrício, pedindo imitar sua oração, fé, esperança e caridade. Não é a Couraça ou Lorica habitualmente associada a seu nome, nem um trecho de sua Confissão. Assim, a discussão sobre a autoria daquela Couraça não comprova a procedência destas frases. Não foram localizados um autor ou uma edição histórica desta oração. Apresentá-la como pedido de intercessão evita atribuir ao próprio santo palavras escritas para se dirigir a ele. Seu conteúdo convida a uma vida cristã perseverante, não apenas à busca de proteção extraordinária."
+    },
+    "instructions": {
+      "es": "Reza las peticiones pensando en una virtud que necesites practicar hoy. Puedes leer toda la oración personalmente o alternar las súplicas en grupo. Las repeticiones forman parte de su estilo, sin establecer una cuenta ritual especial. Si deseas rezar la Coraza de san Patricio, busca ese texto concreto en una edición identificada.",
+      "en": "Pray the petitions while considering a virtue you need to practice today. You may read the entire prayer privately or alternate petitions in a group. Its repetitions belong to its style and establish no special ritual count. If you wish to pray Saint Patrick’s Breastplate, obtain that particular text in an identified edition.",
+      "pt": "Reze os pedidos pensando numa virtude que precise praticar hoje. Você pode ler toda a oração pessoalmente ou alternar as súplicas em grupo. As repetições pertencem ao estilo do texto, sem estabelecer uma contagem ritual especial. Se deseja rezar a Couraça de são Patrício, procure esse texto específico numa edição identificada."
+    },
+    "source": {
+      "es": "Texto actual sin fuente externa identificada. Para distinguir géneros: Confesión de Patricio; Lorica de atribución tradicional, reproducida por Dunleer Parish, Arquidiócesis de Armagh.",
+      "en": "No external source identified for the current text. For distinction: Patrick’s Confession; traditionally attributed Lorica, reproduced by Dunleer Parish, Archdiocese of Armagh.",
+      "pt": "Texto atual sem fonte externa identificada. Para distinguir os gêneros: Confissão de Patrício; Lorica de atribuição tradicional, reproduzida por Dunleer Parish, Arquidiocese de Armagh."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Invocación de procedencia no verificada; no es la Coraza de san Patricio.",
+      "en": "Invocation of unverified provenance; not Saint Patrick’s Breastplate.",
+      "pt": "Invocação de procedência não verificada; não é a Couraça de são Patrício."
+    }
+  },
+  {
+    "prayerId": "prayer_to_st_rita",
+    "history": {
+      "es": "La oración pertenece a la devoción a santa Rita como intercesora en las situaciones difíciles. Una versión de su extensa súplica circula en recopilaciones de novenas; no se ha identificado el autor ni la primera edición. Las expresiones sobre la fuerza de su intercesión son lenguaje devocional y no significan que Dios pierda su libertad o que todo favor deba concederse. El texto menciona episodios y penitencias de la tradición hagiográfica que aquí no se corroboran como hechos históricos. Dar a conocer un favor por gratitud no equivale a cumplir una condición de cadena para que la oración tenga valor.",
+      "en": "The prayer belongs to devotion to Saint Rita as an intercessor in difficult circumstances. A version of its extended petition circulates in novena collections; its author and first edition have not been identified. Expressions about the strength of her intercession are devotional language and do not mean that God loses his freedom or that every favor must be granted. The text mentions episodes and penances from hagiographical tradition that are not corroborated here as historical facts. Sharing a favor in gratitude is not the same as fulfilling a chain-message condition for prayer to have value.",
+      "pt": "A oração pertence à devoção a santa Rita como intercessora nas situações difíceis. Uma versão de sua extensa súplica circula em coletâneas de novenas; não foram identificados o autor e a primeira edição. As expressões sobre a força de sua intercessão são linguagem devocional e não significam que Deus perca sua liberdade ou que todo pedido deva ser atendido. O texto menciona episódios e penitências da tradição hagiográfica que aqui não são corroborados como fatos históricos. Divulgar uma graça por gratidão não equivale a cumprir condição de corrente para que a oração tenha valor."
+    },
+    "instructions": {
+      "es": "Presenta tu intención en el lugar indicado y confíala a Dios por intercesión de santa Rita. No necesitas reproducir penitencias extremas mencionadas en el texto ni abandonar ayuda médica, jurídica o pastoral. En una situación de violencia, pedir paciencia y caridad no exige permanecer expuesto al daño; busca protección y apoyo.",
+      "en": "Present your intention at the indicated point and entrust it to God through Saint Rita’s intercession. You need not imitate extreme penances mentioned in the text or abandon medical, legal, or pastoral help. In situations of violence, asking for patience and charity does not require remaining exposed to harm; seek protection and support.",
+      "pt": "Apresente sua intenção no local indicado e confie-a a Deus pela intercessão de santa Rita. Não é necessário reproduzir penitências extremas mencionadas no texto nem abandonar ajuda médica, jurídica ou pastoral. Numa situação de violência, pedir paciência e caridade não exige continuar exposto ao dano; busque proteção e apoio."
+    },
+    "source": {
+      "es": "St. Rita of Cascia, página «Novenas to St. Rita», primera novena, testimonio del formulario difundido; autor, primera edición y afirmaciones hagiográficas específicas no verificados.",
+      "en": "St. Rita of Cascia, “Novenas to St. Rita” page, first novena, witness to the circulating formula; author, first edition, and specific hagiographical claims unverified.",
+      "pt": "St. Rita of Cascia, página «Novenas to St. Rita», primeira novena, testemunho do formulário difundido; autor, primeira edição e afirmações hagiográficas específicas não verificados."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Formulario documentado en una recopilación devocional; no se certifica el origen o la licencia de sus traducciones actuales.",
+      "en": "Formula documented in a devotional collection; the origin or licensing of its current translations is not certified.",
+      "pt": "Formulário documentado numa coletânea devocional; não se certificam a origem ou a licença de suas traduções atuais."
+    }
+  },
+  {
+    "prayerId": "prayer_to_st_therese",
+    "history": {
+      "es": "Esta oración está dirigida a santa Teresa del Niño Jesús, no escrita por ella para invocarse a sí misma. La Society of the Little Flower difunde una oración de la misma familia que pide una rosa como imagen de amor y solicita la intercesión de la santa. No se ha verificado el autor ni la primera edición de la fórmula actual. La petición de una rosa debe entenderse dentro de una relación de confianza con Dios, no como prueba necesaria de que se ha recibido ayuda. El pequeño camino invita a vivir el amor en las acciones ordinarias, sin depender de señales extraordinarias.",
+      "en": "This prayer is addressed to Saint Thérèse of the Child Jesus, not written by her as an invocation of herself. The Society of the Little Flower circulates a prayer from the same family, asking for a rose as an image of love and seeking the saint’s intercession. The author and first edition of the current formula have not been verified. Asking for a rose belongs within trust in God, rather than serving as necessary proof that help has been received. The Little Way invites love in ordinary actions without dependence on extraordinary signs.",
+      "pt": "Esta oração dirige-se a santa Teresinha do Menino Jesus; não foi escrita por ela para invocar a si mesma. A Society of the Little Flower divulga uma oração da mesma família, pedindo uma rosa como imagem de amor e solicitando a intercessão da santa. Não foram verificados o autor e a primeira edição da fórmula atual. O pedido de uma rosa deve ser compreendido numa relação de confiança em Deus, não como prova necessária de que houve auxílio. O pequeno caminho convida a viver o amor nas ações comuns, sem depender de sinais extraordinários."
+    },
+    "instructions": {
+      "es": "Menciona tu intención donde lo indica la oración y pide aprender la confianza y la caridad de la santa. Puedes terminar con una acción pequeña de amor al prójimo. No conviertas la recepción de una rosa en examen de tu fe o del amor de Dios; esta ficha no establece una novena obligatoria ni un plazo para recibir señales.",
+      "en": "Mention your intention where the prayer indicates and ask to learn the saint’s trust and charity. You may conclude with a small act of love for someone else. Do not turn receiving a rose into a test of your faith or God’s love; this entry establishes neither a compulsory novena nor a deadline for receiving signs.",
+      "pt": "Mencione sua intenção onde a oração indica e peça aprender a confiança e a caridade da santa. Você pode concluir com um pequeno gesto de amor ao próximo. Não transforme o recebimento de uma rosa em teste de sua fé ou do amor de Deus; esta ficha não estabelece novena obrigatória nem prazo para receber sinais."
+    },
+    "source": {
+      "es": "Society of the Little Flower, «Prayers to St. Thérèse», sección My Novena Rose Prayer; no se verificó la primera edición de la fórmula ni una promesa de una señal concreta.",
+      "en": "Society of the Little Flower, “Prayers to St. Thérèse,” My Novena Rose Prayer section; the formula’s first edition and a promise of a specific sign were not verified.",
+      "pt": "Society of the Little Flower, «Prayers to St. Thérèse», seção My Novena Rose Prayer; não foram verificadas a primeira edição da fórmula ou uma promessa de sinal específico."
+    },
+    "approval": {
+      "es": "Uso devocional documentado por la Society of the Little Flower; no se afirma un imprimátur específico de esta traducción.",
+      "en": "Devotional use documented by the Society of the Little Flower; no specific imprimatur for this translation is asserted.",
+      "pt": "Uso devocional documentado pela Society of the Little Flower; não se afirma imprimatur específico desta tradução."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Invocación a la santa, no una obra suya. Autoría, edición y licencia de las traducciones actuales sin verificar.",
+      "en": "Invocation of the saint, not a work by her. Authorship, edition, and licensing of the current translations unverified.",
+      "pt": "Invocação à santa, não obra de sua autoria. Autoria, edição e licença das traduções atuais não verificadas."
+    }
+  },
+  {
+    "prayerId": "te_deum",
+    "history": {
+      "es": "Te Deum es un antiguo himno latino de alabanza y acción de gracias. La tradición que lo atribuye conjuntamente a san Ambrosio y san Agustín no se considera una prueba histórica de autoría. Nicetas de Remesiana ha sido propuesto como autor, pero la atribución sigue discutida; no conviene fijar una fecha exacta de composición. El himno reúne a la Iglesia con los ángeles, apóstoles, profetas y mártires en la alabanza de la Trinidad y la confesión de Cristo. Su conclusión pide salvación y misericordia. La Iglesia lo emplea en la liturgia y en actos solemnes de agradecimiento.",
+      "en": "Te Deum is an ancient Latin hymn of praise and thanksgiving. The tradition jointly attributing it to Saint Ambrose and Saint Augustine is not considered historical proof of authorship. Nicetas of Remesiana has been proposed as its author, but that attribution remains disputed; a precise composition date should not be asserted. The hymn joins the Church with angels, apostles, prophets, and martyrs in praise of the Trinity and confession of Christ. Its conclusion asks for salvation and mercy. The Church uses it in the liturgy and on solemn occasions of thanksgiving for blessings received.",
+      "pt": "Te Deum é um antigo hino latino de louvor e ação de graças. A tradição que o atribui conjuntamente a santo Ambrósio e santo Agostinho não é considerada prova histórica de autoria. Nicetas de Remesiana foi proposto como autor, mas a atribuição continua discutida; não convém afirmar uma data exata de composição. O hino une a Igreja aos anjos, apóstolos, profetas e mártires no louvor à Trindade e na confissão de Cristo. Sua conclusão pede salvação e misericórdia. A Igreja o utiliza na liturgia e em ocasiões solenes de agradecimento pelos dons recebidos."
+    },
+    "instructions": {
+      "es": "Reza o canta el himno como acción de gracias, recordando beneficios concretos recibidos durante el año o en tu vida. En comunidad sigue el ritmo y las indicaciones de la celebración. Para la indulgencia del 31 de diciembre, participa en su canto o recitación solemne en una iglesia u oratorio, con las condiciones habituales.",
+      "en": "Pray or sing the hymn in thanksgiving, remembering concrete blessings received during the year or throughout your life. In a community, follow the celebration’s pace and directions. For the December 31 indulgence, participate in its solemn singing or recitation in a church or oratory, with the usual conditions.",
+      "pt": "Reze ou cante o hino em ação de graças, recordando benefícios concretos recebidos durante o ano ou em sua vida. Em comunidade, acompanhe o ritmo e as indicações da celebração. Para a indulgência de 31 de dezembro, participe do canto ou da recitação solene numa igreja ou oratório, com as condições habituais."
+    },
+    "source": {
+      "es": "The Catholic Encyclopedia, «Te Deum», discusión de la autoría y de los testimonios; Enchiridion Indulgentiarum, cuarta edición, 1999, concesión 26.",
+      "en": "The Catholic Encyclopedia, “Te Deum,” discussion of authorship and textual witnesses; Enchiridion Indulgentiarum, fourth edition, 1999, concession 26.",
+      "pt": "The Catholic Encyclopedia, verbete «Te Deum», discussão da autoria e dos testemunhos textuais; Enchiridion Indulgentiarum, quarta edição, 1999, concessão 26."
+    },
+    "approval": {
+      "es": "Himno de uso litúrgico; la concesión del Enchiridion distingue el acto solemne de fin de año de la oración privada.",
+      "en": "Hymn in liturgical use; the Enchiridion grant distinguishes the solemn year-end act from private prayer.",
+      "pt": "Hino de uso litúrgico; a concessão do Enchiridion distingue o ato solene de fim de ano da oração particular."
+    },
+    "promise": {
+      "kind": "ECCLESIAL_GRANT",
+      "text": {
+        "es": "Indulgencia plenaria por participar devotamente en el canto o recitación solemne del Te Deum, en una iglesia u oratorio, el último día del año, para dar gracias a Dios por sus beneficios.",
+        "en": "A plenary indulgence for devout participation in the solemn singing or recitation of the Te Deum, in a church or oratory, on the last day of the year, thanking God for his blessings.",
+        "pt": "Indulgência plenária pela participação devota no canto ou na recitação solene do Te Deum, numa igreja ou oratório, no último dia do ano, em agradecimento a Deus por seus benefícios."
+      },
+      "attribution": {
+        "es": "Penitenciaría Apostólica.",
+        "en": "Apostolic Penitentiary.",
+        "pt": "Penitenciaria Apostólica."
+      },
+      "source": {
+        "es": "Enchiridion Indulgentiarum, cuarta edición, 1999, concesión 26, primer apartado, segundo acto.",
+        "en": "Enchiridion Indulgentiarum, fourth edition, 1999, concession 26, first section, second act.",
+        "pt": "Enchiridion Indulgentiarum, quarta edição, 1999, concessão 26, primeiro apartado, segundo ato."
+      },
+      "conditions": {
+        "es": "Además del acto indicado: confesión sacramental, Comunión eucarística, oración por las intenciones del Papa y desapego de todo pecado, incluso venial.",
+        "en": "Besides the specified act: sacramental confession, Eucharistic Communion, prayer for the Pope’s intentions, and detachment from every sin, including venial sin.",
+        "pt": "Além do ato indicado: confissão sacramental, Comunhão eucarística, oração pelas intenções do Papa e desapego de todo pecado, inclusive venial."
+      }
+    },
+    "textNote": {
+      "es": "Himno latino antiguo; la edición de las traducciones ya incorporadas no ha sido identificada.",
+      "en": "Ancient Latin hymn; the edition of the existing translations has not been identified.",
+      "pt": "Hino latino antigo; a edição das traduções já incorporadas não foi identificada."
+    }
+  },
+  {
+    "prayerId": "armor_of_god",
+    "history": {
+      "es": "La oración transforma en súplica personal las imágenes de Ef 6,10–18: cinturón de la verdad, coraza de justicia, calzado del Evangelio de la paz, escudo de fe, casco de salvación y espada del Espíritu. El pasaje bíblico exhorta a mantenerse firmes en Dios y a orar perseverantemente. La redacción de la app no es una transcripción literal de Pablo, y no se ha identificado un autor para esa adaptación orante. La armadura describe una vida de verdad, justicia y fe; no autoriza a señalar a otras personas como demonios o a sustituir el discernimiento por el miedo.",
+      "en": "The prayer turns the images of Ephesians 6:10–18 into a personal petition: the belt of truth, breastplate of righteousness, shoes of the gospel of peace, shield of faith, helmet of salvation, and sword of the Spirit. The biblical passage urges steadfastness in God and perseverance in prayer. The app’s wording is not a literal transcription of Paul, and no author of this prayerful adaptation has been identified. The armor describes a life of truth, justice, and faith; it does not authorize labeling other people as demons or replacing discernment with fear.",
+      "pt": "A oração transforma em súplica pessoal as imagens de Ef 6,10–18: cinto da verdade, couraça da justiça, calçado do Evangelho da paz, escudo da fé, capacete da salvação e espada do Espírito. O texto bíblico exorta a permanecer firme em Deus e a perseverar na oração. A redação do aplicativo não é transcrição literal de Paulo, e não foi identificado o autor dessa adaptação orante. A armadura descreve uma vida de verdade, justiça e fé; não autoriza apontar outras pessoas como demônios ou substituir o discernimento pelo medo."
+    },
+    "instructions": {
+      "es": "Lee primero Ef 6,10–18 en su contexto. Después usa la ficha para pedir ayuda a Dios en una tentación o al comenzar el día, relacionando cada imagen con una acción concreta. No es un exorcismo ni requiere gestos especiales. La protección espiritual se vive también buscando la verdad, evitando el daño y pidiendo ayuda cuando hace falta.",
+      "en": "First read Ephesians 6:10–18 in context. Then use the entry to ask God’s help in temptation or at the start of the day, connecting each image with a concrete action. It is not an exorcism and requires no special gestures. Spiritual protection is also lived by seeking truth, avoiding harm, and asking for help when needed.",
+      "pt": "Leia primeiro Ef 6,10–18 em seu contexto. Depois use a ficha para pedir auxílio a Deus numa tentação ou ao começar o dia, relacionando cada imagem a uma ação concreta. Não é exorcismo nem exige gestos especiais. A proteção espiritual também se vive buscando a verdade, evitando o dano e pedindo ajuda quando necessário."
+    },
+    "source": {
+      "es": "Ef 6,10–18, fundamento de las imágenes; autor y edición de la adaptación orante actual no identificados.",
+      "en": "Ephesians 6:10–18, source of the images; author and edition of the current prayerful adaptation unidentified.",
+      "pt": "Ef 6,10–18, fundamento das imagens; autor e edição da adaptação orante atual não identificados."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Paráfrasis orante ya existente, no traducción literal del pasaje ni formulario litúrgico identificado.",
+      "en": "Existing prayerful paraphrase, not a literal translation of the passage or an identified liturgical formula.",
+      "pt": "Paráfrase orante já existente, não tradução literal do texto bíblico nem formulário litúrgico identificado."
+    }
+  },
+  {
+    "prayerId": "eternal_father",
+    "history": {
+      "es": "Padre Eterno es la oración de ofrecimiento de la Coronilla de la Divina Misericordia. Santa Faustina la recoge en el relato de septiembre de 1935, en los números 474–476 de su Diario. Dentro de la devoción se pronuncia al comienzo de cada decena y se une a la súplica por la Pasión dolorosa de Jesús. El ofrecimiento se comprende en relación con la entrega de Cristo al Padre; no significa que quien reza consagre pan y vino. Las promesas asociadas a la Coronilla completa no se atribuyen aquí automáticamente a repetir solo este fragmento aislado.",
+      "en": "Eternal Father is the offering prayer of the Divine Mercy Chaplet. Saint Faustina records it in the September 1935 account in numbers 474–476 of her Diary. Within the devotion it is said at the beginning of each decade and joined to the petition through Jesus’ sorrowful Passion. The offering is understood in relation to Christ’s self-giving to the Father; it does not mean that the person praying consecrates bread and wine. Promises associated with the complete Chaplet are not automatically attributed here to repeating only this isolated fragment of its prayer.",
+      "pt": "Pai Eterno é a oração de oferecimento do Terço da Misericórdia. Santa Faustina a registra no relato de setembro de 1935, nos números 474–476 de seu Diário. Dentro da devoção, é pronunciada no começo de cada dezena e unida à súplica pela dolorosa Paixão de Jesus. O oferecimento deve ser compreendido em relação à entrega de Cristo ao Pai; não significa que a pessoa esteja consagrando pão e vinho. As promessas associadas ao Terço completo não são atribuídas aqui automaticamente à repetição isolada apenas deste trecho da oração."
+    },
+    "instructions": {
+      "es": "Al rezar la Coronilla con un rosario común, di esta oración en la cuenta grande que inicia cada decena. Después reza diez veces la súplica Por su dolorosa Pasión. Se repite el esquema en las cinco decenas. Si lees esta ficha sola, conserva el sentido de unión con Cristo y no la confundas con una plegaria de consagración.",
+      "en": "When praying the Chaplet on ordinary rosary beads, say this prayer on the large bead beginning each decade. Then pray the petition For the sake of his sorrowful Passion ten times. Repeat the pattern for five decades. When reading this entry alone, preserve its meaning of union with Christ and do not confuse it with a prayer of consecration.",
+      "pt": "Ao rezar o Terço da Misericórdia com um terço comum, diga esta oração na conta grande que inicia cada dezena. Depois reze dez vezes a súplica Pela sua dolorosa Paixão. Repita o esquema nas cinco dezenas. Ao ler esta ficha isoladamente, preserve o sentido de união com Cristo e não a confunda com uma oração de consagração."
+    },
+    "source": {
+      "es": "Santa Faustina, Diario, 474–476; Padres Marianos, The Chaplet of Divine Mercy, relato e instrucciones de la devoción.",
+      "en": "Saint Faustina, Diary, 474–476; Marian Fathers, The Chaplet of Divine Mercy, account and instructions for the devotion.",
+      "pt": "Santa Faustina, Diário, 474–476; Padres Marianos, The Chaplet of Divine Mercy, relato e instruções da devoção."
+    },
+    "approval": {
+      "es": "Uso devocional documentado en la Coronilla; no es una fórmula de consagración de la Misa.",
+      "en": "Documented devotional use within the Chaplet; not a formula for consecration at Mass.",
+      "pt": "Uso devocional documentado no Terço da Misericórdia; não é fórmula de consagração da Missa."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Texto del Diario con traducciones ya existentes; edición y permisos de reproducción no verificados.",
+      "en": "Diary text with existing translations; edition and reproduction permissions unverified.",
+      "pt": "Texto do Diário com traduções já existentes; edição e permissões de reprodução não verificadas."
+    }
+  }
+]
