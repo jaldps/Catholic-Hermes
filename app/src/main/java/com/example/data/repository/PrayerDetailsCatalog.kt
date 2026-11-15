@@ -31,6 +31,8 @@ internal data class RawPrayerEntry(
 internal val PrayerDetailFiles = listOf("details-a.json", "details-b.json")
 internal const val PrayerExtraFile = "extra.json"
 internal const val PrayerOverridesFile = "text-overrides.json"
+/** Second overrides file (task T-009, Hermes) so two agents never edit the same file. */
+internal val PrayerOverridesFiles = listOf(PrayerOverridesFile, "text-overrides-b.json")
 
 /**
  * Loads optional prayer details and extra prayers from the `prayers` asset folder.
@@ -95,10 +97,10 @@ class PrayerDetailsCatalog(private val open: (String) -> InputStream) {
             )
         }
         val overrides = LinkedHashMap<String, RawPrayerEntry>()
-        read(PrayerOverridesFile)?.forEach { e ->
+        PrayerOverridesFiles.forEach { f -> read(f)?.forEach { e ->
             val id = e.id ?: e.prayerId
             if (!id.isNullOrBlank() && e.leaderText != null) overrides[id] = e
-        }
+        } }
         overrides.forEach { (id, o) ->
             val d = details[id]
             if (d != null && o.textNote != null) details[id] = d.copy(textNote = o.textNote.lt())
