@@ -42,7 +42,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-006](T-006.md) | Codex | CERRADO ([revisión](T-006-REVIEW.md)) | M4 · «Profundizar» de las preguntas 52–101 → `assets/questions/deeper-b.json` |
 | [T-009](T-009.md) | Hermes | CERRADO ([revisión](T-009-REVIEW.md)) | Texto completo de *Veni Sancte Spiritus* y de «Quédate conmigo, Señor» → `assets/prayers/text-overrides-b.json` |
 | [T-010](T-010.md) | Codex | CERRADO (informe documental) | Identificación y atribución de 6 Biblias católicas (cbt); el dueño declara permiso |
-| [T-011](T-011.md) | Hermes | ABIERTO (10/38 recibidas; cambios pedidos, [revisión](T-011-REVIEW.md)) | M5 · Santos de enero–marzo (38) → `assets/saints/saints-q1.json` |
+| [T-011](T-011.md) | Hermes | CERRADO ([revisión](T-011-REVIEW.md)) | M5 · Santos de enero–marzo (38) → `assets/saints/saints-q1.json` |
 | [T-012](T-012.md) | Codex | CERRADO ([revisión](T-012-REVIEW.md)) | M5 · Santos de octubre–diciembre (59) → `assets/saints/saints-q4.json` |
-| [T-013](T-013.md) | Codex | ABIERTO | M5 · Santos de abril–junio (51) → `assets/saints/saints-q2.json` |
+| [T-013](T-013.md) | Codex | ABIERTO (20/51 integradas, [revisión](T-013-REVIEW.md)) | M5 · Santos de abril–junio (51) → `assets/saints/saints-q2.json` |
 | [T-014](T-014.md) | Codex | ABIERTO (tras T-013) | M5 · Santos de julio–septiembre (67) → `assets/saints/saints-q3.json` |
