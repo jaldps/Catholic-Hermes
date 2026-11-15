@@ -2498,8 +2498,23 @@ fun OfflineBibleDownloadsView(
             style = styles.footnote, color = p.textSecondary,
             modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(bottom = 12.dp)
         )
+        val groups = BibleDownloadManager.LANGUAGE_ORDER.mapNotNull { lang ->
+            manager.specs.filter { it.language == lang }.takeIf { it.isNotEmpty() }?.let { lang to it }
+        }
+        groups.forEach { (lang, specs) ->
+        Text(
+            when (lang) {
+                "es" -> "Español"
+                "en" -> "English"
+                "pt" -> "Português"
+                else -> currentLanguage.pick("Latín · Nova Vulgata", "Latin · Nova Vulgata", "Latim · Nova Vulgata")
+            },
+            style = styles.headline, color = p.textPrimary,
+            modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(top = 12.dp, bottom = 8.dp)
+                .testTag("bible_edition_group_$lang").semantics { heading() }
+        )
         AppListGroup {
-            manager.specs.forEachIndexed { index, spec ->
+            specs.forEachIndexed { index, spec ->
                 var downloading by remember(spec.id) { mutableStateOf(false) }
                 var progress by remember(spec.id) { mutableFloatStateOf(0f) }
                 var status by remember(spec.id) { mutableStateOf("") }
@@ -2565,11 +2580,12 @@ fun OfflineBibleDownloadsView(
                             scope.launch { if (activeEditionId == spec.id) onSelectEdition("bundled"); manager.delete(spec.id); revision++; status = "" }
                         }, modifier = Modifier.heightIn(min = 48.dp).testTag("bible_delete_${spec.id}")) { Text(currentLanguage.pick("Eliminar descarga", "Delete download", "Excluir download")) }
                     }
-                    if (index < manager.specs.lastIndex) {
+                    if (index < specs.lastIndex) {
                         Box(Modifier.fillMaxWidth().padding(start = 18.dp).height(0.5.dp).background(p.separator))
                     }
                 }
             }
+        }
         }
     }
 }

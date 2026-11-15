@@ -12,3 +12,11 @@ def kjv():
 def lang(l):
     d=json.load(open(f"{A}/bible_{l}.json"))
     return {b:[d[b][str(c)] for c in range(1,len(d[b])+1)] for b in d}
+def inherit_orphans(m, K):
+    """A KJV verse the alignment left without a target (the edition merged it into its neighbour) inherits the
+    previous verse's target in the same chapter, so its references are not lost."""
+    for b in OURS:
+        for c, ch in enumerate(K[b], 1):
+            for v in range(2, len(ch) + 1):
+                if (b, c, v) not in m and (b, c, v - 1) in m: m[(b, c, v)] = m[(b, c, v - 1)]
+    return m

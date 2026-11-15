@@ -16,15 +16,29 @@ import java.net.URL
 import java.security.MessageDigest
 import java.util.concurrent.ConcurrentHashMap
 
-/** Pinned, per-edition manifest. Book order is supplied by the source, never by the Catholic UI order. */
-internal class BibleDownloadManifest(val commit: String, val books: Map<String, List<Book>>) {
+/**
+ * Per-edition manifest (assets/bible/download_manifest.json). An edition is offered only when it is listed here.
+ * Book order is supplied by the source, never by the Catholic UI order. Verse numbers are the edition's own and may
+ * have gaps (verses a critical edition omits); [Book.verseCounts] holds each chapter's LAST verse number.
+ */
+internal class BibleDownloadManifest(
+    val commit: String,
+    val books: Map<String, List<Book>>,
+    /** Optional per-edition cross-reference file (xref.bin next to the books). */
+    val xref: Map<String, Xref> = emptyMap(),
+    /** Optional per-edition base URL (ending in "/") overriding [BibleDownloadManager.BIBLES_DATA_BASE]. */
+    val bases: Map<String, String> = emptyMap()
+) {
     data class Book(val id: String, val file: String, val abbreviation: String, val sha256: String, val bytes: Long, val verseCounts: List<Int>)
+    data class Xref(val sha256: String, val bytes: Long)
 
     companion object {
         fun load(context: Context): BibleDownloadManifest {
             val root = JSONObject(context.assets.open("bible/download_manifest.json").bufferedReader().use { it.readText() })
             val editions = root.getJSONObject("editions")
-            return BibleDownloadManifest(root.getString("sourceCommit"), editions.keys().asSequence().associateWith { id ->
+            val xrefs = root.optJSONObject("xref")
+            val bases = root.optJSONObject("bases")
+            return BibleDownloadManifest(root.optString("sourceCommit", ""), editions.keys().asSequence().associateWith { id ->
                 val array = editions.getJSONArray(id)
                 (0 until array.length()).map { index ->
                     val book = array.getJSONObject(index)
@@ -32,7 +46,9 @@ internal class BibleDownloadManifest(val commit: String, val books: Map<String, 
                     Book(book.getString("id"), book.getString("file"), book.getString("abbreviation"),
                         book.getString("sha256"), book.getLong("bytes"), (0 until counts.length()).map { counts.getInt(it) })
                 }
-            })
+            }, xrefs?.keys()?.asSequence()?.associateWith { id ->
+                xrefs.getJSONObject(id).let { Xref(it.getString("sha256"), it.getLong("bytes")) }
+            } ?: emptyMap(), bases?.keys()?.asSequence()?.associateWith { bases.getString(it) } ?: emptyMap())
         }
     }
 }
@@ -43,13 +59,17 @@ class BibleDownloadManager internal constructor(
     private val transfer: suspend (String, File) -> Unit = { url, destination -> transferBook(url, destination) }
 ) {
     private val app = context.applicationContext
+    /** [language] is the edition's own (es/en/pt/la); [path] is its folder under the data base URL. */
     data class VersionSpec(val id: String, val name: String, val language: String, val bookCount: Int, val path: String)
     data class DownloadStatus(val completedBooks: Int, val totalBooks: Int) {
         val complete: Boolean get() = totalBooks > 0 && completedBooks == totalBooks
         val partial: Boolean get() = completedBooks > 0 && !complete
     }
 
-    val specs: List<VersionSpec> get() = VERSION_SPECS
+    /** Only editions the manifest lists are offered: unpublished ones stay invisible. */
+    val specs: List<VersionSpec> = VERSION_SPECS.filter { manifest.books.containsKey(it.id) }
+
+    init { purgeRetiredEditions(app) }
 
     private data class Verified(val size: Long, val modified: Long)
     private val verified = ConcurrentHashMap<String, Verified>()
@@ -69,7 +89,41 @@ class BibleDownloadManager internal constructor(
 
     fun downloadUrl(spec: VersionSpec, index: Int): String {
         val book = manifest.books.getValue(spec.id)[index - 1]
-        return "https://raw.githubusercontent.com/FordhamRamFan/public-domain-bible-translations/${manifest.commit}/${spec.path}/${book.file}"
+        return "${baseUrl(spec)}${spec.path}/${book.file}"
+    }
+
+    private fun baseUrl(spec: VersionSpec) = manifest.bases[spec.id] ?: BIBLES_DATA_BASE
+
+    fun xrefUrl(spec: VersionSpec): String = "${baseUrl(spec)}${spec.path}/$XREF_FILE"
+
+    /** The edition's own cross-reference table when it was downloaded and verifies; null falls back to the bundled language one. */
+    fun xrefFile(versionId: String): File? {
+        val expected = manifest.xref[versionId] ?: return null
+        if (specs.none { it.id == versionId }) return null
+        val file = File(File(app.filesDir, "bibles/$versionId"), XREF_FILE)
+        return file.takeIf { validXref(it, expected) }
+    }
+
+    private fun validXref(file: File, expected: BibleDownloadManifest.Xref): Boolean {
+        if (!file.isFile || file.length() != expected.bytes) return false
+        val stamp = Verified(file.length(), file.lastModified())
+        if (verified[file.path] == stamp) return true
+        val ok = runCatching { sha256(file) == expected.sha256 }.getOrDefault(false)
+        if (ok) verified[file.path] = stamp else verified.remove(file.path)
+        return ok
+    }
+
+    private fun sha256(file: File): String {
+        val digest = MessageDigest.getInstance("SHA-256")
+        file.inputStream().use { stream ->
+            val buffer = ByteArray(8192)
+            while (true) {
+                val count = stream.read(buffer)
+                if (count < 0) break
+                digest.update(buffer, 0, count)
+            }
+        }
+        return digest.digest().joinToString("") { "%02x".format(it.toInt() and 0xff) }
     }
 
     private fun validBook(file: File, expected: BibleDownloadManifest.Book): Boolean {
@@ -77,16 +131,7 @@ class BibleDownloadManager internal constructor(
         val stamp = Verified(file.length(), file.lastModified())
         if (verified[file.path] == stamp) return true
         val valid = runCatching {
-            val digest = MessageDigest.getInstance("SHA-256")
-            file.inputStream().use { stream ->
-                val buffer = ByteArray(8192)
-                while (true) {
-                    val count = stream.read(buffer)
-                    if (count < 0) break
-                    digest.update(buffer, 0, count)
-                }
-            }
-            val actual = digest.digest().joinToString("") { "%02x".format(it.toInt() and 0xff) }
+            val actual = sha256(file)
             if (actual != expected.sha256) return@runCatching false
             val book = JSONObject(file.readText())
             val chapters = book.getJSONArray("chapters")
@@ -94,11 +139,14 @@ class BibleDownloadManager internal constructor(
             expected.verseCounts.indices.all { c ->
                 val chapter = chapters.getJSONObject(c)
                 val verses = chapter.getJSONArray("verses")
-                chapter.getInt("chapter") == c + 1 && verses.length() == expected.verseCounts[c] &&
+                // Verse numbers ascend and may skip omitted verses; the last one is the chapter's length.
+                var previous = 0
+                chapter.getInt("chapter") == c + 1 && verses.length() > 0 &&
                     (0 until verses.length()).all { v ->
                         val verse = verses.getJSONObject(v)
-                        verse.getInt("verse") == v + 1 && verse.getString("text").isNotBlank()
-                    }
+                        val number = verse.getInt("verse")
+                        (number > previous).also { previous = number } && verse.getString("text").isNotBlank()
+                    } && previous == expected.verseCounts[c]
             }
         }.getOrDefault(false)
         if (valid) verified[file.path] = stamp else verified.remove(file.path)
@@ -139,6 +187,7 @@ class BibleDownloadManager internal constructor(
                     }
                     onProgress((index + 1).toFloat() / books.size, "Book ${index + 1} of ${books.size}")
                 }
+                fetchXref(spec, dir)
                 isDownloaded(versionId)
             } catch (cancelled: CancellationException) { throw cancelled }
             catch (_: Exception) {
@@ -147,6 +196,25 @@ class BibleDownloadManager internal constructor(
                 false
             }
         }
+    }
+
+    /** Best effort: without it the reader falls back to the bundled language's cross-references. */
+    private suspend fun fetchXref(spec: VersionSpec, dir: File) {
+        val expected = manifest.xref[spec.id] ?: return
+        val file = File(dir, XREF_FILE)
+        if (validXref(file, expected)) return
+        val part = File(dir, "$XREF_FILE.part")
+        try {
+            for (attempt in 1..3) {
+                currentCoroutineContext().ensureActive()
+                try {
+                    part.delete()
+                    transfer(xrefUrl(spec), part)
+                    if (validXref(part, expected) && part.renameTo(file)) return
+                } catch (cancelled: CancellationException) { throw cancelled }
+                catch (_: Exception) { }
+            }
+        } finally { part.delete() }
     }
 
     suspend fun delete(versionId: String): Boolean = withContext(Dispatchers.IO) {
@@ -169,12 +237,30 @@ class BibleDownloadManager internal constructor(
     fun bookIds(versionId: String): List<String> = manifest.books[versionId]?.map { it.id }.orEmpty()
 
     companion object {
-        // English Douay-Rheims is already bundled. The remote DRC source was
-        // withdrawn after finding duplicate verse labels and misplaced 1 Kings text.
+        /** Folder of Catholic Bible Tools conversions; the coordinator fills in the final host and commit. */
+        const val BIBLES_DATA_BASE = "https://raw.githubusercontent.com/jaldps/Catholic-Hermes/<commit>/bibles/"
+        const val XREF_FILE = "xref.bin"
+
+        /** Editions this build knows how to read; each is offered only if download_manifest.json lists it. */
         val VERSION_SPECS = listOf(
-            VersionSpec("rv1909", "Reina-Valera 1909 (Spanish)", "es", 66, "Spanish/Reina-Valera-1909"),
-            VersionSpec("almeida", "Almeida (Portuguese)", "pt", 66, "Portuguese/Almeida-Portuguese")
+            VersionSpec("es.eldpdd", "El Libro del Pueblo de Dios", "es", 73, "es.eldpdd"),
+            VersionSpec("es.lbl", "La Biblia Latinoamericana", "es", 73, "es.lbl"),
+            VersionSpec("es.lsb", "La Santa Biblia", "es", 73, "es.lsb"),
+            VersionSpec("en.ccb", "Christian Community Bible", "en", 73, "en.ccb"),
+            VersionSpec("en.drbcr", "Douay-Rheims (Challoner Revision)", "en", 73, "en.drbcr"),
+            VersionSpec("pt.bs", "Bíblia Sagrada", "pt", 73, "pt.bs"),
+            VersionSpec("la.nvbse", "Nova Vulgata", "la", 73, "la.nvbse")
         )
+
+        /** Language groups in picker order. */
+        val LANGUAGE_ORDER = listOf("es", "en", "pt", "la")
+
+        /** Protestant editions offered before the Catholic-only change; their files are removed. */
+        private val RETIRED = listOf("rv1909", "almeida")
+
+        private fun purgeRetiredEditions(context: Context) {
+            RETIRED.forEach { runCatching { File(context.filesDir, "bibles/$it").takeIf { dir -> dir.exists() }?.deleteRecursively() } }
+        }
 
         private val locks = ConcurrentHashMap<String, Mutex>()
         private suspend fun transferBook(url: String, destination: File) {

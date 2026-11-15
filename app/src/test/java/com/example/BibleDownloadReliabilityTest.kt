@@ -30,12 +30,12 @@ class BibleDownloadReliabilityTest {
         val hash = MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it.toInt() and 0xff) }
         return BibleDownloadManifest.Book(id, file, abbreviation, hash, bytes.size.toLong(), listOf(1))
     }
-    private val manifest get() = BibleDownloadManifest("pinned-test-commit", mapOf("rv1909" to listOf(
+    private val manifest get() = BibleDownloadManifest("pinned-test-commit", mapOf("es.lbl" to listOf(
         book("gen", "01-Gen.json", "Gen"), book("joh", "43-John.json", "John")
-    )))
+    )), bases = mapOf("es.lbl" to "https://data.example.test/pinned-test-commit/"))
 
     @Test fun interruptedDownloadStaysPartialThenRetryReadsSelectedEditionOffline() = runBlocking {
-        File(context.filesDir, "bibles/rv1909").deleteRecursively()
+        File(context.filesDir, "bibles/es.lbl").deleteRecursively()
         var failJohn = true
         val requested = mutableListOf<String>()
         val manager = BibleDownloadManager(context, manifest) { url, destination ->
@@ -49,72 +49,114 @@ class BibleDownloadReliabilityTest {
             destination.writeText(sources.getValue(name))
         }
         val provider = BibleTextProvider(context, manager)
-        assertFalse(manager.download("rv1909") { _, _ -> })
-        assertEquals(1, manager.status("rv1909").completedBooks)
-        assertTrue(manager.status("rv1909").partial)
-        assertFalse(manager.isDownloaded("rv1909"))
-        assertTrue(provider.getVerses("gen", 1, AppLanguage.EN, "rv1909").isEmpty())
-        assertFalse(manager.versionDir("rv1909").listFiles().orEmpty().any { it.name.endsWith(".part") })
+        assertFalse(manager.download("es.lbl") { _, _ -> })
+        assertEquals(1, manager.status("es.lbl").completedBooks)
+        assertTrue(manager.status("es.lbl").partial)
+        assertFalse(manager.isDownloaded("es.lbl"))
+        assertTrue(provider.getVerses("gen", 1, AppLanguage.EN, "es.lbl").isEmpty())
+        assertFalse(manager.versionDir("es.lbl").listFiles().orEmpty().any { it.name.endsWith(".part") })
         failJohn = false
-        assertTrue(manager.download("rv1909") { _, _ -> })
+        assertTrue(manager.download("es.lbl") { _, _ -> })
         assertEquals(1, requested.count { it == "01-Gen.json" })
-        assertEquals("Downloaded John wording", provider.getVerses("joh", 1, AppLanguage.EN, "rv1909").single().text.en)
-        assertEquals(1, provider.chapterCount("joh", AppLanguage.EN, "rv1909"))
-        assertEquals(0, provider.chapterCount("tob", AppLanguage.EN, "rv1909"))
-        assertTrue(provider.getVerses("tob", 1, AppLanguage.EN, "rv1909").isEmpty())
-        assertEquals("joh", provider.search("John wording", AppLanguage.EN, editionId = "rv1909").single().first)
-        assertTrue(manager.delete("rv1909"))
-        assertTrue(provider.getVerses("joh", 1, AppLanguage.EN, "rv1909").isEmpty())
+        assertEquals("Downloaded John wording", provider.getVerses("joh", 1, AppLanguage.EN, "es.lbl").single().text.en)
+        assertEquals(1, provider.chapterCount("joh", AppLanguage.EN, "es.lbl"))
+        assertEquals(0, provider.chapterCount("tob", AppLanguage.EN, "es.lbl"))
+        assertTrue(provider.getVerses("tob", 1, AppLanguage.EN, "es.lbl").isEmpty())
+        assertEquals("joh", provider.search("John wording", AppLanguage.EN, editionId = "es.lbl").single().first)
+        assertTrue(manager.delete("es.lbl"))
+        assertTrue(provider.getVerses("joh", 1, AppLanguage.EN, "es.lbl").isEmpty())
     }
 
     @Test fun checksumMismatchNeverPromotesACompleteLookingBook() = runBlocking {
-        File(context.filesDir, "bibles/rv1909").deleteRecursively()
+        File(context.filesDir, "bibles/es.lbl").deleteRecursively()
         var attempts = 0
         val manager = BibleDownloadManager(context, manifest) { url, destination ->
             attempts++
             val bytes = sources.getValue(url.substringAfterLast('/')).replace("Downloaded", "Corrupted!")
             destination.writeText(bytes)
         }
-        assertFalse(manager.download("rv1909") { _, _ -> })
+        assertFalse(manager.download("es.lbl") { _, _ -> })
         assertEquals(3, attempts)
-        assertEquals(0, manager.status("rv1909").completedBooks)
-        assertTrue(manager.versionDir("rv1909").listFiles().orEmpty().isEmpty())
+        assertEquals(0, manager.status("es.lbl").completedBooks)
+        assertTrue(manager.versionDir("es.lbl").listFiles().orEmpty().isEmpty())
     }
 
     @Test fun cancellationNeverPromotesPartialFileAndCanBeRetried() = runBlocking {
-        File(context.filesDir, "bibles/rv1909").deleteRecursively()
+        File(context.filesDir, "bibles/es.lbl").deleteRecursively()
         val manager = BibleDownloadManager(context, manifest) { _, destination ->
             destination.writeText("partial")
             throw CancellationException("User cancelled")
         }
         try {
-            manager.download("rv1909") { _, _ -> }
+            manager.download("es.lbl") { _, _ -> }
             fail("Cancellation must propagate")
         } catch (_: CancellationException) { }
-        assertFalse(manager.isDownloaded("rv1909"))
-        assertTrue(manager.versionDir("rv1909").listFiles().orEmpty().isEmpty())
+        assertFalse(manager.isDownloaded("es.lbl"))
+        assertTrue(manager.versionDir("es.lbl").listFiles().orEmpty().isEmpty())
     }
 
-    @Test fun pinnedManifestUsesActualEditionBookOrders() {
-        val manager = BibleDownloadManager(context)
-        val spanish = manager.specs.single { it.id == "rv1909" }
-        assertEquals(66, manager.bookIds(spanish.id).size)
-        assertFalse(manager.bookIds(spanish.id).contains("tob"))
-        assertTrue(manager.downloadUrl(spanish, 17).endsWith("17-Esth.json"))
-        assertTrue(manager.bookIds(spanish.id).contains("jud"))
-        assertFalse("Unsafe remote DRC must remain withdrawn", manager.specs.any { it.id == "drc" })
-        assertTrue(manager.bookIds("drc").isEmpty())
-        assertFalse(manager.isDownloaded("drc"))
-        // The full Catholic English edition remains available from its bundled asset.
-        assertTrue(BibleTextProvider(context).getVerses("tob", 1, AppLanguage.EN).isNotEmpty())
+    @Test fun editionsAreOfferedOnlyWhenTheManifestListsThem() {
+        // The shipped manifest lists nothing yet: every edition stays invisible, no Protestant edition is offered.
+        val shipped = BibleDownloadManager(context)
+        assertTrue(shipped.specs.isEmpty())
+        assertTrue(BibleDownloadManager.VERSION_SPECS.map { it.id }.toSet() ==
+            setOf("en.ccb", "en.drbcr", "es.eldpdd", "es.lbl", "es.lsb", "pt.bs", "la.nvbse"))
+        assertTrue(BibleDownloadManager.VERSION_SPECS.none { it.id == "rv1909" || it.id == "almeida" })
+        val listed = BibleDownloadManager(context, manifest)
+        assertEquals(listOf("es.lbl"), listed.specs.map { it.id })
+        assertEquals("es", listed.specs.single().language)
+        assertFalse(listed.isDownloaded("la.nvbse"))
+        assertTrue(listed.bookIds("la.nvbse").isEmpty())
+        assertThrows(IllegalArgumentException::class.java) { listed.versionDir("la.nvbse") }
     }
 
-    @Test fun tenLegacyFilesAndMalformedJsonAreNeverComplete() {
-        val manager = BibleDownloadManager(context)
-        val dir = manager.versionDir("almeida").also { it.deleteRecursively(); it.mkdirs() }
-        repeat(16) { File(dir, "${it + 1}.json").writeText("{}") }
-        assertFalse(manager.isDownloaded("almeida"))
-        assertEquals(0, manager.status("almeida").completedBooks)
-        dir.deleteRecursively()
+    @Test fun downloadUrlUsesPerEditionBaseOrTheSharedPlaceholder() {
+        val listed = BibleDownloadManager(context, manifest)
+        val spec = listed.specs.single()
+        assertEquals("https://data.example.test/pinned-test-commit/es.lbl/01-Gen.json", listed.downloadUrl(spec, 1))
+        val shared = BibleDownloadManager(context, BibleDownloadManifest("c", manifest.books))
+        assertEquals(BibleDownloadManager.BIBLES_DATA_BASE + "es.lbl/43-John.json", shared.downloadUrl(spec, 2))
+    }
+
+    @Test fun retiredProtestantEditionsAreRemovedFromDevice() {
+        for (id in listOf("rv1909", "almeida")) File(context.filesDir, "bibles/$id").apply { mkdirs(); File(this, "01-Gen.json").writeText("{}") }
+        File(context.filesDir, "bibles/es.lbl").apply { mkdirs() }
+        BibleDownloadManager(context, manifest)
+        assertFalse(File(context.filesDir, "bibles/rv1909").exists())
+        assertFalse(File(context.filesDir, "bibles/almeida").exists())
+        assertTrue(File(context.filesDir, "bibles/es.lbl").exists())
+    }
+
+    @Test fun editionKeepsItsOwnVerseNumbersIncludingGaps() = runBlocking {
+        File(context.filesDir, "bibles/es.lbl").deleteRecursively()
+        val gapped = """{"abbreviation":"Gen","chapters":[{"chapter":1,"verses":[{"verse":1,"text":"Uno"},{"verse":3,"text":"Tres"}]}]}"""
+        val bytes = gapped.toByteArray()
+        val hash = MessageDigest.getInstance("SHA-256").digest(bytes).joinToString("") { "%02x".format(it.toInt() and 0xff) }
+        val one = BibleDownloadManifest("c", mapOf("es.lbl" to listOf(BibleDownloadManifest.Book("gen", "01-Gen.json", "Gen", hash, bytes.size.toLong(), listOf(3)))))
+        val manager = BibleDownloadManager(context, one) { _, destination -> destination.writeText(gapped) }
+        assertTrue(manager.download("es.lbl") { _, _ -> })
+        val provider = BibleTextProvider(context, manager)
+        assertEquals(listOf(1, 3), provider.getVerses("gen", 1, AppLanguage.ES, "es.lbl").map { it.number })
+        assertEquals(3, provider.verseCounts(AppLanguage.ES, "es.lbl").getValue("gen")[0])
+        manager.delete("es.lbl")
+        Unit
+    }
+
+    @Test fun editionXrefIsDownloadedVerifiedAndRemovedWithTheEdition() = runBlocking {
+        File(context.filesDir, "bibles/es.lbl").deleteRecursively()
+        val xref = byteArrayOf(1, 2, 3, 4)
+        val hash = MessageDigest.getInstance("SHA-256").digest(xref).joinToString("") { "%02x".format(it.toInt() and 0xff) }
+        val withXref = BibleDownloadManifest("c", manifest.books, xref = mapOf("es.lbl" to BibleDownloadManifest.Xref(hash, 4)))
+        val manager = BibleDownloadManager(context, withXref) { url, destination ->
+            if (url.endsWith("/xref.bin")) destination.writeBytes(xref) else destination.writeText(sources.getValue(url.substringAfterLast('/')))
+        }
+        assertNull(manager.xrefFile("es.lbl"))
+        assertTrue(manager.download("es.lbl") { _, _ -> })
+        assertNotNull(manager.xrefFile("es.lbl"))
+        File(manager.versionDir("es.lbl"), "xref.bin").writeBytes(byteArrayOf(9, 9, 9, 9))
+        assertNull("a corrupted xref is never used", manager.xrefFile("es.lbl"))
+        manager.delete("es.lbl")
+        assertNull(manager.xrefFile("es.lbl"))
+        Unit
     }
 }

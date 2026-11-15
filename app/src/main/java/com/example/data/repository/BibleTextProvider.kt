@@ -91,8 +91,18 @@ class BibleTextProvider internal constructor(
         language: AppLanguage = AppLanguage.EN,
         editionId: String? = null
     ): List<BibleVerse> {
+        if (isAlternate(editionId)) {
+            // A downloaded edition keeps its own verse numbers, gaps included (omitted verses are simply absent).
+            val array = downloadedBook(editionId!!, bookId)?.optJSONArray("chapters")
+                ?.optJSONObject(chapterNumber - 1)?.optJSONArray("verses") ?: return emptyList()
+            return (0 until array.length()).map { i ->
+                val verse = array.getJSONObject(i)
+                val text = verse.getString("text")
+                BibleVerse(number = verse.getInt("verse"), text = LocalizedText(es = text, en = text, pt = text))
+            }
+        }
         val verses = chapterArray(language, bookId, chapterNumber, editionId)?.toStringList()
-            ?: (if (!isAlternate(editionId)) chapterArray(AppLanguage.EN, bookId, chapterNumber)?.toStringList() else null)
+            ?: chapterArray(AppLanguage.EN, bookId, chapterNumber)?.toStringList()
             ?: return emptyList()
         return verses.mapIndexed { idx, text ->
             BibleVerse(number = idx + 1, text = LocalizedText(es = text, en = text, pt = text))
@@ -108,7 +118,11 @@ class BibleTextProvider internal constructor(
             if (!downloads.isDownloaded(editionId!!)) return emptyMap()
             return downloads.bookIds(editionId).associateWith { bookId ->
                 val chapters = downloadedBook(editionId, bookId)?.optJSONArray("chapters")
-                IntArray(chapters?.length() ?: 0) { chapters!!.getJSONObject(it).getJSONArray("verses").length() }
+                // Last verse number of each chapter: the position scale of the whole-Bible line.
+                IntArray(chapters?.length() ?: 0) {
+                    val verses = chapters!!.getJSONObject(it).getJSONArray("verses")
+                    if (verses.length() == 0) 0 else verses.getJSONObject(verses.length() - 1).getInt("verse")
+                }
             }
         }
         val root = root(language) ?: return emptyMap()
@@ -188,10 +202,9 @@ class BibleTextProvider internal constructor(
         downloads.isDownloaded(versionId)
 
     companion object {
-        @Deprecated("Use BibleDownloadManager.specs and downloadUrl; downloads are pinned and verified")
+        @Deprecated("Use BibleDownloadManager.specs and downloadUrl; downloads are verified")
         val DOWNLOADABLE_VERSIONS = BibleDownloadManager.VERSION_SPECS.map { spec ->
-            DownloadableVersion(spec.id, spec.name,
-                "https://raw.githubusercontent.com/FordhamRamFan/public-domain-bible-translations/main/${spec.path}/")
+            DownloadableVersion(spec.id, spec.name, BibleDownloadManager.BIBLES_DATA_BASE + spec.path + "/")
         }
     }
 

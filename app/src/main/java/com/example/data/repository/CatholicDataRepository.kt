@@ -87,9 +87,9 @@ class CatholicDataRepository(
 
     private val canonIds: List<String> by lazy { BibleData.catholicCanonBooks.map { it.id } }
     private val crossReferenceIndex: CrossReferenceIndex? by lazy {
-        context?.let { CrossReferenceIndex(it, canonIds) }
+        context?.let { CrossReferenceIndex(it, canonIds) { id -> bibleDownloadManager?.xrefFile(id) } }
     }
-    private val bibleLines = HashMap<AppLanguage, BibleLine>()
+    private val bibleLines = HashMap<String, BibleLine>()
 
     private val _currentDate = MutableStateFlow(dateProvider())
     val currentDate: StateFlow<CalendarDate> = _currentDate.asStateFlow()
@@ -778,27 +778,29 @@ class CatholicDataRepository(
         chapter: Int,
         verse: Int,
         language: AppLanguage = _currentLanguage.value,
-        limit: Int = 60
+        limit: Int = 60,
+        editionId: String = _activeBibleEditionId.value
     ): List<ResolvedCrossReference> {
         val index = crossReferenceIndex ?: return emptyList()
-        return index.referencesFrom(VerseRef(bookId, chapter, verse), language, limit).map { ref ->
-            ResolvedCrossReference(ref, referenceLabel(ref, language), referenceText(ref, language))
+        return index.referencesFrom(VerseRef(bookId, chapter, verse), language, limit, editionId).map { ref ->
+            ResolvedCrossReference(ref, referenceLabel(ref, language), referenceText(ref, language, editionId))
         }
     }
 
     /** How many references leave each verse of a chapter. */
-    fun crossReferenceCounts(bookId: String, chapter: Int, language: AppLanguage = _currentLanguage.value): Map<Int, Int> =
-        crossReferenceIndex?.countsForChapter(bookId, chapter, language) ?: emptyMap()
+    fun crossReferenceCounts(bookId: String, chapter: Int, language: AppLanguage = _currentLanguage.value, editionId: String = _activeBibleEditionId.value): Map<Int, Int> =
+        crossReferenceIndex?.countsForChapter(bookId, chapter, language, editionId) ?: emptyMap()
 
     /** Every connection in the Bible, for the whole-Bible arc view. */
-    fun allCrossReferences(language: AppLanguage = _currentLanguage.value, minVotes: Int = 0): Sequence<Pair<VerseRef, VerseRef>> =
-        crossReferenceIndex?.allConnections(language, minVotes) ?: emptySequence()
+    fun allCrossReferences(language: AppLanguage = _currentLanguage.value, minVotes: Int = 0, editionId: String = _activeBibleEditionId.value): Sequence<Pair<VerseRef, VerseRef>> =
+        crossReferenceIndex?.allConnections(language, minVotes, editionId) ?: emptySequence()
 
     /** The whole canon laid on one line, in [language]'s own numbering. */
-    fun bibleLine(language: AppLanguage = _currentLanguage.value): BibleLine? {
-        bibleLines[language]?.let { return it }
-        val counts = bibleProvider?.verseCounts(language)?.takeIf { it.isNotEmpty() } ?: return null
-        return BibleLine(counts, canonIds).also { bibleLines[language] = it }
+    fun bibleLine(language: AppLanguage = _currentLanguage.value, editionId: String = _activeBibleEditionId.value): BibleLine? {
+        val key = "$editionId:${language.code}"
+        bibleLines[key]?.let { return it }
+        val counts = bibleProvider?.verseCounts(language, editionId)?.takeIf { it.isNotEmpty() } ?: return null
+        return BibleLine(counts, canonIds).also { bibleLines[key] = it }
     }
 
     private fun referenceLabel(ref: CrossReference, language: AppLanguage): String {
@@ -812,9 +814,9 @@ class CatholicDataRepository(
         return "$book $start$end"
     }
 
-    private fun referenceText(ref: CrossReference, language: AppLanguage): String {
+    private fun referenceText(ref: CrossReference, language: AppLanguage, editionId: String): String {
         val t = ref.target
-        val verses = bibleProvider?.getVerses(t.bookId, t.chapter, language) ?: return ""
+        val verses = bibleProvider?.getVerses(t.bookId, t.chapter, language, editionId) ?: return ""
         val last = ref.end?.takeIf { it.chapter == t.chapter }?.verse ?: t.verse
         return verses.filter { it.number in t.verse..last }
             .joinToString(" ") { it.text.get(language) }
