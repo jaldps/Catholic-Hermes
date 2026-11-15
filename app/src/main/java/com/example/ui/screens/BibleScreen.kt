@@ -39,6 +39,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -59,7 +60,6 @@ import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.CheckCircle
-import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material.icons.outlined.KeyboardArrowDown
 import androidx.compose.material.icons.outlined.SearchOff
 import androidx.compose.material.icons.outlined.Translate
@@ -140,7 +140,8 @@ import com.example.data.news.ReadingsResult
 import com.example.data.news.VaticanGospelFetcher
 import com.example.data.prefs.ReadingPosition
 import com.example.data.repository.BibleData
-import com.example.data.repository.BibleDownloadManager
+import com.example.data.repository.BibleEdition
+import com.example.data.repository.BibleEditionCatalog
 import com.example.data.repository.CatholicDataRepository
 import com.example.data.xref.VerseRef
 import com.example.ui.design.AppPrimaryCapsule
@@ -367,6 +368,8 @@ internal fun verseIndexForVisibleItem(itemIndex: Int, headerCount: Int, verseCou
     if (verseCount <= 0) null else (itemIndex - headerCount).coerceIn(0, verseCount - 1)
 
 private val LocalBibleEditionLabel = staticCompositionLocalOf { "" }
+/** Opens the Bible chooser from anywhere in the reader. */
+private val LocalOpenBibleChooser = staticCompositionLocalOf<() -> Unit> { {} }
 
 @Composable
 fun BibleScreen(
@@ -477,20 +480,40 @@ fun BibleScreen(
     }
     val listBottom = PaddingValues(bottom = insets.calculateBottomPadding() + 32.dp)
 
-    val editionLabel = repository.bibleDownloadManager?.specs?.firstOrNull { it.id == activeEdition }?.name
+    val resolvedEdition = repository.resolvedEditionId(activeEdition, currentLanguage)
+    val editionLabel = repository.bibleEditions?.edition(resolvedEdition)?.let { "${it.name} · ${editionLanguageName(it.language, currentLanguage)}" }
         ?: when(currentLanguage) { AppLanguage.ES -> "Biblia Platense · Español"; AppLanguage.EN -> "Douay-Rheims-Challoner · English"; AppLanguage.PT -> "Matos Soares · Português" }
-    CompositionLocalProvider(LocalBibleEditionLabel provides editionLabel) {
+    var chooserOpen by remember { mutableStateOf(false) }
+    val defaults by repository.bibleDefaultEditions.collectAsState()
+    val openChooser = remember { { chooserOpen = true } }
+    if (chooserOpen) {
+        repository.bibleEditions?.let { catalog ->
+            AppSheet(
+                onDismiss = { chooserOpen = false },
+                title = currentLanguage.pick("Elegir Biblia", "Choose a Bible", "Escolher Bíblia"),
+                tag = "bible_edition_picker"
+            ) {
+                BibleEditionChooser(
+                    catalog = catalog, currentLanguage = currentLanguage, activeEditionId = resolvedEdition, defaults = defaults,
+                    onSelect = { repository.requestBibleEdition(it); chooserOpen = false },
+                    onSetDefault = { language, id -> repository.setDefaultBibleEdition(language, id) }
+                )
+            }
+        }
+    }
+    CompositionLocalProvider(LocalBibleEditionLabel provides editionLabel, LocalOpenBibleChooser provides openChooser) {
     ReadingTypography(settings) {
         Box(modifier.fillMaxSize().testTag("bible_screen")) {
             val book = selectedBook
             when {
                 selectedMainTab == 2 -> VersionsView(
-                    versions = repository.bibleVersions,
-                    downloadManager = repository.bibleDownloadManager,
+                    catalog = repository.bibleEditions,
                     currentLanguage = currentLanguage,
                     onBack = { selectedMainTab = 0 },
-                    activeEditionId = activeEdition,
-                    onSelectEdition = { repository.requestBibleEdition(it) }
+                    activeEditionId = resolvedEdition,
+                    defaults = defaults,
+                    onSelectEdition = { repository.requestBibleEdition(it) },
+                    onSetDefault = { language, id -> repository.setDefaultBibleEdition(language, id) }
                 )
 
                 selectedMainTab == 0 && book != null -> ReaderHost(
@@ -553,7 +576,7 @@ fun BibleScreen(
                             header = header,
                             reading = dailyContent?.takeIf { it.date == currentDate && it.language == currentLanguage && it.rules == calendarRules }?.reading ?: repository.emptyMassReading(currentDate),
                             date = currentDate,
-                            useVatican = repository.vaticanCalendarMatches(currentDate, calendarRules),
+                            calendarMatches = repository.vaticanCalendarMatches(currentDate, calendarRules),
                             currentLanguage = currentLanguage,
                             speech = speech,
                             contentPadding = listBottom
@@ -1107,7 +1130,7 @@ private fun ReaderHost(
         Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
             Text(currentLanguage.pick("Libro no disponible en esta edición", "Book unavailable in this edition", "Livro indisponível nesta edição"), style = LocalAppTextStyles.current.title2, color = LocalAppDesign.current.palette.textPrimary)
             Text(currentLanguage.pick("Esta edición no contiene este libro. Elige la Biblia católica incluida para leerlo.", "This edition does not contain this book. Choose the included Catholic Bible to read it.", "Esta edição não contém este livro. Escolha a Bíblia católica incluída para lê-lo."), style = LocalAppTextStyles.current.callout, color = LocalAppDesign.current.palette.textSecondary)
-            AppPrimaryCapsule(currentLanguage.pick("Usar Biblia incluida", "Use included Bible", "Usar Bíblia incluída"), onClick = { repository.requestBibleEdition("bundled") }, tag = "bible_use_bundled")
+            AppPrimaryCapsule(currentLanguage.pick("Usar Biblia incluida", "Use included Bible", "Usar Bíblia incluída"), onClick = { repository.requestBibleEdition(BibleEditionCatalog.initialDefault(currentLanguage)) }, tag = "bible_use_bundled")
             AppSecondaryCapsule(currentLanguage.pick("Volver", "Back", "Voltar"), onClick = onBack)
         }
         return
@@ -1311,7 +1334,16 @@ private fun ChapterReader(
         ) {
             item(key = "opening") {
                 val edition = LocalBibleEditionLabel.current
-                Text(edition, style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(horizontal = ReadingInset).testTag("bible_active_edition"))
+                val openChooser = LocalOpenBibleChooser.current
+                Row(Modifier.padding(horizontal = ReadingInset), verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        edition, style = styles.footnote, color = p.textSecondary,
+                        modifier = Modifier.heightIn(min = 48.dp).wrapContentHeight(Alignment.CenterVertically)
+                            .clickable(role = Role.Button, onClickLabel = currentLanguage.pick("Elegir Biblia", "Choose a Bible", "Escolher Bíblia"), onClick = openChooser)
+                            .testTag("bible_active_edition")
+                    )
+                    Icon(Icons.Outlined.KeyboardArrowDown, contentDescription = null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
+                }
                 ChapterOpening(book, chapterNumber, chapterCount, currentLanguage)
             }
             if (verses.isEmpty()) {
@@ -1978,11 +2010,11 @@ private fun shortLessonLabel(heading: String, readingOrdinal: Int, language: App
 }
 
 @Composable
-private fun DailyMissalView(
+internal fun DailyMissalView(
     header: LazyListScope.() -> Unit,
     reading: DailyMassReading,
     date: com.example.data.liturgy.CalendarDate,
-    useVatican: Boolean,
+    calendarMatches: Boolean,
     currentLanguage: AppLanguage,
     speech: SpeechQueue,
     contentPadding: PaddingValues
@@ -1997,14 +2029,20 @@ private fun DailyMissalView(
     // The day's readings come from the Vatican's own feed, read natively; the
     // bundled lectionary is the offline fallback.
     val isoToday = "%04d-%02d-%02d".format(java.util.Locale.ROOT, date.year, date.month, date.day)
-    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday, useVatican) {
+    val injectedLoader = com.example.data.news.LocalReadingsLoader.current
+    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday) {
         produceState<ReadingsResult?>(null) {
-            if (useVatican) value = VaticanGospelFetcher().today(currentLanguage, isoToday)
+            value = injectedLoader?.invoke(currentLanguage, isoToday)
+                ?: VaticanGospelFetcher(cache = com.example.data.news.VaticanReadingsCache.forContext(context))
+                    .today(currentLanguage, isoToday)
         }
     }
+    val choice = com.example.data.news.chooseReadingsSource(vaticanResult, calendarMatches)
     val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
-    val loadingVatican = useVatican && vaticanResult == null
-    val offline = vaticanResult is ReadingsResult.Failure
+    val loadingVatican = choice.source == com.example.data.news.ReadingsSource.LOADING
+    val offline = choice.source == com.example.data.news.ReadingsSource.BUNDLED
+    val showLocalNote = choice.showLocalNote
+    var showLocalSelection by rememberSaveable(isoToday) { mutableStateOf(false) }
 
     // On a ferial weekday the bundled lectionary legitimately has no entry;
     // such a lesson is dropped rather than drawn empty, and nothing is invented.
@@ -2055,20 +2093,36 @@ private fun DailyMissalView(
         }
         item(key = "mass_card") {
             TodayMassCard(reading, currentLanguage, seasonColor)
-            if (offline || !useVatican) {
+            if (offline) {
                 Text(
-                    if (!useVatican) currentLanguage.pick(
-                        "Selecciones de la celebración según los traslados elegidos. El calendario local puede tener otras particularidades.",
-                        "Selections for the celebration under your chosen transfers. Your local calendar may have other propers.",
-                        "Seleções da celebração conforme as transferências escolhidas. O calendário local pode ter outros próprios."
-                    ) else currentLanguage.pick(
+                    currentLanguage.pick(
                         "Lecturas en línea no disponibles · selecciones bíblicas incluidas",
-                                "Online readings unavailable · bundled Scripture selections",
+                        "Online readings unavailable · bundled Scripture selections",
                         "Leituras online indisponíveis · seleções bíblicas incluídas"
                     ),
                     style = styles.footnote, color = p.textSecondary,
                     modifier = Modifier.padding(horizontal = design.spacing.gutter + 4.dp).padding(top = 10.dp)
                 )
+            }
+            if (showLocalNote) {
+                val title = reading.feastTitle.get(currentLanguage)
+                Text(
+                    currentLanguage.pick(
+                        "Lecturas de la Santa Sede (calendario romano general). En tu diócesis hoy puede celebrarse: $title.",
+                        "Readings from the Holy See (General Roman Calendar). In your diocese today the celebration may be: $title.",
+                        "Leituras da Santa Sé (Calendário Romano Geral). Na sua diocese hoje pode celebrar-se: $title."
+                    ),
+                    style = styles.footnote, color = p.textSecondary,
+                    modifier = Modifier.padding(horizontal = design.spacing.gutter + 4.dp).padding(top = 10.dp).testTag("mass_local_note")
+                )
+                Box(Modifier.padding(horizontal = design.spacing.gutter).padding(top = 10.dp)) {
+                    AppSecondaryCapsule(
+                        label = if (showLocalSelection) currentLanguage.pick("Ocultar selección local", "Hide local selection", "Ocultar seleção local")
+                        else currentLanguage.pick("Ver selección de esta celebración", "See this celebration's selection", "Ver seleção desta celebração"),
+                        onClick = { showLocalSelection = !showLocalSelection },
+                        tag = "mass_local_selection"
+                    )
+                }
             }
         }
         item(key = "mass_controls") {
@@ -2143,6 +2197,20 @@ private fun DailyMissalView(
             }
         }
 
+        if (showLocalNote && showLocalSelection) {
+            bundledLessons.forEachIndexed { i, lesson ->
+                item(key = "local_lesson_$i") {
+                    MissalLesson(
+                        shortLabel = lesson.label,
+                        lesson = lesson,
+                        rubric = rubric,
+                        accent = seasonColor,
+                        beingRead = false
+                    )
+                }
+            }
+        }
+
         if (vatican == null && !loadingVatican) item(key = "homily") {
             Column(Modifier.padding(top = 36.dp)) {
                 Text(
@@ -2168,9 +2236,9 @@ private fun DailyMissalView(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    currentLanguage.pick("Fuente: ", "Source: ", "Fonte: ") +
-                        if (vatican != null) "Vatican News · ${vatican.title}" else reading.sourceName,
-                    style = styles.footnote, color = p.textSecondary, textAlign = TextAlign.Center
+                    currentLanguage.pick("Fuente: ", "Source: ", "Fonte: ") + "Vatican News · vaticannews.va",
+                    style = styles.footnote, color = p.textSecondary, textAlign = TextAlign.Center,
+                    modifier = Modifier.testTag("mass_source_attribution")
                 )
                 Spacer(Modifier.height(12.dp))
                 AppSecondaryCapsule(
@@ -2332,20 +2400,29 @@ private fun MissalSkeleton(currentLanguage: AppLanguage) {
 
 // ------------------------------------------------------------------- versions
 
+internal fun editionLanguageName(code: String, ui: AppLanguage): String = when (code) {
+    "es" -> "Español"
+    "en" -> "English"
+    "pt" -> "Português"
+    else -> ui.pick("Latín", "Latin", "Latim")
+}
+
+/** "Leer → Versiones": every installed Bible, choose one to read and set the default for each language. */
 @Composable
 private fun VersionsView(
-    versions: List<BibleVersionInfo>,
-    downloadManager: BibleDownloadManager?,
+    catalog: BibleEditionCatalog?,
     currentLanguage: AppLanguage,
     onBack: () -> Unit,
-    activeEditionId: String = "bundled",
-    onSelectEdition: (String) -> Unit = {}
+    activeEditionId: String,
+    defaults: Map<String, String>,
+    onSelectEdition: (String) -> Unit,
+    onSetDefault: (AppLanguage, String) -> Unit
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
     val insets = appScreenInsets()
-    val title = currentLanguage.pick("Versiones y descargas", "Versions & downloads", "Versões e downloads")
+    val title = currentLanguage.pick("Versiones", "Versions", "Versões")
     AppBackHandler(onBack = onBack)
     AppInlineTitle(title)
 
@@ -2354,184 +2431,95 @@ private fun VersionsView(
         contentPadding = PaddingValues(top = insets.calculateTopPadding(), bottom = insets.calculateBottomPadding() + 32.dp)
     ) {
         item(key = "versions_title") {
-            Column(Modifier.padding(horizontal = design.spacing.gutter).padding(top = 8.dp, bottom = 24.dp)) {
+            Column(Modifier.padding(horizontal = design.spacing.gutter).padding(top = 8.dp, bottom = 16.dp)) {
                 Text(title, style = styles.title1, color = p.textPrimary, modifier = Modifier.semantics { heading() })
                 Spacer(Modifier.height(8.dp))
                 Text(
                     currentLanguage.pick(
-                        "El canon católico (73 libros) frente a las ediciones protestantes (66).",
-                        "The Catholic canon (73 books) beside the Protestant editions (66).",
-                        "O cânon católico (73 livros) diante das edições protestantes (66)."
+                        "Diez Biblias católicas (73 libros), incluidas en la app y disponibles sin conexión.",
+                        "Ten Catholic Bibles (73 books), included in the app and available offline.",
+                        "Dez Bíblias católicas (73 livros), incluídas no app e disponíveis offline."
                     ),
                     style = styles.callout, color = p.textSecondary
                 )
             }
         }
-        item(key = "select_included") {
-            AppListGroup {
-                AppListRow(currentLanguage.pick("Biblia católica incluida · 73 libros", "Included Catholic Bible · 73 books", "Bíblia católica incluída · 73 livros"), subtitle = when(currentLanguage) { AppLanguage.ES -> "Biblia Platense · Español"; AppLanguage.EN -> "Douay-Rheims-Challoner · English"; AppLanguage.PT -> "Matos Soares · Português" }, selected = activeEditionId == "bundled", onClick = { onSelectEdition("bundled") }, modifier = Modifier.testTag("bible_edition_bundled"))
-            }
-            Spacer(Modifier.height(16.dp))
-        }
-        item(key = "versions_label") {
-            Text(
-                currentLanguage.pick("Traducciones", "Translations", "Traduções"),
-                style = styles.title3, color = p.textPrimary,
-                modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(bottom = 12.dp).semantics { heading() }
-            )
-        }
-        versions.forEach { version ->
-            item(key = "version_${version.id}") {
-                VersionCard(version, currentLanguage)
-                Spacer(Modifier.height(12.dp))
-            }
-        }
-        if (downloadManager != null) {
-            item(key = "downloads") {
-                OfflineBibleDownloadsView(manager = downloadManager, currentLanguage = currentLanguage, activeEditionId = activeEditionId, onSelectEdition = onSelectEdition)
-            }
+        if (catalog != null) item(key = "editions") {
+            BibleEditionChooser(catalog, currentLanguage, activeEditionId, defaults, onSelectEdition, onSetDefault)
         }
     }
 }
 
+/**
+ * Installed editions grouped by language (tags bible_edition_group_<lang>, bible_edition_<id>) and, for the edition
+ * being read, the "use as default for <language>" controls (bible_edition_default_<lang>).
+ */
 @Composable
-private fun VersionCard(version: BibleVersionInfo, currentLanguage: AppLanguage) {
-    val design = LocalAppDesign.current
-    val p = design.palette
-    val styles = LocalAppTextStyles.current
-    AppGlassSurface(
-        Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).testTag("version_${version.id}"),
-        contentPadding = PaddingValues(20.dp)
-    ) {
-        Column {
-            Text(version.name, style = styles.headline, color = p.textPrimary)
-            Spacer(Modifier.height(8.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(
-                    Modifier
-                        .then(
-                            if (version.isCatholicCanon) Modifier.clip(RoundedCornerShape(percent = 50)).background(p.action)
-                            else Modifier.lumenGlass(RoundedCornerShape(percent = 50), lifted = false)
-                        )
-                        .padding(horizontal = 10.dp, vertical = 3.dp)
-                ) {
-                    Text(
-                        if (version.isCatholicCanon) currentLanguage.pick("Canon católico · 73", "Catholic canon · 73", "Cânon católico · 73")
-                        else currentLanguage.pick("No católica · 66", "Not Catholic · 66", "Não católica · 66"),
-                        style = styles.caption,
-                        color = if (version.isCatholicCanon) p.onAction else p.textSecondary
-                    )
-                }
-                Spacer(Modifier.width(10.dp))
-                Text("${version.abbreviation} · ${version.language.uppercase()}", style = styles.footnote, color = p.textSecondary)
-            }
-            Spacer(Modifier.height(12.dp))
-            Text(version.description.get(currentLanguage), style = styles.callout, color = p.textPrimary)
-            Spacer(Modifier.height(8.dp))
-            Text(version.canonicalDifferenceNote.get(currentLanguage), style = styles.footnote, color = p.textSecondary)
-        }
-    }
-}
-
-/** Whole-Bible downloads for offline reading, one row each with its own control. */
-@Composable
-fun OfflineBibleDownloadsView(
-    manager: BibleDownloadManager,
+fun BibleEditionChooser(
+    catalog: BibleEditionCatalog,
     currentLanguage: AppLanguage,
-    activeEditionId: String = "bundled",
-    onSelectEdition: (String) -> Unit = {}
+    activeEditionId: String,
+    defaults: Map<String, String>,
+    onSelect: (String) -> Unit,
+    onSetDefault: (AppLanguage, String) -> Unit
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
-    val scope = rememberCoroutineScope()
+    val active = catalog.edition(activeEditionId)
+    fun defaultLabel(language: AppLanguage): String? {
+        val ids = defaults[language.code] ?: BibleEditionCatalog.initialDefault(language)
+        return catalog.edition(ids)?.name
+    }
 
-    Column(Modifier.fillMaxWidth().padding(top = 24.dp)) {
-        Text(
-            currentLanguage.pick("Sin conexión", "Offline", "Offline"),
-            style = styles.title3, color = p.textPrimary,
-            modifier = Modifier.padding(horizontal = design.spacing.gutter).semantics { heading() }
-        )
-        Spacer(Modifier.height(4.dp))
-        Text(
-            currentLanguage.pick(
-                "Guarda una versión completa en el dispositivo para leerla sin conexión.",
-                "Keep a whole version on the device to read it without a connection.",
-                "Guarde uma versão completa no dispositivo para ler sem conexão."
-            ),
-            style = styles.footnote, color = p.textSecondary,
-            modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(bottom = 12.dp)
-        )
-        AppListGroup {
-            manager.specs.forEachIndexed { index, spec ->
-                var downloading by remember(spec.id) { mutableStateOf(false) }
-                var progress by remember(spec.id) { mutableFloatStateOf(0f) }
-                var status by remember(spec.id) { mutableStateOf("") }
-                var revision by remember(spec.id) { mutableIntStateOf(0) }
-                var downloadJob by remember(spec.id) { mutableStateOf<kotlinx.coroutines.Job?>(null) }
-                val validation = rememberIoContent(manager to spec.id, downloading to revision) { manager.status(spec.id) }
-                val downloadStatus = validation.data ?: BibleDownloadManager.DownloadStatus(0, spec.bookCount)
-                val downloaded = validation.data?.complete == true
-                Column {
-                    Row(
-                        Modifier.fillMaxWidth().heightIn(min = 64.dp).padding(start = 18.dp, end = 10.dp, top = 10.dp, bottom = 10.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column(Modifier.weight(1f)) {
-                            Text(spec.name, style = styles.body, color = p.textPrimary)
-                            Spacer(Modifier.height(2.dp))
-                            Text(
-                                if (downloaded) currentLanguage.pick("Descargado · disponible sin conexión", "Downloaded · available offline", "Baixado · disponível offline")
-                                else if (validation.loading) currentLanguage.pick("Comprobando descarga…", "Checking download…", "Verificando download…")
-                                else if (validation.failed) currentLanguage.pick("No se pudo verificar la descarga", "Could not verify download", "Não foi possível verificar o download")
-                                else status.ifBlank { if (downloadStatus.partial) currentLanguage.pick("Parcial: ${downloadStatus.completedBooks}/${downloadStatus.totalBooks} libros", "Partial: ${downloadStatus.completedBooks}/${downloadStatus.totalBooks} books", "Parcial: ${downloadStatus.completedBooks}/${downloadStatus.totalBooks} livros") else currentLanguage.pick("No descargado", "Not downloaded", "Não baixado") },
-                                style = styles.footnote, color = p.textSecondary
-                            )
-                        }
-                        Spacer(Modifier.width(10.dp))
-                        when {
-                            downloaded -> Icon(
-                                Icons.Outlined.CheckCircle,
-                                contentDescription = currentLanguage.pick("Descargado", "Downloaded", "Baixado"),
-                                tint = p.success,
-                                modifier = Modifier.padding(10.dp).size(24.dp)
-                            )
-                            downloading -> Box(Modifier.size(44.dp), contentAlignment = Alignment.Center) {
-                                AppProgressRing(progress = progress, size = 28.dp, stroke = 3.dp)
-                            }
-                            validation.loading -> Box(Modifier.size(44.dp), contentAlignment = Alignment.Center) { AppProgressRing(progress = 0f, size = 28.dp, stroke = 3.dp) }
-                            validation.failed -> AppSecondaryCapsule(currentLanguage.pick("Reintentar", "Retry", "Tentar novamente"), validation.retry)
-                            else -> AppGlassIconButton(
-                                icon = Icons.Outlined.Download,
-                                contentDescription = currentLanguage.pick("Descargar", "Download", "Baixar") + " " + spec.name,
-                                onClick = {
-                                    if (!downloading) {
-                                        downloading = true
-                                        downloadJob = scope.launch {
-                                            try {
-                                            val ok = manager.download(spec.id) { fraction, message ->
-                                                progress = fraction
-                                                status = message
-                                            }
-                                            status = if (ok) currentLanguage.pick("Completado", "Completed", "Concluído") else status
-                                            } finally { downloading = false; revision++ }
-                                        }
-                                    }
-                                },
-                                tag = "bible_download_${spec.id}"
-                            )
-                        }
-                    }
-                    if (downloaded) AppListRow(currentLanguage.pick("Leer esta edición", "Read this edition", "Ler esta edição"), selected = activeEditionId == spec.id, onClick = { onSelectEdition(spec.id) }, modifier = Modifier.testTag("bible_edition_${spec.id}"))
-                    Row(Modifier.padding(horizontal = 18.dp)) {
-                        if (downloading) androidx.compose.material3.TextButton(onClick = { downloadJob?.cancel() }, modifier = Modifier.heightIn(min = 48.dp).testTag("bible_cancel_${spec.id}")) { Text(currentLanguage.pick("Cancelar", "Cancel", "Cancelar")) }
-                        if (!downloading && downloadStatus.completedBooks > 0) androidx.compose.material3.TextButton(onClick = {
-                            scope.launch { if (activeEditionId == spec.id) onSelectEdition("bundled"); manager.delete(spec.id); revision++; status = "" }
-                        }, modifier = Modifier.heightIn(min = 48.dp).testTag("bible_delete_${spec.id}")) { Text(currentLanguage.pick("Eliminar descarga", "Delete download", "Excluir download")) }
-                    }
-                    if (index < manager.specs.lastIndex) {
-                        Box(Modifier.fillMaxWidth().padding(start = 18.dp).height(0.5.dp).background(p.separator))
-                    }
+    Column(Modifier.fillMaxWidth().padding(bottom = 8.dp).testTag("bible_edition_list")) {
+        catalog.groups().forEach { (lang, list) ->
+            Text(
+                when (lang) {
+                    "la" -> currentLanguage.pick("Latín · Nova Vulgata", "Latin · Nova Vulgata", "Latim · Nova Vulgata")
+                    else -> editionLanguageName(lang, currentLanguage)
+                },
+                style = styles.headline, color = p.textPrimary,
+                modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(top = 12.dp, bottom = 8.dp)
+                    .testTag("bible_edition_group_$lang").semantics { heading() }
+            )
+            AppListGroup {
+                list.forEach { edition ->
+                    val defaultFor = AppLanguage.entries.filter { (defaults[it.code] ?: BibleEditionCatalog.initialDefault(it)) == edition.id }
+                    AppListRow(
+                        edition.name,
+                        subtitle = edition.description(currentLanguage) + if (defaultFor.isEmpty()) "" else
+                            " · " + currentLanguage.pick("Predeterminada", "Default", "Padrão") + " " + defaultFor.joinToString("/") { it.code.uppercase() },
+                        showsNavigationAffordance = false,
+                        selected = edition.id == activeEditionId,
+                        onClick = { onSelect(edition.id) },
+                        modifier = Modifier.testTag("bible_edition_${edition.id}")
+                    )
+                }
+            }
+        }
+        if (active != null) {
+            Text(
+                currentLanguage.pick("Predeterminada para cada idioma", "Default for each language", "Padrão para cada idioma"),
+                style = styles.headline, color = p.textPrimary,
+                modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(top = 20.dp, bottom = 4.dp).semantics { heading() }
+            )
+            Text(
+                currentLanguage.pick("Al cambiar el idioma de la app se abre su Biblia predeterminada.", "Changing the app language opens its default Bible.", "Ao mudar o idioma do app abre-se a sua Bíblia padrão."),
+                style = styles.footnote, color = p.textSecondary,
+                modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(bottom = 8.dp)
+            )
+            AppListGroup {
+                AppLanguage.entries.forEach { language ->
+                    val lname = editionLanguageName(language.code, currentLanguage)
+                    AppListRow(
+                        currentLanguage.pick("Usar como predeterminada para $lname", "Use as default for $lname", "Usar como padrão para $lname"),
+                        subtitle = active.name + " · " + currentLanguage.pick("ahora", "now", "agora") + ": " + (defaultLabel(language) ?: ""),
+                        showsNavigationAffordance = false,
+                        selected = (defaults[language.code] ?: BibleEditionCatalog.initialDefault(language)) == active.id,
+                        onClick = { onSetDefault(language, active.id) },
+                        modifier = Modifier.testTag("bible_edition_default_${language.code}")
+                    )
                 }
             }
         }

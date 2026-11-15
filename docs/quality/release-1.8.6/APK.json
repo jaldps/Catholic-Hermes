@@ -1,0 +1,21 @@
+{
+  "version_name": "1.8.6",
+  "version_code": 15,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.6",
+  "sha256": "9135cb60e2130255445dd364d6e7f4352d9ebd7405fbc5115ca534df7a65516a",
+  "bytes": 84378790,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.5 (same package and key)",
+  "changes": [
+    "Ten Catholic Bibles installed in the app (no downloads): Biblia Platense, El Libro del Pueblo de Dios, La Biblia Latinoamericana, La Santa Biblia (ES); Douay-Rheims-Challoner, Douay-Rheims alternate text, Christian Community Bible (EN); Matos Soares, Biblia Sagrada (PT); Nova Vulgata (LA).",
+    "Bible chooser from the reader header and Leer -> Versiones; default Bible per app language (ES/EN/PT), Latin allowed as default; changing app language opens that language's default.",
+    "Cross-references per edition, opening in the same edition.",
+    "Fix for 1.8.5: downloads never completed (raw GitHub URLs not reachable from the phone) and editions could not be selected; download flow removed."
+  ],
+  "tests": ["BibleIntegrityTest", "BibleEditionSelectionTest", "BibleEditionPickerTest", "BibleEditionsTest", "CrossReferenceEditionTest", "CrossReferenceTest", "AppNavigationTest", "BibleReadingJourneyTest", "BibleAreaScreenshotTest(versions,reader)"],
+  "known_limitations": ["Full unit-test suite not run.", "Picker sheet (dialog) not captured in screenshots; inline chooser in Versiones reviewed.", "APK grows to ~84 MB because the Bibles are bundled."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

@@ -25,6 +25,7 @@ import androidx.compose.material.icons.outlined.Hub
 import androidx.compose.material.icons.outlined.IosShare
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -102,10 +103,11 @@ fun VerseSheet(
     val context = LocalContext.current
     val clipboard = LocalClipboardManager.current
     val source = VerseRef(book.id, chapterNumber, verse.number)
-    val references = remember(source, currentLanguage) {
-        repository.crossReferences(book.id, chapterNumber, verse.number, currentLanguage)
+    val edition by repository.activeBibleEditionId.collectAsState()
+    val references = remember(source, currentLanguage, edition) {
+        repository.crossReferences(book.id, chapterNumber, verse.number, currentLanguage, editionId = edition)
     }
-    val line = remember(currentLanguage) { repository.bibleLine(currentLanguage) }
+    val line = remember(currentLanguage, edition) { repository.bibleLine(currentLanguage, edition) }
     var shown by remember(source) { mutableIntStateOf(SheetPreviewCount) }
     var copied by remember(source) { mutableStateOf(false) }
     val cite = citation(book, chapterNumber, verse.number, currentLanguage)
@@ -315,20 +317,21 @@ fun CrossReferenceStudy(
     val p = design.palette
     val styles = LocalAppTextStyles.current
     val insets = appScreenInsets()
-    val line = remember(currentLanguage) { repository.bibleLine(currentLanguage) }
-    val counts = remember(book.id, chapterNumber, currentLanguage) {
-        repository.crossReferenceCounts(book.id, chapterNumber, currentLanguage)
+    val edition by repository.activeBibleEditionId.collectAsState()
+    val line = remember(currentLanguage, edition) { repository.bibleLine(currentLanguage, edition) }
+    val counts = remember(book.id, chapterNumber, currentLanguage, edition) {
+        repository.crossReferenceCounts(book.id, chapterNumber, currentLanguage, edition)
     }
-    val references = remember(book.id, chapterNumber, verse, currentLanguage) {
+    val references = remember(book.id, chapterNumber, verse, currentLanguage, edition) {
         if (verse == null) emptyList()
-        else repository.crossReferences(book.id, chapterNumber, verse, currentLanguage)
+        else repository.crossReferences(book.id, chapterNumber, verse, currentLanguage, editionId = edition)
     }
     // Before a verse is chosen, the chapter's own web: each verse's three
     // strongest links, so the panel is never empty on arrival.
-    val focus = remember(book.id, chapterNumber, verse, currentLanguage) {
+    val focus = remember(book.id, chapterNumber, verse, currentLanguage, edition) {
         if (verse != null) references.map { VerseRef(book.id, chapterNumber, verse) to it.reference.target }
         else counts.keys.sorted().flatMap { v ->
-            repository.crossReferences(book.id, chapterNumber, v, currentLanguage, limit = 3)
+            repository.crossReferences(book.id, chapterNumber, v, currentLanguage, limit = 3, editionId = edition)
                 .map { VerseRef(book.id, chapterNumber, v) to it.reference.target }
         }
     }
@@ -348,7 +351,7 @@ fun CrossReferenceStudy(
         AppGlassSurface(Modifier.fillMaxWidth().weight(0.56f), lifted = false) {
             BibleArcsPanel(
                 line = line,
-                allConnections = { repository.allCrossReferences(currentLanguage, minVotes = 15) },
+                allConnections = { repository.allCrossReferences(currentLanguage, minVotes = 15, editionId = edition) },
                 focus = focus,
                 focusLabel = if (verse != null) citation(book, chapterNumber, verse, currentLanguage)
                 else "${book.name.get(currentLanguage)} $chapterNumber · " + currentLanguage.say(

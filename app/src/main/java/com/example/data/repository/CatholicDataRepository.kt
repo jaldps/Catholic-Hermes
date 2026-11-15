@@ -3,6 +3,7 @@ package com.example.data.repository
 import android.content.Context
 
 import com.example.data.models.AppLanguage
+import com.example.data.persistence.PersonalDataCommands
 import com.example.data.models.BibleBook
 import com.example.data.models.BibleChapter
 import com.example.data.models.BibleVersionInfo
@@ -72,8 +73,9 @@ class CatholicDataRepository(
     private val saintFetcher: DailySaintsFetcher = DailySaintsFetcher()
 ) {
 
-    private val bibleProvider: BibleTextProvider? = context?.let { BibleTextProvider(it) }
-    val bibleDownloadManager: BibleDownloadManager? = context?.let { BibleDownloadManager(it) }
+    /** Every Bible edition ships inside the app; there is nothing to download. */
+    val bibleEditions: BibleEditionCatalog? = context?.let { BibleEditionCatalog(it) }
+    private val bibleProvider: BibleTextProvider? = context?.let { BibleTextProvider(it, bibleEditions!!) }
 
     /** Resolves lectionary citations against the bundled Bible. */
     private val scriptureResolver by lazy { ScriptureResolver(
@@ -87,9 +89,9 @@ class CatholicDataRepository(
 
     private val canonIds: List<String> by lazy { BibleData.catholicCanonBooks.map { it.id } }
     private val crossReferenceIndex: CrossReferenceIndex? by lazy {
-        context?.let { CrossReferenceIndex(it, canonIds) }
+        context?.let { CrossReferenceIndex(it, canonIds, editionAsset = { id -> bibleEditions?.xrefAsset(id) }) }
     }
-    private val bibleLines = HashMap<AppLanguage, BibleLine>()
+    private val bibleLines = HashMap<String, BibleLine>()
 
     private val _currentDate = MutableStateFlow(dateProvider())
     val currentDate: StateFlow<CalendarDate> = _currentDate.asStateFlow()
@@ -103,21 +105,45 @@ class CatholicDataRepository(
     val currentLanguage: StateFlow<AppLanguage> = _currentLanguage.asStateFlow()
 
     private val editionSelection = BibleEditionSelection(
-        validate = { id ->
-            id.takeIf { candidate ->
-                bibleDownloadManager?.specs?.any { it.id == candidate } == true &&
-                    bibleDownloadManager.isDownloaded(candidate)
-            } ?: "bundled"
-        },
+        validate = { id -> id.takeIf { bibleEditions?.isValid(it) == true } ?: BibleEditionCatalog.LEGACY_BUNDLED },
         persist = { preferencesStore?.setActiveBibleTranslationId(it) }
     )
     private val _activeBibleEditionId = editionSelection.selected
+
+    /** The edition being read. The legacy value "bundled" means the app language's original Bible; see [resolvedEditionId]. */
     val activeBibleEditionId: StateFlow<String> = editionSelection.selected
+
+    private val _bibleDefaults = MutableStateFlow(BibleEditionCatalog.INITIAL_DEFAULTS)
+    private val pendingDefaultWrites = java.util.concurrent.atomic.AtomicInteger(0)
+
+    /** Default edition per app language code (es/en/pt). */
+    val bibleDefaultEditions: StateFlow<Map<String, String>> = _bibleDefaults.asStateFlow()
+
+    fun defaultBibleEditionFor(language: AppLanguage): String =
+        _bibleDefaults.value[language.code]?.takeIf { bibleEditions?.isValid(it) != false } ?: BibleEditionCatalog.initialDefault(language)
+
+    /** The id the UI highlights: the legacy "bundled" is shown as the bundled Bible of [language]. */
+    fun resolvedEditionId(id: String = _activeBibleEditionId.value, language: AppLanguage = _currentLanguage.value): String =
+        if (id == BibleEditionCatalog.LEGACY_BUNDLED) BibleEditionCatalog.initialDefault(language) else id
 
     /** Blocking compatibility API for workers; UI uses the application-owned request. */
     fun selectBibleEdition(id: String) = editionSelection.selectBlocking(id)
 
     fun requestBibleEdition(id: String) = editionSelection.request(id)
+
+    /**
+     * Makes [editionId] the default Bible for [language] (any edition, Latin included). When [language] is the current
+     * one it also becomes the edition being read.
+     */
+    fun setDefaultBibleEdition(language: AppLanguage, editionId: String) {
+        if (bibleEditions?.edition(editionId) == null) return
+        _bibleDefaults.value = _bibleDefaults.value + (language.code to editionId)
+        pendingDefaultWrites.incrementAndGet()
+        PersonalDataCommands.submit("bible-default") {
+            try { preferencesStore?.setBibleDefaultEdition(language.code, editionId) } finally { pendingDefaultWrites.decrementAndGet() }
+        }
+        if (language == _currentLanguage.value) requestBibleEdition(editionId)
+    }
 
     data class DailyContent(
         val date: CalendarDate,
@@ -142,7 +168,9 @@ class CatholicDataRepository(
         val info = LiturgicalCalendar.dayInfo(date, _calendarRules.value)
         val empty = LocalizedText("", "", "")
         return BibleData.todayMassReading.copy(
-            dateDisplay = date.toString(), liturgicalSeason = info.season.displayName,
+            dateDisplay = java.text.SimpleDateFormat("EEEE, d MMMM yyyy", java.util.Locale(_currentLanguage.value.code))
+                .format(java.util.GregorianCalendar(date.year, date.month - 1, date.day).time),
+            liturgicalSeason = info.season.displayName,
             liturgicalColorHex = info.color.hex, feastTitle = info.title,
             firstReadingRef = "", firstReadingText = empty, responsorialPsalmRef = "", responsorialPsalmText = empty,
             secondReadingRef = null, secondReadingText = null, gospelRef = "", gospelText = empty,
@@ -166,6 +194,11 @@ class CatholicDataRepository(
     fun setLanguage(language: AppLanguage) {
         val changed = _currentLanguage.value != language
         _currentLanguage.value = language
+        // Changing the app language returns to that language's default Bible.
+        if (changed) {
+            val target = defaultBibleEditionFor(language)
+            if (resolvedEditionId(_activeBibleEditionId.value, language) != target) requestBibleEdition(target)
+        }
         preferencesStore?.let { store ->
             scope.launch { store.setLanguage(language) }
         }
@@ -264,7 +297,7 @@ class CatholicDataRepository(
     /** Chapters actually available for [bookId], falling back to the declared count. */
     fun getChapterCount(bookId: String, language: AppLanguage = _currentLanguage.value, editionId: String = _activeBibleEditionId.value): Int {
         val fromAssets = bibleProvider?.chapterCount(bookId, language, editionId) ?: 0
-        if (editionId != "bundled") return fromAssets
+        if (bibleEditions?.separate(editionId) != null) return fromAssets
         if (fromAssets > 0) return fromAssets
         return BibleData.catholicCanonBooks.firstOrNull { it.id == bookId }?.chaptersCount ?: 0
     }
@@ -345,11 +378,16 @@ class CatholicDataRepository(
     private var saintFetchJob: kotlinx.coroutines.Job? = null
 
     init {
+        // Bibles used to be downloaded into filesDir/bibles; every edition now ships in the APK.
+        context?.let { c -> scope.launch { runCatching { java.io.File(c.filesDir, "bibles").takeIf { it.exists() }?.deleteRecursively() } } }
         reloadNovenas()
         preferencesStore?.let { store ->
             scope.launch {
                 store.preferences.collectLatest { preferences ->
                     _calendarRules.value = preferences.calendarRules
+                    if (pendingDefaultWrites.get() == 0) {
+                        _bibleDefaults.value = BibleEditionCatalog.INITIAL_DEFAULTS + preferences.bibleDefaultEditions
+                    }
                     val id = preferences.activeBibleTranslationId
                     editionSelection.acceptStored(id)
                 }
@@ -776,27 +814,29 @@ class CatholicDataRepository(
         chapter: Int,
         verse: Int,
         language: AppLanguage = _currentLanguage.value,
-        limit: Int = 60
+        limit: Int = 60,
+        editionId: String = _activeBibleEditionId.value
     ): List<ResolvedCrossReference> {
         val index = crossReferenceIndex ?: return emptyList()
-        return index.referencesFrom(VerseRef(bookId, chapter, verse), language, limit).map { ref ->
-            ResolvedCrossReference(ref, referenceLabel(ref, language), referenceText(ref, language))
+        return index.referencesFrom(VerseRef(bookId, chapter, verse), language, limit, editionId).map { ref ->
+            ResolvedCrossReference(ref, referenceLabel(ref, language), referenceText(ref, language, editionId))
         }
     }
 
     /** How many references leave each verse of a chapter. */
-    fun crossReferenceCounts(bookId: String, chapter: Int, language: AppLanguage = _currentLanguage.value): Map<Int, Int> =
-        crossReferenceIndex?.countsForChapter(bookId, chapter, language) ?: emptyMap()
+    fun crossReferenceCounts(bookId: String, chapter: Int, language: AppLanguage = _currentLanguage.value, editionId: String = _activeBibleEditionId.value): Map<Int, Int> =
+        crossReferenceIndex?.countsForChapter(bookId, chapter, language, editionId) ?: emptyMap()
 
     /** Every connection in the Bible, for the whole-Bible arc view. */
-    fun allCrossReferences(language: AppLanguage = _currentLanguage.value, minVotes: Int = 0): Sequence<Pair<VerseRef, VerseRef>> =
-        crossReferenceIndex?.allConnections(language, minVotes) ?: emptySequence()
+    fun allCrossReferences(language: AppLanguage = _currentLanguage.value, minVotes: Int = 0, editionId: String = _activeBibleEditionId.value): Sequence<Pair<VerseRef, VerseRef>> =
+        crossReferenceIndex?.allConnections(language, minVotes, editionId) ?: emptySequence()
 
     /** The whole canon laid on one line, in [language]'s own numbering. */
-    fun bibleLine(language: AppLanguage = _currentLanguage.value): BibleLine? {
-        bibleLines[language]?.let { return it }
-        val counts = bibleProvider?.verseCounts(language)?.takeIf { it.isNotEmpty() } ?: return null
-        return BibleLine(counts, canonIds).also { bibleLines[language] = it }
+    fun bibleLine(language: AppLanguage = _currentLanguage.value, editionId: String = _activeBibleEditionId.value): BibleLine? {
+        val key = "$editionId:${language.code}"
+        bibleLines[key]?.let { return it }
+        val counts = bibleProvider?.verseCounts(language, editionId)?.takeIf { it.isNotEmpty() } ?: return null
+        return BibleLine(counts, canonIds).also { bibleLines[key] = it }
     }
 
     private fun referenceLabel(ref: CrossReference, language: AppLanguage): String {
@@ -810,9 +850,9 @@ class CatholicDataRepository(
         return "$book $start$end"
     }
 
-    private fun referenceText(ref: CrossReference, language: AppLanguage): String {
+    private fun referenceText(ref: CrossReference, language: AppLanguage, editionId: String): String {
         val t = ref.target
-        val verses = bibleProvider?.getVerses(t.bookId, t.chapter, language) ?: return ""
+        val verses = bibleProvider?.getVerses(t.bookId, t.chapter, language, editionId) ?: return ""
         val last = ref.end?.takeIf { it.chapter == t.chapter }?.verse ?: t.verse
         return verses.filter { it.number in t.verse..last }
             .joinToString(" ") { it.text.get(language) }

@@ -41,7 +41,10 @@ sealed interface ReadingsResult {
  * an RSS feed, one item per day, which is read and rendered natively instead.
  */
 class VaticanGospelFetcher(
-    private val client: OkHttpClient = VaticanNewsFetcher.defaultClient()
+    private val client: OkHttpClient = VaticanNewsFetcher.defaultClient(),
+    private val cache: VaticanReadingsCache? = null,
+    /** Replaces the HTTP request (tests); returns the raw feed or throws. */
+    private val rawLoader: ((AppLanguage) -> String)? = null
 ) {
 
     companion object {
@@ -156,22 +159,29 @@ class VaticanGospelFetcher(
                 ?: ReadingsResult.Failure("timed out")
         }
 
+    /** Network first, then the cache for that date; the caller falls back to bundled text. */
     private fun fetch(language: AppLanguage, isoDate: String): ReadingsResult {
-        val request = Request.Builder()
-            .url(feedUrl(language))
-            .header("User-Agent", "SanctaFides/1.0 (Catholic companion app)")
-            .build()
-        return runCatching {
+        val live = fetchLive(language, isoDate)
+        if (live is ReadingsResult.Success) return live
+        val cached = cache?.read(language, isoDate)?.let { parse(it, isoDate) }
+        return if (cached is ReadingsResult.Success) cached else live
+    }
+
+    private fun fetchLive(language: AppLanguage, isoDate: String): ReadingsResult = runCatching {
+        val body = rawLoader?.invoke(language) ?: run {
+            val request = Request.Builder()
+                .url(feedUrl(language))
+                .header("User-Agent", "SanctaFides/1.0 (Catholic companion app)")
+                .build()
             client.newCall(request).execute().use { response ->
-                if (!response.isSuccessful) return@use ReadingsResult.Failure("HTTP ${response.code}")
-                val body = response.body?.string()
-                    ?: return@use ReadingsResult.Failure("empty response")
-                parse(body, isoDate)
+                if (!response.isSuccessful) return@runCatching ReadingsResult.Failure("HTTP ${response.code}")
+                response.body?.string() ?: return@runCatching ReadingsResult.Failure("empty response")
             }
-        }.getOrElse {
-            if (it is CancellationException) throw it
-            ReadingsResult.Failure(it.message ?: it::class.java.simpleName)
         }
+        parse(body, isoDate).also { if (it is ReadingsResult.Success) cache?.write(language, isoDate, body) }
+    }.getOrElse {
+        if (it is CancellationException) throw it
+        ReadingsResult.Failure(it.message ?: it::class.java.simpleName)
     }
 
     /** The dated link identifies the liturgical day; publication time may differ. */

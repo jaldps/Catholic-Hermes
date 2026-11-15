@@ -3,6 +3,8 @@ package com.example.data.xref
 import android.content.Context
 import com.example.data.models.AppLanguage
 import java.io.DataInputStream
+import java.io.File
+import java.io.InputStream
 
 /** One verse in the Catholic canon, in a given edition's own numbering. */
 data class VerseRef(val bookId: String, val chapter: Int, val verse: Int)
@@ -26,32 +28,55 @@ data class CrossReference(
  * an Exodus 8 resolves to the verse the reader actually sees. The
  * deuterocanonical books have no references in the source.
  *
+ * Each installed edition carries its own table (assets/bibles/<id>/xref.bin, same layout) re-keyed to that edition's
+ * numbering (tools/xref/build_assets.py --editions); [editionAsset] finds it, and without one the bundled language table
+ * is used. [editionXref] is an optional file-based override.
+ *
  * File layout: "XRF1", count, then four columns sorted by source verse and
  * descending weight: source, target start, target end (Int each), votes (Short).
  * A verse is packed as book index << 16 | chapter << 8 | verse.
  */
-class CrossReferenceIndex(private val context: Context, private val canon: List<String>) {
+class CrossReferenceIndex(
+    private val context: Context,
+    private val canon: List<String>,
+    /** Asset path of an installed edition's own table ("bundled-es" maps to the bundled Spanish one). */
+    private val editionAsset: (String) -> String? = { null },
+    private val editionXref: (String) -> File? = { null }
+) {
 
     private class Table(val from: IntArray, val start: IntArray, val end: IntArray, val votes: ShortArray)
 
-    private var loaded: Pair<AppLanguage, Table>? = null
+    private var loaded: Pair<String, Table>? = null
 
-    private fun table(language: AppLanguage): Table? {
-        loaded?.let { (lang, t) -> if (lang == language) return t }
-        val t = runCatching {
-            DataInputStream(context.assets.open("xref/xref_${language.code}.bin").buffered(1 shl 16)).use { input ->
-                val magic = ByteArray(4).also { input.readFully(it) }
-                require(String(magic) == "XRF1")
-                val n = input.readInt()
-                val from = IntArray(n) { input.readInt() }
-                val start = IntArray(n) { input.readInt() }
-                val end = IntArray(n) { input.readInt() }
-                val votes = ShortArray(n) { input.readShort() }
-                Table(from, start, end, votes)
-            }
-        }.getOrNull() ?: return null
-        loaded = language to t
-        return t
+    private fun parse(stream: InputStream): Table = DataInputStream(stream.buffered(1 shl 16)).use { input ->
+        val magic = ByteArray(4).also { input.readFully(it) }
+        require(String(magic) == "XRF1")
+        val n = input.readInt()
+        val from = IntArray(n) { input.readInt() }
+        val start = IntArray(n) { input.readInt() }
+        val end = IntArray(n) { input.readInt() }
+        val votes = ShortArray(n) { input.readShort() }
+        Table(from, start, end, votes)
+    }
+
+    /** The edition's own table when [editionId] has one that parses, else the bundled table of [language]. */
+    @Synchronized
+    private fun table(language: AppLanguage, editionId: String?): Table? {
+        val id = editionId?.takeIf { it != "bundled" }
+        val file = id?.let(editionXref)
+        val asset = if (file == null) id?.let(editionAsset) else null
+        val editionKey = "edition:$id"
+        val bundledKey = "lang:${language.code}"
+        val wantsEdition = file != null || asset != null
+        loaded?.let { (k, t) -> if (k == (if (wantsEdition) editionKey else bundledKey)) return t }
+        if (wantsEdition) {
+            val own = runCatching { parse(file?.inputStream() ?: context.assets.open(asset!!)) }.getOrNull()
+            if (own != null) { loaded = editionKey to own; return own }
+            loaded?.let { (k, t) -> if (k == bundledKey) return t }
+        }
+        val bundled = runCatching { parse(context.assets.open("xref/xref_${language.code}.bin")) }.getOrNull() ?: return null
+        loaded = bundledKey to bundled
+        return bundled
     }
 
     private fun pack(ref: VerseRef): Int? {
@@ -65,8 +90,8 @@ class CrossReferenceIndex(private val context: Context, private val canon: List<
     }
 
     /** References from [ref], strongest first. */
-    fun referencesFrom(ref: VerseRef, language: AppLanguage, limit: Int = Int.MAX_VALUE): List<CrossReference> {
-        val t = table(language) ?: return emptyList()
+    fun referencesFrom(ref: VerseRef, language: AppLanguage, limit: Int = Int.MAX_VALUE, editionId: String? = null): List<CrossReference> {
+        val t = table(language, editionId) ?: return emptyList()
         val key = pack(ref) ?: return emptyList()
         var i = lowerBound(t.from, key)
         val out = ArrayList<CrossReference>()
@@ -82,8 +107,8 @@ class CrossReferenceIndex(private val context: Context, private val canon: List<
     }
 
     /** Number of references from each verse of a chapter, by verse number. */
-    fun countsForChapter(bookId: String, chapter: Int, language: AppLanguage): Map<Int, Int> {
-        val t = table(language) ?: return emptyMap()
+    fun countsForChapter(bookId: String, chapter: Int, language: AppLanguage, editionId: String? = null): Map<Int, Int> {
+        val t = table(language, editionId) ?: return emptyMap()
         val first = pack(VerseRef(bookId, chapter, 0)) ?: return emptyMap()
         var i = lowerBound(t.from, first)
         val out = HashMap<Int, Int>()
@@ -99,8 +124,8 @@ class CrossReferenceIndex(private val context: Context, private val canon: List<
      * Every connection as a pair of packed verses, for drawing the whole
      * Bible at once. [minVotes] thins the picture to its strongest links.
      */
-    fun allConnections(language: AppLanguage, minVotes: Int = 0): Sequence<Pair<VerseRef, VerseRef>> {
-        val t = table(language) ?: return emptySequence()
+    fun allConnections(language: AppLanguage, minVotes: Int = 0, editionId: String? = null): Sequence<Pair<VerseRef, VerseRef>> {
+        val t = table(language, editionId) ?: return emptySequence()
         return (0 until t.from.size).asSequence()
             .filter { t.votes[it] >= minVotes }
             .mapNotNull { i -> unpack(t.from[i])?.let { a -> unpack(t.start[i])?.let { b -> a to b } } }

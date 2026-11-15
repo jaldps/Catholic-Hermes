@@ -1,0 +1,22 @@
+{
+  "version_name": "1.8.5",
+  "version_code": 14,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.5",
+  "sha256": "50203e3f2b2a8c208b5bd1abbb2274df203db1c9e63a3982b0a17428f43420f3",
+  "bytes": 63736443,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.4 (same package and key)",
+  "changes": [
+    "Seven downloadable Catholic Bible editions (73 books each): Christian Community Bible, Douay-Rheims (Challoner), El Libro del Pueblo de Dios, La Biblia Latinoamericana, La Santa Biblia, Biblia Sagrada (PT), Nova Vulgata; picker grouped by language; data on branch bibles-data (a489579), sha256-verified per book.",
+    "Per-edition cross-references in each edition's own numbering (OpenBible.info, CC BY 4.0); 52/52 audit per edition.",
+    "Bundled cross-references fixed (Spanish psalms with different verse division, e.g. Gen 1:2 -> Ps 103:30; Jonah 1:17); audit 52/52 en/es/pt with regression tests.",
+    "Protestant downloadable editions (RV1909, Almeida) removed."
+  ],
+  "rights": "Project owner states the seven Bible texts are free to use with permission (2026-11-15); see docs/content/BIBLE-EDITIONS.md.",
+  "tests": ["BibleIntegrityTest", "BibleDownloadReliabilityTest", "BibleEditionPickerTest", "BibleEditionSelectionTest", "CrossReferenceEditionTest", "CrossReferenceTest", "tools/xref audit (52/52 x 10)", "manual sha256 check of live downloads"],
+  "known_limitations": ["Full unit-test suite not run.", "Edition picker not reviewed in a screenshot.", "In ES/PT/LA editions verse placement inside a few chapters relies on length alignment and may be off by one in rare places."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}
