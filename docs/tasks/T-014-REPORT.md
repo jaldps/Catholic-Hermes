@@ -1,6 +1,6 @@
 # T-014 · Informe de Codex
 
-Entrega: **20/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
+Entrega: **30/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -150,10 +150,80 @@ No se fija año exacto de nacimiento o muerte. La colección de sermones contien
 
 No se presenta como único fundador sin compañeros ni se confunde el discernimiento con una técnica de predicción. Sin frases de atribución popular o reconstrucciones de sus conversaciones interiores. Los Ejercicios se describen; no se componen oraciones en su nombre.
 
+### 21. `alphonsus_mary_liguori_bishop` · 01/08
+
+- [Benedicto XVI, audiencia general, 30-III-2011: san Alfonso María de Ligorio](https://www.vatican.va/content/benedict-xvi/en/audiences/2011/documents/hf_ben-xvi_aud_20110330.html)
+- [Catholic Encyclopedia, «St. Alphonsus Liguori»](https://www.newadvent.org/cathen/01334a.htm)
+
+Doctorado y patronazgo comprobados en la catequesis. No se presenta su enfoque como laxismo ni como rigorismo indiscriminado. Sin citas populares sin obra, garantías de salvación desligadas de conversión o detalles de supuesta bilocación.
+
+### 22. `eusebius_of_vercelli_bishop` · 02/08
+
+- [Benedicto XVI, audiencia general, 17-X-2007: san Eusebio de Vercelli](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20071017.html)
+- [Catholic Encyclopedia, «St. Eusebius», obispo de Vercelli](https://www.newadvent.org/cathen/05614b.htm)
+
+Se usa el artículo 05614b, no los homónimos de Samosata, Roma o Cesarea. Se omiten nacimiento y elección episcopal exactos, divergentes entre referencias; no se traslada la errata «364» para una misión anterior al sínodo de 355. Sin martirio por ejecución inventado ni firmas falsas de cartas.
+
+### 23. `peter_julian_eymard_priest` · 02/08
+
+- [Catholic Encyclopedia, «Venerable Pierre-Julien Eymard»](https://www.newadvent.org/cathen/05735b.htm)
+- [Juan XXIII, homilía de canonización, 9-XII-1962, sección sobre Eymard](https://www.vatican.va/content/john-xxiii/it/homilies/1962/documents/hf_j-xxiii_hom_19621209_canonizzazione-santi.html)
+
+La entrada antigua lo llama Venerable y contiene detalles institucionales discutibles: no se toma como estado actual ni se lo llama provincial de los Oblatos. Canonización comprobada en el acto pontificio. No se atribuye en exclusiva cada fundación a un solo colaborador ni se inventa una oración eucarística.
+
+### 24. `john_mary_vianney_priest` · 04/08
+
+- [Benedicto XVI, carta de convocación del Año Sacerdotal, 16-VI-2009](https://www.vatican.va/content/benedict-xvi/en/letters/2009/documents/hf_ben-xvi_let_20090616_anno-sacerdotale.html)
+- [Catholic Encyclopedia, «St. Jean-Baptiste-Marie Vianney»](https://www.newadvent.org/cathen/08326c.htm)
+
+Patronazgo: párrocos, conforme a la carta, sin ampliarlo por conjetura a todas las categorías sacerdotales. No se copian cifras de confesiones, diagnósticos sobre capacidad intelectual, relatos demonológicos o frases atribuidas sin referencia. El Año Sacerdotal se presenta como evento histórico, no vigente.
+
+### 25. `dedication_of_the_basilica_of_saint_mary_major` · 05/08
+
+- [Benedicto XVI, Ángelus, 5-VIII-2007: Santa María la Mayor](https://www.vatican.va/content/benedict-xvi/en/angelus/2007/documents/hf_ben-xvi_ang_20070805.html)
+- [Catholic Encyclopedia, «Pope St. Sixtus III», obras en Santa María la Mayor](https://www.newadvent.org/cathen/14032a.htm)
+
+Se describe una dedicación, no una biografía inventada de María. No se presenta la nevada estival como documento histórico comprobado ni se fija una fecha segura de construcción bajo Liberio. No se llama a la basílica catedral de Roma ni se atribuye al dogma de Éfeso una divinización de María.
+
+### 26. `sixtus_ii_pope_and_companions_martyrs` · 07/08
+
+- [Catholic Encyclopedia, «Pope St. Sixtus II», testimonio de Cipriano, Epístola 80](https://www.newadvent.org/cathen/14031c.htm)
+- [Catholic Encyclopedia, «St. Lawrence», persecución de Valeriano y diáconos romanos](https://www.newadvent.org/cathen/09089a.htm)
+
+Se distingue de Sixto III y del filósofo autor de Sentencias de Sexto. No se fija un número de compañeros para una sola escena ni se reproduce como diálogo contemporáneo la despedida de Lorenzo. La referencia a Cipriano procede de la carta transcrita y localizada por los artículos, sin cita literal compuesta.
+
+### 27. `cajetan_of_thiene_priest` · 07/08
+
+- [Catholic Encyclopedia, «St. Cajetan»](https://www.newadvent.org/cathen/03145a.htm)
+- [Catholic Encyclopedia, «Theatines», fundación y fines](https://www.newadvent.org/cathen/14557a.htm)
+
+Se omite la errata de la entrada individual sobre muerte de Julio II en 1523 (fue en 1513) y un número dudoso de primeros compañeros. No se confunde con el cardenal Tomás de Vio Cayetano ni se atribuye fundación exclusiva sin colaboradores. Sin garantías de trabajo o dinero.
+
+### 28. `dominic_de_guzman_priest` · 08/08
+
+- [Benedicto XVI, audiencia general, 3-II-2010: santo Domingo de Guzmán](https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20100203.html)
+- [Catholic Encyclopedia, «St. Dominic»](https://www.newadvent.org/cathen/05106a.htm)
+
+Nacimiento aproximado. No se afirma que inventó por sí solo el rosario completo ni se narra una aparición como historia contemporánea verificada. Se distingue la misión de Domingo de las estructuras inquisitoriales desarrolladas después; no se le atribuye cada acción de miembros posteriores de su orden.
+
+### 29. `teresa_benedicta_of_the_cross_stein_virgin` · 09/08
+
+- [Santa Sede, biografía de canonización: Edith Stein, 11-X-1998](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_19981011_edith_stein_en.html)
+- [Juan Pablo II, Spes aedificandi, 1-X-1999, 8–10 y proclamación final](https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_01101999_co-patronesses-europe.html)
+
+Se mantienen juntos origen judío, persecución antisemita y lectura católica de su martirio. Se omite fecha exacta de muerte, que la biografía formula como probable. No se inventan últimas palabras ni se convierte la canonización en negación de la identidad de las demás víctimas de la Shoá.
+
+### 30. `lawrence_of_rome_deacon` · 10/08
+
+- [Catholic Encyclopedia, «St. Lawrence», diácono romano y crítica de la pasión](https://www.newadvent.org/cathen/09089a.htm)
+- [Benedicto XVI, homilía en San Lorenzo Extramuros, 30-XI-2008](https://www.vatican.va/content/benedict-xvi/en/homilies/2008/documents/hf_ben-xvi_hom_20081130_san-lorenzo.html)
+
+Se comprobó el artículo 09089a, no el arzobispo de Canterbury (09090a). No se transforma el relato tardío de la parrilla o la despedida de Sixto en testimonio contemporáneo. No se inventan frases humorísticas finales ni número de bienes repartidos.
+
 ## Validación
 
 ```text
-20 entries · 0 errors · 1 warnings
+30 entries · 0 errors · 1 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
