@@ -392,3 +392,5 @@ Las limitaciones específicas se declaran arriba. No hay pregunta bloqueante pen
 Completadas las **51 fichas y 153 biografías**, de 133–153 palabras según el contador del validador. Coinciden las 51 claves y fechas con el contrato y los títulos de fuentes con sus enlaces de este informe. Todos los campos `quote` quedan nulos; los patronazgos se incluyen únicamente donde se documentaron. Se cotejó expresamente la errata 737/735 de Beda con el original italiano y el origen incierto del incendio de Roma con Tácito XV,38.
 
 Entregas parciales: `95bdabd` (10), `36c7528` (20), `811a8dc` (30), `962570c` (40). La compilación y revisión final corresponden al coordinador. Se continúa T-014 en su propia rama después de este envío.
+
+Leídas las revisiones intermedias 1 y 2 e incorporada por merge la base `origin/CatholicGPT` (`15bbd4a`). El coordinador aprobó e integró las primeras 30 fichas. Se mantiene el criterio solicitado y la entrega final queda para su revisión.
