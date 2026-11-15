@@ -1,6 +1,6 @@
 # T-014 · Informe de Codex
 
-Entrega: **60/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
+Entrega: **67/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -420,7 +420,7 @@ La catequesis de 2011 actualiza las condiciones de beato/santo/doctor respecto d
 - [Catholic Encyclopedia: St. Januarius](https://www.newadvent.org/cathen/08295a.htm)
 - [Vatican News: San Gennaro, vescovo di Benevento e martire](https://www.vaticannews.va/it/santo-del-giorno/09/19/san-gennaro--vescovo-di-benevento-e-martire.html)
 
-Patronazgo de Nápoles explícito en Vatican News. Se omiten 305 como fecha cierta, lugar de nacimiento, diálogos, horno y animales de los relatos tardíos. No se incorpora la supuesta canonización de 1586 que da Vatican News, incompatible con la antigüedad del culto como si fuera su origen. Tampoco se atribuye un decreto de reconocimiento sobrenatural de la licuefacción: las fuentes consultadas no permiten documentarlo; la ficha se concentra en el mártir y su culto.
+Patronazgo de Nápoles explícito en Vatican News. Se omiten 305 como fecha cierta, lugar de nacimiento, diálogos, horno y animales de los relatos tardíos. Se omite la noticia de una canonización en 1586 que da Vatican News: no se localizó el documento pontificio correspondiente y no se confunde ese dato con el origen antiguo del culto. Tampoco se atribuye un decreto de reconocimiento sobrenatural de la licuefacción: las fuentes consultadas no permiten documentarlo; la ficha se concentra en el mártir y su culto.
 
 ### 59. `andrew_kim_tae_gon_priest_paul_chong_ha_sang_and_companions_martyrs` · 20/09
 
@@ -437,14 +437,87 @@ Se distinguen los 103 canonizados en 1984 de otros grupos beatificados después,
 
 La autoría del Evangelio se formula como atribución eclesial tradicional, sin fingir resolver su proceso de redacción con una fecha o lengua original segura. No se completa un itinerario misionero o modo de muerte con relatos tardíos. Las escenas evangélicas se parafrasean, sin crear citas del apóstol.
 
+### 61. `pius_francesco_forgione_priest` · 23/09
+
+- [Congregación para las Causas de los Santos, biografía de Pío de Pietrelcina, 1999](https://www.vatican.va/roman_curia/congregations/csaints/documents/rc_con_csaints_doc_19990502_padre-pio_en.html)
+- [Juan Pablo II, homilía de canonización, 16-VI-2002](https://www.vatican.va/content/john-paul-ii/en/homilies/2002/documents/hf_jp-ii_hom_20020616_padre-pio.html)
+
+Se conserva la distinción entre capuchino y otras ramas franciscanas. La síntesis documenta ministerio, hospital y pruebas; no incorpora relatos particulares de bilocación, lectura de conciencias o promesas de curación. Tampoco se atribuyen como cita sus lemas populares sin obra y pasaje.
+
+### 62. `cosmas_of_cilicia_and_damian_of_cilicia_martyrs` · 26/09
+
+- [Catholic Encyclopedia: Sts. Cosmas and Damian](https://www.newadvent.org/cathen/04403e.htm)
+- [Vatican News: Ss. Cosma e Damiano, martiri](https://www.vaticannews.va/it/santo-del-giorno/09/26/ss--cosma-e-damiano--martiri.html)
+
+Médicos/cirujanos como patronazgo explícito de la enciclopedia. Se distingue tradición de hermanos médicos de una biografía contemporánea documentada. No se afirma 287, difícil de conciliar con la persecución de Diocleciano descrita por el mismo artículo, ni se reproducen relatos de suplicios prodigiosos o animales parlantes. Fecha actual 26-IX del calendario, corroborada por Vatican News.
+
+### 63. `vincent_de_paul_priest` · 27/09
+
+- [Catholic Encyclopedia: St. Vincent de Paul](https://www.newadvent.org/cathen/15434c.htm)
+- [Francisco, mensaje a la Familia Vicenciana, 27-IX-2017](https://www.vatican.va/content/francesco/en/messages/pont-messages/2017/documents/papa-francesco_20170927_messaggio-famiglia-vincenziana.html)
+
+Se evita el año de nacimiento, que las biografías históricas no presentan unánimemente. Se mantiene el papel propio de Luisa de Marillac; Vicente no fundó personalmente la Sociedad de San Vicente de Paúl del siglo XIX. No se incorporan como hechos seguros relatos de cautiverio ni citas populares sin localización.
+
+### 64. `wenceslaus_i_of_bohemia_martyr` · 28/09
+
+- [Catholic Encyclopedia: St. Wenceslaus](https://www.newadvent.org/cathen/15587b.htm)
+- [Vatican News: San Venceslao, duca di Boemia, martire](https://www.vaticannews.va/it/santo-del-giorno/09/28/san-venceslao--duca-di-boemia--martire.html)
+
+Patronazgo de Bohemia explícito en ambas fuentes. Se conserva la incertidumbre 929–935 y el título histórico de duque. Se omite la noticia enciclopédica de una dignidad regia concedida por Otón I como hecho de su vida, por su problema cronológico, así como los diálogos finales y los detalles del ataque.
+
+### 65. `lawrence_ruiz_and_companions_martyrs` · 28/09
+
+- [Santa Sede, biografías de Lorenzo Ruiz y quince compañeros](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_19871018_ruiz-compagni_sp.html)
+- [Juan Pablo II, homilía de canonización de los dieciséis mártires, 18-X-1987](https://www.vatican.va/content/john-paul-ii/en/homilies/1987/documents/hf_jp-ii_hom_19871018_canonizzaz-martiri.html)
+
+El encabezado de la página biográfica dice compañeros filipinos, pero sus propias fichas documentan varias nacionalidades; no se copia esa generalización. Se distinguen este grupo de 16 y otros grupos de mártires japoneses. No se usan palabras atribuidas a Lorenzo como cita sin acta y pasaje, ni detalles gráficos de los tormentos.
+
+### 66. `michael_gabriel_and_raphael_archangels` · 29/09
+
+- [Catecismo de la Iglesia Católica, 328–336](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_5_heaven_and_earth.html)
+- [Catholic Encyclopedia: St. Michael the Archangel, referencias bíblicas](https://www.newadvent.org/cathen/10275b.htm)
+- [Biblia, Tob 12,6–22: Rafael y la acción de Dios](https://bible.usccb.org/bible/tobit/12)
+- [Directorio sobre la piedad popular y la liturgia, 217](https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20020513_vers-direttorio_en.html)
+
+Paráfrasis de Ap 12,7–9; Lc 1,19.26–38; Tob 12, no traducción litúrgica copiada. Lc 1 fue comprobado también en https://bible.usccb.org/bible/luke/1. El Directorio 217 desaconseja asignar nombres a los ángeles fuera de Miguel, Gabriel y Rafael. No se agregan nombres de escritos no canónicos, mensajes privados ni supuestos patronazgos sin fuente.
+
+### 67. `jerome_of_stridon_priest` · 30/09
+
+- [Benedicto XVI, audiencia del 7-XI-2007: san Jerónimo](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20071107.html)
+- [Catholic Encyclopedia: St. Jerome](https://www.newadvent.org/cathen/08341a.htm)
+
+Se usa hacia 420: la audiencia indica 419–420. Se evita una fecha de nacimiento precisa discutida. No se afirma que tradujo solo y desde cero cada libro de la Vulgata, ni que fijó individualmente el canon católico. No se usa como cita la frase popular sobre ignorancia de las Escrituras sin incorporar su obra y pasaje.
+
 ## Validación
 
 ```text
-60 entries · 0 errors · 1 warnings
+67 entries · 0 errors · 0 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
 
 ## Datos no verificados y preguntas
 
-Las limitaciones específicas se declaran arriba. No se completa ningún dato dudoso por conjetura ni se atribuyen citas de memoria. No hay pregunta bloqueante para continuar las claves restantes.
+Las limitaciones específicas se declaran arriba. No hay pregunta bloqueante pendiente; el lote queda para revisión e integración del coordinador.
+
+## Comprobación de cierre
+
+- Lote completo: 67/67 claves, 201 biografías.
+- Extensión por idioma: ES 138–155, EN 132–151, PT 128–149 palabras (conteo del validador con `\w+`). Todas dentro de 120–200.
+- 138 URL de fuentes distintas en el informe; títulos concordantes con el asset y consultas registradas. Doce fichas incluyen patronazgos documentados.
+- Las 67 citas quedan en `null`: no se agregan palabras de los santos sin obra y pasaje. No se componen oraciones.
+- Solo cambian el asset Q3 y este informe. No se modifica código, otras fichas, firmas ni APK.
+- Se comprobó de nuevo `origin/CatholicGPT` (`15bbd4a`): no existe una revisión T-014 adicional. Las revisiones intermedias de T-013 no piden correcciones y autorizan continuar.
+
+Validación ejecutada sobre la entrega completa:
+
+```sh
+python3 docs/tasks/tools/validate_saints.py app/src/main/assets/saints/saints-q3.json docs/tasks/T-014.keys
+git diff --check
+```
+
+```text
+67 entries · 0 errors · 0 warnings
+```
+
+`git diff --check` finalizó sin incidencias. Se hicieron entregas de 10, 20, 30, 40, 50 y 60 fichas antes del cierre. La integración y la compilación quedan a cargo del coordinador, según el protocolo.
