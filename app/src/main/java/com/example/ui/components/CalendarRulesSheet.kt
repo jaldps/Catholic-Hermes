@@ -32,7 +32,7 @@ fun CalendarRulesSheet(language: AppLanguage, rules: CalendarRules, store: UserP
     AppSheet(onDismiss = onDismiss, tag = "calendar_rules_sheet") {
         LumenSheetHeader(pick("Calendario litúrgico", "Liturgical calendar", "Calendário litúrgico"), pick("Listo", "Done", "Concluir"), onDismiss, "close_calendar_rules")
         Column(Modifier.padding(horizontal = 20.dp)) {
-            Text(pick("Calendario romano general. Activa los traslados al domingo que correspondan a tu diócesis.", "General Roman Calendar. Enable the Sunday transfers observed in your diocese.", "Calendário Romano Geral. Ative as transferências para domingo observadas na sua diocese."),style = styles.body,color = p.textPrimary)
+            Text(pick("Calendario romano general. Activa los traslados al domingo que correspondan a tu diócesis. Los traslados cambian el nombre de la celebración y la nota local, no la fuente de las lecturas (Santa Sede).", "General Roman Calendar. Enable the Sunday transfers observed in your diocese. Transfers change the celebration name and the local note, not the source of the readings (Holy See).", "Calendário Romano Geral. Ative as transferências para domingo observadas na sua diocese. As transferências mudam o nome da celebração e a nota local, não a fonte das leituras (Santa Sé)."),style = styles.body,color = p.textPrimary)
             Spacer(Modifier.height(16.dp))
             AppListGroup {
                 AppToggleRow(pick("Epifanía al domingo", "Epiphany on Sunday", "Epifania no domingo"),draft.epiphanyOnSunday,{change("epiphany",it)},subtitle = pick("Desactivado: 6 de enero", "Off: January 6", "Desativado: 6 de janeiro"),switchTag = "transfer_epiphany")

@@ -174,7 +174,6 @@ fun HomeScreen(
     // compiling; the fidelity card is the only thing gated on it.
     dao: SanctaFidesDao? = null,
     liturgicalDay: LiturgicalCalendarDay = PilgrimageAndHabitsData.upcomingLiturgicalDays.first(),
-    useOnlineCalendar: Boolean = true,
     onOpenReminders: () -> Unit = {},
     onNavigateToChurches: () -> Unit = onNavigateToDoctrine,
     ttsManager: com.example.data.audio.LiturgicalTtsManager? = null,
@@ -210,16 +209,17 @@ fun HomeScreen(
         }
     }
 
-    // One lectionary source, the same in every theme and offline: the bundled
-    // lectionary for the day. Only a day it does not carry (some ferial days)
-    // falls back to the Vatican's own feed, the source the Mass tab opens.
+    // Vatican News readings are the universal source (network, then the cached
+    // copy for the day); the bundled lectionary only fills in when neither exists.
     val bundledGospel = dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
     val bundledFirst = dailyReading.firstReadingRef.takeIf { it.isNotBlank() }
-    val needsFeed = useOnlineCalendar && (bundledGospel == null || bundledFirst == null)
     val isoToday = now.toLocalDate().toString()
-    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday, needsFeed) {
+    val injectedLoader = com.example.data.news.LocalReadingsLoader.current
+    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday) {
         produceState<ReadingsResult?>(null) {
-            if (needsFeed) value = VaticanGospelFetcher().today(currentLanguage, isoToday)
+            value = injectedLoader?.invoke(currentLanguage, isoToday)
+                ?: VaticanGospelFetcher(cache = com.example.data.news.VaticanReadingsCache.forContext(context))
+                    .today(currentLanguage, isoToday)
         }
     }
     val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
@@ -227,16 +227,15 @@ fun HomeScreen(
     val feedFirst = vatican?.sections?.firstOrNull()
 
     val gospelReference = scriptureRef(
-        if (bundledGospel != null) dailyReading.gospelRef.takeIf { it.isNotBlank() } ?: feedGospel?.citation.orEmpty()
-        else feedGospel?.citation?.takeIf { it.isNotBlank() } ?: dailyReading.gospelRef,
+        feedGospel?.citation?.takeIf { it.isNotBlank() } ?: dailyReading.gospelRef,
         currentLanguage
     )
-    val gospelExcerpt = bundledGospel ?: feedGospel?.text?.takeIf { it.isNotBlank() }
+    val gospelExcerpt = feedGospel?.text?.takeIf { it.isNotBlank() } ?: bundledGospel
     val gospelPreview = remember(gospelExcerpt, currentLanguage) {
         gospelExcerpt?.let { firstSentenceOf(cleanScripture(it, currentLanguage)) }?.takeIf { it.isNotBlank() }
     }
     val firstReadingReference = scriptureRef(
-        bundledFirst ?: feedFirst?.citation?.takeIf { it.isNotBlank() }.orEmpty(),
+        feedFirst?.citation?.takeIf { it.isNotBlank() } ?: bundledFirst.orEmpty(),
         currentLanguage
     )
 

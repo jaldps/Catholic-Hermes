@@ -35,3 +35,24 @@ python3 -c "import sys,pickle; sys.path.insert(0,'tools/xref'); from common impo
 ```bash
 python3 tools/xref/build_assets.py
 ```
+
+## Audit and regression checks
+
+`tools/xref/audit_xref.py` checks that well-known KJV verses (52 cases across Psalms, Daniel, Joel, Malachi, Exodus,
+Esther, ...) land on a verse that says the same thing, per language, for the bundled editions and for every converted
+edition. `tools/xref/test_xref_regression.py` pins the findings (Genesis 1:2 reaches Psalm 103:30, not 103:31, in
+Spanish). Verse divisions that differ inside a chapter (the Platense Ps 103 has 36 verses against 35 in the Douay) are
+placed with a Gale-Church length alignment (`langmap.gc_align`) against the bundled English chapter, with psalm titles
+tried as a leading offset; a KJV verse an edition merges into its neighbour inherits the neighbour's target.
+
+## Downloadable editions (Catholic Bible Tools)
+
+```bash
+python3 -I tools/bibles/convert_cbt.py --src <cbt checkout> --out <out>        # bibles-out/<edition>/, manifest_cbt.json
+XREF_WORK=build/xref python3 -I tools/xref/build_assets.py --editions <out> <out>/xref-out
+XREF_WORK=build/xref python3 -I tools/xref/validate_editions.py <out> <out>/xref-out
+XREF_WORK=build/xref python3 -I tools/xref/audit_xref.py <out>
+```
+
+`editions.py` maps KJV references onto each edition's numbering (Vulgate or Hebrew psalms, Daniel 3/4, Hebrew chapter
+shifts by position, Gale-Church within chapters whose verse counts differ, word-similarity alignment for English).

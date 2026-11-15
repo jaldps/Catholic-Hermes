@@ -49,7 +49,9 @@ data class UserPreferences(
     val highContrast: Boolean = false,
     val calendarRules: CalendarRules = CalendarRules(),
     /** False means preferences could not be read, not that the user reset them. */
-    val storageAvailable: Boolean = true
+    val storageAvailable: Boolean = true,
+    /** Default Bible edition per app language code (es/en/pt); a missing entry means that language's bundled Bible. */
+    val bibleDefaultEditions: Map<String, String> = emptyMap()
 ) {
     companion object {
         const val DEFAULT_DESIGN_LANGUAGE = "LUMEN"
@@ -98,6 +100,7 @@ class UserPreferencesStore(
         val FONT_SCALE = floatPreferencesKey("font_size_scale")
         val NARRATION_SPEED = floatPreferencesKey("audio_narration_speed")
         val BIBLE_TRANSLATION = stringPreferencesKey("active_bible_translation_id")
+        val BIBLE_DEFAULTS = stringPreferencesKey("bible_default_editions")
         val FULL_CCC_DOWNLOADED = booleanPreferencesKey("is_full_ccc_downloaded")
         /** Guided learning tracks: highest reached question number per track,
          *  encoded "trackIndex:questionNumber,trackIndex:questionNumber". */
@@ -197,7 +200,8 @@ class UserPreferencesStore(
                 fontSizeScale = stored[Keys.FONT_SCALE] ?: 1.0f,
                 audioNarrationSpeed = stored[Keys.NARRATION_SPEED] ?: 1.0f,
                 activeBibleTranslationId = stored[Keys.BIBLE_TRANSLATION] ?: "jerusalem",
-                isFullCccDownloaded = stored[Keys.FULL_CCC_DOWNLOADED] ?: false
+                isFullCccDownloaded = stored[Keys.FULL_CCC_DOWNLOADED] ?: false,
+                bibleDefaultEditions = parseBibleDefaults(stored[Keys.BIBLE_DEFAULTS])
             )
         }
 
@@ -265,6 +269,19 @@ class UserPreferencesStore(
 
     suspend fun setAudioNarrationSpeed(speed: Float) {
         editPreference("setAudioNarrationSpeed") { it[Keys.NARRATION_SPEED] = speed }
+    }
+
+    /** Stored as "es=id,en=id,pt=id". */
+    private fun parseBibleDefaults(raw: String?): Map<String, String> =
+        raw.orEmpty().split(',').mapNotNull { part ->
+            part.split('=').takeIf { it.size == 2 && it[0].isNotBlank() && it[1].isNotBlank() }?.let { it[0].trim() to it[1].trim() }
+        }.toMap()
+
+    suspend fun setBibleDefaultEdition(languageCode: String, editionId: String) {
+        editPreference("setBibleDefaultEdition") { prefs ->
+            val merged = parseBibleDefaults(prefs[Keys.BIBLE_DEFAULTS]) + (languageCode to editionId)
+            prefs[Keys.BIBLE_DEFAULTS] = merged.entries.joinToString(",") { "${it.key}=${it.value}" }
+        }
     }
 
     suspend fun setActiveBibleTranslationId(id: String) {

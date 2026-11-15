@@ -110,8 +110,9 @@ def main():
             seen.add(pid)
             lt(e.get("leaderText"), f"{pid}.leaderText", lo=15)
             lt(e.get("textNote"), f"{pid}.textNote")
-            for k in ("title", "responseText", "whenToPray"):
+            for k in ("title", "whenToPray"):
                 if e.get(k) is not None: lt(e[k], f"{pid}.{k}")
+            if e.get("responseText") is not None: lt(e["responseText"], f"{pid}.responseText", required=False)  # all-empty = remove response
             if e.get("latinTitle") is not None and not isinstance(e["latinTitle"], str): err(f"{pid}.latinTitle: string or null")
     else:
         print(__doc__); sys.exit(2)
