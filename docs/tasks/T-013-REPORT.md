@@ -1,6 +1,6 @@
 # T-013 · Informe de Codex
 
-Entrega: **40/51 fichas**, en el orden exacto de `T-013.keys`. Rama `ext/T-013`, base inicial `origin/CatholicGPT` (`82e8d11`).
+Entrega: **51/51 fichas**, en el orden exacto de `T-013.keys`. Rama `ext/T-013`, base inicial `origin/CatholicGPT` (`82e8d11`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -293,14 +293,102 @@ Se omite el rayo como hecho milagroso probado. No se llama franciscano, dominico
 
 Nacimiento aproximado. La fuente antigua ofrece un padre pagano, mientras las pontificias lo sitúan en familia cristiana: se omite ese dato discutido. No se asegura profesión monástica ni se copian textos pseudoepigráficos como obras auténticas; doctorado verificado en su documento pontificio.
 
+### 41. `barnabas_apostle` · 11/06
+
+- [Catholic Encyclopedia, «St. Barnabas», testimonios de Hechos 4, 9, 11–15](https://www.newadvent.org/cathen/02300a.htm)
+- [Hechos de los Apóstoles 13,1–14, envío y misión con Pablo](https://www.newadvent.org/bible/act013.htm)
+
+No se lo incluye entre los Doce ni se afirma como segura su pertenencia a los setenta. Sin fecha o método de martirio, parentescos no necesarios o atribución del escrito llamado Epístola de Bernabé. Se omiten citas textuales traducidas de memoria.
+
+### 42. `anthony_of_padua_priest` · 13/06
+
+- [Benedicto XVI, audiencia general, 10-II-2010: san Antonio de Padua](https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20100210.html)
+- [Catholic Encyclopedia, «St. Anthony of Padua»](https://www.newadvent.org/cathen/01556a.htm)
+
+Nacimiento aproximado. Se evita Vercelli, error que el propio editor de la enciclopedia corrige por Arcella. Doctorado de 1946 verificado en la catequesis. Sin oración compuesta, relatos de peces o bilocación como hechos comprobados, ni promesa automática.
+
+### 43. `romuald_of_ravenna_abbot` · 19/06
+
+- [Catholic Encyclopedia, «St. Romuald»](https://www.newadvent.org/cathen/13179b.htm)
+- [Catholic Encyclopedia, «Camaldolese», origen y vida común/eremítica](https://www.newadvent.org/cathen/03204d.htm)
+
+No se afirma la edad legendaria de ciento veinte años ni una fecha exacta de fundación de Camaldoli. Se omiten visiones, predicciones y mortificaciones severas como consejos. No se atribuye al santo cada desarrollo posterior de las ramas camaldulenses.
+
+### 44. `aloysius_gonzaga_religious` · 21/06
+
+- [Society of Jesus, «Saint Aloysius Gonzaga»](https://www.jesuits.global/saint-blessed/saint-aloysius-gonzaga/)
+- [Catholic Encyclopedia, «St. Aloysius Gonzaga»](https://www.newadvent.org/cathen/01331c.htm)
+- [Gonzaga University, «St. Aloysius Gonzaga», patronazgo de la juventud](https://www.gonzaga.edu/about/our-mission-jesuit-values/gonzagas-history/st-aloysius-gonzaga)
+
+Sin atribuirle ordenación sacerdotal o fundación de una congregación. El patronazgo de la juventud se comprueba en la universidad jesuita; no se generaliza a otras causas sin decreto. Se omiten fechas de beatificación discrepantes y prácticas ascéticas extremas.
+
+### 45. `paulinus_of_nola_bishop` · 22/06
+
+- [Benedicto XVI, audiencia general, 12-XII-2007: san Paulino de Nola](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20071212.html)
+- [Catholic Encyclopedia, «St. Paulinus»](https://www.newadvent.org/cathen/11585b.htm)
+
+Se omite nacimiento exacto, año discutido de ordenación y el relato de esclavitud voluntaria como hecho seguro. No se atribuye al santo la invención de las campanas. Terasia conserva su lugar en el itinerario compartido, sin inventar diálogos o atribuirle escritos de Paulino.
+
+### 46. `john_fisher_bishop_and_thomas_more_martyrs` · 22/06
+
+- [Catholic Encyclopedia, «St. John Fisher»](https://www.newadvent.org/cathen/08462b.htm)
+- [Catholic Encyclopedia, «St. Thomas More»](https://www.newadvent.org/cathen/14689c.htm)
+- [Juan Pablo II, E Sancti Thomae Mori, 31-X-2000, 1–4 y declaración de patronazgo](https://www.vatican.va/holy_father/john_paul_ii/motu_proprio/documents/hf_jp-ii_motu-proprio_20001031_thomas-more_en.html)
+
+Se omiten nacimiento disputado de Fisher y citas finales populares. Se distingue la supremacía eclesiástica reclamada del rechazo de toda autoridad civil. El patronazgo es de Tomás Moro, no una concesión indistinta a ambos.
+
+### 47. `nativity_of_john_the_baptist` · 24/06
+
+- [Evangelio según san Lucas, 1,5–25 y 57–80](https://www.newadvent.org/bible/luk001.htm)
+- [Catholic Encyclopedia, «St. John the Baptist», nacimiento y misión](https://www.newadvent.org/cathen/08486b.htm)
+
+Se explica la celebración y se distingue del martirio del 29 de agosto. Sin genealogías apócrifas, diálogos añadidos, identificación cierta de la localidad o afirmación de que el 24 de junio sea fecha documental del nacimiento.
+
+### 48. `cyril_of_alexandria_bishop` · 27/06
+
+- [Benedicto XVI, audiencia general, 3-X-2007: san Cirilo de Alejandría](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20071003.html)
+- [Catholic Encyclopedia, «St. Cyril of Alexandria»](https://www.newadvent.org/cathen/04592b.htm)
+
+Se evita presentar la maternidad divina como divinización de María. No se confunde a este Cirilo con el de Jerusalén. No se atribuye al santo una orden de asesinato de Hipatia sin prueba documental ni se equiparan todas sus decisiones políticas con el contenido doctrinal de Éfeso.
+
+### 49. `irenaeus_of_lyon_bishop` · 28/06
+
+- [Benedicto XVI, audiencia general, 28-III-2007: san Ireneo de Lyon](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070328.html)
+- [Francisco, decreto de proclamación de Ireneo como Doctor unitatis, 21-I-2022](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2022/01/21/220121b.html)
+- [Catholic Encyclopedia, «St. Irenaeus»](https://www.newadvent.org/cathen/08130b.htm)
+
+Se distinguen culto como mártir y reconstrucción documental de su muerte, incierta. No se fijan años exactos de nacimiento/fallecimiento ni se atribuyen frases populares sin pasaje. Doctorado verificado en el decreto de 2022, no tomado de una referencia anterior a esa declaración.
+
+### 50. `peter_and_paul_apostles` · 29/06
+
+- [Catholic Encyclopedia, «St. Peter, Prince of the Apostles»](https://www.newadvent.org/cathen/11744a.htm)
+- [Catholic Encyclopedia, «St. Paul»](https://www.newadvent.org/cathen/11567b.htm)
+- [Clemente de Roma, Primera carta a los Corintios, 5–6](https://www.newadvent.org/fathers/1010.htm)
+
+No se afirma que ambos murieran el mismo día ni se fija una cronología exacta del martirio. Se distingue el testimonio temprano de Clemente de tradiciones posteriores sobre método de ejecución. No se presenta a Pablo como uno de los Doce ni se inventan conversaciones entre ambos.
+
+### 51. `first_martyrs_of_the_holy_roman_church` · 30/06
+
+- [Clemente de Roma, Primera carta a los Corintios, 5–6](https://www.newadvent.org/fathers/1010.htm)
+- [Catholic Encyclopedia, «Nero», incendio y persecución romana](https://www.newadvent.org/cathen/10752c.htm)
+- [Tácito, Anales XV, 38 y 44, incendio y persecución](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Tacitus/Annals/15B%2A.html)
+
+No se fija número de víctimas ni se reconstruyen nombres, diálogos o torturas individuales. Tácito XV,38 expresa incertidumbre sobre el origen del incendio, por lo que no se sigue la seguridad excesiva del artículo antiguo al atribuírselo a Nerón. No se amplía sin prueba la persecución al imperio entero ni se confunde esta memoria local con el primer martirio cristiano universal.
+
 ## Validación
 
 ```text
-40 entries · 0 errors · 1 warnings
+51 entries · 0 errors · 0 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
 
 ## Datos no verificados y preguntas
 
-Las limitaciones específicas se declaran arriba. No se completa ningún dato dudoso por conjetura ni se atribuyen citas de memoria. No hay pregunta bloqueante para continuar las claves restantes.
+Las limitaciones específicas se declaran arriba. No hay pregunta bloqueante pendiente; el lote queda para revisión e integración del coordinador.
+
+## Cierre del lote
+
+Completadas las **51 fichas y 153 biografías**, de 133–153 palabras según el contador del validador. Coinciden las 51 claves y fechas con el contrato y los títulos de fuentes con sus enlaces de este informe. Todos los campos `quote` quedan nulos; los patronazgos se incluyen únicamente donde se documentaron. Se cotejó expresamente la errata 737/735 de Beda con el original italiano y el origen incierto del incendio de Roma con Tácito XV,38.
+
+Entregas parciales: `95bdabd` (10), `36c7528` (20), `811a8dc` (30), `962570c` (40). La compilación y revisión final corresponden al coordinador. Se continúa T-014 en su propia rama después de este envío.
