@@ -1,22 +1,21 @@
 # T-005 · Informe de Codex
 
-**EN CURSO: entrega parcial ordenada, preguntas 1–40 de 51.** No se declara completo el encargo. El siguiente lote empieza en la pregunta 41. Solo se crean `app/src/main/assets/questions/deeper-a.json` y este informe.
+**ENTREGA COMPLETA: preguntas 1–51 de 51.** Los lotes parciales se publicaron para revisión temprana; esta entrega completa el contrato. Solo se crean `app/src/main/assets/questions/deeper-a.json` y este informe.
 
 ## Contenido entregado
 
-Cuarenta bloques completos con `explanation`, `scripture`, `tradition`, `magisterium`, `objection`, `analogy`, `synthesis`, en ES/EN/PT-BR; fuentes en 3–5 entradas por pregunta. Redacción y paráfrasis propias, sin citas extensas de traducciones modernas. No se tocaron la pregunta, respuesta, fundamento ni aclaración existentes.
+Cincuenta y un bloques completos con `explanation`, `scripture`, `tradition`, `magisterium`, `objection`, `analogy`, `synthesis`, en ES/EN/PT-BR; fuentes en 3–5 entradas por pregunta. Redacción y paráfrasis propias, sin citas extensas de traducciones modernas. No se tocaron la pregunta, respuesta, fundamento ni aclaración existentes.
 
 Se distinguen sufrimiento físico/moral, conocimiento/coacción, condenación/culpabilidad subjetiva, fe/emoción, razonamiento filosófico/testimonio histórico, gratuidad/necesidad de Dios, petición/garantía, providencia/aprobación del mal, unidad bíblica/lectura literalista y gracia/autosuficiencia moral. Las analogías declaran sus límites; las objeciones no se presentan como si fueran absurdas.
 
 ## Validación
 
 ```text
-$ python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-a.json 1 51 --partial
-WARN  partial delivery: 40/51 questions
-40 entries · 0 errors · 1 warnings
+$ python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-a.json 1 51
+51 entries · 0 errors · 0 warnings
 ```
 
-La única advertencia es la entrega parcial. Totales de palabras por idioma según el mismo criterio del validador:
+La entrega completa no tiene advertencias. Totales de palabras por idioma según el mismo criterio del validador:
 
 | Pregunta | ES | EN | PT |
 |---|---:|---:|---:|
@@ -60,8 +59,19 @@ La única advertencia es la entrega parcial. Totales de palabras por idioma seg�
 | 38 | 435 | 423 | 406 |
 | 39 | 428 | 409 | 401 |
 | 40 | 443 | 420 | 420 |
+| 41 | 440 | 417 | 403 |
+| 42 | 442 | 401 | 406 |
+| 43 | 430 | 411 | 418 |
+| 44 | 443 | 402 | 405 |
+| 45 | 445 | 410 | 413 |
+| 46 | 441 | 421 | 418 |
+| 47 | 450 | 421 | 425 |
+| 48 | 432 | 409 | 405 |
+| 49 | 443 | 435 | 422 |
+| 50 | 446 | 420 | 425 |
+| 51 | 442 | 418 | 408 |
 
-No se modificó el validador. Incidencia: su patrón `\bTODO\b`, aplicado sin distinguir mayúsculas, también rechaza la palabra española/portuguesa «todo» dentro de una frase terminada. Se reformularon tres apariciones para poder validar; convendría que el coordinador restringiera el patrón a un marcador real. Esto no bloquea la entrega y no se corrigió fuera del alcance autorizado.
+No se modificó el validador. Incidencia: su patrón `\bTODO\b`, aplicado sin distinguir mayúsculas, también rechaza la palabra española/portuguesa «todo» dentro de una frase terminada. Se reformularon las apariciones detectadas para poder validar; convendría que el coordinador restringiera el patrón a un marcador real. Esto no bloquea la entrega y no se corrigió fuera del alcance autorizado.
 
 No se compiló Android; el protocolo reserva la integración y compilación al coordinador.
 
@@ -112,7 +122,7 @@ Se descargaron las secciones del [índice oficial en inglés](https://www.vatica
 
 ## Dudas y límites
 
-- Las preguntas 41–51 **todavía no están entregadas**. Se leerán sus respuestas actuales y se verificarán las fuentes de cada grupo antes de continuar.
+- Las preguntas 1–51 están entregadas. T-006 (52–101) es un encargo y archivo distintos.
 - Ninguna teoría filosófica particular sobre presciencia/libertad se presenta como la única explicación dogmática.
 - No se pretende resolver definitivamente el sufrimiento inocente, el ocultamiento divino o cada mandato bélico antiguo. Reconocer el límite no equivale a atribuir contradicciones al Magisterio ni a llamar buenas las atrocidades.
 - No se proporcionan diagnósticos ni garantías de curación. Las indicaciones de protección y ayuda no están condicionadas a aceptar una explicación religiosa.
@@ -205,3 +215,46 @@ Observaciones sobre las respuestas breves:
 22. **Pregunta 38:** la empresa que filtra correos propone un mecanismo organizativo sin fuente y podría reducir la intercesión a peticiones descartadas. La ampliación distingue conocimiento recibido/omnisciencia y declara expresamente desconocido el mecanismo.
 23. **Pregunta 39:** 2 R 13,20-21 no narra meramente una curación: el hombre muerto vuelve a la vida. Además, el límite sobre comercio no debe restringirse a falsas reliquias: el canon 1190 §1 prohíbe vender reliquias sagradas.
 24. **Pregunta 40:** conviene incorporar la norma de 2024 y el alcance preciso de nihil obstat. El bloque no aporta decretos históricos individuales de Fátima/Lourdes/Guadalupe y por tanto no certifica ni equipara sus fechas o estatus; queda como explicación del criterio doctrinal y de la necesidad de consultar cada pronunciamiento.
+
+## Cierre 41–51: fuentes y alcance
+
+La entrega completa añade primado de Pedro, infalibilidad, interpretación eclesial, ministerios, relación con otros cristianos, Cruzadas, coerción inquisitorial, Galileo, colonización, corrupción y Eucaristía. Cada pregunta conserva siete campos con redacción original completa en ES/EN/PT-BR y 3–5 fuentes. También se comprobaron los objetivos de palabras de **cada campo** (no solo los umbrales más permisivos de advertencia del validador); todos quedan dentro de los intervalos de la especificación.
+
+Fuentes consultadas para el cierre:
+
+- [CIC 880–882, 889–892 y 894–896](https://www.vatican.va/archive/ENG0015/__P2A.HTM): primado/colegio, carisma doctrinal y autoridad como servicio.
+- [CIC 817–819, 823–827 y 838](https://www.vatican.va/archive/ENG0015/__P29.HTM), comunión bautismal, santidad recibida y purificación; [CIC 1934–1935](https://www.vatican.va/archive/ENG0015/__P6P.HTM), igual dignidad.
+- [CIC 85–86](https://www.vatican.va/archive/ENG0015/__PM.HTM) y Dei Verbum 10/12, previamente cotejados: servicio interpretativo, límites y trabajo exegético.
+- [CIC 2309 y 2312–2313](https://www.vatican.va/archive/ENG0015/__P81.HTM): condiciones de defensa y ley moral durante la guerra. [CIC 2106–2109](https://www.vatican.va/archive/ENG0015/__P7D.HTM), libertad religiosa.
+- [CIC 159](https://www.vatican.va/archive/ENG0015/__PX.HTM), fe/razón; [CIC 1374 y 1376–1381](https://www.vatican.va/archive/ENG0015/__P41.HTM), presencia eucarística, transubstanciación y reconocimiento por fe.
+- [Ireneo, Contra las herejías III,3,1–3](https://www.newadvent.org/fathers/0103303.htm): transmisión pública y tradición/sucesión romana ligada a Pedro y Pablo. No se inventan sucesores ni se presenta cada frase de Ireneo como formulación técnica del Vaticano I.
+- [Tomás de Aquino, Suma Teológica II-II, q. 33, a. 4, ad 2](https://www.newadvent.org/summa/3033.htm), corrección de Pedro y posibilidad de corrección pública ante peligro para la fe.
+- [Clemente de Roma, Primera carta a los corintios 44](https://www.newadvent.org/fathers/1010.htm), continuidad de ministros y destitución injusta de quienes servían humildemente. No se convierte en protección indiscriminada de cualquier titular de un cargo.
+- [Agustín, Sobre el bautismo contra los donatistas I,1,2](https://www.newadvent.org/fathers/14081.htm): se distingue realidad sacramental y comunión/disposición; no se adopta como síntesis completa del ecumenismo contemporáneo ni como inmunidad moral de ministros.
+- [Agustín, Carta 189 a Bonifacio, 6](https://www.newadvent.org/fathers/1102189.htm), finalidad de paz y trato a vencidos/cautivos. No habla de Cruzadas posteriores y no se le atribuye su aprobación anticipada.
+- [Raymond d’Aguiliers, relato de la toma de Jerusalén de 1099, recopilado por Fordham](https://sourcebooks.web.fordham.edu/source/cde-jlem.asp): leído el apartado «The Frankish Victory», versión de Raymond. Se verifica violencia contra habitantes, sin convertir hipérboles de sangre o cifras de otras versiones en estadísticas. La referencia sirve para el hecho citado, no para una historia exhaustiva de todas las Cruzadas.
+- [Tomás de Aquino, Suma Teológica II-II, q. 10, a. 8](https://www.newadvent.org/summa/3010.htm): se leyó la respuesta completa, distinguiéndola de las objeciones. **Se reconoce expresamente que rechaza forzar a creer a no bautizados y admite coacción corporal sobre herejes/apóstatas.** No se oculta esa diferencia ni se usa al Doctor como si ya formulase íntegramente el derecho civil contemporáneo.
+- [Dignitatis humanae 2, 10 y 12](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651207_dignitatis-humanae_en.html), leído el texto de los apartados: dignidad, libertad del acto de fe y reconocimiento de comportamientos históricos contrarios al Evangelio.
+- [Tomás de Aquino, Suma Teológica I, q. 68, a. 1](https://www.newadvent.org/summa/1068.htm), inicio de la respuesta: verdad bíblica y revisión de explicaciones refutadas. No se adopta su física antigua ni se afirma que anticipó a Galileo.
+- [Juan Pablo II, discurso del 31-10-1992 a la Academia Pontificia de Ciencias, §12](https://www.pas.va/en/magisterium/saint-john-paul-ii/1992-31-october.html): error de imponer centralidad de la Tierra desde una interpretación de la Escritura y distinción de métodos. Se consultaron también §§10–11 para contexto; no se repite una leyenda sobre ejecución de Galileo ni se atribuye demostración completa a cada argumento suyo.
+- [Juan Pablo II, mensaje a los indígenas de América, 12-10-1992, §§2–4](https://www.vatican.va/content/john-paul-ii/es/messages/pont_messages/1992/documents/hf_jp-ii_mes_19921012_indigeni-america.html): se cotejó la mención a Las Casas y otros defensores, reconocimiento de abusos, igual dignidad y respeto de culturas. No se adopta una afirmación general como prueba de inocencia de cada institución histórica.
+- [Francisco, discurso a los movimientos populares, Santa Cruz de la Sierra, 09-07-2015](https://www.vatican.va/content/francesco/en/speeches/2015/july/documents/papa-francesco_20150709_bolivia-movimenti-popolari.html), pasaje sobre colonialismo en el segundo de los tres cometidos: reconocimiento de pecados contra los pueblos originarios y petición de perdón. No se inventa una evaluación archivística particular ni una cifra de víctimas.
+- [Justino, Primera Apología 66](https://www.newadvent.org/fathers/0126.htm): alimento eucarístico, carne/sangre y palabras de institución. Se distingue realismo antiguo y terminología técnica posterior; no se copia su polémica sobre otros cultos.
+- Todos los pasajes bíblicos de 41–51 se cotejaron en la edición de consulta identificada. En Jn 6 la numeración Douay-Rheims es parcialmente distinta: se leyó hasta su 6,59 para cubrir el tramo moderno 6,51-58. En Sal 19 se distinguen número del salmo y numeración de los versículos en inglés/español/portugués. Las explicaciones son paráfrasis propias, no transcripciones de notas de esa edición.
+
+Observaciones finales sobre las respuestas existentes:
+
+25. **Pregunta 42:** no conviene que «solo» se interprete como si el único ejercicio infalible fuese cualquier discurso solemne del papa, o que la enseñanza no definitiva careciera de autoridad. CIC 889–892 distingue carisma, formas de ejercicio y asentimiento. La ampliación tampoco usa la infalibilidad como impedimento a investigar corrupción o proteger a víctimas.
+26. **Pregunta 44:** la autoridad ordenada no es solo una técnica organizativa equiparable a un hospital; posee dimensión sacramental, con servicio y responsabilidad. La ampliación distingue ambas y no identifica obediencia con aceptación de delito.
+27. **Pregunta 47:** «hoy no pueden justificarse» no debe sugerir que torturar o coaccionar la conciencia se volvió injusto solo al cambiar la época. Es preciso investigar también las justificaciones y decisiones institucionales, no atribuirlo únicamente a excesos de ejecución. Se muestra con honestidad la postura de Tomás y el criterio actual de libertad religiosa, sin ofrecer una historia completa de los tribunales ni cifras no comprobadas.
+28. **Pregunta 49:** distinguir evangelización/conquista es válido como criterio moral, pero sería evasivo si se usa para negar colaboraciones institucionales documentadas. Las Casas no compensa ni absuelve automáticamente otros daños. La ampliación reclama archivos, voces indígenas y responsabilidades concretas; no atribuye delitos individuales sin documentación.
+29. **Pregunta 51:** arriesgar la vida al participar en una comida religiosa no demuestra por sí solo transubstanciación y no sería justo caricaturizar otras interpretaciones del memorial como si lo consideraran irrelevante. La ampliación se apoya en textos, recepción antigua y definición católica, explicando la presencia sustancial sin prometer una prueba química o una experiencia sensible extraordinaria.
+
+## Datos no verificados y preguntas para el coordinador
+
+- No se verificó una edición griega íntegra de la homilía de Juan Damasceno; la atribución y lugar se cotejaron en la cita identificada de Munificentissimus Deus 21, nota 17. Se declara esta consulta indirecta.
+- No se certifican decretos históricos individuales sobre Fátima, Lourdes o Guadalupe en la pregunta 40. No se les asigna un estatus común ni números o fechas de aprobación no investigados; el bloque explica doctrina y criterio de discernimiento.
+- No se hicieron recuentos archivísticos de víctimas de Cruzadas, Inquisición o colonización, ni historias exhaustivas de sus instituciones. Se omiten cifras y juicios individuales que requerirían esa investigación; las fuentes se emplean para las afirmaciones concretas señaladas.
+- Las analogías no se ofrecen como demostraciones de dogmas; reconocen límites. Se revisaron los tres idiomas, corrigiendo mezclas lingüísticas detectadas en campos españoles antes de esta entrega completa.
+- Las correcciones de las respuestas breves enumeradas requieren intervención del coordinador: el encargo prohíbe modificarlas. **No bloquean la revisión del JSON**, pero algunas afectan a claridad doctrinal, exactitud bíblica o prudencia pastoral y merecen seguimiento.
+- No hay preguntas pendientes que impidan entregar T-005. No se compiló ni publicó un APK; solo se entrega el contenido permitido y su informe para integración.
