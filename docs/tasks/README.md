@@ -41,4 +41,4 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-005](T-005.md) | Codex | CERRADO ([revisión](T-005-REVIEW.md)) | M4 · «Profundizar» de las preguntas 1–51 → `assets/questions/deeper-a.json` |
 | [T-006](T-006.md) | Codex | ABIERTO | M4 · «Profundizar» de las preguntas 52–101 → `assets/questions/deeper-b.json` |
 | [T-009](T-009.md) | Hermes | CERRADO ([revisión](T-009-REVIEW.md)) | Texto completo de *Veni Sancte Spiritus* y de «Quédate conmigo, Señor» → `assets/prayers/text-overrides-b.json` |
-| [T-010](T-010.md) | Codex | ABIERTO (prioritario) | Identificación y derechos de 6 Biblias católicas (cbt) |
+| [T-010](T-010.md) | Codex | ABIERTO (documental, no bloqueante) | Identificación y atribución de 6 Biblias católicas (cbt); el dueño declara permiso |

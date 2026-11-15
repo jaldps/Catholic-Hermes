@@ -96,9 +96,10 @@ class BibleDownloadReliabilityTest {
     }
 
     @Test fun editionsAreOfferedOnlyWhenTheManifestListsThem() {
-        // The shipped manifest lists nothing yet: every edition stays invisible, no Protestant edition is offered.
+        // The shipped manifest publishes the seven Catholic editions, each with its own cross-reference table and pinned base.
         val shipped = BibleDownloadManager(context)
-        assertTrue(shipped.specs.isEmpty())
+        assertEquals(BibleDownloadManager.VERSION_SPECS.map { it.id }.toSet(), shipped.specs.map { it.id }.toSet())
+        shipped.specs.forEach { assertTrue(it.id, shipped.downloadUrl(it, 1).startsWith("https://raw.githubusercontent.com/jaldps/Catholic-Hermes/a4895797797ae11a9d32b005e03774349420e2df/bibles/${it.path}/")) }
         assertTrue(BibleDownloadManager.VERSION_SPECS.map { it.id }.toSet() ==
             setOf("en.ccb", "en.drbcr", "es.eldpdd", "es.lbl", "es.lsb", "pt.bs", "la.nvbse"))
         assertTrue(BibleDownloadManager.VERSION_SPECS.none { it.id == "rv1909" || it.id == "almeida" })
