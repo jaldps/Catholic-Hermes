@@ -1,6 +1,6 @@
 # T-014 · Informe de Codex
 
-Entrega: **10/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
+Entrega: **20/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -78,10 +78,82 @@ Se omite año exacto de nacimiento, con cronologías distintas (1217/1221). Lege
 
 Se explica la celebración, no una biografía de María inventada. La fecha y las palabras atribuidas a la visión de Simón Stock, así como el llamado privilegio sabatino, no se presentan aquí como documentos indiscutidos ni como salvación automática. Tampoco se descarta la devoción: se conserva su sentido eclesial y bautismal según el Directorio.
 
+### 11. `apollinaris_of_ravenna_bishop` · 20/07
+
+- [Catholic Encyclopedia, «St. Apollinaris», obispo de Rávena](https://www.newadvent.org/cathen/01616a.htm)
+- [Catholic Encyclopedia, «Ravenna», crítica de las actas y testimonios monumentales](https://www.newadvent.org/cathen/12662b.htm)
+
+Se cotejaron las entradas: el artículo individual repite una pasión tradicional, pero Ravenna advierte su escaso valor histórico. No se sigue como hecho seguro la ordenación por Pedro ni una persecución bajo Nerón/Vespasiano. Se usa 01616a (Rávena), no 01616b (Valence) ni el teólogo de Laodicea.
+
+### 12. `lawrence_of_brindisi_priest` · 21/07
+
+- [Benedicto XVI, audiencia general, 23-III-2011: san Lorenzo de Brindis](https://www.vatican.va/content/benedict-xvi/en/audiences/2011/documents/hf_ben-xvi_aud_20110323.html)
+- [Catholic Encyclopedia, «St. Lawrence of Brindisi»](https://www.newadvent.org/cathen/09359a.htm)
+
+Doctorado de 1959 comprobado en la catequesis. No se afirma memoria literal de toda la Biblia, intervención militar milagrosa o infalibilidad de cada decisión diplomática. No se confunde con el diácono romano Lorenzo.
+
+### 13. `mary_magdalene` · 22/07
+
+- [Evangelio según san Juan, 20,1–18](https://www.newadvent.org/bible/joh020.htm)
+- [Santa Sede, elevación de María Magdalena a fiesta, publicación de 10-VI-2016](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2016/06/10/160610b.html)
+- [Culto Divino, decreto sobre Marta, María y Lázaro, 26-I-2021, distinción de identidades](https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20210126_decreto-santi_en.html)
+
+Se evita la identificación automática con la pecadora de Lucas 7 o María de Betania presente en fuentes antiguas. No se afirma matrimonio con Jesús, viaje posterior a Provenza o autoría de escritos apócrifos. El rango de fiesta es de 2016, no inclusión entre los Doce.
+
+### 14. `bridget_of_sweden_religious` · 23/07
+
+- [Benedicto XVI, audiencia general, 27-X-2010: santa Brígida de Suecia](https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20101027.html)
+- [Catholic Encyclopedia, «St. Bridget of Sweden»](https://www.newadvent.org/cathen/02782a.htm)
+
+Se distingue de Brígida de Kildare. No se presenta como religiosa profesa, cosa que la catequesis niega, ni se inventan promesas de las quince oraciones. La nota sobre revelaciones privadas sigue el discernimiento explicado por Benedicto XVI.
+
+### 15. `sharbel_makhluf_priest` · 24/07
+
+- [Pablo VI, homilía de canonización de Charbel Makhlouf, 9-X-1977](https://www.vatican.va/content/paul-vi/fr/homilies/1977/documents/hf_p-vi_hom_19771009.html)
+- [Vatican News, «San Charbel Makhluf, sacerdote»](https://www.vaticannews.va/it/santo-del-giorno/07/24/san-charbel-makhluf--sacerdote.html)
+
+Se distingue la Iglesia maronita católica del rito latino y de una religión separada. No se diagnostican fenómenos del cadáver ni se garantizan curaciones. Se omiten citas populares sin obra y lugar, restricciones alimentarias como consejo y detalles no necesarios de su infancia.
+
+### 16. `james_apostle` · 25/07
+
+- [Benedicto XVI, audiencia general, 21-VI-2006: Santiago el Mayor](https://www.vatican.va/content/benedict-xvi/en/audiences/2006/documents/hf_ben-xvi_aud_20060621.html)
+- [Catholic Encyclopedia, «St. James the Greater», testimonios bíblicos y tradiciones españolas](https://www.newadvent.org/cathen/08279b.htm)
+
+No se confunde con Santiago de Alfeo. Se distingue Hechos 12 de la tradición posterior sobre España y Compostela; no se presenta el traslado de reliquias como documento contemporáneo. Sin atribuirle relatos de intervención militar o garantizar efectos de una peregrinación.
+
+### 17. `joachim_and_anne_parents_of_mary` · 26/07
+
+- [Catholic Encyclopedia, «St. Anne», fuentes y desarrollo del culto](https://www.newadvent.org/cathen/01538a.htm)
+- [Catholic Encyclopedia, «St. Joachim», tradición y calendario](https://www.newadvent.org/cathen/08406b.htm)
+
+Se declara la ausencia de nombres en los evangelios canónicos y el carácter apócrifo del Protoevangelio. No se construye una genealogía cierta, se fija edad o se inventan escenas de infancia. No se confunde la Inmaculada Concepción de María con una concepción virginal por parte de Ana.
+
+### 18. `martha_of_bethany_mary_of_bethany_and_lazarus_of_bethany` · 29/07
+
+- [Congregación para el Culto Divino, decreto sobre Marta, María y Lázaro, 26-I-2021](https://www.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20210126_decreto-santi_en.html)
+- [Evangelio según san Juan, 11](https://www.newadvent.org/bible/joh011.htm)
+
+Se sigue la identidad de los tres hermanos y la fecha de incorporación conjunta del decreto de 2021. No se identifican María de Betania, Magdalena y la pecadora de Lucas como una persona. Sin viajes legendarios posteriores, diálogos nuevos o una oposición artificial entre servicio y contemplación.
+
+### 19. `peter_chrysologus_bishop` · 30/07
+
+- [Catholic Encyclopedia, «St. Peter Chrysologus»](https://www.newadvent.org/cathen/11762c.htm)
+- [Catholic Encyclopedia, «Ravenna», sucesión episcopal](https://www.newadvent.org/cathen/12662b.htm)
+- [Catholic Encyclopedia, «Doctors of the Church», Pedro Crisólogo y declaración de 1729](https://www.newadvent.org/cathen/05075a.htm)
+
+No se fija año exacto de nacimiento o muerte. La colección de sermones contiene interpolaciones y atribuciones diversas: por eso no se extrae una cita sin edición y lugar. Se distingue del Crisóstomo de Constantinopla y se documenta el título de doctor.
+
+### 20. `ignatius_of_loyola_priest` · 31/07
+
+- [Society of Jesus, «Saint Ignatius of Loyola», biografía del fundador](https://www.jesuits.global/saint-blessed/saint-ignatius-of-loyola/)
+- [Catholic Encyclopedia, «St. Ignatius Loyola»](https://www.newadvent.org/cathen/07639c.htm)
+
+No se presenta como único fundador sin compañeros ni se confunde el discernimiento con una técnica de predicción. Sin frases de atribución popular o reconstrucciones de sus conversaciones interiores. Los Ejercicios se describen; no se componen oraciones en su nombre.
+
 ## Validación
 
 ```text
-10 entries · 0 errors · 1 warnings
+20 entries · 0 errors · 1 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
