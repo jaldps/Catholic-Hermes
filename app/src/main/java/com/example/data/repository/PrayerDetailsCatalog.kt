@@ -30,6 +30,7 @@ internal data class RawPrayerEntry(
 
 internal val PrayerDetailFiles = listOf("details-a.json", "details-b.json")
 internal const val PrayerExtraFile = "extra.json"
+internal const val PrayerOverridesFile = "text-overrides.json"
 
 /**
  * Loads optional prayer details and extra prayers from the `prayers` asset folder.
@@ -72,7 +73,7 @@ class PrayerDetailsCatalog(private val open: (String) -> InputStream) {
         null
     }
 
-    private val loaded: Pair<Map<String, PrayerDetails>, List<VaticanPrayer>> by lazy {
+    private val loaded: Triple<Map<String, PrayerDetails>, List<VaticanPrayer>, Map<String, RawPrayerEntry>> by lazy {
         val details = LinkedHashMap<String, PrayerDetails>()
         for (f in PrayerDetailFiles) read(f)?.forEach { e ->
             val id = e.prayerId ?: e.id
@@ -93,15 +94,34 @@ class PrayerDetailsCatalog(private val open: (String) -> InputStream) {
                 thematicTags = e.thematicTags.orEmpty()
             )
         }
-        details to extras
+        val overrides = LinkedHashMap<String, RawPrayerEntry>()
+        read(PrayerOverridesFile)?.forEach { e ->
+            val id = e.id ?: e.prayerId
+            if (!id.isNullOrBlank() && e.leaderText != null) overrides[id] = e
+        }
+        overrides.forEach { (id, o) ->
+            val d = details[id]
+            if (d != null && o.textNote != null) details[id] = d.copy(textNote = o.textNote.lt())
+        }
+        Triple(details, extras, overrides)
     }
 
     val detailsById: Map<String, PrayerDetails> get() = loaded.first
     val extraPrayers: List<VaticanPrayer> get() = loaded.second
 
-    /** [existing] followed by the extra prayers whose ids do not collide with it. */
+    /** [existing] with text overrides applied, followed by the extra prayers whose ids do not collide with it. */
     fun mergeInto(existing: List<VaticanPrayer>): List<VaticanPrayer> {
         val ids = existing.mapTo(HashSet()) { it.id }
-        return existing + extraPrayers.filter { ids.add(it.id) }
+        val overrides = loaded.third
+        return (existing + extraPrayers.filter { ids.add(it.id) }).map { p ->
+            val o = overrides[p.id] ?: return@map p
+            p.copy(
+                title = o.title?.lt() ?: p.title,
+                latinTitle = o.latinTitle ?: p.latinTitle,
+                leaderText = o.leaderText.lt(),
+                responseText = o.responseText?.lt() ?: p.responseText,
+                whenToPray = o.whenToPray?.lt() ?: p.whenToPray
+            )
+        }
     }
 }

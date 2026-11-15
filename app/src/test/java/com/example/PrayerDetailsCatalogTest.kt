@@ -56,4 +56,31 @@ class PrayerDetailsCatalogTest {
         assertEquals(listOf("angelus", "new1"), merged.map { it.id })
         assertEquals(PrayerCategory.ANGELUS, merged[0].category)
     }
+
+    private val l0 = LocalizedText("a", "b", "c")
+    private fun prayer(id: String) = VaticanPrayer(id, l0, "Lat", PrayerCategory.MARIAN, l0, l0, l0)
+    private val ov = """[{"id":"p1","title":null,"latinTitle":null,"leaderText":{"es":"E2","en":"N2","pt":"P2"},"responseText":null,"whenToPray":null,"textNote":{"es":"ne","en":"nn","pt":"np"}},
+        {"id":"p2","title":{"es":"T","en":"U","pt":"V"},"latinTitle":"L2","leaderText":$lt,"responseText":{"es":"r","en":"s","pt":"t"},"whenToPray":{"es":"w","en":"x","pt":"y"},"textNote":$lt},
+        {"id":"ghost","leaderText":$lt,"textNote":$lt}]"""
+
+    @Test fun textOverridesReplaceTextAndKeepNullFields() {
+        val c = catalog(mapOf("details-a.json" to "[${detail("p1")}]", "text-overrides.json" to ov))
+        val m = c.mergeInto(listOf(prayer("p1"), prayer("p2"), prayer("other")))
+        assertEquals(listOf("p1", "p2", "other"), m.map { it.id })
+        val p1 = m[0]
+        assertEquals(LocalizedText("E2", "N2", "P2"), p1.leaderText)
+        assertEquals(l0, p1.title); assertEquals("Lat", p1.latinTitle); assertEquals(l0, p1.responseText); assertEquals(l0, p1.whenToPray)
+        val p2 = m[1]
+        assertEquals(LocalizedText("T", "U", "V"), p2.title); assertEquals("L2", p2.latinTitle)
+        assertEquals(LocalizedText("r", "s", "t"), p2.responseText); assertEquals(LocalizedText("w", "x", "y"), p2.whenToPray)
+        assertEquals(prayer("other"), m[2])
+        assertEquals(LocalizedText("ne", "nn", "np"), c.detailsById["p1"]!!.textNote)
+        assertNull(c.detailsById["p2"]); assertNull(c.detailsById["ghost"])
+    }
+
+    @Test fun missingOrMalformedOverridesLeaveExistingUntouched() {
+        val existing = listOf(prayer("p1"))
+        assertEquals(existing, catalog(emptyMap()).mergeInto(existing))
+        assertEquals(existing, catalog(mapOf("text-overrides.json" to "[{oops")).mergeInto(existing))
+    }
 }
