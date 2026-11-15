@@ -1085,5 +1085,269 @@
       "en": "Original translation of the public-domain ancient text (Catholic Hermes, 2026); not an official liturgical translation.",
       "pt": "Tradução própria do original antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
     }
+  },
+  {
+    "id": "adsumus_full",
+    "title": {
+      "es": "Antes de una reunión · Adsumus",
+      "en": "Before a meeting · Adsumus",
+      "pt": "Antes de uma reunião · Adsumus"
+    },
+    "latinTitle": "Adsumus, Domine Sancte Spiritus",
+    "category": "HOLY_SPIRIT",
+    "leaderText": {
+      "es": "Aquí estamos, Señor Espíritu Santo, aquí estamos: retenidos, ciertamente, por la gravedad del pecado, pero reunidos especialmente en tu nombre. Ven a nosotros, permanece con nosotros y dígnate entrar en nuestros corazones. Enséñanos qué hacer, por dónde caminar y muéstranos qué debemos realizar, para que, con tu ayuda, podamos agradarte en todo.\nSé tú solo quien inspire y lleve a efecto nuestros juicios, tú que, con Dios Padre y su Hijo, posees el nombre glorioso. No permitas que perturbemos la justicia, tú que amas la suma equidad. Que la ignorancia no nos arrastre al error, que el favoritismo no nos desvíe, que no nos corrompan los regalos ni la acepción de personas.\nÚnenos eficazmente a ti por el solo don de tu gracia, para que seamos uno en ti y en nada nos apartemos de la verdad. Así, reunidos en tu nombre, mantengamos en todo la justicia con la moderación de la piedad, de modo que aquí nuestro parecer en nada discrepe de ti y en el futuro alcancemos premios eternos por el bien realizado. Amén.",
+      "en": "Here we are, Lord Holy Spirit, here we are: held back indeed by the gravity of sin, yet gathered especially in your name. Come to us, remain with us and deign to enter our hearts. Teach us what to do, where to walk, and show us what we ought to accomplish, so that with your help we may please you in everything.\nBe the sole inspirer and fulfiller of our judgments, you who with God the Father and his Son possess the glorious name. Do not allow us to disturb justice, you who love perfect equity. Let ignorance not draw us into error, favouritism not deflect us, and gifts or partiality towards persons not corrupt us.\nUnite us effectively to yourself by the gift of your grace alone, so that we may be one in you and never depart from the truth. Thus, gathered in your name, may we uphold justice in everything with the moderation of piety, so that here our judgment may in no way disagree with you, and in the future we may receive eternal rewards for the good accomplished. Amen.",
+      "pt": "Aqui estamos, Senhor Espírito Santo, aqui estamos: retidos, certamente, pela gravidade do pecado, mas reunidos especialmente em vosso nome. Vinde a nós, permanecei conosco e dignai-vos entrar em nossos corações. Ensinai-nos o que fazer, por onde caminhar e mostrai-nos o que devemos realizar, para que, com vosso auxílio, possamos agradar-vos em tudo.\nSede vós somente quem inspire e leve a efeito nossos julgamentos, vós que, com Deus Pai e seu Filho, possuís o nome glorioso. Não permitais que perturbemos a justiça, vós que amais a perfeita equidade. Que a ignorância não nos arraste ao erro, que o favoritismo não nos desvie, que não nos corrompam os presentes nem a acepção de pessoas.\nUni-nos eficazmente a vós pelo dom de vossa graça somente, para que sejamos um em vós e em nada nos afastemos da verdade. Assim, reunidos em vosso nome, conservemos em tudo a justiça com a moderação da piedade, para que aqui nosso parecer em nada discorde de vós e no futuro alcancemos prêmios eternos pelo bem realizado. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Antes de discernir o decidir juntos en una comunidad.",
+      "en": "Before shared discernment or decisions in a community.",
+      "pt": "Antes de discernir ou decidir juntos em uma comunidade."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "holy_spirit",
+      "work",
+      "faith"
+    ],
+    "history": {
+      "es": "Adsumus pertenece a la tradición de las asambleas eclesiales. El Enchiridion de 1999 reproduce este formulario completo para el comienzo de una sesión sobre asuntos comunes. No es la versión abreviada difundida para encuentros sinodales recientes. Su fuerza consiste en reconocer que quienes deliberan necesitan conversión y ayuda del Espíritu: la ignorancia, el favoritismo y los regalos pueden torcer el juicio. La unidad que pide no exige renunciar a la verdad ni a la justicia. La oración sitúa la reunión ante Dios y reclama que las decisiones se tomen con rectitud, no solo con eficiencia.",
+      "en": "Adsumus belongs to the tradition of ecclesial assemblies. The 1999 Enchiridion reproduces this complete formula for the beginning of a session about common affairs. It is not the shortened version circulated for recent synodal meetings. Its strength lies in recognising that those who deliberate need conversion and the Spirit’s help: ignorance, favouritism and gifts can distort judgment. The unity it requests does not require abandoning truth or justice. The prayer places a meeting before God and calls for decisions marked by integrity, rather than efficiency alone, while acknowledging the weakness of everyone involved.",
+      "pt": "Adsumus pertence à tradição das assembleias eclesiais. O Enchiridion de 1999 reproduz este formulário completo para o começo de uma sessão sobre assuntos comuns. Não é a versão abreviada difundida para encontros sinodais recentes. Sua força consiste em reconhecer que quem delibera precisa de conversão e do auxílio do Espírito: ignorância, favoritismo e presentes podem distorcer o julgamento. A unidade pedida não exige abandonar a verdade nem a justiça. A oração coloca a reunião diante de Deus e pede decisões tomadas com retidão, além da simples eficiência de seus participantes."
+    },
+    "instructions": {
+      "es": "Lee la oración antes de una reunión parroquial, familiar o de servicio. Deja un momento de silencio para reconocer posibles prejuicios y conflictos de interés. Escucha después a los demás y facilita que puedan hablar. La invocación del Espíritu no convierte automáticamente una opinión personal o una votación en voluntad de Dios.",
+      "en": "Read the prayer before a parish, family or service meeting. Leave a moment of silence to recognise possible prejudices and conflicts of interest. Then listen to others and make room for them to speak. Invoking the Spirit does not automatically turn a personal opinion or a vote into God’s will.",
+      "pt": "Leia a oração antes de uma reunião paroquial, familiar ou de serviço. Deixe um momento de silêncio para reconhecer possíveis preconceitos e conflitos de interesse. Depois escute os demais e dê espaço para que falem. Invocar o Espírito não transforma automaticamente uma opinião pessoal ou uma votação em vontade de Deus."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, cuarta edición, 1999, concesión 26, formulario íntegro Adsumus.",
+      "en": "Enchiridion Indulgentiarum, fourth edition, 1999, concession 26, complete Adsumus formula.",
+      "pt": "Enchiridion Indulgentiarum, quarta edição, 1999, concessão 26, formulário integral Adsumus."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "o_salutaris_hostia",
+    "title": {
+      "es": "Oh Víctima salvadora",
+      "en": "O saving Victim",
+      "pt": "Ó Vítima salvadora"
+    },
+    "latinTitle": "O salutaris Hostia",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "Oh Víctima salvadora, que abres la puerta del cielo: nos oprimen guerras enemigas; danos fuerza, trae auxilio.\nAl Señor uno y trino sea la gloria eterna; que él nos conceda en la patria una vida sin término. Amén.",
+      "en": "O saving Victim, you who open heaven’s gate: hostile wars press upon us; give strength, bring help.\nTo the Lord, one and triune, be everlasting glory; may he grant us life without end in our homeland. Amen.",
+      "pt": "Ó Vítima salvadora, que abris a porta do céu: guerras inimigas nos oprimem; dai-nos força, trazei auxílio.\nAo Senhor uno e trino seja a glória eterna; que ele nos conceda na pátria uma vida sem fim. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Durante la adoración eucarística o una visita al Santísimo.",
+      "en": "During Eucharistic adoration or a visit to the Blessed Sacrament.",
+      "pt": "Durante a adoração eucarística ou uma visita ao Santíssimo."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "eucharist",
+      "praise",
+      "trust"
+    ],
+    "history": {
+      "es": "O salutaris Hostia recoge las dos últimas estrofas de Verbum supernum, himno eucarístico de santo Tomás de Aquino. Forma parte del patrimonio ligado a la fiesta del Cuerpo de Cristo y se ha utilizado en la adoración al Santísimo. La palabra Hostia significa aquí víctima ofrecida: la súplica se dirige a Cristo, cuya entrega abre el camino hacia el Padre. La segunda estrofa termina en alabanza trinitaria y esperanza de la patria eterna. Esta traducción conserva ambas estrofas, sin convertir el lenguaje de combate espiritual en una petición contra personas concretas.",
+      "en": "O salutaris Hostia consists of the final two stanzas of Verbum supernum, a Eucharistic hymn by Saint Thomas Aquinas. It belongs to the heritage associated with the feast of Christ’s Body and has been used in adoration of the Blessed Sacrament. Hostia here means an offered victim: the petition addresses Christ, whose self-giving opens the way to the Father. The second stanza ends with Trinitarian praise and hope for the eternal homeland. This translation retains both stanzas without turning the language of spiritual struggle into a request against particular people or human groups.",
+      "pt": "O salutaris Hostia reúne as duas últimas estrofes de Verbum supernum, hino eucarístico de Santo Tomás de Aquino. Pertence ao patrimônio ligado à festa do Corpo de Cristo e tem sido usado na adoração ao Santíssimo. Hostia significa aqui vítima oferecida: a súplica dirige-se a Cristo, cuja entrega abre o caminho para o Pai. A segunda estrofe termina em louvor trinitário e esperança da pátria eterna. Esta tradução conserva ambas as estrofes, sem transformar a linguagem do combate espiritual em pedido contra pessoas concretas ou grupos humanos."
+    },
+    "instructions": {
+      "es": "Reza mirando al Señor presente en la Eucaristía o recordándolo si no puedes acudir a una iglesia. Alterna las dos estrofas con silencio. Pide fuerza para amar y cumplir tu deber, no para dominar a otros. En una celebración pública sigue el texto y la música previstos por sus responsables.",
+      "en": "Pray while looking towards the Lord present in the Eucharist, or remembering him if you cannot visit a church. Alternate the two stanzas with silence. Ask for strength to love and fulfil your duty, not to dominate others. In a public celebration follow the text and music chosen by those responsible.",
+      "pt": "Reze voltado para o Senhor presente na Eucaristia, ou recordando-o se não puder ir a uma igreja. Alterne as duas estrofes com silêncio. Peça força para amar e cumprir seu dever, sem dominar os outros. Em uma celebração pública siga o texto e a música previstos pelos responsáveis."
+    },
+    "source": {
+      "es": "Tomás de Aquino, Verbum supernum, dos estrofas finales; original latino O salutaris Hostia, reproducido en Preces Latinae.",
+      "en": "Thomas Aquinas, Verbum supernum, final two stanzas; Latin original O salutaris Hostia, reproduced in Preces Latinae.",
+      "pt": "Tomás de Aquino, Verbum supernum, duas estrofes finais; original latino O salutaris Hostia, reproduzido em Preces Latinae."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "panis_angelicus",
+    "title": {
+      "es": "Pan de los ángeles",
+      "en": "Bread of angels",
+      "pt": "Pão dos anjos"
+    },
+    "latinTitle": "Panis angelicus",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "El pan de los ángeles se hace pan de los seres humanos; el pan del cielo pone fin a las figuras. ¡Oh realidad admirable! Come al Señor el pobre, el siervo y el humilde.\nA ti, Divinidad trina y una, te suplicamos: visítanos como te veneramos; por tus sendas llévanos adonde nos dirigimos, a la luz en la que habitas.",
+      "en": "The bread of angels becomes the bread of human beings; the bread of heaven brings the figures to their end. O wondrous reality! The poor, the servant and the humble eat the Lord.\nYou, Godhead three and one, we implore: visit us as we worship you; along your paths lead us where we are heading, to the light in which you dwell.",
+      "pt": "O pão dos anjos torna-se pão dos seres humanos; o pão do céu leva as figuras ao seu termo. Ó realidade admirável! Come o Senhor o pobre, o servo e o humilde.\nA vós, Divindade trina e una, suplicamos: visitai-nos como vos veneramos; por vossas sendas conduzi-nos para onde caminhamos, à luz em que habitais."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Como acción de gracias eucarística y al adorar a Cristo.",
+      "en": "For Eucharistic thanksgiving and adoration of Christ.",
+      "pt": "Como ação de graças eucarística e ao adorar Cristo."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "eucharist",
+      "praise"
+    ],
+    "history": {
+      "es": "Panis angelicus es la estrofa sexta de Sacris solemniis, himno de santo Tomás de Aquino para la solemnidad eucarística. A menudo se conoce por composiciones musicales posteriores, pero su texto es medieval. Aquí se ofrece esa estrofa junto con la séptima y última, la súplica a la Trinidad. Las figuras son las anticipaciones de la Eucaristía, no personas despreciadas ni religiones tratadas con burla. El asombro se centra en que el Señor se entrega como alimento a los pequeños. La conclusión pide caminar hacia la luz de Dios, uniendo la comunión con la esperanza definitiva.",
+      "en": "Panis angelicus is the sixth stanza of Sacris solemniis, Saint Thomas Aquinas’s hymn for the Eucharistic solemnity. It is often known through later musical settings, but its text is medieval. This entry provides that stanza together with the seventh and final one, a petition to the Trinity. The figures are anticipations of the Eucharist, not people being despised or religions being mocked. The wonder centres on the Lord giving himself as food to the lowly. The conclusion asks to journey towards God’s light, joining Communion to the hope of final life with him.",
+      "pt": "Panis angelicus é a sexta estrofe de Sacris solemniis, hino de Santo Tomás de Aquino para a solenidade eucarística. Muitas pessoas o conhecem por composições musicais posteriores, mas seu texto é medieval. Esta entrada oferece essa estrofe com a sétima e última, a súplica à Trindade. As figuras são as antecipações da Eucaristia, sem desprezo por pessoas ou zombaria de religiões. O assombro concentra-se no Senhor que se entrega como alimento aos pequenos. A conclusão pede caminhar para a luz de Deus, unindo a comunhão à esperança da vida definitiva com ele."
+    },
+    "instructions": {
+      "es": "Lee ambas estrofas y deja que la alabanza continúe en silencio. Puedes utilizarlas después de comulgar o al visitar una iglesia. Si conoces una versión musical, distingue su arreglo de este texto antiguo. Recuerda que la gratitud por el alimento eucarístico debe hacerse visible en el trato a los pobres y a los humildes.",
+      "en": "Read both stanzas and let praise continue in silence. Use them after Communion or when visiting a church. If you know a musical setting, distinguish its arrangement from this ancient text. Remember that gratitude for Eucharistic food should become visible in the way you treat people who are poor or overlooked.",
+      "pt": "Leia ambas as estrofes e deixe o louvor continuar em silêncio. Use-as depois de comungar ou ao visitar uma igreja. Se conhecer uma versão musical, distinga seu arranjo deste texto antigo. Lembre-se de que a gratidão pelo alimento eucarístico deve aparecer no modo de tratar os pobres e os humildes."
+    },
+    "source": {
+      "es": "Tomás de Aquino, Sacris solemniis, estrofas 6–7; original latino reproducido en Preces Latinae, Sacris Solemniis.",
+      "en": "Thomas Aquinas, Sacris solemniis, stanzas 6–7; Latin original reproduced in Preces Latinae, Sacris Solemniis.",
+      "pt": "Tomás de Aquino, Sacris solemniis, estrofes 6–7; original latino reproduzido em Preces Latinae, Sacris Solemniis."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "transfige_dulcissime",
+    "title": {
+      "es": "Hiere mi alma con tu amor",
+      "en": "Pierce my soul with your love",
+      "pt": "Ferí minha alma com vosso amor"
+    },
+    "latinTitle": "Transfige, dulcissime Domine Iesu",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "Hiere, dulcísimo Señor Jesús, lo más profundo de mi alma con la herida suavísima y saludable de tu amor, con la caridad verdadera, serena, apostólica y santísima, para que mi alma desfallezca y se derrita siempre por tu solo amor y deseo, te anhele y desfallezca por tus atrios, y desee partir y estar contigo.\nHaz que mi alma tenga hambre de ti, pan de los ángeles, alimento de las almas santas; pan nuestro cotidiano y sobresustancial, que contiene toda dulzura y sabor, y todo deleite de suavidad. Que mi corazón siempre tenga hambre y se alimente de ti, a quien los ángeles desean contemplar, y que lo profundo de mi alma se colme de la dulzura de tu sabor; que tenga siempre sed de ti, fuente de vida, fuente de sabiduría y ciencia, fuente de luz eterna, torrente de delicias, abundancia de la casa de Dios.\nQue siempre te desee, te busque, te encuentre, tienda a ti, llegue a ti, te medite, hable de ti y haga todo para alabanza y gloria de tu nombre, con humildad y discreción, con amor y deleite, con facilidad y afecto, con perseverancia hasta el fin; para que tú solo seas siempre mi esperanza, toda mi confianza, mis riquezas, mi deleite, mi alegría, mi gozo, mi descanso y tranquilidad, mi paz, mi suavidad, mi perfume, mi dulzura, mi alimento, mi sustento, mi refugio, mi auxilio, mi sabiduría, mi porción, mi posesión, mi tesoro, en quien mi mente y mi corazón estén siempre arraigados, fijos, firmes e inamovibles. Amén.",
+      "en": "Pierce, sweetest Lord Jesus, the depths of my soul with the most gentle and healing wound of your love, with true, serene, apostolic and most holy charity, so that my soul may always grow faint and melt with love and desire for you alone, yearn for you and faint for your courts, and desire to depart and be with you.\nMake my soul hunger for you, bread of angels, food of holy souls; our daily and supersubstantial bread, containing every sweetness and flavour and every gentle delight. May my heart always hunger for and feed on you, whom angels desire to behold, and may the depths of my soul be filled with the sweetness of your taste; may it always thirst for you, fountain of life, fountain of wisdom and knowledge, fountain of eternal light, torrent of delights, abundance of God’s house.\nMay it always desire you, seek you, find you, reach towards you, attain you, meditate on you, speak of you and do everything for the praise and glory of your name, with humility and discretion, with love and delight, with readiness and affection, with perseverance until the end; so that you alone may always be my hope, all my confidence, my riches, my delight, my gladness, my joy, my rest and tranquillity, my peace, my gentleness, my fragrance, my sweetness, my food, my refreshment, my refuge, my help, my wisdom, my portion, my possession, my treasure, in whom my mind and heart may always be rooted, fixed, firm and unshaken. Amen.",
+      "pt": "Feri, dulcíssimo Senhor Jesus, o mais profundo de minha alma com a ferida suavíssima e salutar de vosso amor, com a caridade verdadeira, serena, apostólica e santíssima, para que minha alma desfaleça e se derreta sempre por vosso amor e desejo somente, vos anseie e desfaleça por vossos átrios, e deseje partir e estar convosco.\nFazei que minha alma tenha fome de vós, pão dos anjos, alimento das almas santas; pão nosso cotidiano e supersubstancial, que contém toda doçura e sabor e todo deleite de suavidade. Que meu coração sempre tenha fome e se alimente de vós, a quem os anjos desejam contemplar, e que o profundo de minha alma se encha da doçura de vosso sabor; que tenha sempre sede de vós, fonte de vida, fonte de sabedoria e ciência, fonte de luz eterna, torrente de delícias, abundância da casa de Deus.\nQue sempre vos deseje, vos procure, vos encontre, tenda a vós, chegue a vós, vos medite, fale de vós e faça tudo para louvor e glória de vosso nome, com humildade e discrição, com amor e deleite, com facilidade e afeto, com perseverança até o fim; para que vós somente sejais sempre minha esperança, toda minha confiança, minhas riquezas, meu deleite, minha alegria, meu gozo, meu descanso e tranquilidade, minha paz, minha suavidade, meu perfume, minha doçura, meu alimento, meu sustento, meu refúgio, meu auxílio, minha sabedoria, minha porção, minha posse, meu tesouro, em quem minha mente e meu coração estejam sempre enraizados, fixos, firmes e inabaláveis. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para la acción de gracias después de la comunión.",
+      "en": "For thanksgiving after Communion.",
+      "pt": "Para a ação de graças depois da comunhão."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "eucharist",
+      "trust",
+      "praise"
+    ],
+    "history": {
+      "es": "Esta oración se difunde con el nombre de san Buenaventura, pero el formulario completo no debe presentarse como una transcripción segura escrita por él. Su transmisión pertenece a la espiritualidad franciscana y recibió desarrollos posteriores. La tabla de preparación y acción de gracias de The Raccolta de 1910 ya menciona Transfige dulcissime; el texto latino permite comprobar las peticiones. Sus imágenes de hambre, sed y herida hablan del deseo de unión con Cristo. No ordenan producir lesiones ni buscar la muerte. La larga enumeración final centra las esperanzas del orante en el Señor recibido en la Eucaristía.",
+      "en": "This prayer circulates under Saint Bonaventure’s name, but the complete formula should not be presented as a securely established transcription written by him. Its transmission belongs to Franciscan spirituality and received later developments. The preparation and thanksgiving table in the 1910 Raccolta already lists Transfige dulcissime; the Latin text allows the petitions to be checked. Its images of hunger, thirst and a wound describe desire for union with Christ. They do not instruct anyone to inflict injuries or seek death. The long final enumeration centres the worshipper’s hopes on the Lord received in the Eucharist.",
+      "pt": "Esta oração circula com o nome de São Boaventura, mas o formulário completo não deve ser apresentado como transcrição segura escrita por ele. Sua transmissão pertence à espiritualidade franciscana e recebeu desenvolvimentos posteriores. A tabela de preparação e ação de graças de The Raccolta de 1910 já menciona Transfige dulcissime; o texto latino permite conferir os pedidos. As imagens de fome, sede e ferida falam do desejo de união com Cristo. Não mandam produzir lesões nem procurar a morte. A longa enumeração final concentra as esperanças de quem reza no Senhor recebido na Eucaristia."
+    },
+    "instructions": {
+      "es": "Reza despacio, dejando silencios tras cada párrafo. Si su extensión distrae, lee un párrafo con atención y continúa otro día. Entiende la herida como imagen del amor y el deseo de estar con Cristo como esperanza cristiana, no como rechazo de la vida. No es necesario experimentar una emoción intensa para dar gracias.",
+      "en": "Pray slowly, leaving silence after each paragraph. If its length distracts you, read one paragraph attentively and continue another day. Understand the wound as an image of love and the desire to be with Christ as Christian hope, not rejection of life. Intense emotion is not necessary for genuine thanksgiving.",
+      "pt": "Reze devagar, deixando silêncio após cada parágrafo. Se a extensão distrair, leia um parágrafo com atenção e continue outro dia. Entenda a ferida como imagem do amor e o desejo de estar com Cristo como esperança cristã, sem rejeitar a vida. Não é necessário sentir uma emoção intensa para agradecer."
+    },
+    "source": {
+      "es": "Transfige, dulcissime Domine Iesu, tradición franciscana; The Raccolta, 1910, tabla de oraciones antes/después de la Misa, p. 403; original latino y nota de atribución en Preces Latinae, Oratio Sancti Bonaventurae.",
+      "en": "Transfige, dulcissime Domine Iesu, Franciscan tradition; The Raccolta, 1910, table of prayers before/after Mass, p. 403; Latin original and attribution note in Preces Latinae, Oratio Sancti Bonaventurae.",
+      "pt": "Transfige, dulcissime Domine Iesu, tradição franciscana; The Raccolta, 1910, tabela de orações antes/depois da Missa, p. 403; original latino e nota de atribuição em Preces Latinae, Oratio Sancti Bonaventurae."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "concede_mihi_short",
+    "title": {
+      "es": "Para estudiar con recta intención",
+      "en": "For study with a right intention",
+      "pt": "Para estudar com reta intenção"
+    },
+    "latinTitle": "Concede mihi, misericors Deus",
+    "category": "BASIC",
+    "leaderText": {
+      "es": "Concédeme, Dios misericordioso, desear ardientemente, investigar prudentemente, reconocer verdaderamente y cumplir perfectamente las cosas que te agradan, para alabanza y gloria de tu nombre. Amén.",
+      "en": "Grant me, merciful God, to desire ardently, investigate prudently, acknowledge truly and fulfil perfectly the things that please you, for the praise and glory of your name. Amen.",
+      "pt": "Concedei-me, Deus misericordioso, desejar ardentemente, investigar prudentemente, reconhecer verdadeiramente e cumprir perfeitamente as coisas que vos agradam, para louvor e glória de vosso nome. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Antes del estudio, una investigación o una clase.",
+      "en": "Before study, research or a class.",
+      "pt": "Antes do estudo, de uma pesquisa ou de uma aula."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "work",
+      "faith",
+      "daily_routine"
+    ],
+    "history": {
+      "es": "The Raccolta de 1910 publica este breve formulario como oración de santo Tomás de Aquino para antes del estudio o de la clase. Es distinto de Creator ineffabilis, que aparece a continuación en ese devocionario, y no se presenta aquí como el texto completo de la oración más larga que comienza con palabras semejantes. Sus cuatro peticiones unen deseo, investigación, reconocimiento de la verdad y cumplimiento del bien. Estudiar no queda reducido a obtener una nota: también implica honradez intelectual y disposición a corregirse. No se trasladan las antiguas indulgencias expresadas en días que acompañaban la edición.",
+      "en": "The 1910 Raccolta prints this short formula as Saint Thomas Aquinas’s prayer before study or class. It differs from Creator ineffabilis, which follows it in that prayer book, and is not presented here as the complete longer prayer beginning with similar words. Its four petitions connect desire, investigation, recognition of truth and fulfilment of the good. Study is not reduced to obtaining a grade: it also involves intellectual honesty and willingness to accept correction. The obsolete indulgences expressed in days that accompanied the old edition are not transferred to this entry or described as current grants.",
+      "pt": "The Raccolta de 1910 publica este breve formulário como oração de Santo Tomás de Aquino antes do estudo ou da aula. É diferente de Creator ineffabilis, que vem a seguir naquele devocionário, e não é apresentado aqui como texto integral da oração mais longa que começa com palavras semelhantes. Seus quatro pedidos unem desejo, investigação, reconhecimento da verdade e realização do bem. Estudar não se reduz a obter uma nota: também envolve honestidade intelectual e disposição para aceitar correções. Não se transferem as antigas indulgências expressas em dias que acompanhavam aquela edição."
+    },
+    "instructions": {
+      "es": "Antes de abrir el libro o iniciar una investigación, reza una vez y decide cómo trabajar con honestidad. Comprueba las fuentes y distingue lo que sabes de lo que supones. Si no entiendes algo, pregunta. La oración pide ayuda para aprender y obrar bien; no sustituye la lectura, la práctica ni el descanso necesario.",
+      "en": "Before opening a book or beginning research, pray once and decide how to work honestly. Check sources and distinguish what you know from what you assume. Ask when something is unclear. The prayer requests help to learn and act well; it does not replace reading, practice or the rest you need.",
+      "pt": "Antes de abrir o livro ou começar uma pesquisa, reze uma vez e decida como trabalhar honestamente. Confira as fontes e distinga o que sabe do que supõe. Pergunte quando algo não estiver claro. A oração pede auxílio para aprender e agir bem; não substitui a leitura, a prática nem o descanso necessário."
+    },
+    "source": {
+      "es": "The Raccolta, Burns & Oates / Benziger, 1910, n. 51, Prayer of St Thomas Aquinas, To be said before study or class: formulario latino breve.",
+      "en": "The Raccolta, Burns & Oates / Benziger, 1910, no. 51, Prayer of St Thomas Aquinas, To be said before study or class: short Latin formula.",
+      "pt": "The Raccolta, Burns & Oates / Benziger, 1910, n. 51, Prayer of St Thomas Aquinas, To be said before study or class: formulário latino breve."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
   }
 ]
