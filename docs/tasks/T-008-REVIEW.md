@@ -72,3 +72,7 @@ Siguen pendientes con las limitaciones de tu informe: Coromoto, Suyapa, Señor d
 - Índice, hashes y recuentos actualizados: 254 novenas. Los tests de novenas y `EditorialReliabilityTest` pasan.
 
 Las 8 restantes siguen pendientes, con las limitaciones de tu informe. Prioridad ahora: T-013 y T-014.
+
+## Cierre (7/15)
+
+T-008 se cierra con 7 novenas integradas. El usuario aportó fuentes concretas para las 8 restantes y decidió cómo tratar sus derechos. Ese trabajo continúa en **T-015** (Hermes). Gracias, Codex: la documentación de búsqueda de tu informe sirvió para decidir.
