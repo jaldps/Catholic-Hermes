@@ -53,3 +53,17 @@ No se compiló Android en este lote; el protocolo deja esa compilación al coord
 - Completar la selección hasta 25–35 oraciones auténticas y no duplicadas. La lista final de candidatas descartadas se documentará al terminar, con sus motivos.
 - Revisar las atribuciones y permisos de las candidatas restantes antes de incorporarlas. No se publicarán como auténticas composiciones o versiones sin procedencia identificada.
 - No se han atribuido promesas privadas ni números de indulgencia a partir de los devocionarios antiguos. `promise` es `null` en estas diez fichas; las concesiones verificadas de las letanías se explican en `indulgenceNote` y `approval`.
+
+## Segundo lote · 20 entradas acumuladas
+
+Añadidas: `canticle_of_creatures`, `ephrem_lenten_prayer`, `oremus_pro_pontifice`, `benedict_medal_prayer`, `angele_dei_latin`, `salve_regina_latin`, `anima_christi_latin`, `benedic_domine_latin`, `actiones_nostras`, `visita_quaesumus`. Las cuatro ediciones latinas son las excepciones expresamente solicitadas en T-003: el catálogo previo tenía versiones vernáculas, no estos cuerpos latinos. No se añadió otra traducción de Alma de Cristo ni se atribuyó su autoría a Ignacio.
+
+Validación parcial: **20 entries · 0 errors · 4 warnings**. Las cuatro advertencias corresponden únicamente a `leaderText` idéntico en las tres interfaces de las cuatro ediciones latinas; es deliberado, queda indicado en `textNote` y todos sus metadatos están traducidos.
+
+Fuentes adicionales efectivamente leídas:
+
+- [Bibliotheca Augustana, original umbro del Cantico di Frate Sole](https://www.tha.de/~harsch/italica/Cronologia/secolo13/Francesco/fra_cant.html), poema completo y referencia al manuscrito de Asís. Traducciones propias; no se copió una traducción moderna.
+- [Saint Ephrem the Syrian, The Prayer of St Ephrem](https://saintephrem.org/original-translations/the-prayer-of-st-ephrem/), original griego, variantes y referencia CPG 4078.9. Se tradujo el griego sin la variante opcional entre corchetes; no se copió la traducción inglesa moderna. La atribución se conserva como tal.
+- [Confederación Benedictina, The Medal of Saint Benedict](https://osb.org/the-medal-of-saint-benedict/), inscripciones latinas, origen de las letras y diferencia entre la invocación y la bendición del objeto. Se tradujeron las inscripciones antiguas, no el rito de bendición moderno.
+- [Preces Latinae, Anima Christi](https://preces-latinae.org/thesaurus/PostMissam/AnimaChristi.html), original latino y referencias al Misal.
+- Enchiridion oficial ya enlazado: se leyeron las concesiones 17, 18, 25 y 26 con los formularios latinos de Salve, Angele Dei, Oremus, Benedic, Actiones y Visita. Solo se anotan concesiones leídas, sin promesa privada.
