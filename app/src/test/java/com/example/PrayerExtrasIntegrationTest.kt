@@ -18,4 +18,14 @@ class PrayerExtrasIntegrationTest {
         val details = PrayerDetailsCatalog.default.detailsById
         merged.forEach { assertTrue("details for ${it.id}", details.containsKey(it.id)) }
     }
+
+    @Test fun authenticTextOverridesApply() {
+        val merged = PrayerDetailsCatalog.default.mergeInto(PrayerAndNovenaData.vaticanOfficialPrayers).associateBy { it.id }
+        val veni = merged.getValue("come_holy_spirit")
+        assertTrue("full sequence", veni.leaderText.es.contains("Oh luz beatísima"))
+        assertEquals("added response removed", null, veni.responseText)
+        assertEquals(null, merged.getValue("stay_with_me_lord").responseText)
+        val michael = merged.getValue("chaplet_of_st_michael").leaderText.es
+        assertTrue("no exorcism formula", !michael.contains("Huid") && !michael.contains("Pelea hoy"))
+    }
 }

@@ -121,7 +121,12 @@ class PrayerDetailsCatalog(private val open: (String) -> InputStream) {
                 title = o.title?.lt() ?: p.title,
                 latinTitle = o.latinTitle ?: p.latinTitle,
                 leaderText = o.leaderText.lt(),
-                responseText = o.responseText?.lt() ?: p.responseText,
+                // An override responseText with every language blank removes the original response.
+                responseText = when {
+                    o.responseText == null -> p.responseText
+                    o.responseText.lt().let { it.es.isBlank() && it.en.isBlank() && it.pt.isBlank() } -> null
+                    else -> o.responseText.lt()
+                },
                 whenToPray = o.whenToPray?.lt() ?: p.whenToPray
             )
         }
