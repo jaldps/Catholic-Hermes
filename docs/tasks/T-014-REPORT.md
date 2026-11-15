@@ -1,6 +1,6 @@
 # T-014 · Informe de Codex
 
-Entrega: **50/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
+Entrega: **60/67 fichas**, en el orden exacto de `T-014.keys`. Rama `ext/T-014`, base inicial `origin/CatholicGPT` (`15bbd4a`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -364,10 +364,83 @@ La biografía de 2003 se completa con la canonización de 2016 y la memoria facu
 
 Se distinguen fecha litúrgica e histórica, tradición apócrifa y Evangelios canónicos. No se usa como historia comprobada la leyenda de una revelación sobre el origen de la fiesta. No se confunde la natividad con la concepción de María ni se inventan escenas de infancia.
 
+### 51. `peter_claver_priest` · 09/09
+
+- [Compañía de Jesús: Saint Peter Claver](https://www.jesuits.global/saint-blessed/saint-peter-claver/)
+- [Catholic Encyclopedia: St. Peter Claver](https://www.newadvent.org/cathen/11763a.htm)
+
+Las fuentes difieren en nacimiento (1580/1581), día de muerte (8/9 de septiembre) y duración del apostolado; se omiten esos precisos. No se usa una cifra de bautismos ni se reproduce el lenguaje racial del artículo antiguo. No se afirma que abolió la esclavitud ni se inventan palabras de su voto.
+
+### 52. `most_holy_name_of_mary` · 12/09
+
+- [Catholic Encyclopedia: Feast of the Holy Name of Mary](https://www.newadvent.org/cathen/10673b.htm)
+- [Benedicto XVI, homilía en Ratisbona, 12-IX-2006](https://www.vatican.va/content/benedict-xvi/en/homilies/2006/documents/hf_ben-xvi_hom_20060912_regensburg.html)
+- [Catecismo de la Iglesia Católica, 971](https://www.vatican.va/archive/catechism_sp/p123a9p6_sp.html)
+
+No se da como segura ninguna etimología del nombre. Se informa el contexto de 1683 sin convertir una victoria militar en promesa devocional ni norma contra otras religiones. La fecha actual procede del calendario del encargo, corroborado por la homilía de 2006.
+
+### 53. `john_chrysostom_bishop` · 13/09
+
+- [Benedicto XVI, audiencia del 19-IX-2007: san Juan Crisóstomo](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070919.html)
+- [Catholic Encyclopedia: St. John Chrysostom](https://www.newadvent.org/cathen/08452b.htm)
+
+Se evita fijar nacimiento o nombramiento episcopal con precisión no concordante entre cronologías. El sobrenombre se explica, sin atribuir citas apócrifas. Sus homilías se contextualizan históricamente; la condición de doctor no convierte cada polémica antigua en pauta actual.
+
+### 54. `our_lady_of_sorrows` · 15/09
+
+- [Catholic Encyclopedia: Feasts of the Seven Sorrows of the Blessed Virgin Mary](https://www.newadvent.org/cathen/14151b.htm)
+- [Catecismo de la Iglesia Católica, 964](https://www.vatican.va/archive/catechism_sp/p123a9p6_sp.html)
+
+El artículo antiguo conserva fechas y categorías litúrgicas anteriores: se toma 15-IX del calendario del encargo. No se presenta cada escena de la lista devocional como relato expreso del Evangelio ni se atribuye con certeza el Stabat Mater a un autor. Explicación propia, sin componer oración.
+
+### 55. `cornelius_i_pope_and_cyprian_of_carthage_bishop_martyrs` · 16/09
+
+- [Catholic Encyclopedia: Pope Cornelius](https://www.newadvent.org/cathen/04375c.htm)
+- [Catholic Encyclopedia: St. Cyprian of Carthage](https://www.newadvent.org/cathen/04583b.htm)
+- [Benedicto XVI, audiencia del 6-VI-2007: san Cipriano](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070606.html)
+
+No se afirma que murieron juntos ni el mismo día. Se omite el modo preciso de muerte de Cornelio: las fuentes distinguen muerte en destierro de relatos tardíos de decapitación. Cipriano no fue papa; se mantiene su sede de Cartago. No se trasladan sin contexto sus fórmulas sobre salvación y pertenencia a la Iglesia.
+
+### 56. `hildegard_of_bingen_abbess` · 17/09
+
+- [Benedicto XVI, carta apostólica de proclamación de Hildegarda como doctora, 7-X-2012](https://www.vatican.va/content/benedict-xvi/en/apost_letters/documents/hf_ben-xvi_apl_20121007_ildegarda-bingen.html)
+- [Benedicto XVI, homilía de proclamación de los nuevos doctores, 7-X-2012](https://www.vatican.va/content/benedict-xvi/en/homilies/2012/documents/hf_ben-xvi_hom_20121007_apertura-sinodo.html)
+
+La carta documenta biografía, obras y enseñanza reconocida. No se presentan visiones como revelación pública ni sus tratados naturales como medicina clínica vigente. No se confunde la extensión del culto con la fecha de proclamación como doctora. Se evitan atribuciones populares de recetas o citas.
+
+### 57. `robert_bellarmine_bishop` · 17/09
+
+- [Benedicto XVI, audiencia del 23-II-2011: san Roberto Belarmino](https://www.vatican.va/content/benedict-xvi/en/audiences/2011/documents/hf_ben-xvi_aud_20110223.html)
+- [Catholic Encyclopedia: St. Robert Bellarmine](https://www.newadvent.org/cathen/02411d.htm)
+
+La catequesis de 2011 actualiza las condiciones de beato/santo/doctor respecto del artículo antiguo. Se menciona su intervención inicial en el caso Galileo sin reproducir la valoración apologética de la enciclopedia como juicio histórico definitivo. No se le atribuye participación en el proceso de 1633, posterior a su muerte.
+
+### 58. `januarius_i_of_benevento_bishop` · 19/09
+
+- [Catholic Encyclopedia: St. Januarius](https://www.newadvent.org/cathen/08295a.htm)
+- [Vatican News: San Gennaro, vescovo di Benevento e martire](https://www.vaticannews.va/it/santo-del-giorno/09/19/san-gennaro--vescovo-di-benevento-e-martire.html)
+
+Patronazgo de Nápoles explícito en Vatican News. Se omiten 305 como fecha cierta, lugar de nacimiento, diálogos, horno y animales de los relatos tardíos. No se incorpora la supuesta canonización de 1586 que da Vatican News, incompatible con la antigüedad del culto como si fuera su origen. Tampoco se atribuye un decreto de reconocimiento sobrenatural de la licuefacción: las fuentes consultadas no permiten documentarlo; la ficha se concentra en el mártir y su culto.
+
+### 59. `andrew_kim_tae_gon_priest_paul_chong_ha_sang_and_companions_martyrs` · 20/09
+
+- [Juan Pablo II, homilía de canonización de los 103 mártires coreanos, 6-V-1984](https://www.vatican.va/content/john-paul-ii/en/homilies/1984/documents/hf_jp-ii_hom_19840506_martiri-coreani.html)
+- [Diócesis de Montreal: Saint Andrew Kim Taegon, Saint Paul Chong Hasang and companions](https://diocesemontreal.org/en/node/1954)
+- [Juan Pablo II, discurso al episcopado coreano, 24-III-2001](https://www.vatican.va/content/john-paul-ii/en/speeches/2001/march/documents/hf_jp-ii_spe_20010324_korea-ad-limina.html)
+
+Se distinguen los 103 canonizados en 1984 de otros grupos beatificados después, así como clero y laicos. La diócesis identifica a Andrés como primer sacerdote y a Pablo como catequista laico. Su reseña adelanta erróneamente al siglo XVII el florecimiento de comunidades; no se adopta ese dato, contrastado con la fundación de 1784 documentada en la homilía papal. No se asigna la misma fecha de martirio a los 103 ni se confunden con los mártires de Vietnam o China.
+
+### 60. `matthew_apostle` · 21/09
+
+- [Benedicto XVI, audiencia del 30-VIII-2006: Mateo, el publicano](https://www.vatican.va/content/benedict-xvi/en/audiences/2006/documents/hf_ben-xvi_aud_20060830.html)
+- [Catholic Encyclopedia: St. Matthew](https://www.newadvent.org/cathen/10056b.htm)
+
+La autoría del Evangelio se formula como atribución eclesial tradicional, sin fingir resolver su proceso de redacción con una fecha o lengua original segura. No se completa un itinerario misionero o modo de muerte con relatos tardíos. Las escenas evangélicas se parafrasean, sin crear citas del apóstol.
+
 ## Validación
 
 ```text
-50 entries · 0 errors · 1 warnings
+60 entries · 0 errors · 1 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
