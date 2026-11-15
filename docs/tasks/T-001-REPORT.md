@@ -94,3 +94,4 @@ Fuentes generales consultadas:
 1. ¿La concesión que tiene en mente para el Credo es la del «testimonio público de fe» (p. 340 de la ed. latina) o hay otra concreta?
 2. ¿Quiere que el `approval` de las colectas de Navidad y Pascua indique también la concesión general de oír Misa o solo la identificación de la colecta?
 3. El push a `origin` sigue denegado (credencial `joselanzd-hash`, `push: false`); entrego en `fork/ext/T-001`, como indicó.
+4. **`stay_with_me_lord` es un extracto**: el texto de la app recoge solo el inicio de la oración atribuida a san Pío de Pietrelcina; la oración completa es mucho más larga (la rezaba después de la comunión). Completarla exigiría modificar `leaderText`/`responseText` en `PrayerAndNovenaData.kt` (o crear una entrada nueva en `extra.json`), lo que queda fuera de T-001. Quedo a la espera de si lo resuelve otra tarea o me lo encarga.
