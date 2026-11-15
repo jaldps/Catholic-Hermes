@@ -1,10 +1,10 @@
 # T-005 · Informe de Codex
 
-**EN CURSO: entrega parcial ordenada, preguntas 1–10 de 51.** No se declara completo el encargo. El siguiente lote empieza en la pregunta 11. Solo se crean `app/src/main/assets/questions/deeper-a.json` y este informe.
+**EN CURSO: entrega parcial ordenada, preguntas 1–20 de 51.** No se declara completo el encargo. El siguiente lote empieza en la pregunta 21. Solo se crean `app/src/main/assets/questions/deeper-a.json` y este informe.
 
 ## Contenido entregado
 
-Diez bloques completos con `explanation`, `scripture`, `tradition`, `magisterium`, `objection`, `analogy`, `synthesis`, en ES/EN/PT-BR; fuentes en 3–5 entradas por pregunta. Redacción y paráfrasis propias, sin citas extensas de traducciones modernas. No se tocaron la pregunta, respuesta, fundamento ni aclaración existentes.
+Veinte bloques completos con `explanation`, `scripture`, `tradition`, `magisterium`, `objection`, `analogy`, `synthesis`, en ES/EN/PT-BR; fuentes en 3–5 entradas por pregunta. Redacción y paráfrasis propias, sin citas extensas de traducciones modernas. No se tocaron la pregunta, respuesta, fundamento ni aclaración existentes.
 
 Se distinguen sufrimiento físico/moral, conocimiento/coacción, condenación/culpabilidad subjetiva, fe/emoción, razonamiento filosófico/testimonio histórico, gratuidad/necesidad de Dios, petición/garantía, providencia/aprobación del mal, unidad bíblica/lectura literalista y gracia/autosuficiencia moral. Las analogías declaran sus límites; las objeciones no se presentan como si fueran absurdas.
 
@@ -12,8 +12,8 @@ Se distinguen sufrimiento físico/moral, conocimiento/coacción, condenación/cu
 
 ```text
 $ python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-a.json 1 51 --partial
-WARN  partial delivery: 10/51 questions
-10 entries · 0 errors · 1 warnings
+WARN  partial delivery: 20/51 questions
+20 entries · 0 errors · 1 warnings
 ```
 
 La única advertencia es la entrega parcial. Totales de palabras por idioma según el mismo criterio del validador:
@@ -30,6 +30,16 @@ La única advertencia es la entrega parcial. Totales de palabras por idioma seg�
 | 8 | 457 | 433 | 432 |
 | 9 | 478 | 437 | 446 |
 | 10 | 469 | 443 | 439 |
+| 11 | 469 | 439 | 438 |
+| 12 | 474 | 441 | 434 |
+| 13 | 462 | 437 | 435 |
+| 14 | 464 | 427 | 430 |
+| 15 | 470 | 435 | 429 |
+| 16 | 470 | 438 | 430 |
+| 17 | 438 | 426 | 418 |
+| 18 | 437 | 426 | 422 |
+| 19 | 424 | 415 | 410 |
+| 20 | 433 | 428 | 419 |
 
 No se modificó el validador. Incidencia: su patrón `\bTODO\b`, aplicado sin distinguir mayúsculas, también rechaza la palabra española/portuguesa «todo» dentro de una frase terminada. Se reformularon tres apariciones para poder validar; convendría que el coordinador restringiera el patrón a un marcador real. Esto no bloquea la entrega y no se corrigió fuera del alcance autorizado.
 
@@ -82,8 +92,36 @@ Se descargaron las secciones del [índice oficial en inglés](https://www.vatica
 
 ## Dudas y límites
 
-- Las preguntas 11–51 **todavía no están entregadas**. Se leerán sus respuestas actuales y se verificarán las fuentes de cada grupo antes de continuar.
+- Las preguntas 21–51 **todavía no están entregadas**. Se leerán sus respuestas actuales y se verificarán las fuentes de cada grupo antes de continuar.
 - Ninguna teoría filosófica particular sobre presciencia/libertad se presenta como la única explicación dogmática.
 - No se pretende resolver definitivamente el sufrimiento inocente, el ocultamiento divino o cada mandato bélico antiguo. Reconocer el límite no equivale a atribuir contradicciones al Magisterio ni a llamar buenas las atrocidades.
 - No se proporcionan diagnósticos ni garantías de curación. Las indicaciones de protección y ayuda no están condicionadas a aceptar una explicación religiosa.
 - No hay preguntas que bloqueen la revisión de este lote. Las observaciones de contenido existente corresponden al coordinador, dado que T-005 prohíbe modificar esos campos.
+
+## Ampliación 11–20: comprobaciones y fuentes añadidas
+
+Se desarrolla la relación Escritura/Tradición/Magisterio, la formación del canon, la diversidad antigua de listas, la inspiración e interpretación, creación/evolución, pasajes sobre esclavitud, historicidad evangélica, apócrifos y desarrollo doctrinal. No se emplean citas literales de los Padres: son paráfrasis propias con obra y lugar.
+
+Fuentes efectivamente leídas:
+
+- Catecismo oficial: [66–67](https://www.vatican.va/archive/ENG0015/__PH.HTM), [80–83](https://www.vatican.va/archive/ENG0015/__PL.HTM), [85–86 y 94](https://www.vatican.va/archive/ENG0015/__PM.HTM), [105–107](https://www.vatican.va/archive/ENG0015/__PP.HTM), [109–119](https://www.vatican.va/archive/ENG0015/__PQ.HTM), [120 y 126](https://www.vatican.va/archive/ENG0015/__PR.HTM), [283](https://www.vatican.va/archive/ENG0015/__P19.HTM), [366](https://www.vatican.va/archive/ENG0015/__P1B.HTM), [390 y 404](https://www.vatican.va/archive/ENG0015/__P1C.HTM), [2414](https://www.vatican.va/archive/ENG0015/__P8B.HTM).
+- [Dei Verbum 8–12 y 19](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html), texto de los apartados, no solo índices.
+- [Pío XII, Humani generis 36–38](https://www.vatican.va/content/pius-xii/en/encyclicals/documents/hf_p-xii_enc_12081950_humani-generis.html): se recoge expresamente la restricción sobre poligenismo de §37; no se presenta como una autorización irrestricta ni se afirma su derogación. Se distingue investigación sobre el cuerpo y creación inmediata del alma.
+- [Ireneo, Contra las herejías III,3,1–3](https://www.newadvent.org/fathers/0103303.htm), transmisión pública de la fe; [III,1,1](https://www.newadvent.org/fathers/0103301.htm), recepción de los Evangelios y vinculaciones apostólicas, sin convertir su testimonio en demostración automática de todas las fechas o autorías debatidas.
+- [Atanasio, Carta festal 39, apartados 4–7](https://www.newadvent.org/fathers/2806039.htm): lista neotestamentaria de 27 libros, pero lista veterotestamentaria distinta del canon católico actual. Se indica esa diferencia expresamente.
+- [Agustín, La doctrina cristiana II,8](https://logoslibrary.org/augustine/doctrine/208.html): se verificó la presencia de Tobías, Judit, Macabeos, Sabiduría y Eclesiástico. No se adopta su conjetura sobre autoría común de Sabiduría/Eclesiástico ni se equipara mecánicamente su recuento de libros al moderno.
+- [Agustín, Carta 82 a Jerónimo, 1,3](https://www.newadvent.org/fathers/1102082.htm): dificultades de transmisión, traducción o comprensión; no se inventan armonizaciones de relatos.
+- [Tomás de Aquino, Suma Teológica I, q. 90, a. 2](https://www.newadvent.org/summa/1090.htm), alma y creación, sin atribuirle genética moderna; [I, q. 1, a. 10, ad 3](https://www.newadvent.org/summa/1001.htm), metáfora y sentido literal.
+- [Gregorio de Nisa, Homilía IV sobre Eclesiastés, comentario a Ecl 2,7](https://earlychurchtexts.com/public/gregoryofnyss_ecclesiastes_slavery.htm): crítica a poseer personas. Se consultó la traducción de Andrew Maguire para verificar el argumento, sin copiarla; no se atribuye ese rechazo con idéntico alcance a cada Padre antiguo.
+- [Eusebio, Historia eclesiástica III,25,1–7](https://www.newadvent.org/fathers/250103.htm): recepción, discusión y rechazo de escritos. El pasaje menciona un evangelio de Tomás, no el de María. No se identifica sin más el Tomás referido con cada versión conservada.
+- [Evangelio de Tomás, dicho 1](https://www.earlychristianwritings.com/thomas/gospelthomas1.html), solo el texto, no las opiniones de usuarios de esa página; [Evangelio de María, capítulos 5 y 9](https://www.earlychristianwritings.com/text/gospelmary.html), visión y disputa. Se describen muy brevemente, sin reproducir traducciones modernas, inventar fechas exactas ni atribuir la autoría al apóstol o a María Magdalena como hecho demostrado. La condición fragmentaria y la atribución nominal no prueban inspiración ni falsedad de cada detalle.
+- [Vicente de Lérins, Commonitorium 23, §§54–59](https://www.newadvent.org/fathers/3506.htm): crecimiento conservando identidad, no simple autorización de cualquier innovación.
+- Escritura: cotejo de los pasajes añadidos en la Biblia de consulta ya indicada. También se comprobó la diferencia de numeración de 2 Ts 2,15 moderno / 2 Ts 2,14 en Douay-Rheims; no se confundió la bendición del versículo siguiente con la exhortación a conservar las tradiciones.
+
+Observaciones adicionales sobre las respuestas existentes, sin cambiarlas:
+
+8. **Pregunta 15:** la apertura a investigar el origen corporal no equivale a que cualquier hipótesis sobre Adán, pecado original o poligenismo sea doctrinalmente indiferente. La ampliación cita CIC 390/404 y Humani generis 37 y no convierte a Adán en un mero símbolo colectivo ni en una afirmación genética mensurable por el Catecismo.
+9. **Pregunta 17:** la analogía del enfermo de gripe que dice «me estoy muriendo» y no requiere urgencias es clínicamente inadecuada sin información: una gripe también puede ser grave. No corresponde deducir que no hay que buscar ayuda por una frase o diagnóstico supuesto. Se emplea un mapa como analogía, sin dar instrucciones médicas.
+10. **Pregunta 19:** no conviene sugerir mediante la carta escolar en «papel moderno» que se ha demostrado ya una falsificación concreta de Tomás o María. La ampliación separa atribución, recepción, inspiración y utilidad histórica, y evita una cronología no documentada.
+
+Límites: no se ofrece una armonización exhaustiva de cada diferencia entre Evangelios, una solución científica al pecado original ni un catálogo completo de manuscritos apócrifos. Las explicaciones no reemplazan esos estudios especializados y no presentan esos problemas como ya resueltos.
