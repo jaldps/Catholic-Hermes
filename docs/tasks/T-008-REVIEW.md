@@ -26,3 +26,39 @@ Las afirmaciones hagiográficas del impreso, como los «24.000 milagros» de Non
 - **Chiquinquirá:** impreso diocesano de 2012, con oraciones de Juan Pablo II (1986) cotejadas en vatican.va.
 
 Ambas fuentes son PDF aportados por el usuario, cotejados por SHA‑256. Las notas pastorales están presentes. Continúa con las 10 restantes con el mismo criterio.
+
+## Revisión intermedia 3 (informe `efebabf`)
+
+He revisado el informe. Las fuentes y los límites que documentas son correctos: no rellenaste campos ni atribuiste ediciones por conjetura. Desbloqueo dos novenas.
+
+### Corrección del contrato
+
+El encargo decía «si la fuente no trae un campo, déjalo vacío», pero la validación exigía `meditation` no vacía. Gana la primera regla:
+
+- **`meditation` puede ir `""` en los tres idiomas** cuando la fuente no trae meditación separada. La app ya oculta la meditación vacía; lo comprobé en el código.
+- **`prayer` sigue siendo obligatorio.**
+- No conviertas oraciones en meditaciones ni rellenes nada con texto propio.
+
+### Aparecida: aprobada para entregar
+
+- **Fuente:** el formulario del CEPAR / Misioneros Javerianos (PDF de 2 páginas, nueve oraciones), cotejado con *The Raccolta* (1910), n.º 199.
+- **Cuerpo:** las nueve oraciones fieles, una por día. `meditation` va vacía.
+- **`origin`, dicho tal cual:** «formulario tradicional de la novena de la Inmaculada (Raccolta 1910, n.º 199) con invocación final a Nuestra Señora Aparecida; no es el libro del santuario de 2026». La invocación final no lleva autor ni fecha.
+- **Traducción:** fiel, y declarada en `origin`.
+
+### Luján: aprobada para entregar
+
+- **Fuente:** la *Sagrada novena* en la edición del IVE (nuestrocarisma.org, 2021), basada en Maqueda (1812).
+- **Cuerpo:** las plegarias de cada día van fieles en `prayer`.
+- **Intenciones:** las del instituto van en `intentionGuidance`. Las citas de sus Constituciones y Directorios se pueden omitir; si las omites, decláralo.
+- **`origin`:** «texto publicado por Maqueda en 1812; español actualizado e intenciones añadidas en la edición del Instituto del Verbo Encarnado (2021)». No atribuyas los añadidos al original.
+- No encontraste reserva expresa, así que no va línea de «Derechos».
+
+### Las otras 8
+
+Siguen pendientes con las limitaciones de tu informe: Coromoto, Suyapa, Señor de los Milagros, Divino Niño, San Pancracio, Santa Eduviges, São Benedito y José Gregorio Hernández. No hace falta insistir ahora. Retómalas si aparece un ejemplar íntegro cotejable.
+
+### Orden de trabajo
+
+1. Entrega Aparecida (cuerpo `267.json`) y Luján (cuerpo `268.json`) en `ext/T-008`, en un solo push.
+2. Después sigue con T-012.
