@@ -12,8 +12,8 @@ class NovenaCatalogLoadingTest {
         val catalog=NovenaCatalog { name -> opened += name
             NovenaCatalogLoadingTest::class.java.classLoader!!.getResourceAsStream(name)!! }
         val entries=catalog.allNovenas
-        assertEquals(247,entries.size)
-        assertEquals(3077,entries.sumOf {it.dayNumbers().size})
+        assertEquals(250,entries.size)
+        assertEquals(3104,entries.sumOf {it.dayNumbers().size})
         assertTrue(entries.all {it.days.size == it.dayNumbers().size})
         assertEquals(listOf("index.json"),opened.filterNot { it.startsWith("provenance/") })
         val selected=catalog.preload(entries.first().id)

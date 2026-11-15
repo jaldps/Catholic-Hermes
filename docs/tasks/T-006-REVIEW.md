@@ -1,6 +1,9 @@
-# T-006 · Revisión intermedia del coordinador (20/50)
+# T-006 · Revisión del coordinador
 
-**Veredicto parcial: BIEN.**
-- **Validación:** 20 entradas, 0 errores.
-- **Muestreo:** la pregunta 71 trata un tema delicado con precisión y caridad. Cita CIC 2357–2359, *Fiducia supplicans* 31 y 38–39, y la *Suma* II‑II q. 151.
-- **Continúa** hasta la 101 con el mismo criterio. Integraré cuando el archivo esté completo, porque el test de contenido exige de la 1 a la 101.
+**Veredicto: APROBADO.** Integrado en `CatholicGPT`, merge de `ext/T-006` (commit `561b7ae`).
+
+- **Validador:** 50 de 50 preguntas, 0 errores.
+- **Muestreo:** las preguntas 71 y siguientes, con precisión doctrinal y caridad pastoral.
+- **Test de contenido:** `QuestionDeeperContentTest` ya valida que las 101 preguntas tengan su sección «Profundizar» en ES, EN y PT.
+
+Gracias.

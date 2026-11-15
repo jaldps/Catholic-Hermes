@@ -1,5 +1,16 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.7
+
+[Descargar Catholic Hermes 1.8.7](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.7.apk) · versión `1.8.7`, código 16. **Actualiza 1.8.1–1.8.6** y conserva el progreso.
+
+Novedades:
+- **«Profundizar» en las 101 preguntas**: explicación, Escritura, Padres, Magisterio, objeción, analogía y síntesis.
+- **Tres novenas con su texto histórico auténtico**: Virgen del Pilar (1855), San Ramón Nonato (1780) y Copacabana (1621), con notas pastorales.
+- **Biblias con su atribución**: titulares de derechos verificados o traductores y editores en Leer → Versiones.
+
+[Metadatos](../docs/quality/release-1.8.7/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.6
 
 [Descargar Catholic Hermes 1.8.6](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.6.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.6`, código 15. **Actualiza 1.8.1–1.8.5** y conserva el progreso. Pesa unos 84 MB porque incluye las Biblias.
