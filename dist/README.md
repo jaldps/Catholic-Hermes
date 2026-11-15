@@ -1,5 +1,18 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.6
+
+[Descargar Catholic Hermes 1.8.6](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.6.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.6`, código 15. **Actualiza 1.8.1–1.8.5** y conserva el progreso. Pesa unos 84 MB porque incluye las Biblias.
+
+Novedades:
+- **Diez Biblias católicas instaladas**, sin descargas: Platense, El Libro del Pueblo de Dios, La Biblia Latinoamericana y La Santa Biblia (ES); Douay‑Rheims y Christian Community Bible (EN); Matos Soares y Bíblia Sagrada (PT); Nova Vulgata (latín).
+- **Elegir Biblia**: toca el título del lector (p. ej. «Biblia Platense · Español») o ve a Leer → Versiones.
+- **Predeterminada por idioma**: en el mismo selector, «Usar como predeterminada para Español / English / Português». Al cambiar el idioma de la app se abre su Biblia predeterminada.
+- Cada Biblia usa sus propias referencias cruzadas y las abre en la misma edición.
+- Corrige la 1.8.5: las descargas no terminaban y no se podían seleccionar.
+
+[Metadatos](../docs/quality/release-1.8.6/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.5
 
 [Descargar Catholic Hermes 1.8.5](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.5.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.5`, código 14. **Actualiza 1.8.1–1.8.4** y conserva el progreso.

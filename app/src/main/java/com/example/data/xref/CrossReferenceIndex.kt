@@ -28,8 +28,9 @@ data class CrossReference(
  * an Exodus 8 resolves to the verse the reader actually sees. The
  * deuterocanonical books have no references in the source.
  *
- * A downloaded edition may carry its own table (xref.bin, same layout) re-keyed to that edition's numbering
- * (tools/xref/build_assets.py --editions); [editionXref] finds it, and without one the bundled language table is used.
+ * Each installed edition carries its own table (assets/bibles/<id>/xref.bin, same layout) re-keyed to that edition's
+ * numbering (tools/xref/build_assets.py --editions); [editionAsset] finds it, and without one the bundled language table
+ * is used. [editionXref] is an optional file-based override.
  *
  * File layout: "XRF1", count, then four columns sorted by source verse and
  * descending weight: source, target start, target end (Int each), votes (Short).
@@ -38,6 +39,8 @@ data class CrossReference(
 class CrossReferenceIndex(
     private val context: Context,
     private val canon: List<String>,
+    /** Asset path of an installed edition's own table ("bundled-es" maps to the bundled Spanish one). */
+    private val editionAsset: (String) -> String? = { null },
     private val editionXref: (String) -> File? = { null }
 ) {
 
@@ -59,13 +62,18 @@ class CrossReferenceIndex(
     /** The edition's own table when [editionId] has one that parses, else the bundled table of [language]. */
     @Synchronized
     private fun table(language: AppLanguage, editionId: String?): Table? {
-        val file = editionId?.takeIf { it != "bundled" }?.let { editionXref(it) }
-        val editionKey = "edition:$editionId"
+        val id = editionId?.takeIf { it != "bundled" }
+        val file = id?.let(editionXref)
+        val asset = if (file == null) id?.let(editionAsset) else null
+        val editionKey = "edition:$id"
         val bundledKey = "lang:${language.code}"
-        loaded?.let { (k, t) -> if (k == bundledKey && file == null || k == editionKey && file != null) return t }
-        val own = file?.let { f -> runCatching { parse(f.inputStream()) }.getOrNull() }
-        if (own != null) { loaded = editionKey to own; return own }
-        loaded?.let { (k, t) -> if (k == bundledKey) return t }
+        val wantsEdition = file != null || asset != null
+        loaded?.let { (k, t) -> if (k == (if (wantsEdition) editionKey else bundledKey)) return t }
+        if (wantsEdition) {
+            val own = runCatching { parse(file?.inputStream() ?: context.assets.open(asset!!)) }.getOrNull()
+            if (own != null) { loaded = editionKey to own; return own }
+            loaded?.let { (k, t) -> if (k == bundledKey) return t }
+        }
         val bundled = runCatching { parse(context.assets.open("xref/xref_${language.code}.bin")) }.getOrNull() ?: return null
         loaded = bundledKey to bundled
         return bundled

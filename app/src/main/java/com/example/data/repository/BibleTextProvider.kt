@@ -10,8 +10,8 @@ import java.io.File
 
 /**
  * Loads the complete Catholic Bible (73 books) from bundled assets
- * (bible/bible_en.json, bible_es.json, bible_pt.json) and optionally from
- * locally downloaded alternate versions in filesDir/bibles/.
+ * (bible/bible_en.json, bible_es.json, bible_pt.json) and the seven further
+ * editions shipped in assets/bibles/<edition>/ (see [BibleEditionCatalog]).
  *
  * Each asset is {bookId: {chapterNumber: [verse, verse, ...]}} keyed by the
  * same book ids as [BibleData.catholicCanonBooks].
@@ -25,25 +25,24 @@ import java.io.File
  */
 class BibleTextProvider internal constructor(
     private val context: Context,
-    private val downloads: BibleDownloadManager = BibleDownloadManager(context)
+    private val catalog: BibleEditionCatalog = BibleEditionCatalog(context)
 ) {
-    private fun isAlternate(editionId: String?): Boolean = downloads.specs.any { it.id == editionId }
-    private var loadedDownloadedKey: String? = null
-    private var loadedDownloadedBook: JSONObject? = null
+    private fun isAlternate(editionId: String?): Boolean = catalog.separate(editionId) != null
+
+    /** "bundled-en" always reads the English Bible; every other bundled id follows [language]. */
+    private fun lang(language: AppLanguage, editionId: String?): AppLanguage = catalog.bundledLanguage(editionId) ?: language
+
+    private var loadedKey: String? = null
+    private var loadedBook: JSONObject? = null
 
     @Synchronized
     private fun downloadedBook(editionId: String, bookId: String): JSONObject? {
-        if (!downloads.isDownloaded(editionId)) {
-            loadedDownloadedKey = null
-            loadedDownloadedBook = null
-            return null
-        }
         val key = "$editionId:$bookId"
-        if (loadedDownloadedKey != key) {
-            loadedDownloadedBook = downloads.downloadedBook(editionId, bookId)
-            loadedDownloadedKey = key
+        if (loadedKey != key) {
+            loadedBook = catalog.readBook(editionId, bookId)
+            loadedKey = key
         }
-        return loadedDownloadedBook
+        return loadedBook
     }
 
     private val bundledRoots = java.util.EnumMap<AppLanguage, JSONObject>(AppLanguage::class.java)
@@ -64,7 +63,8 @@ class BibleTextProvider internal constructor(
         return parsed
     }
 
-    private fun chapterArray(language: AppLanguage, bookId: String, chapterNumber: Int, editionId: String? = null): JSONArray? {
+    private fun chapterArray(requested: AppLanguage, bookId: String, chapterNumber: Int, editionId: String? = null): JSONArray? {
+        val language = lang(requested, editionId)
         if (isAlternate(editionId)) {
             val chapters = downloadedBook(editionId!!, bookId)?.optJSONArray("chapters") ?: return null
             val verses = chapters.optJSONObject(chapterNumber - 1)?.optJSONArray("verses") ?: return null
@@ -88,9 +88,10 @@ class BibleTextProvider internal constructor(
     fun getVerses(
         bookId: String,
         chapterNumber: Int,
-        language: AppLanguage = AppLanguage.EN,
+        requested: AppLanguage = AppLanguage.EN,
         editionId: String? = null
     ): List<BibleVerse> {
+        val language = lang(requested, editionId)
         if (isAlternate(editionId)) {
             // A downloaded edition keeps its own verse numbers, gaps included (omitted verses are simply absent).
             val array = downloadedBook(editionId!!, bookId)?.optJSONArray("chapters")
@@ -113,10 +114,10 @@ class BibleTextProvider internal constructor(
      * Verses per chapter for every book in [language], in that edition's own
      * numbering: index 0 is chapter 1. Used to lay the whole Bible on one line.
      */
-    fun verseCounts(language: AppLanguage, editionId: String? = null): Map<String, IntArray> {
+    fun verseCounts(requested: AppLanguage, editionId: String? = null): Map<String, IntArray> {
+        val language = lang(requested, editionId)
         if (isAlternate(editionId)) {
-            if (!downloads.isDownloaded(editionId!!)) return emptyMap()
-            return downloads.bookIds(editionId).associateWith { bookId ->
+            return catalog.bookIds(editionId!!).associateWith { bookId ->
                 val chapters = downloadedBook(editionId, bookId)?.optJSONArray("chapters")
                 // Last verse number of each chapter: the position scale of the whole-Bible line.
                 IntArray(chapters?.length() ?: 0) {
@@ -134,7 +135,8 @@ class BibleTextProvider internal constructor(
     }
 
     /** Number of chapters present for [bookId] in [language]. */
-    fun chapterCount(bookId: String, language: AppLanguage = AppLanguage.EN, editionId: String? = null): Int {
+    fun chapterCount(bookId: String, requested: AppLanguage = AppLanguage.EN, editionId: String? = null): Int {
+        val language = lang(requested, editionId)
         if (isAlternate(editionId)) return downloadedBook(editionId!!, bookId)?.optJSONArray("chapters")?.length() ?: 0
         val book = root(language)?.optJSONObject(bookId) ?: return 0
         return book.keys().asSequence().count { it.toIntOrNull() != null }
@@ -146,14 +148,15 @@ class BibleTextProvider internal constructor(
     /** Full-text search over [language], returning (bookId, chapter, verse). */
     fun search(
         query: String,
-        language: AppLanguage = AppLanguage.EN,
+        requested: AppLanguage = AppLanguage.EN,
         limit: Int = 50,
         editionId: String? = null
     ): List<Triple<String, Int, BibleVerse>> {
         if (query.isBlank() || limit <= 0) return emptyList()
+        val language = lang(requested, editionId)
         if (isAlternate(editionId)) {
             val matches = mutableListOf<Triple<String, Int, BibleVerse>>()
-            for (bookId in downloads.bookIds(editionId!!)) {
+            for (bookId in catalog.bookIds(editionId!!)) {
                 for (chapter in 1..chapterCount(bookId, language, editionId)) {
                     for (verse in getVerses(bookId, chapter, language, editionId)) {
                         if (verse.text.get(language).contains(query, ignoreCase = true)) {
@@ -194,19 +197,4 @@ class BibleTextProvider internal constructor(
         }
         return results
     }
-
-    // Offline download support
-    fun downloadedVersionsDir(): File = File(context.filesDir, "bibles").also { it.mkdirs() }
-
-    fun isDownloaded(versionId: String): Boolean =
-        downloads.isDownloaded(versionId)
-
-    companion object {
-        @Deprecated("Use BibleDownloadManager.specs and downloadUrl; downloads are verified")
-        val DOWNLOADABLE_VERSIONS = BibleDownloadManager.VERSION_SPECS.map { spec ->
-            DownloadableVersion(spec.id, spec.name, BibleDownloadManager.BIBLES_DATA_BASE + spec.path + "/")
-        }
-    }
-
-    data class DownloadableVersion(val id: String, val name: String, val baseUrl: String)
 }

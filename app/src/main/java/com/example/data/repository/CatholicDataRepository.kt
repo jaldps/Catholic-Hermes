@@ -3,6 +3,7 @@ package com.example.data.repository
 import android.content.Context
 
 import com.example.data.models.AppLanguage
+import com.example.data.persistence.PersonalDataCommands
 import com.example.data.models.BibleBook
 import com.example.data.models.BibleChapter
 import com.example.data.models.BibleVersionInfo
@@ -72,8 +73,9 @@ class CatholicDataRepository(
     private val saintFetcher: DailySaintsFetcher = DailySaintsFetcher()
 ) {
 
-    private val bibleProvider: BibleTextProvider? = context?.let { BibleTextProvider(it) }
-    val bibleDownloadManager: BibleDownloadManager? = context?.let { BibleDownloadManager(it) }
+    /** Every Bible edition ships inside the app; there is nothing to download. */
+    val bibleEditions: BibleEditionCatalog? = context?.let { BibleEditionCatalog(it) }
+    private val bibleProvider: BibleTextProvider? = context?.let { BibleTextProvider(it, bibleEditions!!) }
 
     /** Resolves lectionary citations against the bundled Bible. */
     private val scriptureResolver by lazy { ScriptureResolver(
@@ -87,7 +89,7 @@ class CatholicDataRepository(
 
     private val canonIds: List<String> by lazy { BibleData.catholicCanonBooks.map { it.id } }
     private val crossReferenceIndex: CrossReferenceIndex? by lazy {
-        context?.let { CrossReferenceIndex(it, canonIds) { id -> bibleDownloadManager?.xrefFile(id) } }
+        context?.let { CrossReferenceIndex(it, canonIds, editionAsset = { id -> bibleEditions?.xrefAsset(id) }) }
     }
     private val bibleLines = HashMap<String, BibleLine>()
 
@@ -103,21 +105,45 @@ class CatholicDataRepository(
     val currentLanguage: StateFlow<AppLanguage> = _currentLanguage.asStateFlow()
 
     private val editionSelection = BibleEditionSelection(
-        validate = { id ->
-            id.takeIf { candidate ->
-                bibleDownloadManager?.specs?.any { it.id == candidate } == true &&
-                    bibleDownloadManager.isDownloaded(candidate)
-            } ?: "bundled"
-        },
+        validate = { id -> id.takeIf { bibleEditions?.isValid(it) == true } ?: BibleEditionCatalog.LEGACY_BUNDLED },
         persist = { preferencesStore?.setActiveBibleTranslationId(it) }
     )
     private val _activeBibleEditionId = editionSelection.selected
+
+    /** The edition being read. The legacy value "bundled" means the app language's original Bible; see [resolvedEditionId]. */
     val activeBibleEditionId: StateFlow<String> = editionSelection.selected
+
+    private val _bibleDefaults = MutableStateFlow(BibleEditionCatalog.INITIAL_DEFAULTS)
+    private val pendingDefaultWrites = java.util.concurrent.atomic.AtomicInteger(0)
+
+    /** Default edition per app language code (es/en/pt). */
+    val bibleDefaultEditions: StateFlow<Map<String, String>> = _bibleDefaults.asStateFlow()
+
+    fun defaultBibleEditionFor(language: AppLanguage): String =
+        _bibleDefaults.value[language.code]?.takeIf { bibleEditions?.isValid(it) != false } ?: BibleEditionCatalog.initialDefault(language)
+
+    /** The id the UI highlights: the legacy "bundled" is shown as the bundled Bible of [language]. */
+    fun resolvedEditionId(id: String = _activeBibleEditionId.value, language: AppLanguage = _currentLanguage.value): String =
+        if (id == BibleEditionCatalog.LEGACY_BUNDLED) BibleEditionCatalog.initialDefault(language) else id
 
     /** Blocking compatibility API for workers; UI uses the application-owned request. */
     fun selectBibleEdition(id: String) = editionSelection.selectBlocking(id)
 
     fun requestBibleEdition(id: String) = editionSelection.request(id)
+
+    /**
+     * Makes [editionId] the default Bible for [language] (any edition, Latin included). When [language] is the current
+     * one it also becomes the edition being read.
+     */
+    fun setDefaultBibleEdition(language: AppLanguage, editionId: String) {
+        if (bibleEditions?.edition(editionId) == null) return
+        _bibleDefaults.value = _bibleDefaults.value + (language.code to editionId)
+        pendingDefaultWrites.incrementAndGet()
+        PersonalDataCommands.submit("bible-default") {
+            try { preferencesStore?.setBibleDefaultEdition(language.code, editionId) } finally { pendingDefaultWrites.decrementAndGet() }
+        }
+        if (language == _currentLanguage.value) requestBibleEdition(editionId)
+    }
 
     data class DailyContent(
         val date: CalendarDate,
@@ -168,6 +194,11 @@ class CatholicDataRepository(
     fun setLanguage(language: AppLanguage) {
         val changed = _currentLanguage.value != language
         _currentLanguage.value = language
+        // Changing the app language returns to that language's default Bible.
+        if (changed) {
+            val target = defaultBibleEditionFor(language)
+            if (resolvedEditionId(_activeBibleEditionId.value, language) != target) requestBibleEdition(target)
+        }
         preferencesStore?.let { store ->
             scope.launch { store.setLanguage(language) }
         }
@@ -266,7 +297,7 @@ class CatholicDataRepository(
     /** Chapters actually available for [bookId], falling back to the declared count. */
     fun getChapterCount(bookId: String, language: AppLanguage = _currentLanguage.value, editionId: String = _activeBibleEditionId.value): Int {
         val fromAssets = bibleProvider?.chapterCount(bookId, language, editionId) ?: 0
-        if (editionId != "bundled") return fromAssets
+        if (bibleEditions?.separate(editionId) != null) return fromAssets
         if (fromAssets > 0) return fromAssets
         return BibleData.catholicCanonBooks.firstOrNull { it.id == bookId }?.chaptersCount ?: 0
     }
@@ -347,11 +378,16 @@ class CatholicDataRepository(
     private var saintFetchJob: kotlinx.coroutines.Job? = null
 
     init {
+        // Bibles used to be downloaded into filesDir/bibles; every edition now ships in the APK.
+        context?.let { c -> scope.launch { runCatching { java.io.File(c.filesDir, "bibles").takeIf { it.exists() }?.deleteRecursively() } } }
         reloadNovenas()
         preferencesStore?.let { store ->
             scope.launch {
                 store.preferences.collectLatest { preferences ->
                     _calendarRules.value = preferences.calendarRules
+                    if (pendingDefaultWrites.get() == 0) {
+                        _bibleDefaults.value = BibleEditionCatalog.INITIAL_DEFAULTS + preferences.bibleDefaultEditions
+                    }
                     val id = preferences.activeBibleTranslationId
                     editionSelection.acceptStored(id)
                 }
