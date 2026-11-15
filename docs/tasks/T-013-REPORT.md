@@ -1,6 +1,6 @@
 # T-013 · Informe de Codex
 
-Entrega: **30/51 fichas**, en el orden exacto de `T-013.keys`. Rama `ext/T-013`, base inicial `origin/CatholicGPT` (`82e8d11`).
+Entrega: **40/51 fichas**, en el orden exacto de `T-013.keys`. Rama `ext/T-013`, base inicial `origin/CatholicGPT` (`82e8d11`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -204,8 +204,9 @@ Se omiten años exactos de nacimiento y muerte, discutidos en las referencias an
 
 - [Benedicto XVI, audiencia general, 18-II-2009: Beda el Venerable](https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20090218.html)
 - [Catholic Encyclopedia, «The Venerable Bede»](https://www.newadvent.org/cathen/02384a.htm)
+- [Benedicto XVI, audiencia general, 18-II-2009, original italiano](https://www.vatican.va/content/benedict-xvi/it/audiences/2009/documents/hf_ben-xvi_aud_20090218.html)
 
-Nacimiento aproximado. Se omite el año exacto de fallecimiento en la ficha: la referencia enciclopédica da 735, mientras la versión inglesa consultada de la catequesis imprime 737. No se resuelve la discrepancia por conjetura. No se llama autobiografía a la totalidad de su historia ni se incorporan frases de muerte sin lugar primario.
+Nacimiento aproximado. La versión inglesa consultada de la catequesis imprime 737. Se cotejó el original italiano, que da 735, coincidente con la referencia enciclopédica; se usa esa fecha documentada, no una corrección por conjetura. No se llama autobiografía a la totalidad de su historia ni se incorporan frases de muerte sin lugar primario.
 
 ### 29. `gregory_vii_pope` · 25/05
 
@@ -221,10 +222,81 @@ Se omiten nacimiento exacto, origen familiar no probado y pertenencia inicial a 
 
 No se identifica con María Magdalena bíblica ni se presenta como carmelita descalza. Se omite fecha exacta de profesión, distinta en las dos fuentes. Sin reproducir éxtasis o palabras atribuidas como doctrina obligatoria, prácticas dañinas ni garantías de favores.
 
+### 31. `philip_neri_priest` · 26/05
+
+- [Catholic Encyclopedia, «St. Philip Romolo Neri»](https://www.newadvent.org/cathen/12018b.htm)
+- [Catholic Encyclopedia, «The Oratory of Saint Philip Neri»](https://www.newadvent.org/cathen/11272a.htm)
+
+Se omite el día exacto de muerte porque la entrada antigua imprime 27 de mayo, frente a la memoria habitual del 26. La ficha del Oratorio escribe «Gregory XII» en 1575, anacronismo que no se traslada. Sin citas humorísticas de atribución popular ni milagros como hechos comprobados.
+
+### 32. `augustine_of_canterbury_bishop` · 27/05
+
+- [Catholic Encyclopedia, «St. Augustine of Canterbury»](https://www.newadvent.org/cathen/02081a.htm)
+- [Catholic Encyclopedia, «Pope St. Gregory I», misión a Inglaterra](https://www.newadvent.org/cathen/06780a.htm)
+
+No se confunde con Agustín de Hipona ni se atribuye a esta misión el primer cristianismo de Britania. Se omiten año exacto de muerte y cifras de bautismos transmitidas por relatos antiguos. Nombres y fecha 597 contrastados con el contexto de la misión gregoriana.
+
+### 33. `paul_vi_pope` · 29/05
+
+- [Santa Sede, «Biographical Profile of His Holiness Pope Paul VI»](https://www.vatican.va/content/paul-vi/en/biografia/documents/hf_p-vi_spe_20190722_biografia.html)
+- [Sala de Prensa de la Santa Sede, canonización de siete beatos, 14-X-2018](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2018/10/14/181014b.html)
+
+Se distingue dirigir las tres sesiones restantes de convocar el Vaticano II, que inició Juan XXIII. Se evita un balance partidista sobre sus decisiones y no se presenta la canonización como aprobación indiscriminada de cada opción política. Fecha litúrgica tomada del calendario de la app.
+
+### 34. `visitation` · 31/05
+
+- [Evangelio según san Lucas, 1,39–56](https://www.newadvent.org/bible/luk001.htm)
+- [Catholic Encyclopedia, «Visitation of the Blessed Virgin Mary»](https://www.newadvent.org/cathen/15480a.htm)
+
+Se parafrasea el relato sin copiar una traducción litúrgica moderna del Magníficat. No se fija fecha civil, itinerario, velocidad de viaje ni grado exacto de parentesco. Se usa la fecha del calendario actual de la app, no el 2 de julio de referencias antiguas.
+
+### 35. `justin_martyr` · 01/06
+
+- [Benedicto XVI, audiencia general, 21-III-2007: san Justino, filósofo y mártir](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070321.html)
+- [Catholic Encyclopedia, «St. Justin Martyr»](https://www.newadvent.org/cathen/08580c.htm)
+
+Fechas aproximadas. No se atribuyen obras apócrifas ni se copian palabras de su juicio sin referencia primaria. La referencia a semillas de verdad sigue la catequesis, sin afirmar equivalencia indiferenciada entre doctrinas. Se distinguen escritos apologéticos de una autobiografía literal.
+
+### 36. `marcellinus_of_rome_and_peter_the_exorcist_martyrs` · 02/06
+
+- [Vatican News, «Sts. Marcellinus, priest, and Peter, exorcist, martyrs on the via Labicana»](https://www.vaticannews.va/en/saints/06/02/sts--marcellinus--priest--and-peter--exorcist--martyrs-on-the-vi.html)
+- [Pontificia Comisión de Arqueología Sacra, Catacombe dei SS. Marcellino e Pietro](https://www.catacombeditalia.va/content/archeologiasacra/it/visita-catacombe/per-regione/roma/catacomba-dei-ss-marcellino-e-pietro.html)
+
+No se confunde a Pedro con el apóstol ni a Marcelino con el papa homónimo. No se reproduce la afirmación simplificada de que exorcista equivalía a un portero moderno. Se omiten milagros carcelarios, fecha exacta del proceso y palabras finales no comprobadas.
+
+### 37. `charles_lwanga_and_companions_martyrs` · 03/06
+
+- [Pablo VI, Sancti martyres, decreto de canonización de Carlos Lwanga, Matías Mulumba y veinte compañeros, 18-X-1964](https://www.vatican.va/content/paul-vi/la/apost_letters/documents/hf_p-vi_apl_19641018_sancti-martyres.html)
+- [Francisco, homilía en Namugongo, 28-XI-2015](https://www.vatican.va/content/francesco/en/homilies/2015/documents/papa-francesco_20151128_uganda-omelia-martiri.html)
+
+Grupo católico de veintidós, distinto del conjunto católico y anglicano de la memoria nacional. No se fija para todos una sola fecha ni método de ejecución. La atención a los jóvenes se apoya en la homilía de Francisco; se evita convertir la narración en acusación contra el pueblo ugandés.
+
+### 38. `boniface_of_mainz_bishop` · 05/06
+
+- [Benedicto XVI, audiencia general, 11-III-2009: san Bonifacio](https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20090311.html)
+- [Catholic Encyclopedia, «St. Boniface»](https://www.newadvent.org/cathen/02656a.htm)
+
+Se omiten nacimiento exacto y cifras de compañeros. Se sigue 754 de la catequesis frente a la alternativa 755 que recoge la fuente antigua. No se cuenta el roble o el códice detenido por una espada como prueba independiente ni se confunde su título misionero con una primera presencia cristiana absoluta.
+
+### 39. `norbert_of_xanten_bishop` · 06/06
+
+- [Catholic Encyclopedia, «St. Norbert»](https://www.newadvent.org/cathen/11100b.htm)
+- [Catholic Encyclopedia, «Premonstratensian Canons»](https://www.newadvent.org/cathen/12387b.htm)
+
+Se omite el rayo como hecho milagroso probado. No se llama franciscano, dominico o fundador de monjes benedictinos: la forma propia es la de canónigos regulares. La distinción vocacional no excluye que otros monjes realicen actividad pastoral.
+
+### 40. `ephrem_the_syrian_deacon` · 09/06
+
+- [Benedicto XVI, audiencia general, 28-XI-2007: san Efrén](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20071128.html)
+- [Benedicto XV, Principi Apostolorum Petro, 5-X-1920, proclamación del doctorado](https://www.vatican.va/content/benedict-xv/en/encyclicals/documents/hf_ben-xv_enc_05101920_principi-apostolorum-petro.html)
+- [Catholic Encyclopedia, «St. Ephraem»](https://www.newadvent.org/cathen/05498a.htm)
+
+Nacimiento aproximado. La fuente antigua ofrece un padre pagano, mientras las pontificias lo sitúan en familia cristiana: se omite ese dato discutido. No se asegura profesión monástica ni se copian textos pseudoepigráficos como obras auténticas; doctorado verificado en su documento pontificio.
+
 ## Validación
 
 ```text
-30 entries · 0 errors · 1 warnings
+40 entries · 0 errors · 1 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
