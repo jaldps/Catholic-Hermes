@@ -43,4 +43,4 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-009](T-009.md) | Hermes | CERRADO ([revisión](T-009-REVIEW.md)) | Texto completo de *Veni Sancte Spiritus* y de «Quédate conmigo, Señor» → `assets/prayers/text-overrides-b.json` |
 | [T-010](T-010.md) | Codex | CERRADO (informe documental) | Identificación y atribución de 6 Biblias católicas (cbt); el dueño declara permiso |
 | [T-011](T-011.md) | Hermes | ABIERTO | M5 · Santos de enero–marzo (38) → `assets/saints/saints-q1.json` |
-| [T-012](T-012.md) | Codex | ABIERTO (tras T-008) | M5 · Santos de octubre–diciembre (59) → `assets/saints/saints-q4.json` |
+| [T-012](T-012.md) | Codex | ABIERTO (50/59 integradas, [revisión](T-012-REVIEW.md)) | M5 · Santos de octubre–diciembre (59) → `assets/saints/saints-q4.json` |
