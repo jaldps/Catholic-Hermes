@@ -1,8 +1,8 @@
 # T-006 · Informe de Codex
 
-## Entrega parcial 3: preguntas 52–81
+## Entrega parcial 4: preguntas 52–91
 
-Se añaden **30 de las 50 preguntas**, en orden, con siete secciones completas y fuentes en ES/EN/PT-BR. No se modifican las preguntas, respuestas, fundamentos o aclaraciones de Kotlin. La base es `origin/CatholicGPT` (`4f302d7`, incorporado por merge). Primera entrega parcial: `c8df15d`. Las preguntas 82–101 siguen pendientes; esta entrega no las presenta como terminadas.
+Se añaden **40 de las 50 preguntas**, en orden, con siete secciones completas y fuentes en ES/EN/PT-BR. No se modifican las preguntas, respuestas, fundamentos o aclaraciones de Kotlin. La base es `origin/CatholicGPT` (`4f302d7`, incorporado por merge). Primera entrega parcial: `c8df15d`. Las preguntas 92–101 siguen pendientes; esta entrega no las presenta como terminadas.
 
 Son explicaciones originales apoyadas en fuentes leídas, no nuevas oraciones. Las alusiones bíblicas y patrísticas son paráfrasis, sin comillas que simulen citas literales. Las analogías incluyen su límite y no se ofrecen como demostraciones de la eficacia sacramental.
 
@@ -10,11 +10,11 @@ Son explicaciones originales apoyadas en fuentes leídas, no nuevas oraciones. L
 
 ```text
 $ python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-b.json 52 101 --partial
-WARN  partial delivery: 30/50 questions
-30 entries · 0 errors · 1 warnings
+WARN  partial delivery: 40/50 questions
+40 entries · 0 errors · 1 warnings
 ```
 
-El único aviso corresponde al carácter parcial de la entrega. No hay avisos de extensión. Se conserva el contrato JSON y los números 52–81, sin huecos.
+El único aviso corresponde al carácter parcial de la entrega. No hay avisos de extensión. Se conserva el contrato JSON y los números 52–91, sin huecos.
 
 ## Fuentes consultadas
 
@@ -62,6 +62,22 @@ Se leyó `T-006-REVIEW.md`: el coordinador aprueba las primeras veinte y pide co
 | 80 · Justicia social | CIC 2424 y 2443–2447; Lc 4,18-19; St 5,1-6; Mt 25,34-40. [Crisóstomo, *Homilías sobre Mateo* **50,4**](https://www.newadvent.org/fathers/200150.htm), cotejado en esta edición: exige ayudar antes y junto a los dones para el culto, sin prohibirlos. Se corrigió la numeración preliminar 50,3 al comprobar el comienzo exacto del apartado. |
 | 81 · Aborto y autonomía | CIC 2270–2273; *Didaché* 2,2; Gn 1,27; Sal 139,13-16; Lc 1,39-44. [*Evangelium vitae* 62 y 99](https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25031995_evangelium-vitae.html): aborto directo y llamada a la misericordia. No se inventan protocolos médicos ni penas canónicas actuales a partir de numeración antigua. |
 
+
+### Preguntas 82–91
+
+| Pregunta | Fuentes cotejadas y límites |
+|---|---|
+| 82 · Violación | CIC 2356, 2270–2271; Ex 20,13; Sal 139,13-16; Mt 25,40. [Agustín, *La ciudad de Dios* I,18–19](https://www.newadvent.org/fathers/120101.htm): la violencia sufrida sin consentimiento no destruye la castidad de la víctima. No se traslada su vocabulario antiguo a un diagnóstico de trauma. |
+| 83 · Doble efecto | CIC 1750–1756 y 2271; Rm 3,8; Ex 20,13; Lc 10,33-35. Tomás, II-II, q. 64, a. 7, ya enlazado: caso de defensa, no protocolo obstétrico ni identificación del feto con un agresor. No se clasifican procedimientos médicos. |
+| 84 · Final de la vida | CIC 2276–2279, leídos completos; Ex 20,13; Mt 25,36; Lc 10,33-35. Tomás, II-II, q. 64, a. 7: principio moral general, sin atribuirle análisis de medicamentos modernos. Se distingue intención de muerte, tratamiento desproporcionado y cuidados ordinarios debidos. |
+| 85 · Policía y militares | CIC 2263–2265 y 2310–2313; Lc 3,14; Rm 13,1-4; Hch 5,29. [Agustín, *Carta* 189 a Bonifacio, 4 y 6](https://www.newadvent.org/fathers/1102189.htm): servicio, paz y trato al vencido; no reglas operativas presentes ni aprobación de cada juicio sobre pueblos de su época. |
+| 86 · Guerra y paz | CIC 2307–2309 y 2312–2313; Mt 5,38-44; Rm 12,17-21; Rm 13,4. Agustín, *Carta* 189,6, mismo enlace. Condiciones simultáneas, evaluación crítica y deberes humanitarios: no una cuenta no comprobada de guerras justas o injustas. |
+| 87 · Pena capital | CIC 2267, verificado en su redacción revisada. [CDF, carta a los obispos, 1-VIII-2018, 7–8](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20180801_lettera-vescovi-penadimorte_en.html), leída completa: desarrollo y contexto de formulaciones anteriores. Agustín, *La ciudad de Dios* I,21: testimonio de una posición antigua diferente; no autorización privada para matar. Gn 9,6; Rm 13,4; Mt 5,43-48. |
+| 88 · Esclavitud y racismo | CIC 1934–1938; Gn 1,27; Ga 3,28; Flm 15-16; St 2,1-9. [Gregorio de Nisa, *Homilías sobre Eclesiastés* IV, comentario a Ecl 2,7](https://earlychurchtexts.com/public/gregoryofnyss_ecclesiastes_slavery.htm), texto del argumento leído, parafraseado, no copiado de su traducción moderna. [Declaración conjunta de dicasterios, 30-III-2023, 6–7](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2023/03/30/230330b.html), leída completa. No se borra responsabilidad institucional ni se afirma haber cotejado el texto completo de cada bula citada por la declaración. |
+| 89 · Riqueza | CIC 2402–2406 y 2446; Mc 10,23-27; Lc 12,15-21; Lc 19,8-10; St 5,1-6. Crisóstomo, *Homilías sobre Mateo* 50,4, enlace anterior: importancia de ganancias honestas, no una cuota de donación que legitime cualquier fortuna. |
+| 90 · Migrantes y pobres | CIC 2241 y 2443–2447; Lv 19,33-34; Mt 25,35; Hb 13,2; St 2,14-17. [Benito, *Regla* 53,1 y 15](https://www.gutenberg.org/ebooks/50040), texto del capítulo leído completo. Hospitalidad monástica como testimonio, no un modelo legislativo contemporáneo. |
+| 91 · Celibato | CIC 1579–1580; Mt 8,14-15; 1 Tm 3,2; Mt 19,12; 1 Co 7,32-35. [Crisóstomo, *Homilía* 10 sobre la Primera a Timoteo](https://www.newadvent.org/fathers/230610.htm), comentario a 1 Tm 3,2: discusión antigua, sin confundirla con la disciplina episcopal oriental vigente. |
+
 ## Precisiones doctrinales y pastorales
 
 - La Misa hace presente el único sacrificio; no añade otra muerte o una redención independiente.
@@ -77,10 +93,12 @@ Se leyó `T-006-REVIEW.md`: el coordinador aprueba las primeras veinte y pide co
 2. **Pregunta 61:** comienza «La respuesta directa es no» ante la pregunta «¿Dónde dice…?». Es un desajuste de pregunta/respuesta: debería decir directamente que no aparece la palabra ni una descripción completa, y después exponer los fundamentos.
 3. **Pregunta 61:** «con la culpa ya perdonada» necesita precisión. CIC 1030 habla de morir en gracia y amistad con Dios; CIC 1031 admite purificación de faltas leves. No debe entenderse que no puede quedar ninguna falta venial pendiente. La nueva explicación mantiene esa distinción.
 
+4. **Pregunta 86:** «la mayoría de las guerras reales no las cumplen» formula una proporción sin un universo de casos o estudio identificable. Se recomienda sustituirla por la exigencia de evaluación rigurosa de cada conflicto; el nuevo texto no repite esa cuantificación.
+
 ## Datos no establecidos y preguntas para el coordinador
 
 No se atribuyen edades no narradas en los bautismos domésticos, una ubicación o duración física del purgatorio ni una sentencia individual sobre niños fallecidos sin bautismo. No se certifican como dogma las opiniones particulares de Gregorio Nacianceno ni cada detalle de Gregorio Magno.
 
 Tampoco se presenta la interpretación de Rm 1 como una discusión resuelta por la sola mención de un versículo ni se identifica atracción con acto voluntario. Se mantiene la enseñanza moral y la exigencia de respeto a las personas, sin promesas de cambiar orientación ni juicios de culpabilidad individual.
 
-No se requiere cambiar el contrato. El coordinador puede integrar este prefijo mientras continúan las preguntas restantes y valorar las tres correcciones del texto base señaladas arriba.
+No se requiere cambiar el contrato. El coordinador puede integrar este prefijo mientras continúan las preguntas restantes y valorar las cuatro correcciones del texto base señaladas arriba.
