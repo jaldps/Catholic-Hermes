@@ -1,6 +1,6 @@
 # T-012 · Informe de Codex
 
-Entrega: **30/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
+Entrega: **40/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Fechas e identificadores se toman de `GeneralRomanSanctoral.kt`. Las biografías son redacción informativa propia, ES/EN/PT, basada en fuentes consultadas; no se presentan como palabras de los santos. `quote` queda `null`: no se añaden citas de memoria ni fórmulas devocionales. Un patronazgo vacío significa que no se incorpora aquí un patronazgo suficientemente comprobado, no que no exista ninguno. Las memorias marianas y otras celebraciones describen su sentido y origen; no se inventa una biografía humana de ángeles o de una fiesta.
 
@@ -115,7 +115,7 @@ No se descartan sus promesas ni se convierten en garantías: esta biografía no 
 ### 15. `ignatius_of_antioch_bishop` · 17/10
 
 - [Benedicto XVI, audiencia general de 14-III-2007](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070314.html)
-- [Ignacio de Antioquía, Carta a los Romanos, 1–10](https://www.newadvent.org/fathers/0109.htm)
+- [Ignacio de Antioquía, Carta a los Romanos, 1–10](https://www.newadvent.org/fathers/0107.htm)
 
 La carta primaria se leyó como comprobación de su testimonio; no se cita su imagen del trigo sin una localización textual en quote. Cronología de muerte prudente, sin fijar 107 como certeza absoluta.
 
@@ -226,10 +226,83 @@ Nacimiento aproximado. No se confunde con el rey bíblico Josafat ni el personaj
 
 Fecha de nacimiento prudente: las fuentes manejan 1193 o hacia 1200. Canonización/doctorado verificados en la audiencia de 2010, no en la enciclopedia anterior. No se le atribuye la autoría de la Summa de Tomás ni obras apócrifas de magia. Patronazgo de las ciencias naturales comprobado en la audiencia.
 
+### 31. `margaret_of_scotland` · 16/11
+
+- [Catholic Encyclopedia, «St. Margaret of Scotland»](https://www.newadvent.org/cathen/09655c.htm)
+- [Vatican News, «St. Margaret of Scotland»](https://www.vaticannews.va/en/saints/11/16/st--margaret-of-scotland.html)
+
+Nacimiento aproximado, sin atribuir una nacionalidad moderna simple a su infancia en el exilio. No se confunde con Margarita María Alacoque ni Margarita de Antioquía. No se convierte el lenguaje cultural de la fuente antigua en jerarquías entre pueblos.
+
+### 32. `gertrude_the_great_virgin` · 16/11
+
+- [Catholic Encyclopedia, «St. Gertrude the Great»](https://www.newadvent.org/cathen/06534a.htm)
+- [Benedicto XVI, audiencia general de 6-X-2010](https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20101006.html)
+- [Catecismo de la Iglesia Católica, 67](https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_1/iii_christ_jesus_mediator_and_fullness_of_all_revelation.index.html)
+
+No se la identifica con la abadesa Gertrudis ni se declara que escribió cada libro del Heraldo: el libro II es suyo, otros fueron compilados. Lugar de nacimiento y padres desconocidos. Muerte 1301/1302: se expresa sin falsa precisión. No se atribuye liberación automática de mil almas.
+
+### 33. `elizabeth_of_hungary_religious` · 17/11
+
+- [Catholic Encyclopedia, «St. Elizabeth of Hungary»](https://www.newadvent.org/cathen/05389a.htm)
+- [Benedicto XVI, audiencia general de 20-X-2010](https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20101020.html)
+
+Relato de las rosas presentado como tradición/iconografía, no como milagro certificado en esta ficha. No se promueven mortificaciones extremas ni se confunde con Isabel de Portugal. Matrimonio y tres hijos comprobados.
+
+### 34. `dedication_of_the_basilicas_of_saints_peter_and_paul_apostles` · 18/11
+
+- [Abbaye Sainte-Madeleine du Barroux, «Dedication of the Basilicas of Saint-Pierre and Saint-Paul»](https://www.barroux.org/en/saints-of-the-day/dedication-of-the-basilicas-of-saint-pierre-and-saint-paul/)
+- [Den katolske kirke, «Vigselsfesten for Peters og Paulus’ basilikaer i Roma»](https://www.katolsk.no/biografier/historisk/nov18)
+- [Concilio Vaticano II, Lumen gentium, 6](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html)
+
+Se describe una celebración y su significado, sin biografía ficticia de edificios. No se confunde la dedicación actual de San Pablo (diciembre de 1854) con la fecha común de memoria del 18 de noviembre. Catedral de Roma distinguida de San Pedro.
+
+### 35. `presentation_of_the_blessed_virgin_mary` · 21/11
+
+- [Catholic Encyclopedia, «Feast of the Presentation of the Blessed Virgin Mary»](https://www.newadvent.org/cathen/12400a.htm)
+- [Vatican News, «Presentation of the Blessed Virgin Mary»](https://www.vaticannews.va/en/liturgical-holidays/presentation-of-the-blessed-virgin-mary-.html)
+
+Distinción explícita entre tradición apócrifa, historia litúrgica y sentido espiritual. No se afirma que María entró físicamente en el Santo de los Santos a los tres años como dato histórico certificado.
+
+### 36. `cecilia_of_rome_virgin` · 22/11
+
+- [Catholic Encyclopedia, «St. Cecilia»](https://www.newadvent.org/cathen/03471a.htm)
+- [Vatican News, «St. Cecilia, Virgin and Martyr in the Cemetery of Callistus»](https://www.vaticannews.va/en/saints/11/22/st--cecilia--virgin-and-martyr-in-the-cemitery-of--callistus.html)
+
+Patronazgo musical verificado; no se afirma que fuera organista. Se distinguen culto antiguo, actas legendarias e iconografía. Sin fechas exactas, cuerpo incorrupto o prodigios certificados por conjetura.
+
+### 37. `clement_i_pope` · 23/11
+
+- [Catholic Encyclopedia, «Pope St. Clement I»](https://www.newadvent.org/cathen/04012c.htm)
+- [Benedicto XVI, audiencia general de 7-III-2007](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070307.html)
+
+Sin identificarlo como certeza con el Clemente de Flp 4,3 ni asignar autoría de las Pseudoclementinas. La muerte con ancla se identifica como relato posterior, no dato demostrado.
+
+### 38. `columban_of_luxeuil_abbot` · 23/11
+
+- [Catholic Encyclopedia, «St. Columbanus»](https://www.newadvent.org/cathen/04137a.htm)
+- [Benedicto XVI, audiencia general de 11-VI-2008](https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080611.html)
+
+No se confunde con Columba de Iona. Nacimiento aproximado; fundación de Bobbio y muerte cotejadas. Se omiten penitencias corporales antiguas y relatos de animales como episodios históricos certificados.
+
+### 39. `andrew_dung_lac_priest_and_companions_martyrs` · 24/11
+
+- [Den katolske kirke, «St. Andrew Dung-Lac and his 116 companions»](https://www.katolsk.no/biografier/historisk/adung_en)
+- [Santa Sede, tabla de canonizaciones de Juan Pablo II: 19-VI-1988](https://www.vatican.va/news_services/liturgy/saints/index_saints_en.html)
+- [Vatican News, «Sts. Andrew Dũng Lạc, and his companions, Martyrs»](https://www.vaticannews.va/en/saints/11/24/sts--andrew-d_ng-lc--and-his-companions--martyrs.html)
+
+Se comprueba 1988 con el registro de canonizaciones: una página italiana de Vatican News dice erróneamente 1990. No se copian estimaciones de cientos de miles de víctimas ni se confunden 117 vietnamitas con los 103 mártires coreanos de 1984.
+
+### 40. `catherine_of_alexandria_virgin` · 25/11
+
+- [Catholic Encyclopedia, «St. Catherine of Alexandria»](https://www.newadvent.org/cathen/03445a.htm)
+- [Vatican News, «St. Catherine of Alexandria»](https://www.vaticannews.va/en/saints/11/25/st--catherine-of-alexandria.html)
+
+Sin fecha de nacimiento o martirio inventada. Debates, rueda, traslado angélico y discursos distinguidos de la historia comprobada; no se atribuyen citas legendarias. Patronazgo tradicional de filósofos/estudiosos atestiguado en la enciclopedia.
+
 ## Validación
 
 ```text
-30 entries · 0 errors · 1 warnings
+40 entries · 0 errors · 1 warnings
 ```
 
 El aviso de las entregas parciales corresponde al prefijo de claves aún incompleto. Se ejecuta el validador oficial con `--partial` en cada entrega parcial y sin esa opción al completar el lote. También se verifica la meta editorial de 120–200 palabras por idioma y `git diff --check`. La compilación e integración corresponden al coordinador. No se publica APK ni se modifica `CatholicGPT`.
