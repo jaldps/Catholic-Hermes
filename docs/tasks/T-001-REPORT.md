@@ -89,6 +89,24 @@ Fuentes generales consultadas:
 - **`sign_of_the_cross` / `signarse` / `persignarse`**: no hay una concesión específica en el *Enchiridion* consultado; el `approval` se limita al uso litúrgico.
 - **Edición de las traducciones**: en general no se identificó la edición de las traducciones de la app; por eso los `textNote` usan «edición no identificada» cuando no son dominio público.
 
+## Observaciones de contenido para el coordinador (informativas, no bloquean T-001)
+
+Estas no son correcciones de `details-a.json` (que ya está validado y entregado), sino
+observaciones sobre el **texto fuente de la app** (`PrayerAndNovenaData.kt`), que no forma
+parte de este encargo. Pueden ser decisiones editoriales intencionadas (las ediciones
+trilingües suelen usar fórmulas distintas según el idioma); las dejo para su conocimiento,
+y no hace falta que haga nada si lo tiene así previsto.
+
+- **`come_holy_spirit`**: el texto de la app es solo la primera parte de la secuencia *Veni Sancte Spiritus* (se detiene en «en el llanto, consuelo» / «in fletu solatium»); la secuencia tradicional continúa con «O lux beatissima…», «Lava quod est sordidum…», etc. Además, la `responseText` («Oh Espíritu Santo, ven y renueva la faz de la tierra…») no pertenece a la secuencia: es una adición.
+- **`guardian_angel`**: el PT usa otra oración distinta («Santo Anjo do Senhor, meu zeloso e leal amigo…») frente al «Ángel de Dios, que eres mi custodio…» / «Angel of God, my guardian dear…». Ambas son válidas, pero no son el mismo texto; el título PT también difiere («Santo Anjo do Senhor»).
+- **`morning_offering`**: los tres idiomas son tres fórmulas de ofrecimiento diferentes (ES «¡Señor Dios Todopoderoso!…»; EN «O Jesus, through the Immaculate Heart of Mary…»; PT «Senhor Deus de infinita bondade…»). Misma intención, distinto contenido.
+- **`act_of_contrition`**: tres fórmulas legítimas diferentes (ES «¡Señor mío Jesucristo…!»; EN «O my God, I am heartily sorry…»; PT «Meu Deus, eu me arrependo…»). La concesión 9 del *Enchiridion* cubre «cualquier fórmula legítima», por lo que la indulgencia no depende de la fórmula.
+- **`sign_of_the_cross` / `signarse`**: fichas casi idénticas (solo cambia el «y»); ya consultado.
+- **`stay_with_me_lord`**: extracto del inicio de la oración de san Pío; ya consultado (pregunta 4).
+
+El resto de las 34 oraciones tienen el mismo texto sustancial en los tres idiomas, salvo
+`lenten_prayer`, que quedó marcada como de origen no identificado.
+
 ## Preguntas para el coordinador
 
 1. ¿La concesión que tiene en mente para el Credo es la del «testimonio público de fe» (p. 340 de la ed. latina) o hay otra concreta?
