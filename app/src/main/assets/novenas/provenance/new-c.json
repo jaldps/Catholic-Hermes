@@ -56,5 +56,64 @@
       "Devota novena di Nostra Signora del Pilar di Saragozza, versione dallo spagnolo di S.A.R.D.M.A.B.; cenno istorico del P. Fr. Diego dello Spirito Santo, Napoli: Stabilimento tipografico di G. Nobile, 1855, pp. 19–52. https://archive.org/details/bub_gb_VN7wZpxiFH0C",
       "Facsímil completo: https://archive.org/download/bub_gb_VN7wZpxiFH0C/bub_gb_VN7wZpxiFH0C.pdf"
     ]
+  },
+  {
+    "id": "novena-a-san-ramon-nonato",
+    "status": "pastoral_review",
+    "origin": {
+      "es": "Texto: Novena del glorioso San Ramon No Nacido, México, Herederos de Joseph de Jáuregui, 1780, ejemplar Wellcome b29296043 con Public Domain Mark. ES: transcripción cotejada con el facsímil, con normalización tipográfica; EN/PT: traducciones propias y fieles, incluido el cierre latino. La meditación es la cuarta advertencia original: leer la vida del santo o meditar sus virtudes; no se compusieron reflexiones nuevas. Los gozos conservan relatos y cifras hagiográficos del impreso, no certificados aquí como hechos o curaciones reconocidas. El lenguaje histórico de cautividad, enfermedad, sufrimiento y humildad exige contexto pastoral: no invita a buscar daño, aceptar abusos ni sustituir la atención sanitaria. No se atribuye una promesa automática ni una indulgencia vigente.",
+      "en": "Text: Novena del glorioso San Ramon No Nacido, Mexico, Heirs of Joseph de Jáuregui, 1780, Wellcome copy b29296043 with Public Domain Mark. ES: transcription checked against the facsimile, with typographical normalization; EN/PT: faithful original translations, including the Latin conclusion. The meditation is the fourth original instruction: read the saint’s life or reflect on his virtues; no new reflections were composed. The praises retain the book’s hagiographical accounts and numbers, not certified here as established events or recognized healings. Historical language of captivity, illness, suffering and humility needs pastoral context: it does not invite seeking harm, accepting abuse or replacing healthcare. No automatic promise or current indulgence is attributed.",
+      "pt": "Texto: Novena del glorioso San Ramon No Nacido, México, Herdeiros de Joseph de Jáuregui, 1780, exemplar Wellcome b29296043 com Public Domain Mark. ES: transcrição conferida com o fac-símile, com normalização tipográfica; EN/PT: traduções próprias e fiéis, incluindo o encerramento latino. A meditação é a quarta advertência original: ler a vida do santo ou meditar suas virtudes; não se compuseram novas reflexões. Os louvores conservam relatos e números hagiográficos do impresso, sem certificação aqui como fatos ou curas reconhecidas. A linguagem histórica de cativeiro, doença, sofrimento e humildade exige contexto pastoral: não convida a procurar dano, aceitar abusos nem substituir a atenção à saúde. Não se atribui promessa automática nem indulgência vigente."
+    },
+    "history": {
+      "es": "San Ramón Nonato nació hacia 1200 en Portell, Cataluña; según la tradición, por cesárea tras la muerte de su madre, de ahí el apodo «Nonato». Ingresó en la Orden de la Merced, dedicada a redimir cautivos, y murió el 31 de agosto de 1240 en Cardona. Muchos detalles de su vida proceden de relatos tardíos: el candado en los labios y el cardenalato son tradiciones sin documentación firme. Fue canonizado en 1657. La piedad popular lo invoca por las mujeres embarazadas, las parteras y los recién nacidos. La novena puede rezarse antes de su fiesta, el 31 de agosto.",
+      "en": "Saint Raymond Nonnatus was born around 1200 in Portell, Catalonia; according to tradition, by Caesarean section after his mother's death, hence the nickname “Nonnatus.” He entered the Order of Mercy, devoted to ransoming captives, and died on 31 August 1240 at Cardona. Many details of his life come from late accounts: the padlock on his lips and a cardinalate are traditions without firm documentation. He was canonized in 1657. Popular piety invokes him for pregnant women, midwives and newborns. The novena may be prayed before his feast, 31 August.",
+      "pt": "São Raimundo Nonato nasceu por volta de 1200 em Portell, na Catalunha; segundo a tradição, por cesariana após a morte de sua mãe, daí o apelido “Nonato”. Ingressou na Ordem das Mercês, dedicada ao resgate de cativos, e morreu em 31 de agosto de 1240 em Cardona. Muitos detalhes de sua vida procedem de relatos tardios: o cadeado nos lábios e o cardinalato são tradições sem documentação firme. Foi canonizado em 1657. A piedade popular o invoca pelas gestantes, parteiras e recém-nascidos. A novena pode ser rezada antes de sua festa, em 31 de agosto."
+    },
+    "approval": {
+      "es": "Canonizado en 1657; su memoria figura en el Martirologio Romano el 31 de agosto.",
+      "en": "Canonized in 1657; his memorial appears in the Roman Martyrology on 31 August.",
+      "pt": "Canonizado em 1657; sua memória consta do Martirológio Romano em 31 de agosto."
+    },
+    "promise": {
+      "kind": "NONE",
+      "text": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "attribution": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "source": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      },
+      "conditions": {
+        "es": "",
+        "en": "",
+        "pt": ""
+      }
+    },
+    "commercialAdditions": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "pastoralNote": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "sources": [
+      "Martirologio Romano (2004), 31 de agosto",
+      "Orden de la Merced: biografía de san Ramón Nonato",
+      "Novena del glorioso San Ramon No Nacido, México: Herederos del Lic. D. Joseph de Jáuregui, 1780. Wellcome Collection, b29296043. https://archive.org/details/b29296043",
+      "Facsímil, PDF pp. 12, 14–32: https://archive.org/download/b29296043/b29296043.pdf",
+      "Ejemplar de contraste, Mariano Ontiveros, México, 1825, b29296456: https://archive.org/details/b29296456. Presenta una laguna entre la antífona y el tercer día; no se usa como base del segundo día ni de la colecta."
+    ]
   }
 ]

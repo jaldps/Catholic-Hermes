@@ -49,5 +49,56 @@
       8,
       9
     ]
+  },
+  {
+    "id": "novena-a-san-ramon-nonato",
+    "title": {
+      "es": "Novena a San Ramón Nonato",
+      "en": "Novena to Saint Raymond Nonnatus",
+      "pt": "Novena a São Raimundo Nonato"
+    },
+    "patron": {
+      "es": "Mercedario; patrono de las gestantes y las parteras",
+      "en": "Mercedarian; patron of expectant mothers and midwives",
+      "pt": "Mercedário; padroeiro das gestantes e das parteiras"
+    },
+    "category": {
+      "es": "Novenas",
+      "en": "Novenas",
+      "pt": "Novenas"
+    },
+    "description": {
+      "es": "Nueve días del novenario histórico mexicano de 1780: oraciones particulares, oración común, gozos, antífona y oración final. La meditación conserva la rúbrica original de reflexionar sobre las virtudes del santo. Edición histórica para revisión pastoral.",
+      "en": "Nine days from the historical Mexican novena of 1780: daily prayers, common prayer, praises, antiphon and concluding prayer. The meditation retains the original rubric to reflect on the saint’s virtues. Historical edition for pastoral review.",
+      "pt": "Nove dias do novenário histórico mexicano de 1780: orações particulares, oração comum, louvores, antífona e oração final. A meditação conserva a rubrica original de refletir sobre as virtudes do santo. Edição histórica para revisão pastoral."
+    },
+    "miraculousHistory": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promises": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "imageUrl": null,
+    "tags": [
+      "family",
+      "health",
+      "love"
+    ],
+    "bodyFile": "263.json",
+    "dayNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
   }
 ]

@@ -1,8 +1,8 @@
 # T-008 · Informe de Codex
 
-## Entrega parcial 1
+## Entrega parcial 2
 
-Una novena recuperada: **Pilar, 9 días completos ES/EN/PT** (`262.json`), con índice de integración y procedencia. Las otras catorce siguen en investigación; esta entrega no las certifica ni restituye los cuerpos anteriormente redactados por agentes.
+Dos novenas recuperadas: **Pilar y San Ramón Nonato, 18 días ES/EN/PT** (`262.json` y `263.json`), con índice de integración y procedencia. Primera entrega parcial: `e75e65e`. Las otras trece siguen en investigación; esta entrega no las certifica ni restituye los cuerpos anteriormente redactados por agentes.
 
 ## Pilar: fuente, alcance y cotejo
 
@@ -22,6 +22,21 @@ Una novena recuperada: **Pilar, 9 días completos ES/EN/PT** (`262.json`), con �
 
 La p. 49 incluye como obsequio una **disciplina corporal** o una mortificación proporcionada. Se conserva documentariamente y se identifica como práctica del impreso histórico; **no se presenta como instrucción corporal actual para el lector**. La descripción y la procedencia visibles señalan que requiere revisión pastoral y acompañamiento. No se ha inventado una penitencia sustitutiva dentro de la novena. Antes de integrarla como guía práctica para principiantes, el coordinador debe decidir cómo presentar esta edición histórica y su contexto. No se modifica el `pastoralNote` previamente revisado porque el contrato solo autoriza cambiar `status`, `origin` y `sources`.
 
+## San Ramón Nonato: fuente completa y laguna detectada
+
+| Fuente exacta, con URL | Tipo de fuente | Reserva expresa | Resultado |
+|---|---|---|---|
+| *Novena del glorioso San Ramon No Nacido*, México, Imprenta de los Herederos del Lic. D. Joseph de Jáuregui, calle de San Bernardo, **1780**. [Ejemplar Wellcome b29296043](https://archive.org/details/b29296043); [PDF completo](https://archive.org/download/b29296043/b29296043.pdf), pp. PDF 9 (portada), 12 (rúbrica de meditación), 14–32 (nueve días y cierre). Autor no establecido. | Impreso antiguo, **Public Domain Mark** explícita en sus metadatos. | Marca de dominio público; no se asigna una reserva de la digitalización al texto antiguo. | `263.json`: nueve oraciones particulares, oración común, gozos con respuesta, antífona y colecta, ES/EN/PT. Marcado `pastoral_review` por el contexto hagiográfico y lenguaje histórico. |
+
+- Se comprobaron visualmente la portada y todas las páginas PDF **14–32**, además de la p. 12 que contiene la rúbrica para meditar. ES: transcripción con normalización tipográfica (s larga, cortes de línea, mayúsculas). EN/PT: traducciones propias y fieles. Se conserva la sintaxis antigua, incluso alguna discordancia del impreso; no se modifica la petición para modernizarla.
+- El ejemplar de [Mariano Ontiveros, 1825](https://archive.org/details/b29296456) **no sirve por sí solo como fuente completa**: después de la antífona de su página PDF 21 salta a la continuación de la rúbrica y al tercer día en la 22. Faltan el V/R, la colecta y el cuerpo del segundo día. Se detectó comparando las imágenes, no solo el OCR. Por eso se cambió la base a **1780**, que sí conserva el tramo completo; no se inventa ni se atribuye a 1825 lo que no aparece en su ejemplar digital.
+- `meditation` reproduce únicamente la **cuarta advertencia del propio novenario**: leer un capítulo de la vida del santo o meditar en sus virtudes, con deseo de imitarlas. Se mantiene como rúbrica, sin escribir meditaciones nuevas ni inventar un capítulo biográfico. Esa instrucción original general se aplica a la novena; no se presenta como una reflexión diferente para cada fecha.
+- `intentionGuidance` conserva la rúbrica original de comenzar con la señal de la cruz y el acto de contrición, y de la recitación comunitaria. Las oraciones básicas aparecen como rúbricas, igual que en el impreso. `scripture` permanece vacío.
+- La respuesta de los gozos (*Sednos Protector, y Guía / Non-nato Ramon Glorioso*) se imprime completa al principio y luego abreviada «Sednos, &c.»: se desarrolla la **misma respuesta**, sin escribir otra. Se conservan todas sus estrofas. El V/R y la colecta final se traducen del latín antiguo; no se usa una traducción litúrgica moderna.
+- La antífona de 1780 muestra la forma impresa *dilexit Christus* donde el contexto reclama el objeto *Christum*; el ejemplar de 1825 permite cotejar la lectura *Christum*. La traducción sigue el sentido inequívoco «amó a Cristo», sin inventar una oración adicional ni presentar una transcripción latina corregida como si fuera literal del impreso.
+- Los gozos y la oración común incluyen afirmaciones hagiográficas (nacimiento, imágenes que sudan, curaciones y una cifra de **24.000 milagros en dos años**). Se documenta que **el impreso las afirma**; no se han verificado como hechos ni como milagros reconocidos. La procedencia visible lo aclara. Se conserva también la petición final de resignación a la voluntad de Dios si el favor tarda o no se obtiene; no se convierte el lenguaje devocional en promesa automática.
+- Las expresiones históricas sobre cautividad, «infieles», sufrimiento y humildad requieren contexto pastoral. No se promueve buscar daño ni aceptar abusos, ni se sustituye atención sanitaria. Las antiguas indulgencias y las instrucciones para embarazo de los apéndices no se incorporan al cuerpo de los nueve días.
+
 ## Resto de la investigación en curso
 
 Estas son pistas documentadas, no declaraciones de inexistencia ni de protección automática de los textos.
@@ -37,7 +52,7 @@ Estas son pistas documentadas, no declaraciones de inexistencia ni de protecció
 | Suyapa | [Basílica, novena](https://basilicadesuyapa.com/novena-virgen-de-suyapa). | No se atribuye una reserva sin comprobarla. | Pendiente de texto íntegro; la consulta anterior mostraba el archivo como próximo. |
 | Señor de los Milagros | [Editorial Fátima, Novena rogativa e historia](https://www.fatima.pe/producto/novena-rogativa-e-historia-del-senor-de-los-milagros). | No se equipara la ficha comercial a una reserva expresa del texto. | Pendiente de texto íntegro cotejable; no es prueba de inexistencia de otro novenario. |
 | Divino Niño del 20 de Julio | Eliécer Salesman, *Novena bíblica al Divino Niño Jesús*, [catálogo San Pablo](https://sanpablo.cr/libreria/producto/oracion-y-devocion/novena-biblica-al-divino-nino-jesus/). | No se afirma reserva específica solo por ser edición reciente. | Pendiente de fuente textual íntegra reutilizable; no se confunde con Praga. |
-| San Ramón Nonato | **Nueva fuente antigua descargada:** *Novena del glorioso San Ramon No Nacido*, México, Mariano Ontiveros, **1825**, [Wellcome](https://archive.org/details/b29296456). | Marca explícita **Public Domain Mark**. | En cotejo. También descargado el [PDF mercedario actual](https://merced.org.ar/wp-content/uploads/2019/12/04-Novena-Nonato.pdf), cuya autora figura como Patricia Inés Guerra: no se finge que sea la misma edición de 1825. |
+| San Ramón Nonato | **Entregada la edición de 1780**, Herederos de Joseph de Jáuregui, [Wellcome b29296043](https://archive.org/details/b29296043). El ejemplar de 1825 presenta la laguna descrita arriba. | Marca explícita **Public Domain Mark**. | Nueve días ES/EN/PT en `263.json`. También se identificó el [PDF mercedario contemporáneo](https://merced.org.ar/wp-content/uploads/2019/12/04-Novena-Nonato.pdf), de Patricia Inés Guerra: no se confunde con el impreso antiguo ni se copia. |
 | San Pancracio | [Sancho el Sabio, Salvador Mujal, 1958](https://catalogo.sanchoelsabio.eus/Record/310186/Details). | No se atribuye reserva específica sin verla. | Pendiente de cuerpo cotejable. |
 | Santa Eduviges | Antonio de Paredes, *Novena de la gloriosa Santa Heduvige*, México, Herederos de Joseph de Jáuregui, **1791**, [catálogo Biblioteca Pública de Jalisco](https://virtual.bpej.udg.mx/coleccion/23?page=119), exlibris 2664. | Texto antiguo, sin reserva vigente establecida. | Pendiente de facsímil completo. |
 | São Benedito | Pe. Fábio Evaristo CSsR, *Novena de São Benedito*, 5.ª ed., 2021, [Editora Santuário](https://www.editorasantuario.com.br/livros/novenas/novena-de-sao-benedito), ISBN 8572008020. | Reserva editorial expresa comprobada en T-004. Derechos: Editora Santuário. | No se incorpora esa edición; se busca otra fuente. Es Benedito de Palermo, no Bento de Nursia. |
@@ -48,7 +63,7 @@ Estas son pistas documentadas, no declaraciones de inexistencia ni de protecció
 Se ejecutó Python conforme al encargo: JSON válido, nueve días ordenados, `meditation` y `prayer` completos ES/EN/PT, ids del índice iguales a los de procedencia, numeración desde 262 sin huecos y conservación de campos de metadatos no autorizados.
 
 ```text
-1 novenas · 9 trilingual days · matching index/provenance IDs · 0 errors
+2 novenas · 18 trilingual days · matching index/provenance IDs · 0 errors
 scripture uses the existing String model; unmodified metadata preserved.
 ```
 
