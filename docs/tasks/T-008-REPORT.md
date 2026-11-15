@@ -2,7 +2,7 @@
 
 ## Entrega parcial · 5 de 15 novenas
 
-Cinco novenas recuperadas, **45 días ES/EN/PT**, cuerpos `262.json`–`266.json`: Pilar, San Ramón Nonato, selección histórica de Copacabana, selección de Altagracia 2021 y Chiquinquirá 2012. Esta actualización incorpora los dos PDF aportados por el usuario; los tres cuerpos anteriores permanecen intactos y la revisión penitencial del Pilar sigue aplicada. Base: `origin/CatholicGPT` (`4f302d7`), rama de entrega `ext/T-008`.
+Cinco novenas recuperadas, **45 días ES/EN/PT**, cuerpos `262.json`–`266.json`: Pilar, San Ramón Nonato, selección histórica de Copacabana, selección de Altagracia 2021 y Chiquinquirá 2012. Esta actualización incorpora los dos PDF aportados por el usuario; los tres cuerpos anteriores permanecen intactos y la revisión penitencial del Pilar sigue aplicada. Base actualizada: `origin/CatholicGPT` (`0cf8491`, publicación 1.8.7), incorporada mediante merge en `ext/T-008`. Se conservan las nuevas notas pastorales que el coordinador añadió a Nonato y Copacabana.
 
 Las meditaciones y oraciones proceden de fuentes identificadas; EN/PT son traducciones propias y fieles. No se han redactado nuevas oraciones, meditaciones ni intenciones para completar campos. Las selecciones se declaran expresamente y requieren revisión del coordinador antes de la integración. Se conserva el formato real del modelo: `scripture` es `String`, mientras los demás campos textuales son ES/EN/PT.
 
@@ -57,6 +57,8 @@ Validación de esta entrega parcial:
 ```text
 5 novenas · 45 trilingual days · matching index/provenance IDs · 0 errors
 scripture uses the existing String model; unmodified metadata preserved.
+18 new days: ES source selections, nine original dedications, 12 complete praises per language, dates and preserved Pilar omission: 0 errors
+Both uploaded PDF fingerprints match the documented sources.
 ```
 
 También se comprobó `git diff --check`, las tres lenguas de los 18 días nuevos y la correspondencia de las referencias de Altagracia con las nueve lecturas del PDF. Se mantienen intactos los tres cuerpos ya revisados, incluida la omisión penitencial del Pilar. Solo se cambian dos cuerpos nuevos, el índice de integración, la procedencia y este informe. No hay Kotlin, APK ni modificaciones de encargos cerrados.
@@ -151,4 +153,4 @@ Se continuó la investigación después de aplicar la revisión del Pilar. Estos
 
 El validador Python comprueba JSON válido, nueve días ordenados, `meditation` y `prayer` no vacíos en ES/EN/PT, ids idénticos entre índice y procedencia y cuerpos consecutivos desde 262, además de preservar los campos no autorizados de metadatos. Resultado: **0 errors**. No se usa un indicador ficticio `--partial`: T-008 no entrega un script oficial; la validación Python exigida se ejecuta sobre la entrega parcial existente.
 
-Solo se publica en `ext/T-008`, sin force-push. El coordinador integra el índice, revisa las selecciones y compila. T-006 está entregado en `ext/T-006` (`561b7ae`) y T-010 en `ext/T-010` (`9008c22`); no se modifican aquí ni se tocan encargos cerrados.
+Solo se publica en `ext/T-008`, sin force-push. El coordinador integra el índice, revisa las selecciones y compila. T-006 (`561b7ae`) y T-010 (`9008c22`) ya fueron integrados por el coordinador y figuran CERRADO en el protocolo de la base 1.8.7; no se editan aquí ni se tocan otros encargos cerrados.
