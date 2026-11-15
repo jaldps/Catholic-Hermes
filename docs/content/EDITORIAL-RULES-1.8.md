@@ -20,6 +20,8 @@ Obligatorias para todo contenido nuevo o reescrito (santos, órdenes, cargos, de
 
 ## 2. Derechos
 
+- **Regla del usuario (15‑11‑2026):** el texto de oraciones y novenas **nunca se inventa**: siempre procede de una fuente comprobada y se reproduce fielmente (la traducción fiel está permitida). Que un texto esté publicado por un santuario, diócesis, editorial o web **no implica copyright**; solo se trata como protegido con **reserva expresa verificada**, y entonces se indica «Derechos: <titular>».
+
 - Textos de dominio público (oraciones antiguas, Padres, textos anteriores a ~1930, documentos del Magisterio citados brevemente) pueden reproducirse.
 - No copiar íntegros textos con derechos (traducciones litúrgicas oficiales modernas —ICEL, misales nacionales—, libros de editoriales, webs comerciales). Usar traducción propia de un original de dominio público o redacción propia, y marcar «traducción/adaptación propia» cuando corresponda.
 - Explicaciones, biografías, guías: siempre redacción original.

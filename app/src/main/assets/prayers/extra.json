@@ -1,0 +1,1353 @@
+[
+  {
+    "id": "litany_of_st_joseph",
+    "title": {
+      "es": "Letanía de San José",
+      "en": "Litany of Saint Joseph",
+      "pt": "Ladainha de São José"
+    },
+    "latinTitle": "Litaniae Sancti Ioseph",
+    "category": "INTERCESSION",
+    "leaderText": {
+      "es": "V/ Señor, ten piedad.\nR/ Señor, ten piedad.\n\nV/ Cristo, ten piedad.\nR/ Cristo, ten piedad.\n\nV/ Señor, ten piedad.\nR/ Señor, ten piedad.\n\nV/ Cristo, óyenos.\nR/ Cristo, óyenos.\n\nV/ Cristo, escúchanos.\nR/ Cristo, escúchanos.\n\nV/ Dios Padre del cielo.\nR/ ten piedad de nosotros.\n\nV/ Dios Hijo, Redentor del mundo.\nR/ ten piedad de nosotros.\n\nV/ Dios Espíritu Santo.\nR/ ten piedad de nosotros.\n\nV/ Santísima Trinidad, un solo Dios.\nR/ ten piedad de nosotros.\n\nV/ Santa María.\nR/ ruega por nosotros.\n\nV/ San José.\nR/ ruega por nosotros.\n\nV/ Ilustre descendiente de David.\nR/ ruega por nosotros.\n\nV/ Luz de los patriarcas.\nR/ ruega por nosotros.\n\nV/ Esposo de la Madre de Dios.\nR/ ruega por nosotros.\n\nV/ Custodio del Redentor.\nR/ ruega por nosotros.\n\nV/ Casto custodio de la Virgen.\nR/ ruega por nosotros.\n\nV/ Padre nutricio del Hijo de Dios.\nR/ ruega por nosotros.\n\nV/ Diligente defensor de Cristo.\nR/ ruega por nosotros.\n\nV/ Servidor de Cristo.\nR/ ruega por nosotros.\n\nV/ Ministro de la salvación.\nR/ ruega por nosotros.\n\nV/ Cabeza de la Sagrada Familia.\nR/ ruega por nosotros.\n\nV/ José justísimo.\nR/ ruega por nosotros.\n\nV/ José castísimo.\nR/ ruega por nosotros.\n\nV/ José prudentísimo.\nR/ ruega por nosotros.\n\nV/ José fortísimo.\nR/ ruega por nosotros.\n\nV/ José obedientísimo.\nR/ ruega por nosotros.\n\nV/ José fidelísimo.\nR/ ruega por nosotros.\n\nV/ Espejo de paciencia.\nR/ ruega por nosotros.\n\nV/ Amante de la pobreza.\nR/ ruega por nosotros.\n\nV/ Modelo de los trabajadores.\nR/ ruega por nosotros.\n\nV/ Gloria de la vida familiar.\nR/ ruega por nosotros.\n\nV/ Custodio de las vírgenes.\nR/ ruega por nosotros.\n\nV/ Sostén de las familias.\nR/ ruega por nosotros.\n\nV/ Apoyo en las dificultades.\nR/ ruega por nosotros.\n\nV/ Consuelo de los afligidos.\nR/ ruega por nosotros.\n\nV/ Esperanza de los enfermos.\nR/ ruega por nosotros.\n\nV/ Patrono de los exiliados.\nR/ ruega por nosotros.\n\nV/ Patrono de los afligidos.\nR/ ruega por nosotros.\n\nV/ Patrono de los pobres.\nR/ ruega por nosotros.\n\nV/ Patrono de los moribundos.\nR/ ruega por nosotros.\n\nV/ Terror de los demonios.\nR/ ruega por nosotros.\n\nV/ Protector de la santa Iglesia.\nR/ ruega por nosotros.\n\nV/ Cordero de Dios, que quitas los pecados del mundo.\nR/ perdónanos, Señor.\n\nV/ Cordero de Dios, que quitas los pecados del mundo.\nR/ escúchanos, Señor.\n\nV/ Cordero de Dios, que quitas los pecados del mundo.\nR/ ten piedad de nosotros.\n\nV/ Lo constituyó señor de su casa.\nR/ Y administrador de todos sus bienes.\n\nOremos.\nDios, que en tu inefable providencia te dignaste elegir a san José como esposo de tu santísima Madre, concédenos, te rogamos, que merezcamos tenerlo como intercesor en el cielo, a quien veneramos como protector en la tierra. Tú, que vives y reinas por los siglos de los siglos. Amén.",
+      "en": "V/ Lord, have mercy.\nR/ Lord, have mercy.\n\nV/ Christ, have mercy.\nR/ Christ, have mercy.\n\nV/ Lord, have mercy.\nR/ Lord, have mercy.\n\nV/ Christ, hear us.\nR/ Christ, hear us.\n\nV/ Christ, graciously hear us.\nR/ Christ, graciously hear us.\n\nV/ God the Father in heaven.\nR/ have mercy on us.\n\nV/ God the Son, Redeemer of the world.\nR/ have mercy on us.\n\nV/ God the Holy Spirit.\nR/ have mercy on us.\n\nV/ Holy Trinity, one God.\nR/ have mercy on us.\n\nV/ Holy Mary.\nR/ pray for us.\n\nV/ Saint Joseph.\nR/ pray for us.\n\nV/ Illustrious son of David.\nR/ pray for us.\n\nV/ Light of Patriarchs.\nR/ pray for us.\n\nV/ Spouse of the Mother of God.\nR/ pray for us.\n\nV/ Guardian of the Redeemer.\nR/ pray for us.\n\nV/ Pure Guardian of the Virgin.\nR/ pray for us.\n\nV/ Provider for the Son of God.\nR/ pray for us.\n\nV/ Zealous defender of Christ.\nR/ pray for us.\n\nV/ Servant of Christ.\nR/ pray for us.\n\nV/ Minister of salvation.\nR/ pray for us.\n\nV/ Head of the Holy Family.\nR/ pray for us.\n\nV/ Joseph, most just.\nR/ pray for us.\n\nV/ Joseph, most chaste.\nR/ pray for us.\n\nV/ Joseph, most prudent.\nR/ pray for us.\n\nV/ Joseph, most brave.\nR/ pray for us.\n\nV/ Joseph, most obedient.\nR/ pray for us.\n\nV/ Joseph, most loyal.\nR/ pray for us.\n\nV/ Mirror of patience.\nR/ pray for us.\n\nV/ Lover of poverty.\nR/ pray for us.\n\nV/ Model for workers.\nR/ pray for us.\n\nV/ Glory of family life.\nR/ pray for us.\n\nV/ Guardian of virgins.\nR/ pray for us.\n\nV/ Cornerstone of families.\nR/ pray for us.\n\nV/ Support in difficulties.\nR/ pray for us.\n\nV/ Comfort of the sorrowing.\nR/ pray for us.\n\nV/ Hope of the sick.\nR/ pray for us.\n\nV/ Patron of exiles.\nR/ pray for us.\n\nV/ Patron of the afflicted.\nR/ pray for us.\n\nV/ Patron of the poor.\nR/ pray for us.\n\nV/ Patron of the dying.\nR/ pray for us.\n\nV/ Terror of demons.\nR/ pray for us.\n\nV/ Protector of the Holy Church.\nR/ pray for us.\n\nV/ Lamb of God, you take away the sins of the world.\nR/ spare us, O Lord.\n\nV/ Lamb of God, you take away the sins of the world.\nR/ hear us, O Lord.\n\nV/ Lamb of God, you take away the sins of the world.\nR/ have mercy on us.\n\nV/ He made him master of his house.\nR/ And ruler of all his possessions.\n\nLet us pray.\nO God, who in your inexpressible providence were pleased to choose Saint Joseph as spouse of your most holy Mother, grant, we pray, that we, who revere him as our protector on earth, may be worthy of his heavenly intercession. Who live and reign for ever and ever. Amen.",
+      "pt": "V/ Senhor, tende piedade.\nR/ Senhor, tende piedade.\n\nV/ Cristo, tende piedade.\nR/ Cristo, tende piedade.\n\nV/ Senhor, tende piedade.\nR/ Senhor, tende piedade.\n\nV/ Cristo, ouvi-nos.\nR/ Cristo, ouvi-nos.\n\nV/ Cristo, atendei-nos.\nR/ Cristo, atendei-nos.\n\nV/ Deus Pai do céu.\nR/ tende piedade de nós.\n\nV/ Deus Filho, Redentor do mundo.\nR/ tende piedade de nós.\n\nV/ Deus Espírito Santo.\nR/ tende piedade de nós.\n\nV/ Santíssima Trindade, um só Deus.\nR/ tende piedade de nós.\n\nV/ Santa Maria.\nR/ rogai por nós.\n\nV/ São José.\nR/ rogai por nós.\n\nV/ Ilustre descendente de Davi.\nR/ rogai por nós.\n\nV/ Luz dos patriarcas.\nR/ rogai por nós.\n\nV/ Esposo da Mãe de Deus.\nR/ rogai por nós.\n\nV/ Guardião do Redentor.\nR/ rogai por nós.\n\nV/ Casto guardião da Virgem.\nR/ rogai por nós.\n\nV/ Pai nutrício do Filho de Deus.\nR/ rogai por nós.\n\nV/ Diligente defensor de Cristo.\nR/ rogai por nós.\n\nV/ Servidor de Cristo.\nR/ rogai por nós.\n\nV/ Ministro da salvação.\nR/ rogai por nós.\n\nV/ Chefe da Sagrada Família.\nR/ rogai por nós.\n\nV/ José justíssimo.\nR/ rogai por nós.\n\nV/ José castíssimo.\nR/ rogai por nós.\n\nV/ José prudentíssimo.\nR/ rogai por nós.\n\nV/ José fortíssimo.\nR/ rogai por nós.\n\nV/ José obedientíssimo.\nR/ rogai por nós.\n\nV/ José fidelíssimo.\nR/ rogai por nós.\n\nV/ Espelho de paciência.\nR/ rogai por nós.\n\nV/ Amante da pobreza.\nR/ rogai por nós.\n\nV/ Modelo dos trabalhadores.\nR/ rogai por nós.\n\nV/ Glória da vida familiar.\nR/ rogai por nós.\n\nV/ Guardião das virgens.\nR/ rogai por nós.\n\nV/ Sustentáculo das famílias.\nR/ rogai por nós.\n\nV/ Amparo nas dificuldades.\nR/ rogai por nós.\n\nV/ Consolo dos que sofrem.\nR/ rogai por nós.\n\nV/ Esperança dos enfermos.\nR/ rogai por nós.\n\nV/ Padroeiro dos exilados.\nR/ rogai por nós.\n\nV/ Padroeiro dos aflitos.\nR/ rogai por nós.\n\nV/ Padroeiro dos pobres.\nR/ rogai por nós.\n\nV/ Padroeiro dos moribundos.\nR/ rogai por nós.\n\nV/ Terror dos demônios.\nR/ rogai por nós.\n\nV/ Protetor da santa Igreja.\nR/ rogai por nós.\n\nV/ Cordeiro de Deus, que tirais os pecados do mundo.\nR/ perdoai-nos, Senhor.\n\nV/ Cordeiro de Deus, que tirais os pecados do mundo.\nR/ ouvi-nos, Senhor.\n\nV/ Cordeiro de Deus, que tirais os pecados do mundo.\nR/ tende piedade de nós.\n\nV/ Ele o constituiu senhor de sua casa.\nR/ E administrador de todos os seus bens.\n\nOremos.\nÓ Deus, que em vossa inefável providência vos dignastes escolher são José como esposo de vossa santíssima Mãe, concedei-nos, nós vos pedimos, que mereçamos tê-lo como intercessor no céu, a quem veneramos como protetor na terra. Vós, que viveis e reinais pelos séculos dos séculos. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "En la oración familiar, por los trabajadores y por la Iglesia.",
+      "en": "During family prayer, for workers and for the Church.",
+      "pt": "Na oração em família, pelos trabalhadores e pela Igreja."
+    },
+    "indulgenceNote": {
+      "es": "El Enchiridion de 1999, concesión 22, prevé indulgencia parcial para la recitación piadosa de letanías legítimamente aprobadas. Una traducción propia no se presenta como edición litúrgica oficial.",
+      "en": "The 1999 Enchiridion, concession 22, provides a partial indulgence for devout recitation of legitimately approved litanies. An original translation is not presented as an official liturgical edition.",
+      "pt": "O Enchiridion de 1999, concessão 22, prevê indulgência parcial pela recitação piedosa de ladainhas legitimamente aprovadas. Uma tradução própria não é apresentada como edição litúrgica oficial."
+    },
+    "thematicTags": [
+      "family",
+      "work",
+      "litany"
+    ],
+    "history": {
+      "es": "La letanía de san José fue aprobada por la Sede Apostólica en 1909. En 2021, durante el año dedicado al santo, la Congregación para el Culto Divino comunicó siete invocaciones añadidas con aprobación de Francisco. Esta versión las incluye, junto con las súplicas tradicionales, el Cordero de Dios, el versículo y la oración final. Contemplar a José como esposo, custodio y trabajador conduce a imitar su disponibilidad para servir. La traducción inglesa publicada por el comité de culto de la USCCB está declarada de dominio público; el español y el portugués son traducciones propias, no ediciones litúrgicas oficiales.",
+      "en": "The Apostolic See approved Saint Joseph’s litany in 1909. In 2021, during the year dedicated to the saint, the Congregation for Divine Worship announced seven invocations added with Francis’s approval. This version includes them alongside the traditional petitions, Lamb of God, versicle, and concluding prayer. Contemplating Joseph as spouse, guardian, and worker leads toward imitating his readiness to serve. The English translation published by the USCCB’s worship committee is expressly public domain; the Spanish and Portuguese texts are original translations, rather than official liturgical editions approved for their respective countries.",
+      "pt": "A ladainha de são José foi aprovada pela Sé Apostólica em 1909. Em 2021, durante o ano dedicado ao santo, a Congregação para o Culto Divino comunicou sete invocações acrescentadas com aprovação de Francisco. Esta versão as inclui, juntamente com as súplicas tradicionais, o Cordeiro de Deus, o versículo e a oração final. Contemplar José como esposo, guardião e trabalhador conduz a imitar sua disponibilidade para servir. A tradução inglesa publicada pelo comitê de culto da USCCB é declarada de domínio público; os textos espanhol e português são traduções próprias, não edições litúrgicas oficiais."
+    },
+    "instructions": {
+      "es": "En grupo, una persona proclama V/ y los demás responden R/. En privado puedes decir ambas partes. Reza toda la letanía una vez, sin añadir cuentas o plazos para obtener un favor. Las siete invocaciones de 2021 forman parte del texto presentado; para el uso litúrgico público en español, consulta la edición aprobada de tu conferencia episcopal.",
+      "en": "In a group, one person leads V/ and everyone else answers R/. In private, you may say both parts. Pray the complete litany once without adding counts or deadlines for obtaining a favor. The seven 2021 invocations are included. For public liturgical use, follow the edition approved for your country.",
+      "pt": "Em grupo, uma pessoa proclama V/ e as demais respondem R/. Na oração pessoal, você pode dizer as duas partes. Reze a ladainha completa uma vez, sem acrescentar contagens ou prazos para obter uma graça. As sete invocações de 2021 estão incluídas; para o uso litúrgico público em português, consulte a edição aprovada pela conferência episcopal."
+    },
+    "source": {
+      "es": "Raccolta, 1910, n. 489; Culto Divino, carta de 1 de mayo de 2021; USCCB, Litany of Saint Joseph, junio de 2021, texto declarado de dominio público.",
+      "en": "Raccolta, 1910, no. 489; Divine Worship, letter of May 1, 2021; USCCB, Litany of Saint Joseph, June 2021, text expressly declared public domain.",
+      "pt": "Raccolta, 1910, n. 489; Culto Divino, carta de 1º de maio de 2021; USCCB, Litany of Saint Joseph, junho de 2021, texto declarado de domínio público."
+    },
+    "approval": {
+      "es": "El Enchiridion Indulgentiarum de 1999, concesión 22, incluye la letanía de San José entre las letanías aprobadas.",
+      "en": "The 1999 Enchiridion Indulgentiarum, concession 22, includes Saint Joseph’s litany among approved litanies.",
+      "pt": "O Enchiridion Indulgentiarum de 1999, concessão 22, inclui a ladainha de São José entre as ladainhas aprovadas."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del formulario latino tradicional con las invocaciones de 2021, cotejada con la edición inglesa de dominio público. Catholic Hermes, 2026. No es traducción litúrgica oficial.",
+      "en": "Public-domain English text approved by the USCCB Committee on Divine Worship, June 2021, with V/ and R/ formatting. No protected modern translation copied.",
+      "pt": "Tradução própria do formulário latino tradicional com as invocações de 2021, conferida com a edição inglesa de domínio público. Catholic Hermes, 2026. Não é tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "litany_of_the_holy_name",
+    "title": {
+      "es": "Letanía del Santísimo Nombre de Jesús",
+      "en": "Litany of the Holy Name of Jesus",
+      "pt": "Ladainha do Santíssimo Nome de Jesus"
+    },
+    "latinTitle": "Litaniae Sanctissimi Nominis Iesu",
+    "category": "INTERCESSION",
+    "leaderText": {
+      "es": "V/ Señor, ten piedad.\nR/ Señor, ten piedad.\n\nV/ Cristo, ten piedad.\nR/ Cristo, ten piedad.\n\nV/ Señor, ten piedad.\nR/ Señor, ten piedad.\n\nV/ Jesús, óyenos.\nR/ Jesús, óyenos.\n\nV/ Jesús, escúchanos.\nR/ Jesús, escúchanos.\n\nV/ Dios Padre del cielo.\nR/ ten piedad de nosotros.\n\nV/ Dios Hijo, Redentor del mundo.\nR/ ten piedad de nosotros.\n\nV/ Dios Espíritu Santo.\nR/ ten piedad de nosotros.\n\nV/ Santísima Trinidad, un solo Dios.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Hijo del Dios vivo.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Esplendor del Padre.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Resplandor de la luz eterna.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Rey de la gloria.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Sol de justicia.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Hijo de la Virgen María.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Amabilísimo.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Admirable.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Dios fuerte.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Padre del siglo futuro.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Mensajero del gran consejo.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Poderosísimo.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Pacientísimo.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Obedientísimo.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Manso y humilde de corazón.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Amante de la castidad.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Amante de nosotros.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Dios de la paz.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Autor de la vida.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Modelo de virtudes.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Celoso de las almas.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Dios nuestro.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Refugio nuestro.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Padre de los pobres.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Tesoro de los fieles.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Buen Pastor.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Luz verdadera.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Sabiduría eterna.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Bondad infinita.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Camino y vida nuestra.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Alegría de los ángeles.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Rey de los patriarcas.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Maestro de los apóstoles.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Doctor de los evangelistas.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Fortaleza de los mártires.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Luz de los confesores de la fe.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Pureza de las vírgenes.\nR/ ten piedad de nosotros.\n\nV/ Jesús, Corona de todos los santos.\nR/ ten piedad de nosotros.\n\nV/ Muéstrate propicio.\nR/ Perdónanos, Jesús.\n\nV/ Muéstrate propicio.\nR/ Escúchanos, Jesús.\n\nV/ De todo mal.\nR/ Líbranos, Jesús.\n\nV/ De todo pecado.\nR/ Líbranos, Jesús.\n\nV/ De tu ira.\nR/ Líbranos, Jesús.\n\nV/ De las asechanzas del diablo.\nR/ Líbranos, Jesús.\n\nV/ Del espíritu de impureza.\nR/ Líbranos, Jesús.\n\nV/ De la muerte eterna.\nR/ Líbranos, Jesús.\n\nV/ Del descuido de tus inspiraciones.\nR/ Líbranos, Jesús.\n\nV/ Por el misterio de tu santa Encarnación.\nR/ Líbranos, Jesús.\n\nV/ Por tu nacimiento.\nR/ Líbranos, Jesús.\n\nV/ Por tu infancia.\nR/ Líbranos, Jesús.\n\nV/ Por tu vida divina.\nR/ Líbranos, Jesús.\n\nV/ Por tus trabajos.\nR/ Líbranos, Jesús.\n\nV/ Por tu agonía y Pasión.\nR/ Líbranos, Jesús.\n\nV/ Por tu Cruz y abandono.\nR/ Líbranos, Jesús.\n\nV/ Por tus sufrimientos.\nR/ Líbranos, Jesús.\n\nV/ Por tu muerte y sepultura.\nR/ Líbranos, Jesús.\n\nV/ Por tu resurrección.\nR/ Líbranos, Jesús.\n\nV/ Por tu ascensión.\nR/ Líbranos, Jesús.\n\nV/ Por tus alegrías.\nR/ Líbranos, Jesús.\n\nV/ Por tu gloria.\nR/ Líbranos, Jesús.\n\nV/ Cordero de Dios, que quitas los pecados del mundo.\nR/ perdónanos, Jesús.\n\nV/ Cordero de Dios, que quitas los pecados del mundo.\nR/ escúchanos, Jesús.\n\nV/ Cordero de Dios, que quitas los pecados del mundo.\nR/ ten piedad de nosotros, Jesús.\n\nV/ Jesús, óyenos.\nR/ Jesús, escúchanos.\n\nOremos.\nSeñor Jesucristo, que dijiste: Pedid y recibiréis; buscad y encontraréis; llamad y se os abrirá: concédenos, te rogamos, a quienes te suplicamos, el afecto de tu divino amor, para que te amemos con todo el corazón, de palabra y de obra, y nunca cesemos de alabarte.\n\nHaz, Señor, que tengamos siempre temor y amor de tu santo Nombre, porque nunca privas de tu gobierno a quienes estableces en la firmeza de tu amor. Tú, que vives y reinas por los siglos de los siglos. Amén.",
+      "en": "V/ Lord, have mercy.\nR/ Lord, have mercy.\n\nV/ Christ, have mercy.\nR/ Christ, have mercy.\n\nV/ Lord, have mercy.\nR/ Lord, have mercy.\n\nV/ Jesus, hear us.\nR/ Jesus, hear us.\n\nV/ Jesus, graciously hear us.\nR/ Jesus, graciously hear us.\n\nV/ God the Father in heaven.\nR/ have mercy on us.\n\nV/ God the Son, Redeemer of the world.\nR/ have mercy on us.\n\nV/ God the Holy Spirit.\nR/ have mercy on us.\n\nV/ Holy Trinity, one God.\nR/ have mercy on us.\n\nV/ Jesus, Son of the living God.\nR/ have mercy on us.\n\nV/ Jesus, Splendor of the Father.\nR/ have mercy on us.\n\nV/ Jesus, Radiance of eternal light.\nR/ have mercy on us.\n\nV/ Jesus, King of glory.\nR/ have mercy on us.\n\nV/ Jesus, Sun of justice.\nR/ have mercy on us.\n\nV/ Jesus, Son of the Virgin Mary.\nR/ have mercy on us.\n\nV/ Jesus, Most lovable.\nR/ have mercy on us.\n\nV/ Jesus, Most admirable.\nR/ have mercy on us.\n\nV/ Jesus, Mighty God.\nR/ have mercy on us.\n\nV/ Jesus, Father of the age to come.\nR/ have mercy on us.\n\nV/ Jesus, Messenger of great counsel.\nR/ have mercy on us.\n\nV/ Jesus, Most powerful.\nR/ have mercy on us.\n\nV/ Jesus, Most patient.\nR/ have mercy on us.\n\nV/ Jesus, Most obedient.\nR/ have mercy on us.\n\nV/ Jesus, Meek and humble of heart.\nR/ have mercy on us.\n\nV/ Jesus, Lover of chastity.\nR/ have mercy on us.\n\nV/ Jesus, Lover of us.\nR/ have mercy on us.\n\nV/ Jesus, God of peace.\nR/ have mercy on us.\n\nV/ Jesus, Author of life.\nR/ have mercy on us.\n\nV/ Jesus, Model of virtues.\nR/ have mercy on us.\n\nV/ Jesus, Zealous for souls.\nR/ have mercy on us.\n\nV/ Jesus, Our God.\nR/ have mercy on us.\n\nV/ Jesus, Our refuge.\nR/ have mercy on us.\n\nV/ Jesus, Father of the poor.\nR/ have mercy on us.\n\nV/ Jesus, Treasure of the faithful.\nR/ have mercy on us.\n\nV/ Jesus, Good Shepherd.\nR/ have mercy on us.\n\nV/ Jesus, True light.\nR/ have mercy on us.\n\nV/ Jesus, Eternal wisdom.\nR/ have mercy on us.\n\nV/ Jesus, Infinite goodness.\nR/ have mercy on us.\n\nV/ Jesus, Our way and life.\nR/ have mercy on us.\n\nV/ Jesus, Joy of angels.\nR/ have mercy on us.\n\nV/ Jesus, King of patriarchs.\nR/ have mercy on us.\n\nV/ Jesus, Master of the apostles.\nR/ have mercy on us.\n\nV/ Jesus, Teacher of the evangelists.\nR/ have mercy on us.\n\nV/ Jesus, Strength of martyrs.\nR/ have mercy on us.\n\nV/ Jesus, Light of confessors of the faith.\nR/ have mercy on us.\n\nV/ Jesus, Purity of virgins.\nR/ have mercy on us.\n\nV/ Jesus, Crown of all saints.\nR/ have mercy on us.\n\nV/ Be merciful to us.\nR/ Spare us, Jesus.\n\nV/ Be merciful to us.\nR/ Hear us, Jesus.\n\nV/ From all evil.\nR/ Deliver us, Jesus.\n\nV/ From all sin.\nR/ Deliver us, Jesus.\n\nV/ From your wrath.\nR/ Deliver us, Jesus.\n\nV/ From the snares of the devil.\nR/ Deliver us, Jesus.\n\nV/ From the spirit of unchastity.\nR/ Deliver us, Jesus.\n\nV/ From eternal death.\nR/ Deliver us, Jesus.\n\nV/ From neglecting your inspirations.\nR/ Deliver us, Jesus.\n\nV/ Through the mystery of your holy Incarnation.\nR/ Deliver us, Jesus.\n\nV/ Through your birth.\nR/ Deliver us, Jesus.\n\nV/ Through your infancy.\nR/ Deliver us, Jesus.\n\nV/ Through your divine life.\nR/ Deliver us, Jesus.\n\nV/ Through your labors.\nR/ Deliver us, Jesus.\n\nV/ Through your agony and Passion.\nR/ Deliver us, Jesus.\n\nV/ Through your Cross and abandonment.\nR/ Deliver us, Jesus.\n\nV/ Through your sufferings.\nR/ Deliver us, Jesus.\n\nV/ Through your death and burial.\nR/ Deliver us, Jesus.\n\nV/ Through your resurrection.\nR/ Deliver us, Jesus.\n\nV/ Through your ascension.\nR/ Deliver us, Jesus.\n\nV/ Through your joys.\nR/ Deliver us, Jesus.\n\nV/ Through your glory.\nR/ Deliver us, Jesus.\n\nV/ Lamb of God, you take away the sins of the world.\nR/ spare us, Jesus.\n\nV/ Lamb of God, you take away the sins of the world.\nR/ hear us, Jesus.\n\nV/ Lamb of God, you take away the sins of the world.\nR/ have mercy on us, Jesus.\n\nV/ Jesus, hear us.\nR/ Jesus, graciously hear us.\n\nLet us pray.\nLord Jesus Christ, you said: Ask and you will receive; seek and you will find; knock and it will be opened to you. Grant, we pray, to us who ask, the gift of your divine love, so that we may love you with all our heart, in word and deed, and never cease to praise you.\n\nGrant us, Lord, an enduring reverence and love for your holy Name, for you never cease to guide those whom you establish firmly in your love. You live and reign for ever and ever. Amen.",
+      "pt": "V/ Senhor, tende piedade.\nR/ Senhor, tende piedade.\n\nV/ Cristo, tende piedade.\nR/ Cristo, tende piedade.\n\nV/ Senhor, tende piedade.\nR/ Senhor, tende piedade.\n\nV/ Jesus, ouvi-nos.\nR/ Jesus, ouvi-nos.\n\nV/ Jesus, atendei-nos.\nR/ Jesus, atendei-nos.\n\nV/ Deus Pai do céu.\nR/ tende piedade de nós.\n\nV/ Deus Filho, Redentor do mundo.\nR/ tende piedade de nós.\n\nV/ Deus Espírito Santo.\nR/ tende piedade de nós.\n\nV/ Santíssima Trindade, um só Deus.\nR/ tende piedade de nós.\n\nV/ Jesus, Filho do Deus vivo.\nR/ tende piedade de nós.\n\nV/ Jesus, Esplendor do Pai.\nR/ tende piedade de nós.\n\nV/ Jesus, Resplendor da luz eterna.\nR/ tende piedade de nós.\n\nV/ Jesus, Rei da glória.\nR/ tende piedade de nós.\n\nV/ Jesus, Sol da justiça.\nR/ tende piedade de nós.\n\nV/ Jesus, Filho da Virgem Maria.\nR/ tende piedade de nós.\n\nV/ Jesus, Amabilíssimo.\nR/ tende piedade de nós.\n\nV/ Jesus, Admirável.\nR/ tende piedade de nós.\n\nV/ Jesus, Deus forte.\nR/ tende piedade de nós.\n\nV/ Jesus, Pai do século futuro.\nR/ tende piedade de nós.\n\nV/ Jesus, Mensageiro do grande conselho.\nR/ tende piedade de nós.\n\nV/ Jesus, Poderosíssimo.\nR/ tende piedade de nós.\n\nV/ Jesus, Pacientíssimo.\nR/ tende piedade de nós.\n\nV/ Jesus, Obedientíssimo.\nR/ tende piedade de nós.\n\nV/ Jesus, Manso e humilde de coração.\nR/ tende piedade de nós.\n\nV/ Jesus, Amante da castidade.\nR/ tende piedade de nós.\n\nV/ Jesus, Amante de nós.\nR/ tende piedade de nós.\n\nV/ Jesus, Deus da paz.\nR/ tende piedade de nós.\n\nV/ Jesus, Autor da vida.\nR/ tende piedade de nós.\n\nV/ Jesus, Modelo de virtudes.\nR/ tende piedade de nós.\n\nV/ Jesus, Zeloso pelas almas.\nR/ tende piedade de nós.\n\nV/ Jesus, Nosso Deus.\nR/ tende piedade de nós.\n\nV/ Jesus, Nosso refúgio.\nR/ tende piedade de nós.\n\nV/ Jesus, Pai dos pobres.\nR/ tende piedade de nós.\n\nV/ Jesus, Tesouro dos fiéis.\nR/ tende piedade de nós.\n\nV/ Jesus, Bom Pastor.\nR/ tende piedade de nós.\n\nV/ Jesus, Luz verdadeira.\nR/ tende piedade de nós.\n\nV/ Jesus, Sabedoria eterna.\nR/ tende piedade de nós.\n\nV/ Jesus, Bondade infinita.\nR/ tende piedade de nós.\n\nV/ Jesus, Nosso caminho e nossa vida.\nR/ tende piedade de nós.\n\nV/ Jesus, Alegria dos anjos.\nR/ tende piedade de nós.\n\nV/ Jesus, Rei dos patriarcas.\nR/ tende piedade de nós.\n\nV/ Jesus, Mestre dos apóstolos.\nR/ tende piedade de nós.\n\nV/ Jesus, Doutor dos evangelistas.\nR/ tende piedade de nós.\n\nV/ Jesus, Fortaleza dos mártires.\nR/ tende piedade de nós.\n\nV/ Jesus, Luz dos confessores da fé.\nR/ tende piedade de nós.\n\nV/ Jesus, Pureza das virgens.\nR/ tende piedade de nós.\n\nV/ Jesus, Coroa de todos os santos.\nR/ tende piedade de nós.\n\nV/ Sede-nos propício.\nR/ Perdoai-nos, Jesus.\n\nV/ Sede-nos propício.\nR/ Ouvi-nos, Jesus.\n\nV/ De todo mal.\nR/ Livrai-nos, Jesus.\n\nV/ De todo pecado.\nR/ Livrai-nos, Jesus.\n\nV/ De vossa ira.\nR/ Livrai-nos, Jesus.\n\nV/ Das ciladas do diabo.\nR/ Livrai-nos, Jesus.\n\nV/ Do espírito de impureza.\nR/ Livrai-nos, Jesus.\n\nV/ Da morte eterna.\nR/ Livrai-nos, Jesus.\n\nV/ Da negligência para com vossas inspirações.\nR/ Livrai-nos, Jesus.\n\nV/ Pelo mistério de vossa santa Encarnação.\nR/ Livrai-nos, Jesus.\n\nV/ Por vosso nascimento.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossa infância.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossa vida divina.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossos trabalhos.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossa agonia e Paixão.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossa Cruz e abandono.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossos sofrimentos.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossa morte e sepultura.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossa ressurreição.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossa ascensão.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossas alegrias.\nR/ Livrai-nos, Jesus.\n\nV/ Por vossa glória.\nR/ Livrai-nos, Jesus.\n\nV/ Cordeiro de Deus, que tirais os pecados do mundo.\nR/ perdoai-nos, Jesus.\n\nV/ Cordeiro de Deus, que tirais os pecados do mundo.\nR/ ouvi-nos, Jesus.\n\nV/ Cordeiro de Deus, que tirais os pecados do mundo.\nR/ tende piedade de nós, Jesus.\n\nV/ Jesus, ouvi-nos.\nR/ Jesus, atendei-nos.\n\nOremos.\nSenhor Jesus Cristo, que dissestes: Pedi e recebereis; procurai e encontrareis; batei e vos será aberto: concedei-nos, nós vos pedimos, o afeto de vosso divino amor, para que vos amemos de todo o coração, por palavras e obras, e nunca cessemos de vos louvar.\n\nFazei, Senhor, que tenhamos sempre temor e amor de vosso santo Nome, pois nunca privais de vosso governo aqueles que estabeleceis na firmeza de vosso amor. Vós, que viveis e reinais pelos séculos dos séculos. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para alabar a Jesús y pedir la gracia de vivir unidos a él.",
+      "en": "To praise Jesus and ask for the grace of living in union with him.",
+      "pt": "Para louvar Jesus e pedir a graça de viver unido a ele."
+    },
+    "indulgenceNote": {
+      "es": "El Enchiridion de 1999, concesión 22, prevé indulgencia parcial para la recitación piadosa de letanías legítimamente aprobadas. Una traducción propia no se presenta como edición litúrgica oficial.",
+      "en": "The 1999 Enchiridion, concession 22, provides a partial indulgence for devout recitation of legitimately approved litanies. An original translation is not presented as an official liturgical edition.",
+      "pt": "O Enchiridion de 1999, concessão 22, prevê indulgência parcial pela recitação piedosa de ladainhas legitimamente aprovadas. Uma tradução própria não é apresentada como edição litúrgica oficial."
+    },
+    "thematicTags": [
+      "faith",
+      "praise",
+      "litany"
+    ],
+    "history": {
+      "es": "La letanía del Nombre de Jesús contempla a Cristo mediante títulos de la Escritura y de la tradición de la Iglesia. Se conserva completa en la Raccolta de 1910, con las súplicas de misericordia, las peticiones de liberación y dos oraciones finales. Honrar el Nombre de Jesús es dirigirse a su persona, no atribuir fuerza mágica a sus sonidos. Títulos como mensajero del gran consejo o padre del siglo futuro expresan su misión salvadora y no lo convierten en un ángel creado ni lo confunden con la persona del Padre. El Enchiridion de 1999 reconoce esta letanía.",
+      "en": "The Litany of the Holy Name contemplates Christ through titles from Scripture and the Church’s tradition. The 1910 Raccolta preserves it completely, with petitions for mercy, requests for deliverance, and two concluding prayers. Honoring Jesus’ Name addresses his person, rather than assigning magical force to its sounds. Titles such as messenger of great counsel and father of the age to come express his saving mission; they neither make him a created angel nor confuse him with the person of the Father. The 1999 Enchiridion recognizes this litany among approved forms of prayer.",
+      "pt": "A ladainha do Nome de Jesus contempla Cristo mediante títulos da Escritura e da tradição da Igreja. A Raccolta de 1910 a conserva completa, com as súplicas de misericórdia, os pedidos de libertação e duas orações finais. Honrar o Nome de Jesus é dirigir-se à sua pessoa, não atribuir força mágica a seus sons. Títulos como mensageiro do grande conselho e pai do século futuro exprimem sua missão salvadora: não o transformam num anjo criado nem o confundem com a pessoa do Pai. O Enchiridion de 1999 reconhece esta ladainha entre as formas aprovadas de oração."
+    },
+    "instructions": {
+      "es": "Alterna las invocaciones y las respuestas en grupo, o reza todo personalmente. Observa el cambio de respuesta: primero pedimos misericordia y luego liberación. Las dos oraciones finales pertenecen al formulario de referencia y se conservan. La letanía no es un rito de exorcismo ni exige dirigirse a un espíritu maligno.",
+      "en": "Alternate invocations and responses in a group, or pray every part privately. Notice the change of response: first asking for mercy, then for deliverance. Both concluding prayers belong to the reference formula and are retained. The litany is not an exorcism rite and does not require addressing an evil spirit.",
+      "pt": "Alterne as invocações e respostas em grupo ou reze todas as partes pessoalmente. Observe a mudança de resposta: primeiro pedimos misericórdia e depois libertação. As duas orações finais pertencem ao formulário de referência e foram conservadas. A ladainha não é rito de exorcismo e não exige dirigir-se a um espírito maligno."
+    },
+    "source": {
+      "es": "Raccolta, edición de 1910, n. 56, letanía y oraciones finales; Enchiridion Indulgentiarum, 1999, concesión 22.",
+      "en": "Raccolta, 1910 edition, no. 56, litany and concluding prayers; Enchiridion Indulgentiarum, 1999, concession 22.",
+      "pt": "Raccolta, edição de 1910, n. 56, ladainha e orações finais; Enchiridion Indulgentiarum, 1999, concessão 22."
+    },
+    "approval": {
+      "es": "El Enchiridion de 1999, concesión 22, incluye la letanía del Santísimo Nombre de Jesús entre las letanías aprobadas.",
+      "en": "The 1999 Enchiridion, concession 22, includes the Litany of the Holy Name of Jesus among approved litanies.",
+      "pt": "O Enchiridion de 1999, concessão 22, inclui a ladainha do Santíssimo Nome de Jesus entre as ladainhas aprovadas."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia y fiel del formulario latino de dominio público, según la Raccolta de 1910. Catholic Hermes, 2026. No es edición litúrgica oficial.",
+      "en": "Original faithful translation of the public-domain Latin formula witnessed by the 1910 Raccolta. Catholic Hermes, 2026. Not an official liturgical edition.",
+      "pt": "Tradução própria e fiel do formulário latino de domínio público, conforme a Raccolta de 1910. Catholic Hermes, 2026. Não é edição litúrgica oficial."
+    }
+  },
+  {
+    "id": "litany_of_the_precious_blood",
+    "title": {
+      "es": "Letanía de la Preciosísima Sangre",
+      "en": "Litany of the Most Precious Blood",
+      "pt": "Ladainha do Preciosíssimo Sangue"
+    },
+    "latinTitle": "Litaniae Pretiosissimi Sanguinis Domini Nostri Iesu Christi",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "V/ Señor, ten piedad.\nR/ Señor, ten piedad.\n\nV/ Cristo, ten piedad.\nR/ Cristo, ten piedad.\n\nV/ Señor, ten piedad.\nR/ Señor, ten piedad.\n\nV/ Cristo, óyenos.\nR/ Cristo, óyenos.\n\nV/ Cristo, escúchanos.\nR/ Cristo, escúchanos.\n\nV/ Dios Padre del cielo.\nR/ ten piedad de nosotros.\n\nV/ Dios Hijo, Redentor del mundo.\nR/ ten piedad de nosotros.\n\nV/ Dios Espíritu Santo.\nR/ ten piedad de nosotros.\n\nV/ Santísima Trinidad, un solo Dios.\nR/ ten piedad de nosotros.\n\nV/ Sangre de Cristo, del Unigénito del Padre eterno.\nR/ sálvanos.\n\nV/ Sangre de Cristo, del Verbo de Dios encarnado.\nR/ sálvanos.\n\nV/ Sangre de Cristo, de la nueva y eterna alianza.\nR/ sálvanos.\n\nV/ Sangre de Cristo, que en la agonía corriste hasta la tierra.\nR/ sálvanos.\n\nV/ Sangre de Cristo, derramada en la flagelación.\nR/ sálvanos.\n\nV/ Sangre de Cristo, que brotaste en la coronación de espinas.\nR/ sálvanos.\n\nV/ Sangre de Cristo, derramada en la Cruz.\nR/ sálvanos.\n\nV/ Sangre de Cristo, precio de nuestra salvación.\nR/ sálvanos.\n\nV/ Sangre de Cristo, sin la cual no hay remisión.\nR/ sálvanos.\n\nV/ Sangre de Cristo, bebida de la Eucaristía y purificación de las almas.\nR/ sálvanos.\n\nV/ Sangre de Cristo, río de misericordia.\nR/ sálvanos.\n\nV/ Sangre de Cristo, vencedora de los demonios.\nR/ sálvanos.\n\nV/ Sangre de Cristo, fortaleza de los mártires.\nR/ sálvanos.\n\nV/ Sangre de Cristo, vigor de los confesores de la fe.\nR/ sálvanos.\n\nV/ Sangre de Cristo, que haces florecer las vírgenes.\nR/ sálvanos.\n\nV/ Sangre de Cristo, apoyo de quienes están en peligro.\nR/ sálvanos.\n\nV/ Sangre de Cristo, alivio de quienes trabajan.\nR/ sálvanos.\n\nV/ Sangre de Cristo, consuelo en el llanto.\nR/ sálvanos.\n\nV/ Sangre de Cristo, esperanza de los penitentes.\nR/ sálvanos.\n\nV/ Sangre de Cristo, consuelo de los moribundos.\nR/ sálvanos.\n\nV/ Sangre de Cristo, paz y dulzura de los corazones.\nR/ sálvanos.\n\nV/ Sangre de Cristo, prenda de la vida eterna.\nR/ sálvanos.\n\nV/ Sangre de Cristo, que liberas las almas del purgatorio.\nR/ sálvanos.\n\nV/ Sangre de Cristo, dignísima de toda gloria y honor.\nR/ sálvanos.\n\nV/ Cordero de Dios, que quitas los pecados del mundo.\nR/ perdónanos, Señor.\n\nV/ Cordero de Dios, que quitas los pecados del mundo.\nR/ escúchanos, Señor.\n\nV/ Cordero de Dios, que quitas los pecados del mundo.\nR/ ten piedad de nosotros.\n\nV/ Nos redimiste, Señor, con tu Sangre.\nR/ E hiciste de nosotros un reino para nuestro Dios.\n\nOremos.\nDios todopoderoso y eterno, que constituiste a tu Hijo unigénito Redentor del mundo y quisiste ser aplacado por su Sangre, concédenos, te rogamos, venerar de tal modo el precio de nuestra salvación y ser defendidos por su poder de los males de esta vida en la tierra, que gocemos para siempre de sus frutos en el cielo. Por el mismo Cristo nuestro Señor. Amén.",
+      "en": "V/ Lord, have mercy.\nR/ Lord, have mercy.\n\nV/ Christ, have mercy.\nR/ Christ, have mercy.\n\nV/ Lord, have mercy.\nR/ Lord, have mercy.\n\nV/ Christ, hear us.\nR/ Christ, hear us.\n\nV/ Christ, graciously hear us.\nR/ Christ, graciously hear us.\n\nV/ God the Father in heaven.\nR/ have mercy on us.\n\nV/ God the Son, Redeemer of the world.\nR/ have mercy on us.\n\nV/ God the Holy Spirit.\nR/ have mercy on us.\n\nV/ Holy Trinity, one God.\nR/ have mercy on us.\n\nV/ Blood of Christ, of the only-begotten Son of the eternal Father.\nR/ save us.\n\nV/ Blood of Christ, of the incarnate Word of God.\nR/ save us.\n\nV/ Blood of Christ, of the new and eternal covenant.\nR/ save us.\n\nV/ Blood of Christ, falling to the earth in the agony.\nR/ save us.\n\nV/ Blood of Christ, flowing in the scourging.\nR/ save us.\n\nV/ Blood of Christ, flowing in the crowning with thorns.\nR/ save us.\n\nV/ Blood of Christ, poured out on the Cross.\nR/ save us.\n\nV/ Blood of Christ, price of our salvation.\nR/ save us.\n\nV/ Blood of Christ, without which there is no forgiveness.\nR/ save us.\n\nV/ Blood of Christ, drink in the Eucharist and cleansing of souls.\nR/ save us.\n\nV/ Blood of Christ, river of mercy.\nR/ save us.\n\nV/ Blood of Christ, victor over demons.\nR/ save us.\n\nV/ Blood of Christ, strength of martyrs.\nR/ save us.\n\nV/ Blood of Christ, courage of confessors of the faith.\nR/ save us.\n\nV/ Blood of Christ, bringing forth virgins.\nR/ save us.\n\nV/ Blood of Christ, support of those in danger.\nR/ save us.\n\nV/ Blood of Christ, relief of those who labor.\nR/ save us.\n\nV/ Blood of Christ, comfort amid tears.\nR/ save us.\n\nV/ Blood of Christ, hope of the penitent.\nR/ save us.\n\nV/ Blood of Christ, consolation of the dying.\nR/ save us.\n\nV/ Blood of Christ, peace and sweetness of hearts.\nR/ save us.\n\nV/ Blood of Christ, pledge of eternal life.\nR/ save us.\n\nV/ Blood of Christ, freeing souls from purgatory.\nR/ save us.\n\nV/ Blood of Christ, most worthy of all glory and honor.\nR/ save us.\n\nV/ Lamb of God, you take away the sins of the world.\nR/ spare us, O Lord.\n\nV/ Lamb of God, you take away the sins of the world.\nR/ hear us, O Lord.\n\nV/ Lamb of God, you take away the sins of the world.\nR/ have mercy on us.\n\nV/ You redeemed us, Lord, in your Blood.\nR/ And made us a kingdom for our God.\n\nLet us pray.\nAlmighty and eternal God, you appointed your only-begotten Son as Redeemer of the world and willed to be appeased through his Blood. Grant, we pray, that we may so venerate the price of our salvation and be protected by its power from the evils of this earthly life that we may rejoice in its fruits for ever in heaven. Through the same Christ our Lord. Amen.",
+      "pt": "V/ Senhor, tende piedade.\nR/ Senhor, tende piedade.\n\nV/ Cristo, tende piedade.\nR/ Cristo, tende piedade.\n\nV/ Senhor, tende piedade.\nR/ Senhor, tende piedade.\n\nV/ Cristo, ouvi-nos.\nR/ Cristo, ouvi-nos.\n\nV/ Cristo, atendei-nos.\nR/ Cristo, atendei-nos.\n\nV/ Deus Pai do céu.\nR/ tende piedade de nós.\n\nV/ Deus Filho, Redentor do mundo.\nR/ tende piedade de nós.\n\nV/ Deus Espírito Santo.\nR/ tende piedade de nós.\n\nV/ Santíssima Trindade, um só Deus.\nR/ tende piedade de nós.\n\nV/ Sangue de Cristo, do Unigênito do Pai eterno.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, do Verbo de Deus encarnado.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, da nova e eterna aliança.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, que na agonia correstes até a terra.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, derramado na flagelação.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, que brotastes na coroação de espinhos.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, derramado na Cruz.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, preço de nossa salvação.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, sem o qual não há remissão.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, bebida na Eucaristia e purificação das almas.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, rio de misericórdia.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, vencedor dos demônios.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, fortaleza dos mártires.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, vigor dos confessores da fé.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, que fazeis florescer as virgens.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, amparo dos que estão em perigo.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, alívio dos que trabalham.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, consolo no pranto.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, esperança dos penitentes.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, consolo dos moribundos.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, paz e doçura dos corações.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, penhor da vida eterna.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, que libertais as almas do purgatório.\nR/ salvai-nos.\n\nV/ Sangue de Cristo, digníssimo de toda glória e honra.\nR/ salvai-nos.\n\nV/ Cordeiro de Deus, que tirais os pecados do mundo.\nR/ perdoai-nos, Senhor.\n\nV/ Cordeiro de Deus, que tirais os pecados do mundo.\nR/ ouvi-nos, Senhor.\n\nV/ Cordeiro de Deus, que tirais os pecados do mundo.\nR/ tende piedade de nós.\n\nV/ Vós nos redimistes, Senhor, com vosso Sangue.\nR/ E fizestes de nós um reino para nosso Deus.\n\nOremos.\nDeus todo-poderoso e eterno, que constituístes vosso Filho unigênito Redentor do mundo e quisestes ser aplacado por seu Sangue, concedei-nos, nós vos pedimos, venerar de tal modo o preço de nossa salvação e ser defendidos por seu poder dos males desta vida na terra, que nos alegremos para sempre com seus frutos no céu. Pelo mesmo Cristo nosso Senhor. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "En la meditación de la Pasión y la devoción a la Sangre de Cristo.",
+      "en": "During meditation on the Passion and devotion to Christ’s Blood.",
+      "pt": "Na meditação da Paixão e na devoção ao Sangue de Cristo."
+    },
+    "indulgenceNote": {
+      "es": "El Enchiridion de 1999, concesión 22, prevé indulgencia parcial para la recitación piadosa de letanías legítimamente aprobadas. Una traducción propia no se presenta como edición litúrgica oficial.",
+      "en": "The 1999 Enchiridion, concession 22, provides a partial indulgence for devout recitation of legitimately approved litanies. An original translation is not presented as an official liturgical edition.",
+      "pt": "O Enchiridion de 1999, concessão 22, prevê indulgência parcial pela recitação piedosa de ladainhas legitimamente aprovadas. Uma tradução própria não é apresentada como edição litúrgica oficial."
+    },
+    "thematicTags": [
+      "eucharist",
+      "mercy",
+      "litany"
+    ],
+    "history": {
+      "es": "Esta letanía contempla la Sangre de Cristo en su relación con la Encarnación, la Pasión, la Eucaristía y la esperanza de la vida eterna. El formulario fue promulgado bajo san Juan XXIII en 1960; su carta Inde a primis explica la unidad de esta devoción con las del Nombre y del Corazón de Jesús. La súplica sálvanos se dirige a Cristo mismo: su Sangre no es un objeto separado de su persona. Se conservan las veinticuatro invocaciones principales, el Cordero de Dios, el versículo y la oración final. No se añade una promesa de resultados concretos.",
+      "en": "This litany contemplates Christ’s Blood in relation to the Incarnation, Passion, Eucharist, and hope of eternal life. The formula was promulgated under Saint John XXIII in 1960; his letter Inde a primis explains this devotion’s unity with devotion to Jesus’ Name and Heart. The petition save us addresses Christ himself: his Blood is not an object separated from his person. The twenty-four principal invocations, Lamb of God, versicle, and concluding prayer are retained. No promise of particular outcomes is added to the text or presented as a condition for prayer to be heard.",
+      "pt": "Esta ladainha contempla o Sangue de Cristo em relação à Encarnação, à Paixão, à Eucaristia e à esperança da vida eterna. O formulário foi promulgado sob são João XXIII em 1960; sua carta Inde a primis explica a unidade dessa devoção com as do Nome e do Coração de Jesus. A súplica salvai-nos dirige-se ao próprio Cristo: seu Sangue não é objeto separado de sua pessoa. São conservadas as vinte e quatro invocações principais, o Cordeiro de Deus, o versículo e a oração final. Não se acrescenta promessa de resultados específicos."
+    },
+    "instructions": {
+      "es": "Reza V/ y R/ alternadamente en grupo; en privado puedes decir ambos. La respuesta principal es sálvanos, distinta de la súplica inicial de misericordia. No omitas la oración final del formulario completo. Puedes hacer pausas breves para meditar en la entrega de Cristo, sin convertir las referencias a su Sangre en prácticas materiales o supersticiosas.",
+      "en": "Alternate V/ and R/ in a group; in private, you may say both. The main response is save us, distinct from the opening petition for mercy. Retain the concluding prayer of the complete formula. You may pause briefly to meditate on Christ’s self-giving without turning references to his Blood into material or superstitious practices.",
+      "pt": "Alterne V/ e R/ em grupo; na oração pessoal, você pode dizer ambas as partes. A resposta principal é salvai-nos, diferente da súplica inicial de misericórdia. Conserve a oração final do formulário completo. É possível fazer breves pausas para meditar na entrega de Cristo, sem transformar as referências a seu Sangue em práticas materiais ou supersticiosas."
+    },
+    "source": {
+      "es": "Juan XXIII, Inde a primis, 30 de junio de 1960, contexto de la devoción; Preces Latinae, Litaniae pretiosissimi Sanguinis Domini Nostri Iesu Christi, formulario latino; Enchiridion Indulgentiarum, 1999, concesión 22.",
+      "en": "John XXIII, Inde a primis, June 30, 1960, context of the devotion; Preces Latinae, Litaniae pretiosissimi Sanguinis Domini Nostri Iesu Christi, Latin formula; Enchiridion Indulgentiarum, 1999, concession 22.",
+      "pt": "João XXIII, Inde a primis, 30 de junho de 1960, contexto da devoção; Preces Latinae, Litaniae pretiosissimi Sanguinis Domini Nostri Iesu Christi, formulário latino; Enchiridion Indulgentiarum, 1999, concessão 22."
+    },
+    "approval": {
+      "es": "El Enchiridion de 1999, concesión 22, incluye la letanía de la Preciosísima Sangre entre las letanías aprobadas.",
+      "en": "The 1999 Enchiridion, concession 22, includes the Litany of the Most Precious Blood among approved litanies.",
+      "pt": "O Enchiridion de 1999, concessão 22, inclui a ladainha do Preciosíssimo Sangue entre as ladainhas aprovadas."
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del formulario latino tradicional, sin copiar una traducción litúrgica moderna. Catholic Hermes, 2026. No es edición litúrgica oficial.",
+      "en": "Original translation of the traditional Latin formula, without copying a modern liturgical translation. Catholic Hermes, 2026. Not an official liturgical edition.",
+      "pt": "Tradução própria do formulário latino tradicional, sem copiar tradução litúrgica moderna. Catholic Hermes, 2026. Não é edição litúrgica oficial."
+    }
+  },
+  {
+    "id": "ave_maris_stella",
+    "title": {
+      "es": "Salve, estrella del mar",
+      "en": "Hail, Star of the Sea",
+      "pt": "Salve, Estrela do Mar"
+    },
+    "latinTitle": "Ave maris stella",
+    "category": "MARIAN",
+    "leaderText": {
+      "es": "Salve, estrella del mar,\nMadre amorosa de Dios\ny siempre Virgen,\npuerta dichosa del cielo.\n\nAl recibir aquel Ave\nde la boca de Gabriel,\nasiéntanos en la paz,\ncambiando el nombre de Eva.\n\nDesata las cadenas de los culpables,\nda luz a los ciegos,\naparta nuestros males,\npide para nosotros todos los bienes.\n\nMuéstrate madre:\nreciba por ti nuestras súplicas\naquel que, nacido por nosotros,\nquiso ser tu hijo.\n\nVirgen singular,\nmansa entre todas,\nlibres de culpas,\nhaznos mansos y castos.\n\nDanos una vida pura,\nprepara un camino seguro,\npara que, viendo a Jesús,\nnos alegremos siempre contigo.\n\nAlabado sea Dios Padre,\ngloria a Cristo Altísimo\ny al Espíritu Santo:\nun solo honor a los Tres. Amén.",
+      "en": "Hail, star of the sea,\nloving Mother of God,\nand ever Virgin,\nhappy gate of heaven.\n\nReceiving that Hail\nfrom Gabriel’s lips,\nestablish us in peace,\nreversing Eve’s name.\n\nLoosen the chains of the guilty,\nbring light to the blind,\ndrive away our evils,\nask every good for us.\n\nShow yourself a mother:\nmay he receive our prayers through you,\nhe who, born for us,\nchose to be your son.\n\nVirgin beyond compare,\ngentle above all,\nset us free from sin\nand make us gentle and chaste.\n\nGrant us a pure life,\nprepare a safe way,\nso that, seeing Jesus,\nwe may always rejoice with you.\n\nPraise be to God the Father,\nglory to Christ Most High,\nand to the Holy Spirit:\none honor to the Three. Amen.",
+      "pt": "Salve, estrela do mar,\nMãe amorosa de Deus\ne sempre Virgem,\nfeliz porta do céu.\n\nRecebendo aquela Ave\ndos lábios de Gabriel,\nfirmai-nos na paz,\ninvertendo o nome de Eva.\n\nSoltai as correntes dos culpados,\ntrazei luz aos cegos,\nafastai nossos males,\npedi para nós todos os bens.\n\nMostrai-vos mãe:\nreceba por vós nossas súplicas\naquele que, nascido por nós,\nquis ser vosso filho.\n\nVirgem singular,\nmansa entre todas,\nlivres das culpas,\nfazei-nos mansos e castos.\n\nConcedei-nos vida pura,\npreparai um caminho seguro,\npara que, vendo Jesus,\nnos alegremos sempre convosco.\n\nLouvor a Deus Pai,\nglória a Cristo Altíssimo\ne ao Espírito Santo:\num só louvor aos Três. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "En las fiestas marianas y en la oración personal a la Virgen.",
+      "en": "On Marian feasts and during personal prayer to Our Lady.",
+      "pt": "Nas festas marianas e na oração pessoal à Virgem."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "marian",
+      "praise"
+    ],
+    "history": {
+      "es": "Ave maris stella es un himno latino de la tradición mariana, conservado en libros litúrgicos y devocionarios. La Raccolta de 1910 transmite las siete estrofas que aquí se traducen completas. Su autor no se identifica en esta ficha como un santo concreto. María aparece como estrella, madre y puerta del cielo porque conduce a Cristo y ruega ante él. El juego entre Ave y Eva expresa poéticamente el paso a la esperanza, sin pretender una explicación lingüística de los nombres. La última estrofa alaba a la Trinidad, manteniendo la devoción mariana dentro de la fe cristiana.",
+      "en": "Ave maris stella is a Latin hymn in the Marian tradition, preserved in liturgical and devotional books. The 1910 Raccolta transmits the seven stanzas translated here in full. This entry does not identify its author as a particular saint. Mary appears as star, mother, and gate of heaven because she leads to Christ and intercedes before him. The wordplay between Ave and Eve poetically expresses the movement toward hope, without claiming to explain the names’ linguistic origins. The last stanza praises the Trinity, keeping Marian devotion within the Christian profession of faith.",
+      "pt": "Ave maris stella é um hino latino da tradição mariana, conservado em livros litúrgicos e devocionários. A Raccolta de 1910 transmite as sete estrofes aqui traduzidas integralmente. Esta ficha não identifica seu autor como um santo específico. Maria aparece como estrela, mãe e porta do céu porque conduz a Cristo e intercede diante dele. O jogo entre Ave e Eva exprime poeticamente a passagem à esperança, sem pretender explicar a origem linguística dos nomes. A última estrofe louva a Trindade, mantendo a devoção mariana dentro da profissão da fé cristã."
+    },
+    "instructions": {
+      "es": "Puedes leer o cantar las siete estrofas, haciendo una pausa entre ellas. En grupo se pueden alternar las estrofas; no hay una respuesta separada que añadir al texto. Presta atención a las peticiones de luz, libertad y vida santa. Para su empleo en una celebración litúrgica sigue el libro autorizado correspondiente.",
+      "en": "You may read or sing all seven stanzas, pausing between them. A group may alternate stanzas; there is no separate response to add to the text. Attend to the requests for light, freedom, and a holy life. For use within a liturgical celebration, follow the appropriate authorized book.",
+      "pt": "Você pode ler ou cantar as sete estrofes, fazendo uma pausa entre elas. Em grupo, é possível alternar as estrofes; não há resposta separada a acrescentar ao texto. Preste atenção aos pedidos de luz, liberdade e vida santa. Para o uso numa celebração litúrgica, siga o livro autorizado correspondente."
+    },
+    "source": {
+      "es": "Raccolta, edición de 1910, n. 213, Ave maris stella, texto latino de siete estrofas.",
+      "en": "Raccolta, 1910 edition, no. 213, Ave maris stella, seven-stanza Latin text.",
+      "pt": "Raccolta, edição de 1910, n. 213, Ave maris stella, texto latino de sete estrofes."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del himno latino de dominio público, en siete estrofas, sin pretensión de versión métrica oficial. Catholic Hermes, 2026.",
+      "en": "Original translation of the public-domain Latin hymn in seven stanzas, not an official metrical version. Catholic Hermes, 2026.",
+      "pt": "Tradução própria do hino latino de domínio público em sete estrofes, sem pretensão de versão métrica oficial. Catholic Hermes, 2026."
+    }
+  },
+  {
+    "id": "stabat_mater",
+    "title": {
+      "es": "Estaba la Madre dolorosa",
+      "en": "The Sorrowful Mother Stood",
+      "pt": "Estava a Mãe Dolorosa"
+    },
+    "latinTitle": "Stabat Mater dolorosa",
+    "category": "MARIAN",
+    "leaderText": {
+      "es": "Estaba la Madre dolorosa,\nllorando junto a la Cruz,\nmientras pendía su Hijo.\n\nUna espada atravesó\nsu alma que gemía,\nafligida y dolorida.\n\n¡Qué triste y afligida\nestaba aquella bendita\nMadre del Unigénito!\n\nCuánto sufría y se dolía\naquella Madre piadosa,\nal ver las penas de su ilustre Hijo.\n\n¿Quién podría no llorar\nsi viera a la Madre de Cristo\nen semejante suplicio?\n\n¿Quién no se entristecería\nal contemplar a la Madre de Cristo\ndoliente con su Hijo?\n\nPor los pecados de su pueblo\nvio a Jesús entre tormentos\ny sometido a los azotes.\n\nVio a su dulce Hijo\nmorir abandonado\ncuando entregó su espíritu.\n\nEa, Madre, fuente de amor,\nhazme sentir la fuerza de tu dolor\npara que llore contigo.\n\nHaz que arda mi corazón\nen amar a Cristo Dios,\npara que le agrade.\n\nSanta Madre, haz esto:\ngraba con fuerza las llagas\ndel Crucificado en mi corazón.\n\nDe tu Hijo herido,\nque se dignó sufrir tanto por mí,\ncomparte conmigo las penas.\n\nHazme llorar piadosamente contigo\ny compadecer al Crucificado\nmientras yo viva.\n\nQuiero estar contigo junto a la Cruz\ny unirme a ti\nen el llanto.\n\nVirgen ilustre entre las vírgenes,\nno seas severa conmigo:\nhaz que llore a tu lado.\n\nHaz que lleve la muerte de Cristo,\nque participe en su Pasión\ny recuerde sus llagas.\n\nHaz que me hieran sus llagas,\nque me embriaguen la Cruz\ny la Sangre de tu Hijo.\n\nPara no arder en las llamas,\nsé tú, Virgen, mi defensa\nen el día del juicio.\n\nCristo, cuando deba partir de aquí,\nconcédeme llegar, por tu Madre,\na la palma de la victoria.\n\nCuando muera el cuerpo,\nhaz que sea dada al alma\nla gloria del paraíso. Amén.",
+      "en": "The sorrowful Mother stood\nweeping beside the Cross\nas her Son hung there.\n\nA sword passed through\nher grieving soul,\nafflicted and in pain.\n\nHow sad and afflicted\nwas that blessed Mother\nof the Only-begotten Son!\n\nHow the loving Mother\ngrieved and suffered\nto see her glorious Son’s torment.\n\nWho could keep from weeping\nat seeing Christ’s Mother\nin such suffering?\n\nWho could fail to grieve\non beholding Christ’s Mother\nsuffering with her Son?\n\nFor the sins of his people\nshe saw Jesus in torment\nand subjected to the scourge.\n\nShe saw her sweet Son\ndying abandoned\nas he gave up his spirit.\n\nCome, Mother, fountain of love,\nlet me feel the force of your sorrow\nso that I may weep with you.\n\nLet my heart burn\nwith love for Christ our God,\nthat I may please him.\n\nHoly Mother, do this:\nfirmly imprint the Crucified One’s wounds\nupon my heart.\n\nShare with me the pains\nof your wounded Son,\nwho chose to suffer so much for me.\n\nLet me weep devoutly with you\nand share the Crucified One’s suffering\nfor as long as I live.\n\nI desire to stand beside the Cross with you\nand join you\nin your weeping.\n\nVirgin glorious among virgins,\ndo not be stern with me:\nlet me weep beside you.\n\nLet me bear Christ’s death,\nshare in his Passion,\nand remember his wounds.\n\nLet his wounds pierce me;\nlet the Cross\nand your Son’s Blood inebriate me.\n\nThat I may not burn in flames,\nbe my defense, O Virgin,\non the day of judgment.\n\nChrist, when I must depart from here,\ngrant that through your Mother\nI may reach the palm of victory.\n\nWhen my body dies,\ngrant that my soul may receive\nthe glory of paradise. Amen.",
+      "pt": "Estava a Mãe dolorosa,\nchorando junto à Cruz,\nenquanto seu Filho ali pendia.\n\nUma espada atravessou\nsua alma que gemia,\naflita e dolorida.\n\nComo estava triste e aflita\naquela bendita\nMãe do Unigênito!\n\nQuanto sofria e se entristecia\naquela Mãe piedosa,\nao ver as penas de seu ilustre Filho.\n\nQuem poderia não chorar\nse visse a Mãe de Cristo\nem tamanho sofrimento?\n\nQuem não se entristeceria\nao contemplar a Mãe de Cristo\nsofrendo com seu Filho?\n\nPelos pecados de seu povo,\nela viu Jesus nos tormentos\ne submetido aos açoites.\n\nViu seu doce Filho\nmorrer abandonado\nao entregar seu espírito.\n\nÓ Mãe, fonte de amor,\nfazei-me sentir a força de vossa dor\npara que eu chore convosco.\n\nFazei arder meu coração\nno amor a Cristo Deus,\npara que eu lhe agrade.\n\nSanta Mãe, fazei isto:\ngravai firmemente em meu coração\nas chagas do Crucificado.\n\nDe vosso Filho ferido,\nque se dignou sofrer tanto por mim,\ncompartilhai comigo as penas.\n\nFazei-me chorar piedosamente convosco\ne compadecer-me do Crucificado\nenquanto eu viver.\n\nDesejo estar convosco junto à Cruz\ne unir-me a vós\nno pranto.\n\nVirgem ilustre entre as virgens,\nnão sejais severa comigo:\nfazei-me chorar ao vosso lado.\n\nFazei que eu leve a morte de Cristo,\nparticipe de sua Paixão\ne recorde suas chagas.\n\nFazei que suas chagas me firam,\nque a Cruz e o Sangue\nde vosso Filho me inebriem.\n\nPara não arder nas chamas,\nsede, ó Virgem, minha defesa\nno dia do julgamento.\n\nCristo, quando eu tiver de partir daqui,\nconcedei que, por vossa Mãe,\neu alcance a palma da vitória.\n\nQuando o corpo morrer,\nfazei que seja dada à alma\na glória do paraíso. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para meditar la Pasión de Cristo junto a María.",
+      "en": "To meditate on Christ’s Passion beside Mary.",
+      "pt": "Para meditar a Paixão de Cristo junto de Maria."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "marian",
+      "lent",
+      "faith"
+    ],
+    "history": {
+      "es": "Stabat Mater es un poema latino que contempla a María junto a la Cruz y pide compartir su unión con Cristo. La atribución a Jacopone da Todi es tradicional, pero la autoría ha sido discutida y no se presenta aquí como demostrada. Se traduce la forma de veinte estrofas transmitida por la Raccolta de 1910, con su conclusión dirigida a Cristo. El lenguaje de heridas, lágrimas y embriaguez es poético y expresa participación amorosa en la Pasión. No prescribe provocarse dolor físico. La oración conduce de la compasión a la esperanza de la vida eterna.",
+      "en": "Stabat Mater is a Latin poem contemplating Mary beside the Cross and asking to share her union with Christ. Attribution to Jacopone da Todi is traditional, but authorship has been debated and is not presented here as proven. This is a translation of the twenty-stanza form transmitted by the 1910 Raccolta, including its conclusion addressed to Christ. Its language of wounds, tears, and inebriation is poetic and expresses loving participation in the Passion. It does not prescribe causing oneself physical pain. The prayer leads from compassion toward hope of eternal life.",
+      "pt": "Stabat Mater é um poema latino que contempla Maria junto à Cruz e pede compartilhar sua união com Cristo. A atribuição a Jacopone da Todi é tradicional, mas a autoria foi discutida e não é apresentada aqui como demonstrada. Traduz-se a forma de vinte estrofes transmitida pela Raccolta de 1910, com sua conclusão dirigida a Cristo. A linguagem de chagas, lágrimas e embriaguez é poética e exprime participação amorosa na Paixão. Não prescreve provocar dor física em si mesmo. A oração conduz da compaixão à esperança da vida eterna."
+    },
+    "instructions": {
+      "es": "Reza despacio las veinte estrofas o medítalas por partes, conservando el sentido de la secuencia completa. Puedes acompañar con ellas la contemplación de la Pasión. No hace falta producir lágrimas o emociones intensas para rezar bien. Si la cantas en una celebración litúrgica, usa la versión y el lugar indicados por el libro autorizado.",
+      "en": "Pray the twenty stanzas slowly or meditate on them in sections, retaining the meaning of the complete sequence. They can accompany contemplation of the Passion. Producing tears or intense feelings is not required to pray well. When singing it within a liturgical celebration, use the version and placement indicated by the authorized book.",
+      "pt": "Reze devagar as vinte estrofes ou medite-as por partes, conservando o sentido da sequência completa. Elas podem acompanhar a contemplação da Paixão. Não é necessário produzir lágrimas ou emoções intensas para rezar bem. Ao cantá-las numa celebração litúrgica, use a versão e o lugar indicados pelo livro autorizado."
+    },
+    "source": {
+      "es": "Raccolta, edición de 1910, n. 238, Stabat Mater; The Catholic Encyclopedia, «Stabat Mater», discusión de la autoría.",
+      "en": "Raccolta, 1910 edition, no. 238, Stabat Mater; The Catholic Encyclopedia, “Stabat Mater,” authorship discussion.",
+      "pt": "Raccolta, edição de 1910, n. 238, Stabat Mater; The Catholic Encyclopedia, verbete «Stabat Mater», discussão da autoria."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia y completa de la forma latina de dominio público de la Raccolta de 1910; no es una traducción métrica litúrgica oficial. Catholic Hermes, 2026.",
+      "en": "Original complete translation of the public-domain Latin form in the 1910 Raccolta; not an official metrical liturgical translation. Catholic Hermes, 2026.",
+      "pt": "Tradução própria e integral da forma latina de domínio público da Raccolta de 1910; não é tradução métrica litúrgica oficial. Catholic Hermes, 2026."
+    }
+  },
+  {
+    "id": "montfort_short_consecration",
+    "title": {
+      "es": "Todo tuyo · fórmula montfortiana breve",
+      "en": "Entirely Yours · Short Montfortian Formula",
+      "pt": "Todo Vosso · Fórmula Montfortiana Breve"
+    },
+    "latinTitle": "Totus tuus ego sum",
+    "category": "MARIAN",
+    "leaderText": {
+      "es": "Soy todo tuyo, y todo lo mío es tuyo. Te recibo en todo lo mío. Dame tu corazón, María.",
+      "en": "I am entirely yours, and all that is mine is yours. I receive you into all that is mine. Give me your heart, Mary.",
+      "pt": "Sou todo vosso, e tudo o que é meu é vosso. Eu vos recebo em tudo o que é meu. Dai-me vosso coração, Maria."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para renovar una entrega a Jesús por María y preparar la Comunión.",
+      "en": "To renew dedication to Jesus through Mary and prepare for Communion.",
+      "pt": "Para renovar a entrega a Jesus por Maria e preparar a Comunhão."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "marian",
+      "trust",
+      "eucharist"
+    ],
+    "history": {
+      "es": "La fórmula breve pertenece a la tradición montfortiana de entrega a Jesús por María. Benedicto XVI la citó en latín en la beatificación de Juan Pablo II y remitió al número 266 del Tratado de la verdadera devoción. Se distingue de la consagración extensa del Amor de la Sabiduría eterna. Sus palabras expresan disponibilidad y acogida de María para recibir mejor a Cristo; no sustituyen la entrega bautismal a Dios. Aquí se traduce la fórmula breve documentada, sin añadir promesas particulares ni componer una consagración nueva a partir de frases sueltas.",
+      "en": "This short formula belongs to the Montfortian tradition of dedication to Jesus through Mary. Benedict XVI quoted it in Latin at John Paul II’s beatification and referred to number 266 of the Treatise on True Devotion. It differs from the longer consecration in The Love of Eternal Wisdom. Its words express readiness and welcome for Mary in order to receive Christ more fully; they do not replace baptismal dedication to God. This entry translates the documented short formula without adding particular promises or composing a new consecration from disconnected phrases.",
+      "pt": "A fórmula breve pertence à tradição montfortina de entrega a Jesus por Maria. Bento XVI a citou em latim na beatificação de João Paulo II, remetendo ao número 266 do Tratado da Verdadeira Devoção. Ela se distingue da consagração extensa do Amor da Sabedoria Eterna. Suas palavras exprimem disponibilidade e acolhimento de Maria para receber melhor a Cristo; não substituem a entrega batismal a Deus. Aqui se traduz a fórmula breve documentada, sem acrescentar promessas particulares nem compor uma nova consagração a partir de frases isoladas."
+    },
+    "instructions": {
+      "es": "Reza la fórmula con calma y entiende el todo tuyo como una entrega orientada a Cristo. Puede acompañar la preparación para la Comunión o renovar una práctica devocional ya comprendida. Si deseas una consagración formal según el método de san Luis, estudia su texto y busca acompañamiento; esta fórmula breve no describe todo ese itinerario.",
+      "en": "Pray the formula calmly and understand entirely yours as a dedication directed toward Christ. It may accompany preparation for Communion or renew an already understood devotional practice. If seeking a formal consecration following Saint Louis’s method, study his text and seek guidance; this short formula does not describe that complete journey.",
+      "pt": "Reze a fórmula com calma e entenda todo vosso como entrega orientada a Cristo. Ela pode acompanhar a preparação para a Comunhão ou renovar uma prática devocional já compreendida. Se deseja uma consagração formal segundo o método de são Luís, estude seu texto e procure acompanhamento; esta fórmula breve não descreve todo esse caminho."
+    },
+    "source": {
+      "es": "San Luis María de Montfort, Tratado de la verdadera devoción, 266; fórmula latina citada por Benedicto XVI en la homilía de beatificación de Juan Pablo II, 1 de mayo de 2011.",
+      "en": "Saint Louis Marie de Montfort, Treatise on True Devotion, 266; Latin formula quoted by Benedict XVI in the homily for John Paul II’s beatification, May 1, 2011.",
+      "pt": "São Luís Maria de Montfort, Tratado da Verdadeira Devoção, 266; fórmula latina citada por Bento XVI na homilia de beatificação de João Paulo II, 1º de maio de 2011."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia de la fórmula latina montfortiana documentada, de origen anterior al siglo XX. Catholic Hermes, 2026.",
+      "en": "Original translation of the documented Montfortian Latin formula, originating before the twentieth century. Catholic Hermes, 2026.",
+      "pt": "Tradução própria da fórmula latina montfortina documentada, de origem anterior ao século XX. Catholic Hermes, 2026."
+    }
+  },
+  {
+    "id": "thomas_before_study",
+    "title": {
+      "es": "Oración de Santo Tomás antes del estudio",
+      "en": "Saint Thomas’s Prayer Before Study",
+      "pt": "Oração de Santo Tomás Antes do Estudo"
+    },
+    "latinTitle": "Creator ineffabilis",
+    "category": "BASIC",
+    "leaderText": {
+      "es": "Creador inefable, que de los tesoros de tu sabiduría dispusiste las tres jerarquías de los ángeles, las colocaste en admirable orden sobre el cielo más alto y distribuiste con suma armonía las partes del universo: tú, verdadera fuente de luz y sabiduría y principio que todo lo supera, dígnate derramar un rayo de tu claridad sobre las tinieblas de mi entendimiento, apartando de mí la doble oscuridad en que nací: el pecado y la ignorancia.\n\nTú, que haces elocuentes las lenguas de los niños, instruye mi lengua e infunde en mis labios la gracia de tu bendición. Dame agudeza para entender, capacidad para retener, método y facilidad para aprender, sutileza para interpretar y abundante gracia para hablar. Instruye mi comienzo, dirige mi progreso y lleva a término mi final. Tú, que eres verdadero Dios y hombre, que vives y reinas por los siglos de los siglos. Amén.",
+      "en": "Ineffable Creator, from the treasures of your wisdom you appointed the three hierarchies of angels, placed them in wonderful order above the highest heaven, and arranged the parts of the universe with great harmony. You who are the true source of light and wisdom, the principle surpassing all things, graciously shed a ray of your brightness upon the darkness of my understanding. Remove from me the twofold darkness in which I was born: sin and ignorance.\n\nYou make the tongues of children eloquent: instruct my tongue and pour the grace of your blessing upon my lips. Give me sharp understanding, the capacity to remember, method and ease in learning, insight in interpretation, and abundant grace in speaking. Instruct my beginning, direct my progress, and bring my work to completion. You who are true God and man, who live and reign for ever and ever. Amen.",
+      "pt": "Criador inefável, que dos tesouros de vossa sabedoria dispusestes as três hierarquias dos anjos, as colocastes em admirável ordem acima do céu mais alto e distribuístes com grande harmonia as partes do universo: vós, verdadeira fonte de luz e sabedoria e princípio que tudo supera, dignai-vos derramar um raio de vossa claridade sobre as trevas de meu entendimento, afastando de mim a dupla escuridão em que nasci: o pecado e a ignorância.\n\nVós, que tornais eloquentes as línguas das crianças, instruí minha língua e infundi em meus lábios a graça de vossa bênção. Dai-me agudeza para entender, capacidade para guardar na memória, método e facilidade para aprender, sutileza para interpretar e abundante graça para falar. Instruí meu começo, dirigi meu progresso e levai meu trabalho à conclusão. Vós, que sois verdadeiro Deus e homem, que viveis e reinais pelos séculos dos séculos. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Antes de estudiar, escribir, enseñar o preparar una exposición.",
+      "en": "Before studying, writing, teaching, or preparing to speak.",
+      "pt": "Antes de estudar, escrever, ensinar ou preparar uma apresentação."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "doctrine",
+      "work",
+      "faith"
+    ],
+    "history": {
+      "es": "Creator ineffabilis es una oración tradicionalmente transmitida bajo el nombre de santo Tomás de Aquino. La Raccolta de 1910 la incluye entre las oraciones previas a escribir y predicar; su uso antes del estudio expresa la misma petición de luz. No se limita a pedir buenos resultados: solicita comprensión, memoria, método y claridad, y reconoce el pecado y la ignorancia como oscuridades distintas. El lenguaje de las jerarquías angélicas y del cielo más alto pertenece a la expresión tradicional del texto. La oración invita a unir el trabajo intelectual con humildad, perseverancia y responsabilidad.",
+      "en": "Creator ineffabilis is a prayer traditionally transmitted under the name of Saint Thomas Aquinas. The 1910 Raccolta includes it among prayers before writing and preaching; using it before study expresses the same petition for light. It does not merely ask for successful results: it seeks understanding, memory, method, and clarity while recognizing sin and ignorance as distinct forms of darkness. Its language of angelic hierarchies and the highest heaven belongs to the text’s traditional expression. The prayer invites intellectual work joined to humility, perseverance, and responsibility rather than reliance on a formula alone.",
+      "pt": "Creator ineffabilis é uma oração tradicionalmente transmitida sob o nome de santo Tomás de Aquino. A Raccolta de 1910 a inclui entre as orações anteriores à escrita e à pregação; seu uso antes do estudo exprime o mesmo pedido de luz. Ela não se limita a pedir bons resultados: solicita compreensão, memória, método e clareza, reconhecendo o pecado e a ignorância como escuridões distintas. A linguagem das hierarquias angélicas e do céu mais alto pertence à expressão tradicional do texto. A oração convida a unir o trabalho intelectual à humildade, à perseverança e à responsabilidade."
+    },
+    "instructions": {
+      "es": "Reza antes de comenzar el trabajo y elige una disposición concreta: atención, constancia o voluntad de comprender. Después realiza el estudio o la preparación que corresponda. En grupo puede leerse toda en común. El texto no dispensa del esfuerzo ni vincula a su recitación una nota académica o un resultado determinado.",
+      "en": "Pray before beginning your work and choose a concrete disposition: attentiveness, perseverance, or willingness to understand. Then undertake the necessary study or preparation. A group may read the entire prayer together. The text does not dispense with effort or attach a particular academic grade or outcome to its recitation.",
+      "pt": "Reze antes de começar o trabalho e escolha uma disposição concreta: atenção, constância ou vontade de compreender. Depois realize o estudo ou a preparação necessária. Em grupo, todos podem ler a oração juntos. O texto não dispensa o esforço nem vincula à recitação uma nota acadêmica ou resultado determinado."
+    },
+    "source": {
+      "es": "Raccolta, edición de 1910, n. 52; Preces Latinae, Oratio S. Thomae Aquinatis ante studium, texto latino Creator ineffabilis.",
+      "en": "Raccolta, 1910 edition, no. 52; Preces Latinae, Oratio S. Thomae Aquinatis ante studium, Latin text Creator ineffabilis.",
+      "pt": "Raccolta, edição de 1910, n. 52; Preces Latinae, Oratio S. Thomae Aquinatis ante studium, texto latino Creator ineffabilis."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia y fiel del texto latino tradicional de dominio público. Catholic Hermes, 2026. No se copió la traducción inglesa moderna de Preces Latinae.",
+      "en": "Original faithful translation of the traditional public-domain Latin text. Catholic Hermes, 2026. The modern English translation on Preces Latinae was not copied.",
+      "pt": "Tradução própria e fiel do texto latino tradicional de domínio público. Catholic Hermes, 2026. Não se copiou a tradução inglesa moderna de Preces Latinae."
+    }
+  },
+  {
+    "id": "thomas_after_communion",
+    "title": {
+      "es": "Acción de gracias de Santo Tomás",
+      "en": "Saint Thomas’s Thanksgiving After Communion",
+      "pt": "Ação de Graças de Santo Tomás"
+    },
+    "latinTitle": "Gratias tibi ago",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "Te doy gracias, Señor, Padre santo, Dios todopoderoso y eterno, porque a mí, pecador, indigno siervo tuyo, sin mérito alguno de mi parte y solo por la bondad de tu misericordia, te dignaste saciarme con el precioso Cuerpo y la Sangre de tu Hijo, nuestro Señor Jesucristo. Te ruego que esta santa comunión no sea para mí motivo de condena, sino intercesión salvadora para el perdón. Sea para mí armadura de fe y escudo de buena voluntad.\n\nSea destrucción de mis vicios, extinción de la concupiscencia y de los deseos desordenados, aumento de caridad y paciencia, de humildad, obediencia y todas las virtudes; defensa firme contra las asechanzas de todos los enemigos, visibles e invisibles; perfecta calma de mis movimientos corporales y espirituales; adhesión firme a ti, único Dios verdadero, y feliz cumplimiento de mi fin.\n\nTe ruego que te dignes conducir a este pecador al banquete inefable donde tú, con tu Hijo y el Espíritu Santo, eres para tus santos luz verdadera, plenitud que sacia, gozo eterno, alegría consumada y felicidad perfecta. Por el mismo Cristo nuestro Señor. Amén.",
+      "en": "I thank you, Lord, holy Father, almighty and eternal God. Though I am a sinner, your unworthy servant, you have graciously satisfied me with the precious Body and Blood of your Son, our Lord Jesus Christ, through no merit of my own but solely through the kindness of your mercy. I pray that this holy communion may not become a cause of condemnation for me, but saving intercession for forgiveness. May it be my armor of faith and shield of good will.\n\nMay it remove my vices, extinguish disordered craving and desire, and increase charity and patience, humility, obedience, and every virtue. May it be a firm defense against the snares of all enemies, visible and invisible; the perfect quieting of my bodily and spiritual impulses; firm adherence to you, the one true God; and the happy fulfillment of my final end.\n\nI pray that you graciously lead me, a sinner, to the ineffable banquet where you, with your Son and the Holy Spirit, are for your saints true light, complete fulfillment, eternal joy, perfect gladness, and complete happiness. Through the same Christ our Lord. Amen.",
+      "pt": "Eu vos dou graças, Senhor, Pai santo, Deus todo-poderoso e eterno, porque a mim, pecador, vosso servo indigno, sem mérito algum de minha parte e somente pela bondade de vossa misericórdia, vos dignastes saciar com o precioso Corpo e Sangue de vosso Filho, nosso Senhor Jesus Cristo. Peço que esta santa comunhão não seja para mim motivo de condenação, mas intercessão salvadora para o perdão. Seja para mim armadura da fé e escudo da boa vontade.\n\nSeja destruição de meus vícios, extinção da concupiscência e dos desejos desordenados, aumento de caridade e paciência, de humildade, obediência e de todas as virtudes; defesa firme contra as ciladas de todos os inimigos, visíveis e invisíveis; perfeita tranquilidade de meus movimentos corporais e espirituais; firme adesão a vós, único Deus verdadeiro, e feliz cumprimento de meu fim.\n\nPeço que vos digneis conduzir este pecador ao banquete inefável onde vós, com vosso Filho e o Espírito Santo, sois para vossos santos luz verdadeira, plenitude que sacia, gozo eterno, alegria consumada e felicidade perfeita. Pelo mesmo Cristo nosso Senhor. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Después de recibir la Comunión, dejando un tiempo de silencio.",
+      "en": "After receiving Communion, allowing time for silence.",
+      "pt": "Depois de receber a Comunhão, reservando um tempo de silêncio."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "eucharist",
+      "praise",
+      "faith"
+    ],
+    "history": {
+      "es": "Gratias tibi ago es una oración transmitida bajo el nombre de santo Tomás de Aquino en la tradición de acción de gracias después de la Misa. La Raccolta de 1910 la menciona entre los formularios de ese momento. El texto comienza reconociendo que la Comunión es un don de misericordia y pide que ese don transforme la vida: crecimiento en las virtudes, libertad frente al pecado y unión con Dios. Termina mirando al banquete eterno de la Trinidad. Su petición de perdón se comprende dentro de la vida sacramental, no como sustitución de la confesión cuando es necesaria.",
+      "en": "Gratias tibi ago is a prayer transmitted under Saint Thomas Aquinas’s name in the tradition of thanksgiving after Mass. The 1910 Raccolta lists it among formulas for that moment. The text begins by recognizing Communion as a gift of mercy and asks that this gift transform life: growth in virtue, freedom from sin, and union with God. It ends by looking toward the eternal banquet of the Trinity. Its petition for forgiveness belongs within sacramental life, rather than replacing confession when confession is required before receiving Communion.",
+      "pt": "Gratias tibi ago é uma oração transmitida sob o nome de santo Tomás de Aquino na tradição de ação de graças depois da Missa. A Raccolta de 1910 a menciona entre os formulários desse momento. O texto começa reconhecendo que a Comunhão é dom de misericórdia e pede que esse dom transforme a vida: crescimento nas virtudes, liberdade diante do pecado e união com Deus. Termina voltando-se para o banquete eterno da Trindade. Seu pedido de perdão deve ser compreendido dentro da vida sacramental, não como substituição da confissão quando ela é necessária."
+    },
+    "instructions": {
+      "es": "Después de comulgar, reza sin prisa y deja pausas para agradecer personalmente. Puedes elegir una de las virtudes nombradas y pedir ayuda para practicarla durante el día. La oración puede leerse en silencio; no exige que todos la digan en voz alta durante la celebración. Conserva la referencia a la Comunión realmente recibida.",
+      "en": "After receiving Communion, pray without rushing and leave pauses for personal thanksgiving. You may choose one named virtue and ask for help to practice it during the day. The prayer can be read silently; everyone need not recite it aloud during the celebration. Preserve its reference to Communion actually received.",
+      "pt": "Depois de comungar, reze sem pressa e faça pausas para agradecer pessoalmente. Você pode escolher uma das virtudes mencionadas e pedir auxílio para praticá-la durante o dia. A oração pode ser lida em silêncio; não exige que todos a recitem em voz alta durante a celebração. Conserve a referência à Comunhão realmente recebida."
+    },
+    "source": {
+      "es": "Misal Romano, acción de gracias después de la Misa, Oratio Sancti Thomae; Raccolta, 1910, tabla de oraciones, p. 403; texto latino en Preces Latinae, Oratio Sancti Thomae Aquinatis Post Missam.",
+      "en": "Roman Missal, thanksgiving after Mass, Oratio Sancti Thomae; Raccolta, 1910, table of prayers, p. 403; Latin text in Preces Latinae, Oratio Sancti Thomae Aquinatis Post Missam.",
+      "pt": "Missal Romano, ação de graças depois da Missa, Oratio Sancti Thomae; Raccolta, 1910, quadro de orações, p. 403; texto latino em Preces Latinae, Oratio Sancti Thomae Aquinatis Post Missam."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del formulario latino tradicional de dominio público. Catholic Hermes, 2026. No es una traducción oficial moderna del Misal.",
+      "en": "Original translation of the traditional public-domain Latin formula. Catholic Hermes, 2026. Not a modern official Missal translation.",
+      "pt": "Tradução própria do formulário latino tradicional de domínio público. Catholic Hermes, 2026. Não é tradução oficial moderna do Missal."
+    }
+  },
+  {
+    "id": "ambrose_before_mass",
+    "title": {
+      "es": "Preparación para la Comunión · atribuida a San Ambrosio",
+      "en": "Preparation for Communion · Attributed to Saint Ambrose",
+      "pt": "Preparação para a Comunhão · Atribuída a Santo Ambrósio"
+    },
+    "latinTitle": "Ad mensam dulcissimi convivii tui",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "A la mesa de tu dulcísimo banquete, piadoso Señor Jesucristo, me acerco con temor y temblor, pecador que nada presume de sus propios méritos, sino que confía en tu misericordia y bondad. Tengo el corazón y el cuerpo manchados por muchas faltas, y no he guardado con cuidado mi mente y mi lengua.\n\nPor eso, piadosa Divinidad, majestad que sobrecoge, yo, miserable y cercado de angustias, recurro a ti, fuente de misericordia; me apresuro a ti para ser sanado y me refugio bajo tu protección. A ti, cuyo juicio no puedo soportar, anhelo tenerte como Salvador. Te muestro mis heridas, Señor, y descubro ante ti mi vergüenza. Sé que mis pecados son muchos y grandes, por lo que temo; pero espero en tus misericordias, que no tienen número.\n\nMírame, pues, con los ojos de tu misericordia, Señor Jesucristo, Rey eterno, Dios y hombre, crucificado por el ser humano. Escúchame, que espero en ti; ten piedad de mí, lleno de miserias y pecados, tú que nunca dejas de ser fuente de compasión.\n\nSalve, víctima salvadora, ofrecida en el madero de la Cruz por mí y por todo el género humano. Salve, Sangre noble y preciosa que brotas de las heridas de mi Señor Jesucristo crucificado y lavas los pecados del mundo entero.\n\nRecuerda, Señor, a tu criatura, a quien redimiste con tu Sangre. Me arrepiento de haber pecado y deseo enmendar lo que hice. Aparta de mí, Padre clementísimo, todas mis iniquidades y pecados, para que, purificado en mente y cuerpo, merezca gustar dignamente lo más santo.\n\nConcédeme que esta santa degustación de tu Cuerpo y Sangre, que me propongo recibir siendo indigno, sea remisión de mis pecados, purificación completa de mis faltas, alejamiento de los pensamientos vergonzosos y renovación de los buenos sentimientos; que produzca eficazmente obras que te agraden y sea firme protección de mi alma y de mi cuerpo contra las asechanzas de mis enemigos. Amén.",
+      "en": "At the table of your sweetest banquet, loving Lord Jesus Christ, I approach with fear and trembling: a sinner presuming nothing from my own merits, but trusting in your mercy and goodness. My heart and body are stained by many sins, and I have not carefully guarded my mind and tongue.\n\nTherefore, gracious God, awesome majesty, I, miserable and surrounded by distress, return to you, the fountain of mercy. I hasten to you for healing and seek refuge beneath your protection. You whose judgment I cannot bear, I long to have as Savior. I show you my wounds, Lord, and uncover my shame before you. I know my sins are many and great, and I fear because of them; but I hope in your mercies, which cannot be numbered.\n\nLook upon me, then, with eyes of mercy, Lord Jesus Christ, eternal King, God and man, crucified for humanity. Hear me as I hope in you; have mercy on me, full of misery and sin, for you never cease to be a fountain of compassion.\n\nHail, saving victim, offered upon the wood of the Cross for me and the whole human race. Hail, noble and precious Blood, flowing from the wounds of my crucified Lord Jesus Christ and washing away the sins of the whole world.\n\nRemember, Lord, your creature, whom you redeemed with your Blood. I repent of having sinned and desire to amend what I have done. Take away from me, most merciful Father, all my wrongdoing and sins, so that, purified in mind and body, I may worthily taste the most holy things.\n\nGrant that this holy foretaste of your Body and Blood, which I intend to receive despite my unworthiness, may be remission of my sins, complete purification of my faults, the banishing of shameful thoughts and renewal of good affections. May it effectively bear works pleasing to you and firmly protect my soul and body against the snares of my enemies. Amen.",
+      "pt": "À mesa de vosso dulcíssimo banquete, piedoso Senhor Jesus Cristo, aproximo-me com temor e tremor, pecador que nada presume de seus próprios méritos, mas confia em vossa misericórdia e bondade. Tenho o coração e o corpo manchados por muitas faltas e não guardei cuidadosamente minha mente e minha língua.\n\nPor isso, piedosa Divindade, majestade que inspira reverência, eu, miserável e cercado de angústias, recorro a vós, fonte de misericórdia; apresso-me a vós para ser curado e refugio-me sob vossa proteção. A vós, cujo julgamento não posso suportar, desejo ter como Salvador. Mostro-vos minhas feridas, Senhor, e descubro diante de vós minha vergonha. Sei que meus pecados são muitos e grandes, pelos quais temo; mas espero em vossas misericórdias, que não têm número.\n\nOlhai-me, pois, com os olhos de vossa misericórdia, Senhor Jesus Cristo, Rei eterno, Deus e homem, crucificado pelo ser humano. Ouvi-me, que espero em vós; tende piedade de mim, cheio de misérias e pecados, vós que nunca deixais de ser fonte de compaixão.\n\nSalve, vítima salvadora, oferecida no madeiro da Cruz por mim e por todo o gênero humano. Salve, Sangue nobre e precioso que brotais das chagas de meu Senhor Jesus Cristo crucificado e lavais os pecados do mundo inteiro.\n\nLembrai-vos, Senhor, de vossa criatura, que redimistes com vosso Sangue. Arrependo-me de ter pecado e desejo emendar o que fiz. Afastai de mim, Pai clementíssimo, todas as minhas iniquidades e pecados, para que, purificado na mente e no corpo, mereça saborear dignamente as coisas santíssimas.\n\nConcedei que esta santa degustação de vosso Corpo e Sangue, que pretendo receber sendo indigno, seja remissão de meus pecados, purificação completa de minhas faltas, afastamento dos pensamentos vergonhosos e renovação dos bons sentimentos; que produza eficazmente obras que vos agradem e seja firme proteção de minha alma e de meu corpo contra as ciladas de meus inimigos. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Antes de la Misa o al preparar la recepción de la Comunión.",
+      "en": "Before Mass or when preparing to receive Communion.",
+      "pt": "Antes da Missa ou ao preparar a recepção da Comunhão."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "eucharist",
+      "forgiveness",
+      "trust"
+    ],
+    "history": {
+      "es": "Ad mensam dulcissimi convivii tui se transmite entre las oraciones de preparación para la Misa bajo el nombre de san Ambrosio. La atribución no se presenta como autoría demostrada; se considera posible un origen medieval. La Raccolta de 1910 ya la menciona por su inicio latino. La oración reconoce la fragilidad del creyente, pero pone la confianza en la misericordia de Cristo, su Cruz y su Sangre. Su lenguaje penitencial pertenece a esa tradición de preparación eucarística. Pedir perdón en ella no sustituye la confesión sacramental ni exige despreciar la dignidad que Dios concede a cada persona.",
+      "en": "Ad mensam dulcissimi convivii tui is transmitted among prayers of preparation for Mass under Saint Ambrose’s name. The attribution is not presented as proven authorship; a medieval origin is considered possible. The 1910 Raccolta already lists it by its Latin opening. The prayer acknowledges the believer’s weakness but places trust in Christ’s mercy, Cross, and Blood. Its penitential language belongs to that tradition of Eucharistic preparation. Seeking forgiveness through it does not replace sacramental confession or require contempt for the dignity God grants to every human person.",
+      "pt": "Ad mensam dulcissimi convivii tui é transmitida entre as orações de preparação para a Missa sob o nome de santo Ambrósio. A atribuição não é apresentada como autoria demonstrada; considera-se possível uma origem medieval. A Raccolta de 1910 já a menciona por seu início latino. A oração reconhece a fragilidade do fiel, mas deposita a confiança na misericórdia de Cristo, em sua Cruz e em seu Sangue. Sua linguagem penitencial pertence a essa tradição de preparação eucarística. Pedir perdão por meio dela não substitui a confissão sacramental nem exige desprezar a dignidade que Deus concede a cada pessoa."
+    },
+    "instructions": {
+      "es": "Lee la oración antes de la celebración o en un momento de preparación personal, sin distraerte de las partes comunes de la Misa. Deja que el reconocimiento del pecado conduzca a la confianza. Si tienes conciencia de pecado grave, sigue la disciplina de la confesión antes de comulgar; la fórmula no la reemplaza. Si provoca escrúpulos persistentes, busca acompañamiento espiritual y profesional.",
+      "en": "Read the prayer before the celebration or during personal preparation without distracting yourself from the Mass’s common parts. Let acknowledgment of sin lead toward trust. If conscious of grave sin, follow the discipline of confession before Communion; the formula does not replace it. Seek spiritual and professional guidance if its language provokes persistent scruples.",
+      "pt": "Leia a oração antes da celebração ou num momento de preparação pessoal, sem se distrair das partes comuns da Missa. Deixe que o reconhecimento do pecado conduza à confiança. Se tiver consciência de pecado grave, siga a disciplina da confissão antes de comungar; a fórmula não a substitui. Se provocar escrúpulos persistentes, procure acompanhamento espiritual e profissional."
+    },
+    "source": {
+      "es": "Raccolta, 1910, tabla de oraciones de preparación, p. 403; Preces Latinae, Oratio Sancti Ambrosii Ante Missam, texto latino Ad mensam y nota sobre la atribución.",
+      "en": "Raccolta, 1910, table of preparation prayers, p. 403; Preces Latinae, Oratio Sancti Ambrosii Ante Missam, Latin Ad mensam text and note on attribution.",
+      "pt": "Raccolta, 1910, quadro de orações de preparação, p. 403; Preces Latinae, Oratio Sancti Ambrosii Ante Missam, texto latino Ad mensam e nota sobre a atribuição."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia completa del formulario latino tradicional de dominio público. Catholic Hermes, 2026. No se copió una traducción moderna del Misal o de una web.",
+      "en": "Original complete translation of the traditional public-domain Latin formula. Catholic Hermes, 2026. No modern Missal or website translation copied.",
+      "pt": "Tradução própria integral do formulário latino tradicional de domínio público. Catholic Hermes, 2026. Não se copiou tradução moderna do Missal ou de um site."
+    }
+  },
+  {
+    "id": "nada_te_turbe",
+    "title": {
+      "es": "Nada te turbe",
+      "en": "Let Nothing Trouble You",
+      "pt": "Nada o Perturbe"
+    },
+    "latinTitle": null,
+    "category": "BASIC",
+    "leaderText": {
+      "es": "Nada te turbe,\nnada te espante,\ntodo se pasa,\nDios no se muda;\nla paciencia\ntodo lo alcanza;\nquien a Dios tiene,\nnada le falta:\nsolo Dios basta.",
+      "en": "Let nothing trouble you,\nlet nothing frighten you.\nAll things pass;\nGod does not change.\nPatience\nattains all things.\nWhoever has God\nlacks nothing:\nGod alone is enough.",
+      "pt": "Nada o perturbe,\nnada o assuste;\ntudo passa,\nDeus não muda.\nA paciência\ntudo alcança.\nQuem tem Deus\nnada lhe falta:\nsó Deus basta."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para recordar la confianza en Dios durante las dificultades.",
+      "en": "To remember trust in God during difficulties.",
+      "pt": "Para recordar a confiança em Deus nas dificuldades."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "trust",
+      "peace",
+      "faith"
+    ],
+    "history": {
+      "es": "Estos versos se transmiten bajo el nombre de santa Teresa de Jesús y forman parte del patrimonio de oración teresiano. Su brevedad facilita recordarlos en medio de una dificultad. La afirmación solo Dios basta expresa la primacía de Dios y la confianza en su fidelidad; no afirma que las necesidades humanas o los vínculos con otras personas carezcan de valor. La paciencia no equivale a resignarse ante una injusticia. Se conserva la estrofa española conocida, sin ampliarla con frases de autoría moderna ni adjudicarle aquí una fecha exacta de composición que no se ha verificado.",
+      "en": "These verses are transmitted under Saint Teresa of Jesus’s name and belong to the Teresian heritage of prayer. Their brevity makes them easy to remember during difficulty. The statement God alone is enough expresses God’s primacy and trust in his faithfulness; it does not claim that human needs or relationships lack value. Patience is not the same as submitting to injustice. The familiar Spanish stanza is retained without extending it with modern additions or assigning an exact date of composition that has not been verified here through documentary evidence.",
+      "pt": "Estes versos são transmitidos sob o nome de santa Teresa de Jesus e fazem parte do patrimônio teresiano de oração. Sua brevidade ajuda a recordá-los nas dificuldades. A afirmação só Deus basta exprime a primazia de Deus e a confiança em sua fidelidade; não afirma que as necessidades humanas ou os vínculos com outras pessoas não tenham valor. Paciência não é o mesmo que resignação diante de uma injustiça. Conserva-se a conhecida estrofe espanhola, sem ampliá-la com frases de autoria moderna nem atribuir-lhe uma data exata de composição não verificada aqui."
+    },
+    "instructions": {
+      "es": "Lee los versos y repite despacio la frase que te ayude a recuperar la atención y la confianza. No se establece una cantidad obligatoria de repeticiones. Puedes acompañarlos de silencio y de una decisión concreta para afrontar la dificultad. En una crisis persistente, busca también apoyo pastoral y profesional cuando lo necesites.",
+      "en": "Read the verses and slowly repeat the phrase that helps restore attention and trust. No compulsory number of repetitions is prescribed. You may accompany them with silence and a concrete decision for addressing the difficulty. During a persistent crisis, also seek pastoral and professional support when you need it.",
+      "pt": "Leia os versos e repita devagar a frase que ajude a recuperar a atenção e a confiança. Não se estabelece quantidade obrigatória de repetições. Você pode acompanhá-los de silêncio e de uma decisão concreta para enfrentar a dificuldade. Numa crise persistente, procure também apoio pastoral e profissional quando necessário."
+    },
+    "source": {
+      "es": "Santa Teresa de Jesús, poesías, estrofa Nada te turbe; texto reproducido en CIC 227.",
+      "en": "Saint Teresa of Jesus, poetry, stanza Nada te turbe; text reproduced in CCC 227.",
+      "pt": "Santa Teresa de Jesus, poesias, estrofe Nada te turbe; texto reproduzido em CIC 227."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Estrofa española tradicional de dominio público; se conserva íntegra. Las versiones inglesa y portuguesa son traducciones propias fieles, Catholic Hermes, 2026.",
+      "en": "Complete traditional public-domain Spanish stanza; English is an original faithful translation, Catholic Hermes, 2026.",
+      "pt": "Estrofe espanhola tradicional de domínio público, conservada integralmente; o português é tradução própria fiel, Catholic Hermes, 2026."
+    }
+  },
+  {
+    "id": "canticle_of_creatures",
+    "title": {
+      "es": "Cántico de las criaturas",
+      "en": "Canticle of the Creatures",
+      "pt": "Cântico das criaturas"
+    },
+    "latinTitle": null,
+    "category": "BASIC",
+    "leaderText": {
+      "es": "Altísimo, omnipotente, buen Señor, tuyas son las alabanzas, la gloria, el honor y toda bendición. A ti solo, Altísimo, corresponden, y ningún ser humano es digno de nombrarte.\nAlabado seas, mi Señor, con todas tus criaturas, especialmente el señor hermano sol, que es el día y por quien nos iluminas. Él es hermoso y radiante con gran esplendor: de ti, Altísimo, lleva significado.\nAlabado seas, mi Señor, por la hermana luna y las estrellas: en el cielo las has formado claras, preciosas y hermosas.\nAlabado seas, mi Señor, por el hermano viento, y por el aire, las nubes, el cielo sereno y todo tiempo, por el que das sustento a tus criaturas.\nAlabado seas, mi Señor, por la hermana agua, que es muy útil, humilde, preciosa y casta.\nAlabado seas, mi Señor, por el hermano fuego, por el que iluminas la noche: él es hermoso, alegre, robusto y fuerte.\nAlabado seas, mi Señor, por nuestra hermana madre tierra, que nos sustenta y gobierna, y produce diversos frutos con flores de colores y hierba.\nAlabado seas, mi Señor, por quienes perdonan por tu amor y soportan enfermedad y tribulación. Bienaventurados quienes lo soporten en paz, pues por ti, Altísimo, serán coronados.\nAlabado seas, mi Señor, por nuestra hermana muerte corporal, de la que ningún ser humano vivo puede escapar. ¡Ay de quienes mueran en pecados mortales! Bienaventurados aquellos a quienes encuentre en tu santísima voluntad, pues la muerte segunda no les hará daño.\nAlabad y bendecid a mi Señor y dadle gracias, y servidle con gran humildad.",
+      "en": "Most High, almighty, good Lord, yours are the praises, the glory, the honour and every blessing. To you alone, Most High, they belong, and no human being is worthy to name you.\nPraised be you, my Lord, with all your creatures, especially lord brother sun, who is the day, and through whom you light us. He is beautiful and radiant with great splendour: of you, Most High, he bears a sign.\nPraised be you, my Lord, for sister moon and the stars: in heaven you have formed them bright, precious and beautiful.\nPraised be you, my Lord, for brother wind, and for air, cloud, clear sky and every kind of weather, through which you sustain your creatures.\nPraised be you, my Lord, for sister water, who is very useful, humble, precious and chaste.\nPraised be you, my Lord, for brother fire, through whom you light the night: he is beautiful, joyful, robust and strong.\nPraised be you, my Lord, for our sister mother earth, who sustains and governs us, and produces various fruits with coloured flowers and grass.\nPraised be you, my Lord, for those who forgive for your love and endure sickness and tribulation. Blessed are those who endure it in peace, for by you, Most High, they shall be crowned.\nPraised be you, my Lord, for our sister bodily death, from whom no living human being can escape. Woe to those who die in mortal sins! Blessed are those whom she finds in your most holy will, for the second death shall do them no harm.\nPraise and bless my Lord and give him thanks, and serve him with great humility.",
+      "pt": "Altíssimo, onipotente, bom Senhor, vossos são os louvores, a glória, a honra e toda bênção. A vós somente, Altíssimo, pertencem, e nenhum ser humano é digno de vos nomear.\nLouvado sejais, meu Senhor, com todas as vossas criaturas, especialmente o senhor irmão sol, que é o dia e por quem nos iluminais. Ele é belo e radiante com grande esplendor: de vós, Altíssimo, traz um sinal.\nLouvado sejais, meu Senhor, pela irmã lua e pelas estrelas: no céu as formastes claras, preciosas e belas.\nLouvado sejais, meu Senhor, pelo irmão vento, e pelo ar, pelas nuvens, pelo céu sereno e por todo tempo, pelo qual dais sustento às vossas criaturas.\nLouvado sejais, meu Senhor, pela irmã água, que é muito útil, humilde, preciosa e casta.\nLouvado sejais, meu Senhor, pelo irmão fogo, pelo qual iluminais a noite: ele é belo, alegre, robusto e forte.\nLouvado sejais, meu Senhor, por nossa irmã mãe terra, que nos sustenta e governa, e produz diversos frutos com flores coloridas e erva.\nLouvado sejais, meu Senhor, por aqueles que perdoam por vosso amor e suportam enfermidade e tribulação. Bem-aventurados os que as suportarem em paz, pois por vós, Altíssimo, serão coroados.\nLouvado sejais, meu Senhor, por nossa irmã morte corporal, da qual nenhum ser humano vivo pode escapar. Ai daqueles que morrerem em pecados mortais! Bem-aventurados os que ela encontrar na vossa santíssima vontade, pois a segunda morte não lhes fará mal.\nLouvai e bendizei ao meu Senhor e dai-lhe graças, e servi-o com grande humildade."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Al contemplar la creación o dar gracias en la enfermedad.",
+      "en": "When contemplating creation or giving thanks during illness.",
+      "pt": "Ao contemplar a criação ou agradecer durante a doença."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "praise",
+      "faith",
+      "daily_routine"
+    ],
+    "history": {
+      "es": "Francisco de Asís compuso este cántico en lengua umbra medieval. Su núcleo suele fecharse en 1225; las estrofas del perdón y de la muerte pertenecen a las etapas finales de su vida. La tradición manuscrita conserva un texto más amplio que las versiones cantadas que a veces se conocen hoy. La alabanza se dirige al Creador, no convierte las criaturas en dioses y llega hasta el sufrimiento, la reconciliación y la muerte corporal. Aquí se ofrece el poema completo, traducido del original antiguo, sin suprimir su referencia a la conversión y a la vida eterna.",
+      "en": "Francis of Assisi composed this canticle in medieval Umbrian. Its core is commonly dated to 1225; the verses about forgiveness and death belong to the final stages of his life. The manuscript tradition preserves a fuller text than some familiar modern musical settings. Praise is addressed to the Creator: creatures are not treated as gods. The poem reaches beyond the beauty of nature to suffering, reconciliation and bodily death. This entry translates the complete ancient poem, retaining its call to conversion and its reference to eternal life rather than selecting only its best-known nature verses.",
+      "pt": "Francisco de Assis compôs este cântico em língua umbra medieval. Seu núcleo costuma ser datado de 1225; as estrofes do perdão e da morte pertencem às etapas finais de sua vida. A tradição manuscrita conserva um texto mais amplo que certas versões musicais conhecidas atualmente. O louvor dirige-se ao Criador, sem transformar as criaturas em deuses, e chega ao sofrimento, à reconciliação e à morte corporal. Esta entrada traduz o poema antigo completo, conservando seu chamado à conversão e sua referência à vida eterna, além das estrofes mais conhecidas sobre a natureza."
+    },
+    "instructions": {
+      "es": "Lee una estrofa por vez, dejando un silencio para agradecer algo concreto. No saltes las estrofas del perdón y de la muerte: relacionan el cuidado de la creación con la caridad y la esperanza cristiana. Puedes rezarlo al aire libre o junto a un enfermo, respetando su estado y sin exigirle sentir alegría.",
+      "en": "Read one stanza at a time, leaving a silence to give thanks for something concrete. Keep the verses about forgiveness and death: they connect care for creation with charity and Christian hope. Pray outdoors or beside someone who is ill, respecting their condition and without requiring them to feel cheerful.",
+      "pt": "Leia uma estrofe de cada vez, deixando um silêncio para agradecer algo concreto. Conserve as estrofes do perdão e da morte: elas ligam o cuidado da criação à caridade e à esperança cristã. Reze ao ar livre ou junto a um enfermo, respeitando sua condição, sem exigir que ele sinta alegria."
+    },
+    "source": {
+      "es": "Francisco de Asís, Cantico di frate Sole, texto umbro; Bibliotheca Augustana, transcripción con referencia al códice 338 de Asís, ff. 33r–34r.",
+      "en": "Francis of Assisi, Cantico di frate Sole, Umbrian text; Bibliotheca Augustana, transcription identifying Assisi codex 338, ff. 33r–34r.",
+      "pt": "Francisco de Assis, Cantico di frate Sole, texto umbro; Bibliotheca Augustana, transcrição com referência ao códice 338 de Assis, ff. 33r–34r."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia completa del original umbro medieval de dominio público (Catholic Hermes, 2026).",
+      "en": "Complete original translation of the public-domain medieval Umbrian original (Catholic Hermes, 2026).",
+      "pt": "Tradução própria integral do original umbro medieval em domínio público (Catholic Hermes, 2026)."
+    }
+  },
+  {
+    "id": "ephrem_lenten_prayer",
+    "title": {
+      "es": "Oración cuaresmal atribuida a san Efrén",
+      "en": "Lenten prayer attributed to Saint Ephrem",
+      "pt": "Oração quaresmal atribuída a Santo Efrém"
+    },
+    "latinTitle": null,
+    "category": "BASIC",
+    "leaderText": {
+      "es": "Señor y Dueño de mi vida, no me des espíritu de ociosidad, de entrometimiento, de afán de dominio ni de palabras vacías. Concédeme, en cambio, a mí, tu siervo, espíritu de castidad, humildad, paciencia y amor. Sí, Señor y Rey, concédeme ver mis propias faltas y no condenar a mi hermano, porque bendito eres por los siglos de los siglos. Amén.",
+      "en": "Lord and Master of my life, do not give me a spirit of idleness, meddling, desire to rule or empty talk. Instead, grant to me, your servant, a spirit of chastity, humility, patience and love. Yes, Lord and King, grant me to see my own failings and not condemn my brother, for you are blessed for ages of ages. Amen.",
+      "pt": "Senhor e Dono da minha vida, não me deis espírito de ociosidade, de intromissão, de desejo de dominar nem de palavras vazias. Concedei, ao contrário, a mim, vosso servo, espírito de castidade, humildade, paciência e amor. Sim, Senhor e Rei, concedei-me ver minhas próprias faltas e não condenar meu irmão, pois sois bendito pelos séculos dos séculos. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Durante la Cuaresma y al examinar la propia conducta.",
+      "en": "During Lent and when examining your conduct.",
+      "pt": "Durante a Quaresma e ao examinar a própria conduta."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "lent",
+      "forgiveness",
+      "daily_routine"
+    ],
+    "history": {
+      "es": "Esta oración pertenece a la tradición cuaresmal bizantina y circula bajo el nombre de san Efrén. Su presencia en el corpus griego atribuido al santo no demuestra por sí sola que él escribiera cada palabra; existen variantes griegas y eslavas. La versión aquí traducida sigue el formulario griego sin la variante añadida sobre el amor al dinero. Pide abandonar vicios concretos y recibir virtudes que hacen posible la convivencia. Culmina con una petición especialmente exigente: reconocer las faltas propias sin condenar al hermano. Es una escuela breve de arrepentimiento, no una fórmula para diagnosticar a otras personas.",
+      "en": "This prayer belongs to the Byzantine Lenten tradition and circulates under Saint Ephrem’s name. Its inclusion in the Greek corpus attributed to him does not by itself establish that he wrote every word; Greek and Slavonic variants exist. The translation here follows the Greek form without the additional variant concerning love of money. It asks for release from specific vices and for virtues needed in community. Its climax is a demanding petition: to recognise personal failings without condemning a brother. It teaches repentance rather than supplying a formula for diagnosing the faults of other people.",
+      "pt": "Esta oração pertence à tradição quaresmal bizantina e circula sob o nome de Santo Efrém. Sua presença no corpus grego atribuído ao santo não demonstra, por si só, que ele escreveu cada palavra; existem variantes gregas e eslavas. A tradução aqui segue o formulário grego sem a variante acrescentada sobre o amor ao dinheiro. Pede abandonar vícios concretos e receber virtudes necessárias à convivência. Termina com uma súplica exigente: reconhecer as próprias faltas sem condenar o irmão. Ensina o arrependimento pessoal, sem oferecer uma fórmula para diagnosticar os defeitos de outras pessoas."
+    },
+    "instructions": {
+      "es": "Reza despacio sus tres movimientos: renuncia al vicio, petición de virtudes y reconocimiento de las propias faltas. En la tradición bizantina puede acompañarse de inclinaciones o postraciones; en oración privada adapta la postura a tu salud. Elige después un acto concreto de paciencia o reconciliación, sin convertir el examen en desprecio de ti mismo.",
+      "en": "Pray its three movements slowly: rejection of vice, petition for virtues and recognition of personal failings. In Byzantine practice bows or prostrations may accompany it; in private prayer adapt your posture to your health. Afterwards choose a concrete act of patience or reconciliation, without turning examination into self-contempt.",
+      "pt": "Reze devagar seus três movimentos: renúncia aos vícios, pedido de virtudes e reconhecimento das próprias faltas. Na tradição bizantina pode haver inclinações ou prostrações; na oração privada adapte a postura à sua saúde. Depois escolha um ato concreto de paciência ou reconciliação, sem transformar o exame em desprezo por si mesmo."
+    },
+    "source": {
+      "es": "Corpus griego atribuido a Efrén, Precationes e sacris scripturis collectae, oración 9 (CPG 4078.9); texto griego reproducido por Saint Ephrem the Syrian, The Prayer of St Ephrem.",
+      "en": "Greek corpus attributed to Ephrem, Precationes e sacris scripturis collectae, prayer 9 (CPG 4078.9); Greek text reproduced by Saint Ephrem the Syrian, The Prayer of St Ephrem.",
+      "pt": "Corpus grego atribuído a Efrém, Precationes e sacris scripturis collectae, oração 9 (CPG 4078.9); texto grego reproduzido por Saint Ephrem the Syrian, The Prayer of St Ephrem."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original griego antiguo de dominio público (Catholic Hermes, 2026), sin la variante entre corchetes sobre la avaricia.",
+      "en": "Original translation of the public-domain ancient Greek text (Catholic Hermes, 2026), without the bracketed variant concerning greed.",
+      "pt": "Tradução própria do original grego antigo em domínio público (Catholic Hermes, 2026), sem a variante entre colchetes sobre a avareza."
+    }
+  },
+  {
+    "id": "oremus_pro_pontifice",
+    "title": {
+      "es": "Oración por el Papa",
+      "en": "Prayer for the Pope",
+      "pt": "Oração pelo Papa"
+    },
+    "latinTitle": "Oremus pro Pontifice",
+    "category": "INTERCESSION",
+    "leaderText": {
+      "es": "V/ Oremos por nuestro pontífice N.\nR/ Que el Señor lo conserve, le dé vida y lo haga dichoso en la tierra, y no lo entregue a la voluntad de sus enemigos.",
+      "en": "V/ Let us pray for our pontiff N.\nR/ May the Lord preserve him, give him life and make him blessed on earth, and not hand him over to the will of his enemies.",
+      "pt": "V/ Oremos pelo nosso pontífice N.\nR/ Que o Senhor o conserve, lhe dê vida e o faça feliz na terra, e não o entregue à vontade de seus inimigos."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Por el ministerio del Papa y las necesidades de la Iglesia.",
+      "en": "For the Pope’s ministry and the needs of the Church.",
+      "pt": "Pelo ministério do Papa e pelas necessidades da Igreja."
+    },
+    "indulgenceNote": {
+      "es": "La concesión 25 del Enchiridion de 1999 prevé indulgencia parcial al rezar piadosamente por el Papa, con espíritu de devoción filial, una oración legítimamente aprobada. Esta traducción propia no se presenta como edición oficial.",
+      "en": "Concession 25 of the 1999 Enchiridion provides a partial indulgence for devout prayer for the Pope, in a spirit of filial devotion, using a legitimately approved prayer. This original translation is not presented as an official edition.",
+      "pt": "A concessão 25 do Enchiridion de 1999 prevê indulgência parcial ao rezar piedosamente pelo Papa, com espírito de devoção filial, uma oração legitimamente aprovada. Esta tradução própria não é apresentada como edição oficial."
+    },
+    "thematicTags": [
+      "faith",
+      "daily_routine"
+    ],
+    "history": {
+      "es": "Este breve versículo y su respuesta forman parte de la oración tradicional por el Romano Pontífice. El Enchiridion de 1999 los reproduce como ejemplo de oración legítimamente aprobada por los pastores. La letra N permite insertar el nombre del Papa sin que el texto quede ligado a un pontificado determinado. Se pide vida y protección para que pueda cumplir su servicio eclesial. Pedir por él no significa declarar impecables todas sus decisiones personales: es una expresión de comunión y caridad que también comprende sus necesidades, responsabilidades y fidelidad al Evangelio.",
+      "en": "This short versicle and response belong to the traditional prayer for the Roman Pontiff. The 1999 Enchiridion reproduces them as an example of legitimately approved prayer for the Church’s pastors. The letter N allows the Pope’s name to be inserted without tying the text to a particular pontificate. It asks for life and protection so that he may fulfil his ecclesial service. Praying for him does not declare every personal decision faultless. It expresses communion and charity, including concern for his needs, responsibilities and fidelity to the Gospel in the exercise of his ministry.",
+      "pt": "Este breve versículo com sua resposta pertence à oração tradicional pelo Romano Pontífice. O Enchiridion de 1999 o reproduz como exemplo de oração legitimamente aprovada pelos pastores. A letra N permite inserir o nome do Papa sem vincular o texto a um pontificado específico. Pede-se vida e proteção para que ele cumpra seu serviço eclesial. Rezar por ele não significa declarar impecáveis todas as suas decisões pessoais: expressa comunhão e caridade, incluindo suas necessidades, responsabilidades e fidelidade ao Evangelho no exercício do ministério confiado à sua pessoa."
+    },
+    "instructions": {
+      "es": "Sustituye N por el nombre del Papa reinante. Si rezas acompañado, una persona dice el versículo y las demás responden. No hace falta añadir un título o una petición inventada al formulario. Puedes unir esta oración a tu recuerdo de quienes sirven a la Iglesia y de quienes sufren por sus divisiones.",
+      "en": "Replace N with the reigning Pope’s name. When praying together, one person says the versicle and the others respond. You need not add an invented title or petition to the formula. You may connect this prayer with remembrance of those who serve the Church and those who suffer from its divisions.",
+      "pt": "Substitua N pelo nome do Papa reinante. Em grupo, uma pessoa diz o versículo e as demais respondem. Não é necessário acrescentar ao formulário um título ou pedido inventado. Você pode unir esta oração à lembrança de quem serve à Igreja e de quem sofre com suas divisões."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, cuarta edición, 1999, concesión 25, Oremus pro Pontifice.",
+      "en": "Enchiridion Indulgentiarum, fourth edition, 1999, concession 25, Oremus pro Pontifice.",
+      "pt": "Enchiridion Indulgentiarum, quarta edição, 1999, concessão 25, Oremus pro Pontifice."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "benedict_medal_prayer",
+    "title": {
+      "es": "Invocación de la medalla de San Benito",
+      "en": "Invocation on Saint Benedict’s medal",
+      "pt": "Invocação da medalha de São Bento"
+    },
+    "latinTitle": "Crux sacra sit mihi lux",
+    "category": "PROTECTION",
+    "leaderText": {
+      "es": "Que la santa cruz sea mi luz; que el dragón nunca sea mi guía. ¡Apártate, Satanás! Nunca me sugieras vanidades. Malo es lo que ofreces: bebe tú mismo tus venenos.",
+      "en": "May the holy cross be my light; may the dragon never be my guide. Depart, Satan! Never suggest vanities to me. What you offer is evil: drink your poisons yourself.",
+      "pt": "Que a santa cruz seja minha luz; que o dragão nunca seja meu guia. Afasta-te, Satanás! Nunca me sugiras vaidades. É mau o que ofereces: bebe tu mesmo teus venenos."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Al rechazar la tentación y recordar la cruz de Cristo.",
+      "en": "When rejecting temptation and remembering Christ’s cross.",
+      "pt": "Ao rejeitar a tentação e recordar a cruz de Cristo."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "protection",
+      "spiritual_warfare",
+      "trust"
+    ],
+    "history": {
+      "es": "Las letras de la medalla de San Benito abrevian una invocación latina a la cruz y una firme renuncia al mal. La explicación publicada por la Confederación Benedictina relaciona esas letras con un manuscrito de Metten fechado en 1415; eso no equivale a demostrar que san Benito compusiera el texto. La medalla jubilar de Montecassino de 1880 difundió una forma conocida de sus símbolos. Su uso pertenece a los sacramentales y a la oración cristiana, no a la magia. Aquí se ofrece únicamente la breve invocación de la medalla, sin reproducir un rito de exorcismo sobre personas u objetos.",
+      "en": "The letters on Saint Benedict’s medal abbreviate a Latin invocation of the cross and a firm rejection of evil. The explanation published by the Benedictine Confederation connects these letters with a Metten manuscript dated 1415; that does not establish that Benedict himself composed the text. The Montecassino jubilee medal of 1880 spread a familiar arrangement of its symbols. Its use belongs to sacramentals and Christian prayer, not magic. This entry provides only the medal’s short invocation, without reproducing a rite of exorcism over people or objects or granting authority to perform such a rite.",
+      "pt": "As letras da medalha de São Bento abreviam uma invocação latina à cruz e uma firme renúncia ao mal. A explicação publicada pela Confederação Beneditina relaciona essas letras com um manuscrito de Metten datado de 1415; isso não demonstra que São Bento tenha composto o texto. A medalha jubilar de Montecassino de 1880 difundiu uma forma conhecida de seus símbolos. Seu uso pertence aos sacramentais e à oração cristã, sem caráter mágico. Esta entrada oferece somente a breve invocação da medalha, sem reproduzir um rito de exorcismo sobre pessoas ou objetos."
+    },
+    "instructions": {
+      "es": "Reza la invocación como rechazo del pecado y confianza en Cristo. Si tienes una medalla, puedes pedir su bendición a un sacerdote o diácono conforme al ritual de la Iglesia. La app no bendice objetos. Ante una tentación, acompaña la oración con una decisión práctica; no la utilices para acusar a alguien de posesión.",
+      "en": "Pray the invocation as rejection of sin and trust in Christ. If you have a medal, ask a priest or deacon for its blessing according to the Church’s ritual. The app does not bless objects. In temptation, join prayer to a practical decision; do not use it to accuse someone of possession.",
+      "pt": "Reze a invocação como rejeição do pecado e confiança em Cristo. Se tiver uma medalha, peça sua bênção a um sacerdote ou diácono conforme o ritual da Igreja. O aplicativo não abençoa objetos. Diante de uma tentação, una a oração a uma decisão prática; não a use para acusar alguém de possessão."
+    },
+    "source": {
+      "es": "Confederación Benedictina, The Medal of Saint Benedict, apartados Description of the Jubilee Medal y Use of the Medal; inscripciones latinas de la medalla.",
+      "en": "Benedictine Confederation, The Medal of Saint Benedict, Description of the Jubilee Medal and Use of the Medal; Latin inscriptions on the medal.",
+      "pt": "Confederação Beneditina, The Medal of Saint Benedict, seções Description of the Jubilee Medal e Use of the Medal; inscrições latinas da medalha."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "angele_dei_latin",
+    "title": {
+      "es": "Ángel de Dios · latín",
+      "en": "Angel of God · Latin",
+      "pt": "Anjo de Deus · latim"
+    },
+    "latinTitle": "Angele Dei",
+    "category": "PROTECTION",
+    "leaderText": {
+      "es": "Angele Dei, qui custos es mei, me tibi commissum pietate superna illumina, custodi, rege et guberna. Amen.",
+      "en": "Angele Dei, qui custos es mei, me tibi commissum pietate superna illumina, custodi, rege et guberna. Amen.",
+      "pt": "Angele Dei, qui custos es mei, me tibi commissum pietate superna illumina, custodi, rege et guberna. Amen."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para aprender y rezar el formulario latino con comprensión.",
+      "en": "To learn and pray the Latin formula with understanding.",
+      "pt": "Para aprender e rezar o formulário latino com compreensão."
+    },
+    "indulgenceNote": {
+      "es": "El Enchiridion de 1999, concesión 18, incluye esta oración en la correspondiente concesión de indulgencia parcial; se requiere rezarla piadosamente, con las disposiciones y en el contexto allí indicados.",
+      "en": "The 1999 Enchiridion, concession 18, includes this prayer in its corresponding partial-indulgence provision; devout prayer with the dispositions and in the context specified there is required.",
+      "pt": "O Enchiridion de 1999, concessão 18, inclui esta oração na respectiva concessão de indulgência parcial; é necessário rezá-la piedosamente, com as disposições e no contexto ali indicados."
+    },
+    "thematicTags": [
+      "angels",
+      "protection"
+    ],
+    "history": {
+      "es": "Angele Dei es una oración tradicional al ángel custodio. La Iglesia la incluye entre las invocaciones aprobadas que ayudan a vivir atentos al cuidado de Dios. Su texto pide luz, custodia, dirección y gobierno, sin atribuir al ángel una divinidad propia. La autoría medieval no debe confundirse con las atribuciones populares a san Anselmo. Esta ficha conserva el formulario latino reproducido en el Enchiridion, sin añadir alternativas de día o de noche. La traducción vernácula ya existe en el catálogo: esta edición permite aprender el original sin sustituir aquella ayuda para comprenderlo.",
+      "en": "Angele Dei is a traditional prayer to the guardian angel. The Church includes it among approved invocations that encourage attention to God’s care. Its text asks for light, protection, direction and guidance without treating the angel as divine. Its medieval authorship should not be confused with popular attributions to Saint Anselm. This entry retains the Latin formula printed in the Enchiridion without adding alternatives for day or night. A vernacular translation already exists in the catalogue: this edition allows the original to be learned alongside the explanation that helps readers understand it.",
+      "pt": "Angele Dei é uma oração tradicional ao anjo da guarda. A Igreja a inclui entre as invocações aprovadas que ajudam a viver atentos ao cuidado de Deus. O texto pede luz, guarda, direção e governo, sem atribuir ao anjo uma divindade própria. Sua autoria medieval não deve ser confundida com atribuições populares a Santo Anselmo. Esta ficha conserva o formulário latino reproduzido no Enchiridion, sem acrescentar alternativas de dia ou de noite. A tradução vernácula já existe no catálogo: esta edição permite aprender o original com apoio da explicação disponível."
+    },
+    "instructions": {
+      "es": "Lee primero la versión en tu idioma y después pronuncia el latín con calma. No necesitas dominar su pronunciación para confiar en Dios. Puedes usarlo al comenzar el día o antes de dormir. La protección del ángel acompaña tu responsabilidad: sigue tomando las precauciones normales y cuidando a quienes dependen de ti.",
+      "en": "Read the version in your own language first, then say the Latin slowly. Perfect pronunciation is not required for trust in God. Use it at the beginning of the day or before sleep. The angel’s protection accompanies your responsibility: continue taking ordinary precautions and caring for those who depend on you.",
+      "pt": "Leia primeiro a versão em seu idioma e depois pronuncie o latim com calma. Não é necessário dominar a pronúncia para confiar em Deus. Use-a ao começar o dia ou antes de dormir. A proteção do anjo acompanha sua responsabilidade: continue tomando as precauções habituais e cuidando de quem depende de você."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, 1999, concesión 18, Angele Dei.",
+      "en": "Enchiridion Indulgentiarum, 1999, concession 18, Angele Dei.",
+      "pt": "Enchiridion Indulgentiarum, 1999, concessão 18, Angele Dei."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Original latino de dominio público, conservado deliberadamente en las tres interfaces; explicaciones traducidas.",
+      "en": "Public-domain Latin original, intentionally retained in all three interfaces; explanations are translated.",
+      "pt": "Original latino em domínio público, mantido intencionalmente nas três interfaces; explicações traduzidas."
+    }
+  },
+  {
+    "id": "salve_regina_latin",
+    "title": {
+      "es": "Salve · latín",
+      "en": "Hail Holy Queen · Latin",
+      "pt": "Salve-Rainha · latim"
+    },
+    "latinTitle": "Salve, Regina",
+    "category": "MARIAN",
+    "leaderText": {
+      "es": "Salve, Regina, mater misericordiae; vita, dulcedo et spes nostra, salve. Ad te clamamus, exsules filii Hevae. Ad te suspiramus, gementes et flentes in hac lacrimarum valle. Eia ergo, advocata nostra, illos tuos misericordes oculos ad nos converte. Et Iesum, benedictum fructum ventris tui, nobis post hoc exsilium ostende. O clemens, o pia, o dulcis Virgo Maria.",
+      "en": "Salve, Regina, mater misericordiae; vita, dulcedo et spes nostra, salve. Ad te clamamus, exsules filii Hevae. Ad te suspiramus, gementes et flentes in hac lacrimarum valle. Eia ergo, advocata nostra, illos tuos misericordes oculos ad nos converte. Et Iesum, benedictum fructum ventris tui, nobis post hoc exsilium ostende. O clemens, o pia, o dulcis Virgo Maria.",
+      "pt": "Salve, Regina, mater misericordiae; vita, dulcedo et spes nostra, salve. Ad te clamamus, exsules filii Hevae. Ad te suspiramus, gementes et flentes in hac lacrimarum valle. Eia ergo, advocata nostra, illos tuos misericordes oculos ad nos converte. Et Iesum, benedictum fructum ventris tui, nobis post hoc exsilium ostende. O clemens, o pia, o dulcis Virgo Maria."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para aprender y rezar el formulario latino con comprensión.",
+      "en": "To learn and pray the Latin formula with understanding.",
+      "pt": "Para aprender e rezar o formulário latino com compreensão."
+    },
+    "indulgenceNote": {
+      "es": "El Enchiridion de 1999, concesión 17, incluye esta oración en la correspondiente concesión de indulgencia parcial; se requiere rezarla piadosamente, con las disposiciones y en el contexto allí indicados.",
+      "en": "The 1999 Enchiridion, concession 17, includes this prayer in its corresponding partial-indulgence provision; devout prayer with the dispositions and in the context specified there is required.",
+      "pt": "O Enchiridion de 1999, concessão 17, inclui esta oração na respectiva concessão de indulgência parcial; é necessário rezá-la piedosamente, com as disposições e no contexto ali indicados."
+    },
+    "thematicTags": [
+      "marian",
+      "evening"
+    ],
+    "history": {
+      "es": "La Salve es una de las grandes antífonas marianas de la tradición latina. Su autoría ha recibido diversas atribuciones medievales, que no se presentan aquí como certeza histórica. El texto se dirige a María como madre e intercesora y termina pidiendo que muestre a Jesús, fruto bendito de su vientre. La esperanza cristiana permanece centrada en Cristo; el lenguaje afectivo hacia su madre expresa esa relación. Esta edición ofrece solo la antífona latina que reproduce el Enchiridion, sin mezclarla con el versículo y las oraciones que pueden añadirse en otros contextos devocionales.",
+      "en": "The Salve Regina is one of the great Marian antiphons of the Latin tradition. Various medieval authorships have been proposed, none presented here as historical certainty. The text addresses Mary as mother and intercessor and culminates in asking her to show Jesus, the blessed fruit of her womb. Christian hope remains centred on Christ; affectionate language towards his mother expresses that relationship. This edition gives only the Latin antiphon reproduced in the Enchiridion, without combining it with the versicle and prayers sometimes added in other devotional settings. A vernacular edition remains available in the catalogue.",
+      "pt": "A Salve-Rainha é uma das grandes antífonas marianas da tradição latina. Sua autoria recebeu diversas atribuições medievais, que não são apresentadas aqui como certeza histórica. O texto dirige-se a Maria como mãe e intercessora e termina pedindo que mostre Jesus, fruto bendito de seu ventre. A esperança cristã permanece centrada em Cristo; a linguagem afetuosa para com sua mãe expressa essa relação. Esta edição oferece somente a antífona latina reproduzida no Enchiridion, sem misturá-la com o versículo e as orações que podem ser acrescentados em outros contextos devocionais."
+    },
+    "instructions": {
+      "es": "Acompaña la lectura latina con la versión en tu idioma. Puedes rezarla al final del Rosario o de una jornada. Detente en la petición de ver a Jesús, sin interpretar la intercesión de María como una alternativa a él. Si la cantas, elige una melodía conocida que conserve íntegro el texto.",
+      "en": "Follow the Latin alongside the version in your language. Pray it after the Rosary or at the end of a day. Pause at the petition to see Jesus, without treating Mary’s intercession as an alternative to him. If you sing it, choose a familiar melody that retains the complete text.",
+      "pt": "Acompanhe a leitura latina com a versão em seu idioma. Reze-a ao terminar o Rosário ou o dia. Detenha-se no pedido de ver Jesus, sem interpretar a intercessão de Maria como alternativa a ele. Se cantar, escolha uma melodia conhecida que conserve o texto integral."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, 1999, concesión 17, Salve Regina; Liturgia de las Horas, antífona mariana de Completas.",
+      "en": "Enchiridion Indulgentiarum, 1999, concession 17, Salve Regina; Liturgy of the Hours, Marian antiphon at Compline.",
+      "pt": "Enchiridion Indulgentiarum, 1999, concessão 17, Salve Regina; Liturgia das Horas, antífona mariana das Completas."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Original latino de dominio público, conservado deliberadamente en las tres interfaces; explicaciones traducidas.",
+      "en": "Public-domain Latin original, intentionally retained in all three interfaces; explanations are translated.",
+      "pt": "Original latino em domínio público, mantido intencionalmente nas três interfaces; explicações traduzidas."
+    }
+  },
+  {
+    "id": "anima_christi_latin",
+    "title": {
+      "es": "Alma de Cristo · latín",
+      "en": "Soul of Christ · Latin",
+      "pt": "Alma de Cristo · latim"
+    },
+    "latinTitle": "Anima Christi",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "Anima Christi, sanctifica me.\nCorpus Christi, salva me.\nSanguis Christi, inebria me.\nAqua lateris Christi, lava me.\nPassio Christi, conforta me.\nO bone Iesu, exaudi me.\nIntra tua vulnera absconde me.\nNe permittas me separari a te.\nAb hoste maligno defende me.\nIn hora mortis meae voca me.\nEt iube me venire ad te,\nut cum Sanctis tuis laudem te\nin saecula saeculorum. Amen.",
+      "en": "Anima Christi, sanctifica me.\nCorpus Christi, salva me.\nSanguis Christi, inebria me.\nAqua lateris Christi, lava me.\nPassio Christi, conforta me.\nO bone Iesu, exaudi me.\nIntra tua vulnera absconde me.\nNe permittas me separari a te.\nAb hoste maligno defende me.\nIn hora mortis meae voca me.\nEt iube me venire ad te,\nut cum Sanctis tuis laudem te\nin saecula saeculorum. Amen.",
+      "pt": "Anima Christi, sanctifica me.\nCorpus Christi, salva me.\nSanguis Christi, inebria me.\nAqua lateris Christi, lava me.\nPassio Christi, conforta me.\nO bone Iesu, exaudi me.\nIntra tua vulnera absconde me.\nNe permittas me separari a te.\nAb hoste maligno defende me.\nIn hora mortis meae voca me.\nEt iube me venire ad te,\nut cum Sanctis tuis laudem te\nin saecula saeculorum. Amen."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para aprender y rezar el formulario latino con comprensión.",
+      "en": "To learn and pray the Latin formula with understanding.",
+      "pt": "Para aprender e rezar o formulário latino com compreensão."
+    },
+    "indulgenceNote": {
+      "es": "El Enchiridion de 1999, concesión 8, incluye esta oración en la correspondiente concesión de indulgencia parcial; se requiere rezarla piadosamente, con las disposiciones y en el contexto allí indicados.",
+      "en": "The 1999 Enchiridion, concession 8, includes this prayer in its corresponding partial-indulgence provision; devout prayer with the dispositions and in the context specified there is required.",
+      "pt": "O Enchiridion de 1999, concessão 8, inclui esta oração na respectiva concessão de indulgência parcial; é necessário rezá-la piedosamente, com as disposições e no contexto ali indicados."
+    },
+    "thematicTags": [
+      "eucharist",
+      "trust"
+    ],
+    "history": {
+      "es": "Alma de Cristo es anterior a san Ignacio de Loyola, aunque la tradición ignaciana contribuyó a difundirla y él la recomendó en sus Ejercicios. No se debe presentar al santo como su autor. La oración reúne referencias al cuerpo, sangre, costado y pasión del Señor para pedir santificación y unión con él hasta la muerte. Las imágenes son espirituales y sacramentales, no instrucciones sobre el consumo de bebidas. Esta ficha ofrece el original latino, distinto de la versión vernácula ya existente. Conserva las peticiones finales para no reducir la oración a unas pocas invocaciones conocidas.",
+      "en": "Anima Christi predates Saint Ignatius of Loyola, although Ignatian spirituality helped spread it and he recommended it in his Exercises. He should not be presented as its author. The prayer brings together Christ’s body, blood, side and passion to ask for sanctification and union with him until death. Its imagery is spiritual and sacramental, not instruction about consuming drinks. This entry provides the Latin original alongside the vernacular edition already in the catalogue. The closing petitions remain intact, so the prayer is not reduced to a selection of its most familiar invocations.",
+      "pt": "Alma de Cristo é anterior a Santo Inácio de Loyola, embora a tradição inaciana tenha contribuído para sua difusão e ele a tenha recomendado nos Exercícios. O santo não deve ser apresentado como seu autor. A oração reúne referências ao corpo, sangue, lado e paixão do Senhor para pedir santificação e união com ele até a morte. Suas imagens são espirituais e sacramentais, sem instruções sobre consumir bebidas. Esta ficha oferece o original latino ao lado da versão vernácula já existente. Conserva os pedidos finais para não reduzir a oração a poucas invocações conhecidas."
+    },
+    "instructions": {
+      "es": "Reza después de comulgar o durante una visita al Santísimo, dejando silencio entre las invocaciones. Consulta la versión en tu idioma para entenderlas. La oración privada acompaña la acción litúrgica; no exige recitar todas sus palabras si estás siguiendo la Misa. Puedes detenerte en una petición y hacerla tuya serenamente.",
+      "en": "Pray after Communion or during a visit to the Blessed Sacrament, leaving silence between invocations. Consult the vernacular version to understand them. Private prayer accompanies the liturgical action; it does not require you to finish every word while following Mass. You may pause at one petition and receive it peacefully.",
+      "pt": "Reze depois da comunhão ou durante uma visita ao Santíssimo, deixando silêncio entre as invocações. Consulte a versão em seu idioma para compreendê-las. A oração privada acompanha a ação litúrgica; não é preciso terminar todas as palavras enquanto acompanha a Missa. Você pode deter-se serenamente em um pedido."
+    },
+    "source": {
+      "es": "Missale Romanum, 1962, acción de gracias después de la Misa, Anima Christi; texto latino de contraste en Preces Latinae.",
+      "en": "Missale Romanum, 1962, thanksgiving after Mass, Anima Christi; Latin text cross-checked in Preces Latinae.",
+      "pt": "Missale Romanum, 1962, ação de graças depois da Missa, Anima Christi; texto latino conferido em Preces Latinae."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Original latino de dominio público, conservado deliberadamente en las tres interfaces; explicaciones traducidas.",
+      "en": "Public-domain Latin original, intentionally retained in all three interfaces; explanations are translated.",
+      "pt": "Original latino em domínio público, mantido intencionalmente nas três interfaces; explicações traduzidas."
+    }
+  },
+  {
+    "id": "benedic_domine_latin",
+    "title": {
+      "es": "Bendición de la mesa · latín",
+      "en": "Grace before meals · Latin",
+      "pt": "Bênção da mesa · latim"
+    },
+    "latinTitle": "Benedic, Domine",
+    "category": "BASIC",
+    "leaderText": {
+      "es": "Benedic, Domine, nos et haec tua dona, quae de tua largitate sumus sumpturi. Per Christum Dominum nostrum. Amen.",
+      "en": "Benedic, Domine, nos et haec tua dona, quae de tua largitate sumus sumpturi. Per Christum Dominum nostrum. Amen.",
+      "pt": "Benedic, Domine, nos et haec tua dona, quae de tua largitate sumus sumpturi. Per Christum Dominum nostrum. Amen."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para aprender y rezar el formulario latino con comprensión.",
+      "en": "To learn and pray the Latin formula with understanding.",
+      "pt": "Para aprender e rezar o formulário latino com compreensão."
+    },
+    "indulgenceNote": {
+      "es": "El Enchiridion de 1999, concesión 26, incluye esta oración en la correspondiente concesión de indulgencia parcial; se requiere rezarla piadosamente, con las disposiciones y en el contexto allí indicados.",
+      "en": "The 1999 Enchiridion, concession 26, includes this prayer in its corresponding partial-indulgence provision; devout prayer with the dispositions and in the context specified there is required.",
+      "pt": "O Enchiridion de 1999, concessão 26, inclui esta oração na respectiva concessão de indulgência parcial; é necessário rezá-la piedosamente, com as disposições e no contexto ali indicados."
+    },
+    "thematicTags": [
+      "family",
+      "daily_routine"
+    ],
+    "history": {
+      "es": "Esta breve bendición de la mesa pertenece a la oración cotidiana de la tradición latina. Reconoce que los alimentos son dones recibidos y pide la bendición tanto para las personas como para aquello que van a tomar. El Enchiridion de 1999 reproduce el formulario entre las oraciones de súplica y acción de gracias. Esta edición conserva el latín porque la versión vernácula ya está disponible en el catálogo. Rezar antes de comer puede educar la gratitud y la sobriedad, pero pierde coherencia si se separa del cuidado de quienes no disponen de alimento suficiente.",
+      "en": "This short table blessing belongs to everyday prayer in the Latin tradition. It recognises food as a received gift and asks a blessing both for the people and for what they are about to take. The 1999 Enchiridion reproduces the formula among prayers of petition and thanksgiving. This edition retains the Latin because a vernacular version is already available in the catalogue. Prayer before eating can form gratitude and moderation, but it loses coherence when separated from concern for people who do not have enough food for themselves or their families.",
+      "pt": "Esta breve bênção da mesa pertence à oração cotidiana da tradição latina. Reconhece os alimentos como dons recebidos e pede a bênção para as pessoas e para aquilo que vão tomar. O Enchiridion de 1999 reproduz o formulário entre as orações de súplica e ação de graças. Esta edição conserva o latim porque a versão vernácula já está disponível no catálogo. Rezar antes de comer pode educar a gratidão e a sobriedade, mas perde coerência se for separado do cuidado por quem não dispõe de alimento suficiente para viver."
+    },
+    "instructions": {
+      "es": "Antes de comer, haz una pausa y reza con quienes quieran acompañarte. Aprende el significado con la versión en tu idioma; no conviertas la pronunciación en un examen para los niños. La bendición no reemplaza las medidas de higiene ni la atención a las alergias. Une la gratitud a un gesto de generosidad.",
+      "en": "Before eating, pause and pray with whoever wishes to join you. Learn the meaning through the vernacular version; do not turn pronunciation into a test for children. The blessing does not replace hygiene or attention to food allergies. Connect gratitude with a practical act of generosity towards someone in need.",
+      "pt": "Antes de comer, faça uma pausa e reze com quem quiser acompanhar. Aprenda o significado com a versão em seu idioma; não transforme a pronúncia em prova para as crianças. A bênção não substitui a higiene nem os cuidados com alergias. Una a gratidão a um gesto concreto de generosidade."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, 1999, concesión 26, Benedic, Domine.",
+      "en": "Enchiridion Indulgentiarum, 1999, concession 26, Benedic, Domine.",
+      "pt": "Enchiridion Indulgentiarum, 1999, concessão 26, Benedic, Domine."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Original latino de dominio público, conservado deliberadamente en las tres interfaces; explicaciones traducidas.",
+      "en": "Public-domain Latin original, intentionally retained in all three interfaces; explanations are translated.",
+      "pt": "Original latino em domínio público, mantido intencionalmente nas três interfaces; explicações traduzidas."
+    }
+  },
+  {
+    "id": "actiones_nostras",
+    "title": {
+      "es": "Al comenzar una tarea",
+      "en": "Before beginning a task",
+      "pt": "Ao começar uma tarefa"
+    },
+    "latinTitle": "Actiones nostras",
+    "category": "BASIC",
+    "leaderText": {
+      "es": "Te rogamos, Señor: adelántate a nuestras acciones con tu inspiración y acompáñalas con tu ayuda, para que toda nuestra actividad comience siempre en ti y, una vez comenzada, llegue por ti a su término. Por Cristo nuestro Señor. Amén.",
+      "en": "We ask you, Lord: go before our actions with your inspiration and accompany them with your help, so that all our activity may always begin in you and, once begun, be brought to completion through you. Through Christ our Lord. Amen.",
+      "pt": "Nós vos pedimos, Senhor: precedei nossas ações com vossa inspiração e acompanhai-as com vosso auxílio, para que toda a nossa atividade comece sempre em vós e, uma vez iniciada, chegue por vós ao seu termo. Por Cristo nosso Senhor. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Antes de trabajar, estudiar o emprender un servicio.",
+      "en": "Before work, study or an act of service.",
+      "pt": "Antes de trabalhar, estudar ou prestar um serviço."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "work",
+      "daily_routine",
+      "trust"
+    ],
+    "history": {
+      "es": "Actiones nostras es una colecta de la tradición romana empleada también como oración al comenzar las actividades. El Enchiridion de 1999 la reproduce y remite a su uso en el Misal y en la Liturgia de las Horas. Su brevedad expresa una idea central de la vida espiritual: la iniciativa y la ayuda de Dios acompañan la acción humana desde el comienzo hasta el final. No se pide éxito a cualquier precio, sino obrar en relación con él. La oración puede dar unidad al trabajo ordinario sin separar la piedad de la preparación, la competencia y la responsabilidad.",
+      "en": "Actiones nostras is a collect of the Roman tradition also used before beginning activities. The 1999 Enchiridion reproduces it and identifies its use in the Missal and the Liturgy of the Hours. Its brevity expresses a central insight of spiritual life: God’s initiative and help accompany human action from its beginning to its completion. It does not ask for success at any cost, but for action in relationship with him. The prayer can unite ordinary work and faith without separating devotion from the preparation, competence and responsibility that the work actually requires.",
+      "pt": "Actiones nostras é uma coleta da tradição romana usada também ao iniciar atividades. O Enchiridion de 1999 a reproduz e indica seu uso no Missal e na Liturgia das Horas. Sua brevidade expressa uma ideia central da vida espiritual: a iniciativa e o auxílio de Deus acompanham a ação humana do começo ao fim. Não se pede sucesso a qualquer preço, mas agir em relação com ele. A oração pode dar unidade ao trabalho cotidiano sem separar a piedade da preparação, da competência e da responsabilidade exigidas pela tarefa."
+    },
+    "instructions": {
+      "es": "Reza antes de comenzar una tarea concreta y aclara qué bien deseas servir con ella. Después trabaja con atención y honestidad. Si surge un error, corrígelo y pide ayuda cuando corresponda. La fórmula no predice un resultado favorable ni convierte en buena una tarea injusta; invita a revisar también el propósito.",
+      "en": "Pray before a concrete task and identify the good you hope to serve through it. Then work attentively and honestly. If an error occurs, correct it and ask for help when appropriate. The formula does not predict a favourable outcome or make an unjust task good; it invites examination of your purpose.",
+      "pt": "Reze antes de começar uma tarefa concreta e esclareça o bem que deseja servir com ela. Depois trabalhe com atenção e honestidade. Se houver erro, corrija-o e peça ajuda quando necessário. A fórmula não prevê um resultado favorável nem torna justa uma tarefa injusta; convida a examinar também o propósito."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, 1999, concesión 26, Actiones nostras; colecta del jueves después de Ceniza y Laudes del lunes de la primera semana.",
+      "en": "Enchiridion Indulgentiarum, 1999, concession 26, Actiones nostras; collect for Thursday after Ash Wednesday and Monday Morning Prayer, week one.",
+      "pt": "Enchiridion Indulgentiarum, 1999, concessão 26, Actiones nostras; coleta da quinta-feira depois das Cinzas e Laudes da segunda-feira da primeira semana."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "visita_quaesumus",
+    "title": {
+      "es": "Visita, Señor, este hogar",
+      "en": "Visit this home, Lord",
+      "pt": "Visitai, Senhor, este lar"
+    },
+    "latinTitle": "Visita, quaesumus, Domine",
+    "category": "MORNING_NIGHT",
+    "leaderText": {
+      "es": "Visita, te rogamos, Señor, esta morada y aleja de ella todas las asechanzas del enemigo; que tus santos ángeles habiten en ella y nos guarden en paz, y que tu bendición esté siempre sobre nosotros. Por Cristo nuestro Señor. Amén.",
+      "en": "Visit this dwelling, we ask you, Lord, and drive far from it every ambush of the enemy; may your holy angels dwell in it and guard us in peace, and may your blessing remain upon us always. Through Christ our Lord. Amen.",
+      "pt": "Visitai, nós vos pedimos, Senhor, esta morada e afastai dela todas as ciladas do inimigo; que vossos santos anjos nela habitem e nos guardem em paz, e que vossa bênção esteja sempre sobre nós. Por Cristo nosso Senhor. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Al terminar el día o pedir paz para el hogar.",
+      "en": "At the end of the day or when praying for peace at home.",
+      "pt": "Ao terminar o dia ou pedir paz para o lar."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "evening",
+      "family",
+      "angels",
+      "peace"
+    ],
+    "history": {
+      "es": "Esta oración de la tradición romana forma parte del patrimonio de Completas, la oración que cierra la jornada. El Enchiridion de 1999 la reproduce entre los formularios de súplica y acción de gracias. Su lenguaje convierte la casa y el descanso en un lugar de confianza: pide la visita de Dios, la compañía de los ángeles y la paz. No describe una técnica para identificar presencias invisibles ni exige que el hogar sea perfecto. Quien la reza presenta a Dios su vulnerabilidad al llegar la noche y aprende a descansar sin abandonar el cuidado concreto de los demás.",
+      "en": "This prayer of the Roman tradition belongs to the heritage of Compline, the prayer that closes the day. The 1999 Enchiridion reproduces it among formulas of petition and thanksgiving. Its language makes home and rest a place of trust: it asks for God’s visit, the companionship of angels and peace. It does not describe a technique for detecting invisible presences or require a perfect household. Those who pray present their vulnerability to God as night approaches and learn to rest without abandoning practical care for other people or their own responsibilities.",
+      "pt": "Esta oração da tradição romana pertence ao patrimônio das Completas, a oração que encerra o dia. O Enchiridion de 1999 a reproduz entre os formulários de súplica e ação de graças. Sua linguagem transforma a casa e o descanso em lugar de confiança: pede a visita de Deus, a companhia dos anjos e a paz. Não descreve uma técnica para identificar presenças invisíveis nem exige um lar perfeito. Quem reza apresenta a Deus sua vulnerabilidade ao chegar a noite e aprende a descansar sem abandonar o cuidado concreto com os outros."
+    },
+    "instructions": {
+      "es": "Reza al prepararte para dormir, a solas o en familia. Deja un breve silencio para encomendar a quienes viven contigo. Si hay un conflicto, acompaña la petición de paz con un paso posible de reconciliación. Si existe violencia o peligro, busca protección efectiva: esta oración no exige permanecer en una situación insegura.",
+      "en": "Pray as you prepare for sleep, alone or with your family. Leave a brief silence to remember those who live with you. When there is conflict, join the petition for peace to a possible step towards reconciliation. If there is violence or danger, seek effective protection: prayer does not require remaining unsafe.",
+      "pt": "Reze ao se preparar para dormir, sozinho ou em família. Faça um breve silêncio para confiar a Deus quem mora com você. Se houver conflito, una o pedido de paz a um passo possível de reconciliação. Diante de violência ou perigo, busque proteção efetiva: a oração não exige permanecer em situação insegura."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, 1999, concesión 26, Visita, quaesumus; Liturgia de las Horas, Completas.",
+      "en": "Enchiridion Indulgentiarum, 1999, concession 26, Visita, quaesumus; Liturgy of the Hours, Compline.",
+      "pt": "Enchiridion Indulgentiarum, 1999, concessão 26, Visita, quaesumus; Liturgia das Horas, Completas."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "adsumus_full",
+    "title": {
+      "es": "Antes de una reunión · Adsumus",
+      "en": "Before a meeting · Adsumus",
+      "pt": "Antes de uma reunião · Adsumus"
+    },
+    "latinTitle": "Adsumus, Domine Sancte Spiritus",
+    "category": "HOLY_SPIRIT",
+    "leaderText": {
+      "es": "Aquí estamos, Señor Espíritu Santo, aquí estamos: retenidos, ciertamente, por la gravedad del pecado, pero reunidos especialmente en tu nombre. Ven a nosotros, permanece con nosotros y dígnate entrar en nuestros corazones. Enséñanos qué hacer, por dónde caminar y muéstranos qué debemos realizar, para que, con tu ayuda, podamos agradarte en todo.\nSé tú solo quien inspire y lleve a efecto nuestros juicios, tú que, con Dios Padre y su Hijo, posees el nombre glorioso. No permitas que perturbemos la justicia, tú que amas la suma equidad. Que la ignorancia no nos arrastre al error, que el favoritismo no nos desvíe, que no nos corrompan los regalos ni la acepción de personas.\nÚnenos eficazmente a ti por el solo don de tu gracia, para que seamos uno en ti y en nada nos apartemos de la verdad. Así, reunidos en tu nombre, mantengamos en todo la justicia con la moderación de la piedad, de modo que aquí nuestro parecer en nada discrepe de ti y en el futuro alcancemos premios eternos por el bien realizado. Amén.",
+      "en": "Here we are, Lord Holy Spirit, here we are: held back indeed by the gravity of sin, yet gathered especially in your name. Come to us, remain with us and deign to enter our hearts. Teach us what to do, where to walk, and show us what we ought to accomplish, so that with your help we may please you in everything.\nBe the sole inspirer and fulfiller of our judgments, you who with God the Father and his Son possess the glorious name. Do not allow us to disturb justice, you who love perfect equity. Let ignorance not draw us into error, favouritism not deflect us, and gifts or partiality towards persons not corrupt us.\nUnite us effectively to yourself by the gift of your grace alone, so that we may be one in you and never depart from the truth. Thus, gathered in your name, may we uphold justice in everything with the moderation of piety, so that here our judgment may in no way disagree with you, and in the future we may receive eternal rewards for the good accomplished. Amen.",
+      "pt": "Aqui estamos, Senhor Espírito Santo, aqui estamos: retidos, certamente, pela gravidade do pecado, mas reunidos especialmente em vosso nome. Vinde a nós, permanecei conosco e dignai-vos entrar em nossos corações. Ensinai-nos o que fazer, por onde caminhar e mostrai-nos o que devemos realizar, para que, com vosso auxílio, possamos agradar-vos em tudo.\nSede vós somente quem inspire e leve a efeito nossos julgamentos, vós que, com Deus Pai e seu Filho, possuís o nome glorioso. Não permitais que perturbemos a justiça, vós que amais a perfeita equidade. Que a ignorância não nos arraste ao erro, que o favoritismo não nos desvie, que não nos corrompam os presentes nem a acepção de pessoas.\nUni-nos eficazmente a vós pelo dom de vossa graça somente, para que sejamos um em vós e em nada nos afastemos da verdade. Assim, reunidos em vosso nome, conservemos em tudo a justiça com a moderação da piedade, para que aqui nosso parecer em nada discorde de vós e no futuro alcancemos prêmios eternos pelo bem realizado. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Antes de discernir o decidir juntos en una comunidad.",
+      "en": "Before shared discernment or decisions in a community.",
+      "pt": "Antes de discernir ou decidir juntos em uma comunidade."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "holy_spirit",
+      "work",
+      "faith"
+    ],
+    "history": {
+      "es": "Adsumus pertenece a la tradición de las asambleas eclesiales. El Enchiridion de 1999 reproduce este formulario completo para el comienzo de una sesión sobre asuntos comunes. No es la versión abreviada difundida para encuentros sinodales recientes. Su fuerza consiste en reconocer que quienes deliberan necesitan conversión y ayuda del Espíritu: la ignorancia, el favoritismo y los regalos pueden torcer el juicio. La unidad que pide no exige renunciar a la verdad ni a la justicia. La oración sitúa la reunión ante Dios y reclama que las decisiones se tomen con rectitud, no solo con eficiencia.",
+      "en": "Adsumus belongs to the tradition of ecclesial assemblies. The 1999 Enchiridion reproduces this complete formula for the beginning of a session about common affairs. It is not the shortened version circulated for recent synodal meetings. Its strength lies in recognising that those who deliberate need conversion and the Spirit’s help: ignorance, favouritism and gifts can distort judgment. The unity it requests does not require abandoning truth or justice. The prayer places a meeting before God and calls for decisions marked by integrity, rather than efficiency alone, while acknowledging the weakness of everyone involved.",
+      "pt": "Adsumus pertence à tradição das assembleias eclesiais. O Enchiridion de 1999 reproduz este formulário completo para o começo de uma sessão sobre assuntos comuns. Não é a versão abreviada difundida para encontros sinodais recentes. Sua força consiste em reconhecer que quem delibera precisa de conversão e do auxílio do Espírito: ignorância, favoritismo e presentes podem distorcer o julgamento. A unidade pedida não exige abandonar a verdade nem a justiça. A oração coloca a reunião diante de Deus e pede decisões tomadas com retidão, além da simples eficiência de seus participantes."
+    },
+    "instructions": {
+      "es": "Lee la oración antes de una reunión parroquial, familiar o de servicio. Deja un momento de silencio para reconocer posibles prejuicios y conflictos de interés. Escucha después a los demás y facilita que puedan hablar. La invocación del Espíritu no convierte automáticamente una opinión personal o una votación en voluntad de Dios.",
+      "en": "Read the prayer before a parish, family or service meeting. Leave a moment of silence to recognise possible prejudices and conflicts of interest. Then listen to others and make room for them to speak. Invoking the Spirit does not automatically turn a personal opinion or a vote into God’s will.",
+      "pt": "Leia a oração antes de uma reunião paroquial, familiar ou de serviço. Deixe um momento de silêncio para reconhecer possíveis preconceitos e conflitos de interesse. Depois escute os demais e dê espaço para que falem. Invocar o Espírito não transforma automaticamente uma opinião pessoal ou uma votação em vontade de Deus."
+    },
+    "source": {
+      "es": "Enchiridion Indulgentiarum, cuarta edición, 1999, concesión 26, formulario íntegro Adsumus.",
+      "en": "Enchiridion Indulgentiarum, fourth edition, 1999, concession 26, complete Adsumus formula.",
+      "pt": "Enchiridion Indulgentiarum, quarta edição, 1999, concessão 26, formulário integral Adsumus."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "o_salutaris_hostia",
+    "title": {
+      "es": "Oh Víctima salvadora",
+      "en": "O saving Victim",
+      "pt": "Ó Vítima salvadora"
+    },
+    "latinTitle": "O salutaris Hostia",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "Oh Víctima salvadora, que abres la puerta del cielo: nos oprimen guerras enemigas; danos fuerza, trae auxilio.\nAl Señor uno y trino sea la gloria eterna; que él nos conceda en la patria una vida sin término. Amén.",
+      "en": "O saving Victim, you who open heaven’s gate: hostile wars press upon us; give strength, bring help.\nTo the Lord, one and triune, be everlasting glory; may he grant us life without end in our homeland. Amen.",
+      "pt": "Ó Vítima salvadora, que abris a porta do céu: guerras inimigas nos oprimem; dai-nos força, trazei auxílio.\nAo Senhor uno e trino seja a glória eterna; que ele nos conceda na pátria uma vida sem fim. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Durante la adoración eucarística o una visita al Santísimo.",
+      "en": "During Eucharistic adoration or a visit to the Blessed Sacrament.",
+      "pt": "Durante a adoração eucarística ou uma visita ao Santíssimo."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "eucharist",
+      "praise",
+      "trust"
+    ],
+    "history": {
+      "es": "O salutaris Hostia recoge las dos últimas estrofas de Verbum supernum, himno eucarístico de santo Tomás de Aquino. Forma parte del patrimonio ligado a la fiesta del Cuerpo de Cristo y se ha utilizado en la adoración al Santísimo. La palabra Hostia significa aquí víctima ofrecida: la súplica se dirige a Cristo, cuya entrega abre el camino hacia el Padre. La segunda estrofa termina en alabanza trinitaria y esperanza de la patria eterna. Esta traducción conserva ambas estrofas, sin convertir el lenguaje de combate espiritual en una petición contra personas concretas.",
+      "en": "O salutaris Hostia consists of the final two stanzas of Verbum supernum, a Eucharistic hymn by Saint Thomas Aquinas. It belongs to the heritage associated with the feast of Christ’s Body and has been used in adoration of the Blessed Sacrament. Hostia here means an offered victim: the petition addresses Christ, whose self-giving opens the way to the Father. The second stanza ends with Trinitarian praise and hope for the eternal homeland. This translation retains both stanzas without turning the language of spiritual struggle into a request against particular people or human groups.",
+      "pt": "O salutaris Hostia reúne as duas últimas estrofes de Verbum supernum, hino eucarístico de Santo Tomás de Aquino. Pertence ao patrimônio ligado à festa do Corpo de Cristo e tem sido usado na adoração ao Santíssimo. Hostia significa aqui vítima oferecida: a súplica dirige-se a Cristo, cuja entrega abre o caminho para o Pai. A segunda estrofe termina em louvor trinitário e esperança da pátria eterna. Esta tradução conserva ambas as estrofes, sem transformar a linguagem do combate espiritual em pedido contra pessoas concretas ou grupos humanos."
+    },
+    "instructions": {
+      "es": "Reza mirando al Señor presente en la Eucaristía o recordándolo si no puedes acudir a una iglesia. Alterna las dos estrofas con silencio. Pide fuerza para amar y cumplir tu deber, no para dominar a otros. En una celebración pública sigue el texto y la música previstos por sus responsables.",
+      "en": "Pray while looking towards the Lord present in the Eucharist, or remembering him if you cannot visit a church. Alternate the two stanzas with silence. Ask for strength to love and fulfil your duty, not to dominate others. In a public celebration follow the text and music chosen by those responsible.",
+      "pt": "Reze voltado para o Senhor presente na Eucaristia, ou recordando-o se não puder ir a uma igreja. Alterne as duas estrofes com silêncio. Peça força para amar e cumprir seu dever, sem dominar os outros. Em uma celebração pública siga o texto e a música previstos pelos responsáveis."
+    },
+    "source": {
+      "es": "Tomás de Aquino, Verbum supernum, dos estrofas finales; original latino O salutaris Hostia, reproducido en Preces Latinae.",
+      "en": "Thomas Aquinas, Verbum supernum, final two stanzas; Latin original O salutaris Hostia, reproduced in Preces Latinae.",
+      "pt": "Tomás de Aquino, Verbum supernum, duas estrofes finais; original latino O salutaris Hostia, reproduzido em Preces Latinae."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "panis_angelicus",
+    "title": {
+      "es": "Pan de los ángeles",
+      "en": "Bread of angels",
+      "pt": "Pão dos anjos"
+    },
+    "latinTitle": "Panis angelicus",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "El pan de los ángeles se hace pan de los seres humanos; el pan del cielo pone fin a las figuras. ¡Oh realidad admirable! Come al Señor el pobre, el siervo y el humilde.\nA ti, Divinidad trina y una, te suplicamos: visítanos como te veneramos; por tus sendas llévanos adonde nos dirigimos, a la luz en la que habitas.",
+      "en": "The bread of angels becomes the bread of human beings; the bread of heaven brings the figures to their end. O wondrous reality! The poor, the servant and the humble eat the Lord.\nYou, Godhead three and one, we implore: visit us as we worship you; along your paths lead us where we are heading, to the light in which you dwell.",
+      "pt": "O pão dos anjos torna-se pão dos seres humanos; o pão do céu leva as figuras ao seu termo. Ó realidade admirável! Come o Senhor o pobre, o servo e o humilde.\nA vós, Divindade trina e una, suplicamos: visitai-nos como vos veneramos; por vossas sendas conduzi-nos para onde caminhamos, à luz em que habitais."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Como acción de gracias eucarística y al adorar a Cristo.",
+      "en": "For Eucharistic thanksgiving and adoration of Christ.",
+      "pt": "Como ação de graças eucarística e ao adorar Cristo."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "eucharist",
+      "praise"
+    ],
+    "history": {
+      "es": "Panis angelicus es la estrofa sexta de Sacris solemniis, himno de santo Tomás de Aquino para la solemnidad eucarística. A menudo se conoce por composiciones musicales posteriores, pero su texto es medieval. Aquí se ofrece esa estrofa junto con la séptima y última, la súplica a la Trinidad. Las figuras son las anticipaciones de la Eucaristía, no personas despreciadas ni religiones tratadas con burla. El asombro se centra en que el Señor se entrega como alimento a los pequeños. La conclusión pide caminar hacia la luz de Dios, uniendo la comunión con la esperanza definitiva.",
+      "en": "Panis angelicus is the sixth stanza of Sacris solemniis, Saint Thomas Aquinas’s hymn for the Eucharistic solemnity. It is often known through later musical settings, but its text is medieval. This entry provides that stanza together with the seventh and final one, a petition to the Trinity. The figures are anticipations of the Eucharist, not people being despised or religions being mocked. The wonder centres on the Lord giving himself as food to the lowly. The conclusion asks to journey towards God’s light, joining Communion to the hope of final life with him.",
+      "pt": "Panis angelicus é a sexta estrofe de Sacris solemniis, hino de Santo Tomás de Aquino para a solenidade eucarística. Muitas pessoas o conhecem por composições musicais posteriores, mas seu texto é medieval. Esta entrada oferece essa estrofe com a sétima e última, a súplica à Trindade. As figuras são as antecipações da Eucaristia, sem desprezo por pessoas ou zombaria de religiões. O assombro concentra-se no Senhor que se entrega como alimento aos pequenos. A conclusão pede caminhar para a luz de Deus, unindo a comunhão à esperança da vida definitiva com ele."
+    },
+    "instructions": {
+      "es": "Lee ambas estrofas y deja que la alabanza continúe en silencio. Puedes utilizarlas después de comulgar o al visitar una iglesia. Si conoces una versión musical, distingue su arreglo de este texto antiguo. Recuerda que la gratitud por el alimento eucarístico debe hacerse visible en el trato a los pobres y a los humildes.",
+      "en": "Read both stanzas and let praise continue in silence. Use them after Communion or when visiting a church. If you know a musical setting, distinguish its arrangement from this ancient text. Remember that gratitude for Eucharistic food should become visible in the way you treat people who are poor or overlooked.",
+      "pt": "Leia ambas as estrofes e deixe o louvor continuar em silêncio. Use-as depois de comungar ou ao visitar uma igreja. Se conhecer uma versão musical, distinga seu arranjo deste texto antigo. Lembre-se de que a gratidão pelo alimento eucarístico deve aparecer no modo de tratar os pobres e os humildes."
+    },
+    "source": {
+      "es": "Tomás de Aquino, Sacris solemniis, estrofas 6–7; original latino reproducido en Preces Latinae, Sacris Solemniis.",
+      "en": "Thomas Aquinas, Sacris solemniis, stanzas 6–7; Latin original reproduced in Preces Latinae, Sacris Solemniis.",
+      "pt": "Tomás de Aquino, Sacris solemniis, estrofes 6–7; original latino reproduzido em Preces Latinae, Sacris Solemniis."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "transfige_dulcissime",
+    "title": {
+      "es": "Hiere mi alma con tu amor",
+      "en": "Pierce my soul with your love",
+      "pt": "Ferí minha alma com vosso amor"
+    },
+    "latinTitle": "Transfige, dulcissime Domine Iesu",
+    "category": "EUCHARISTIC",
+    "leaderText": {
+      "es": "Hiere, dulcísimo Señor Jesús, lo más profundo de mi alma con la herida suavísima y saludable de tu amor, con la caridad verdadera, serena, apostólica y santísima, para que mi alma desfallezca y se derrita siempre por tu solo amor y deseo, te anhele y desfallezca por tus atrios, y desee partir y estar contigo.\nHaz que mi alma tenga hambre de ti, pan de los ángeles, alimento de las almas santas; pan nuestro cotidiano y sobresustancial, que contiene toda dulzura y sabor, y todo deleite de suavidad. Que mi corazón siempre tenga hambre y se alimente de ti, a quien los ángeles desean contemplar, y que lo profundo de mi alma se colme de la dulzura de tu sabor; que tenga siempre sed de ti, fuente de vida, fuente de sabiduría y ciencia, fuente de luz eterna, torrente de delicias, abundancia de la casa de Dios.\nQue siempre te desee, te busque, te encuentre, tienda a ti, llegue a ti, te medite, hable de ti y haga todo para alabanza y gloria de tu nombre, con humildad y discreción, con amor y deleite, con facilidad y afecto, con perseverancia hasta el fin; para que tú solo seas siempre mi esperanza, toda mi confianza, mis riquezas, mi deleite, mi alegría, mi gozo, mi descanso y tranquilidad, mi paz, mi suavidad, mi perfume, mi dulzura, mi alimento, mi sustento, mi refugio, mi auxilio, mi sabiduría, mi porción, mi posesión, mi tesoro, en quien mi mente y mi corazón estén siempre arraigados, fijos, firmes e inamovibles. Amén.",
+      "en": "Pierce, sweetest Lord Jesus, the depths of my soul with the most gentle and healing wound of your love, with true, serene, apostolic and most holy charity, so that my soul may always grow faint and melt with love and desire for you alone, yearn for you and faint for your courts, and desire to depart and be with you.\nMake my soul hunger for you, bread of angels, food of holy souls; our daily and supersubstantial bread, containing every sweetness and flavour and every gentle delight. May my heart always hunger for and feed on you, whom angels desire to behold, and may the depths of my soul be filled with the sweetness of your taste; may it always thirst for you, fountain of life, fountain of wisdom and knowledge, fountain of eternal light, torrent of delights, abundance of God’s house.\nMay it always desire you, seek you, find you, reach towards you, attain you, meditate on you, speak of you and do everything for the praise and glory of your name, with humility and discretion, with love and delight, with readiness and affection, with perseverance until the end; so that you alone may always be my hope, all my confidence, my riches, my delight, my gladness, my joy, my rest and tranquillity, my peace, my gentleness, my fragrance, my sweetness, my food, my refreshment, my refuge, my help, my wisdom, my portion, my possession, my treasure, in whom my mind and heart may always be rooted, fixed, firm and unshaken. Amen.",
+      "pt": "Feri, dulcíssimo Senhor Jesus, o mais profundo de minha alma com a ferida suavíssima e salutar de vosso amor, com a caridade verdadeira, serena, apostólica e santíssima, para que minha alma desfaleça e se derreta sempre por vosso amor e desejo somente, vos anseie e desfaleça por vossos átrios, e deseje partir e estar convosco.\nFazei que minha alma tenha fome de vós, pão dos anjos, alimento das almas santas; pão nosso cotidiano e supersubstancial, que contém toda doçura e sabor e todo deleite de suavidade. Que meu coração sempre tenha fome e se alimente de vós, a quem os anjos desejam contemplar, e que o profundo de minha alma se encha da doçura de vosso sabor; que tenha sempre sede de vós, fonte de vida, fonte de sabedoria e ciência, fonte de luz eterna, torrente de delícias, abundância da casa de Deus.\nQue sempre vos deseje, vos procure, vos encontre, tenda a vós, chegue a vós, vos medite, fale de vós e faça tudo para louvor e glória de vosso nome, com humildade e discrição, com amor e deleite, com facilidade e afeto, com perseverança até o fim; para que vós somente sejais sempre minha esperança, toda minha confiança, minhas riquezas, meu deleite, minha alegria, meu gozo, meu descanso e tranquilidade, minha paz, minha suavidade, meu perfume, minha doçura, meu alimento, meu sustento, meu refúgio, meu auxílio, minha sabedoria, minha porção, minha posse, meu tesouro, em quem minha mente e meu coração estejam sempre enraizados, fixos, firmes e inabaláveis. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Para la acción de gracias después de la comunión.",
+      "en": "For thanksgiving after Communion.",
+      "pt": "Para a ação de graças depois da comunhão."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "eucharist",
+      "trust",
+      "praise"
+    ],
+    "history": {
+      "es": "Esta oración se difunde con el nombre de san Buenaventura, pero el formulario completo no debe presentarse como una transcripción segura escrita por él. Su transmisión pertenece a la espiritualidad franciscana y recibió desarrollos posteriores. La tabla de preparación y acción de gracias de The Raccolta de 1910 ya menciona Transfige dulcissime; el texto latino permite comprobar las peticiones. Sus imágenes de hambre, sed y herida hablan del deseo de unión con Cristo. No ordenan producir lesiones ni buscar la muerte. La larga enumeración final centra las esperanzas del orante en el Señor recibido en la Eucaristía.",
+      "en": "This prayer circulates under Saint Bonaventure’s name, but the complete formula should not be presented as a securely established transcription written by him. Its transmission belongs to Franciscan spirituality and received later developments. The preparation and thanksgiving table in the 1910 Raccolta already lists Transfige dulcissime; the Latin text allows the petitions to be checked. Its images of hunger, thirst and a wound describe desire for union with Christ. They do not instruct anyone to inflict injuries or seek death. The long final enumeration centres the worshipper’s hopes on the Lord received in the Eucharist.",
+      "pt": "Esta oração circula com o nome de São Boaventura, mas o formulário completo não deve ser apresentado como transcrição segura escrita por ele. Sua transmissão pertence à espiritualidade franciscana e recebeu desenvolvimentos posteriores. A tabela de preparação e ação de graças de The Raccolta de 1910 já menciona Transfige dulcissime; o texto latino permite conferir os pedidos. As imagens de fome, sede e ferida falam do desejo de união com Cristo. Não mandam produzir lesões nem procurar a morte. A longa enumeração final concentra as esperanças de quem reza no Senhor recebido na Eucaristia."
+    },
+    "instructions": {
+      "es": "Reza despacio, dejando silencios tras cada párrafo. Si su extensión distrae, lee un párrafo con atención y continúa otro día. Entiende la herida como imagen del amor y el deseo de estar con Cristo como esperanza cristiana, no como rechazo de la vida. No es necesario experimentar una emoción intensa para dar gracias.",
+      "en": "Pray slowly, leaving silence after each paragraph. If its length distracts you, read one paragraph attentively and continue another day. Understand the wound as an image of love and the desire to be with Christ as Christian hope, not rejection of life. Intense emotion is not necessary for genuine thanksgiving.",
+      "pt": "Reze devagar, deixando silêncio após cada parágrafo. Se a extensão distrair, leia um parágrafo com atenção e continue outro dia. Entenda a ferida como imagem do amor e o desejo de estar com Cristo como esperança cristã, sem rejeitar a vida. Não é necessário sentir uma emoção intensa para agradecer."
+    },
+    "source": {
+      "es": "Transfige, dulcissime Domine Iesu, tradición franciscana; The Raccolta, 1910, tabla de oraciones antes/después de la Misa, p. 403; original latino y nota de atribución en Preces Latinae, Oratio Sancti Bonaventurae.",
+      "en": "Transfige, dulcissime Domine Iesu, Franciscan tradition; The Raccolta, 1910, table of prayers before/after Mass, p. 403; Latin original and attribution note in Preces Latinae, Oratio Sancti Bonaventurae.",
+      "pt": "Transfige, dulcissime Domine Iesu, tradição franciscana; The Raccolta, 1910, tabela de orações antes/depois da Missa, p. 403; original latino e nota de atribuição em Preces Latinae, Oratio Sancti Bonaventurae."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  },
+  {
+    "id": "concede_mihi_short",
+    "title": {
+      "es": "Para estudiar con recta intención",
+      "en": "For study with a right intention",
+      "pt": "Para estudar com reta intenção"
+    },
+    "latinTitle": "Concede mihi, misericors Deus",
+    "category": "BASIC",
+    "leaderText": {
+      "es": "Concédeme, Dios misericordioso, desear ardientemente, investigar prudentemente, reconocer verdaderamente y cumplir perfectamente las cosas que te agradan, para alabanza y gloria de tu nombre. Amén.",
+      "en": "Grant me, merciful God, to desire ardently, investigate prudently, acknowledge truly and fulfil perfectly the things that please you, for the praise and glory of your name. Amen.",
+      "pt": "Concedei-me, Deus misericordioso, desejar ardentemente, investigar prudentemente, reconhecer verdadeiramente e cumprir perfeitamente as coisas que vos agradam, para louvor e glória de vosso nome. Amém."
+    },
+    "responseText": null,
+    "whenToPray": {
+      "es": "Antes del estudio, una investigación o una clase.",
+      "en": "Before study, research or a class.",
+      "pt": "Antes do estudo, de uma pesquisa ou de uma aula."
+    },
+    "indulgenceNote": null,
+    "thematicTags": [
+      "work",
+      "faith",
+      "daily_routine"
+    ],
+    "history": {
+      "es": "The Raccolta de 1910 publica este breve formulario como oración de santo Tomás de Aquino para antes del estudio o de la clase. Es distinto de Creator ineffabilis, que aparece a continuación en ese devocionario, y no se presenta aquí como el texto completo de la oración más larga que comienza con palabras semejantes. Sus cuatro peticiones unen deseo, investigación, reconocimiento de la verdad y cumplimiento del bien. Estudiar no queda reducido a obtener una nota: también implica honradez intelectual y disposición a corregirse. No se trasladan las antiguas indulgencias expresadas en días que acompañaban la edición.",
+      "en": "The 1910 Raccolta prints this short formula as Saint Thomas Aquinas’s prayer before study or class. It differs from Creator ineffabilis, which follows it in that prayer book, and is not presented here as the complete longer prayer beginning with similar words. Its four petitions connect desire, investigation, recognition of truth and fulfilment of the good. Study is not reduced to obtaining a grade: it also involves intellectual honesty and willingness to accept correction. The obsolete indulgences expressed in days that accompanied the old edition are not transferred to this entry or described as current grants.",
+      "pt": "The Raccolta de 1910 publica este breve formulário como oração de Santo Tomás de Aquino antes do estudo ou da aula. É diferente de Creator ineffabilis, que vem a seguir naquele devocionário, e não é apresentado aqui como texto integral da oração mais longa que começa com palavras semelhantes. Seus quatro pedidos unem desejo, investigação, reconhecimento da verdade e realização do bem. Estudar não se reduz a obter uma nota: também envolve honestidade intelectual e disposição para aceitar correções. Não se transferem as antigas indulgências expressas em dias que acompanhavam aquela edição."
+    },
+    "instructions": {
+      "es": "Antes de abrir el libro o iniciar una investigación, reza una vez y decide cómo trabajar con honestidad. Comprueba las fuentes y distingue lo que sabes de lo que supones. Si no entiendes algo, pregunta. La oración pide ayuda para aprender y obrar bien; no sustituye la lectura, la práctica ni el descanso necesario.",
+      "en": "Before opening a book or beginning research, pray once and decide how to work honestly. Check sources and distinguish what you know from what you assume. Ask when something is unclear. The prayer requests help to learn and act well; it does not replace reading, practice or the rest you need.",
+      "pt": "Antes de abrir o livro ou começar uma pesquisa, reze uma vez e decida como trabalhar honestamente. Confira as fontes e distinga o que sabe do que supõe. Pergunte quando algo não estiver claro. A oração pede auxílio para aprender e agir bem; não substitui a leitura, a prática nem o descanso necessário."
+    },
+    "source": {
+      "es": "The Raccolta, Burns & Oates / Benziger, 1910, n. 51, Prayer of St Thomas Aquinas, To be said before study or class: formulario latino breve.",
+      "en": "The Raccolta, Burns & Oates / Benziger, 1910, no. 51, Prayer of St Thomas Aquinas, To be said before study or class: short Latin formula.",
+      "pt": "The Raccolta, Burns & Oates / Benziger, 1910, n. 51, Prayer of St Thomas Aquinas, To be said before study or class: formulário latino breve."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "promise": null,
+    "textNote": {
+      "es": "Traducción propia del original latino antiguo de dominio público (Catholic Hermes, 2026); no es una traducción litúrgica oficial.",
+      "en": "Original translation of the public-domain ancient Latin text (Catholic Hermes, 2026); not an official liturgical translation.",
+      "pt": "Tradução própria do original latino antigo em domínio público (Catholic Hermes, 2026); não é uma tradução litúrgica oficial."
+    }
+  }
+]
