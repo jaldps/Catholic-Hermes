@@ -1,0 +1,30 @@
+{
+  "version_name": "1.8.9",
+  "version_code": 18,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.9",
+  "sha256": "bc8328da76f47c794ff0e9a6a55a12423720901e451d192f27fb798824af39ae",
+  "bytes": 85136363,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.8 (same package and key)",
+  "changes": [
+    "All 15 retired novenas are back with verified sources (T-008, T-015): Coromoto, Suyapa, Señor de los Milagros, Divino Niño del 20 de Julio, San Pancracio, Santa Eduviges, São Benedito (Benedict of Palermo) and José Gregorio Hernández added; 262 novenas.",
+    "Rights lines where an express reservation was verified: EWTN Inc., Conferencia Episcopal de Honduras, Biblioteca Católica; San Pancracio cites www.devocionario.com.",
+    "Saints: January-March complete (38, T-011) and April-June 30/51 (T-013), in addition to October-December (59)."
+  ],
+  "tests": [
+    "Novena* (integrity, catalog, provenance, progress, journey)",
+    "EditorialReliabilityTest",
+    "SaintsCatalogTest",
+    "SaintsScreenTest",
+    "DailyContextReliabilityTest"
+  ],
+  "known_limitations": [
+    "Full unit-test suite not run.",
+    "Saints April-June partial (30/51) and July-September pending (T-013, T-014).",
+    "Artwork for the newly added novenas pending."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}
