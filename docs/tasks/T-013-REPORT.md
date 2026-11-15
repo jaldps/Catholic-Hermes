@@ -1,6 +1,6 @@
 # T-013 · Informe de Codex
 
-Entrega: **10/51 fichas**, en el orden exacto de `T-013.keys`. Rama `ext/T-013`, base inicial `origin/CatholicGPT` (`82e8d11`).
+Entrega: **20/51 fichas**, en el orden exacto de `T-013.keys`. Rama `ext/T-013`, base inicial `origin/CatholicGPT` (`82e8d11`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -79,10 +79,81 @@ Se privilegian las dos fuentes primarias de Juan Pablo II. El artículo antiguo 
 
 Se evita trasladar el lenguaje polémico confesional de la fuente antigua y las palabras atribuidas al mártir sin referencia primaria. No se afirma que Sigmaringen formara parte de Prusia en 1577, pese al anacronismo del encabezamiento de la enciclopedia. Sin garantías ligadas a su intercesión.
 
+### 11. `mark_evangelist` · 25/04
+
+- [Catholic Encyclopedia, «St. Mark»](https://www.newadvent.org/cathen/09672c.htm)
+- [Eusebio de Cesarea, Historia eclesiástica II, 15–16](https://www.newadvent.org/fathers/250102.htm)
+
+La relación con Juan Marcos, Pedro y Alejandría se formula como tradición antigua. No se fija año de composición, muerte o un relato de martirio seguro. Eusebio se cita con libro y capítulos, sin copiar sus frases como palabras de Marcos.
+
+### 12. `peter_chanel_priest` · 28/04
+
+- [Society of Mary Archives, USA Province, «St. Peter Chanel introduction»](https://maristarchives.omeka.net/exhibits/show/stpeterchanel/stpeterchanelintro)
+- [Catholic Encyclopedia, «St. Peter-Louis-Marie Chanel», dos artículos históricos](https://www.newadvent.org/cathen/11769a.htm)
+
+El archivo de su congregación confirma misión, canonización de 1954 y patronazgo. Los dos artículos antiguos discrepan 1802/1803: se omite aquí el año de nacimiento. Se evita reproducir su lenguaje despectivo sobre culturas indígenas, cifras de conversiones o una causalidad milagrosa no documentada.
+
+### 13. `louis_grignion_de_montfort_priest` · 28/04
+
+- [Catholic Encyclopedia, «St. Louis-Marie Grignion de Montfort»](https://www.newadvent.org/cathen/09384a.htm)
+- [Juan Pablo II, carta a las familias montfortianas, firmada 8-XII-2003 y publicada 13-I-2004, 1–3](https://www.vatican.va/content/john-paul-ii/en/letters/2004/documents/hf_jp-ii_let_20040113_famiglie-monfortane.html)
+
+Se distingue fecha de firma de la carta y fecha de publicación. No se copian promesas sin fuente, frases publicitarias ni fórmulas de consagración compuestas. La interpretación cristocéntrica y bautismal procede de la carta pontificia; no se presenta la devoción como obligación universal.
+
+### 14. `catherine_of_siena_virgin` · 29/04
+
+- [Benedicto XVI, audiencia general, 24-XI-2010: santa Catalina de Siena](https://www.vatican.va/content/benedict-xvi/en/audiences/2010/documents/hf_ben-xvi_aud_20101124.html)
+- [Catholic Encyclopedia, «St. Catherine of Siena»](https://www.newadvent.org/cathen/03447a.htm)
+
+Doctorado y patronazgos comprobados en la catequesis. No se convierten sus experiencias místicas en doctrina obligatoria ni se reproducen prácticas ascéticas extremas como consejos. No se atribuye solo a ella toda la decisión del regreso pontificio.
+
+### 15. `pius_v_pope` · 30/04
+
+- [Catholic Encyclopedia, «Pope St. Pius V»](https://www.newadvent.org/cathen/12130a.htm)
+- [Vatican News, «Hl. Pius V.», reforma litúrgica y cronología](https://www.vaticannews.va/de/tagesheiliger/04/30/hl--pius-v---papst.html)
+
+Se conservan fechas históricas comprobadas; no se llama al misal de 1570 el primer misal cristiano ni se presupone uniformidad absoluta de los ritos. No se añaden relatos de visión de Lepanto, atribuciones dudosas de invocaciones ni afirmaciones de fundación de hospitales anteriores al papa.
+
+### 16. `joseph_the_worker` · 01/05
+
+- [Vatican News, «St Joseph The Worker», institución de la memoria](https://www.vaticannews.va/en/saints/05/01/st-joseph--the-worker--spouse-of-the-blessede-virigin-mary---pat.html)
+- [Francisco, Patris corde, 8-XII-2020, 6: padre trabajador](https://www.vatican.va/content/francesco/en/apost_letters/documents/papa-francesco-lettera-ap_20201208_patris-corde.html)
+
+Se describe la celebración, no una biografía inventada del taller de Nazaret. Fecha de institución y patronazgo comprobados. No se incorpora oración compuesta ni indulgencia jubilar caducada de 2020–2021.
+
+### 17. `athanasius_of_alexandria_bishop` · 02/05
+
+- [Benedicto XVI, audiencia general, 20-VI-2007: san Atanasio de Alejandría](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070620.html)
+- [Catholic Encyclopedia, «St. Athanasius»](https://www.newadvent.org/cathen/02035a.htm)
+
+Nacimiento aproximado, no día exacto. Se distingue participar en Nicea como colaborador de Alejandro de presidirlo o ser entonces obispo. No se atribuye al santo la redacción individual del Credo ni del llamado Símbolo atanasiano.
+
+### 18. `philip_and_james_apostles` · 03/05
+
+- [Catholic Encyclopedia, «St. Philip the Apostle»](https://www.newadvent.org/cathen/11799a.htm)
+- [Catholic Encyclopedia, «St. James the Less», identificaciones](https://www.newadvent.org/cathen/08280a.htm)
+- [Evangelio según san Juan, 1,43–51](https://bible.usccb.org/bible/john/1)
+
+No se presenta como certeza histórica independiente la identificación de todos los personajes llamados Santiago. Felipe apóstol se distingue del evangelizador de Hechos 8. Se omiten lugares y formas exactas de martirio no reconstruibles con seguridad.
+
+### 19. `john_of_avila_priest` · 10/05
+
+- [Benedicto XVI, carta apostólica que proclama doctor a san Juan de Ávila, 7-X-2012, 2–4 y 6](https://www.vatican.va/content/benedict-xvi/en/apost_letters/documents/hf_ben-xvi_apl_20121007_giovanni-avila.html)
+- [Catholic Encyclopedia, «Blessed John of Avila»](https://www.newadvent.org/cathen/08469a.htm)
+
+Nacimiento aproximado: la carta admite 1499 o 1500. Se usa la fuente pontificia para el estado actual de santo y doctor y el patronazgo de 1946; la antigua ficha de beato no se toma como estado vigente. No se inventan palabras dirigidas a Teresa ni presencia personal en Trento.
+
+### 20. `nereus_of_terracina_and_achilleus_of_terracina_martyrs` · 12/05
+
+- [Catholic Encyclopedia, «Sts. Nereus and Achilleus, Domitilla and Pancratius», epígrafe y arqueología](https://www.newadvent.org/cathen/10751a.htm)
+- [Vatican News, «Saints Nérée et Achillée», memoria del epígrafe damasiano](https://www.vaticannews.va/fr/saint-du-jour/05/12/saints-neree-et-achillee--freres--soldats--martyr-sur-la-via-ard.html)
+
+Se atribuye el relato militar al epígrafe de Dámaso. No se fija 304, Diocleciano, parentesco biológico ni servicio doméstico a Domitila como hechos demostrados: las fuentes combinan hipótesis y leyendas. No se confunde esta memoria con la ficha separada de Pancracio.
+
 ## Validación
 
 ```text
-10 entries · 0 errors · 1 warnings
+20 entries · 0 errors · 1 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
