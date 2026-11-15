@@ -1,6 +1,6 @@
 # T-012 · Informe de Codex
 
-Entrega: **50/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
+Entrega: **59/59 fichas**, en el orden exacto de `T-012.keys`. Rama `ext/T-012`, base `origin/CatholicGPT` (`cc02a30`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Fechas e identificadores se toman de `GeneralRomanSanctoral.kt`. Las biografías son redacción informativa propia, ES/EN/PT, basada en fuentes consultadas; no se presentan como palabras de los santos. `quote` queda `null`: no se añaden citas de memoria ni fórmulas devocionales. Un patronazgo vacío significa que no se incorpora aquí un patronazgo suficientemente comprobado, no que no exista ninguno. Las memorias marianas y otras celebraciones describen su sentido y origen; no se inventa una biografía humana de ángeles o de una fiesta.
 
@@ -371,10 +371,83 @@ No se fija origen portugués o español como certeza. Elección conflictiva cont
 
 Culto reconocido y recepción litúrgica distinguidos de estudios extraordinarios de la tilma no comprobados. La memoria opcional del calendario general no elimina el rango de fiesta/solemnidad donde está concedido. Patronazgo mexicano verificado en Radio Vaticana.
 
+### 51. `lucy_of_syracuse_virgin` · 13/12
+
+- [Catholic Encyclopedia, «St. Lucy»](https://www.newadvent.org/cathen/09414a.htm)
+- [Francisco, carta a la Iglesia de Siracusa por el traslado temporal del cuerpo de santa Lucía, 13-XII-2024](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2024/12/13/241213E.html)
+
+Año de muerte no fijado como certeza. El texto no reproduce la leyenda de arrancarse los ojos ni invita a imitar autolesión. Patronazgo de Siracusa documentado en la carta, no se inventa una promesa de curación ocular.
+
+### 52. `john_of_the_cross_priest` · 14/12
+
+- [Catholic Encyclopedia, «St. John of the Cross»](https://www.newadvent.org/cathen/08480a.htm)
+- [Benedicto XVI, audiencia general de 16-II-2011](https://www.vatican.va/content/benedict-xvi/en/audiences/2011/documents/hf_ben-xvi_aud_20110216.html)
+
+Títulos de las cuatro obras y cronología cotejados. La noche oscura no se emplea como diagnóstico de depresión ni como motivo para permanecer en una situación de abuso. Sin citas poéticas reconstruidas de memoria.
+
+### 53. `peter_canisius_priest` · 21/12
+
+- [Catholic Encyclopedia, «St. Peter Canisius»](https://www.newadvent.org/cathen/11756c.htm)
+- [Benedicto XVI, audiencia general de 9-II-2011](https://www.vatican.va/content/benedict-xvi/en/audiences/2011/documents/hf_ben-xvi_aud_20110209.html)
+
+La fuente antigua lo llama beato: estado actual, canonización y doctorado se cotejan con la audiencia. No se confunden Friburgo suiza y Freiburg alemana. No se repiten cifras de ediciones o traducciones de los catecismos sin necesidad.
+
+### 54. `john_of_kanty_priest` · 23/12
+
+- [Catholic Encyclopedia, «St. John Cantius»](https://www.newadvent.org/cathen/08451b.htm)
+- [University of Notre Dame, FaithND, «St. John Cantius»](https://faith.nd.edu/saint/st-john-cantius/)
+- [Vatican News, «St. John of Kanty, priest»](https://www.vaticannews.va/en/saints/12/23/st--john-of-kanty--priest.html)
+
+Se omite fecha de nacimiento: la enciclopedia da 1412/1403, frente a 1390 en fuentes universitarias actuales. Muerte 1473 y canonización 1767 concordantes. No se copian anécdotas de milagros, cifras de peregrinaciones o prácticas ascéticas extremas.
+
+### 55. `stephen_the_first_martyr` · 26/12
+
+- [Catholic Encyclopedia, «St. Stephen»](https://www.newadvent.org/cathen/14286b.htm)
+- [Benedicto XVI, audiencia general de 10-I-2007](https://www.vatican.va/content/benedict-xvi/en/audiences/2007/documents/hf_ben-xvi_aud_20070110.html)
+
+Hechos 6–7 es el fundamento; se conserva la distinción explícita de Benedicto XVI entre los Siete y el término diácono posterior. Sin año exacto inventado, palabras atribuidas fuera de la Escritura ni culpa colectiva contra los judíos.
+
+### 56. `john_apostle` · 27/12
+
+- [Catholic Encyclopedia, «St. John the Evangelist»](https://www.newadvent.org/cathen/08492a.htm)
+- [Benedicto XVI, audiencia general de 5-VII-2006](https://www.vatican.va/content/benedict-xvi/en/audiences/2006/documents/hf_ben-xvi_aud_20060705.html)
+
+Se distinguen apóstol, identificación tradicional del discípulo amado y cuestiones de composición joánica, como hace la audiencia. No se fija edad de cien años, fecha exacta de muerte o autoría autógrafa de cada texto como hechos seguros.
+
+### 57. `holy_innocents_martyrs` · 28/12
+
+- [Catholic Encyclopedia, «Holy Innocents»](https://www.newadvent.org/cathen/07419a.htm)
+- [Evangelio según san Mateo, 2,13–18](https://bible.usccb.org/bible/matthew/2)
+
+La narración se atribuye explícitamente a Mateo. No se inventa cantidad de niños, fecha exacta de la matanza o testimonios externos. No se llama a Herodes «el Grande» y a Herodes Antipas una misma persona ni se añaden milagros.
+
+### 58. `thomas_becket_bishop` · 29/12
+
+- [Catholic Encyclopedia, «St. Thomas Becket»](https://www.newadvent.org/cathen/14676a.htm)
+- [Canterbury Cathedral, «Thomas Becket», A Walk Through Time](https://learning.canterbury-cathedral.org/a-walk-through-time/becket/)
+
+Sin frase reconstruida del rey presentada como cita auténtica ni afirmación de orden directa documentada. Se evita fijar 1118/1120 como nacimiento indiscutido. Canonización de 1173 y asesinato de 1170 cotejados.
+
+### 59. `sylvester_i_pope` · 31/12
+
+- [Catholic Encyclopedia, «Pope St. Sylvester I (314–335)»](https://www.newadvent.org/cathen/14370a.htm)
+- [Vatican News, «St. Sylvester I, Pope»](https://www.vaticannews.va/en/saints/12/31/st--sylvester-i--pope.html)
+- [Catholic Encyclopedia, «Donation of Constantine»](https://www.newadvent.org/cathen/05118a.htm)
+
+Se distingue la cronología documentada de leyendas de curación/bautismo y de la falsa Donación. No se le atribuye asistir personalmente a Nicea ni redactar por sí solo el Credo. No se inventa autoría de cada basílica o institución de su período.
+
 ## Validación
 
 ```text
-50 entries · 0 errors · 1 warnings
+59 entries · 0 errors · 0 warnings
 ```
 
 El aviso de las entregas parciales corresponde al prefijo de claves aún incompleto. Se ejecuta el validador oficial con `--partial` en cada entrega parcial y sin esa opción al completar el lote. También se verifica la meta editorial de 120–200 palabras por idioma y `git diff --check`. La compilación e integración corresponden al coordinador. No se publica APK ni se modifica `CatholicGPT`.
+
+## Revisión final
+
+Completadas las 59 fichas y sus 177 biografías. Control adicional: cada biografía tiene entre 134 y 160 palabras (meta 120–200); las fuentes del JSON coinciden por título y orden con los enlaces del informe; no hay URL en los campos del asset ni citas atribuidas sin verificación.
+
+Se corrigió durante el cotejo el enlace primario de Ignacio: la Carta a los Romanos corresponde a `fathers/0107.htm`, no a la Carta a los Esmirniotas. Se revisaron asimismo los títulos reales de los artículos de la enciclopedia antes de usarlos. La falsa Donación de Constantino tiene una referencia específica adicional. Las diferencias de cronología y límites documentales de cada ficha quedan señalados arriba.
+
+Entregas parciales publicadas: `e522b15` (10), `cf73bb9` (20), `3a07fd8` (30), `4812bd4` (40), `6c55d7d` (50). La entrega final completa el lote sin cambiar claves ni fechas de la aplicación. Solo se modifican `saints-q4.json` y este informe.
