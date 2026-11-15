@@ -1,6 +1,6 @@
 # T-013 · Informe de Codex
 
-Entrega: **20/51 fichas**, en el orden exacto de `T-013.keys`. Rama `ext/T-013`, base inicial `origin/CatholicGPT` (`82e8d11`).
+Entrega: **30/51 fichas**, en el orden exacto de `T-013.keys`. Rama `ext/T-013`, base inicial `origin/CatholicGPT` (`82e8d11`).
 
 Se leyeron el protocolo, las reglas editoriales, el contrato M5 y las claves. Identificadores y fechas coinciden con `GeneralRomanSanctoral.kt`. Biografías informativas de redacción propia en ES/EN/PT, fundadas en fuentes consultadas; no son palabras atribuidas a los santos. No se componen oraciones ni citas. `quote: null` cuando no se incorpora una cita textual con obra y lugar. Los patronazgos se incluyen solo con fuente; una lista vacía no significa que no existan. Las celebraciones marianas se explican como celebraciones, sin fabricar biografías.
 
@@ -150,10 +150,81 @@ Nacimiento aproximado: la carta admite 1499 o 1500. Se usa la fuente pontificia 
 
 Se atribuye el relato militar al epígrafe de Dámaso. No se fija 304, Diocleciano, parentesco biológico ni servicio doméstico a Domitila como hechos demostrados: las fuentes combinan hipótesis y leyendas. No se confunde esta memoria con la ficha separada de Pancracio.
 
+### 21. `pancras_of_rome_martyr` · 12/05
+
+- [Catholic Encyclopedia, «Sts. Nereus and Achilleus, Domitilla and Pancratius», sepultura y tradición de Pancracio](https://www.newadvent.org/cathen/10751a.htm)
+- [Vatican News, calendario de santos del 12 de mayo: Pancracio en la vía Aurelia](https://www.vaticannews.va/en/saints/05/12.html)
+
+No se fijan edad de catorce años, origen frigio o año 304 como historia segura. La ficha se apoya en el culto antiguo y declara la posterioridad de las narraciones. Sin promesas de empleo o dinero, patronazgos no documentados ni fórmulas de cadena.
+
+### 22. `our_lady_of_fatima` · 13/05
+
+- [Santuario de Fátima, «Chronology of the three seers», 1917 y decisión episcopal de 13-X-1930](https://www.fatima.pt/en/pages/chronology-of-the-three-seers)
+- [Congregación para la Doctrina de la Fe, El mensaje de Fátima, 26-VI-2000, comentario teológico](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000626_message-fatima_en.html)
+
+Se distingue el reconocimiento episcopal histórico de una definición dogmática. No se aplican retroactivamente las categorías de 2024 al decreto de 1930. Sin cifras de almas, predicciones añadidas o promesas sin condiciones; no se copian textos de las oraciones modernas del folleto.
+
+### 23. `matthias_apostle` · 14/05
+
+- [Atos / Hechos de los Apóstoles 1,15–26, texto bíblico](https://www.newadvent.org/bible/act001.htm)
+- [Catholic Encyclopedia, «St. Matthias»](https://www.newadvent.org/cathen/10066a.htm)
+
+Se parafrasea Hechos 1 sin copiar una traducción litúrgica moderna. No se asegura pertenencia a los setenta discípulos, país de misión, método de muerte o autenticidad de reliquias. La fecha sigue el calendario de la aplicación, no la fecha anterior de febrero citada en la enciclopedia.
+
+### 24. `john_i_pope` · 18/05
+
+- [Catholic Encyclopedia, «Pope St. John I»](https://www.newadvent.org/cathen/08421a.htm)
+- [Catholic Encyclopedia, «Theodoric the Great», relaciones con Roma y Constantinopla](https://www.newadvent.org/cathen/14576a.htm)
+
+Se omite día exacto de muerte (18/19 de mayo) y cualquier carta apócrifa atribuida al pontífice. No se afirma que intentara convertir católicos al arrianismo; se distingue el encargo político del contenido probado de la negociación.
+
+### 25. `bernardine_of_siena_priest` · 20/05
+
+- [Catholic Encyclopedia, «St. Bernardine of Siena»](https://www.newadvent.org/cathen/02505b.htm)
+- [Catholic Encyclopedia, «Holy Name of Jesus», monograma y examen de la devoción](https://www.newadvent.org/cathen/07421a.htm)
+
+No se copian cifras de conversiones o auditorios, curaciones ni una cita atribuida a Vicente Ferrer. El monograma se explica en su función cristológica. No se trasladan como normas actuales todas las posiciones sociales de la predicación medieval.
+
+### 26. `christopher_magallanes_priest_and_companions_martyrs` · 21/05
+
+- [Santa Sede, biografía de canonización: Cristóbal Magallanes Jara](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20000521_magallanes-jara_sp.html)
+- [Juan Pablo II, homilía de canonización, 21-V-2000, 2–3](https://www.vatican.va/content/john-paul-ii/en/homilies/2000/documents/hf_jp-ii_hom_20000521_canonizations.html)
+- [Santa Sede, registro de santos proclamados por Juan Pablo II, 21-V-2000](https://www.vatican.va/news_services/liturgy/saints/index_saints_en.html)
+
+Se distingue el grupo de veinticinco mártires de las veintisiete personas canonizadas aquel día, que incluyen otros dos fundadores. No se reducen todas las muertes a la misma fecha, lugar o episodio. Se omiten últimas palabras literales y clasificaciones políticas no documentadas.
+
+### 27. `rita_of_cascia_religious` · 22/05
+
+- [Juan Pablo II, discurso a los peregrinos de santa Rita, 20-V-2000, 1–3](https://www.vatican.va/content/john-paul-ii/en/speeches/2000/apr-jun/documents/hf_jp-ii_spe_20000520_santa-rita.html)
+- [Catholic Encyclopedia, «St. Rita of Cascia»](https://www.newadvent.org/cathen/13064a.htm)
+
+Se omiten años exactos de nacimiento y muerte, discutidos en las referencias antiguas. No se narran la muerte de sus hijos como resultado garantizado de una petición, prácticas de daño corporal ni detalles legendarios como historia segura. Su vida matrimonial no se convierte en obligación de soportar violencia. Sin patronazgos o promesas añadidos.
+
+### 28. `bede_the_venerable_priest` · 25/05
+
+- [Benedicto XVI, audiencia general, 18-II-2009: Beda el Venerable](https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20090218.html)
+- [Catholic Encyclopedia, «The Venerable Bede»](https://www.newadvent.org/cathen/02384a.htm)
+
+Nacimiento aproximado. Se omite el año exacto de fallecimiento en la ficha: la referencia enciclopédica da 735, mientras la versión inglesa consultada de la catequesis imprime 737. No se resuelve la discrepancia por conjetura. No se llama autobiografía a la totalidad de su historia ni se incorporan frases de muerte sin lugar primario.
+
+### 29. `gregory_vii_pope` · 25/05
+
+- [Catholic Encyclopedia, «Pope St. Gregory VII»](https://www.newadvent.org/cathen/06791c.htm)
+- [Catholic Encyclopedia, «Conflict of Investitures»](https://www.newadvent.org/cathen/08084c.htm)
+
+Se omiten nacimiento exacto, origen familiar no probado y pertenencia inicial a un monasterio concreto. Canossa no se presenta como conclusión del conflicto. No se fabrica una cita final ni se transforma el programa político medieval en doctrina universal vigente.
+
+### 30. `mary_magdalene_de_pazzi_virgin` · 25/05
+
+- [Benedicto XVI, carta por el IV centenario de la muerte de santa María Magdalena de Pazzi, 29-IV-2007](https://www.vatican.va/content/benedict-xvi/en/letters/2007/documents/hf_ben-xvi_let_20070429_maddalena-pazzi.html)
+- [Catholic Encyclopedia, «St. Mary Magdalen de’ Pazzi»](https://www.newadvent.org/cathen/09762a.htm)
+
+No se identifica con María Magdalena bíblica ni se presenta como carmelita descalza. Se omite fecha exacta de profesión, distinta en las dos fuentes. Sin reproducir éxtasis o palabras atribuidas como doctrina obligatoria, prácticas dañinas ni garantías de favores.
+
 ## Validación
 
 ```text
-20 entries · 0 errors · 1 warnings
+30 entries · 0 errors · 1 warnings
 ```
 
 El aviso único de las entregas parciales corresponde al prefijo incompleto. Se valida con `--partial` durante el avance y sin esa opción al completar el lote. Se comprueba además la meta editorial de 120–200 palabras por idioma, la correspondencia de fuentes con este informe y `git diff --check`. La compilación e integración corresponden al coordinador. No se modifica `CatholicGPT`, código, otros lotes ni APK.
