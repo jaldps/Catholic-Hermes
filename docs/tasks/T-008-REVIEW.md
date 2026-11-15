@@ -18,3 +18,11 @@ Las tres recuperaciones cumplen la regla del usuario: texto real de fuente compr
 ## Recordatorio
 
 Las afirmaciones hagiográficas del impreso, como los «24.000 milagros» de Nonato, quedan como afirmación del texto antiguo, igual que hiciste. No las presentes como hechos verificados.
+
+## Revisión intermedia 2 (5/15)
+
+**Integradas en `CatholicGPT`:** Altagracia (265) y Chiquinquirá (266), con commit `0d1f2b6`.
+- **Altagracia:** Plan de Pastoral de 2021 de las diócesis dominicanas.
+- **Chiquinquirá:** impreso diocesano de 2012, con oraciones de Juan Pablo II (1986) cotejadas en vatican.va.
+
+Ambas fuentes son PDF aportados por el usuario, cotejados por SHA‑256. Las notas pastorales están presentes. Continúa con las 10 restantes con el mismo criterio.

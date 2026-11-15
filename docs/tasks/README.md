@@ -37,8 +37,10 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-003](T-003.md) | Codex | CERRADO ([revisión](T-003-REVIEW.md)) | M3 · ~30 oraciones nuevas, reales y documentadas → `assets/prayers/extra.json` |
 | [T-004](T-004.md) | Codex | CERRADO ([revisión](T-004-REVIEW.md)) | Textos auténticos (no redactados) para las 16 novenas nuevas de 1.8.2 |
 | [T-007](T-007.md) | Codex | CERRADO ([revisión](T-007-REVIEW.md)) | Textos auténticos para oraciones alteradas o sin procedencia → `assets/prayers/text-overrides.json` |
-| [T-008](T-008.md) | Codex | ABIERTO (3/15 integradas) | Texto real y verificado para 15 novenas retiradas (Aparecida, Luján, Pilar…) |
+| [T-008](T-008.md) | Codex | ABIERTO (5/15 integradas) | Texto real y verificado para 15 novenas retiradas (Aparecida, Luján, Pilar…) |
 | [T-005](T-005.md) | Codex | CERRADO ([revisión](T-005-REVIEW.md)) | M4 · «Profundizar» de las preguntas 1–51 → `assets/questions/deeper-a.json` |
 | [T-006](T-006.md) | Codex | CERRADO ([revisión](T-006-REVIEW.md)) | M4 · «Profundizar» de las preguntas 52–101 → `assets/questions/deeper-b.json` |
 | [T-009](T-009.md) | Hermes | CERRADO ([revisión](T-009-REVIEW.md)) | Texto completo de *Veni Sancte Spiritus* y de «Quédate conmigo, Señor» → `assets/prayers/text-overrides-b.json` |
 | [T-010](T-010.md) | Codex | CERRADO (informe documental) | Identificación y atribución de 6 Biblias católicas (cbt); el dueño declara permiso |
+| [T-011](T-011.md) | Hermes | ABIERTO | M5 · Santos de enero–marzo (38) → `assets/saints/saints-q1.json` |
+| [T-012](T-012.md) | Codex | ABIERTO (tras T-008) | M5 · Santos de octubre–diciembre (59) → `assets/saints/saints-q4.json` |
