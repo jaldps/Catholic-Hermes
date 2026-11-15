@@ -5,7 +5,9 @@ Usage (from the repository root):
   python3 docs/tasks/tools/validate_prayers.py details app/src/main/assets/prayers/details-a.json docs/tasks/T-001.ids
   python3 docs/tasks/tools/validate_prayers.py details app/src/main/assets/prayers/details-b.json docs/tasks/T-002.ids
   python3 docs/tasks/tools/validate_prayers.py extra   app/src/main/assets/prayers/extra.json
+  python3 docs/tasks/tools/validate_prayers.py overrides app/src/main/assets/prayers/text-overrides.json
 
+Add --partial to validate an ordered prefix of the list (partial delivery); every entry is still fully checked.
 Exit code 0 = valid. Fix every ERROR before pushing; WARN lines need a look.
 """
 import json, re, sys, pathlib
@@ -66,13 +68,16 @@ def existing_ids():
 
 def main():
     if len(sys.argv) < 3: print(__doc__); sys.exit(2)
+    partial = "--partial" in sys.argv
+    if partial: sys.argv.remove("--partial")
     mode, path = sys.argv[1], ROOT / sys.argv[2]
     data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, list): err("top level must be a JSON array")
     if mode == "details":
         want = [l.strip() for l in (ROOT / sys.argv[3]).read_text().splitlines() if l.strip()]
         got = [e.get("prayerId") for e in data]
-        if got != want: err(f"prayerId list must equal {sys.argv[3]} in the same order.\n  missing={sorted(set(want)-set(got))}\n  extra={sorted(set(got)-set(want))}")
+        if partial and got == want[:len(got)] and got: warn(f"partial delivery: {len(got)}/{len(want)} entries")
+        elif got != want: err(f"prayerId list must equal {sys.argv[3]} in the same order.\n  missing={sorted(set(want)-set(got))}\n  extra={sorted(set(got)-set(want))}")
         for e in data:
             if list(e.keys()) != ["prayerId"] + DETAIL_KEYS: err(f"{e.get('prayerId')}: keys must be exactly {['prayerId']+DETAIL_KEYS} in that order")
             details(e, e.get("prayerId"))
@@ -94,6 +99,20 @@ def main():
             if e.get("category") not in CATEGORIES: err(f"{pid}: category invalid")
             if not isinstance(e.get("thematicTags"), list): err(f"{pid}: thematicTags must be a list")
             details(e, pid)
+    elif mode == "overrides":
+        ids = set(existing_ids()); seen = set()
+        okeys = ["id", "title", "latinTitle", "leaderText", "responseText", "whenToPray", "textNote"]
+        for e in data:
+            pid = e.get("id", "?")
+            if list(e.keys()) != okeys: err(f"{pid}: keys must be exactly {okeys} in that order")
+            if pid not in ids: err(f"{pid}: not an existing prayer id")
+            if pid in seen: err(f"{pid}: duplicated")
+            seen.add(pid)
+            lt(e.get("leaderText"), f"{pid}.leaderText", lo=15)
+            lt(e.get("textNote"), f"{pid}.textNote")
+            for k in ("title", "responseText", "whenToPray"):
+                if e.get(k) is not None: lt(e[k], f"{pid}.{k}")
+            if e.get("latinTitle") is not None and not isinstance(e["latinTitle"], str): err(f"{pid}.latinTitle: string or null")
     else:
         print(__doc__); sys.exit(2)
     for w in warns: print("WARN ", w)

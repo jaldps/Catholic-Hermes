@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Validator for M4 tasks (T-005: questions 1-51, T-006: 52-101).
+"""Add --partial to validate an ordered prefix (partial delivery).
+Validator for M4 tasks (T-005: questions 1-51, T-006: 52-101).
 
 Usage (repository root):
   python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-a.json 1 51
@@ -19,11 +20,15 @@ errors, warns = [], []
 def words(s): return len(re.findall(r"\w+", s))
 
 def main():
+    partial = "--partial" in sys.argv
+    if partial: sys.argv.remove("--partial")
     if len(sys.argv) != 4: print(__doc__); sys.exit(2)
     path, lo, hi = ROOT / sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
     data = json.loads(path.read_text(encoding="utf-8"))
     nums = [e.get("number") for e in data]
-    if nums != list(range(lo, hi + 1)):
+    if partial and nums and nums == list(range(lo, lo + len(nums))):
+        warns.append(f"partial delivery: {len(nums)}/{hi - lo + 1} questions")
+    elif nums != list(range(lo, hi + 1)):
         errors.append(f"numbers must be exactly {lo}..{hi} in order; missing={sorted(set(range(lo,hi+1))-set(nums))} extra={sorted(set(nums)-set(range(lo,hi+1)))}")
     for e in data:
         n = e.get("number")
