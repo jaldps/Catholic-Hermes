@@ -1,0 +1,767 @@
+[
+ {
+  "id": "novena-a-nuestra-senora-aparecida",
+  "title": {
+   "es": "Novena a Nuestra Señora Aparecida",
+   "en": "Novena to Our Lady of Aparecida",
+   "pt": "Novena a Nossa Senhora Aparecida"
+  },
+  "patron": {
+   "es": "Patrona de Brasil",
+   "en": "Patroness of Brazil",
+   "pt": "Padroeira do Brasil"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con la Virgen venerada en Aparecida, Brasil, cuya imagen de barro fue hallada en el río Paraíba en 1717. Incluye consideraciones, oraciones y una guía para la intención de cada día.",
+   "en": "Nine days with the Virgin venerated at Aparecida, Brazil, whose clay image was found in the Paraíba River in 1717. Includes daily reflections, prayers and guidance for each day's intention.",
+   "pt": "Nove dias com a Virgem venerada em Aparecida, no Brasil, cuja imagem de barro foi encontrada no rio Paraíba em 1717. Traz reflexões, orações e uma orientação para a intenção de cada dia."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "blessings",
+   "comfort",
+   "family"
+  ],
+  "bodyFile": "246.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-nuestra-senora-de-lujan",
+  "title": {
+   "es": "Novena a Nuestra Señora de Luján",
+   "en": "Novena to Our Lady of Luján",
+   "pt": "Novena a Nossa Senhora de Luján"
+  },
+  "patron": {
+   "es": "Advocación mariana de Argentina",
+   "en": "Marian title venerated in Argentina",
+   "pt": "Invocação mariana da Argentina"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con la Inmaculada venerada en Luján, Argentina, cuya pequeña imagen llegó en 1630. Incluye consideraciones, oraciones y una guía para la intención de cada día.",
+   "en": "Nine days with the Immaculate Conception venerated at Luján, Argentina, whose small image arrived in 1630. Includes daily reflections, prayers and guidance for each day's intention.",
+   "pt": "Nove dias com a Imaculada venerada em Luján, na Argentina, cuja pequena imagem chegou em 1630. Traz reflexões, orações e uma orientação para a intenção de cada dia."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "blessings",
+   "family",
+   "comfort"
+  ],
+  "bodyFile": "247.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-la-virgen-del-pilar",
+  "title": {
+   "es": "Novena a la Virgen del Pilar",
+   "en": "Novena to Our Lady of the Pillar",
+   "pt": "Novena a Nossa Senhora do Pilar"
+  },
+  "patron": {
+   "es": "Advocación mariana de Zaragoza (España), venerada en el mundo hispano",
+   "en": "Marian title of Zaragoza (Spain), venerated in the Hispanic world",
+   "pt": "Invocação mariana de Saragoça (Espanha), venerada no mundo hispânico"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con la Virgen del Pilar, venerada en la basílica de Zaragoza, cuya fiesta es el 12 de octubre. Incluye consideraciones, oraciones y una guía para la intención de cada día.",
+   "en": "Nine days with Our Lady of the Pillar, venerated in the basilica of Zaragoza, whose feast is October 12. Includes daily reflections, prayers and guidance for each day's intention.",
+   "pt": "Nove dias com Nossa Senhora do Pilar, venerada na basílica de Saragoça, cuja festa é em 12 de outubro. Traz reflexões, orações e uma orientação para a intenção de cada dia."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "blessings",
+   "family",
+   "peace"
+  ],
+  "bodyFile": "248.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-nuestra-senora-de-chiquinquira",
+  "title": {
+   "es": "Novena a Nuestra Señora de Chiquinquirá",
+   "en": "Novena to Our Lady of Chiquinquirá",
+   "pt": "Novena a Nossa Senhora de Chiquinquirá"
+  },
+  "patron": {
+   "es": "Advocación mariana venerada en Colombia",
+   "en": "Marian title venerated in Colombia",
+   "pt": "Invocação mariana venerada na Colômbia"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con la Virgen del Rosario de Chiquinquirá, venerada en Colombia desde la renovación de su pintura en 1586. Incluye consideraciones, oraciones y una guía para la intención de cada día.",
+   "en": "Nine days with Our Lady of the Rosary of Chiquinquirá, venerated in Colombia since the renewal of her painting in 1586. Includes daily reflections, prayers and guidance for each day's intention.",
+   "pt": "Nove dias com Nossa Senhora do Rosário de Chiquinquirá, venerada na Colômbia desde a renovação de sua pintura em 1586. Traz reflexões, orações e uma orientação para a intenção de cada dia."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "blessings",
+   "family",
+   "comfort"
+  ],
+  "bodyFile": "249.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-nuestra-senora-de-coromoto",
+  "title": {
+   "es": "Novena a Nuestra Señora de Coromoto",
+   "en": "Novena to Our Lady of Coromoto",
+   "pt": "Novena a Nossa Senhora de Coromoto"
+  },
+  "patron": {
+   "es": "Patrona de Venezuela",
+   "en": "Patroness of Venezuela",
+   "pt": "Padroeira da Venezuela"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con la Virgen de Coromoto, venerada en Guanare (Venezuela) desde 1652. Incluye consideraciones, oraciones y una guía para la intención de cada día.",
+   "en": "Nine days with Our Lady of Coromoto, venerated at Guanare (Venezuela) since 1652. Includes daily reflections, prayers and guidance for each day's intention.",
+   "pt": "Nove dias com Nossa Senhora de Coromoto, venerada em Guanare (Venezuela) desde 1652. Traz reflexões, orações e uma orientação para a intenção de cada dia."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "blessings",
+   "family",
+   "peace"
+  ],
+  "bodyFile": "250.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-nuestra-senora-de-la-altagracia",
+  "title": {
+   "es": "Novena a Nuestra Señora de la Altagracia",
+   "en": "Novena to Our Lady of Altagracia",
+   "pt": "Novena a Nossa Senhora da Altagracia"
+  },
+  "patron": {
+   "es": "Patrona de la República Dominicana",
+   "en": "Patroness of the Dominican Republic",
+   "pt": "Padroeira da República Dominicana"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con la Virgen de la Altagracia, venerada en Higüey (República Dominicana). Incluye consideraciones, oraciones y una guía para la intención de cada día.",
+   "en": "Nine days with Our Lady of Altagracia, venerated at Higüey (Dominican Republic). Includes daily reflections, prayers and guidance for each day's intention.",
+   "pt": "Nove dias com Nossa Senhora da Altagracia, venerada em Higüey (República Dominicana). Traz reflexões, orações e uma orientação para a intenção de cada dia."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "blessings",
+   "family",
+   "comfort"
+  ],
+  "bodyFile": "251.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-nuestra-senora-de-copacabana",
+  "title": {
+   "es": "Novena a Nuestra Señora de Copacabana",
+   "en": "Novena to Our Lady of Copacabana",
+   "pt": "Novena a Nossa Senhora de Copacabana"
+  },
+  "patron": {
+   "es": "Patrona de Bolivia",
+   "en": "Patroness of Bolivia",
+   "pt": "Padroeira da Bolívia"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con la Virgen de Copacabana, venerada a orillas del lago Titicaca (Bolivia). Incluye consideraciones, oraciones y una guía para la intención de cada día.",
+   "en": "Nine days with Our Lady of Copacabana, venerated on the shores of Lake Titicaca (Bolivia). Includes daily reflections, prayers and guidance for each day's intention.",
+   "pt": "Nove dias com Nossa Senhora de Copacabana, venerada às margens do lago Titicaca (Bolívia). Traz reflexões, orações e uma orientação para a intenção de cada dia."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "blessings",
+   "family",
+   "comfort"
+  ],
+  "bodyFile": "252.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-nuestra-senora-de-suyapa",
+  "title": {
+   "es": "Novena a Nuestra Señora de Suyapa",
+   "en": "Novena to Our Lady of Suyapa",
+   "pt": "Novena a Nossa Senhora de Suyapa"
+  },
+  "patron": {
+   "es": "Patrona de Honduras",
+   "en": "Patroness of Honduras",
+   "pt": "Padroeira de Honduras"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con la Virgen de Suyapa, cuya pequeña imagen fue hallada en 1747 cerca de Tegucigalpa (Honduras). Incluye consideraciones, oraciones y una guía para la intención de cada día.",
+   "en": "Nine days with Our Lady of Suyapa, whose small image was found in 1747 near Tegucigalpa (Honduras). Includes daily reflections, prayers and guidance for each day's intention.",
+   "pt": "Nove dias com Nossa Senhora de Suyapa, cuja pequena imagem foi encontrada em 1747 perto de Tegucigalpa (Honduras). Traz reflexões, orações e uma orientação para a intenção de cada dia."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "blessings",
+   "family",
+   "peace"
+  ],
+  "bodyFile": "253.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-al-senor-de-los-milagros",
+  "title": {
+   "es": "Novena al Señor de los Milagros",
+   "en": "Novena to the Lord of Miracles",
+   "pt": "Novena ao Senhor dos Milagres"
+  },
+  "patron": {
+   "es": "Cristo crucificado venerado en Lima (Perú)",
+   "en": "Crucified Christ venerated in Lima, Peru",
+   "pt": "Cristo crucificado venerado em Lima (Peru)"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con Cristo crucificado, venerado en Lima en la imagen del Señor de los Milagros. Consideraciones sobre la cruz, la fe en la prueba, el perdón y el servicio.",
+   "en": "Nine days with Christ crucified, venerated in Lima in the image of the Lord of Miracles. Reflections on the cross, faith in trial, forgiveness and service.",
+   "pt": "Nove dias com Cristo crucificado, venerado em Lima na imagem do Senhor dos Milagres. Reflexões sobre a cruz, a fé na provação, o perdão e o serviço."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "comfort",
+   "peace",
+   "blessings"
+  ],
+  "bodyFile": "254.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-al-divino-nino-jesus-del-20-de-julio",
+  "title": {
+   "es": "Novena al Divino Niño Jesús del 20 de Julio",
+   "en": "Novena to the Divino Niño Jesús of the 20 de Julio",
+   "pt": "Novena ao Divino Menino Jesus do 20 de Julho"
+  },
+  "patron": {
+   "es": "Niño Jesús venerado en Bogotá (Colombia)",
+   "en": "Child Jesus venerated in Bogotá, Colombia",
+   "pt": "Menino Jesus venerado em Bogotá (Colômbia)"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con el Niño Jesús venerado en el santuario del barrio 20 de Julio, en Bogotá. Consideraciones sobre la infancia espiritual, la familia, los niños y la confianza.",
+   "en": "Nine days with the Child Jesus venerated at the sanctuary in Bogotá's 20 de Julio neighborhood. Reflections on spiritual childhood, family, children and trust.",
+   "pt": "Nove dias com o Menino Jesus venerado no santuário do bairro 20 de Julho, em Bogotá. Reflexões sobre a infância espiritual, a família, as crianças e a confiança."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "family",
+   "love",
+   "blessings"
+  ],
+  "bodyFile": "256.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-san-ramon-nonato",
+  "title": {
+   "es": "Novena a San Ramón Nonato",
+   "en": "Novena to Saint Raymond Nonnatus",
+   "pt": "Novena a São Raimundo Nonato"
+  },
+  "patron": {
+   "es": "Mercedario; patrono de las gestantes y las parteras",
+   "en": "Mercedarian; patron of expectant mothers and midwives",
+   "pt": "Mercedário; padroeiro das gestantes e das parteiras"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con san Ramón Nonato, religioso mercedario del siglo XIII. Consideraciones sobre la vida, la vocación, la libertad de los cautivos y el cuidado de las madres y los niños.",
+   "en": "Nine days with Saint Raymond Nonnatus, a thirteenth-century Mercedarian religious. Reflections on life, vocation, the freedom of captives and the care of mothers and children.",
+   "pt": "Nove dias com são Raimundo Nonato, religioso mercedário do século XIII. Reflexões sobre a vida, a vocação, a liberdade dos cativos e o cuidado das mães e das crianças."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "family",
+   "health",
+   "love"
+  ],
+  "bodyFile": "257.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-san-pancracio",
+  "title": {
+   "es": "Novena a San Pancracio",
+   "en": "Novena to Saint Pancras",
+   "pt": "Novena a São Pancrácio"
+  },
+  "patron": {
+   "es": "Mártir romano; invocado por los jóvenes y por el trabajo",
+   "en": "Roman martyr; invoked by the young and for work",
+   "pt": "Mártir romano; invocado pelos jovens e pelo trabalho"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con san Pancracio, joven mártir romano. Consideraciones sobre la fidelidad, el trabajo honesto, la confianza en la providencia y la generosidad.",
+   "en": "Nine days with Saint Pancras, a young Roman martyr. Reflections on fidelity, honest work, trust in providence and generosity.",
+   "pt": "Nove dias com são Pancrácio, jovem mártir romano. Reflexões sobre a fidelidade, o trabalho honesto, a confiança na providência e a generosidade."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "money",
+   "blessings",
+   "peace"
+  ],
+  "bodyFile": "258.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-santa-eduviges",
+  "title": {
+   "es": "Novena a Santa Eduviges",
+   "en": "Novena to Saint Hedwig",
+   "pt": "Novena a Santa Edwiges"
+  },
+  "patron": {
+   "es": "Duquesa de Silesia; invocada por los endeudados y los pobres",
+   "en": "Duchess of Silesia; invoked by debtors and the poor",
+   "pt": "Duquesa da Silésia; invocada pelos endividados e pelos pobres"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con santa Eduviges, duquesa de Silesia del siglo XIII. Consideraciones sobre el matrimonio, la sobriedad, la misericordia con los deudores y el servicio a los enfermos.",
+   "en": "Nine days with Saint Hedwig, a thirteenth-century Duchess of Silesia. Reflections on marriage, simplicity, mercy toward debtors and service to the sick.",
+   "pt": "Nove dias com santa Edwiges, duquesa da Silésia do século XIII. Reflexões sobre o matrimônio, a sobriedade, a misericórdia com os devedores e o serviço aos doentes."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "money",
+   "family",
+   "comfort"
+  ],
+  "bodyFile": "259.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-sao-benedito",
+  "title": {
+   "es": "Novena a San Benito de Palermo (São Benedito)",
+   "en": "Novena to Saint Benedict the Moor (São Benedito)",
+   "pt": "Novena a São Benedito"
+  },
+  "patron": {
+   "es": "Franciscano; patrono de los afrodescendientes y los cocineros",
+   "en": "Franciscan; patron of people of African descent and of cooks",
+   "pt": "Franciscano; padroeiro dos afrodescendentes e dos cozinheiros"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con san Benito de Palermo, religioso franciscano del siglo XVI. Consideraciones sobre la dignidad humana, el trabajo humilde, el servicio y la fraternidad universal.",
+   "en": "Nine days with Saint Benedict the Moor, a sixteenth-century Franciscan religious. Reflections on human dignity, humble work, service and universal brotherhood.",
+   "pt": "Nove dias com são Benedito, religioso franciscano do século XVI. Reflexões sobre a dignidade humana, o trabalho humilde, o serviço e a fraternidade universal."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "blessings",
+   "peace",
+   "health"
+  ],
+  "bodyFile": "260.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "id": "novena-a-san-jose-gregorio-hernandez",
+  "title": {
+   "es": "Novena a San José Gregorio Hernández",
+   "en": "Novena to Saint José Gregorio Hernández",
+   "pt": "Novena a São José Gregório Hernández"
+  },
+  "patron": {
+   "es": "Médico venezolano; patrono de los médicos y los enfermos",
+   "en": "Venezuelan physician; patron of doctors and the sick",
+   "pt": "Médico venezuelano; padroeiro dos médicos e dos doentes"
+  },
+  "category": {
+   "es": "Novenas",
+   "en": "Novenas",
+   "pt": "Novenas"
+  },
+  "description": {
+   "es": "Nueve días con san José Gregorio Hernández, médico venezolano canonizado en 2025. Consideraciones sobre la fe y la ciencia, el servicio a los pobres, la vocación y la confianza.",
+   "en": "Nine days with Saint José Gregorio Hernández, a Venezuelan physician canonized in 2025. Reflections on faith and science, service to the poor, vocation and trust.",
+   "pt": "Nove dias com são José Gregório Hernández, médico venezuelano canonizado em 2025. Reflexões sobre a fé e a ciência, o serviço aos pobres, a vocação e a confiança."
+  },
+  "miraculousHistory": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "promises": {
+   "es": "",
+   "en": "",
+   "pt": ""
+  },
+  "imageUrl": null,
+  "tags": [
+   "health",
+   "comfort",
+   "blessings"
+  ],
+  "bodyFile": "261.json",
+  "dayNumbers": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ }
+]

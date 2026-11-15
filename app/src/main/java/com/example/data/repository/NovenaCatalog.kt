@@ -31,7 +31,7 @@ internal data class RawProvenance(
     val commercialAdditions: LocalizedText? = null, val pastoralNote: LocalizedText? = null,
     val sources: List<String>? = null
 )
-internal val ProvenanceFiles = listOf("p1.json", "p2.json", "p3.json", "p4.json", "new-a.json", "new-b.json")
+internal val ProvenanceFiles = listOf("p1.json", "p2.json", "p3.json", "p4.json", "new-a.json", "new-b.json", "new-c.json")
 
 /** Metadata loads once; only requested bodies enter a bounded, evictable cache. */
 class NovenaCatalog(private val open: (String) -> InputStream) {
