@@ -1,0 +1,23 @@
+{
+  "version_name": "1.8.3",
+  "version_code": 12,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.3",
+  "sha256": "fdb1ba5697db9d1a5ceda470bd0f17bdbe15efcbdaf3c14e3b395d6bead1d7f5",
+  "bytes": 63454325,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1 and 1.8.2 (same package and key)",
+  "changes": [
+    "Prayers: history, how to pray it, source, approval/indulgence (Enchiridion 1999) and promise for all 68 existing prayers (tasks T-001 Hermes, T-002 Codex).",
+    "25 new documented prayers (T-003 Codex): litanies of St Joseph, Holy Name and Precious Blood, Ave maris stella, Stabat Mater, Aquinas prayers, Canticle of the Creatures, Latin editions, among others.",
+    "Chaplet of St Michael: removed a block taken from Leo XIII's exorcism (CDF, Inde ab aliquot annis, 1985).",
+    "Esquipulas novena replaced by the authentic 1791 public-domain imprint (T-004).",
+    "15 novenas whose text had been composed by agents were withdrawn until their real, verified text is sourced (T-008).",
+    "Code ready for 'Go deeper' in the 101 questions (T-005/T-006) and authentic prayer text overrides (T-007); content pending."
+  ],
+  "tests": ["PrayerDetailsCatalogTest", "PrayerDetailsContentTest", "PrayerDetailsUiTest", "PrayerExtrasIntegrationTest", "NovenaProvenanceTest", "NovenaProvenanceUiTest", "NovenaCatalogLoadingTest", "NovenaAssetIntegrityTest", "NovenaProgressTest", "NovenaIndexJourneyTest", "EditorialReliabilityTest", "RetainedNavigationTest", "QuestionDeeperCatalogTest", "QuestionDeeperUiTest", "GroupedPickersTest"],
+  "known_limitations": ["Full unit-test suite not run for this checkpoint.", "Several existing prayer texts are known to be altered or unsourced and are flagged in their history; authentic replacements pending in T-007."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

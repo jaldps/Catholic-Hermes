@@ -1,5 +1,18 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.3
+
+[Descargar Catholic Hermes 1.8.3](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.3.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.3`, código 12. **Actualiza 1.8.1/1.8.2** y conserva el progreso.
+
+Novedades:
+- Cada oración (68 existentes + 25 nuevas) muestra **Cómo rezarla**, **Historia**, fuente, aprobación o indulgencia (*Enchiridion* 1999) y promesa cuando la hay documentada.
+- 25 oraciones nuevas reales y documentadas: letanías de San José, del Santísimo Nombre y de la Preciosísima Sangre, Ave maris stella, Stabat Mater, oraciones de Santo Tomás, Cántico de las criaturas, ediciones latinas y otras.
+- Corona de San Miguel sin el bloque tomado del exorcismo de León XIII (no permitido a los fieles, CDF 1985).
+- Novena de Esquipulas con su texto auténtico (impreso de 1791, dominio público).
+- Se retiraron 15 novenas cuyo texto había sido redactado por agentes; volverán con su texto real de fuente verificada.
+
+[Metadatos](../docs/quality/release-1.8.3/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.2
 
 [Descargar Catholic Hermes 1.8.2](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.2.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.2`, código 11. **Actualiza la 1.8.1** (misma firma y paquete) y conserva su progreso.

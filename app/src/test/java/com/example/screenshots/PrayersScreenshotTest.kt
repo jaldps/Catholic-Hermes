@@ -100,6 +100,8 @@ class PrayersScreenshotTest {
         "prayers" to {},
         "prayers_scrolled" to { scrollTo("prayer_devotion_angelus") },
         "prayer_detail" to { scrollTo("prayer_row_hail_mary"); tap("prayer_row_hail_mary") },
+        "prayer_history" to { scrollTo("prayer_row_hail_mary"); tap("prayer_row_hail_mary"); scrollTo("prayer_history") },
+        "prayer_extra" to { scrollTo("prayer_row_litany_of_st_joseph"); tap("prayer_row_litany_of_st_joseph"); scrollTo("prayer_instructions") },
         "category" to { tap("prayer_category_tile_all") },
         "how_to_pray" to { scrollTo("how_to_pray_toggle"); tap("how_to_pray_toggle") },
         "chaplet" to { scrollTo("open_chaplet_row"); tap("open_chaplet_row") },
