@@ -1,20 +1,19 @@
 # T-006 · Informe de Codex
 
-## Entrega parcial 4: preguntas 52–91
+## Entrega completa: preguntas 52–101
 
-Se añaden **40 de las 50 preguntas**, en orden, con siete secciones completas y fuentes en ES/EN/PT-BR. No se modifican las preguntas, respuestas, fundamentos o aclaraciones de Kotlin. La base es `origin/CatholicGPT` (`4f302d7`, incorporado por merge). Primera entrega parcial: `c8df15d`. Las preguntas 92–101 siguen pendientes; esta entrega no las presenta como terminadas.
+Se añaden **las 50 preguntas**, en orden, con siete secciones completas y fuentes en ES/EN/PT-BR. No se modifican las preguntas, respuestas, fundamentos o aclaraciones de Kotlin. La base es `origin/CatholicGPT` (`4f302d7`, incorporado por merge). Primera entrega parcial: `c8df15d`. Se completa la continuación pedida en `T-006-REVIEW.md`. Entregas parciales posteriores: `71a103e` (52–71), `f975400` (52–81) y `c4f438a` (52–91).
 
 Son explicaciones originales apoyadas en fuentes leídas, no nuevas oraciones. Las alusiones bíblicas y patrísticas son paráfrasis, sin comillas que simulen citas literales. Las analogías incluyen su límite y no se ofrecen como demostraciones de la eficacia sacramental.
 
 ## Validación ejecutada
 
 ```text
-$ python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-b.json 52 101 --partial
-WARN  partial delivery: 40/50 questions
-40 entries · 0 errors · 1 warnings
+$ python3 docs/tasks/tools/validate_questions.py app/src/main/assets/questions/deeper-b.json 52 101
+50 entries · 0 errors · 0 warnings
 ```
 
-El único aviso corresponde al carácter parcial de la entrega. No hay avisos de extensión. Se conserva el contrato JSON y los números 52–91, sin huecos.
+No hay avisos de extensión. Se conserva el contrato JSON y los números 52–101, sin huecos. `git diff --check` también finaliza sin errores. Se revisaron las localizaciones finales y las tres versiones; no se cambian Kotlin, APK ni encargos cerrados.
 
 ## Fuentes consultadas
 
@@ -78,6 +77,22 @@ Se leyó `T-006-REVIEW.md`: el coordinador aprueba las primeras veinte y pide co
 | 90 · Migrantes y pobres | CIC 2241 y 2443–2447; Lv 19,33-34; Mt 25,35; Hb 13,2; St 2,14-17. [Benito, *Regla* 53,1 y 15](https://www.gutenberg.org/ebooks/50040), texto del capítulo leído completo. Hospitalidad monástica como testimonio, no un modelo legislativo contemporáneo. |
 | 91 · Celibato | CIC 1579–1580; Mt 8,14-15; 1 Tm 3,2; Mt 19,12; 1 Co 7,32-35. [Crisóstomo, *Homilía* 10 sobre la Primera a Timoteo](https://www.newadvent.org/fathers/230610.htm), comentario a 1 Tm 3,2: discusión antigua, sin confundirla con la disciplina episcopal oriental vigente. |
 
+
+### Preguntas 92–101
+
+| Pregunta | Fuentes cotejadas y límites |
+|---|---|
+| 92 · Vida consagrada | CIC 915–916 y 931; Mt 19,10-12; 1 Co 7,7-8.32-35; Ef 5,25-32. Benito, *Regla* 58,9-16, capítulo leído completo en Gutenberg 50040: proceso previo a profesión, sin elevar sus detalles disciplinarios antiguos a normas actuales. [Canon 601](https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib2-cann573-606_en.html): superiores legítimos y constituciones; no obediencia abusiva. |
+| 93 · Ordenación de mujeres | CIC 1577–1578; Mc 3,13-19; Jn 20,17-18; Rm 16,1-4. [*Ordinatio sacerdotalis* 3–4](https://www.vatican.va/content/john-paul-ii/en/apost_letters/1994/documents/hf_jp-ii_apl_19940522_ordinatio-sacerdotalis.html), leído el contexto: carácter definitivo y distinción de dignidad. [*Suplemento de la Suma*, q. 39, a. 1](https://www.newadvent.org/summa/5039.htm), artículo leído: se reconoce expresamente su argumento medieval de subordinación, sin repetirlo como prueba de inferioridad humana. Se cita el Suplemento como tal, sin fingir que es una redacción moderna del Magisterio ni una obra terminada por Tomás. |
+| 94 · Familias, mujeres y escucha | CIC 907 y 911; [canon 212 §3](https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib2-cann208-329_en.html), leído completo; Hch 18,24-26; Rm 16,1-4; 1 Co 12,12-20. [Crisóstomo, *Homilía* 31 sobre Romanos, comentario a Rm 16,6](https://www.newadvent.org/fathers/210231.htm): María, Priscila y enseñanza, sin trasladar su disciplina de presidencia pública a cada cargo contemporáneo. |
+| 95 · Patrimonio | CIC 2403–2404; [cánones 1254 §2 y 1291](https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib5-cann1254-1310_en.html); Lc 12,15; Hch 4,32-35; Mt 25,35-40. [Ambrosio, *Sobre los deberes* II,28,137–139](https://www.newadvent.org/fathers/34012.htm): empleo de oro y vasos para rescatar cautivos. No se inventan cifras patrimoniales ni se afirma que cada bien sea invendible. |
+| 96 · Corrupción financiera | CIC 2409, 2454 y 827; cánones 1284 y 1287, leídos en el enlace anterior, con distinción de sus destinatarios y del derecho particular. Mt 21,12-13; 1 Tm 6,9-10; St 5,1-6. Crisóstomo, *Homilías sobre Mateo* 50,4: origen honesto de los dones. No se formulan acusaciones contemporáneas sin pruebas. |
+| 97 · Título de padre | CIC 239 y 1547; Mt 23,8-12; 1 Co 4,14-15; Flm 10. [Crisóstomo, *Homilías sobre Mateo* 72,3](https://www.newadvent.org/fathers/200172.htm), leído el comentario exacto: paternidad suprema de Dios y humildad; no autoridad humana ilimitada. |
+| 98 · Comunidad, templo y ministerio | CIC 1373, 1180 y 1547; Mt 18,19-20; Hch 2,42; Hch 14,23; 1 Co 11,23-26. Justino, *Primera Apología* 67, enlace anterior. **Hch 14,23 en numeración habitual corresponde aquí a 14,22 en la Douay-Rheims consultada**; se comprobó el contenido de la designación de responsables, no solo un número. Se distinguen los modos de presencia de Cristo. |
+| 99 · Incoherencia de ministros | CIC 2039, 1782 y 907; canon 212 §3; Mt 23,1-4; Rm 2,21-24; 1 P 5,2-3. Crisóstomo, *Homilías sobre Mateo* 72,1, mismo enlace: responsabilidad agravada del maestro incoherente. No se deduce de ese texto una dispensa de protección o de rendición de cuentas. |
+| 100 · Fidelidad de la Iglesia | CIC 823 y 827; Mc 10,42-45; Jn 13,12-17; Ap 2,1-7; Ef 5,25-27. [Agustín, *La doctrina cristiana* I,35,39 y I,36,40–41](https://www.newadvent.org/fathers/12021.htm), cotejadas también las divisiones de capítulo: caridad y corrección de lecturas erróneas. No se inventa un juicio hipotético de Jesús ni una Iglesia ideal que excuse los daños de la comunidad real. |
+| 101 · Repetición al orar | CIC 2700–2703, 2708 y 2729; Mt 6,7-13; Lc 11,1-4; Mt 26,44. [Agustín, *Carta* 130 a Proba, 10,19–20](https://www.newadvent.org/fathers/1102130.htm): deseo perseverante, brevedad y atención; no se le atribuye una exposición del Rosario posterior. La distracción involuntaria no se presenta como invalidez de la oración. |
+
 ## Precisiones doctrinales y pastorales
 
 - La Misa hace presente el único sacrificio; no añade otra muerte o una redención independiente.
@@ -101,4 +116,4 @@ No se atribuyen edades no narradas en los bautismos domésticos, una ubicación 
 
 Tampoco se presenta la interpretación de Rm 1 como una discusión resuelta por la sola mención de un versículo ni se identifica atracción con acto voluntario. Se mantiene la enseñanza moral y la exigencia de respeto a las personas, sin promesas de cambiar orientación ni juicios de culpabilidad individual.
 
-No se requiere cambiar el contrato. El coordinador puede integrar este prefijo mientras continúan las preguntas restantes y valorar las cuatro correcciones del texto base señaladas arriba.
+No se requiere cambiar el contrato. El coordinador puede integrar el archivo completo y valorar las cuatro correcciones del texto base señaladas arriba. La revisión intermedia indicaba que esperaría a tener las cincuenta entradas para ejecutar el test de contenido 1–101; aquí no se afirma haber ejecutado esa integración ni una compilación Android.
