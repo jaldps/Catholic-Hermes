@@ -39,6 +39,9 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.data.models.QuestionDeeper
+import com.example.data.repository.QuestionDeeperCatalog
+import com.example.ui.design.AppChip
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
@@ -634,6 +637,7 @@ private fun QuestionPage(
     val progressLabel = language.tr(
         "Pregunta ${index + 1} de $total", "Question ${index + 1} of $total", "Pergunta ${index + 1} de $total"
     )
+    val deeper = remember(question.number) { QuestionDeeperCatalog.default.byNumber[question.number] }
     val prayerId = qaRelatedPrayerId(question.number)
     val prayerName = repository.vaticanPrayers.firstOrNull { it.id == prayerId }?.title?.get(language)
 
@@ -650,6 +654,9 @@ private fun QuestionPage(
         }
         item(key = "answer") {
             ReadingParagraphs(answerText, lead = true)
+        }
+        if (deeper != null) {
+            item(key = "deeper") { QuestionDeeperBlock(deeper, language) }
         }
 
         if (foundationText.isNotBlank()) {
@@ -995,5 +1002,52 @@ private fun SourceBlock(label: String, body: String) {
         Text(label, style = styles.headline, color = design.palette.textPrimary, modifier = Modifier.semantics { heading() })
         Spacer(Modifier.height(6.dp))
         Text(body, style = styles.callout, color = design.palette.textSecondary)
+    }
+}
+
+/** "Go deeper": collapsed shows the synthesis and a "read more" capsule; expanded shows all seven sections and sources. */
+@Composable
+internal fun QuestionDeeperBlock(deeper: QuestionDeeper, language: AppLanguage) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    var expanded by rememberSaveable(deeper.number) { mutableStateOf(false) }
+    val sections = listOf(
+        Triple("explanation", language.tr("Explicación", "Explanation", "Explicação"), deeper.explanation),
+        Triple("scripture", language.tr("Lo que dice la Escritura", "What Scripture says", "O que diz a Escritura"), deeper.scripture),
+        Triple("tradition", language.tr("Padres y Tradición", "Fathers and Tradition", "Padres e Tradição"), deeper.tradition),
+        Triple("magisterium", language.tr("Magisterio", "Magisterium", "Magistério"), deeper.magisterium),
+        Triple("objection", language.tr("La objeción más fuerte", "The strongest objection", "A objeção mais forte"), deeper.objection),
+        Triple("analogy", language.tr("Para entenderlo", "An image to understand it", "Para entender"), deeper.analogy),
+        Triple("synthesis", language.tr("En síntesis", "In summary", "Em síntese"), deeper.synthesis)
+    ).filter { it.third.get(language).isNotBlank() }
+    Column(Modifier.fillMaxWidth().testTag("qa_deeper")) {
+        SectionHeader(language.tr("Profundizar", "Go deeper", "Aprofundar"), topGap = 36.dp)
+        val shown = if (expanded) sections else sections.filter { it.first == "synthesis" }
+        shown.forEach { (key, title, text) ->
+            Column(Modifier.fillMaxWidth().testTag("qa_deeper_$key")) {
+                if (expanded) {
+                    Text(
+                        title, style = styles.headline, color = design.palette.textPrimary,
+                        modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(top = 8.dp, bottom = 6.dp)
+                            .semantics { heading() }
+                    )
+                }
+                ReadingParagraphs(text.get(language))
+                Spacer(Modifier.height(16.dp))
+            }
+        }
+        if (expanded && deeper.sources.isNotEmpty()) {
+            Column(Modifier.testTag("qa_deeper_sources")) {
+                deeper.sources.forEach { FootnoteText(it) }
+            }
+        }
+        Box(Modifier.padding(horizontal = design.spacing.gutter).padding(top = 4.dp)) {
+            AppChip(
+                label = if (expanded) language.tr("Leer menos", "Read less", "Ler menos") else language.tr("Leer más", "Read more", "Ler mais"),
+                selected = false,
+                onClick = { expanded = !expanded },
+                modifier = Modifier.testTag("qa_deeper_expand")
+            )
+        }
     }
 }
