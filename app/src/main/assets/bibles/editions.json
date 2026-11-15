@@ -1,0 +1,12 @@
+{"editions":[
+{"id":"bundled-es","name":"Biblia Platense","language":"es","bundled":true,"description":{"es":"Traducción católica · 73 libros","en":"Catholic translation · 73 books","pt":"Tradução católica · 73 livros"}},
+{"id":"es.eldpdd","name":"El Libro del Pueblo de Dios","language":"es","description":{"es":"Traducción católica · 73 libros","en":"Catholic translation · 73 books","pt":"Tradução católica · 73 livros"}},
+{"id":"es.lbl","name":"La Biblia Latinoamericana","language":"es","description":{"es":"Traducción católica · 73 libros","en":"Catholic translation · 73 books","pt":"Tradução católica · 73 livros"}},
+{"id":"es.lsb","name":"La Santa Biblia","language":"es","description":{"es":"Traducción católica · 73 libros","en":"Catholic translation · 73 books","pt":"Tradução católica · 73 livros"}},
+{"id":"bundled-en","name":"Douay-Rheims-Challoner","language":"en","bundled":true,"description":{"es":"Traducción católica clásica · 73 libros","en":"Classic Catholic translation · 73 books","pt":"Tradução católica clássica · 73 livros"}},
+{"id":"en.drbcr","name":"Douay-Rheims (Challoner Revision)","language":"en","description":{"es":"Traducción católica clásica · 73 libros","en":"Classic Catholic translation · 73 books","pt":"Tradução católica clássica · 73 livros"}},
+{"id":"en.ccb","name":"Christian Community Bible","language":"en","description":{"es":"Traducción católica · 73 libros","en":"Catholic translation · 73 books","pt":"Tradução católica · 73 livros"}},
+{"id":"bundled-pt","name":"Matos Soares","language":"pt","bundled":true,"description":{"es":"Traducción católica · 73 libros","en":"Catholic translation · 73 books","pt":"Tradução católica · 73 livros"}},
+{"id":"pt.bs","name":"Bíblia Sagrada","language":"pt","description":{"es":"Traducción católica · 73 libros","en":"Catholic translation · 73 books","pt":"Tradução católica · 73 livros"}},
+{"id":"la.nvbse","name":"Nova Vulgata","language":"la","description":{"es":"Texto latino oficial de la Iglesia · 73 libros","en":"Official Latin text of the Church · 73 books","pt":"Texto latino oficial da Igreja · 73 livros"}}
+]}
