@@ -17,15 +17,15 @@
       "pt": "Symbolum Apostolicum; textos litúrgicos do Batismo e do Terço."
     },
     "approval": {
-      "es": "Profesión de fe usada en el Bautismo y al inicio del Rosario; el Catecismo de la Iglesia Católica la expone en la primera parte.",
-      "en": "Profession of faith used at Baptism and at the start of the Rosary; the Catechism of the Catholic Church explains it in its first part.",
-      "pt": "Profissão de fé usada no Batismo e no início do Terço; o Catecismo da Igreja Católica expõe-na na primeira parte."
+      "es": "Concesión parcial del Enchiridion 1999 por el testimonio público de fe; profesión de fe en el Bautismo y al inicio del Rosario.",
+      "en": "Partial indulgence, Enchiridion 1999, for public testimony of faith; profession of faith at Baptism and at the start of the Rosary.",
+      "pt": "Indulgência parcial do Enchiridion 1999 pelo testemunho público de fé; profissão de fé no Batismo e no início do Terço."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -52,17 +52,17 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto evangélico; traducción propia.",
-      "en": "Gospel text; translation ours.",
-      "pt": "Texto evangélico; tradução nossa."
+      "es": "Texto evangélico de dominio público.",
+      "en": "Gospel text in the public domain.",
+      "pt": "Texto evangélico de domínio público."
     }
   },
   {
     "prayerId": "hail_mary",
     "history": {
-      "es": "El Avemaría junta dos textos del Evangelio: el saludo del ángel Gabriel a María en la Anunciación (Lc 1,28) y la alabanza de Isabel, inspirada por el Espíritu Santo, en la Visitación (Lc 1,42). La primera parte se reza desde los primeros siglos; la segunda, «Santa María, Madre de Dios, ruega por nosotros, pecadores...», se generalizó hacia el siglo XVI y quedó incorporada al Breviario de Pío V en 1568. El concilio de Éfeso (431) proclamó a María Theotokos, «Madre de Dios», lo que consolidó la oración. Es el centro del Rosario y del Ángelus, y la Iglesia la repite como confianza en la intercesión materna.",
-      "en": "The Hail Mary joins two Gospel texts: the angel Gabriel's greeting to Mary at the Annunciation (Luke 1:28) and Elizabeth's praise, inspired by the Holy Spirit, at the Visitation (Luke 1:42). The first part was prayed from the earliest centuries; the second, \"Holy Mary, Mother of God, pray for us sinners...\", became general around the 16th century and was incorporated into the Breviary of Pius V in 1568. The Council of Ephesus (431) proclaimed Mary Theotokos, \"Mother of God\", which strengthened the prayer. It is the heart of the Rosary and the Angelus, and the Church repeats it in trust in Mary's motherly intercession.",
-      "pt": "A Ave Maria junta dois textos do Evangelho: a saudação do anjo Gabriel a Maria na Anunciação (Lc 1,28) e o louvor de Isabel, inspirado pelo Espírito Santo, na Visitação (Lc 1,42). A primeira parte reza-se desde os primeiros séculos; a segunda, «Santa Maria, Mãe de Deus, rogai por nós pecadores...», generalizou-se pelo século XVI e ficou incorporada no Breviário de Pio V em 1568. O Concílio de Éfeso (431) proclamou Maria Theotokos, «Mãe de Deus», o que consolidou a oração. É o centro do Terço e do Angelus, e a Igreja repete-a confiando na intercessão materna."
+      "es": "El Avemaría junta dos textos del Evangelio: el saludo del ángel Gabriel a María en la Anunciación (Lc 1,28) y la alabanza de Isabel, inspirada por el Espíritu Santo, en la Visitación (Lc 1,42). La primera parte se reza desde los primeros siglos; la segunda, «Santa María, Madre de Dios, ruega por nosotros, pecadores...», se añadió después y la forma completa quedó recogida en el Breviario Romano de 1568. El concilio de Éfeso (431) definió que María es Theotokos, «Madre de Dios», título que la oración recoge; no fijó la forma de la oración. Es el centro del Rosario y del Ángelus, y la Iglesia la repite como confianza en la intercesión materna.",
+      "en": "The Hail Mary joins two Gospel texts: the angel Gabriel's greeting to Mary at the Annunciation (Luke 1:28) and Elizabeth's praise, inspired by the Holy Spirit, at the Visitation (Luke 1:42). The first part was prayed from the earliest centuries; the second, \"Holy Mary, Mother of God, pray for us sinners...\", was added later, and the complete form was included in the Roman Breviary of 1568. The Council of Ephesus (431) defined that Mary is Theotokos, \"Mother of God\", a title the prayer includes; it did not fix the form of the prayer. It is the heart of the Rosary and the Angelus, and the Church repeats it in trust in Mary's motherly intercession.",
+      "pt": "A Ave Maria junta dois textos do Evangelho: a saudação do anjo Gabriel a Maria na Anunciação (Lc 1,28) e o louvor de Isabel, inspirado pelo Espírito Santo, na Visitação (Lc 1,42). A primeira parte reza-se desde os primeiros séculos; a segunda, «Santa Maria, Mãe de Deus, rogai por nós pecadores...», foi acrescentada depois, e a forma completa ficou recolhida no Breviário Romano de 1568. O Concílio de Éfeso (431) definiu que Maria é Theotokos, «Mãe de Deus», título que a oração recolhe; não fixou a forma da oração. É o centro do Terço e do Angelus, e a Igreja repete-a confiando na intercessão materna."
     },
     "instructions": {
       "es": "Se reza de pie o de rodillas, con las manos juntas. En el Rosario se dice diez veces en cada decena, meditando cada misterio; quien guía puede anunciar el misterio y todos recitan juntos. En el Ángelus se intercalan tres Avemarías entre los versos. En familia puede rezarse de rodillas al comenzar o terminar el día. No hace falta prisa: el sentido está en escuchar a María y confiar en su intercesión.",
@@ -70,20 +70,20 @@
       "pt": "Reza-se de pé ou de joelhos, com as mãos unidas. No Terço, diz-se dez vezes em cada dezena, meditando no mistério; quem guia pode anunciar o mistério e todos recitam em conjunto. No Angelus, intercalam-se três Ave-Marias entre os versos. Em família, pode rezar-se de joelhos ao começar ou terminar o dia. Não é preciso pressa: o sentido está em escutar Maria e confiar na sua intercessão."
     },
     "source": {
-      "es": "Lc 1,28 y 1,42; Breviario de Pío V (1568).",
-      "en": "Luke 1:28 and 1:42; Breviary of Pius V (1568).",
-      "pt": "Lc 1,28 e 1,42; Breviário de Pio V (1568)."
+      "es": "Lc 1,28 y 1,42; Breviario Romano (1568); Enciclopedia Católica (Hail Mary).",
+      "en": "Luke 1:28 and 1:42; Roman Breviary (1568); Catholic Encyclopedia (Hail Mary).",
+      "pt": "Lc 1,28 e 1,42; Breviário Romano (1568); Enciclopédia Católica (Hail Mary)."
     },
     "approval": {
-      "es": "Oración central del Rosario y del Ángelus; usada en la Liturgia de las Horas y en el Breviario.",
-      "en": "Central prayer of the Rosary and the Angelus; used in the Liturgy of the Hours and the Breviary.",
-      "pt": "Oração central do Terço e do Angelus; usada na Liturgia das Horas e no Breviário."
+      "es": "Oración central del Rosario y del Ángelus; su forma completa quedó recogida en el Breviario Romano de 1568.",
+      "en": "Central prayer of the Rosary and the Angelus; its complete form was included in the Roman Breviary of 1568.",
+      "pt": "Oração central do Terço e do Angelus; a sua forma completa ficou recolhida no Breviário Romano de 1568."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto bíblico y tradicional; traducción propia.",
-      "en": "Biblical and traditional text; translation ours.",
-      "pt": "Texto bíblico e tradicional; tradução nossa."
+      "es": "Texto bíblico y tradicional de dominio público.",
+      "en": "Biblical and traditional text in the public domain.",
+      "pt": "Texto bíblico e tradicional de domínio público."
     }
   },
   {
@@ -104,15 +104,15 @@
       "pt": "Liturgia das Horas; Missal Romano (doxologia)."
     },
     "approval": {
-      "es": "Recitado en la Liturgia de las Horas y en el Rosario.",
-      "en": "Recited in the Liturgy of the Hours and the Rosary.",
-      "pt": "Recitado na Liturgia das Horas e no Terço."
+      "es": "Recitado en la Liturgia de las Horas y al final de cada decena del Rosario.",
+      "en": "Recited in the Liturgy of the Hours and at the end of each decade of the Rosary.",
+      "pt": "Recitado na Liturgia das Horas e no fim de cada dezena do Terço."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico tradicional de dominio público.",
-      "en": "Traditional liturgical text in the public domain.",
-      "pt": "Texto litúrgico tradicional de domínio público."
+      "es": "Texto litúrgico de dominio público.",
+      "en": "Liturgical text in the public domain.",
+      "pt": "Texto litúrgico de domínio público."
     }
   },
   {
@@ -139,9 +139,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico tradicional de dominio público.",
-      "en": "Traditional liturgical text in the public domain.",
-      "pt": "Texto litúrgico tradicional de domínio público."
+      "es": "Texto litúrgico de dominio público.",
+      "en": "Liturgical text in the public domain.",
+      "pt": "Texto litúrgico de domínio público."
     }
   },
   {
@@ -168,9 +168,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico tradicional de dominio público.",
-      "en": "Traditional liturgical text in the public domain.",
-      "pt": "Texto litúrgico tradicional de domínio público."
+      "es": "Texto litúrgico de dominio público.",
+      "en": "Liturgical text in the public domain.",
+      "pt": "Texto litúrgico de domínio público."
     }
   },
   {
@@ -220,15 +220,15 @@
       "pt": "Rito da Penitência; catequese tradicional."
     },
     "approval": {
-      "es": "Recomendado para el examen de conciencia y el sacramento de la Reconciliación.",
-      "en": "Recommended for the examination of conscience and the Sacrament of Reconciliation.",
-      "pt": "Recomendado para o exame de consciência e o sacramento da Reconciliação."
+      "es": "Concesión parcial del Enchiridion 1999, concesión 9 (examen de conciencia y acto de contrición).",
+      "en": "Partial indulgence, Enchiridion 1999, grant 9 (examination of conscience and act of contrition).",
+      "pt": "Indulgência parcial do Enchiridion 1999, concessão 9 (exame de consciência e ato de contrição)."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -255,9 +255,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -284,9 +284,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -313,9 +313,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -342,9 +342,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -371,9 +371,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -400,9 +400,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico tradicional de dominio público.",
-      "en": "Traditional liturgical text in the public domain.",
-      "pt": "Texto litúrgico tradicional de domínio público."
+      "es": "Texto litúrgico de dominio público.",
+      "en": "Liturgical text in the public domain.",
+      "pt": "Texto litúrgico de domínio público."
     }
   },
   {
@@ -423,15 +423,15 @@
       "pt": "Ángele Dei; devocionários tradicionais."
     },
     "approval": {
-      "es": "Oración de la piedad tradicional recomendada para niños y familias.",
-      "en": "Prayer of traditional piety recommended for children and families.",
-      "pt": "Oração da piedade tradicional recomendada para crianças e famílias."
+      "es": "Concesión parcial del Enchiridion 1999, concesión 18 (preces al ángel custodio).",
+      "en": "Partial indulgence, Enchiridion 1999, grant 18 (prayers to the guardian angel).",
+      "pt": "Indulgência parcial do Enchiridion 1999, concessão 18 (preces ao anjo da guarda)."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -458,9 +458,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Composición devocional de los siglos XIX-XX; edición no identificada.",
+      "en": "Devotional composition of the 19th-20th centuries; edition not identified.",
+      "pt": "Composição devocional dos séculos XIX-XX; edição não identificada."
     }
   },
   {
@@ -487,17 +487,17 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto devocional tradicional; traducción propia.",
-      "en": "Traditional devotional text; translation ours.",
-      "pt": "Texto devocional tradicional; tradução nossa."
+      "es": "Composición devocional; edición no identificada.",
+      "en": "Devotional composition; edition not identified.",
+      "pt": "Composição devocional; edição não identificada."
     }
   },
   {
     "prayerId": "angelus",
     "history": {
-      "es": "El Ángelus es la oración conmemorativa de la Anunciación del ángel a María. Nació en el uso de las campanas al atardecer, que desde el siglo XIII llamaban a rezar; la forma actual, con los tres versos y el «Dios te salve María», se fijó hacia el siglo XVI y se extendió por toda la Iglesia. En tiempo pascual se sustituye por el «Regina caeli». La tradición le asocia una antigua indulgencia papal y el rezo al mediodía. La Iglesia lo recomienda como recuerdo cotidiano del misterio de la Encarnación.",
-      "en": "The Angelus is the prayer commemorating the Annunciation to Mary. It grew from the ringing of bells at dusk, which since the 13th century called the faithful to prayer; its present form, with three versicles and the \"Hail Mary\", was fixed around the 16th century and spread through the whole Church. In Easter time it is replaced by the \"Regina caeli\". Tradition associates it with an ancient papal indulgence and with the noon recitation. The Church recommends it as a daily remembrance of the mystery of the Incarnation.",
-      "pt": "O Angelus é a oração comemorativa da Anunciação do anjo a Maria. Nasceu do uso dos sinos ao entardecer, que desde o século XIII chamavam a rezar; a forma atual, com três versos e a «Ave Maria», fixou-se pelo século XVI e difundiu-se por toda a Igreja. No tempo pascal, substitui-se pelo «Regina caeli». A tradição associa-o a uma antiga indulgência papal e ao rezo ao meio-dia. A Igreja recomenda-o como memória quotidiana do mistério da Encarnação."
+      "es": "El Ángelus es la oración conmemorativa de la Anunciación del ángel a María. El toque de campanas al atardecer se documenta desde el siglo XIII y la práctica de rezar tres Avemarías a esa hora se generalizó en la primera mitad del XIV; los versículos actuales aparecen en un catecismo impreso en Venecia en 1560 y la forma plena no se documenta antes de 1612. En tiempo pascual se sustituye por el «Regina caeli». La tradición le asocia una indulgencia concedida por Benedicto XIII (1724) y modificada por León XIII (1884). La Iglesia lo recomienda como recuerdo cotidiano del misterio de la Encarnación.",
+      "en": "The Angelus is the prayer commemorating the Annunciation to Mary. The ringing of bells at dusk is documented from the 13th century, and the practice of praying three Hail Marys at that hour became general in the first half of the 14th; the present versicles appear in a catechism printed at Venice in 1560, and the full form is not documented before 1612. In Easter time it is replaced by the Regina caeli. Tradition associates it with an indulgence granted by Benedict XIII (1724) and modified by Leo XIII (1884). The Church recommends it as a daily remembrance of the mystery of the Incarnation.",
+      "pt": "O Angelus é a oração comemorativa da Anunciação do anjo a Maria. O toque dos sinos ao entardecer documenta-se desde o século XIII, e a prática de rezar três Ave-Marias a essa hora generalizou-se na primeira metade do XIV; os versos atuais aparecem num catecismo impresso em Veneza em 1560, e a forma plena não se documenta antes de 1612. No tempo pascal, substitui-se pelo «Regina caeli». A tradição associa-o a uma indulgência concedida por Bento XIII (1724) e modificada por Leão XIII (1884). A Igreja recomenda-o como memória quotidiana do mistério da Encarnação."
     },
     "instructions": {
       "es": "Se reza de pie, a las seis de la mañana, al mediodía y a las seis de la tarde; en tiempo pascual, el «Regina caeli» ocupa su lugar. Quien guía dice el versículo «V/. El Ángel del Señor anunció a María» y todos responden «R/. Y concibió por obra del Espíritu Santo»; entre verso y verso se reza un Avemaría. Se concluye con la oración «Infunde, Señor, tu gracia...». Al oír las campanas, basta detenerse un momento y recitarla con devoción.",
@@ -505,20 +505,20 @@
       "pt": "Reza-se de pé, às seis da manhã, ao meio-dia e às seis da tarde; no tempo pascal, o «Regina caeli» ocupa o seu lugar. Quem guia diz o verso «V/. O Anjo do Senhor anunciou a Maria» e todos respondem «R/. E ela concebeu do Espírito Santo»; entre verso e verso reza-se uma Ave-Maria. Conclui-se com a oração «Derramai, ó Deus, a vossa graça...». Ao ouvir os sinos, basta parar um momento e recitá-la com devoção."
     },
     "source": {
-      "es": "Lc 1,26-38; Misal Romano y Liturgia de las Horas (Ángelus).",
-      "en": "Luke 1:26-38; Roman Missal and Liturgy of the Hours (Angelus).",
-      "pt": "Lc 1,26-38; Missal Romano e Liturgia das Horas (Angelus)."
+      "es": "Lc 1,26-38; Enciclopedia Católica (Angelus); Enchiridion 1999, concesión 17 §2, 2°.",
+      "en": "Luke 1:26-38; Catholic Encyclopedia (Angelus); Enchiridion 1999, grant 17 §2, 2°.",
+      "pt": "Lc 1,26-38; Enciclopédia Católica (Angelus); Enchiridion 1999, concessão 17 §2, 2°."
     },
     "approval": {
-      "es": "Recitado en la Iglesia como memoria de la Anunciación.",
-      "en": "Recited in the Church as a remembrance of the Annunciation.",
-      "pt": "Recitado na Igreja como memória da Anunciação."
+      "es": "Concesión parcial del Enchiridion 1999, concesión 17 §2, 2° (Angelus al alba, mediodía y tarde).",
+      "en": "Partial indulgence, Enchiridion 1999, grant 17 §2, 2° (Angelus at dawn, noon and evening).",
+      "pt": "Indulgência parcial do Enchiridion 1999, concessão 17 §2, 2° (Angelus ao amanhecer, meio-dia e tarde)."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico tradicional de dominio público.",
-      "en": "Traditional liturgical text in the public domain.",
-      "pt": "Texto litúrgico tradicional de domínio público."
+      "es": "Texto litúrgico de dominio público.",
+      "en": "Liturgical text in the public domain.",
+      "pt": "Texto litúrgico de domínio público."
     }
   },
   {
@@ -539,23 +539,23 @@
       "pt": "Liturgia das Horas, Completas (antífona pascal)."
     },
     "approval": {
-      "es": "Antífona del tiempo pascual en la Liturgia de las Horas.",
-      "en": "Easter-season antiphon in the Liturgy of the Hours.",
-      "pt": "Antífona do tempo pascal na Liturgia das Horas."
+      "es": "Concesión parcial del Enchiridion 1999, concesión 17 §2, 2° (Regina caeli en tiempo pascual).",
+      "en": "Partial indulgence, Enchiridion 1999, grant 17 §2, 2° (Regina caeli in Easter time).",
+      "pt": "Indulgência parcial do Enchiridion 1999, concessão 17 §2, 2° (Regina caeli no tempo pascal)."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico tradicional de dominio público.",
-      "en": "Traditional liturgical text in the public domain.",
-      "pt": "Texto litúrgico tradicional de domínio público."
+      "es": "Texto litúrgico de dominio público.",
+      "en": "Liturgical text in the public domain.",
+      "pt": "Texto litúrgico de domínio público."
     }
   },
   {
     "prayerId": "salve_regina",
     "history": {
-      "es": "La «Salve Regina» es la más célebre de las cuatro antífonas marianas y una de las oraciones más difundidas de la Iglesia. La tradición la atribuye a Hermann de Reichenau (siglo XI), aunque su autor exacto no está probado; se cantó en la liturgia monástica desde la Edad Media y quedó como antífona del tiempo ordinario y conclusión del Rosario. Su texto, inspirado en las súplicas de los desterrados hijos de Eva, expresa la esperanza en la intercesión de María. La Iglesia la reza al final del Rosario, en la Liturgia de las Horas y como acción de gracias.",
-      "en": "The \"Salve Regina\" is the most famous of the four Marian antiphons and one of the most widespread prayers of the Church. Tradition attributes it to Herman of Reichenau (11th century), though its exact author is unproven; it was sung in monastic liturgy from the Middle Ages and became the antiphon of Ordinary Time and the close of the Rosary. Its text, inspired by the pleas of the banished children of Eve, expresses hope in Mary's intercession. The Church prays it at the end of the Rosary, in the Liturgy of the Hours and as thanksgiving.",
-      "pt": "A «Salve Rainha» é a mais célebre das quatro antífonas marianas e uma das orações mais difundidas da Igreja. A tradição atribui-a a Hermann de Reichenau (século XI), embora o autor exato não esteja provado; cantou-se na liturgia monástica desde a Idade Média e ficou como antífona do tempo ordinário e conclusão do Terço. O seu texto, inspirado nas súplicas dos degredados filhos de Eva, exprime a esperança na intercessão de Maria. A Igreja reza-a no fim do Terço, na Liturgia das Horas e como ação de graças."
+      "es": "La «Salve Regina» es la más célebre de las cuatro antífonas marianas y una de las oraciones más difundidas de la Iglesia. Su autoría se discute: la tradición la asigna a Hermann de Reichenau (Hermann Contractus), pero también se ha atribuido a Adhémar de Le Puy y a otros; la Iglesia no ha fijado un autor. Se cantó en la liturgia monástica desde la Edad Media y quedó como antífona del tiempo ordinario y conclusión del Rosario. Su texto, inspirado en las súplicas de los desterrados hijos de Eva, expresa la esperanza en la intercesión de María. La Iglesia la reza al final del Rosario y en la Liturgia de las Horas (Completas).",
+      "en": "The Salve Regina is the most famous of the four Marian antiphons and one of the most widespread prayers of the Church. Its authorship is disputed: tradition assigns it to Herman of Reichenau (Hermann Contractus), but it has also been attributed to Adhémar of Le Puy and others; the Church has not fixed an author. It was sung in monastic liturgy from the Middle Ages and became the antiphon of Ordinary Time and the close of the Rosary. Its text, inspired by the pleas of the banished children of Eve, expresses hope in Mary's intercession. The Church prays it at the end of the Rosary and in the Liturgy of the Hours (Compline).",
+      "pt": "A «Salve Rainha» é a mais célebre das quatro antífonas marianas e uma das orações mais difundidas da Igreja. A sua autoria discute-se: a tradição atribui-a a Hermann de Reichenau (Hermann Contractus), mas também foi atribuída a Adhémar de Le Puy e a outros; a Igreja não fixou autor. Cantou-se na liturgia monástica desde a Idade Média e ficou como antífona do tempo ordinário e conclusão do Terço. O seu texto, inspirado nas súplicas dos degredados filhos de Eva, exprime a esperança na intercessão de Maria. A Igreja reza-a no fim do Terço e na Liturgia das Horas (Completas)."
     },
     "instructions": {
       "es": "Se reza de pie, al final del Rosario, en la Liturgia de las Horas y como acción de gracias. Quien guía dice la primera parte y todos responden «Ruega por nosotros, Santa Madre de Dios...»; a continuación se reza la oración final. En mayo y octubre es habitual en las devociones marianas. El tono es suplicante y esperanzado.",
@@ -563,28 +563,28 @@
       "pt": "Reza-se de pé, no fim do Terço, na Liturgia das Horas e como ação de graças. Quem guia diz a primeira parte e todos respondem «Rogai por nós, Santa Mãe de Deus...»; a seguir reza-se a oração final. Em maio e outubro é habitual nas devoções marianas. O tom é suplicante e cheio de esperança."
     },
     "source": {
-      "es": "Liturgia de las Horas, Completas (antífona mariana); Misal Romano.",
-      "en": "Liturgy of the Hours, Compline (Marian antiphon); Roman Missal.",
-      "pt": "Liturgia das Horas, Completas (antífona mariana); Missal Romano."
+      "es": "Liturgia de las Horas, Completas (antífona mariana); Enciclopedia Católica (Salve Regina); Enchiridion 1999, concesión 17 §2, 3°.",
+      "en": "Liturgy of the Hours, Compline (Marian antiphon); Catholic Encyclopedia (Salve Regina); Enchiridion 1999, grant 17 §2, 3°.",
+      "pt": "Liturgia das Horas, Completas (antífona mariana); Enciclopédia Católica (Salve Regina); Enchiridion 1999, concessão 17 §2, 3°."
     },
     "approval": {
-      "es": "Antífona mariana del tiempo ordinario; rezada al final del Rosario.",
-      "en": "Marian antiphon of Ordinary Time; prayed at the end of the Rosary.",
-      "pt": "Antífona mariana do tempo ordinário; rezada no fim do Terço."
+      "es": "Antífona mariana en la Liturgia de las Horas (Completas); concesión parcial del Enchiridion 1999, concesión 17 §2, 3°.",
+      "en": "Marian antiphon in the Liturgy of the Hours (Compline); partial indulgence, Enchiridion 1999, grant 17 §2, 3°.",
+      "pt": "Antífona mariana na Liturgia das Horas (Completas); indulgência parcial do Enchiridion 1999, concessão 17 §2, 3°."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico tradicional de dominio público.",
-      "en": "Traditional liturgical text in the public domain.",
-      "pt": "Texto litúrgico tradicional de domínio público."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
     "prayerId": "memorare",
     "history": {
-      "es": "El «Memorare» es una de las oraciones de confianza mariana más queridas. La tradición lo atribuye a san Bernardo de Claraval, pero el autor real es el sacerdote francés Claude Bernard (siglo XVII), que lo difundió con el título «Acordaos»; por eso se le llama también «oración de san Bernardo» sin certeza documental. Su forma latina, «Memorare, o piissima Virgo Maria...», pasó a los devocionarios y a la piedad popular. La Iglesia la recomienda como oración de confianza en la intercesión de María, especialmente en las pruebas.",
-      "en": "The \"Memorare\" is one of the most beloved prayers of Marian trust. Tradition attributes it to St. Bernard of Clairvaux, but its real author is the French priest Claude Bernard (17th century), who spread it under the title \"Remember\"; for that reason it is also called \"St. Bernard's prayer\" without documentary certainty. Its Latin form, \"Memorare, o piissima Virgo Maria...\", passed into prayer books and popular piety. The Church recommends it as a prayer of trust in Mary's intercession, especially in trials.",
-      "pt": "O «Memorare» é uma das orações de confiança mariana mais queridas. A tradição atribui-a a São Bernardo de Claraval, mas o autor real é o sacerdote francês Claude Bernard (século XVII), que a difundiu com o título «Lembrai-vos»; por isso também se chama «oração de São Bernardo» sem certeza documental. A sua forma latina, «Memorare, o piissima Virgo Maria...», passou aos devocionários e à piedade popular. A Igreja recomenda-a como oração de confiança na intercessão de Maria, especialmente nas provações."
+      "es": "El «Memorare» es una de las oraciones de confianza mariana más queridas. La tradición lo ha atribuido a san Bernardo de Claraval, pero no es su autor: el padre Claude Bernard (1588-1641), el «Pobre Sacerdote», declaró haberlo aprendido de su propio padre y fue quien lo difundió con miles de impresos. El texto se documenta al menos desde el siglo XV como parte de una oración más larga, «Ad sanctitatis tuae pedes, dulcissima Virgo Maria», conservada en el «Hortulus Animae» y el «Antidotarius Animae»; se separó de ella probablemente a finales del siglo XVI y su forma actual se estabilizó en el siglo XIX. El Enchiridion Indulgentiarum (1999) le concede indulgencia parcial.",
+      "en": "The Memorare is one of the most beloved prayers of Marian trust. Tradition long attributed it to St. Bernard of Clairvaux, but he did not compose it: Fr. Claude Bernard (1588-1641), the \"Poor Priest\", said he had learned it from his own father and spread it widely with thousands of leaflets. The text is documented at least from the 15th century as part of a longer prayer, \"Ad sanctitatis tuae pedes, dulcissima Virgo Maria\", preserved in the Hortulus Animae and the Antidotarius Animae; it was separated from it probably in the late 16th century, and its present form was fixed in the 19th century. The Enchiridion Indulgentiarum (1999) grants it a partial indulgence.",
+      "pt": "O «Memorare» é uma das orações de confiança mariana mais queridas. A tradição atribuiu-o longamente a São Bernardo de Claraval, mas ele não o compôs: o pe. Claude Bernard (1588-1641), o «Pobre Sacerdote», declarou tê-lo aprendido do próprio pai e difundiu-o com milhares de impressos. O texto documenta-se pelo menos desde o século XV como parte de uma oração mais longa, «Ad sanctitatis tuae pedes, dulcissima Virgo Maria», conservada no Hortulus Animae e no Antidotarius Animae; separou-se dela provavelmente no fim do século XVI, e a sua forma atual fixou-se no século XIX. O Enchiridion Indulgentiarum (1999) concede-lhe indulgência parcial."
     },
     "instructions": {
       "es": "Se reza de pie o de rodillas, con las manos juntas, en los momentos de prueba o necesidad. No hace falta una forma especial: basta acudir a María con confianza y decir la oración despacio. En grupo, puede rezarse junta; en la enfermedad, es una plegaria habitual. La afirmación de que nadie ha sido desamparado es una invitación a confiar, no una garantía mágica.",
@@ -592,28 +592,28 @@
       "pt": "Reza-se de pé ou de joelhos, com as mãos unidas, nos momentos de provação ou necessidade. Não é precisa uma forma especial: basta recorrer a Maria com confiança e dizer a oração devagar. Em grupo, pode rezar-se em conjunto; na doença, é uma prece habitual. A afirmação de que ninguém ficou desamparado é um convite à confiança, não uma garantia mágica."
     },
     "source": {
-      "es": "Memorare, o piissima Virgo Maria; devocionarios tradicionales.",
-      "en": "Memorare, o piissima Virgo Maria; traditional prayer books.",
-      "pt": "Memorare, o piissima Virgo Maria; devocionários tradicionais."
+      "es": "Ad sanctitatis tuae pedes, dulcissima Virgo Maria (s. XV); Enchiridion Indulgentiarum 1999, concesión 17 §2, 3°.",
+      "en": "Ad sanctitatis tuae pedes, dulcissima Virgo Maria (15th c.); Enchiridion Indulgentiarum 1999, grant 17 §2, 3°.",
+      "pt": "Ad sanctitatis tuae pedes, dulcissima Virgo Maria (séc. XV); Enchiridion Indulgentiarum 1999, concessão 17 §2, 3°."
     },
     "approval": {
-      "es": "Oración de la piedad tradicional; la atribución a san Bernardo es tradicional, no documentada.",
-      "en": "Prayer of traditional piety; the attribution to St. Bernard is traditional, not documented.",
-      "pt": "Oração da piedade tradicional; a atribuição a São Bernardo é tradicional, não documentada."
+      "es": "Concesión parcial del Enchiridion 1999, concesión 17 §2, 3° (preces marianas aprobadas).",
+      "en": "Partial indulgence, Enchiridion 1999, grant 17 §2, 3° (approved Marian prayers).",
+      "pt": "Indulgência parcial do Enchiridion 1999, concessão 17 §2, 3° (preces marianas aprovadas)."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público; forma fijada en el siglo XIX.",
+      "en": "Traditional text in the public domain; form fixed in the 19th century.",
+      "pt": "Texto tradicional de domínio público; forma fixada no século XIX."
     }
   },
   {
     "prayerId": "anima_christi",
     "history": {
-      "es": "El «Anima Christi» es una oración eucarística y cristológica muy difundida. La tradición la atribuye a san Ignacio de Loyola, que la citó en los Ejercicios espirituales, pero el texto es anterior y su autor exacto se desconoce; se leía en la liturgia y en los devocionarios desde el siglo XIV. Invoca el Cuerpo, la Sangre, el Agua y la Pasión de Cristo, y pide refugio en sus llagas. San Ignacio la recomendó después de la comunión, y la Iglesia la considera una de las oraciones de acción de gracias eucarísticas más queridas.",
-      "en": "The \"Anima Christi\" is a widely used Eucharistic and Christological prayer. Tradition attributes it to St. Ignatius of Loyola, who cited it in the Spiritual Exercises, but the text is earlier and its exact author is unknown; it was read in the liturgy and prayer books from the 14th century. It invokes Christ's Body, Blood, Water and Passion, and asks for refuge in his wounds. St. Ignatius recommended it after Communion, and the Church regards it as one of the most beloved prayers of Eucharistic thanksgiving.",
-      "pt": "A «Alma de Cristo» é uma oração eucarística e cristológica muito difundida. A tradição atribui-a a Santo Inácio de Loyola, que a citou nos Exercícios Espirituais, mas o texto é anterior e o autor exato desconhece-se; lia-se na liturgia e nos devocionários desde o século XIV. Invoca o Corpo, o Sangue, a Água e a Paixão de Cristo, e pede refúgio nas suas chagas. Santo Inácio recomendou-a depois da comunhão, e a Igreja considera-a uma das orações de ação de graças eucarísticas mais queridas."
+      "es": "El «Anima Christi» es una oración eucarística y cristológica muy difundida, documentada desde la primera mitad del siglo XIV; fue enriquecida con indulgencias por el papa Juan XXII en 1330. La creencia de que fue compuesta por san Ignacio de Loyola es un error: el texto se halla en manuscritos de unos cien años antes de su nacimiento, como un libro de oraciones de Aviñón de 1387 y una inscripción del Alcázar de Sevilla de la época de Pedro I. Invoca el Cuerpo, la Sangre, el Agua y la Pasión de Cristo, y pide refugio en sus llagas. San Ignacio la citó en los Ejercicios espirituales y la dio a conocer; la Iglesia la considera una de las oraciones de acción de gracias eucarísticas más queridas.",
+      "en": "The Anima Christi is a widely used Eucharistic and Christological prayer, documented from the first half of the 14th century; it was enriched with indulgences by Pope John XXII in 1330. The belief that it was composed by St. Ignatius of Loyola is a mistake: the text is found in manuscripts about a hundred years before his birth, such as a prayer book of Avignon of 1387 and an inscription on the Alcazar of Seville from the time of Peter I. It invokes Christ's Body, Blood, Water and Passion, and asks for refuge in his wounds. St. Ignatius cited it in the Spiritual Exercises and made it known; the Church regards it as one of the most beloved prayers of Eucharistic thanksgiving.",
+      "pt": "A «Alma de Cristo» é uma oração eucarística e cristológica muito difundida, documentada desde a primeira metade do século XIV; foi enriquecida com indulgências pelo papa João XXII em 1330. A crença de que foi composta por Santo Inácio de Loyola é um erro: o texto acha-se em manuscritos de cerca de cem anos antes do seu nascimento, como um livro de orações de Avinhão de 1387 e uma inscrição do Alcázar de Sevilha da época de Pedro I. Invoca o Corpo, o Sangue, a Água e a Paixão de Cristo, e pede refúgio nas suas chagas. Santo Inácio citou-a nos Exercícios Espirituais e difundiu-a; a Igreja considera-a uma das orações de ação de graças eucarísticas mais queridas."
     },
     "instructions": {
       "es": "Se reza de rodillas o de pie, con las manos juntas, después de recibir la comunión o ante el Sagrario. Es propia de la adoración eucarística y de la acción de gracias después de misa. Se dice despacio, contemplando cada invocación; no hace falta repetirla muchas veces. En la comunión espiritual también puede usarse como plegaria de unión con Cristo.",
@@ -621,49 +621,49 @@
       "pt": "Reza-se de joelhos ou de pé, com as mãos unidas, depois de receber a comunhão ou diante do sacrário. É própria da adoração eucarística e da ação de graças depois da missa. Diz-se devagar, contemplando cada invocação; não é preciso repeti-la muitas vezes. Na comunhão espiritual também pode usar-se como prece de união com Cristo."
     },
     "source": {
-      "es": "Anima Christi; Ejercicios espirituales de san Ignacio de Loyola.",
-      "en": "Anima Christi; Spiritual Exercises of St. Ignatius of Loyola.",
-      "pt": "Anima Christi; Exercícios Espirituais de Santo Inácio de Loyola."
+      "es": "Anima Christi (s. XIV); Enciclopedia Católica (Anima Christi); Enchiridion 1999, concesión 8 §2, 2°.",
+      "en": "Anima Christi (14th c.); Catholic Encyclopedia (Anima Christi); Enchiridion 1999, grant 8 §2, 2°.",
+      "pt": "Anima Christi (séc. XIV); Enciclopédia Católica (Anima Christi); Enchiridion 1999, concessão 8 §2, 2°."
     },
     "approval": {
-      "es": "Oración eucarística tradicional recomendada después de la comunión.",
-      "en": "Traditional Eucharistic prayer recommended after Communion.",
-      "pt": "Oração eucarística tradicional recomendada depois da comunhão."
+      "es": "Concesión parcial del Enchiridion 1999, concesión 8 §2, 2° (acción de gracias después de la comunión).",
+      "en": "Partial indulgence, Enchiridion 1999, grant 8 §2, 2° (thanksgiving after Communion).",
+      "pt": "Indulgência parcial do Enchiridion 1999, concessão 8 §2, 2° (ação de graças depois da comunhão)."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
     "prayerId": "st_michael",
     "history": {
-      "es": "La oración a san Miguel fue compuesta por el papa León XIII a finales del siglo XIX, según la tradición después de una visión que le turbó; se mandó rezar después de la Misa rezada hasta 1964, y sigue siendo la oración de protección espiritual más conocida. Invoca al arcángel guerrero del Apocalipsis (Ap 12,7) y pide a Dios que reprima al demonio. La Iglesia la recomienda para el combate espiritual, y san Pío X y otros pontífices la promovieron.",
-      "en": "The prayer to St. Michael was composed by Pope Leo XIII in the late 19th century, according to tradition after a vision that disturbed him; it was ordered to be said after Low Mass until 1964, and remains the best-known prayer of spiritual protection. It invokes the archangel warrior of the Apocalypse (Rev 12:7) and asks God to rebuke the devil. The Church recommends it for spiritual combat, and St. Pius X and other pontiffs promoted it. It is also prayed at the start of the day's activities and in moments of danger.",
-      "pt": "A oração a São Miguel foi composta pelo papa Leão XIII no fim do século XIX, segundo a tradição após uma visão que o perturbou; mandou-se rezá-la depois da Missa rezada até 1964, e continua a ser a oração de proteção espiritual mais conhecida. Invoca o arcanjo guerreiro do Apocalipse (Ap 12,7) e pede a Deus que reprima o demônio. A Igreja recomenda-a para o combate espiritual, e São Pio X e outros pontífices promoveram-na."
+      "es": "La oración a san Miguel es la más conocida de las preces leoninas, un conjunto que el papa León XIII mandó rezar después de la Misa rezada; la invocación a san Miguel se añadió en 1886. Durante unos ochenta años se recitó de ordinario tras la Misa rezada, hasta que la instrucción Inter Oecumenici (26 de septiembre de 1964, §48 j) suprimió estas preces como parte obligatoria de la liturgia, sin abolirlas; desde entonces su recitación quedó libre y ha continuado. El 24 de abril de 1994, en el Regina Caeli, Juan Pablo II pidió que no se olvidara ni dejara de rezarse. La tradición la asocia a una visión de León XIII, sin fuente documental segura.",
+      "en": "The prayer to St. Michael is the best known of the Leonine prayers, a set that Pope Leo XIII ordered to be said after Low Mass; the invocation to St. Michael was added in 1886. For some eighty years it was customarily recited after Low Mass, until the instruction Inter Oecumenici (26 September 1964, §48 j) suppressed these prayers as a mandatory part of the liturgy, without abolishing them; since then their recitation has been free and has continued. On 24 April 1994, in the Regina Caeli, John Paul II asked that it not be forgotten or left unprayed. Tradition associates it with a vision of Leo XIII, without secure documentary source.",
+      "pt": "A oração a São Miguel é a mais conhecida das preces leoninas, um conjunto que o papa Leão XIII mandou rezar depois da Missa rezada; a invocação a São Miguel foi acrescentada em 1886. Durante cerca de oitenta anos rezou-se de ordinário depois da Missa rezada, até que a instrução Inter Oecumenici (26 de setembro de 1964, §48 j) suprimiu estas preces como parte obrigatória da liturgia, sem as abolir; desde então a sua recitação ficou livre e continuou. A 24 de abril de 1994, no Regina Caeli, João Paulo II pediu que não fosse esquecida nem deixada de rezar. A tradição associa-a a uma visão de Leão XIII, sem fonte documental segura."
     },
     "instructions": {
-      "es": "Se reza de pie o de rodillas, con las manos juntas, al terminar la Misa o en los momentos de peligro espiritual. Quien guía dice la primera parte y todos responden la segunda. Se puede rezar una sola vez; no hacen falta largas repeticiones. En la lucha contra las tentaciones graves es una plegaria habitual, y conviene acompañarla de la confesión y el recurso a los sacramentos.",
-      "en": "Pray it standing or kneeling, with hands joined, at the end of Mass or in moments of spiritual danger. The leader says the first part and all answer the second. It can be said once; long repetitions are not needed. In the struggle against grave temptations it is a common petition, and it is good to accompany it with confession and the sacraments.",
-      "pt": "Reza-se de pé ou de joelhos, com as mãos unidas, no fim da Missa ou nos momentos de perigo espiritual. Quem guia diz a primeira parte e todos respondem a segunda. Pode rezar-se uma só vez; não são precisas longas repetições. Na luta contra as tentações graves é uma prece habitual, e convém acompanhá-la com a confissão e o recurso aos sacramentos."
+      "es": "Se reza de pie o de rodillas, con las manos juntas, en la oración personal y comunitaria, en los momentos de peligro espiritual o al comenzar las actividades del día. Quien guía dice la primera parte y todos responden la segunda. Se puede rezar una sola vez; no hacen falta largas repeticiones. En la lucha contra las tentaciones graves es una plegaria habitual, y conviene acompañarla de la confesión y el recurso a los sacramentos.",
+      "en": "Pray it standing or kneeling, with hands joined, in personal and communal prayer, in moments of spiritual danger or at the start of the day's activities. The leader says the first part and all answer the second. It can be said once; long repetitions are not needed. In the struggle against grave temptations it is a common petition, and it is good to accompany it with confession and the sacraments.",
+      "pt": "Reza-se de pé ou de joelhos, com as mãos unidas, na oração pessoal e comunitária, nos momentos de perigo espiritual ou ao começar as atividades do dia. Quem guia diz a primeira parte e todos respondem a segunda. Pode rezar-se uma só vez; não são precisas longas repetições. Na luta contra as tentações graves é uma prece habitual, e convém acompanhá-la com a confissão e o recurso aos sacramentos."
     },
     "source": {
-      "es": "León XIII (1886); Ritual Romano (oración a san Miguel).",
-      "en": "Leo XIII (1886); Roman Ritual (prayer to St. Michael).",
-      "pt": "Leão XIII (1886); Ritual Romano (oração a São Miguel)."
+      "es": "Preces leoninas (León XIII, 1884-1886); Inter Oecumenici (1964, §48 j); Regina Caeli de Juan Pablo II (24-4-1994).",
+      "en": "Leonine Prayers (Leo XIII, 1884-1886); Inter Oecumenici (1964, §48 j); John Paul II, Regina Caeli (24 April 1994).",
+      "pt": "Preces leoninas (Leão XIII, 1884-1886); Inter Oecumenici (1964, §48 j); João Paulo II, Regina Caeli (24-4-1994)."
     },
     "approval": {
-      "es": "Compuesta por León XIII; rezada en la Iglesia para la protección espiritual.",
-      "en": "Composed by Leo XIII; prayed in the Church for spiritual protection.",
-      "pt": "Composta por Leão XIII; rezada na Igreja para a proteção espiritual."
+      "es": "Preces leoninas tras la Misa rezada (1884-1964); hoy de recitación libre.",
+      "en": "Leonine Prayers after Low Mass (1884-1964); now of free recitation.",
+      "pt": "Preces leoninas depois da Missa rezada (1884-1964); hoje de recitação livre."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico tradicional de dominio público.",
-      "en": "Traditional liturgical text in the public domain.",
-      "pt": "Texto litúrgico tradicional de domínio público."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -690,9 +690,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto de la revelación de Fátima; traducción propia.",
-      "en": "Text of the Fatima revelation; translation ours.",
-      "pt": "Texto da revelação de Fátima; tradução nossa."
+      "es": "Texto de la revelación de Fátima; edición no identificada.",
+      "en": "Text of the Fatima revelation; edition not identified.",
+      "pt": "Texto da revelação de Fátima; edição não identificada."
     }
   },
   {
@@ -719,9 +719,9 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico tradicional de dominio público.",
-      "en": "Traditional liturgical text in the public domain.",
-      "pt": "Texto litúrgico tradicional de domínio público."
+      "es": "Texto litúrgico de dominio público.",
+      "en": "Liturgical text in the public domain.",
+      "pt": "Texto litúrgico de domínio público."
     }
   },
   {
@@ -742,15 +742,15 @@
       "pt": "Filocalia; Lc 18,13 e 18,38."
     },
     "approval": {
-      "es": "Oración de la tradición hesicasta oriental, recomendada en la Iglesia.",
-      "en": "Prayer of the Eastern hesychast tradition, recommended in the Church.",
-      "pt": "Oração da tradição hesicasta oriental, recomendada na Igreja."
+      "es": "Oración de la tradición hesicasta oriental.",
+      "en": "Prayer of the Eastern hesychast tradition.",
+      "pt": "Oração da tradição hesicasta oriental."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto tradicional de dominio público; traducción propia.",
-      "en": "Traditional text in the public domain; translation ours.",
-      "pt": "Texto tradicional de domínio público; tradução nossa."
+      "es": "Texto tradicional de dominio público.",
+      "en": "Traditional text in the public domain.",
+      "pt": "Texto tradicional de domínio público."
     }
   },
   {
@@ -771,15 +771,15 @@
       "pt": "Lc 1,46-55; Liturgia das Horas, Vésperas."
     },
     "approval": {
-      "es": "Cántico evangélico proclamado en la Liturgia de las Horas.",
-      "en": "Gospel canticle proclaimed in the Liturgy of the Hours.",
-      "pt": "Cântico evangélico proclamado na Liturgia das Horas."
+      "es": "Concesión parcial del Enchiridion 1999, concesión 17 §2, 1° (cántico Magnificat).",
+      "en": "Partial indulgence, Enchiridion 1999, grant 17 §2, 1° (Magnificat canticle).",
+      "pt": "Indulgência parcial do Enchiridion 1999, concessão 17 §2, 1° (cântico Magnificat)."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto evangélico; traducción propia.",
-      "en": "Gospel text; translation ours.",
-      "pt": "Texto evangélico; tradução nossa."
+      "es": "Texto evangélico de dominio público.",
+      "en": "Gospel text in the public domain.",
+      "pt": "Texto evangélico de domínio público."
     }
   },
   {
@@ -800,15 +800,15 @@
       "pt": "Lc 2,29-32; Liturgia das Horas, Completas."
     },
     "approval": {
-      "es": "Cántico evangélico proclamado en la Liturgia de las Horas.",
-      "en": "Gospel canticle proclaimed in the Liturgy of the Hours.",
-      "pt": "Cântico evangélico proclamado na Liturgia das Horas."
+      "es": "Cántico evangélico proclamado en la Liturgia de las Horas (Completas).",
+      "en": "Gospel canticle proclaimed in the Liturgy of the Hours (Compline).",
+      "pt": "Cântico evangélico proclamado na Liturgia das Horas (Completas)."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto evangélico; traducción propia.",
-      "en": "Gospel text; translation ours.",
-      "pt": "Texto evangélico; tradução nossa."
+      "es": "Texto evangélico de dominio público.",
+      "en": "Gospel text in the public domain.",
+      "pt": "Texto evangélico de domínio público."
     }
   },
   {
@@ -829,15 +829,15 @@
       "pt": "Lc 1,68-79; Liturgia das Horas, Laudes."
     },
     "approval": {
-      "es": "Cántico evangélico proclamado en la Liturgia de las Horas.",
-      "en": "Gospel canticle proclaimed in the Liturgy of the Hours.",
-      "pt": "Cântico evangélico proclamado na Liturgia das Horas."
+      "es": "Cántico evangélico proclamado en la Liturgia de las Horas (Laudes).",
+      "en": "Gospel canticle proclaimed in the Liturgy of the Hours (Lauds).",
+      "pt": "Cântico evangélico proclamado na Liturgia das Horas (Laudes)."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto evangélico; traducción propia.",
-      "en": "Gospel text; translation ours.",
-      "pt": "Texto evangélico; tradução nossa."
+      "es": "Texto evangélico de dominio público.",
+      "en": "Gospel text in the public domain.",
+      "pt": "Texto evangélico de domínio público."
     }
   },
   {
@@ -864,17 +864,17 @@
     },
     "promise": null,
     "textNote": {
-      "es": "Texto conciliar de dominio público; traducción propia.",
-      "en": "Conciliar text in the public domain; translation ours.",
-      "pt": "Texto conciliar de domínio público; tradução nossa."
+      "es": "Texto conciliar de dominio público.",
+      "en": "Conciliar text in the public domain.",
+      "pt": "Texto conciliar de domínio público."
     }
   },
   {
     "prayerId": "christmas_prayer",
     "history": {
-      "es": "La oración de Navidad es una plegaria del Misal Romano para el tiempo de Navidad, que pide a Dios que, así como hizo brillar la noche santa con la luz de Cristo, nos haga gozar perfectamente de Él en el cielo. Se reza en la temporada de Navidad y en la misa del día de Navidad, y resume el deseo cristiano de contemplar la luz del Verbo encarnado. Es una oración de acción de gracias por el misterio de la Encarnación.",
-      "en": "The Christmas prayer is a petition of the Roman Missal for the Christmas season, asking God that, as he made the holy night shine with the light of Christ, he may let us enjoy him perfectly in heaven. It is prayed in the Christmas season and at the Mass on Christmas Day, and sums up the Christian desire to contemplate the light of the incarnate Word. It is a prayer of thanksgiving for the mystery of the Incarnation. At Christmas, the Church asks that the light of Christ shine in the life of the faithful.",
-      "pt": "A oração de Natal é uma prece do Missal Romano para o tempo de Natal, que pede a Deus que, assim como fez brilhar a noite santa com a luz de Cristo, nos faça gozar perfeitamente dele no céu. Reza-se no tempo de Natal e na missa do dia de Natal, e resume o desejo cristão de contemplar a luz do Verbo encarnado. É uma oração de ação de graças pelo mistério da Encarnação. No Natal, a Igreja pede que a luz de Cristo brilhe na vida dos fiéis."
+      "es": "La oración de Navidad es la colecta de la Misa de la Noche (Missa in nocte) del Natal del Señor en el Misal Romano: pide a Dios que, así como hizo brillar la noche sacratísima con la luz de Cristo, nos haga gozar perfectamente de Él en el cielo. Se reza en la Misa de la Noche y en el tiempo de Navidad, y resume el deseo cristiano de contemplar la luz del Verbo encarnado. Es una oración de acción de gracias por el misterio de la Encarnación.",
+      "en": "The Christmas prayer is the collect of the Mass at Night (Missa in nocte) of the Nativity of the Lord in the Roman Missal: it asks God that, as he made the most sacred night shine with the light of Christ, he may let us enjoy him perfectly in heaven. It is prayed at the Mass at Night and in the Christmas season, and sums up the Christian desire to contemplate the light of the incarnate Word. It is a prayer of thanksgiving for the mystery of the Incarnation.",
+      "pt": "A oração de Natal é a colecta da Missa da Noite (Missa in nocte) da Natividade do Senhor no Missal Romano: pede a Deus que, assim como fez brilhar a noite sacratíssima com a luz de Cristo, nos faça gozar perfeitamente dele no céu. Reza-se na Missa da Noite e no tempo de Natal, e resume o desejo cristão de contemplar a luz do Verbo encarnado. É uma oração de ação de graças pelo mistério da Encarnação. O texto latino conserva-se no Missal Romano."
     },
     "instructions": {
       "es": "Se reza de rodillas o de pie, con las manos juntas, en la misa de Navidad o en la oración familiar de la Nochebuena y del día de Navidad. En grupo, el celebrante la introduce y todos responden «Amén». Puede rezarse también en la oración personal durante la octava de Navidad. No hace falta repetirla muchas veces.",
@@ -882,28 +882,28 @@
       "pt": "Reza-se de joelhos ou de pé, com as mãos unidas, na missa de Natal ou na oração familiar da Consoada e do dia de Natal. Em grupo, o celebrante introduz-a e todos respondem «Amém». Pode rezar-se também na oração pessoal durante a oitava de Natal. Não é preciso repeti-la muitas vezes."
     },
     "source": {
-      "es": "Misal Romano, oración del tiempo de Navidad.",
-      "en": "Roman Missal, prayer of the Christmas season.",
-      "pt": "Missal Romano, oração do tempo de Natal."
+      "es": "Misal Romano, Misa de la Noche de Navidad (colecta: Deus, qui hanc sacratissimam noctem…).",
+      "en": "Roman Missal, Mass at Night of Christmas (collect: Deus, qui hanc sacratissimam noctem...).",
+      "pt": "Missal Romano, Missa da Noite de Natal (colecta: Deus, qui hanc sacratissimam noctem...)."
     },
     "approval": {
-      "es": "Oración del Misal Romano para el tiempo de Navidad.",
-      "en": "Prayer of the Roman Missal for the Christmas season.",
-      "pt": "Oração do Missal Romano para o tempo de Natal."
+      "es": "Colecta de la Misa de la Noche de Navidad en el Misal Romano.",
+      "en": "Collect of the Mass at Night of Christmas in the Roman Missal.",
+      "pt": "Colecta da Missa da Noite de Natal no Missal Romano."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico de dominio público; traducción propia.",
-      "en": "Liturgical text in the public domain; translation ours.",
-      "pt": "Texto litúrgico de domínio público; tradução nossa."
+      "es": "Traducción tradicional; edición no identificada.",
+      "en": "Traditional translation; edition not identified.",
+      "pt": "Tradução tradicional; edição não identificada."
     }
   },
   {
     "prayerId": "easter_prayer",
     "history": {
-      "es": "La oración de Pascua es la plegaria del Misal Romano para el tiempo pascual, que pide a Dios que lleve a término los buenos deseos que Él mismo inspira, porque por su Hijo ha vencido la muerte y nos ha abierto la puerta de la eternidad. Se reza en el Domingo de Resurrección y durante la temporada de Pascua, y resume la alegría y la esperanza de la Pascua cristiana. Es una oración de acción de gracias por la Resurrección.",
-      "en": "The Easter prayer is the petition of the Roman Missal for the Easter season, asking God to bring to fulfilment the good desires he himself inspires, for through his Son he has conquered death and opened to us the gate of eternity. It is prayed on Easter Sunday and during the Easter season, and sums up the joy and hope of the Christian Easter. It is a prayer of thanksgiving for the Resurrection. In the Easter season, the Church renews with this prayer the joy of the Resurrection.",
-      "pt": "A oração pascal é a prece do Missal Romano para o tempo pascal, que pede a Deus que leve a cumprimento os bons desejos que Ele mesmo inspira, porque pelo seu Filho venceu a morte e nos abriu a porta da eternidade. Reza-se no Domingo de Ressurreição e durante o tempo pascal, e resume a alegria e a esperança da Páscoa cristã. É uma oração de ação de graças pela Ressurreição. No tempo pascal, a Igreja renova com esta oração o gozo da Ressurreição."
+      "es": "La oración de Pascua es la colecta de la Misa del Domingo de Resurrección en el Misal Romano: pide a Dios que lleve a término los buenos deseos que Él mismo inspira, porque por su Hijo ha vencido la muerte y nos ha abierto la puerta de la eternidad. Se reza en la Misa del Domingo de Resurrección y durante el tiempo pascual, y resume la alegría y la esperanza de la Pascua cristiana. Es una oración de acción de gracias por la Resurrección.",
+      "en": "The Easter prayer is the collect of the Mass on Easter Sunday in the Roman Missal: it asks God to bring to fulfilment the good desires he himself inspires, for through his Son he has conquered death and opened to us the gate of eternity. It is prayed at the Mass on Easter Sunday and during the Easter season, and sums up the joy and hope of the Christian Easter. It is a prayer of thanksgiving for the Resurrection. The Latin text is preserved in the Roman Missal.",
+      "pt": "A oração pascal é a colecta da Missa do Domingo de Ressurreição no Missal Romano: pede a Deus que leve a cumprimento os bons desejos que Ele mesmo inspira, porque pelo seu Filho venceu a morte e nos abriu a porta da eternidade. Reza-se na Missa do Domingo de Ressurreição e durante o tempo pascal, e resume a alegria e a esperança da Páscoa cristã. É uma oração de ação de graças pela Ressurreição. O texto latino conserva-se no Missal Romano."
     },
     "instructions": {
       "es": "Se reza de rodillas o de pie, con las manos juntas, en la misa del Domingo de Resurrección y durante la temporada de Pascua. En grupo, el celebrante la introduce y todos responden «Amén». En la oración personal, puede rezarse cada día de la octava de Pascua y en las solemnidades del tiempo pascual. No hace falta repetirla muchas veces.",
@@ -911,28 +911,28 @@
       "pt": "Reza-se de joelhos ou de pé, com as mãos unidas, na missa do Domingo de Ressurreição e durante o tempo pascal. Em grupo, o celebrante introduz-a e todos respondem «Amém». Na oração pessoal, pode rezar-se cada dia da oitava da Páscoa e nas solenidades do tempo pascal. Não é preciso repeti-la muitas vezes."
     },
     "source": {
-      "es": "Misal Romano, oración del tiempo pascual.",
-      "en": "Roman Missal, prayer of the Easter season.",
-      "pt": "Missal Romano, oração do tempo pascal."
+      "es": "Misal Romano, Misa del Domingo de Pascua (colecta: Deus, qui hodierna die…).",
+      "en": "Roman Missal, Mass on Easter Sunday (collect: Deus, qui hodierna die...).",
+      "pt": "Missal Romano, Missa do Domingo de Páscoa (colecta: Deus, qui hodierna die...)."
     },
     "approval": {
-      "es": "Oración del Misal Romano para el tiempo pascual.",
-      "en": "Prayer of the Roman Missal for the Easter season.",
-      "pt": "Oração do Missal Romano para o tempo pascal."
+      "es": "Colecta de la Misa del Domingo de Pascua en el Misal Romano.",
+      "en": "Collect of the Mass on Easter Sunday in the Roman Missal.",
+      "pt": "Colecta da Missa do Domingo de Páscoa no Missal Romano."
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico de dominio público; traducción propia.",
-      "en": "Liturgical text in the public domain; translation ours.",
-      "pt": "Texto litúrgico de domínio público; tradução nossa."
+      "es": "Traducción tradicional; edición no identificada.",
+      "en": "Traditional translation; edition not identified.",
+      "pt": "Tradução tradicional; edição não identificada."
     }
   },
   {
     "prayerId": "lenten_prayer",
     "history": {
-      "es": "La oración de Cuaresma es una plegaria del Misal Romano para el tiempo cuaresmal, que pide a Dios que, por la observancia de la Cuaresma, alcancemos el perdón de los pecados y nos adhieramos más firmemente a su voluntad. Se reza durante la Cuaresma y prepara el ánimo para los misterios pascuales. Es una oración de conversión y de esperanza, propia del tiempo litúrgico que conduce a la Pascua. Su petición de conversión se une al ayuno, la limosna y la oración del tiempo cuaresmal.",
-      "en": "The Lenten prayer is a petition of the Roman Missal for the Lenten season, asking God that, through the observance of Lent, we may obtain forgiveness of sins and cling more firmly to his will. It is prayed during Lent and prepares the soul for the Easter mysteries. It is a prayer of conversion and hope, proper to the liturgical season that leads to Easter. Its petition for conversion is joined to the fasting, almsgiving and prayer of the Lenten season.",
-      "pt": "A oração da Quaresma é uma prece do Missal Romano para o tempo quaresmal, que pede a Deus que, pela observância da Quaresma, obtenhamos o perdão dos pecados e nos apeguemos mais firmemente à sua vontade. Reza-se durante a Quaresma e prepara o ânimo para os mistérios pascais. É uma oração de conversão e esperança, própria do tempo litúrgico que conduz à Páscoa. O seu pedido de conversão une-se ao jejum, à esmola e à oração do tempo quaresmal."
+      "es": "La oración de Cuaresma es una plegaria para el tiempo cuaresmal: pide a Dios que, por la observancia de la Cuaresma, alcancemos el perdón de los pecados y nos adhieramos más firmemente a su voluntad, y prepara el ánimo para los misterios pascuales. Su texto no se ha podido identificar con seguridad entre las colectas del Misal Romano o la Liturgia de las Horas, así que no se atribuye a una fuente concreta. Se reza durante la Cuaresma como oración de conversión y esperanza.",
+      "en": "The Lenten prayer is a petition for the Lenten season: it asks God that, through the observance of Lent, we may obtain forgiveness of sins and cling more firmly to his will, and it prepares the soul for the Easter mysteries. Its text could not be identified with certainty among the collects of the Roman Missal or the Liturgy of the Hours, so it is not attributed to a concrete source. It is prayed during Lent as a prayer of conversion and hope.",
+      "pt": "A oração da Quaresma é uma prece para o tempo quaresmal: pede a Deus que, pela observância da Quaresma, obtenhamos o perdão dos pecados e nos apeguemos mais firmemente à sua vontade, e prepara o ânimo para os mistérios pascais. O seu texto não pôde ser identificado com segurança entre as colectas do Missal Romano ou da Liturgia das Horas, por isso não se atribui a uma fonte concreta. Reza-se durante a Quaresma como oração de conversão e esperança."
     },
     "instructions": {
       "es": "Se reza de rodillas o de pie, con las manos juntas, en la misa de Cuaresma y en la oración personal durante ese tiempo. En grupo, el celebrante la introduce y todos responden «Amén». Puede rezarse al comenzar la Cuaresma y en los días de penitencia. No hace falta repetirla muchas veces; conviene acompañarla con obras de conversión.",
@@ -940,28 +940,28 @@
       "pt": "Reza-se de joelhos ou de pé, com as mãos unidas, na missa quaresmal e na oração pessoal durante este tempo. Em grupo, o celebrante introduz-a e todos respondem «Amém». Pode rezar-se no início da Quaresma e nos dias de penitência. Não é preciso repeti-la muitas vezes; convém acompanhá-la com obras de conversão."
     },
     "source": {
-      "es": "Misal Romano, oración del tiempo cuaresmal.",
-      "en": "Roman Missal, prayer of the Lenten season.",
-      "pt": "Missal Romano, oração do tempo quaresmal."
+      "es": "Texto de origen no identificado; no se atribuye al Misal Romano.",
+      "en": "Text of unidentified origin; not attributed to the Roman Missal.",
+      "pt": "Texto de origem não identificada; não se atribui ao Missal Romano."
     },
     "approval": {
-      "es": "Oración del Misal Romano para el tiempo cuaresmal.",
-      "en": "Prayer of the Roman Missal for the Lenten season.",
-      "pt": "Oração do Missal Romano para o tempo quaresmal."
+      "es": "",
+      "en": "",
+      "pt": ""
     },
     "promise": null,
     "textNote": {
-      "es": "Texto litúrgico de dominio público; traducción propia.",
-      "en": "Liturgical text in the public domain; translation ours.",
-      "pt": "Texto litúrgico de domínio público; tradução nossa."
+      "es": "Texto de origen no identificado; edición no identificada.",
+      "en": "Text of unidentified origin; edition not identified.",
+      "pt": "Texto de origem não identificada; edição não identificada."
     }
   },
   {
     "prayerId": "stay_with_me_lord",
     "history": {
-      "es": "«Quédate conmigo, Señor» es una plegaria de la piedad moderna inspirada en el «Mane nobiscum, Domine» del Evangelio (Lc 24,29), cuando los discípulos de Emaús piden a Jesús que se quede con ellos porque atardece. Se difundió como oración de la noche y de la adoración eucarística, y expresa el deseo de no quedar solo ante la debilidad y la oscuridad. No es una oración litúrgica antigua, sino una composición devocional reciente. Su texto recoge el anhelo del discípulo que no quiere quedarse solo al caer la tarde.",
-      "en": "\"Stay with Me, Lord\" is a prayer of modern piety inspired by the \"Mane nobiscum, Domine\" of the Gospel (Luke 24:29), when the disciples at Emmaus ask Jesus to stay with them because it is nearly evening. It spread as a night prayer and a Eucharistic adoration prayer, and expresses the desire not to be left alone before weakness and darkness. It is not an ancient liturgical prayer, but a recent devotional composition. Its text gathers the longing of the disciple who does not want to be left alone at dusk.",
-      "pt": "«Ficai comigo, Senhor» é uma prece da piedade moderna inspirada no «Mane nobiscum, Domine» do Evangelho (Lc 24,29), quando os discípulos de Emaús pedem a Jesus que fique com eles porque já é tarde. Difundiu-se como oração da noite e da adoração eucarística, e exprime o desejo de não ficar sozinho diante da fraqueza e das trevas. Não é uma oração litúrgica antiga, mas uma composição devocional recente. O seu texto recolhe o anseio do discípulo que não quer ficar sozinho ao cair a tarde."
+      "es": "«Quédate conmigo, Señor» es la oración que, según la tradición, san Pío de Pietrelcina (1887-1968) rezaba después de la sagrada comunión. El texto de la app recoge el inicio de esa oración, una plegaria eucarística que pide a Jesús que no le deje solo al caer la tarde y en la hora de la muerte. No es una composición de la app: se difundió como oración del santo de Pietrelcina y se halla en devocionarios y folletos; la edición concreta no está identificada.",
+      "en": "Stay with Me, Lord is the prayer which, according to tradition, St. Pio of Pietrelcina (1887-1968) prayed after Holy Communion. The app's text is the beginning of that prayer, a Eucharistic petition asking Jesus not to leave him alone at dusk and at the hour of death. It is not a composition of the app: it spread as the prayer of the saint of Pietrelcina and is found in prayer books and leaflets; the exact edition is not identified.",
+      "pt": "«Ficai comigo, Senhor» é a oração que, segundo a tradição, São Pio de Pietrelcina (1887-1968) rezava depois da sagrada comunhão. O texto da app recolhe o início dessa oração, uma prece eucarística que pede a Jesus que não o deixe sozinho ao cair a tarde e na hora da morte. Não é uma composição da app: difundiu-se como oração do santo de Pietrelcina e acha-se em devocionários e folhetos; a edição concreta não está identificada. O texto completo é mais longo do que o aqui recolhido."
     },
     "instructions": {
       "es": "Se reza de rodillas o de pie, con las manos juntas, en la oración de la noche y en la adoración eucarística. En la adoración, puede rezarse ante el Sagrario expuesto o ante el tabernáculo. En grupo, uno la dice y todos responden «Quédate, Señor, conmigo. Amén». Basta una recitación confiada; no hace falta repetirla muchas veces.",
@@ -969,20 +969,20 @@
       "pt": "Reza-se de joelhos ou de pé, com as mãos unidas, na oração da noite e na adoração eucarística. Na adoração, pode rezar-se diante do Santíssimo exposto ou do sacrário. Em grupo, uma pessoa diz-a e todos respondem «Ficai, Senhor, comigo. Amém». Basta uma recitação confiante; não é preciso repeti-la muitas vezes."
     },
     "source": {
-      "es": "Lc 24,29; devocionarios de la adoración eucarística.",
-      "en": "Luke 24:29; Eucharistic adoration prayer books.",
-      "pt": "Lc 24,29; devocionários da adoração eucarística."
+      "es": "Oración de san Pío de Pietrelcina después de la comunión; edición no identificada.",
+      "en": "Prayer of St. Pio of Pietrelcina after Communion; edition not identified.",
+      "pt": "Oração de São Pio de Pietrelcina depois da comunhão; edição não identificada."
     },
     "approval": {
-      "es": "Composición devocional reciente inspirada en el Evangelio.",
-      "en": "Recent devotional composition inspired by the Gospel.",
-      "pt": "Composição devocional recente inspirada no Evangelho."
+      "es": "Uso en la oración de la noche y en la adoración eucarística.",
+      "en": "Use in night prayer and Eucharistic adoration.",
+      "pt": "Uso na oração da noite e na adoração eucarística."
     },
     "promise": null,
     "textNote": {
-      "es": "Composición devocional reciente; redacción propia.",
-      "en": "Recent devotional composition; wording ours.",
-      "pt": "Composição devocional recente; redação nossa."
+      "es": "Oración atribuida a san Pío de Pietrelcina; edición no identificada.",
+      "en": "Prayer attributed to St. Pio of Pietrelcina; edition not identified.",
+      "pt": "Oração atribuída a São Pio de Pietrelcina; edição não identificada."
     }
   }
 ]
