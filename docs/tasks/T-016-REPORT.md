@@ -1,6 +1,6 @@
 # T-016 · Informe de Codex
 
-Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega de **45 nuevas familias** (objetivo aproximado: 60) y **82 fichas ampliadas**. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
+Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega completa de **60 nuevas familias** y **97 fichas ampliadas**. Se fusionó también `origin/CatholicGPT` hasta `d9a3a5a`, sin modificar la implementación del coordinador. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
 
 Leídos el protocolo, las reglas editoriales, el contrato M6 y los datos existentes. Solo se crean los dos JSON autorizados y este informe. Redacción original ES/EN/PT; no se componen lemas, citas ni oraciones. Las aprobaciones no se deducen del año de fundación ni de una agregación a otra orden. `motto: null`, aprobaciones vacías y listas de santos vacías señalan que no se incorpora un dato suficientemente documentado, no que necesariamente carezcan de ellos.
 
@@ -587,7 +587,7 @@ kind order: la fuente institucional especifica votos solemnes. 1489 es autorizac
 - [Bridgettine Sisters de Columbus, History y distinción de ramas](https://bridgettines.com/history/)
 - [S:ta Birgittas abbedi Pax Mariae, preguntas sobre su regla y vida contemplativa](https://birgittaskloster.se/1000-fragor-och-svar/)
 
-El año del campo foundationYear se etiqueta expresamente como aprobación: no se afirma una fecha única para el proyecto anterior. La ficha abarca la rama monástica histórica de monjas, no equipara jurídicamente a la rama de Hesselblad de 1911 con cada monasterio medieval. Se consulta también la explicación de la regla del monasterio actual de Vadstena. Sin documento original pontificio incorporado, approval permanece vacío.
+El campo foundationYear utiliza el año de reconocimiento de la orden, 1370; la descripción aclara que es aprobación y no una fecha única del proyecto anterior. La ficha abarca la rama monástica histórica de monjas, no equipara jurídicamente a la rama de Hesselblad de 1911 con cada monasterio medieval. Se consulta también la explicación de la regla del monasterio actual de Vadstena. Sin documento original pontificio incorporado, approval permanece vacío.
 
 ### 79. `carmelitas-caridad-vedruna-ccv` · `congregation`
 
@@ -618,6 +618,117 @@ kind congregation, no society de vida apostólica por el nombre Society. Se dist
 
 La fuente especifica instituto religioso apostólico de derecho pontificio; el nombre Compañía no determina society. Se distingue la fundación de 1876 de asociaciones previas del fundador. No se inventa documento pontificio ni un lema derivado de una consigna espiritual.
 
+### 83. `hermanas-misericordia-rsm` · `congregation`
+
+- [Mercy International Association, The Congregation](https://www.mercyworld.org/about/members/the-congregation/)
+- [Mercy International Association, Catherine McAuley: Early Years](https://www.mercyworld.org/catherine/chronology/early-years/)
+
+Se delimita el instituto unido de 1994 dentro de la familia iniciada en 1831. No se presenta a cada hermana Mercy como miembro de ese instituto único. No se reutilizan cifras ni equipos de gobierno antiguos de la ficha institucional. McAuley no se presenta como beata o santa. No se inventa aprobación pontificia.
+
+### 84. `notre-dame-namur-sndden` · `congregation`
+
+- [Sisters of Notre Dame de Namur, South Africa: Who We Are](https://www.sndden.org/south-africa/who-we-are/)
+- [Sisters of Notre Dame de Namur, Britain: Who We Are](https://www.sndden.org/britain/who-we-are/)
+
+Se concreta la sugerencia Notre Dame en Namur para evitar mezclar congregaciones. Se respeta el papel de Françoise como cofundadora, sin atribuirle beatificación no comprobada. Las páginas difieren al resumir profesión y dedicación en 1804/1805; se usa 1804 solo como origen de la congregación. Sin aprobación documental precisa.
+
+### 85. `congregacion-jesus-cj` · `congregation`
+
+- [Congregatio Jesu, Who We Are](https://www.congregatiojesu.org/who-we-are/)
+- [Congregatio Jesu, Becoming One: comunicado del 4-XI-2025](https://www.congregatiojesu.org/spiritual-journey-to-becoming-one/)
+- [Congregatio Jesu, Being One: celebración de la unión](https://www.congregatiojesu.org/who-we-are/being-one/)
+
+Se incorpora el cambio canónico verificado del 4-XI-2025: no se presentan CJ e IBVM como dos institutos aún separados. 1609 sigue siendo origen del proyecto de Ward, no fecha del decreto de unión. Venerable no equivale a beata: notableSaints vacío. No se fabrica incipit o aprobación papal de una obra históricamente compleja.
+
+### 86. `san-jose-cluny-sjc` · `congregation`
+
+- [Saint-Joseph de Cluny, History: Anne-Marie Javouhey](https://www.sj-cluny.org/en/notre-histoire/anne-marie-javouhey/histoire/)
+- [Saint-Joseph de Cluny, Our Mission: Introduction](https://www.sj-cluny.org/en/notre-mission/presentation/)
+
+Se distinguen fundación en 1807 y nombre de Cluny desde 1812. Javouhey se presenta como beata, no santa. Se omiten cifras e indulgencias temporales de aniversarios, que no forman parte de esta ficha. Sin documento de aprobación pontificia comprobado.
+
+### 87. `siervas-maria-enfermos-sdem` · `congregation`
+
+- [Siervas de María, Curia General: Origen y fundación](https://www.siervasdemariacg.org/es/quienes-somos/origen-y-fundacion.html)
+- [Siervas de María, Curia General: Organización](https://www.siervasdemariacg.org/es/quienes-somos/organizacion.html)
+
+La denominación completa delimita el instituto de Torres Acosta y evita mezclarlo con servitas u otras Siervas de María. Se utiliza la fecha institucional de 1851. La curia documenta el lema; se traduce fielmente su frase breve, sin componer una oración. No se inventa aprobación pontificia.
+
+### 88. `hermanas-hospitalarias-hsc` · `congregation`
+
+- [Hermanas Hospitalarias, Nuestra Historia](https://hospitalarias.org/nuestra-historia/)
+- [Hermanas Hospitalarias, Preguntas Frecuentes](https://hospitalarias.org/preguntas-frecuentes/)
+
+Se verifican los tres fundadores: no se confunde María Angustias Giménez con fundadoras de otras congregaciones. No se hace a cada profesional miembro religioso. La cronología da aprobación de 1892 pero, sin documento y papa identificados, approval queda vacío. No se reproducen números actuales sin año.
+
+### 89. `religiosas-asuncion-ra` · `congregation`
+
+- [Religieuses de l’Assomption, Notre Histoire](https://assumpta.org/fr/qui-sommes-nous/notre-histoire)
+- [Santa Sede, biografía de María Eugenia de Jesús, canonización de 2007](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20070603_eugenie-jesus_en.html)
+
+Se distingue 1839 fundación de 1841 primera escuela. La biografía vaticana redactada para canonización conserva el encabezado antiguo Blessed; se coteja el estado de santa con el sitio institucional actual. No se confunde esta congregación con los asuncionistas. No se usa el rótulo de aniversario 185 de una página con fecha dinámica como fecha histórica.
+
+### 90. `buen-pastor-rgs` · `congregation`
+
+- [Our Lady of Charity of the Good Shepherd, History and Heritage](https://www.olcgs.org/who-we-are/history-and-heritage/)
+- [Good Shepherd Sisters Ireland, History](https://goodshepherdsisters.ie/about/history/)
+
+Se verifica el generalato de 1835 y la reunificación efectiva del 27-VI-2014. Se distingue esta congregación de su antecedente de 1641. La rama contemplativa no se clasifica como orden autónoma distinta. La existencia de programas actuales no se presenta como prueba de una historia institucional sin daños o responsabilidades. No se inventa título de bula.
+
+### 91. `siervas-espiritu-santo-ssps` · `congregation`
+
+- [Missionary Sisters SSpS, About Us: fundadores y nombre canónico](https://worldssps.org/about-us/)
+- [Missionary Sisters SSpS, Reflection Guide 2021](https://www.worldssps.org/wp-content/uploads/2021/01/Reflection-Guide-ENG-2021.pdf)
+- [Missionary Sisters SSpS, entrevista sobre las causas de sus cofundadoras, 2021](https://worldssps.org/vatican-news-features-sr-ortud-stegmaier-ssps/)
+
+Se verifica beatificación de Helena en 1995 y de Hendrina en 2008. Se diferencia la congregación misionera de 1889 de la contemplativa de 1896. No se adopta automáticamente un lema personal de Janssen como lema oficial del instituto. Sin documento de aprobación completo, approval vacío.
+
+### 92. `hijas-san-pablo-fsp` · `congregation`
+
+- [Figlie di San Paolo, Chi Siamo](https://www.paoline.org/chi-siamo/)
+- [Figlie di San Paolo, Venerabile Tecla Merlo](https://www.paoline.org/chi-siamo/venerabile-tecla-merlo/)
+- [Figlie di San Paolo, Famiglia Paolina](https://www.paoline.org/chi-siamo/famiglia-paolina/)
+
+Se distinguen las Hijas de 1915 de la Sociedad masculina de 1914. La cofundadora Tecla es venerable, no beata; notableSaints incluye solo a Alberione. No se compone una oración paulinista ni se inventa documento de aprobación.
+
+### 93. `carmelitas-misioneras-teresianas-cmt` · `congregation`
+
+- [Carmelitas Misioneras Teresianas Europa, Quiénes Somos](https://europa.cmtpalau.org/quienes-somos/quienes-somos-cmt/)
+- [CMT América, historia provincial, 2022](https://america.cmtpalau.org/2022/08/cuatro-anos-de-nuestra-provincia-vamos-caminando-familia-palautiana/)
+- [Santa Sede, lista de beatificaciones de Juan Pablo II: Palau, 1988](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_list_blesseds-jp-ii_en.html)
+
+Se mantiene el nombre completo CMT y se distingue de otras congregaciones palautianas. La fuente vaticana confirma beatificación, sin atribuir canonización. No se compone un lema con la definición del carisma. Approval vacío sin documento preciso.
+
+### 94. `religiosas-maria-inmaculada-rmi` · `congregation`
+
+- [Religiosas de María Inmaculada Europa, Nuestra Congregación](https://www.rmieuropa.com/es/quienes-somos/nuestra-congregacion/)
+- [Religiosas de María Inmaculada Europa, La Fundadora](https://www.rmieuropa.com/es/quienes-somos/la-fundadora/)
+
+Se distingue la aprobación del movimiento laical MOLAVIM en 2005 de la historia canónica del instituto: no se traslada a approval. La labor con jóvenes se explica en términos actuales de acogida y formación sin repetir fórmulas despectivas del contexto social antiguo. No se inventa documento pontificio.
+
+### 95. `mercedarias-caridad-mc` · `congregation`
+
+- [Santa Sede, biografía de Juan Nepomuceno Zegrí, beatificación de 2003](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20031109_zegri_sp.html)
+- [Mercedarias de la Caridad de Madrid, Historia](https://nsm.madrid.mercedariasdelacaridad.es/historia)
+- [Provincia Mercedaria de Chile, aniversario fundacional, 16-III-2026](https://www.mercedarios.cl/detalle.php?id=MjcyOQ%3D%3D)
+
+Se diferencia fundación del 16-III-1878 de agregación a la Orden de la Merced del 9-VI-1878: la segunda no se hace pasar por aprobación pontificia. Zegrí es beato, no santo. La redacción es propia y no reproduce promesas o consignas no comprobadas.
+
+### 96. `hermanitas-ancianos-desamparados-had` · `congregation`
+
+- [Hermanitas de los Ancianos Desamparados, Origen de la Congregación](https://www.hermanitas.net/origen-congregacion/)
+- [Hermanitas de los Ancianos Desamparados, Sobre Nuestra Congregación](https://www.hermanitas.net/sobre-nuestra-congregacion/)
+
+Se distingue el origen con aspirantes en 1872 de la fecha institucional del 27-I-1873. Se conserva la participación de ambos fundadores. Solo Jornet entra en notableSaints; no se asigna beatificación a López Novoa. La congregación no se duplica con la fundada por Jugan. No se inventa aprobación pontificia.
+
+### 97. `hermanas-cruz-hc` · `congregation`
+
+- [Santa Sede, biografía de Ángela de la Cruz, canonización de 2003](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20030504_guerrero-gonzalez_sp.html)
+- [Hermanas de la Cruz, historia de la fundación y vida de la comunidad](https://www.hermanasdelacruz.org/2011/)
+- [Francisco, homilía de canonización de María de la Purísima, 18-X-2015](https://www.vatican.va/content/francesco/es/homilies/2015/documents/papa-francesco_20151018_omelia-canonizzazioni.html)
+
+Se verifica fundación de 1875 en fuente vaticana e institucional. La vida austera se describe sin recomendar mortificaciones al lector. Se distingue el instituto de otras congregaciones con Cruz en el nombre. No se toma el nombre de la santa de 2015 como si fuera la Inmaculada Concepción de María sin referencia a la persona. Sin documento de aprobación preciso.
+
 ## Validación
 
 ```sh
@@ -628,8 +739,8 @@ python3 docs/tasks/tools/validate_orders.py details app/src/main/assets/orders/o
 ```text
 WARN  legionarios-cristo-lc.founder: identical text in two languages
 WARN  carmelitas-caridad-vedruna-ccv.founder: identical text in two languages
-45 entries · 0 errors · 2 warnings
-82 entries · 0 errors · 0 warnings
+60 entries · 0 errors · 2 warnings
+97 entries · 0 errors · 0 warnings
 ```
 
 Las entregas de fichas ampliadas aceptan un prefijo ordenado; el aviso de parcial no es un error. Se comprueban además las extensiones editoriales, las claves e identificadores y `git diff --check` antes de entregar. Integración y compilación a cargo del coordinador.
@@ -637,3 +748,15 @@ Las entregas de fichas ampliadas aceptan un prefijo ordenado; el aviso de parcia
 ## Datos no verificados y cuestiones para el coordinador
 
 Las limitaciones y discrepancias del Kotlin original se detallan por entrada; este encargo no autoriza editar ese archivo. Las omisiones prudentes de fechas, lemas o cifras no bloquean el avance. Los datos iniciales no se usan como prueba de sí mismos.
+
+## Cierre de la entrega
+
+- Comprobación final: 60 entradas nuevas, 97 fichas ampliadas, 180 descripciones de entre 60 y 120 palabras; identificadores únicos y correspondencia exacta entre los dos assets. Los primeros 37 identificadores conservan el orden del Kotlin.
+- Ambos validadores terminan en **0 errors**. Los dos avisos de `new` son coincidencias legítimas de nombres propios entre idiomas: «Marcial Maciel Degollado, fundador histórico» y «Santa Joaquina de Vedruna». No se alteran nombres auténticos para silenciar avisos.
+- Se entregaron puntos de revisión con 15, 30 y 37 fichas existentes, y con 15, 30, 45 y 60 familias nuevas. No se editaron oraciones, novenas, interfaz ni el catálogo Kotlin original.
+- Clasificación final: 33 entradas `order`, 55 `congregation`, 8 `society` y 1 `prelature`. Se distingue la forma jurídica del nombre común; por ejemplo, Opus Dei es prelatura, Hijas de la Caridad es sociedad, y Salesianos y Sociedad del Sagrado Corazón son congregaciones. Los casos de familias amplias o ramas específicas se delimitan en las notas de cada ficha.
+- Acceso documental: las constituciones de M.Afr., la presentación de los asuncionistas y las páginas/calendario rogacionistas se contrastaron mediante texto indexado de sus sitios oficiales porque el acceso HTTP directo devolvió 403/500/503/406. No se afirma descarga o lectura directa de esos documentos. El resto de los límites específicos, incluidas fuentes antiguas o fechas discrepantes, se declara por familia.
+- No se ha compilado Android ni instalado en dispositivo: el encargo delega esa integración al coordinador. La validación del contenido y `git diff --check` sí se completaron.
+- Pendiente para el coordinador: corregir, en un encargo que permita editar Kotlin, las discrepancias de nombres/fechas/títulos señaladas especialmente en RSHM, Adoratrices de la Sangre de Cristo, religiosas de Jesús-María, Émilie Gamelin y las dominicas de Rosario Arroyo. Estos assets conservan los identificadores por contrato y no ocultan las discrepancias.
+
+No quedan preguntas que impidan revisar o integrar esta entrega. Los campos sin prueba documental suficiente permanecen vacíos conforme al contrato.

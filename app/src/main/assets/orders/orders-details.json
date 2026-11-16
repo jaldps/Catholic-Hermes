@@ -2417,5 +2417,462 @@
       "Compañía de Santa Teresa de Jesús, Rasgos carismáticos",
       "Santa Sede, biografía de Enrique de Ossó"
     ]
+  },
+  {
+    "id": "hermanas-misericordia-rsm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La congregación sirve en Irlanda y otras regiones mediante educación, salud y servicios sociales. Comparte una red espiritual con otros institutos Mercy jurídicamente distintos.",
+      "en": "The congregation serves in Ireland and other regions through education, healthcare and social services. It shares a spiritual network with other legally distinct Mercy institutes.",
+      "pt": "A congregação serve na Irlanda e em outras regiões por meio de educação, saúde e serviços sociais. Compartilha uma rede espiritual com outros institutos Mercy juridicamente distintos."
+    },
+    "sources": [
+      "Mercy International Association, The Congregation",
+      "Mercy International Association, Catherine McAuley: Early Years"
+    ]
+  },
+  {
+    "id": "notre-dame-namur-sndden",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Julia Billiart"
+      ],
+      "en": [
+        "Saint Julie Billiart"
+      ],
+      "pt": [
+        "Santa Júlia Billiart"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas mantienen misión educativa y servicios de acompañamiento en distintos países, con presencia documentada en Europa, África y América.",
+      "en": "The sisters maintain educational mission and accompaniment services in different countries, with a documented presence in Europe, Africa and the Americas.",
+      "pt": "As irmãs mantêm missão educativa e serviços de acompanhamento em diferentes países, com presença documentada na Europa, na África e nas Américas."
+    },
+    "sources": [
+      "Sisters of Notre Dame de Namur, South Africa: Who We Are",
+      "Sisters of Notre Dame de Namur, Britain: Who We Are"
+    ]
+  },
+  {
+    "id": "congregacion-jesus-cj",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Desde la unión de 2025, la congregación sirve internacionalmente en educación, acompañamiento espiritual y proyectos sociales, compartiendo la herencia de CJ y Loreto.",
+      "en": "Since the 2025 union, the congregation serves internationally in education, spiritual accompaniment and social projects, sharing the heritage of CJ and Loreto.",
+      "pt": "Desde a união de 2025, a congregação serve internacionalmente na educação, no acompanhamento espiritual e em projetos sociais, compartilhando a herança de CJ e Loreto."
+    },
+    "sources": [
+      "Congregatio Jesu, Who We Are",
+      "Congregatio Jesu, Becoming One: comunicado del 4-XI-2025",
+      "Congregatio Jesu, Being One: celebración de la unión"
+    ]
+  },
+  {
+    "id": "san-jose-cluny-sjc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beata Ana María Javouhey"
+      ],
+      "en": [
+        "Blessed Anne-Marie Javouhey"
+      ],
+      "pt": [
+        "Bem-aventurada Ana Maria Javouhey"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas, procedentes de distintas culturas, trabajan en educación, pastoral, salud y acción social en comunidades de presencia internacional.",
+      "en": "The sisters, coming from different cultures, work in education, pastoral care, healthcare and social action in communities with an international presence.",
+      "pt": "As irmãs, provenientes de diferentes culturas, trabalham na educação, na pastoral, na saúde e na ação social em comunidades de presença internacional."
+    },
+    "sources": [
+      "Saint-Joseph de Cluny, History: Anne-Marie Javouhey",
+      "Saint-Joseph de Cluny, Our Mission: Introduction"
+    ]
+  },
+  {
+    "id": "siervas-maria-enfermos-sdem",
+    "kind": "congregation",
+    "motto": {
+      "es": "Estuve enfermo y me visitasteis.",
+      "en": "I was sick and you visited me.",
+      "pt": "Estive doente e vocês me visitaram."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa María Soledad Torres Acosta"
+      ],
+      "en": [
+        "Saint María Soledad Torres Acosta"
+      ],
+      "pt": [
+        "Santa Maria Soledade Torres Acosta"
+      ]
+    },
+    "presence": {
+      "es": "La congregación mantiene comunidades dedicadas al cuidado de enfermos y al acompañamiento de sus familias, continuando su tradición de servicio domiciliario.",
+      "en": "The congregation maintains communities dedicated to caring for sick people and accompanying their families, continuing its tradition of home care.",
+      "pt": "A congregação mantém comunidades dedicadas ao cuidado dos enfermos e ao acompanhamento de suas famílias, continuando sua tradição de serviço domiciliar."
+    },
+    "sources": [
+      "Siervas de María, Curia General: Origen y fundación",
+      "Siervas de María, Curia General: Organización"
+    ]
+  },
+  {
+    "id": "hermanas-hospitalarias-hsc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Benito Menni"
+      ],
+      "en": [
+        "Saint Benito Menni"
+      ],
+      "pt": [
+        "São Bento Menni"
+      ]
+    },
+    "presence": {
+      "es": "La congregación sostiene centros, hospitales y comunidades asistenciales en distintos continentes, con religiosas y equipos profesionales dedicados especialmente a salud mental y discapacidad.",
+      "en": "The congregation supports centres, hospitals and care communities on different continents, with sisters and professional teams dedicated especially to mental health and disability.",
+      "pt": "A congregação mantém centros, hospitais e comunidades assistenciais em diferentes continentes, com religiosas e equipes profissionais dedicadas especialmente à saúde mental e à deficiência."
+    },
+    "sources": [
+      "Hermanas Hospitalarias, Nuestra Historia",
+      "Hermanas Hospitalarias, Preguntas Frecuentes"
+    ]
+  },
+  {
+    "id": "religiosas-asuncion-ra",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa María Eugenia de Jesús Milleret"
+      ],
+      "en": [
+        "Saint Marie Eugénie of Jesus Milleret"
+      ],
+      "pt": [
+        "Santa Maria Eugênia de Jesus Milleret"
+      ]
+    },
+    "presence": {
+      "es": "Las religiosas mantienen comunidades y misión educativa en distintos continentes y comparten su espiritualidad con laicos vinculados a Asunción Juntos.",
+      "en": "The sisters maintain communities and educational mission on different continents and share their spirituality with lay people involved in Assumption Together.",
+      "pt": "As religiosas mantêm comunidades e missão educativa em diferentes continentes e compartilham sua espiritualidade com leigos ligados à Assunção Juntos."
+    },
+    "sources": [
+      "Religieuses de l’Assomption, Notre Histoire",
+      "Santa Sede, biografía de María Eugenia de Jesús, canonización de 2007"
+    ]
+  },
+  {
+    "id": "buen-pastor-rgs",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa María Eufrasia Pelletier"
+      ],
+      "en": [
+        "Saint Mary Euphrasia Pelletier"
+      ],
+      "pt": [
+        "Santa Maria Eufrásia Pelletier"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas apostólicas y contemplativas comparten una misión internacional de acompañamiento, protección y defensa de la dignidad de personas vulnerables, con colaboradores laicos.",
+      "en": "The apostolic and contemplative sisters share an international mission of accompaniment, protection and defence of vulnerable people’s dignity with lay collaborators.",
+      "pt": "As irmãs apostólicas e contemplativas compartilham uma missão internacional de acompanhamento, proteção e defesa da dignidade das pessoas vulneráveis, com colaboradores leigos."
+    },
+    "sources": [
+      "Our Lady of Charity of the Good Shepherd, History and Heritage",
+      "Good Shepherd Sisters Ireland, History"
+    ]
+  },
+  {
+    "id": "siervas-espiritu-santo-ssps",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Arnoldo Janssen",
+        "Beata María Helena Stollenwerk",
+        "Beata Josefa Hendrina Stenmanns"
+      ],
+      "en": [
+        "Saint Arnold Janssen",
+        "Blessed Maria Helena Stollenwerk",
+        "Blessed Josepha Hendrina Stenmanns"
+      ],
+      "pt": [
+        "Santo Arnaldo Janssen",
+        "Bem-aventurada Maria Helena Stollenwerk",
+        "Bem-aventurada Josefa Hendrina Stenmanns"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas sirven en distintos continentes con comunidades interculturales, evangelización y proyectos educativos, sanitarios y sociales adaptados a las necesidades locales.",
+      "en": "The sisters serve on different continents through intercultural communities, evangelization and educational, healthcare and social projects adapted to local needs.",
+      "pt": "As irmãs servem em diferentes continentes com comunidades interculturais, evangelização e projetos educativos, de saúde e sociais adaptados às necessidades locais."
+    },
+    "sources": [
+      "Missionary Sisters SSpS, About Us: fundadores y nombre canónico",
+      "Missionary Sisters SSpS, Reflection Guide 2021",
+      "Missionary Sisters SSpS, entrevista sobre las causas de sus cofundadoras, 2021"
+    ]
+  },
+  {
+    "id": "hijas-san-pablo-fsp",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Santiago Alberione"
+      ],
+      "en": [
+        "Blessed James Alberione"
+      ],
+      "pt": [
+        "Bem-aventurado Tiago Alberione"
+      ]
+    },
+    "presence": {
+      "es": "Las paulinas mantienen presencia internacional mediante obras editoriales, librerías y proyectos de comunicación y formación, con colaboración de profesionales y laicos.",
+      "en": "The Pauline sisters maintain an international presence through publishing, bookshops and communication and formation projects, collaborating with professionals and lay people.",
+      "pt": "As paulinas mantêm presença internacional por meio de editoras, livrarias e projetos de comunicação e formação, com colaboração de profissionais e leigos."
+    },
+    "sources": [
+      "Figlie di San Paolo, Chi Siamo",
+      "Figlie di San Paolo, Venerabile Tecla Merlo",
+      "Figlie di San Paolo, Famiglia Paolina"
+    ]
+  },
+  {
+    "id": "carmelitas-misioneras-teresianas-cmt",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Francisco Palau y Quer"
+      ],
+      "en": [
+        "Blessed Francisco Palau y Quer"
+      ],
+      "pt": [
+        "Bem-aventurado Francisco Palau y Quer"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas mantienen comunidades en Europa, América y otras regiones, con misión educativa, acompañamiento espiritual y servicio a necesidades humanas concretas.",
+      "en": "The sisters maintain communities in Europe, the Americas and other regions, with educational mission, spiritual accompaniment and service responding to practical human needs.",
+      "pt": "As irmãs mantêm comunidades na Europa, nas Américas e em outras regiões, com missão educativa, acompanhamento espiritual e serviço a necessidades humanas concretas."
+    },
+    "sources": [
+      "Carmelitas Misioneras Teresianas Europa, Quiénes Somos",
+      "CMT América, historia provincial, 2022",
+      "Santa Sede, lista de beatificaciones de Juan Pablo II: Palau, 1988"
+    ]
+  },
+  {
+    "id": "religiosas-maria-inmaculada-rmi",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Vicenta María López y Vicuña"
+      ],
+      "en": [
+        "Saint Vicenta María López y Vicuña"
+      ],
+      "pt": [
+        "Santa Vicenta Maria López y Vicuña"
+      ]
+    },
+    "presence": {
+      "es": "Las religiosas desarrollan residencias, centros sociales, casas de acogida y formación para jóvenes en diversos países, en colaboración con laicos asociados.",
+      "en": "The sisters maintain residences, social centres, welcoming homes and formation for young women in different countries, collaborating with associated lay people.",
+      "pt": "As religiosas desenvolvem residências, centros sociais, casas de acolhida e formação para jovens em diferentes países, em colaboração com leigos associados."
+    },
+    "sources": [
+      "Religiosas de María Inmaculada Europa, Nuestra Congregación",
+      "Religiosas de María Inmaculada Europa, La Fundadora"
+    ]
+  },
+  {
+    "id": "mercedarias-caridad-mc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Juan Nepomuceno Zegrí y Moreno"
+      ],
+      "en": [
+        "Blessed Juan Nepomuceno Zegrí y Moreno"
+      ],
+      "pt": [
+        "Bem-aventurado João Nepomuceno Zegrí y Moreno"
+      ]
+    },
+    "presence": {
+      "es": "La congregación mantiene obras educativas y servicios de acompañamiento social en distintos países, con religiosas y colaboradores vinculados a la familia mercedaria.",
+      "en": "The congregation maintains educational works and social accompaniment services in different countries, involving sisters and collaborators linked to the Mercedarian family.",
+      "pt": "A congregação mantém obras educativas e serviços de acompanhamento social em diferentes países, com religiosas e colaboradores ligados à família mercedária."
+    },
+    "sources": [
+      "Santa Sede, biografía de Juan Nepomuceno Zegrí, beatificación de 2003",
+      "Mercedarias de la Caridad de Madrid, Historia",
+      "Provincia Mercedaria de Chile, aniversario fundacional, 16-III-2026"
+    ]
+  },
+  {
+    "id": "hermanitas-ancianos-desamparados-had",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Teresa de Jesús Jornet"
+      ],
+      "en": [
+        "Saint Teresa of Jesus Jornet"
+      ],
+      "pt": [
+        "Santa Teresa de Jesus Jornet"
+      ]
+    },
+    "presence": {
+      "es": "Sus hogares atienden a personas mayores necesitadas en España, América y otras presencias misioneras, con apoyo de profesionales, voluntarios y benefactores.",
+      "en": "Its homes care for elderly people in need in Spain, the Americas and other missionary settings, supported by professionals, volunteers and benefactors.",
+      "pt": "Seus lares atendem pessoas idosas necessitadas na Espanha, nas Américas e em outras presenças missionárias, com apoio de profissionais, voluntários e benfeitores."
+    },
+    "sources": [
+      "Hermanitas de los Ancianos Desamparados, Origen de la Congregación",
+      "Hermanitas de los Ancianos Desamparados, Sobre Nuestra Congregación"
+    ]
+  },
+  {
+    "id": "hermanas-cruz-hc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Ángela de la Cruz",
+        "Santa María de la Purísima de la Cruz"
+      ],
+      "en": [
+        "Saint Angela of the Cross",
+        "Saint María of the Immaculate Conception of the Cross"
+      ],
+      "pt": [
+        "Santa Ângela da Cruz",
+        "Santa Maria Puríssima da Cruz"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas mantienen comunidades y servicios de atención a personas pobres y enfermas, continuando el estilo de cercanía iniciado en Sevilla.",
+      "en": "The sisters maintain communities and services caring for people who are poor or sick, continuing the personal approach begun in Seville.",
+      "pt": "As irmãs mantêm comunidades e serviços de atenção às pessoas pobres e enfermas, continuando o estilo de proximidade iniciado em Sevilha."
+    },
+    "sources": [
+      "Santa Sede, biografía de Ángela de la Cruz, canonización de 2003",
+      "Hermanas de la Cruz, historia de la fundación y vida de la comunidad",
+      "Francisco, homilía de canonización de María de la Purísima, 18-X-2015"
+    ]
   }
 ]

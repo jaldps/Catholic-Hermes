@@ -1047,7 +1047,7 @@
       "pt": "Brigidinas: Ramo Monástico Histórico"
     },
     "abbreviation": "O.Ss.S.",
-    "foundationYear": "1370 (aprobación / approval / aprovação)",
+    "foundationYear": "1370",
     "founder": {
       "es": "Santa Brígida de Suecia",
       "en": "Saint Bridget of Sweden",
@@ -1166,6 +1166,396 @@
       "es": "Oración y educación para favorecer el encuentro con Jesús y la transformación de la sociedad.",
       "en": "Prayer and education fostering encounter with Jesus and the transformation of society.",
       "pt": "Oração e educação para favorecer o encontro com Jesus e a transformação da sociedade."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "hermanas-misericordia-rsm",
+    "name": {
+      "es": "Congregación de las Hermanas de la Misericordia",
+      "en": "Congregation of the Sisters of Mercy",
+      "pt": "Congregação das Irmãs da Misericórdia"
+    },
+    "abbreviation": "R.S.M.",
+    "foundationYear": "1831",
+    "founder": {
+      "es": "Catalina McAuley",
+      "en": "Catherine McAuley",
+      "pt": "Catarina McAuley"
+    },
+    "description": {
+      "es": "Las Hermanas de la Misericordia tienen su origen en la obra de Catalina McAuley en Dublín y en su profesión religiosa de 1831. Unieron educación de mujeres y niñas, visita a enfermos y respuesta a la pobreza. Su inspiración se extendió a numerosos países, dando lugar a diferentes institutos de la familia Mercy. Esta ficha se centra en la congregación formada como instituto único en 1994 por la unión de comunidades de esa tradición. Sus religiosas desarrollan educación, atención sanitaria, acompañamiento social y compromiso con la justicia en colaboración con laicos.",
+      "en": "The Sisters of Mercy originated in Catherine McAuley’s work in Dublin and her religious profession in 1831. They united education of women and girls, visiting sick people and responses to poverty. Their inspiration spread to many countries, giving rise to different institutes within the Mercy family. This entry focuses on the congregation established as a single institute in 1994 through the union of communities from that tradition. Its sisters undertake education, healthcare, social accompaniment and commitment to justice in collaboration with lay people.",
+      "pt": "As Irmãs da Misericórdia têm sua origem na obra de Catarina McAuley em Dublin e em sua profissão religiosa de 1831. Uniram educação de mulheres e meninas, visita aos enfermos e resposta à pobreza. Sua inspiração se estendeu a numerosos países, dando origem a diferentes institutos da família Mercy. Esta ficha se concentra na congregação formada como instituto único em 1994 pela união de comunidades dessa tradição. Suas religiosas desenvolvem educação, atendimento de saúde, acompanhamento social e compromisso com a justiça em colaboração com leigos."
+    },
+    "charism": {
+      "es": "Hacer presente la misericordia mediante educación, cuidado y defensa de la dignidad de personas pobres.",
+      "en": "Making mercy present through education, care and defence of the dignity of people in poverty.",
+      "pt": "Tornar presente a misericórdia por meio de educação, cuidado e defesa da dignidade das pessoas pobres."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "notre-dame-namur-sndden",
+    "name": {
+      "es": "Hermanas de Nuestra Señora de Namur",
+      "en": "Sisters of Notre Dame de Namur",
+      "pt": "Irmãs de Nossa Senhora de Namur"
+    },
+    "abbreviation": "S.N.D.deN.",
+    "foundationYear": "1804",
+    "founder": {
+      "es": "Santa Julia Billiart y Françoise Blin de Bourdon",
+      "en": "Saint Julie Billiart and Françoise Blin de Bourdon",
+      "pt": "Santa Júlia Billiart e Françoise Blin de Bourdon"
+    },
+    "description": {
+      "es": "Las Hermanas de Nuestra Señora de Namur nacieron en Amiens en 1804 con Julia Billiart y Françoise Blin de Bourdon. La comunidad trasladó su centro a Namur y desarrolló una misión educativa especialmente orientada a personas pobres. Su espiritualidad destaca la bondad de Dios y la confianza necesaria para responder a nuevas necesidades. Las religiosas sirven en educación y otros proyectos de acompañamiento humano y cristiano, junto a colaboradores laicos. El nombre Notre Dame pertenece también a otras congregaciones: esta ficha trata específicamente del instituto de Namur y no de cada familia con ese título.",
+      "en": "The Sisters of Notre Dame de Namur began in Amiens in 1804 with Julie Billiart and Françoise Blin de Bourdon. The community moved its centre to Namur and developed an educational mission particularly directed towards people in poverty. Its spirituality emphasizes God’s goodness and the trust needed to respond to new needs. The sisters serve in education and other projects of human and Christian accompaniment alongside lay collaborators. Other congregations also bear the name Notre Dame: this entry concerns the Namur institute specifically, rather than every family using that title.",
+      "pt": "As Irmãs de Nossa Senhora de Namur nasceram em Amiens em 1804 com Júlia Billiart e Françoise Blin de Bourdon. A comunidade transferiu seu centro para Namur e desenvolveu uma missão educativa especialmente voltada às pessoas pobres. Sua espiritualidade destaca a bondade de Deus e a confiança necessária para responder a novas necessidades. As religiosas servem na educação e em outros projetos de acompanhamento humano e cristão, junto a colaboradores leigos. O nome Notre Dame também pertence a outras congregações: esta ficha trata especificamente do instituto de Namur e não de cada família com esse título."
+    },
+    "charism": {
+      "es": "Testimoniar la bondad de Dios mediante educación y servicio a personas con menos oportunidades.",
+      "en": "Witnessing to God’s goodness through education and service to people with fewer opportunities.",
+      "pt": "Testemunhar a bondade de Deus por meio de educação e serviço às pessoas com menos oportunidades."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "congregacion-jesus-cj",
+    "name": {
+      "es": "Congregación de Jesús: familia de Mary Ward y Loreto",
+      "en": "Congregatio Jesu: Mary Ward and Loreto Family",
+      "pt": "Congregação de Jesus: Família de Mary Ward e Loreto"
+    },
+    "abbreviation": "C.J.",
+    "foundationYear": "1609",
+    "founder": {
+      "es": "Mary Ward, venerable",
+      "en": "Mary Ward, Venerable",
+      "pt": "Mary Ward, venerável"
+    },
+    "description": {
+      "es": "La Congregación de Jesús procede del proyecto de Mary Ward, iniciado en 1609 para mujeres consagradas dedicadas a una misión apostólica sin clausura. De espiritualidad ignaciana, desarrolla educación, acompañamiento espiritual y servicios sociales. Su historia atravesó dificultades de reconocimiento y distintas configuraciones institucionales. El 4 de noviembre de 2025, Congregatio Jesu y el Instituto de la Bienaventurada Virgen María, conocido como Loreto, se unieron canónicamente en una sola congregación. La obra actual comparte la herencia de ambas ramas y colabora con laicos en la formación de personas, la justicia y la dignidad humana.",
+      "en": "Congregatio Jesu grew from Mary Ward’s project, begun in 1609 for consecrated women dedicated to an apostolic mission without enclosure. Rooted in Ignatian spirituality, it undertakes education, spiritual accompaniment and social services. Its history passed through difficulties of recognition and different institutional configurations. On 4 November 2025, Congregatio Jesu and the Institute of the Blessed Virgin Mary, known as Loreto, united canonically as one congregation. Its present work shares the heritage of both branches and collaborates with lay people in formation, justice and human dignity.",
+      "pt": "A Congregação de Jesus procede do projeto de Mary Ward, iniciado em 1609 para mulheres consagradas dedicadas a uma missão apostólica sem clausura. De espiritualidade inaciana, desenvolve educação, acompanhamento espiritual e serviços sociais. Sua história atravessou dificuldades de reconhecimento e diferentes configurações institucionais. Em 4 de novembro de 2025, a Congregatio Jesu e o Instituto da Bem-Aventurada Virgem Maria, conhecido como Loreto, uniram-se canonicamente em uma só congregação. A obra atual compartilha a herança dos dois ramos e colabora com leigos na formação de pessoas, na justiça e na dignidade humana."
+    },
+    "charism": {
+      "es": "Seguir a Jesús con libertad apostólica, discernimiento ignaciano y servicio educativo y social.",
+      "en": "Following Jesus through apostolic freedom, Ignatian discernment and educational and social service.",
+      "pt": "Seguir Jesus com liberdade apostólica, discernimento inaciano e serviço educativo e social."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "san-jose-cluny-sjc",
+    "name": {
+      "es": "Hermanas de San José de Cluny",
+      "en": "Sisters of Saint Joseph of Cluny",
+      "pt": "Irmãs de São José de Cluny"
+    },
+    "abbreviation": "S.J.C.",
+    "foundationYear": "1807",
+    "founder": {
+      "es": "Beata Ana María Javouhey",
+      "en": "Blessed Anne-Marie Javouhey",
+      "pt": "Bem-aventurada Ana Maria Javouhey"
+    },
+    "description": {
+      "es": "Ana María Javouhey fundó esta congregación en Chalon-sur-Saône, Francia, en 1807. El nombre de Cluny procede de la casa adquirida por la comunidad en 1812. Desde sus primeras misiones fuera de Francia, las hermanas desarrollaron educación, atención sanitaria y servicio a poblaciones de distintas culturas. Su espiritualidad busca la voluntad de Dios y el respeto a la dignidad de cada persona. La misión actual abarca escuelas, pastoral, salud y acción social. La congregación mantiene una identidad propia entre los numerosos institutos femeninos que llevan el nombre de san José.",
+      "en": "Anne-Marie Javouhey founded this congregation in Chalon-sur-Saône, France, in 1807. The name Cluny comes from the house the community acquired in 1812. From their early missions outside France, the sisters developed education, healthcare and service to populations of different cultures. Their spirituality seeks God’s will and respect for every person’s dignity. Their present mission includes schools, pastoral ministry, healthcare and social action. The congregation retains its own identity among the many women’s institutes bearing Saint Joseph’s name.",
+      "pt": "Ana Maria Javouhey fundou esta congregação em Chalon-sur-Saône, na França, em 1807. O nome de Cluny procede da casa adquirida pela comunidade em 1812. Desde as primeiras missões fora da França, as irmãs desenvolveram educação, atendimento de saúde e serviço a populações de diferentes culturas. Sua espiritualidade procura a vontade de Deus e o respeito à dignidade de cada pessoa. A missão atual abrange escolas, pastoral, saúde e ação social. A congregação mantém identidade própria entre os numerosos institutos femininos que levam o nome de São José."
+    },
+    "charism": {
+      "es": "Buscar la voluntad de Dios y servir la dignidad humana mediante educación, salud y misión.",
+      "en": "Seeking God’s will and serving human dignity through education, healthcare and mission.",
+      "pt": "Buscar a vontade de Deus e servir à dignidade humana por meio de educação, saúde e missão."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "siervas-maria-enfermos-sdem",
+    "name": {
+      "es": "Siervas de María Ministras de los Enfermos",
+      "en": "Servants of Mary, Ministers to the Sick",
+      "pt": "Servas de Maria Ministras dos Enfermos"
+    },
+    "abbreviation": "S. de M.",
+    "foundationYear": "1851",
+    "founder": {
+      "es": "Santa María Soledad Torres Acosta",
+      "en": "Saint María Soledad Torres Acosta",
+      "pt": "Santa Maria Soledade Torres Acosta"
+    },
+    "description": {
+      "es": "Las Siervas de María Ministras de los Enfermos comenzaron en Madrid el 15 de agosto de 1851. María Soledad Torres Acosta dio forma a una consagración dedicada al cuidado de quienes sufren enfermedad. Las religiosas unen oración, vida fraterna y asistencia a enfermos, con particular tradición de servicio en los domicilios. Su inspiración mariana se expresa en disponibilidad, cercanía y acompañamiento de las familias. La congregación se extendió fuera de España y mantiene comunidades en distintas regiones. No se identifica con otras familias religiosas que también usan el nombre Siervas de María.",
+      "en": "The Servants of Mary, Ministers to the Sick, began in Madrid on 15 August 1851. María Soledad Torres Acosta shaped a consecrated life dedicated to caring for people suffering from illness. The sisters unite prayer, fraternal life and care for sick people, with a particular tradition of service in their homes. Their Marian inspiration finds expression in availability, closeness and accompaniment of families. The congregation spread beyond Spain and maintains communities in different regions. It is distinct from other religious families that also use the name Servants of Mary.",
+      "pt": "As Servas de Maria Ministras dos Enfermos começaram em Madri em 15 de agosto de 1851. Maria Soledade Torres Acosta deu forma a uma consagração dedicada ao cuidado de quem sofre com a doença. As religiosas unem oração, vida fraterna e assistência aos enfermos, com particular tradição de serviço nos domicílios. Sua inspiração mariana se expressa em disponibilidade, proximidade e acompanhamento das famílias. A congregação se estendeu para além da Espanha e mantém comunidades em diferentes regiões. Não se identifica com outras famílias religiosas que também usam o nome Servas de Maria."
+    },
+    "charism": {
+      "es": "Servir a Cristo en las personas enfermas con disponibilidad, cuidado y presencia junto a sus familias.",
+      "en": "Serving Christ in sick people through availability, care and presence alongside their families.",
+      "pt": "Servir a Cristo nas pessoas enfermas com disponibilidade, cuidado e presença junto às suas famílias."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "hermanas-hospitalarias-hsc",
+    "name": {
+      "es": "Hermanas Hospitalarias del Sagrado Corazón de Jesús",
+      "en": "Sisters Hospitallers of the Sacred Heart of Jesus",
+      "pt": "Irmãs Hospitaleiras do Sagrado Coração de Jesus"
+    },
+    "abbreviation": "H.S.C.",
+    "foundationYear": "1881",
+    "founder": {
+      "es": "San Benito Menni, María Josefa Recio y María Angustias Giménez",
+      "en": "Saint Benito Menni, María Josefa Recio and María Angustias Giménez",
+      "pt": "São Bento Menni, María Josefa Recio e María Angustias Giménez"
+    },
+    "description": {
+      "es": "Las Hermanas Hospitalarias nacieron en Ciempozuelos, Madrid, en 1881 por iniciativa de Benito Menni, María Josefa Recio y María Angustias Giménez. Respondieron al abandono que sufrían mujeres con enfermedad mental. La congregación une hospitalidad, cuidado profesional y atención a la dignidad de cada persona. Sus religiosas trabajan con profesionales, voluntarios y colaboradores en salud mental, discapacidad y otros ámbitos asistenciales. La dimensión espiritual acompaña una atención integral, sin sustituir el conocimiento clínico. Son una congregación femenina propia, vinculada por su inspiración hospitalaria a san Juan de Dios.",
+      "en": "The Sisters Hospitallers began in Ciempozuelos, Madrid, in 1881 through the initiative of Benito Menni, María Josefa Recio and María Angustias Giménez. They responded to the neglect experienced by women with mental illness. The congregation unites hospitality, professional care and attention to each person’s dignity. Its sisters work with professionals, volunteers and collaborators in mental health, disability and other areas of care. Spiritual accompaniment forms part of integral care without replacing clinical knowledge. They are a distinct women’s congregation, linked through their hospitaller inspiration to Saint John of God.",
+      "pt": "As Irmãs Hospitaleiras nasceram em Ciempozuelos, Madri, em 1881 por iniciativa de Bento Menni, María Josefa Recio e María Angustias Giménez. Responderam ao abandono sofrido por mulheres com doença mental. A congregação une hospitalidade, cuidado profissional e atenção à dignidade de cada pessoa. Suas religiosas trabalham com profissionais, voluntários e colaboradores na saúde mental, na deficiência e em outros campos assistenciais. A dimensão espiritual acompanha um atendimento integral, sem substituir o conhecimento clínico. São uma congregação feminina própria, vinculada por sua inspiração hospitaleira a São João de Deus."
+    },
+    "charism": {
+      "es": "Hospitalidad que integra compasión, ciencia y respeto a la dignidad de las personas atendidas.",
+      "en": "Hospitality integrating compassion, science and respect for the dignity of people receiving care.",
+      "pt": "Hospitalidade que integra compaixão, ciência e respeito à dignidade das pessoas atendidas."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "religiosas-asuncion-ra",
+    "name": {
+      "es": "Religiosas de la Asunción",
+      "en": "Religious of the Assumption",
+      "pt": "Religiosas da Assunção"
+    },
+    "abbreviation": "R.A.",
+    "foundationYear": "1839",
+    "founder": {
+      "es": "Santa María Eugenia de Jesús Milleret",
+      "en": "Saint Marie Eugénie of Jesus Milleret",
+      "pt": "Santa Maria Eugênia de Jesus Milleret"
+    },
+    "description": {
+      "es": "Las Religiosas de la Asunción nacieron en París en 1839 alrededor de María Eugenia de Jesús Milleret y sus primeras compañeras. Su proyecto unió oración, estudio y una educación capaz de transformar la sociedad desde el Evangelio. La vida comunitaria y la liturgia sostienen una misión educativa que se expresa en escuelas y otras presencias de acompañamiento. La congregación se extendió a distintos continentes y comparte hoy espiritualidad y misión con laicos. Pertenece a la familia espiritual de la Asunción, pero tiene gobierno e identidad distintos de los asuncionistas y de otras congregaciones de ese nombre.",
+      "en": "The Religious of the Assumption began in Paris in 1839 around Marie Eugénie of Jesus Milleret and her first companions. Their project united prayer, study and education capable of transforming society through the Gospel. Community life and liturgy sustain an educational mission expressed in schools and other settings of accompaniment. The congregation spread to different continents and today shares spirituality and mission with lay people. It belongs to the Assumption spiritual family but has its own governance and identity, distinct from the Assumptionists and other congregations bearing that name.",
+      "pt": "As Religiosas da Assunção nasceram em Paris em 1839 ao redor de Maria Eugênia de Jesus Milleret e de suas primeiras companheiras. Seu projeto uniu oração, estudo e uma educação capaz de transformar a sociedade a partir do Evangelho. A vida comunitária e a liturgia sustentam uma missão educativa que se expressa em escolas e em outras presenças de acompanhamento. A congregação se estendeu a diferentes continentes e hoje compartilha espiritualidade e missão com leigos. Pertence à família espiritual da Assunção, mas possui governo e identidade distintos dos assuncionistas e de outras congregações desse nome."
+    },
+    "charism": {
+      "es": "Oración y educación para formar personas y transformar la sociedad a la luz del Evangelio.",
+      "en": "Prayer and education forming people and transforming society in the light of the Gospel.",
+      "pt": "Oração e educação para formar pessoas e transformar a sociedade à luz do Evangelho."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "buen-pastor-rgs",
+    "name": {
+      "es": "Nuestra Señora de la Caridad del Buen Pastor",
+      "en": "Our Lady of Charity of the Good Shepherd",
+      "pt": "Nossa Senhora da Caridade do Bom Pastor"
+    },
+    "abbreviation": "R.G.S.",
+    "foundationYear": "1835",
+    "founder": {
+      "es": "Santa María Eufrasia Pelletier; raíces en san Juan Eudes",
+      "en": "Saint Mary Euphrasia Pelletier; roots in Saint John Eudes",
+      "pt": "Santa Maria Eufrásia Pelletier; raízes em São João Eudes"
+    },
+    "description": {
+      "es": "La congregación del Buen Pastor surgió en Angers en 1835 con María Eufrasia Pelletier, sobre la tradición de Nuestra Señora de la Caridad iniciada por Juan Eudes en 1641. Su misión acompaña especialmente a mujeres y niñas en situaciones de exclusión, violencia o explotación. Reúne hermanas apostólicas y contemplativas dentro de una misma congregación. En 2014 se reunificó con la congregación de Nuestra Señora de la Caridad. Su servicio actual combina acompañamiento, educación, defensa de derechos y colaboración social. La historia distingue así la raíz eudista, la organización de Angers y la posterior reunificación.",
+      "en": "The Good Shepherd congregation emerged in Angers in 1835 with Mary Euphrasia Pelletier, building on the Our Lady of Charity tradition begun by John Eudes in 1641. Its mission especially accompanies women and girls facing exclusion, violence or exploitation. It brings together apostolic and contemplative sisters within one congregation. In 2014 it reunited with the Congregation of Our Lady of Charity. Its present service combines accompaniment, education, defence of rights and social collaboration. Its history thus distinguishes the Eudist roots, the Angers organization and the subsequent reunification.",
+      "pt": "A congregação do Bom Pastor surgiu em Angers em 1835 com Maria Eufrásia Pelletier, sobre a tradição de Nossa Senhora da Caridade iniciada por João Eudes em 1641. Sua missão acompanha especialmente mulheres e meninas em situações de exclusão, violência ou exploração. Reúne irmãs apostólicas e contemplativas dentro de uma mesma congregação. Em 2014 reunificou-se com a congregação de Nossa Senhora da Caridade. Seu serviço atual combina acompanhamento, educação, defesa de direitos e colaboração social. A história distingue assim a raiz eudista, a organização de Angers e a posterior reunificação."
+    },
+    "charism": {
+      "es": "Acompañar y defender la dignidad de mujeres, niñas y personas en situación de vulnerabilidad.",
+      "en": "Accompanying and defending the dignity of women, girls and people in vulnerable situations.",
+      "pt": "Acompanhar e defender a dignidade de mulheres, meninas e pessoas em situação de vulnerabilidade."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "siervas-espiritu-santo-ssps",
+    "name": {
+      "es": "Misioneras Siervas del Espíritu Santo",
+      "en": "Missionary Sisters Servants of the Holy Spirit",
+      "pt": "Missionárias Servas do Espírito Santo"
+    },
+    "abbreviation": "S.Sp.S.",
+    "foundationYear": "1889",
+    "founder": {
+      "es": "San Arnoldo Janssen, beatas María Helena Stollenwerk y Josefa Hendrina Stenmanns",
+      "en": "Saint Arnold Janssen, Blesseds Maria Helena Stollenwerk and Josepha Hendrina Stenmanns",
+      "pt": "Santo Arnaldo Janssen, bem-aventuradas Maria Helena Stollenwerk e Josefa Hendrina Stenmanns"
+    },
+    "description": {
+      "es": "Las Misioneras Siervas del Espíritu Santo nacieron en Steyl, Países Bajos, en 1889. Arnoldo Janssen impulsó la fundación junto a María Helena Stollenwerk y Josefa Hendrina Stenmanns. Su vida religiosa une espiritualidad trinitaria, comunidad intercultural y disponibilidad para la misión. Las hermanas realizan evangelización, educación, atención social y otros servicios según las necesidades locales. Comparten la familia de Steyl con los Misioneros del Verbo Divino y con las Siervas del Espíritu Santo de Adoración Perpetua. Estas últimas constituyen otra congregación, de vocación contemplativa, y no se confunden con las misioneras de esta ficha.",
+      "en": "The Missionary Sisters Servants of the Holy Spirit began in Steyl, the Netherlands, in 1889. Arnold Janssen promoted the foundation together with Maria Helena Stollenwerk and Josepha Hendrina Stenmanns. Their religious life unites Trinitarian spirituality, intercultural community and missionary availability. The sisters undertake evangelization, education, social care and other services according to local needs. They share the Steyl family with the Divine Word Missionaries and the Servants of the Holy Spirit of Perpetual Adoration. The latter form a separate congregation with a contemplative vocation and are distinct from the missionary sisters in this entry.",
+      "pt": "As Missionárias Servas do Espírito Santo nasceram em Steyl, nos Países Baixos, em 1889. Arnaldo Janssen promoveu a fundação junto a Maria Helena Stollenwerk e Josefa Hendrina Stenmanns. Sua vida religiosa une espiritualidade trinitária, comunidade intercultural e disponibilidade para a missão. As irmãs realizam evangelização, educação, atendimento social e outros serviços conforme as necessidades locais. Compartilham a família de Steyl com os Missionários do Verbo Divino e com as Servas do Espírito Santo da Adoração Perpétua. Estas últimas constituem outra congregação, de vocação contemplativa, e não se confundem com as missionárias desta ficha."
+    },
+    "charism": {
+      "es": "Participar en la misión de Dios con espiritualidad trinitaria y comunidades interculturales al servicio de los pueblos.",
+      "en": "Participating in God’s mission through Trinitarian spirituality and intercultural communities serving peoples.",
+      "pt": "Participar da missão de Deus com espiritualidade trinitária e comunidades interculturais a serviço dos povos."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "hijas-san-pablo-fsp",
+    "name": {
+      "es": "Hijas de San Pablo",
+      "en": "Daughters of Saint Paul",
+      "pt": "Filhas de São Paulo"
+    },
+    "abbreviation": "F.S.P.",
+    "foundationYear": "1915",
+    "founder": {
+      "es": "Beato Santiago Alberione y venerable Tecla Merlo",
+      "en": "Blessed James Alberione and Venerable Tecla Merlo",
+      "pt": "Bem-aventurado Tiago Alberione e venerável Tecla Merlo"
+    },
+    "description": {
+      "es": "Las Hijas de San Pablo nacieron en Alba, Italia, en 1915 por iniciativa de Santiago Alberione. Tecla Merlo, cofundadora y primera superiora general, acompañó la formación y expansión del instituto. La congregación femenina dedica su vida a evangelizar en el mundo de la comunicación. Su misión incluye edición, librerías, producción audiovisual y presencia en medios digitales, sostenidas por oración, estudio y vida comunitaria. Forma parte de la Familia Paulina, pero es distinta de la Sociedad de San Pablo y de los otros institutos de esa familia. San Pablo inspira su nombre y dinamismo apostólico.",
+      "en": "The Daughters of Saint Paul began in Alba, Italy, in 1915 through James Alberione’s initiative. Tecla Merlo, cofoundress and first superior general, accompanied the institute’s formation and expansion. The women’s congregation dedicates its life to evangelization in the world of communication. Its mission includes publishing, bookshops, audiovisual production and digital media, sustained by prayer, study and community life. It belongs to the Pauline Family but is distinct from the Society of Saint Paul and that family’s other institutes. Saint Paul inspires its name and apostolic dynamism.",
+      "pt": "As Filhas de São Paulo nasceram em Alba, na Itália, em 1915 por iniciativa de Tiago Alberione. Tecla Merlo, cofundadora e primeira superiora geral, acompanhou a formação e a expansão do instituto. A congregação feminina dedica sua vida a evangelizar no mundo da comunicação. Sua missão inclui edição, livrarias, produção audiovisual e presença nos meios digitais, sustentadas por oração, estudo e vida comunitária. Faz parte da Família Paulina, mas é distinta da Sociedade de São Paulo e dos outros institutos dessa família. São Paulo inspira seu nome e dinamismo apostólico."
+    },
+    "charism": {
+      "es": "Evangelizar en la cultura de la comunicación con medios editoriales, audiovisuales y digitales.",
+      "en": "Evangelizing within communication culture through publishing, audiovisual and digital media.",
+      "pt": "Evangelizar na cultura da comunicação com meios editoriais, audiovisuais e digitais."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "carmelitas-misioneras-teresianas-cmt",
+    "name": {
+      "es": "Carmelitas Misioneras Teresianas",
+      "en": "Teresian Carmelite Missionaries",
+      "pt": "Carmelitas Missionárias Teresianas"
+    },
+    "abbreviation": "C.M.T.",
+    "foundationYear": "1860",
+    "founder": {
+      "es": "Beato Francisco Palau y Quer",
+      "en": "Blessed Francisco Palau y Quer",
+      "pt": "Bem-aventurado Francisco Palau y Quer"
+    },
+    "description": {
+      "es": "Las Carmelitas Misioneras Teresianas fueron fundadas en Ciudadela, Menorca, en 1860 por Francisco Palau y Quer. Su espiritualidad carmelitana comprende a la Iglesia como comunión de Dios con el prójimo. Las religiosas unen contemplación, fraternidad y misión, con inspiración mariana y teresiana. Su servicio se expresa en educación, acompañamiento espiritual, atención social y otras respuestas a las necesidades locales. La congregación se extendió desde España a América y otras regiones. Conserva identidad propia entre los institutos nacidos de la experiencia de Palau y no se confunde con las monjas carmelitas descalzas.",
+      "en": "The Teresian Carmelite Missionaries were founded in Ciutadella, Menorca, in 1860 by Francisco Palau y Quer. Their Carmelite spirituality understands the Church as communion with God and neighbour. The sisters unite contemplation, fraternity and mission, with Marian and Teresian inspiration. Their service finds expression in education, spiritual accompaniment, social care and other responses to local needs. The congregation spread from Spain to the Americas and other regions. It retains its own identity among institutes born from Palau’s experience and is distinct from Discalced Carmelite nuns.",
+      "pt": "As Carmelitas Missionárias Teresianas foram fundadas em Ciutadella, Menorca, em 1860 por Francisco Palau y Quer. Sua espiritualidade carmelitana compreende a Igreja como comunhão de Deus com o próximo. As religiosas unem contemplação, fraternidade e missão, com inspiração mariana e teresiana. Seu serviço se expressa na educação, no acompanhamento espiritual, na atenção social e em outras respostas às necessidades locais. A congregação se estendeu da Espanha às Américas e a outras regiões. Conserva identidade própria entre os institutos nascidos da experiência de Palau e não se confunde com as monjas carmelitas descalças."
+    },
+    "charism": {
+      "es": "Vivir la comunión eclesial mediante contemplación, fraternidad y misión al servicio del prójimo.",
+      "en": "Living ecclesial communion through contemplation, fraternity and mission in service to others.",
+      "pt": "Viver a comunhão eclesial por meio de contemplação, fraternidade e missão a serviço do próximo."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "religiosas-maria-inmaculada-rmi",
+    "name": {
+      "es": "Religiosas de María Inmaculada",
+      "en": "Religious of Mary Immaculate",
+      "pt": "Religiosas de Maria Imaculada"
+    },
+    "abbreviation": "R.M.I.",
+    "foundationYear": "1876",
+    "founder": {
+      "es": "Santa Vicenta María López y Vicuña",
+      "en": "Saint Vicenta María López y Vicuña",
+      "pt": "Santa Vicenta Maria López y Vicuña"
+    },
+    "description": {
+      "es": "Las Religiosas de María Inmaculada nacieron en Madrid en 1876 por iniciativa de Vicenta María López y Vicuña. Respondieron a la situación de jóvenes que llegaban a la ciudad buscando trabajo y quedaban sin hogar, protección o formación. Las hermanas unen vida de oración, fraternidad y acompañamiento educativo. Hoy mantienen residencias, centros sociales, casas de acogida y formación profesional. Su pedagogía busca prevenir situaciones de vulnerabilidad y favorecer el crecimiento integral de las jóvenes. Comparten su espiritualidad y misión con el movimiento laical MOLAVIM, que posee una identidad distinta del instituto religioso.",
+      "en": "The Religious of Mary Immaculate began in Madrid in 1876 through Vicenta María López y Vicuña’s initiative. They responded to young women arriving in the city to find work who lacked housing, protection or training. The sisters unite prayer, fraternity and educational accompaniment. Today they maintain residences, social centres, welcoming homes and vocational training. Their educational approach seeks to prevent situations of vulnerability and support young women’s integral growth. They share spirituality and mission with the lay movement MOLAVIM, which has an identity distinct from the religious institute.",
+      "pt": "As Religiosas de Maria Imaculada nasceram em Madri em 1876 por iniciativa de Vicenta Maria López y Vicuña. Responderam à situação de jovens que chegavam à cidade em busca de trabalho e ficavam sem moradia, proteção ou formação. As irmãs unem vida de oração, fraternidade e acompanhamento educativo. Hoje mantêm residências, centros sociais, casas de acolhida e formação profissional. Sua pedagogia procura prevenir situações de vulnerabilidade e favorecer o crescimento integral das jovens. Compartilham sua espiritualidade e missão com o movimento leigo MOLAVIM, que possui identidade distinta do instituto religioso."
+    },
+    "charism": {
+      "es": "Acoger y acompañar a las jóvenes con formación integral, prevención y evangelización.",
+      "en": "Welcoming and accompanying young women through integral formation, prevention and evangelization.",
+      "pt": "Acolher e acompanhar as jovens com formação integral, prevenção e evangelização."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "mercedarias-caridad-mc",
+    "name": {
+      "es": "Hermanas Mercedarias de la Caridad",
+      "en": "Mercedarian Sisters of Charity",
+      "pt": "Irmãs Mercedárias da Caridade"
+    },
+    "abbreviation": "M.C.",
+    "foundationYear": "1878",
+    "founder": {
+      "es": "Beato Juan Nepomuceno Zegrí y Moreno",
+      "en": "Blessed Juan Nepomuceno Zegrí y Moreno",
+      "pt": "Bem-aventurado João Nepomuceno Zegrí y Moreno"
+    },
+    "description": {
+      "es": "Las Mercedarias de la Caridad fueron fundadas en Málaga en 1878 por Juan Nepomuceno Zegrí y Moreno. Nacieron para responder al sufrimiento humano mediante obras de misericordia y una caridad inspirada en María de la Merced. La congregación se vinculó a la familia mercedaria, manteniendo su identidad femenina apostólica. Sus hermanas sirven en educación, atención social y otros ámbitos de acompañamiento a personas necesitadas. La misión se ha extendido a distintos países y cuenta con colaboración laical. Su servicio busca aliviar formas concretas de desamparo y favorecer la dignidad y la libertad de las personas.",
+      "en": "The Mercedarian Sisters of Charity were founded in Málaga in 1878 by Juan Nepomuceno Zegrí y Moreno. They began as a response to human suffering through works of mercy and charity inspired by Mary of Mercy. The congregation became linked to the Mercedarian family while maintaining its identity as an apostolic women’s institute. Its sisters serve in education, social care and other forms of accompaniment for people in need. Their mission has spread to different countries and involves lay collaboration. Their service seeks to relieve practical forms of abandonment and support people’s dignity and freedom.",
+      "pt": "As Mercedárias da Caridade foram fundadas em Málaga em 1878 por João Nepomuceno Zegrí y Moreno. Nasceram para responder ao sofrimento humano por meio de obras de misericórdia e de uma caridade inspirada em Maria das Mercês. A congregação se vinculou à família mercedária, mantendo sua identidade feminina apostólica. Suas irmãs servem na educação, na atenção social e em outros campos de acompanhamento às pessoas necessitadas. A missão se estendeu a diferentes países e conta com colaboração leiga. Seu serviço procura aliviar formas concretas de desamparo e favorecer a dignidade e a liberdade das pessoas."
+    },
+    "charism": {
+      "es": "Expresar la caridad redentora mediante obras de misericordia que alivien el sufrimiento y el desamparo.",
+      "en": "Expressing redeeming charity through works of mercy relieving suffering and abandonment.",
+      "pt": "Expressar a caridade redentora por meio de obras de misericórdia que aliviem o sofrimento e o desamparo."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "hermanitas-ancianos-desamparados-had",
+    "name": {
+      "es": "Hermanitas de los Ancianos Desamparados",
+      "en": "Little Sisters of the Abandoned Elderly",
+      "pt": "Irmãzinhas dos Anciãos Desamparados"
+    },
+    "abbreviation": "H.A.D.",
+    "foundationYear": "1873",
+    "founder": {
+      "es": "Saturnino López Novoa y santa Teresa de Jesús Jornet",
+      "en": "Saturnino López Novoa and Saint Teresa of Jesus Jornet",
+      "pt": "Saturnino López Novoa e Santa Teresa de Jesus Jornet"
+    },
+    "description": {
+      "es": "Las Hermanitas de los Ancianos Desamparados nacieron en Barbastro en 1873 por iniciativa de Saturnino López Novoa y con la colaboración de Teresa de Jesús Jornet. La congregación se dedica a acoger y cuidar a personas mayores necesitadas. Su vida une oración, fraternidad y servicio cotidiano, procurando un ambiente familiar y respetuoso. Desde España la obra se extendió a otros países, especialmente de América. Las religiosas colaboran con trabajadores, voluntarios y benefactores para sostener sus hogares. Constituyen un instituto distinto de las Hermanitas de los Pobres fundadas por Juana Jugan.",
+      "en": "The Little Sisters of the Abandoned Elderly began in Barbastro in 1873 through Saturnino López Novoa’s initiative and Teresa of Jesus Jornet’s collaboration. The congregation is dedicated to welcoming and caring for elderly people in need. Its life unites prayer, fraternity and daily service, seeking a respectful family atmosphere. From Spain the work spread to other countries, particularly in the Americas. The sisters collaborate with employees, volunteers and benefactors to sustain their homes. They form a distinct institute from the Little Sisters of the Poor founded by Jeanne Jugan.",
+      "pt": "As Irmãzinhas dos Anciãos Desamparados nasceram em Barbastro em 1873 por iniciativa de Saturnino López Novoa e com a colaboração de Teresa de Jesus Jornet. A congregação se dedica a acolher e cuidar de pessoas idosas necessitadas. Sua vida une oração, fraternidade e serviço cotidiano, procurando um ambiente familiar e respeitoso. A partir da Espanha a obra se estendeu a outros países, especialmente nas Américas. As religiosas colaboram com profissionais, voluntários e benfeitores para manter seus lares. Constituem um instituto distinto das Irmãzinhas dos Pobres fundadas por Joana Jugan."
+    },
+    "charism": {
+      "es": "Acoger y cuidar a las personas mayores necesitadas en un ambiente de familia, oración y respeto.",
+      "en": "Welcoming and caring for elderly people in need in a setting of family, prayer and respect.",
+      "pt": "Acolher e cuidar das pessoas idosas necessitadas em um ambiente de família, oração e respeito."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "hermanas-cruz-hc",
+    "name": {
+      "es": "Hermanas de la Compañía de la Cruz",
+      "en": "Sisters of the Company of the Cross",
+      "pt": "Irmãs da Companhia da Cruz"
+    },
+    "abbreviation": "H.C.",
+    "foundationYear": "1875",
+    "founder": {
+      "es": "Santa Ángela de la Cruz",
+      "en": "Saint Angela of the Cross",
+      "pt": "Santa Ângela da Cruz"
+    },
+    "description": {
+      "es": "Las Hermanas de la Compañía de la Cruz nacieron en Sevilla en 1875 por iniciativa de Ángela de la Cruz. Su vocación une oración, sencillez de vida y servicio cercano a personas pobres y enfermas. Las hermanas buscan compartir la vida de quienes sufren necesidad y acompañarlos mediante visitas, cuidados y ayuda concreta. La congregación se extendió desde Andalucía a otras regiones y conserva un estilo comunitario austero. Su historia incluye a santa María de la Purísima de la Cruz. Es una congregación apostólica femenina, no una orden monástica de clausura.",
+      "en": "The Sisters of the Company of the Cross began in Seville in 1875 through Angela of the Cross’s initiative. Their vocation unites prayer, simplicity of life and close service to people who are poor or sick. The sisters seek to share the lives of people in need and accompany them through visits, care and practical assistance. The congregation spread from Andalusia to other regions and retains an austere community lifestyle. Its history includes Saint María of the Immaculate Conception of the Cross. It is an apostolic women’s congregation rather than a cloistered monastic order.",
+      "pt": "As Irmãs da Companhia da Cruz nasceram em Sevilha em 1875 por iniciativa de Ângela da Cruz. Sua vocação une oração, simplicidade de vida e serviço próximo às pessoas pobres e enfermas. As irmãs procuram compartilhar a vida de quem sofre necessidade e acompanhar essas pessoas com visitas, cuidados e ajuda concreta. A congregação se estendeu da Andaluzia a outras regiões e conserva um estilo comunitário austero. Sua história inclui Santa Maria Puríssima da Cruz. É uma congregação apostólica feminina, não uma ordem monástica de clausura."
+    },
+    "charism": {
+      "es": "Compartir la vida de las personas pobres y servir a quienes sufren con oración, sencillez y caridad.",
+      "en": "Sharing the lives of people in poverty and serving those who suffer through prayer, simplicity and charity.",
+      "pt": "Compartilhar a vida das pessoas pobres e servir a quem sofre com oração, simplicidade e caridade."
     },
     "gender": "women"
   }
