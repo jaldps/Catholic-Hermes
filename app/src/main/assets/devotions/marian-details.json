@@ -83,23 +83,13 @@
       "pt": "O culto de Guadalupe é afirmado em Ecclesia in America, 11 (1999), e na celebração papal de 12-XII-2024. Esse reconhecimento não confirma automaticamente cada número de conversões ou afirmação científica sobre a tilma."
     },
     "promises": {
-      "text": {
-        "es": "En el relato guadalupano, María asegura a Juan Diego su cercanía y amparo de madre y lo invita a no temer. Es un mensaje de confianza del relato devocional, no una garantía individual de inmunidad a la enfermedad o a la angustia.",
-        "en": "In the Guadalupan account, Mary assures Juan Diego of her maternal closeness and protection and invites him not to fear. This is a message of trust within the devotional account, not an individual guarantee of immunity from illness or distress.",
-        "pt": "No relato guadalupano, Maria assegura a Juan Diego sua proximidade e proteção maternas e o convida a não temer. É uma mensagem de confiança do relato devocional, não uma garantia individual de imunidade à doença ou à angústia."
-      },
-      "attribution": {
-        "es": "Palabras atribuidas a María en Nican Mopohua, 118–119, recordadas por Francisco en 2024.",
-        "en": "Words attributed to Mary in Nican Mopohua, 118–119, recalled by Francis in 2024.",
-        "pt": "Palavras atribuídas a Maria em Nican Mopohua, 118–119, recordadas por Francisco em 2024."
-      },
-      "source": "Nican Mopohua, 118–119; Francisco, homilía del 12-XII-2024. Paráfrasis fiel del pasaje."
+      "remove": true
     },
     "miracles": {
       "text": {
-        "es": "La tradición guadalupana relata el signo de las rosas y de la imagen en la tilma. Se retiran los números de conversiones y las afirmaciones oftalmológicas o de conservación inexplicable que aquí carecen de respaldo documental suficiente.",
-        "en": "Guadalupan tradition recounts the sign of the roses and the image on the tilma. Conversion figures and claims about eye examinations or inexplicable preservation are omitted here for lack of sufficient documentary support.",
-        "pt": "A tradição guadalupana relata o sinal das rosas e da imagem na tilma. Retiram-se números de conversões e afirmações oftalmológicas ou de conservação inexplicável que aqui carecem de apoio documental suficiente."
+        "es": "La tradición guadalupana relata el signo de las rosas y de la imagen en la tilma.",
+        "en": "Guadalupan tradition recounts the sign of the roses and the image on the tilma.",
+        "pt": "A tradição guadalupana relata o sinal das rosas e da imagem na tilma."
       }
     },
     "prayer": {
@@ -279,17 +269,7 @@
       "pt": "O bispo de Leiria José Alves Correia da Silva declarou dignas de crédito as visões de 1917 e autorizou o culto em sua carta pastoral de 13-X-1930. A publicação da Congregação para a Doutrina da Fé de 2000 distingue a revelação privada do depósito da fé."
     },
     "promises": {
-      "text": {
-        "es": "El relato de Lucía atribuye a María la promesa del triunfo final de su Corazón Inmaculado, la consagración y conversión de Rusia y un tiempo de paz. La promesa se entiende en el contexto del llamado a la oración, la penitencia y la conversión; no permite calcular fechas ni asegurar resultados políticos.",
-        "en": "Lucia’s account attributes to Mary the promise of the final triumph of her Immaculate Heart, the consecration and conversion of Russia and a time of peace. The promise is understood within the call to prayer, penance and conversion; it does not permit calculating dates or ensuring political outcomes.",
-        "pt": "O relato de Lúcia atribui a Maria a promessa do triunfo final de seu Coração Imaculado, a consagração e conversão da Rússia e um tempo de paz. A promessa é entendida no contexto do chamado à oração, à penitência e à conversão; não permite calcular datas nem assegurar resultados políticos."
-      },
-      "attribution": {
-        "es": "Relato de sor Lucía sobre las palabras de María; revelación privada, presentada con comentario teológico en 2000.",
-        "en": "Sister Lucia’s account of Mary’s words; private revelation presented with theological commentary in 2000.",
-        "pt": "Relato da irmã Lúcia sobre as palavras de Maria; revelação privada apresentada com comentário teológico em 2000."
-      },
-      "source": "Congregación para la Doctrina de la Fe, El mensaje de Fátima, 26-VI-2000: segunda parte del secreto y comentario teológico. Paráfrasis."
+      "remove": true
     },
     "miracles": {
       "text": {
@@ -390,17 +370,7 @@
       "pt": "A capela da rue du Bac documenta a difusão eclesial da medalha desde 1832. Vatican News registra a bênção papal de uma imagem para a peregrinação de 2020; esse gesto não é transformado em nova declaração sobre cada relato de 1830."
     },
     "promises": {
-      "text": {
-        "es": "El relato de Catalina atribuye a María la promesa de grandes gracias para las personas que lleven la medalla con confianza. No especifica una curación, prosperidad o resultado material asegurado para cada portador.",
-        "en": "Catherine’s account attributes to Mary the promise of great graces for people who wear the medal with confidence. It does not specify a healing, prosperity or material outcome assured for every wearer.",
-        "pt": "O relato de Catarina atribui a Maria a promessa de grandes graças para as pessoas que usarem a medalha com confiança. Não especifica uma cura, prosperidade ou resultado material assegurado a cada pessoa."
-      },
-      "attribution": {
-        "es": "Relato de santa Catalina Labouré sobre el 27-XI-1830; revelación privada.",
-        "en": "Saint Catherine Labouré’s account of 27 November 1830; private revelation.",
-        "pt": "Relato de Santa Catarina Labouré sobre 27-XI-1830; revelação privada."
-      },
-      "source": "Capilla de Nuestra Señora de la Medalla Milagrosa, 27 novembre 1830: palabras sobre llevar la medalla con confianza. Paráfrasis fiel."
+      "remove": true
     },
     "miracles": {
       "text": {
@@ -655,9 +625,9 @@
     },
     "miracles": {
       "text": {
-        "es": "La memoria de Lepanto pertenece a la historia de esta devoción. Se retira la frase sobre cien mil avemarías y las victorias genéricas, sin fuente concreta, y no se presentan hechos militares como garantía de intervención milagrosa para cada devoto.",
-        "en": "The memory of Lepanto belongs to this devotion’s history. The phrase about a hundred thousand Hail Marys and unspecified victories is removed for lack of a specific source; military events are not presented as a guarantee of miraculous intervention for every devotee.",
-        "pt": "A memória de Lepanto pertence à história desta devoção. Retira-se a frase sobre cem mil ave-marias e as vitórias genéricas sem fonte concreta; fatos militares não são apresentados como garantia de intervenção milagrosa para cada devoto."
+        "es": "La memoria de Lepanto pertenece a la historia de esta devoción.",
+        "en": "The memory of Lepanto belongs to this devotion’s history.",
+        "pt": "A memória de Lepanto pertence à história desta devoção."
       }
     },
     "prayer": {
@@ -780,9 +750,9 @@
     },
     "miracles": {
       "text": {
-        "es": "El culto y la coronación documentados no autentican automáticamente cada leyenda sobre el origen del cuadro. Se retira el relato del hallazgo de los Astacio en 1515 como milagro probado, por falta de una fuente concreta en esta auditoría.",
-        "en": "The documented devotion and coronation do not automatically authenticate every legend about the painting’s origins. The account of the Astacio discovery in 1515 is removed as a proven miracle for lack of a specific source in this audit.",
-        "pt": "O culto e a coroação documentados não autenticam automaticamente cada lenda sobre a origem do quadro. Retira-se o relato do encontro dos Astacio em 1515 como milagre comprovado, por falta de fonte concreta nesta auditoria."
+        "es": "El culto y la coronación documentados no autentican automáticamente cada leyenda sobre el origen del cuadro.",
+        "en": "The documented devotion and coronation do not automatically authenticate every legend about the painting’s origins.",
+        "pt": "O culto e a coroação documentados não autenticam automaticamente cada lenda sobre a origem do quadro."
       }
     },
     "prayer": {
@@ -840,9 +810,9 @@
     },
     "miracles": {
       "text": {
-        "es": "El convento conserva los relatos de lágrimas de la imagen, distintos de una lista de curaciones con dictamen individual. Se retira la enumeración imprecisa de un cáncer y una sordera sin personas ni documentos identificados.",
-        "en": "The convent preserves accounts of the image’s tears, distinct from a list of healings with individual judgements. The imprecise listing of a cancer and deafness without identified people or documents is removed.",
-        "pt": "O convento conserva os relatos de lágrimas da imagem, distintos de uma lista de curas com parecer individual. Retira-se a enumeração imprecisa de um câncer e de uma surdez sem pessoas nem documentos identificados."
+        "es": "El convento conserva los relatos de lágrimas de la imagen, distintos de una lista de curaciones con dictamen individual.",
+        "en": "The convent preserves accounts of the image’s tears, distinct from a list of healings with individual judgements.",
+        "pt": "O convento conserva os relatos de lágrimas da imagem, distintos de uma lista de curas com parecer individual."
       }
     },
     "prayer": {

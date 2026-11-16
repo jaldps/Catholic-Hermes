@@ -49,7 +49,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-013](T-013.md) | Codex | CERRADO ([revisión](T-013-REVIEW.md)) | M5 · Santos de abril–junio (51) → `assets/saints/saints-q2.json` |
 | [T-014](T-014.md) | Codex | CERRADO ([revisión](T-014-REVIEW.md)) | M5 · Santos de julio–septiembre (67) → `assets/saints/saints-q3.json` |
 | [T-015](T-015.md) | Hermes | CERRADO ([revisión](T-015-REVIEW.md)) | Las 8 novenas pendientes de T-008, con las fuentes elegidas por el usuario (EWTN, CEH, devocionario, ipray…) → cuerpos 269–276 y `provenance/new-d.json` |
-| [T-016](T-016.md) | Codex | ABIERTO (30 nuevas + 67 fichas integradas, [revisión](T-016-REVIEW.md)) | M6 · ~60 órdenes nuevas + fichas ampliadas de todas → `assets/orders/orders-new.json`, `orders-details.json` |
+| [T-016](T-016.md) | Codex | CERRADO ([revisión](T-016-REVIEW.md)) | M6 · ~60 órdenes nuevas + fichas ampliadas de todas → `assets/orders/orders-new.json`, `orders-details.json` |
 | [T-017](T-017.md) | Hermes | CERRADO ([revisión](T-017-REVIEW.md)) | M6 · ~30 cargos y ministerios nuevos → `assets/orders/offices-new.json` |
-| [T-018](T-018.md) | Codex | ABIERTO (tras T-016) | M7 · Devociones marianas: auditoría de 30 + ~25 nuevas → `assets/devotions/marian-*.json` |
-| [T-019](T-019.md) | Hermes | ABIERTO (tras T-017) | M7 · Devociones de Cristo: auditoría de 20 + ~20 nuevas → `assets/devotions/christ-*.json` |
+| [T-018](T-018.md) | Codex | ABIERTO (auditoría integrada; faltan nuevas, [revisión](T-018-REVIEW.md)) | M7 · Devociones marianas: auditoría de 30 + ~25 nuevas → `assets/devotions/marian-*.json` |
+| [T-019](T-019.md) | Hermes | ABIERTO (cambios pedidos, [revisión](T-019-REVIEW.md)) | M7 · Devociones de Cristo: auditoría de 20 + ~20 nuevas → `assets/devotions/christ-*.json` |

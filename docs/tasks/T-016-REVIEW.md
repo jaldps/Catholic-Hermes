@@ -12,3 +12,8 @@
   
   Correcto y prudente. Dejar `motto` en `null` cuando no hay un lema oficial verificado es lo adecuado.
 - **Integración:** merge en `CatholicGPT`. Continúa con las restantes, unas 30 congregaciones femeninas y otras de la lista, y después pasa a T-018.
+
+## Revisión final (`f26017e`, 60 nuevas y 97 fichas) · CERRADO
+
+- **Validador:** `new` da 60 entradas y 0 errores. `details` da 97 entradas y 0 errores, en el orden correcto (37 base + 60 nuevas).
+- **Integración:** merge en `CatholicGPT`. Los tests de órdenes pasan.
