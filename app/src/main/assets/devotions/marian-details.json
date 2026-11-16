@@ -707,5 +707,312 @@
       "Congregación para el Culto Divino, decreto del título de basílica, 24-I-2011",
       "Dominicos, celebración de la Candelaria, 2-II-2024"
     ]
+  },
+  {
+    "id": "mercedes",
+    "recognition": {
+      "es": "Francisco reconoció la tradición de la familia mercedaria en su mensaje del 17-I-2018. Ese documento testimonia el culto mariano y su carisma de servicio, sin autenticar cada relato de cadenas o liberaciones atribuidas a una imagen.",
+      "en": "Francis acknowledged the Mercedarian family’s tradition in his message of 17 January 2018. That document witnesses to the Marian devotion and its charism of service without authenticating every account of chains or liberations attributed to an image.",
+      "pt": "Francisco reconheceu a tradição da família mercedária em sua mensagem de 17-I-2018. Esse documento testemunha o culto mariano e seu carisma de serviço, sem autenticar cada relato de correntes ou libertações atribuídas a uma imagem."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La liberación de cautivos forma parte de la historia y misión mercedarias. No se confunde esa obra de caridad con una declaración canónica de milagro sobre cadenas que se abren solas.",
+        "en": "The liberation of captives belongs to Mercedarian history and mission. That work of charity is not confused with a canonical declaration of a miracle concerning chains opening by themselves.",
+        "pt": "A libertação de cativos faz parte da história e da missão mercedárias. Essa obra de caridade não é confundida com declaração canônica de milagre sobre correntes que se abrem sozinhas."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La devoción se expresa en oración y en ayuda a personas privadas de libertad o sometidas a explotación. Honrar a María conduce a Cristo y al respeto efectivo de la dignidad humana.",
+      "en": "The devotion is expressed through prayer and assistance to people deprived of freedom or subjected to exploitation. Honouring Mary leads towards Christ and effective respect for human dignity.",
+      "pt": "A devoção se expressa na oração e na ajuda às pessoas privadas de liberdade ou submetidas à exploração. Honrar Maria conduz a Cristo e ao respeito efetivo à dignidade humana."
+    },
+    "sources": [
+      "Francisco, mensaje a la familia mercedaria, 17-I-2018",
+      "Catecismo de la Iglesia Católica, 969–971: intercesión y culto mariano"
+    ]
+  },
+  {
+    "id": "caacupe",
+    "recognition": {
+      "es": "Francisco celebró públicamente en el santuario de Caacupé el 11-VII-2015. La Conferencia Episcopal Paraguaya documenta el novenario nacional de 2025, culminado en la fiesta del 8 de diciembre; se trata de culto eclesial recibido, sin aprobación implícita de cada leyenda.",
+      "en": "Francis celebrated publicly at the Caacupé shrine on 11 July 2015. The Paraguayan Bishops’ Conference documents the 2025 national novena culminating in the 8 December feast; this is received ecclesial devotion, without implicit approval of every legend.",
+      "pt": "Francisco celebrou publicamente no santuário de Caacupé em 11-VII-2015. A Conferência Episcopal Paraguaia documenta a novena nacional de 2025, culminando na festa de 8 de dezembro; trata-se de culto eclesial acolhido, sem aprovação implícita de cada lenda."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición de Caacupé reúne relatos de auxilio y gratitud. Las fuentes citadas no identifican sentencias particulares sobre cosechas o inundaciones, por lo que esas afirmaciones no se presentan aquí como milagros canónicos comprobados.",
+        "en": "Caacupé’s tradition brings together accounts of help and gratitude. The cited sources identify no particular judgements concerning harvests or floods, so those claims are not presented here as verified canonical miracles.",
+        "pt": "A tradição de Caacupé reúne relatos de auxílio e gratidão. As fontes citadas não identificam sentenças particulares sobre colheitas ou inundações; por isso essas afirmações não são apresentadas aqui como milagres canônicos comprovados."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La novena y la peregrinación culminan el 8 de diciembre con la celebración de la Inmaculada Concepción. La oración por Paraguay se une a la Eucaristía y al compromiso con el bien común.",
+      "en": "The novena and pilgrimage culminate on 8 December with the celebration of the Immaculate Conception. Prayer for Paraguay is united with the Eucharist and commitment to the common good.",
+      "pt": "A novena e a peregrinação culminam em 8 de dezembro com a celebração da Imaculada Conceição. A oração pelo Paraguai se une à Eucaristia e ao compromisso com o bem comum."
+    },
+    "sources": [
+      "Francisco, homilía en Caacupé, 11-VII-2015",
+      "Conferencia Episcopal Paraguaya, apertura del novenario de Caacupé, 2025"
+    ]
+  },
+  {
+    "id": "altagracia",
+    "recognition": {
+      "es": "El Concordato de 1954, artículo XVIII, reconoce la fiesta dominicana de la Altagracia el 21 de enero. Francisco conmemoró el centenario de su coronación canónica en su mensaje de 16-VII-2022; se distingue esta advocación de la solemnidad de la Asunción.",
+      "en": "The 1954 Concordat, Article XVIII, recognizes the Dominican feast of Our Lady of Altagracia on 21 January. Francis commemorated the centenary of her canonical coronation in his message of 16 July 2022; this devotion is distinct from the Assumption solemnity.",
+      "pt": "A Concordata de 1954, artigo XVIII, reconhece a festa dominicana de Nossa Senhora da Altagracia em 21 de janeiro. Francisco comemorou o centenário de sua coroação canônica em sua mensagem de 16-VII-2022; esta devoção se distingue da solenidade da Assunção."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El culto y la coronación documentados no autentican automáticamente cada leyenda sobre el origen del cuadro. Se retira el relato del hallazgo de los Astacio en 1515 como milagro probado, por falta de una fuente concreta en esta auditoría.",
+        "en": "The documented devotion and coronation do not automatically authenticate every legend about the painting’s origins. The account of the Astacio discovery in 1515 is removed as a proven miracle for lack of a specific source in this audit.",
+        "pt": "O culto e a coroação documentados não autenticam automaticamente cada lenda sobre a origem do quadro. Retira-se o relato do encontro dos Astacio em 1515 como milagre comprovado, por falta de fonte concreta nesta auditoria."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La fiesta del 21 de enero reúne peregrinaciones a Higüey y celebraciones eucarísticas. La devoción contempla a María en relación con Jesús y anima a la oración y al cuidado de las familias.",
+      "en": "The 21 January feast brings together pilgrimages to Higüey and Eucharistic celebrations. The devotion contemplates Mary in relation to Jesus and encourages prayer and care for families.",
+      "pt": "A festa de 21 de janeiro reúne peregrinações a Higüey e celebrações eucarísticas. A devoção contempla Maria em relação com Jesus e anima a oração e o cuidado das famílias."
+    },
+    "sources": [
+      "Santa Sede y República Dominicana, Concordato de 1954, art. XVIII",
+      "Francisco, mensaje al pueblo dominicano por el jubileo altagraciano, 16-VII-2022"
+    ]
+  },
+  {
+    "id": "perpetuo_socorro",
+    "recognition": {
+      "es": "El santuario romano y los redentoristas documentan la restauración del icono al culto público en San Alfonso en 1866, conmemoradas en el jubileo de 2015–2016. Es una devoción eclesial al icono, no una aparición nueva del siglo XIX.",
+      "en": "The Roman shrine and the Redemptorists document the icon’s restoration to public devotion at Saint Alphonsus in 1866, commemorated in the 2015–2016 jubilee. This is an ecclesial devotion to the icon, not a new nineteenth-century apparition.",
+      "pt": "O santuário romano e os redentoristas documentam a devolução do ícone ao culto público em Santo Afonso em 1866, comemorada no jubileu de 2015–2016. É uma devoção eclesial ao ícone, não uma nova aparição do século XIX."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El icono expresa el misterio de Cristo y la solicitud de su Madre mediante símbolos de la pasión. Esos elementos artísticos no son milagros; tampoco se atribuyen curaciones concretas sin documentos identificados.",
+        "en": "The icon expresses Christ’s mystery and his Mother’s care through symbols of the passion. Those artistic elements are not miracles; specific healings are likewise not attributed without identified documents.",
+        "pt": "O ícone expressa o mistério de Cristo e o cuidado de sua Mãe por meio de símbolos da paixão. Esses elementos artísticos não são milagres; também não se atribuem curas concretas sem documentos identificados."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La devoción se vive con novenas, oración ante el icono y celebración del 27 de junio. La contemplación conduce a confiar en Cristo y a ayudar a quienes necesitan consuelo.",
+      "en": "The devotion is lived through novenas, prayer before the icon and the 27 June celebration. Contemplation leads towards trust in Christ and assistance to those needing consolation.",
+      "pt": "A devoção é vivida com novenas, oração diante do ícone e celebração de 27 de junho. A contemplação conduz à confiança em Cristo e à ajuda a quem precisa de consolo."
+    },
+    "sources": [
+      "Santuario romano del Perpetuo Socorro, Jubilee of Our Lady, 2015–2016",
+      "Redentoristas de Irlanda, Follow the Icon, 2016"
+    ]
+  },
+  {
+    "id": "akita",
+    "recognition": {
+      "es": "La carta pastoral de John Shojiro Ito, obispo de Niigata, del 22-IV-1984 autorizó la veneración diocesana de Nuestra Señora de Akita, pendiente de un juicio definitivo de la Santa Sede. No se afirma una aprobación pontificia universal de los mensajes ni se le asigna retrospectivamente un nihil obstat de 2024.",
+      "en": "Bishop John Shojiro Ito of Niigata’s pastoral letter of 22 April 1984 authorized diocesan veneration of Our Lady of Akita, pending a definitive judgement by the Holy See. No universal papal approval of the messages is asserted, nor is a 2024 nihil obstat retrospectively assigned to it.",
+      "pt": "A carta pastoral de John Shojiro Ito, bispo de Niigata, de 22-IV-1984 autorizou a veneração diocesana de Nossa Senhora de Akita, aguardando juízo definitivo da Santa Sé. Não se afirma aprovação pontifícia universal das mensagens nem se atribui retrospectivamente um nihil obstat de 2024."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El convento conserva los relatos de lágrimas de la imagen, distintos de una lista de curaciones con dictamen individual. Se retira la enumeración imprecisa de un cáncer y una sordera sin personas ni documentos identificados.",
+        "en": "The convent preserves accounts of the image’s tears, distinct from a list of healings with individual judgements. The imprecise listing of a cancer and deafness without identified people or documents is removed.",
+        "pt": "O convento conserva os relatos de lágrimas da imagem, distintos de uma lista de curas com parecer individual. Retira-se a enumeração imprecisa de um câncer e de uma surdez sem pessoas nem documentos identificados."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "El obispo actual presenta el convento como espacio de oración y acogida. La visita se orienta a la conversión, la Eucaristía y el ejemplo de María, sin buscar predicciones ni sustituir atención médica.",
+      "en": "The present bishop describes the convent as a place of prayer and welcome. A visit is directed towards conversion, the Eucharist and Mary’s example, without seeking predictions or replacing medical care.",
+      "pt": "O bispo atual apresenta o convento como espaço de oração e acolhida. A visita se orienta para a conversão, a Eucaristia e o exemplo de Maria, sem buscar previsões nem substituir atendimento médico."
+    },
+    "sources": [
+      "John Ata, A Message From Our Lady: Akita, Japan, EWTN: cronología de 1984",
+      "Seitai Hoshikai, sitio oficial y mensaje del obispo Paul Daisuke Narui",
+      "DDF, Normas de discernimiento, 17-V-2024"
+    ]
+  },
+  {
+    "id": "kibeho",
+    "recognition": {
+      "es": "Augustin Misago, obispo de Gikongoro, reconoció las apariciones a Alphonsine Mumureke, Nathalie Mukamazimpaka y Marie-Claire Mukangango en su declaración del 29-VI-2001. El reconocimiento no comprende indistintamente a cada supuesto vidente o mensaje posterior.",
+      "en": "Bishop Augustin Misago of Gikongoro recognized the apparitions to Alphonsine Mumureke, Nathalie Mukamazimpaka and Marie-Claire Mukangango in his declaration of 29 June 2001. Recognition does not indiscriminately include every alleged visionary or later message.",
+      "pt": "Augustin Misago, bispo de Gikongoro, reconheceu as aparições a Alphonsine Mumureke, Nathalie Mukamazimpaka e Marie-Claire Mukangango em sua declaração de 29-VI-2001. O reconhecimento não abrange indistintamente cada suposto vidente ou mensagem posterior."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La declaración eclesial se refiere a las apariciones reconocidas y a sus frutos espirituales. No permite afirmar una paz continua tras la guerra ni transformar el sufrimiento del genocidio en prueba de favor para una población concreta.",
+        "en": "The ecclesial declaration concerns the recognized apparitions and their spiritual fruits. It does not allow claims of uninterrupted peace after the war or turn the suffering of genocide into proof of favour towards a particular population.",
+        "pt": "A declaração eclesial se refere às aparições reconhecidas e a seus frutos espirituais. Não permite afirmar uma paz contínua após a guerra nem transformar o sofrimento do genocídio em prova de favor para uma população concreta."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La devoción invita a la conversión, la reconciliación y la oración del Rosario, con especial atención a los dolores de María. El 28 de noviembre recuerda el inicio de los acontecimientos reconocidos.",
+      "en": "The devotion invites conversion, reconciliation and praying the Rosary, with particular attention to Mary’s sorrows. The 28 November commemoration recalls the beginning of the recognized events.",
+      "pt": "A devoção convida à conversão, à reconciliação e à oração do Rosário, com atenção especial às dores de Maria. A comemoração de 28 de novembro recorda o início dos acontecimentos reconhecidos."
+    },
+    "sources": [
+      "Augustin Misago, Declaration: Apparitions of Kibeho, 29-VI-2001, transcripción en EWTN",
+      "Vatican News, cuarenta años de Kibeho, noviembre de 2021"
+    ]
+  },
+  {
+    "id": "remedios_cholula",
+    "recognition": {
+      "es": "Es un santuario de culto católico: la ficha patrimonial de la Secretaría de Cultura de México registra su bendición en 1874. No se ha verificado en esta auditoría un decreto específico de reconocimiento de apariciones, por lo que no se afirma que exista.",
+      "en": "It is a shrine of Catholic devotion: Mexico’s Secretariat of Culture heritage entry records its blessing in 1874. This audit has not verified a specific decree recognizing apparitions, so none is asserted.",
+      "pt": "É um santuário de culto católico: a ficha patrimonial da Secretaria de Cultura do México registra sua bênção em 1874. Não foi verificado nesta auditoria um decreto específico de reconhecimento de aparições; por isso não se afirma que exista."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "Las fuentes patrimoniales consultadas describen el santuario y su historia, sin aportar decretos sobre el cese milagroso de epidemias. La feria y la peregrinación son expresiones de devoción, no milagros por sí mismas.",
+        "en": "The heritage sources consulted describe the shrine and its history without providing decrees concerning the miraculous ending of epidemics. The festival and pilgrimage are expressions of devotion, not miracles in themselves.",
+        "pt": "As fontes patrimoniais consultadas descrevem o santuário e sua história, sem apresentar decretos sobre o fim milagroso de epidemias. A festa e a peregrinação são expressões de devoção, não milagres por si mesmas."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La devoción se expresa en la visita al santuario, la fiesta de septiembre y la oración de las comunidades locales. Su vivencia cristiana se une a la Eucaristía, la caridad y el respeto a los demás peregrinos.",
+      "en": "The devotion is expressed through visits to the shrine, the September feast and the prayer of local communities. Its Christian practice is united with the Eucharist, charity and respect for other pilgrims.",
+      "pt": "A devoção se expressa na visita ao santuário, na festa de setembro e na oração das comunidades locais. Sua vivência cristã se une à Eucaristia, à caridade e ao respeito aos demais peregrinos."
+    },
+    "sources": [
+      "Secretaría de Cultura de México, ficha del Santuario de Nuestra Señora de los Remedios de Cholula",
+      "Ayuntamiento de San Pedro Cholula, Santuario de la Virgen de los Remedios"
+    ]
+  },
+  {
+    "id": "copacabana",
+    "recognition": {
+      "es": "Francisco honró públicamente a la Virgen de Copacabana como patrona de Bolivia el 10-VII-2015. La Conferencia Episcopal Boliviana documenta la entronización de 1583 y la coronación de 1925; ambos hechos se distinguen de una declaración sobre cada relato de favores.",
+      "en": "Francis publicly honoured Our Lady of Copacabana as Bolivia’s patroness on 10 July 2015. The Bolivian Bishops’ Conference documents the 1583 enthronement and 1925 coronation; both are distinct from a declaration about every account of favours.",
+      "pt": "Francisco honrou publicamente Nossa Senhora de Copacabana como padroeira da Bolívia em 10-VII-2015. A Conferência Episcopal Boliviana documenta a entronização de 1583 e a coroação de 1925; os dois fatos se distinguem de uma declaração sobre cada relato de graças."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La historia del santuario conserva testimonios de gratitud y protección. Las fuentes citadas no aportan dictámenes individuales sobre naufragios o pesca, por lo que no se afirman como milagros canónicos comprobados.",
+        "en": "The shrine’s history preserves testimonies of gratitude and protection. The cited sources provide no individual judgements concerning shipwrecks or fishing, so these are not asserted as verified canonical miracles.",
+        "pt": "A história do santuário conserva testemunhos de gratidão e proteção. As fontes citadas não apresentam pareceres individuais sobre naufrágios ou pesca; por isso não são afirmados como milagres canônicos comprovados."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La peregrinación y la oración ante la imagen se unen a la celebración de Cristo y al servicio de las personas pobres. La memoria de su entronización, el 2 de febrero, forma parte de la tradición del santuario.",
+      "en": "Pilgrimage and prayer before the image are united with celebrating Christ and serving people in poverty. The memory of its enthronement on 2 February belongs to the shrine’s tradition.",
+      "pt": "A peregrinação e a oração diante da imagem se unem à celebração de Cristo e ao serviço às pessoas pobres. A memória de sua entronização, em 2 de fevereiro, faz parte da tradição do santuário."
+    },
+    "sources": [
+      "Francisco, homenaje a la Virgen de Copacabana, 10-VII-2015",
+      "Conferencia Episcopal Boliviana, Santuario de Copacabana: lugar de purificación"
+    ]
+  },
+  {
+    "id": "san_juan_lagos",
+    "recognition": {
+      "es": "La diócesis de San Juan de los Lagos documenta la coronación pontificia de la imagen el 15-VIII-1904 en su boletín del centenario. El archivo de la catedral conserva el relato fundacional de 1623; el reconocimiento del culto no promete curación instantánea a cada peregrino.",
+      "en": "The Diocese of San Juan de los Lagos documents the image’s pontifical coronation on 15 August 1904 in its centenary bulletin. The cathedral archive preserves the founding account of 1623; recognition of the devotion does not promise instant healing to every pilgrim.",
+      "pt": "A Diocese de San Juan de los Lagos documenta a coroação pontifícia da imagem em 15-VIII-1904 em seu boletim do centenário. O arquivo da catedral conserva o relato fundador de 1623; o reconhecimento do culto não promete cura instantânea a cada peregrino."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La catedral narra el auxilio a una niña de una familia de artistas en 1623 como primer milagro de su tradición. Los exvotos testimonian gratitud de los fieles, pero no equivalen por sí solos a dictámenes canónicos individuales.",
+        "en": "The cathedral recounts help given to a girl from a family of performers in 1623 as its tradition’s first miracle. Votive offerings witness to the faithful’s gratitude but do not in themselves constitute individual canonical judgements.",
+        "pt": "A catedral narra o auxílio a uma menina de uma família de artistas em 1623 como primeiro milagre de sua tradição. Os ex-votos testemunham a gratidão dos fiéis, mas não equivalem por si só a pareceres canônicos individuais."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La devoción se expresa en peregrinaciones, oración y Eucaristía, especialmente en las fiestas del santuario. El camino compartido invita al cuidado mutuo y a agradecer los dones recibidos.",
+      "en": "The devotion is expressed through pilgrimages, prayer and the Eucharist, especially at the shrine’s feasts. The shared journey invites mutual care and thanksgiving for gifts received.",
+      "pt": "A devoção se expressa em peregrinações, oração e Eucaristia, especialmente nas festas do santuário. O caminho compartilhado convida ao cuidado mútuo e a agradecer os dons recebidos."
+    },
+    "sources": [
+      "Diócesis de San Juan de los Lagos, Boletín 295: centenario de la coronación",
+      "Catedral Basílica de San Juan de los Lagos, Archivo Histórico"
+    ]
+  },
+  {
+    "id": "angeles_costa_rica",
+    "recognition": {
+      "es": "La Conferencia Episcopal de Costa Rica conmemora en su carta pastoral colectiva de 2026 la coronación pontificia del 25-IV-1926. Juan Pablo II invocó a la Virgen de los Ángeles como patrona nacional en su despedida de Costa Rica del 6-III-1983.",
+      "en": "The Costa Rican Bishops’ Conference commemorates the pontifical coronation of 25 April 1926 in its 2026 collective pastoral letter. John Paul II invoked Our Lady of the Angels as the national patroness in his farewell to Costa Rica on 6 March 1983.",
+      "pt": "A Conferência Episcopal da Costa Rica comemora em sua carta pastoral coletiva de 2026 a coroação pontifícia de 25-IV-1926. João Paulo II invocou Nossa Senhora dos Anjos como padroeira nacional em sua despedida da Costa Rica de 6-III-1983."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El retorno de la imagen a su lugar de hallazgo pertenece al relato tradicional. La paz social es una responsabilidad humana y un bien por el que se ora, no una prueba automática de milagro ni una inmunidad nacional frente a la violencia.",
+        "en": "The image’s return to its discovery place belongs to the traditional account. Social peace is a human responsibility and a good for which people pray, not automatic proof of a miracle or national immunity from violence.",
+        "pt": "O retorno da imagem ao lugar de seu encontro pertence ao relato tradicional. A paz social é uma responsabilidade humana e um bem pelo qual se reza, não uma prova automática de milagre nem imunidade nacional à violência."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Reina de los ángeles, ruega por nosotros.",
+        "en": "Queen of angels, pray for us.",
+        "pt": "Rainha dos anjos, rogai por nós."
+      },
+      "source": "Letanías lauretanas, Regina angelorum, ora pro nobis; original latino tradicional cotejado en el libreto del Rosario del 4-V-2013. Traducciones propias fieles."
+    },
+    "practice": {
+      "es": "La fiesta del 2 de agosto y la romería a Cartago se viven con oración y Eucaristía. La petición de paz exige también reconciliación, atención a las víctimas y respeto a la dignidad de cada persona.",
+      "en": "The 2 August feast and pilgrimage to Cartago are lived through prayer and the Eucharist. Prayer for peace also calls for reconciliation, care for victims and respect for every person’s dignity.",
+      "pt": "A festa de 2 de agosto e a romaria a Cartago são vividas com oração e Eucaristia. O pedido de paz também exige reconciliação, atenção às vítimas e respeito à dignidade de cada pessoa."
+    },
+    "sources": [
+      "Conferencia Episcopal de Costa Rica, carta pastoral colectiva La paz esté con ustedes, 2026",
+      "Juan Pablo II, despedida de Costa Rica, 6-III-1983",
+      "Santa Sede, Rosario del 4-V-2013: letanías lauretanas"
+    ]
   }
 ]

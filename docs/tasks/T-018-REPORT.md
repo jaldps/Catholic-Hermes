@@ -1,6 +1,6 @@
 # T-018 · Informe de Codex
 
-Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega de **20/30 auditorías** y **0 devociones nuevas** (objetivo aproximado: 25).
+Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega de **30/30 auditorías** y **0 devociones nuevas** (objetivo aproximado: 25).
 
 Leídos el protocolo, las reglas editoriales, el contrato M7 y los 30 registros originales. Solo se modifican los tres archivos autorizados. Explicaciones originales en ES/EN/PT; no se compone ninguna oración. Cada fórmula conservada o sustituida se documenta. Una retirada significa que no se ha comprobado la procedencia de esa redacción, no un juicio contra la devoción. Las promesas de revelación privada se atribuyen y no se presentan como garantías mecánicas. No se trasladan las categorías de 2024 retrospectivamente a declaraciones históricas.
 
@@ -159,13 +159,84 @@ Oración sustituida por la invocación tradicional Regina sacratissimi Rosarii, 
 
 Oración retirada: no se verificó la procedencia de la fórmula del catálogo. Promesa retirada por carecer de atribución documental. Se delimita Tenerife, evitando mezclar sus relatos con la devoción boliviana de Copacabana. El título de basílica no prueba una aparición ni cada leyenda de origen.
 
+### 21. `mercedes` · oración retirada
+
+- [Francisco, mensaje a la familia mercedaria, 17-I-2018](https://press.vatican.va/content/salastampa/es/bollettino/pubblico/2018/01/17/mens.html)
+- [Catecismo de la Iglesia Católica, 969–971: intercesión y culto mariano](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_9/paragraph_6_mary_-_mother_of_christ%2C_mother_of_the_church.index.html)
+
+Oración retirada: la fórmula del catálogo no se verificó como texto transmitido en las fuentes consultadas. Se retira la lista de intenciones presentada como promesa y se distingue redención de cautivos de un milagro físico. El mensaje de 2018 contiene una cronología inicial que no se reutiliza para fechar la aprobación de la orden: fundación y confirmación son asuntos distintos. No se inventa oración.
+
+### 22. `caacupe` · oración retirada
+
+- [Francisco, homilía en Caacupé, 11-VII-2015](https://www.vatican.va/content/francesco/es/homilies/2015/documents/papa-francesco_20150711_paraguay-omelia-caacupe.html)
+- [Conferencia Episcopal Paraguaya, apertura del novenario de Caacupé, 2025](https://episcopal.org.py/?p=488)
+
+Oración retirada: la redacción exacta no fue documentada en las fuentes consultadas. Se retiran promesas genéricas y milagros agrarios sin expediente. La cifra 1760 del campo year no se usa aquí como origen de la devoción: las fuentes de esta auditoría documentan el culto actual, no demuestran esa fecha fundacional. Revisar la historia de origen requeriría un campo de sobrescritura adicional.
+
+### 23. `altagracia` · oración retirada
+
+- [Santa Sede y República Dominicana, Concordato de 1954, art. XVIII](https://www.vatican.va/roman_curia/secretariat_state/archivio/documents/rc_seg-st_19540616_concordato-dominicana_sp.html)
+- [Francisco, mensaje al pueblo dominicano por el jubileo altagraciano, 16-VII-2022](https://press.vatican.va/content/salastampa/it/bollettino/pubblico/2022/07/16/0537.pdf)
+
+Oración retirada: no se comprobó la procedencia exacta del texto de la app. La promesa sobre encontrar cosas perdidas carece de atribución documental y se retira. Error confirmado para el coordinador: feastDay conserva 15 de agosto, pero la fiesta propia es 21 de enero, documentada incluso en el Concordato; el contrato no permite sustituir ese campo. Se consultó el boletín PDF de 2022, ya que el URL HTML solo devolvía una cabecera.
+
+### 24. `perpetuo_socorro` · oración retirada
+
+- [Santuario romano del Perpetuo Socorro, Jubilee of Our Lady, 2015–2016](https://www.perpetuosoccorso.it/en/jubilee-of-our-lady/)
+- [Redentoristas de Irlanda, Follow the Icon, 2016](https://www.redemptorists.ie/follow-the-icon/)
+
+Oración retirada: no se verificó el texto exacto de la app. Se retira la supuesta promesa de obtener socorro siempre y en cualquier lugar por visitar una imagen; no se la atribuye a Pío IX sin prueba. Se distingue significado iconográfico de milagro. La etiqueta icono milenario del Kotlin no está verificada y requiere revisar historia/year fuera del contrato. No se reutilizan indulgencias temporales de 2015–2016.
+
+### 25. `akita` · oración retirada
+
+- [John Ata, A Message From Our Lady: Akita, Japan, EWTN: cronología de 1984](https://www.ewtn.com/catholicism/library/apparitions-at-akita-5167)
+- [Seitai Hoshikai, sitio oficial y mensaje del obispo Paul Daisuke Narui](https://seitaihoshikai.com/us/index.html)
+- [DDF, Normas de discernimiento, 17-V-2024](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240517_norme-fenomeni-soprannaturali_sp.html)
+
+Oración retirada: la fórmula mariana exacta no se verificó en el sitio del convento, que publica otra oración eucarística. No se compone una adaptación para hacerla coincidir. Se retira la promesa genérica. La autorización de Ito se documenta en la cronología secundaria de John Ata publicada por EWTN; no se presenta ese artículo como el texto completo de la carta. Se diferencia la autorización diocesana de un juicio de la Santa Sede. No se afirma que exista un posterior decreto romano no localizado. El sitio actual conserva invitación pastoral del obispo a la oración, no una nueva declaración de sobrenaturalidad.
+
+### 26. `kibeho` · oración retirada
+
+- [Augustin Misago, Declaration: Apparitions of Kibeho, 29-VI-2001, transcripción en EWTN](https://www.ewtn.com/catholicism/library/declaration-apparitions-of-kibeho-21169)
+- [Vatican News, cuarenta años de Kibeho, noviembre de 2021](https://www.vaticannews.va/fr/afrique/news/2021-11/rwanda-40-ans-des-apparitions-a-kibeho.html)
+
+Oración retirada: no se verificó la fórmula del catálogo, que además contiene denuestos. Se retira una promesa de reconciliación no atribuida documentalmente. La declaración se leyó en transcripción EWTN, sin copiar su traducción moderna con reserva expresa; se parafrasea el estatus y se contrasta con Vatican News. El reconocimiento es limitado a tres videntes. Se retira la inexacta paz incansable de los aldeanos, sin minimizar las consecuencias humanas del genocidio.
+
+### 27. `remedios_cholula` · oración retirada
+
+- [Secretaría de Cultura de México, ficha del Santuario de Nuestra Señora de los Remedios de Cholula](https://sic.gob.mx/ficha.php?table=monumento_icahe&table_id=1782)
+- [Ayuntamiento de San Pedro Cholula, Santuario de la Virgen de los Remedios](https://www.cholula.gob.mx/turismo/que-visitar/item/471-santuario-de-la-virgen-de-los-remedios)
+
+Oración retirada: no se verificó la fórmula exacta. Se retiran promesas de curación y milagros epidémicos sin expediente. Límite: no se localizó un decreto de apariciones ni una declaración pontificia concreta; las dos fuentes patrimoniales documentan el templo y su bendición, no sustituyen una autoridad eclesial para juzgar fenómenos. El año 1519 del campo year como fecha del templo es incorrecto frente al inicio de 1594 documentado por ambas fichas; queda para el coordinador porque no se permite sobrescribir ese campo. No se extrapola desde otros santuarios de los Remedios.
+
+### 28. `copacabana` · oración retirada
+
+- [Francisco, homenaje a la Virgen de Copacabana, 10-VII-2015](https://press.vatican.va/content/francesco/en/speeches/2015/july/documents/papa-francesco_20150710_bolivia-virgen-de-copacabana.html)
+- [Conferencia Episcopal Boliviana, Santuario de Copacabana: lugar de purificación](https://evangelizacion.ceb.bo/santuario-de-copacabana-un-lugar-de-purificacion-con-sello-misionero/)
+
+Oración retirada: no se documentó la fórmula del catálogo; el homenaje de Francisco contiene una oración distinta y no se usa como si fuera la fuente de esa redacción. Se retiran promesas sobre abundancia de pesca. El dato del 5 de agosto no se utiliza para negar otras celebraciones locales; la fuente confirma específicamente la entronización del 2-II-1583. No se inventa una aparición ni milagros individuales.
+
+### 29. `san_juan_lagos` · oración retirada
+
+- [Diócesis de San Juan de los Lagos, Boletín 295: centenario de la coronación](https://diocesisdesanjuan.org/boletin/bol_biblioteca/Boletin_295.pdf)
+- [Catedral Basílica de San Juan de los Lagos, Archivo Histórico](https://virgendesanjuan.org/?page_id=522)
+
+Oración retirada: la fórmula antigua mezcla destinatarios y no se documentó como oración real. Se retira la promesa de curación instantánea, que no figura como promesa general en las fuentes. El relato de 1623 se conserva como historia del santuario, sin atribuir al niño un expediente médico moderno ni convertir todos los exvotos en milagros reconocidos.
+
+### 30. `angeles_costa_rica` · oración sustituida por texto verificado
+
+- [Conferencia Episcopal de Costa Rica, carta pastoral colectiva La paz esté con ustedes, 2026](https://www.iglesiacr.org/carta-pastoral-colectiva-la-paz-este-con-ustedes/)
+- [Juan Pablo II, despedida de Costa Rica, 6-III-1983](https://www.vatican.va/content/john-paul-ii/es/speeches/1983/march/documents/hf_jp-ii_spe_19830306_commiato-costa-rica.html)
+- [Santa Sede, Rosario del 4-V-2013: letanías lauretanas](https://www.vatican.va/news_services/liturgy/libretti/2013/20130504-libretto-rosario-smaria-maggiore.pdf)
+
+Oración sustituida por la invocación tradicional Regina angelorum, ora pro nobis, cotejada en el libreto latino y traducida fielmente; se identifica como oración mariana común y no texto exclusivo de Cartago. Se retiran promesas no documentadas sobre compañía de ángeles. La paz nacional no se presenta como milagro permanente, conforme al llamado concreto de los obispos frente a la violencia.
+
 ## Devociones nuevas
 
 ## Validación
 
 ```text
-WARN  partial delivery: 20/30
-20 entries · 0 errors · 1 warnings
+30 entries · 0 errors · 0 warnings
 0 entries · 0 errors · 0 warnings
 ```
 
