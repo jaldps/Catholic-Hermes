@@ -1355,19 +1355,13 @@ private fun HowToPrayPage(currentLanguage: AppLanguage, bottomPadding: Dp) {
             AppDetailHeader(
                 title = title,
                 assetPath = rememberFirstAsset(ArtSunrise, "heroes/sunrise_mountains.jpg"),
-                imageHeight = 300.dp
-            )
-            Text(
-                currentLanguage.pick(
+                meta = currentLanguage.pick(
                     "Cinco pasos para una oración más profunda.",
                     "Five steps to a deeper prayer.",
                     "Cinco passos para uma oração mais profunda."
-                ),
-                style = styles.title3.copy(fontWeight = FontWeight.Normal),
-                color = p.textPrimary,
-                modifier = Modifier.padding(horizontal = design.spacing.gutter)
+                )
             )
-            Spacer(Modifier.height(24.dp))
+            Spacer(Modifier.height(16.dp))
         }
         itemsIndexed(steps, key = { i, _ -> "step_$i" }) { index, step ->
             PrayerNumberedStep(
@@ -2233,80 +2227,27 @@ private fun RemoteArtCard(
 
 // ========================================================== novena overview
 
-/** Header for remote art (with bundled fallback): art, title1, meta row. */
+/** Header for remote art (with bundled fallback): the shared detail header. */
 @Composable
 private fun RemoteArtHeader(
     title: String,
     imageUrl: String?,
     fallbackAsset: String?,
-    imageHeight: Dp,
     eyebrow: String? = null,
     meta: String? = null,
     metaIcon: ImageVector? = null,
     titleTag: String? = null,
-    titleStyleSmall: Boolean = false,
     actions: @Composable () -> Unit = {}
 ) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-    val p = design.palette
-    val top = statusBarHeight()
-    Column(Modifier.fillMaxWidth()) {
-        Box(Modifier.fillMaxWidth().height(imageHeight + top)) {
-            AppRemoteImage(
-                imageUrl = imageUrl,
-                fallbackAssetPath = fallbackAsset,
-                modifier = Modifier.fillMaxSize(),
-                alignment = Alignment.TopCenter
-            )
-            Box(Modifier.fillMaxSize().background(if (design.isDark) Color.Black.copy(alpha = 0.2f) else p.canvasTop.copy(alpha = 0.12f)))
-            Box(
-                Modifier.fillMaxSize().background(
-                    Brush.verticalGradient(
-                        0f to (if (design.isDark) Color.Black.copy(alpha = 0.45f) else p.canvasTop.copy(alpha = 0.6f)),
-                        0.22f to Color.Transparent,
-                        0.5f to Color.Transparent,
-                        0.82f to p.canvasTop.copy(alpha = 0.82f),
-                        1f to p.canvasTop
-                    )
-                )
-            )
-            Row(
-                Modifier
-                    .align(Alignment.TopEnd)
-                    .padding(top = top + 4.dp, end = design.spacing.gutter - 2.dp),
-                horizontalArrangement = Arrangement.spacedBy(4.dp)
-            ) { actions() }
-        }
-        Column(
-            Modifier
-                .padding(horizontal = design.spacing.gutter)
-                .offset(y = (-28).dp)
-        ) {
-            if (eyebrow != null) {
-                Text(eyebrow, style = styles.eyebrow, color = p.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
-                Spacer(Modifier.height(6.dp))
-            }
-            Text(
-                title,
-                style = if (titleStyleSmall) styles.title1 else styles.title1,
-                color = p.textPrimary,
-                modifier = Modifier
-                    .semantics { heading() }
-                    .then(if (titleTag != null) Modifier.testTag(titleTag) else Modifier)
-            )
-            if (meta != null) {
-                Spacer(Modifier.height(10.dp))
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    if (metaIcon != null) {
-                        Icon(metaIcon, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
-                        Spacer(Modifier.width(8.dp))
-                    }
-                    Text(meta, style = styles.subhead, color = p.textSecondary)
-                }
-            }
-        }
-    }
+    AppDetailHeader(
+        title = title,
+        assetPath = fallbackAsset,
+        imageUrl = imageUrl?.takeIf { it.isNotBlank() },
+        eyebrow = eyebrow,
+        meta = meta,
+        metaIcon = metaIcon,
+        titleTag = titleTag
+    ) { actions() }
 }
 
 private val GenericDayTheme = Regex("^(D[ií]a|Day)\\s*\\d+$", RegexOption.IGNORE_CASE)
@@ -2354,7 +2295,6 @@ internal fun NovenaOverviewView(
                 title = title,
                 imageUrl = novena.imageUrl,
                 fallbackAsset = rememberFirstAsset(novenaFallbackArt(novena), ArtLily),
-                imageHeight = 320.dp,
                 meta = listOfNotNull(
                     currentLanguage.pick("$total días", "$total days", "$total dias"),
                     started?.let { currentLanguage.pick("comenzada el $it", "started $it", "iniciada em $it") }
@@ -2372,7 +2312,7 @@ internal fun NovenaOverviewView(
             }
         }
         item(key = "intro") {
-            Column(Modifier.padding(horizontal = design.spacing.gutter).offset(y = (-12).dp)) {
+            Column(Modifier.padding(horizontal = design.spacing.gutter).padding(top = 6.dp)) {
                 if (patron != null) {
                     Text(patron, style = styles.footnote, color = p.textSecondary)
                     Spacer(Modifier.height(12.dp))
@@ -2599,7 +2539,6 @@ private fun NovenaDayView(
                 eyebrow = novena.title.get(currentLanguage),
                 imageUrl = novena.imageUrl,
                 fallbackAsset = rememberFirstAsset(novenaFallbackArt(novena), ArtLily),
-                imageHeight = 210.dp,
                 meta = if (prayed) currentLanguage.pick("de $total · Rezado", "of $total · Prayed", "de $total · Rezado")
                 else currentLanguage.pick("de $total", "of $total", "de $total"),
                 titleTag = "novena_day_title"

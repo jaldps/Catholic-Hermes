@@ -38,6 +38,12 @@ fun SanctaFidesTheme(
     reduceMotion: Boolean = false,
     reduceTransparency: Boolean = false,
     highContrast: Boolean = false,
+    /**
+     * Today's liturgical colour. With the "Liturgical Dynamic" tint, Lumen's
+     * accent and ambient light follow it through the Church's year; null keeps
+     * Ordinary Time green.
+     */
+    liturgicalColorHex: Long? = null,
     content: @Composable () -> Unit
 ) {
     val systemDark = isSystemInDarkTheme()
@@ -53,8 +59,23 @@ fun SanctaFidesTheme(
 
     // The preset only tints: Lumen calibrates each preset's ink so it clears
     // 4.5:1 on canvas and glass in both modes.
-    val accent = if (identity == DesignLanguage.SANCTUARY && themePreset == "LITURGICAL_DYNAMIC") base.palette.accent else lumenAccent(themePreset, isDark)
-    val tinted = base.palette.copy(accent = accent, ringEnd = if (themePreset == "LITURGICAL_DYNAMIC") base.palette.ringEnd else accent)
+    val season = if (identity != DesignLanguage.SANCTUARY && themePreset == "LITURGICAL_DYNAMIC") LiturgicalLight.of(liturgicalColorHex) else null
+    val glass = identity == DesignLanguage.GLASS
+    val accent = if (identity == DesignLanguage.SANCTUARY && themePreset == "LITURGICAL_DYNAMIC") base.palette.accent
+        else (season?.accent(isDark) ?: lumenAccent(themePreset, isDark)).let { if (glass) glassAccent(it, isDark) else it }
+    val liquid = identity != DesignLanguage.SANCTUARY
+    val tinted = base.palette.copy(
+        accent = accent,
+        ringEnd = if (themePreset == "LITURGICAL_DYNAMIC" && season == null) base.palette.ringEnd else accent,
+        ringStart = if (!liquid || (themePreset == "LITURGICAL_DYNAMIC" && season == null)) base.palette.ringStart
+            else lerp(accent, if (isDark) Color(0xFF0A0E1C) else Color.White, 0.68f),
+        // Liquid glass tints its primary actions with the preset's accent.
+        action = if (liquid) accent else base.palette.action,
+        onAction = if (liquid) (if (isDark) Color(0xFF070B16) else Color.White) else base.palette.onAction,
+        accentMuted = if (liquid) lerp(accent, if (isDark) Color(0xFF0A0E1C) else Color.White, if (isDark) 0.80f else 0.86f) else base.palette.accentMuted,
+        ambient = if (liquid) (season?.ambient(isDark) ?: lumenAmbient(themePreset, isDark)).let { if (glass) glassAmbient(it) else it }
+            else emptyList()
+    )
     val accessible = if (highContrast) tinted.copy(
         textSecondary = tinted.textPrimary, textTertiary = tinted.textPrimary,
         hairline = if (isDark) Color(0xFFAC9F92) else Color(0xFF827364),
@@ -101,12 +122,84 @@ fun SanctaFidesTheme(
     }
 }
 
+/**
+ * The light of the liturgical day: the accent ink (4.5:1 on canvas and glass
+ * in both modes) and the four ambient pools for each liturgical colour.
+ */
+enum class LiturgicalLight(
+    private val hex: Long,
+    private val accentLight: Long, private val accentDark: Long,
+    private val ambientLight: List<Long>, private val ambientDark: List<Long>
+) {
+    GREEN(0xFF2C6B3E, 0xFF2A6E38, 0xFF7FC48A,
+        listOf(0x94A6E0B8, 0x80FFDD9C, 0x5CCFBCFF, 0x6BAAD6F8),
+        listOf(0x4D1F6B45, 0x2EE08A3C, 0x385A43D6, 0x331E5C8C)),
+    VIOLET(0xFF5E2777, 0xFF6A489E, 0xFFBBA6EC,
+        listOf(0x94C9B6F2, 0x80FFDD9C, 0x5CF2BCD6, 0x6BAAC6F8),
+        listOf(0x593E2A8C, 0x2EE08A3C, 0x386A2A9C, 0x331E3C8C)),
+    WHITE(0xFFD4AF37, 0xFF856014, 0xFFE8C877,
+        listOf(0x99FFE6A8, 0x80FFF0CC, 0x5CF6D9C0, 0x6BCFE0F8),
+        listOf(0x4D8C6A1E, 0x33E0A03C, 0x33503C8C, 0x2E1E5C8C)),
+    RED(0xFF9E1F27, 0xFFA8281F, 0xFFF29B92,
+        listOf(0x8CF4B4AC, 0x80FFDD9C, 0x5CF2BCD0, 0x66F8CDB8),
+        listOf(0x528C2420, 0x33E08A3C, 0x385A2A8C, 0x33A8323A)),
+    ROSE(0xFFB85977, 0xFF93395D, 0xFFF0AAC2,
+        listOf(0x94F6BCD2, 0x80FFDD9C, 0x5CD9BCF2, 0x66F8C8D8),
+        listOf(0x528C2A58, 0x2EE08A3C, 0x385A3AA8, 0x33A83A6A));
+
+    fun accent(isDark: Boolean) = Color(if (isDark) accentDark else accentLight)
+    fun ambient(isDark: Boolean) = (if (isDark) ambientDark else ambientLight).map { Color(it) }
+
+    companion object {
+        /** The liturgical colour nearest to [colorHex]; null stays null. */
+        fun of(colorHex: Long?): LiturgicalLight? {
+            val c = Color(colorHex ?: return null)
+            return entries.minBy { e ->
+                val o = Color(e.hex)
+                val dr = o.red - c.red; val dg = o.green - c.green; val db = o.blue - c.blue
+                dr * dr + dg * dg + db * db
+            }
+        }
+    }
+}
+
+/**
+ * Clear glass lets the ambient light through at full strength, so the Glass
+ * identity brightens that light and moves the accent ink further from it:
+ * deeper in light mode, paler in dark. Calibrated so every ink still clears
+ * 4.5:1 on bare light and through every pane (LiquidGlassTest).
+ */
+internal const val GlassAmbientBoost = 1.4f
+internal fun glassAmbient(pools: List<Color>): List<Color> =
+    pools.map { it.copy(alpha = (it.alpha * GlassAmbientBoost).coerceAtMost(1f)) }
+internal fun glassAccent(accent: Color, isDark: Boolean): Color =
+    if (isDark) lerp(accent, Color.White, 0.45f) else lerp(accent, Color.Black, 0.15f)
+
 /** Lumen ink for each tint preset, light and dark. */
-private fun lumenAccent(preset: String, isDark: Boolean): Color = when (preset) {
+internal fun lumenAccent(preset: String, isDark: Boolean): Color = when (preset) {
     "MONASTIC_MINIMALIST" -> if (isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
     "SACRED_BURGUNDY" -> if (isDark) Color(0xFFE59AA6) else Color(0xFF8A2D3B)
-    "MARIAN_AZURE" -> if (isDark) Color(0xFF8FC2EC) else Color(0xFF2A6597)
-    else -> if (isDark) Color(0xFF7FC48A) else Color(0xFF2D743B)
+    "MARIAN_AZURE" -> if (isDark) Color(0xFF9DBDFF) else Color(0xFF2459B5)
+    else -> if (isDark) Color(0xFF7FC48A) else Color(0xFF2A6E38)
+}
+
+/**
+ * The four pools of ambient light for each tint preset: the accent's own
+ * light top-left, candle gold top-right, a violet shade and a cool return.
+ */
+private fun lumenAmbient(preset: String, isDark: Boolean): List<Color> = when (preset) {
+    "MONASTIC_MINIMALIST" ->
+        if (isDark) listOf(Color(0x40485878), Color(0x1FC9A27A), Color(0x2E4A4A8C), Color(0x2E3C5A7A))
+        else listOf(Color(0x8CC3D0E6), Color(0x66F3E0C0), Color(0x59D2CEEC), Color(0x66BFD2E8))
+    "SACRED_BURGUNDY" ->
+        if (isDark) listOf(Color(0x4D8C2A45), Color(0x33E08A3C), Color(0x385A3AA8), Color(0x33A83A5A))
+        else listOf(Color(0x8FF4B8C4), Color(0x80FFDD9C), Color(0x5CDDC2F2), Color(0x66F8CBB8))
+    "MARIAN_AZURE" ->
+        if (isDark) listOf(Color(0x592A5BD6), Color(0x29E0A050), Color(0x406A43D6), Color(0x381E7AA8))
+        else listOf(Color(0x99A9C9FF), Color(0x7AFFDFA0), Color(0x5CCFBCFF), Color(0x73ACE0F4))
+    else ->
+        if (isDark) listOf(Color(0x4D1F6B45), Color(0x2EE08A3C), Color(0x385A43D6), Color(0x331E5C8C))
+        else listOf(Color(0x94A6E0B8), Color(0x80FFDD9C), Color(0x5CCFBCFF), Color(0x6BAAD6F8))
 }
 
 /**
@@ -125,7 +218,7 @@ private fun buildColorScheme(
     val base = if (isDark) darkColorScheme() else lightColorScheme()
 
     return when (identity) {
-        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.SANCTUARY -> base.copy(
+        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> base.copy(
             primary = accent,
             onPrimary = onAccent,
             primaryContainer = palette.accentMuted,
@@ -193,3 +286,6 @@ fun MyApplicationTheme(
         content = content
     )
 }
+
+/** The ambient pools of a tint preset, for contrast tests. */
+internal fun lumenAmbientForTests(preset: String, isDark: Boolean): List<Color> = lumenAmbient(preset, isDark)

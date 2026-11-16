@@ -70,6 +70,7 @@ import com.example.ui.design.lumenPress
 import com.example.ui.design.rememberAssetBitmap
 import com.example.ui.design.rememberFirstAsset
 import com.example.ui.design.rememberHeroMeta
+import com.example.ui.design.AppIconWell
 import com.example.ui.design.softShadow
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -327,7 +328,7 @@ private fun StudyCard(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    val shape = RoundedCornerShape(22.dp)
+    val shape = if (design.isSanctuary) design.shapes.card else RoundedCornerShape(24.dp)
     val bitmap = rememberAssetBitmap(assetPath, 900)
     val focus = rememberHeroMeta(assetPath)
     // Opaque glass (the translucent glass composited over the canvas), so the
@@ -393,7 +394,7 @@ private fun StudyCard(
         Box(
             Modifier
                 .matchParentSize()
-                .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), shape)
+                .border(1.dp, Brush.linearGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom, p.glassEdgeTop.copy(alpha = p.glassEdgeTop.alpha * 0.5f))), shape)
         )
     }
 }
@@ -506,8 +507,9 @@ private fun EntryRow(
                 .padding(horizontal = RowInset, vertical = 11.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(icon, contentDescription = null, tint = p.textPrimary, modifier = Modifier.size(GlyphSize))
-            Spacer(Modifier.width(GlyphGap))
+            if (design.isSanctuary) Icon(icon, contentDescription = null, tint = p.textPrimary, modifier = Modifier.size(GlyphSize))
+            else AppIconWell(icon)
+            Spacer(Modifier.width(if (design.isSanctuary) GlyphGap else 14.dp))
             Column(Modifier.weight(1f)) {
                 Text(title, style = styles.body, color = p.textPrimary)
                 if (subtitle != null) {
@@ -526,7 +528,7 @@ private fun EntryRow(
             Box(
                 Modifier
                     .fillMaxWidth()
-                    .padding(start = RowInset + GlyphSize + GlyphGap)
+                    .padding(start = RowInset + if (design.isSanctuary) GlyphSize + GlyphGap else 50.dp)
                     .height(0.5.dp)
                     .background(p.separator)
             )

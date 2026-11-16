@@ -965,7 +965,7 @@ private fun GuidedOfficeView(
                 )
             }
             Column(Modifier.padding(horizontal = design.spacing.gutter)) {
-                Text(intro, style = styles.callout, color = p.textSecondary)
+                Text(intro, style = styles.subhead, color = p.textSecondary)
                 Spacer(Modifier.height(20.dp))
                 AppProgressBar(
                     if (total == 0) 0f else done.size.toFloat() / total,

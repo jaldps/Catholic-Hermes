@@ -107,8 +107,9 @@ fun AppGlassSurface(
 }
 
 /**
- * The 40dp glass circle used for back, close, search, bell, bookmark and more
- * (44dp hit area). [onImage] uses the denser glass for legibility over art.
+ * The 44dp glass circle used for back, close, search, bell, bookmark and more
+ * (48dp hit area). In the scaffold's chrome it blurs what scrolls beneath it;
+ * [onImage] keeps the denser glass for legibility over art.
  */
 @Composable
 fun AppGlassIconButton(
@@ -122,29 +123,57 @@ fun AppGlassIconButton(
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
+    val live = LocalLiquidBackdrop.current != null
     Box(
         modifier
             .size(48.dp)
-            .lumenPress(onClick, 0.92f)
+            .lumenPress(onClick, 0.9f)
             .semantics { if (contentDescription != null) this.contentDescription = contentDescription }
             .tagged(tag),
         contentAlignment = Alignment.Center
     ) {
-        Box(
-            Modifier
-                .size(40.dp)
-                // Dark glass casts no shadow (a black shadow on near-black is a
-                // smudge); over art it gets a faint dark backing so the 12%
-                // white stays legible without turning into a grey disc.
-                .then(
-                    if (design.isDark && onImage) Modifier.background(Color.Black.copy(alpha = 0.22f), CircleShape)
-                    else Modifier
-                )
-                .lumenGlass(CircleShape, strong = true, lifted = !design.isDark),
-            contentAlignment = Alignment.Center
-        ) {
-            Icon(icon, contentDescription = null, tint = tint ?: p.textPrimary, modifier = Modifier.size(24.dp))
+        Box(Modifier.size(44.dp), contentAlignment = Alignment.Center) {
+            LiquidBackdropFill(CircleShape, Modifier.matchParentSize(), blur = 16.dp)
+            Box(
+                Modifier.matchParentSize()
+                    // Over art in the dark, a faint backing keeps the glass from
+                    // disappearing into a bright painting.
+                    .then(
+                        if (design.isDark && onImage && !design.opaqueMaterial()) Modifier.background(Color.Black.copy(alpha = 0.20f), CircleShape)
+                        else Modifier
+                    )
+                    // No ambient lens: these sit over paintings as often as over
+                    // the light, and must show whatever is really behind them.
+                    .liquidPane(CircleShape, design.chromeGlassSpec(live).copy(lens = 0f))
+            )
+            Icon(icon, contentDescription = null, tint = tint ?: p.textPrimary, modifier = Modifier.size(22.dp))
         }
+    }
+}
+
+/**
+ * A small bead of accent-tinted glass that carries a row's or card's glyph.
+ * Sanctuary keeps the bare engraved glyph.
+ */
+@Composable
+fun AppIconWell(icon: ImageVector, modifier: Modifier = Modifier, tint: Color? = null, size: Dp = 36.dp) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    if (design.isSanctuary) {
+        Icon(icon, null, tint = tint ?: p.textPrimary, modifier = modifier.size(24.dp))
+        return
+    }
+    val ink = tint ?: p.accent
+    val shape = RoundedCornerShape(size * 0.32f)
+    Box(
+        modifier.size(size)
+            .background(Brush.verticalGradient(listOf(ink.copy(alpha = if (design.isDark) 0.24f else 0.16f), ink.copy(alpha = if (design.isDark) 0.14f else 0.09f))), shape)
+            .then(if (design.opaqueMaterial()) Modifier else Modifier.border(1.dp, Brush.verticalGradient(listOf(
+                Color.White.copy(alpha = if (design.isDark) 0.20f else 0.80f),
+                Color.White.copy(alpha = if (design.isDark) 0.03f else 0.20f))), shape)),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(icon, null, tint = ink, modifier = Modifier.size(size * 0.56f))
     }
 }
 
@@ -201,16 +230,18 @@ fun AppHeroImage(
         val grade = if (design.isSanctuary) {
             gradeMatrix(0.94f, 0.96f, 0.93f, 0.88f, 3f, 2f, 0f)
         } else if (!design.isDark) {
-            gradeMatrix(0.85f, 0.93f, 0.93f, 0.93f, 18f, 18f, 18f)
+            gradeMatrix(0.96f, 0.97f, 0.97f, 0.98f, 8f, 8f, 10f)
         } else if (meta.tone == "light") {
             // About -0.6 EV with a warm cast.
-            gradeMatrix(0.64f, 0.37f, 0.35f, 0.30f, 3f, 2f, -2f)
+            gradeMatrix(0.78f, 0.52f, 0.50f, 0.50f, 2f, 2f, 4f)
         } else {
-            gradeMatrix(0.74f, 0.74f, 0.70f, 0.62f, 3f, 1f, -3f)
+            gradeMatrix(0.88f, 0.84f, 0.82f, 0.84f, 1f, 1f, 3f)
         }
         ColorFilter.colorMatrix(grade)
     }
-    Box(modifier.clipToBounds().background(p.canvasTop)) {
+    val dissolve = fadeToCanvas && !design.opaqueMaterial()
+    Box(modifier.clipToBounds()
+        .then(if (dissolve) Modifier.fadeOutBottom(fadeStart) else Modifier.background(p.canvasTop))) {
         if (bitmap != null) {
             if (meta.zoom > 1.001f) {
                 Canvas(Modifier.fillMaxSize()) {
@@ -246,7 +277,7 @@ fun AppHeroImage(
         // Light mist: lift the art toward the paper so a saturated painting
         // never shouts. Dark needs none beyond the grade above.
         if (!design.isDark && !design.isSanctuary) {
-            Box(Modifier.fillMaxSize().background(p.canvasTop.copy(alpha = 0.10f)))
+            Box(Modifier.fillMaxSize().background(p.canvasTop.copy(alpha = 0.05f)))
         }
         if (topVeil) {
             Box(
@@ -260,7 +291,7 @@ fun AppHeroImage(
                 )
             )
         }
-        if (fadeToCanvas) {
+        if (fadeToCanvas && !dissolve) {
             val span = 1f - fadeStart
             Box(
                 Modifier.fillMaxSize().background(
@@ -279,59 +310,106 @@ fun AppHeroImage(
 }
 
 /**
- * Tab-root hero: art from the very top of the display (under the status
- * bar), the [title] in `display` at the bottom-start gutter with an optional
- * [eyebrow] above it, and glass [actions] top-right. Declares the screen
- * edge-to-edge; put it first in the screen's scroll content.
+ * The one header every screen opens with.
+ *
+ * Art runs from the very top of the display for exactly [AppHeaderArtHeight]
+ * below the status bar and dissolves into the ambient light; the eyebrow,
+ * title and meta sit in one block on the same bottom line, on every screen.
+ * Only the title's rank changes: `largeTitle` on a section root,
+ * `title1` on anything deeper. A long title grows the header upward, never
+ * moves the line it sits on.
  */
+val AppHeaderArtHeight: Dp = 236.dp
+
+/** Bottom inset of the header's text block; with [AppHeaderArtHeight] it fixes the title line. */
+private val HeaderTextBottom: Dp = 14.dp
+
 @Composable
-fun AppHeroHeader(
-    assetPath: String?,
+private fun AppHeaderFrame(
     title: String,
+    root: Boolean,
+    edgeToEdge: Boolean,
     modifier: Modifier = Modifier,
+    assetPath: String? = null,
+    imageUrl: String? = null,
     eyebrow: String? = null,
-    height: Dp = 340.dp,
+    meta: String? = null,
+    metaIcon: ImageVector? = null,
     titleTag: String? = null,
-    /**
-     * How far the next sibling (e.g. the season card) rides up over the hero's
-     * fade. The hero reports that much less height and lifts its title clear.
-     */
     overlap: Dp = 0.dp,
     actions: @Composable RowScope.() -> Unit = {}
 ) {
-    val headerInsets = AppEdgeToEdge()
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
     val statusTop = statusBarHeight()
+    // Where this screen's content starts: 0 when it draws edge to edge, else
+    // below the status bar and back row the scaffold already cleared.
+    val contentTop = if (edgeToEdge) 0.dp else (LocalScreenFrame.current?.insets?.calculateTopPadding() ?: 0.dp)
+    val hasArt = assetPath != null || imageUrl != null
     val largeText = styles.eyebrow.fontSize.value * androidx.compose.ui.platform.LocalDensity.current.fontScale >= 20f
-    val top = if (design.isSanctuary || largeText) maxOf(statusTop, headerInsets.calculateTopPadding()) else statusTop
-    if (design.isSanctuary || largeText) {
-        Column(modifier.fillMaxWidth().padding(top = top + 8.dp)) {
+    val titleStyle = if (root) styles.largeTitle else styles.title1
+
+    val metaLine: @Composable (Modifier) -> Unit = { m ->
+        if (meta != null) Row(m, verticalAlignment = Alignment.CenterVertically) {
+            if (metaIcon != null) {
+                Icon(metaIcon, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
+                Spacer(Modifier.width(8.dp))
+            }
+            Text(meta, style = styles.subhead, color = p.textSecondary)
+        }
+    }
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val text: @Composable (Modifier) -> Unit = { m ->
+        Column(m) {
+            // On paper (title at the top) the eyebrow's line is always reserved,
+            // so titles share one line whether or not a screen has an eyebrow.
+            if (eyebrow == null && design.isSanctuary && root) {
+                Spacer(Modifier.height(with(density) { styles.eyebrow.lineHeight.toDp() } + 4.dp))
+            }
+            if (eyebrow != null) {
+                Text(
+                    eyebrow, style = styles.eyebrow,
+                    color = if (design.isDark && hasArt && !design.isSanctuary) p.textPrimary.copy(alpha = 0.84f) else p.textSecondary,
+                    maxLines = 2, overflow = TextOverflow.Ellipsis
+                )
+                Spacer(Modifier.height(4.dp))
+            }
+            // Never truncated: a long title grows the header upward.
+            Text(title, style = titleStyle, color = p.textPrimary,
+                modifier = Modifier.semantics { heading() }.tagged(titleTag))
+        }
+    }
+
+    // Sanctuary and very large type: the title on paper, the art in a ruled frame beneath it.
+    if (design.isSanctuary || largeText || !hasArt) {
+        Column(modifier.fillMaxWidth().padding(top = (if (edgeToEdge) maxOf(statusTop, LocalScreenFrame.current?.insets?.calculateTopPadding() ?: statusTop) else 0.dp) + 8.dp)) {
             Row(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
                 verticalAlignment = Alignment.CenterVertically) {
-                Column(Modifier.weight(1f)) {
-                    if (eyebrow != null) Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
-                    Text(title, style = styles.largeTitle, color = p.textPrimary,
-                        modifier = Modifier.semantics { heading() }.tagged(titleTag))
-                }
+                text(Modifier.weight(1f))
                 Row(horizontalArrangement = Arrangement.spacedBy(4.dp), content = actions)
             }
-            Spacer(Modifier.height(14.dp))
-            Box(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)
-                .height((height * 0.56f).coerceIn(120.dp, 220.dp))
-                .border(0.75.dp, p.hairline, design.shapes.thumbnail)
-                .padding(5.dp).clip(design.shapes.thumbnail)) {
-                AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = false, topVeil = false)
+            metaLine(Modifier.padding(horizontal = design.spacing.gutter).padding(top = 6.dp))
+            if (hasArt) {
+                Spacer(Modifier.height(14.dp))
+                Box(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)
+                    .height(if (largeText) 132.dp else 168.dp)
+                    .then(if (design.isSanctuary) Modifier.border(0.75.dp, p.hairline, design.shapes.thumbnail).padding(5.dp) else Modifier)
+                    .clip(design.shapes.thumbnail)) {
+                    if (imageUrl.isNullOrBlank() && assetPath != null) AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = false, topVeil = false)
+                    else AppRemoteImage(imageUrl, assetPath, Modifier.fillMaxSize(), alignment = Alignment.TopCenter)
+                }
             }
-            Spacer(Modifier.height(20.dp))
+            Spacer(Modifier.height(if (hasArt) 20.dp else 14.dp))
         }
         return
     }
+
+    Column(modifier.fillMaxWidth()) {
     Box(
-        modifier
+        Modifier
             .fillMaxWidth()
-            // The overlap trim is applied OUTSIDE the fixed height: inside it, the
+            // The overlap trim is applied OUTSIDE the height: inside it, the
             // parent would centre the shorter box and leave a band above the art.
             .then(
                 if (overlap > 0.dp) Modifier.layout { measurable, constraints ->
@@ -341,49 +419,81 @@ fun AppHeroHeader(
                     }
                 } else Modifier
             )
-            .height(height + top)
+            .heightIn(min = statusTop + AppHeaderArtHeight - contentTop)
     ) {
-        AppHeroImage(assetPath, Modifier.fillMaxSize())
-        // 40dp glass circle, 44dp target, 8dp below the status bar on the gutter.
+        Box(Modifier.matchParentSize()) {
+            if (imageUrl.isNullOrBlank() && assetPath != null) {
+                AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeStart = 0.30f)
+            } else {
+                // Remote art, with the bundled painting while it loads or if it fails.
+                Box(Modifier.fillMaxSize().fadeOutBottom(0.30f)) {
+                    AppRemoteImage(imageUrl, assetPath, Modifier.fillMaxSize(), alignment = Alignment.TopCenter)
+                    if (design.isDark) Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.18f)))
+                    Box(Modifier.fillMaxWidth().height(120.dp).background(Brush.verticalGradient(listOf(
+                        if (design.isDark) Color.Black.copy(alpha = 0.4f) else p.canvasTop.copy(alpha = 0.55f), Color.Transparent))))
+                }
+            }
+        }
+        // 44dp glass circles, level with the scaffold's back button.
         Row(
-            Modifier.align(Alignment.TopEnd).padding(top = top + 8.dp - 2.dp, end = design.spacing.gutter - 2.dp),
+            Modifier.align(Alignment.TopEnd)
+                .padding(top = (statusTop - contentTop).coerceAtLeast(0.dp) + 2.dp, end = design.spacing.gutter - 4.dp),
             horizontalArrangement = Arrangement.spacedBy(4.dp),
             verticalAlignment = Alignment.CenterVertically,
             content = actions
         )
-        Column(
+        text(
             Modifier
                 .align(Alignment.BottomStart)
                 .padding(horizontal = design.spacing.gutter)
-                .padding(bottom = 16.dp + overlap)
-        ) {
-            if (eyebrow != null) {
-                Text(
-                    eyebrow,
-                    style = styles.eyebrow,
-                    // Over the misted art the secondary ink is not enough in dark.
-                    color = if (design.isDark) p.textPrimary.copy(alpha = 0.82f) else p.textSecondary,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Spacer(Modifier.height(4.dp))
-            }
-            Text(
-                title,
-                style = styles.display,
-                color = p.textPrimary,
-                maxLines = 2,
-                modifier = Modifier.semantics { heading() }.tagged(titleTag)
-            )
-        }
+                // Keeps a long title clear of the back button: the header grows instead.
+                .padding(top = (statusTop - contentTop).coerceAtLeast(0.dp) + 60.dp, bottom = HeaderTextBottom + overlap)
+        )
+    }
+    // The meta line hangs under the title line, so it never moves the title.
+    // (Pulled 8dp up into the title's bottom inset, taking that much less room.)
+    metaLine(Modifier.padding(horizontal = design.spacing.gutter).layout { measurable, constraints ->
+        val placeable = measurable.measure(constraints)
+        val lift = 8.dp.roundToPx()
+        layout(placeable.width, (placeable.height - lift).coerceAtLeast(0)) { placeable.place(0, -lift) }
+    })
     }
 }
 
 /**
- * Detail header: optional art (fading into the canvas) with the [title] in
- * `title1` beneath it, an optional [eyebrow] and [meta] line. The back button
- * is the scaffold's single glass back control — register the in-screen back
- * with [AppBackHandler]. [actions] (bookmark, more) sit top-right.
+ * Section-root header (a dock tab or a destination opened from Explore): the
+ * shared art frame with the [title] in `largeTitle`. Declares the screen
+ * edge-to-edge; put it first in the screen's scroll content. [height] is
+ * ignored: every header has the same art height ([AppHeaderArtHeight]).
+ */
+@Composable
+fun AppHeroHeader(
+    assetPath: String?,
+    title: String,
+    modifier: Modifier = Modifier,
+    eyebrow: String? = null,
+    @Suppress("UNUSED_PARAMETER") height: Dp = AppHeaderArtHeight,
+    titleTag: String? = null,
+    /**
+     * How far the next sibling (e.g. the season card) rides up over the hero's
+     * fade. The hero reports that much less height and lifts its title clear.
+     */
+    overlap: Dp = 0.dp,
+    meta: String? = null,
+    actions: @Composable RowScope.() -> Unit = {}
+) {
+    AppEdgeToEdge()
+    AppHeaderFrame(title, root = true, edgeToEdge = true, modifier = modifier, assetPath = assetPath,
+        eyebrow = eyebrow, meta = meta, titleTag = titleTag, overlap = overlap, actions = actions)
+}
+
+/**
+ * Detail header (anything below a section root): the shared art frame with
+ * the [title] in `title1`, an optional [eyebrow] and [meta] line. The back
+ * button is the scaffold's single glass back control — register the in-screen
+ * back with [AppBackHandler]. [actions] (bookmark, more) sit top-right.
+ * With an [imageUrl], [assetPath] is the bundled fallback shown while it
+ * loads. [imageHeight] is ignored: every header has the same art height.
  */
 @Composable
 fun AppDetailHeader(
@@ -394,85 +504,21 @@ fun AppDetailHeader(
     eyebrow: String? = null,
     meta: String? = null,
     metaIcon: ImageVector? = null,
-    imageHeight: Dp = 300.dp,
+    @Suppress("UNUSED_PARAMETER") imageHeight: Dp = AppHeaderArtHeight,
     titleTag: String? = null,
+    /** True on a section root that uses this entry point: the title takes `largeTitle`. */
+    root: Boolean = false,
     actions: @Composable RowScope.() -> Unit = {}
 ) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-    val p = design.palette
-    val insets = appScreenInsets()
-    val hasArt = assetPath != null || imageUrl != null
-    Column(modifier.fillMaxWidth()) {
-        if (hasArt) {
-            val top = statusBarHeight()
-            Box(Modifier.fillMaxWidth().height(imageHeight + if (insets.calculateTopPadding() > 0.dp) top else 0.dp)) {
-                if (assetPath != null) {
-                    AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeStart = 0.5f)
-                } else {
-                    Box(Modifier.fillMaxSize()) {
-                        AsyncImage(
-                            model = imageUrl,
-                            contentDescription = null,
-                            contentScale = ContentScale.Crop,
-                            alignment = Alignment.TopCenter,
-                            modifier = Modifier.fillMaxSize()
-                        )
-                        Box(
-                            Modifier.fillMaxSize().background(
-                                Brush.verticalGradient(
-                                    0f to (if (design.isDark) Color.Black.copy(alpha = 0.4f) else p.canvasTop.copy(alpha = 0.55f)),
-                                    0.25f to Color.Transparent,
-                                    0.5f to Color.Transparent,
-                                    0.8f to p.canvasTop.copy(alpha = 0.8f),
-                                    1f to p.canvasTop
-                                )
-                            )
-                        )
-                    }
-                }
-                Row(
-                    Modifier.align(Alignment.TopEnd).padding(top = top + 4.dp, end = design.spacing.gutter - 2.dp),
-                    horizontalArrangement = Arrangement.spacedBy(4.dp),
-                    content = actions
-                )
-            }
-        } else {
-            Spacer(Modifier.height(insets.calculateTopPadding() + 8.dp))
-            Row(
-                Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter - 2.dp),
-                horizontalArrangement = Arrangement.End,
-                content = actions
-            )
-        }
-        Column(
-            Modifier
-                .padding(horizontal = design.spacing.gutter)
-                .then(if (hasArt) Modifier.offset(y = (-28).dp) else Modifier.padding(top = 4.dp))
-        ) {
-            if (eyebrow != null) {
-                Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
-                Spacer(Modifier.height(6.dp))
-            }
-            Text(title, style = styles.title1, color = p.textPrimary, modifier = Modifier.semantics { heading() }.tagged(titleTag))
-            if (meta != null) {
-                Spacer(Modifier.height(10.dp))
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    if (metaIcon != null) {
-                        Icon(metaIcon, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
-                        Spacer(Modifier.width(8.dp))
-                    }
-                    Text(meta, style = styles.subhead, color = p.textSecondary)
-                }
-            }
-        }
-    }
+    val edgeToEdge = appScreenInsets().calculateTopPadding() > 0.dp
+    AppHeaderFrame(title, root = root, edgeToEdge = edgeToEdge, modifier = modifier, assetPath = assetPath,
+        imageUrl = imageUrl, eyebrow = eyebrow, meta = meta, metaIcon = metaIcon, titleTag = titleTag, actions = actions)
 }
 
 /**
- * Tab-root title without art: `largeTitle` with an optional [eyebrow] and
- * glass [actions] on the right (search, stats). Clears the status bar itself
- * on an edge-to-edge screen.
+ * Section-root title without art: the same block and rank as [AppHeroHeader],
+ * for the rare root that has no picture. Clears the status bar itself on an
+ * edge-to-edge screen.
  */
 @Composable
 fun AppLargeTitleHeader(
@@ -482,30 +528,9 @@ fun AppLargeTitleHeader(
     titleTag: String? = null,
     actions: @Composable RowScope.() -> Unit = {}
 ) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-    val p = design.palette
-    val insets = appScreenInsets()
-    Column(modifier.fillMaxWidth().padding(top = insets.calculateTopPadding())) {
-        Row(
-            Modifier.fillMaxWidth().padding(start = design.spacing.gutter, end = design.spacing.gutter - 2.dp, top = 8.dp),
-            horizontalArrangement = Arrangement.End,
-            verticalAlignment = Alignment.CenterVertically,
-            content = actions
-        )
-        Column(Modifier.padding(horizontal = design.spacing.gutter).padding(top = 6.dp, bottom = 14.dp)) {
-            if (eyebrow != null) {
-                Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
-                Spacer(Modifier.height(2.dp))
-            }
-            Text(
-                title,
-                style = if (title.length > 18) styles.title1 else styles.largeTitle,
-                color = p.textPrimary,
-                modifier = Modifier.semantics { heading() }.tagged(titleTag)
-            )
-        }
-    }
+    val edgeToEdge = appScreenInsets().calculateTopPadding() > 0.dp
+    AppHeaderFrame(title, root = true, edgeToEdge = edgeToEdge, modifier = modifier,
+        eyebrow = eyebrow, titleTag = titleTag, actions = actions)
 }
 
 // ------------------------------------------------------------------ cards
@@ -604,7 +629,7 @@ fun AppContentCard(
         Column {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (icon != null) {
-                    Icon(icon, null, tint = p.textPrimary, modifier = Modifier.size(24.dp))
+                    AppIconWell(icon)
                     Spacer(Modifier.width(14.dp))
                 }
                 Column(Modifier.weight(1f)) {
@@ -664,8 +689,8 @@ fun AppCategoryTile(
             .heightIn(min = 104.dp)
             .lumenPress(onClick, 0.96f)
             .then(
-                if (selected) Modifier.softShadow(shape, p.shadow).background(p.action, shape)
-                else Modifier.lumenGlass(shape)
+                if (selected) Modifier.liquidPane(shape, design.tintedGlassSpec(p.action))
+                else Modifier.appContentSurface(shape)
             )
             .clip(shape)
             .semantics { this.selected = selected }
@@ -732,16 +757,19 @@ fun AppImageCard(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    val shape = RoundedCornerShape(22.dp)
+    val shape = if (design.isSanctuary) design.shapes.card else RoundedCornerShape(24.dp)
     val fallback = rememberAssetBitmap(assetPath, 720)
     val meta2 = rememberHeroMeta(assetPath)
     Box(
         modifier
             .aspectRatio(aspectRatio)
             .lumenPress(onClick, 0.97f)
-            .softShadow(shape, p.shadow)
+            .softShadow(shape, p.shadow.copy(alpha = if (design.isDark) 0.45f else 0.16f), 26.dp, 10.dp)
             .clip(shape)
-            .background(p.raised)
+            // Before the art lands (or where there is none): deep glass in the accent's hue.
+            .background(Brush.linearGradient(listOf(
+                lerp(p.accent, Color(0xFF0B1022), if (design.isDark) 0.62f else 0.38f),
+                lerp(p.accent, Color(0xFF0B1022), 0.86f))))
             .tagged(tag)
     ) {
         when {
@@ -769,7 +797,10 @@ fun AppImageCard(
                 )
             )
         )
-        Box(Modifier.fillMaxSize().border(1.dp, Color.White.copy(alpha = if (design.isDark) 0.08f else 0.35f), shape))
+        Box(Modifier.fillMaxSize().border(1.dp, Brush.linearGradient(listOf(
+            Color.White.copy(alpha = if (design.isDark) 0.30f else 0.70f),
+            Color.White.copy(alpha = if (design.isDark) 0.04f else 0.12f),
+            Color.White.copy(alpha = if (design.isDark) 0.12f else 0.32f))), shape))
         Column(Modifier.align(Alignment.BottomStart).padding(14.dp)) {
             if (eyebrow != null) {
                 Text(eyebrow, style = styles.caption, color = Color.White.copy(alpha = 0.85f), maxLines = 1)
@@ -819,35 +850,37 @@ fun AppFilterChips(
     }
 }
 
-/** One capsule chip. Selected = action fill. */
+/** One capsule chip: clear glass, accent-tinted glass when selected. */
 @Composable
 fun AppKitChip(label: String, selected: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
     val shape = design.shapes.button
-    val fill by animateColorAsState(if (selected) p.action else p.groupedSurface, tween(design.motion.fastMillis), label = "chip")
+    val ink by animateColorAsState(if (selected) p.onAction else p.textPrimary, tween(design.motion.fastMillis), label = "chip")
     Box(
         modifier
             .heightIn(min = 48.dp)
             .lumenPress(onClick, 0.95f, Role.Tab)
-            .then(if (selected) Modifier.softShadow(shape, p.shadow, 16.dp, 4.dp) else Modifier.lumenGlass(shape, lifted = false))
+            .then(
+                if (selected) Modifier.liquidPane(shape, design.tintedGlassSpec(p.action).copy(shadowBlur = 16.dp, shadowY = 5.dp))
+                else Modifier.lumenGlass(shape, lifted = false)
+            )
             .clip(shape)
-            .background(fill)
             .semantics { this.selected = selected }
-            .padding(horizontal = 16.dp, vertical = 8.dp),
+            .padding(horizontal = 18.dp, vertical = 8.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
             label,
-            style = styles.subhead.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Medium),
-            color = if (selected) p.onAction else p.textPrimary,
+            style = styles.subhead.copy(fontWeight = if (selected) androidx.compose.ui.text.font.FontWeight.SemiBold else androidx.compose.ui.text.font.FontWeight.Medium),
+            color = ink,
             maxLines = 1
         )
     }
 }
 
-/** The primary action: a 52dp charcoal (ivory in dark) capsule. */
+/** The primary action: a 52dp capsule of accent-tinted glass. */
 @Composable
 fun AppPrimaryCapsule(
     label: String,
@@ -867,9 +900,7 @@ fun AppPrimaryCapsule(
             .then(if (fillWidth) Modifier.fillMaxWidth() else Modifier)
             .heightIn(min = 52.dp)
             .lumenPress(onClick, 0.97f, enabled = enabled)
-            // Warm 8% lift in light; none in dark (an ivory capsule needs no shadow).
-            .softShadow(shape, if (enabled && !design.isDark) p.shadow else Color.Transparent, 24.dp, 8.dp)
-            .background(if (enabled) p.action else p.action.copy(alpha = 0.3f), shape)
+            .liquidPane(shape, design.tintedGlassSpec(p.action, enabled))
             .tagged(tag)
             .padding(horizontal = 26.dp, vertical = 14.dp),
         horizontalArrangement = Arrangement.Center,
@@ -901,20 +932,14 @@ fun AppSecondaryCapsule(
     Row(
         modifier
             .then(if (fillWidth) Modifier.fillMaxWidth() else Modifier)
-            .heightIn(min = 48.dp)
+            .heightIn(min = 50.dp)
             .lumenPress(onClick, 0.97f, enabled = enabled)
-            // Flat tint, no shadow: black 5% in light, white 12% with a lit
-            // 14% -> 4% edge in dark.
-            .background(
-                if (design.isDark) Color.White.copy(alpha = 0.12f) else Color.Black.copy(alpha = 0.05f),
-                shape
-            )
             .then(
-                if (design.isDark) Modifier.border(
-                    1.dp,
-                    Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.14f), Color.White.copy(alpha = 0.04f))),
-                    shape
-                ) else Modifier
+                if (design.opaqueMaterial()) Modifier
+                    .background(if (design.isDark) Color.White.copy(alpha = 0.12f) else Color.Black.copy(alpha = 0.05f), shape)
+                    .then(if (design.isDark) Modifier.border(1.dp,
+                        Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.14f), Color.White.copy(alpha = 0.04f))), shape) else Modifier)
+                else Modifier.liquidPane(shape, design.glassSpec(GlassRole.Control).copy(shadowBlur = 14.dp, shadowY = 4.dp))
             )
             .tagged(tag)
             .padding(horizontal = 20.dp, vertical = 10.dp),
@@ -952,7 +977,7 @@ fun AppTransportBar(
     val shape = design.shapes.button
     Row(
         modifier
-            .lumenGlass(shape)
+            .lumenGlass(shape, strong = true)
             .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(18.dp)
@@ -964,15 +989,13 @@ fun AppTransportBar(
                 .lumenPress(onPlayPause, 0.92f)
                 .semantics { contentDescription = if (isPlaying) pauseLabel else playLabel }
                 .testTag("${tagPrefix}_play")
-                .softShadow(CircleShape, p.shadow, 18.dp, 6.dp)
-                .background(p.glassStrong, CircleShape)
-                .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), CircleShape),
+                .liquidPane(CircleShape, design.tintedGlassSpec(p.action)),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 if (isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow,
                 null,
-                tint = p.textPrimary,
+                tint = p.onAction,
                 modifier = Modifier.size(30.dp)
             )
         }
@@ -1059,7 +1082,7 @@ fun AppProgressBar(
                 .fillMaxWidth(animated)
                 .height(height)
                 .clip(RoundedCornerShape(percent = 50))
-                .background(color ?: p.textPrimary)
+                .background(color ?: p.accent)
         )
     }
 }
@@ -1167,7 +1190,7 @@ fun AppStepList(
                 Box(
                     Modifier
                         .size(34.dp)
-                        .then(if (active) Modifier.background(p.action, CircleShape) else Modifier.lumenGlass(CircleShape, lifted = false)),
+                        .then(if (active) Modifier.liquidPane(CircleShape, design.tintedGlassSpec(p.action, glow = false)) else Modifier.lumenGlass(CircleShape, lifted = false)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text("${i + 1}", style = styles.subhead, color = if (active) p.onAction else p.textPrimary)

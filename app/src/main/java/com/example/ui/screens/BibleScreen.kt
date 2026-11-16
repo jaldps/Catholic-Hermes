@@ -153,6 +153,7 @@ import com.example.ui.design.AppGlassSurface
 import com.example.ui.design.AppGroupedRow
 import com.example.ui.design.AppHideTabBar
 import com.example.ui.design.AppInlineTitle
+import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppLargeTitleHeader
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
@@ -452,7 +453,7 @@ fun BibleScreen(
     val title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada")
     val header: LazyListScope.() -> Unit = {
         item(key = "bible_title") {
-            AppLargeTitleHeader(title = title, titleTag = "bible_title") {
+            AppDetailHeader(title = title, assetPath = "heroes/lumen/bible.jpg", root = true, titleTag = "bible_title") {
                 AppGlassIconButton(
                     icon = Icons.Outlined.Translate,
                     contentDescription = currentLanguage.pick(
@@ -979,7 +980,7 @@ private fun ContinueReadingCard(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    val art = rememberFirstAsset("heroes/lumen/bible.jpg", "heroes/church_window_light.jpg")
+    val art = rememberFirstAsset("heroes/lumen/john.jpg", "heroes/lumen/bible.jpg", "heroes/church_window_light.jpg")
     val bitmap = rememberAssetBitmap(art, 900)
     val meta = rememberHeroMeta(art)
     val shape = design.shapes.card

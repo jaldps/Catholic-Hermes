@@ -23,6 +23,7 @@ import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performSemanticsAction
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performScrollToNode
 import androidx.room.Room
@@ -100,6 +101,21 @@ class DevotionalPrioritiesScreenshotTest {
         compose.waitForIdle()
     }
 
+    /**
+     * The list scrolls under the floating dock, so a scroll-to can leave its
+     * target behind the dock where a tap would land on a tab. Scroll the
+     * remaining distance so the whole target is tappable.
+     */
+    private fun revealAboveDock(tag: String) {
+        val target = compose.onNodeWithTag(tag, useUnmergedTree = true).fetchSemanticsNode().boundsInRoot
+        val dock = compose.onNodeWithTag("bottom_nav_bar").fetchSemanticsNode().boundsInRoot
+        val overlap = target.bottom - dock.top
+        if (overlap > 0f) {
+            compose.onNode(hasScrollToNodeAction()).performSemanticsAction(androidx.compose.ui.semantics.SemanticsActions.ScrollBy) { it(0f, overlap + 24f) }
+            compose.waitForIdle()
+        }
+    }
+
     private fun scrollTo(tag: String) {
         compose.onNode(hasScrollToNodeAction()).performScrollToNode(hasTestTag(tag))
         compose.waitForIdle()
@@ -120,6 +136,7 @@ class DevotionalPrioritiesScreenshotTest {
                 false
             }
         }
+        revealAboveDock("add_first_journal_entry")
         tap("add_first_journal_entry")
         compose.onNodeWithTag("journal_composer", useUnmergedTree = true).assertIsDisplayed()
     }

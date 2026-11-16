@@ -291,7 +291,7 @@ fun RemindersScreen(
                         title = title,
                         assetPath = "heroes/lumen/angelus.jpg",
                         meta = summary,
-                        imageHeight = 230.dp,
+                        root = true,
                         titleTag = "reminders_title"
                     )
                 }
