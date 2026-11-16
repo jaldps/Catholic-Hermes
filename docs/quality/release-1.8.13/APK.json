@@ -1,0 +1,39 @@
+{
+  "version_name": "1.8.13",
+  "version_code": 22,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.13",
+  "sha256": "88b73a715ed6735b1bacf7de38f7eb6f136d961d8e475207415ae217e0d4c92d",
+  "bytes": 86687808,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.12 (same package and key)",
+  "changes": [
+    "Liquid Glass redesign of Lumen (T-020): ambient liturgical light, content and control glass, live blur on Android 12+ and refraction lens on Android 13+ (untested on device).",
+    "New selectable identity Cristal (transparent refracting glass) next to Lumen and Sanctuary.",
+    "Single header on every screen (same art height and title line); new public-domain paintings for Saints, First steps and the Gospel of John card.",
+    "Accent colour follows the liturgical colour of the day with the default Liturgical Dynamic tint.",
+    "Marian devotions: 25 new (T-018) and literal, sourced quotations for the Guadalupe, Fatima and Miraculous Medal promises."
+  ],
+  "tests": [
+    "AppNavigationTest",
+    "DesignNavigationTest",
+    "DesignContrastTest",
+    "LiquidGlassTest",
+    "Font*",
+    "SaintsScreenTest",
+    "OrdersScreenTest",
+    "Devotions*",
+    "VoiceSettingsUiTest",
+    "RosaryInteractionTest",
+    "Novena*",
+    "EditorialReliabilityTest"
+  ],
+  "known_limitations": [
+    "Full unit-test suite not run here (T-020 reports 477/483; the 6 failures are RecoverySheetsScreenshotTest, which already failed before the redesign).",
+    "Live blur, AGSL lens, haptics and scroll performance not verified on a device.",
+    "Christ devotions (T-019) pending corrections."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

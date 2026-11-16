@@ -1,5 +1,17 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.13
+
+[Descargar Catholic Hermes 1.8.13](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.13.apk) · versión `1.8.13`, código 22. **Actualiza 1.8.1–1.8.12** y conserva el progreso.
+
+Novedades:
+- **Rediseño Liquid Glass** de Lumen: luz ambiental que sigue el color litúrgico del día, paneles de cristal, desenfoque en vivo (Android 12+) y lente de refracción (Android 13+).
+- **Nueva identidad «Cristal»** (Apariencia → Estilo), cristal transparente con refracción, junto a Lumen y Sanctuary.
+- **Cabezal único** en todas las pantallas, con pinturas nuevas de dominio público para Santos, Primeros pasos y el Evangelio de Juan.
+- **25 devociones marianas nuevas** y promesas con cita literal y fuente (Guadalupe, Fátima, Medalla Milagrosa).
+
+[Metadatos](../docs/quality/release-1.8.13/APK.json). No se ha probado en un teléfono físico: el desenfoque y la lente solo se ven en el dispositivo.
+
 ## Catholic Hermes 1.8.12
 
 [Descargar Catholic Hermes 1.8.12](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.12.apk) · versión `1.8.12`, código 21. **Actualiza 1.8.1–1.8.11** y conserva el progreso.
