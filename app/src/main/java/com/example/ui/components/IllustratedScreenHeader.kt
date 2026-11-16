@@ -41,7 +41,7 @@ fun IllustratedScreenHeader(
                 SacredArt(subject, Modifier.size(artSize).testTag("screen_header_illustration"), transparentBackground = true)
             }
         }
-        DesignLanguage.APPLE, DesignLanguage.IVE -> {
+        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.GLASS -> {
             // One flexible bar owns the title, date and illustration together.
             // Search and reading follow immediately instead of another banner.
             AppScreenTitle(title, subtitle, modifier, trailingContent = {

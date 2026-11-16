@@ -34,6 +34,9 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.asComposeRenderEffect
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.translate
+import androidx.compose.ui.layout.findRootCoordinates
+import androidx.compose.ui.graphics.drawscope.withTransform
+import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.layer.GraphicsLayer
 import androidx.compose.ui.graphics.layer.drawLayer
@@ -75,7 +78,15 @@ data class GlassSpec(
     val rimWidth: Dp,
     val shadow: Color,
     val shadowBlur: Dp,
-    val shadowY: Dp
+    val shadowY: Dp,
+    /**
+     * How strongly the pane bends the ambient light behind it (0 = not at
+     * all): the light is redrawn magnified inside the pane and more sharply
+     * along its rim, as a thick slab of clear glass would show it.
+     */
+    val lens: Float = 0f,
+    /** Peak alpha of the specular glint in the pane's lit corner. */
+    val glint: Float = 0f
 )
 
 /** The roles glass plays. One spec per role keeps every screen consistent. */
@@ -107,6 +118,7 @@ fun AppDesign.glassSpec(role: GlassRole, lifted: Boolean = true): GlassSpec {
             if (lifted && !isSanctuary && !highContrast) p.shadow.copy(alpha = if (isDark) 0.22f else 0.07f) else Color.Transparent,
             20.dp, 5.dp)
     }
+    if (isGlass) return clearGlassSpec(role, lifted)
     return when (role) {
         GlassRole.Content -> GlassSpec(
             fillTop = p.pane.copy(alpha = (p.pane.alpha + 0.04f).coerceAtMost(1f)),
@@ -152,10 +164,63 @@ fun AppDesign.glassSpec(role: GlassRole, lifted: Boolean = true): GlassSpec {
 }
 
 /**
+ * The Glass identity's panes: a thin tint, the light behind bent through
+ * them, a bright rim and a glint. Nothing here is dense enough to hide what
+ * is behind it; legibility comes from the ambient light's own range.
+ */
+private fun AppDesign.clearGlassSpec(role: GlassRole, lifted: Boolean): GlassSpec {
+    val p = palette
+    val rimLight = p.glassEdgeTop
+    val rimShade = p.glassEdgeBottom.copy(alpha = p.glassEdgeBottom.alpha * 0.35f)
+    fun shadow(light: Float, dark: Float) = if (lifted) p.shadow.copy(alpha = if (isDark) dark else light) else Color.Transparent
+    return when (role) {
+        GlassRole.Content -> GlassSpec(
+            fillTop = p.pane.copy(alpha = p.pane.alpha * 1.25f), fillBottom = p.pane.copy(alpha = p.pane.alpha * 0.8f),
+            sheen = 0f, rimLight = rimLight, rimShade = rimShade, rimWidth = 1.25.dp,
+            shadow = shadow(0.10f, 0.34f), shadowBlur = 30.dp, shadowY = 12.dp,
+            lens = 1f, glint = if (isDark) 0.16f else 0.50f
+        )
+        GlassRole.Control -> GlassSpec(
+            fillTop = p.glass.copy(alpha = p.glass.alpha * 1.3f), fillBottom = p.glass.copy(alpha = p.glass.alpha * 0.8f),
+            sheen = 0f, rimLight = rimLight, rimShade = rimShade, rimWidth = 1.25.dp,
+            shadow = shadow(0.09f, 0.30f), shadowBlur = 18.dp, shadowY = 6.dp,
+            lens = 1f, glint = if (isDark) 0.14f else 0.45f
+        )
+        // Floats over scrolling text inside the content, where nothing can be
+        // sampled: frosted enough to keep its own labels readable.
+        GlassRole.Floating -> GlassSpec(
+            fillTop = p.glassStrong.copy(alpha = (p.glassStrong.alpha + 0.05f).coerceAtMost(1f)), fillBottom = p.glassStrong,
+            sheen = 0f, rimLight = rimLight, rimShade = rimShade, rimWidth = 1.25.dp,
+            shadow = shadow(0.14f, 0.42f), shadowBlur = 30.dp, shadowY = 10.dp,
+            lens = 0.7f, glint = if (isDark) 0.14f else 0.40f
+        )
+        GlassRole.Thumb -> GlassSpec(
+            fillTop = Color.White.copy(alpha = if (isDark) 0.13f else 0.62f),
+            fillBottom = Color.White.copy(alpha = if (isDark) 0.07f else 0.40f),
+            sheen = 0f, rimLight = Color.White.copy(alpha = if (isDark) 0.55f else 1f),
+            rimShade = Color.White.copy(alpha = if (isDark) 0.10f else 0.45f), rimWidth = 1.25.dp,
+            shadow = p.shadow.copy(alpha = if (isDark) 0.36f else 0.16f), shadowBlur = 14.dp, shadowY = 4.dp,
+            lens = 1.4f, glint = if (isDark) 0.20f else 0.55f
+        )
+    }
+}
+
+/**
  * Dock and bar glass. Over a [live] blurred backdrop the tint thins so the
  * content shows through; without one it is the dense floating glass.
  */
 fun AppDesign.chromeGlassSpec(live: Boolean): GlassSpec {
+    if (isGlass && !opaqueMaterial()) {
+        // Clear either way: live, the content blurs and bends beneath it;
+        // otherwise the content has already dissolved into the light there.
+        val tint = if (isDark) Color.White.copy(alpha = if (live) 0.06f else 0.08f)
+            else Color.White.copy(alpha = if (live) 0.14f else 0.22f)
+        return clearGlassSpec(GlassRole.Control, lifted = true).copy(
+            fillTop = tint.copy(alpha = tint.alpha * 1.3f), fillBottom = tint,
+            shadow = palette.shadow.copy(alpha = if (isDark) 0.44f else 0.15f), shadowBlur = 30.dp, shadowY = 10.dp,
+            lens = 1.2f
+        )
+    }
     val base = glassSpec(GlassRole.Floating)
     if (!live || opaqueMaterial()) return base
     val tint = if (isDark) Color(0xFF161D33) else Color.White
@@ -198,6 +263,7 @@ private fun Path.addOutline(outline: Outline) = when (outline) {
  */
 fun Modifier.liquidPane(shape: Shape, spec: GlassSpec): Modifier = this
     .then(if (spec.shadow.alpha > 0f) Modifier.softShadow(shape, spec.shadow, spec.shadowBlur, spec.shadowY) else Modifier)
+    .then(if (spec.lens > 0f) Modifier.ambientLens(shape, spec.lens) else Modifier)
     .drawWithCache {
         val body = Path().apply { addOutline(shape.createOutline(size, layoutDirection, this@drawWithCache)) }
         val fill = if (spec.fillTop == spec.fillBottom) null
@@ -223,9 +289,23 @@ fun Modifier.liquidPane(shape: Shape, spec: GlassSpec): Modifier = this
             start = Offset(size.width * 0.12f, 0f),
             end = Offset(size.width * 0.88f, size.height)
         )
+        // The glint: light pooling in the corner it enters by, and a faint
+        // shade along the far edge that gives the slab its thickness.
+        val glint = if (spec.glint > 0f) Brush.radialGradient(
+            0f to Color.White.copy(alpha = spec.glint),
+            0.45f to Color.White.copy(alpha = spec.glint * 0.28f),
+            1f to Color.Transparent,
+            center = Offset(size.width * 0.10f, 0f),
+            radius = maxOf(minOf(size.width, size.height) * 1.15f, 1f)
+        ) else null
+        val shade = if (spec.glint > 0f) Brush.verticalGradient(
+            0f to Color.Transparent, 0.72f to Color.Transparent, 1f to Color.Black.copy(alpha = 0.045f)
+        ) else null
         onDrawBehind {
             if (fill != null) drawPath(body, fill) else drawPath(body, spec.fillTop)
             if (sheen != null) drawPath(body, sheen)
+            if (glint != null) drawPath(body, glint)
+            if (shade != null) drawPath(body, shade)
             if (rimPath != null) {
                 if (rim != null) drawPath(rimPath, rim, style = Stroke(stroke))
                 else if (spec.rimLight.alpha > 0f) drawPath(rimPath, spec.rimLight, style = Stroke(stroke))
@@ -249,27 +329,79 @@ fun Modifier.liquidAmbient(): Modifier = composed {
     }
     drawWithCache {
         val base = Brush.verticalGradient(listOf(p.canvasTop, p.canvasBottom))
-        val w = size.width
-        val h = size.height
-        val unit = maxOf(w, h * 0.5f)
-        fun pool(color: Color, cx: Float, cy: Float, radius: Float) = Brush.radialGradient(
-            0f to color,
-            0.32f to color.copy(alpha = color.alpha * 0.70f),
-            0.62f to color.copy(alpha = color.alpha * 0.26f),
-            1f to color.copy(alpha = 0f),
-            center = Offset(w * cx, h * cy), radius = unit * radius
-        )
-        val brushes = listOf(
-            pool(pools[0], 0.02f, 0.02f, 0.98f),
-            pool(pools[1], 1.04f, 0.20f, 0.86f),
-            pool(pools[2], -0.08f, 0.60f, 0.90f),
-            pool(pools[3], 1.00f, 0.90f, 0.92f)
-        )
+        val brushes = ambientPools(pools, size.width, size.height, 1f)
         onDrawBehind {
             drawRect(base)
             brushes.forEach { drawRect(it) }
         }
     }
+}
+
+/** The four pools of ambient light for a [w] x [h] canvas, each alpha scaled by [gain]. */
+private fun ambientPools(pools: List<Color>, w: Float, h: Float, gain: Float): List<Brush> {
+    val unit = maxOf(w, h * 0.5f).coerceAtLeast(1f)
+    fun pool(color: Color, cx: Float, cy: Float, radius: Float): Brush {
+        val a = (color.alpha * gain).coerceAtMost(1f)
+        return Brush.radialGradient(
+            0f to color.copy(alpha = a),
+            0.32f to color.copy(alpha = a * 0.70f),
+            0.62f to color.copy(alpha = a * 0.26f),
+            1f to color.copy(alpha = 0f),
+            center = Offset(w * cx, h * cy), radius = unit * radius
+        )
+    }
+    return listOf(
+        pool(pools[0], 0.02f, 0.02f, 0.98f),
+        pool(pools[1], 1.04f, 0.20f, 0.86f),
+        pool(pools[2], -0.08f, 0.60f, 0.90f),
+        pool(pools[3], 1.00f, 0.90f, 0.92f)
+    )
+}
+
+/** How much brighter the ambient light reads through a lens of strength 1. */
+const val LensGain = 1.25f
+
+/**
+ * Refraction without a shader: the ambient light behind the pane is redrawn
+ * inside it magnified about the pane's centre, and again, more strongly,
+ * along a rim band. As the pane moves across the light the image inside it
+ * slides, the way it does through real glass. Works on every Android version
+ * and on a software canvas.
+ */
+private fun Modifier.ambientLens(shape: Shape, strength: Float): Modifier = composed {
+    val pools = LocalAppDesign.current.palette.ambient
+    if (pools.size < 4) return@composed this
+    var origin by remember { mutableStateOf(Offset.Zero) }
+    var root by remember { mutableStateOf(androidx.compose.ui.unit.IntSize.Zero) }
+    this
+        .onGloballyPositioned { c ->
+            origin = c.positionInRoot()
+            root = c.findRootCoordinates().size
+        }
+        .drawWithCache {
+            val body = Path().apply { addOutline(shape.createOutline(size, layoutDirection, this@drawWithCache)) }
+            val band = 10.dp.toPx()
+            val ring = if (size.width > band * 3f && size.height > band * 3f) {
+                val inner = Path().apply {
+                    addOutline(shape.createOutline(Size(size.width - band * 2f, size.height - band * 2f), layoutDirection, this@drawWithCache))
+                    translate(Offset(band, band))
+                }
+                Path().apply { op(body, inner, androidx.compose.ui.graphics.PathOperation.Difference) }
+            } else null
+            val rootSize = Size(root.width.toFloat(), root.height.toFloat())
+            val brushes = if (root.width > 0) ambientPools(pools, rootSize.width, rootSize.height, 1f + (LensGain - 1f) * strength.coerceAtMost(1f)) else emptyList()
+            onDrawBehind {
+                if (brushes.isEmpty()) return@onDrawBehind
+                val o = origin
+                val pivot = Offset(o.x + size.width / 2f, o.y + size.height / 2f)
+                fun light(zoom: Float) = withTransform({
+                    translate(-o.x, -o.y)
+                    scale(zoom, zoom, pivot)
+                }) { brushes.forEach { drawRect(it, size = rootSize) } }
+                clipPath(body) { light(1f + 0.12f * strength) }
+                if (ring != null) clipPath(ring) { light(1f + 0.38f * strength) }
+            }
+        }
 }
 
 /**

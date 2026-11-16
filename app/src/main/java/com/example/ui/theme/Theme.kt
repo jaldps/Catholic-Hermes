@@ -60,8 +60,9 @@ fun SanctaFidesTheme(
     // The preset only tints: Lumen calibrates each preset's ink so it clears
     // 4.5:1 on canvas and glass in both modes.
     val season = if (identity != DesignLanguage.SANCTUARY && themePreset == "LITURGICAL_DYNAMIC") LiturgicalLight.of(liturgicalColorHex) else null
+    val glass = identity == DesignLanguage.GLASS
     val accent = if (identity == DesignLanguage.SANCTUARY && themePreset == "LITURGICAL_DYNAMIC") base.palette.accent
-        else season?.accent(isDark) ?: lumenAccent(themePreset, isDark)
+        else (season?.accent(isDark) ?: lumenAccent(themePreset, isDark)).let { if (glass) glassAccent(it, isDark) else it }
     val liquid = identity != DesignLanguage.SANCTUARY
     val tinted = base.palette.copy(
         accent = accent,
@@ -72,7 +73,8 @@ fun SanctaFidesTheme(
         action = if (liquid) accent else base.palette.action,
         onAction = if (liquid) (if (isDark) Color(0xFF070B16) else Color.White) else base.palette.onAction,
         accentMuted = if (liquid) lerp(accent, if (isDark) Color(0xFF0A0E1C) else Color.White, if (isDark) 0.80f else 0.86f) else base.palette.accentMuted,
-        ambient = if (liquid) season?.ambient(isDark) ?: lumenAmbient(themePreset, isDark) else emptyList()
+        ambient = if (liquid) (season?.ambient(isDark) ?: lumenAmbient(themePreset, isDark)).let { if (glass) glassAmbient(it) else it }
+            else emptyList()
     )
     val accessible = if (highContrast) tinted.copy(
         textSecondary = tinted.textPrimary, textTertiary = tinted.textPrimary,
@@ -161,6 +163,18 @@ enum class LiturgicalLight(
     }
 }
 
+/**
+ * Clear glass lets the ambient light through at full strength, so the Glass
+ * identity brightens that light and moves the accent ink further from it:
+ * deeper in light mode, paler in dark. Calibrated so every ink still clears
+ * 4.5:1 on bare light and through every pane (LiquidGlassTest).
+ */
+internal const val GlassAmbientBoost = 1.4f
+internal fun glassAmbient(pools: List<Color>): List<Color> =
+    pools.map { it.copy(alpha = (it.alpha * GlassAmbientBoost).coerceAtMost(1f)) }
+internal fun glassAccent(accent: Color, isDark: Boolean): Color =
+    if (isDark) lerp(accent, Color.White, 0.45f) else lerp(accent, Color.Black, 0.15f)
+
 /** Lumen ink for each tint preset, light and dark. */
 internal fun lumenAccent(preset: String, isDark: Boolean): Color = when (preset) {
     "MONASTIC_MINIMALIST" -> if (isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
@@ -204,7 +218,7 @@ private fun buildColorScheme(
     val base = if (isDark) darkColorScheme() else lightColorScheme()
 
     return when (identity) {
-        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.SANCTUARY -> base.copy(
+        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> base.copy(
             primary = accent,
             onPrimary = onAccent,
             primaryContainer = palette.accentMuted,
@@ -272,3 +286,6 @@ fun MyApplicationTheme(
         content = content
     )
 }
+
+/** The ambient pools of a tint preset, for contrast tests. */
+internal fun lumenAmbientForTests(preset: String, isDark: Boolean): List<Color> = lumenAmbient(preset, isDark)

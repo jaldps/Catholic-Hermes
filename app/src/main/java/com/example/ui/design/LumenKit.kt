@@ -192,6 +192,13 @@ object LumenKit : AppKit {
                                         val bottomStops = if (!dockShown) arrayOf(1f to Color.Black) else if (live) arrayOf(
                                             ((h - fadeBottom) / h).coerceIn(0.5f, 1f) to Color.Black,
                                             1f to Color.Black.copy(alpha = floor)
+                                        ) else if (design.isGlass) arrayOf(
+                                            // Clear glass hides nothing: the content must be gone
+                                            // before it reaches the dock's top edge.
+                                            ((h - fadeBottom - 40.dp.toPx()) / h).coerceIn(0.5f, 1f) to Color.Black,
+                                            ((h - fadeBottom) / h).coerceIn(0.5f, 1f) to Color.Black.copy(alpha = 0.34f),
+                                            ((h - fadeBottom + 22.dp.toPx()) / h).coerceIn(0.5f, 1f) to Color.Black.copy(alpha = 0.03f),
+                                            1f to Color.Black.copy(alpha = 0f)
                                         ) else arrayOf(
                                             ((h - fadeBottom) / h).coerceIn(0.5f, 1f) to Color.Black,
                                             ((h - fadeBottom * 0.80f) / h).coerceIn(0.5f, 1f) to Color.Black.copy(alpha = 0.42f),

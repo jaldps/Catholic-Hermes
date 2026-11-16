@@ -79,6 +79,56 @@ class LiquidGlassTest {
         }
     }
 
+    /** Clear glass hides nothing, so its inks must hold on the bare, brightened light and through the lens. */
+    @Test @Config(sdk = [34]) fun clearGlassKeepsEveryInkReadableOnTheLightItLetsThrough() {
+        for (dark in listOf(false, true)) {
+            val design = DesignTokens.of(DesignLanguage.GLASS, dark)
+            val p = design.palette
+            val lights = LiturgicalLight.entries.map { it.accent(dark) to it.ambient(dark) } +
+                AppThemePreset.entries.map { lumenAccent(it.id, dark) to com.example.ui.theme.lumenAmbientForTests(it.id, dark) }
+            for ((rawAccent, rawPools) in lights) {
+                val accent = com.example.ui.theme.glassAccent(rawAccent, dark)
+                val pools = com.example.ui.theme.glassAmbient(rawPools)
+                // Bare light, and the same light as a lens shows it (brighter).
+                val grounds = listOf(p.canvasTop, p.canvasBottom).flatMap { ground ->
+                    listOf(ground) + pools.flatMap { pool ->
+                        listOf(pool, pool.copy(alpha = (pool.alpha * com.example.ui.design.LensGain).coerceAtMost(1f)))
+                            .map { it.compositeOver(ground) }
+                    }
+                }
+                fun through(role: GlassRole): List<Color> {
+                    val spec = design.glassSpec(role)
+                    return grounds.flatMap { g -> listOf(spec.fillTop.compositeOver(g), spec.fillBottom.compositeOver(g)) }
+                }
+                val panes = listOf(GlassRole.Content, GlassRole.Control, GlassRole.Floating).flatMap { through(it) }
+                for (surface in grounds + panes) {
+                    for (ink in listOf(p.textPrimary, p.textSecondary, p.textTertiary, accent)) {
+                        val ratio = contrast(ink, surface)
+                        assertTrue("glass dark=$dark ink=$ink surface=$surface ratio=$ratio", ratio >= 4.5f)
+                    }
+                }
+                // The sliding thumb only ever carries the selected label: primary ink or the accent.
+                for (surface in through(GlassRole.Thumb)) {
+                    for (ink in listOf(p.textPrimary, accent)) {
+                        val ratio = contrast(ink, surface)
+                        assertTrue("glass thumb dark=$dark ink=$ink surface=$surface ratio=$ratio", ratio >= 4.5f)
+                    }
+                }
+                val onAction = if (dark) Color(0xFF070B16) else Color.White
+                assertTrue("glass action label, dark=$dark", contrast(accent, onAction) >= 4.5f)
+            }
+            // It really is clear: no pane is dense enough to hide the light.
+            assertTrue(design.glassSpec(GlassRole.Content).fillTop.alpha < 0.35f)
+            assertTrue(design.glassSpec(GlassRole.Control).fillTop.alpha < 0.25f)
+            assertTrue(design.chromeGlassSpec(live = false).fillTop.alpha < 0.35f)
+            assertTrue(design.glassSpec(GlassRole.Content).lens > 0f)
+        }
+        // With transparency reduced it becomes solid, like every identity.
+        val solid = DesignTokens.of(DesignLanguage.GLASS, false).copy(reduceTransparency = true)
+        assertEquals(1f, solid.glassSpec(GlassRole.Content).fillBottom.alpha)
+        assertEquals(0f, solid.glassSpec(GlassRole.Content).lens)
+    }
+
     @Test @Config(sdk = [34]) fun liturgicalColoursResolveToTheirOwnLight() {
         assertEquals(LiturgicalLight.GREEN, LiturgicalLight.of(0xFF2C6B3E))
         assertEquals(LiturgicalLight.VIOLET, LiturgicalLight.of(0xFF5E2777))

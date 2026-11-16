@@ -29,12 +29,16 @@ enum class DesignLanguage(
     /** Legacy alias. Old IVE preferences resolve to Lumen. */
     IVE("IVE", LocalizedText("Lumen", "Lumen", "Lumen"),
         LocalizedText("Cristal líquido bajo la luz del día litúrgico.", "Liquid glass in the light of the liturgical day.", "Vidro líquido sob a luz do dia litúrgico.")),
+    /** Clear, refracting glass on every surface. */
+    GLASS("GLASS", LocalizedText("Cristal", "Glass", "Vidro"),
+        LocalizedText("Cristal líquido: transparencia, refracción y luz.", "Liquid glass: transparency, refraction and light.", "Vidro líquido: transparência, refração e luz.")),
     SANCTUARY("SANCTUARY", LocalizedText("Sanctuary", "Sanctuary", "Sanctuary"),
         LocalizedText("La belleza de un misal personal.", "The beauty of a personal missal.", "A beleza de um missal pessoal."));
 
     companion object {
-        val selectable = listOf(APPLE, SANCTUARY)
+        val selectable = listOf(APPLE, GLASS, SANCTUARY)
         fun fromId(id: String?): DesignLanguage = when (id) {
+            "GLASS" -> GLASS
             "SANCTUARY", "VATICAN" -> SANCTUARY
             else -> APPLE
         }
@@ -183,6 +187,8 @@ data class AppDesign(
     val highContrast: Boolean = false
 ) {
     val isSanctuary: Boolean get() = language == DesignLanguage.SANCTUARY
+    /** Clear liquid glass: thin tints, the light behind bent through every pane. */
+    val isGlass: Boolean get() = language == DesignLanguage.GLASS
 }
 
 val LocalAppDesign = staticCompositionLocalOf {
@@ -335,6 +341,38 @@ object DesignTokens {
         ambient = listOf(Color(0x4D1F6B45), Color(0x2EE08A3C), Color(0x385A43D6), Color(0x331E5C8C))
     )
 
+    /**
+     * Cristal — Alba seen through clear glass. Panes are thin tints (a fifth
+     * of the density of Lumen's), so the ambient light is brighter and the
+     * secondary inks a step deeper to hold 4.5:1 on bare light.
+     */
+    private val GlassLight = LumenLight.copy(
+        textSecondary = Color(0xFF434B62),
+        textTertiary = Color(0xFF434B62),
+        pane = Color(0x38FFFFFF),
+        glass = Color(0x24FFFFFF),
+        glassStrong = Color(0x73FFFFFF),
+        glassEdgeTop = Color(0xFFFFFFFF),
+        glassEdgeBottom = Color(0xA6FFFFFF),
+        shadow = Color(0x2E2A3A72),
+        separator = Color(0x241B2540),
+        ambient = LumenLight.ambient.map { it.copy(alpha = (it.alpha * 1.4f).coerceAtMost(1f)) }
+    )
+
+    /** Cristal at night: glass that is almost only its edges and what it bends. */
+    private val GlassDark = LumenDark.copy(
+        textPrimary = Color(0xFFF4F6FF),
+        textSecondary = Color(0xFFC6CDE4),
+        textTertiary = Color(0xFFC6CDE4),
+        pane = Color(0x12FFFFFF),
+        glass = Color(0x0DFFFFFF),
+        glassStrong = Color(0x8C161D33),
+        glassEdgeTop = Color(0x73FFFFFF),
+        glassEdgeBottom = Color(0x29FFFFFF),
+        separator = Color(0x29FFFFFF),
+        ambient = LumenDark.ambient.map { it.copy(alpha = (it.alpha * 1.4f).coerceAtMost(1f)) }
+    )
+
     private val SanctuaryShapes = AppShapes(
         card = RoundedCornerShape(10.dp), cardLarge = RoundedCornerShape(12.dp),
         button = RoundedCornerShape(8.dp), buttonSmall = RoundedCornerShape(8.dp),
@@ -382,7 +420,11 @@ object DesignTokens {
             decor = AppleDecor.copy(navStyle = if (sanctuary) NavStyle.FOLIO_RAIL else NavStyle.TAB_BAR,
                 listStyle = if (sanctuary) ListStyle.RULED_FOLIO else ListStyle.INSET_GROUPED,
                 usesOrnaments = sanctuary, usesDropCaps = sanctuary, navIconSize = 24.dp, rowIconSize = 22.dp),
-            palette = if (sanctuary) { if (isDark) SanctuaryDark else SanctuaryLight } else { if (isDark) LumenDark else LumenLight }
+            palette = when {
+                sanctuary -> if (isDark) SanctuaryDark else SanctuaryLight
+                language == DesignLanguage.GLASS -> if (isDark) GlassDark else GlassLight
+                else -> if (isDark) LumenDark else LumenLight
+            }
         )
     }
 
