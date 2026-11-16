@@ -1,0 +1,377 @@
+{
+  "id": "track_paul_life_in_christ",
+  "level": "FOUNDATION",
+  "estimatedMinutes": 100,
+  "iconName": "AutoStories",
+  "title": {
+    "es": "San Pablo y la vida en Cristo",
+    "en": "Saint Paul and life in Christ",
+    "pt": "São Paulo e a vida em Cristo"
+  },
+  "description": {
+    "es": "Cinco encuentros para empezar a leer a Pablo: del encuentro con Jesús a la gracia, la comunidad, la caridad y la esperanza. Pasajes, contexto y preguntas ayudan a comprender una vida recibida de Dios que transforma nuestras decisiones y relaciones.",
+    "en": "Five encounters introducing Paul: from meeting Jesus to grace, community, charity and hope. Passages, context and questions explore a life received from God that transforms our decisions and relationships. No prior study is needed to begin this guided journey.",
+    "pt": "Cinco encontros para começar a ler Paulo: do encontro com Jesus à graça, à comunidade, à caridade e à esperança. Passagens, contexto e perguntas ajudam a compreender uma vida recebida de Deus que transforma nossas decisões e relações."
+  },
+  "objectives": [
+    {
+      "es": "Relacionar el encuentro de Pablo con Cristo y su misión en la Iglesia.",
+      "en": "Connect Paul’s encounter with Christ and his mission within the Church.",
+      "pt": "Relacionar o encontro de Paulo com Cristo e sua missão na Igreja."
+    },
+    {
+      "es": "Explicar la relación católica entre gracia, fe, renovación y caridad.",
+      "en": "Explain the Catholic relationship between grace, faith, renewal and charity.",
+      "pt": "Explicar a relação católica entre graça, fé, renovação e caridade."
+    },
+    {
+      "es": "Elegir una práctica de comunión y esperanza a partir de las cartas paulinas.",
+      "en": "Choose a practice of communion and hope grounded in Paul’s letters.",
+      "pt": "Escolher uma prática de comunhão e esperança a partir das cartas paulinas."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "paul_1_damascus_encounter",
+      "lessonNumber": 1,
+      "title": {
+        "es": "Damasco: de perseguir a recibir una misión",
+        "en": "Damascus: from persecution to receiving a mission",
+        "pt": "Damasco: de perseguir a receber uma missão"
+      },
+      "scriptureReferences": [
+        "act 9:1-19"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Reconocer la iniciativa de Cristo y la participación de Ananías en el relato.",
+          "en": "Recognize Christ’s initiative and Ananias’s participation in the narrative.",
+          "pt": "Reconhecer a iniciativa de Cristo e a participação de Ananias no relato."
+        },
+        {
+          "es": "Relacionar conversión, Bautismo e incorporación a una comunidad.",
+          "en": "Connect conversion, Baptism and incorporation into a community.",
+          "pt": "Relacionar conversão, Batismo e incorporação a uma comunidade."
+        }
+      ],
+      "summary": {
+        "es": "Cristo toma la iniciativa ante Saulo, detiene su persecución y lo abre a una misión. El encuentro conduce a recibir ayuda, el Bautismo y un lugar entre los discípulos.",
+        "en": "Christ takes the initiative with Saul, interrupts his persecution and opens a mission before him. The encounter leads to receiving help, Baptism and a place among the disciples.",
+        "pt": "Cristo toma a iniciativa diante de Saulo, interrompe sua perseguição e lhe abre uma missão. O encontro leva a receber ajuda, o Batismo e um lugar entre os discípulos."
+      },
+      "historicalContext": {
+        "es": "Hechos introduce a Saulo como perseguidor de los discípulos de Jesús y lo sitúa camino de Damasco. La narración alterna su encuentro con Cristo y el diálogo del Señor con Ananías, un discípulo que conoce la amenaza. Después muestra la visita, la recuperación de la vista, el Bautismo y el alimento. En esta escena el personaje se llama Saulo; el texto no narra un cambio de nombre a Pablo. Atiende a la secuencia completa, no solo a la luz del camino: la misión se recibe también mediante una persona y una comunidad concretas.",
+        "en": "Acts introduces Saul as a persecutor of Jesus’ disciples and places him on the road to Damascus. The narrative alternates his encounter with Christ and the Lord’s dialogue with Ananias, a disciple aware of the threat. It then shows the visit, restored sight, Baptism and food. In this scene the character is called Saul; the text does not narrate a name change to Paul. Attend to the complete sequence rather than only the light on the road: mission is received through a particular person and community as well.",
+        "pt": "Atos apresenta Saulo como perseguidor dos discípulos de Jesus e o situa a caminho de Damasco. A narrativa alterna seu encontro com Cristo e o diálogo do Senhor com Ananias, um discípulo que conhece a ameaça. Depois mostra a visita, a recuperação da visão, o Batismo e o alimento. Nessa cena a personagem se chama Saulo; o texto não narra uma mudança de nome para Paulo. Observe a sequência completa, não apenas a luz do caminho: a missão é recebida também por meio de uma pessoa e de uma comunidade concretas."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Cristo se da a conocer primero",
+            "en": "Christ first makes himself known",
+            "pt": "Cristo se dá a conhecer primeiro"
+          },
+          "body": {
+            "es": "Saulo no comienza buscando una técnica para mejorar su carácter: pretende perseguir a los discípulos. El encuentro interrumpe ese proyecto y lo obliga a escuchar a quien creía combatir solamente en otros. Jesús se identifica con los perseguidos, abriendo una comprensión de la relación entre él y su Iglesia. El Catecismo reconoce en la conversión de Pablo la revelación del Hijo por iniciativa de la gracia. La novedad decisiva no es el espectáculo de la luz, sino quién se manifiesta y para qué llama. La fe apostólica se centra en Jesús, Hijo de Dios.",
+            "en": "Saul does not begin by seeking a technique to improve his character: he intends to persecute the disciples. The encounter interrupts that project and makes him listen to the one he thought he was attacking only in others. Jesus identifies himself with the persecuted, opening an understanding of his relationship with the Church. The Catechism recognizes the revelation of the Son through grace’s initiative in Paul’s conversion. The decisive novelty is not the spectacle of light but who reveals himself and what his call means. Apostolic faith centres on Jesus, the Son of God.",
+            "pt": "Saulo não começa procurando uma técnica para melhorar seu caráter: pretende perseguir os discípulos. O encontro interrompe esse projeto e o obriga a escutar aquele que julgava combater apenas nos outros. Jesus se identifica com os perseguidos, abrindo uma compreensão da relação entre ele e sua Igreja. O Catecismo reconhece na conversão de Paulo a revelação do Filho por iniciativa da graça. A novidade decisiva não é o espetáculo da luz, mas quem se manifesta e para que chama. A fé apostólica se centra em Jesus, Filho de Deus."
+          }
+        },
+        {
+          "title": {
+            "es": "Una ayuda concreta, no un héroe solitario",
+            "en": "Practical help, rather than a solitary hero",
+            "pt": "Uma ajuda concreta, não um herói solitário"
+          },
+          "body": {
+            "es": "Saulo necesita que lo conduzcan y después recibe a Ananías. La narración no borra el temor de este discípulo ni llama imaginario al daño que el perseguidor podía causar. Presenta una intervención específica del Señor y una misión que se desarrollará en la Iglesia. El gesto de Ananías permite a Saulo recibir lo que no puede darse por sí mismo. La lectura cristiana reconoce aquí la iniciativa de Dios y el servicio de otro creyente. No convierte esta escena singular en una orden general de acercarse sin protección a personas que representan una amenaza.",
+            "en": "Saul needs others to lead him and later receives Ananias. The narrative does not erase this disciple’s fear or call the persecutor’s potential harm imaginary. It presents a specific intervention of the Lord and a mission unfolding within the Church. Ananias’s action enables Saul to receive what he cannot give himself. Christian reading recognizes God’s initiative and another believer’s service here. It does not turn this particular scene into a general command to approach threatening people without protection, or make refusing an unsafe encounter a failure of faith in the Lord.",
+            "pt": "Saulo precisa que o conduzam e depois recebe Ananias. A narrativa não apaga o temor desse discípulo nem chama de imaginário o dano que o perseguidor podia causar. Apresenta uma intervenção específica do Senhor e uma missão que se desenvolverá na Igreja. O gesto de Ananias permite a Saulo receber o que não pode dar a si mesmo. A leitura cristã reconhece aqui a iniciativa de Deus e o serviço de outro fiel. Não transforma essa cena singular numa ordem geral para se aproximar sem proteção de pessoas que representam ameaça."
+          }
+        },
+        {
+          "title": {
+            "es": "El Bautismo abre una vida compartida",
+            "en": "Baptism opens a shared life",
+            "pt": "O Batismo abre uma vida partilhada"
+          },
+          "body": {
+            "es": "El relato conduce al Bautismo, no termina en una experiencia privada del camino. Según el Catecismo, este sacramento libera del pecado, regenera como hijo de Dios e incorpora a Cristo y a la Iglesia. La iniciación cristiana se despliega en Bautismo, Confirmación y Eucaristía: una vida que recibe fundamento, fortaleza y alimento. La conversión de Pablo tiene rasgos únicos; no es necesario repetir su ceguera o una visión para acercarse a Jesús. Quien aún no está bautizado puede preguntar y conocer una comunidad; quien lo está puede renovar su respuesta y aprender a dejarse ayudar.",
+            "en": "The narrative leads to Baptism rather than ending in a private roadside experience. According to the Catechism, this sacrament frees from sin, regenerates as God’s child and incorporates into Christ and the Church. Christian initiation unfolds through Baptism, Confirmation and Eucharist: a life receiving foundation, strength and nourishment. Paul’s conversion has unique features; nobody needs to repeat his blindness or have a vision to approach Jesus. Those not baptized may ask questions and get to know a community; the baptized may renew their response and learn to receive help from others.",
+            "pt": "O relato conduz ao Batismo, não termina numa experiência privada do caminho. Segundo o Catecismo, esse sacramento liberta do pecado, regenera como filho de Deus e incorpora a Cristo e à Igreja. A iniciação cristã se desenvolve no Batismo, na Confirmação e na Eucaristia: uma vida que recebe fundamento, força e alimento. A conversão de Paulo tem traços únicos; não é necessário repetir sua cegueira ou uma visão para se aproximar de Jesus. Quem ainda não é batizado pode perguntar e conhecer uma comunidade; quem já é pode renovar sua resposta e aprender a receber ajuda."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Relee Hch 9,1–19 y observa las iniciativas de Jesús, las preguntas de Saulo y el temor de Ananías. Señala los pasos desde la dependencia de otros hasta el Bautismo; distingue lo narrado de los detalles que aportan algunas imágenes populares.",
+        "en": "Reread Acts 9:1–19 and notice Jesus’ initiatives, Saul’s questions and Ananias’s fear. Trace the steps from depending on others to Baptism; distinguish the narrated details from additions in some popular pictures.",
+        "pt": "Releia At 9,1–19 e observe as iniciativas de Jesus, as perguntas de Saulo e o temor de Ananias. Identifique os passos desde a dependência de outras pessoas até o Batismo; distinga o que é narrado dos detalhes de algumas imagens populares."
+      },
+      "meditatio": {
+        "es": "¿Qué idea sobre Jesús o sus discípulos necesitas volver a escuchar con honestidad? ¿Qué ayuda concreta te cuesta aceptar cuando deseas cambiar una conducta o comenzar una vida de fe?",
+        "en": "What idea about Jesus or his disciples do you need to hear again honestly? What practical help is difficult to accept when you want to change a behaviour or begin a life of faith?",
+        "pt": "Que ideia sobre Jesus ou seus discípulos você precisa voltar a escutar com honestidade? Que ajuda concreta é difícil aceitar quando deseja mudar uma conduta ou iniciar uma vida de fé?"
+      },
+      "oratio": {
+        "es": "Habla con Cristo sobre lo que te ha detenido o sorprendido en la lectura. Puedes pedir luz para conocerlo mejor y humildad para recibir ayuda, sin pedir una experiencia extraordinaria como condición para creer.",
+        "en": "Speak with Christ about what arrested your attention or surprised you in the reading. You may ask for light to know him better and humility to receive help, without making an extraordinary experience a condition for belief.",
+        "pt": "Converse com Cristo sobre o que chamou sua atenção ou o surpreendeu na leitura. Você pode pedir luz para conhecê-lo melhor e humildade para receber ajuda, sem exigir uma experiência extraordinária como condição para crer."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio ante Jesús que llama por el nombre. No busques una voz ni una señal especial; vuelve serenamente a su presencia si tus pensamientos se dispersan.",
+        "en": "Remain silent for sixty to ninety seconds before Jesus who calls by name. Do not seek a voice or special sign; return gently to his presence if your thoughts become scattered.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio diante de Jesus que chama pelo nome. Não busque uma voz nem um sinal especial; volte serenamente à sua presença se os pensamentos se dispersarem."
+      },
+      "actionStep": {
+        "es": "Identifica una persona o comunidad fiable a la que puedas dirigir una pregunta de fe. Si aún no estás bautizado, puedes informarte sobre el catecumenado; si lo estás, pide orientación para una respuesta concreta de renovación.",
+        "en": "Identify a trustworthy person or community to whom you can bring a question of faith. If you are not baptized, you can ask about the catechumenate; if baptized, seek guidance for a practical response of renewal.",
+        "pt": "Identifique uma pessoa ou comunidade confiável à qual possa dirigir uma pergunta de fé. Se ainda não é batizado, pode informar-se sobre o catecumenato; se já é, peça orientação para uma resposta concreta de renovação."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Qué toma la iniciativa en la transformación de Saulo?",
+            "en": "What takes the initiative in Saul’s transformation?",
+            "pt": "O que toma a iniciativa na transformação de Saulo?"
+          },
+          "answer": {
+            "es": "La iniciativa pertenece a Cristo, que se da a conocer y detiene la persecución. Saulo responde escuchando y recibiendo ayuda. La gracia no es un premio por haber dejado primero de ser perseguidor: abre un camino de conversión.",
+            "en": "The initiative belongs to Christ, who makes himself known and interrupts persecution. Saul responds by listening and receiving help. Grace is not a reward for first ceasing to be a persecutor: it opens a path of conversion.",
+            "pt": "A iniciativa pertence a Cristo, que se dá a conhecer e interrompe a perseguição. Saulo responde escutando e recebendo ajuda. A graça não é um prêmio por ter deixado primeiro de ser perseguidor: abre um caminho de conversão."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Por qué importan Ananías y el Bautismo después del encuentro?",
+            "en": "Why do Ananias and Baptism matter after the encounter?",
+            "pt": "Por que Ananias e o Batismo importam depois do encontro?"
+          },
+          "answer": {
+            "es": "Muestran que la vida nueva no queda encerrada en una experiencia privada. Saulo recibe un servicio concreto y es bautizado. El Catecismo explica que el Bautismo incorpora a Cristo y a la Iglesia y hace participar de su misión.",
+            "en": "They show that new life is not enclosed within a private experience. Saul receives practical service and is baptized. The Catechism explains that Baptism incorporates into Christ and the Church and gives a share in his mission.",
+            "pt": "Mostram que a vida nova não fica encerrada numa experiência privada. Saulo recebe um serviço concreto e é batizado. O Catecismo explica que o Batismo incorpora a Cristo e à Igreja e faz participar de sua missão."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Necesita un principiante una experiencia como la de Damasco para empezar?",
+            "en": "Does a beginner need an experience like Damascus in order to start?",
+            "pt": "Um iniciante precisa de uma experiência como a de Damasco para começar?"
+          },
+          "answer": {
+            "es": "No. El relato describe una llamada particular, no un requisito extraordinario para cada creyente. Se puede empezar escuchando el Evangelio, preguntando y recibiendo acompañamiento. La falta de una visión no demuestra ausencia de gracia ni impide acercarse a una comunidad.",
+            "en": "No. The account describes a particular call, rather than an extraordinary requirement for every believer. One can begin by hearing the Gospel, asking questions and receiving guidance. Having no vision does not prove grace is absent or prevent approaching a community.",
+            "pt": "Não. O relato descreve um chamado particular, não um requisito extraordinário para cada fiel. É possível começar escutando o Evangelho, perguntando e recebendo acompanhamento. A ausência de uma visão não demonstra falta de graça nem impede aproximar-se de uma comunidade."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_442_442",
+          "title": {
+            "es": "Catecismo §442",
+            "en": "Catechism paragraph 442",
+            "pt": "Catecismo, parágrafo 442"
+          },
+          "catechismStart": 442,
+          "catechismEnd": 442,
+          "url": null
+        },
+        {
+          "id": "ccc_1212_1216",
+          "title": {
+            "es": "Catecismo §§1212–1216",
+            "en": "Catechism §§1212–1216",
+            "pt": "Catecismo, parágrafos 1212–1216"
+          },
+          "catechismStart": 1212,
+          "catechismEnd": 1216,
+          "url": null
+        },
+        {
+          "id": "ccc_787_789",
+          "title": {
+            "es": "Catecismo §§787–789",
+            "en": "Catechism §§787–789",
+            "pt": "Catecismo, parágrafos 787–789"
+          },
+          "catechismStart": 787,
+          "catechismEnd": 789,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "paul_2_justified_grace",
+      "lessonNumber": 2,
+      "title": {
+        "es": "Justificados por la gracia",
+        "en": "Justified by grace",
+        "pt": "Justificados pela graça"
+      },
+      "scriptureReferences": [
+        "rom 5:1-11"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar la justificación como perdón y renovación recibidos por gracia.",
+          "en": "Explain justification as forgiveness and renewal received through grace.",
+          "pt": "Explicar a justificação como perdão e renovação recebidos pela graça."
+        },
+        {
+          "es": "Distinguir cooperación y mérito cristianos de comprar la salvación.",
+          "en": "Distinguish Christian cooperation and merit from purchasing salvation.",
+          "pt": "Distinguir cooperação e mérito cristãos de comprar a salvação."
+        }
+      ],
+      "summary": {
+        "es": "Dios nos reconcilia en Cristo cuando todavía necesitamos su misericordia. La justificación es un don que perdona y renueva, y abre una respuesta libre de fe y caridad.",
+        "en": "God reconciles us in Christ while we still need his mercy. Justification is a gift that forgives and renews, opening a free response of faith and charity.",
+        "pt": "Deus nos reconcilia em Cristo quando ainda precisamos de sua misericórdia. A justificação é um dom que perdoa e renova e abre uma resposta livre de fé e caridade."
+      },
+      "historicalContext": {
+        "es": "Después de tratar la fe de Abrahán, Pablo desarrolla en Romanos las consecuencias de la justificación: paz con Dios, esperanza y amor derramado por el Espíritu. Su argumento mira a Cristo que muere por quienes aún son pecadores y enemigos. El pasaje pertenece a una carta dirigida a cristianos de Roma, no a un manual de autoestima o un intercambio comercial con Dios. Observa cómo los verbos de recibir, reconciliar y salvar se apoyan en una iniciativa divina. Las dificultades de la vida no desaparecen, pero pueden ser atravesadas desde una relación nueva con Dios.",
+        "en": "After considering Abraham’s faith, Paul develops the consequences of justification in Romans: peace with God, hope and love poured out through the Spirit. His argument looks towards Christ dying for people who are still sinners and enemies. The passage belongs to a letter addressed to Christians in Rome, rather than a self esteem manual or a commercial exchange with God. Notice how receiving, reconciliation and salvation depend on divine initiative. Life’s difficulties do not disappear, but can be faced within a new relationship with God rather than as proof of abandonment.",
+        "pt": "Depois de tratar da fé de Abraão, Paulo desenvolve em Romanos as consequências da justificação: paz com Deus, esperança e amor derramado pelo Espírito. Seu argumento contempla Cristo que morre por aqueles que ainda são pecadores e inimigos. A passagem pertence a uma carta dirigida aos cristãos de Roma, não a um manual de autoestima ou a uma troca comercial com Deus. Observe como os verbos receber, reconciliar e salvar se apoiam numa iniciativa divina. As dificuldades da vida não desaparecem, mas podem ser atravessadas a partir de uma relação nova com Deus."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "El amor de Dios precede a nuestros méritos",
+            "en": "God’s love precedes our merits",
+            "pt": "O amor de Deus precede nossos méritos"
+          },
+          "body": {
+            "es": "Pablo fundamenta la esperanza en lo que Dios ha hecho en Cristo, no en que sus lectores ya fueran dignos de recibirlo. La muerte del Hijo por los pecadores muestra una iniciativa de reconciliación que precede a su respuesta. La gracia es el auxilio gratuito de Dios y la participación en su vida; incluso prepararnos para acogerla necesita su acción. Por eso la paz con Dios no se compra acumulando logros religiosos. Tampoco equivale a sentir calma permanente. Se refiere a una relación restaurada que permite confiar, aun cuando persistan conflictos y emociones difíciles.",
+            "en": "Paul grounds hope in what God has done in Christ, rather than his readers already being worthy to receive it. The Son’s death for sinners reveals an initiative of reconciliation preceding their response. Grace is God’s freely given help and a share in his life; even preparation to welcome it needs his action. Peace with God therefore cannot be purchased by accumulating religious achievements. Nor does it mean feeling continually calm. It concerns a restored relationship enabling trust even when conflicts and difficult emotions remain within a person’s everyday experience.",
+            "pt": "Paulo fundamenta a esperança naquilo que Deus fez em Cristo, não no fato de seus leitores já serem dignos de recebê-lo. A morte do Filho pelos pecadores mostra uma iniciativa de reconciliação que precede sua resposta. A graça é o auxílio gratuito de Deus e a participação em sua vida; até nos prepararmos para acolhê-la precisamos de sua ação. Por isso a paz com Deus não se compra acumulando conquistas religiosas. Também não equivale a sentir calma permanente. Refere-se a uma relação restaurada que permite confiar, mesmo quando persistem conflitos e emoções difíceis."
+          }
+        },
+        {
+          "title": {
+            "es": "Perdón y renovación interior",
+            "en": "Forgiveness and inward renewal",
+            "pt": "Perdão e renovação interior"
+          },
+          "body": {
+            "es": "Justificación es el nombre de ese paso del pecado a una relación justa con Dios por Cristo y en el Espíritu. El Catecismo, recogiendo la enseñanza del Concilio de Trento, incluye perdón, santificación y renovación interior. No es fingir que la persona está sana mientras nada cambia, ni volverla perfecta de inmediato. Se recibe por la fe y el Bautismo, sacramento de la fe, y comunica fe, esperanza y caridad. Dios actúa en una libertad real que puede responder o resistirse. La vida nueva necesita crecimiento y conversión; no convierte al creyente en autor de su propia salvación.",
+            "en": "Justification names this passage from sin into a right relationship with God through Christ and in the Spirit. The Catechism, receiving the Council of Trent’s teaching, includes forgiveness, sanctification and inward renewal. It is neither pretending a person is healed while nothing changes nor making them immediately perfect. It is received through faith and Baptism, the sacrament of faith, and communicates faith, hope and charity. God acts within a real freedom capable of response or resistance. New life requires growth and conversion; it does not make the believer the author of their own salvation.",
+            "pt": "Justificação é o nome dessa passagem do pecado a uma relação justa com Deus por Cristo e no Espírito. O Catecismo, acolhendo o ensinamento do Concílio de Trento, inclui perdão, santificação e renovação interior. Não é fingir que a pessoa está curada enquanto nada muda, nem torná-la perfeita imediatamente. É recebida pela fé e pelo Batismo, sacramento da fé, e comunica fé, esperança e caridade. Deus age numa liberdade real que pode responder ou resistir. A vida nova precisa de crescimento e conversão; não transforma o fiel em autor da própria salvação."
+          }
+        },
+        {
+          "title": {
+            "es": "Cooperar con el don que nos sostiene",
+            "en": "Cooperating with the gift that sustains us",
+            "pt": "Cooperar com o dom que nos sustenta"
+          },
+          "body": {
+            "es": "La gratuidad no hace irrelevante cómo vivimos. El Espíritu suscita una cooperación libre que se expresa en la fe y la caridad. Cuando la Iglesia habla de mérito cristiano, reconoce el valor de obras hechas en Cristo gracias a que Dios quiso asociarnos a su acción. Nadie merece la gracia primera del perdón; las obras posteriores tampoco se vuelven una cuenta independiente de Dios. Son una respuesta real, sostenida por su don, que puede beneficiar a otros. La respuesta práctica une gratitud y responsabilidad: el don recibido mueve a amar y no convierte a Dios en deudor.",
+            "en": "The gift’s freedom does not make our way of life irrelevant. The Spirit awakens free cooperation expressed in faith and charity. When the Church speaks of Christian merit, she recognizes the value of works done in Christ because God chose to associate us with his action. Nobody merits the initial grace of forgiveness; later works do not become an account independent of God either. They are a real response sustained by his gift and can benefit others. Gratitude and responsibility therefore belong together: the gift moves us towards love without turning God into a debtor.",
+            "pt": "A gratuidade não torna irrelevante nosso modo de viver. O Espírito suscita uma cooperação livre que se expressa na fé e na caridade. Quando a Igreja fala de mérito cristão, reconhece o valor de obras feitas em Cristo porque Deus quis nos associar à sua ação. Ninguém merece a graça primeira do perdão; as obras posteriores também não se tornam uma conta independente de Deus. São uma resposta real, sustentada por seu dom, que pode beneficiar outras pessoas. A resposta prática une gratidão e responsabilidade: o dom recebido move a amar e não transforma Deus em devedor."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Relee Rm 5,1–11 y localiza las expresiones que muestran nuestra condición cuando Cristo se entrega. Después observa qué recibimos y por quién. Distingue esa iniciativa de las consecuencias que Pablo describe para la vida creyente.",
+        "en": "Reread Romans 5:1–11 and locate the descriptions of our condition when Christ gives himself. Then notice what we receive and through whom. Distinguish that initiative from the consequences Paul describes for believers’ lives.",
+        "pt": "Releia Rm 5,1–11 e localize as expressões que mostram nossa condição quando Cristo se entrega. Depois observe o que recebemos e por quem. Distinga essa iniciativa das consequências que Paulo descreve para a vida de fé."
+      },
+      "meditatio": {
+        "es": "¿En qué momento tratas tus prácticas religiosas como una forma de comprar aceptación? ¿Qué obra de caridad podrías realizar como respuesta a un amor recibido, en vez de usarla para compararte con otros?",
+        "en": "When do you treat religious practices as a way of purchasing acceptance? What work of charity could you offer in response to received love, rather than using it to compare yourself with others?",
+        "pt": "Em que momento você trata suas práticas religiosas como forma de comprar aceitação? Que obra de caridade poderia realizar como resposta a um amor recebido, em vez de usá-la para se comparar com outras pessoas?"
+      },
+      "oratio": {
+        "es": "Agradece a Dios su iniciativa y presenta tu necesidad de perdón con palabras propias. Puedes pedir ayuda para acoger su gracia y colaborar con ella en un acto de caridad, sin negociar una recompensa.",
+        "en": "Thank God for taking the initiative and express your need for forgiveness in your own words. You may ask for help to receive his grace and cooperate through an act of charity, without negotiating a reward.",
+        "pt": "Agradeça a Deus sua iniciativa e apresente sua necessidade de perdão com palavras próprias. Você pode pedir ajuda para acolher sua graça e colaborar com ela num ato de caridade, sem negociar uma recompensa."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio ante el amor de Dios manifestado en Cristo. Deja descansar por un momento tus cuentas de éxitos y fracasos. No necesitas sentir seguridad perfecta para permanecer ante él.",
+        "en": "Remain silent for sixty to ninety seconds before God’s love revealed in Christ. Let your accounting of successes and failures rest for a moment. You need not feel perfectly secure in order to remain before him.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio diante do amor de Deus manifestado em Cristo. Deixe descansar por um momento suas contas de sucessos e fracassos. Não precisa sentir segurança perfeita para permanecer diante dele."
+      },
+      "actionStep": {
+        "es": "Elige una obra pequeña de caridad que responda a una necesidad real y hazla discretamente. Después describe qué ayuda recibiste para realizarla. Si buscas el Bautismo o la reconciliación sacramental, consulta a tu parroquia con libertad.",
+        "en": "Choose a small work of charity responding to a real need and carry it out quietly. Afterwards describe the help you received in doing it. If seeking Baptism or sacramental reconciliation, freely ask your parish for guidance.",
+        "pt": "Escolha uma pequena obra de caridade que responda a uma necessidade real e realize-a discretamente. Depois descreva a ajuda recebida para realizá-la. Se procura o Batismo ou a reconciliação sacramental, consulte sua paróquia com liberdade."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿La justificación es solo un cambio de etiqueta sin renovación?",
+            "en": "Is justification only a change of label without renewal?",
+            "pt": "A justificação é apenas uma mudança de rótulo sem renovação?"
+          },
+          "answer": {
+            "es": "No. Según el Catecismo incluye perdón, santificación y renovación interior por el Espíritu. No significa perfección instantánea: inaugura una vida recibida por la fe y el Bautismo que necesita crecer y responder en caridad.",
+            "en": "No. According to the Catechism it includes forgiveness, sanctification and inward renewal through the Spirit. It does not mean instant perfection: it begins a life received through faith and Baptism that needs growth and a response in charity.",
+            "pt": "Não. Segundo o Catecismo inclui perdão, santificação e renovação interior pelo Espírito. Não significa perfeição instantânea: inaugura uma vida recebida pela fé e pelo Batismo que precisa crescer e responder na caridade."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Podemos merecer la primera gracia mediante nuestras obras?",
+            "en": "Can we merit initial grace through our works?",
+            "pt": "Podemos merecer a primeira graça por nossas obras?"
+          },
+          "answer": {
+            "es": "No. La iniciativa y hasta la preparación para acoger el perdón proceden de la gracia. La cooperación posterior es libre y valiosa, pero permanece sostenida por Dios; el mérito cristiano no es autosalvación ni una deuda impuesta al Creador.",
+            "en": "No. The initiative and even preparation to receive forgiveness come from grace. Later cooperation is free and valuable but remains sustained by God; Christian merit is neither self salvation nor a debt imposed upon the Creator.",
+            "pt": "Não. A iniciativa e até a preparação para acolher o perdão procedem da graça. A cooperação posterior é livre e valiosa, mas continua sustentada por Deus; o mérito cristão não é autossalvação nem uma dívida imposta ao Criador."
+          }
+        },
+        {
+          "prompt": {
+            "es": "Una persona no siente paz y concluye que Dios la rechaza. ¿Qué conviene distinguir?",
+            "en": "Someone feels no peace and concludes that God rejects them. What needs distinguishing?",
+            "pt": "Uma pessoa não sente paz e conclui que Deus a rejeita. O que convém distinguir?"
+          },
+          "answer": {
+            "es": "La paz de la reconciliación no se identifica con un estado emocional constante. CIC 2005 advierte que no podemos deducir nuestra situación de gracia solo de sentimientos. Conviene buscar acompañamiento prudente y atender el malestar sin convertirlo en sentencia divina.",
+            "en": "The peace of reconciliation is not identical with a constant emotional state. CCC 2005 warns against deducing our state of grace from feelings alone. Seek prudent guidance and attend to distress without treating it as a divine verdict.",
+            "pt": "A paz da reconciliação não se identifica com um estado emocional constante. O CIC 2005 adverte que não podemos deduzir nossa situação de graça apenas dos sentimentos. Convém buscar acompanhamento prudente e cuidar do sofrimento sem transformá-lo em sentença divina."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_1987_1995",
+          "title": {
+            "es": "Catecismo §§1987–1995",
+            "en": "Catechism §§1987–1995",
+            "pt": "Catecismo, parágrafos 1987–1995"
+          },
+          "catechismStart": 1987,
+          "catechismEnd": 1995,
+          "url": null
+        },
+        {
+          "id": "ccc_1996_2005",
+          "title": {
+            "es": "Catecismo §§1996–2005",
+            "en": "Catechism §§1996–2005",
+            "pt": "Catecismo, parágrafos 1996–2005"
+          },
+          "catechismStart": 1996,
+          "catechismEnd": 2005,
+          "url": null
+        },
+        {
+          "id": "ccc_2006_2011",
+          "title": {
+            "es": "Catecismo §§2006–2011",
+            "en": "Catechism §§2006–2011",
+            "pt": "Catecismo, parágrafos 2006–2011"
+          },
+          "catechismStart": 2006,
+          "catechismEnd": 2011,
+          "url": null
+        }
+      ]
+    }
+  ]
+}
