@@ -1,0 +1,349 @@
+[
+  {
+    "id": "virgen_del_valle",
+    "recognition": {
+      "es": "La coronación canónica de 1911 y el patronazgo diocesano de 1921 están documentados en la carta pastoral de los obispos del oriente venezolano de 2021. Son reconocimiento del culto, no una certificación de cada relato popular.",
+      "en": "The 1911 canonical coronation and 1921 diocesan patronage are documented in the eastern Venezuelan bishops’ 2021 pastoral letter. They recognize the devotion, rather than certify every popular account.",
+      "pt": "A coroação canônica de 1911 e o padroeirado diocesano de 1921 estão documentados na carta pastoral dos bispos do leste venezuelano de 2021. Reconhecem o culto, sem certificar cada relato popular."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El santuario recoge la tradición de la lluvia tras las rogativas de 1608. Aquí se presenta como relato histórico de la devoción, sin añadir una declaración canónica individual no comprobada.",
+        "en": "The shrine recounts the tradition of rain following the prayers of 1608. It is presented here as an account from the devotion’s history, without adding an unverified individual canonical declaration.",
+        "pt": "O santuário recolhe a tradição da chuva após as preces de 1608. Aqui ela é apresentada como relato histórico da devoção, sem acrescentar uma declaração canônica individual não comprovada."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La fiesta del 8 de septiembre reúne peregrinaciones y celebraciones eucarísticas. La devoción acompaña a las familias y comunidades costeras mediante oración y caridad.",
+      "en": "The 8 September feast brings together pilgrimages and Eucharistic celebrations. The devotion accompanies families and coastal communities through prayer and charity.",
+      "pt": "A festa de 8 de setembro reúne peregrinações e celebrações eucarísticas. A devoção acompanha famílias e comunidades costeiras por meio da oração e da caridade."
+    },
+    "sources": [
+      "Basílica del Valle, Historia de la Parroquia",
+      "Obispos del oriente venezolano, carta pastoral del centenario del patronazgo, 2021"
+    ]
+  },
+  {
+    "id": "virgen_del_carmen",
+    "recognition": {
+      "es": "Juan Pablo II reafirma el escapulario como signo de pertenencia a María y de vida cristiana en su mensaje a la familia carmelitana del 25-III-2001. El culto aprobado no convierte cada detalle de la tradición de 1251 en un hecho históricamente demostrado.",
+      "en": "John Paul II affirms the scapular as a sign of belonging to Mary and Christian life in his message to the Carmelite family of 25 March 2001. Approved devotion does not make every detail of the 1251 tradition historically demonstrated.",
+      "pt": "João Paulo II reafirma o escapulário como sinal de pertença a Maria e de vida cristã em sua mensagem à família carmelitana de 25-III-2001. O culto aprovado não transforma cada detalhe da tradição de 1251 em fato historicamente demonstrado."
+    },
+    "promises": {
+      "text": {
+        "es": "La tradición carmelitana atribuye a María la promesa de perseverancia final para quienes permanecen fieles a su vocación cristiana. Llevar el escapulario exige vida de gracia, oración, conversión y castidad según el propio estado; no asegura salvación por un objeto ni liberación del purgatorio en una fecha fija.",
+        "en": "Carmelite tradition attributes to Mary a promise of final perseverance for those who remain faithful to their Christian vocation. Wearing the scapular calls for a life of grace, prayer, conversion and chastity according to one’s state of life; an object does not ensure salvation or release from purgatory on a fixed date.",
+        "pt": "A tradição carmelitana atribui a Maria a promessa de perseverança final para quem permanece fiel à vocação cristã. Usar o escapulário exige vida de graça, oração, conversão e castidade segundo o próprio estado; um objeto não assegura salvação nem libertação do purgatório em data fixa."
+      },
+      "attribution": {
+        "es": "Tradición carmelitana atribuida a san Simón Stock, interpretada por la catequesis de la familia carmelitana.",
+        "en": "Carmelite tradition attributed to Saint Simon Stock, interpreted by the Carmelite family’s catechesis.",
+        "pt": "Tradição carmelitana atribuída a São Simão Stock, interpretada pela catequese da família carmelitana."
+      },
+      "source": "Carmelitas descalzos, Catechesis on the Brown Scapular, secciones sobre perseverancia y Sabbatine Privilege; Juan Pablo II, mensaje de 25-III-2001."
+    },
+    "miracles": {
+      "text": {
+        "es": "Los relatos de protección asociados al escapulario pertenecen a la tradición carmelitana. Las fuentes citadas no justifican presentar incendios, naufragios o victorias militares genéricas como milagros individualmente declarados por la Iglesia.",
+        "en": "Accounts of protection associated with the scapular belong to Carmelite tradition. The cited sources do not justify presenting unspecified fires, shipwrecks or military victories as miracles individually declared by the Church.",
+        "pt": "Os relatos de proteção associados ao escapulário pertencem à tradição carmelitana. As fontes citadas não justificam apresentar incêndios, naufrágios ou vitórias militares genéricas como milagres individualmente declarados pela Igreja."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Flor del Carmelo, vid florecida, esplendor del cielo, Virgen que das a luz, singular. Madre bondadosa, que no conociste varón, sé propicia a los carmelitas, Estrella del mar.",
+        "en": "Flower of Carmel, flowering vine, splendour of heaven, unique Virgin who gives birth. Gentle Mother, who knew no man, be gracious to the Carmelites, Star of the Sea.",
+        "pt": "Flor do Carmelo, vide florescente, esplendor do céu, Virgem singular que dá à luz. Mãe bondosa, que não conheceste varão, sê propícia aos carmelitas, Estrela do mar."
+      },
+      "source": "Flos Carmeli, dos estrofas iniciales; original latino tradicional cotejado en Our Lady of Mercy Lay Carmelite Community. Traducciones propias fieles."
+    },
+    "practice": {
+      "es": "La fiesta se celebra el 16 de julio. El escapulario se recibe con formación sobre su sentido y se vive con oración, sacramentos, castidad según el propio estado y caridad; no es un amuleto.",
+      "en": "The feast is celebrated on 16 July. The scapular is received with instruction about its meaning and lived through prayer, the sacraments, chastity according to one’s state of life and charity; it is not an amulet.",
+      "pt": "A festa é celebrada em 16 de julho. O escapulário é recebido com formação sobre seu sentido e vivido com oração, sacramentos, castidade segundo o próprio estado de vida e caridade; não é um amuleto."
+    },
+    "sources": [
+      "Juan Pablo II, mensaje a la familia carmelitana, 25-III-2001",
+      "Carmelitas descalzos, Catechesis on the Brown Scapular",
+      "Comunidad laical carmelita Our Lady of Mercy, Flos Carmeli"
+    ]
+  },
+  {
+    "id": "guadalupe",
+    "recognition": {
+      "es": "El culto de Guadalupe está afirmado en Ecclesia in America, 11 (1999), y en la celebración papal del 12-XII-2024. Ese reconocimiento no avala automáticamente cada cifra de conversiones o afirmación científica sobre la tilma.",
+      "en": "The Guadalupe devotion is affirmed in Ecclesia in America, 11 (1999), and the papal celebration of 12 December 2024. That recognition does not automatically endorse every conversion statistic or scientific claim about the tilma.",
+      "pt": "O culto de Guadalupe é afirmado em Ecclesia in America, 11 (1999), e na celebração papal de 12-XII-2024. Esse reconhecimento não confirma automaticamente cada número de conversões ou afirmação científica sobre a tilma."
+    },
+    "promises": {
+      "text": {
+        "es": "En el relato guadalupano, María asegura a Juan Diego su cercanía y amparo de madre y lo invita a no temer. Es un mensaje de confianza del relato devocional, no una garantía individual de inmunidad a la enfermedad o a la angustia.",
+        "en": "In the Guadalupan account, Mary assures Juan Diego of her maternal closeness and protection and invites him not to fear. This is a message of trust within the devotional account, not an individual guarantee of immunity from illness or distress.",
+        "pt": "No relato guadalupano, Maria assegura a Juan Diego sua proximidade e proteção maternas e o convida a não temer. É uma mensagem de confiança do relato devocional, não uma garantia individual de imunidade à doença ou à angústia."
+      },
+      "attribution": {
+        "es": "Palabras atribuidas a María en Nican Mopohua, 118–119, recordadas por Francisco en 2024.",
+        "en": "Words attributed to Mary in Nican Mopohua, 118–119, recalled by Francis in 2024.",
+        "pt": "Palavras atribuídas a Maria em Nican Mopohua, 118–119, recordadas por Francisco em 2024."
+      },
+      "source": "Nican Mopohua, 118–119; Francisco, homilía del 12-XII-2024. Paráfrasis fiel del pasaje."
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición guadalupana relata el signo de las rosas y de la imagen en la tilma. Se retiran los números de conversiones y las afirmaciones oftalmológicas o de conservación inexplicable que aquí carecen de respaldo documental suficiente.",
+        "en": "Guadalupan tradition recounts the sign of the roses and the image on the tilma. Conversion figures and claims about eye examinations or inexplicable preservation are omitted here for lack of sufficient documentary support.",
+        "pt": "A tradição guadalupana relata o sinal das rosas e da imagem na tilma. Retiram-se números de conversões e afirmações oftalmológicas ou de conservação inexplicável que aqui carecem de apoio documental suficiente."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La fiesta del 12 de diciembre se vive con Eucaristía, peregrinación y oración. El mensaje invita a reconocer la dignidad de los pueblos y a acercarse a Jesucristo.",
+      "en": "The 12 December feast is lived through the Eucharist, pilgrimage and prayer. Its message invites recognition of peoples’ dignity and closeness to Jesus Christ.",
+      "pt": "A festa de 12 de dezembro é vivida com Eucaristia, peregrinação e oração. A mensagem convida a reconhecer a dignidade dos povos e a aproximar-se de Jesus Cristo."
+    },
+    "sources": [
+      "Juan Pablo II, Ecclesia in America, 11, 1999",
+      "Francisco, homilía de Guadalupe, 12-XII-2024, cita de Nican Mopohua 118–119"
+    ]
+  },
+  {
+    "id": "caridad_del_cobre",
+    "recognition": {
+      "es": "La Virgen de la Caridad es venerada públicamente como patrona de Cuba. La oración de Francisco en El Cobre del 21-IX-2015 y su homilía del día siguiente documentan ese culto eclesial.",
+      "en": "Our Lady of Charity is publicly venerated as Cuba’s patroness. Francis’s prayer at El Cobre on 21 September 2015 and his homily the following day document that ecclesial devotion.",
+      "pt": "Nossa Senhora da Caridade é venerada publicamente como padroeira de Cuba. A oração de Francisco em El Cobre de 21-IX-2015 e sua homilia do dia seguinte documentam esse culto eclesial."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El hallazgo de la imagen en el mar pertenece al relato fundacional de la devoción. No se incorporan como milagros canónicamente declarados las curaciones de mineros o afirmaciones generales sobre la unidad nacional sin un documento concreto.",
+        "en": "The discovery of the image at sea belongs to the devotion’s founding account. Miners’ healings or general claims about national unity are not included as canonically declared miracles without a specific document.",
+        "pt": "O encontro da imagem no mar pertence ao relato fundador da devoção. Não se incluem como milagres canonicamente declarados curas de mineiros ou afirmações gerais sobre a unidade nacional sem documento concreto."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La fiesta del 8 de septiembre se celebra con oración, peregrinación y Eucaristía. La caridad se expresa también en reconciliación y ayuda a quienes sufren.",
+      "en": "The 8 September feast is celebrated through prayer, pilgrimage and the Eucharist. Charity also finds expression in reconciliation and assistance to those who suffer.",
+      "pt": "A festa de 8 de setembro é celebrada com oração, peregrinação e Eucaristia. A caridade também se expressa na reconciliação e na ajuda a quem sofre."
+    },
+    "sources": [
+      "Francisco, oración ante la Virgen de la Caridad del Cobre, 21-IX-2015",
+      "Francisco, homilía en el Santuario del Cobre, 22-IX-2015"
+    ]
+  },
+  {
+    "id": "aparecida",
+    "recognition": {
+      "es": "Pío XI acogió la declaración de Aparecida como patrona de Brasil en 1930; la proclamación solemne tuvo lugar en 1931. El Santuario Nacional documenta ambos momentos y el culto recibido por la Iglesia.",
+      "en": "Pius XI accepted the declaration of Aparecida as Brazil’s patroness in 1930; the solemn proclamation followed in 1931. The National Shrine documents both moments and the devotion received by the Church.",
+      "pt": "Pio XI acolheu a declaração de Aparecida como padroeira do Brasil em 1930; a proclamação solene ocorreu em 1931. O Santuário Nacional documenta os dois momentos e o culto recebido pela Igreja."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El santuario conserva relatos de favores ligados a su historia. Esos testimonios no se presentan aquí como una lista de curaciones sometidas a un reconocimiento canónico individual; el patronazgo no sustituye esa comprobación.",
+        "en": "The shrine preserves accounts of favours linked to its history. These testimonies are not presented here as a list of healings subject to individual canonical recognition; patronage does not replace that verification.",
+        "pt": "O santuário conserva relatos de graças ligados à sua história. Esses testemunhos não são apresentados aqui como lista de curas submetidas a reconhecimento canônico individual; o padroeirado não substitui essa comprovação."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La fiesta del 12 de octubre reúne peregrinaciones, novena y Eucaristía. La devoción anima a la oración familiar y a la solidaridad con las personas pobres.",
+      "en": "The 12 October feast brings together pilgrimages, a novena and the Eucharist. The devotion encourages family prayer and solidarity with people in poverty.",
+      "pt": "A festa de 12 de outubro reúne peregrinações, novena e Eucaristia. A devoção anima a oração familiar e a solidariedade com as pessoas pobres."
+    },
+    "sources": [
+      "Santuario Nacional de Aparecida, 95 anos como Padroeira do Brasil",
+      "Santuario Nacional de Aparecida, historia del culto en el siglo XX"
+    ]
+  },
+  {
+    "id": "coromoto",
+    "recognition": {
+      "es": "Pío XII se dirigió a Venezuela con motivo de la coronación de Nuestra Señora de Coromoto en su radiomensaje del 12-IX-1952. La Conferencia Episcopal Venezolana documentó su septuagésimo aniversario en 2022.",
+      "en": "Pius XII addressed Venezuela on the occasion of Our Lady of Coromoto’s coronation in his radio message of 12 September 1952. The Venezuelan Bishops’ Conference documented its seventieth anniversary in 2022.",
+      "pt": "Pio XII dirigiu-se à Venezuela por ocasião da coroação de Nossa Senhora de Coromoto em sua radiomensagem de 12-IX-1952. A Conferência Episcopal Venezuelana documentou seu septuagésimo aniversário em 2022."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El culto conserva el relato tradicional del encuentro con una familia indígena. No se presentan las afirmaciones microscópicas de 2009 como reconocimiento eclesial de un milagro ni como demostración científica concluyente.",
+        "en": "The devotion preserves the traditional account of an encounter with an Indigenous family. Claims about microscopic examinations in 2009 are not presented as ecclesial recognition of a miracle or conclusive scientific proof.",
+        "pt": "O culto conserva o relato tradicional do encontro com uma família indígena. As afirmações microscópicas de 2009 não são apresentadas como reconhecimento eclesial de um milagre nem como demonstração científica conclusiva."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Nuestra Señora de Coromoto, Patrona de Venezuela, renueva la Fe, en toda la extensión de nuestra Patria. Amén.",
+        "en": "Our Lady of Coromoto, Patroness of Venezuela, renew the Faith throughout the whole extent of our homeland. Amen.",
+        "pt": "Nossa Senhora de Coromoto, Padroeira da Venezuela, renova a Fé em toda a extensão de nossa pátria. Amém."
+      },
+      "source": "Hermano Nectario María, invocación de junio de 1922, reproducida en Proyecto Coromoto. ES cotejado; traducciones propias fieles EN/PT."
+    },
+    "practice": {
+      "es": "La celebración nacional de septiembre reúne Eucaristía y peregrinación. La oración familiar y el Rosario pueden expresar el compromiso de renovar la fe y servir a la reconciliación.",
+      "en": "The national September celebration brings together the Eucharist and pilgrimage. Family prayer and the Rosary can express a commitment to renewing faith and serving reconciliation.",
+      "pt": "A celebração nacional de setembro reúne Eucaristia e peregrinação. A oração familiar e o Rosário podem expressar o compromisso de renovar a fé e servir à reconciliação."
+    },
+    "sources": [
+      "Pío XII, radiomensaje por la coronación de Coromoto, 12-IX-1952",
+      "Conferencia Episcopal Venezolana, aniversario de la coronación, 2022",
+      "Proyecto Coromoto, invocación y oración familiar"
+    ]
+  },
+  {
+    "id": "lujan",
+    "recognition": {
+      "es": "Juan Pablo II consagró Argentina a la Virgen de Luján en su oración pública del 12-IV-1987. El santuario documenta la coronación de 1887 y la historia del culto nacional.",
+      "en": "John Paul II entrusted Argentina to Our Lady of Luján in his public prayer of 12 April 1987. The shrine documents the 1887 coronation and the history of the national devotion.",
+      "pt": "João Paulo II consagrou a Argentina à Virgem de Luján em sua oração pública de 12-IV-1987. O santuário documenta a coroação de 1887 e a história do culto nacional."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El santuario conserva el relato de la carreta que se detuvo en 1630. Se presenta como tradición fundacional; no se añaden curaciones del río ni una supuesta incorrupción de Manuel sin documentación verificable.",
+        "en": "The shrine preserves the account of the cart that stopped in 1630. It is presented as the founding tradition; river healings and an alleged incorruption of Manuel are not added without verifiable documentation.",
+        "pt": "O santuário conserva o relato da carroça que parou em 1630. Ele é apresentado como tradição fundadora; não se acrescentam curas no rio nem uma suposta incorruptibilidade de Manuel sem documentação verificável."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La devoción se vive en peregrinaciones, Rosario y Eucaristía, especialmente en la fiesta del 8 de mayo. Invita a la oración por el país y al servicio de quienes necesitan acompañamiento.",
+      "en": "The devotion is lived through pilgrimages, the Rosary and the Eucharist, especially on the 8 May feast. It invites prayer for the country and service to those needing accompaniment.",
+      "pt": "A devoção é vivida em peregrinações, Rosário e Eucaristia, especialmente na festa de 8 de maio. Convida à oração pelo país e ao serviço de quem precisa de acompanhamento."
+    },
+    "sources": [
+      "Juan Pablo II, Consagración de Argentina a la Virgen de Luján, 12-IV-1987",
+      "Santuario de Luján, Historia de la Basílica y la Virgen"
+    ]
+  },
+  {
+    "id": "chiquinquira",
+    "recognition": {
+      "es": "El santuario documenta el decreto de coronación de 1910 y la coronación de 1919. Juan Pablo II celebró en Chiquinquirá el 3-VII-1986 y recordó la tradición de la renovación del lienzo; esta ficha se refiere al santuario colombiano.",
+      "en": "The shrine documents the 1910 coronation decree and the 1919 coronation. John Paul II celebrated in Chiquinquirá on 3 July 1986 and recalled the tradition of the image’s renewal; this entry concerns the Colombian shrine.",
+      "pt": "O santuário documenta o decreto de coroação de 1910 e a coroação de 1919. João Paulo II celebrou em Chiquinquirá em 3-VII-1986 e recordou a tradição da renovação da tela; esta ficha se refere ao santuário colombiano."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La renovación del lienzo de 1586 forma parte del relato del santuario y fue evocada por Juan Pablo II. No se afirma que exista una demostración científica de autorrenovación ni se añade una declaración sobre una peste sin documento concreto.",
+        "en": "The 1586 renewal of the image belongs to the shrine’s account and was recalled by John Paul II. No claim is made of scientific proof of self-renewal, nor is a declaration about a plague added without a specific document.",
+        "pt": "A renovação da tela de 1586 faz parte do relato do santuário e foi evocada por João Paulo II. Não se afirma que exista uma demonstração científica de autorrenovação nem se acrescenta uma declaração sobre uma peste sem documento concreto."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La celebración del 9 de julio, el Rosario y la peregrinación al santuario expresan esta devoción. La oración conduce a Cristo y al compromiso con la paz y la renovación de la vida cristiana.",
+      "en": "The 9 July celebration, the Rosary and pilgrimage to the shrine express this devotion. Prayer leads to Christ and commitment to peace and renewal of Christian life.",
+      "pt": "A celebração de 9 de julho, o Rosário e a peregrinação ao santuário expressam esta devoção. A oração conduz a Cristo e ao compromisso com a paz e a renovação da vida cristã."
+    },
+    "sources": [
+      "Santuario de Chiquinquirá, Historia del Santuario",
+      "Juan Pablo II, homilía en Chiquinquirá, 3-VII-1986"
+    ]
+  },
+  {
+    "id": "fatima",
+    "recognition": {
+      "es": "El obispo de Leiria José Alves Correia da Silva declaró dignas de crédito las visiones de 1917 y autorizó el culto en su carta pastoral del 13-X-1930. La publicación de la Congregación para la Doctrina de la Fe de 2000 distingue la revelación privada del depósito de la fe.",
+      "en": "Bishop José Alves Correia da Silva of Leiria declared the 1917 visions worthy of belief and authorized the devotion in his pastoral letter of 13 October 1930. The Congregation for the Doctrine of the Faith’s 2000 publication distinguishes private revelation from the deposit of faith.",
+      "pt": "O bispo de Leiria José Alves Correia da Silva declarou dignas de crédito as visões de 1917 e autorizou o culto em sua carta pastoral de 13-X-1930. A publicação da Congregação para a Doutrina da Fé de 2000 distingue a revelação privada do depósito da fé."
+    },
+    "promises": {
+      "text": {
+        "es": "El relato de Lucía atribuye a María la promesa del triunfo final de su Corazón Inmaculado, la consagración y conversión de Rusia y un tiempo de paz. La promesa se entiende en el contexto del llamado a la oración, la penitencia y la conversión; no permite calcular fechas ni asegurar resultados políticos.",
+        "en": "Lucia’s account attributes to Mary the promise of the final triumph of her Immaculate Heart, the consecration and conversion of Russia and a time of peace. The promise is understood within the call to prayer, penance and conversion; it does not permit calculating dates or ensuring political outcomes.",
+        "pt": "O relato de Lúcia atribui a Maria a promessa do triunfo final de seu Coração Imaculado, a consagração e conversão da Rússia e um tempo de paz. A promessa é entendida no contexto do chamado à oração, à penitência e à conversão; não permite calcular datas nem assegurar resultados políticos."
+      },
+      "attribution": {
+        "es": "Relato de sor Lucía sobre las palabras de María; revelación privada, presentada con comentario teológico en 2000.",
+        "en": "Sister Lucia’s account of Mary’s words; private revelation presented with theological commentary in 2000.",
+        "pt": "Relato da irmã Lúcia sobre as palavras de Maria; revelação privada apresentada com comentário teológico em 2000."
+      },
+      "source": "Congregación para la Doctrina de la Fe, El mensaje de Fátima, 26-VI-2000: segunda parte del secreto y comentario teológico. Paráfrasis."
+    },
+    "miracles": {
+      "text": {
+        "es": "El fenómeno solar de octubre de 1917 pertenece a los testimonios estudiados en la historia de Fátima. No se añaden miles de curaciones sin expedientes concretos ni se convierte la interpretación personal de Juan Pablo II sobre el atentado en una declaración médica.",
+        "en": "The solar phenomenon of October 1917 belongs to the testimonies studied in Fatima’s history. Thousands of healings are not added without specific records, nor is John Paul II’s personal interpretation of the assassination attempt turned into a medical declaration.",
+        "pt": "O fenômeno solar de outubro de 1917 pertence aos testemunhos estudados na história de Fátima. Não se acrescentam milhares de curas sem processos concretos nem se transforma a interpretação pessoal de João Paulo II sobre o atentado em declaração médica."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Oh Jesús mío, perdónanos, líbranos del fuego del infierno, lleva a todas las almas al Cielo, principalmente a aquellas que más lo necesiten.",
+        "en": "O my Jesus, forgive us, deliver us from the fire of hell, lead all souls to Heaven, especially those who most need it.",
+        "pt": "Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno, levai as alminhas todas para o Céu, principalmente aquelas que mais dele precisarem."
+      },
+      "source": "Oración transmitida por los videntes en 1917; Documentação Crítica de Fátima: Seleção de documentos (1917–1930), p. 58. PT original; traducciones propias fieles ES/EN."
+    },
+    "practice": {
+      "es": "Los cinco primeros sábados unen, durante cinco meses, confesión, comunión, Rosario y quince minutos de meditación de sus misterios, con intención reparadora. Según el relato de Lucía, se asocia a ellos la asistencia de María en la hora de la muerte con las gracias necesarias para la salvación. Es revelación privada y exige conversión, no solo cumplimiento exterior.",
+      "en": "The five first Saturdays unite confession, Communion, the Rosary and fifteen minutes of meditation on its mysteries over five months, with reparation as their intention. According to Lucia’s account, Mary’s assistance at death with the graces necessary for salvation is associated with them. This is private revelation and calls for conversion, not merely outward observance.",
+      "pt": "Os cinco primeiros sábados unem, durante cinco meses, confissão, comunhão, Rosário e quinze minutos de meditação de seus mistérios, com intenção reparadora. Segundo o relato de Lúcia, associa-se a eles a assistência de Maria na hora da morte com as graças necessárias para a salvação. É revelação privada e exige conversão, não apenas cumprimento exterior."
+    },
+    "sources": [
+      "Santuario de Fátima, Cronología: carta pastoral de 1930",
+      "Congregación para la Doctrina de la Fe, El mensaje de Fátima, 26-VI-2000",
+      "Santuario de Fátima, Documentação Crítica: Seleção de documentos, 1917–1930"
+    ]
+  },
+  {
+    "id": "lourdes",
+    "recognition": {
+      "es": "El obispo de Tarbes Bertrand-Sévère Laurence reconoció las apariciones y autorizó el culto en su mandato del 18-I-1862. Ese reconocimiento histórico no se sustituye retrospectivamente por una categoría de las Normas de 2024.",
+      "en": "Bishop Bertrand-Sévère Laurence of Tarbes recognized the apparitions and authorized the devotion in his mandate of 18 January 1862. That historical recognition is not retrospectively replaced by a category from the 2024 Norms.",
+      "pt": "O bispo de Tarbes Bertrand-Sévère Laurence reconheceu as aparições e autorizou o culto em seu mandato de 18-I-1862. Esse reconhecimento histórico não é substituído retrospectivamente por uma categoria das Normas de 2024."
+    },
+    "promises": null,
+    "miracles": {
+      "text": {
+        "es": "El santuario documenta curaciones reconocidas como milagrosas, entre ellas la de la hermana Bernadette Moriau, reconocida por el obispo de Beauvais el 11-II-2018. La evaluación médica y el juicio del obispo son pasos distintos; peregrinar no garantiza una curación.",
+        "en": "The shrine documents healings recognized as miraculous, including Sister Bernadette Moriau’s, recognized by the Bishop of Beauvais on 11 February 2018. Medical assessment and the bishop’s judgement are distinct steps; pilgrimage does not guarantee healing.",
+        "pt": "O santuário documenta curas reconhecidas como milagrosas, entre elas a da irmã Bernadette Moriau, reconhecida pelo bispo de Beauvais em 11-II-2018. A avaliação médica e o juízo do bispo são etapas distintas; peregrinar não garante cura."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La peregrinación comprende Eucaristía, reconciliación, Rosario, oración en la gruta y servicio a los enfermos. El agua es un signo que acompaña la oración, no un tratamiento médico ni un medio mágico.",
+      "en": "Pilgrimage includes the Eucharist, reconciliation, the Rosary, prayer at the grotto and service to sick people. The water is a sign accompanying prayer, not medical treatment or a magical means.",
+      "pt": "A peregrinação compreende Eucaristia, reconciliação, Rosário, oração na gruta e serviço aos enfermos. A água é um sinal que acompanha a oração, não um tratamento médico nem um meio mágico."
+    },
+    "sources": [
+      "Santuario de Lourdes, La reconnaissance des Apparitions",
+      "Santuario de Lourdes, Miraculous Healings: Bernadette Moriau",
+      "Santuario de Lourdes, Route 4: Bernadette’s Vocation"
+    ]
+  }
+]
