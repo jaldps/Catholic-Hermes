@@ -1,6 +1,6 @@
 # T-016 · Informe de Codex
 
-Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega de **30 nuevas familias** (objetivo aproximado: 60) y **67 fichas ampliadas**. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
+Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega de **45 nuevas familias** (objetivo aproximado: 60) y **82 fichas ampliadas**. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
 
 Leídos el protocolo, las reglas editoriales, el contrato M6 y los datos existentes. Solo se crean los dos JSON autorizados y este informe. Redacción original ES/EN/PT; no se componen lemas, citas ni oraciones. Las aprobaciones no se deducen del año de fundación ni de una agregación a otra orden. `motto: null`, aprobaciones vacías y listas de santos vacías señalan que no se incorpora un dato suficientemente documentado, no que necesariamente carezcan de ellos.
 
@@ -509,6 +509,115 @@ La fuente declara que no existe fecha única de fundación y señala 1705 como c
 
 Se distingue la autorización diocesana de 1877 de la profesión fundacional del 28-VI-1878. No se presenta a Dehon como beato o santo. No se atribuye automáticamente a otra familia que use Sacred Heart el mismo carisma o identidad canónica. La cronología institucional aporta aprobaciones históricas, pero no se incorpora una referencia documental incompleta como aprobación pontificia.
 
+### 68. `asuncionistas-aa` · `congregation`
+
+- [Augustinians of the Assumption, Who We Are](https://www.assumptio.org/en/who-we-are/)
+- [Jean-Paul Périer-Muzet, A Brief History of the Assumptionists, edición institucional](https://assumption.us/images/stories/Books/A_Brief_History_of_the_Assumptionists_-_Jean-Paul_Perier-Muzet_ver_2b.pdf)
+
+Se distinguen comienzo del noviciado en 1845 y votos en 1850: ambas fechas aparecen en la historia institucional. No se confunde con las Religiosas de la Asunción. El fundador no se presenta como beato. No se incorporan cifras históricas como actuales. Sitio de la curia consultado mediante contenido indexado por bloqueo HTTP 403; el libro institucional sí se descargó y consultó.
+
+### 69. `orionistas-fdp` · `congregation`
+
+- [Santa Sede, biografía de Luis Orione, canonización de 2004](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20040516_orione_en.html)
+- [Juan Pablo II, mensaje a la Pequeña Obra, marzo de 2003](https://www.vatican.va/content/john-paul-ii/en/speeches/2003/march/documents/hf_jp-ii_spe_20030320_divina-provvidenza.html)
+
+1893 corresponde al inicio educativo reconocido por la Santa Sede como comienzo fundacional; 1903 es aprobación diocesana, no pontificia. Se distinguen las ramas masculina y femenina. Se omite aprobación pontificia sin documento comprobado.
+
+### 70. `rogacionistas-rcj` · `congregation`
+
+- [Rogationists, About Us](https://rogationists.org/about-us/)
+- [Rogationist Publications, About Us](https://rogationistpublications.org/about-us-page/)
+- [Curia rogacionista, calendario 2024: aniversario fundacional del 16 de mayo](https://rcj.org/sites/default/files/CAL_ROG_2024_EN.pdf)
+
+Se verifica 1897 frente a la fundación femenina de 1887. Las páginas institucionales y calendario se consultaron por contenido indexado ante bloqueo HTTP directo; no se toman como actuales tratamientos antiguos de beato en otras páginas. No se copia como oración una paráfrasis del mandato evangélico.
+
+### 71. `misioneros-sagrado-corazon-msc` · `congregation`
+
+- [MSC Irlanda, Our History](https://www.mscmissions.ie/about-us/our-story/our-history/)
+- [Juan Pablo II, carta por el 150 aniversario, 1-IX-2004](https://www.vatican.va/content/john-paul-ii/en/letters/2004/documents/hf_jp-ii_let_20040901_missionaries-sacred-heart.html)
+
+Fecha fundacional explícita en fuente pontificia e institucional. Se distingue la congregación masculina de la familia espiritual más amplia. No se presenta al fundador como santo, ni se convierten los mártires laicos de una misión en miembros religiosos del instituto. Approval vacío sin documento preciso.
+
+### 72. `sagrados-corazones-sscc` · `congregation`
+
+- [Congregación SS.CC. de Irlanda e Inglaterra, History](https://www.sacred-hearts.net/history)
+- [Catholic Encyclopedia, Congregation of Picpus, 1912](https://www.newadvent.org/cathen/13308a.htm)
+- [Santa Sede, biografía de san Damián, canonización de 2009](https://press.vatican.va/news_services/liturgy/saints/2009/ns_lit_doc_20091011_de-veuster_en.html)
+
+kind congregation: la Catholic Encyclopedia especifica votos perpetuos simples. Gender men delimita esta ficha al ramo masculino indicado por el encargo, sin negar que la familia se fundó con dos ramas. Se atribuye correctamente el papel fundacional de Aymer en la familia. No se afirman cifras de 1912 como actuales. Sin documento pontificio preciso, approval vacío.
+
+### 73. `hermanos-cristianos-cfc` · `congregation`
+
+- [Christian Brothers European Province, History](https://christianbrothers.eu/history/)
+- [Edmund Rice Christian Brothers Oceania, FAQ y presentación de la provincia](https://www.edmundrice.org/faq)
+
+Se diferencia C.F.C. de F.S.C. y de los Hermanos de la Presentación. 1802 corresponde a la primera escuela; no se identifica con los primeros votos de 1808 ni con la aprobación de 1820. Sin referencia al documento original, approval vacío. No se copian recuentos sin fecha. Rice se presenta como beato, no santo.
+
+### 74. `basilianos-san-josafat-osbm` · `order`
+
+- [Orden Basiliana de San Josafat, Brief History of the Order](https://osbm.info/en/a-brief-history-of-the-order/)
+- [Orden Basiliana de San Josafat, edición de los capítulos generales, 5-V-2026](https://osbm.info/en/new-book-published-basilian-general-chapters-from-1642-to-1743/)
+
+1617 corresponde a la organización reformada, no al comienzo del monacato basiliano. No se confunde con otros institutos católicos de nombre basiliano. Se omiten las traducciones inglesas de títulos de decretos como si fueran sus incipit latinos originales. No se incorporan estadísticas de 2022 como actuales.
+
+### 75. `benedictinas-adoracion-perpetua-osb` · `order`
+
+- [Service des Moniales, Monastery of the Immaculée Conception at Rouen](https://www.service-des-moniales.cef.fr/en/monastery-of-the-immaculee-conception-at-rouen/)
+- [Benedictine Nuns of the Blessed Sacrament de Varsovia, History](https://www.benedyktynki-sakramentki.org/en/about-us/history/)
+
+La entrada orientativa Benedictinas se concreta en la rama mectildiana para aportar información distinta de la familia OSB ya existente. kind order se refiere a las monjas benedictinas, no convierte sus federaciones en un instituto central único. El servicio monástico ofrece la ficha mediante contenido indexado; su HTML actual no expone el cuerpo histórico. La segunda fuente es el monasterio de Varsovia. No se inventa aprobación pontificia ni beatificación de Mectilde.
+
+### 76. `dominicas-contemplativas-op` · `order`
+
+- [Orden de Predicadores, Nuns](https://www.op.org/nuns/)
+- [Orden de Predicadores, Our Story: Prouilhe, 1206](https://www.op.org/our-story/)
+
+Se separan las monjas de 1206 de los frailes confirmados en 1216 y de las congregaciones apostólicas femeninas. No se hace pasar una confirmación de los frailes por el acto fundacional de las monjas. Se mantiene la especificidad contemplativa y autonomía monástica.
+
+### 77. `concepcionistas-oic` · `order`
+
+- [Pablo VI, canonización de Beatriz de Silva, 3-X-1976](https://www.vatican.va/content/paul-vi/it/homilies/1976/documents/hf_p-vi_hom_19761003.html)
+- [Concepcionistas OIC Brasil, A Ordem](https://concepcionistasoicbrasil.com.br/a-ordem/)
+- [Concepcionistas OIC Brasil, Regra e Constituições: bula Ad statum prosperum](https://concepcionistasoicbrasil.com.br/wp-content/uploads/2024/06/REGRA-e-Constituiicoes1.pdf)
+
+kind order: la fuente institucional especifica votos solemnes. 1489 es autorización inicial, 1511 regla propia; no se mezclan. Se documenta el texto de la bula de Julio II, sin copiar la regla ni componer oración. Se distingue de congregaciones educativas homónimas.
+
+### 78. `brigidinas-monasticas-osss` · `order`
+
+- [Bridgettine Sisters de Columbus, History y distinción de ramas](https://bridgettines.com/history/)
+- [S:ta Birgittas abbedi Pax Mariae, preguntas sobre su regla y vida contemplativa](https://birgittaskloster.se/1000-fragor-och-svar/)
+
+El año del campo foundationYear se etiqueta expresamente como aprobación: no se afirma una fecha única para el proyecto anterior. La ficha abarca la rama monástica histórica de monjas, no equipara jurídicamente a la rama de Hesselblad de 1911 con cada monasterio medieval. Se consulta también la explicación de la regla del monasterio actual de Vadstena. Sin documento original pontificio incorporado, approval permanece vacío.
+
+### 79. `carmelitas-caridad-vedruna-ccv` · `congregation`
+
+- [Carmelitas de la Caridad Vedruna, Orígenes](https://vedruna.org/origenes/)
+- [Fundación Vedruna Educación, Historia y biografía](https://fundacionvedrunaeducacion.org/historia-y-biografia/)
+
+Se distingue la congregación de la familia espiritual con miembros laicos. Las obras apostólicas no se confunden con clausura carmelita. No se repiten recuentos de países sin año. No se inventa lema ni documento de aprobación.
+
+### 80. `hermanitas-pobres-psdp` · `congregation`
+
+- [Little Sisters of the Poor Australia, Our History](https://www.littlesistersofthepoor.org.au/our-life/our-history/)
+- [Little Sisters of the Poor Australia, About Us](https://www.littlesistersofthepoor.org.au/about-us/)
+
+Se verifica la fundación de 1839 y la condición de santa de Jugan. La hospitalidad se describe como parte de la consagración, sin inventar fórmulas de votos. No se confunde con las Hermanitas de los Ancianos Desamparados, otra congregación. Se omiten cifras de presencia sin referencia temporal.
+
+### 81. `religiosas-sagrado-corazon-rscj` · `congregation`
+
+- [Society of the Sacred Heart, Our History](https://rscj.org/vocations/our-history/)
+- [Society of the Sacred Heart, Our Founding Mothers](https://rscj.org/associates/our-founding-mothers/)
+
+kind congregation, no society de vida apostólica por el nombre Society. Se distinguen RSCJ, RSHM y ACI. El lema se traduce fielmente desde la formulación inglesa institucional, sin reconstruir un latín no consultado. Las fuentes reconocen también el pasado de esclavitud de obras norteamericanas; no se presenta una historia exenta de responsabilidades. Approval vacío sin documento preciso.
+
+### 82. `compania-santa-teresa-stj` · `congregation`
+
+- [Compañía de Santa Teresa de Jesús, Quiénes somos](https://www.stjteresianas.org/quienes-somos)
+- [Compañía de Santa Teresa de Jesús, Rasgos carismáticos](https://www.stjteresianas.org/quienes-somos/rasgos-carismaticos)
+- [Santa Sede, biografía de Enrique de Ossó](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_19930616_de-osso_sp.html)
+
+La fuente especifica instituto religioso apostólico de derecho pontificio; el nombre Compañía no determina society. Se distingue la fundación de 1876 de asociaciones previas del fundador. No se inventa documento pontificio ni un lema derivado de una consigna espiritual.
+
 ## Validación
 
 ```sh
@@ -518,8 +627,9 @@ python3 docs/tasks/tools/validate_orders.py details app/src/main/assets/orders/o
 
 ```text
 WARN  legionarios-cristo-lc.founder: identical text in two languages
-30 entries · 0 errors · 1 warnings
-67 entries · 0 errors · 0 warnings
+WARN  carmelitas-caridad-vedruna-ccv.founder: identical text in two languages
+45 entries · 0 errors · 2 warnings
+82 entries · 0 errors · 0 warnings
 ```
 
 Las entregas de fichas ampliadas aceptan un prefijo ordenado; el aviso de parcial no es un error. Se comprueban además las extensiones editoriales, las claves e identificadores y `git diff --check` antes de entregar. Integración y compilación a cargo del coordinador.

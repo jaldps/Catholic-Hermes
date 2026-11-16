@@ -778,5 +778,395 @@
       "pt": "Viver o amor do Coração de Jesus por meio da oração, da reparação e do serviço à justiça."
     },
     "gender": "men"
+  },
+  {
+    "id": "asuncionistas-aa",
+    "name": {
+      "es": "Agustinos de la Asunción: Asuncionistas",
+      "en": "Augustinians of the Assumption: Assumptionists",
+      "pt": "Agostinianos da Assunção: Assuncionistas"
+    },
+    "abbreviation": "A.A.",
+    "foundationYear": "1845",
+    "founder": {
+      "es": "Emmanuel d’Alzon",
+      "en": "Father Emmanuel d’Alzon",
+      "pt": "Padre Emmanuel d’Alzon"
+    },
+    "description": {
+      "es": "Los asuncionistas comenzaron en Nimes en 1845 por iniciativa de Emmanuel d’Alzon; las primeras profesiones llegaron en 1850. Son una congregación de sacerdotes y hermanos que vive según la Regla de san Agustín. Su vida apostólica busca servir al Reino de Dios mediante fraternidad, estudio y atención a los desafíos de la sociedad. Desarrollan educación, comunicación, peregrinaciones y servicio pastoral. También poseen una tradición de encuentro con las Iglesias orientales. Comparten una familia espiritual con otras congregaciones de la Asunción y con laicos asociados, sin confundirse jurídicamente con ellas.",
+      "en": "The Assumptionists began in Nîmes in 1845 through Emmanuel d’Alzon’s initiative; the first professions followed in 1850. They are a congregation of priests and brothers living according to the Rule of Saint Augustine. Their apostolic life seeks to serve God’s Kingdom through fraternity, study and attention to society’s challenges. They undertake education, communication, pilgrimages and pastoral service. They also have a tradition of encounter with Eastern Churches. They share a spiritual family with other Assumption congregations and associated lay people while remaining legally distinct from them.",
+      "pt": "Os assuncionistas começaram em Nîmes em 1845 por iniciativa de Emmanuel d’Alzon; as primeiras profissões ocorreram em 1850. São uma congregação de sacerdotes e irmãos que vive segundo a Regra de Santo Agostinho. Sua vida apostólica procura servir ao Reino de Deus por meio da fraternidade, do estudo e da atenção aos desafios da sociedade. Desenvolvem educação, comunicação, peregrinações e serviço pastoral. Também possuem uma tradição de encontro com as Igrejas orientais. Compartilham uma família espiritual com outras congregações da Assunção e com leigos associados, sem se confundir juridicamente com elas."
+    },
+    "charism": {
+      "es": "Servir al Reino de Dios mediante comunidad agustiniana y compromiso apostólico con la sociedad.",
+      "en": "Serving God’s Kingdom through Augustinian community and apostolic engagement with society.",
+      "pt": "Servir ao Reino de Deus por meio da comunidade agostiniana e do compromisso apostólico com a sociedade."
+    },
+    "gender": "men"
+  },
+  {
+    "id": "orionistas-fdp",
+    "name": {
+      "es": "Hijos de la Divina Providencia: Orionistas",
+      "en": "Sons of Divine Providence: Orionists",
+      "pt": "Filhos da Divina Providência: Orionitas"
+    },
+    "abbreviation": "F.D.P.",
+    "foundationYear": "1893",
+    "founder": {
+      "es": "San Luis Orione",
+      "en": "Saint Luigi Orione",
+      "pt": "São Luís Orione"
+    },
+    "description": {
+      "es": "Los Hijos de la Divina Providencia nacieron de las obras educativas que Luis Orione inició en Tortona en 1893. La congregación masculina recibió aprobación diocesana en 1903. Reúne sacerdotes, hermanos y eremitas dentro de la Pequeña Obra de la Divina Providencia. Su carisma vincula amor a la Iglesia y servicio concreto a personas pobres, enfermas o excluidas. Desarrolla educación, atención social y acompañamiento pastoral. El instituto masculino se distingue de las Pequeñas Hermanas Misioneras de la Caridad y de las demás ramas de la familia orionista.",
+      "en": "The Sons of Divine Providence grew from the educational works Luigi Orione began in Tortona in 1893. The men’s congregation received diocesan approval in 1903. It brings together priests, brothers and hermits within the Little Work of Divine Providence. Its charism links love for the Church with practical service to people who are poor, sick or excluded. It undertakes education, social care and pastoral accompaniment. The men’s institute is distinct from the Little Missionary Sisters of Charity and the other branches of the Orionine family.",
+      "pt": "Os Filhos da Divina Providência nasceram das obras educativas que Luís Orione iniciou em Tortona em 1893. A congregação masculina recebeu aprovação diocesana em 1903. Reúne sacerdotes, irmãos e eremitas dentro da Pequena Obra da Divina Providência. Seu carisma vincula amor à Igreja e serviço concreto às pessoas pobres, enfermas ou excluídas. Desenvolve educação, atendimento social e acompanhamento pastoral. O instituto masculino se distingue das Pequenas Irmãs Missionárias da Caridade e dos demais ramos da família orionita."
+    },
+    "charism": {
+      "es": "Servir a Cristo en las personas pobres y excluidas en comunión con la Iglesia.",
+      "en": "Serving Christ in poor and excluded people in communion with the Church.",
+      "pt": "Servir a Cristo nas pessoas pobres e excluídas em comunhão com a Igreja."
+    },
+    "gender": "men"
+  },
+  {
+    "id": "rogacionistas-rcj",
+    "name": {
+      "es": "Rogacionistas del Corazón de Jesús",
+      "en": "Rogationists of the Heart of Jesus",
+      "pt": "Rogacionistas do Coração de Jesus"
+    },
+    "abbreviation": "R.C.J.",
+    "foundationYear": "1897",
+    "founder": {
+      "es": "San Aníbal María Di Francia",
+      "en": "Saint Hannibal Mary Di Francia",
+      "pt": "Santo Aníbal Maria Di Francia"
+    },
+    "description": {
+      "es": "Los rogacionistas fueron fundados en Mesina en 1897 por Aníbal María Di Francia, comprometido con la infancia pobre y con la oración por las vocaciones. Su nombre procede del mandato evangélico de pedir al dueño de la mies que envíe trabajadores. Son una congregación de sacerdotes y hermanos que une oración, difusión de la cultura vocacional y obras de caridad. Sirven mediante formación, educación y acompañamiento de niños, jóvenes y familias necesitadas. Son distintos del instituto femenino de las Hijas del Divino Celo, nacido de la misma inspiración.",
+      "en": "The Rogationists were founded in Messina in 1897 by Hannibal Mary Di Francia, who was committed to poor children and prayer for vocations. Their name comes from the Gospel command to ask the Lord of the harvest to send workers. They are a congregation of priests and brothers uniting prayer, promotion of a culture of vocation and charitable works. They serve through formation, education and accompaniment of children, young people and families in need. They are distinct from the women’s institute of the Daughters of Divine Zeal, born from the same inspiration.",
+      "pt": "Os rogacionistas foram fundados em Messina em 1897 por Aníbal Maria Di Francia, comprometido com a infância pobre e com a oração pelas vocações. Seu nome procede do mandato evangélico de pedir ao dono da messe que envie trabalhadores. São uma congregação de sacerdotes e irmãos que une oração, difusão da cultura vocacional e obras de caridade. Servem por meio de formação, educação e acompanhamento de crianças, jovens e famílias necessitadas. São distintos do instituto feminino das Filhas do Divino Zelo, nascido da mesma inspiração."
+    },
+    "charism": {
+      "es": "Orar por las vocaciones, promover esa oración y servir a los pequeños y pobres.",
+      "en": "Praying for vocations, promoting that prayer and serving children and poor people.",
+      "pt": "Rezar pelas vocações, promover essa oração e servir aos pequenos e aos pobres."
+    },
+    "gender": "men"
+  },
+  {
+    "id": "misioneros-sagrado-corazon-msc",
+    "name": {
+      "es": "Misioneros del Sagrado Corazón",
+      "en": "Missionaries of the Sacred Heart",
+      "pt": "Missionários do Sagrado Coração"
+    },
+    "abbreviation": "M.S.C.",
+    "foundationYear": "1854",
+    "founder": {
+      "es": "Julio Chevalier",
+      "en": "Jules Chevalier",
+      "pt": "Júlio Chevalier"
+    },
+    "description": {
+      "es": "Los Misioneros del Sagrado Corazón fueron fundados en Issoudun, Francia, el 8 de diciembre de 1854 por Julio Chevalier. La congregación masculina reúne sacerdotes y hermanos que desean dar a conocer el amor de Dios manifestado en el Corazón de Jesús. Su espiritualidad inspira cercanía, compasión y respuesta a las necesidades del entorno. Desarrollan misiones, ministerio pastoral, formación y servicios de promoción humana. Comparten una familia espiritual con congregaciones femeninas y laicos asociados, pero conservan una identidad propia. No se identifican con los dehonianos ni con los Sagrados Corazones de Picpus.",
+      "en": "The Missionaries of the Sacred Heart were founded in Issoudun, France, on 8 December 1854 by Jules Chevalier. The men’s congregation brings together priests and brothers who seek to make known God’s love revealed in the Heart of Jesus. Its spirituality inspires closeness, compassion and responses to local needs. They undertake missions, pastoral ministry, formation and services supporting human development. They share a spiritual family with women’s congregations and associated lay people while retaining their own identity. They are distinct from the Dehonians and the Sacred Hearts congregation of Picpus.",
+      "pt": "Os Missionários do Sagrado Coração foram fundados em Issoudun, na França, em 8 de dezembro de 1854 por Júlio Chevalier. A congregação masculina reúne sacerdotes e irmãos que desejam tornar conhecido o amor de Deus manifestado no Coração de Jesus. Sua espiritualidade inspira proximidade, compaixão e resposta às necessidades do ambiente. Desenvolvem missões, ministério pastoral, formação e serviços de promoção humana. Compartilham uma família espiritual com congregações femininas e leigos associados, mas conservam identidade própria. Não se identificam com os dehonianos nem com os Sagrados Corações de Picpus."
+    },
+    "charism": {
+      "es": "Dar a conocer el amor del Corazón de Jesús mediante cercanía, compasión y servicio misionero.",
+      "en": "Making the love of the Heart of Jesus known through closeness, compassion and missionary service.",
+      "pt": "Tornar conhecido o amor do Coração de Jesus por meio de proximidade, compaixão e serviço missionário."
+    },
+    "gender": "men"
+  },
+  {
+    "id": "sagrados-corazones-sscc",
+    "name": {
+      "es": "Congregación de los Sagrados Corazones: Picpus",
+      "en": "Congregation of the Sacred Hearts: Picpus",
+      "pt": "Congregação dos Sagrados Corações: Picpus"
+    },
+    "abbreviation": "SS.CC.",
+    "foundationYear": "1800",
+    "founder": {
+      "es": "Pedro Coudrin y Enriqueta Aymer de la Chevalerie, fundadores de la familia",
+      "en": "Pierre Coudrin and Henriette Aymer de la Chevalerie, founders of the family",
+      "pt": "Pedro Coudrin e Henriqueta Aymer de la Chevalerie, fundadores da família"
+    },
+    "description": {
+      "es": "La Congregación de los Sagrados Corazones nació en Poitiers en la Navidad de 1800 con Pedro Coudrin y Enriqueta Aymer de la Chevalerie. Surgió en el contexto de persecución y reconstrucción religiosa posterior a la Revolución francesa. Su espiritualidad une contemplación del amor de Jesús y María, adoración eucarística y servicio misionero. Esta ficha presenta la rama masculina, de sacerdotes y hermanos, dentro de una familia con rama femenina. Su historia incluye la misión en el Pacífico y el servicio de san Damián de Molokai a personas con lepra.",
+      "en": "The Congregation of the Sacred Hearts began in Poitiers at Christmas 1800 with Pierre Coudrin and Henriette Aymer de la Chevalerie. It emerged amid persecution and religious reconstruction following the French Revolution. Its spirituality unites contemplation of the love of Jesus and Mary, Eucharistic adoration and missionary service. This entry presents the male branch of priests and brothers within a family that also has a female branch. Its history includes mission in the Pacific and Saint Damien of Molokai’s service to people with leprosy.",
+      "pt": "A Congregação dos Sagrados Corações nasceu em Poitiers no Natal de 1800 com Pedro Coudrin e Henriqueta Aymer de la Chevalerie. Surgiu no contexto de perseguição e reconstrução religiosa posterior à Revolução Francesa. Sua espiritualidade une contemplação do amor de Jesus e Maria, adoração eucarística e serviço missionário. Esta ficha apresenta o ramo masculino, de sacerdotes e irmãos, dentro de uma família com ramo feminino. Sua história inclui a missão no Pacífico e o serviço de São Damião de Molokai às pessoas com hanseníase."
+    },
+    "charism": {
+      "es": "Contemplar el amor de Jesús y María y expresarlo en adoración y servicio misionero.",
+      "en": "Contemplating the love of Jesus and Mary and expressing it in adoration and missionary service.",
+      "pt": "Contemplar o amor de Jesus e Maria e expressá-lo na adoração e no serviço missionário."
+    },
+    "gender": "men"
+  },
+  {
+    "id": "hermanos-cristianos-cfc",
+    "name": {
+      "es": "Congregación de los Hermanos Cristianos",
+      "en": "Congregation of Christian Brothers",
+      "pt": "Congregação dos Irmãos Cristãos"
+    },
+    "abbreviation": "C.F.C.",
+    "foundationYear": "1802",
+    "founder": {
+      "es": "Beato Edmund Ignatius Rice",
+      "en": "Blessed Edmund Ignatius Rice",
+      "pt": "Bem-aventurado Edmund Ignatius Rice"
+    },
+    "description": {
+      "es": "Los Hermanos Cristianos tienen su origen en la escuela que Edmund Rice abrió en Waterford, Irlanda, en 1802 para niños sin acceso a la educación. Son una congregación de religiosos hermanos, distinta de los Hermanos de La Salle. Su misión educativa se ha extendido a diferentes países y contextos sociales. Hoy la familia de Edmund Rice reúne comunidades religiosas y numerosas obras con participación laical. Sus servicios incluyen educación, acompañamiento de jóvenes desfavorecidos y trabajo por la justicia social. Compartir el carisma no convierte a cada colaborador en miembro de la congregación.",
+      "en": "The Christian Brothers originated in the school Edmund Rice opened in Waterford, Ireland, in 1802 for children without access to education. They are a congregation of religious brothers, distinct from the De La Salle Brothers. Their educational mission has spread to different countries and social settings. Today the Edmund Rice family includes religious communities and many works involving lay people. Its services include education, accompaniment of disadvantaged young people and work for social justice. Sharing the charism does not make every collaborator a member of the congregation.",
+      "pt": "Os Irmãos Cristãos têm sua origem na escola que Edmund Rice abriu em Waterford, na Irlanda, em 1802 para crianças sem acesso à educação. São uma congregação de religiosos irmãos, distinta dos Irmãos de La Salle. Sua missão educativa se estendeu a diferentes países e contextos sociais. Hoje a família de Edmund Rice reúne comunidades religiosas e numerosas obras com participação leiga. Seus serviços incluem educação, acompanhamento de jovens desfavorecidos e trabalho pela justiça social. Compartilhar o carisma não transforma cada colaborador em membro da congregação."
+    },
+    "charism": {
+      "es": "Educación y presencia fraterna al servicio de personas desfavorecidas, según la inspiración de Edmund Rice.",
+      "en": "Education and fraternal presence serving disadvantaged people in the spirit of Edmund Rice.",
+      "pt": "Educação e presença fraterna a serviço de pessoas desfavorecidas, segundo a inspiração de Edmund Rice."
+    },
+    "gender": "men"
+  },
+  {
+    "id": "basilianos-san-josafat-osbm",
+    "name": {
+      "es": "Orden Basiliana de San Josafat",
+      "en": "Basilian Order of Saint Josaphat",
+      "pt": "Ordem Basiliana de São Josafat"
+    },
+    "abbreviation": "O.S.B.M.",
+    "foundationYear": "1617",
+    "founder": {
+      "es": "Metropolita José Veliamyn Rutsky y san Josafat Kuntsevych",
+      "en": "Metropolitan Joseph Veliamyn Rutsky and Saint Josaphat Kuntsevych",
+      "pt": "Metropolita José Veliamyn Rutsky e São Josafat Kuntsevych"
+    },
+    "description": {
+      "es": "La Orden Basiliana de San Josafat pertenece a la tradición católica oriental y sigue la herencia monástica de san Basilio. Su organización moderna procede de la reforma impulsada por el metropolita José Rutsky y san Josafat Kuntsevych, con un primer capítulo en 1617. Sus monjes unen oración litúrgica, vida comunitaria y servicio a la Iglesia. Desarrollan pastoral, formación, publicaciones y estudio, con presencia en Europa y América. No abarca a cada comunidad que lleva el nombre de san Basilio: existen otros institutos basilianos católicos con historia y gobierno propios.",
+      "en": "The Basilian Order of Saint Josaphat belongs to the Eastern Catholic tradition and follows Saint Basil’s monastic heritage. Its modern organization grew from the reform promoted by Metropolitan Joseph Rutsky and Saint Josaphat Kuntsevych, with a first chapter in 1617. Its monks unite liturgical prayer, community life and service to the Church. They undertake pastoral ministry, formation, publishing and study, with a presence in Europe and the Americas. The order does not include every community named after Saint Basil: other Catholic Basilian institutes have their own histories and governance.",
+      "pt": "A Ordem Basiliana de São Josafat pertence à tradição católica oriental e segue a herança monástica de São Basílio. Sua organização moderna procede da reforma promovida pelo metropolita José Rutsky e por São Josafat Kuntsevych, com um primeiro capítulo em 1617. Seus monges unem oração litúrgica, vida comunitária e serviço à Igreja. Desenvolvem pastoral, formação, publicações e estudo, com presença na Europa e nas Américas. A ordem não abrange cada comunidade que leva o nome de São Basílio: existem outros institutos basilianos católicos com história e governo próprios."
+    },
+    "charism": {
+      "es": "Vida monástica de tradición basiliana, oración litúrgica y servicio apostólico en la Iglesia oriental.",
+      "en": "Monastic life in the Basilian tradition, liturgical prayer and apostolic service in the Eastern Church.",
+      "pt": "Vida monástica de tradição basiliana, oração litúrgica e serviço apostólico na Igreja oriental."
+    },
+    "gender": "men"
+  },
+  {
+    "id": "benedictinas-adoracion-perpetua-osb",
+    "name": {
+      "es": "Benedictinas de la Adoración Perpetua del Santísimo Sacramento",
+      "en": "Benedictine Nuns of Perpetual Adoration of the Blessed Sacrament",
+      "pt": "Beneditinas da Adoração Perpétua do Santíssimo Sacramento"
+    },
+    "abbreviation": "O.S.B.",
+    "foundationYear": "1653",
+    "founder": {
+      "es": "Catalina Mectilde del Santísimo Sacramento de Bar",
+      "en": "Catherine Mectilde of the Blessed Sacrament de Bar",
+      "pt": "Catarina Mectilde do Santíssimo Sacramento de Bar"
+    },
+    "description": {
+      "es": "Esta familia contemplativa nació en París en 1653 por iniciativa de Catalina Mectilde de Bar. Une la tradición de san Benito con una dedicación particular a la adoración eucarística y a la reparación. Las monjas viven en monasterios, con oración litúrgica, lectura espiritual, trabajo y acogida según las posibilidades de cada comunidad. Su historia se extendió desde Francia a otros países europeos. Es una rama concreta de la amplia familia benedictina femenina; no representa a cada monasterio de benedictinas ni constituye una única casa central para ellas.",
+      "en": "This contemplative family began in Paris in 1653 through Catherine Mectilde de Bar’s initiative. It unites Saint Benedict’s tradition with a particular dedication to Eucharistic adoration and reparation. The nuns live in monasteries, combining liturgical prayer, spiritual reading, work and hospitality according to each community’s possibilities. Its history extended from France to other European countries. It is a particular branch of the wider family of Benedictine women; it does not represent every Benedictine monastery or constitute a single central house governing them all.",
+      "pt": "Esta família contemplativa nasceu em Paris em 1653 por iniciativa de Catarina Mectilde de Bar. Une a tradição de São Bento a uma dedicação particular à adoração eucarística e à reparação. As monjas vivem em mosteiros, com oração litúrgica, leitura espiritual, trabalho e acolhida segundo as possibilidades de cada comunidade. Sua história se estendeu da França a outros países europeus. É um ramo concreto da ampla família beneditina feminina; não representa cada mosteiro de beneditinas nem constitui uma única casa central para elas."
+    },
+    "charism": {
+      "es": "Vida monástica benedictina dedicada especialmente a la adoración eucarística y la reparación.",
+      "en": "Benedictine monastic life dedicated especially to Eucharistic adoration and reparation.",
+      "pt": "Vida monástica beneditina dedicada especialmente à adoração eucarística e à reparação."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "dominicas-contemplativas-op",
+    "name": {
+      "es": "Monjas de la Orden de Predicadores: Dominicas contemplativas",
+      "en": "Nuns of the Order of Preachers: Dominican Nuns",
+      "pt": "Monjas da Ordem dos Pregadores: Dominicanas contemplativas"
+    },
+    "abbreviation": "O.P.",
+    "foundationYear": "1206",
+    "founder": {
+      "es": "Santo Domingo de Guzmán",
+      "en": "Saint Dominic de Guzmán",
+      "pt": "São Domingos de Gusmão"
+    },
+    "description": {
+      "es": "Las monjas dominicas remontan su origen a la comunidad que santo Domingo estableció en Prouilhe en 1206, antes de la confirmación de los frailes predicadores. Participan en la misión de la Orden mediante una vida contemplativa de oración, estudio, fraternidad y trabajo. Sus monasterios sostienen la predicación con la escucha de la Palabra y la intercesión por la Iglesia y el mundo. Tienen comunidades en diferentes países y formas de colaboración entre monasterios. Se distinguen de las numerosas congregaciones dominicas de vida apostólica dedicadas a educación, salud u otros servicios.",
+      "en": "Dominican nuns trace their origins to the community Saint Dominic established at Prouilhe in 1206, before the confirmation of the preaching friars. They participate in the Order’s mission through a contemplative life of prayer, study, fraternity and work. Their monasteries support preaching through listening to the Word and interceding for the Church and the world. They have communities in different countries and forms of cooperation between monasteries. They are distinct from the many Dominican congregations of apostolic life devoted to education, healthcare or other services.",
+      "pt": "As monjas dominicanas remontam sua origem à comunidade que São Domingos estabeleceu em Prouilhe em 1206, antes da confirmação dos frades pregadores. Participam da missão da Ordem por meio de uma vida contemplativa de oração, estudo, fraternidade e trabalho. Seus mosteiros sustentam a pregação com a escuta da Palavra e a intercessão pela Igreja e pelo mundo. Possuem comunidades em diferentes países e formas de colaboração entre mosteiros. Distinguem-se das numerosas congregações dominicanas de vida apostólica dedicadas à educação, à saúde ou a outros serviços."
+    },
+    "charism": {
+      "es": "Sostener la predicación mediante la contemplación, la escucha de la Palabra y la intercesión.",
+      "en": "Supporting preaching through contemplation, listening to the Word and intercession.",
+      "pt": "Sustentar a pregação por meio da contemplação, da escuta da Palavra e da intercessão."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "concepcionistas-oic",
+    "name": {
+      "es": "Orden de la Inmaculada Concepción: Concepcionistas",
+      "en": "Order of the Immaculate Conception: Conceptionist Nuns",
+      "pt": "Ordem da Imaculada Conceição: Concepcionistas"
+    },
+    "abbreviation": "O.I.C.",
+    "foundationYear": "1489",
+    "founder": {
+      "es": "Santa Beatriz de Silva",
+      "en": "Saint Beatrice of Silva",
+      "pt": "Santa Beatriz da Silva"
+    },
+    "description": {
+      "es": "Las concepcionistas nacieron en Toledo por iniciativa de Beatriz de Silva y con apoyo de Isabel la Católica. La fundación recibió autorización en 1489 y la orden obtuvo regla propia en 1511. Sus monjas viven una vocación contemplativa centrada en Cristo, con especial referencia a María en su Inmaculada Concepción. La oración litúrgica, la fraternidad, el trabajo y la clausura configuran su vida cotidiana. Sus monasterios están presentes en distintos países, incluidos España y Brasil. No se identifican con otras congregaciones educativas que también llevan el nombre de Concepcionistas.",
+      "en": "The Conceptionist nuns began in Toledo through Beatrice of Silva’s initiative, supported by Isabella of Castile. The foundation received authorization in 1489 and the order obtained its own rule in 1511. Its nuns live a contemplative vocation centred on Christ, with particular reference to Mary in her Immaculate Conception. Liturgical prayer, fraternity, work and enclosure shape their daily life. Their monasteries are present in different countries, including Spain and Brazil. They are distinct from educational congregations that also bear the name Conceptionist.",
+      "pt": "As concepcionistas nasceram em Toledo por iniciativa de Beatriz da Silva e com apoio de Isabel, a Católica. A fundação recebeu autorização em 1489 e a ordem obteve regra própria em 1511. Suas monjas vivem uma vocação contemplativa centrada em Cristo, com referência especial a Maria em sua Imaculada Conceição. A oração litúrgica, a fraternidade, o trabalho e a clausura configuram sua vida cotidiana. Seus mosteiros estão presentes em diferentes países, incluindo Espanha e Brasil. Não se identificam com outras congregações educativas que também levam o nome de Concepcionistas."
+    },
+    "charism": {
+      "es": "Vida contemplativa centrada en Cristo con inspiración en la Inmaculada Concepción de María.",
+      "en": "Contemplative life centred on Christ and inspired by Mary’s Immaculate Conception.",
+      "pt": "Vida contemplativa centrada em Cristo com inspiração na Imaculada Conceição de Maria."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "brigidinas-monasticas-osss",
+    "name": {
+      "es": "Brigidinas: rama monástica histórica",
+      "en": "Bridgettines: Historical Monastic Branch",
+      "pt": "Brigidinas: Ramo Monástico Histórico"
+    },
+    "abbreviation": "O.Ss.S.",
+    "foundationYear": "1370 (aprobación / approval / aprovação)",
+    "founder": {
+      "es": "Santa Brígida de Suecia",
+      "en": "Saint Bridget of Sweden",
+      "pt": "Santa Brígida da Suécia"
+    },
+    "description": {
+      "es": "La tradición brigidina nació del proyecto monástico de santa Brígida de Suecia en el siglo XIV y recibió aprobación en 1370. Su forma original contemplaba comunidades femeninas y masculinas separadas dentro de una organización vinculada a una abadesa. Esta ficha se centra en las monjas de la rama monástica histórica. Su vida une liturgia, contemplación de la pasión de Cristo, devoción mariana y trabajo comunitario. La familia brigidina incluye también otras ramas y reformas posteriores, entre ellas la iniciada por santa Isabel Hesselblad en 1911; no forman una única realidad administrativa.",
+      "en": "The Bridgettine tradition grew from Saint Bridget of Sweden’s monastic project in the fourteenth century and received approval in 1370. Its original form envisaged separate female and male communities within an organization associated with an abbess. This entry focuses on the nuns of the historical monastic branch. Their life unites liturgy, contemplation of Christ’s passion, Marian devotion and community work. The Bridgettine family also includes other branches and later reforms, including that begun by Saint Elizabeth Hesselblad in 1911; they do not form a single administrative entity.",
+      "pt": "A tradição brigidina nasceu do projeto monástico de Santa Brígida da Suécia no século XIV e recebeu aprovação em 1370. Sua forma original contemplava comunidades femininas e masculinas separadas dentro de uma organização vinculada a uma abadessa. Esta ficha se concentra nas monjas do ramo monástico histórico. Sua vida une liturgia, contemplação da paixão de Cristo, devoção mariana e trabalho comunitário. A família brigidina inclui também outros ramos e reformas posteriores, entre eles o iniciado por Santa Isabel Hesselblad em 1911; não formam uma única realidade administrativa."
+    },
+    "charism": {
+      "es": "Contemplar a Cristo en una vida monástica de liturgia, memoria de la pasión y devoción mariana.",
+      "en": "Contemplating Christ in monastic life through liturgy, remembrance of the passion and Marian devotion.",
+      "pt": "Contemplar a Cristo em uma vida monástica de liturgia, memória da paixão e devoção mariana."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "carmelitas-caridad-vedruna-ccv",
+    "name": {
+      "es": "Carmelitas de la Caridad Vedruna",
+      "en": "Carmelite Sisters of Charity Vedruna",
+      "pt": "Carmelitas da Caridade Vedruna"
+    },
+    "abbreviation": "C.C.V.",
+    "foundationYear": "1826",
+    "founder": {
+      "es": "Santa Joaquina de Vedruna",
+      "en": "Saint Joaquina de Vedruna",
+      "pt": "Santa Joaquina de Vedruna"
+    },
+    "description": {
+      "es": "Joaquina de Vedruna, viuda y madre de familia, fundó esta congregación en Vic en 1826. Su proyecto unió vida consagrada, educación y atención a personas necesitadas. Las hermanas desarrollan una espiritualidad carmelitana expresada en la caridad y en un modo cercano de acompañar. La misión se realiza hoy junto a laicos y laicas, especialmente en educación, salud y promoción de la dignidad humana. La familia Vedruna responde también a desafíos como la migración y el cuidado de la creación. Es una congregación apostólica, distinta de las monjas carmelitas de clausura.",
+      "en": "Joaquina de Vedruna, a widow and mother, founded this congregation in Vic in 1826. Her project united consecrated life, education and care for people in need. The sisters develop a Carmelite spirituality expressed in charity and a personal approach to accompaniment. Today their mission is carried out alongside lay women and men, especially in education, healthcare and promotion of human dignity. The Vedruna family also responds to challenges such as migration and care for creation. It is an apostolic congregation, distinct from cloistered Carmelite nuns.",
+      "pt": "Joaquina de Vedruna, viúva e mãe de família, fundou esta congregação em Vic em 1826. Seu projeto uniu vida consagrada, educação e atenção às pessoas necessitadas. As irmãs desenvolvem uma espiritualidade carmelitana expressa na caridade e em um modo próximo de acompanhar. A missão se realiza hoje junto a leigos e leigas, especialmente na educação, na saúde e na promoção da dignidade humana. A família Vedruna também responde a desafios como a migração e o cuidado da criação. É uma congregação apostólica, distinta das monjas carmelitas de clausura."
+    },
+    "charism": {
+      "es": "Unir contemplación y caridad mediante educación, cuidado y acompañamiento de personas necesitadas.",
+      "en": "Uniting contemplation and charity through education, care and accompaniment of people in need.",
+      "pt": "Unir contemplação e caridade por meio de educação, cuidado e acompanhamento de pessoas necessitadas."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "hermanitas-pobres-psdp",
+    "name": {
+      "es": "Hermanitas de los Pobres",
+      "en": "Little Sisters of the Poor",
+      "pt": "Irmãzinhas dos Pobres"
+    },
+    "abbreviation": "P.S.D.P.",
+    "foundationYear": "1839",
+    "founder": {
+      "es": "Santa Juana Jugan",
+      "en": "Saint Jeanne Jugan",
+      "pt": "Santa Joana Jugan"
+    },
+    "description": {
+      "es": "Las Hermanitas de los Pobres nacieron en Saint-Servan, Francia, en 1839, cuando Juana Jugan acogió en su casa a una anciana sin recursos. De ese gesto surgió una congregación dedicada a las personas mayores pobres. Las hermanas viven la hospitalidad como parte de su consagración y buscan ofrecer un ambiente de hogar, respeto y acompañamiento hasta el final de la vida. Sus casas reciben colaboración de trabajadores, voluntarios y benefactores. La misión se ha extendido a diversos continentes, sin limitar el cuidado por la religión o el origen de las personas acogidas.",
+      "en": "The Little Sisters of the Poor began in Saint-Servan, France, in 1839 when Jeanne Jugan welcomed an elderly woman without resources into her home. That gesture gave rise to a congregation dedicated to elderly people in poverty. The sisters live hospitality as part of their consecration and seek to offer a home marked by respect and accompaniment until the end of life. Their homes involve employees, volunteers and benefactors. The mission has spread to different continents, without restricting care according to the religion or origin of those welcomed.",
+      "pt": "As Irmãzinhas dos Pobres nasceram em Saint-Servan, na França, em 1839, quando Joana Jugan acolheu em sua casa uma idosa sem recursos. Desse gesto surgiu uma congregação dedicada às pessoas idosas pobres. As irmãs vivem a hospitalidade como parte de sua consagração e procuram oferecer um ambiente de lar, respeito e acompanhamento até o fim da vida. Suas casas recebem colaboração de profissionais, voluntários e benfeitores. A missão se estendeu a diferentes continentes, sem limitar o cuidado pela religião ou pela origem das pessoas acolhidas."
+    },
+    "charism": {
+      "es": "Acoger a las personas mayores pobres con hospitalidad, dignidad y acompañamiento hasta el final de la vida.",
+      "en": "Welcoming elderly people in poverty with hospitality, dignity and accompaniment until the end of life.",
+      "pt": "Acolher as pessoas idosas pobres com hospitalidade, dignidade e acompanhamento até o fim da vida."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "religiosas-sagrado-corazon-rscj",
+    "name": {
+      "es": "Religiosas del Sagrado Corazón de Jesús",
+      "en": "Society of the Sacred Heart",
+      "pt": "Religiosas do Sagrado Coração de Jesus"
+    },
+    "abbreviation": "R.S.C.J.",
+    "foundationYear": "1800",
+    "founder": {
+      "es": "Santa Magdalena Sofía Barat",
+      "en": "Saint Madeleine Sophie Barat",
+      "pt": "Santa Madalena Sofia Barat"
+    },
+    "description": {
+      "es": "La Sociedad del Sagrado Corazón nació en París en 1800 por iniciativa de Magdalena Sofía Barat. Su propósito unió vida de oración y educación de las jóvenes en una época de reconstrucción social y religiosa. Las religiosas buscan dar a conocer el amor de Dios mediante formación integral, relaciones humanas y servicio. Su misión incluye escuelas y otros espacios educativos y sociales. Santa Rosa Filipina Duchesne impulsó su expansión a Norteamérica. Es una congregación religiosa femenina, distinta de las Religiosas del Sagrado Corazón de María y de las Esclavas del Sagrado Corazón.",
+      "en": "The Society of the Sacred Heart began in Paris in 1800 through Madeleine Sophie Barat’s initiative. Its purpose united prayer and the education of young women during a period of social and religious reconstruction. The sisters seek to make God’s love known through integral formation, human relationships and service. Their mission includes schools and other educational and social settings. Saint Rose Philippine Duchesne promoted its expansion to North America. It is a women’s religious congregation, distinct from the Religious of the Sacred Heart of Mary and the Handmaids of the Sacred Heart.",
+      "pt": "A Sociedade do Sagrado Coração nasceu em Paris em 1800 por iniciativa de Madalena Sofia Barat. Seu propósito uniu vida de oração e educação das jovens em uma época de reconstrução social e religiosa. As religiosas procuram tornar conhecido o amor de Deus por meio de formação integral, relações humanas e serviço. Sua missão inclui escolas e outros espaços educativos e sociais. Santa Rosa Filipina Duchesne impulsionou sua expansão para a América do Norte. É uma congregação religiosa feminina, distinta das Religiosas do Sagrado Coração de Maria e das Escravas do Sagrado Coração."
+    },
+    "charism": {
+      "es": "Dar a conocer el amor del Corazón de Jesús mediante la oración y la educación integral.",
+      "en": "Making the love of the Heart of Jesus known through prayer and integral education.",
+      "pt": "Tornar conhecido o amor do Coração de Jesus por meio da oração e da educação integral."
+    },
+    "gender": "women"
+  },
+  {
+    "id": "compania-santa-teresa-stj",
+    "name": {
+      "es": "Compañía de Santa Teresa de Jesús",
+      "en": "Society of Saint Teresa of Jesus",
+      "pt": "Companhia de Santa Teresa de Jesus"
+    },
+    "abbreviation": "S.T.J.",
+    "foundationYear": "1876",
+    "founder": {
+      "es": "San Enrique de Ossó",
+      "en": "Saint Enrique de Ossó",
+      "pt": "Santo Henrique de Ossó"
+    },
+    "description": {
+      "es": "La Compañía de Santa Teresa de Jesús fue fundada en 1876 por Enrique de Ossó. Inspirada en Teresa de Ávila, reúne a mujeres consagradas dedicadas a la oración y a la misión educativa. Su proyecto busca formar personas capaces de encuentro, libertad y compromiso con la dignidad humana. Las hermanas comparten obras y responsabilidades con educadores y otros colaboradores laicos. La educación se realiza en escuelas y en diversas presencias sociales y pastorales. Aunque tiene espiritualidad teresiana, la Compañía no es un monasterio de carmelitas descalzas ni una sociedad de vida apostólica.",
+      "en": "The Society of Saint Teresa of Jesus was founded in 1876 by Enrique de Ossó. Inspired by Teresa of Ávila, it brings together consecrated women dedicated to prayer and educational mission. Its project seeks to form people capable of encounter, freedom and commitment to human dignity. The sisters share works and responsibilities with educators and other lay collaborators. Education takes place in schools and in different social and pastoral settings. Although its spirituality is Teresian, the Society is neither a monastery of Discalced Carmelite nuns nor a society of apostolic life.",
+      "pt": "A Companhia de Santa Teresa de Jesus foi fundada em 1876 por Henrique de Ossó. Inspirada em Teresa de Ávila, reúne mulheres consagradas dedicadas à oração e à missão educativa. Seu projeto procura formar pessoas capazes de encontro, liberdade e compromisso com a dignidade humana. As irmãs compartilham obras e responsabilidades com educadores e outros colaboradores leigos. A educação se realiza em escolas e em diferentes presenças sociais e pastorais. Embora tenha espiritualidade teresiana, a Companhia não é um mosteiro de carmelitas descalças nem uma sociedade de vida apostólica."
+    },
+    "charism": {
+      "es": "Oración y educación para favorecer el encuentro con Jesús y la transformación de la sociedad.",
+      "en": "Prayer and education fostering encounter with Jesus and the transformation of society.",
+      "pt": "Oração e educação para favorecer o encontro com Jesus e a transformação da sociedade."
+    },
+    "gender": "women"
   }
 ]

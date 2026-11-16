@@ -1974,5 +1974,448 @@
       "Dehonians USA, History and Mission",
       "Curia general dehoniana, Dehonian Family"
     ]
+  },
+  {
+    "id": "asuncionistas-aa",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Sus comunidades internacionales mantienen obras educativas, comunicación, peregrinaciones y servicios pastorales, con colaboración de laicos vinculados a su espiritualidad.",
+      "en": "Its international communities maintain educational works, communication, pilgrimages and pastoral services, collaborating with lay people linked to their spirituality.",
+      "pt": "Suas comunidades internacionais mantêm obras educativas, comunicação, peregrinações e serviços pastorais, com colaboração de leigos ligados à sua espiritualidade."
+    },
+    "sources": [
+      "Augustinians of the Assumption, Who We Are",
+      "Jean-Paul Périer-Muzet, A Brief History of the Assumptionists, edición institucional"
+    ]
+  },
+  {
+    "id": "orionistas-fdp",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Luis Orione"
+      ],
+      "en": [
+        "Saint Luigi Orione"
+      ],
+      "pt": [
+        "São Luís Orione"
+      ]
+    },
+    "presence": {
+      "es": "La familia orionista desarrolla obras de educación, asistencia y evangelización en distintos países; esta ficha corresponde a su congregación masculina.",
+      "en": "The Orionine family undertakes education, care and evangelization in different countries; this entry concerns its men’s congregation.",
+      "pt": "A família orionita desenvolve obras de educação, assistência e evangelização em diferentes países; esta ficha corresponde à sua congregação masculina."
+    },
+    "sources": [
+      "Santa Sede, biografía de Luis Orione, canonización de 2004",
+      "Juan Pablo II, mensaje a la Pequeña Obra, marzo de 2003"
+    ]
+  },
+  {
+    "id": "rogacionistas-rcj",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Aníbal María Di Francia"
+      ],
+      "en": [
+        "Saint Hannibal Mary Di Francia"
+      ],
+      "pt": [
+        "Santo Aníbal Maria Di Francia"
+      ]
+    },
+    "presence": {
+      "es": "Los sacerdotes y hermanos promueven la oración por las vocaciones, publicaciones formativas y obras educativas y caritativas en diversos países.",
+      "en": "The priests and brothers promote prayer for vocations, formation publications and educational and charitable works in different countries.",
+      "pt": "Os sacerdotes e irmãos promovem a oração pelas vocações, publicações formativas e obras educativas e caritativas em diferentes países."
+    },
+    "sources": [
+      "Rogationists, About Us",
+      "Rogationist Publications, About Us",
+      "Curia rogacionista, calendario 2024: aniversario fundacional del 16 de mayo"
+    ]
+  },
+  {
+    "id": "misioneros-sagrado-corazon-msc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Los misioneros sirven en distintas regiones mediante pastoral, misiones y formación, en colaboración con otras vocaciones de la familia Chevalier.",
+      "en": "The missionaries serve in different regions through pastoral ministry, missions and formation, collaborating with other vocations in the Chevalier family.",
+      "pt": "Os missionários servem em diferentes regiões por meio de pastoral, missões e formação, em colaboração com outras vocações da família Chevalier."
+    },
+    "sources": [
+      "MSC Irlanda, Our History",
+      "Juan Pablo II, carta por el 150 aniversario, 1-IX-2004"
+    ]
+  },
+  {
+    "id": "sagrados-corazones-sscc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Damián de Molokai"
+      ],
+      "en": [
+        "Saint Damien of Molokai"
+      ],
+      "pt": [
+        "São Damião de Molokai"
+      ]
+    },
+    "presence": {
+      "es": "La rama masculina mantiene comunidades y servicios pastorales y misioneros en distintas regiones, junto a la presencia propia de la rama femenina.",
+      "en": "The male branch maintains communities and pastoral and missionary services in different regions, alongside the female branch’s own presence.",
+      "pt": "O ramo masculino mantém comunidades e serviços pastorais e missionários em diferentes regiões, junto à presença própria do ramo feminino."
+    },
+    "sources": [
+      "Congregación SS.CC. de Irlanda e Inglaterra, History",
+      "Catholic Encyclopedia, Congregation of Picpus, 1912",
+      "Santa Sede, biografía de san Damián, canonización de 2009"
+    ]
+  },
+  {
+    "id": "hermanos-cristianos-cfc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Edmund Ignatius Rice"
+      ],
+      "en": [
+        "Blessed Edmund Ignatius Rice"
+      ],
+      "pt": [
+        "Bem-aventurado Edmund Ignatius Rice"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades y obras vinculadas al carisma de Edmund Rice desarrollan educación, atención a jóvenes y servicios de justicia social con amplia colaboración laical.",
+      "en": "Communities and works linked to Edmund Rice’s charism undertake education, youth support and social justice services with extensive lay collaboration.",
+      "pt": "As comunidades e obras ligadas ao carisma de Edmund Rice desenvolvem educação, atenção aos jovens e serviços de justiça social com ampla colaboração leiga."
+    },
+    "sources": [
+      "Christian Brothers European Province, History",
+      "Edmund Rice Christian Brothers Oceania, FAQ y presentación de la provincia"
+    ]
+  },
+  {
+    "id": "basilianos-san-josafat-osbm",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Josafat Kuntsevych"
+      ],
+      "en": [
+        "Saint Josaphat Kuntsevych"
+      ],
+      "pt": [
+        "São Josafat Kuntsevych"
+      ]
+    },
+    "presence": {
+      "es": "La orden mantiene monasterios en Europa y América, con vida litúrgica, formación, actividad editorial y atención pastoral de comunidades católicas orientales.",
+      "en": "The order maintains monasteries in Europe and the Americas, combining liturgical life, formation, publishing and pastoral care of Eastern Catholic communities.",
+      "pt": "A ordem mantém mosteiros na Europa e nas Américas, com vida litúrgica, formação, atividade editorial e atendimento pastoral de comunidades católicas orientais."
+    },
+    "sources": [
+      "Orden Basiliana de San Josafat, Brief History of the Order",
+      "Orden Basiliana de San Josafat, edición de los capítulos generales, 5-V-2026"
+    ]
+  },
+  {
+    "id": "benedictinas-adoracion-perpetua-osb",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Sus monasterios continúan la vida contemplativa y la adoración eucarística en comunidades europeas, entre ellas las de Francia y Polonia.",
+      "en": "Its monasteries continue contemplative life and Eucharistic adoration in European communities, including those in France and Poland.",
+      "pt": "Seus mosteiros continuam a vida contemplativa e a adoração eucarística em comunidades europeias, entre elas as da França e da Polônia."
+    },
+    "sources": [
+      "Service des Moniales, Monastery of the Immaculée Conception at Rouen",
+      "Benedictine Nuns of the Blessed Sacrament de Varsovia, History"
+    ]
+  },
+  {
+    "id": "dominicas-contemplativas-op",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santo Domingo de Guzmán, fundador"
+      ],
+      "en": [
+        "Saint Dominic de Guzmán, founder"
+      ],
+      "pt": [
+        "São Domingos de Gusmão, fundador"
+      ]
+    },
+    "presence": {
+      "es": "Los monasterios dominicos ofrecen presencia contemplativa en diferentes países y colaboran entre sí mediante estructuras propias de la vida monástica.",
+      "en": "Dominican monasteries offer a contemplative presence in different countries and collaborate through structures proper to monastic life.",
+      "pt": "Os mosteiros dominicanos oferecem presença contemplativa em diferentes países e colaboram entre si por meio de estruturas próprias da vida monástica."
+    },
+    "sources": [
+      "Orden de Predicadores, Nuns",
+      "Orden de Predicadores, Our Story: Prouilhe, 1206"
+    ]
+  },
+  {
+    "id": "concepcionistas-oic",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Julio II, bula Ad statum prosperum, 17-IX-1511: aprobación de la regla propia.",
+      "en": "Julius II, bull Ad statum prosperum, 17 September 1511: approval of the order’s own rule.",
+      "pt": "Papa Júlio II, bula Ad statum prosperum, 17-IX-1511: aprovação da regra própria."
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Beatriz de Silva"
+      ],
+      "en": [
+        "Saint Beatrice of Silva"
+      ],
+      "pt": [
+        "Santa Beatriz da Silva"
+      ]
+    },
+    "presence": {
+      "es": "La orden mantiene monasterios de vida contemplativa en España, Brasil y otros países, con oración litúrgica, trabajo y vida fraterna.",
+      "en": "The order maintains contemplative monasteries in Spain, Brazil and other countries, with liturgical prayer, work and fraternal life.",
+      "pt": "A ordem mantém mosteiros de vida contemplativa na Espanha, no Brasil e em outros países, com oração litúrgica, trabalho e vida fraterna."
+    },
+    "sources": [
+      "Pablo VI, canonización de Beatriz de Silva, 3-X-1976",
+      "Concepcionistas OIC Brasil, A Ordem",
+      "Concepcionistas OIC Brasil, Regra e Constituições: bula Ad statum prosperum"
+    ]
+  },
+  {
+    "id": "brigidinas-monasticas-osss",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Brígida de Suecia"
+      ],
+      "en": [
+        "Saint Bridget of Sweden"
+      ],
+      "pt": [
+        "Santa Brígida da Suécia"
+      ]
+    },
+    "presence": {
+      "es": "La rama histórica continúa en comunidades contemplativas europeas; otras ramas brigidinas mantienen sus propios monasterios, congregaciones y formas de gobierno.",
+      "en": "The historical branch continues in European contemplative communities; other Bridgettine branches maintain their own monasteries, congregations and forms of governance.",
+      "pt": "O ramo histórico continua em comunidades contemplativas europeias; outros ramos brigidinos mantêm seus próprios mosteiros, congregações e formas de governo."
+    },
+    "sources": [
+      "Bridgettine Sisters de Columbus, History y distinción de ramas",
+      "S:ta Birgittas abbedi Pax Mariae, preguntas sobre su regla y vida contemplativa"
+    ]
+  },
+  {
+    "id": "carmelitas-caridad-vedruna-ccv",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Joaquina de Vedruna"
+      ],
+      "en": [
+        "Saint Joaquina de Vedruna"
+      ],
+      "pt": [
+        "Santa Joaquina de Vedruna"
+      ]
+    },
+    "presence": {
+      "es": "La familia Vedruna mantiene presencia educativa, sanitaria y social en distintos continentes, con religiosas y colaboradores laicos que comparten la misión.",
+      "en": "The Vedruna family maintains educational, healthcare and social ministries on different continents, involving sisters and lay collaborators who share the mission.",
+      "pt": "A família Vedruna mantém presença educativa, sanitária e social em diferentes continentes, com religiosas e colaboradores leigos que compartilham a missão."
+    },
+    "sources": [
+      "Carmelitas de la Caridad Vedruna, Orígenes",
+      "Fundación Vedruna Educación, Historia y biografía"
+    ]
+  },
+  {
+    "id": "hermanitas-pobres-psdp",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Juana Jugan"
+      ],
+      "en": [
+        "Saint Jeanne Jugan"
+      ],
+      "pt": [
+        "Santa Joana Jugan"
+      ]
+    },
+    "presence": {
+      "es": "La congregación mantiene hogares para personas mayores pobres en distintos continentes, con participación de hermanas, profesionales, voluntarios y benefactores.",
+      "en": "The congregation maintains homes for elderly people in poverty on different continents, involving sisters, professionals, volunteers and benefactors.",
+      "pt": "A congregação mantém lares para pessoas idosas pobres em diferentes continentes, com participação de irmãs, profissionais, voluntários e benfeitores."
+    },
+    "sources": [
+      "Little Sisters of the Poor Australia, Our History",
+      "Little Sisters of the Poor Australia, About Us"
+    ]
+  },
+  {
+    "id": "religiosas-sagrado-corazon-rscj",
+    "kind": "congregation",
+    "motto": {
+      "es": "Un corazón y un alma en el Corazón de Jesús.",
+      "en": "One Heart and One Soul in the Heart of Jesus.",
+      "pt": "Um coração e uma alma no Coração de Jesus."
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Magdalena Sofía Barat",
+        "Santa Rosa Filipina Duchesne"
+      ],
+      "en": [
+        "Saint Madeleine Sophie Barat",
+        "Saint Rose Philippine Duchesne"
+      ],
+      "pt": [
+        "Santa Madalena Sofia Barat",
+        "Santa Rosa Filipina Duchesne"
+      ]
+    },
+    "presence": {
+      "es": "Las religiosas y sus colaboradores sirven en educación y proyectos sociales en distintos países, dentro de una red internacional de espiritualidad y misión.",
+      "en": "The sisters and their collaborators serve in education and social projects in different countries within an international network of spirituality and mission.",
+      "pt": "As religiosas e seus colaboradores servem na educação e em projetos sociais em diferentes países, dentro de uma rede internacional de espiritualidade e missão."
+    },
+    "sources": [
+      "Society of the Sacred Heart, Our History",
+      "Society of the Sacred Heart, Our Founding Mothers"
+    ]
+  },
+  {
+    "id": "compania-santa-teresa-stj",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Enrique de Ossó"
+      ],
+      "en": [
+        "Saint Enrique de Ossó"
+      ],
+      "pt": [
+        "Santo Henrique de Ossó"
+      ]
+    },
+    "presence": {
+      "es": "La Compañía desarrolla misión educativa en África, América y Europa, en colaboración con laicos y laicas vinculados al carisma teresiano.",
+      "en": "The Society undertakes educational mission in Africa, the Americas and Europe, collaborating with lay women and men linked to its Teresian charism.",
+      "pt": "A Companhia desenvolve missão educativa na África, nas Américas e na Europa, em colaboração com leigos e leigas ligados ao carisma teresiano."
+    },
+    "sources": [
+      "Compañía de Santa Teresa de Jesús, Quiénes somos",
+      "Compañía de Santa Teresa de Jesús, Rasgos carismáticos",
+      "Santa Sede, biografía de Enrique de Ossó"
+    ]
   }
 ]
