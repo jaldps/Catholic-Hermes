@@ -64,6 +64,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
@@ -216,25 +217,40 @@ private fun nearestLiturgical(c: Color): Color {
 enum class GroupPosition { First, Middle, Last, Single }
 
 /**
- * Glass background for one row of a group split across lazy items: only the
- * outer corners are rounded, and no shadow (it would seam between items).
- * Applies the gutter.
+ * Content glass for one row of a group split across lazy items: only the
+ * outer corners are rounded and the rim runs unbroken down the sides, so
+ * consecutive items read as one pane. No shadow (it would seam between
+ * items). Applies the gutter.
  */
 @Composable
 fun Modifier.groupedItem(position: GroupPosition): Modifier {
     val design = LocalAppDesign.current
-    val r = if (design.isSanctuary) 8.dp else 20.dp
+    val r = if (design.isSanctuary) 8.dp else 24.dp
     val shape = when (position) {
         GroupPosition.First -> RoundedCornerShape(topStart = r, topEnd = r)
         GroupPosition.Middle -> RoundedCornerShape(0.dp)
         GroupPosition.Last -> RoundedCornerShape(bottomStart = r, bottomEnd = r)
         GroupPosition.Single -> RoundedCornerShape(r)
     }
-    return this
-        .fillMaxWidth()
-        .padding(horizontal = design.spacing.gutter)
-        .clip(shape)
-        .background(design.palette.groupedSurface)
+    val base = this.fillMaxWidth().padding(horizontal = design.spacing.gutter)
+    if (design.opaqueMaterial()) return base.clip(shape).background(design.palette.groupedSurface)
+    val spec = design.glassSpec(GlassRole.Content, lifted = false)
+    return base.clip(shape).drawBehind {
+        // The pane continues beyond this item wherever the group does.
+        val radius = r.toPx()
+        val top = if (position == GroupPosition.First || position == GroupPosition.Single) 0f else -radius * 2f
+        val bottom = if (position == GroupPosition.Last || position == GroupPosition.Single) size.height else size.height + radius * 2f
+        val stroke = spec.rimWidth.toPx()
+        val corner = androidx.compose.ui.geometry.CornerRadius(radius, radius)
+        drawRoundRect(spec.fillBottom, androidx.compose.ui.geometry.Offset(0f, top),
+            androidx.compose.ui.geometry.Size(size.width, bottom - top), corner)
+        drawRoundRect(
+            Brush.horizontalGradient(listOf(spec.rimLight, spec.rimShade, spec.rimLight.copy(alpha = spec.rimLight.alpha * 0.6f))),
+            androidx.compose.ui.geometry.Offset(stroke / 2f, top + stroke / 2f),
+            androidx.compose.ui.geometry.Size(size.width - stroke, bottom - top - stroke), corner,
+            style = androidx.compose.ui.graphics.drawscope.Stroke(stroke)
+        )
+    }
 }
 
 /** A list row usable as a lazy item; see [groupedItem]. */
@@ -298,24 +314,31 @@ fun AppGroupedRow(
 
 // ------------------------------------------------------------------ toggles
 
-/** iOS-style switch: success green when on. */
+/** Glass switch: an accent-lit track with a bright lens that slides on a spring. */
 @Composable
 fun AppSwitch(checked: Boolean, onCheckedChange: (Boolean) -> Unit, modifier: Modifier = Modifier, tag: String? = null) {
     val design = LocalAppDesign.current
     val p = design.palette
-    val track by animateColorAsState(if (checked) p.success else p.textPrimary.copy(alpha = 0.18f),
+    val feedback = rememberGlassFeedback()
+    val track by animateColorAsState(if (checked) p.success else p.textPrimary.copy(alpha = if (design.isDark) 0.20f else 0.14f),
         tween(design.motion.fastMillis), label = "switch")
-    val knob by animateDpAsState(if (checked) 20.dp else 0.dp, tween(design.motion.fastMillis), label = "knob")
+    val knob by animateDpAsState(if (checked) 20.dp else 0.dp,
+        if (design.reduceMotion) androidx.compose.animation.core.snap() else androidx.compose.animation.core.spring(dampingRatio = 0.7f, stiffness = 520f),
+        label = "knob")
+    val capsule = RoundedCornerShape(percent = 50)
     Box(modifier.size(width = 56.dp, height = 48.dp)
-        .toggleable(value = checked, role = Role.Switch, onValueChange = onCheckedChange)
+        .toggleable(value = checked, role = Role.Switch, onValueChange = { feedback.tick(); onCheckedChange(it) })
         .tag(tag), contentAlignment = Alignment.Center) {
         Box(Modifier.size(width = 51.dp, height = 31.dp)
-            .clip(RoundedCornerShape(percent = 50)).background(track)
-            .border(if (design.highContrast) 1.5.dp else 0.5.dp, p.hairline, RoundedCornerShape(percent = 50))
+            .clip(capsule).background(track)
+            .border(if (design.highContrast) 1.5.dp else 1.dp,
+                if (design.opaqueMaterial()) Brush.verticalGradient(listOf(p.hairline, p.hairline))
+                else Brush.verticalGradient(listOf(Color.Black.copy(alpha = if (design.isDark) 0.30f else 0.10f), Color.White.copy(alpha = if (design.isDark) 0.14f else 0.55f))),
+                capsule)
             .padding(2.dp)) {
             Box(Modifier.offset(x = knob).size(27.dp)
-                .softShadow(CircleShape, Color.Black.copy(alpha = 0.14f), 4.dp, 1.dp)
-                .background(Color.White, CircleShape))
+                .softShadow(CircleShape, Color.Black.copy(alpha = 0.20f), 6.dp, 2.dp)
+                .background(Brush.verticalGradient(listOf(Color.White, Color(0xFFF1F3F8))), CircleShape))
         }
     }
 }
@@ -430,9 +453,10 @@ fun AppSheet(
         onDismissRequest = onDismiss,
         properties = DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)
     ) {
+        androidx.compose.runtime.CompositionLocalProvider(LocalLiquidBackdrop provides null) {
         Box(Modifier.fillMaxSize()) {
             Box(
-                Modifier.fillMaxSize().background(Color.Black.copy(alpha = if (design.isDark) 0.5f else 0.28f))
+                Modifier.fillMaxSize().background(p.scrim)
                     .clickable(remember { MutableInteractionSource() }, null) { onDismiss() }
             )
             AnimatedVisibility(
@@ -445,12 +469,14 @@ fun AppSheet(
                 Column(
                     modifier.fillMaxWidth().heightIn(max = (LocalConfiguration.current.screenHeightDp * 0.9f).dp)
                         .clip(shape)
-                        .background(Brush.verticalGradient(listOf(p.canvasTop, p.canvasBottom)))
-                        .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, Color.Transparent)), shape)
+                        .background(p.canvasTop)
+                        .lumenCanvas()
+                        .border(1.dp, Brush.verticalGradient(
+                            0f to p.glassEdgeTop, 0.25f to p.glassEdgeBottom.copy(alpha = p.glassEdgeBottom.alpha * 0.5f), 1f to Color.Transparent), shape)
                         .tag(tag)
                 ) {
                     Box(Modifier.fillMaxWidth().padding(top = 10.dp), contentAlignment = Alignment.Center) {
-                        Box(Modifier.size(width = 38.dp, height = 5.dp).clip(RoundedCornerShape(percent = 50)).background(p.inkQuiet.copy(alpha = 0.5f)))
+                        Box(Modifier.size(width = 40.dp, height = 5.dp).clip(RoundedCornerShape(percent = 50)).background(p.inkQuiet.copy(alpha = 0.55f)))
                     }
                     if (title != null) {
                         Text(title, style = styles.headline, color = p.textPrimary, textAlign = TextAlign.Center,
@@ -470,6 +496,7 @@ fun AppSheet(
                 }
             }
         }
+        }
     }
 }
 
@@ -484,7 +511,7 @@ fun AppMenu(expanded: Boolean, onDismiss: () -> Unit, items: List<AppMenuItem>, 
     val styles = LocalAppTextStyles.current
     MaterialTheme(
         colorScheme = MaterialTheme.colorScheme.copy(surface = p.raised, surfaceContainer = p.raised),
-        shapes = MaterialTheme.shapes.copy(extraSmall = RoundedCornerShape(18.dp))
+        shapes = MaterialTheme.shapes.copy(extraSmall = RoundedCornerShape(if (design.isSanctuary) 10.dp else 22.dp))
     ) {
         DropdownMenu(expanded = expanded, onDismissRequest = onDismiss, modifier = modifier.widthIn(min = 220.dp)) {
             items.forEachIndexed { i, item ->
@@ -515,8 +542,8 @@ fun AppMenuChip(label: String, items: List<AppMenuItem>, modifier: Modifier = Mo
     var open by remember { mutableStateOf(false) }
     Box(modifier) {
         Row(
-            Modifier.heightIn(min = 40.dp).lumenPress({ open = true }, 0.96f)
-                .lumenGlass(RoundedCornerShape(percent = 50), strong = true)
+            Modifier.heightIn(min = 44.dp).lumenPress({ open = true }, 0.96f)
+                .lumenGlass(LocalAppDesign.current.shapes.button, strong = true)
                 .tag(tag).padding(horizontal = 16.dp, vertical = 9.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -573,7 +600,9 @@ fun AppConfirmDialog(
     val styles = LocalAppTextStyles.current
     Dialog(onDismissRequest = onDismiss) {
         Column(
-            Modifier.fillMaxWidth().clip(RoundedCornerShape(24.dp)).background(p.raised).tag(tag).padding(top = 24.dp),
+            Modifier.fillMaxWidth().clip(design.shapes.dialog).background(p.raised)
+                .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), design.shapes.dialog)
+                .tag(tag).padding(top = 26.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(title, style = styles.headline, color = p.textPrimary, textAlign = TextAlign.Center, modifier = Modifier.padding(horizontal = 24.dp))

@@ -107,8 +107,9 @@ fun AppGlassSurface(
 }
 
 /**
- * The 40dp glass circle used for back, close, search, bell, bookmark and more
- * (44dp hit area). [onImage] uses the denser glass for legibility over art.
+ * The 44dp glass circle used for back, close, search, bell, bookmark and more
+ * (48dp hit area). In the scaffold's chrome it blurs what scrolls beneath it;
+ * [onImage] keeps the denser glass for legibility over art.
  */
 @Composable
 fun AppGlassIconButton(
@@ -122,28 +123,28 @@ fun AppGlassIconButton(
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
+    val live = LocalLiquidBackdrop.current != null
     Box(
         modifier
             .size(48.dp)
-            .lumenPress(onClick, 0.92f)
+            .lumenPress(onClick, 0.9f)
             .semantics { if (contentDescription != null) this.contentDescription = contentDescription }
             .tagged(tag),
         contentAlignment = Alignment.Center
     ) {
-        Box(
-            Modifier
-                .size(40.dp)
-                // Dark glass casts no shadow (a black shadow on near-black is a
-                // smudge); over art it gets a faint dark backing so the 12%
-                // white stays legible without turning into a grey disc.
-                .then(
-                    if (design.isDark && onImage) Modifier.background(Color.Black.copy(alpha = 0.22f), CircleShape)
-                    else Modifier
-                )
-                .lumenGlass(CircleShape, strong = true, lifted = !design.isDark),
-            contentAlignment = Alignment.Center
-        ) {
-            Icon(icon, contentDescription = null, tint = tint ?: p.textPrimary, modifier = Modifier.size(24.dp))
+        Box(Modifier.size(44.dp), contentAlignment = Alignment.Center) {
+            LiquidBackdropFill(CircleShape, Modifier.matchParentSize(), blur = 16.dp)
+            Box(
+                Modifier.matchParentSize()
+                    // Over art in the dark, a faint backing keeps the glass from
+                    // disappearing into a bright painting.
+                    .then(
+                        if (design.isDark && onImage && !design.opaqueMaterial()) Modifier.background(Color.Black.copy(alpha = 0.20f), CircleShape)
+                        else Modifier
+                    )
+                    .liquidPane(CircleShape, design.chromeGlassSpec(live))
+            )
+            Icon(icon, contentDescription = null, tint = tint ?: p.textPrimary, modifier = Modifier.size(22.dp))
         }
     }
 }
@@ -201,16 +202,18 @@ fun AppHeroImage(
         val grade = if (design.isSanctuary) {
             gradeMatrix(0.94f, 0.96f, 0.93f, 0.88f, 3f, 2f, 0f)
         } else if (!design.isDark) {
-            gradeMatrix(0.85f, 0.93f, 0.93f, 0.93f, 18f, 18f, 18f)
+            gradeMatrix(0.96f, 0.97f, 0.97f, 0.98f, 8f, 8f, 10f)
         } else if (meta.tone == "light") {
             // About -0.6 EV with a warm cast.
-            gradeMatrix(0.64f, 0.37f, 0.35f, 0.30f, 3f, 2f, -2f)
+            gradeMatrix(0.78f, 0.52f, 0.50f, 0.50f, 2f, 2f, 4f)
         } else {
-            gradeMatrix(0.74f, 0.74f, 0.70f, 0.62f, 3f, 1f, -3f)
+            gradeMatrix(0.88f, 0.84f, 0.82f, 0.84f, 1f, 1f, 3f)
         }
         ColorFilter.colorMatrix(grade)
     }
-    Box(modifier.clipToBounds().background(p.canvasTop)) {
+    val dissolve = fadeToCanvas && !design.opaqueMaterial()
+    Box(modifier.clipToBounds()
+        .then(if (dissolve) Modifier.fadeOutBottom(fadeStart) else Modifier.background(p.canvasTop))) {
         if (bitmap != null) {
             if (meta.zoom > 1.001f) {
                 Canvas(Modifier.fillMaxSize()) {
@@ -246,7 +249,7 @@ fun AppHeroImage(
         // Light mist: lift the art toward the paper so a saturated painting
         // never shouts. Dark needs none beyond the grade above.
         if (!design.isDark && !design.isSanctuary) {
-            Box(Modifier.fillMaxSize().background(p.canvasTop.copy(alpha = 0.10f)))
+            Box(Modifier.fillMaxSize().background(p.canvasTop.copy(alpha = 0.05f)))
         }
         if (topVeil) {
             Box(
@@ -260,7 +263,7 @@ fun AppHeroImage(
                 )
             )
         }
-        if (fadeToCanvas) {
+        if (fadeToCanvas && !dissolve) {
             val span = 1f - fadeStart
             Box(
                 Modifier.fillMaxSize().background(
@@ -410,7 +413,7 @@ fun AppDetailHeader(
                 if (assetPath != null) {
                     AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeStart = 0.5f)
                 } else {
-                    Box(Modifier.fillMaxSize()) {
+                    Box(Modifier.fillMaxSize().then(if (design.opaqueMaterial()) Modifier else Modifier.fadeOutBottom(0.5f))) {
                         AsyncImage(
                             model = imageUrl,
                             contentDescription = null,
@@ -423,9 +426,7 @@ fun AppDetailHeader(
                                 Brush.verticalGradient(
                                     0f to (if (design.isDark) Color.Black.copy(alpha = 0.4f) else p.canvasTop.copy(alpha = 0.55f)),
                                     0.25f to Color.Transparent,
-                                    0.5f to Color.Transparent,
-                                    0.8f to p.canvasTop.copy(alpha = 0.8f),
-                                    1f to p.canvasTop
+                                    1f to Color.Transparent
                                 )
                             )
                         )
@@ -664,8 +665,8 @@ fun AppCategoryTile(
             .heightIn(min = 104.dp)
             .lumenPress(onClick, 0.96f)
             .then(
-                if (selected) Modifier.softShadow(shape, p.shadow).background(p.action, shape)
-                else Modifier.lumenGlass(shape)
+                if (selected) Modifier.liquidPane(shape, design.tintedGlassSpec(p.action))
+                else Modifier.appContentSurface(shape)
             )
             .clip(shape)
             .semantics { this.selected = selected }
@@ -732,14 +733,14 @@ fun AppImageCard(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    val shape = RoundedCornerShape(22.dp)
+    val shape = if (design.isSanctuary) design.shapes.card else RoundedCornerShape(24.dp)
     val fallback = rememberAssetBitmap(assetPath, 720)
     val meta2 = rememberHeroMeta(assetPath)
     Box(
         modifier
             .aspectRatio(aspectRatio)
             .lumenPress(onClick, 0.97f)
-            .softShadow(shape, p.shadow)
+            .softShadow(shape, p.shadow.copy(alpha = if (design.isDark) 0.45f else 0.16f), 26.dp, 10.dp)
             .clip(shape)
             .background(p.raised)
             .tagged(tag)
@@ -769,7 +770,10 @@ fun AppImageCard(
                 )
             )
         )
-        Box(Modifier.fillMaxSize().border(1.dp, Color.White.copy(alpha = if (design.isDark) 0.08f else 0.35f), shape))
+        Box(Modifier.fillMaxSize().border(1.dp, Brush.linearGradient(listOf(
+            Color.White.copy(alpha = if (design.isDark) 0.30f else 0.70f),
+            Color.White.copy(alpha = if (design.isDark) 0.04f else 0.12f),
+            Color.White.copy(alpha = if (design.isDark) 0.12f else 0.32f))), shape))
         Column(Modifier.align(Alignment.BottomStart).padding(14.dp)) {
             if (eyebrow != null) {
                 Text(eyebrow, style = styles.caption, color = Color.White.copy(alpha = 0.85f), maxLines = 1)
@@ -819,35 +823,37 @@ fun AppFilterChips(
     }
 }
 
-/** One capsule chip. Selected = action fill. */
+/** One capsule chip: clear glass, accent-tinted glass when selected. */
 @Composable
 fun AppKitChip(label: String, selected: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
     val shape = design.shapes.button
-    val fill by animateColorAsState(if (selected) p.action else p.groupedSurface, tween(design.motion.fastMillis), label = "chip")
+    val ink by animateColorAsState(if (selected) p.onAction else p.textPrimary, tween(design.motion.fastMillis), label = "chip")
     Box(
         modifier
             .heightIn(min = 48.dp)
             .lumenPress(onClick, 0.95f, Role.Tab)
-            .then(if (selected) Modifier.softShadow(shape, p.shadow, 16.dp, 4.dp) else Modifier.lumenGlass(shape, lifted = false))
+            .then(
+                if (selected) Modifier.liquidPane(shape, design.tintedGlassSpec(p.action).copy(shadowBlur = 16.dp, shadowY = 5.dp))
+                else Modifier.lumenGlass(shape, lifted = false)
+            )
             .clip(shape)
-            .background(fill)
             .semantics { this.selected = selected }
-            .padding(horizontal = 16.dp, vertical = 8.dp),
+            .padding(horizontal = 18.dp, vertical = 8.dp),
         contentAlignment = Alignment.Center
     ) {
         Text(
             label,
-            style = styles.subhead.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Medium),
-            color = if (selected) p.onAction else p.textPrimary,
+            style = styles.subhead.copy(fontWeight = if (selected) androidx.compose.ui.text.font.FontWeight.SemiBold else androidx.compose.ui.text.font.FontWeight.Medium),
+            color = ink,
             maxLines = 1
         )
     }
 }
 
-/** The primary action: a 52dp charcoal (ivory in dark) capsule. */
+/** The primary action: a 52dp capsule of accent-tinted glass. */
 @Composable
 fun AppPrimaryCapsule(
     label: String,
@@ -867,9 +873,7 @@ fun AppPrimaryCapsule(
             .then(if (fillWidth) Modifier.fillMaxWidth() else Modifier)
             .heightIn(min = 52.dp)
             .lumenPress(onClick, 0.97f, enabled = enabled)
-            // Warm 8% lift in light; none in dark (an ivory capsule needs no shadow).
-            .softShadow(shape, if (enabled && !design.isDark) p.shadow else Color.Transparent, 24.dp, 8.dp)
-            .background(if (enabled) p.action else p.action.copy(alpha = 0.3f), shape)
+            .liquidPane(shape, design.tintedGlassSpec(p.action, enabled))
             .tagged(tag)
             .padding(horizontal = 26.dp, vertical = 14.dp),
         horizontalArrangement = Arrangement.Center,
@@ -901,20 +905,14 @@ fun AppSecondaryCapsule(
     Row(
         modifier
             .then(if (fillWidth) Modifier.fillMaxWidth() else Modifier)
-            .heightIn(min = 48.dp)
+            .heightIn(min = 50.dp)
             .lumenPress(onClick, 0.97f, enabled = enabled)
-            // Flat tint, no shadow: black 5% in light, white 12% with a lit
-            // 14% -> 4% edge in dark.
-            .background(
-                if (design.isDark) Color.White.copy(alpha = 0.12f) else Color.Black.copy(alpha = 0.05f),
-                shape
-            )
             .then(
-                if (design.isDark) Modifier.border(
-                    1.dp,
-                    Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.14f), Color.White.copy(alpha = 0.04f))),
-                    shape
-                ) else Modifier
+                if (design.opaqueMaterial()) Modifier
+                    .background(if (design.isDark) Color.White.copy(alpha = 0.12f) else Color.Black.copy(alpha = 0.05f), shape)
+                    .then(if (design.isDark) Modifier.border(1.dp,
+                        Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.14f), Color.White.copy(alpha = 0.04f))), shape) else Modifier)
+                else Modifier.liquidPane(shape, design.glassSpec(GlassRole.Control).copy(shadowBlur = 14.dp, shadowY = 4.dp))
             )
             .tagged(tag)
             .padding(horizontal = 20.dp, vertical = 10.dp),
@@ -952,7 +950,7 @@ fun AppTransportBar(
     val shape = design.shapes.button
     Row(
         modifier
-            .lumenGlass(shape)
+            .lumenGlass(shape, strong = true)
             .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(18.dp)
@@ -964,15 +962,13 @@ fun AppTransportBar(
                 .lumenPress(onPlayPause, 0.92f)
                 .semantics { contentDescription = if (isPlaying) pauseLabel else playLabel }
                 .testTag("${tagPrefix}_play")
-                .softShadow(CircleShape, p.shadow, 18.dp, 6.dp)
-                .background(p.glassStrong, CircleShape)
-                .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), CircleShape),
+                .liquidPane(CircleShape, design.tintedGlassSpec(p.action)),
             contentAlignment = Alignment.Center
         ) {
             Icon(
                 if (isPlaying) Icons.Filled.Pause else Icons.Filled.PlayArrow,
                 null,
-                tint = p.textPrimary,
+                tint = p.onAction,
                 modifier = Modifier.size(30.dp)
             )
         }
@@ -1059,7 +1055,7 @@ fun AppProgressBar(
                 .fillMaxWidth(animated)
                 .height(height)
                 .clip(RoundedCornerShape(percent = 50))
-                .background(color ?: p.textPrimary)
+                .background(color ?: p.accent)
         )
     }
 }
@@ -1167,7 +1163,7 @@ fun AppStepList(
                 Box(
                     Modifier
                         .size(34.dp)
-                        .then(if (active) Modifier.background(p.action, CircleShape) else Modifier.lumenGlass(CircleShape, lifted = false)),
+                        .then(if (active) Modifier.liquidPane(CircleShape, design.tintedGlassSpec(p.action, glow = false)) else Modifier.lumenGlass(CircleShape, lifted = false)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text("${i + 1}", style = styles.subhead, color = if (active) p.onAction else p.textPrimary)

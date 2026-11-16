@@ -131,8 +131,8 @@ fun GuiCustomizerModal(
                 val swatch = when (preset.id) {
                     "MONASTIC_MINIMALIST" -> if (design.isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
                     "SACRED_BURGUNDY" -> if (design.isDark) Color(0xFFE59AA6) else Color(0xFF8A2D3B)
-                    "MARIAN_AZURE" -> if (design.isDark) Color(0xFF8FC2EC) else Color(0xFF2A6597)
-                    else -> if (design.isSanctuary) (if (design.isDark) Color(0xFFE5A4AE) else Color(0xFF7A293A)) else if (design.isDark) Color(0xFF7FC48A) else Color(0xFF2D743B)
+                    "MARIAN_AZURE" -> if (design.isDark) Color(0xFF9DBDFF) else Color(0xFF2459B5)
+                    else -> if (design.isSanctuary) (if (design.isDark) Color(0xFFE5A4AE) else Color(0xFF7A293A)) else if (design.isDark) Color(0xFF7FC48A) else Color(0xFF2A6E38)
                 }
                 Box(
                     Modifier
