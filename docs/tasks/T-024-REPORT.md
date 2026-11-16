@@ -16,10 +16,10 @@ No se asigna una lectura principal de los Salmos en estos cursos. Si se menciona
 
 El validador publicado exige cinco lecciones y no tiene opción `--partial`. En entregas de una o dos lecciones se ejecuta intacto mediante un envoltorio temporal externo al repositorio: conserva todos sus controles y descuenta únicamente el error de cantidad total, declarado como pendiente. El envoltorio además exige 70–110 palabras de contexto y 80–130 por desarrollo en cada idioma, con ambos contadores (espacios y regex). No se anuncian cinco lecciones cuando todavía hay un prefijo. Al completar cada curso se ejecuta el comando oficial sin envoltorio.
 
-## `track_paul_life_in_christ` · 2/5 lecciones
+## `track_paul_life_in_christ` · 4/5 lecciones
 
 ```text
-2/5 lessons (partial; exact-five completeness requirement pending) · 0 errors · 0 warnings
+4/5 lessons (partial; exact-five completeness requirement pending) · 0 errors · 0 warnings
 ```
 
 ### 1. `paul_1_damascus_encounter`
@@ -48,6 +48,32 @@ Lecturas: `rom 5:1-11`.
   - https://www.vatican.va/archive/catechism_sp/p3s1c3a2_sp.html
 
 CIC 1987–1995 sostiene justificación, fe, Bautismo, perdón, renovación y cooperación libre. La referencia a Trento se verifica a través de las citas del Catecismo: especialmente 1989 (DS 1528), 1992 (DS 1529) y 1993 (DS 1525); no se finge consulta de una edición independiente de los decretos. Se amplían los rangos con 1996–2005 para gracia, preparación y distinción entre estado de gracia y emociones (2005), y 2006–2011 para mérito y gratuidad de la gracia primera (2010). Se leyó también el resumen 2017–2029. No se caricaturiza a protestantes, ni se equipara justificación con éxito moral previo, ficción jurídica o perfección instantánea.
+
+### 3. `paul_3_one_body`
+
+Lecturas: `1co 12:12-27`.
+
+- CIC **787–795**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p123a9p2_sp.html
+- CIC **799–801**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p123a9p2_sp.html
+- CIC **827–827**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p123a9p3_sp.html
+
+CIC 787–795 sostiene comunión, Bautismo, Eucaristía, diversidad, Cabeza y crecimiento; se añaden 799–801 para carismas, bien común y discernimiento con los pastores, y 827 para la necesidad de conversión de miembros y ministros. La dignidad no se hace depender de utilidad, salud o cargo. No se interpreta Cuerpo de Cristo como absorción de las personas, ni santidad de la Iglesia como impecabilidad de cada decisión institucional. Las aplicaciones prácticas respetan la autonomía de quien necesita ayuda.
+
+### 4. `paul_4_greatest_love`
+
+Lecturas: `1co 13:1-13`.
+
+- CIC **1812–1813**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p3s1c1a7_sp.html
+- CIC **1822–1829**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p3s1c1a7_sp.html
+- CIC **2264–2265**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p3s2c2a5_sp.html
+
+CIC 1822–1829 sostiene caridad, amor de Dios y del prójimo, forma de las virtudes, verdad y corrección; se añade 1812–1813 para explicar virtud teologal como don de Dios y 2264–2265 para evitar interpretar paciencia como renuncia a proteger la vida. 1 Co 13 se lee dentro de la discusión sobre carismas, no solo como texto nupcial. No se compone una oración ni se reproduce de memoria una traducción moderna del himno. Las situaciones prácticas son ejemplos editoriales, no citas atribuidas a una persona real.
 
 ## Límites y revisión pendiente
 

@@ -372,6 +372,348 @@
           "url": null
         }
       ]
+    },
+    {
+      "id": "paul_3_one_body",
+      "lessonNumber": 3,
+      "title": {
+        "es": "Un solo Cuerpo, muchos miembros",
+        "en": "One Body, many members",
+        "pt": "Um só Corpo, muitos membros"
+      },
+      "scriptureReferences": [
+        "1co 12:12-27"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar la unión con Cristo y la diversidad de miembros en la Iglesia.",
+          "en": "Explain union with Christ and the diversity of members within the Church.",
+          "pt": "Explicar a união com Cristo e a diversidade de membros na Igreja."
+        },
+        {
+          "es": "Discernir un don por su servicio al bien común y a quienes necesitan cuidado.",
+          "en": "Discern a gift by its service to the common good and those needing care.",
+          "pt": "Discernir um dom por seu serviço ao bem comum e a quem precisa de cuidado."
+        }
+      ],
+      "summary": {
+        "es": "Pablo describe una comunión real en Cristo donde la diversidad sirve a la unidad. Ningún miembro puede excluir a otro ni medir su dignidad por su visibilidad o productividad.",
+        "en": "Paul describes a real communion in Christ where diversity serves unity. No member may exclude another or measure their dignity by visibility or productivity.",
+        "pt": "Paulo descreve uma comunhão real em Cristo na qual a diversidade serve à unidade. Nenhum membro pode excluir outro nem medir sua dignidade pela visibilidade ou produtividade."
+      },
+      "historicalContext": {
+        "es": "La primera carta a los Corintios se dirige a una comunidad con divisiones y preguntas sobre su vida compartida. En el capítulo doce, Pablo trata los dones espirituales y desarrolla la comparación del cuerpo: manos, pies, ojos y oídos muestran tanto la diferencia como la necesidad mutua. El capítulo trece explicará después el lugar decisivo del amor. Lee el pasaje como una corrección de la competencia entre miembros, no como una clasificación de personas más o menos valiosas. La pertenencia se funda en el Espíritu y el Bautismo, antes de cualquier función visible.",
+        "en": "First Corinthians addresses a community with divisions and questions about its shared life. In chapter twelve, Paul considers spiritual gifts and develops the comparison with a body: hands, feet, eyes and ears show both difference and mutual need. Chapter thirteen will explain love’s decisive place. Read this passage as a correction of competition between members, rather than a ranking of people as more or less valuable. Belonging rests on the Spirit and Baptism before any visible role, and the comparison requires attention to those who seem weakest in the community.",
+        "pt": "A primeira carta aos Coríntios se dirige a uma comunidade com divisões e perguntas sobre sua vida partilhada. No capítulo doze, Paulo trata dos dons espirituais e desenvolve a comparação com o corpo: mãos, pés, olhos e ouvidos mostram tanto a diferença como a necessidade mútua. O capítulo treze explicará depois o lugar decisivo do amor. Leia a passagem como correção da competição entre membros, não como classificação de pessoas mais ou menos valiosas. A pertença se fundamenta no Espírito e no Batismo, antes de qualquer função visível."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Más que reunirse alrededor de una idea",
+            "en": "More than gathering around an idea",
+            "pt": "Mais do que reunir-se ao redor de uma ideia"
+          },
+          "body": {
+            "es": "La imagen del cuerpo expresa una unión que supera el acuerdo sobre intereses comunes. El Catecismo explica que Cristo comunica su vida por el Espíritu y los sacramentos: el Bautismo incorpora a su muerte y resurrección, y la Eucaristía fortalece la comunión con él y entre los miembros. Cristo es la Cabeza, fuente del crecimiento de su Iglesia. Esta unión no borra la personalidad ni convierte cada decisión de un miembro en palabra divina. Permite recibir una vida compartida y responsabilidades mutuas, en lugar de construir una identidad cristiana completamente aislada.",
+            "en": "The body image expresses a union exceeding agreement about common interests. The Catechism explains that Christ communicates his life through the Spirit and sacraments: Baptism incorporates into his death and resurrection, and the Eucharist strengthens communion with him and among the members. Christ is the Head, the source of his Church’s growth. This union does not erase personality or turn every member’s decision into a divine word. It makes possible a shared life and mutual responsibilities, rather than constructing a Christian identity entirely in isolation from others who belong to Christ.",
+            "pt": "A imagem do corpo expressa uma união que ultrapassa o acordo sobre interesses comuns. O Catecismo explica que Cristo comunica sua vida pelo Espírito e pelos sacramentos: o Batismo incorpora à sua morte e ressurreição, e a Eucaristia fortalece a comunhão com ele e entre os membros. Cristo é a Cabeça, fonte do crescimento de sua Igreja. Essa união não apaga a personalidade nem transforma cada decisão de um membro em palavra divina. Permite receber uma vida partilhada e responsabilidades mútuas, em vez de construir uma identidade cristã completamente isolada."
+          }
+        },
+        {
+          "title": {
+            "es": "La fragilidad no elimina la pertenencia",
+            "en": "Vulnerability does not remove belonging",
+            "pt": "A fragilidade não elimina a pertença"
+          },
+          "body": {
+            "es": "Pablo responde tanto a quien se siente inútil como a quien cree no necesitar a los demás. Ninguna parte puede convertir su diferencia en motivo de expulsión. El texto concede especial atención y honor a lo que parece más débil: su dignidad no depende de rendimiento, salud o prestigio. El Catecismo relaciona esta diversidad con los dones del mismo Espíritu y con la caridad. Sufrir con quien sufre y alegrarse por su bien hacen concreta la comunión. Una comunidad sana busca maneras de incluir y acompañar, en vez de convertir la participación en una competencia.",
+            "en": "Paul addresses both the person who feels useless and the one who thinks others are unnecessary. No part can make difference a reason for exclusion. The text gives special attention and honour to what seems weaker: dignity does not depend on performance, health or prestige. The Catechism connects this diversity with the same Spirit’s gifts and with charity. Sharing another’s suffering and joy makes communion practical. A healthy community seeks ways to include and accompany rather than making participation a competition in which only the most visible or productive members seem to matter.",
+            "pt": "Paulo responde tanto a quem se sente inútil como a quem julga não precisar dos outros. Nenhuma parte pode transformar sua diferença em motivo de exclusão. O texto concede atenção e honra especiais àquilo que parece mais fraco: sua dignidade não depende de desempenho, saúde ou prestígio. O Catecismo relaciona essa diversidade aos dons do mesmo Espírito e à caridade. Sofrer com quem sofre e alegrar-se com seu bem tornam concreta a comunhão. Uma comunidade saudável procura maneiras de incluir e acompanhar, em vez de transformar a participação numa competição."
+          }
+        },
+        {
+          "title": {
+            "es": "Los dones necesitan discernimiento y servicio",
+            "en": "Gifts require discernment and service",
+            "pt": "Os dons precisam de discernimento e serviço"
+          },
+          "body": {
+            "es": "Un carisma es un don del Espíritu para edificar la Iglesia y servir al bien de las personas. Puede ser sencillo; no necesita llamar la atención. El Catecismo pide discernirlo según la caridad y en relación con los pastores, para que sirva al bien común. Esto no significa que una persona con responsabilidades esté exenta de rendir cuentas. La Iglesia recibe santidad de Cristo mientras sus miembros, también sus ministros, necesitan conversión. Cuidar la comunión puede exigir escuchar una herida, corregir una conducta y buscar ayuda adecuada; silenciar el daño no fortalece al cuerpo.",
+            "en": "A charism is a gift of the Spirit for building up the Church and serving people’s good. It can be simple and need not attract attention. The Catechism requires discerning it through charity and in relationship with the pastors so that it serves the common good. This does not exempt anyone with responsibilities from accountability. The Church receives holiness from Christ while her members, including ministers, need conversion. Caring for communion can require hearing a wound, correcting behaviour and seeking appropriate help; silencing harm does not strengthen the body or heal its members.",
+            "pt": "Um carisma é um dom do Espírito para edificar a Igreja e servir ao bem das pessoas. Pode ser simples; não precisa chamar atenção. O Catecismo pede discerni-lo segundo a caridade e em relação com os pastores, para que sirva ao bem comum. Isso não significa que uma pessoa com responsabilidades esteja dispensada de prestar contas. A Igreja recebe santidade de Cristo enquanto seus membros, também seus ministros, precisam de conversão. Cuidar da comunhão pode exigir escutar uma ferida, corrigir uma conduta e buscar ajuda adequada; silenciar o dano não fortalece o corpo."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Relee 1 Co 12,12–27 y distingue las dos tentaciones que Pablo representa: sentirse fuera por ser diferente y excluir al otro por no necesitarlo. Señala después cómo cambia la valoración de los miembros que parecen más débiles.",
+        "en": "Reread 1 Corinthians 12:12–27 and distinguish Paul’s two portrayed temptations: feeling outside because you are different and excluding someone you think unnecessary. Then notice how the valuation of seemingly weaker members changes.",
+        "pt": "Releia 1 Cor 12,12–27 e distinga as duas tentações apresentadas por Paulo: sentir-se fora por ser diferente e excluir o outro por julgá-lo desnecessário. Depois observe como muda a valorização dos membros que parecem mais fracos."
+      },
+      "meditatio": {
+        "es": "¿Tiendes a infravalorar un don propio o a despreciar uno ajeno? ¿Qué persona necesita hoy que tu comunidad reconozca su pertenencia sin exigirle demostrar utilidad o esconder su fragilidad?",
+        "en": "Do you tend to undervalue a gift of your own or dismiss someone else’s? Who needs your community to acknowledge their belonging today without demanding proof of usefulness or concealment of vulnerability?",
+        "pt": "Você tende a subestimar um dom seu ou a desprezar um dom alheio? Que pessoa precisa hoje que sua comunidade reconheça sua pertença sem exigir demonstração de utilidade ou ocultação da fragilidade?"
+      },
+      "oratio": {
+        "es": "Presenta a Cristo tu manera de pertenecer a una comunidad. Puedes agradecer un don recibido de otra persona y pedir ayuda para servir sin competir, usando palabras propias y respetando las necesidades de los demás.",
+        "en": "Bring to Christ your way of belonging to a community. You may thank him for a gift received through another person and ask for help to serve without competing, using your own words and respecting others’ needs.",
+        "pt": "Apresente a Cristo seu modo de pertencer a uma comunidade. Você pode agradecer um dom recebido de outra pessoa e pedir ajuda para servir sem competir, usando palavras próprias e respeitando as necessidades dos outros."
+      },
+      "contemplatio": {
+        "es": "Guarda entre sesenta y noventa segundos de silencio ante Cristo, Cabeza de su Cuerpo. No repases cargos o comparaciones. Permanece disponible para recibir su vida y vuelve con calma a esa presencia cuando te distraigas.",
+        "en": "Keep silence for sixty to ninety seconds before Christ, Head of his Body. Set roles and comparisons aside. Remain available to receive his life and return calmly to his presence whenever you become distracted.",
+        "pt": "Guarde entre sessenta e noventa segundos em silêncio diante de Cristo, Cabeça de seu Corpo. Deixe de lado funções e comparações. Permaneça disponível para receber sua vida e volte com calma a essa presença quando houver distração."
+      },
+      "actionStep": {
+        "es": "Pregunta a una persona cómo podrías facilitar su participación y escucha su respuesta antes de ofrecer soluciones. Puedes ajustar una tarea o reconocer un servicio poco visible; evita decidir por ella qué necesita o cuánto debe aportar.",
+        "en": "Ask someone how you could make their participation easier and listen before proposing solutions. You might adjust a task or acknowledge a less visible service; avoid deciding for them what they need or how much they must contribute.",
+        "pt": "Pergunte a uma pessoa como poderia facilitar sua participação e escute sua resposta antes de oferecer soluções. Pode ajustar uma tarefa ou reconhecer um serviço pouco visível; evite decidir por ela o que precisa ou quanto deve contribuir."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿La unidad del Cuerpo exige que todos tengan la misma función?",
+            "en": "Does the Body’s unity require everyone to have the same function?",
+            "pt": "A unidade do Corpo exige que todos tenham a mesma função?"
+          },
+          "answer": {
+            "es": "No. La diversidad de miembros y funciones pertenece a la comparación de Pablo. La unidad procede del Espíritu y de la unión con Cristo; distintos dones pueden servir a un mismo bien sin borrar la identidad de las personas.",
+            "en": "No. Diversity of members and functions belongs to Paul’s comparison. Unity comes from the Spirit and union with Christ; different gifts can serve one common good without erasing the identity of the people who receive them.",
+            "pt": "Não. A diversidade de membros e funções pertence à comparação de Paulo. A unidade procede do Espírito e da união com Cristo; dons diferentes podem servir a um mesmo bem sem apagar a identidade das pessoas."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo se reconoce para qué sirve un carisma?",
+            "en": "How do we recognize a charism’s purpose?",
+            "pt": "Como reconhecer a finalidade de um carisma?"
+          },
+          "answer": {
+            "es": "Está ordenado a la edificación de la Iglesia y al bien de las personas, bajo la medida de la caridad y el discernimiento. Que un don parezca extraordinario o haga popular a alguien no basta para confirmar su autenticidad.",
+            "en": "It is ordered towards building up the Church and people’s good, measured by charity and discernment. A gift seeming extraordinary or making someone popular is not enough to establish its authenticity or beneficial use.",
+            "pt": "Ele se ordena à edificação da Igreja e ao bem das pessoas, sob a medida da caridade e do discernimento. Um dom parecer extraordinário ou tornar alguém popular não basta para confirmar sua autenticidade."
+          }
+        },
+        {
+          "prompt": {
+            "es": "Un grupo excluye a quien necesita ayuda porque aporta poco. ¿Cómo orienta Pablo la respuesta?",
+            "en": "A group excludes someone needing help because they contribute little. How does Paul guide a response?",
+            "pt": "Um grupo exclui quem precisa de ajuda porque contribui pouco. Como Paulo orienta a resposta?"
+          },
+          "answer": {
+            "es": "Pablo destaca la pertenencia y el honor de quienes parecen más débiles. Corresponde escuchar sus necesidades y facilitar una participación digna, sin medir su valor por productividad. El cuidado mutuo expresa la comunión que el grupo dice vivir.",
+            "en": "Paul emphasizes the belonging and honour of those who seem weaker. Listen to their needs and facilitate dignified participation without measuring worth by productivity. Mutual care expresses the communion the group claims to live.",
+            "pt": "Paulo destaca a pertença e a honra daqueles que parecem mais fracos. É preciso escutar suas necessidades e facilitar uma participação digna, sem medir seu valor pela produtividade. O cuidado mútuo expressa a comunhão que o grupo afirma viver."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_787_795",
+          "title": {
+            "es": "Catecismo §§787–795",
+            "en": "Catechism §§787–795",
+            "pt": "Catecismo, parágrafos 787–795"
+          },
+          "catechismStart": 787,
+          "catechismEnd": 795,
+          "url": null
+        },
+        {
+          "id": "ccc_799_801",
+          "title": {
+            "es": "Catecismo §§799–801",
+            "en": "Catechism §§799–801",
+            "pt": "Catecismo, parágrafos 799–801"
+          },
+          "catechismStart": 799,
+          "catechismEnd": 801,
+          "url": null
+        },
+        {
+          "id": "ccc_827_827",
+          "title": {
+            "es": "Catecismo §827",
+            "en": "Catechism paragraph 827",
+            "pt": "Catecismo, parágrafo 827"
+          },
+          "catechismStart": 827,
+          "catechismEnd": 827,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "paul_4_greatest_love",
+      "lessonNumber": 4,
+      "title": {
+        "es": "El amor más grande",
+        "en": "The greatest love",
+        "pt": "O amor maior"
+      },
+      "scriptureReferences": [
+        "1co 13:1-13"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar qué significa caridad como virtud teologal.",
+          "en": "Explain the meaning of charity as a theological virtue.",
+          "pt": "Explicar o significado de caridade como virtude teologal."
+        },
+        {
+          "es": "Discernir la relación entre amor, verdad y corrección fraterna.",
+          "en": "Discern the relationship between love, truth and fraternal correction.",
+          "pt": "Discernir a relação entre amor, verdade e correção fraterna."
+        }
+      ],
+      "summary": {
+        "es": "La caridad da forma cristiana a los dones y a las obras. Es amor recibido de Dios que busca el bien del prójimo con paciencia y verdad, no solo emoción o generosidad visible.",
+        "en": "Charity gives Christian form to gifts and actions. It is love received from God that seeks a neighbour’s good through patience and truth, beyond emotion or visible generosity alone.",
+        "pt": "A caridade dá forma cristã aos dons e às obras. É amor recebido de Deus que busca o bem do próximo com paciência e verdade, além da emoção ou da generosidade visível."
+      },
+      "historicalContext": {
+        "es": "Pablo coloca este capítulo entre su enseñanza sobre los dones del Espíritu y las orientaciones para la reunión de la comunidad. Por eso no es únicamente un poema para una boda: responde también a la competencia y las divisiones de Corinto. Primero considera acciones impresionantes sin amor, después describe la manera de amar y finalmente compara lo parcial con lo que llegará a plenitud. Observa ese movimiento antes de elegir una frase aislada. La referencia a fe, esperanza y caridad conecta el pasaje con la vida cristiana entera, no solo con una relación afectiva particular.",
+        "en": "Paul places this chapter between his teaching about the Spirit’s gifts and guidance for the community’s gathering. It is therefore more than a poem for weddings: it also addresses Corinth’s competition and divisions. He first considers impressive actions without love, then describes love’s manner and finally compares what is partial with what will reach fullness. Notice that movement before selecting an isolated phrase. The reference to faith, hope and charity connects the passage with Christian life as a whole, rather than only one particular affectionate relationship or an occasion of celebration.",
+        "pt": "Paulo coloca este capítulo entre seu ensinamento sobre os dons do Espírito e as orientações para a reunião da comunidade. Por isso não é apenas um poema para um casamento: responde também à competição e às divisões de Corinto. Primeiro considera ações impressionantes sem amor, depois descreve o modo de amar e finalmente compara o parcial com o que chegará à plenitude. Observe esse movimento antes de escolher uma frase isolada. A referência à fé, à esperança e à caridade relaciona a passagem à vida cristã inteira, não apenas a uma relação afetiva particular."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Caridad es aprender a amar desde Dios",
+            "en": "Charity learns to love from God",
+            "pt": "Caridade é aprender a amar a partir de Deus"
+          },
+          "body": {
+            "es": "En el uso cotidiano, caridad puede significar dar dinero. El Catecismo usa aquí una palabra más amplia: virtud teologal, recibida de Dios, por la que lo amamos a él y al prójimo por amor suyo. Una virtud dispone a obrar bien; teologal indica que Dios es su origen y su término. No elimina afectos ni esfuerzos humanos, sino que los sana y orienta. Por eso una donación puede expresar caridad, pero no agota su sentido. Escuchar, perdonar, corregir con respeto y atender una necesidad también pueden participar del amor recibido de Cristo.",
+            "en": "In everyday usage, charity can mean giving money. Here the Catechism uses a wider meaning: a theological virtue received from God, through which we love him and our neighbour for his sake. A virtue disposes us to act well; theological means that God is its origin and end. It does not eliminate human affection or effort but heals and directs them. A donation can therefore express charity without exhausting its meaning. Listening, forgiving, correcting respectfully and meeting a need can also share in the love received from Christ and make it visible.",
+            "pt": "No uso cotidiano, caridade pode significar dar dinheiro. O Catecismo usa aqui uma palavra mais ampla: virtude teologal, recebida de Deus, pela qual amamos a ele e ao próximo por amor dele. Uma virtude dispõe a agir bem; teologal indica que Deus é sua origem e seu fim. Não elimina afetos nem esforços humanos, mas os cura e orienta. Por isso uma doação pode expressar caridade sem esgotar seu sentido. Escutar, perdoar, corrigir com respeito e atender a uma necessidade também podem participar do amor recebido de Cristo."
+          }
+        },
+        {
+          "title": {
+            "es": "La medida de los dones y las obras",
+            "en": "The measure of gifts and actions",
+            "pt": "A medida dos dons e das obras"
+          },
+          "body": {
+            "es": "Pablo imagina dones extraordinarios y entregas muy grandes para mostrar que la apariencia del gesto no basta. Sin caridad, la acción puede buscar dominio o reconocimiento en lugar del bien del otro. El Catecismo explica que la caridad anima y ordena las demás virtudes: su importancia no compite con la fe y la esperanza, sino que da forma al obrar cristiano. Esto invita a examinar intención y manera de actuar sin despreciar los servicios pequeños. Una ayuda discreta, respetuosa y necesaria puede expresar mejor el amor que una intervención espectacular que humilla a quien recibe.",
+            "en": "Paul considers extraordinary gifts and very great sacrifices to show that an action’s appearance is insufficient. Without charity, it may seek control or recognition rather than another person’s good. The Catechism explains that charity animates and orders the other virtues: its importance does not compete with faith and hope but gives Christian action its form. This invites examining intention and manner without despising small services. Quiet, respectful and needed help may express love better than a spectacular intervention that humiliates its recipient or makes the giver the centre of the encounter.",
+            "pt": "Paulo considera dons extraordinários e entregas muito grandes para mostrar que a aparência do gesto não basta. Sem caridade, a ação pode buscar domínio ou reconhecimento em vez do bem do outro. O Catecismo explica que a caridade anima e ordena as demais virtudes: sua importância não compete com a fé e a esperança, mas dá forma ao agir cristão. Isso convida a examinar intenção e modo de agir sem desprezar os pequenos serviços. Uma ajuda discreta, respeitosa e necessária pode expressar melhor o amor do que uma intervenção espetacular que humilha quem recebe."
+          }
+        },
+        {
+          "title": {
+            "es": "La paciencia permanece unida a la verdad",
+            "en": "Patience remains united with truth",
+            "pt": "A paciência permanece unida à verdade"
+          },
+          "body": {
+            "es": "El mismo pasaje que elogia la paciencia rechaza alegrarse de la injusticia. Amar no obliga a llamar bueno al daño ni a negar lo que sucede. La caridad incluye benevolencia y corrección fraterna, según el Catecismo; puede pedir una conversación honesta, un límite o ayuda para proteger a alguien. La obligación de defender la vida permanece. Soportar dificultades por amor no es conceder permiso para abusar. En relaciones ordinarias, este criterio ayuda a distinguir una molestia que podemos llevar con paciencia de una conducta que necesita corrección; en situaciones peligrosas, corresponde priorizar seguridad y apoyo adecuado.",
+            "en": "The same passage praising patience rejects delight in injustice. Loving does not require calling harm good or denying what happens. According to the Catechism, charity includes benevolence and fraternal correction; it may require an honest conversation, a boundary or help to protect someone. The duty to defend life remains. Bearing difficulties in love does not give permission to abuse. In ordinary relationships, this helps distinguish an irritation we can bear patiently from behaviour needing correction; in dangerous situations, safety and appropriate support take priority over pressure to endure harm or keep it hidden.",
+            "pt": "A mesma passagem que elogia a paciência rejeita alegrar-se com a injustiça. Amar não obriga a chamar de bom o dano nem a negar o que acontece. A caridade inclui benevolência e correção fraterna, segundo o Catecismo; pode pedir uma conversa honesta, um limite ou ajuda para proteger alguém. A obrigação de defender a vida permanece. Suportar dificuldades por amor não é conceder permissão para abusar. Nas relações comuns, esse critério distingue uma contrariedade que podemos levar com paciência de uma conduta que precisa de correção; em situações perigosas, é preciso priorizar segurança e apoio adequado."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Relee 1 Co 13,1–13 en tres movimientos: acciones sin amor, descripción del amor y plenitud esperada. Observa cómo la referencia a la verdad orienta las expresiones de paciencia; conserva ambas al interpretar el pasaje.",
+        "en": "Reread 1 Corinthians 13:1–13 in three movements: actions without love, love’s description and expected fullness. Notice how the reference to truth directs the language of patience; keep both together when interpreting the passage.",
+        "pt": "Releia 1 Cor 13,1–13 em três movimentos: ações sem amor, descrição do amor e plenitude esperada. Observe como a referência à verdade orienta as expressões de paciência; preserve ambas ao interpretar a passagem."
+      },
+      "meditatio": {
+        "es": "¿Qué gesto bueno puede estar mezclado en ti con deseo de reconocimiento? ¿En qué relación necesitas unir paciencia y verdad, respetando tanto a la otra persona como la dignidad y seguridad propias?",
+        "en": "What good action in your life may be mixed with a desire for recognition? In what relationship do you need patience and truth together, respecting both the other person and your own dignity and safety?",
+        "pt": "Que gesto bom pode estar misturado em você com desejo de reconhecimento? Em que relação precisa unir paciência e verdade, respeitando tanto a outra pessoa como sua própria dignidade e segurança?"
+      },
+      "oratio": {
+        "es": "Habla con Dios sobre tu manera de amar, sin fingir afectos que no sientes. Puedes pedir caridad para una relación concreta y luz para actuar con respeto y verdad; exprésalo con tus propias palabras.",
+        "en": "Speak with God about how you love, without pretending to have feelings you do not experience. You may ask for charity in a particular relationship and light to act respectfully and truthfully; use your own words.",
+        "pt": "Converse com Deus sobre seu modo de amar, sem fingir afetos que não sente. Você pode pedir caridade para uma relação concreta e luz para agir com respeito e verdade; expresse isso com suas próprias palavras."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio ante el amor de Cristo. Deja descansar las comparaciones sobre cuánto das o recibes. No es necesario producir un sentimiento; vuelve con suavidad a su presencia.",
+        "en": "Remain silent for sixty to ninety seconds before Christ’s love. Let comparisons about how much you give or receive rest. You need not produce a feeling; return gently to his presence when your attention wanders.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio diante do amor de Cristo. Deixe descansar as comparações sobre quanto dá ou recebe. Não é necessário produzir um sentimento; volte suavemente à sua presença."
+      },
+      "actionStep": {
+        "es": "Elige un acto de amor que respete una necesidad real: escuchar sin interrumpir, reconocer un error o ayudar sin publicarlo. Si hace falta corregir algo, prepara una conversación respetuosa y segura, sin usar esta lección para controlar a otro.",
+        "en": "Choose an act of love respecting a real need: listening without interruption, acknowledging a mistake or helping without publicity. If something needs correction, prepare a respectful and safe conversation without using this lesson to control someone else.",
+        "pt": "Escolha um ato de amor que respeite uma necessidade real: escutar sem interromper, reconhecer um erro ou ajudar sem divulgar. Se algo precisa de correção, prepare uma conversa respeitosa e segura, sem usar esta lição para controlar outra pessoa."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Por qué caridad significa más que una donación?",
+            "en": "Why does charity mean more than a donation?",
+            "pt": "Por que caridade significa mais do que uma doação?"
+          },
+          "answer": {
+            "es": "Es una virtud teologal por la que amamos a Dios y al prójimo por amor suyo. Una donación puede expresarla, pero también la escucha, la paciencia y la corrección respetuosa; no se reduce a dinero ni a emoción.",
+            "en": "It is a theological virtue through which we love God and our neighbour for his sake. A donation can express it, as can listening, patience and respectful correction; it cannot be reduced to money or emotion.",
+            "pt": "É uma virtude teologal pela qual amamos a Deus e ao próximo por amor dele. Uma doação pode expressá-la, assim como a escuta, a paciência e a correção respeitosa; ela não se reduz a dinheiro nem a emoção."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Un don impresionante demuestra por sí solo que una acción es caritativa?",
+            "en": "Does an impressive gift by itself prove that an action is charitable?",
+            "pt": "Um dom impressionante demonstra por si só que uma ação é caridosa?"
+          },
+          "answer": {
+            "es": "No. Pablo distingue la grandeza visible del gesto y el amor que le da forma. Hay que considerar intención, verdad y bien del destinatario. Un acto que humilla o busca dominar puede contradecir la caridad aunque parezca generoso.",
+            "en": "No. Paul distinguishes an action’s visible greatness from the love giving it form. Consider intention, truth and the recipient’s good. An act that humiliates or seeks control may contradict charity despite appearing generous.",
+            "pt": "Não. Paulo distingue a grandeza visível do gesto e o amor que lhe dá forma. É preciso considerar intenção, verdade e bem do destinatário. Um ato que humilha ou busca dominar pode contradizer a caridade mesmo parecendo generoso."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿La paciencia cristiana exige callar ante una conducta dañina?",
+            "en": "Does Christian patience require silence before harmful behaviour?",
+            "pt": "A paciência cristã exige silêncio diante de uma conduta prejudicial?"
+          },
+          "answer": {
+            "es": "No. El amor se alegra con la verdad y la caridad incluye corrección fraterna. Puede ser necesario establecer límites y buscar protección. La defensa de la vida y el cuidado de personas vulnerables no contradicen el amor.",
+            "en": "No. Love rejoices with truth, and charity includes fraternal correction. Boundaries and protection may be necessary. Defending life and caring for vulnerable people do not contradict love or require pretending that harmful behaviour is good.",
+            "pt": "Não. O amor se alegra com a verdade e a caridade inclui correção fraterna. Pode ser necessário estabelecer limites e buscar proteção. A defesa da vida e o cuidado das pessoas vulneráveis não contradizem o amor."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_1812_1813",
+          "title": {
+            "es": "Catecismo §§1812–1813",
+            "en": "Catechism §§1812–1813",
+            "pt": "Catecismo, parágrafos 1812–1813"
+          },
+          "catechismStart": 1812,
+          "catechismEnd": 1813,
+          "url": null
+        },
+        {
+          "id": "ccc_1822_1829",
+          "title": {
+            "es": "Catecismo §§1822–1829",
+            "en": "Catechism §§1822–1829",
+            "pt": "Catecismo, parágrafos 1822–1829"
+          },
+          "catechismStart": 1822,
+          "catechismEnd": 1829,
+          "url": null
+        },
+        {
+          "id": "ccc_2264_2265",
+          "title": {
+            "es": "Catecismo §§2264–2265",
+            "en": "Catechism §§2264–2265",
+            "pt": "Catecismo, parágrafos 2264–2265"
+          },
+          "catechismStart": 2264,
+          "catechismEnd": 2265,
+          "url": null
+        }
+      ]
     }
   ]
 }
