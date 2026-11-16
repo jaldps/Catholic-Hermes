@@ -1,10 +1,11 @@
 # Working on CatholicGPT
 
 - Work in the existing checkout; do not create worktrees unless requested.
-- Current UI direction (approved November 12, 2026): two complete selectable identities, Lumen (luminous glass controls) and Sanctuary (editorial missal), each with light/dark/system appearance. Keep clear tasks and concise copy; retain meaningful sacred illustrations and opaque reading surfaces.
-- Keep both identities behind `ui/design/AppKit.kt`. Screens call the wrappers in `AppComponents.kt`; avoid parallel navigation/content/component systems. Preserve compatibility with old stored identity IDs.
+- Current UI direction (approved November 12, 2026; extended November 16, 2026): three complete selectable identities — Lumen (Liquid Glass: ambient liturgical light, dense content glass, clear control glass), Cristal (transparent refracting glass, id `GLASS`) and Sanctuary (editorial missal) — each with light/dark/system appearance. «Reducir transparencia» and «alto contraste» fall back to opaque material. With the default «Dinámico Litúrgico» tint, accent and ambient light follow the liturgical colour of the day. Keep clear tasks and concise copy; retain meaningful sacred illustrations and opaque reading surfaces.
+- Single header: every screen uses `AppHeroHeader` / `AppDetailHeader` / `AppLargeTitleHeader` (236 dp of art, title on the same baseline, `largeTitle` for section roots and `title1` below them). Do not add per-screen header heights or title styles.
+- Keep all identities behind `ui/design/AppKit.kt`. Screens call the wrappers in `AppComponents.kt`; avoid parallel navigation/content/component systems. Preserve compatibility with old stored identity IDs.
 - Preserve real scripture/prayer content, reading references, progress, current values, accessibility labels and stable test tags. Decorative or redundant UI can be removed without deleting the underlying data.
-- Illustrations must complement the task, remain clipped to their frame and never obscure text/controls. Font selection must be visible, persistent and effective across both identities. App screenshots and behavior tests are the validation targets.
+- Illustrations must complement the task, remain clipped to their frame and never obscure text/controls. Font selection must be visible, persistent and effective across all identities. App screenshots and behavior tests are the validation targets.
 
 ## Verification
 
