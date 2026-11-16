@@ -93,6 +93,38 @@ Lecturas: `luk 24:36-53`, `act 2:1-13`.
 
 CIC 639–655 distingue realidad corporal, signos históricos y misterio trascendente; especialmente 645–647 evita tanto fantasma como retorno a la vida mortal y reconoce que nadie observó el instante mismo. CIC 659–667 sostiene Ascensión, intercesión y esperanza; 731–732, don del Espíritu como Persona divina; se añade 767–768 para la manifestación pública y misión universal de la Iglesia. No se reduce Pascua a metáfora ni el Espíritu a energía. El cierre remite a los cursos existentes sin imponer Bautismo o comunión como requisito.
 
+## `track_salvation_history` · 2/5 lecciones
+
+```text
+2/5 lessons (partial; exact-five completeness requirement pending) · 0 errors · 0 warnings
+```
+
+### 1. `salvation_1_creation_fall`
+
+Lecturas: `gen 1:1-2:3`, `gen 3:1-24`.
+
+- CIC **279–301**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s2c1p4_sp.html
+- CIC **337–349**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s2c1p5_sp.html
+- CIC **355–357**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s2c1p6_sp.html
+- CIC **385–412**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s2c1p7_sp.html
+
+CIC 279–301 sostiene creación libre, bondad, conservación y distinción de las preguntas científicas; 337–349 añade el lenguaje de los días y el descanso; 355–357, dignidad personal e imagen de Dios; 385–412, pecado original, lenguaje figurado que afirma un acontecimiento primordial (390), ausencia de falta personal del recién nacido (405) y protoevangelio (410–411). No se da una cronología científica, ni se reduce la caída a ficción o mala estructura social. Se emplean dos rangos separados de Génesis para evitar incluir silenciosamente otro capítulo como parte de una sola referencia.
+
+### 2. `salvation_2_abraham_promise`
+
+Lecturas: `gen 12:1-9`, `gen 15:1-21`.
+
+- CIC **59–61**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s1c2a1_sp.html
+- CIC **144–147**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s1c3a1_sp.html
+
+CIC 59–61 sostiene elección, bendición a las naciones, pueblo depositario y veneración de los patriarcas; 144–147, obediencia libre de la fe y confianza de Abrahán. Se conserva Abram en el contexto de Génesis 12 y 15, antes del cambio de nombre del capítulo 17. No se inventan fechas históricas ni se aplica la promesa particular de hijos o tierra como garantía material al usuario. Los signos de Génesis 15 se describen desde el relato, sin reconstruir un ritual jurídico externo no documentado.
+
 ## Límites y revisión pendiente
 
 No se modifica Kotlin, navegación, progreso ni corpus bíblico. No se afirma haber probado la navegación en un dispositivo o haber compilado Android: la integración, pruebas del catálogo y compilación corresponden al coordinador. La revisión externa teológica y lingüística y la comprobación final del texto resuelto en las tres lenguas quedan a su cargo. Las duraciones son estimaciones pedagógicas; la lectura y el silencio pueden requerir más tiempo.
