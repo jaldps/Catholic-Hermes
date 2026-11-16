@@ -55,3 +55,6 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-019](T-019.md) | Hermes | ABIERTO (cambios pedidos, [revisión](T-019-REVIEW.md)) | M7 · Devociones de Cristo: auditoría de 20 + ~20 nuevas → `assets/devotions/christ-*.json` |
 | [T-020](T-020.md) | Diseño | CERRADO ([revisión](T-020-REVIEW.md)) | Rediseño Liquid Glass de Lumen, identidad Cristal, cabezal único, luz litúrgica |
 | [T-021](T-021.md) | Polish | ABIERTO | Pulido visual sobre el rediseño (3 identidades, claro/oscuro, 320 dp, 130 %) |
+| [T-022](T-022.md) | Codex | ABIERTO | M8 · Cursos B (Jesús y el misterio pascual) y C (Historia de la salvación) → `assets/courses/` |
+| [T-023](T-023.md) | Hermes | ABIERTO (tras T-019) | M8 · Curso D (Los Salmos, escuela de oración) → `assets/courses/track_psalms_prayer.json` |
+| [T-024](T-024.md) | Codex | ABIERTO (tras T-022) | M8 · Curso E (San Pablo y la vida en Cristo) → `assets/courses/track_paul_life_in_christ.json` |
