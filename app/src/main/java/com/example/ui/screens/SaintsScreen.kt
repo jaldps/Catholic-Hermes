@@ -7,6 +7,7 @@ import androidx.compose.material.icons.automirrored.outlined.ArrowBack
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import com.example.ui.design.AppBackHandler
+import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.appScreenInsets
 import com.example.ui.design.appDockInset
@@ -225,24 +226,17 @@ private fun SaintDetail(
     val card = Modifier.fillMaxWidth().padding(horizontal = gutter).widthIn(max = design.spacing.readingMaxWidth + gutter * 2)
     LazyColumn(
         modifier = modifier.fillMaxSize().testTag("saint_detail"),
-        contentPadding = PaddingValues(top = appScreenInsets().calculateTopPadding(), bottom = appScreenInsets().calculateBottomPadding() + 32.dp),
+        contentPadding = PaddingValues(bottom = appScreenInsets().calculateBottomPadding() + 32.dp),
         verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
     ) {
         item {
-            Column(Modifier.padding(horizontal = gutter).widthIn(max = design.spacing.readingMaxWidth)) {
-                Spacer(Modifier.height(8.dp))
-                Row { AppSecondaryButton(tr("Todos los santos", "All saints", "Todos os santos"), onBack, leadingIcon = Icons.AutoMirrored.Outlined.ArrowBack, modifier = Modifier.testTag("saint_detail_back")) }
-                Spacer(Modifier.height(22.dp))
-                Text(
-                    saintDateLabel(celebration.month, celebration.day, language) + " · " + celebration.rank.displayName.get(language),
-                    style = styles.eyebrow, color = palette.accent
-                )
-                Spacer(Modifier.height(6.dp))
-                Text(
-                    celebration.title.get(language), style = styles.title1, color = palette.textPrimary,
-                    modifier = Modifier.semantics { heading() }
-                )
-                Spacer(Modifier.height(6.dp))
+            AppDetailHeader(
+                title = celebration.title.get(language),
+                assetPath = "heroes/lumen/saints.jpg",
+                eyebrow = saintDateLabel(celebration.month, celebration.day, language) + " · " + celebration.rank.displayName.get(language)
+            )
+            Row(Modifier.padding(horizontal = gutter).padding(top = 4.dp)) {
+                AppSecondaryButton(tr("Todos los santos", "All saints", "Todos os santos"), onBack, leadingIcon = Icons.AutoMirrored.Outlined.ArrowBack, modifier = Modifier.testTag("saint_detail_back"))
             }
         }
         if (bio.isNotBlank()) item {

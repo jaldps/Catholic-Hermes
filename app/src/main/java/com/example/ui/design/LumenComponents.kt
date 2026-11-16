@@ -367,7 +367,8 @@ private fun AppHeaderFrame(
                 )
                 Spacer(Modifier.height(4.dp))
             }
-            Text(title, style = titleStyle, color = p.textPrimary, maxLines = 4, overflow = TextOverflow.Ellipsis,
+            // Never truncated: a long title grows the header upward.
+            Text(title, style = titleStyle, color = p.textPrimary,
                 modifier = Modifier.semantics { heading() }.tagged(titleTag))
         }
     }
@@ -387,9 +388,8 @@ private fun AppHeaderFrame(
                     .height(if (largeText) 132.dp else 168.dp)
                     .then(if (design.isSanctuary) Modifier.border(0.75.dp, p.hairline, design.shapes.thumbnail).padding(5.dp) else Modifier)
                     .clip(design.shapes.thumbnail)) {
-                    if (assetPath != null) AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = false, topVeil = false)
-                    else AsyncImage(model = imageUrl, contentDescription = null, contentScale = ContentScale.Crop,
-                        alignment = Alignment.TopCenter, modifier = Modifier.fillMaxSize())
+                    if (imageUrl.isNullOrBlank() && assetPath != null) AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = false, topVeil = false)
+                    else AppRemoteImage(imageUrl, assetPath, Modifier.fillMaxSize(), alignment = Alignment.TopCenter)
                 }
             }
             Spacer(Modifier.height(if (hasArt) 20.dp else 14.dp))
@@ -414,12 +414,13 @@ private fun AppHeaderFrame(
             .heightIn(min = statusTop + AppHeaderArtHeight - contentTop)
     ) {
         Box(Modifier.matchParentSize()) {
-            if (assetPath != null) {
+            if (imageUrl.isNullOrBlank() && assetPath != null) {
                 AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeStart = 0.30f)
             } else {
+                // Remote art, with the bundled painting while it loads or if it fails.
                 Box(Modifier.fillMaxSize().fadeOutBottom(0.30f)) {
-                    AsyncImage(model = imageUrl, contentDescription = null, contentScale = ContentScale.Crop,
-                        alignment = Alignment.TopCenter, modifier = Modifier.fillMaxSize())
+                    AppRemoteImage(imageUrl, assetPath, Modifier.fillMaxSize(), alignment = Alignment.TopCenter)
+                    if (design.isDark) Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.18f)))
                     Box(Modifier.fillMaxWidth().height(120.dp).background(Brush.verticalGradient(listOf(
                         if (design.isDark) Color.Black.copy(alpha = 0.4f) else p.canvasTop.copy(alpha = 0.55f), Color.Transparent))))
                 }
@@ -442,7 +443,12 @@ private fun AppHeaderFrame(
         )
     }
     // The meta line hangs under the title line, so it never moves the title.
-    metaLine(Modifier.padding(horizontal = design.spacing.gutter).offset(y = (-8).dp))
+    // (Pulled 8dp up into the title's bottom inset, taking that much less room.)
+    metaLine(Modifier.padding(horizontal = design.spacing.gutter).layout { measurable, constraints ->
+        val placeable = measurable.measure(constraints)
+        val lift = 8.dp.roundToPx()
+        layout(placeable.width, (placeable.height - lift).coerceAtLeast(0)) { placeable.place(0, -lift) }
+    })
     }
 }
 
@@ -478,7 +484,8 @@ fun AppHeroHeader(
  * the [title] in `title1`, an optional [eyebrow] and [meta] line. The back
  * button is the scaffold's single glass back control — register the in-screen
  * back with [AppBackHandler]. [actions] (bookmark, more) sit top-right.
- * [imageHeight] is ignored: every header has the same art height.
+ * With an [imageUrl], [assetPath] is the bundled fallback shown while it
+ * loads. [imageHeight] is ignored: every header has the same art height.
  */
 @Composable
 fun AppDetailHeader(

@@ -74,6 +74,7 @@ import com.example.data.models.AppLanguage
 import com.example.ui.design.AppChevron
 import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppGlassSurface
+import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppProgressBar
 import com.example.ui.design.AppSecondaryCapsule
 import com.example.ui.design.GroupPosition
@@ -582,8 +583,8 @@ internal fun RefChip(
 // ----------------------------------------------------------------- headers
 
 /**
- * The art-less header of every reading page: eyebrow, optional thin progress,
- * title (title1, or title2 for very long questions) and a meta line. Clears
+ * The header of every reading page: the shared art header, an optional thin progress
+ * line and an optional leading emblem under it. Clears
  * the status bar and the single glass back button.
  */
 @Composable
@@ -599,45 +600,37 @@ internal fun ReadingHeader(
     leading: (@Composable () -> Unit)? = null
 ) {
     val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-    val p = design.palette
-    val top = appScreenInsets().calculateTopPadding()
-    Column(
-        modifier
-            .fillMaxWidth()
-            .padding(top = top + 8.dp)
-            .padding(horizontal = design.spacing.gutter)
-    ) {
-        if (leading != null) {
-            leading()
-            Spacer(Modifier.height(16.dp))
-        }
-        if (eyebrow != null) {
-            Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
-            Spacer(Modifier.height(8.dp))
-        }
-        if (progress != null) {
-            AppProgressBar(
-                progress,
-                modifier = Modifier
-                    .semantics { if (progressLabel != null) stateDescription = progressLabel }
-                    .then(if (progressTag != null) Modifier.testTag(progressTag) else Modifier),
-                height = 3.dp
-            )
-            Spacer(Modifier.height(14.dp))
-        }
-        Text(
-            title,
-            style = if (title.length > 100) styles.title2 else styles.title1,
-            color = p.textPrimary,
-            modifier = Modifier.semantics { heading() }.then(if (titleTag != null) Modifier.testTag(titleTag) else Modifier)
+    // The same header as every other page, under its section's painting.
+    Column(modifier.fillMaxWidth()) {
+        AppDetailHeader(
+            title = title,
+            assetPath = LocalReaderArt.current,
+            eyebrow = eyebrow,
+            meta = meta,
+            titleTag = titleTag
         )
-        if (meta != null) {
-            Spacer(Modifier.height(8.dp))
-            Text(meta, style = styles.subhead, color = p.textSecondary)
+        if (progress != null || leading != null) {
+            Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).padding(top = 10.dp)) {
+                if (progress != null) {
+                    AppProgressBar(
+                        progress,
+                        modifier = Modifier
+                            .semantics { if (progressLabel != null) stateDescription = progressLabel }
+                            .then(if (progressTag != null) Modifier.testTag(progressTag) else Modifier),
+                        height = 3.dp
+                    )
+                }
+                if (leading != null) {
+                    Spacer(Modifier.height(16.dp))
+                    leading()
+                }
+            }
         }
     }
 }
+
+/** The painting a reading page opens under: its section's art. Null = no art. */
+internal val LocalReaderArt = androidx.compose.runtime.staticCompositionLocalOf<String?> { null }
 
 /** The Listen capsule and the Share circle, directly under a reading title. */
 @Composable

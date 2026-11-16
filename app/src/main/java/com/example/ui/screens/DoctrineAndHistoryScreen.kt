@@ -161,7 +161,10 @@ fun DoctrineAndHistoryScreen(
     val saveable = rememberSaveableStateHolder()
     val spec = rootSpec(initialTopTab, currentLanguage, repository)
 
-    CompositionLocalProvider(LocalBottomPad provides insets.calculateBottomPadding() + 24.dp) {
+    CompositionLocalProvider(
+        LocalBottomPad provides insets.calculateBottomPadding() + 24.dp,
+        LocalReaderArt provides spec.asset
+    ) {
         Box(modifier.fillMaxSize().testTag("doctrine_and_history_screen")) {
             AnimatedContent(
                 targetState = stack,
