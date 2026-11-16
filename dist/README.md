@@ -1,5 +1,13 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.14
+
+[Descargar Catholic Hermes 1.8.14](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.14.apk) · versión `1.8.14`, código 23. **Actualiza 1.8.1–1.8.13** y conserva el progreso.
+
+- **Corrección urgente:** ya se puede elegir el estilo **Cristal** («Glass» / «Vidro») en Apariencia → Estilo. Antes se guardaba como Lumen.
+
+[Metadatos](../docs/quality/release-1.8.14/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.13
 
 [Descargar Catholic Hermes 1.8.13](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.13.apk) · versión `1.8.13`, código 22. **Actualiza 1.8.1–1.8.12** y conserva el progreso.

@@ -1,0 +1,24 @@
+{
+  "version_name": "1.8.14",
+  "version_code": 23,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.14",
+  "sha256": "440159923e7f3ed794cdb44674c1a3540802ca0972f8e82813406ebd1d848bff",
+  "bytes": 86687808,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.13 (same package and key)",
+  "changes": [
+    "Hotfix: the Cristal / Glass / Vidro style could not be selected (it was saved as Lumen)."
+  ],
+  "built_from": "git archive of 0ed92f0 + version bump (clean tree, without in-progress M8 work)",
+  "tests": [
+    "FontPreferencesTest (every selectable identity persists)",
+    "AppearanceInteractionTest"
+  ],
+  "known_limitations": [
+    "Not tested on a physical phone."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}
