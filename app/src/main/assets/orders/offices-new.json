@@ -473,5 +473,178 @@
       "Motu proprio Pontificalis Domus (Pablo VI, 28-III-1968)",
       "Código de Derecho Canónico, cc. 232-293"
     ]
+  },
+  {
+    "id": "office_abad",
+    "name": {
+      "es": "Abad",
+      "en": "Abbot",
+      "pt": "Abade"
+    },
+    "description": {
+      "es": "Es el superior de un monasterio autónomo, que, aparte de su propio superior, no tiene otro superior mayor ni está asociado a un instituto de religiosos con potestad sobre él. El Código de Derecho Canónico (cc. 615-617 y 620) encomienda la vigilancia peculiar de ese monasterio al obispo diocesano, y el superior gobierna a su comunidad según el derecho universal y el propio, cumpliendo su función con espíritu de servicio. El abad recibe la obediencia de los monjes y los gobierna como a hijos de Dios, fomentando la obediencia voluntaria y escuchándolos. En la tradición monástica, el abad es padre y pastor del monasterio.",
+      "en": "He is the superior of an autonomous monastery which, apart from its own superior, has no other major superior and is not associated with an institute of religious with power over it. The Code of Canon Law (cc. 615-617 and 620) entrusts the peculiar vigilance of that monastery to the diocesan bishop, and the superior governs his community according to universal and proper law, fulfilling his function with a spirit of service. The abbot receives the obedience of the monks and governs them as children of God, fostering voluntary obedience and listening to them. In the monastic tradition, the abbot is the father and pastor of the monastery.",
+      "pt": "É o superior de um mosteiro autônomo que, além do seu próprio superior, não tem outro superior maior nem está associado a um instituto de religiosos com potestade sobre ele. O Código de Direito Canônico (cc. 615-617 e 620) confia a vigilância peculiar desse mosteiro ao bispo diocesano, e o superior governa sua comunidade segundo o direito universal e o próprio, cumprindo sua função com espírito de serviço. O abade recebe a obediência dos monges e governa-os como a filhos de Deus, fomentando a obediência voluntária e ouvindo-os. Na tradição monástica, o abade é pai e pastor do mosteiro."
+    },
+    "group": "consecrated",
+    "after": "office_madre_general",
+    "sources": [
+      "Código de Derecho Canónico, cc. 615-617 y 620",
+      "Código de Derecho Canónico, c. 618"
+    ]
+  },
+  {
+    "id": "office_prior",
+    "name": {
+      "es": "Prior",
+      "en": "Prior",
+      "pt": "Prior"
+    },
+    "description": {
+      "es": "Es un título de superior propio de algunas tradiciones e institutos, que preside una comunidad o una provincia. No es una figura definida por el derecho universal: el Código de Derecho Canónico (cc. 620-625) regula los superiores mayores y las provincias, y el Código de los Cánones de las Iglesias Orientales (cc. 418 y 508) llama superiores mayores al presidente de una federación monástica, al superior de un monasterio sui iuris, al superior general y al superior provincial. En la tradición de canónigos regulares, dominicos y cartujos, el prior gobierna un priorato o una provincia. Su denominación y su potestad dependen de las constituciones del instituto.",
+      "en": "It is a title of superior proper to some traditions and institutes, who presides over a community or a province. It is not a figure defined by universal law: the Code of Canon Law (cc. 620-625) regulates major superiors and provinces, and the Code of Canons of the Eastern Churches (cc. 418 and 508) calls major superiors the president of a monastic federation, the superior of a monastery sui iuris, the superior general, and the provincial superior. In the tradition of canons regular, Dominicans, and Carthusians, the prior governs a priory or a province. Its denomination and its power depend on the constitutions of the institute.",
+      "pt": "É um título de superior próprio de algumas tradições e institutos, que preside uma comunidade ou uma província. Não é uma figura definida pelo direito universal: o Código de Direito Canônico (cc. 620-625) regula os superiores maiores e as províncias, e o Código dos Cânones das Igrejas Orientais (cc. 418 e 508) chama superiores maiores o presidente de uma federação monástica, o superior de um mosteiro sui iuris, o superior geral e o superior provincial. Na tradição dos cónegos regulares, dominicanos e cartuxos, o prior rege um priorado ou uma província. Sua denominação e sua potestade dependem das constituições do instituto."
+    },
+    "group": "consecrated",
+    "after": "office_abad",
+    "sources": [
+      "Código de Derecho Canónico, cc. 620-625",
+      "Código de los Cánones de las Iglesias Orientales, cc. 418 y 508"
+    ]
+  },
+  {
+    "id": "office_superior_provincial",
+    "name": {
+      "es": "Superior provincial",
+      "en": "Provincial Superior",
+      "pt": "Superior provincial"
+    },
+    "description": {
+      "es": "Es el superior mayor que gobierna una provincia, el conjunto de varias casas erigido canónicamente que forma parte inmediata de un instituto bajo un mismo superior. El Código de Derecho Canónico (cc. 620-625) le reconoce la potestad dentro de los límites de su cargo, ser designado por un tiempo determinado y conveniente, y gobernar con espíritu de servicio y con su consejo propio. El superior general tiene potestad sobre todas las provincias, casas y miembros, y los demás superiores la tienen dentro de los límites de su cargo. El provincial reside en su propia casa y no se ausenta de ella sino a tenor del derecho propio.",
+      "en": "He is the major superior who governs a province, the group of several canonically erected houses that forms an immediate part of an institute under one superior. The Code of Canon Law (cc. 620-625) recognizes in him power within the limits of his office, to be appointed for a determined and suitable time, and to govern with a spirit of service and with his own council. The superior general has power over all the provinces, houses, and members, and the other superiors have it within the limits of their office. The provincial resides in his own house and does not leave it except in accordance with proper law.",
+      "pt": "É o superior maior que governa uma província, o conjunto de várias casas canonicamente erigidas que forma parte imediata de um instituto sob um mesmo superior. O Código de Direito Canônico (cc. 620-625) reconhece-lhe a potestade dentro dos limites do seu cargo, ser designado por tempo determinado e conveniente, e governar com espírito de serviço e com o seu conselho próprio. O superior geral tem potestade sobre todas as províncias, casas e membros, e os demais superiores a têm dentro dos limites do seu cargo. O provincial reside na sua própria casa e não se ausenta dela senão a tenor do direito próprio."
+    },
+    "group": "consecrated",
+    "after": "office_prior",
+    "sources": [
+      "Código de Derecho Canónico, cc. 620-625",
+      "Código de Derecho Canónico, c. 621"
+    ]
+  },
+  {
+    "id": "office_superior_general",
+    "name": {
+      "es": "Superior general",
+      "en": "Superior General",
+      "pt": "Superior geral"
+    },
+    "description": {
+      "es": "Es el superior mayor que tiene potestad sobre todas las provincias, casas y miembros del instituto, según el derecho propio. El Código de Derecho Canónico (cc. 622-625) dispone que debe ser designado por elección canónica de acuerdo con las constituciones, por un tiempo determinado y conveniente, y que gobierna con su consejo propio. Los demás superiores la tienen dentro de los límites de su cargo. Para ser nombrado válidamente se requiere un tiempo conveniente desde la profesión perpetua o definitiva, determinado en las constituciones. El superior general reside en su propia casa y no se ausenta de ella sino a tenor del derecho propio.",
+      "en": "He is the major superior who has power over all the provinces, houses, and members of the institute, according to proper law. The Code of Canon Law (cc. 622-625) provides that he is to be appointed by canonical election in accordance with the constitutions, for a determined and suitable time, and that he governs with his own council. The other superiors have it within the limits of their office. To be validly appointed, a suitable time is required since perpetual or definitive profession, determined in the constitutions. The superior general resides in his own house and does not leave it except in accordance with proper law.",
+      "pt": "É o superior maior que tem potestade sobre todas as províncias, casas e membros do instituto, segundo o direito próprio. O Código de Direito Canônico (cc. 622-625) dispõe que deve ser designado por eleição canónica de acordo com as constituições, por tempo determinado e conveniente, e que governa com o seu conselho próprio. Os demais superiores a têm dentro dos limites do seu cargo. Para ser nomeado validamente requer-se tempo conveniente desde a profissão perpétua ou definida, determinado nas constituições. O superior geral reside na sua própria casa e não se ausenta dela senão a tenor do direito próprio."
+    },
+    "group": "consecrated",
+    "after": "office_superior_provincial",
+    "sources": [
+      "Código de Derecho Canónico, cc. 622-625",
+      "Código de Derecho Canónico, c. 625 §1"
+    ]
+  },
+  {
+    "id": "office_virgen_consagrada",
+    "name": {
+      "es": "Virgen consagrada",
+      "en": "Consecrated Virgin",
+      "pt": "Virgem consagrada"
+    },
+    "description": {
+      "es": "Es la mujer que, formulando el propósito santo de seguir más de cerca a Cristo, es consagrada a Dios por el obispo diocesano según el rito litúrgico aprobado, celebra desposorios místicos con Jesucristo, Hijo de Dios, y se entrega al servicio de la Iglesia. El Código de Derecho Canónico (c. 604) reconoce este orden de vírgenes entre las formas de vida consagrada. El Ordo consecrationis virginum, promulgado el 31 de mayo de 1970, restauró la consagración para mujeres que permanecen en sus condiciones ordinarias de vida, y la instrucción Ecclesiae Sponsae Imago (2018) describe sus rasgos y disciplina. Pueden asociarse para cumplir mejor su propósito.",
+      "en": "She is the woman who, expressing the holy purpose of following Christ more closely, is consecrated to God by the diocesan bishop according to the approved liturgical rite, celebrates mystical espousals with Jesus Christ, Son of God, and gives herself to the service of the Church. The Code of Canon Law (c. 604) recognizes this order of virgins among the forms of consecrated life. The Ordo consecrationis virginum, promulgated on 31 May 1970, restored the consecration for women who remain in their ordinary conditions of life, and the instruction Ecclesiae Sponsae Imago (2018) describes its features and discipline. They may associate to fulfill their purpose better.",
+      "pt": "É a mulher que, formulando o santo propósito de seguir mais de perto a Cristo, é consagrada a Deus pelo bispo diocesano segundo o rito litúrgico aprovado, celebra desposórios místicos com Jesus Cristo, Filho de Deus, e se entrega ao serviço da Igreja. O Código de Direito Canônico (c. 604) reconhece essa ordem das virgens entre as formas de vida consagrada. O Ordo consecrationis virginum, promulgado em 31 de maio de 1970, restaurou a consagração para mulheres que permanecem em suas condições ordinárias de vida, e a instrução Ecclesiae Sponsae Imago (2018) descreve seus traços e disciplina. Podem associar-se para cumprir melhor seu propósito."
+    },
+    "group": "consecrated",
+    "after": "office_superior_general",
+    "sources": [
+      "Código de Derecho Canónico, c. 604 §1",
+      "Ordo consecrationis virginum (31-V-1970)",
+      "Instrucción Ecclesiae Sponsae Imago (8-VI-2018)"
+    ]
+  },
+  {
+    "id": "office_ermiteno",
+    "name": {
+      "es": "Ermitaño",
+      "en": "Hermit",
+      "pt": "Eremita"
+    },
+    "description": {
+      "es": "Es el fiel que, con un apartamiento más estricto del mundo, el silencio de la soledad, la oración asidua y la penitencia, dedica su vida a la alabanza de Dios y a la salvación del mundo. El Código de Derecho Canónico (c. 603) reconoce la vida eremítica o anacorética además de los institutos de vida consagrada, y llama ermitaño al que se entrega a Dios dentro de la vida consagrada si profiera públicamente los tres consejos evangélicos, corroborados mediante voto u otro vínculo sagrado, en manos del obispo diocesano, y sigue su forma propia de vida bajo la dirección de este. Es una consagración personal, no una pertenencia a un instituto.",
+      "en": "He is the faithful who, with a stricter withdrawal from the world, the silence of solitude, assiduous prayer, and penance, dedicates his life to the praise of God and the salvation of the world. The Code of Canon Law (c. 603) recognizes the eremitic or anchoritic life in addition to the institutes of consecrated life, and calls a hermit the one who gives himself to God within consecrated life if he publicly professes the three evangelical counsels, confirmed by vow or another sacred bond, in the hands of the diocesan bishop, and follows his own form of life under the direction of the bishop. It is a personal consecration, not a belonging to an institute.",
+      "pt": "É o fiel que, com um apartamento mais estrito do mundo, o silêncio da solidão, a oração assídua e a penitência, dedica sua vida ao louvor de Deus e à salvação do mundo. O Código de Direito Canônico (c. 603) reconhece a vida eremítica ou anacorética além dos institutos de vida consagrada, e chama eremita aquele que se entrega a Deus dentro da vida consagrada se professar publicamente os três conselhos evangélicos, corroborados por voto ou outro vínculo sagrado, nas mãos do bispo diocesano, e segue sua forma própria de vida sob a direção deste. É uma consagração pessoal, não uma pertença a um instituto."
+    },
+    "group": "consecrated",
+    "after": "office_virgen_consagrada",
+    "sources": [
+      "Código de Derecho Canónico, c. 603",
+      "Instrucción Ecclesiae Sponsae Imago (8-VI-2018)"
+    ]
+  },
+  {
+    "id": "office_viuda_consagrada",
+    "name": {
+      "es": "Viuda consagrada",
+      "en": "Consecrated Widow",
+      "pt": "Viúva consagrada"
+    },
+    "description": {
+      "es": "Su estatus canónico debe precisarse: el Código de Derecho Canónico de 1983 no la menciona. El canon 604 habla del orden de las vírgenes y no de las viudas, y el Ordo consecrationis virginum, promulgado en 1970, contempla dos formas, para mujeres que permanecen en el mundo y para monjas, sin incluir a las viudas. La liturgia latina distingue la consagración de vírgenes de la bendición de viudas (benedictio viduarum), rito propio y distinto, atestiguado en los pontificales. Quien recibe la bendición de viudas profesa un propósito de castidad perpetua y se entrega a la oración y al servicio de la Iglesia, pero su rito es una bendición, no una consagración equiparable a la de las vírgenes.",
+      "en": "Her canonical status must be made precise: the Code of Canon Law of 1983 does not mention her. Canon 604 speaks of the order of virgins and not of widows, and the Ordo consecrationis virginum, promulgated in 1970, contemplates two forms, for women who remain in the world and for nuns, without including widows. The Latin liturgy distinguishes the consecration of virgins from the blessing of widows (benedictio viduarum), a proper and distinct rite, attested in the pontificals. She who receives the blessing of widows professes a purpose of perpetual chastity and gives herself to prayer and the service of the Church, but her rite is a blessing, not a consecration comparable to that of virgins.",
+      "pt": "Seu estatuto canônico deve ser precisado: o Código de Direito Canônico de 1983 não a menciona. O canon 604 fala da ordem das virgens e não das viúvas, e o Ordo consecrationis virginum, promulgado em 1970, contempla duas formas, para mulheres que permanecem no mundo e para monjas, sem incluir as viúvas. A liturgia latina distingue a consagração de virgens da bênção das viúvas (benedictio viduarum), rito próprio e distinto, atestado nos pontifícios. Aquela que recebe a bênção das viúvas professa um propósito de castidade perpétua e se entrega à oração e ao serviço da Igreja, mas seu rito é uma bênção, não uma consagração equiparável à das virgens."
+    },
+    "group": "consecrated",
+    "after": "office_ermiteno",
+    "sources": [
+      "Código de Derecho Canónico, c. 604",
+      "Ordo consecrationis virginum (31-V-1970)",
+      "Pontificale Romanum, Benedictio viduarum"
+    ]
+  },
+  {
+    "id": "office_catequista_instituido",
+    "name": {
+      "es": "Catequista instituido",
+      "en": "Instituted Catechist",
+      "pt": "Catequista instituído"
+    },
+    "description": {
+      "es": "Es el laico que recibe de la Iglesia el ministerio estable de catequista, para transmitir la fe y acompañar a los fieles en la iniciación cristiana. La carta apostólica en forma de motu proprio Antiquum ministerium (Francisco, 10 de mayo de 2021) instituye el ministerio laical de Catequista y encarga a las Conferencias Episcopales el itinerario de formación y los criterios de admisión. Se trata de un ministerio laical, distinto del ministerio ordenado, que se presta en la Iglesia local según las necesidades pastorales del Ordinario del lugar. La Congregación para el Culto Divino publicó el rito de institución el 3 de diciembre de 2021.",
+      "en": "He is the layperson who receives from the Church the stable ministry of catechist, to transmit the faith and accompany the faithful in Christian initiation. The apostolic letter issued as a motu proprio Antiquum ministerium (Francis, 10 May 2021) institutes the lay ministry of Catechist and entrusts to the Episcopal Conferences the formation itinerary and the criteria for admission. It is a lay ministry, distinct from the ordained ministry, rendered in the local Church according to the pastoral needs of the local Ordinary. The Congregation for Divine Worship published the rite of institution on 3 December 2021.",
+      "pt": "É o leigo que recebe da Igreja o ministério estável de catequista, para transmitir a fé e acompanhar os fiéis na iniciação cristã. A carta apostólica em forma de motu proprio Antiquum ministerium (Francisco, 10 de maio de 2021) institui o ministério laical de Catequista e confia às Conferências Episcopais o itinerário de formação e os critérios de admissão. Trata-se de um ministério laical, distinto do ministério ordenado, prestado na Igreja local segundo as necessidades pastorais do Ordinário do lugar. A Congregação para o Culto Divino publicou o rito de instituição em 3 de dezembro de 2021."
+    },
+    "group": "mission",
+    "after": "office_misionero_laico",
+    "sources": [
+      "Motu proprio Antiquum ministerium (Francisco, 10-V-2021)",
+      "Carta sobre el rito de institución de los catequistas (3-XII-2021)"
+    ]
+  },
+  {
+    "id": "office_ministro_extraordinario_comunion",
+    "name": {
+      "es": "Ministro extraordinario de la comunión",
+      "en": "Extraordinary Minister of Holy Communion",
+      "pt": "Ministro extraordinário da comunhão"
+    },
+    "description": {
+      "es": "Es el acólito u otro fiel designado que, donde lo aconseja la necesidad de la Iglesia y no hay ministros ordinarios, puede ejercer el ministerio de la palabra, presidir las oraciones litúrgicas, administrar el bautismo y dar la sagrada Comunión. El Código de Derecho Canónico (cc. 230 §3 y 910 §2) distingue los ministros ordinarios de la sagrada comunión, que son el obispo, el presbítero y el diácono, del ministro extraordinario, que es el acólito o también otro fiel designado. El motu proprio Spiritus Domini (10 de enero de 2021) recordó que esos ministerios laicales pueden confiararse a todos los fieles, hombres y mujeres.",
+      "en": "He is the acolyte or other designated faithful who, where the need of the Church advises it and there are no ordinary ministers, may exercise the ministry of the word, preside over liturgical prayers, administer baptism, and give holy Communion. The Code of Canon Law (cc. 230 §3 and 910 §2) distinguishes the ordinary ministers of holy Communion, who are the bishop, the presbyter, and the deacon, from the extraordinary minister, who is the acolyte or also another designated faithful. The motu proprio Spiritus Domini (10 January 2021) recalled that these lay ministries may be entrusted to all the faithful, men and women.",
+      "pt": "É o acólito ou outro fiel designado que, onde o aconselha a necessidade da Igreja e não há ministros ordinários, pode exercer o ministério da palavra, presidir as orações litúrgicas, administrar o batismo e dar a sagrada Comunhão. O Código de Direito Canônico (cc. 230 §3 e 910 §2) distingue os ministros ordinários da sagrada comunhão, que são o bispo, o presbítero e o diácono, do ministro extraordinário, que é o acólito ou também outro fiel designado. O motu proprio Spiritus Domini (10 de janeiro de 2021) recordou que esses ministérios laicais podem confiar-se a todos os fiéis, homens e mulheres."
+    },
+    "group": "altar",
+    "after": "office_acolito",
+    "sources": [
+      "Código de Derecho Canónico, cc. 230 §3 y 910 §2",
+      "Motu proprio Spiritus Domini (Francisco, 10-I-2021)"
+    ]
   }
 ]
