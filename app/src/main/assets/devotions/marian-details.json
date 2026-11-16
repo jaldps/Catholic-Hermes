@@ -84,22 +84,22 @@
     },
     "promises": {
       "text": {
-        "es": "En el relato guadalupano, María asegura a Juan Diego su cercanía y amparo de madre y lo invita a no temer. Es un mensaje de confianza del relato devocional, no una garantía individual de inmunidad a la enfermedad o a la angustia.",
-        "en": "In the Guadalupan account, Mary assures Juan Diego of her maternal closeness and protection and invites him not to fear. This is a message of trust within the devotional account, not an individual guarantee of immunity from illness or distress.",
-        "pt": "No relato guadalupano, Maria assegura a Juan Diego sua proximidade e proteção maternas e o convida a não temer. É uma mensagem de confiança do relato devocional, não uma garantia individual de imunidade à doença ou à angústia."
+        "es": "«¿No estoy yo aquí que soy tu Madre?»",
+        "en": "“Am I not here, I who am your Mother?”",
+        "pt": "«Não estou eu aqui, que sou tua Mãe?»"
       },
       "attribution": {
-        "es": "Palabras atribuidas a María en Nican Mopohua, 118–119, recordadas por Francisco en 2024.",
-        "en": "Words attributed to Mary in Nican Mopohua, 118–119, recalled by Francis in 2024.",
-        "pt": "Palavras atribuídas a Maria em Nican Mopohua, 118–119, recordadas por Francisco em 2024."
+        "es": "Fragmento de las palabras de María a Juan Diego en el Nican Mopohua, 119. Es consuelo materno en el relato guadalupano, no una garantía de ausencia de sufrimiento.",
+        "en": "Excerpt from Mary’s words to Juan Diego in the Nican Mopohua, 119. It expresses motherly comfort in the Guadalupe narrative, rather than a guarantee of freedom from suffering.",
+        "pt": "Trecho das palavras de Maria a Juan Diego no Nican Mopohua, 119. É consolo materno no relato de Guadalupe, não garantia de ausência de sofrimento."
       },
-      "source": "Nican Mopohua, 118–119; Francisco, homilía del 12-XII-2024. Paráfrasis fiel del pasaje."
+      "source": "Nican Mopohua, 119, traducción de Primo Feliciano Velázquez (publicada en 1926), transcripción de Proyecto Guadalupe reproducida por la Sociedad Genealógica y de Historia Familiar de México. Fragmento: ES literal; EN/PT traducciones propias fieles."
     },
     "miracles": {
       "text": {
-        "es": "La tradición guadalupana relata el signo de las rosas y de la imagen en la tilma. Las cifras populares de conversiones y las afirmaciones oftalmológicas no equivalen a una declaración eclesial de milagro.",
-        "en": "Guadalupan tradition recounts the sign of the roses and the image on the tilma. Popular conversion figures and claims about the image’s eyes do not amount to an ecclesial declaration of a miracle.",
-        "pt": "A tradição guadalupana relata o sinal das rosas e da imagem na tilma. Números populares de conversões e afirmações oftalmológicas não equivalem a uma declaração eclesial de milagre."
+        "es": "La tradición guadalupana relata el signo de las rosas y de la imagen en la tilma.",
+        "en": "Guadalupan tradition recounts the sign of the roses and the image on the tilma.",
+        "pt": "A tradição guadalupana relata o sinal das rosas e da imagem na tilma."
       }
     },
     "prayer": {
@@ -112,7 +112,8 @@
     },
     "sources": [
       "Juan Pablo II, Ecclesia in America, 11, 1999",
-      "Francisco, homilía de Guadalupe, 12-XII-2024, cita de Nican Mopohua 118–119"
+      "Francisco, homilía de Guadalupe, 12-XII-2024, cita de Nican Mopohua 118–119",
+      "Nican Mopohua, 119, traducción de Primo Feliciano Velázquez, 1926; transcripción de Proyecto Guadalupe"
     ]
   },
   {
@@ -280,16 +281,16 @@
     },
     "promises": {
       "text": {
-        "es": "El relato de Lucía atribuye a María la promesa del triunfo final de su Corazón Inmaculado, la consagración y conversión de Rusia y un tiempo de paz. La promesa se entiende en el contexto del llamado a la oración, la penitencia y la conversión; no permite calcular fechas ni asegurar resultados políticos.",
-        "en": "Lucia’s account attributes to Mary the promise of the final triumph of her Immaculate Heart, the consecration and conversion of Russia and a time of peace. The promise is understood within the call to prayer, penance and conversion; it does not permit calculating dates or ensuring political outcomes.",
-        "pt": "O relato de Lúcia atribui a Maria a promessa do triunfo final de seu Coração Imaculado, a consagração e conversão da Rússia e um tempo de paz. A promessa é entendida no contexto do chamado à oração, à penitência e à conversão; não permite calcular datas nem assegurar resultados políticos."
+        "es": "«Al fin, mi Corazón Inmaculado triunfará».",
+        "en": "“In the end, my Immaculate Heart will triumph.”",
+        "pt": "«Por fim, o Meu Imaculado Coração triunfará.»"
       },
       "attribution": {
-        "es": "Relato de sor Lucía sobre las palabras de María; revelación privada, presentada con comentario teológico en 2000.",
-        "en": "Sister Lucia’s account of Mary’s words; private revelation presented with theological commentary in 2000.",
-        "pt": "Relato da irmã Lúcia sobre as palavras de Maria; revelação privada apresentada com comentário teológico em 2000."
+        "es": "Fragmento de las palabras de María a los pastorcitos el 13-VII-1917, según la cuarta memoria de Lucía. Su contexto es la llamada a la conversión, la consagración de Rusia y la comunión reparadora; es revelación privada.",
+        "en": "Excerpt from Mary’s words to the shepherd children on 13 July 1917, according to Lúcia’s fourth memoir. Its context is the call to conversion, the consecration of Russia and Communion of reparation; it is private revelation.",
+        "pt": "Trecho das palavras de Maria aos pastorinhos em 13-VII-1917, segundo a quarta memória de Lúcia. Seu contexto é o chamado à conversão, a consagração da Rússia e a comunhão reparadora; é revelação privada."
       },
-      "source": "Congregación para la Doctrina de la Fe, El mensaje de Fátima, 26-VI-2000: segunda parte del secreto y comentario teológico. Paráfrasis."
+      "source": "Irmã Lúcia, Memórias da Irmã Lúcia I, compilación de Luís Kondor, 13.ª edición, Secretariado dos Pastorinhos, Fátima, octubre de 2007, cuarta memoria, p. 177. Fragmento: PT literal; ES/EN traducciones propias fieles."
     },
     "miracles": {
       "text": {
@@ -314,7 +315,8 @@
     "sources": [
       "Santuario de Fátima, Cronología: carta pastoral de 1930",
       "Congregación para la Doctrina de la Fe, El mensaje de Fátima, 26-VI-2000",
-      "Santuario de Fátima, Documentação Crítica: Seleção de documentos, 1917–1930"
+      "Santuario de Fátima, Documentação Crítica: Seleção de documentos, 1917–1930",
+      "Irmã Lúcia, Memórias da Irmã Lúcia I, 13.ª ed., Secretariado dos Pastorinhos, 2007, cuarta memoria, p. 177"
     ]
   },
   {
@@ -391,16 +393,16 @@
     },
     "promises": {
       "text": {
-        "es": "El relato de Catalina atribuye a María la promesa de grandes gracias para las personas que lleven la medalla con confianza. No especifica una curación, prosperidad o resultado material asegurado para cada portador.",
-        "en": "Catherine’s account attributes to Mary the promise of great graces for people who wear the medal with confidence. It does not specify a healing, prosperity or material outcome assured for every wearer.",
-        "pt": "O relato de Catarina atribui a Maria a promessa de grandes graças para as pessoas que usarem a medalha com confiança. Não especifica uma cura, prosperidade ou resultado material assegurado a cada pessoa."
+        "es": "«… recibirán grandes gracias…»",
+        "en": "“… shall receive great graces …”",
+        "pt": "«… receberão grandes graças…»"
       },
       "attribution": {
-        "es": "Relato de santa Catalina Labouré sobre el 27-XI-1830; revelación privada.",
-        "en": "Saint Catherine Labouré’s account of 27 November 1830; private revelation.",
-        "pt": "Relato de Santa Catarina Labouré sobre 27-XI-1830; revelação privada."
+        "es": "Fragmento del relato de Catalina Labouré sobre el 27-XI-1830. La edición citada relaciona la promesa con llevar la medalla bendecida, especialmente al cuello, y con la confianza; se trata de revelación privada.",
+        "en": "Excerpt from Catherine Labouré’s account of 27 November 1830. The cited edition links the promise with wearing the blessed medal, especially around the neck, and with confidence; it is private revelation.",
+        "pt": "Trecho do relato de Catarina Labouré sobre 27-XI-1830. A edição citada relaciona a promessa ao uso da medalha abençoada, especialmente ao pescoço, e à confiança; trata-se de revelação privada."
       },
-      "source": "Capilla de Nuestra Señora de la Medalla Milagrosa, 27 novembre 1830: palabras sobre llevar la medalla con confianza. Paráfrasis fiel."
+      "source": "Ernesto Cassinari, Life of blessed Catherine Labouré, traducción inglesa de una Hija de la Caridad, B. Herder, edición catalogada en 1935 por DePaul University, cap. VII, p. 70. Fragmento: EN literal; ES/PT traducciones propias fieles. Aviso de reproducción: consultar Special Collections and Archives, DePaul University; titular de derechos no especificado."
     },
     "miracles": {
       "text": {
@@ -425,7 +427,8 @@
     "sources": [
       "Capilla de la Medalla Milagrosa, 27 novembre 1830",
       "Capilla de la Medalla Milagrosa, Histoire de la Médaille",
-      "Vatican News, peregrinación de la imagen bendecida en 2020, noticia de mayo de 2025"
+      "Vatican News, peregrinación de la imagen bendecida en 2020, noticia de mayo de 2025",
+      "Ernesto Cassinari, Life of blessed Catherine Labouré, B. Herder, catálogo DePaul 1935, cap. VII, p. 70"
     ]
   },
   {
@@ -655,9 +658,9 @@
     },
     "miracles": {
       "text": {
-        "es": "Lepanto pertenece a la memoria de esta devoción. Rosarium Virginis Mariae presenta el Rosario como contemplación de Cristo y oración por la paz, sin ofrecer garantías de victorias militares futuras.",
-        "en": "Lepanto belongs to this devotion’s memory. Rosarium Virginis Mariae presents the Rosary as contemplation of Christ and prayer for peace, without offering guarantees of future military victories.",
-        "pt": "Lepanto pertence à memória desta devoção. Rosarium Virginis Mariae apresenta o Rosário como contemplação de Cristo e oração pela paz, sem oferecer garantias de vitórias militares futuras."
+        "es": "La memoria de Lepanto pertenece a la historia de esta devoción.",
+        "en": "The memory of Lepanto belongs to this devotion’s history.",
+        "pt": "A memória de Lepanto pertence à história desta devoção."
       }
     },
     "prayer": {
@@ -780,9 +783,9 @@
     },
     "miracles": {
       "text": {
-        "es": "La tradición del cuadro y los testimonios de favores acompañan el culto de la Altagracia. El reconocimiento de su coronación no constituye una declaración sobre cada relato de origen o curación.",
-        "en": "The painting’s tradition and testimonies of favours accompany the Altagracia devotion. Recognition of its coronation does not constitute a declaration about every account of origins or healing.",
-        "pt": "A tradição do quadro e os testemunhos de graças acompanham o culto da Altagracia. O reconhecimento de sua coroação não constitui declaração sobre cada relato de origem ou cura."
+        "es": "El culto y la coronación documentados no autentican automáticamente cada leyenda sobre el origen del cuadro.",
+        "en": "The documented devotion and coronation do not automatically authenticate every legend about the painting’s origins.",
+        "pt": "O culto e a coroação documentados não autenticam automaticamente cada lenda sobre a origem do quadro."
       }
     },
     "prayer": {
@@ -840,9 +843,9 @@
     },
     "miracles": {
       "text": {
-        "es": "El convento conserva relatos sobre las lágrimas de la imagen. La autorización del culto no debe confundirse con dictámenes individuales sobre cualquier curación atribuida a la devoción.",
-        "en": "The convent preserves accounts of the image’s tears. Authorization of the devotion should not be confused with individual judgements about every healing attributed to it.",
-        "pt": "O convento conserva relatos sobre as lágrimas da imagem. A autorização do culto não deve ser confundida com pareceres individuais sobre qualquer cura atribuída à devoção."
+        "es": "El convento conserva los relatos de lágrimas de la imagen, distintos de una lista de curaciones con dictamen individual.",
+        "en": "The convent preserves accounts of the image’s tears, distinct from a list of healings with individual judgements.",
+        "pt": "O convento conserva os relatos de lágrimas da imagem, distintos de uma lista de curas com parecer individual."
       }
     },
     "prayer": {

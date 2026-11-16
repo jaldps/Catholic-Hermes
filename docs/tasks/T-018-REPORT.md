@@ -27,8 +27,9 @@ Oración sustituida por las dos estrofas iniciales del himno tradicional Flos Ca
 
 - [Juan Pablo II, Ecclesia in America, 11, 1999](https://www.vatican.va/content/john-paul-ii/es/apost_exhortations/documents/hf_jp-ii_exh_22011999_ecclesia-in-america.html)
 - [Francisco, homilía de Guadalupe, 12-XII-2024, cita de Nican Mopohua 118–119](https://press.vatican.va/content/francesco/es/homilies/2024/documents/20241212-omelia-guadalupe.html)
+- [Nican Mopohua, 119, traducción de Primo Feliciano Velázquez, 1926; transcripción de Proyecto Guadalupe](https://genealogia.org.mx/texto-castellano-del-nican-mopohua-primo-feliciano-v/)
 
-Oración retirada: la fórmula exacta del catálogo y sus variantes no se documentaron en las fuentes consultadas. Se conserva el consuelo materno del Nican Mopohua con atribución concreta, mediante paráfrasis fiel sin fabricar cita. No se conserva el dato de nueve millones de conversiones ni se presentan estudios de los ojos como dictámenes eclesiales.
+Oración retirada: la fórmula exacta del catálogo y sus variantes no se documentaron en las fuentes consultadas. Revisión aplicada: se sustituye la paráfrasis de la promesa por la pregunta literal del Nican Mopohua, 119, en la traducción de Primo Feliciano Velázquez publicada en 1926. Se cotejó la transcripción de Proyecto Guadalupe reproducida por la Sociedad Genealógica y de Historia Familiar de México, que identifica traducción, fecha y versículo; no se afirma lectura del facsímil de 1926. EN/PT son traducciones propias fieles del fragmento, sin añadir otras palabras de María. No se conserva el dato de nueve millones de conversiones ni se presentan estudios de los ojos como dictámenes eclesiales.
 
 ### 4. `caridad_del_cobre` · oración retirada
 
@@ -71,8 +72,9 @@ Oración retirada: no se documentó el texto exacto de la app. Se retira la prom
 - [Santuario de Fátima, Cronología: carta pastoral de 1930](https://www.fatima.pt/es/pages/cronologia)
 - [Congregación para la Doctrina de la Fe, El mensaje de Fátima, 26-VI-2000](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000626_message-fatima_sp.html)
 - [Santuario de Fátima, Documentação Crítica: Seleção de documentos, 1917–1930](https://www.fatima.pt/files/upload/fontes/F001_DCF_selecao.pdf)
+- [Irmã Lúcia, Memórias da Irmã Lúcia I, 13.ª ed., Secretariado dos Pastorinhos, 2007, cuarta memoria, p. 177](https://www.fatima.pt/files/upload/fontes/F002_Memorias1.pdf)
 
-Oración sustituida por la fórmula Ó meu Jesus documentada en el interrogatorio de 1917, DCF Seleção, p. 58; PT transcrito fielmente, ES/EN traducciones propias. No se añade Amén ni se cambia el objeto de la oración. Se conservan las promesas documentadas: triunfo del Corazón Inmaculado, atribuido al relato de Lucía; y auxilio final con los primeros sábados, en practice y en el documento de condiciones de 1930, DCF p. 522. No son garantías mecánicas. No se crea otra devoción duplicada para los sábados.
+Oración sustituida por la fórmula Ó meu Jesus documentada en el interrogatorio de 1917, DCF Seleção, p. 58; PT transcrito fielmente, ES/EN traducciones propias. No se añade Amén ni se cambia el objeto de la oración. Revisión aplicada: la promesa se presenta como un fragmento literal de Memórias da Irmã Lúcia I, 13.ª edición, octubre de 2007, Secretariado dos Pastorinhos, cuarta memoria, p. 177, verificado en el PDF del santuario; ES/EN son traducciones propias fieles. Se identifica el contexto del mensaje sin poner una explicación editorial en boca de María. El auxilio final y las condiciones de los primeros sábados permanecen en practice, según el documento de 1930, DCF p. 522; no se crea una devoción duplicada para los sábados.
 
 ### 10. `lourdes` · oración retirada
 
@@ -95,8 +97,9 @@ Oración sustituida por la jaculatoria tradicional que transcribe el sitio de la
 - [Capilla de la Medalla Milagrosa, 27 novembre 1830](https://www.chapellenotredamedelamedaillemiraculeuse.com/apparitions-et-medaille/27-novembre-1830/)
 - [Capilla de la Medalla Milagrosa, Histoire de la Médaille](https://www.chapellenotredamedelamedaillemiraculeuse.com/apparitions-et-medaille/medaille-miraculeuse/histoire-de-la-medaille/)
 - [Vatican News, peregrinación de la imagen bendecida en 2020, noticia de mayo de 2025](https://www.vaticannews.va/es/iglesia/news/2025-05/estatua-de-la-virgen-de-la-medalla-milagrosa-sicilia.html)
+- [Ernesto Cassinari, Life of blessed Catherine Labouré, B. Herder, catálogo DePaul 1935, cap. VII, p. 70](https://digicol.lib.depaul.edu/digital/collection/p15448coll3/id/47487)
 
-Oración sustituida: el catálogo interpola derrama los rayos y altera la invocación; se restituye la fórmula breve que transcribe la capilla en francés. Traducciones propias fieles, sin añadido de Amén. Se conserva la promesa atribuida a Catalina con su condición de confianza, sin sumar condiciones textuales o resultados concretos que no trae la fuente. Ratisbonne se describe sin el calificativo incorrecto o despectivo de ateo judío.
+Oración sustituida: el catálogo interpola derrama los rayos y altera la invocación; se restituye la fórmula breve que transcribe la capilla en francés. Traducciones propias fieles, sin añadido de Amén. Revisión aplicada: la promesa cita solo un fragmento literal de la edición inglesa de Ernesto Cassinari, Life of blessed Catherine Labouré, B. Herder, cap. VII, p. 70. Se cotejaron el OCR y la imagen de la página impresa: la promesa está en la 70, no en la 69. DePaul la cataloga con fecha 1935 y publicación [1934–35?]; no se inventa un año impreso inequívoco. La atribución explica las condiciones efectivamente presentes en esa edición (medalla bendecida, especialmente al cuello, y confianza), separadas del fragmento citado; ES/PT son traducciones propias fieles. La biblioteca solicita consultar sobre derechos y reproducción sin identificar un titular: se declara ese aviso sin atribuirle la propiedad intelectual y se reproduce solo un fragmento de cuatro palabras inglesas. Ratisbonne se describe sin el calificativo incorrecto o despectivo de ateo judío.
 
 ### 13. `rosa_mistica` · oración sustituida por texto verificado
 
@@ -319,14 +322,14 @@ Se distingue fiesta litúrgica del 17 de agosto de aniversario de las aparicione
 - [Santuario de Banneux, Recognition of Apparitions: carta pastoral de 1949](https://banneux-nd.be/en/recognition-of-apparitions/)
 - [Santuario de Banneux, Fête de Notre-Dame de Banneux](https://banneux-nd.be/en/fete-de-notre-dame-de-banneux/)
 
-Se conservan atribución y sentido de la promesa de intercesión a partir del relato institucional, sin asegurar una curación. No se actualiza retrospectivamente la carta de 1949 a nihil obstat de 2024. Oración null: no se compone una oración específica.
+Revisión aplicada también a las nuevas: la promesa de intercesión es ahora un fragmento literal de la edición inglesa del santuario, The Apparitions, párrafo del jueves 19-I-1933. ES/PT son traducciones propias fieles, dirigidas a Mariette; no se añade una garantía de curación. No se actualiza retrospectivamente la carta de 1949 a nihil obstat de 2024. Oración null: no se compone una oración específica.
 
 ### 13. `virgen_beauraing`
 
 - [Santuario de Beauraing, Récit des Apparitions](https://sanctuairedebeauraing.be/recit-des-apparitions/)
 - [Diócesis de Namur, inauguración del jardín de Beauraing y reconocimiento de 1949](https://diocesedenamur.be/actualites/inauguration-du-jardin-renove-de-beauraing/)
 
-Se distinguen autorización del culto de 1943 y reconocimiento de 1949. El santuario informa de dos curaciones declaradas, sin nombres en la síntesis usada: no se inventan pacientes ni diagnósticos. La promesa de conversión se parafrasea con atribución al relato y sin fórmula de eficacia automática. Oración null.
+Se distinguen autorización del culto de 1943 y reconocimiento de 1949. El santuario informa de dos curaciones declaradas, sin nombres en la síntesis usada: no se inventan pacientes ni diagnósticos. Revisión aplicada también a las nuevas: la promesa es traducción fiel de la frase completa Je convertirai les pécheurs, en Récit des Apparitions, edición web francesa del santuario, párrafo del 3-I-1933. Se elimina la paráfrasis editorial anterior; no se agrega plazo ni condición atribuida a María. Oración null.
 
 ### 14. `virgen_la_salette`
 
@@ -405,7 +408,7 @@ Se distingue la fiesta de la Venida del 25 de abril de la celebración del 26 de
 - [Santuario de Pontmain, L’histoire y mandato de 1872](https://sanctuaire-pontmain.fr/lhistoire/)
 - [Diócesis de Laval, aniversario diocesano y reconocimiento de Pontmain, 2024](https://diocesedelaval.fr/lanniversaire-de-notre-diocese/)
 
-Se conserva el mensaje de esperanza con atribución y contexto, sin imponer un plazo para cada petición personal. No se inventa un decreto romano posterior ni se traslada el juicio de 1872 a las categorías de 2024. Oración null: no se compone fórmula ni se reproduce una oración histórica citada en un PDF que no pudo recuperarse de forma utilizable.
+Revisión aplicada también a las nuevas: se reemplaza la paráfrasis por traducciones fieles de las dos líneas del mensaje histórico de 1871, transcritas por el santuario en L’histoire, apartado Apparition phase 2. Solo se regulariza la puntuación; el contexto pastoral queda separado en attribution y no se incorpora como palabra de María. No se inventa un decreto romano posterior ni se traslada el juicio de 1872 a las categorías de 2024. Oración null: no se compone fórmula ni se reproduce una oración histórica citada en un PDF que no pudo recuperarse de forma utilizable.
 
 ### 24. `nossa_senhora_nazare_belem`
 
@@ -435,11 +438,23 @@ Validador de detalles con `--partial` mientras no estén las 30 fichas; sin ese 
 
 Los límites de cada consulta y las inconsistencias del catálogo original que quedan fuera de los campos autorizados se detallan por entrada. No se deduce una ausencia universal de milagros de que esta auditoría no haya localizado una declaración particular.
 
+## Revisión intermedia 1 aplicada (16-XI-2026)
+
+Se incorporó `origin/CatholicGPT` (`3576e6e`) y se atendieron los dos ajustes de `T-018-REVIEW.md`:
+
+- **Guadalupe:** pregunta literal de *Nican Mopohua*, 119, traducción identificada de Primo Feliciano Velázquez (1926), consultada en una transcripción expresamente identificada; EN/PT son traducciones propias fieles.
+- **Fátima:** fragmento literal portugués de *Memórias da Irmã Lúcia I*, 13.ª edición, Secretariado dos Pastorinhos, 2007, cuarta memoria, **p. 177**; ES/EN son traducciones propias fieles.
+- **Medalla Milagrosa:** fragmento literal inglés de Cassinari, *Life of blessed Catherine Labouré*, B. Herder, fecha del catálogo DePaul 1935, cap. VII, **p. 70**. [Registro bibliográfico y OCR](https://digicol.lib.depaul.edu/digital/collection/p15448coll3/id/47620), [facsímil de la página](https://digicol.lib.depaul.edu/digital/collection/p15448coll3/id/47487). La imagen impresa se cotejó para evitar el desplazamiento de encabezados del OCR. La datación bibliográfica incierta y el aviso de reproducción quedan declarados.
+- **Banneux, Beauraing y Pontmain:** se aplicó el mismo criterio preventivamente a las tres promesas nuevas. Se identifican edición web, fecha o apartado, y qué idioma es literal o traducción propia fiel. Se elimina toda etiqueta de paráfrasis de palabras de María. Los fragmentos breves se identifican como tales y las condiciones y explicaciones se mantienen en la atribución, fuera de la cita.
+- **Guadalupe, Lepanto, Altagracia y Akita:** el texto visible de `miracles` queda dirigido al lector. El porqué de las retiradas se conserva únicamente en este informe.
+
+Las tres promesas retiradas provisionalmente por el coordinador se recuperan ahora con citas verificadas, no con la paráfrasis anterior. La descripción aprobada del Carmen se conserva. Las 25 fichas nuevas están completas y listas para su revisión; no se afirma que estén integradas todavía.
+
 ## Cierre y alcance de la entrega
 
 - **30 fichas auditadas y 25 nuevas**, completas en ES/EN/PT. Las 75 historias nuevas cumplen 100–220 palabras, tanto con el contador del validador como por separación de palabras. Identificadores únicos, claves y orden contractual comprobados.
 - Oraciones existentes: **13 sustituidas por textos verificados y 17 retiradas por no haberse comprobado su redacción**. No se confunde una oración papal distinta o una mera semejanza de palabras con la fuente de la fórmula antigua. Las sustituciones incluyen Flos Carmeli, invocación de Coromoto de 1922, oración de Fátima de 1917, jaculatoria del Pilar, invocación de la Medalla, Sub tuum, una estrofa del Stabat Mater y peticiones de las letanías. Todas se identifican y las traducciones son fieles, no composiciones nuevas.
-- Promesas existentes: se conserva con `null` la formulación ya correcta de Lourdes; **4 se sustituyen con atribución y fuente** (Carmen, Guadalupe, Medalla Milagrosa y Fátima); **25 listas genéricas sin procedencia se retiran**. Se conserva el sentido de las promesas documentadas, sin neutralizarlas por ser revelación privada ni convertirlas en efectos automáticos. Los primeros sábados se explican en Fátima, con cinco meses consecutivos, intención reparadora, confesión, comunión en gracia, Rosario y meditación; la confesión puede ser otro día según el texto documental consultado.
+- Promesas existentes: se conserva con `null` la formulación ya correcta de Lourdes; **4 se sustituyen con atribución y fuente** (Carmen como descripción de la tradición aprobada por el coordinador; Guadalupe, Medalla Milagrosa y Fátima con fragmentos literales identificados); **25 listas genéricas sin procedencia se retiran**. Se conserva el sentido de las promesas documentadas, sin neutralizarlas por ser revelación privada ni convertirlas en efectos automáticos. Los primeros sábados se explican en Fátima, con cinco meses consecutivos, intención reparadora, confesión, comunión en gracia, Rosario y meditación; la confesión puede ser otro día según el texto documental consultado.
 - Las nuevas incorporan **3 invocaciones auténticas** y **3 promesas documentadas** (Banneux, Beauraing, Pontmain). `prayer: null` no significa que una devoción no tenga oraciones: significa que esta entrega no introduce una fórmula nueva sin procedencia verificada.
 - Se concreta «Virgen de la Paz» en El Salvador. Se añaden Suyapa, Desamparados de Valencia, Buen Consejo de Genazzano, Pontmain, el Círio de Belém y María Desatadora de los Nudos a la lista orientativa para alcanzar 25. Nazaré de Portugal y el Círio de Belém son fichas de tradiciones locales distintas, con identificación de país y santuario; no se mezclan sus relatos.
 - **Validación final:** `details marian` y `new marian`, sin `--partial`, terminan ambos con **0 errors · 0 warnings**. También se completó `git diff --check`. No se ha compilado Android ni se afirma una prueba en teléfono; la integración y compilación corresponden al coordinador.
