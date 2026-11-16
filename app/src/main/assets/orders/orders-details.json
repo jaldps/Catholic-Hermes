@@ -1545,5 +1545,434 @@
       "Orden Hospitalaria, El rostro de la Orden cambia, 26-IV-2009",
       "Catholic Encyclopedia: Brothers Hospitallers of St. John of God"
     ]
+  },
+  {
+    "id": "oratorianos-co",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Felipe Neri"
+      ],
+      "en": [
+        "Saint Philip Neri"
+      ],
+      "pt": [
+        "São Filipe Néri"
+      ]
+    },
+    "presence": {
+      "es": "Las casas oratorianas mantienen comunidades estables dedicadas a la oración y al servicio pastoral, cooperando mediante su confederación internacional.",
+      "en": "Oratorian houses maintain stable communities devoted to prayer and pastoral service, cooperating through their international confederation.",
+      "pt": "As casas oratorianas mantêm comunidades estáveis dedicadas à oração e ao serviço pastoral, cooperando por meio de sua confederação internacional."
+    },
+    "sources": [
+      "Francisco, mensaje por el quinto centenario de san Felipe Neri, 26-V-2015",
+      "Catholic-Hierarchy, Confederation of Oratorians of St. Philip Neri",
+      "Catholic Encyclopedia: The Oratory of Saint Philip Neri"
+    ]
+  },
+  {
+    "id": "vicentinos-cm",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "Urbano VIII, bula Salvatoris nostri, 12-I-1633.",
+      "en": "Urban VIII, bull Salvatoris nostri, 12 January 1633.",
+      "pt": "Papa Urbano VIII, bula Salvatoris nostri, 12-I-1633."
+    },
+    "notableSaints": {
+      "es": [
+        "San Vicente de Paúl"
+      ],
+      "en": [
+        "Saint Vincent de Paul"
+      ],
+      "pt": [
+        "São Vicente de Paulo"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades desarrollan evangelización y formación de ministros, en colaboración con las Iglesias locales y con la amplia familia vicenciana.",
+      "en": "Its communities undertake evangelization and the formation of ministers, collaborating with local Churches and the wider Vincentian family.",
+      "pt": "Suas comunidades desenvolvem evangelização e formação de ministros, em colaboração com as Igrejas locais e com a ampla família vicentina."
+    },
+    "sources": [
+      "Congregación de la Misión, sitio general",
+      "Congregación de la Misión, Constituciones, artículo 3 e introducción histórica, versión inglesa",
+      "Congregación de la Misión, Constituciones, introducción histórica latina"
+    ]
+  },
+  {
+    "id": "palotinos-sac",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Vicente Pallotti"
+      ],
+      "en": [
+        "Saint Vincent Pallotti"
+      ],
+      "pt": [
+        "São Vicente Pallotti"
+      ]
+    },
+    "presence": {
+      "es": "Padres y hermanos realizan ministerios pastorales, educativos y misioneros, colaborando con las demás realidades de la familia del Apostolado Católico.",
+      "en": "Fathers and brothers undertake pastoral, educational and missionary ministries, collaborating with other parts of the Catholic Apostolate family.",
+      "pt": "Padres e irmãos realizam ministérios pastorais, educativos e missionários, colaborando com outras realidades da família do Apostolado Católico."
+    },
+    "sources": [
+      "Palotinos, About Us: historia de la familia y de la Unión del Apostolado Católico",
+      "Sociedad del Apostolado Católico en Nigeria, About Us: forma canónica",
+      "Catholic Encyclopedia: Vincent Mary Pallotti"
+    ]
+  },
+  {
+    "id": "marianistas-sm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Guillermo José Chaminade"
+      ],
+      "en": [
+        "Blessed William Joseph Chaminade"
+      ],
+      "pt": [
+        "Bem-aventurado Guilherme José Chaminade"
+      ]
+    },
+    "presence": {
+      "es": "Los marianistas sostienen instituciones educativas, parroquias y centros de retiro, con colaboración de laicos en formación y servicio social.",
+      "en": "Marianists support educational institutions, parishes and retreat centres, collaborating with lay people in formation and social service.",
+      "pt": "Os marianistas mantêm instituições educativas, paróquias e centros de retiro, com colaboração de leigos na formação e no serviço social."
+    },
+    "sources": [
+      "Marianistas, Society of Mary: identidad y carisma",
+      "Marianistas, History"
+    ]
+  },
+  {
+    "id": "sacramentinos-sss",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Pedro Julián Eymard"
+      ],
+      "en": [
+        "Saint Peter Julian Eymard"
+      ],
+      "pt": [
+        "São Pedro Julião Eymard"
+      ]
+    },
+    "presence": {
+      "es": "La congregación mantiene comunidades y ministerios de evangelización eucarística, con celebraciones, formación, retiros y participación en la vida parroquial.",
+      "en": "The congregation maintains communities and ministries of Eucharistic evangelization through celebrations, formation, retreats and participation in parish life.",
+      "pt": "A congregação mantém comunidades e ministérios de evangelização eucarística, com celebrações, formação, retiros e participação na vida paroquial."
+    },
+    "sources": [
+      "Congregación del Santísimo Sacramento, Who We Are",
+      "Congregación del Santísimo Sacramento, Saint Peter Julian Eymard"
+    ]
+  },
+  {
+    "id": "combonianos-mccj",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Daniel Comboni"
+      ],
+      "en": [
+        "Saint Daniel Comboni"
+      ],
+      "pt": [
+        "São Daniel Comboni"
+      ]
+    },
+    "presence": {
+      "es": "La congregación trabaja en evangelización y promoción humana en África y otras regiones, colaborando con las diversas vocaciones de la familia comboniana.",
+      "en": "The congregation works in evangelization and human development in Africa and other regions, collaborating with the different vocations of the Comboni family.",
+      "pt": "A congregação trabalha na evangelização e na promoção humana na África e em outras regiões, colaborando com as diferentes vocações da família comboniana."
+    },
+    "sources": [
+      "Misioneros Combonianos, Who We Are",
+      "Misioneros Combonianos, About Us e historia norteamericana",
+      "Santa Sede, biografía de Daniel Comboni, 5-X-2003"
+    ]
+  },
+  {
+    "id": "javerianos-sx",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Guido María Conforti"
+      ],
+      "en": [
+        "Saint Guido Maria Conforti"
+      ],
+      "pt": [
+        "São Guido Maria Conforti"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades misioneras sirven a Iglesias locales en diversos países, con formación, diálogo cultural y religioso y anuncio del Evangelio.",
+      "en": "Missionary communities serve local Churches in different countries through formation, cultural and religious dialogue and proclamation of the Gospel.",
+      "pt": "As comunidades missionárias servem às Igrejas locais em diferentes países, com formação, diálogo cultural e religioso e anúncio do Evangelho."
+    },
+    "sources": [
+      "Misioneros Javerianos de Filipinas, Xaverian Life",
+      "Santa Sede, libro de canonización de Guido María Conforti, 23-X-2011, perfil biográfico"
+    ]
+  },
+  {
+    "id": "misiones-extranjeras-pime",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Pablo Manna"
+      ],
+      "en": [
+        "Blessed Paolo Manna"
+      ],
+      "pt": [
+        "Bem-aventurado Paulo Manna"
+      ]
+    },
+    "presence": {
+      "es": "El instituto envía sacerdotes y hermanos a comunidades misioneras, desarrollando evangelización y servicios de formación y promoción humana en distintos países.",
+      "en": "The institute sends priests and brothers to missionary communities, undertaking evangelization and services of formation and human development in different countries.",
+      "pt": "O instituto envia sacerdotes e irmãos a comunidades missionárias, desenvolvendo evangelização e serviços de formação e promoção humana em diferentes países."
+    },
+    "sources": [
+      "PIME, Who We Are, English PIME Booklet",
+      "PIME y familias misioneras vinculadas, Bounded Missionary Families, sección PIME"
+    ]
+  },
+  {
+    "id": "maryknoll-mm",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Los padres y hermanos sirven en comunidades de distintas culturas y sostienen formación misionera, publicaciones y proyectos de atención a necesidades humanas.",
+      "en": "Fathers and brothers serve communities of different cultures and support missionary formation, publications and projects responding to human needs.",
+      "pt": "Os padres e irmãos servem comunidades de diferentes culturas e mantêm formação missionária, publicações e projetos de atenção às necessidades humanas."
+    },
+    "sources": [
+      "Maryknoll Fathers and Brothers, misión y forma canónica",
+      "Maryknoll, Founders",
+      "Maryknoll, History"
+    ]
+  },
+  {
+    "id": "misiones-africanas-sma",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Sus comunidades y colaboradores sirven a poblaciones africanas y de origen africano con ministerios de evangelización, formación y acompañamiento humano.",
+      "en": "Its communities and collaborators serve African populations and people of African origin through evangelization, formation and human accompaniment.",
+      "pt": "Suas comunidades e colaboradores servem populações africanas e pessoas de origem africana com ministérios de evangelização, formação e acompanhamento humano."
+    },
+    "sources": [
+      "Society of African Missions, Foundation and Early History",
+      "Society of African Missions, Our History",
+      "Catholic-Hierarchy, Society of African Missions: forma canónica"
+    ]
+  },
+  {
+    "id": "misioneros-africa-mafr",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Sus comunidades internacionales sirven al mundo africano mediante evangelización, formación, diálogo religioso y compromiso con la justicia, la paz y el cuidado de la creación.",
+      "en": "Its international communities serve the African world through evangelization, formation, religious dialogue and commitment to justice, peace and care for creation.",
+      "pt": "Suas comunidades internacionais servem ao mundo africano por meio de evangelização, formação, diálogo religioso e compromisso com a justiça, a paz e o cuidado da criação."
+    },
+    "sources": [
+      "Missionaries of Africa, Who We Are",
+      "Missionaries of Africa, Constitutions and Laws, artículos iniciales"
+    ]
+  },
+  {
+    "id": "consolata-imc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San José Allamano"
+      ],
+      "en": [
+        "Saint Joseph Allamano"
+      ],
+      "pt": [
+        "São José Allamano"
+      ]
+    },
+    "presence": {
+      "es": "El instituto desarrolla misión y acompañamiento de comunidades en distintos continentes, con formación y servicios de promoción humana.",
+      "en": "The institute undertakes mission and accompaniment of communities on different continents through formation and services supporting human development.",
+      "pt": "O instituto desenvolve missão e acompanhamento de comunidades em diferentes continentes, com formação e serviços de promoção humana."
+    },
+    "sources": [
+      "Instituto Misiones Consolata, Calendario del Fondatore",
+      "Consolata Taiwan, presentación del instituto",
+      "Francisco, homilía de canonización, 20-X-2024"
+    ]
+  },
+  {
+    "id": "legionarios-cristo-lc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La congregación mantiene comunidades y obras de evangelización, educación y formación. Publica informes sobre prevención de abusos y atención a víctimas.",
+      "en": "The congregation maintains communities and works of evangelization, education and formation. It publishes reports on abuse prevention and care for victims.",
+      "pt": "A congregação mantém comunidades e obras de evangelização, educação e formação. Publica relatórios sobre prevenção de abusos e atenção às vítimas."
+    },
+    "sources": [
+      "Legionaries of Christ, Who We Are e historia",
+      "Santa Sede, comunicado sobre la visita apostólica, 1-V-2010",
+      "Santa Sede, biografía del cardenal Velasio De Paolis",
+      "Legionaries of Christ, 5th Annual Report: Truth, Justice and Healing, 2024"
+    ]
+  },
+  {
+    "id": "montfortianos-smm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Luis María Grignion de Montfort"
+      ],
+      "en": [
+        "Saint Louis Marie Grignion de Montfort"
+      ],
+      "pt": [
+        "São Luís Maria Grignion de Montfort"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades montfortianas realizan misiones, catequesis y servicios pastorales, con presencia internacional y una tradición de formación espiritual mariana.",
+      "en": "Montfortian communities undertake missions, catechesis and pastoral services, with an international presence and a tradition of Marian spiritual formation.",
+      "pt": "As comunidades monfortinas realizam missões, catequese e serviços pastorais, com presença internacional e uma tradição de formação espiritual mariana."
+    },
+    "sources": [
+      "Montfort Missionaries Philippines, Our Origin",
+      "Montfort Missionaries Philippines, Our Founder"
+    ]
+  },
+  {
+    "id": "dehonianos-scj",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Sus sacerdotes y hermanos sirven en distintos continentes mediante educación, ministerio parroquial, misiones y proyectos de atención social.",
+      "en": "Its priests and brothers serve on different continents through education, parish ministry, missions and projects providing social assistance.",
+      "pt": "Seus sacerdotes e irmãos servem em diferentes continentes por meio de educação, ministério paroquial, missões e projetos de atendimento social."
+    },
+    "sources": [
+      "Dehonians USA, History and Mission",
+      "Curia general dehoniana, Dehonian Family"
+    ]
   }
 ]

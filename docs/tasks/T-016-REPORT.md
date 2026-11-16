@@ -1,6 +1,6 @@
 # T-016 · Informe de Codex
 
-Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega de **15 nuevas familias** (objetivo aproximado: 60) y **52 fichas ampliadas**. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
+Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega de **30 nuevas familias** (objetivo aproximado: 60) y **67 fichas ampliadas**. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
 
 Leídos el protocolo, las reglas editoriales, el contrato M6 y los datos existentes. Solo se crean los dos JSON autorizados y este informe. Redacción original ES/EN/PT; no se componen lemas, citas ni oraciones. Las aprobaciones no se deducen del año de fundación ni de una agregación a otra orden. `motto: null`, aprobaciones vacías y listas de santos vacías señalan que no se incorpora un dato suficientemente documentado, no que necesariamente carezcan de ellos.
 
@@ -395,6 +395,120 @@ kind congregation de hermanos, no orden de sacerdotes. Se distingue FSC de los C
 
 1539 expresa el comienzo del servicio del fundador, no una orden canónicamente erigida ese año. Se distinguen reconocimiento inicial de 1572 y desarrollo posterior de la orden. No se completa el documento de aprobación con un título no cotejado ni se trasladan requisitos de admisión del artículo antiguo como actuales.
 
+### 53. `oratorianos-co` · `society`
+
+- [Francisco, mensaje por el quinto centenario de san Felipe Neri, 26-V-2015](https://www.vatican.va/content/francesco/en/messages/pont-messages/2015/documents/papa-francesco_20150526_messaggio-v-centenario-san-filippo-neri.html)
+- [Catholic-Hierarchy, Confederation of Oratorians of St. Philip Neri](https://www.catholic-hierarchy.org/diocese/dqco0.html)
+- [Catholic Encyclopedia: The Oratory of Saint Philip Neri](https://www.newadvent.org/cathen/11272a.htm)
+
+kind society: la confederación agrupa casas de la tradición oratoriana, no es una orden con votos religiosos. La enciclopedia imprime Gregory XII en 1575, anacronismo que no se reproduce. No se incorpora un nombre de bula no cotejado; las Constituciones de 1612 se distinguen de la erección inicial.
+
+### 54. `vicentinos-cm` · `society`
+
+- [Congregación de la Misión, sitio general](https://cmglobal.org/)
+- [Congregación de la Misión, Constituciones, artículo 3 e introducción histórica, versión inglesa](https://dbcm.cmglobal.org/constitution-en/)
+- [Congregación de la Misión, Constituciones, introducción histórica latina](https://dbcm.cmglobal.org/en/constitution-latin/)
+
+kind society explícito en las Constituciones: el nombre Congregación no la convierte en instituto religioso de votos simples. Se distingue aprobación de 1633 de la regulación posterior de sus votos. No es la Sociedad de San Vicente de Paúl fundada en el siglo XIX.
+
+### 55. `palotinos-sac` · `society`
+
+- [Palotinos, About Us: historia de la familia y de la Unión del Apostolado Católico](https://www.pallottines.org/about-us)
+- [Sociedad del Apostolado Católico en Nigeria, About Us: forma canónica](https://www.pallottinenig.org/about.php)
+- [Catholic Encyclopedia: Vincent Mary Pallotti](https://www.newadvent.org/cathen/11429a.htm)
+
+kind society, explícito en la fuente institucional nigeriana. No se atribuyen automáticamente a la SAC la aprobación inicial de la Unión de 1835 o el decreto de la UAC de 2003. Approval queda vacío hasta identificar un documento correspondiente a la sociedad de sacerdotes y hermanos.
+
+### 56. `marianistas-sm` · `congregation`
+
+- [Marianistas, Society of Mary: identidad y carisma](https://www.marianist.com/society-of-mary)
+- [Marianistas, History](https://www.marianist.com/history)
+
+kind congregation, no society de vida apostólica. Se distingue SM marianista de SM marista, aunque compartan sigla, y de FMS. El fundador figura como beato, no santo. No se infiere una aprobación pontificia del año de fundación.
+
+### 57. `sacramentinos-sss` · `congregation`
+
+- [Congregación del Santísimo Sacramento, Who We Are](https://www.blessedsacrament.com/who-we-are/)
+- [Congregación del Santísimo Sacramento, Saint Peter Julian Eymard](https://www.blessedsacrament.com/st-peter-julian-eymard/)
+
+kind congregation. No se atribuye a Eymard pertenencia provincial a los Oblatos; su etapa previa fue marista. No se completa el documento pontificio a partir de una simple noticia de aprobación ni se convierten cifras sin fecha en estadísticas actuales.
+
+### 58. `combonianos-mccj` · `congregation`
+
+- [Misioneros Combonianos, Who We Are](https://www.comboni.org/en/who-we-are)
+- [Misioneros Combonianos, About Us e historia norteamericana](https://combonimissionaries.org/about-us/)
+- [Santa Sede, biografía de Daniel Comboni, 5-X-2003](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20031005_comboni_en.html)
+
+Se distingue instituto masculino de 1867 de las hermanas de 1872 y de la familia más amplia. No se hacen miembros de esta congregación todos los laicos o religiosas que comparten el carisma. La fecha fundacional no se transforma en aprobación pontificia. No se copia una consigna personal del fundador como lema jurídico no documentado.
+
+### 59. `javerianos-sx` · `congregation`
+
+- [Misioneros Javerianos de Filipinas, Xaverian Life](https://philippines.xaverians.org/vocations/xaverian-life)
+- [Santa Sede, libro de canonización de Guido María Conforti, 23-X-2011, perfil biográfico](https://www.vatican.va/news_services/liturgy/libretti/2011/20111023.pdf)
+
+kind congregation: son religiosos con profesión, no una sociedad sin votos por llevar Society en el nombre. Se distingue el fundador Conforti de Francisco Javier, inspirador del nombre. Se utiliza el perfil biográfico del libro de canonización; no se copia la traducción litúrgica. Approval vacío sin documento preciso.
+
+### 60. `misiones-extranjeras-pime` · `society`
+
+- [PIME, Who We Are, English PIME Booklet](https://pime.org/il-pime/chi-siamo/english-pime-booklet)
+- [PIME y familias misioneras vinculadas, Bounded Missionary Families, sección PIME](https://pime.org/images/sito2019/BMF_booklet.pdf)
+
+kind society explícito. Se distingue origen lombardo de 1850 de unión de 1926 y de familias femeninas vinculadas pero jurídicamente distintas. Ramazzotti no se presenta como único fundador de cada antecedente. Las cifras del folleto no se reutilizan como actuales. No se inventa el documento de unión pontificia.
+
+### 61. `maryknoll-mm` · `society`
+
+- [Maryknoll Fathers and Brothers, misión y forma canónica](https://maryknollsociety.org/)
+- [Maryknoll, Founders](https://maryknollsociety.org/about/maryknoll-history/founders/)
+- [Maryknoll, History](https://maryknollsociety.org/about/maryknoll-history/)
+
+kind society, explícito en el sitio oficial. Se distingue a James Anthony Walsh, cofundador, de James Edward Walsh, obispo posterior. La bendición de Pío X en 1911 se documenta como tal, sin fabricar bula o convertirla en aprobación de otras ramas Maryknoll. No se atribuye beatificación a los fundadores.
+
+### 62. `misiones-africanas-sma` · `society`
+
+- [Society of African Missions, Foundation and Early History](https://sma.ie/foundation-and-early-history/)
+- [Society of African Missions, Our History](https://sma.ie/our-history/)
+- [Catholic-Hierarchy, Society of African Missions: forma canónica](https://www.catholic-hierarchy.org/diocese/dqsma.html)
+
+kind society. Brésillac y Planque se distinguen en sus papeles de iniciador y continuador/cofundador según la historia institucional. No se equipara esta sociedad con M.Afr. El permiso de misión de 1856 y el territorio confiado después no se hacen pasar por una aprobación papal definitiva sin documento.
+
+### 63. `misioneros-africa-mafr` · `society`
+
+- [Missionaries of Africa, Who We Are](https://mafr.org/about-us/who-we-are/)
+- [Missionaries of Africa, Constitutions and Laws, artículos iniciales](https://mafrome.org/wp-content/uploads/2024/04/CONSTITUTIONS-ET-LOIS.pdf)
+
+Sociedad de vida apostólica explícita en ambas fuentes. La constitución se consultó en contenido indexado: el servidor mafrome.org devolvió 503 al acceso directo. El juramento misionero no se describe como profesión religiosa de una orden. Sin aprobación precisa incorporada; no se asignan automáticamente a esta sociedad mártires laicos de Uganda.
+
+### 64. `consolata-imc` · `congregation`
+
+- [Instituto Misiones Consolata, Calendario del Fondatore](https://www.giuseppeallamano.consolata.org/index.php/allamano/calendario-dell-allamano)
+- [Consolata Taiwan, presentación del instituto](https://taiwan.consolata.org/?p=111)
+- [Francisco, homilía de canonización, 20-X-2024](https://www.vatican.va/content/francesco/en/homilies/2024/documents/20241020-omelia-canonizzazione.html)
+
+Se distingue la fundación masculina de 1901 de la femenina de 1910. Allamano fue canonizado en 2024: no se conserva el antiguo tratamiento de beato de algunas páginas. No se reutilizan estadísticas antiguas. La aprobación diocesana fundacional y la de constituciones no se convierten en una bula pontificia inventada. Prosa original, sin reproducción de los contenidos con licencia CC BY-NC-ND del calendario.
+
+### 65. `legionarios-cristo-lc` · `congregation`
+
+- [Legionaries of Christ, Who We Are e historia](https://legionariesofchrist.org/about-us/legionaries-of-christ/)
+- [Santa Sede, comunicado sobre la visita apostólica, 1-V-2010](https://www.vatican.va/resources/resources_comunicato-legionari-cristo-2010_en.html)
+- [Santa Sede, biografía del cardenal Velasio De Paolis](https://www.vatican.va/news_services/press/documentazione/documents/cardinali_biografie/cardinali_bio_depaolis_v_en.html)
+- [Legionaries of Christ, 5th Annual Report: Truth, Justice and Healing, 2024](https://legionariesofchrist.org/wp-content/uploads/2025/04/5th-Annual-Report-Truth-Justice-and-Healing-2024-Legionaries-of-Christ.pdf)
+
+Se incorpora expresamente la intervención de 2010 y los abusos, sin presentar al fundador como modelo ni afirmar que la renovación haya resuelto todos los daños. El informe institucional documenta medidas declaradas, no constituye auditoría independiente. No se mezclan constituciones de 2014/2020 con reconocimiento inicial. No se atribuyen santos o beatos al instituto sin prueba.
+
+### 66. `montfortianos-smm` · `congregation`
+
+- [Montfort Missionaries Philippines, Our Origin](https://montfortian.info/ph/our-origin.html)
+- [Montfort Missionaries Philippines, Our Founder](https://www.montfortian.info/ph/our-founder.html)
+
+La fuente declara que no existe fecha única de fundación y señala 1705 como comienzo; se utiliza c. 1705. Se distingue de los marianistas y de otras Compañías de María. No se transforma el lema personal Totus tuus en lema institucional no comprobado. Approval vacío.
+
+### 67. `dehonianos-scj` · `congregation`
+
+- [Dehonians USA, History and Mission](https://dehoniansusa.org/about/history-and-mission/)
+- [Curia general dehoniana, Dehonian Family](https://www.dehoniani.org/en/dehonian-family-2/)
+
+Se distingue la autorización diocesana de 1877 de la profesión fundacional del 28-VI-1878. No se presenta a Dehon como beato o santo. No se atribuye automáticamente a otra familia que use Sacred Heart el mismo carisma o identidad canónica. La cronología institucional aporta aprobaciones históricas, pero no se incorpora una referencia documental incompleta como aprobación pontificia.
+
 ## Validación
 
 ```sh
@@ -403,8 +517,9 @@ python3 docs/tasks/tools/validate_orders.py details app/src/main/assets/orders/o
 ```
 
 ```text
-15 entries · 0 errors · 0 warnings
-52 entries · 0 errors · 0 warnings
+WARN  legionarios-cristo-lc.founder: identical text in two languages
+30 entries · 0 errors · 1 warnings
+67 entries · 0 errors · 0 warnings
 ```
 
 Las entregas de fichas ampliadas aceptan un prefijo ordenado; el aviso de parcial no es un error. Se comprueban además las extensiones editoriales, las claves e identificadores y `git diff --check` antes de entregar. Integración y compilación a cargo del coordinador.
