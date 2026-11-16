@@ -1,0 +1,33 @@
+{
+  "version_name": "1.8.11",
+  "version_code": 20,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.11",
+  "sha256": "e708ef952eb9d47fff876380c37a4c0c95ee0a79c3b406fbe8aae13399bfdc9f",
+  "bytes": 85312293,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.10 (same package and key)",
+  "changes": [
+    "More natural narration: the app no longer pitch-shifts one voice; it picks the best installed offline voices (two distinct voices for leader and response).",
+    "Settings > Reading voice: choose leader and response voices with preview, and a shortcut to Android's TTS settings to download better free offline voices.",
+    "Code for M6 (orders/offices) and M7 (devotions) is in place; content arrives with T-016 to T-019."
+  ],
+  "tests": [
+    "VoiceSelectorTest",
+    "VoiceSettingsUiTest",
+    "NarrationAvailabilityTest",
+    "RosaryNarrationTest",
+    "RosaryInteractionTest",
+    "OrdersScreenTest",
+    "DevotionsScreenTest",
+    "AppNavigationTest",
+    "DesignNavigationTest"
+  ],
+  "known_limitations": [
+    "Full unit-test suite not run.",
+    "Voice selection not verified on a real device or engine (Robolectric exposes no voices)."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

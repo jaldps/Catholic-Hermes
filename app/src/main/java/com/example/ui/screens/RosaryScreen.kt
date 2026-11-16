@@ -2228,8 +2228,8 @@ private fun OptionsSheet(
         SheetLabel(lang.pick("Voces", "Voices", "Vozes"))
         AppSegmentedTabs(
             options = listOf(
-                lang.pick("Diálogo", "Dialogue", "Diálogo"),
-                lang.pick("Quien guía", "Leader", "Quem conduz"),
+                lang.pick("Ambas voces", "Both voices", "Ambas as vozes"),
+                lang.pick("Guía", "Leader", "Guia"),
                 lang.pick("Respuesta", "Response", "Resposta")
             ),
             selectedIndex = modes.indexOf(voiceMode).coerceAtLeast(0),

@@ -51,7 +51,9 @@ data class UserPreferences(
     /** False means preferences could not be read, not that the user reset them. */
     val storageAvailable: Boolean = true,
     /** Default Bible edition per app language code (es/en/pt); a missing entry means that language's bundled Bible. */
-    val bibleDefaultEditions: Map<String, String> = emptyMap()
+    val bibleDefaultEditions: Map<String, String> = emptyMap(),
+    /** Chosen narration voice names, keyed "es.leader" / "es.response"; a missing key means automatic. */
+    val narrationVoices: Map<String, String> = emptyMap()
 ) {
     companion object {
         const val DEFAULT_DESIGN_LANGUAGE = "LUMEN"
@@ -83,6 +85,10 @@ class UserPreferencesStore(
     private suspend fun editPreference(key: String, transform: suspend (MutablePreferences) -> Unit) {
         PersonalDataCommands.execute("preferences:$key") { dataStore.edit(transform); retryRead() }
     }
+
+    private val VOICE_KEYS = listOf("es", "en", "pt").flatMap { l ->
+        listOf("leader", "response").map { r -> "$l.$r" to stringPreferencesKey("narration_voice_${l}_$r") }
+    }.toMap()
 
     private object Keys {
         val EPIPHANY_SUNDAY = booleanPreferencesKey("calendar_epiphany_sunday")
@@ -201,7 +207,8 @@ class UserPreferencesStore(
                 audioNarrationSpeed = stored[Keys.NARRATION_SPEED] ?: 1.0f,
                 activeBibleTranslationId = stored[Keys.BIBLE_TRANSLATION] ?: "jerusalem",
                 isFullCccDownloaded = stored[Keys.FULL_CCC_DOWNLOADED] ?: false,
-                bibleDefaultEditions = parseBibleDefaults(stored[Keys.BIBLE_DEFAULTS])
+                bibleDefaultEditions = parseBibleDefaults(stored[Keys.BIBLE_DEFAULTS]),
+                narrationVoices = VOICE_KEYS.mapNotNull { (id, key) -> stored[key]?.takeIf { it.isNotBlank() }?.let { id to it } }.toMap()
             )
         }
 
@@ -265,6 +272,12 @@ class UserPreferencesStore(
 
     suspend fun setFontSizeScale(scale: Float) {
         editPreference("setFontSizeScale") { it[Keys.FONT_SCALE] = scale }
+    }
+
+    /** [name] null restores automatic selection. [language] is es/en/pt, [role] leader/response. */
+    suspend fun setNarrationVoice(language: String, role: String, name: String?) {
+        val key = VOICE_KEYS["$language.$role"] ?: return
+        editPreference("setNarrationVoice") { if (name.isNullOrBlank()) it.remove(key) else it[key] = name }
     }
 
     suspend fun setAudioNarrationSpeed(speed: Float) {

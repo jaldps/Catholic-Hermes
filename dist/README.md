@@ -1,5 +1,15 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.11
+
+[Descargar Catholic Hermes 1.8.11](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.11.apk) · versión `1.8.11`, código 20. **Actualiza 1.8.1–1.8.10** y conserva el progreso.
+
+Novedades:
+- **Voz más natural**: la app ya no deforma el tono de una misma voz; usa las mejores voces sin conexión del teléfono, dos voces reales distintas para quien guía y quien responde.
+- **Ajustes → Voz de lectura**: elige la voz que guía y la que responde (con botón para escucharlas) y abre los ajustes de Android para **descargar voces de mejor calidad, gratis y sin conexión**, en español, inglés y portugués.
+
+[Metadatos](../docs/quality/release-1.8.11/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.10
 
 [Descargar Catholic Hermes 1.8.10](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.10.apk) · versión `1.8.10`, código 19. **Actualiza 1.8.1–1.8.9** y conserva el progreso.
