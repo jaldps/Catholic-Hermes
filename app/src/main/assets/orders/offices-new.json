@@ -188,5 +188,195 @@
       "Código de Derecho Canónico, cc. 350 §4, 352 y 355",
       "Código de Derecho Canónico, cc. 350-355"
     ]
+  },
+  {
+    "id": "office_nuncio_apostolico",
+    "name": {
+      "es": "Nuncio apostólico",
+      "en": "Apostolic Nuncio",
+      "pt": "Núncio apostólico"
+    },
+    "description": {
+      "es": "Es el legado del Romano Pontífice que le representa de modo estable ante una Iglesia particular y ante un Estado o autoridad pública. El Código de Derecho Canónico (cc. 362-367) reconoce el derecho nativo e independiente del Papa de nombrar, trasladar y hacer cesar a sus legados, observando las normas del derecho internacional ante los Estados. Su función principal es procurar que los vínculos de unidad entre la Sede Apostólica y las Iglesias particulares sean cada vez más firmes y eficaces. Ante los Estados compete el oficio peculiar de la representación diplomática. El cargo no cesa al quedar vacante la Sede Apostólica, salvo lo dispuesto en las letras pontificias.",
+      "en": "He is the legate of the Roman Pontiff who represents him in a stable manner before a particular Church and before a State or public authority. The Code of Canon Law (cc. 362-367) recognizes the native and independent right of the Pope to appoint, transfer, and end his legates, observing the norms of international law before States. His principal function is to ensure that the bonds of unity between the Apostolic See and the particular Churches become ever firmer and more effective. Before States the peculiar office of diplomatic representation belongs to him. The office does not cease when the Apostolic See becomes vacant, unless the apostolic letters provide otherwise.",
+      "pt": "É o legado do Romano Pontífice que o representa de modo estável ante uma Igreja particular e ante um Estado ou autoridade pública. O Código de Direito Canônico (cc. 362-367) reconhece o direito nativo e independente do Papa de nomear, transferir e fazer cessar os seus legados, observando as normas do direito internacional perante os Estados. Sua função principal é procurar que os vínculos de união entre a Sé Apostólica e as Igrejas particulares sejam cada vez mais firmes e eficazes. Perante os Estados compete o ofício peculiar da representação diplomática. O cargo não cessa ao vagar a Sé Apostólica, salvo o disposto nas letras pontifícias."
+    },
+    "group": "governance",
+    "after": "office_decano_colegio_cardenalicio",
+    "sources": [
+      "Código de Derecho Canónico, cc. 362-367",
+      "Código de Derecho Canónico, c. 365 §1"
+    ]
+  },
+  {
+    "id": "office_delegado_apostolico",
+    "name": {
+      "es": "Delegado apostólico",
+      "en": "Apostolic Delegate",
+      "pt": "Delegado apostólico"
+    },
+    "description": {
+      "es": "Es el representante del Romano Pontífice enviado ante una misión pontificia, ante organismos internacionales o ante conferencias y reuniones. El Código de Derecho Canónico (cc. 362-367) equipara a los legados del Papa a quienes se envían como delegados u observadores, y les encomienda representar de modo estable a la Sede Apostólica. Su tarea es procurar la unidad entre la Sede Apostólica y las Iglesias particulares y dar cuenta de cuanto se le encomienda. El nombramiento, el traslado y el cese corresponden al Romano Pontífice, y ante los Estados se observan las normas del derecho internacional.",
+      "en": "He is the representative of the Roman Pontiff sent before a pontifical mission, before international organizations, or before conferences and meetings. The Code of Canon Law (cc. 362-367) places on the same level the legates of the Pope and those sent as delegates or observers, and entrusts them with stably representing the Apostolic See. His task is to foster unity between the Apostolic See and the particular Churches and to give an account of all that is entrusted to him. Appointment, transfer, and removal belong to the Roman Pontiff, and before States the norms of international law are observed.",
+      "pt": "É o representante do Romano Pontífice enviado ante uma missão pontifícia, ante organismos internacionais ou ante conferências e reuniões. O Código de Direito Canônico (cc. 362-367) equipara os legados do Papa aos que são enviados como delegados ou observadores, e confia-lhes representar de modo estável a Sé Apostólica. Sua tarefa é promover a união entre a Sé Apostólica e as Igrejas particulares e prestar contas do que lhe é confiado. A nomeação, a transferência e o cessar competem ao Romano Pontífice, e perante os Estados observam-se as normas do direito internacional."
+    },
+    "group": "governance",
+    "after": "office_nuncio_apostolico",
+    "sources": [
+      "Código de Derecho Canónico, cc. 362-367",
+      "Código de Derecho Canónico, c. 363 §2"
+    ]
+  },
+  {
+    "id": "office_secretario_de_estado",
+    "name": {
+      "es": "Secretario de Estado",
+      "en": "Secretary of State",
+      "pt": "Secretário de Estado"
+    },
+    "description": {
+      "es": "Es quien dirige la Secretaría de Estado y ayuda de cerca al Romano Pontífice en el ejercicio de su suprema misión. La constitución apostólica Praedicate Evangelium (arts. 44-52) la describe como secretaría papal y la divide en tres secciones: Asuntos Generales, Relaciones con los Estados y Organismos Internacionales, y Personal Diplomático de la Santa Sede. El secretario de Estado convoca y coordina las reuniones de los dirigentes de las instituciones curiales, y los documentos sobre relaciones con los Estados requieren el nihil obstat de la Secretaría. Es la institución que colabora más directamente con el Papa en el gobierno de la Iglesia universal.",
+      "en": "He is the one who directs the Secretariat of State and closely assists the Roman Pontiff in the exercise of his supreme mission. The apostolic constitution Praedicate Evangelium (arts. 44-52) describes it as the papal secretariat and divides it into three sections: General Affairs, Relations with States and International Organizations, and Diplomatic Personnel of the Holy See. The Secretary of State convenes and coordinates the meetings of the heads of the curial institutions, and documents concerning relations with States require the nihil obstat of the Secretariat. It is the institution that collaborates most directly with the Pope in the governance of the universal Church.",
+      "pt": "É quem dirige a Secretaria de Estado e auxilia de perto o Romano Pontífice no exercício de sua suprema missão. A constituição apostólica Praedicate Evangelium (arts. 44-52) descreve-a como secretaria papal e divide-a em três seções: Assuntos Gerais, Relações com os Estados e Organismos Internacionais e Pessoal Diplomático da Santa Sé. O Secretário de Estado convoca e coordena as reuniões dos dirigentes das instituições curiais, e os documentos sobre relações com os Estados requerem o nihil obstat da Secretaria. É a instituição que colabora mais diretamente com o Papa no governo da Igreja universal."
+    },
+    "group": "governance",
+    "after": "office_delegado_apostolico",
+    "sources": [
+      "Praedicate Evangelium, arts. 44-52",
+      "Praedicate Evangelium, arts. 163 y 170"
+    ]
+  },
+  {
+    "id": "office_prefecto_dicasterio",
+    "name": {
+      "es": "Prefecto de dicasterio",
+      "en": "Prefect of a Dicastery",
+      "pt": "Prefeito de dicastério"
+    },
+    "description": {
+      "es": "Es quien gobierna y representa un dicasterio de la Curia Romana. La constitución apostólica Praedicate Evangelium (arts. 174-188) dispone que cada institución curial se compone de un prefecto, o equiparado, de un número adecuado de miembros, secretarios, subsecretarios y oficiales. El prefecto la dirige y la representa, es nombrado por el Romano Pontífice por un período de cinco años, y debe presentar su renuncia al alcanzar la edad prevista por el Reglamento General de la Curia Romana. Verifica y evalúa periódicamente con el Papa la eficacia, la viabilidad y la oportunidad de las facultades de su dicasterio.",
+      "en": "He is the one who governs and represents a dicastery of the Roman Curia. The apostolic constitution Praedicate Evangelium (arts. 174-188) provides that each curial institution is composed of a prefect, or equivalent, an adequate number of members, secretaries, undersecretaries, and officials. The prefect directs and represents it, is appointed by the Roman Pontiff for a period of five years, and must present his resignation upon reaching the age set by the General Regulations of the Roman Curia. He periodically verifies and evaluates with the Pope the effectiveness, viability, and timeliness of the faculties of his dicastery.",
+      "pt": "É quem governa e representa um dicastério da Cúria Romana. A constituição apostólica Praedicate Evangelium (arts. 174-188) dispõe que cada instituição curial se compõe de um prefeito, ou equiparado, de número adequado de membros, secretários, subsecretários e oficiais. O prefeito dirige-o e representa-o, é nomeado pelo Romano Pontífice por um período de cinco anos, e deve apresentar sua renúncia ao atingir a idade prevista pelo Regulamento Geral da Cúria Romana. Verifica e avalia periodicamente com o Papa a eficácia, a viabilidade e a oportunidade das faculdades de seu dicastério."
+    },
+    "group": "governance",
+    "after": "office_secretario_de_estado",
+    "sources": [
+      "Praedicate Evangelium, arts. 174-188",
+      "Praedicate Evangelium, art. 177 §1"
+    ]
+  },
+  {
+    "id": "office_camarlengo",
+    "name": {
+      "es": "Camarlengo",
+      "en": "Camerlengo",
+      "pt": "Camerlengo"
+    },
+    "description": {
+      "es": "Es el cardenal al que la constitución apostólica Praedicate Evangelium (arts. 235-237) encomienda las funciones de la legislación especial sobre la Sede Apostólica vacante y la elección del Romano Pontífice. Nombra al vicecamarlengo y es apoyado por tres cardenales asistentes. Durante la Sede vacante vela y administra los bienes y derechos temporales de la Sede Apostólica, y en caso de impedimento asume la función el vicecamarlengo. Es un cargo propio del gobierno de la Iglesia universal en el tiempo en que la Sede está vacante, y está previsto en la Curia Romana como oficina.",
+      "en": "He is the cardinal to whom the apostolic constitution Praedicate Evangelium (arts. 235-237) entrusts the functions of the special legislation on the vacant Apostolic See and the election of the Roman Pontiff. He appoints the vice-camerlengo and is assisted by three cardinal assistants. During the vacancy of the See he watches over and administers the goods and temporal rights of the Apostolic See, and in case of impediment the vice-camerlengo assumes the function. It is an office proper to the governance of the universal Church when the See is vacant, and it is provided for in the Roman Curia as an office.",
+      "pt": "É o cardeal a quem a constituição apostólica Praedicate Evangelium (arts. 235-237) confia as funções da legislação especial sobre a Sé Apostólica vacante e a eleição do Romano Pontífice. Nomeia o vice-camerlengo e é amparado por três cardeais assistentes. Durante a vacância da Sé, vela e administra os bens e direitos temporais da Sé Apostólica, e em caso de impedimento assume a função o vice-camerlengo. É um cargo próprio do governo da Igreja universal no tempo em que a Sé está vacante, e está previsto na Cúria Romana como ofício."
+    },
+    "group": "governance",
+    "after": "office_prefecto_dicasterio",
+    "sources": [
+      "Praedicate Evangelium, arts. 235-237",
+      "Praedicate Evangelium, art. 172 §3"
+    ]
+  },
+  {
+    "id": "office_penitenciario_mayor",
+    "name": {
+      "es": "Penitenciario mayor",
+      "en": "Major Penitentiary",
+      "pt": "Penitenciário mor"
+    },
+    "description": {
+      "es": "Es quien rige la Penitenciaría Apostólica, organismo ordinario de justicia de la Curia Romana. La constitución apostólica Praedicate Evangelium (arts. 190-193) le encomienda la jurisdicción sobre el fuero interno y las indulgencias como expresiones de la misericordia divina, y le asiste un regente. Concede absolución de censuras, dispensas, conmutaciones, sanaciones y otras gracias en el fuero interno, y provee a que en las Basílicas Papales de Roma haya penitenciarios con las oportunas facultades. En caso de Sede vacante sigue atendiendo los asuntos ordinarios de su competencia.",
+      "en": "He is the one who governs the Apostolic Penitentiary, an ordinary organ of justice of the Roman Curia. The apostolic constitution Praedicate Evangelium (arts. 190-193) entrusts him with jurisdiction over the internal forum and indulgences as expressions of divine mercy, and a regent assists him. He grants absolution from censures, dispensations, commutations, sanations, and other graces in the internal forum, and provides that in the Papal Basilicas of Rome there be penitentiaries with the appropriate faculties. In the event of a vacant See he continues to attend to the ordinary affairs of his competence.",
+      "pt": "É quem rege a Penitenciária Apostólica, organismo ordinário de justiça da Cúria Romana. A constituição apostólica Praedicate Evangelium (arts. 190-193) confia-lhe a jurisdição sobre o foro interno e as indulgências como expressões da misericórdia divina, e um regente o assiste. Concede absolvição de censuras, dispensas, comutações, saneamentos e outras graças no foro interno, e provê para que nas Basílicas Papais de Roma haja penitenciários com as oportunas faculdades. Em caso de Sé vacante, continua a tratar dos assuntos ordinários de sua competência."
+    },
+    "group": "governance",
+    "after": "office_camarlengo",
+    "sources": [
+      "Praedicate Evangelium, arts. 190-193",
+      "Praedicate Evangelium, art. 192 §1"
+    ]
+  },
+  {
+    "id": "office_ordinario_militar",
+    "name": {
+      "es": "Ordinario militar",
+      "en": "Military Ordinary",
+      "pt": "Ordinário militar"
+    },
+    "description": {
+      "es": "Es el obispo que rige un ordinariato militar, la circunscripción eclesiástica que atiende pastoralmente a los fieles católicos de las fuerzas armadas y a sus familias. La constitución apostólica Spirituali militum curae (Juan Pablo II, 1986) erige y regula el ordinariato militar y la figura del ordinario castrense, con su curia, la condición eclesiástica de los sacerdotes adscritos y las normas sobre la asistencia a los fieles. No es una diócesis: es una circunscripción especial de carácter personal, y sus estatutos los aprueba la Sede Apostólica.",
+      "en": "He is the bishop who governs a military ordinariate, the ecclesiastical circumscription that pastorally serves the Catholic faithful of the armed forces and their families. The apostolic constitution Spirituali militum curae (John Paul II, 1986) erects and regulates the military ordinariate and the figure of the military ordinary, with its curia, the ecclesiastical condition of the assigned priests, and the norms on the assistance to the faithful. It is not a diocese: it is a special circumscription of a personal character, and its statutes are approved by the Apostolic See.",
+      "pt": "É o bispo que rege um ordinariato militar, a circunscrição eclesiástica que atende pastoralmente aos fiéis católicos das forças armadas e às suas famílias. A constituição apostólica Spirituali militum curae (João Paulo II, 1986) erige e regula o ordinariato militar e a figura do ordinário castrense, com sua cúria, a condição eclesiástica dos presbíteros adscritos e as normas sobre a assistência aos fiéis. Não é uma diocese: é uma circunscrição especial de caráter pessoal, e seus estatutos são aprovados pela Sé Apostólica."
+    },
+    "group": "governance",
+    "after": "office_penitenciario_mayor",
+    "sources": [
+      "Spirituali militum curae (Juan Pablo II, 21-IV-1986)",
+      "Praedicate Evangelium, arts. 190-193"
+    ]
+  },
+  {
+    "id": "office_prelado_territorial",
+    "name": {
+      "es": "Prelado territorial",
+      "en": "Territorial Prelate",
+      "pt": "Prelado territorial"
+    },
+    "description": {
+      "es": "Es quien rige una prelatura territorial como pastor propio, del mismo modo que un obispo diocesano. El Código de Derecho Canónico (cc. 368 y 370) la define como una porción del pueblo de Dios, delimitada territorialmente, cuya atención se encomienda, por especiales circunstancias, a un prelado. La equipara a la diócesis y al vicariato y la prefectura apostólicos, y su titular goza en derecho de las potestades del obispo diocesano, salvo lo que la naturaleza del asunto o la ley disponga. Son realidades históricas poco frecuentes en la organización actual de la Iglesia.",
+      "en": "He is the one who governs a territorial prelature as its own pastor, in the same way as a diocesan bishop. The Code of Canon Law (cc. 368 and 370) defines it as a portion of the People of God, territorially delimited, whose care is entrusted, for special circumstances, to a prelate. It equates it to the diocese and to the apostolic vicariate and prefecture, and its holder enjoys in law the powers of the diocesan bishop, except what the nature of the matter or the law provides. They are historical realities, infrequent in the present organization of the Church.",
+      "pt": "É quem rege uma prelado territorial como pastor próprio, do mesmo modo que um bispo diocesano. O Código de Direito Canônico (cc. 368 e 370) define-a como uma porção do povo de Deus, delimitada territorialmente, cuja atenção é confiada, por circunstâncias especiais, a um prelado. Equipara-a à diocese e ao vicariato e à prefeitura apostólicos, e seu titular goza em direito das potestades do bispo diocesano, salvo o que a natureza do assunto ou a lei dispuser. São realidades históricas pouco frequentes na organização atual da Igreja."
+    },
+    "group": "governance",
+    "after": "office_ordinario_militar",
+    "sources": [
+      "Código de Derecho Canónico, cc. 368 y 370",
+      "Código de Derecho Canónico, c. 381 §2"
+    ]
+  },
+  {
+    "id": "office_abad_territorial",
+    "name": {
+      "es": "Abad territorial",
+      "en": "Territorial Abbot",
+      "pt": "Abade territorial"
+    },
+    "description": {
+      "es": "Es quien rige una abadía territorial como pastor propio, del mismo modo que un obispo diocesano. El Código de Derecho Canónico (cc. 368 y 370) la define como una porción del pueblo de Dios, delimitada territorialmente, cuya atención se encomienda, por especiales circunstancias, a un abad. La equipara a la diócesis y a la prelatura territorial, y su titular goza en derecho de las potestades del obispo diocesano, salvo lo que la naturaleza del asunto o la ley disponga. Son realidades históricas poco frecuentes, propias de la tradición monástica y de la historia de la Iglesia.",
+      "en": "He is the one who governs a territorial abbey as its own pastor, in the same way as a diocesan bishop. The Code of Canon Law (cc. 368 and 370) defines it as a portion of the People of God, territorially delimited, whose care is entrusted, for special circumstances, to an abbot. It equates it to the diocese and the territorial prelature, and its holder enjoys in law the powers of the diocesan bishop, except what the nature of the matter or the law provides. They are historical realities, infrequent, proper to the monastic tradition and the history of the Church.",
+      "pt": "É quem rege uma abadia territorial como pastor próprio, do mesmo modo que um bispo diocesano. O Código de Direito Canônico (cc. 368 e 370) define-a como uma porção do povo de Deus, delimitada territorialmente, cuja atenção é confiada, por circunstâncias especiais, a um abade. Equipara-a à diocese e ao prelado territorial, e seu titular goza em direito das potestades do bispo diocesano, salvo o que a natureza do assunto ou a lei dispuser. São realidades históricas pouco frequentes, próprias da tradição monástica e da história da Igreja."
+    },
+    "group": "governance",
+    "after": "office_prelado_territorial",
+    "sources": [
+      "Código de Derecho Canónico, cc. 368 y 370",
+      "Código de Derecho Canónico, c. 381 §2"
+    ]
+  },
+  {
+    "id": "office_prelado_personal",
+    "name": {
+      "es": "Prelado personal",
+      "en": "Personal Prelate",
+      "pt": "Prelado pessoal"
+    },
+    "description": {
+      "es": "Es el ordinario propio que gobierna una prelatura personal, erigida por la Sede Apostólica, oídas las Conferencias Episcopales, para promover una conveniente distribución de presbíteros o peculiares obras pastorales o misionales en favor de varias regiones o grupos sociales. El Código de Derecho Canónico (cc. 294-297) la compone de presbíteros y diáconos del clero secular, y el prelado tiene la potestad de erigir un seminario y de incardinar y promover a sus alumnos a título de servicio a la prelatura. Los laicos pueden cooperar según los estatutos, y se determinan las relaciones con los ordinarios locales.",
+      "en": "He is the proper ordinary who governs a personal prelature, erected by the Apostolic See, having heard the Episcopal Conferences, to promote a suitable distribution of presbyters or peculiar pastoral or missionary works for various regions or social groups. The Code of Canon Law (cc. 294-297) composes it of presbyters and deacons of the secular clergy, and the prelate has the power to erect a seminary and to incardinate and promote his students by title of service to the prelature. Lay people may cooperate according to the statutes, and the relations with the local ordinaries are determined.",
+      "pt": "É o ordinário próprio que governa uma prelado pessoal, erigida pela Sé Apostólica, ouvidas as Conferências Episcopais, para promover uma conveniente distribuição de presbíteros ou peculiares obras pastorais ou missionais em favor de várias regiões ou grupos sociais. O Código de Direito Canônico (cc. 294-297) compõe-a de presbíteros e diáconos do clero secular, e o prelado tem a potestade de erigir um seminário e de incardinar e promover seus alunos a título de serviço à prelado. Os leigos podem cooperar segundo os estatutos, e determinam-se as relações com os ordinários locais."
+    },
+    "group": "governance",
+    "after": "office_abad_territorial",
+    "sources": [
+      "Código de Derecho Canónico, cc. 294-297",
+      "Constitución Apostólica Ut sit (Juan Pablo II, 1982)"
+    ]
   }
 ]
