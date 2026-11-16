@@ -6,7 +6,7 @@ Rama `ext/T-022`. Base inicial de T-022: `origin/CatholicGPT` (`be71f71`). Solo 
 
 Enseñanza y contexto de redacción propia en ES/EN/PT. No se incorpora texto bíblico: las referencias se resuelven desde la edición que selecciona la app. No se compone ninguna oración: `oratio` contiene consignas para la oración personal, no palabras atribuidas a Jesús, María o un santo. El curso no se presenta como publicación del Vaticano ni como formación sacramental certificada.
 
-Los rangos del Catecismo se cotejan en el corpus completo ES/EN/PT, cuya procedencia oficial documenta `docs/content/catechism-provenance.json`, y en las páginas oficiales españolas enumeradas por lección. Se contrastan los pasajes en las Biblias incluidas. Las explicaciones son paráfrasis editoriales, sin citas textuales importadas de memoria.
+La doctrina citada se revisó en la edición española oficial del Catecismo y se comprobó que todos los números existen en el corpus ES/EN/PT, cuya procedencia documenta `docs/content/catechism-provenance.json`. Las páginas españolas consultadas se enumeran por lección. Las explicaciones EN/PT son traducciones editoriales propias, no copias del Catecismo ni traducciones litúrgicas. Se contrastan los pasajes en las Biblias incluidas; las explicaciones son paráfrasis editoriales, sin citas textuales importadas de memoria.
 
 ## Numeración bíblica y resolución
 
@@ -93,10 +93,10 @@ Lecturas: `luk 24:36-53`, `act 2:1-13`.
 
 CIC 639–655 distingue realidad corporal, signos históricos y misterio trascendente; especialmente 645–647 evita tanto fantasma como retorno a la vida mortal y reconoce que nadie observó el instante mismo. CIC 659–667 sostiene Ascensión, intercesión y esperanza; 731–732, don del Espíritu como Persona divina; se añade 767–768 para la manifestación pública y misión universal de la Iglesia. No se reduce Pascua a metáfora ni el Espíritu a energía. El cierre remite a los cursos existentes sin imponer Bautismo o comunión como requisito.
 
-## `track_salvation_history` · 4/5 lecciones
+## `track_salvation_history` · 5/5 lecciones
 
 ```text
-4/5 lessons (partial; exact-five completeness requirement pending) · 0 errors · 0 warnings
+5 lessons · 0 errors · 0 warnings
 ```
 
 ### 1. `salvation_1_creation_fall`
@@ -153,8 +153,43 @@ Lecturas: `2sa 7:1-17`, `isa 52:13-53:12`.
 
 CIC 64 sostiene la formación profética de la esperanza; 709–716, David, Mesías, Siervo y promesa del Espíritu; 601 se añade como anclaje directo del cumplimiento del Siervo en la muerte redentora de Jesús; 128–130 protege el valor propio del Antiguo Testamento dentro de la lectura tipológica. No se atribuyen a Jesús las faltas de descendientes davídicos de 2 S 7, ni se pretende zanjar la identidad histórica original del Siervo o fechar su composición. Las referencias cruzan correctamente Is 52–53.
 
+### 5. `salvation_5_christ_fulfilment`
+
+Lecturas: `heb 1:1-4`, `luk 24:44-49`.
+
+- CIC **65–67**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s1c2a1_sp.html
+- CIC **128–130**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html
+- CIC **121–123**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html
+- CIC **839–839**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p123a9p3_sp.html
+
+CIC 65–67 sostiene plenitud en Cristo, comprensión gradual y función de las revelaciones privadas; 128–130, tipología y lectura recíproca de ambos Testamentos; 121–123, valor permanente y Antigua Alianza no revocada; 839, vínculo con el pueblo judío y dones irrevocables. No se atribuye Hebreos a Pablo ni se niega el valor legítimo de revelaciones privadas reconocidas. El texto no transforma cumplimiento en desprecio de Israel o abolición del Antiguo Testamento. El cierre exige explicar y releer, no alcanzar un rango espiritual.
+
 ## Límites y revisión pendiente
 
 No se modifica Kotlin, navegación, progreso ni corpus bíblico. No se afirma haber probado la navegación en un dispositivo o haber compilado Android: la integración, pruebas del catálogo y compilación corresponden al coordinador. La revisión externa teológica y lingüística y la comprobación final del texto resuelto en las tres lenguas quedan a su cargo. Las duraciones son estimaciones pedagógicas; la lectura y el silencio pueden requerir más tiempo.
 
 No quedan datos históricos controvertidos presentados como fechas o autorías seguras. Los matices y límites concretos se documentan por lección. No se deducen decretos o aprobación eclesiástica del hecho de enlazar el Catecismo.
+
+## Cierre de T-022
+
+- **Dos cursos completos, diez lecciones y tres idiomas**. Todos los ids y el orden de las cinco lecciones del curso B coinciden con el plan; el curso C sigue las cinco etapas solicitadas. Nivel FOUNDATION, 20 minutos sugeridos por lección y 100 por curso.
+- **Validadores oficiales, sin envoltorio:**
+
+```text
+track_jesus_paschal.json: 5 lessons · 0 errors · 0 warnings
+track_salvation_history.json: 5 lessons · 0 errors · 0 warnings
+```
+
+- Comprobación adicional: 10 ids únicos, 30 contextos de 70–110 palabras y 90 desarrollos de 80–130 palabras, con conteo por espacios y por regex. Cada lección contiene dos objetivos observables, tres desarrollos, dos preguntas de meditación y tres preguntas con respuesta razonada (dos de comprensión y una de discernimiento).
+- Se comprobaron **17 referencias en cada corpus incluido ES/EN/PT**: los rangos completos contienen números de versículo consecutivos y texto no vacío. Esto cubre los cruces Gn 1–2, Ex 19–20 e Is 52–53. No demuestra por sí solo que la transcripción de cada versículo heredado esté libre de erratas. El resolutor de estudio consulta esos corpus por idioma; no se ha fingido una interacción con la pantalla ni una prueba de todas las ediciones alternativas.
+- `oratio` contiene exclusivamente guías en segunda persona para la oración personal. No contiene plegarias inventadas, nuevas palabras de Jesús o María, ni citas atribuidas a santos. La contemplación mantiene silencio real y la acción se distingue de él.
+- Los cierres proponen resumir lo aprendido, expresar una pregunta y elegir una acción; no califican la fe, no certifican formación sacramental y no exigen comulgar.
+- Solo se han creado los dos JSON y este informe. Se completó `git diff --check`.
+
+### Observación sobre el corpus bíblico heredado (fuera del alcance)
+
+Durante el cotejo apareció una posible truncación en `assets/bible/bible_es.json`, Gn 15,9: la enumeración española no contiene los animales equivalentes a cabra y carnero que sí aparecen en las copias EN/PT. El rango se resuelve porque el versículo existe y no está vacío, pero esa integridad estructural no garantiza integridad textual. No se corrige la Biblia dentro de este encargo, cuyos archivos autorizados son solo los cursos y el informe; se recomienda al coordinador cotejar ese versículo con la edición Platense antes de publicar. El comentario del curso no reproduce la lista ni añade una supuesta cita para disimularla.

@@ -729,6 +729,189 @@
           "url": null
         }
       ]
+    },
+    {
+      "id": "salvation_5_christ_fulfilment",
+      "lessonNumber": 5,
+      "title": {
+        "es": "Cristo, plenitud de las promesas",
+        "en": "Christ, fullness of the promises",
+        "pt": "Cristo, plenitude das promessas"
+      },
+      "scriptureReferences": [
+        "heb 1:1-4",
+        "luk 24:44-49"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar la revelación definitiva en Cristo y el crecimiento de su comprensión.",
+          "en": "Explain definitive revelation in Christ and growth in understanding it.",
+          "pt": "Explicar a revelação definitiva em Cristo e o crescimento de sua compreensão."
+        },
+        {
+          "es": "Leer promesa y cumplimiento sin desechar el Antiguo Testamento ni a Israel.",
+          "en": "Read promise and fulfilment without discarding the Old Testament or Israel.",
+          "pt": "Ler promessa e cumprimento sem descartar o Antigo Testamento nem Israel."
+        }
+      ],
+      "summary": {
+        "es": "Dios lleva a plenitud su palabra en el Hijo y permite comprender en él la unidad de la historia bíblica. Esa plenitud confirma la fidelidad de Dios y no cancela el valor de Israel ni del Antiguo Testamento.",
+        "en": "God brings his word to fullness in the Son and enables us to understand biblical history’s unity in him. That fullness confirms God’s faithfulness without cancelling the value of Israel or the Old Testament.",
+        "pt": "Deus leva sua palavra à plenitude no Filho e permite compreender nele a unidade da história bíblica. Essa plenitude confirma a fidelidade de Deus sem cancelar o valor de Israel nem do Antigo Testamento."
+      },
+      "historicalContext": {
+        "es": "Hebreos comienza con una exposición solemne sobre el Hijo, en contraste con los diversos modos anteriores de la palabra profética. Este inicio no identifica al autor humano del escrito; no lo atribuiremos aquí a Pablo. Lucas presenta al Resucitado explicando las Escrituras y enviando a sus discípulos como testigos de conversión y perdón. Leemos dos formas de proclamar la centralidad de Cristo: una presentación doctrinal y una escena narrativa. Ambas requieren recordar lo recorrido desde la creación y las alianzas, para que la palabra cumplimiento no se convierta en una excusa para olvidar esa historia.",
+        "en": "Hebrews begins with a solemn exposition about the Son, set alongside the earlier diversity of prophetic speech. This opening does not identify the writing’s human author; we will not attribute it to Paul here. Luke presents the risen Lord explaining Scripture and sending his disciples as witnesses of conversion and forgiveness. We read two ways of proclaiming Christ’s centrality: a doctrinal presentation and a narrative scene. Both require remembering the journey from creation and the covenants, so that fulfilment does not become an excuse to forget the history being fulfilled.",
+        "pt": "Hebreus começa com uma exposição solene sobre o Filho, em contraste com os diversos modos anteriores da palavra profética. Esse início não identifica o autor humano do escrito; não o atribuiremos aqui a Paulo. Lucas apresenta o Ressuscitado explicando as Escrituras e enviando seus discípulos como testemunhas de conversão e perdão. Lemos duas formas de proclamar a centralidade de Cristo: uma apresentação doutrinal e uma cena narrativa. Ambas exigem recordar o percurso desde a criação e as alianças, para que a palavra cumprimento não se torne desculpa para esquecer essa história."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "La palabra definitiva es una Persona",
+            "en": "The definitive Word is a Person",
+            "pt": "A palavra definitiva é uma Pessoa"
+          },
+          "body": {
+            "es": "Hebreos no anuncia simplemente un nuevo mensaje junto a los antiguos: presenta al Hijo, por quien Dios se da a conocer de modo pleno. El Catecismo reconoce en Cristo la Palabra definitiva del Padre y enseña que no esperamos otra revelación pública que la sustituya antes de su manifestación gloriosa. Esto no significa que cada cristiano comprenda ya su profundidad. La Iglesia continúa aprendiendo a explicitar y vivir lo recibido. Una doctrina puede ser comprendida mejor sin que se invente otro salvador o se declare insuficiente el don de Dios en Jesús.",
+            "en": "Hebrews announces more than another message alongside the earlier ones: it presents the Son, through whom God makes himself fully known. The Catechism recognizes Christ as the Father’s definitive Word and teaches that we await no further public revelation replacing it before his glorious manifestation. This does not mean every Christian already comprehends its depth. The Church continues learning to unfold and live what she has received. A doctrine can be understood more deeply without inventing another saviour or declaring God’s gift in Jesus insufficient. Learning continues because the gift exceeds our present understanding.",
+            "pt": "Hebreus não anuncia simplesmente uma nova mensagem ao lado das antigas: apresenta o Filho, por quem Deus se dá a conhecer plenamente. O Catecismo reconhece em Cristo a Palavra definitiva do Pai e ensina que não esperamos outra revelação pública que a substitua antes de sua manifestação gloriosa. Isso não significa que cada cristão já compreenda sua profundidade. A Igreja continua aprendendo a explicitar e viver o que recebeu. Uma doutrina pode ser compreendida melhor sem inventar outro salvador ou declarar insuficiente o dom de Deus em Jesus."
+          }
+        },
+        {
+          "title": {
+            "es": "Promesa y cumplimiento se iluminan mutuamente",
+            "en": "Promise and fulfilment illuminate one another",
+            "pt": "Promessa e cumprimento se iluminam mutuamente"
+          },
+          "body": {
+            "es": "En Lucas, Jesús abre la comprensión de los discípulos para reconocer la relación entre las Escrituras y su Pascua. La lectura cristiana llamada tipología reconoce en obras anteriores de Dios figuras que alcanzan plenitud en Cristo. No convierte cada objeto o número en una contraseña escondida. Se apoya en el sentido de los relatos y en la unidad de la fe. El Catecismo insiste en las dos direcciones: leemos el Antiguo Testamento desde Cristo y necesitamos el Antiguo para comprender el Nuevo. Sin creación, promesa y éxodo, se empobrece el significado de la salvación anunciada.",
+            "en": "In Luke, Jesus opens the disciples’ understanding to recognize the relationship between Scripture and his Pasch. Christian reading called typology recognizes earlier works of God as figures reaching fullness in Christ. It does not make every object or number a hidden password. It rests on the narratives’ meaning and the unity of faith. The Catechism insists on both directions: we read the Old Testament through Christ and need the Old to understand the New. Without creation, promise and exodus, our understanding of the proclaimed salvation becomes poorer and loses its historical depth.",
+            "pt": "Em Lucas, Jesus abre a compreensão dos discípulos para reconhecer a relação entre as Escrituras e sua Páscoa. A leitura cristã chamada tipologia reconhece em obras anteriores de Deus figuras que alcançam plenitude em Cristo. Não transforma cada objeto ou número numa senha escondida. Apoia-se no sentido dos relatos e na unidade da fé. O Catecismo insiste nas duas direções: lemos o Antigo Testamento a partir de Cristo e precisamos do Antigo para compreender o Novo. Sem criação, promessa e êxodo, empobrece-se o significado da salvação anunciada."
+          }
+        },
+        {
+          "title": {
+            "es": "Fidelidad que exige respeto y discernimiento",
+            "en": "Faithfulness calls for respect and discernment",
+            "pt": "Fidelidade que exige respeito e discernimento"
+          },
+          "body": {
+            "es": "El Catecismo afirma el valor permanente del Antiguo Testamento porque la Antigua Alianza no ha sido revocada. Reconoce además el vínculo singular de la Iglesia con el pueblo judío y la irrevocabilidad de los dones de Dios. Cumplimiento no significa que podamos despreciar esa fe o borrar su historia. También orienta nuestro discernimiento: una revelación privada reconocida puede ayudar a vivir el Evangelio, pero no completarlo o corregir a Cristo. Las devociones sirven a esa relación central. Al cerrar el curso, la respuesta adecuada es gratitud, aprendizaje y servicio, sin pretender poseer una clave secreta de la historia.",
+            "en": "The Catechism affirms the Old Testament’s permanent value because the Old Covenant has never been revoked. It also recognizes the Church’s distinctive bond with the Jewish people and the irrevocability of God’s gifts. Fulfilment does not permit contempt for that faith or erasure of its history. It also guides discernment: a recognized private revelation may help people live the Gospel, but cannot complete it or correct Christ. Devotions serve this central relationship. Finishing the course invites gratitude, learning and service, rather than claiming possession of a secret key to history.",
+            "pt": "O Catecismo afirma o valor permanente do Antigo Testamento porque a Antiga Aliança não foi revogada. Reconhece também o vínculo singular da Igreja com o povo judeu e a irrevogabilidade dos dons de Deus. Cumprimento não significa que possamos desprezar essa fé ou apagar sua história. Também orienta nosso discernimento: uma revelação privada reconhecida pode ajudar a viver o Evangelho, mas não completá-lo ou corrigir Cristo. As devoções servem a essa relação central. Ao concluir o curso, a resposta adequada é gratidão, aprendizado e serviço, sem pretender possuir uma chave secreta da história."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "En Hb 1,1–4 identifica lo que se dice del Hijo y su relación con la palabra profética. En Lc 24,44–49 observa qué comprende la comunidad, qué debe anunciar y qué don debe esperar antes de salir.",
+        "en": "In Hebrews 1:1–4, identify what is said of the Son and his relationship with prophetic speech. In Luke 24:44–49, notice what the community understands, what it must proclaim and what gift it must await before going out.",
+        "pt": "Em Hb 1,1–4 identifique o que se diz do Filho e sua relação com a palavra profética. Em Lc 24,44–49 observe o que a comunidade compreende, o que deve anunciar e que dom deve esperar antes de partir."
+      },
+      "meditatio": {
+        "es": "¿Qué parte del Antiguo Testamento te gustaría volver a leer después de este recorrido? ¿Alguna devoción o mensaje ocupa en tu vida el lugar central que debería tener el encuentro con Cristo?",
+        "en": "Which part of the Old Testament would you like to reread after this journey? Does any devotion or message occupy the central place in your life that belongs to encountering Christ?",
+        "pt": "Que parte do Antigo Testamento você gostaria de reler depois deste percurso? Alguma devoção ou mensagem ocupa em sua vida o lugar central que deveria pertencer ao encontro com Cristo?"
+      },
+      "oratio": {
+        "es": "Agradece a Dios, con palabras propias, su fidelidad a través de esta historia. Puedes pedir ayuda para escuchar a Cristo, respetar al pueblo judío y vivir una esperanza que se traduzca en cuidado del prójimo.",
+        "en": "Thank God in your own words for his faithfulness throughout this history. You may ask for help to listen to Christ, respect the Jewish people and live a hope expressed in care for neighbours.",
+        "pt": "Agradeça a Deus, com palavras próprias, sua fidelidade ao longo dessa história. Você pode pedir ajuda para escutar Cristo, respeitar o povo judeu e viver uma esperança que se traduza no cuidado com o próximo."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio ante Cristo que abre la comprensión de las Escrituras. No necesitas resumir ahora cada etapa. Vuelve suavemente a su presencia, dejando descansar también las preguntas pendientes.",
+        "en": "Remain silent for sixty to ninety seconds before Christ who opens understanding of Scripture. You need not summarize every stage now. Return gently to his presence, allowing your remaining questions to rest as well.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio diante de Cristo que abre a compreensão das Escrituras. Não precisa resumir agora cada etapa. Volte suavemente à sua presença, deixando descansar também as perguntas pendentes."
+      },
+      "actionStep": {
+        "es": "Dibuja un recorrido con cinco etapas: creación, Abrahán, éxodo, David y profetas, Cristo. Añade una referencia de cada lección y una pregunta pendiente. Para profundizar, continúa con Jesús y el misterio pascual o vuelve al curso de lectura bíblica.",
+        "en": "Draw a journey with five stages: creation, Abraham, exodus, David and prophets, Christ. Add one reference from each lesson and one remaining question. Continue with Jesus and the Paschal Mystery or return to the course on reading the Bible.",
+        "pt": "Desenhe um percurso com cinco etapas: criação, Abraão, êxodo, Davi e profetas, Cristo. Acrescente uma referência de cada lição e uma pergunta pendente. Para aprofundar, continue com Jesus e o mistério pascal ou retorne ao curso de leitura bíblica."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿La revelación definitiva significa que ya no podemos aprender nada sobre la fe?",
+            "en": "Does definitive revelation mean we can learn nothing more about faith?",
+            "pt": "A revelação definitiva significa que já não podemos aprender nada sobre a fé?"
+          },
+          "answer": {
+            "es": "No. Cristo es la plenitud del don de Dios, pero su contenido se comprende gradualmente. El crecimiento doctrinal y la vida de fe buscan explicitar lo recibido; no necesitan una revelación pública que reemplace o corrija al Hijo.",
+            "en": "No. Christ is the fullness of God’s gift, but its content is understood gradually. Growth in doctrine and faith seeks to unfold what has been received; it does not require a public revelation replacing or correcting the Son.",
+            "pt": "Não. Cristo é a plenitude do dom de Deus, mas seu conteúdo é compreendido gradualmente. O crescimento doutrinal e a vida de fé procuram explicitar o que foi recebido; não precisam de uma revelação pública que substitua ou corrija o Filho."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Por qué el cumplimiento en Cristo no permite descartar el Antiguo Testamento?",
+            "en": "Why does fulfilment in Christ not permit discarding the Old Testament?",
+            "pt": "Por que o cumprimento em Cristo não permite descartar o Antigo Testamento?"
+          },
+          "answer": {
+            "es": "Conserva valor propio de revelación y permite comprender el Nuevo; la Antigua Alianza no ha sido revocada. La unidad de la historia muestra la fidelidad de Dios, no el derecho cristiano a despreciar las raíces recibidas de Israel.",
+            "en": "It retains its own value as revelation and helps us understand the New; the Old Covenant has never been revoked. History’s unity shows God’s faithfulness, rather than a Christian right to despise roots received from Israel.",
+            "pt": "Ele conserva valor próprio de revelação e permite compreender o Novo; a Antiga Aliança não foi revogada. A unidade da história mostra a fidelidade de Deus, não um direito cristão de desprezar as raízes recebidas de Israel."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo discernir un mensaje que se presenta como una corrección necesaria del Evangelio?",
+            "en": "How would you discern a message presented as a necessary correction of the Gospel?",
+            "pt": "Como discernir uma mensagem apresentada como correção necessária do Evangelho?"
+          },
+          "answer": {
+            "es": "Una revelación privada no puede completar o corregir la plenitud de Cristo. Conviene contrastar el mensaje con la fe de la Iglesia y buscar orientación. Una devoción legítima ayuda a vivir el Evangelio, no exige abandonarlo por una novedad.",
+            "en": "A private revelation cannot complete or correct Christ’s fullness. Compare the message with the Church’s faith and seek guidance. A legitimate devotion helps people live the Gospel; it does not require abandoning it for a novelty.",
+            "pt": "Uma revelação privada não pode completar ou corrigir a plenitude de Cristo. Convém comparar a mensagem com a fé da Igreja e buscar orientação. Uma devoção legítima ajuda a viver o Evangelho, não exige abandoná-lo por uma novidade."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_65_67",
+          "title": {
+            "es": "Catecismo §§65–67",
+            "en": "Catechism §§65–67",
+            "pt": "Catecismo, parágrafos 65–67"
+          },
+          "catechismStart": 65,
+          "catechismEnd": 67,
+          "url": null
+        },
+        {
+          "id": "ccc_128_130",
+          "title": {
+            "es": "Catecismo §§128–130",
+            "en": "Catechism §§128–130",
+            "pt": "Catecismo, parágrafos 128–130"
+          },
+          "catechismStart": 128,
+          "catechismEnd": 130,
+          "url": null
+        },
+        {
+          "id": "ccc_121_123",
+          "title": {
+            "es": "Catecismo §§121–123",
+            "en": "Catechism §§121–123",
+            "pt": "Catecismo, parágrafos 121–123"
+          },
+          "catechismStart": 121,
+          "catechismEnd": 123,
+          "url": null
+        },
+        {
+          "id": "ccc_839_839",
+          "title": {
+            "es": "Catecismo §§839–839",
+            "en": "Catechism §§839–839",
+            "pt": "Catecismo, parágrafos 839–839"
+          },
+          "catechismStart": 839,
+          "catechismEnd": 839,
+          "url": null
+        }
+      ]
     }
   ]
 }
