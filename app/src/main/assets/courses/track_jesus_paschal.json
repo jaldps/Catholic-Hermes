@@ -1,0 +1,228 @@
+{
+  "id": "track_jesus_paschal",
+  "level": "FOUNDATION",
+  "estimatedMinutes": 100,
+  "iconName": "AutoStories",
+  "title": {
+    "es": "Jesús y el misterio pascual",
+    "en": "Jesus and the Paschal Mystery",
+    "pt": "Jesus e o mistério pascal"
+  },
+  "description": {
+    "es": "Cinco encuentros para quien empieza o desea ordenar su fe: descubrir quién es Jesús y cómo su Encarnación, Reino, Cena, cruz y resurrección forman una misma obra de salvación. Lectura guiada, preguntas y oración personal, sin requisitos previos.",
+    "en": "Five encounters for beginners and anyone seeking a clearer understanding of faith: discover who Jesus is and how his Incarnation, Kingdom, Supper, cross and resurrection belong to one saving work. Guided reading, questions and personal prayer, with no prerequisites.",
+    "pt": "Cinco encontros para quem começa ou deseja organizar sua fé: descobrir quem é Jesus e como sua Encarnação, Reino, Ceia, cruz e ressurreição formam uma mesma obra de salvação. Leitura guiada, perguntas e oração pessoal, sem requisitos prévios."
+  },
+  "objectives": [
+    {
+      "es": "Explicar por qué Jesús es verdadero Dios y verdadero hombre.",
+      "en": "Explain why Jesus is true God and true man.",
+      "pt": "Explicar por que Jesus é verdadeiro Deus e verdadeiro homem."
+    },
+    {
+      "es": "Relacionar el anuncio del Reino, la Cena, la cruz y la resurrección.",
+      "en": "Connect the proclamation of the Kingdom, the Supper, the cross and the resurrection.",
+      "pt": "Relacionar o anúncio do Reino, a Ceia, a cruz e a ressurreição."
+    },
+    {
+      "es": "Elegir una respuesta de fe, servicio y misión sostenida por el Espíritu.",
+      "en": "Choose a response of faith, service and mission sustained by the Spirit.",
+      "pt": "Escolher uma resposta de fé, serviço e missão sustentada pelo Espírito."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "jesus_1_incarnation",
+      "lessonNumber": 1,
+      "title": {
+        "es": "El Verbo se hace hombre",
+        "en": "The Word becomes human",
+        "pt": "O Verbo se faz homem"
+      },
+      "scriptureReferences": [
+        "luk 1:26-38"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Distinguir la identidad divina de Jesús de su humanidad verdadera.",
+          "en": "Distinguish Jesus’ divine identity from his genuine humanity.",
+          "pt": "Distinguir a identidade divina de Jesus de sua humanidade verdadeira."
+        },
+        {
+          "es": "Explicar cómo la respuesta libre de María acoge una iniciativa de Dios.",
+          "en": "Explain how Mary’s free response welcomes God’s initiative.",
+          "pt": "Explicar como a resposta livre de Maria acolhe uma iniciativa de Deus."
+        }
+      ],
+      "summary": {
+        "es": "En Jesús, Dios entra realmente en nuestra vida humana para salvarnos. La Anunciación une el don del Espíritu, la promesa a Israel y la respuesta libre de María.",
+        "en": "In Jesus, God truly enters our human life to save us. The Annunciation brings together the Spirit’s gift, the promise to Israel and Mary’s free response.",
+        "pt": "Em Jesus, Deus entra realmente em nossa vida humana para nos salvar. A Anunciação une o dom do Espírito, a promessa a Israel e a resposta livre de Maria."
+      },
+      "historicalContext": {
+        "es": "Lucas sitúa la Anunciación en Nazaret y presenta a María como una joven judía comprometida con José, de la casa de David. El anuncio a Zacarías precede esta escena; la visita a Isabel la sigue. Es un relato de vocación y promesa dentro de los capítulos sobre los orígenes de Jesús, no una explicación biológica de su concepción. Observa los nombres, las preguntas y las respuestas. El trono de David y el reinado sin fin conectan al niño anunciado con la esperanza de Israel, antes de que comience su ministerio público.",
+        "en": "Luke places the Annunciation in Nazareth and introduces Mary as a Jewish woman betrothed to Joseph, of David’s house. The announcement to Zechariah precedes this scene; the visit to Elizabeth follows it. This is a narrative of calling and promise within the chapters about Jesus’ beginnings, rather than a biological explanation of his conception. Notice the names, questions and replies. David’s throne and the reign without end connect the announced child with Israel’s hope, before the account of his public ministry begins.",
+        "pt": "Lucas situa a Anunciação em Nazaré e apresenta Maria como uma jovem judia prometida em casamento a José, da casa de Davi. O anúncio a Zacarias precede essa cena; a visita a Isabel vem depois. É um relato de vocação e promessa nos capítulos sobre as origens de Jesus, não uma explicação biológica de sua concepção. Observe os nomes, as perguntas e as respostas. O trono de Davi e o reinado sem fim ligam a criança anunciada à esperança de Israel, antes do início de seu ministério público."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Una promesa que toma rostro",
+            "en": "A promise with a human face",
+            "pt": "Uma promessa que ganha rosto"
+          },
+          "body": {
+            "es": "El ángel no ofrece primero un programa de perfeccionamiento personal: anuncia a alguien. Jesús recibe un nombre y es presentado como Hijo del Altísimo y heredero del trono de David. La salvación cristiana empieza por el don de Dios, no por una conquista humana. Según el Catecismo, el Hijo se encarna para reconciliarnos con Dios, manifestar su amor, enseñarnos la santidad y hacernos participar de su vida. Estas finalidades se iluminan entre sí: salvar no es solo borrar una deuda, sino restaurar una relación y abrirnos a la comunión con Dios.",
+            "en": "The angel first announces a person, rather than a programme of self improvement. Jesus receives a name and is presented as Son of the Most High and heir to David’s throne. Christian salvation begins with God’s gift, rather than a human achievement. The Catechism explains that the Son becomes incarnate to reconcile us with God, reveal his love, teach us holiness and share divine life with us. These purposes illuminate one another: salvation involves more than cancelling a debt. It restores a relationship and opens human beings to communion with God.",
+            "pt": "O anjo não oferece primeiro um programa de aperfeiçoamento pessoal: anuncia alguém. Jesus recebe um nome e é apresentado como Filho do Altíssimo e herdeiro do trono de Davi. A salvação cristã começa pelo dom de Deus, não por uma conquista humana. Segundo o Catecismo, o Filho se encarna para nos reconciliar com Deus, manifestar seu amor, ensinar a santidade e nos fazer participar de sua vida. Essas finalidades se iluminam: salvar é mais do que apagar uma dívida. É restaurar uma relação e nos abrir à comunhão com Deus."
+          }
+        },
+        {
+          "title": {
+            "es": "Verdadero Dios y verdadero hombre",
+            "en": "True God and true man",
+            "pt": "Verdadeiro Deus e verdadeiro homem"
+          },
+          "body": {
+            "es": "Encarnación significa que el Hijo eterno asumió una naturaleza humana real sin dejar de ser Dios. No son dos personas que se turnan ni una mezcla que reduce su humanidad. El mismo Jesús tiene cuerpo, inteligencia y voluntad humanos; su vida no es un disfraz. Esta precisión importa para la salvación: quien comparte nuestra condición es realmente el Hijo, y lo que vive humanamente es auténtico. Llamar a María Madre de Dios identifica a la persona de su Hijo; no significa que ella haya creado la divinidad o sea anterior a Dios.",
+            "en": "Incarnation means that the eternal Son assumed a real human nature without ceasing to be God. He is neither two alternating persons nor a mixture that diminishes his humanity. This same Jesus has a human body, intelligence and will; his life is not a disguise. The distinction matters for salvation: the one who shares our condition really is the Son, and his human experience is genuine. Calling Mary Mother of God identifies the person of her Son. It does not mean that she created his divinity or existed before God.",
+            "pt": "Encarnação significa que o Filho eterno assumiu uma natureza humana real sem deixar de ser Deus. Não são duas pessoas que se alternam, nem uma mistura que diminui sua humanidade. O mesmo Jesus possui corpo, inteligência e vontade humanos; sua vida não é um disfarce. Essa precisão importa para a salvação: quem partilha nossa condição é realmente o Filho, e sua experiência humana é autêntica. Chamar Maria de Mãe de Deus identifica a pessoa de seu Filho; não significa que ela tenha criado a divindade ou existido antes de Deus."
+          }
+        },
+        {
+          "title": {
+            "es": "La gracia suscita una respuesta libre",
+            "en": "Grace invites a free response",
+            "pt": "A graça suscita uma resposta livre"
+          },
+          "body": {
+            "es": "María escucha, pregunta cómo sucederá y da su consentimiento. Su pregunta no rompe el diálogo: permite escuchar que la iniciativa procede del Espíritu Santo. Dios prepara y sostiene su respuesta sin convertirla en un objeto pasivo. El Catecismo presenta su consentimiento como obediencia de la fe y cooperación libre con la obra del Hijo. Para quien empieza, esto distingue confianza y credulidad: preguntar con sinceridad puede formar parte de creer. La respuesta de María es única en la historia de la salvación; nuestra respuesta cotidiana recibe su ejemplo, sin repetir su maternidad.",
+            "en": "Mary listens, asks how this will happen and gives her consent. Her question continues the dialogue and allows her to hear that the initiative belongs to the Holy Spirit. God prepares and sustains her response without making her a passive object. The Catechism describes her consent as the obedience of faith and free cooperation with her Son’s work. For a beginner, this distinguishes trust from gullibility: sincere questions can belong within belief. Mary’s response is unique in salvation history. Our everyday response follows her example without repeating her motherhood.",
+            "pt": "Maria escuta, pergunta como isso acontecerá e dá seu consentimento. Sua pergunta não rompe o diálogo: permite ouvir que a iniciativa procede do Espírito Santo. Deus prepara e sustenta sua resposta sem torná-la um objeto passivo. O Catecismo apresenta seu consentimento como obediência da fé e cooperação livre com a obra do Filho. Para quem começa, isso distingue confiança e credulidade: perguntar com sinceridade pode fazer parte da fé. A resposta de Maria é única na história da salvação; nossa resposta cotidiana segue seu exemplo, sem repetir sua maternidade."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Relee Lc 1,26–38. Distingue lo que Gabriel anuncia, lo que María pregunta y lo que responde. Localiza la referencia a David y el papel del Espíritu; evita sustituir estos detalles por una idea general sobre obedecer.",
+        "en": "Reread Luke 1:26–38. Distinguish Gabriel’s announcement, Mary’s question and her response. Locate the reference to David and the Spirit’s role; keep these details in view before drawing a general lesson about obedience.",
+        "pt": "Releia Lc 1,26–38. Distinga o anúncio de Gabriel, a pergunta de Maria e sua resposta. Localize a referência a Davi e o papel do Espírito; observe esses detalhes antes de tirar uma lição geral sobre obedecer."
+      },
+      "meditatio": {
+        "es": "¿Qué cambia en tu idea de Dios al contemplar que el Hijo comparte una vida humana real? ¿Qué pregunta sincera querrías seguir estudiando antes de dar un próximo paso de fe?",
+        "en": "How does the Son sharing a genuine human life change your understanding of God? What sincere question would you like to explore before taking your next step in faith?",
+        "pt": "O que muda em sua ideia de Deus ao considerar que o Filho partilha uma vida humana real? Que pergunta sincera você gostaria de estudar antes de dar um próximo passo na fé?"
+      },
+      "oratio": {
+        "es": "Habla con Dios, con tus propias palabras, sobre lo que comprendiste y lo que todavía te cuesta. Puedes agradecer la cercanía de Jesús y pedir ayuda para responder con libertad y confianza.",
+        "en": "Speak to God in your own words about what you understood and what remains difficult. You may give thanks for Jesus’ closeness and ask for help to respond freely and trustfully.",
+        "pt": "Converse com Deus, com suas próprias palavras, sobre o que compreendeu e o que ainda é difícil. Você pode agradecer a proximidade de Jesus e pedir ajuda para responder com liberdade e confiança."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio ante Dios, recordando la escena del anuncio. No necesitas resolver tu pregunta ni sentir una emoción especial; si te distraes, vuelve serenamente a la presencia de Jesús.",
+        "en": "Remain quietly before God for sixty to ninety seconds, recalling the scene of the announcement. You need not solve your question or feel a special emotion; if distracted, return gently to Jesus’ presence.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio diante de Deus, recordando a cena do anúncio. Não precisa resolver sua pergunta nem sentir uma emoção especial; se houver distração, volte serenamente à presença de Jesus."
+      },
+      "actionStep": {
+        "es": "Anota una pregunta sobre Jesús y consulta uno de los rangos del Catecismo de esta lección. Escribe después una frase propia que distinga lo que entendiste de lo que deseas seguir aprendiendo.",
+        "en": "Write down one question about Jesus and consult one of this lesson’s Catechism ranges. Then write a sentence distinguishing what you understood from what you wish to explore further.",
+        "pt": "Anote uma pergunta sobre Jesus e consulte um dos trechos do Catecismo desta lição. Depois escreva uma frase distinguindo o que compreendeu do que deseja continuar aprendendo."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Jesús es mitad Dios y mitad hombre?",
+            "en": "Is Jesus half God and half human?",
+            "pt": "Jesus é metade Deus e metade homem?"
+          },
+          "answer": {
+            "es": "No. Es una sola persona, el Hijo eterno, con naturaleza divina y naturaleza humana verdaderas. No se reparten porcentajes: su humanidad no desaparece y su divinidad no se transforma en otra cosa.",
+            "en": "No. He is one person, the eternal Son, with true divine and human natures. These are not percentages: his humanity does not disappear, and his divinity does not turn into something else.",
+            "pt": "Não. Ele é uma só pessoa, o Filho eterno, com natureza divina e natureza humana verdadeiras. Não se dividem porcentagens: sua humanidade não desaparece e sua divindade não se transforma em outra coisa."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿La pregunta de María elimina su respuesta de fe?",
+            "en": "Does Mary’s question cancel her response of faith?",
+            "pt": "A pergunta de Maria elimina sua resposta de fé?"
+          },
+          "answer": {
+            "es": "No. El relato muestra una pregunta, una explicación sobre la acción del Espíritu y un consentimiento. El Catecismo presenta esa respuesta como cooperación libre sostenida por la gracia, no como comprensión completa de todos los acontecimientos futuros.",
+            "en": "No. The narrative includes a question, an explanation of the Spirit’s action and consent. The Catechism presents her response as free cooperation sustained by grace, rather than complete understanding of every future event.",
+            "pt": "Não. O relato apresenta uma pergunta, uma explicação sobre a ação do Espírito e um consentimento. O Catecismo mostra essa resposta como cooperação livre sustentada pela graça, não como compreensão completa de todos os acontecimentos futuros."
+          }
+        },
+        {
+          "prompt": {
+            "es": "Alguien dice que la fe exige apagar la inteligencia. ¿Qué muestra esta escena?",
+            "en": "Someone says faith requires switching off reason. What does this scene show?",
+            "pt": "Alguém diz que a fé exige desligar a inteligência. O que esta cena mostra?"
+          },
+          "answer": {
+            "es": "María dialoga y pregunta; el texto no propone fingir una claridad completa. Una respuesta responsable puede incluir estudio y acompañamiento. Acoger el don de Dios no significa aceptar sin discernimiento cualquier afirmación religiosa.",
+            "en": "Mary enters into dialogue and asks a question; the text does not require pretending everything is clear. Responsible faith can include study and guidance. Welcoming God’s gift does not mean accepting every religious claim without discernment.",
+            "pt": "Maria dialoga e pergunta; o texto não propõe fingir que tudo está claro. Uma resposta responsável pode incluir estudo e acompanhamento. Acolher o dom de Deus não significa aceitar qualquer afirmação religiosa sem discernimento."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_456_460",
+          "title": {
+            "es": "Catecismo §§456–460",
+            "en": "Catechism §§456–460",
+            "pt": "Catecismo, parágrafos 456–460"
+          },
+          "catechismStart": 456,
+          "catechismEnd": 460,
+          "url": null
+        },
+        {
+          "id": "ccc_464_469",
+          "title": {
+            "es": "Catecismo §§464–469",
+            "en": "Catechism §§464–469",
+            "pt": "Catecismo, parágrafos 464–469"
+          },
+          "catechismStart": 464,
+          "catechismEnd": 469,
+          "url": null
+        },
+        {
+          "id": "ccc_484_489",
+          "title": {
+            "es": "Catecismo §§484–489",
+            "en": "Catechism §§484–489",
+            "pt": "Catecismo, parágrafos 484–489"
+          },
+          "catechismStart": 484,
+          "catechismEnd": 489,
+          "url": null
+        },
+        {
+          "id": "ccc_494_494",
+          "title": {
+            "es": "Catecismo §§494–494",
+            "en": "Catechism §§494–494",
+            "pt": "Catecismo, parágrafos 494–494"
+          },
+          "catechismStart": 494,
+          "catechismEnd": 494,
+          "url": null
+        },
+        {
+          "id": "ccc_470_475",
+          "title": {
+            "es": "Catecismo §§470–475",
+            "en": "Catechism §§470–475",
+            "pt": "Catecismo, parágrafos 470–475"
+          },
+          "catechismStart": 470,
+          "catechismEnd": 475,
+          "url": null
+        }
+      ]
+    }
+  ]
+}
