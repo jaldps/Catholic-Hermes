@@ -1,0 +1,1978 @@
+[
+  {
+    "id": "franciscanos-ofm",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Honorio III, bula Solet annuere, 29-XI-1223: confirmación de la Regla.",
+      "en": "Honorius III, bull Solet annuere, 29 November 1223: confirmation of the Rule.",
+      "pt": "Honório III, bula Solet annuere, 29-XI-1223: confirmação da Regra."
+    },
+    "notableSaints": {
+      "es": [
+        "San Francisco de Asís"
+      ],
+      "en": [
+        "Saint Francis of Assisi"
+      ],
+      "pt": [
+        "São Francisco de Assis"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes sirven en parroquias, misiones y obras de evangelización, organizados en provincias y custodias de distintas regiones.",
+      "en": "The friars serve in parishes, missions and evangelization, organized in provinces and custodies across different regions.",
+      "pt": "Os frades servem em paróquias, missões e obras de evangelização, organizados em províncias e custódias de diferentes regiões."
+    },
+    "sources": [
+      "Orden de Frailes Menores, Honorio III y la Regla de 1223",
+      "OFM, encuentro de la Conferencia Nuestra Señora de Guadalupe",
+      "Catholic Encyclopedia: Franciscan Order"
+    ]
+  },
+  {
+    "id": "jesuitas-sj",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Pablo III, bula Regimini militantis Ecclesiae, 27-IX-1540.",
+      "en": "Paul III, bull Regimini militantis Ecclesiae, 27 September 1540.",
+      "pt": "Paulo III, bula Regimini militantis Ecclesiae, 27-IX-1540."
+    },
+    "notableSaints": {
+      "es": [
+        "San Ignacio de Loyola",
+        "San Francisco Javier"
+      ],
+      "en": [
+        "Saint Ignatius of Loyola",
+        "Saint Francis Xavier"
+      ],
+      "pt": [
+        "Santo Inácio de Loyola",
+        "São Francisco Xavier"
+      ]
+    },
+    "presence": {
+      "es": "Sacerdotes y hermanos desarrollan ministerios educativos, espirituales, sociales y misioneros mediante provincias y redes apostólicas internacionales.",
+      "en": "Priests and brothers undertake educational, spiritual, social and missionary ministries through provinces and international apostolic networks.",
+      "pt": "Sacerdotes e irmãos realizam ministérios educativos, espirituais, sociais e missionários por meio de províncias e redes apostólicas internacionais."
+    },
+    "sources": [
+      "Compañía de Jesús, aprobación pontificia de 1540",
+      "Compañía de Jesús, ministerios y presencia internacional",
+      "Catholic Encyclopedia: The Jesuits"
+    ]
+  },
+  {
+    "id": "opus-dei",
+    "kind": "prelature",
+    "motto": null,
+    "approval": {
+      "es": "Juan Pablo II, constitución apostólica Ut sit, 28-XI-1982: erección como prelatura personal.",
+      "en": "John Paul II, apostolic constitution Ut sit, 28 November 1982: erection as a personal prelature.",
+      "pt": "João Paulo II, constituição apostólica Ut sit, 28-XI-1982: ereção como prelazia pessoal."
+    },
+    "notableSaints": {
+      "es": [
+        "San Josemaría Escrivá"
+      ],
+      "en": [
+        "Saint Josemaría Escrivá"
+      ],
+      "pt": [
+        "São Josemaria Escrivá"
+      ]
+    },
+    "presence": {
+      "es": "La prelatura ofrece formación y atención pastoral para la santificación del trabajo y de la vida familiar y social, con cooperación de laicos.",
+      "en": "The prelature provides formation and pastoral care for holiness in work, family and social life, with the cooperation of lay people.",
+      "pt": "A prelazia oferece formação e cuidado pastoral para a santificação do trabalho e da vida familiar e social, com a cooperação de leigos."
+    },
+    "sources": [
+      "Opus Dei, Prelature of Opus Dei",
+      "Francisco, Ad charisma tuendum, 14-VII-2022"
+    ]
+  },
+  {
+    "id": "dominicos-op",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Honorio III, bula Religiosam vitam, 22-XII-1216.",
+      "en": "Honorius III, bull Religiosam vitam, 22 December 1216.",
+      "pt": "Honório III, bula Religiosam vitam, 22-XII-1216."
+    },
+    "notableSaints": {
+      "es": [
+        "Santo Domingo de Guzmán",
+        "Santo Tomás de Aquino"
+      ],
+      "en": [
+        "Saint Dominic de Guzmán",
+        "Saint Thomas Aquinas"
+      ],
+      "pt": [
+        "São Domingos de Gusmão",
+        "São Tomás de Aquino"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes predican y estudian en comunidades de distintos continentes, con apostolados parroquiales, universitarios y de formación cristiana.",
+      "en": "The friars preach and study in communities across different continents, undertaking parish, university and Christian formation ministries.",
+      "pt": "Os frades pregam e estudam em comunidades de diferentes continentes, com apostolados paroquiais, universitários e de formação cristã."
+    },
+    "sources": [
+      "Orden de Predicadores, Our Story",
+      "Catholic Encyclopedia: Order of Preachers"
+    ]
+  },
+  {
+    "id": "benedictinos-osb",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Benito de Nursia"
+      ],
+      "en": [
+        "Saint Benedict of Nursia"
+      ],
+      "pt": [
+        "São Bento de Núrsia"
+      ]
+    },
+    "presence": {
+      "es": "Los monasterios autónomos se agrupan en congregaciones y en la Confederación Benedictina, con oración litúrgica, hospitalidad y diversos servicios educativos.",
+      "en": "Autonomous monasteries are grouped in congregations and the Benedictine Confederation, sustaining liturgical prayer, hospitality and various educational services.",
+      "pt": "Os mosteiros autônomos se agrupam em congregações e na Confederação Beneditina, mantendo oração litúrgica, hospitalidade e diferentes serviços educativos."
+    },
+    "sources": [
+      "Confederación Benedictina, The Benedictine Confederation",
+      "Catholic Encyclopedia: Benedictine Order"
+    ]
+  },
+  {
+    "id": "carmelitas-oc",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La orden mantiene comunidades de frailes y monjas; sus apostolados incluyen oración contemplativa, servicio pastoral y acompañamiento de la familia carmelita.",
+      "en": "The order maintains communities of friars and nuns; its ministries include contemplative prayer, pastoral service and accompaniment of the Carmelite family.",
+      "pt": "A ordem mantém comunidades de frades e monjas; seus apostolados incluem oração contemplativa, serviço pastoral e acompanhamento da família carmelita."
+    },
+    "sources": [
+      "Curia general O.Carm., identidad y servicio",
+      "Catholic Encyclopedia: The Carmelite Order"
+    ]
+  },
+  {
+    "id": "agustinos-osa",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Alejandro IV, bula Licet ecclesiae catholicae, 1256: confirmación de la Gran Unión.",
+      "en": "Alexander IV, bull Licet ecclesiae catholicae, 1256: confirmation of the Grand Union.",
+      "pt": "Alexandre IV, bula Licet ecclesiae catholicae, 1256: confirmação da Grande União."
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La fraternidad internacional se organiza en provincias y otras circunscripciones, con comunidades dedicadas a la vida común y al servicio de las Iglesias locales.",
+      "en": "The international brotherhood is organized in provinces and other circumscriptions, with communities dedicated to common life and service to local Churches.",
+      "pt": "A fraternidade internacional se organiza em províncias e outras circunscrições, com comunidades dedicadas à vida comum e ao serviço das Igrejas locais."
+    },
+    "sources": [
+      "Orden de San Agustín, Where We Are",
+      "Catholic Encyclopedia: Hermits of St. Augustine"
+    ]
+  },
+  {
+    "id": "trapenses-ocso",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Monjes y monjas viven en monasterios de diversos países, dedicados a oración, lectura espiritual y trabajo, con acogida según las posibilidades de cada casa.",
+      "en": "Monks and nuns live in monasteries in different countries, devoted to prayer, spiritual reading and work, with hospitality adapted to each house.",
+      "pt": "Monges e monjas vivem em mosteiros de diferentes países, dedicados à oração, à leitura espiritual e ao trabalho, com acolhida conforme as possibilidades de cada casa."
+    },
+    "sources": [
+      "OCSO, History: Order of Cistercians of the Strict Observance",
+      "OCSO, monasterios y vida actual",
+      "Catholic Encyclopedia: Trappists"
+    ]
+  },
+  {
+    "id": "salesianos-sdb",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "Pío IX, aprobación definitiva de la Regla y Constituciones, 1874.",
+      "en": "Pius IX, definitive approval of the Rule and Constitutions, 1874.",
+      "pt": "Pio IX, aprovação definitiva da Regra e das Constituições, 1874."
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan Bosco"
+      ],
+      "en": [
+        "Saint John Bosco"
+      ],
+      "pt": [
+        "São João Bosco"
+      ]
+    },
+    "presence": {
+      "es": "La congregación anima escuelas, formación profesional, oratorios y proyectos sociales y misioneros para jóvenes en distintas regiones del mundo.",
+      "en": "The congregation supports schools, vocational training, oratories and social and missionary projects for young people in different world regions.",
+      "pt": "A congregação anima escolas, formação profissional, oratórios e projetos sociais e missionários para jovens em diferentes regiões do mundo."
+    },
+    "sources": [
+      "Salesianos de Don Bosco, sitio general y obras",
+      "Catholic Encyclopedia: The Salesian Society"
+    ]
+  },
+  {
+    "id": "redentoristas-cssr",
+    "kind": "congregation",
+    "motto": {
+      "es": "Copiosa apud eum redemptio",
+      "en": "Copiosa apud eum redemptio",
+      "pt": "Copiosa apud eum redemptio"
+    },
+    "approval": {
+      "es": "Benedicto XIV, carta apostólica Ad pastoralis dignitatis fastigium, 25-II-1749.",
+      "en": "Benedict XIV, apostolic letter Ad pastoralis dignitatis fastigium, 25 February 1749.",
+      "pt": "Bento XIV, carta apostólica Ad pastoralis dignitatis fastigium, 25-II-1749."
+    },
+    "notableSaints": {
+      "es": [
+        "San Alfonso María de Ligorio",
+        "San Gerardo Mayela"
+      ],
+      "en": [
+        "Saint Alphonsus Mary Liguori",
+        "Saint Gerard Majella"
+      ],
+      "pt": [
+        "Santo Afonso Maria de Ligório",
+        "São Geraldo Majela"
+      ]
+    },
+    "presence": {
+      "es": "Los redentoristas trabajan en misiones populares, santuarios, parroquias y formación teológica, con especial atención a personas pobres y comunidades desatendidas.",
+      "en": "Redemptorists serve through popular missions, shrines, parishes and theological formation, with particular attention to poor people and neglected communities.",
+      "pt": "Os redentoristas atuam em missões populares, santuários, paróquias e formação teológica, com atenção especial às pessoas pobres e comunidades desassistidas."
+    },
+    "sources": [
+      "Redentoristas, sitio general Scala News",
+      "Redentoristas, Memorial: Approval of the Congregation",
+      "Catholic Encyclopedia: Redemptorists"
+    ]
+  },
+  {
+    "id": "capuchinos-ofmcap",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Los frailes capuchinos viven en fraternidades y sirven mediante predicación, acompañamiento espiritual, misiones y obras de solidaridad en distintos países.",
+      "en": "Capuchin friars live in fraternities and serve through preaching, spiritual accompaniment, missions and works of solidarity in different countries.",
+      "pt": "Os frades capuchinhos vivem em fraternidades e servem pela pregação, pelo acompanhamento espiritual, pelas missões e por obras de solidariedade em diferentes países."
+    },
+    "sources": [
+      "Orden de Frailes Menores Capuchinos, Curia general",
+      "Catholic Encyclopedia: Capuchin Friars Minor"
+    ]
+  },
+  {
+    "id": "cistercienses-ocist",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Roberto de Molesme",
+        "San Bernardo de Claraval"
+      ],
+      "en": [
+        "Saint Robert of Molesme",
+        "Saint Bernard of Clairvaux"
+      ],
+      "pt": [
+        "São Roberto de Molesme",
+        "São Bernardo de Claraval"
+      ]
+    },
+    "presence": {
+      "es": "Monasterios de monjes y monjas forman congregaciones dentro de la orden, con vida litúrgica, formación monástica y servicios adaptados a cada comunidad.",
+      "en": "Monasteries of monks and nuns form congregations within the order, sustaining liturgical life, monastic formation and services adapted to each community.",
+      "pt": "Mosteiros de monges e monjas formam congregações dentro da ordem, mantendo vida litúrgica, formação monástica e serviços adaptados a cada comunidade."
+    },
+    "sources": [
+      "Orden Cisterciense, Curia general y organización",
+      "Catholic Encyclopedia: Cistercians"
+    ]
+  },
+  {
+    "id": "cartujos-ocart",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Bruno de Colonia"
+      ],
+      "en": [
+        "Saint Bruno of Cologne"
+      ],
+      "pt": [
+        "São Bruno de Colônia"
+      ]
+    },
+    "presence": {
+      "es": "La orden reúne monasterios masculinos y femeninos dedicados a la soledad y la oración, con casas en Europa, América y Asia.",
+      "en": "The order brings together monasteries of men and women devoted to solitude and prayer, with houses in Europe, the Americas and Asia.",
+      "pt": "A ordem reúne mosteiros masculinos e femininos dedicados à solidão e à oração, com casas na Europa, nas Américas e na Ásia."
+    },
+    "sources": [
+      "Orden de la Cartuja, The Carthusian Monks: identidad y monasterios",
+      "Catholic Encyclopedia: The Carthusian Order"
+    ]
+  },
+  {
+    "id": "pasionistas-cp",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "Clemente XIV, bula Supremi apostolatus, 16-XI-1769: confirmación del instituto y sus reglas.",
+      "en": "Clement XIV, bull Supremi apostolatus, 16 November 1769: confirmation of the institute and its rules.",
+      "pt": "Clemente XIV, bula Supremi apostolatus, 16-XI-1769: confirmação do instituto e de suas regras."
+    },
+    "notableSaints": {
+      "es": [
+        "San Pablo de la Cruz"
+      ],
+      "en": [
+        "Saint Paul of the Cross"
+      ],
+      "pt": [
+        "São Paulo da Cruz"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades pasionistas mantienen retiros, predicación, formación espiritual y servicio pastoral, anunciando la pasión de Cristo en diversas regiones.",
+      "en": "Passionist communities offer retreats, preaching, spiritual formation and pastoral service, proclaiming Christ’s Passion in different regions of the world.",
+      "pt": "As comunidades passionistas mantêm retiros, pregação, formação espiritual e serviço pastoral, anunciando a paixão de Cristo em diferentes regiões."
+    },
+    "sources": [
+      "Congregación de la Pasión, Curia general Passio Christi",
+      "Catholic Encyclopedia: Passionists"
+    ]
+  },
+  {
+    "id": "camilianos-mi",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Gregorio XIV, bula Illius qui pro gregis, 1591: erección como orden.",
+      "en": "Gregory XIV, bull Illius qui pro gregis, 1591: erection as an order.",
+      "pt": "Gregório XIV, bula Illius qui pro gregis, 1591: ereção como ordem."
+    },
+    "notableSaints": {
+      "es": [
+        "San Camilo de Lelis"
+      ],
+      "en": [
+        "Saint Camillus de Lellis"
+      ],
+      "pt": [
+        "São Camilo de Lellis"
+      ]
+    },
+    "presence": {
+      "es": "Los camilos sirven a enfermos y familias en instituciones sanitarias y pastorales, y colaboran con profesionales y grupos laicos vinculados a su carisma.",
+      "en": "Camillians serve sick people and families in healthcare and pastoral settings, collaborating with professionals and lay groups associated with their charism.",
+      "pt": "Os camilianos servem a doentes e famílias em instituições de saúde e na pastoral, colaborando com profissionais e grupos leigos ligados ao seu carisma."
+    },
+    "sources": [
+      "Ministros de los Enfermos, sitio general",
+      "Ministros de los Enfermos, relación de la Familia Camiliana Laica con la orden",
+      "Catholic Encyclopedia: St. Camillus de Lellis"
+    ]
+  },
+  {
+    "id": "maristas-fms",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Marcelino Champagnat"
+      ],
+      "en": [
+        "Saint Marcellin Champagnat"
+      ],
+      "pt": [
+        "São Marcelino Champagnat"
+      ]
+    },
+    "presence": {
+      "es": "Los hermanos y sus colaboradores laicos se dedican a la educación cristiana de niños y jóvenes, especialmente de quienes tienen mayores necesidades.",
+      "en": "The brothers and their lay partners dedicate themselves to the Christian education of children and young people, especially those in greatest need.",
+      "pt": "Os irmãos e seus colaboradores leigos se dedicam à educação cristã de crianças e jovens, especialmente daqueles com maiores necessidades."
+    },
+    "sources": [
+      "Instituto Marista, Marist Institute",
+      "Juan Pablo II, homilía de canonización de Marcelino Champagnat, 18-IV-1999"
+    ]
+  },
+  {
+    "id": "oblato-maria-inmaculada-omi",
+    "kind": "congregation",
+    "motto": {
+      "es": "Evangelizare pauperibus misit me. Pauperes evangelizantur.",
+      "en": "Evangelizare pauperibus misit me. Pauperes evangelizantur.",
+      "pt": "Evangelizare pauperibus misit me. Pauperes evangelizantur."
+    },
+    "approval": {
+      "es": "León XII, breve de aprobación del instituto, 17-II-1826.",
+      "en": "Leo XII, brief approving the institute, 17 February 1826.",
+      "pt": "Leão XII, breve de aprovação do instituto, 17-II-1826."
+    },
+    "notableSaints": {
+      "es": [
+        "San Eugenio de Mazenod"
+      ],
+      "en": [
+        "Saint Eugène de Mazenod"
+      ],
+      "pt": [
+        "Santo Eugênio de Mazenod"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades misioneras atienden parroquias, santuarios, formación y evangelización en distintas regiones, con atención a comunidades pobres o poco acompañadas.",
+      "en": "Their missionary communities serve in parishes, shrines, formation and evangelization across different regions, with attention to poor or underserved communities.",
+      "pt": "Suas comunidades missionárias atuam em paróquias, santuários, formação e evangelização em diferentes regiões, com atenção a comunidades pobres ou pouco acompanhadas."
+    },
+    "sources": [
+      "Misioneros Oblatos de María Inmaculada, OMI World",
+      "OMI World, Coat of Arms of the Congregation",
+      "Catholic Encyclopedia: Oblates of Mary Immaculate"
+    ]
+  },
+  {
+    "id": "verbitas-svd",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Arnoldo Janssen",
+        "San José Freinademetz"
+      ],
+      "en": [
+        "Saint Arnold Janssen",
+        "Saint Joseph Freinademetz"
+      ],
+      "pt": [
+        "Santo Arnaldo Janssen",
+        "São José Freinademetz"
+      ]
+    },
+    "presence": {
+      "es": "Sacerdotes y hermanos viven en comunidades internacionales y desarrollan misión, animación bíblica, comunicación y servicios de justicia y paz.",
+      "en": "Priests and brothers live in international communities and undertake missionary work, biblical ministry, communication and services for justice and peace.",
+      "pt": "Sacerdotes e irmãos vivem em comunidades internacionais e desenvolvem missão, animação bíblica, comunicação e serviços de justiça e paz."
+    },
+    "sources": [
+      "Sociedad del Verbo Divino, Curia general",
+      "SVD, presentación de las Constituciones revisadas tras el capítulo de 2024",
+      "Juan Pablo II, canonización de Janssen, Freinademetz y Comboni, 5-X-2003",
+      "Catholic Encyclopedia: Society of the Divine Word"
+    ]
+  },
+  {
+    "id": "claretianos-cmf",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "Pío IX, aprobación del instituto el 22-XII-1865, formalizada por decreto el 27-I-1866.",
+      "en": "Pius IX, approval of the institute on 22 December 1865, formalized by decree on 27 January 1866.",
+      "pt": "Pio IX, aprovação do instituto em 22-XII-1865, formalizada por decreto em 27-I-1866."
+    },
+    "notableSaints": {
+      "es": [
+        "San Antonio María Claret"
+      ],
+      "en": [
+        "Saint Anthony Mary Claret"
+      ],
+      "pt": [
+        "Santo Antônio Maria Claret"
+      ]
+    },
+    "presence": {
+      "es": "Los misioneros claretianos sirven mediante predicación, pastoral bíblica, educación, medios de comunicación y acompañamiento de comunidades en distintos continentes.",
+      "en": "Claretian missionaries serve through preaching, biblical ministry, education, communication media and accompaniment of communities on different continents.",
+      "pt": "Os missionários claretianos servem pela pregação, pela pastoral bíblica, pela educação, pelos meios de comunicação e pelo acompanhamento de comunidades em diferentes continentes."
+    },
+    "sources": [
+      "Misioneros Claretianos, sitio general",
+      "Misioneros Claretianos, reflexión inicial del XXV capítulo general",
+      "Catholic Encyclopedia: St. Antonio María Claret y Clará"
+    ]
+  },
+  {
+    "id": "espiritanos-cssp",
+    "kind": "congregation",
+    "motto": {
+      "es": "Un solo corazón y una sola alma",
+      "en": "One heart and one soul",
+      "pt": "Um só coração e uma só alma"
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Los espiritanos evangelizan y acompañan comunidades especialmente desatendidas, con ministerios pastorales, educativos y sociales compartidos con colaboradores laicos.",
+      "en": "Spiritans evangelize and accompany particularly underserved communities through pastoral, educational and social ministries shared with lay partners.",
+      "pt": "Os espiritanos evangelizam e acompanham comunidades especialmente desassistidas, com ministérios pastorais, educativos e sociais compartilhados com colaboradores leigos."
+    },
+    "sources": [
+      "Congregación del Espíritu Santo, Spiritans Roma",
+      "Spiritans Roma, Spiritan Vocation, Regla de Vida 3–7",
+      "Catholic Encyclopedia: Religious Congregations of the Holy Ghost"
+    ]
+  },
+  {
+    "id": "paulinos-ssp",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Santiago Alberione"
+      ],
+      "en": [
+        "Blessed James Alberione"
+      ],
+      "pt": [
+        "Bem-aventurado Tiago Alberione"
+      ]
+    },
+    "presence": {
+      "es": "La congregación sirve al anuncio del Evangelio mediante edición, librerías, medios audiovisuales y comunicación digital en diversos países.",
+      "en": "The congregation serves the proclamation of the Gospel through publishing, bookshops, audiovisual media and digital communication in different countries.",
+      "pt": "A congregação serve ao anúncio do Evangelho por meio de editoras, livrarias, meios audiovisuais e comunicação digital em diferentes países."
+    },
+    "sources": [
+      "Sociedad de San Pablo, sitio general y circunscripciones",
+      "Santa Sede, biografía de Santiago Alberione para su beatificación, 27-IV-2003"
+    ]
+  },
+  {
+    "id": "hijas-caridad-dc",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Vicente de Paúl",
+        "Santa Luisa de Marillac"
+      ],
+      "en": [
+        "Saint Vincent de Paul",
+        "Saint Louise de Marillac"
+      ],
+      "pt": [
+        "São Vicente de Paulo",
+        "Santa Luísa de Marillac"
+      ]
+    },
+    "presence": {
+      "es": "La Compañía sirve en salud, educación, asistencia social y pastoral, compartiendo vida comunitaria y colaboración con otras personas para atender la pobreza.",
+      "en": "The Company serves in healthcare, education, social assistance and pastoral care, sharing community life and collaboration with others to address poverty.",
+      "pt": "A Companhia atua na saúde, na educação, na assistência social e na pastoral, unindo vida comunitária e colaboração com outras pessoas no serviço à pobreza."
+    },
+    "sources": [
+      "Hijas de la Caridad, We Are: identidad canónica y misión",
+      "Catholic Encyclopedia: Sisters of Charity of St. Vincent de Paul"
+    ]
+  },
+  {
+    "id": "hijas-maria-auxiliadora-fma",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Las salesianas desarrollan educación, formación y acompañamiento de jóvenes, con comunidades interculturales y atención a las nuevas formas de pobreza.",
+      "en": "The Salesian Sisters provide education, formation and accompaniment for young people, with intercultural communities and attention to new forms of poverty.",
+      "pt": "As salesianas desenvolvem educação, formação e acompanhamento de jovens, com comunidades interculturais e atenção às novas formas de pobreza."
+    },
+    "sources": [
+      "Francisco, discurso al capítulo general de las Hijas de María Auxiliadora, 22-X-2021",
+      "Catholic Encyclopedia: The Salesian Society, rama femenina"
+    ]
+  },
+  {
+    "id": "carmelitas-descalzas-ocd",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Teresa de Jesús"
+      ],
+      "en": [
+        "Saint Teresa of Jesus"
+      ],
+      "pt": [
+        "Santa Teresa de Jesus"
+      ]
+    },
+    "presence": {
+      "es": "Las monjas viven en monasterios contemplativos, con oración litúrgica, silencio y trabajo; conservan vínculos de formación y comunión dentro de la familia teresiana.",
+      "en": "The nuns live in contemplative monasteries with liturgical prayer, silence and work, maintaining bonds of formation and communion within the Teresian family.",
+      "pt": "As monjas vivem em mosteiros contemplativos, com oração litúrgica, silêncio e trabalho, mantendo vínculos de formação e comunhão na família teresiana."
+    },
+    "sources": [
+      "Carmelitas Descalzos, Curia general y familia carmelitana",
+      "Catholic Encyclopedia: The Carmelite Order, reforma teresiana"
+    ]
+  },
+  {
+    "id": "clarisas-osc",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Clara de Asís"
+      ],
+      "en": [
+        "Saint Clare of Assisi"
+      ],
+      "pt": [
+        "Santa Clara de Assis"
+      ]
+    },
+    "presence": {
+      "es": "Las clarisas viven en monasterios contemplativos, con oración, vida fraterna y trabajo; sus comunidades conservan diversas tradiciones y formas de asociación.",
+      "en": "Poor Clares live in contemplative monasteries with prayer, sisterly community and work; their communities preserve different traditions and forms of association.",
+      "pt": "As clarissas vivem em mosteiros contemplativos, com oração, vida fraterna e trabalho; suas comunidades conservam diferentes tradições e formas de associação."
+    },
+    "sources": [
+      "Benedicto XVI, audiencia sobre santa Clara, 15-IX-2010",
+      "Catholic Encyclopedia: Poor Clares"
+    ]
+  },
+  {
+    "id": "misioneras-caridad-mc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Teresa de Calcuta"
+      ],
+      "en": [
+        "Saint Teresa of Calcutta"
+      ],
+      "pt": [
+        "Santa Teresa de Calcutá"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas combinan oración comunitaria y servicio gratuito a personas pobres, enfermas o abandonadas, con colaboración de voluntarios en diferentes regiones.",
+      "en": "The sisters combine community prayer and free service to poor, sick or abandoned people, collaborating with volunteers in different regions.",
+      "pt": "As irmãs unem oração comunitária e serviço gratuito a pessoas pobres, doentes ou abandonadas, com colaboração de voluntários em diferentes regiões."
+    },
+    "sources": [
+      "Mother Teresa Center, MC Family: asociados y servicio actual",
+      "Santa Sede, biografía de Teresa de Calcuta, 2003"
+    ]
+  },
+  {
+    "id": "franciscanas-misioneras-maria-fmm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beata María de la Pasión"
+      ],
+      "en": [
+        "Blessed Mary of the Passion"
+      ],
+      "pt": [
+        "Bem-aventurada Maria da Paixão"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades internacionales unen adoración eucarística y misión, con servicios de educación, salud, pastoral y promoción humana según las necesidades locales.",
+      "en": "Their international communities unite Eucharistic adoration and mission, serving in education, healthcare, pastoral ministry and human development according to local needs.",
+      "pt": "Suas comunidades internacionais unem adoração eucarística e missão, com serviços de educação, saúde, pastoral e promoção humana conforme as necessidades locais."
+    },
+    "sources": [
+      "Franciscanas Misioneras de María, sitio general",
+      "FMM, Blessed Mary of the Passion",
+      "Juan Pablo II, homilía de beatificación, 20-X-2002"
+    ]
+  },
+  {
+    "id": "hermanas-caridad-santa-ana-csa",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Las hermanas mantienen servicios sanitarios, educativos, sociales y pastorales en comunidades de Europa, América, Asia y África, con espíritu de hospitalidad.",
+      "en": "The sisters provide healthcare, educational, social and pastoral services in communities in Europe, the Americas, Asia and Africa, with a spirit of hospitality.",
+      "pt": "As irmãs mantêm serviços de saúde, educativos, sociais e pastorais em comunidades da Europa, das Américas, da Ásia e da África, com espírito de hospitalidade."
+    },
+    "sources": [
+      "Hermanas de la Caridad de Santa Ana, sitio institucional",
+      "Hermanas de la Caridad de Santa Ana, Historia"
+    ]
+  },
+  {
+    "id": "orden-visitacion-vhm",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Juana Francisca de Chantal",
+        "Santa Margarita María Alacoque"
+      ],
+      "en": [
+        "Saint Jane Frances de Chantal",
+        "Saint Margaret Mary Alacoque"
+      ],
+      "pt": [
+        "Santa Joana Francisca de Chantal",
+        "Santa Margarida Maria Alacoque"
+      ]
+    },
+    "presence": {
+      "es": "Los monasterios visitandinos sostienen vida comunitaria y oración litúrgica, con la espiritualidad de Francisco de Sales y Juana de Chantal.",
+      "en": "Visitation monasteries sustain community life and liturgical prayer in the spirituality of Francis de Sales and Jane de Chantal.",
+      "pt": "Os mosteiros visitandinos mantêm vida comunitária e oração litúrgica na espiritualidade de Francisco de Sales e Joana de Chantal."
+    },
+    "sources": [
+      "Monasterio de la Visitación de Georgetown, vida y comunidad actuales",
+      "Benedicto XVI, audiencia sobre san Francisco de Sales, 2-III-2011",
+      "Catholic Encyclopedia: Visitation Order"
+    ]
+  },
+  {
+    "id": "ursulinas-osu",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Ángela de Mérici"
+      ],
+      "en": [
+        "Saint Angela Merici"
+      ],
+      "pt": [
+        "Santa Ângela de Mérici"
+      ]
+    },
+    "presence": {
+      "es": "La Unión Romana reúne comunidades educativas y pastorales de distintos continentes; otras ramas ursulinas conservan organizaciones propias dentro de la familia de Ángela de Mérici.",
+      "en": "The Roman Union brings together educational and pastoral communities on different continents; other Ursuline branches retain their own organizations within Angela Merici’s family.",
+      "pt": "A União Romana reúne comunidades educativas e pastorais de diferentes continentes; outros ramos ursulinos conservam organizações próprias na família de Ângela de Mérici."
+    },
+    "sources": [
+      "Ursulinas de la Unión Romana, sitio general",
+      "Ursulinas de la Unión Romana, History",
+      "Catholic Encyclopedia: The Ursulines"
+    ]
+  },
+  {
+    "id": "adoratrices-asc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa María De Mattias"
+      ],
+      "en": [
+        "Saint Maria De Mattias"
+      ],
+      "pt": [
+        "Santa Maria De Mattias"
+      ]
+    },
+    "presence": {
+      "es": "Las adoratrices unen oración y servicio en comunidades interculturales, con obras educativas, promoción de la justicia y atención a las necesidades de sus vecinos.",
+      "en": "The Adorers unite prayer and service in intercultural communities through educational works, the promotion of justice and care for their neighbours’ needs.",
+      "pt": "As adoradoras unem oração e serviço em comunidades interculturais, com obras educativas, promoção da justiça e atenção às necessidades das pessoas próximas."
+    },
+    "sources": [
+      "Adoratrices de la Sangre de Cristo, Dirección general: About Us",
+      "Santa Sede, biografía de María De Mattias, 18-V-2003"
+    ]
+  },
+  {
+    "id": "esclavas-sagrado-corazon-rshm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La congregación internacional sirve mediante educación y ministerios orientados a la dignidad y la vida, con comunidades y colaboradores en diversos países.",
+      "en": "The international congregation serves through education and ministries supporting dignity and life, with communities and collaborators in different countries.",
+      "pt": "A congregação internacional serve pela educação e por ministérios voltados à dignidade e à vida, com comunidades e colaboradores em diferentes países."
+    },
+    "sources": [
+      "Religiosas del Sagrado Corazón de María, sitio general",
+      "RSHM, Constitutions y proceso de revisión"
+    ]
+  },
+  {
+    "id": "hermanas-providencia-sp",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beata Émilie Tavernier-Gamelin"
+      ],
+      "en": [
+        "Blessed Émilie Tavernier-Gamelin"
+      ],
+      "pt": [
+        "Bem-aventurada Émilie Tavernier-Gamelin"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas y sus asociados continúan el servicio compasivo a personas pobres, enfermas y marginadas, manteniendo viva la herencia de Émilie Gamelin.",
+      "en": "The sisters and their associates continue compassionate service to poor, sick and marginalized people, keeping Émilie Gamelin’s heritage alive.",
+      "pt": "As irmãs e seus associados continuam o serviço compassivo às pessoas pobres, doentes e marginalizadas, mantendo viva a herança de Émilie Gamelin."
+    },
+    "sources": [
+      "Hermanas de la Providencia Émilie-Gamelin, sitio institucional",
+      "Providence International, Centre Émilie-Gamelin",
+      "Santa Sede, biografía para la beatificación de Émilie Gamelin, 7-X-2001"
+    ]
+  },
+  {
+    "id": "siervas-de-los-pobres-dss",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La congregación nacida en Kerala mantiene su identidad de servicio a personas pobres y marginadas, con vida comunitaria y apostolado social.",
+      "en": "The congregation originating in Kerala maintains its identity of service to poor and marginalized people through community life and social ministry.",
+      "pt": "A congregação nascida em Kerala mantém sua identidade de serviço às pessoas pobres e marginalizadas, com vida comunitária e apostolado social."
+    },
+    "sources": [
+      "Dinasevanasabha, sitio oficial",
+      "Ursulinas de la Unión Romana, Mother Petra Dinadasi"
+    ]
+  },
+  {
+    "id": "franciscanas-de-los-angeles-fsma",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Las hermanas unen adoración eucarística y misión, con servicios educativos y sanitarios y comunidades vinculadas a su fundación francesa.",
+      "en": "The sisters unite Eucharistic adoration and mission through educational and healthcare services and communities connected with their French foundation.",
+      "pt": "As irmãs unem adoração eucarística e missão, com serviços educativos e de saúde e comunidades ligadas à sua fundação francesa."
+    },
+    "sources": [
+      "Franciscaines de Sainte-Marie-des-Anges, provincia de Francia",
+      "Diócesis de Fréjus-Toulon, Franciscaines de Sainte-Marie des anges"
+    ]
+  },
+  {
+    "id": "religiosas-jesus-maria-rjm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Claudina Thévenet"
+      ],
+      "en": [
+        "Saint Claudine Thévenet"
+      ],
+      "pt": [
+        "Santa Claudina Thévenet"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades sirven mediante educación formal e informal, misión y pastoral, con especial atención a jóvenes, personas pobres y promoción de la dignidad de las mujeres.",
+      "en": "Their communities serve through formal and informal education, mission and pastoral ministries, with particular attention to young people, poor people and women’s dignity.",
+      "pt": "Suas comunidades servem pela educação formal e informal, pela missão e pela pastoral, com atenção especial aos jovens, às pessoas pobres e à dignidade das mulheres."
+    },
+    "sources": [
+      "Religiosas de Jesús-María, Who We Are",
+      "RJM, documentación histórica: Part II, Foundation of the Congregation"
+    ]
+  },
+  {
+    "id": "dominicanas-visitacion-dv",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La congregación filipina mantiene ministerios de educación, catequesis, retiros y salud, con presencia documentada en Filipinas, Estados Unidos, Kenia e Italia.",
+      "en": "The Philippine congregation undertakes education, catechesis, retreats and healthcare ministries, with documented presence in the Philippines, the United States, Kenya and Italy.",
+      "pt": "A congregação filipina mantém ministérios de educação, catequese, retiros e saúde, com presença documentada nas Filipinas, nos Estados Unidos, no Quênia e na Itália."
+    },
+    "sources": [
+      "Orden de Predicadores, historia de la congregación fundada por Rosario de la Visitación",
+      "Dominican Sisters International Confederation, Foundress of a Dominican Sisters’ Congregation in the Philippines"
+    ]
+  },
+  {
+    "id": "mercedarios-odem",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Gregorio IX, bula Devotionis vestrae, 17-I-1235.",
+      "en": "Gregory IX, bull Devotionis vestrae, 17 January 1235.",
+      "pt": "Gregório IX, bula Devotionis vestrae, 17-I-1235."
+    },
+    "notableSaints": {
+      "es": [
+        "San Pedro Nolasco"
+      ],
+      "en": [
+        "Saint Peter Nolasco"
+      ],
+      "pt": [
+        "São Pedro Nolasco"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes sirven mediante evangelización y obras de redención y asistencia, con comunidades y apostolados en distintos países.",
+      "en": "The friars serve through evangelization and works of liberation and assistance, with communities and ministries in different countries.",
+      "pt": "Os frades servem pela evangelização e por obras de libertação e assistência, com comunidades e apostolados em diferentes países."
+    },
+    "sources": [
+      "Orden de la Merced, Our History",
+      "Provincia Mercedaria de Aragón, Manual de historia de la Orden Mercedaria",
+      "Catholic Encyclopedia: Mercedarians"
+    ]
+  },
+  {
+    "id": "trinitarios-osst",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Inocencio III, bula Operante divinae dispositionis clementia, 17-XII-1198.",
+      "en": "Innocent III, bull Operante divinae dispositionis clementia, 17 December 1198.",
+      "pt": "Inocêncio III, bula Operante divinae dispositionis clementia, 17-XII-1198."
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan de Mata",
+        "San Juan Bautista de la Concepción"
+      ],
+      "en": [
+        "Saint John of Matha",
+        "Saint John Baptist of the Conception"
+      ],
+      "pt": [
+        "São João da Mata",
+        "São João Batista da Conceição"
+      ]
+    },
+    "presence": {
+      "es": "La orden mantiene comunidades y servicios pastorales, junto con iniciativas de solidaridad con cristianos perseguidos y personas privadas de libertad.",
+      "en": "The order maintains communities and pastoral ministries alongside initiatives supporting persecuted Christians and people deprived of freedom.",
+      "pt": "A ordem mantém comunidades e serviços pastorais, além de iniciativas de solidariedade com cristãos perseguidos e pessoas privadas de liberdade."
+    },
+    "sources": [
+      "Orden Trinitaria, History",
+      "Orden Trinitaria, Apostolate Secretariat",
+      "Juan Pablo II, mensaje al ministro general, 7-VI-1998"
+    ]
+  },
+  {
+    "id": "servitas-osm",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Benedicto XI, bula Dum levamus, 11-II-1304.",
+      "en": "Benedict XI, bull Dum levamus, 11 February 1304.",
+      "pt": "Bento XI, bula Dum levamus, 11-II-1304."
+    },
+    "notableSaints": {
+      "es": [
+        "San Felipe Benizi"
+      ],
+      "en": [
+        "Saint Philip Benizi"
+      ],
+      "pt": [
+        "São Filipe Benizi"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes mantienen comunidades y ministerios pastorales; la familia servita incluye también monjas, congregaciones femeninas y laicos con vínculos propios.",
+      "en": "The friars maintain communities and pastoral ministries; the Servite family also includes nuns, women’s congregations and lay people with their own bonds.",
+      "pt": "Os frades mantêm comunidades e ministérios pastorais; a família servita também inclui monjas, congregações femininas e leigos com vínculos próprios."
+    },
+    "sources": [
+      "Orden de los Siervos de María, A Short History, capítulo I",
+      "Catholic Encyclopedia: Order of Servites"
+    ]
+  },
+  {
+    "id": "minimos-om",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Francisco de Paula"
+      ],
+      "en": [
+        "Saint Francis of Paola"
+      ],
+      "pt": [
+        "São Francisco de Paula"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades desarrollan oración, predicación y servicio pastoral, compartiendo su espiritualidad de conversión con otras ramas de la familia mínima.",
+      "en": "The communities undertake prayer, preaching and pastoral service, sharing their spirituality of conversion with other branches of the Minim family.",
+      "pt": "As comunidades desenvolvem oração, pregação e serviço pastoral, compartilhando sua espiritualidade de conversão com outros ramos da família mínima."
+    },
+    "sources": [
+      "Catholic Encyclopedia: Minimi",
+      "Juan Pablo II, discurso al capítulo general de los Mínimos, 3-VII-2000"
+    ]
+  },
+  {
+    "id": "premonstratenses-opraem",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Norberto de Xanten"
+      ],
+      "en": [
+        "Saint Norbert of Xanten"
+      ],
+      "pt": [
+        "São Norberto de Xanten"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades abaciales mantienen la oración coral y sirven a parroquias y otras obras; su presencia incluye casas activas en el ámbito anglófono.",
+      "en": "Abbatial communities maintain choral prayer and serve parishes and other ministries; their presence includes active houses in the English-speaking world.",
+      "pt": "As comunidades abaciais mantêm a oração coral e servem a paróquias e outras obras; sua presença inclui casas ativas no mundo de língua inglesa."
+    },
+    "sources": [
+      "Canónigos Regulares de Prémontré, History",
+      "Premonstratensian Abbeys in the UK, Origins and Organisation",
+      "Catholic Encyclopedia: Premonstratensian Canons"
+    ]
+  },
+  {
+    "id": "carmelitas-descalzos-ocd",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan de la Cruz",
+        "Santa Teresa de Jesús"
+      ],
+      "en": [
+        "Saint John of the Cross",
+        "Saint Teresa of Jesus"
+      ],
+      "pt": [
+        "São João da Cruz",
+        "Santa Teresa de Jesus"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes mantienen comunidades de formación y servicio pastoral, con retiros, acompañamiento espiritual y misión en diferentes regiones del mundo.",
+      "en": "The friars maintain communities of formation and pastoral service, offering retreats, spiritual accompaniment and mission in different world regions.",
+      "pt": "Os frades mantêm comunidades de formação e serviço pastoral, com retiros, acompanhamento espiritual e missão em diferentes regiões do mundo."
+    },
+    "sources": [
+      "Carmelitas Descalzos, Curia general",
+      "Carmelitas Descalzos, biografía de san Juan de la Cruz",
+      "Catholic Encyclopedia: The Carmelite Order, reforma descalza"
+    ]
+  },
+  {
+    "id": "agustinos-recoletos-oar",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La orden sirve en comunidades y obras pastorales, educativas y sociales, organizadas en provincias que reúnen religiosos de distintos lugares.",
+      "en": "The order serves through communities and pastoral, educational and social works, organized in provinces gathering religious from different places.",
+      "pt": "A ordem serve em comunidades e obras pastorais, educativas e sociais, organizadas em províncias que reúnem religiosos de diferentes lugares."
+    },
+    "sources": [
+      "Agustinos Recoletos, Quiénes somos, sitio institucional actual",
+      "Agustinos Recoletos, Constituciones e identidad carismática"
+    ]
+  },
+  {
+    "id": "franciscanos-conventuales-ofmconv",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "León X, bula Ite vos, 29-V-1517: configuración separada de observantes y conventuales.",
+      "en": "Leo X, bull Ite vos, 29 May 1517: separate configuration of Observants and Conventuals.",
+      "pt": "Leão X, bula Ite vos, 29-V-1517: configuração separada de observantes e conventuais."
+    },
+    "notableSaints": {
+      "es": [
+        "San Maximiliano María Kolbe",
+        "San José de Cupertino"
+      ],
+      "en": [
+        "Saint Maximilian Mary Kolbe",
+        "Saint Joseph of Cupertino"
+      ],
+      "pt": [
+        "São Maximiliano Maria Kolbe",
+        "São José de Cupertino"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes sostienen comunidades, santuarios y ministerios de evangelización en diversas regiones, con iniciativas pastorales, educativas y de comunicación.",
+      "en": "The friars sustain communities, shrines and evangelization ministries in different regions, with pastoral, educational and communication initiatives.",
+      "pt": "Os frades mantêm comunidades, santuários e ministérios de evangelização em diferentes regiões, com iniciativas pastorais, educativas e de comunicação."
+    },
+    "sources": [
+      "Curia general OFMConv, sitio institucional",
+      "OFMConv, Ordine dei Frati Minori Conventuali: historia y santos",
+      "Catholic Encyclopedia: Franciscan Order"
+    ]
+  },
+  {
+    "id": "tercera-orden-regular-tor",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Nicolás V, bula Pastoralis officii, 20-VII-1447: unión de fraternidades regulares.",
+      "en": "Nicholas V, bull Pastoralis officii, 20 July 1447: union of regular fraternities.",
+      "pt": "Nicolau V, bula Pastoralis officii, 20-VII-1447: união de fraternidades regulares."
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Los religiosos mantienen comunidades de vida fraterna y servicio apostólico, compartiendo la tradición de conversión franciscana con otras ramas de la familia.",
+      "en": "The religious maintain communities of fraternal life and apostolic service, sharing the Franciscan tradition of conversion with other branches of the family.",
+      "pt": "Os religiosos mantêm comunidades de vida fraterna e serviço apostólico, compartilhando a tradição de conversão franciscana com outros ramos da família."
+    },
+    "sources": [
+      "Tercera Orden Regular, History of the Order",
+      "Tercera Orden Regular, identidad y misión",
+      "Catholic Encyclopedia: Third Orders"
+    ]
+  },
+  {
+    "id": "escolapios-schp",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San José de Calasanz"
+      ],
+      "en": [
+        "Saint Joseph Calasanz"
+      ],
+      "pt": [
+        "São José de Calasanz"
+      ]
+    },
+    "presence": {
+      "es": "La orden desarrolla escuelas y proyectos educativos y pastorales, con religiosos y colaboradores laicos comprometidos con la formación integral de la juventud.",
+      "en": "The order runs schools and educational and pastoral projects, with religious and lay collaborators committed to the integral formation of young people.",
+      "pt": "A ordem desenvolve escolas e projetos educativos e pastorais, com religiosos e colaboradores leigos comprometidos com a formação integral da juventude."
+    },
+    "sources": [
+      "Escuelas Pías, sitio general",
+      "Penitenciaría Apostólica, documento del jubileo escolapio de 2016–2017, introducción histórica",
+      "Catholic Encyclopedia: St. Joseph Calasanctius"
+    ]
+  },
+  {
+    "id": "teatinos-cr",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Clemente VII, breve Exponi nobis, 24-VI-1524.",
+      "en": "Clement VII, brief Exponi nobis, 24 June 1524.",
+      "pt": "Papa Clemente VII, breve Exponi nobis, 24-VI-1524."
+    },
+    "notableSaints": {
+      "es": [
+        "San Cayetano de Thiene"
+      ],
+      "en": [
+        "Saint Cajetan of Thiene"
+      ],
+      "pt": [
+        "São Caetano de Thiene"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades conservan el servicio litúrgico y pastoral de iglesias, junto con predicación y formación en la espiritualidad de sus fundadores.",
+      "en": "Their communities maintain liturgical and pastoral service in churches, together with preaching and formation in their founders’ spirituality.",
+      "pt": "Suas comunidades mantêm o serviço litúrgico e pastoral em igrejas, junto com pregação e formação na espiritualidade dos fundadores."
+    },
+    "sources": [
+      "Teatinos, The Theatines: origen e identidad",
+      "Catholic Encyclopedia: Theatines"
+    ]
+  },
+  {
+    "id": "barnabitas-crsp",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Clemente VII, breve Vota per quae vos, 18-II-1533.",
+      "en": "Clement VII, brief Vota per quae vos, 18 February 1533.",
+      "pt": "Papa Clemente VII, breve Vota per quae vos, 18-II-1533."
+    },
+    "notableSaints": {
+      "es": [
+        "San Antonio María Zaccaria"
+      ],
+      "en": [
+        "Saint Anthony Mary Zaccaria"
+      ],
+      "pt": [
+        "Santo Antônio Maria Zaccaria"
+      ]
+    },
+    "presence": {
+      "es": "La orden mantiene comunidades y obras pastorales, educativas y misioneras; su provincia norteamericana documenta ministerios en Estados Unidos y Canadá.",
+      "en": "The order maintains communities and pastoral, educational and missionary works; its North American province documents ministries in the United States and Canada.",
+      "pt": "A ordem mantém comunidades e obras pastorais, educativas e missionárias; sua província norte-americana documenta ministérios nos Estados Unidos e no Canadá."
+    },
+    "sources": [
+      "Barnabite Fathers USA, Pontifical Approval of the Barnabites",
+      "Catholic Encyclopedia: Barnabites"
+    ]
+  },
+  {
+    "id": "somascos-crs",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Jerónimo Emiliani"
+      ],
+      "en": [
+        "Saint Jerome Emiliani"
+      ],
+      "pt": [
+        "São Jerônimo Emiliani"
+      ]
+    },
+    "presence": {
+      "es": "Padres y hermanos desarrollan comunidades y obras de educación y atención a jóvenes, junto con servicios de evangelización y acompañamiento pastoral.",
+      "en": "Fathers and brothers maintain communities and works of education and care for young people, alongside evangelization and pastoral accompaniment.",
+      "pt": "Padres e irmãos mantêm comunidades e obras de educação e cuidado de jovens, além de serviços de evangelização e acompanhamento pastoral."
+    },
+    "sources": [
+      "Somascan Fathers, History",
+      "Catholic Encyclopedia: Somaschi"
+    ]
+  },
+  {
+    "id": "hermanos-lasalle-fsc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "Benedicto XIII, bula In apostolicae dignitatis solio, 26-I-1725.",
+      "en": "Benedict XIII, bull In apostolicae dignitatis solio, 26 January 1725.",
+      "pt": "Bento XIII, bula In apostolicae dignitatis solio, 26-I-1725."
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan Bautista de La Salle"
+      ],
+      "en": [
+        "Saint John Baptist de La Salle"
+      ],
+      "pt": [
+        "São João Batista de La Salle"
+      ]
+    },
+    "presence": {
+      "es": "La red lasaliana reúne hermanos y colaboradores laicos en instituciones educativas y proyectos de formación y promoción humana de diversas regiones.",
+      "en": "The Lasallian network brings brothers and lay partners together in educational institutions and projects of formation and human development in different regions.",
+      "pt": "A rede lassalista reúne irmãos e colaboradores leigos em instituições educativas e projetos de formação e promoção humana em diferentes regiões."
+    },
+    "sources": [
+      "Instituto de los Hermanos de las Escuelas Cristianas, sitio general",
+      "Instituto FSC, Boletín 262: análisis de la bula de aprobación, p. 24",
+      "Catholic Encyclopedia: Institute of the Brothers of the Christian Schools"
+    ]
+  },
+  {
+    "id": "hospitalarios-san-juan-dios-oh",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan de Dios"
+      ],
+      "en": [
+        "Saint John of God"
+      ],
+      "pt": [
+        "São João de Deus"
+      ]
+    },
+    "presence": {
+      "es": "Los hermanos comparten su misión con profesionales y voluntarios en centros sanitarios y sociales, atendiendo diferentes necesidades de salud y vulnerabilidad.",
+      "en": "The brothers share their mission with professionals and volunteers in healthcare and social centres, addressing different needs arising from illness and vulnerability.",
+      "pt": "Os irmãos compartilham sua missão com profissionais e voluntários em centros de saúde e sociais, atendendo diferentes necessidades de saúde e vulnerabilidade."
+    },
+    "sources": [
+      "Orden Hospitalaria de San Juan de Dios, Curia general",
+      "Orden Hospitalaria, El rostro de la Orden cambia, 26-IV-2009",
+      "Catholic Encyclopedia: Brothers Hospitallers of St. John of God"
+    ]
+  },
+  {
+    "id": "oratorianos-co",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Felipe Neri"
+      ],
+      "en": [
+        "Saint Philip Neri"
+      ],
+      "pt": [
+        "São Filipe Néri"
+      ]
+    },
+    "presence": {
+      "es": "Las casas oratorianas mantienen comunidades estables dedicadas a la oración y al servicio pastoral, cooperando mediante su confederación internacional.",
+      "en": "Oratorian houses maintain stable communities devoted to prayer and pastoral service, cooperating through their international confederation.",
+      "pt": "As casas oratorianas mantêm comunidades estáveis dedicadas à oração e ao serviço pastoral, cooperando por meio de sua confederação internacional."
+    },
+    "sources": [
+      "Francisco, mensaje por el quinto centenario de san Felipe Neri, 26-V-2015",
+      "Catholic-Hierarchy, Confederation of Oratorians of St. Philip Neri",
+      "Catholic Encyclopedia: The Oratory of Saint Philip Neri"
+    ]
+  },
+  {
+    "id": "vicentinos-cm",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "Urbano VIII, bula Salvatoris nostri, 12-I-1633.",
+      "en": "Urban VIII, bull Salvatoris nostri, 12 January 1633.",
+      "pt": "Papa Urbano VIII, bula Salvatoris nostri, 12-I-1633."
+    },
+    "notableSaints": {
+      "es": [
+        "San Vicente de Paúl"
+      ],
+      "en": [
+        "Saint Vincent de Paul"
+      ],
+      "pt": [
+        "São Vicente de Paulo"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades desarrollan evangelización y formación de ministros, en colaboración con las Iglesias locales y con la amplia familia vicenciana.",
+      "en": "Its communities undertake evangelization and the formation of ministers, collaborating with local Churches and the wider Vincentian family.",
+      "pt": "Suas comunidades desenvolvem evangelização e formação de ministros, em colaboração com as Igrejas locais e com a ampla família vicentina."
+    },
+    "sources": [
+      "Congregación de la Misión, sitio general",
+      "Congregación de la Misión, Constituciones, artículo 3 e introducción histórica, versión inglesa",
+      "Congregación de la Misión, Constituciones, introducción histórica latina"
+    ]
+  },
+  {
+    "id": "palotinos-sac",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Vicente Pallotti"
+      ],
+      "en": [
+        "Saint Vincent Pallotti"
+      ],
+      "pt": [
+        "São Vicente Pallotti"
+      ]
+    },
+    "presence": {
+      "es": "Padres y hermanos realizan ministerios pastorales, educativos y misioneros, colaborando con las demás realidades de la familia del Apostolado Católico.",
+      "en": "Fathers and brothers undertake pastoral, educational and missionary ministries, collaborating with other parts of the Catholic Apostolate family.",
+      "pt": "Padres e irmãos realizam ministérios pastorais, educativos e missionários, colaborando com outras realidades da família do Apostolado Católico."
+    },
+    "sources": [
+      "Palotinos, About Us: historia de la familia y de la Unión del Apostolado Católico",
+      "Sociedad del Apostolado Católico en Nigeria, About Us: forma canónica",
+      "Catholic Encyclopedia: Vincent Mary Pallotti"
+    ]
+  },
+  {
+    "id": "marianistas-sm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Guillermo José Chaminade"
+      ],
+      "en": [
+        "Blessed William Joseph Chaminade"
+      ],
+      "pt": [
+        "Bem-aventurado Guilherme José Chaminade"
+      ]
+    },
+    "presence": {
+      "es": "Los marianistas sostienen instituciones educativas, parroquias y centros de retiro, con colaboración de laicos en formación y servicio social.",
+      "en": "Marianists support educational institutions, parishes and retreat centres, collaborating with lay people in formation and social service.",
+      "pt": "Os marianistas mantêm instituições educativas, paróquias e centros de retiro, com colaboração de leigos na formação e no serviço social."
+    },
+    "sources": [
+      "Marianistas, Society of Mary: identidad y carisma",
+      "Marianistas, History"
+    ]
+  },
+  {
+    "id": "sacramentinos-sss",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Pedro Julián Eymard"
+      ],
+      "en": [
+        "Saint Peter Julian Eymard"
+      ],
+      "pt": [
+        "São Pedro Julião Eymard"
+      ]
+    },
+    "presence": {
+      "es": "La congregación mantiene comunidades y ministerios de evangelización eucarística, con celebraciones, formación, retiros y participación en la vida parroquial.",
+      "en": "The congregation maintains communities and ministries of Eucharistic evangelization through celebrations, formation, retreats and participation in parish life.",
+      "pt": "A congregação mantém comunidades e ministérios de evangelização eucarística, com celebrações, formação, retiros e participação na vida paroquial."
+    },
+    "sources": [
+      "Congregación del Santísimo Sacramento, Who We Are",
+      "Congregación del Santísimo Sacramento, Saint Peter Julian Eymard"
+    ]
+  },
+  {
+    "id": "combonianos-mccj",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Daniel Comboni"
+      ],
+      "en": [
+        "Saint Daniel Comboni"
+      ],
+      "pt": [
+        "São Daniel Comboni"
+      ]
+    },
+    "presence": {
+      "es": "La congregación trabaja en evangelización y promoción humana en África y otras regiones, colaborando con las diversas vocaciones de la familia comboniana.",
+      "en": "The congregation works in evangelization and human development in Africa and other regions, collaborating with the different vocations of the Comboni family.",
+      "pt": "A congregação trabalha na evangelização e na promoção humana na África e em outras regiões, colaborando com as diferentes vocações da família comboniana."
+    },
+    "sources": [
+      "Misioneros Combonianos, Who We Are",
+      "Misioneros Combonianos, About Us e historia norteamericana",
+      "Santa Sede, biografía de Daniel Comboni, 5-X-2003"
+    ]
+  },
+  {
+    "id": "javerianos-sx",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Guido María Conforti"
+      ],
+      "en": [
+        "Saint Guido Maria Conforti"
+      ],
+      "pt": [
+        "São Guido Maria Conforti"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades misioneras sirven a Iglesias locales en diversos países, con formación, diálogo cultural y religioso y anuncio del Evangelio.",
+      "en": "Missionary communities serve local Churches in different countries through formation, cultural and religious dialogue and proclamation of the Gospel.",
+      "pt": "As comunidades missionárias servem às Igrejas locais em diferentes países, com formação, diálogo cultural e religioso e anúncio do Evangelho."
+    },
+    "sources": [
+      "Misioneros Javerianos de Filipinas, Xaverian Life",
+      "Santa Sede, libro de canonización de Guido María Conforti, 23-X-2011, perfil biográfico"
+    ]
+  },
+  {
+    "id": "misiones-extranjeras-pime",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Pablo Manna"
+      ],
+      "en": [
+        "Blessed Paolo Manna"
+      ],
+      "pt": [
+        "Bem-aventurado Paulo Manna"
+      ]
+    },
+    "presence": {
+      "es": "El instituto envía sacerdotes y hermanos a comunidades misioneras, desarrollando evangelización y servicios de formación y promoción humana en distintos países.",
+      "en": "The institute sends priests and brothers to missionary communities, undertaking evangelization and services of formation and human development in different countries.",
+      "pt": "O instituto envia sacerdotes e irmãos a comunidades missionárias, desenvolvendo evangelização e serviços de formação e promoção humana em diferentes países."
+    },
+    "sources": [
+      "PIME, Who We Are, English PIME Booklet",
+      "PIME y familias misioneras vinculadas, Bounded Missionary Families, sección PIME"
+    ]
+  },
+  {
+    "id": "maryknoll-mm",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Los padres y hermanos sirven en comunidades de distintas culturas y sostienen formación misionera, publicaciones y proyectos de atención a necesidades humanas.",
+      "en": "Fathers and brothers serve communities of different cultures and support missionary formation, publications and projects responding to human needs.",
+      "pt": "Os padres e irmãos servem comunidades de diferentes culturas e mantêm formação missionária, publicações e projetos de atenção às necessidades humanas."
+    },
+    "sources": [
+      "Maryknoll Fathers and Brothers, misión y forma canónica",
+      "Maryknoll, Founders",
+      "Maryknoll, History"
+    ]
+  },
+  {
+    "id": "misiones-africanas-sma",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Sus comunidades y colaboradores sirven a poblaciones africanas y de origen africano con ministerios de evangelización, formación y acompañamiento humano.",
+      "en": "Its communities and collaborators serve African populations and people of African origin through evangelization, formation and human accompaniment.",
+      "pt": "Suas comunidades e colaboradores servem populações africanas e pessoas de origem africana com ministérios de evangelização, formação e acompanhamento humano."
+    },
+    "sources": [
+      "Society of African Missions, Foundation and Early History",
+      "Society of African Missions, Our History",
+      "Catholic-Hierarchy, Society of African Missions: forma canónica"
+    ]
+  },
+  {
+    "id": "misioneros-africa-mafr",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Sus comunidades internacionales sirven al mundo africano mediante evangelización, formación, diálogo religioso y compromiso con la justicia, la paz y el cuidado de la creación.",
+      "en": "Its international communities serve the African world through evangelization, formation, religious dialogue and commitment to justice, peace and care for creation.",
+      "pt": "Suas comunidades internacionais servem ao mundo africano por meio de evangelização, formação, diálogo religioso e compromisso com a justiça, a paz e o cuidado da criação."
+    },
+    "sources": [
+      "Missionaries of Africa, Who We Are",
+      "Missionaries of Africa, Constitutions and Laws, artículos iniciales"
+    ]
+  },
+  {
+    "id": "consolata-imc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San José Allamano"
+      ],
+      "en": [
+        "Saint Joseph Allamano"
+      ],
+      "pt": [
+        "São José Allamano"
+      ]
+    },
+    "presence": {
+      "es": "El instituto desarrolla misión y acompañamiento de comunidades en distintos continentes, con formación y servicios de promoción humana.",
+      "en": "The institute undertakes mission and accompaniment of communities on different continents through formation and services supporting human development.",
+      "pt": "O instituto desenvolve missão e acompanhamento de comunidades em diferentes continentes, com formação e serviços de promoção humana."
+    },
+    "sources": [
+      "Instituto Misiones Consolata, Calendario del Fondatore",
+      "Consolata Taiwan, presentación del instituto",
+      "Francisco, homilía de canonización, 20-X-2024"
+    ]
+  },
+  {
+    "id": "legionarios-cristo-lc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La congregación mantiene comunidades y obras de evangelización, educación y formación. Publica informes sobre prevención de abusos y atención a víctimas.",
+      "en": "The congregation maintains communities and works of evangelization, education and formation. It publishes reports on abuse prevention and care for victims.",
+      "pt": "A congregação mantém comunidades e obras de evangelização, educação e formação. Publica relatórios sobre prevenção de abusos e atenção às vítimas."
+    },
+    "sources": [
+      "Legionaries of Christ, Who We Are e historia",
+      "Santa Sede, comunicado sobre la visita apostólica, 1-V-2010",
+      "Santa Sede, biografía del cardenal Velasio De Paolis",
+      "Legionaries of Christ, 5th Annual Report: Truth, Justice and Healing, 2024"
+    ]
+  },
+  {
+    "id": "montfortianos-smm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Luis María Grignion de Montfort"
+      ],
+      "en": [
+        "Saint Louis Marie Grignion de Montfort"
+      ],
+      "pt": [
+        "São Luís Maria Grignion de Montfort"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades montfortianas realizan misiones, catequesis y servicios pastorales, con presencia internacional y una tradición de formación espiritual mariana.",
+      "en": "Montfortian communities undertake missions, catechesis and pastoral services, with an international presence and a tradition of Marian spiritual formation.",
+      "pt": "As comunidades monfortinas realizam missões, catequese e serviços pastorais, com presença internacional e uma tradição de formação espiritual mariana."
+    },
+    "sources": [
+      "Montfort Missionaries Philippines, Our Origin",
+      "Montfort Missionaries Philippines, Our Founder"
+    ]
+  },
+  {
+    "id": "dehonianos-scj",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Sus sacerdotes y hermanos sirven en distintos continentes mediante educación, ministerio parroquial, misiones y proyectos de atención social.",
+      "en": "Its priests and brothers serve on different continents through education, parish ministry, missions and projects providing social assistance.",
+      "pt": "Seus sacerdotes e irmãos servem em diferentes continentes por meio de educação, ministério paroquial, missões e projetos de atendimento social."
+    },
+    "sources": [
+      "Dehonians USA, History and Mission",
+      "Curia general dehoniana, Dehonian Family"
+    ]
+  }
+]
