@@ -386,7 +386,9 @@ object LumenKit : AppKit {
                                 }
                             }
                         ) {
-                            Box(Modifier.fillMaxSize().liquidPane(lensShape, design.glassSpec(GlassRole.Thumb)))
+                            // Over a live backdrop the thumb must not redraw the ambient light on top of it.
+                            Box(Modifier.fillMaxSize().liquidPane(lensShape,
+                                design.glassSpec(GlassRole.Thumb).let { if (live) it.copy(lens = 0f) else it }))
                         }
                     }
                     Row(

@@ -142,7 +142,9 @@ fun AppGlassIconButton(
                         if (design.isDark && onImage && !design.opaqueMaterial()) Modifier.background(Color.Black.copy(alpha = 0.20f), CircleShape)
                         else Modifier
                     )
-                    .liquidPane(CircleShape, design.chromeGlassSpec(live))
+                    // No ambient lens: these sit over paintings as often as over
+                    // the light, and must show whatever is really behind them.
+                    .liquidPane(CircleShape, design.chromeGlassSpec(live).copy(lens = 0f))
             )
             Icon(icon, contentDescription = null, tint = tint ?: p.textPrimary, modifier = Modifier.size(22.dp))
         }

@@ -218,7 +218,9 @@ fun AppDesign.chromeGlassSpec(live: Boolean): GlassSpec {
         return clearGlassSpec(GlassRole.Control, lifted = true).copy(
             fillTop = tint.copy(alpha = tint.alpha * 1.3f), fillBottom = tint,
             shadow = palette.shadow.copy(alpha = if (isDark) 0.44f else 0.15f), shadowBlur = 30.dp, shadowY = 10.dp,
-            lens = 1.2f
+            // Live, the real backdrop is already blurred and bent beneath the
+            // tint; redrawing the ambient light over it would hide it.
+            lens = if (live) 0f else 1.2f
         )
     }
     val base = glassSpec(GlassRole.Floating)
