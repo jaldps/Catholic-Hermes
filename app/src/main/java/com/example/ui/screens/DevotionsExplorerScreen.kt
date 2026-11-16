@@ -31,6 +31,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
 import com.example.data.models.ChristManifestation
+import com.example.data.models.LocalizedText
 import com.example.data.models.MarianApparition
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppEmptyState
@@ -110,7 +111,10 @@ internal fun DevotionsExplorerScreen(
                     it.originHistory.get(language), it.recordedMiracles.get(language)
                 )
             }.map {
-                DevotionRowData(it.id, it.region, splitAlias(it.title.get(language)).title, it.country.get(language), null)
+                DevotionRowData(
+                    it.id, it.region, splitAlias(it.title.get(language)).title, it.country.get(language),
+                    it.year.takeIf { y -> y.isNotBlank() }?.let { y -> devotionYear(y, language) }
+                )
             }
         }
     }
@@ -253,7 +257,8 @@ private fun MarianPage(item: MarianApparition, language: AppLanguage, nav: Doctr
             "Prayer of veneration and intercession",
             "Oração de veneração e intercessão"
         ),
-        prayer = item.venerationPrayer.get(language)
+        prayer = item.venerationPrayer.get(language),
+        extras = item.extras(language)
     )
 }
 
@@ -266,7 +271,8 @@ private fun ChristPage(item: ChristManifestation, language: AppLanguage, nav: Do
         nav = nav,
         id = item.id,
         title = ta.title,
-        eyebrow = language.tr("Devoción a Cristo", "Devotion to Christ", "Devoção a Cristo"),
+        eyebrow = language.tr("Devoción a Cristo", "Devotion to Christ", "Devoção a Cristo") +
+            devotionYear(item.year, language).let { if (it.isNotBlank()) " · $it" else "" },
         alias = ta.alias,
         facts = listOf(
             language.tr("Fiesta", "Feast day", "Festa") to item.feastDay.get(language),
@@ -281,9 +287,32 @@ private fun ChristPage(item: ChristManifestation, language: AppLanguage, nav: Do
         miraclesLabel = language.tr("Milagros", "Miracles", "Milagres"),
         miracles = item.recordedMiracles.get(language),
         prayerTitle = language.tr("Oración devocional", "Devotional prayer", "Oração devocional"),
-        prayer = item.officialPrayer.get(language)
+        prayer = item.officialPrayer.get(language),
+        extras = item.extras(language)
     )
 }
+
+/** Optional editorial material for a devotion; blank pieces are not shown. */
+private data class DevotionExtras(
+    val recognition: String = "",
+    val practice: String = "",
+    val promiseSource: String = "",
+    val prayerSource: String = "",
+    val sources: List<String> = emptyList()
+)
+
+private fun promiseCredit(attribution: LocalizedText?, source: String?, language: AppLanguage) =
+    listOfNotNull(attribution?.get(language)?.trim(), source?.trim()).filter { it.isNotEmpty() }.joinToString(" — ")
+
+private fun MarianApparition.extras(language: AppLanguage) = DevotionExtras(
+    recognition?.get(language).orEmpty(), practice?.get(language).orEmpty(),
+    promiseCredit(promiseAttribution, promiseSource, language), prayerSource.orEmpty(), sources
+)
+
+private fun ChristManifestation.extras(language: AppLanguage) = DevotionExtras(
+    recognition?.get(language).orEmpty(), practice?.get(language).orEmpty(),
+    promiseCredit(promiseAttribution, promiseSource, language), prayerSource.orEmpty(), sources
+)
 
 @Composable
 private fun DevotionPage(
@@ -302,7 +331,8 @@ private fun DevotionPage(
     miraclesLabel: String,
     miracles: String,
     prayerTitle: String,
-    prayer: String
+    prayer: String,
+    extras: DevotionExtras = DevotionExtras()
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -318,6 +348,13 @@ private fun DevotionPage(
             FactsGroup(facts)
             BlockGap(28.dp)
         }
+        if (extras.recognition.isNotBlank()) item(key = "recognition") {
+            NoteCard(
+                language.tr("Reconocimiento eclesial", "Church recognition", "Reconhecimento eclesial"),
+                extras.recognition, Modifier.testTag("devotion_recognition")
+            )
+            BlockGap(28.dp)
+        }
         item(key = "history") {
             SectionHeader(historyLabel, topGap = 0.dp)
             ReadingParagraphs(history)
@@ -327,8 +364,29 @@ private fun DevotionPage(
             }
             BlockGap(28.dp)
         }
+        if (extras.practice.isNotBlank()) item(key = "practice") {
+            NoteCard(
+                language.tr("Cómo se vive", "How it is lived", "Como se vive"),
+                extras.practice, Modifier.testTag("devotion_practice")
+            )
+            BlockGap(28.dp)
+        }
         if (promises.isNotBlank()) item(key = "promises") {
-            NoteCard(language.tr("Promesas", "Promises", "Promessas"), promises, quote = true)
+            GlassCard {
+                Text(
+                    language.tr("Promesas", "Promises", "Promessas"), style = styles.headline,
+                    color = p.textPrimary, modifier = Modifier.semantics { heading() }
+                )
+                Spacer(Modifier.height(8.dp))
+                Text(promises, style = styles.reading.copy(fontStyle = FontStyle.Italic), color = p.textPrimary)
+                if (extras.promiseSource.isNotBlank()) {
+                    Spacer(Modifier.height(10.dp))
+                    Text(
+                        extras.promiseSource, style = styles.footnote, color = p.textSecondary,
+                        modifier = Modifier.testTag("devotion_promise_source")
+                    )
+                }
+            }
             Spacer(Modifier.height(12.dp))
         }
         if (miracles.isNotBlank()) item(key = "miracles") {
@@ -344,6 +402,13 @@ private fun DevotionPage(
                     style = styles.reading.copy(fontStyle = FontStyle.Italic),
                     color = p.textPrimary
                 )
+                if (extras.prayerSource.isNotBlank()) {
+                    Spacer(Modifier.height(10.dp))
+                    Text(
+                        extras.prayerSource, style = styles.footnote, color = p.textSecondary,
+                        modifier = Modifier.testTag("devotion_prayer_source")
+                    )
+                }
                 Spacer(Modifier.height(16.dp))
                 val playing = nav.voice.playing
                 AppSecondaryCapsule(
@@ -353,6 +418,13 @@ private fun DevotionPage(
                     tag = "devotion_prayer_listen"
                 )
             }
+        }
+        if (extras.sources.isNotEmpty()) item(key = "sources") {
+            BlockGap(28.dp)
+            NoteCard(
+                language.tr("Fuentes", "Sources", "Fontes"),
+                extras.sources.joinToString("\n") { "• $it" }, Modifier.testTag("devotion_sources")
+            )
         }
     }
 }
