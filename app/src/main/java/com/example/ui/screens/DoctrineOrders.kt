@@ -21,7 +21,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import androidx.compose.material3.Text
 import com.example.data.models.AppLanguage
+import com.example.data.models.LocalizedText
+import com.example.data.models.ReligiousOrder
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppInlineTitle
@@ -42,11 +47,11 @@ internal fun OrdersRoot(
     var segment by rememberSaveable { mutableStateOf(0) }
     val orders = repository.religiousOrders
     val offices = repository.churchOffices
-    val officeOrder = remember(offices) { officeDisplayOrder(offices.map { it.id }) }
+    val officeOrder = remember(offices) { officeDisplayOrder(offices.map { it.id }, offices.map { it.group }) }
 
     LazyColumn(
         state = state,
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().testTag("orders_list"),
         contentPadding = PaddingValues(bottom = LocalBottomPad.current)
     ) {
         item(key = "hero", contentType = "hero") { RootHeader(spec) }
@@ -77,7 +82,7 @@ internal fun OrdersRoot(
                     LeadRow(
                         title = order.name.get(language),
                         subtitle = orderMeta(order.abbreviation, order.foundationYear),
-                        leading = { EmblemPlate(order.id, 44.dp) },
+                        leading = { EmblemPlate(order.id, 44.dp, abbreviation = order.abbreviation) },
                         leadingWidth = 44.dp,
                         position = groupPosition(i, orders.size),
                         onClick = { nav.open("order:$i") },
@@ -95,7 +100,7 @@ internal fun OrdersRoot(
                 }
             } else {
                 OfficeGroup.entries.forEach { group ->
-                    val members = officeOrder.filter { officeGroup(offices[it].id) == group }
+                    val members = officeOrder.filter { officeGroup(offices[it].id, offices[it].group) == group }
                     if (members.isNotEmpty()) {
                         item(key = "og_${group.name}", contentType = "header") {
                             SectionHeader(officeGroupTitle(group, language), topGap = 8.dp)
@@ -166,7 +171,7 @@ private fun OrderPage(
         progressLabel = progressLabel,
         progressTag = "order_progress",
         leading = {
-            EmblemPlate(order.id, 104.dp, contentDescription = name, tag = "order_emblem_detail")
+            EmblemPlate(order.id, 104.dp, abbreviation = order.abbreviation, contentDescription = name, tag = "order_emblem_detail")
         }
     ) {
         item(key = "actions") {
@@ -182,6 +187,7 @@ private fun OrderPage(
             NoteCard(charismLabel, charism, quote = true)
             BlockGap(28.dp)
         }
+        orderExtras(order, language)
         item(key = "footer") {
             SequenceFooter(
                 language,
@@ -207,7 +213,7 @@ private fun OfficePage(
     if (offices.isEmpty()) return
     val index = rawIndex.coerceIn(0, offices.lastIndex)
     val office = offices[index]
-    val display = remember(offices) { officeDisplayOrder(offices.map { it.id }) }
+    val display = remember(offices) { officeDisplayOrder(offices.map { it.id }, offices.map { it.group }) }
     val pos = display.indexOf(index).coerceAtLeast(0)
     val total = offices.size
     val name = office.name.get(language)
@@ -217,7 +223,7 @@ private fun OfficePage(
     val progressLabel = language.tr("Oficio ${pos + 1} de $total", "Office ${pos + 1} of $total", "Ofício ${pos + 1} de $total")
     ReaderPage(
         title = name,
-        eyebrow = officeGroupTitle(officeGroup(office.id), language),
+        eyebrow = officeGroupTitle(officeGroup(office.id, office.group), language),
         progress = (pos + 1).toFloat() / total,
         progressLabel = progressLabel,
         progressTag = "office_progress"
@@ -228,6 +234,10 @@ private fun OfficePage(
         }
         item(key = "description") {
             ReadingParagraphs(description, lead = true)
+            BlockGap(28.dp)
+        }
+        if (office.sources.isNotEmpty()) item(key = "sources") {
+            SourcesCard(language, office.sources, "office_sources")
             BlockGap(28.dp)
         }
         item(key = "footer") {
@@ -242,4 +252,67 @@ private fun OfficePage(
             )
         }
     }
+}
+
+private fun kindLabel(kind: String, language: AppLanguage): String? = when (kind) {
+    "order" -> language.tr("Orden", "Order", "Ordem")
+    "congregation" -> language.tr("Congregación", "Congregation", "Congregação")
+    "society" -> language.tr("Sociedad de vida apostólica", "Society of apostolic life", "Sociedade de vida apostólica")
+    "secular_institute" -> language.tr("Instituto secular", "Secular institute", "Instituto secular")
+    "prelature" -> language.tr("Prelatura personal", "Personal prelature", "Prelazia pessoal")
+    "monastic_federation" -> language.tr("Federación monástica", "Monastic federation", "Federação monástica")
+    else -> null
+}
+
+private fun LocalizedText.text(language: AppLanguage): String? = get(language).trim().takeIf { it.isNotEmpty() }
+
+private fun androidx.compose.foundation.lazy.LazyListScope.orderExtras(order: ReligiousOrder, language: AppLanguage) {
+    val kind = order.kind?.let { kindLabel(it, language) }
+    val motto = order.motto?.text(language)
+    val approval = order.approval?.text(language)
+    val saints = order.notableSaints.mapNotNull { it.text(language) }
+    val presence = order.presence?.text(language)
+    if (kind != null) item(key = "kind") {
+        Text(
+            kind,
+            style = LocalAppTextStyles.current.footnote,
+            color = LocalAppDesign.current.palette.textSecondary,
+            modifier = Modifier
+                .padding(horizontal = LocalAppDesign.current.spacing.gutter)
+                .testTag("order_kind")
+        )
+        BlockGap(20.dp)
+    }
+    if (motto != null) item(key = "motto") {
+        NoteCard(language.tr("Lema", "Motto", "Lema"), motto, Modifier.testTag("order_motto"), quote = true)
+        BlockGap(20.dp)
+    }
+    if (approval != null) item(key = "approval") {
+        NoteCard(language.tr("Aprobación pontificia", "Pontifical approval", "Aprovação pontifícia"), approval, Modifier.testTag("order_approval"))
+        BlockGap(20.dp)
+    }
+    if (saints.isNotEmpty()) item(key = "saints") {
+        NoteCard(
+            language.tr("Santos destacados", "Notable saints", "Santos de destaque"),
+            saints.joinToString("\n") { "• $it" }, Modifier.testTag("order_saints")
+        )
+        BlockGap(20.dp)
+    }
+    if (presence != null) item(key = "presence") {
+        NoteCard(language.tr("Presencia hoy", "Presence today", "Presença hoje"), presence, Modifier.testTag("order_presence"))
+        BlockGap(20.dp)
+    }
+    if (order.sources.isNotEmpty()) item(key = "sources") {
+        SourcesCard(language, order.sources, "order_sources")
+        BlockGap(28.dp)
+    }
+}
+
+@Composable
+private fun SourcesCard(language: AppLanguage, sources: List<String>, tag: String) {
+    NoteCard(
+        language.tr("Fuentes", "Sources", "Fontes"),
+        sources.joinToString("\n") { "• $it" },
+        Modifier.testTag(tag)
+    )
 }

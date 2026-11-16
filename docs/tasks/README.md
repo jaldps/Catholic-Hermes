@@ -17,6 +17,8 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 6. **Entregar.** Haz commit con `T-00N: <resumen>` y `git push -u origin ext/T-00N`. Si no tienes permiso de push en `jaldps/Catholic-Hermes`, haz push de la misma rama a tu fork: el coordinador lo lee desde ahí. Puedes subir entregas parciales: cada push es un punto de revisión.
 7. **Correcciones.** El coordinador responde en `docs/tasks/T-00N-REVIEW.md`, dentro de tu rama o en `CatholicGPT`. Si pide cambios, corrígelos en la misma rama y vuelve a hacer push.
 
+8. **Siguiente encargo.** Al terminar un encargo, o tras aplicar una revisión, haz `git fetch origin` y vuelve a leer este README en `origin/CatholicGPT`. Sigue sin esperar con el siguiente encargo `ABIERTO` asignado a ti, o con un `T-0NN-REVIEW.md` que pida cambios. Si no hay nada, avisa a Jose y para.
+
 ## Reglas fijas
 
 - No hagas push a `CatholicGPT` ni a `main`. No hagas force-push sobre ramas ajenas.
@@ -49,3 +51,5 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-015](T-015.md) | Hermes | CERRADO ([revisión](T-015-REVIEW.md)) | Las 8 novenas pendientes de T-008, con las fuentes elegidas por el usuario (EWTN, CEH, devocionario, ipray…) → cuerpos 269–276 y `provenance/new-d.json` |
 | [T-016](T-016.md) | Codex | ABIERTO | M6 · ~60 órdenes nuevas + fichas ampliadas de todas → `assets/orders/orders-new.json`, `orders-details.json` |
 | [T-017](T-017.md) | Hermes | ABIERTO | M6 · ~30 cargos y ministerios nuevos → `assets/orders/offices-new.json` |
+| [T-018](T-018.md) | Codex | ABIERTO (tras T-016) | M7 · Devociones marianas: auditoría de 30 + ~25 nuevas → `assets/devotions/marian-*.json` |
+| [T-019](T-019.md) | Hermes | ABIERTO (tras T-017) | M7 · Devociones de Cristo: auditoría de 20 + ~20 nuevas → `assets/devotions/christ-*.json` |

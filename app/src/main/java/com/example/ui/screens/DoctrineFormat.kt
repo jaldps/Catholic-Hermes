@@ -282,7 +282,7 @@ internal fun parseNumbered(text: String): NumberedBlock {
 // ------------------------------------------------------------------- orders
 
 /** Offices by hierarchy; ids from the data. Unknown ids fall into [Other]. */
-internal enum class OfficeGroup { Altar, Clergy, Consecrated, Mission, Other }
+internal enum class OfficeGroup { Altar, Clergy, Governance, Consecrated, Mission, Other }
 
 private val officeGroupOf: Map<String, OfficeGroup> = buildMap {
     listOf("monaguillo", "lector", "acolito").forEach { put("office_$it", OfficeGroup.Altar) }
@@ -297,19 +297,29 @@ private val officeGroupOf: Map<String, OfficeGroup> = buildMap {
     listOf("misionero", "misionero_laico", "laico_consagrado").forEach { put("office_$it", OfficeGroup.Mission) }
 }
 
-internal fun officeGroup(id: String): OfficeGroup = officeGroupOf[id] ?: OfficeGroup.Other
+/** [jsonGroup] is the `group` of an office added from JSON; ids in the built-in map win. */
+internal fun officeGroup(id: String, jsonGroup: String? = null): OfficeGroup =
+    officeGroupOf[id] ?: when (jsonGroup?.trim()?.lowercase()) {
+        "altar" -> OfficeGroup.Altar
+        "clergy" -> OfficeGroup.Clergy
+        "governance" -> OfficeGroup.Governance
+        "consecrated" -> OfficeGroup.Consecrated
+        "mission" -> OfficeGroup.Mission
+        else -> OfficeGroup.Other
+    }
 
 internal fun officeGroupTitle(group: OfficeGroup, language: AppLanguage): String = when (group) {
     OfficeGroup.Altar -> language.tr("Servicio al altar", "Serving at the altar", "Serviço ao altar")
     OfficeGroup.Clergy -> language.tr("Clero", "Clergy", "Clero")
+    OfficeGroup.Governance -> language.tr("Gobierno y Curia", "Governance and Curia", "Governo e Cúria")
     OfficeGroup.Consecrated -> language.tr("Vida consagrada", "Consecrated life", "Vida consagrada")
     OfficeGroup.Mission -> language.tr("Misión y laicado", "Mission and laity", "Missão e laicato")
     OfficeGroup.Other -> language.tr("Otros", "Others", "Outros")
 }
 
 /** Data indices of the offices in display order: by group, data order inside each group. */
-internal fun officeDisplayOrder(ids: List<String>): List<Int> =
-    OfficeGroup.entries.flatMap { g -> ids.indices.filter { officeGroup(ids[it]) == g } }
+internal fun officeDisplayOrder(ids: List<String>, groups: List<String?> = emptyList()): List<Int> =
+    OfficeGroup.entries.flatMap { g -> ids.indices.filter { officeGroup(ids[it], groups.getOrNull(it)) == g } }
 
 /** "OFM · 1209", dropping the placeholder dash some orders carry for an abbreviation. */
 internal fun orderMeta(abbreviation: String, year: String): String? =
