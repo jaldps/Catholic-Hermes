@@ -78,6 +78,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
@@ -280,8 +281,9 @@ fun AppGroupedRow(
             verticalAlignment = Alignment.CenterVertically
         ) {
             if (leadingIcon != null) {
-                Icon(leadingIcon, null, tint = if (selected) p.accent else p.textPrimary, modifier = Modifier.size(22.dp))
-                Spacer(Modifier.width(16.dp))
+                if (design.isSanctuary) Icon(leadingIcon, null, tint = if (selected) p.accent else p.textPrimary, modifier = Modifier.size(22.dp))
+                else AppIconWell(leadingIcon)
+                Spacer(Modifier.width(if (design.isSanctuary) 16.dp else 14.dp))
             }
             Column(Modifier.weight(1f)) {
                 Text(title, style = styles.body, color = if (selected) p.accent else p.textPrimary)
@@ -305,7 +307,7 @@ fun AppGroupedRow(
         }
         if (position == GroupPosition.First || position == GroupPosition.Middle) {
             Box(
-                Modifier.fillMaxWidth().padding(start = 18.dp + if (leadingIcon != null) 38.dp else 0.dp)
+                Modifier.fillMaxWidth().padding(start = 18.dp + if (leadingIcon != null) (if (design.isSanctuary) 38.dp else 50.dp) else 0.dp)
                     .height(0.5.dp).background(p.separator)
             )
         }
@@ -365,8 +367,9 @@ fun AppToggleRow(
             verticalAlignment = Alignment.CenterVertically
         ) {
             if (leadingIcon != null) {
-                Icon(leadingIcon, null, tint = p.textPrimary, modifier = Modifier.size(22.dp))
-                Spacer(Modifier.width(16.dp))
+                if (design.isSanctuary) Icon(leadingIcon, null, tint = p.textPrimary, modifier = Modifier.size(22.dp))
+                else AppIconWell(leadingIcon)
+                Spacer(Modifier.width(if (design.isSanctuary) 16.dp else 14.dp))
             }
             Column(Modifier.weight(1f)) {
                 Text(title, style = styles.body, color = p.textPrimary)
@@ -376,7 +379,7 @@ fun AppToggleRow(
             AppSwitch(checked, onCheckedChange, modifier = Modifier.semantics { contentDescription = title }, tag = switchTag)
         }
         if (showDivider) {
-            Box(Modifier.fillMaxWidth().padding(start = 18.dp + if (leadingIcon != null) 38.dp else 0.dp)
+            Box(Modifier.fillMaxWidth().padding(start = 18.dp + if (leadingIcon != null) (if (design.isSanctuary) 38.dp else 50.dp) else 0.dp)
                 .height(0.5.dp).background(p.separator))
         }
     }
@@ -468,11 +471,7 @@ fun AppSheet(
                 val shape = design.shapes.sheet
                 Column(
                     modifier.fillMaxWidth().heightIn(max = (LocalConfiguration.current.screenHeightDp * 0.9f).dp)
-                        .clip(shape)
-                        .background(p.canvasTop)
-                        .lumenCanvas()
-                        .border(1.dp, Brush.verticalGradient(
-                            0f to p.glassEdgeTop, 0.25f to p.glassEdgeBottom.copy(alpha = p.glassEdgeBottom.alpha * 0.5f), 1f to Color.Transparent), shape)
+                        .appFloatingPanel(shape)
                         .tag(tag)
                 ) {
                     Box(Modifier.fillMaxWidth().padding(top = 10.dp), contentAlignment = Alignment.Center) {
@@ -496,6 +495,51 @@ fun AppSheet(
                 }
             }
         }
+        }
+    }
+}
+
+/**
+ * The material of anything that floats in its own window (sheets, dialogs):
+ * a pane lit by the same ambient light as the screens, with a specular rim.
+ */
+@Composable
+fun Modifier.appFloatingPanel(shape: androidx.compose.ui.graphics.Shape): Modifier {
+    val p = LocalAppDesign.current.palette
+    return this.clip(shape).background(p.canvasTop).lumenCanvas()
+        .border(1.dp, Brush.verticalGradient(
+            0f to p.glassEdgeTop, 0.3f to p.glassEdgeBottom.copy(alpha = p.glassEdgeBottom.alpha * 0.5f), 1f to p.glassEdgeBottom.copy(alpha = p.glassEdgeBottom.alpha * 0.3f)), shape)
+}
+
+/**
+ * A centred glass dialog for a short decision or a first-run choice. Content
+ * scrolls when it is taller than the window.
+ */
+@Composable
+fun AppDialog(
+    onDismiss: () -> Unit,
+    modifier: Modifier = Modifier,
+    title: String? = null,
+    tag: String? = null,
+    content: @Composable ColumnScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
+        androidx.compose.runtime.CompositionLocalProvider(LocalLiquidBackdrop provides null) {
+            Column(
+                modifier.padding(horizontal = 20.dp, vertical = 24.dp).widthIn(max = 520.dp).fillMaxWidth()
+                    .appFloatingPanel(design.shapes.dialog).tag(tag)
+                    .verticalScroll(rememberScrollState()).padding(vertical = 24.dp)
+            ) {
+                if (title != null) {
+                    Text(title, style = styles.title2, color = p.textPrimary,
+                        modifier = Modifier.padding(horizontal = 24.dp).semantics { heading() })
+                    Spacer(Modifier.height(8.dp))
+                }
+                content()
+            }
         }
     }
 }
@@ -600,9 +644,7 @@ fun AppConfirmDialog(
     val styles = LocalAppTextStyles.current
     Dialog(onDismissRequest = onDismiss) {
         Column(
-            Modifier.fillMaxWidth().clip(design.shapes.dialog).background(p.raised)
-                .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), design.shapes.dialog)
-                .tag(tag).padding(top = 26.dp),
+            Modifier.fillMaxWidth().appFloatingPanel(design.shapes.dialog).tag(tag).padding(top = 26.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(title, style = styles.headline, color = p.textPrimary, textAlign = TextAlign.Center, modifier = Modifier.padding(horizontal = 24.dp))

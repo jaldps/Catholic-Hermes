@@ -189,13 +189,20 @@ object LumenKit : AppKit {
                                         val floor = if (live) 0.72f else 0.02f
                                         val topSpan = (statusTop + BarRow + 28.dp).toPx()
                                         val topAlpha = if (live) 1f else 1f - edge * 0.97f
+                                        val bottomStops = if (!dockShown) arrayOf(1f to Color.Black) else if (live) arrayOf(
+                                            ((h - fadeBottom) / h).coerceIn(0.5f, 1f) to Color.Black,
+                                            1f to Color.Black.copy(alpha = floor)
+                                        ) else arrayOf(
+                                            ((h - fadeBottom) / h).coerceIn(0.5f, 1f) to Color.Black,
+                                            ((h - fadeBottom * 0.80f) / h).coerceIn(0.5f, 1f) to Color.Black.copy(alpha = 0.42f),
+                                            ((h - fadeBottom * 0.56f) / h).coerceIn(0.5f, 1f) to Color.Black.copy(alpha = 0.06f),
+                                            1f to Color.Black.copy(alpha = floor)
+                                        )
                                         Brush.verticalGradient(
                                             0f to Color.Black.copy(alpha = topAlpha),
                                             (topSpan * 0.55f / h) to Color.Black.copy(alpha = topAlpha + (1f - topAlpha) * 0.12f),
                                             (topSpan / h) to Color.Black,
-                                            ((h - fadeBottom) / h).coerceIn(0.5f, 1f) to Color.Black,
-                                            ((h - fadeBottom * 0.62f) / h).coerceIn(0.5f, 1f) to Color.Black.copy(alpha = if (dockShown) floor + (1f - floor) * 0.30f else 1f),
-                                            1f to Color.Black.copy(alpha = if (dockShown) floor else 1f)
+                                            *bottomStops
                                         )
                                     })
                                     .nestedScroll(watcher)
@@ -651,7 +658,8 @@ object LumenKit : AppKit {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 if (leadingIcon != null) {
-                    Icon(leadingIcon, null, tint = if (selected) scheme.primary else p.textPrimary, modifier = Modifier.size(26.dp))
+                    if (design.isSanctuary) Icon(leadingIcon, null, tint = if (selected) scheme.primary else p.textPrimary, modifier = Modifier.size(26.dp))
+                    else AppIconWell(leadingIcon)
                     Spacer(Modifier.width(14.dp))
                 }
                 Column(Modifier.weight(1f)) {
@@ -681,7 +689,7 @@ object LumenKit : AppKit {
                 Box(
                     Modifier
                         .fillMaxWidth()
-                        .padding(start = inset + if (leadingIcon != null) 38.dp else 0.dp)
+                        .padding(start = inset + if (leadingIcon != null) (if (design.isSanctuary) 40.dp else 50.dp) else 0.dp)
                         .height(0.5.dp)
                         .background(p.separator)
                 )
