@@ -126,12 +126,14 @@ private fun SaintsList(
     val monthLabel = if (month == 0) tr("Todos los meses", "All months", "Todos os meses") else saintMonthName(month, language)
 
     LazyColumn(
-        modifier = modifier.fillMaxSize().testTag("saints_screen"),
-        contentPadding = PaddingValues(bottom = appDockInset() + 24.dp)
+        // The header reaches the top edge; scroll-to and keyboard focus stop
+        // above the floating dock, where rows can be tapped.
+        modifier = modifier.fillMaxSize().padding(bottom = appScreenInsets().calculateBottomPadding()).testTag("saints_screen"),
+        contentPadding = PaddingValues(bottom = 32.dp)
     ) {
         item(key = "title") {
             AppHeroHeader(
-                assetPath = "heroes/lumen/mass.jpg",
+                assetPath = "heroes/lumen/saints.jpg",
                 title = tr("Santos", "Saints", "Santos"),
                 eyebrow = tr("Calendario Romano General", "General Roman Calendar", "Calendário Romano Geral")
             )
@@ -223,7 +225,7 @@ private fun SaintDetail(
     val card = Modifier.fillMaxWidth().padding(horizontal = gutter).widthIn(max = design.spacing.readingMaxWidth + gutter * 2)
     LazyColumn(
         modifier = modifier.fillMaxSize().testTag("saint_detail"),
-        contentPadding = PaddingValues(top = appScreenInsets().calculateTopPadding(), bottom = appDockInset() + 24.dp),
+        contentPadding = PaddingValues(top = appScreenInsets().calculateTopPadding(), bottom = appScreenInsets().calculateBottomPadding() + 32.dp),
         verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
     ) {
         item {

@@ -117,10 +117,10 @@ fun BeginnerJourneyScreen(currentLanguage: AppLanguage, onOpenBible: () -> Unit,
     val uri = androidx.compose.ui.platform.LocalUriHandler.current
     val gutter = design.spacing.gutter
     val p = design.palette
-    LazyColumn(Modifier.fillMaxSize().testTag("beginner_journey_screen"), contentPadding = PaddingValues(bottom = appDockInset() + 24.dp)) {
+    LazyColumn(Modifier.fillMaxSize().padding(bottom = appScreenInsets().calculateBottomPadding()).testTag("beginner_journey_screen"), contentPadding = PaddingValues(bottom = 32.dp)) {
         item {
             AppHeroHeader(
-                assetPath = "heroes/lumen/home.jpg",
+                assetPath = "heroes/lumen/begin.jpg",
                 title = l.journey("Primeros pasos", "Start here", "Primeiros passos"),
                 meta = l.journey("Siete pasos a tu ritmo. Puedes saltar cualquiera.", "Seven steps at your pace. You may skip any step.", "Sete passos no seu ritmo. Você pode pular qualquer um.")
             )

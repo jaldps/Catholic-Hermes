@@ -980,7 +980,7 @@ private fun ContinueReadingCard(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    val art = rememberFirstAsset("heroes/lumen/spiritual.jpg", "heroes/lumen/bible.jpg", "heroes/church_window_light.jpg")
+    val art = rememberFirstAsset("heroes/lumen/john.jpg", "heroes/lumen/bible.jpg", "heroes/church_window_light.jpg")
     val bitmap = rememberAssetBitmap(art, 900)
     val meta = rememberHeroMeta(art)
     val shape = design.shapes.card
