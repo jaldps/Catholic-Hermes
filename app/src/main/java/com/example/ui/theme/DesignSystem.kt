@@ -25,10 +25,10 @@ enum class DesignLanguage(
 ) {
     /** Source-compatible Lumen identity; stored APPLE migrates to LUMEN. */
     APPLE("LUMEN", LocalizedText("Lumen", "Lumen", "Lumen"),
-        LocalizedText("Luz, cristal y calma.", "Light, glass and quiet.", "Luz, vidro e calma.")),
+        LocalizedText("Cristal líquido bajo la luz del día litúrgico.", "Liquid glass in the light of the liturgical day.", "Vidro líquido sob a luz do dia litúrgico.")),
     /** Legacy alias. Old IVE preferences resolve to Lumen. */
     IVE("IVE", LocalizedText("Lumen", "Lumen", "Lumen"),
-        LocalizedText("Luz, cristal y calma.", "Light, glass and quiet.", "Luz, vidro e calma.")),
+        LocalizedText("Cristal líquido bajo la luz del día litúrgico.", "Liquid glass in the light of the liturgical day.", "Vidro líquido sob a luz do dia litúrgico.")),
     SANCTUARY("SANCTUARY", LocalizedText("Sanctuary", "Sanctuary", "Sanctuary"),
         LocalizedText("La belleza de un misal personal.", "The beauty of a personal missal.", "A beleza de um missal pessoal."));
 
@@ -161,7 +161,11 @@ data class AppPalette(
     val ringStart: Color = accentMuted,
     val ringEnd: Color = accent,
     /** Decorative-only ink (placeholders, disabled glyphs); never body text. */
-    val inkQuiet: Color = textTertiary
+    val inkQuiet: Color = textTertiary,
+    /** Dense content glass (cards, groups); [groupedSurface] is its opaque twin. */
+    val pane: Color = groupedSurface,
+    /** Four pools of ambient light behind the glass; empty = plain canvas. */
+    val ambient: List<Color> = emptyList()
 )
 
 @Immutable
@@ -206,21 +210,22 @@ object DesignTokens {
     // ----------------------------------------------------------------- Lumen
 
     /**
-     * Lumen: one radius per element type — cards 24, groups and tiles 20,
-     * image cards 22, sheets 28, and every button-like control a capsule.
+     * Lumen: one radius per element type — cards 28, groups and tiles 24,
+     * image cards 24, sheets 34, and every button-like control a capsule.
+     * Nested glass is concentric: inner radius = outer radius - inset.
      */
     private val LumenShapes = AppShapes(
-        card = RoundedCornerShape(24.dp),
-        cardLarge = RoundedCornerShape(24.dp),
+        card = RoundedCornerShape(28.dp),
+        cardLarge = RoundedCornerShape(28.dp),
         button = RoundedCornerShape(percent = 50),
         buttonSmall = RoundedCornerShape(percent = 50),
         field = RoundedCornerShape(percent = 50),
         chip = RoundedCornerShape(percent = 50),
-        sheet = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
-        dialog = RoundedCornerShape(28.dp),
-        thumbnail = RoundedCornerShape(16.dp),
+        sheet = RoundedCornerShape(topStart = 34.dp, topEnd = 34.dp),
+        dialog = RoundedCornerShape(32.dp),
+        thumbnail = RoundedCornerShape(18.dp),
         badge = RoundedCornerShape(percent = 50),
-        listGroup = RoundedCornerShape(20.dp)
+        listGroup = RoundedCornerShape(24.dp)
     )
 
     private val LumenSpacing = AppSpacing(
@@ -257,68 +262,77 @@ object DesignTokens {
     )
 
     /**
-     * Warm daylight. Glass is drawn translucent ([AppPalette.glass]); the
-     * opaque [AppPalette.groupedSurface]/[AppPalette.raised] are that glass
+     * Alba — morning light in a pale stone nave. Cool pearl canvas, clear
+     * white glass, deep ink. Glass is translucent ([AppPalette.pane],
+     * [AppPalette.glass], [AppPalette.glassStrong]); the opaque
+     * [AppPalette.groupedSurface]/[AppPalette.raised] are that glass
      * composited over the canvas, for code that needs a solid colour and for
      * contrast checks. Every ink clears 4.5:1 on canvas and glass.
      */
     private val LumenLight = AppPalette(
-        canvas = Color(0xFFF2F0ED),
-        groupedSurface = Color(0xFFFBFAF9),
+        canvas = Color(0xFFF0F2F8),
+        groupedSurface = Color(0xFFFAFBFD),
         raised = Color(0xFFFFFFFF),
-        hairline = Color(0x0F000000),
-        accent = Color(0xFF2D743B),
-        accentMuted = Color(0xFFE3EEDF),
-        gold = Color(0xFF8A6A1F),
-        textPrimary = Color(0xFF1D1C1A),
-        textSecondary = Color(0xFF6B6661),
-        textTertiary = Color(0xFF6C6762),
-        scrim = Color(0x52000000),
-        selectionTint = Color(0xFFE8E4DE),
-        canvasTop = Color(0xFFF6F4F1),
-        canvasBottom = Color(0xFFECE9E5),
-        glass = Color(0xB8FFFFFF),
-        glassStrong = Color(0xE0FFFFFF),
-        glassEdgeTop = Color(0xF2FFFFFF),
-        glassEdgeBottom = Color(0x59FFFFFF),
-        shadow = Color(0x143B2F22),
-        separator = Color(0x0F000000),
-        action = Color(0xFF2B2A28),
+        hairline = Color(0x1F1B2540),
+        accent = Color(0xFF2A6E38),
+        accentMuted = Color(0xFFE1EEE3),
+        gold = Color(0xFF8A6418),
+        textPrimary = Color(0xFF0F1424),
+        textSecondary = Color(0xFF4C546B),
+        textTertiary = Color(0xFF505870),
+        scrim = Color(0x520A1024),
+        selectionTint = Color(0xFFE6EAF4),
+        canvasTop = Color(0xFFF4F6FB),
+        canvasBottom = Color(0xFFECEEF6),
+        glass = Color(0x8CFFFFFF),
+        glassStrong = Color(0xD9FFFFFF),
+        glassEdgeTop = Color(0xFFFFFFFF),
+        glassEdgeBottom = Color(0x8CFFFFFF),
+        shadow = Color(0x242A3A72),
+        separator = Color(0x1A1B2540),
+        action = Color(0xFF2A6E38),
         onAction = Color(0xFFFFFFFF),
-        success = Color(0xFF43A047),
-        ringStart = Color(0xFFCFE6C6),
-        ringEnd = Color(0xFF4E9F4A),
-        inkQuiet = Color(0xFF9C968F)
+        success = Color(0xFF2E9F4B),
+        ringStart = Color(0xFFBFE3C4),
+        ringEnd = Color(0xFF3E9B4F),
+        inkQuiet = Color(0xFF8E96AD),
+        pane = Color(0xB3FFFFFF),
+        ambient = listOf(Color(0x94A6E0B8), Color(0x80FFDD9C), Color(0x5CCFBCFF), Color(0x6BAAD6F8))
     )
 
-    /** Night chapel: warm charcoal, quiet glass, nothing glows. */
+    /**
+     * Vigilia — the same nave at night: midnight blue stone, glass that only
+     * shows where light catches its edge, colour glowing low behind it.
+     */
     private val LumenDark = AppPalette(
-        canvas = Color(0xFF131211),
-        groupedSurface = Color(0xFF242321),
-        raised = Color(0xFF2E2D2B),
-        hairline = Color(0x14FFFFFF),
+        canvas = Color(0xFF0A0E1C),
+        groupedSurface = Color(0xFF171D31),
+        raised = Color(0xFF1F2740),
+        hairline = Color(0x24FFFFFF),
         accent = Color(0xFF7FC48A),
-        accentMuted = Color(0xFF223326),
-        gold = Color(0xFFD9BC7A),
-        textPrimary = Color(0xFFF3F0EB),
-        textSecondary = Color(0xFFA8A29B),
-        textTertiary = Color(0xFF9A958F),
-        scrim = Color(0x8C000000),
-        selectionTint = Color(0xFF34322F),
-        canvasTop = Color(0xFF171614),
-        canvasBottom = Color(0xFF0E0D0C),
-        glass = Color(0xD92C2A27),
-        glassStrong = Color(0xF02C2A27),
-        glassEdgeTop = Color(0x24FFFFFF),
-        glassEdgeBottom = Color(0x0AFFFFFF),
-        shadow = Color(0x73000000),
-        separator = Color(0x14FFFFFF),
-        action = Color(0xFFF3F0EB),
-        onAction = Color(0xFF171614),
+        accentMuted = Color(0xFF1D3328),
+        gold = Color(0xFFE3C27A),
+        textPrimary = Color(0xFFF1F4FF),
+        textSecondary = Color(0xFFAAB3CF),
+        textTertiary = Color(0xFF9BA4C0),
+        scrim = Color(0x99000000),
+        selectionTint = Color(0xFF283150),
+        canvasTop = Color(0xFF0C1122),
+        canvasBottom = Color(0xFF070A15),
+        glass = Color(0x8C2A3352),
+        glassStrong = Color(0xE0222A44),
+        glassEdgeTop = Color(0x52FFFFFF),
+        glassEdgeBottom = Color(0x1AFFFFFF),
+        shadow = Color(0x80000000),
+        separator = Color(0x1FFFFFFF),
+        action = Color(0xFF7FC48A),
+        onAction = Color(0xFF07120B),
         success = Color(0xFF5DB762),
         ringStart = Color(0xFF2C4A2E),
         ringEnd = Color(0xFF7FC48A),
-        inkQuiet = Color(0xFF77726C)
+        inkQuiet = Color(0xFF6E7692),
+        pane = Color(0xB81B2238),
+        ambient = listOf(Color(0x4D1F6B45), Color(0x2EE08A3C), Color(0x385A43D6), Color(0x331E5C8C))
     )
 
     private val SanctuaryShapes = AppShapes(
@@ -340,7 +354,8 @@ object DesignTokens {
         glass = Color(0xFFFFFBF3), glassStrong = Color(0xFFFAF4E9),
         glassEdgeTop = Color(0xFFD5C7B5), glassEdgeBottom = Color(0xFFD5C7B5),
         shadow = Color(0x0A493522), success = Color(0xFF356241),
-        ringStart = Color(0xFFCFBC94), ringEnd = Color(0xFF7A293A), inkQuiet = Color(0xFF9B8C7A)
+        ringStart = Color(0xFFCFBC94), ringEnd = Color(0xFF7A293A), inkQuiet = Color(0xFF9B8C7A),
+        pane = Color(0xFFFFFBF3), ambient = emptyList(), scrim = Color(0x52000000)
     )
     private val SanctuaryDark = LumenDark.copy(
         canvas = Color(0xFF1B1517), canvasTop = Color(0xFF221A1D), canvasBottom = Color(0xFF171214),
@@ -352,7 +367,8 @@ object DesignTokens {
         glass = Color(0xFF2A2225), glassStrong = Color(0xFF2F2528),
         glassEdgeTop = Color(0xFF62504F), glassEdgeBottom = Color(0xFF62504F),
         shadow = Color.Transparent, success = Color(0xFF98C9A1),
-        ringStart = Color(0xFF816A49), ringEnd = Color(0xFFE5A4AE), inkQuiet = Color(0xFF9E8D83)
+        ringStart = Color(0xFF816A49), ringEnd = Color(0xFFE5A4AE), inkQuiet = Color(0xFF9E8D83),
+        pane = Color(0xFF2A2225), ambient = emptyList(), scrim = Color(0x8C000000)
     )
 
     fun of(language: DesignLanguage, isDark: Boolean): AppDesign {

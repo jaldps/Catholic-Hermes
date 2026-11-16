@@ -97,42 +97,31 @@ fun Modifier.softShadow(shape: Shape, color: Color, blur: Dp = 30.dp, offsetY: D
     }
 
 /**
- * Frosted glass: translucent fill, a lit 1dp edge (bright at the top, fading
- * down) and a soft lift shadow. [strong] is the denser glass of floating
- * controls. [lifted] = false drops the shadow for glass nested in glass.
+ * Control glass: clear floating material with a specular rim and a soft lift
+ * shadow. [strong] is the denser glass of floating controls that sit over
+ * scrolling content. [lifted] = false drops the shadow for glass nested in
+ * glass. See [liquidPane].
  */
 fun Modifier.lumenGlass(shape: Shape, strong: Boolean = false, lifted: Boolean = true): Modifier = composed {
     val design = LocalAppDesign.current
-    val p = design.palette
-    val solid = design.isSanctuary || design.reduceTransparency || design.highContrast
-    val base = if (solid) p.raised else if (strong) p.glassStrong else p.glass
-    val fill = Brush.verticalGradient(listOf(
-        base.copy(alpha = if (solid) 1f else base.alpha),
-        base.copy(alpha = if (solid) 1f else (base.alpha * 0.96f).coerceIn(0f, 1f))
-    ))
-    this
-        .then(if (lifted && !design.isSanctuary && !design.highContrast) softShadow(
-            shape, p.shadow.copy(alpha = if (design.isDark) 0.22f else 0.07f),
-            blur = 20.dp, offsetY = 5.dp
-        ) else Modifier)
-        .background(fill, shape)
-        .border(if (design.highContrast) 1.5.dp else 0.75.dp,
-            if (solid) Brush.verticalGradient(listOf(p.hairline, p.hairline))
-            else Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), shape)
+    liquidPane(shape, design.glassSpec(if (strong) GlassRole.Floating else GlassRole.Control, lifted))
 }
 
-/** Stable opaque reading/content material. Glass remains on transient controls. */
+/** Content glass: the dense, calm pane reading text sits on. */
 fun Modifier.appContentSurface(shape: Shape): Modifier = composed {
     val design = LocalAppDesign.current
-    val p = design.palette
-    background(p.groupedSurface, shape)
-        .border(if (design.highContrast) 1.5.dp else if (design.isSanctuary) 0.75.dp else 0.5.dp,
-            if (design.highContrast || design.isSanctuary) p.hairline else p.separator, shape)
+    if (design.opaqueMaterial()) {
+        val p = design.palette
+        background(p.groupedSurface, shape)
+            .border(if (design.highContrast) 1.5.dp else if (design.isSanctuary) 0.75.dp else 0.5.dp,
+                if (design.highContrast || design.isSanctuary) p.hairline else p.separator, shape)
+    } else liquidPane(shape, design.glassSpec(GlassRole.Content))
 }
 
 /**
- * A ripple-free target that gives under the finger on a spring, as iOS
- * buttons and cards do. Null [onClick] leaves the modifier inert.
+ * A ripple-free target that gives under the finger on a spring, as glass
+ * does, and answers with the system's quiet click (and a tick for
+ * selections). Null [onClick] leaves the modifier inert.
  */
 fun Modifier.lumenPress(
     onClick: (() -> Unit)?,
@@ -143,21 +132,27 @@ fun Modifier.lumenPress(
     val source = remember { MutableInteractionSource() }
     val pressed by source.collectIsPressedAsState()
     val reduceMotion = LocalAppDesign.current.reduceMotion
+    val feedback = rememberGlassFeedback()
+    val latest by rememberUpdatedState(onClick)
     val s by animateFloatAsState(
         if (pressed && enabled && !reduceMotion) scale else 1f,
-        if (reduceMotion) snap() else spring(dampingRatio = 0.8f, stiffness = 600f),
+        if (reduceMotion) snap() else spring(dampingRatio = 0.62f, stiffness = 520f),
         label = "lumenPress"
     )
     graphicsLayer { scaleX = s; scaleY = s }
-        .clickable(source, indication = null, enabled = enabled, role = role, onClick = onClick)
+        .clickable(source, indication = null, enabled = enabled, role = role) {
+            if (role == Role.Tab || role == Role.Switch || role == Role.Checkbox || role == Role.RadioButton) feedback.tick()
+            else feedback.click()
+            latest()
+        }
 }
 
-/** Full-screen canvas gradient. */
+/** Full-screen canvas: ambient light for Lumen, paper for Sanctuary. */
 @Composable
 fun Modifier.lumenCanvas(): Modifier {
     val design = LocalAppDesign.current
     val p = design.palette
-    return background(Brush.verticalGradient(listOf(p.canvasTop, p.canvasBottom)))
+    return liquidAmbient()
         .then(if (design.isSanctuary && !design.highContrast) Modifier.drawBehind {
             // Static, barely visible paper fibres. No bitmap allocation or animation.
             val step = 5.dp.toPx()
