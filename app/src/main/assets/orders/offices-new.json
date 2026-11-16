@@ -378,5 +378,100 @@
       "Código de Derecho Canónico, cc. 294-297",
       "Constitución Apostólica Ut sit (Juan Pablo II, 1982)"
     ]
+  },
+  {
+    "id": "office_arzobispo_mayor",
+    "name": {
+      "es": "Arzobispo mayor",
+      "en": "Major Archbishop",
+      "pt": "Arcebispo maior"
+    },
+    "description": {
+      "es": "En las Iglesias orientales católicas, es el metropolita de una sede determinada o agrnóvida por la suprema autoridad de la Iglesia, que preside una Iglesia sui iuris que no tiene el título patriarcal. El Código de los Cánones de las Iglesias Orientales (cc. 151-154) define al archiepiscopus mayor y dispone que le valen las normas del derecho común sobre las Iglesias patriarcales y los patriarcas, salvo lo que expresamente se disponga o se deduzca de la naturaleza de la cosa. Se elige según los cánones 63-74 y obtiene la precedencia de honor inmediatamente después de los patriarcas, según el orden de erección.",
+      "en": "In the Eastern Catholic Churches, he is the metropolitan of a see determined or recognized by the supreme authority of the Church, who presides over a sui iuris Church that does not bear the patriarchal title. The Code of Canons of the Eastern Churches (cc. 151-154) defines the archiepiscopus major and provides that the norms of common law on patriarchal Churches and patriarchs apply to him, unless common law expressly provides otherwise or it is clear from the nature of the matter. He is elected according to canons 63-74 and holds the honor of precedence immediately after the patriarchs, according to the order of erection.",
+      "pt": "Nas Igrejas orientais católicas, é o metropolita de uma sede determinada ou reconhecida pela suprema autoridade da Igreja, que preside uma Igreja sui iuris que não tem o título patriarcal. O Código dos Cânones das Igrejas Orientais (cc. 151-154) define o archiepiscopus major e dispõe que se aplicam a ele as normas do direito comum sobre as Igrejas patriarcais e os patriarcas, salvo o que o direito comum expressamente dispuser ou se deduzir da natureza da coisa. Ele é eleito segundo os cânones 63-74 e obtém a precedência de honra imediatamente após os patriarcas, segundo a ordem de ereção."
+    },
+    "group": "clergy",
+    "after": "office_monsenor",
+    "sources": [
+      "Código de los Cánones de las Iglesias Orientales, cc. 151-154",
+      "Código de los Cánones de las Iglesias Orientales, c. 152"
+    ]
+  },
+  {
+    "id": "office_diacono_permanente",
+    "name": {
+      "es": "Diácono permanente",
+      "en": "Permanent Deacon",
+      "pt": "Diácono permanente"
+    },
+    "description": {
+      "es": "Es el diácono que no aspira al presbiterado y recibe el orden diaconal de manera estable, para servir en la caridad, la liturgia de la Palabra y el altar. El Código de Derecho Canónico (cc. 236 y 288) prevé su formación según las prescripciones de la Conferencia Episcopal y le aplica las normas de los clérigos con las excepciones propias de su estado. Quien no está casado ha de tener al menos veinticinco años, y quien está casado al menos treinta y cinco, con el consentimiento de su mujer. Puede estar casado si contrajo matrimonio antes de la ordenación, y no celebra la Eucaristía como presidente principal.",
+      "en": "He is the deacon who does not aspire to the presbyterate and receives the diaconal order in a stable manner, to serve in charity, the Liturgy of the Word, and the altar. The Code of Canon Law (cc. 236 and 288) provides for his formation according to the prescriptions of the Episcopal Conference and applies to him the norms of the clergy with the exceptions proper to his state. One who is not married must be at least twenty-five years old, and one who is married at least thirty-five, with the consent of his wife. He may be married if he contracted marriage before ordination, and he does not celebrate the Eucharist as principal celebrant.",
+      "pt": "É o diácono que não aspira ao presbiterado e recebe a ordem diaconal de maneira estável, para servir na caridade, na liturgia da Palavra e no altar. O Código de Direito Canônico (cc. 236 e 288) prevê sua formação segundo as prescrições da Conferência Episcopal e aplica-lhe as normas dos clérigos com as exceções próprias do seu estado. Quem não é casado deve ter ao menos vinte e cinco anos, e quem é casado ao menos trinta e cinco, com o consentimento da esposa. Pode ser casado se contraiu matrimônio antes da ordenação, e não celebra a Eucaristia como presidente principal."
+    },
+    "group": "clergy",
+    "after": "office_arzobispo_mayor",
+    "sources": [
+      "Código de Derecho Canónico, cc. 236 y 288",
+      "Código de Derecho Canónico, c. 1031 §2"
+    ]
+  },
+  {
+    "id": "office_rector_seminario",
+    "name": {
+      "es": "Rector del seminario",
+      "en": "Rector of the Seminary",
+      "pt": "Reitor do seminário"
+    },
+    "description": {
+      "es": "Es el presbítero que dirige el seminario y representa a la institución en todos los asuntos, salvo lo que la autoridad competente haya dispuesto. El Código de Derecho Canónico (cc. 235-264) exige que los candidatos al sacerdocio reciban en el seminario mayor la formación espiritual, humana, filosófica y teológica durante el tiempo de la formación, y el rector, con los superiores y profesores, cuida que los alumnos cumplan el Plan de formación sacerdotal y el reglamento. El rector y el maestro de novicios no deben oír confesiones de los alumnos residentes, salvo petición espontánea en casos particulares.",
+      "en": "He is the presbyter who directs the seminary and represents the institution in all matters, except what the competent authority has provided. The Code of Canon Law (cc. 235-264) requires that candidates for the priesthood receive in the major seminary the spiritual, human, philosophical, and theological formation for the whole time of formation, and the rector, with the superiors and professors, sees that the students fulfill the Plan of priestly formation and the regulations. The rector and the master of novices must not hear the confessions of the resident students, unless they spontaneously request it in particular cases.",
+      "pt": "É o presbítero que dirige o seminário e representa a instituição em todos os assuntos, salvo o que a autoridade competente dispuser. O Código de Direito Canônico (cc. 235-264) exige que os candidatos ao sacerdócio recebam no seminário maior a formação espiritual, humana, filosófica e teológica durante o tempo da formação, e o reitor, com os superiores e professores, cuida para que os alunos cumpram o Plano de formação sacerdotal e o regulamento. O reitor e o mestre de noviços não devem ouvir confissões dos alunos residentes, salvo pedido espontâneo em casos particulares."
+    },
+    "group": "clergy",
+    "after": "office_diacono_permanente",
+    "sources": [
+      "Código de Derecho Canónico, cc. 235-264",
+      "Código de Derecho Canónico, c. 238 §2"
+    ]
+  },
+  {
+    "id": "office_capellan",
+    "name": {
+      "es": "Capellán",
+      "en": "Chaplain",
+      "pt": "Capelão"
+    },
+    "description": {
+      "es": "Es el sacerdote a quien el Ordinario del lugar encomienda establemente, al menos en parte, la atención pastoral de alguna comunidad o grupo de fieles, para que la ejerza según el derecho universal y particular. El Código de Derecho Canónico (cc. 564-569) le nombra y le otorga las facultades necesarias: oír confesiones, predicar, administrar el Viático y la unción de los enfermos, y confirmar a quienes estén en peligro de muerte. En hospitales, cárceles y viajes marítimos puede absolver de censuras no reservadas. Se constituyen capellanías para quienes, por su género de vida, no pueden gozar de la atención parroquial ordinaria, como emigrantes, prófugos, nómadas y marinos.",
+      "en": "He is the priest to whom the local Ordinary stably entrusts, at least in part, the pastoral care of some community or group of the faithful, so that he may exercise it according to universal and particular law. The Code of Canon Law (cc. 564-569) appoints him and grants him the necessary faculties: to hear confessions, preach, administer Viaticum and the anointing of the sick, and confirm those in danger of death. In hospitals, prisons, and maritime journeys he can absolve from non-reserved censures. Chaplaincies are established for those who, by their way of life, cannot enjoy ordinary parish care, such as emigrants, refugees, nomads, and seafarers.",
+      "pt": "É o sacerdote a quem o Ordinário do lugar confia estavelmente, ao menos em parte, a atenção pastoral de alguma comunidade ou grupo de fiéis, para que a exerça segundo o direito universal e particular. O Código de Direito Canônico (cc. 564-569) nomeia-o e outorga-lhe as faculdades necessárias: ouvir confissões, pregar, administrar o Viático e a unção dos enfermos e confirmar quem estiver em perigo de morte. Em hospitais, cárceres e viagens marítimas, pode absolver de censuras não reservadas. Constituem-se capelanias para quem, por seu gênero de vida, não pode gozar da atenção paroquial ordinária, como emigrantes, prófugos, nômades e marinheiros."
+    },
+    "group": "clergy",
+    "after": "office_rector_seminario",
+    "sources": [
+      "Código de Derecho Canónico, cc. 564-569",
+      "Código de Derecho Canónico, c. 566 §1"
+    ]
+  },
+  {
+    "id": "office_monsenor",
+    "name": {
+      "es": "Monseñor",
+      "en": "Monsignor",
+      "pt": "Monsenhor"
+    },
+    "description": {
+      "es": "No es un sacramento ni un cargo de gobierno, sino un título honorífico que el Romano Pontífice concede a algunos sacerdotes en reconocimiento de un servicio. El motu proprio Pontificalis Domus (Pablo VI, 28 de marzo de 1968) reorganizó la Casa Pontificia y reguló estas distinciones, dividiéndola en la Capilla Pontificia y la Familia Pontificia. Los títulos actuales, como capellán de Su Santidad, prelado de honor y protonotario apostólico, expresan gratitud por un servicio y no confieren jurisdicción. Se usan como tratamiento reverencial y no forman parte de la estructura jerárquica de la Iglesia.",
+      "en": "It is neither a sacrament nor an office of governance, but an honorary title that the Roman Pontiff grants to some priests in recognition of a service. The motu proprio Pontificalis Domus (Paul VI, 28 March 1968) reorganized the Papal Household and regulated these distinctions, dividing it into the Papal Chapel and the Papal Family. The present titles, such as Chaplain of His Holiness, Prelate of Honor, and Apostolic Protonotary, express gratitude for a service and confer no jurisdiction. They are used as a reverential form of address and do not form part of the hierarchical structure of the Church.",
+      "pt": "Não é um sacramento nem um cargo de governo, mas um título honorífico que o Romano Pontífice concede a alguns sacerdotes em reconhecimento de um serviço. O motu proprio Pontificalis Domus (Paulo VI, 28 de março de 1968) reorganizou a Casa Pontificia e regulou essas distinções, dividindo-a na Capela Pontifícia e na Família Pontifícia. Os títulos atuais, como capelão de Sua Santidade, prelado de honra e protonotário apostólico, exprimem gratidão por um serviço e não conferem jurisdição. Usam-se como tratamento reverencial e não fazem parte da estrutura hierárquica da Igreja."
+    },
+    "group": "clergy",
+    "after": "office_capellan",
+    "sources": [
+      "Motu proprio Pontificalis Domus (Pablo VI, 28-III-1968)",
+      "Código de Derecho Canónico, cc. 232-293"
+    ]
   }
 ]
