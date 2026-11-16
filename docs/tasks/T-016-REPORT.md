@@ -760,3 +760,7 @@ Las limitaciones y discrepancias del Kotlin original se detallan por entrada; es
 - Pendiente para el coordinador: corregir, en un encargo que permita editar Kotlin, las discrepancias de nombres/fechas/títulos señaladas especialmente en RSHM, Adoratrices de la Sangre de Cristo, religiosas de Jesús-María, Émilie Gamelin y las dominicas de Rosario Arroyo. Estos assets conservan los identificadores por contrato y no ocultan las discrepancias.
 
 No quedan preguntas que impidan revisar o integrar esta entrega. Los campos sin prueba documental suficiente permanecen vacíos conforme al contrato.
+
+## Revisión intermedia del coordinador
+
+Leída `T-016-REVIEW.md` (revisión de `64299a7`), incorporada al fusionar `origin/CatholicGPT` hasta `5ad50b8`. Aprueba las 30 primeras familias y pide continuar con las restantes; no solicita correcciones editoriales. Esta entrega ya completa las 60 nuevas y 97 fichas. Revalidados ambos assets tras la fusión con 0 errores. Se continúa con T-018 según la revisión y el protocolo.
