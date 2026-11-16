@@ -93,10 +93,10 @@ Lecturas: `luk 24:36-53`, `act 2:1-13`.
 
 CIC 639–655 distingue realidad corporal, signos históricos y misterio trascendente; especialmente 645–647 evita tanto fantasma como retorno a la vida mortal y reconoce que nadie observó el instante mismo. CIC 659–667 sostiene Ascensión, intercesión y esperanza; 731–732, don del Espíritu como Persona divina; se añade 767–768 para la manifestación pública y misión universal de la Iglesia. No se reduce Pascua a metáfora ni el Espíritu a energía. El cierre remite a los cursos existentes sin imponer Bautismo o comunión como requisito.
 
-## `track_salvation_history` · 2/5 lecciones
+## `track_salvation_history` · 4/5 lecciones
 
 ```text
-2/5 lessons (partial; exact-five completeness requirement pending) · 0 errors · 0 warnings
+4/5 lessons (partial; exact-five completeness requirement pending) · 0 errors · 0 warnings
 ```
 
 ### 1. `salvation_1_creation_fall`
@@ -124,6 +124,34 @@ Lecturas: `gen 12:1-9`, `gen 15:1-21`.
   - https://www.vatican.va/archive/catechism_sp/p1s1c3a1_sp.html
 
 CIC 59–61 sostiene elección, bendición a las naciones, pueblo depositario y veneración de los patriarcas; 144–147, obediencia libre de la fe y confianza de Abrahán. Se conserva Abram en el contexto de Génesis 12 y 15, antes del cambio de nombre del capítulo 17. No se inventan fechas históricas ni se aplica la promesa particular de hijos o tierra como garantía material al usuario. Los signos de Génesis 15 se describen desde el relato, sin reconstruir un ritual jurídico externo no documentado.
+
+### 3. `salvation_3_exodus_covenant`
+
+Lecturas: `exo 3:1-15`, `exo 19:1-20:17`.
+
+- CIC **62–64**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s1c2a1_sp.html
+- CIC **2056–2063**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p3s2_sp.html
+- CIC **121–123**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html
+
+CIC 62–64 sostiene liberación, Sinaí, vocación de Israel y esperanza; 2056–2063, Decálogo dentro de la alianza y respuesta al don previo, especialmente 2057 y 2061–2062. Se añade 121–123 para apoyar el valor permanente del Antiguo Testamento. No se asigna un faraón, año del éxodo o explicación natural de la zarza. Se rechaza la caricatura del judaísmo como mero legalismo y se distingue pueblo sacerdotal de una proyección de cargos sacramentales posteriores.
+
+### 4. `salvation_4_david_prophets`
+
+Lecturas: `2sa 7:1-17`, `isa 52:13-53:12`.
+
+- CIC **64–64**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s1c2a1_sp.html
+- CIC **709–716**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s2c3a8_sp.html
+- CIC **601–601**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p122a4p2_sp.html
+- CIC **128–130**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s1c2a3_sp.html
+
+CIC 64 sostiene la formación profética de la esperanza; 709–716, David, Mesías, Siervo y promesa del Espíritu; 601 se añade como anclaje directo del cumplimiento del Siervo en la muerte redentora de Jesús; 128–130 protege el valor propio del Antiguo Testamento dentro de la lectura tipológica. No se atribuyen a Jesús las faltas de descendientes davídicos de 2 S 7, ni se pretende zanjar la identidad histórica original del Siervo o fechar su composición. Las referencias cruzan correctamente Is 52–53.
 
 ## Límites y revisión pendiente
 
