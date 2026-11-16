@@ -103,7 +103,7 @@ fun ParishFinderScreen(
             AppDetailHeader(
                 title = strings("Parroquias", "Parishes", "Paróquias"),
                 assetPath = hero,
-                imageHeight = 180.dp
+                root = true
             )
         }
         item(key = "parish_intro") {

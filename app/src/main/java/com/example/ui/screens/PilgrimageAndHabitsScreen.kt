@@ -175,7 +175,7 @@ private fun PilgrimageHome(
 
     LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = dock + 24.dp)) {
         item(key = "pilgrimage_header") {
-            AppDetailHeader(title = title, assetPath = hero, imageHeight = 180.dp)
+            AppDetailHeader(title = title, assetPath = hero, root = true)
         }
         item(key = "pilgrimage_tabs") {
             AppSegmentedTabs(

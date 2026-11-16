@@ -86,7 +86,7 @@ internal fun RootHeader(spec: RootSpec) {
             title = spec.title,
             assetPath = spec.asset,
             eyebrow = spec.eyebrow,
-            imageHeight = 280.dp,
+            root = true,
             titleTag = "doctrine_title"
         )
     }

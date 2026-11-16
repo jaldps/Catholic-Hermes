@@ -444,7 +444,7 @@ private fun SpiritualHub(
                 AppDetailHeader(
                     title = language.pick("Vida espiritual", "Spiritual life", "Vida espiritual"),
                     assetPath = hero,
-                    imageHeight = 180.dp
+                    root = true
                 )
             }
             item(key = "life_practices") {

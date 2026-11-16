@@ -949,7 +949,7 @@ private fun CccIndexPage(
                 title = lang.pick("Catecismo", "Catechism", "Catecismo"),
                 assetPath = "heroes/lumen/catechism.jpg",
                 meta = lang.pick("de la Iglesia Católica", "of the Catholic Church", "da Igreja Católica"),
-                imageHeight = 220.dp,
+                root = true,
                 modifier = Modifier.testTag("catechism_hero_photo")
             )
         }
