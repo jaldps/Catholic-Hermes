@@ -223,6 +223,338 @@
           "url": null
         }
       ]
+    },
+    {
+      "id": "jesus_2_kingdom",
+      "lessonNumber": 2,
+      "title": {
+        "es": "El Reino llega: conversión y seguimiento",
+        "en": "The Kingdom draws near: conversion and discipleship",
+        "pt": "O Reino se aproxima: conversão e seguimento"
+      },
+      "scriptureReferences": [
+        "mar 1:14-20"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar qué anuncia Jesús al proclamar la cercanía del Reino.",
+          "en": "Explain what Jesus announces when proclaiming the nearness of the Kingdom.",
+          "pt": "Explicar o que Jesus anuncia ao proclamar a proximidade do Reino."
+        },
+        {
+          "es": "Distinguir conversión sostenida por la gracia y mera autosuperación.",
+          "en": "Distinguish conversion sustained by grace from mere self improvement.",
+          "pt": "Distinguir a conversão sustentada pela graça do mero aperfeiçoamento pessoal."
+        }
+      ],
+      "summary": {
+        "es": "El Reino se acerca en la persona y la obra de Jesús. Su llamada a convertirse reúne discípulos que aprenden a responder al amor recibido.",
+        "en": "The Kingdom draws near in Jesus’ person and work. His call to conversion gathers disciples who learn to respond to the love they receive.",
+        "pt": "O Reino se aproxima na pessoa e na obra de Jesus. Seu chamado à conversão reúne discípulos que aprendem a responder ao amor recebido."
+      },
+      "historicalContext": {
+        "es": "Marcos comienza el ministerio de Jesús en Galilea después del arresto de Juan. La proclamación del Reino precede a dos escenas de llamada junto al mar: Simón y Andrés dejan sus redes; Santiago y Juan dejan la barca y a su padre. El estilo es breve y concentra la atención en la iniciativa de Jesús y la respuesta de los discípulos. No contiene un manual para cada decisión familiar o laboral. Lee estas llamadas como el comienzo de un camino que el Evangelio seguirá mostrando, con aprendizaje, incomprensiones y misericordia.",
+        "en": "Mark begins Jesus’ ministry in Galilee after John’s arrest. The proclamation of the Kingdom precedes two calling scenes beside the sea: Simon and Andrew leave their nets; James and John leave the boat and their father. The narrative is brief and directs attention to Jesus’ initiative and the disciples’ response. It does not offer a manual for every family or employment decision. Read these calls as the beginning of a journey that the Gospel will continue to unfold, including learning, misunderstanding and mercy along the way.",
+        "pt": "Marcos inicia o ministério de Jesus na Galileia depois da prisão de João. A proclamação do Reino precede duas cenas de chamado junto ao mar: Simão e André deixam as redes; Tiago e João deixam a barca e o pai. O estilo é breve e concentra a atenção na iniciativa de Jesus e na resposta dos discípulos. Não contém um manual para cada decisão familiar ou profissional. Leia esses chamados como o início de um caminho que o Evangelho continuará mostrando, com aprendizado, incompreensões e misericórdia."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "El Reino tiene un centro: Jesús",
+            "en": "The Kingdom has a centre: Jesus",
+            "pt": "O Reino tem um centro: Jesus"
+          },
+          "body": {
+            "es": "Reino de Dios designa su acción salvadora que llega en Jesús, no un territorio que sus seguidores deban conquistar. Cristo reúne personas alrededor de sí y les comunica la vida del Padre. Sus palabras y signos anuncian lo que se manifestará de modo decisivo en su muerte y resurrección. El Catecismo llama a la Iglesia germen y comienzo del Reino: por eso no se confunden sin más sus miembros con la plenitud de lo que Dios promete. El Reino incluye una esperanza futura y transforma ya las relaciones, especialmente la acogida de pobres y pecadores.",
+            "en": "The Kingdom of God means his saving action arriving in Jesus, rather than territory his followers must conquer. Christ gathers people around himself and shares the Father’s life with them. His words and signs announce what will become decisive through his death and resurrection. The Catechism calls the Church the seed and beginning of the Kingdom; its members therefore cannot simply be equated with the fullness of God’s promise. The Kingdom includes future hope while already transforming relationships, especially through the welcome offered to poor people and sinners who hear Jesus’ call.",
+            "pt": "Reino de Deus designa sua ação salvadora que chega em Jesus, não um território que seus seguidores devam conquistar. Cristo reúne pessoas ao seu redor e lhes comunica a vida do Pai. Suas palavras e sinais anunciam o que se manifestará de modo decisivo em sua morte e ressurreição. O Catecismo chama a Igreja de germe e começo do Reino: por isso seus membros não se confundem simplesmente com a plenitude da promessa de Deus. O Reino inclui esperança futura e já transforma as relações, especialmente a acolhida dos pobres e pecadores."
+          }
+        },
+        {
+          "title": {
+            "es": "Convertirse es responder a un amor previo",
+            "en": "Conversion responds to a love already given",
+            "pt": "Converter-se é responder a um amor anterior"
+          },
+          "body": {
+            "es": "La llamada a convertirse no exige comprar la atención de Dios mediante una vida impecable. Jesús ofrece la buena noticia y llama a abandonar el pecado para acogerla. La gracia, ayuda gratuita de Dios, mueve una respuesta que sigue siendo libre. Para quien comienza, el Bautismo es el lugar de la conversión primera; para quien ya está bautizado, la conversión continúa. El Catecismo recuerda a Pedro, cuyo arrepentimiento nace del encuentro con la misericordia de Jesús. Reconocer una falta puede abrir un camino concreto de reparación y renovación, sin convertir la culpa en identidad permanente.",
+            "en": "The call to conversion does not mean buying God’s attention through an impeccable life. Jesus offers good news and calls people to turn away from sin in order to receive it. Grace, God’s freely given help, moves a response that remains free. Baptism is the place of initial conversion for someone entering Christian life; conversion continues for the baptized. The Catechism recalls Peter, whose repentance follows his encounter with Jesus’ mercy. Acknowledging wrongdoing can open a practical path of repair and renewal, without making guilt a person’s permanent identity or final destination.",
+            "pt": "O chamado à conversão não exige comprar a atenção de Deus por meio de uma vida impecável. Jesus oferece a boa notícia e chama a abandonar o pecado para acolhê-la. A graça, ajuda gratuita de Deus, move uma resposta que continua livre. Para quem começa, o Batismo é o lugar da conversão primeira; para quem já é batizado, a conversão continua. O Catecismo recorda Pedro, cujo arrependimento nasce do encontro com a misericórdia de Jesus. Reconhecer uma falta pode abrir um caminho concreto de reparação e renovação, sem tornar a culpa uma identidade permanente."
+          }
+        },
+        {
+          "title": {
+            "es": "Seguirlo modifica la vida cotidiana",
+            "en": "Following him changes everyday life",
+            "pt": "Segui-lo transforma a vida cotidiana"
+          },
+          "body": {
+            "es": "Los pescadores no reciben primero una lista de logros: reciben una invitación a estar con Jesús y participar de su misión. Dejar las redes expresa la prioridad de esa llamada, pero no autoriza a despreciar responsabilidades o imponer decisiones repentinas a otra persona. El seguimiento necesita discernimiento y se vive en comunidad. Tampoco garantiza riqueza, influencia o ausencia de dificultades; el arresto de Juan ya impide esa lectura cómoda. Una primera respuesta puede ser sencilla: escuchar el Evangelio, conocer una comunidad cristiana o corregir una conducta que perjudica al prójimo.",
+            "en": "The fishermen first receive an invitation to accompany Jesus and share his mission, rather than a list of achievements. Leaving their nets expresses the priority of his call, but does not authorize contempt for responsibilities or pressure on someone else to make sudden decisions. Discipleship requires discernment and is lived within a community. It promises neither wealth nor influence nor freedom from difficulties; John’s arrest already challenges that comfortable reading. A first response can be simple: listening to the Gospel, getting to know a Christian community or correcting behaviour that harms a neighbour.",
+            "pt": "Os pescadores não recebem primeiro uma lista de conquistas: recebem um convite para estar com Jesus e participar de sua missão. Deixar as redes expressa a prioridade desse chamado, mas não autoriza desprezar responsabilidades nem impor decisões repentinas a outra pessoa. O seguimento precisa de discernimento e se vive em comunidade. Também não garante riqueza, influência ou ausência de dificuldades; a prisão de João já impede essa leitura cômoda. Uma primeira resposta pode ser simples: escutar o Evangelho, conhecer uma comunidade cristã ou corrigir uma conduta que prejudica o próximo."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Relee Mc 1,14–20 y observa el orden: anuncio, invitación y respuesta. Identifica qué hacen Jesús y cada pareja de hermanos. Después compara sus acciones con lo que el pasaje no promete.",
+        "en": "Reread Mark 1:14–20 and notice the sequence: proclamation, invitation and response. Identify what Jesus and each pair of brothers do. Then compare their actions with what the passage does not promise.",
+        "pt": "Releia Mc 1,14–20 e observe a ordem: anúncio, convite e resposta. Identifique o que fazem Jesus e cada dupla de irmãos. Depois compare suas ações com aquilo que a passagem não promete."
+      },
+      "meditatio": {
+        "es": "¿En qué situación tiendes a medir la fe por los resultados materiales? ¿Qué cambio concreto podrías discernir como respuesta al amor de Dios, sin compararte con el camino de otra persona?",
+        "en": "In what situation do you tend to measure faith by material results? What practical change could you discern as a response to God’s love, without comparing yourself with another person’s journey?",
+        "pt": "Em que situação você tende a medir a fé pelos resultados materiais? Que mudança concreta poderia discernir como resposta ao amor de Deus, sem se comparar com o caminho de outra pessoa?"
+      },
+      "oratio": {
+        "es": "Presenta a Dios una resistencia o una inquietud que haya surgido en la lectura. Pide, con tus palabras, luz para discernir y ayuda para responder; puedes agradecer una ocasión concreta de misericordia recibida.",
+        "en": "Bring to God a hesitation or concern raised by your reading. In your own words, ask for light to discern and help to respond; you may give thanks for a particular experience of mercy.",
+        "pt": "Apresente a Deus uma resistência ou preocupação que tenha surgido na leitura. Peça, com suas palavras, luz para discernir e ajuda para responder; você pode agradecer uma ocasião concreta de misericórdia recebida."
+      },
+      "contemplatio": {
+        "es": "Guarda entre sesenta y noventa segundos de silencio, recordando a Jesús que se acerca a los pescadores. Permanece ante él sin preparar una respuesta brillante. Si te distraes, vuelve con calma a esa escena.",
+        "en": "Keep silence for sixty to ninety seconds, recalling Jesus approaching the fishermen. Remain before him without preparing an impressive response. If you become distracted, return gently to that scene.",
+        "pt": "Guarde entre sessenta e noventa segundos de silêncio, recordando Jesus que se aproxima dos pescadores. Permaneça diante dele sem preparar uma resposta brilhante. Se houver distração, volte com calma a essa cena."
+      },
+      "actionStep": {
+        "es": "Elige una conducta pequeña que puedas cambiar esta semana para tratar mejor a alguien. Decide cuándo intentarlo y, si necesitas orientación, consulta a una persona prudente de tu comunidad; evita decisiones drásticas improvisadas.",
+        "en": "Choose one small change that could help you treat someone better this week. Decide when to try it and seek guidance from a wise person in your community if needed; avoid sudden drastic decisions.",
+        "pt": "Escolha uma pequena mudança que possa ajudá-lo a tratar melhor alguém nesta semana. Decida quando tentar e, se precisar de orientação, procure uma pessoa prudente de sua comunidade; evite decisões drásticas improvisadas."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿El Reino equivale al éxito material de los creyentes?",
+            "en": "Does the Kingdom mean believers’ material success?",
+            "pt": "O Reino equivale ao sucesso material dos fiéis?"
+          },
+          "answer": {
+            "es": "No. Se centra en la acción salvadora de Dios en Jesús y llama a la comunión con él. Acoge a pobres y pecadores y transforma relaciones; ni la riqueza ni el poder son su medida.",
+            "en": "No. It centres on God’s saving action in Jesus and calls people into communion with him. It welcomes poor people and sinners and transforms relationships; neither wealth nor power measures its presence.",
+            "pt": "Não. Ele se centra na ação salvadora de Deus em Jesus e chama à comunhão com ele. Acolhe pobres e pecadores e transforma relações; nem a riqueza nem o poder são sua medida."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Por qué la conversión no termina al comenzar la vida cristiana?",
+            "en": "Why does conversion continue after Christian life begins?",
+            "pt": "Por que a conversão continua depois do início da vida cristã?"
+          },
+          "answer": {
+            "es": "El Bautismo inicia una vida nueva, pero los bautizados siguen necesitando purificación y renovación. La gracia no elimina su libertad. El arrepentimiento de Pedro muestra que Jesús vuelve a llamar también a quienes ya lo siguen.",
+            "en": "Baptism begins a new life, but the baptized still need purification and renewal. Grace does not remove their freedom. Peter’s repentance shows that Jesus calls again even those who are already following him.",
+            "pt": "O Batismo inicia uma vida nova, mas os batizados continuam precisando de purificação e renovação. A graça não elimina sua liberdade. O arrependimento de Pedro mostra que Jesus chama novamente também aqueles que já o seguem."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo responder a quien exige abandonar hoy cualquier responsabilidad para demostrar fe?",
+            "en": "How would you respond to someone demanding that you abandon every responsibility today to prove faith?",
+            "pt": "Como responder a quem exige abandonar hoje qualquer responsabilidade para provar a fé?"
+          },
+          "answer": {
+            "es": "Las llamadas del Evangelio muestran la prioridad de Jesús, no una regla de impulsividad impuesta a otra persona. Conviene discernir una respuesta libre, considerar los deberes reales y buscar acompañamiento; una presión manipuladora no sustituye la voz de Cristo.",
+            "en": "The Gospel calls show Jesus’ priority, rather than a rule of impulsiveness imposed on another person. Discern a free response, consider real responsibilities and seek guidance; manipulative pressure cannot replace the voice of Christ.",
+            "pt": "Os chamados do Evangelho mostram a prioridade de Jesus, não uma regra de impulsividade imposta a outra pessoa. Convém discernir uma resposta livre, considerar os deveres reais e buscar acompanhamento; a pressão manipuladora não substitui a voz de Cristo."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_541_546",
+          "title": {
+            "es": "Catecismo §§541–546",
+            "en": "Catechism §§541–546",
+            "pt": "Catecismo, parágrafos 541–546"
+          },
+          "catechismStart": 541,
+          "catechismEnd": 546,
+          "url": null
+        },
+        {
+          "id": "ccc_1427_1429",
+          "title": {
+            "es": "Catecismo §§1427–1429",
+            "en": "Catechism §§1427–1429",
+            "pt": "Catecismo, parágrafos 1427–1429"
+          },
+          "catechismStart": 1427,
+          "catechismEnd": 1429,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "jesus_3_supper_service",
+      "lessonNumber": 3,
+      "title": {
+        "es": "La Cena: don, alianza y servicio",
+        "en": "The Supper: gift, covenant and service",
+        "pt": "A Ceia: dom, aliança e serviço"
+      },
+      "scriptureReferences": [
+        "luk 22:14-20",
+        "joh 13:1-15"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Relacionar la Cena con la entrega de Jesús en la cruz.",
+          "en": "Connect the Supper with Jesus’ self offering on the cross.",
+          "pt": "Relacionar a Ceia com a entrega de Jesus na cruz."
+        },
+        {
+          "es": "Distinguir memorial sacramental, recuerdo y servicio al prójimo.",
+          "en": "Distinguish sacramental memorial, recollection and service to others.",
+          "pt": "Distinguir memorial sacramental, lembrança e serviço ao próximo."
+        }
+      ],
+      "summary": {
+        "es": "La Cena anticipa la entrega pascual de Jesús, y el lavatorio muestra la forma de su amor. La Eucaristía hace presente su único sacrificio y llama a vivirlo sirviendo.",
+        "en": "The Supper anticipates Jesus’ Paschal self offering, and the washing of feet reveals the form of his love. The Eucharist makes his one sacrifice present and calls us to live through service.",
+        "pt": "A Ceia antecipa a entrega pascal de Jesus, e o lava-pés mostra a forma de seu amor. A Eucaristia torna presente seu único sacrifício e chama a vivê-lo no serviço."
+      },
+      "historicalContext": {
+        "es": "Lucas presenta la comida de Jesús con los apóstoles como celebración pascual, antes de la pasión. Juan abre el relato de la cena destacando el amor de Jesús y narra el lavatorio de los pies. Son dos testimonios con acentos propios: Juan no repite aquí las palabras sobre el pan y el cáliz. Lee cada escena por separado antes de relacionarlas. Los relatos permiten reconocer la libertad con que Jesús se entrega y el desconcierto de sus discípulos, sin exigir que resolvamos en esta lección las cuestiones de cronología entre los evangelios.",
+        "en": "Luke presents Jesus’ meal with the apostles as a Passover celebration before the passion. John opens his account of the supper by emphasizing Jesus’ love and narrates the washing of feet. These are two witnesses with distinct emphases: John does not repeat the words over bread and cup here. Read each scene separately before connecting them. The accounts reveal Jesus’ freedom in giving himself and the disciples’ bewilderment, without requiring this lesson to settle the questions of chronology between the Gospels or merge their distinctive narrative details.",
+        "pt": "Lucas apresenta a refeição de Jesus com os apóstolos como celebração pascal, antes da paixão. João abre o relato da ceia destacando o amor de Jesus e narra o lava-pés. São dois testemunhos com acentos próprios: João não repete aqui as palavras sobre o pão e o cálice. Leia cada cena separadamente antes de relacioná-las. Os relatos permitem reconhecer a liberdade com que Jesus se entrega e a perplexidade dos discípulos, sem exigir que resolvamos nesta lição as questões de cronologia entre os evangelhos."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Un don que precede a la violencia",
+            "en": "A gift that precedes the violence",
+            "pt": "Um dom que precede a violência"
+          },
+          "body": {
+            "es": "En Lucas, Jesús habla de su cuerpo entregado y de la alianza en su sangre antes de ser detenido. La violencia no convierte de repente su vida en salvación: él da libremente lo que otros intentarán arrebatarle. El contexto pascual recuerda la liberación de Israel y sitúa su entrega dentro de la fidelidad de Dios. El Catecismo relaciona esta Cena con el paso de Jesús al Padre por su muerte y resurrección. Así, Cena y cruz no son historias rivales: la primera anuncia sacramentalmente el don que la segunda llevará hasta el extremo.",
+            "en": "In Luke, Jesus speaks of his body given and the covenant in his blood before his arrest. Violence does not suddenly turn his life into salvation: he freely gives what others will try to take from him. The Passover setting recalls Israel’s liberation and places his self offering within God’s faithfulness. The Catechism connects this Supper with Jesus’ passage to the Father through death and resurrection. Supper and cross are therefore not competing stories: the first sacramentally anticipates the gift that the second will carry to its fullest expression.",
+            "pt": "Em Lucas, Jesus fala de seu corpo entregue e da aliança em seu sangue antes de ser preso. A violência não transforma de repente sua vida em salvação: ele oferece livremente o que outros tentarão tirar dele. O contexto pascal recorda a libertação de Israel e situa sua entrega na fidelidade de Deus. O Catecismo relaciona essa Ceia com a passagem de Jesus ao Pai por sua morte e ressurreição. Assim, Ceia e cruz não são histórias rivais: a primeira antecipa sacramentalmente o dom que a segunda levará até o extremo."
+          }
+        },
+        {
+          "title": {
+            "es": "Memorial: el acontecimiento se hace presente",
+            "en": "Memorial: the event becomes present",
+            "pt": "Memorial: o acontecimento se torna presente"
+          },
+          "body": {
+            "es": "Recordar a un ser querido puede cambiar nuestros sentimientos, pero el memorial eucarístico significa algo más. En la celebración de la Iglesia, la Pascua de Cristo se hace presente sacramentalmente: se participa de su único sacrificio, no se organiza una nueva muerte de Jesús. El Catecismo explica esta relación a partir del memorial bíblico y de las palabras de la institución. La presencia no depende de que el participante consiga imaginar la escena con intensidad. Acercarse a la Misa supone aprender a recibir un don, además de comprender y recordar un hecho del pasado.",
+            "en": "Remembering someone we love can change our feelings, but the Eucharistic memorial means something more. In the Church’s celebration, Christ’s Pasch becomes sacramentally present: we share in his one sacrifice rather than arranging a new death of Jesus. The Catechism explains this relationship through biblical memorial and the words of institution. This presence does not depend on a participant imagining the scene with sufficient intensity. Approaching Mass means learning to receive a gift, alongside understanding and remembering a past event. Its reality rests on Christ’s action rather than the strength of our emotions.",
+            "pt": "Lembrar uma pessoa querida pode mudar nossos sentimentos, mas o memorial eucarístico significa algo mais. Na celebração da Igreja, a Páscoa de Cristo se torna presente sacramentalmente: participa-se de seu único sacrifício, não se organiza uma nova morte de Jesus. O Catecismo explica essa relação a partir do memorial bíblico e das palavras da instituição. A presença não depende de o participante conseguir imaginar a cena com intensidade. Aproximar-se da Missa significa aprender a receber um dom, além de compreender e recordar um acontecimento do passado. Sua realidade se apoia na ação de Cristo."
+          }
+        },
+        {
+          "title": {
+            "es": "Recibir su amor y aprender a servir",
+            "en": "Receive his love and learn to serve",
+            "pt": "Receber seu amor e aprender a servir"
+          },
+          "body": {
+            "es": "Pedro se resiste a que Jesús le lave los pies. El relato muestra que ser discípulo incluye dejarse servir antes de pretender dar algo a los demás. Después, el Maestro propone su gesto como ejemplo: el amor recibido cambia la manera de ejercer autoridad y tratar al prójimo. El lavatorio no vuelve innecesaria la Eucaristía ni la Eucaristía hace innecesario el servicio. El Catecismo une ambos en el amor de Cristo hasta el fin. Para un principiante, participar con respeto y aprender a ayudar son respuestas complementarias; nadie necesita comulgar para estudiar esta lección.",
+            "en": "Peter resists letting Jesus wash his feet. The narrative shows that discipleship includes accepting service before trying to give something to others. The Master then offers his action as an example: received love changes how authority is exercised and neighbours are treated. Washing feet does not make the Eucharist unnecessary, nor does the Eucharist make service unnecessary. The Catechism places both within Christ’s love to the end. For a beginner, respectful participation and learning to help are complementary responses. Nobody needs to receive Communion in order to study or complete this lesson.",
+            "pt": "Pedro resiste a deixar Jesus lavar seus pés. O relato mostra que ser discípulo inclui deixar-se servir antes de pretender oferecer algo aos outros. Depois, o Mestre propõe seu gesto como exemplo: o amor recebido muda a maneira de exercer autoridade e tratar o próximo. O lava-pés não torna a Eucaristia desnecessária, nem a Eucaristia torna desnecessário o serviço. O Catecismo une ambos no amor de Cristo até o fim. Para quem começa, participar com respeito e aprender a ajudar são respostas complementares; ninguém precisa comungar para estudar esta lição."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Lee primero Lc 22,14–20 y observa los verbos de la entrega. Después lee Jn 13,1–15: identifica la resistencia de Pedro y la explicación de Jesús. Relaciona ambas escenas sin atribuir a una las palabras de la otra.",
+        "en": "First read Luke 22:14–20 and notice the actions of self giving. Then read John 13:1–15: identify Peter’s resistance and Jesus’ explanation. Connect the scenes without assigning one account’s words to the other.",
+        "pt": "Leia primeiro Lc 22,14–20 e observe os verbos da entrega. Depois leia Jo 13,1–15: identifique a resistência de Pedro e a explicação de Jesus. Relacione as cenas sem atribuir a uma as palavras da outra."
+      },
+      "meditatio": {
+        "es": "¿Te resulta más difícil recibir ayuda o ofrecerla sin buscar reconocimiento? ¿Qué cambia al entender que el servicio cristiano nace de un don recibido y no de demostrar superioridad moral?",
+        "en": "Is it harder for you to accept help or offer it without seeking recognition? What changes when Christian service begins with a received gift rather than proving moral superiority?",
+        "pt": "É mais difícil para você receber ajuda ou oferecê-la sem buscar reconhecimento? O que muda ao entender que o serviço cristão nasce de um dom recebido, não da demonstração de superioridade moral?"
+      },
+      "oratio": {
+        "es": "Habla con Jesús sobre tu manera de recibir y de servir. Puedes agradecer un gesto concreto de cuidado y pedir ayuda para participar con más atención en su amor, sin compararte con otras personas.",
+        "en": "Speak with Jesus about how you receive care and offer service. You may thank him for a particular act of care and ask for help to share his love more attentively, without comparing yourself with others.",
+        "pt": "Converse com Jesus sobre seu modo de receber cuidado e de servir. Você pode agradecer um gesto concreto de carinho e pedir ajuda para participar com mais atenção de seu amor, sem se comparar com outras pessoas."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio, ante la imagen de Jesús arrodillado para lavar los pies. No prepares ahora una tarea ni un discurso; deja que esa escena acompañe tu presencia ante él.",
+        "en": "Remain in silence for sixty to ninety seconds with the image of Jesus kneeling to wash feet. Do not prepare a task or speech now; let the scene accompany your presence before him.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio, diante da imagem de Jesus ajoelhado para lavar os pés. Não prepare agora uma tarefa nem um discurso; deixe essa cena acompanhar sua presença diante dele."
+      },
+      "actionStep": {
+        "es": "Elige un servicio discreto y realizable: escuchar, colaborar en una tarea o pedir perdón por una falta concreta. Hazlo sin exigir agradecimiento. Si deseas asistir a Misa, puedes hacerlo respetuosamente aunque todavía estés aprendiendo.",
+        "en": "Choose one quiet, realistic act of service: listening, helping with a task or apologizing for a particular wrong. Do it without demanding thanks. If you wish to attend Mass, you can participate respectfully while still learning.",
+        "pt": "Escolha um serviço discreto e realizável: escutar, colaborar numa tarefa ou pedir perdão por uma falta concreta. Faça isso sem exigir agradecimento. Se desejar assistir à Missa, pode participar respeitosamente mesmo enquanto ainda está aprendendo."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Por qué la Cena ayuda a comprender la cruz?",
+            "en": "Why does the Supper help us understand the cross?",
+            "pt": "Por que a Ceia ajuda a compreender a cruz?"
+          },
+          "answer": {
+            "es": "Antes de ser detenido, Jesús expresa libremente su entrega por los demás. La Cena anticipa sacramentalmente su Pascua y permite leer la cruz desde ese amor ofrecido, sin llamar buena a la violencia de quienes lo matan.",
+            "en": "Before his arrest, Jesus freely expresses his self offering for others. The Supper sacramentally anticipates his Pasch and allows us to read the cross through that love, without calling his killers’ violence good.",
+            "pt": "Antes de ser preso, Jesus expressa livremente sua entrega pelos outros. A Ceia antecipa sacramentalmente sua Páscoa e permite ler a cruz a partir desse amor oferecido, sem chamar de boa a violência daqueles que o matam."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Memorial significa solo pensar con fuerza en el pasado?",
+            "en": "Does memorial mean only thinking intensely about the past?",
+            "pt": "Memorial significa apenas pensar intensamente no passado?"
+          },
+          "answer": {
+            "es": "No. En la Eucaristía se hace presente sacramentalmente el único sacrificio pascual de Cristo. La celebración no repite su muerte ni depende de la intensidad de nuestra imaginación; su don puede formar nuestra vida.",
+            "en": "No. The Eucharist sacramentally makes Christ’s one Paschal sacrifice present. The celebration neither repeats his death nor depends on the intensity of our imagination; the gift we receive can shape our lives.",
+            "pt": "Não. Na Eucaristia se torna presente sacramentalmente o único sacrifício pascal de Cristo. A celebração não repete sua morte nem depende da intensidade de nossa imaginação; o dom recebido pode formar nossa vida."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Es coherente usar la Misa como excusa para no ayudar a nadie?",
+            "en": "Is it consistent to use Mass as an excuse never to help anyone?",
+            "pt": "É coerente usar a Missa como desculpa para nunca ajudar ninguém?"
+          },
+          "answer": {
+            "es": "No. La Cena y el lavatorio muestran un mismo amor que se entrega. El servicio no reemplaza la realidad sacramental, pero recibir ese don llama a responder en el trato concreto al prójimo, según las posibilidades reales de cada persona.",
+            "en": "No. The Supper and washing of feet reveal the same self giving love. Service does not replace sacramental reality, but receiving that gift calls for a response in practical care for neighbours, according to each person’s real circumstances.",
+            "pt": "Não. A Ceia e o lava-pés mostram um mesmo amor que se entrega. O serviço não substitui a realidade sacramental, mas receber esse dom chama a responder no cuidado concreto com o próximo, segundo as possibilidades reais de cada pessoa."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_610_611",
+          "title": {
+            "es": "Catecismo §§610–611",
+            "en": "Catechism §§610–611",
+            "pt": "Catecismo, parágrafos 610–611"
+          },
+          "catechismStart": 610,
+          "catechismEnd": 611,
+          "url": null
+        },
+        {
+          "id": "ccc_1337_1340",
+          "title": {
+            "es": "Catecismo §§1337–1340",
+            "en": "Catechism §§1337–1340",
+            "pt": "Catecismo, parágrafos 1337–1340"
+          },
+          "catechismStart": 1337,
+          "catechismEnd": 1340,
+          "url": null
+        },
+        {
+          "id": "ccc_1362_1367",
+          "title": {
+            "es": "Catecismo §§1362–1367",
+            "en": "Catechism §§1362–1367",
+            "pt": "Catecismo, parágrafos 1362–1367"
+          },
+          "catechismStart": 1362,
+          "catechismEnd": 1367,
+          "url": null
+        }
+      ]
     }
   ]
 }
