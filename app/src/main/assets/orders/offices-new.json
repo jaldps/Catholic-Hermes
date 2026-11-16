@@ -1,0 +1,192 @@
+[
+  {
+    "id": "office_obispo_auxiliar",
+    "name": {
+      "es": "Obispo auxiliar",
+      "en": "Auxiliary Bishop",
+      "pt": "Bispo auxiliar"
+    },
+    "description": {
+      "es": "Es un obispo que el Sumo Pontífice nombra, a petición del obispo diocesano, para ayudarle en el gobierno de toda la diócesis; no tiene derecho de sucesión. El Código de Derecho Canónico (cc. 403-411) lo prevé cuando las necesidades pastorales lo aconsejan, y en circunstancias más graves puede dotarsele de facultades especiales. Recibe la consagración episcopal, debe ser nombrado vicario general o, al menos, vicario episcopal, asiste al obispo en el gobierno de la diócesis y le suple cuando está ausente o impedido. Ha de consultarse con él en los asuntos de mayor importancia, residir en la diócesis y actuar en unión de acción e intenciones.",
+      "en": "He is a bishop whom the Supreme Pontiff appoints, at the request of the diocesan bishop, to help him govern the whole diocese; he has no right of succession. The Code of Canon Law (cc. 403-411) provides for him when pastoral needs advise it, and in more serious circumstances he may be given special faculties. He receives episcopal consecration, must be appointed vicar general or at least episcopal vicar, assists the bishop in the whole government and takes his place when he is absent or impeded. He must be consulted on matters of greater importance, reside in the diocese, and act in union of purpose and intention.",
+      "pt": "É um bispo que o Sumo Pontífice nomeia, a pedido do bispo diocesano, para ajudá-lo no governo de toda a diocese; não tem direito de sucessão. O Código de Direito Canônico (cc. 403-411) prevê-o quando as necessidades pastorais o aconselham, e em circunstâncias mais graves pode ser dotado de faculdades especiais. Recebe a consagração episcopal, deve ser nomeado vigário geral ou, ao menos, vigário episcopal, assiste o bispo no governo da diocese e substitui-o quando está ausente ou impedido. Deve ser consultado nos assuntos de maior importância, residir na diocese e agir em união de ação e intenções."
+    },
+    "group": "governance",
+    "after": "office_obispo",
+    "sources": [
+      "Código de Derecho Canónico, cc. 403-411",
+      "Catecismo de la Iglesia Católica, nn. 1555-1571"
+    ]
+  },
+  {
+    "id": "office_obispo_coadjutor",
+    "name": {
+      "es": "Obispo coadjutor",
+      "en": "Coadjutor Bishop",
+      "pt": "Bispo coadjutor"
+    },
+    "description": {
+      "es": "Es un obispo que el Sumo Pontífice nombra por propia iniciativa, con facultades especiales y derecho de sucesión, para que al quedar vacante la sede pase a ser obispo de la diócesis. El Código de Derecho Canónico (cc. 403 y 409) lo prevé en circunstancias graves, también de carácter personal. Debe ser nombrado vicario general, asiste al obispo diocesano en el gobierno de la diócesis y le suple cuando está ausente o impedido. Los tres se consultan mutuamente en los asuntos de mayor importancia, y el coadjutor debe residir en la diócesis y actuar en unión de intenciones. Toma posesión presentando las letras apostólicas al obispo y al colegio de consultores.",
+      "en": "He is a bishop whom the Supreme Pontiff appoints on his own initiative, with special faculties and the right of succession, so that when the see becomes vacant he becomes bishop of the diocese. The Code of Canon Law (cc. 403 and 409) provides for him in serious circumstances, including personal ones. He must be appointed vicar general, assists the diocesan bishop in the whole government, and takes his place when he is absent or impeded. The three consult one another on matters of greater importance, and the coadjutor must reside in the diocese and act in union of intention. He takes possession by presenting the apostolic letters to the bishop and the college of consultors.",
+      "pt": "É um bispo que o Sumo Pontífice nomeia por própria iniciativa, com faculdades especiais e direito de sucessão, para que, ao vagar a sé, torne-se bispo da diocese. O Código de Direito Canônico (cc. 403 e 409) prevê-o em circunstâncias graves, também de caráter pessoal. Deve ser nomeado vigário geral, assiste o bispo diocesano no governo da diocese e substitui-o quando está ausente ou impedido. Os três consultam-se mutuamente nos assuntos de maior importância, e o coadjutor deve residir na diocese e agir em união de intenções. Toma posse apresentando as letras apostólicas ao bispo e ao colégio de consultores."
+    },
+    "group": "governance",
+    "after": "office_obispo_auxiliar",
+    "sources": [
+      "Código de Derecho Canónico, cc. 403 y 409",
+      "Catecismo de la Iglesia Católica, nn. 1555-1571"
+    ]
+  },
+  {
+    "id": "office_obispo_emperito",
+    "name": {
+      "es": "Obispo emérito",
+      "en": "Bishop Emeritus",
+      "pt": "Bispo emérito"
+    },
+    "description": {
+      "es": "Es el obispo diocesano cuya renuncia al oficio ha sido aceptada por el Sumo Pontífice, por haber cumplido setenta y cinco años o por enfermedad u otra causa grave. El Código de Derecho Canónico (cc. 401 y 402) le conserva el título de obispo dimisionario de su diócesis y, si lo desea, puede seguir residiendo en ella. La Conferencia Episcopal debe cuidar su conveniente y digna sustentación, con obligación principal sobre la misma diócesis a la que sirvió. No gobierna ya la diócesis, pero sigue siendo obispo y conserva su misión de maestro y pastor según su estado y fuerzas.",
+      "en": "He is the diocesan bishop whose resignation from office has been accepted by the Supreme Pontiff, for having reached seventy-five years of age or for illness or another grave cause. The Code of Canon Law (cc. 401 and 402) preserves for him the title of bishop emeritus (dimissary bishop) of his diocese and, if he wishes, he may continue residing in it. The Episcopal Conference must provide for his suitable and dignified support, with the principal obligation falling on the very diocese he served. He no longer governs the diocese, but he remains a bishop and keeps his mission of teacher and shepherd according to his state and strength.",
+      "pt": "É o bispo diocesano cuja renúncia ao ofício foi aceita pelo Sumo Pontífice, por ter completado setenta e cinco anos ou por doença ou outra causa grave. O Código de Direito Canônico (cc. 401 e 402) conserva-lhe o título de bispo dimissionário de sua diocese e, se quiser, pode continuar residindo nela. A Conferência Episcopal deve prover a sua conveniente e digna sustentação, com obrigação principal sobre a própria diocese a que serviu. Não governa mais a diocese, mas continua sendo bispo e conserva sua missão de mestre e pastor segundo seu estado e forças."
+    },
+    "group": "governance",
+    "after": "office_obispo_coadjutor",
+    "sources": [
+      "Código de Derecho Canónico, cc. 401-402",
+      "Catecismo de la Iglesia Católica, nn. 1555-1571"
+    ]
+  },
+  {
+    "id": "office_administrador_apostolico",
+    "name": {
+      "es": "Administrador apostólico",
+      "en": "Apostolic Administrator",
+      "pt": "Administrador apostólico"
+    },
+    "description": {
+      "es": "Es quien rige una administración apostólica en nombre del Sumo Pontífice. El Código de Derecho Canónico (cc. 368 y 381 §2) la equipara a la diócesis: por razones especiales y particularmente graves, aquella porción del pueblo de Dios no se erige como diócesis, y su atención pastoral se encomienda al administrador, que la rige en nombre del Sumo Pontífice. Goza en derecho de las mismas potestades que el obispo diocesano, salvo lo que la naturaleza del asunto o la ley disponga. Su nombramiento corresponde a la autoridad competente, y la curia actúa con estructura diocesana.",
+      "en": "He is the one who governs an apostolic administration in the name of the Supreme Pontiff. The Code of Canon Law (cc. 368 and 381 §2) equates it to a diocese: for special and particularly grave reasons, that portion of the People of God is not erected as a diocese, and its pastoral care is entrusted to the administrator, who governs it in the name of the Supreme Pontiff. He enjoys in law the same powers as the diocesan bishop, except what the nature of the matter or the law provides. His appointment belongs to the competent authority, and the curia acts with a diocesan structure.",
+      "pt": "É quem rege uma administração apostólica em nome do Sumo Pontífice. O Código de Direito Canônico (cc. 368 e 381 §2) equipara-a à diocese: por razões especiais e particularmente graves, aquela porção do povo de Deus não é erigida como diocese, e sua atenção pastoral é confiada ao administrador, que a rege em nome do Sumo Pontífice. Goza em direito das mesmas potestades que o bispo diocesano, salvo o que a natureza do assunto ou a lei dispuser. Sua nomeação compete à autoridade competente, e a curia age com estrutura diocesana."
+    },
+    "group": "governance",
+    "after": "office_obispo_emperito",
+    "sources": [
+      "Código de Derecho Canónico, cc. 368 y 381 §2",
+      "Código de Derecho Canónico, cc. 412-430"
+    ]
+  },
+  {
+    "id": "office_vicario_general",
+    "name": {
+      "es": "Vicario general",
+      "en": "Vicar General",
+      "pt": "Vicário geral"
+    },
+    "description": {
+      "es": "Es el presbítero que el obispo diocesano nombra libremente para ayudarle en el gobierno de toda la diócesis, dotado de potestad ordinaria. El Código de Derecho Canónico (cc. 475-481) le confiere la potestad ejecutiva que corresponde por derecho al obispo, para realizar cualquier acto administrativo, salvo los que el obispo se haya reservado o que requieran mandato especial. Debe tener al menos treinta años, ser doctor o licenciado en derecho canónico o en teología, o verdaderamente experto en estas materias, y de sana doctrina y prudencia. Informa al obispo de los asuntos importantes y nunca actúa contra su voluntad.",
+      "en": "He is the presbyter whom the diocesan bishop freely appoints to help him govern the whole diocese, endowed with ordinary power. The Code of Canon Law (cc. 475-481) grants him the executive power that belongs by law to the bishop, to perform any administrative act, except those the bishop has reserved or that require a special mandate. He must be at least thirty years old, a doctor or licentiate in canon law or theology, or truly expert in these matters, and of sound doctrine and prudence. He informs the bishop of important matters and never acts against his will.",
+      "pt": "É o presbítero que o bispo diocesano nomeia livremente para ajudá-lo no governo de toda a diocese, dotado de potestade ordinária. O Código de Direito Canônico (cc. 475-481) confere-lhe a potestade executiva que compete por direito ao bispo, para realizar qualquer ato administrativo, exceto os que o bispo reservou ou que exigem mandato especial. Deve ter ao menos trinta anos, ser doutor ou licenciado em direito canônico ou em teologia, ou verdadeiro experto nestas matérias, e de sã doutrina e prudência. Informa o bispo dos assuntos importantes e nunca age contra a sua vontade."
+    },
+    "group": "governance",
+    "after": "office_administrador_apostolico",
+    "sources": [
+      "Código de Derecho Canónico, cc. 475-481",
+      "Código de Derecho Canónico, c. 477 §1"
+    ]
+  },
+  {
+    "id": "office_vicario_episcopal",
+    "name": {
+      "es": "Vicario episcopal",
+      "en": "Episcopal Vicar",
+      "pt": "Vicário episcopal"
+    },
+    "description": {
+      "es": "Es el presbítero que el obispo diocesano nombra, cuando el buen gobierno lo requiere, para una determinada circunscripción, para ciertos asuntos o respecto a fieles de un mismo rito o grupo. El Código de Derecho Canónico (cc. 476-481) le concede la misma potestad ordinaria que por derecho universal compete al vicario general, pero solo en su propio ámbito, con las mismas exigencias de edad, doctrina y prudencia. No puede ser obispo auxiliar no sea que lo sea obispo, y se le nombra para un tiempo determinado. Informa al obispo y no actúa contra su voluntad e intenciones.",
+      "en": "He is the presbyter whom the diocesan bishop appoints, when good government requires it, for a given circumscription, for certain matters, or with regard to the faithful of the same rite or group. The Code of Canon Law (cc. 476-481) grants him the same ordinary power that universal law grants to the vicar general, but only in his own sphere, with the same demands of age, doctrine, and prudence. He may be an auxiliary bishop, and otherwise is appointed for a determined time. He informs the bishop and does not act against his will and intentions.",
+      "pt": "É o presbítero que o bispo diocesano nomeia, quando o bom governo o exige, para uma determinada circunscrição, para certos assuntos ou relativamente aos fiéis do mesmo rito ou grupo. O Código de Direito Canônico (cc. 476-481) concede-lhe a mesma potestade ordinária que o direito universal confere ao vigário geral, mas apenas no seu próprio âmbito, com as mesmas exigências de idade, doutrina e prudência. Pode ser bispo auxiliar e, em caso contrário, é nomeado por tempo determinado. Informa o bispo e não age contra a sua vontade e intenções."
+    },
+    "group": "governance",
+    "after": "office_vicario_general",
+    "sources": [
+      "Código de Derecho Canónico, cc. 476-481",
+      "Código de Derecho Canónico, c. 478 §1"
+    ]
+  },
+  {
+    "id": "office_vicario_judicial",
+    "name": {
+      "es": "Vicario judicial",
+      "en": "Judicial Vicar",
+      "pt": "Vicário judicial"
+    },
+    "description": {
+      "es": "Es el presbítero que el obispo diocesano debe nombrar, distinto del vicario general, con potestad ordinaria de juzgar. El Código de Derecho Canónico (cc. 1419-1421) establece que el obispo es juez de primera instancia en la diócesis y puede ejercer la potestad judicial por sí o por medio de otros; el vicario judicial constituye un solo tribunal con el obispo, pero no juzga las causas que este se haya reservado. Debe ser doctor o licenciado en derecho canónico, de al menos treinta años y de buena fama. Al quedar vacante la sede no cesa ni puede ser removido por el administrador diocesano.",
+      "en": "He is the presbyter whom the diocesan bishop must appoint, distinct from the vicar general, with ordinary power to judge. The Code of Canon Law (cc. 1419-1421) establishes that the bishop is the judge of first instance in the diocese and may exercise judicial power himself or through others; the judicial vicar forms a single tribunal with the bishop, but does not judge the causes the bishop has reserved. He must be a doctor or licentiate in canon law, at least thirty years old, and of good reputation. When the see becomes vacant he does not cease and cannot be removed by the diocesan administrator.",
+      "pt": "É o presbítero que o bispo diocesano deve nomear, distinto do vigário geral, com potestade ordinária de julgar. O Código de Direito Canônico (cc. 1419-1421) estabelece que o bispo é juiz de primeira instância na diocese e pode exercer a potestade judicial por si ou por meio de outros; o vicário judicial constitui um só tribunal com o bispo, mas não julga as causas que este reservou. Deve ser doutor ou licenciado em direito canônico, de ao menos trinta anos e de boa fama. Ao vagar a sé, não cessa nem pode ser removido pelo administrador diocesano."
+    },
+    "group": "governance",
+    "after": "office_vicario_episcopal",
+    "sources": [
+      "Código de Derecho Canónico, cc. 1419-1421",
+      "Código de Derecho Canónico, cc. 1419-1446"
+    ]
+  },
+  {
+    "id": "office_canciller_curia",
+    "name": {
+      "es": "Canciller de la curia",
+      "en": "Chancellor of the Curia",
+      "pt": "Chanceler da cúria"
+    },
+    "description": {
+      "es": "Es quien cuida de que se redacten las actas de la curia, se expidan y se custodien en el archivo, según el Código de Derecho Canónico (cc. 482-486). Debe haber un canciller en cada curia y, si es necesario, un vicecanciller; ambos son de propio derecho notarios y secretarios de la curia. El canciller y los demás notarios deben ser personas de buena fama y por encima de toda sospecha, y el obispo puede removerlos libremente, salvo que el administrador diocesano lo haga sin el consentimiento del colegio de consultores. El archivo diocesano debe guardar con diligencia los documentos espirituales y temporales de la diócesis y de las parroquias.",
+      "en": "He is the one who sees to it that the acts of the curia are drawn up, dispatched, and kept in the archive, according to the Code of Canon Law (cc. 482-486). There must be a chancellor in each curia and, if necessary, a vice-chancellor; both are by office notaries and secretaries of the curia. The chancellor and the other notaries must be persons of good reputation and above all suspicion, and the bishop can remove them freely, unless the diocesan administrator does so without the consent of the college of consultors. The diocesan archive must carefully keep the spiritual and temporal documents of the diocese and the parishes.",
+      "pt": "É quem cuida para que as atas da cúria sejam redigidas, expedidas e guardadas no arquivo, segundo o Código de Direito Canônico (cc. 482-486). Deve haver um chanceler em cada cúria e, se necessário, um vice-chanceler; ambos são de próprio direito notários e secretários da cúria. O chanceler e os demais notários devem ser pessoas de boa fama e acima de toda suspeita, e o bispo pode removê-los livremente, salvo se o administrador diocesano o fizer sem o consentimento do colégio de consultores. O arquivo diocesano deve guardar com diligência os documentos espirituais e temporais da diocese e das paróquias."
+    },
+    "group": "governance",
+    "after": "office_vicario_judicial",
+    "sources": [
+      "Código de Derecho Canónico, cc. 482-486",
+      "Código de Derecho Canónico, c. 485"
+    ]
+  },
+  {
+    "id": "office_economo_diocesano",
+    "name": {
+      "es": "Ecónomo diocesano",
+      "en": "Diocesan Finance Officer",
+      "pt": "Economo diocesano"
+    },
+    "description": {
+      "es": "Es la persona que el obispo nombra, oído el colegio de consultores y el consejo de asuntos económicos, para administrar los bienes de la diócesis bajo la autoridad del obispo. El Código de Derecho Canónico (c. 494) pide que sea verdaderamente experto en materia económica y de reconocida honradez, lo nombra por cinco años, renovables, y no debe ser removido sin causa grave, que el obispo pondera oídos el colegio y el consejo. Corresponde al consejo aprobar el presupuesto anual de ingresos y gastos y las cuentas de fin de año. Al final de cada año, el ecónomo rinde cuentas al consejo.",
+      "en": "He is the person whom the bishop appoints, having heard the college of consultors and the finance council, to administer the goods of the diocese under the authority of the bishop. The Code of Canon Law (c. 494) requires that he be truly expert in financial matters and of proven honesty, appoints him for five years, renewable, and he is not to be removed without grave cause, which the bishop weighs having heard the college and the council. It belongs to the council to approve the annual budget of income and expenditure and the year-end accounts. At the end of each year the finance officer renders an account to the council.",
+      "pt": "É a pessoa que o bispo nomeia, ouvido o colégio de consultores e o conselho para os assuntos econômicos, para administrar os bens da diocese sob a autoridade do bispo. O Código de Direito Canônico (c. 494) pede que seja verdadeiro experto em matéria econômica e de reconhecida probidade, nomeia-o por cinco anos, renováveis, e não deve ser removido sem causa grave, que o bispo pondera ouvidos o colégio e o conselho. Compete ao conselho aprovar o orçamento anual de receitas e despesas e as contas de fim de ano. Ao final de cada ano, o economo presta contas ao conselho."
+    },
+    "group": "governance",
+    "after": "office_canciller_curia",
+    "sources": [
+      "Código de Derecho Canónico, c. 494",
+      "Código de Derecho Canónico, cc. 493-494"
+    ]
+  },
+  {
+    "id": "office_decano_colegio_cardenalicio",
+    "name": {
+      "es": "Decano del Colegio Cardenalicio",
+      "en": "Dean of the College of Cardinals",
+      "pt": "Decano do Colégio dos Cardeais"
+    },
+    "description": {
+      "es": "Es el cardenal que preside el Colegio cardenalicio y, impedido, hace sus veces el subdecano; ninguno de los dos tiene potestad de régimen sobre los demás cardenales, sino que se le considera primero entre iguales. El Código de Derecho Canónico (cc. 350 §4, 352 y 355) le da como título la diócesis de Ostia, junto con la Iglesia de la que ya era titular. Al quedar vacante el oficio, los cardenales con título suburbicario eligen al decano, y el Sumo Pontífice aprueba al elegido. Corresponde al decano ordenar de obispo al elegido Romano Pontífice si careciera de esa ordenación.",
+      "en": "He is the cardinal who presides over the College of Cardinals and, when impeded, is replaced by the subdean; neither of them has any power of governance over the other cardinals, but is considered first among equals. The Code of Canon Law (cc. 350 §4, 352 and 355) gives him as title the diocese of Ostia, together with the church of which he was already titular. When the office becomes vacant, the cardinals with a suburbicarian title elect the dean, and the Supreme Pontiff approves the one elected. It belongs to the dean to ordain as bishop the one elected Roman Pontiff if he lacked that ordination.",
+      "pt": "É o cardeal que preside o Colégio dos Cardeais e, impedido, é substituído pelo subdecano; nenhum dos dois tem potestade de regime sobre os demais cardeais, mas é considerado primeiro entre iguais. O Código de Direito Canônico (cc. 350 §4, 352 e 355) dá-lhe como título a diocese de Óstia, junto com a Igreja da qual já era titular. Ao vagar o ofício, os cardeais com título suburbicário elegem o decano, e o Sumo Pontífice aprova o eleito. Compete ao decano ordenar de bispo o eleito Romano Pontífice se carecesse dessa ordenação."
+    },
+    "group": "governance",
+    "after": "office_economo_diocesano",
+    "sources": [
+      "Código de Derecho Canónico, cc. 350 §4, 352 y 355",
+      "Código de Derecho Canónico, cc. 350-355"
+    ]
+  }
+]
