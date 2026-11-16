@@ -73,7 +73,8 @@ class CatholicDataRepository(
     private val dateChanges: kotlinx.coroutines.flow.Flow<CalendarDate>? = null,
     private val saintFetcher: DailySaintsFetcher = DailySaintsFetcher(),
     private val saintsCatalog: SaintsCatalog = SaintsCatalog.default,
-    private val ordersCatalog: OrdersCatalog = OrdersCatalog.default
+    private val ordersCatalog: OrdersCatalog = OrdersCatalog.default,
+    private val devotionsCatalog: DevotionsCatalog = DevotionsCatalog.default
 ) {
 
     /** Every Bible edition ships inside the app; there is nothing to download. */
@@ -561,20 +562,9 @@ class CatholicDataRepository(
     }
 
     /** Month names as (ES, EN, PT), indexed by [Calendar.MONTH]. */
-    private val MONTH_NAMES = listOf(
-        Triple("Enero", "January", "Janeiro"),
-        Triple("Febrero", "February", "Fevereiro"),
-        Triple("Marzo", "March", "Março"),
-        Triple("Abril", "April", "Abril"),
-        Triple("Mayo", "May", "Maio"),
-        Triple("Junio", "June", "Junho"),
-        Triple("Julio", "July", "Julho"),
-        Triple("Agosto", "August", "Agosto"),
-        Triple("Septiembre", "September", "Setembro"),
-        Triple("Octubre", "October", "Outubro"),
-        Triple("Noviembre", "November", "Novembro"),
-        Triple("Diciembre", "December", "Dezembro")
-    )
+    // A getter, not a stored field: init {} launches saint-of-the-day work that
+    // can call renderFeastDate before fields declared below it are assigned.
+    private val MONTH_NAMES: List<Triple<String, String, String>> get() = FEAST_MONTH_NAMES
 
     /** Renders one month/day in the active language ("5 de Noviembre" / "November 5" / "5 de Novembro"). */
     private fun renderFeastDate(dayNum: Int, monthIndex: Int): String {
@@ -667,8 +657,8 @@ class CatholicDataRepository(
             verseCache[key] = it
         }
     }
-    val marianApparitions: List<MarianApparition> get() = DevotionsAndHistoryData.marianApparitions
-    val christManifestations: List<ChristManifestation> get() = DevotionsAndHistoryData.christManifestations
+    val marianApparitions: List<MarianApparition> get() = devotionsCatalog.marian
+    val christManifestations: List<ChristManifestation> get() = devotionsCatalog.christ
 
     // Doctrine & Church History
     val churchHistoryEpochs: List<ChurchHistoryEpoch> get() = DevotionsAndHistoryData.churchHistoryEpochs
@@ -892,3 +882,18 @@ class CatholicDataRepository(
             .joinToString(" ") { it.text.get(language) }
     }
 }
+
+private val FEAST_MONTH_NAMES = listOf(
+    Triple("Enero", "January", "Janeiro"),
+    Triple("Febrero", "February", "Fevereiro"),
+    Triple("Marzo", "March", "Março"),
+    Triple("Abril", "April", "Abril"),
+    Triple("Mayo", "May", "Maio"),
+    Triple("Junio", "June", "Junho"),
+    Triple("Julio", "July", "Julho"),
+    Triple("Agosto", "August", "Agosto"),
+    Triple("Septiembre", "September", "Setembro"),
+    Triple("Octubre", "October", "Outubro"),
+    Triple("Noviembre", "November", "Novembro"),
+    Triple("Diciembre", "December", "Dezembro")
+)

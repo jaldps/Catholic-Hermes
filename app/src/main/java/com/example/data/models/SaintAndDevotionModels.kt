@@ -26,7 +26,13 @@ data class MarianApparition(
     val venerationPrayer: LocalizedText,
     val region: String = "Americas", // "Americas", "Europe", "Asia_Africa", "Universal"
     val country: LocalizedText = LocalizedText("Universal", "Universal", "Universal"),
-    val patronageOf: LocalizedText = LocalizedText("Devoción y amparo de los fieles", "Devotion and solace of the faithful", "Devoção e amparo dos fiéis")
+    val patronageOf: LocalizedText = LocalizedText("Devoción y amparo de los fieles", "Devotion and solace of the faithful", "Devoção e amparo dos fiéis"),
+    val recognition: LocalizedText? = null,
+    val practice: LocalizedText? = null,
+    val sources: List<String> = emptyList(),
+    val promiseAttribution: LocalizedText? = null,
+    val promiseSource: String? = null,
+    val prayerSource: String? = null
 )
 
 data class ChristManifestation(
@@ -40,7 +46,14 @@ data class ChristManifestation(
     val region: String = "Americas", // "Americas", "Europe", "Universal"
     val country: LocalizedText = LocalizedText("Universal", "Universal", "Universal"),
     val primarySanctuary: LocalizedText = LocalizedText("Santuarios y Parroquias Católicas", "Catholic Sanctuaries & Parishes", "Santuários e Paróquias Católicas"),
-    val recordedMiracles: LocalizedText = LocalizedText("Incontables milagros de sanación y conversión espiritual.", "Countless miracles of physical healing and spiritual conversion.", "Incontáveis milagres de cura e conversão espiritual.")
+    val recordedMiracles: LocalizedText = LocalizedText("Incontables milagros de sanación y conversión espiritual.", "Countless miracles of physical healing and spiritual conversion.", "Incontáveis milagres de cura e conversão espiritual."),
+    val year: String = "",
+    val recognition: LocalizedText? = null,
+    val practice: LocalizedText? = null,
+    val sources: List<String> = emptyList(),
+    val promiseAttribution: LocalizedText? = null,
+    val promiseSource: String? = null,
+    val prayerSource: String? = null
 )
 
 data class VerseOfTheDay(
