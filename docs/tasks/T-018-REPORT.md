@@ -1,6 +1,6 @@
 # T-018 · Informe de Codex
 
-Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega de **30/30 auditorías** y **10 devociones nuevas** (objetivo aproximado: 25).
+Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega de **30/30 auditorías** y **20 devociones nuevas** (objetivo aproximado: 25).
 
 Leídos el protocolo, las reglas editoriales, el contrato M7 y los 30 registros originales. Solo se modifican los tres archivos autorizados. Explicaciones originales en ES/EN/PT; no se compone ninguna oración. Cada fórmula conservada o sustituida se documenta. Una retirada significa que no se ha comprobado la procedencia de esa redacción, no un juicio contra la devoción. Las promesas de revelación privada se atribuyen y no se presentan como garantías mecánicas. No se trasladan las categorías de 2024 retrospectivamente a declaraciones históricas.
 
@@ -305,11 +305,88 @@ Year 1025 es fundación del monasterio; la talla es posterior (siglos XII/XIII s
 
 Se respeta la distinción entre llegada de los paulinos en 1382 y presencia del icono en 1384 según la cronología institucional, sin atribuirle autoría apostólica. Coronación en 1717 y aprobación de la fiesta en 1904 se documentan. No se reutilizan cifras históricas de peregrinos como actuales. Oración/promesas null.
 
+### 11. `nuestra_senora_knock`
+
+- [Knock Shrine, The Commissions of Enquiry](https://www.knockshrine.ie/the-commissions-of-enquiry-2/)
+- [Knock Shrine, A Pilgrim’s Guide, 2023](https://www.knockshrine.ie/wp-content/uploads/2023/08/A-Pilgrims-Guide-to-Knock-Shrine-A5-booklet-FINAL-PROOF.pdf)
+- [Francisco, videomensaje por el santuario internacional de Knock, 19-III-2021](https://www.vatican.va/content/francesco/en/messages/pont-messages/2021/documents/papa-francesco_20210319_videomessaggio-santuario-knock.html)
+
+Se distingue fiesta litúrgica del 17 de agosto de aniversario de las apariciones del 21; ambas fechas figuran en la guía institucional. No se convierte la opinión de las comisiones en un decreto con título o fecha inventados. No se toman indulgencias de la guía como vigentes sin decreto comprobado. Oración/promesas null, sin componer una fórmula.
+
+### 12. `virgen_banneux`
+
+- [Santuario de Banneux, The Apparitions, 1933](https://banneux-nd.be/en/the-apparitions/)
+- [Santuario de Banneux, Recognition of Apparitions: carta pastoral de 1949](https://banneux-nd.be/en/recognition-of-apparitions/)
+- [Santuario de Banneux, Fête de Notre-Dame de Banneux](https://banneux-nd.be/en/fete-de-notre-dame-de-banneux/)
+
+Se conservan atribución y sentido de la promesa de intercesión a partir del relato institucional, sin asegurar una curación. No se actualiza retrospectivamente la carta de 1949 a nihil obstat de 2024. Oración null: no se compone una oración específica.
+
+### 13. `virgen_beauraing`
+
+- [Santuario de Beauraing, Récit des Apparitions](https://sanctuairedebeauraing.be/recit-des-apparitions/)
+- [Diócesis de Namur, inauguración del jardín de Beauraing y reconocimiento de 1949](https://diocesedenamur.be/actualites/inauguration-du-jardin-renove-de-beauraing/)
+
+Se distinguen autorización del culto de 1943 y reconocimiento de 1949. El santuario informa de dos curaciones declaradas, sin nombres en la síntesis usada: no se inventan pacientes ni diagnósticos. La promesa de conversión se parafrasea con atribución al relato y sin fórmula de eficacia automática. Oración null.
+
+### 14. `virgen_la_salette`
+
+- [Santuario de La Salette, History: mandato del 19-IX-1851](https://www.lasalette.cef.fr/en/history/)
+- [Santuario de La Salette, Come to the Sanctuary: vida de peregrinación](https://www.lasalette.cef.fr/en/come-to-the-sanctuary/)
+
+Páginas institucionales consultadas por contenido indexado ante bloqueo HTTP 403; se explicita esta limitación. No se extrapola el reconocimiento de 1851 a versiones ampliadas posteriores del secreto ni se inventan predicciones. No se afirma prohibición de textos concretos sin documento identificado. Oración/promesas null, sin componer fórmulas.
+
+### 15. `virgen_walsingham`
+
+- [Santuario Nacional Católico de Walsingham, Our Story](https://www.walsingham.org.uk/our-story/)
+- [Santuario Nacional Católico de Walsingham, guía de peregrinos 2025](https://www.walsingham.org.uk/wp-content/uploads/2025/04/Pilgrim-Guide-2025-28-Mar-2025-email.pdf)
+- [Conferencia Episcopal de Inglaterra y Gales, Walsingham elevado a fiesta, 12-VII-2024](https://www.cbcew.org.uk/our-lady-of-walsingham-now-a-feast-in-dioceses-of-england/)
+
+1061 se presenta según el relato de la balada, no como decreto contemporáneo de aparición. Se distingue santuario católico de anglicano. El rango litúrgico de 2024 se limita a las diócesis de Inglaterra según el anuncio; no se universaliza. No se reutilizan indulgencias temporales de 2025. Oración/promesas null.
+
+### 16. `nuestra_senora_vailankanni`
+
+- [DDF, The Love of Mary at Vailankanni, carta de 1-VIII-2024](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240801_lettera-vescovo-tanjore_en.html)
+- [Portal Vailankanni.info, historia y fiesta de Nuestra Señora de la Salud](https://vailankanni.info/)
+
+El intervalo 1501–1600 expresa siglo XVI según el DDF, no una fecha exacta de aparición. No se etiqueta el portal local como sitio diocesano cuya titularidad no se haya comprobado. La historia de la diócesis menciona 1963 y la cronología del portal 1962 para la basílica: se evita adoptar una fecha hasta distinguir decreto y celebración. Se utiliza la carta del DDF de 2024, cuyo texto no emite un nihil obstat formal separado. Oración/promesas null.
+
+### 17. `nossa_senhora_nazare_portugal`
+
+- [Confraria de Nossa Senhora da Nazaré, Santuario](https://cnsn.pt/valencias/santuario-de-nossa-senhora-da-nazare/)
+- [Visit Portugal, Santuário de Nossa Senhora da Nazaré: historia y fiesta](https://www.visitportugal.com/pt-pt/node/135048)
+- [Agencia ECCLESIA, regreso de la imagen al santuario, 29-II-2024](https://agencia.ecclesia.pt/portal/lisboa-imagem-de-nossa-senhora-da-nazare-volta-ao-santuario/)
+
+1377 corresponde al templo documentado, no a una aparición. La leyenda de 1182 se presenta solo como tradición, sin afirmar evidencia contemporánea o autoría de la talla por san José o san Lucas. No se confunde el santuario de Portugal con la tradición brasileña. No se inventa decreto pontificio de aparición, coronación ni oración.
+
+### 18. `maria_auxiliadora`
+
+- [Arquidiócesis de Turín, ficha del Santuario de Maria Ausiliatrice, 2018](https://www.diocesi.torino.it/wp-content/uploads/2018/07/16_Schede-Storico_Artistiche-_-Santuario-di-Maria-Ausiliatrice-_-Torino.pdf)
+- [Basílica de Valdocco, conmemoración de la consagración de 1868](https://basilicamariaausiliatrice.it/la-consacrazione-della-basilica-maria-ausiliatrice-di-torino-154-anni-fa/)
+- [Vatican News, celebración del 24 de mayo, 2019](https://www.vaticannews.va/es/iglesia/news/2019-05/devocion-mariana-maria-auxiliadora-24-mayo.html)
+- [Santa Sede, Rosario del 4-V-2013: letanías lauretanas](https://www.vatican.va/news_services/liturgy/libretti/2013/20130504-libretto-rosario-smaria-maggiore.pdf)
+
+1868 refiere a la inauguración del santuario; no se inventa un año fundacional del título antiguo. Se omite la cronología 1814/1815 de la fiesta cuando las síntesis divergen, sin trasladar promesas de protección contra el cólera a una recomendación sanitaria. Oración auténtica de las letanías, traducida fielmente; no se compone fórmula salesiana.
+
+### 19. `virgen_paz_el_salvador`
+
+- [Pablo VI, radiomensaje por el patronazgo de El Salvador, 21-XI-1966](https://www.vatican.va/content/paul-vi/es/speeches/1966/documents/hf_p-vi_spe_19661121_regina-pacis.html)
+- [El Testigo Fiel, Nuestra Señora de la Paz: tradición de 1682 y fiesta](https://www.eltestigofiel.org/index.php?idu=ov_16702)
+- [Santa Sede, Rosario del 4-V-2013: letanías lauretanas](https://www.vatican.va/news_services/liturgy/libretti/2013/20130504-libretto-rosario-smaria-maggiore.pdf)
+
+La narración de 1682 procede de una síntesis devocional secundaria y se etiqueta como tradición; el patronazgo de 1966 se verifica en el documento papal primario. No se atribuyen a 1933 o a otra advocación de la Paz datos de este culto. Se utiliza la invocación tradicional Regina pacis, sin inventar oración ni promesa nacional de inmunidad.
+
+### 20. `virgen_suyapa`
+
+- [Juan Pablo II, homilía en Suyapa, 8-III-1983](https://www.vatican.va/content/john-paul-ii/es/homilies/1983/documents/hf_jp-ii_hom_19830308_tegucigalpa.html)
+- [Suyapa Medios, editorial sobre el hallazgo y la devoción de Suyapa](https://www.suyapamedios.hn/blog/iglesia-3/editorial-nuestra-voz-quien-es-la-virgen-mas-guapa-la-virgen-de-suyapa-6210)
+
+1747 se etiqueta como año del hallazgo según la tradición documentada por Suyapa Medios. No se inventa fecha o incipit del acto inicial de patronazgo; la homilía pontificia confirma el título recibido. No se copia la oración papal moderna ni se compone otra. Oración/promesas null.
+
 ## Validación
 
 ```text
 30 entries · 0 errors · 0 warnings
-10 entries · 0 errors · 0 warnings
+20 entries · 0 errors · 0 warnings
 ```
 
 Validador de detalles con `--partial` mientras no estén las 30 fichas; sin ese argumento al completar. Se ejecuta también `git diff --check` antes de entregar. No se modifica el Kotlin ni la implementación del coordinador, y no se afirma haber probado una instalación en dispositivo.

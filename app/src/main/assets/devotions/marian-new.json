@@ -610,5 +610,660 @@
       "Jasna Góra, Major Marian Celebrations",
       "Francisco, homilía en Częstochowa, 28-VII-2016"
     ]
+  },
+  {
+    "id": "nuestra_senora_knock",
+    "title": {
+      "es": "Nuestra Señora de Knock",
+      "en": "Our Lady of Knock",
+      "pt": "Nossa Senhora de Knock"
+    },
+    "feastDay": {
+      "es": "17 de agosto; 21: aniversario",
+      "en": "17 August; 21st: anniversary",
+      "pt": "17 de agosto; dia 21: aniversário"
+    },
+    "year": "1879",
+    "location": {
+      "es": "Knock, condado de Mayo, Irlanda",
+      "en": "Knock, County Mayo, Ireland",
+      "pt": "Knock, condado de Mayo, Irlanda"
+    },
+    "primarySanctuary": {
+      "es": "Santuario Internacional Eucarístico y Mariano de Knock",
+      "en": "International Eucharistic and Marian Shrine of Knock",
+      "pt": "Santuário Internacional Eucarístico e Mariano de Knock"
+    },
+    "history": {
+      "es": "La devoción de Knock recuerda el testimonio de vecinos que, el 21 de agosto de 1879, dijeron haber visto a María, san José, san Juan y un altar con el Cordero junto a la iglesia parroquial. El relato destaca el silencio de la escena y su referencia a la Eucaristía. Dos investigaciones eclesiásticas estudiaron la credibilidad de los testigos, en 1879–1880 y 1935–1936. El lugar se convirtió en un centro de peregrinación para Irlanda y para comunidades irlandesas de otros países. En 2021 Francisco celebró su elevación a santuario internacional de especial devoción eucarística y mariana. La oración invita al silencio interior, la escucha y la comunión con Cristo.",
+      "en": "Devotion to Our Lady of Knock recalls local people’s testimony that on 21 August 1879 they saw Mary, Saint Joseph, Saint John and an altar with the Lamb beside the parish church. The account emphasizes the scene’s silence and its reference to the Eucharist. Two ecclesiastical investigations examined the witnesses’ credibility in 1879–1880 and 1935–1936. The place became a pilgrimage centre for Ireland and Irish communities abroad. In 2021 Francis celebrated its elevation to an international shrine of special Eucharistic and Marian devotion. Prayer there invites interior silence, listening and communion with Christ rather than the pursuit of new predictions.",
+      "pt": "A devoção de Knock recorda o testemunho de moradores que, em 21 de agosto de 1879, disseram ter visto Maria, São José, São João e um altar com o Cordeiro junto à igreja paroquial. O relato destaca o silêncio da cena e sua referência à Eucaristia. Duas investigações eclesiásticas estudaram a credibilidade das testemunhas, em 1879–1880 e 1935–1936. O lugar tornou-se centro de peregrinação para a Irlanda e para comunidades irlandesas de outros países. Em 2021 Francisco celebrou sua elevação a santuário internacional de especial devoção eucarística e mariana. A oração convida ao silêncio interior, à escuta e à comunhão com Cristo."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "El reconocimiento del santuario y el examen de los testimonios no se convierten en una garantía de curación para los peregrinos.",
+      "en": "Recognition of the shrine and examination of testimony are not turned into a guarantee of healing for pilgrims.",
+      "pt": "O reconhecimento do santuário e o exame dos testemunhos não se transformam em garantia de cura para os peregrinos."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "Irlanda",
+      "en": "Ireland",
+      "pt": "Irlanda"
+    },
+    "patronageOf": {
+      "es": "Santuario nacional irlandés de devoción mariana.",
+      "en": "Irish national shrine of Marian devotion.",
+      "pt": "Santuário nacional irlandês de devoção mariana."
+    },
+    "recognition": {
+      "es": "Francisco confirmó públicamente su elevación a santuario internacional en el videomensaje del 19-III-2021. El santuario documenta las dos investigaciones históricas de los testimonios.",
+      "en": "Francis publicly affirmed its elevation to an international shrine in his video message of 19 March 2021. The shrine documents the two historical investigations of the testimony.",
+      "pt": "Francisco confirmou publicamente sua elevação a santuário internacional na videomensagem de 19-III-2021. O santuário documenta as duas investigações históricas dos testemunhos."
+    },
+    "practice": {
+      "es": "La fiesta del 17 de agosto y el aniversario del día 21 se acompañan de Eucaristía, reconciliación y Rosario, con espacio para el silencio.",
+      "en": "The 17 August feast and anniversary on the 21st include the Eucharist, reconciliation and Rosary, with space for silence.",
+      "pt": "A festa de 17 de agosto e o aniversário do dia 21 são acompanhados de Eucaristia, reconciliação e Rosário, com espaço para o silêncio."
+    },
+    "sources": [
+      "Knock Shrine, The Commissions of Enquiry",
+      "Knock Shrine, A Pilgrim’s Guide, 2023",
+      "Francisco, videomensaje por el santuario internacional de Knock, 19-III-2021"
+    ]
+  },
+  {
+    "id": "virgen_banneux",
+    "title": {
+      "es": "Nuestra Señora de Banneux: Virgen de los Pobres",
+      "en": "Our Lady of Banneux: Virgin of the Poor",
+      "pt": "Nossa Senhora de Banneux: Virgem dos Pobres"
+    },
+    "feastDay": {
+      "es": "15 de enero",
+      "en": "15 January",
+      "pt": "15 de janeiro"
+    },
+    "year": "1933",
+    "location": {
+      "es": "Banneux, provincia de Lieja, Bélgica",
+      "en": "Banneux, Province of Liège, Belgium",
+      "pt": "Banneux, província de Liège, Bélgica"
+    },
+    "primarySanctuary": {
+      "es": "Santuario de la Virgen de los Pobres de Banneux",
+      "en": "Shrine of the Virgin of the Poor at Banneux",
+      "pt": "Santuário da Virgem dos Pobres de Banneux"
+    },
+    "history": {
+      "es": "Banneux recuerda los encuentros que Mariette Beco relató entre el 15 de enero y el 2 de marzo de 1933. En ellos, María se presenta como Virgen de los Pobres y dirige la atención hacia una fuente y hacia el sufrimiento de los enfermos. La historia del santuario comprende la construcción de una capilla, la acogida de peregrinos y un discernimiento eclesial prolongado. El obispo de Lieja reconoció las ocho apariciones en 1949. Su espiritualidad invita a la confianza, la oración y la solidaridad con quienes viven pobreza o enfermedad. El agua acompaña la oración como signo; no reemplaza la atención médica ni promete una curación automática.",
+      "en": "Banneux recalls the encounters Mariette Beco reported between 15 January and 2 March 1933. In them, Mary presents herself as the Virgin of the Poor and directs attention towards a spring and sick people’s suffering. The shrine’s history includes the building of a chapel, welcoming pilgrims and a prolonged ecclesial discernment. The Bishop of Liège recognized the eight apparitions in 1949. Its spirituality invites trust, prayer and solidarity with people experiencing poverty or illness. The water accompanies prayer as a sign; it neither replaces medical care nor promises automatic healing to people who visit the spring or take its water home.",
+      "pt": "Banneux recorda os encontros que Mariette Beco relatou entre 15 de janeiro e 2 de março de 1933. Neles, Maria se apresenta como Virgem dos Pobres e dirige a atenção para uma fonte e para o sofrimento dos enfermos. A história do santuário compreende a construção de uma capela, a acolhida de peregrinos e um discernimento eclesial prolongado. O bispo de Liège reconheceu as oito aparições em 1949. Sua espiritualidade convida à confiança, à oração e à solidariedade com quem vive pobreza ou doença. A água acompanha a oração como sinal; não substitui o atendimento médico nem promete cura automática."
+    },
+    "promises": {
+      "text": {
+        "es": "En el relato de Mariette, María ofrece su intercesión y vincula la fuente al alivio de los enfermos de todas las naciones. Es una invitación a la confianza y la oración, no una promesa de curación física para cada persona.",
+        "en": "In Mariette’s account, Mary offers her intercession and associates the spring with relief for sick people of all nations. It is an invitation to trust and prayer, not a promise of physical healing for every person.",
+        "pt": "No relato de Mariette, Maria oferece sua intercessão e associa a fonte ao alívio dos enfermos de todas as nações. É um convite à confiança e à oração, não uma promessa de cura física para cada pessoa."
+      },
+      "attribution": {
+        "es": "Relato de Mariette Beco sobre las palabras de María en enero de 1933; revelación privada.",
+        "en": "Mariette Beco’s account of Mary’s words in January 1933; private revelation.",
+        "pt": "Relato de Mariette Beco sobre as palavras de Maria em janeiro de 1933; revelação privada."
+      },
+      "source": "Santuario de Banneux, The Apparitions, encuentro del 19-I-1933. Paráfrasis fiel."
+    },
+    "miracles": {
+      "es": "El reconocimiento de las apariciones se distingue del juicio sobre una curación particular. No se presenta una lista de milagros sin dictámenes identificados.",
+      "en": "Recognition of the apparitions is distinct from judgement about a particular healing. No list of miracles is presented without identified judgements.",
+      "pt": "O reconhecimento das aparições se distingue do juízo sobre uma cura particular. Não se apresenta lista de milagres sem pareceres identificados."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "Bélgica",
+      "en": "Belgium",
+      "pt": "Bélgica"
+    },
+    "patronageOf": {
+      "es": "Invocada como Virgen de los Pobres, con especial atención a los enfermos.",
+      "en": "Invoked as the Virgin of the Poor, with particular attention to sick people.",
+      "pt": "Invocada como Virgem dos Pobres, com atenção especial aos enfermos."
+    },
+    "recognition": {
+      "es": "Louis-Joseph Kerkhofs, obispo de Lieja, reconoció las ocho apariciones en su carta pastoral del 22-VIII-1949, reproducida por el santuario.",
+      "en": "Bishop Louis-Joseph Kerkhofs of Liège recognized the eight apparitions in his pastoral letter of 22 August 1949, reproduced by the shrine.",
+      "pt": "Louis-Joseph Kerkhofs, bispo de Liège, reconheceu as oito aparições em sua carta pastoral de 22-VIII-1949, reproduzida pelo santuário."
+    },
+    "practice": {
+      "es": "La fiesta del 15 de enero y la visita a la fuente se viven con oración, Eucaristía y cuidado de los enfermos.",
+      "en": "The 15 January feast and visits to the spring are lived through prayer, the Eucharist and care for sick people.",
+      "pt": "A festa de 15 de janeiro e a visita à fonte são vividas com oração, Eucaristia e cuidado dos enfermos."
+    },
+    "sources": [
+      "Santuario de Banneux, The Apparitions, 1933",
+      "Santuario de Banneux, Recognition of Apparitions: carta pastoral de 1949",
+      "Santuario de Banneux, Fête de Notre-Dame de Banneux"
+    ]
+  },
+  {
+    "id": "virgen_beauraing",
+    "title": {
+      "es": "Nuestra Señora de Beauraing: Virgen del Corazón de Oro",
+      "en": "Our Lady of Beauraing: Virgin of the Golden Heart",
+      "pt": "Nossa Senhora de Beauraing: Virgem do Coração de Ouro"
+    },
+    "feastDay": {
+      "es": "29 de noviembre: aniversario",
+      "en": "29 November: anniversary",
+      "pt": "29 de novembro: aniversário"
+    },
+    "year": "1932–1933",
+    "location": {
+      "es": "Beauraing, provincia de Namur, Bélgica",
+      "en": "Beauraing, Province of Namur, Belgium",
+      "pt": "Beauraing, província de Namur, Bélgica"
+    },
+    "primarySanctuary": {
+      "es": "Santuario de Nuestra Señora de Beauraing",
+      "en": "Shrine of Our Lady of Beauraing",
+      "pt": "Santuário de Nossa Senhora de Beauraing"
+    },
+    "history": {
+      "es": "La devoción de Beauraing procede del testimonio de cinco niños sobre encuentros con María durante el invierno de 1932–1933. El relato destaca su llamado a la oración, al amor de Jesús y a la conversión, así como el signo de un corazón luminoso. Por ello es venerada como Virgen del Corazón de Oro. La Iglesia estudió los testimonios y autorizó el culto antes del reconocimiento de los hechos por el obispo de Namur en 1949. El santuario conserva el lugar de oración y espacios de acogida para peregrinos. Su mensaje se propone como revelación privada orientada al Evangelio, no como una doctrina nueva ni una obligación de aceptar cada testimonio posterior.",
+      "en": "Devotion to Our Lady of Beauraing comes from five children’s testimony about encounters with Mary during the winter of 1932–1933. The account emphasizes her call to prayer, love of Jesus and conversion, together with the sign of a luminous heart. She is therefore venerated as the Virgin of the Golden Heart. The Church studied the testimony and authorized devotion before the Bishop of Namur’s recognition of the events in 1949. The shrine preserves the place of prayer and welcoming spaces for pilgrims. Its message is offered as private revelation directed towards the Gospel, not as new doctrine or an obligation to accept every later testimony.",
+      "pt": "A devoção de Beauraing procede do testemunho de cinco crianças sobre encontros com Maria durante o inverno de 1932–1933. O relato destaca seu chamado à oração, ao amor de Jesus e à conversão, assim como o sinal de um coração luminoso. Por isso é venerada como Virgem do Coração de Ouro. A Igreja estudou os testemunhos e autorizou o culto antes do reconhecimento dos fatos pelo bispo de Namur em 1949. O santuário conserva o lugar de oração e espaços de acolhida para peregrinos. Sua mensagem é proposta como revelação privada orientada ao Evangelho, não como doutrina nova nem obrigação de aceitar cada testemunho posterior."
+    },
+    "promises": {
+      "text": {
+        "es": "El relato de Beauraing atribuye a María la promesa de conversión de los pecadores, junto con el llamado a orar y amar a su Hijo. No convierte una práctica devocional en control de la libertad de otras personas ni fija un plazo para su conversión.",
+        "en": "The Beauraing account attributes to Mary the promise of sinners’ conversion, together with the call to pray and love her Son. It does not turn a devotional practice into control over other people’s freedom or set a deadline for their conversion.",
+        "pt": "O relato de Beauraing atribui a Maria a promessa de conversão dos pecadores, junto ao chamado a rezar e amar seu Filho. Não transforma uma prática devocional em controle sobre a liberdade de outras pessoas nem fixa prazo para sua conversão."
+      },
+      "attribution": {
+        "es": "Palabras de María según el relato de los niños conservado por el santuario; revelación privada.",
+        "en": "Mary’s words according to the children’s account preserved by the shrine; private revelation.",
+        "pt": "Palavras de Maria segundo o relato das crianças conservado pelo santuário; revelação privada."
+      },
+      "source": "Santuario de Beauraing, Récit des Apparitions: promesa de conversión y llamado al amor de Jesús. Paráfrasis fiel."
+    },
+    "miracles": {
+      "es": "El santuario menciona dos curaciones declaradas milagrosas. No se añaden otros casos ni se convierte la aprobación de apariciones en garantía de curación.",
+      "en": "The shrine mentions two healings declared miraculous. No other cases are added, and approval of apparitions is not turned into a guarantee of healing.",
+      "pt": "O santuário menciona duas curas declaradas milagrosas. Não se acrescentam outros casos nem se transforma a aprovação das aparições em garantia de cura."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "Bélgica",
+      "en": "Belgium",
+      "pt": "Bélgica"
+    },
+    "patronageOf": {
+      "es": "Venerada como Virgen del Corazón de Oro.",
+      "en": "Venerated as the Virgin of the Golden Heart.",
+      "pt": "Venerada como Virgem do Coração de Ouro."
+    },
+    "recognition": {
+      "es": "El obispo de Namur André-Marie Charue reconoció los hechos el 2-VII-1949, con asentimiento de la Santa Sede, según el santuario y la diócesis.",
+      "en": "Bishop André-Marie Charue of Namur recognized the events on 2 July 1949, with the Holy See’s assent, according to the shrine and diocese.",
+      "pt": "O bispo de Namur André-Marie Charue reconheceu os fatos em 2-VII-1949, com assentimento da Santa Sé, segundo o santuário e a diocese."
+    },
+    "practice": {
+      "es": "El aniversario de noviembre y la peregrinación se acompañan de Rosario, Eucaristía y oración por la conversión y la paz.",
+      "en": "The November anniversary and pilgrimage include the Rosary, the Eucharist and prayer for conversion and peace.",
+      "pt": "O aniversário de novembro e a peregrinação são acompanhados de Rosário, Eucaristia e oração pela conversão e pela paz."
+    },
+    "sources": [
+      "Santuario de Beauraing, Récit des Apparitions",
+      "Diócesis de Namur, inauguración del jardín de Beauraing y reconocimiento de 1949"
+    ]
+  },
+  {
+    "id": "virgen_la_salette",
+    "title": {
+      "es": "Nuestra Señora de La Salette",
+      "en": "Our Lady of La Salette",
+      "pt": "Nossa Senhora de La Salette"
+    },
+    "feastDay": {
+      "es": "19 de septiembre",
+      "en": "19 September",
+      "pt": "19 de setembro"
+    },
+    "year": "1846",
+    "location": {
+      "es": "La Salette-Fallavaux, Isère, Francia",
+      "en": "La Salette-Fallavaux, Isère, France",
+      "pt": "La Salette-Fallavaux, Isère, França"
+    },
+    "primarySanctuary": {
+      "es": "Santuario de Nuestra Señora de La Salette",
+      "en": "Shrine of Our Lady of La Salette",
+      "pt": "Santuário de Nossa Senhora de La Salette"
+    },
+    "history": {
+      "es": "La Salette recuerda el encuentro que Maximin Giraud y Mélanie Calvat relataron el 19 de septiembre de 1846 en los pastos de montaña de Isère. Describieron a una Señora llorando, con un crucifijo, que los llamó a comunicar un mensaje de conversión. Tras una investigación, el obispo de Grenoble reconoció la aparición en 1851 y promovió un santuario. La peregrinación conserva un acento en la reconciliación, la oración y la atención a la vida cotidiana de las personas. La aprobación histórica debe distinguirse de cualquier publicación posterior atribuida a los videntes. El mensaje cristiano no invita a buscar fechas del fin del mundo, sino a volver a Cristo.",
+      "en": "La Salette recalls the encounter Maximin Giraud and Mélanie Calvat reported on 19 September 1846 in the mountain pastures of Isère. They described a weeping Lady with a crucifix who called them to communicate a message of conversion. Following an investigation, the Bishop of Grenoble recognized the apparition in 1851 and promoted a shrine. Pilgrimage retains an emphasis on reconciliation, prayer and attention to people’s everyday lives. Historical approval should be distinguished from every later publication attributed to the visionaries. The Christian message invites a return to Christ rather than the search for dates for the end of the world.",
+      "pt": "La Salette recorda o encontro que Maximin Giraud e Mélanie Calvat relataram em 19 de setembro de 1846 nos pastos de montanha de Isère. Descreveram uma Senhora chorando, com um crucifixo, que os chamou a comunicar uma mensagem de conversão. Após uma investigação, o bispo de Grenoble reconheceu a aparição em 1851 e promoveu um santuário. A peregrinação conserva um acento na reconciliação, na oração e na atenção à vida cotidiana das pessoas. A aprovação histórica deve ser distinguida de qualquer publicação posterior atribuída aos videntes. A mensagem cristã não convida a buscar datas do fim do mundo, mas a voltar para Cristo."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "El reconocimiento de la aparición no constituye una declaración sobre cada curación o publicación posterior. No se enumeran milagros médicos sin dictamen concreto.",
+      "en": "Recognition of the apparition is not a declaration about every healing or later publication. Medical miracles are not listed without a specific judgement.",
+      "pt": "O reconhecimento da aparição não constitui declaração sobre cada cura ou publicação posterior. Não se enumeram milagres médicos sem parecer concreto."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "Francia",
+      "en": "France",
+      "pt": "França"
+    },
+    "patronageOf": {
+      "es": "Invocada en la espiritualidad de la reconciliación.",
+      "en": "Invoked within a spirituality of reconciliation.",
+      "pt": "Invocada na espiritualidade da reconciliação."
+    },
+    "recognition": {
+      "es": "Philibert de Bruillard, obispo de Grenoble, reconoció la aparición en su mandato del 19-IX-1851; el santuario transcribe el juicio y su confirmación posterior.",
+      "en": "Bishop Philibert de Bruillard of Grenoble recognized the apparition in his mandate of 19 September 1851; the shrine reproduces the judgement and its subsequent confirmation.",
+      "pt": "Philibert de Bruillard, bispo de Grenoble, reconheceu a aparição em seu mandamento de 19-IX-1851; o santuário transcreve o juízo e sua confirmação posterior."
+    },
+    "practice": {
+      "es": "La peregrinación y la fiesta del 19 de septiembre se viven con Eucaristía, reconciliación, Rosario y escucha del Evangelio.",
+      "en": "Pilgrimage and the 19 September feast are lived through the Eucharist, reconciliation, the Rosary and listening to the Gospel.",
+      "pt": "A peregrinação e a festa de 19 de setembro são vividas com Eucaristia, reconciliação, Rosário e escuta do Evangelho."
+    },
+    "sources": [
+      "Santuario de La Salette, History: mandato del 19-IX-1851",
+      "Santuario de La Salette, Come to the Sanctuary: vida de peregrinación"
+    ]
+  },
+  {
+    "id": "virgen_walsingham",
+    "title": {
+      "es": "Nuestra Señora de Walsingham",
+      "en": "Our Lady of Walsingham",
+      "pt": "Nossa Senhora de Walsingham"
+    },
+    "feastDay": {
+      "es": "24 de septiembre",
+      "en": "24 September",
+      "pt": "24 de setembro"
+    },
+    "year": "1061",
+    "location": {
+      "es": "Walsingham, Norfolk, Inglaterra",
+      "en": "Walsingham, Norfolk, England",
+      "pt": "Walsingham, Norfolk, Inglaterra"
+    },
+    "primarySanctuary": {
+      "es": "Santuario Nacional Católico y Basílica de Nuestra Señora de Walsingham",
+      "en": "Catholic National Shrine and Basilica of Our Lady of Walsingham",
+      "pt": "Santuário Nacional Católico e Basílica de Nossa Senhora de Walsingham"
+    },
+    "history": {
+      "es": "La tradición de Walsingham sitúa en 1061 la experiencia de Richeldis de Faverches, que habría recibido la invitación de construir una réplica de la casa de la Anunciación. El relato, transmitido en la balada de Pynson, expresa la cercanía del misterio de Nazaret a la vida del pueblo inglés. El santuario medieval fue destruido durante la Reforma, pero la devoción sobrevivió y la peregrinación católica se restauró alrededor de la Slipper Chapel. En 1934 fue reconocida como santuario nacional y en 2015 recibió el título de basílica menor. Esta ficha presenta el santuario católico, distinguiéndolo del santuario anglicano y valorando la oración por la unidad cristiana.",
+      "en": "Walsingham’s tradition places Richeldis de Faverches’s experience in 1061, when she is said to have been invited to build a replica of the house of the Annunciation. The account, transmitted in the Pynson Ballad, expresses the closeness of Nazareth’s mystery to English life. The medieval shrine was destroyed during the Reformation, but devotion survived and Catholic pilgrimage was restored around the Slipper Chapel. In 1934 it was recognized as a national shrine and in 2015 received the title of minor basilica. This entry presents the Catholic shrine, distinguishing it from the Anglican shrine while valuing prayer for Christian unity.",
+      "pt": "A tradição de Walsingham situa em 1061 a experiência de Richeldis de Faverches, que teria recebido o convite de construir uma réplica da casa da Anunciação. O relato, transmitido na balada de Pynson, expressa a proximidade do mistério de Nazaré à vida do povo inglês. O santuário medieval foi destruído durante a Reforma, mas a devoção sobreviveu e a peregrinação católica foi restaurada ao redor da Slipper Chapel. Em 1934 foi reconhecida como santuário nacional e em 2015 recebeu o título de basílica menor. Esta ficha apresenta o santuário católico, distinguindo-o do santuário anglicano e valorizando a oração pela unidade cristã."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición medieval se distingue del reconocimiento actual del santuario. No se afirma una curación particular sin documentación identificada.",
+      "en": "The medieval tradition is distinct from the shrine’s present recognition. No particular healing is asserted without identified documentation.",
+      "pt": "A tradição medieval se distingue do reconhecimento atual do santuário. Não se afirma uma cura particular sem documentação identificada."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "Reino Unido",
+      "en": "United Kingdom",
+      "pt": "Reino Unido"
+    },
+    "patronageOf": {
+      "es": "Santuario nacional católico de Inglaterra.",
+      "en": "Catholic national shrine of England.",
+      "pt": "Santuário nacional católico da Inglaterra."
+    },
+    "recognition": {
+      "es": "El santuario documenta el título de basílica menor de 2015. La Conferencia Episcopal anunció en 2024 la concesión del rango de fiesta para el 24 de septiembre en las diócesis de Inglaterra.",
+      "en": "The shrine documents its 2015 minor basilica title. In 2024 the Bishops’ Conference announced the grant of feast rank for 24 September in the dioceses of England.",
+      "pt": "O santuário documenta o título de basílica menor de 2015. A Conferência Episcopal anunciou em 2024 a concessão do grau de festa para 24 de setembro nas dioceses da Inglaterra."
+    },
+    "practice": {
+      "es": "La peregrinación incluye Eucaristía, reconciliación, Rosario y oración por las familias y la unidad de los cristianos.",
+      "en": "Pilgrimage includes the Eucharist, reconciliation, the Rosary and prayer for families and Christian unity.",
+      "pt": "A peregrinação inclui Eucaristia, reconciliação, Rosário e oração pelas famílias e pela unidade dos cristãos."
+    },
+    "sources": [
+      "Santuario Nacional Católico de Walsingham, Our Story",
+      "Santuario Nacional Católico de Walsingham, guía de peregrinos 2025",
+      "Conferencia Episcopal de Inglaterra y Gales, Walsingham elevado a fiesta, 12-VII-2024"
+    ]
+  },
+  {
+    "id": "nuestra_senora_vailankanni",
+    "title": {
+      "es": "Nuestra Señora de la Salud de Vailankanni",
+      "en": "Our Lady of Good Health of Vailankanni",
+      "pt": "Nossa Senhora da Saúde de Vailankanni"
+    },
+    "feastDay": {
+      "es": "8 de septiembre",
+      "en": "8 September",
+      "pt": "8 de setembro"
+    },
+    "year": "1501–1600",
+    "location": {
+      "es": "Vailankanni, Tamil Nadu, India",
+      "en": "Vailankanni, Tamil Nadu, India",
+      "pt": "Vailankanni, Tamil Nadu, Índia"
+    },
+    "primarySanctuary": {
+      "es": "Basílica de Nuestra Señora de la Salud",
+      "en": "Basilica of Our Lady of Good Health",
+      "pt": "Basílica de Nossa Senhora da Saúde"
+    },
+    "history": {
+      "es": "Vailankanni es un santuario mariano de la costa de Tamil Nadu cuya tradición devocional se remonta al siglo XVI. Sus relatos vinculan la cercanía de María con niños pobres y enfermos, la generosidad de compartir y el auxilio recibido por navegantes. Esas narraciones deben leerse como tradición del santuario, sin fabricar fechas exactas o expedientes médicos. La peregrinación reúne a católicos y a personas de otras religiones que buscan consuelo. En 2002 acogió la Jornada Mundial del Enfermo. La carta del Dicasterio para la Doctrina de la Fe de 2024 valora sus frutos y el amor de Cristo expresado mediante la intercesión de María.",
+      "en": "Vailankanni is a Marian shrine on the Tamil Nadu coast whose devotional tradition dates to the sixteenth century. Its accounts associate Mary’s closeness with poor and sick children, the generosity of sharing and help received by seafarers. These narratives should be read as the shrine’s tradition without inventing exact dates or medical records. Pilgrimage gathers Catholics and people of other religions seeking consolation. In 2002 it hosted the World Day of the Sick. The Dicastery for the Doctrine of the Faith’s 2024 letter values its fruits and Christ’s love expressed through Mary’s intercession, encouraging practical care for those who need help.",
+      "pt": "Vailankanni é um santuário mariano da costa de Tamil Nadu cuja tradição devocional remonta ao século XVI. Seus relatos vinculam a proximidade de Maria a crianças pobres e enfermas, à generosidade de compartilhar e ao auxílio recebido por navegantes. Essas narrativas devem ser lidas como tradição do santuário, sem fabricar datas exatas ou processos médicos. A peregrinação reúne católicos e pessoas de outras religiões que procuram consolo. Em 2002 acolheu a Jornada Mundial do Enfermo. A carta do Dicastério para a Doutrina da Fé de 2024 valoriza seus frutos e o amor de Cristo expresso mediante a intercessão de Maria."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La carta de 2024 recoge testimonios de salud y consuelo. No se convierten en dictámenes médicos individuales ni en promesa de curación para cada peregrino.",
+      "en": "The 2024 letter recounts testimonies of health and consolation. They are not turned into individual medical judgements or a promise of healing for every pilgrim.",
+      "pt": "A carta de 2024 recolhe testemunhos de saúde e consolo. Não são transformados em pareceres médicos individuais nem em promessa de cura para cada peregrino."
+    },
+    "prayer": null,
+    "region": "Asia_Africa",
+    "country": {
+      "es": "India",
+      "en": "India",
+      "pt": "Índia"
+    },
+    "patronageOf": {
+      "es": "Invocada como Madre de la Salud y consuelo de los enfermos.",
+      "en": "Invoked as Mother of Health and consolation of sick people.",
+      "pt": "Invocada como Mãe da Saúde e consolo dos enfermos."
+    },
+    "recognition": {
+      "es": "El DDF expresó, con aprobación de Francisco, su valoración de la devoción en la carta al obispo de Thanjavur del 1-VIII-2024. No se la presenta como un decreto distinto de nihil obstat que el texto no contiene.",
+      "en": "With Francis’s approval, the DDF expressed its appreciation of the devotion in its letter to the Bishop of Thanjavur of 1 August 2024. It is not presented as a separate nihil obstat decree absent from the text.",
+      "pt": "O DDF expressou, com aprovação de Francisco, sua valorização da devoção na carta ao bispo de Thanjavur de 1-VIII-2024. Não é apresentada como decreto distinto de nihil obstat que o texto não contém."
+    },
+    "practice": {
+      "es": "La fiesta del 8 de septiembre se prepara con oración y peregrinación. El cuidado de los enfermos acompaña la Eucaristía y la caridad.",
+      "en": "The 8 September feast is prepared through prayer and pilgrimage. Care for sick people accompanies the Eucharist and charity.",
+      "pt": "A festa de 8 de setembro é preparada com oração e peregrinação. O cuidado dos enfermos acompanha a Eucaristia e a caridade."
+    },
+    "sources": [
+      "DDF, The Love of Mary at Vailankanni, carta de 1-VIII-2024",
+      "Portal Vailankanni.info, historia y fiesta de Nuestra Señora de la Salud"
+    ]
+  },
+  {
+    "id": "nossa_senhora_nazare_portugal",
+    "title": {
+      "es": "Nuestra Señora de Nazaré: Portugal",
+      "en": "Our Lady of Nazaré: Portugal",
+      "pt": "Nossa Senhora da Nazaré: Portugal"
+    },
+    "feastDay": {
+      "es": "8 de septiembre",
+      "en": "8 September",
+      "pt": "8 de setembro"
+    },
+    "year": "1377",
+    "location": {
+      "es": "Sítio da Nazaré, Portugal",
+      "en": "Sítio da Nazaré, Portugal",
+      "pt": "Sítio da Nazaré, Portugal"
+    },
+    "primarySanctuary": {
+      "es": "Santuario de Nuestra Señora de Nazaré",
+      "en": "Shrine of Our Lady of Nazaré",
+      "pt": "Santuário de Nossa Senhora da Nazaré"
+    },
+    "history": {
+      "es": "El santuario de Nazaré está situado sobre la costa portuguesa y conserva una tradición mariana estrechamente ligada al paisaje y a la vida de las comunidades. El relato de Fuas Roupinho y su auxilio junto al acantilado pertenece a la memoria devocional; se distingue de los documentos sobre los edificios. La historia patrimonial sitúa la fundación del templo por Fernando I en 1377, seguida de reconstrucciones posteriores. La imagen de María con el Niño es centro de peregrinación, especialmente el 8 de septiembre. Su regreso tras una restauración fue acompañado por el patriarca de Lisboa en 2024. Esta ficha se refiere al santuario portugués, no al Círio de Belém de Brasil.",
+      "en": "The shrine of Nazaré stands above the Portuguese coast and preserves a Marian tradition closely linked to the landscape and community life. The account of Fuas Roupinho receiving help beside the cliff belongs to devotional memory and is distinguished from documents about the buildings. The heritage history places the church’s foundation by Ferdinand I in 1377, followed by later rebuilding. The image of Mary with the Child is a centre of pilgrimage, particularly on 8 September. Its return after restoration was accompanied by the Patriarch of Lisbon in 2024. This entry concerns the Portuguese shrine rather than Brazil’s Círio of Belém.",
+      "pt": "O santuário da Nazaré está situado sobre a costa portuguesa e conserva uma tradição mariana estreitamente ligada à paisagem e à vida das comunidades. O relato de D. Fuas Roupinho e de seu auxílio junto à falésia pertence à memória devocional; distingue-se dos documentos sobre os edifícios. A história patrimonial situa a fundação do templo por D. Fernando I em 1377, seguida de reconstruções posteriores. A imagem de Maria com o Menino é centro de peregrinação, especialmente em 8 de setembro. Seu retorno após uma restauração foi acompanhado pelo patriarca de Lisboa em 2024. Esta ficha se refere ao santuário português, não ao Círio de Belém do Brasil."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "El auxilio a Fuas Roupinho se presenta como tradición, sin añadir un decreto canónico no comprobado sobre el episodio.",
+      "en": "Help given to Fuas Roupinho is presented as tradition, without adding an unverified canonical decree about the episode.",
+      "pt": "O auxílio a D. Fuas Roupinho é apresentado como tradição, sem acrescentar decreto canônico não comprovado sobre o episódio."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "Portugal",
+      "en": "Portugal",
+      "pt": "Portugal"
+    },
+    "patronageOf": {
+      "es": "Devoción de Nazaré y de sus comunidades peregrinas.",
+      "en": "A devotion of Nazaré and its pilgrim communities.",
+      "pt": "Devoção da Nazaré e de suas comunidades peregrinas."
+    },
+    "recognition": {
+      "es": "El culto del santuario continúa públicamente: la Agencia ECCLESIA documentó el regreso de la imagen restaurada con el patriarca de Lisboa el 27-II-2024. No se atribuye a ese acto una declaración sobre apariciones.",
+      "en": "The shrine’s devotion continues publicly: Agência ECCLESIA documented the restored image’s return with the Patriarch of Lisbon on 27 February 2024. That event is not attributed a declaration concerning apparitions.",
+      "pt": "O culto do santuário continua publicamente: a Agência ECCLESIA documentou o retorno da imagem restaurada com o patriarca de Lisboa em 27-II-2024. Não se atribui a esse ato declaração sobre aparições."
+    },
+    "practice": {
+      "es": "La fiesta del 8 de septiembre, la peregrinación y la oración se unen a la Eucaristía y a la atención a quienes necesitan acogida.",
+      "en": "The 8 September feast, pilgrimage and prayer are joined to the Eucharist and care for those needing welcome.",
+      "pt": "A festa de 8 de setembro, a peregrinação e a oração se unem à Eucaristia e à atenção a quem precisa de acolhida."
+    },
+    "sources": [
+      "Confraria de Nossa Senhora da Nazaré, Santuario",
+      "Visit Portugal, Santuário de Nossa Senhora da Nazaré: historia y fiesta",
+      "Agencia ECCLESIA, regreso de la imagen al santuario, 29-II-2024"
+    ]
+  },
+  {
+    "id": "maria_auxiliadora",
+    "title": {
+      "es": "María Auxiliadora de los Cristianos",
+      "en": "Mary Help of Christians",
+      "pt": "Maria Auxiliadora dos Cristãos"
+    },
+    "feastDay": {
+      "es": "24 de mayo",
+      "en": "24 May",
+      "pt": "24 de maio"
+    },
+    "year": "1868",
+    "location": {
+      "es": "Valdocco, Turín; devoción internacional",
+      "en": "Valdocco, Turin; international devotion",
+      "pt": "Valdocco, Turim; devoção internacional"
+    },
+    "primarySanctuary": {
+      "es": "Basílica de María Auxiliadora de Turín",
+      "en": "Basilica of Mary Help of Christians in Turin",
+      "pt": "Basílica de Maria Auxiliadora de Turim"
+    },
+    "history": {
+      "es": "María Auxiliadora es un título tradicional que expresa la confianza de la Iglesia en la intercesión de la Madre de Jesús. Su devoción recibió un impulso particular de san Juan Bosco y de la familia salesiana, con especial cercanía a la educación y al acompañamiento de los jóvenes. La iglesia de Valdocco, en Turín, fue inaugurada el 9 de junio de 1868, fecha del santuario indicada aquí y no comienzo del título mariano. La celebración del 24 de mayo se ha difundido por comunidades de distintos países. La ayuda de María se comprende en relación con Cristo y se expresa en oración, vida sacramental y servicio concreto.",
+      "en": "Mary Help of Christians is a traditional title expressing the Church’s trust in the intercession of Jesus’ Mother. Its devotion received a particular impetus from Saint John Bosco and the Salesian family, with special closeness to education and accompaniment of young people. The church at Valdocco in Turin was inaugurated on 9 June 1868, the shrine date given here rather than the beginning of the Marian title. The 24 May celebration has spread through communities in different countries. Mary’s help is understood in relation to Christ and is expressed through prayer, sacramental life and practical service to people in need.",
+      "pt": "Maria Auxiliadora é um título tradicional que expressa a confiança da Igreja na intercessão da Mãe de Jesus. Sua devoção recebeu impulso particular de São João Bosco e da família salesiana, com especial proximidade à educação e ao acompanhamento dos jovens. A igreja de Valdocco, em Turim, foi inaugurada em 9 de junho de 1868, data do santuário indicada aqui e não começo do título mariano. A celebração de 24 de maio se difundiu por comunidades de diferentes países. O auxílio de Maria é compreendido em relação com Cristo e se expressa em oração, vida sacramental e serviço concreto junto às comunidades."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "Los relatos de favores ligados a la historia salesiana no se convierten en promesas de inmunidad ante enfermedades o peligros.",
+      "en": "Accounts of favours associated with Salesian history are not turned into promises of immunity from illness or danger.",
+      "pt": "Os relatos de graças ligados à história salesiana não se transformam em promessas de imunidade diante de doenças ou perigos."
+    },
+    "prayer": {
+      "text": {
+        "es": "Auxilio de los cristianos, ruega por nosotros.",
+        "en": "Help of Christians, pray for us.",
+        "pt": "Auxílio dos cristãos, rogai por nós."
+      },
+      "source": "Letanías lauretanas, Auxilium christianorum, ora pro nobis; original latino tradicional cotejado en el libreto del Rosario del 4-V-2013. Traducciones propias fieles."
+    },
+    "region": "Universal",
+    "country": {
+      "es": "Italia; devoción universal",
+      "en": "Italy; worldwide devotion",
+      "pt": "Itália; devoção universal"
+    },
+    "patronageOf": {
+      "es": "Invocada por la Iglesia y especialmente por la familia salesiana.",
+      "en": "Invoked by the Church and particularly by the Salesian family.",
+      "pt": "Invocada pela Igreja e especialmente pela família salesiana."
+    },
+    "recognition": {
+      "es": "La ficha de la arquidiócesis de Turín documenta la inauguración de 1868 y la elevación a basílica en 1911. La invocación Auxilium christianorum forma parte de las letanías lauretanas.",
+      "en": "The Archdiocese of Turin’s entry documents the 1868 inauguration and elevation to basilica status in 1911. The invocation Auxilium christianorum belongs to the Litany of Loreto.",
+      "pt": "A ficha da Arquidiocese de Turim documenta a inauguração de 1868 e a elevação a basílica em 1911. A invocação Auxilium christianorum faz parte das ladainhas lauretanas."
+    },
+    "practice": {
+      "es": "La fiesta del 24 de mayo se acompaña de novena, Eucaristía y oración, unidas al servicio educativo y a la atención a los jóvenes.",
+      "en": "The 24 May feast includes a novena, the Eucharist and prayer, joined to educational service and care for young people.",
+      "pt": "A festa de 24 de maio é acompanhada de novena, Eucaristia e oração, unidas ao serviço educativo e à atenção aos jovens."
+    },
+    "sources": [
+      "Arquidiócesis de Turín, ficha del Santuario de Maria Ausiliatrice, 2018",
+      "Basílica de Valdocco, conmemoración de la consagración de 1868",
+      "Vatican News, celebración del 24 de mayo, 2019",
+      "Santa Sede, Rosario del 4-V-2013: letanías lauretanas"
+    ]
+  },
+  {
+    "id": "virgen_paz_el_salvador",
+    "title": {
+      "es": "Nuestra Señora de la Paz: El Salvador",
+      "en": "Our Lady of Peace: El Salvador",
+      "pt": "Nossa Senhora da Paz: El Salvador"
+    },
+    "feastDay": {
+      "es": "21 de noviembre",
+      "en": "21 November",
+      "pt": "21 de novembro"
+    },
+    "year": "1682",
+    "location": {
+      "es": "San Miguel, El Salvador",
+      "en": "San Miguel, El Salvador",
+      "pt": "San Miguel, El Salvador"
+    },
+    "primarySanctuary": {
+      "es": "Catedral Basílica de Nuestra Señora de la Paz",
+      "en": "Cathedral Basilica of Our Lady of Peace",
+      "pt": "Catedral Basílica de Nossa Senhora da Paz"
+    },
+    "history": {
+      "es": "La devoción salvadoreña a Nuestra Señora de la Paz tiene su centro en San Miguel. Una tradición vincula el origen de la imagen a su llegada en 1682 y a la experiencia de reconciliación de la comunidad; esos detalles se presentan como relato devocional, no como documentación de cada prodigio. La imagen reúne oración por las familias, el país y la convivencia social. Pablo VI proclamó a la Virgen de la Paz patrona nacional y dirigió un radiomensaje al pueblo salvadoreño el 21 de noviembre de 1966. Su significado cristiano exige unir la petición de paz con la justicia, el perdón y la atención a las víctimas.",
+      "en": "Salvadoran devotion to Our Lady of Peace is centred in San Miguel. A tradition associates the image’s origins with its arrival in 1682 and the community’s experience of reconciliation; these details are presented as a devotional account rather than documentation of every prodigy. The image gathers prayer for families, the country and peaceful social relations. Paul VI proclaimed Our Lady of Peace the national patroness and addressed the Salvadoran people by radio on 21 November 1966. Its Christian meaning calls for joining prayer for peace with justice, forgiveness and care for victims, rather than treating a nation as immune to violence.",
+      "pt": "A devoção salvadorenha a Nossa Senhora da Paz tem seu centro em San Miguel. Uma tradição vincula a origem da imagem à sua chegada em 1682 e à experiência de reconciliação da comunidade; esses detalhes são apresentados como relato devocional, não como documentação de cada prodígio. A imagem reúne oração pelas famílias, pelo país e pela convivência social. Paulo VI proclamou a Virgem da Paz padroeira nacional e dirigiu uma radiomensagem ao povo salvadorenho em 21 de novembro de 1966. Seu significado cristão exige unir o pedido de paz à justiça, ao perdão e à atenção às vítimas em suas comunidades."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "Los relatos de auxilio frente a conflictos y amenazas naturales pertenecen a la memoria del culto. No aseguran ausencia de violencia o desastres.",
+      "en": "Accounts of help amid conflicts and natural threats belong to the devotion’s memory. They do not ensure freedom from violence or disasters.",
+      "pt": "Os relatos de auxílio diante de conflitos e ameaças naturais pertencem à memória do culto. Não asseguram ausência de violência ou desastres."
+    },
+    "prayer": {
+      "text": {
+        "es": "Reina de la paz, ruega por nosotros.",
+        "en": "Queen of peace, pray for us.",
+        "pt": "Rainha da paz, rogai por nós."
+      },
+      "source": "Letanías lauretanas, Regina pacis, ora pro nobis; original latino tradicional cotejado en el libreto del Rosario del 4-V-2013. Traducciones propias fieles."
+    },
+    "region": "Americas",
+    "country": {
+      "es": "El Salvador",
+      "en": "El Salvador",
+      "pt": "El Salvador"
+    },
+    "patronageOf": {
+      "es": "Patrona de El Salvador.",
+      "en": "Patroness of El Salvador.",
+      "pt": "Padroeira de El Salvador."
+    },
+    "recognition": {
+      "es": "Pablo VI anunció el patronazgo nacional en su radiomensaje del 21-XI-1966. Se reconoce el culto, sin convertir cada relato tradicional en un dictamen particular de milagro.",
+      "en": "Paul VI announced national patronage in his radio message of 21 November 1966. The devotion is recognized without turning every traditional account into a particular miracle judgement.",
+      "pt": "Paulo VI anunciou o padroeirado nacional em sua radiomensagem de 21-XI-1966. Reconhece-se o culto, sem transformar cada relato tradicional em parecer particular de milagre."
+    },
+    "practice": {
+      "es": "La fiesta del 21 de noviembre se vive con Eucaristía y oración por la paz, acompañadas de reconciliación y solidaridad.",
+      "en": "The 21 November feast is lived through the Eucharist and prayer for peace, accompanied by reconciliation and solidarity.",
+      "pt": "A festa de 21 de novembro é vivida com Eucaristia e oração pela paz, acompanhadas de reconciliação e solidariedade."
+    },
+    "sources": [
+      "Pablo VI, radiomensaje por el patronazgo de El Salvador, 21-XI-1966",
+      "El Testigo Fiel, Nuestra Señora de la Paz: tradición de 1682 y fiesta",
+      "Santa Sede, Rosario del 4-V-2013: letanías lauretanas"
+    ]
+  },
+  {
+    "id": "virgen_suyapa",
+    "title": {
+      "es": "Nuestra Señora de Suyapa",
+      "en": "Our Lady of Suyapa",
+      "pt": "Nossa Senhora de Suyapa"
+    },
+    "feastDay": {
+      "es": "3 de febrero",
+      "en": "3 February",
+      "pt": "3 de fevereiro"
+    },
+    "year": "1747",
+    "location": {
+      "es": "Suyapa, Tegucigalpa, Honduras",
+      "en": "Suyapa, Tegucigalpa, Honduras",
+      "pt": "Suyapa, Tegucigalpa, Honduras"
+    },
+    "primarySanctuary": {
+      "es": "Basílica de Nuestra Señora de Suyapa",
+      "en": "Basilica of Our Lady of Suyapa",
+      "pt": "Basílica de Nossa Senhora de Suyapa"
+    },
+    "history": {
+      "es": "Nuestra Señora de Suyapa es venerada en Honduras mediante una pequeña imagen de María. El relato tradicional sitúa su hallazgo el 3 de febrero de 1747 y lo vincula a Alejandro Colindres y a la vida sencilla de los trabajadores del campo. La devoción pasó del ámbito familiar a una peregrinación que expresa la fe del pueblo hondureño. Juan Pablo II celebró en su santuario en marzo de 1983 y la invocó como patrona del país. Su mensaje destacó la unidad de los pueblos, la Palabra de Dios y la Eucaristía. La celebración de febrero invita a unir gratitud, oración por Honduras y servicio a quienes necesitan apoyo.",
+      "en": "Our Lady of Suyapa is venerated in Honduras through a small image of Mary. The traditional account places its discovery on 3 February 1747 and links it to Alejandro Colindres and the simple lives of agricultural workers. Devotion developed from a family setting into a pilgrimage expressing the Honduran people’s faith. John Paul II celebrated at the shrine in March 1983 and invoked her as the country’s patroness. His message emphasized unity between peoples, the Word of God and the Eucharist. The February celebration invites thanksgiving, prayer for Honduras and service to people needing support in their daily lives.",
+      "pt": "Nossa Senhora de Suyapa é venerada em Honduras por meio de uma pequena imagem de Maria. O relato tradicional situa seu encontro em 3 de fevereiro de 1747 e o vincula a Alejandro Colindres e à vida simples dos trabalhadores do campo. A devoção passou do âmbito familiar a uma peregrinação que expressa a fé do povo hondurenho. João Paulo II celebrou em seu santuário em março de 1983 e a invocou como padroeira do país. Sua mensagem destacou a unidade dos povos, a Palavra de Deus e a Eucaristia. A celebração de fevereiro convida a unir gratidão, oração por Honduras e serviço a quem precisa de apoio."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "El hallazgo se presenta como tradición devocional. No se añade una curación individual ni un dictamen médico sin fuente identificada.",
+      "en": "The discovery is presented as devotional tradition. No individual healing or medical judgement is added without an identified source.",
+      "pt": "O encontro é apresentado como tradição devocional. Não se acrescenta uma cura individual nem um parecer médico sem fonte identificada."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "Honduras",
+      "en": "Honduras",
+      "pt": "Honduras"
+    },
+    "patronageOf": {
+      "es": "Patrona de Honduras.",
+      "en": "Patroness of Honduras.",
+      "pt": "Padroeira de Honduras."
+    },
+    "recognition": {
+      "es": "Juan Pablo II celebró en el santuario el 8-III-1983 y la reconoció en su homilía como patrona de Honduras. Ese documento atestigua el culto, no una nueva aprobación de apariciones.",
+      "en": "John Paul II celebrated at the shrine on 8 March 1983 and acknowledged her in his homily as Honduras’s patroness. That document attests the devotion, not a new approval of apparitions.",
+      "pt": "João Paulo II celebrou no santuário em 8-III-1983 e a reconheceu em sua homilia como padroeira de Honduras. Esse documento atesta o culto, não uma nova aprovação de aparições."
+    },
+    "practice": {
+      "es": "La fiesta del 3 de febrero reúne peregrinación, Eucaristía y oración por el país, con compromiso de solidaridad entre las familias.",
+      "en": "The 3 February feast gathers pilgrimage, the Eucharist and prayer for the country, with a commitment to solidarity between families.",
+      "pt": "A festa de 3 de fevereiro reúne peregrinação, Eucaristia e oração pelo país, com compromisso de solidariedade entre as famílias."
+    },
+    "sources": [
+      "Juan Pablo II, homilía en Suyapa, 8-III-1983",
+      "Suyapa Medios, editorial sobre el hallazgo y la devoción de Suyapa"
+    ]
   }
 ]
