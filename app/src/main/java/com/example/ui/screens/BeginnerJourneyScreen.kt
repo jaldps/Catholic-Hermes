@@ -4,8 +4,11 @@ import android.content.Context
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.AlertDialog
+import androidx.compose.material.icons.outlined.Language
+import androidx.compose.material.icons.automirrored.outlined.OpenInNew
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
@@ -35,25 +38,54 @@ internal fun WelcomeChoices(language: AppLanguage, onChooseLanguage: () -> Unit 
     val store = remember { BeginnerJourneyStore(context) }
     var profile by rememberSaveable { mutableIntStateOf(0) }
     var time by rememberSaveable { mutableIntStateOf(store.minutes) }
-    val p = LocalAppDesign.current.palette
-    AlertDialog(
-        onDismissRequest = { store.welcome(profile, time); onClose() },
-        title = { Text(language.journey("Un lugar para comenzar", "A place to begin", "Um lugar para começar")) },
-        text = {
-            Column {
-                Text(language.journey("Ven como eres. Puedes cambiar de camino en cualquier momento.", "Come as you are. You can choose another path at any time.", "Venha como está. Você pode escolher outro caminho a qualquer momento."))
-                TextButton(onClick = onChooseLanguage, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).testTag("welcome_language")) { Text(language.journey("Idioma: ", "Language: ", "Idioma: ") + language.displayName) }
-                Spacer(Modifier.height(16.dp))
-                listOf(language.journey("Estoy explorando", "I'm exploring", "Estou explorando"), language.journey("Estoy regresando", "I'm returning", "Estou voltando"), language.journey("Estoy practicando", "I'm practicing", "Estou praticando")).forEachIndexed { i, label ->
-                    TextButton(onClick = { profile = i }, modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp).testTag("welcome_profile_$i")) { Text((if (profile == i) "✓ " else "") + label, color = p.textPrimary) }
-                }
-                Text(language.journey("Tiempo para hoy", "Time for today", "Tempo para hoje"))
-                Row { listOf(2, 5, 10).forEach { minutes -> TextButton(onClick = { time = minutes }, modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("welcome_minutes_$minutes")) { Text((if (time == minutes) "✓ " else "") + "$minutes min") } } }
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val finish = { store.welcome(profile, time); onClose() }
+    AppDialog(onDismiss = finish, title = language.journey("Un lugar para comenzar", "A place to begin", "Um lugar para começar"), tag = "welcome_dialog") {
+        Text(
+            language.journey("Ven como eres. Puedes cambiar de camino en cualquier momento.", "Come as you are. You can choose another path at any time.", "Venha como está. Você pode escolher outro caminho a qualquer momento."),
+            style = styles.subhead, color = p.textSecondary, modifier = Modifier.padding(horizontal = 24.dp)
+        )
+        Spacer(Modifier.height(18.dp))
+        AppListGroup {
+            listOf(
+                language.journey("Estoy explorando", "I'm exploring", "Estou explorando"),
+                language.journey("Estoy regresando", "I'm returning", "Estou voltando"),
+                language.journey("Estoy practicando", "I'm practicing", "Estou praticando")
+            ).forEachIndexed { i, label ->
+                AppListRow(
+                    title = label, selected = profile == i, showsNavigationAffordance = false,
+                    trailingText = if (profile == i) "✓" else null,
+                    onClick = { profile = i },
+                    modifier = Modifier.testTag("welcome_profile_$i").semantics { selected = profile == i }
+                )
             }
-        },
-        confirmButton = { TextButton(onClick = { store.welcome(profile, time); onClose() }, modifier = Modifier.testTag("welcome_begin")) { Text(language.journey("Comenzar", "Begin", "Começar")) } },
-        dismissButton = { TextButton(onClick = { store.welcome(profile, time); onClose() }, modifier = Modifier.testTag("welcome_skip")) { Text(language.journey("Omitir", "Skip", "Pular")) } }
-    )
+        }
+        Spacer(Modifier.height(18.dp))
+        Text(language.journey("Tiempo para hoy", "Time for today", "Tempo para hoje"), style = styles.footnote, color = p.textSecondary,
+            modifier = Modifier.padding(horizontal = 24.dp))
+        Spacer(Modifier.height(8.dp))
+        Row(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            listOf(2, 5, 10).forEach { minutes ->
+                AppChip("$minutes min", selected = time == minutes, onClick = { time = minutes },
+                    modifier = Modifier.weight(1f).testTag("welcome_minutes_$minutes"))
+            }
+        }
+        Spacer(Modifier.height(14.dp))
+        AppListGroup {
+            AppListRow(
+                title = language.journey("Idioma", "Language", "Idioma"), trailingText = language.displayName,
+                leadingIcon = androidx.compose.material.icons.Icons.Outlined.Language,
+                onClick = onChooseLanguage, modifier = Modifier.testTag("welcome_language")
+            )
+        }
+        Spacer(Modifier.height(22.dp))
+        Column(Modifier.padding(horizontal = design.spacing.gutter), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            AppPrimaryCapsule(language.journey("Comenzar", "Begin", "Começar"), onClick = finish, tag = "welcome_begin")
+            AppSecondaryCapsule(language.journey("Omitir", "Skip", "Pular"), onClick = finish, fillWidth = true, tag = "welcome_skip")
+        }
+    }
 }
 
 @Composable
@@ -81,20 +113,53 @@ fun BeginnerJourneyScreen(currentLanguage: AppLanguage, onOpenBible: () -> Unit,
     )
     val sources = listOf("John 1:35–39", "Matthew 6:9–13; CCC 2759", "CCC 125–127", "CCC 1346–1355, 1385; Code of Canon Law 844 §1, 916", "CCC 1451–1460; Code of Canon Law 916, 988 §1", "CCC 1212, 2179", "CCC 2447, 2697–2699")
     val sourceUrls = listOf("https://bible.usccb.org/bible/john/1", "https://www.vatican.va/archive/ENG0015/_INDEX.HTM", "https://www.vatican.va/archive/ENG0015/_INDEX.HTM", "https://www.usccb.org/prayer-and-worship/the-mass/order-of-mass", "https://www.vatican.va/archive/ENG0015/_INDEX.HTM", "https://www.vatican.va/archive/ENG0015/_INDEX.HTM", "https://www.vatican.va/archive/ENG0015/_INDEX.HTM")
+    AppEdgeToEdge()
     val uri = androidx.compose.ui.platform.LocalUriHandler.current
-    LazyColumn(Modifier.fillMaxSize().testTag("beginner_journey_screen"), contentPadding = PaddingValues(horizontal = design.spacing.gutter, vertical = 24.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        item { AppScreenTitle(l.journey("Primeros pasos", "Start here", "Primeiros passos"), l.journey("Siete pasos a tu ritmo. Puedes saltar cualquiera.", "Seven steps at your pace. You may skip any step.", "Sete passos no seu ritmo. Você pode pular qualquer um.")) }
-        item { AppCard {
-            Text("${selected + 1} · ${titles[selected]}", style = styles.title2, color = design.palette.textPrimary)
-            Spacer(Modifier.height(12.dp))
-            Text(bodies[selected], style = styles.reading, color = design.palette.textPrimary)
-            Spacer(Modifier.height(16.dp))
-            AppPrimaryCapsule(label = when(selected) { 0, 2 -> l.journey("Abrir el Evangelio", "Open the Gospel", "Abrir o Evangelho"); 1, 6 -> l.journey("Rezar", "Pray", "Rezar"); else -> l.journey("Encontrar una parroquia", "Find a parish", "Encontrar uma paróquia") }, onClick = when(selected) { 0,2 -> onOpenBible; 1,6 -> onOpenPrayer; else -> onOpenParishes }, tag = "journey_action")
-            Spacer(Modifier.height(12.dp))
-            Text(l.journey("Guía editorial · Fuentes: ", "Editorial guide · Sources: ", "Guia editorial · Fontes: ") + sources[selected], style = styles.footnote, color = design.palette.textSecondary)
-            TextButton(onClick = { uri.openUri(sourceUrls[selected]) }) { Text(l.journey("Consultar la fuente", "Read the source", "Consultar a fonte")) }
-            if (selected < 6) AppSecondaryCapsule(l.journey("Paso siguiente", "Next step", "Próximo passo"), onClick = { selected++; store.advance(selected) }, tag = "journey_next")
-        } }
-        items(7) { index -> AppListRow("${index + 1}. ${titles[index]}", selected = selected == index, onClick = { selected = index; store.advance(index) }, modifier = Modifier.testTag("journey_step_$index")) }
+    val gutter = design.spacing.gutter
+    val p = design.palette
+    LazyColumn(Modifier.fillMaxSize().testTag("beginner_journey_screen"), contentPadding = PaddingValues(bottom = appDockInset() + 24.dp)) {
+        item {
+            AppHeroHeader(
+                assetPath = "heroes/lumen/home.jpg",
+                title = l.journey("Primeros pasos", "Start here", "Primeiros passos"),
+                meta = l.journey("Siete pasos a tu ritmo. Puedes saltar cualquiera.", "Seven steps at your pace. You may skip any step.", "Sete passos no seu ritmo. Você pode pular qualquer um.")
+            )
+            AppSegmentedProgress(count = 7, current = selected, fraction = 1f, modifier = Modifier.padding(horizontal = gutter).padding(top = 6.dp, bottom = 18.dp), height = 5.dp)
+        }
+        item {
+            AppCard(Modifier.padding(horizontal = gutter)) {
+                Text(l.journey("Paso ${selected + 1} de 7", "Step ${selected + 1} of 7", "Passo ${selected + 1} de 7"), style = styles.eyebrow, color = p.accent)
+                Spacer(Modifier.height(4.dp))
+                Text(titles[selected], style = styles.title2, color = p.textPrimary, modifier = Modifier.semantics { heading() })
+                Spacer(Modifier.height(12.dp))
+                Text(bodies[selected], style = styles.reading, color = p.textPrimary)
+                Spacer(Modifier.height(18.dp))
+                AppPrimaryCapsule(label = when(selected) { 0, 2 -> l.journey("Abrir el Evangelio", "Open the Gospel", "Abrir o Evangelho"); 1, 6 -> l.journey("Rezar", "Pray", "Rezar"); else -> l.journey("Encontrar una parroquia", "Find a parish", "Encontrar uma paróquia") }, onClick = when(selected) { 0,2 -> onOpenBible; 1,6 -> onOpenPrayer; else -> onOpenParishes }, tag = "journey_action")
+                if (selected < 6) {
+                    Spacer(Modifier.height(8.dp))
+                    AppSecondaryCapsule(l.journey("Paso siguiente", "Next step", "Próximo passo"), onClick = { selected++; store.advance(selected) }, fillWidth = true, tag = "journey_next")
+                }
+                Spacer(Modifier.height(14.dp))
+                Text(l.journey("Guía editorial · Fuentes: ", "Editorial guide · Sources: ", "Guia editorial · Fontes: ") + sources[selected], style = styles.footnote, color = p.textSecondary)
+                Row(
+                    Modifier.heightIn(min = 48.dp).lumenPress({ uri.openUri(sourceUrls[selected]) }, 0.97f).testTag("journey_source"),
+                    verticalAlignment = androidx.compose.ui.Alignment.CenterVertically
+                ) {
+                    Text(l.journey("Consultar la fuente", "Read the source", "Consultar a fonte"), style = styles.subhead.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold), color = p.accent)
+                    Spacer(Modifier.width(6.dp))
+                    androidx.compose.material3.Icon(androidx.compose.material.icons.Icons.AutoMirrored.Outlined.OpenInNew, null, tint = p.accent, modifier = Modifier.size(16.dp))
+                }
+            }
+            Spacer(Modifier.height(design.spacing.sectionGap))
+        }
+        item {
+            AppSectionHeader(l.journey("El camino", "The path", "O caminho"))
+            AppListGroup {
+                titles.forEachIndexed { index, title ->
+                    AppListRow(title, trailingText = "${index + 1}", selected = selected == index, showsNavigationAffordance = false,
+                        onClick = { selected = index; store.advance(index) }, modifier = Modifier.testTag("journey_step_$index"))
+                }
+            }
+        }
     }
 }
