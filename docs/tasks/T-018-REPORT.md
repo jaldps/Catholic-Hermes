@@ -1,6 +1,6 @@
 # T-018 · Informe de Codex
 
-Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega de **30/30 auditorías** y **0 devociones nuevas** (objetivo aproximado: 25).
+Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega de **30/30 auditorías** y **10 devociones nuevas** (objetivo aproximado: 25).
 
 Leídos el protocolo, las reglas editoriales, el contrato M7 y los 30 registros originales. Solo se modifican los tres archivos autorizados. Explicaciones originales en ES/EN/PT; no se compone ninguna oración. Cada fórmula conservada o sustituida se documenta. Una retirada significa que no se ha comprobado la procedencia de esa redacción, no un juicio contra la devoción. Las promesas de revelación privada se atribuyen y no se presentan como garantías mecánicas. No se trasladan las categorías de 2024 retrospectivamente a declaraciones históricas.
 
@@ -233,11 +233,83 @@ Oración sustituida por la invocación tradicional Regina angelorum, ora pro nob
 
 ## Devociones nuevas
 
+### 1. `virgen_del_quinche`
+
+- [Francisco, discurso en El Quinche, 8-VII-2015](https://www.vatican.va/content/francesco/es/speeches/2015/july/documents/papa-francesco_20150708_ecuador-religiosi.html)
+- [Arzobispo de Quito, homilía de El Quinche, 21-XI-2022](https://www.arquidiocesisdequito.com.ec/comunicacion/homilias/item/ella-es-nuestra-madre-madre-de-la-paz.html)
+- [Estudio histórico, El clero y los usos políticos de la Virgen del Quinche, Anuario de Historia Regional](https://revistas.uis.edu.co/index.php/anuariohistoria/article/download/8628/8827?inline=1)
+
+Year 1604 refiere al traslado documentado, no a fecha exacta de fabricación o aparición. No se mezcla 1586/1588/1598 entre fuentes. No se declara una aprobación particular de apariciones a partir de la visita papal. Oración y promesas null: no se compone fórmula ni se atribuyen garantías. No se reproduce la oración moderna de una web.
+
+### 2. `virgen_urkupina`
+
+- [Conferencia Episcopal Boliviana, Urcupiña: una fe con sello de integración nacional](https://evangelizacion.ceb.bo/urcupina-una-fe-con-sello-de-integracion-nacional/)
+- [Conferencia Episcopal Boliviana, Festividad de Nuestra Señora de Urcupiña, 2024](https://evangelizacion.ceb.bo/wp-content/uploads/2024/08/Festividad-Nustra-Senora-de-Urcupina.pdf)
+
+La fecha circa 1700 se etiqueta en history como tradición y no como hecho probado. Decreto 1998/091 comprobado, sin inventar papa ni documento de apariciones. No se transforma el préstamo ritual de piedras o dinero en promesa de prosperidad. Oración/promesas null.
+
+### 3. `virgen_socavon`
+
+- [Conferencia Episcopal Boliviana, Revista Misionera 5: Santuario del Socavón](https://ceb.bo/wp-content/uploads/2022/06/REVISTA-5.pdf)
+- [Conferencia Episcopal Boliviana, elevación del santuario a basílica menor, agosto de 2025](https://ceb.bo/2025/08/su-santidad-leon-xiv-ha-elevado-el-santuario-del-socavon-a-basilica-menor/)
+
+La datación 1550–1600 se conserva como estimación institucional de la pintura. Se actualiza el título de basílica a 2025; no se deja como un proyecto pendiente de 2024. El nihil obstat de la CEB para tramitar ese título no se confunde con el nihil obstat sobre fenómenos de las Normas de 2024. Sin oración nueva ni promesa de riqueza.
+
+### 4. `virgen_zapopan`
+
+- [Juan Pablo II, homilía en el santuario de Zapopan, 30-I-1979](https://www.vatican.va/content/john-paul-ii/es/homilies/1979/documents/hf_jp-ii_hom_19790130_messico-zapopan.html)
+- [UNESCO, La romería de Zapopan, expediente 01400, inscripción de 2018](https://ich.unesco.org/es/RL/la-romeria-de-zapopan-ciclo-ritual-de-la-llevada-de-la-virgen-01400)
+
+Year 1734 es el inicio documentado del ciclo de la romería, no la talla de la imagen. No se confunde patrimonio cultural UNESCO con aprobación de apariciones o milagros. No se incorporan cifras de participantes como dato actual ni se inventan oraciones/promesas.
+
+### 5. `virgen_itati`
+
+- [Arzobispado de Corrientes, Basílica de Itatí: historia](https://www.arzcorrientes.org.ar/public/arquidiocesis/santuarios/basilica-itati)
+- [AICA, obispo de Posadas sobre Itatí, 25-VII-2024](https://aica.org/noticia-en-proceso-mons-martinez-el-espiritu-santo-impulsa-siempre-a-su-iglesia)
+
+Se distinguen fecha de la parroquia (1615), coronación (16-VII-1900), patronazgo (1918) y fiesta de julio. No se sigue la cronología de otro santuario en publicaciones generales. Los relatos de transfiguración o ataques indígenas no se convierten en declaraciones médicas. Sin oración inventada ni promesa de curación.
+
+### 6. `virgen_rocio`
+
+- [Diócesis de Huelva, historia de coronaciones canónicas, 2025: Rocío](https://diocesisdehuelva.es/2025/09/de-pie-a-tu-derecha-esta-la-reina-enjoyada-con-oro/)
+- [Hermandad Matriz, Exvoto 5, 2016: Historia y teología de los títulos Rocío y Rocinas, pp. 159–166](https://hermandadmatrizrocio.org/wp-content/uploads/2018/05/revista-exvoto-5-2016.pdf)
+
+1270–1284 es la hipótesis de datación del estudio, no un año de aparición demostrada. El estudio de Exvoto se consultó en contenido indexado; el servidor no entregó el PDF utilizable. La fuente diocesana sí documenta culto y coronación. No se usan leyendas como hechos demostrados ni se inventa oración; no se añaden indulgencias jubilares antiguas.
+
+### 7. `virgen_covadonga`
+
+- [Santuario de Covadonga, Cronología: coronación de 1918](https://santuariodecovadonga.es/cronologia/)
+- [Catecismo de la Iglesia Católica, 971: culto mariano](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_9/paragraph_6_mary_-_mother_of_christ%2C_mother_of_the_church.index.html)
+
+Year 1918 se identifica en history como coronación, no origen medieval. No se toman leyendas de intervención militar como hechos probados ni se inventa año preciso de la tradición. Se evita copiar el error tipográfico XII aniversario de la cronología, cuyo sentido es duodécimo centenario. La segunda fuente sustenta el sentido del culto, no los datos locales. Oración/promesas null.
+
+### 8. `virgen_montserrat`
+
+- [Abadía de Montserrat, History: 1025 e imagen románica](https://abadiamontserrat.cat/en/monestir/montserrat-history)
+- [Abadía de Montserrat, Confraria de la Mare de Déu: fiestas](https://abadiamontserrat.cat/santuari/confraria-de-la-mare-de-deu-de-montserrat)
+
+Year 1025 es fundación del monasterio; la talla es posterior (siglos XII/XIII según la cronología). No se atribuye la escultura a san Lucas ni se fecha un hallazgo legendario como hecho demostrado. Se prescinde de entradas cronológicas problemáticas ajenas a estos datos. Oración/promesas null; no se copia una oración moderna de una cofradía.
+
+### 9. `virgen_loreto`
+
+- [Congregación para el Culto Divino, decreto de Loreto, 7-X-2019](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2019/10/31/191031e.html)
+- [Santuario Pontificio de Loreto, La Santa Casa da Nazareth a Loreto](https://www.santuarioloreto.va/it/storia/la-santa-casa-da-nazareth-a-loreto.html)
+
+1294 se identifica como fecha del traslado según la tradición, no demostración de cada relato sobre ángeles o medios de transporte. Se distingue la fecha del decreto (7-X-2019) de su publicación (31-X-2019). No se presenta el patronazgo de aviadores con número o fecha no comprobados; el campo expresa asociación pastoral documentada, no un título jurídico. Oración/promesas null.
+
+### 10. `virgen_czestochowa`
+
+- [Jasna Góra, From the History of Jasna Góra](https://en.jasnagora.pl/z-historii-jasnej-g%C3%B3ry/)
+- [Jasna Góra, Major Marian Celebrations](https://en.jasnagora.pl/kancelaria-kustosza-sanktuarium/g%C5%82%C3%B3wne-uroczysto%C5%9Bci-maryjne/)
+- [Francisco, homilía en Częstochowa, 28-VII-2016](https://www.vatican.va/content/francesco/en/homilies/2016/documents/papa-francesco_20160728_omelia-polonia-czestochowa.html)
+
+Se respeta la distinción entre llegada de los paulinos en 1382 y presencia del icono en 1384 según la cronología institucional, sin atribuirle autoría apostólica. Coronación en 1717 y aprobación de la fiesta en 1904 se documentan. No se reutilizan cifras históricas de peregrinos como actuales. Oración/promesas null.
+
 ## Validación
 
 ```text
 30 entries · 0 errors · 0 warnings
-0 entries · 0 errors · 0 warnings
+10 entries · 0 errors · 0 warnings
 ```
 
 Validador de detalles con `--partial` mientras no estén las 30 fichas; sin ese argumento al completar. Se ejecuta también `git diff --check` antes de entregar. No se modifica el Kotlin ni la implementación del coordinador, y no se afirma haber probado una instalación en dispositivo.

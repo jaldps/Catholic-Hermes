@@ -1,1 +1,614 @@
-[]
+[
+  {
+    "id": "virgen_del_quinche",
+    "title": {
+      "es": "Nuestra Señora de la Presentación de El Quinche",
+      "en": "Our Lady of the Presentation of El Quinche",
+      "pt": "Nossa Senhora da Apresentação de El Quinche"
+    },
+    "feastDay": {
+      "es": "21 de noviembre",
+      "en": "21 November",
+      "pt": "21 de novembro"
+    },
+    "year": "1604",
+    "location": {
+      "es": "El Quinche, Quito, Ecuador",
+      "en": "El Quinche, Quito, Ecuador",
+      "pt": "El Quinche, Quito, Equador"
+    },
+    "primarySanctuary": {
+      "es": "Santuario Nacional de El Quinche",
+      "en": "National Shrine of El Quinche",
+      "pt": "Santuário Nacional de El Quinche"
+    },
+    "history": {
+      "es": "La devoción de El Quinche se centra en una imagen de María con el Niño atribuida al escultor Diego de Robles. Su historia está vinculada inicialmente a la comunidad indígena de Oyacachi y al traslado de la imagen a El Quinche en 1604; ese traslado es el año indicado aquí, no una fecha de aparición probada. El santuario reúne a peregrinos que caminan desde Quito y otras localidades, especialmente en noviembre. La tradición expresa cercanía de María a comunidades de diversas raíces culturales. Francisco visitó el santuario en julio de 2015. La celebración cristiana une esa memoria, la Eucaristía y el compromiso con la paz.",
+      "en": "The devotion of El Quinche centres on an image of Mary with the Child attributed to the sculptor Diego de Robles. Its history is initially linked to the Indigenous community of Oyacachi and the image’s transfer to El Quinche in 1604; that transfer is the year given here, not an established apparition date. The shrine gathers pilgrims who walk from Quito and other places, particularly in November. The tradition expresses Mary’s closeness to communities with different cultural roots. Francis visited the shrine in July 2015. Christian celebration brings together that memory, the Eucharist and a commitment to peace.",
+      "pt": "A devoção de El Quinche se concentra em uma imagem de Maria com o Menino atribuída ao escultor Diego de Robles. Sua história está ligada inicialmente à comunidade indígena de Oyacachi e à transferência da imagem para El Quinche em 1604; essa transferência é o ano indicado aqui, não uma data comprovada de aparição. O santuário reúne peregrinos que caminham de Quito e de outras localidades, especialmente em novembro. A tradição expressa a proximidade de Maria às comunidades de diferentes raízes culturais. Francisco visitou o santuário em julho de 2015. A celebração cristã une essa memória, a Eucaristia e o compromisso com a paz."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "Las tradiciones de favores se distinguen de una declaración eclesial sobre un milagro individual; no se incorpora aquí una lista de curaciones verificadas.",
+      "en": "Traditions of favours are distinct from an ecclesial declaration about an individual miracle; no list of verified healings is included here.",
+      "pt": "As tradições de graças se distinguem de uma declaração eclesial sobre um milagre individual; não se inclui aqui uma lista de curas verificadas."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "Ecuador",
+      "en": "Ecuador",
+      "pt": "Equador"
+    },
+    "patronageOf": {
+      "es": "Devoción nacional ecuatoriana, especialmente de las comunidades de Quito y sus alrededores.",
+      "en": "An Ecuadorian national devotion, especially among communities in and around Quito.",
+      "pt": "Devoção nacional equatoriana, especialmente das comunidades de Quito e de seus arredores."
+    },
+    "recognition": {
+      "es": "La visita y discurso de Francisco del 8-VII-2015 y la homilía del arzobispo de Quito del 21-XI-2022 documentan el culto público del santuario.",
+      "en": "Francis’s visit and address of 8 July 2015 and the Archbishop of Quito’s homily of 21 November 2022 document the shrine’s public devotion.",
+      "pt": "A visita e o discurso de Francisco de 8-VII-2015 e a homilia do arcebispo de Quito de 21-XI-2022 documentam o culto público do santuário."
+    },
+    "practice": {
+      "es": "La peregrinación de noviembre se acompaña de Eucaristía, reconciliación y oración por las familias y por la paz.",
+      "en": "The November pilgrimage includes the Eucharist, reconciliation and prayer for families and peace.",
+      "pt": "A peregrinação de novembro é acompanhada de Eucaristia, reconciliação e oração pelas famílias e pela paz."
+    },
+    "sources": [
+      "Francisco, discurso en El Quinche, 8-VII-2015",
+      "Arzobispo de Quito, homilía de El Quinche, 21-XI-2022",
+      "Estudio histórico, El clero y los usos políticos de la Virgen del Quinche, Anuario de Historia Regional"
+    ]
+  },
+  {
+    "id": "virgen_urkupina",
+    "title": {
+      "es": "Nuestra Señora de Urkupiña",
+      "en": "Our Lady of Urkupiña",
+      "pt": "Nossa Senhora de Urkupiña"
+    },
+    "feastDay": {
+      "es": "15 de agosto",
+      "en": "15 August",
+      "pt": "15 de agosto"
+    },
+    "year": "c. 1700",
+    "location": {
+      "es": "Quillacollo, Cochabamba, Bolivia",
+      "en": "Quillacollo, Cochabamba, Bolivia",
+      "pt": "Quillacollo, Cochabamba, Bolívia"
+    },
+    "primarySanctuary": {
+      "es": "Santuario de Nuestra Señora de Urkupiña, San Ildefonso",
+      "en": "Shrine of Our Lady of Urkupiña, Saint Ildephonsus",
+      "pt": "Santuário de Nossa Senhora de Urkupiña, Santo Ildefonso"
+    },
+    "history": {
+      "es": "La devoción de Urkupiña se vive en Quillacollo, cerca de Cochabamba, en torno a María y al misterio de su Asunción. Un relato tradicional sitúa hacia 1700 los encuentros de una niña pastora con una Señora y un Niño en las colinas de Cota; no se presenta esa narración como fecha histórica demostrada. La fiesta reúne oración, peregrinación y expresiones culturales de raíz andina. El nombre se relaciona con una expresión quechua sobre la presencia en el cerro. El templo de San Ildefonso fue constituido santuario arquidiocesano en 1998. Su sentido cristiano invita al encuentro con Cristo y a la convivencia entre pueblos.",
+      "en": "The devotion of Urkupiña is lived in Quillacollo, near Cochabamba, around Mary and the mystery of her Assumption. A traditional account places a shepherd girl’s encounters with a Lady and Child in the Cota hills around 1700; the narrative is not presented as a historically established date. The feast brings together prayer, pilgrimage and cultural expressions with Andean roots. The name is associated with a Quechua expression about presence on the hill. Saint Ildephonsus Church was established as an archdiocesan shrine in 1998. Its Christian meaning invites encounter with Christ and peaceful relations between peoples. Pilgrims gather with their families and neighbouring communities.",
+      "pt": "A devoção de Urkupiña é vivida em Quillacollo, perto de Cochabamba, em torno de Maria e do mistério de sua Assunção. Um relato tradicional situa por volta de 1700 os encontros de uma menina pastora com uma Senhora e um Menino nas colinas de Cota; essa narrativa não é apresentada como data histórica comprovada. A festa reúne oração, peregrinação e expressões culturais de raiz andina. O nome se relaciona com uma expressão quéchua sobre a presença no cerro. O templo de Santo Ildefonso foi constituído santuário arquidiocesano em 1998. Seu sentido cristão convida ao encontro com Cristo e à convivência entre povos."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "El relato de la pastora pertenece a la tradición local. No se deducen de él promesas de riqueza ni milagros económicos para cada peregrino.",
+      "en": "The shepherd girl’s account belongs to local tradition. It does not establish promises of wealth or economic miracles for every pilgrim.",
+      "pt": "O relato da pastorinha pertence à tradição local. Dele não se deduzem promessas de riqueza nem milagres econômicos para cada peregrino."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "Bolivia",
+      "en": "Bolivia",
+      "pt": "Bolívia"
+    },
+    "patronageOf": {
+      "es": "Devoción de integración entre comunidades bolivianas.",
+      "en": "A devotion bringing Bolivian communities together.",
+      "pt": "Devoção de integração entre comunidades bolivianas."
+    },
+    "recognition": {
+      "es": "El decreto arzobispal 1998/091 constituyó el templo como santuario arquidiocesano, según la Conferencia Episcopal Boliviana; reconoce el culto, sin definir sobrenaturales los encuentros tradicionales.",
+      "en": "Archiepiscopal decree 1998/091 established the church as an archdiocesan shrine, according to the Bolivian Bishops’ Conference; it recognizes the devotion without defining the traditional encounters as supernatural.",
+      "pt": "O decreto arquiepiscopal 1998/091 constituiu o templo como santuário arquidiocesano, segundo a Conferência Episcopal Boliviana; reconhece o culto, sem definir como sobrenaturais os encontros tradicionais."
+    },
+    "practice": {
+      "es": "La preparación de agosto y la fiesta del día 15 se viven con Eucaristía, peregrinación y respeto mutuo entre las comunidades.",
+      "en": "The August preparation and the feast on the 15th are lived through the Eucharist, pilgrimage and mutual respect between communities.",
+      "pt": "A preparação de agosto e a festa do dia 15 são vividas com Eucaristia, peregrinação e respeito mútuo entre as comunidades."
+    },
+    "sources": [
+      "Conferencia Episcopal Boliviana, Urcupiña: una fe con sello de integración nacional",
+      "Conferencia Episcopal Boliviana, Festividad de Nuestra Señora de Urcupiña, 2024"
+    ]
+  },
+  {
+    "id": "virgen_socavon",
+    "title": {
+      "es": "Nuestra Señora del Socavón",
+      "en": "Our Lady of the Socavón",
+      "pt": "Nossa Senhora do Socavón"
+    },
+    "feastDay": {
+      "es": "2 de febrero; peregrinación de carnaval",
+      "en": "2 February; Carnival pilgrimage",
+      "pt": "2 de fevereiro; peregrinação de carnaval"
+    },
+    "year": "1550–1600",
+    "location": {
+      "es": "Oruro, Bolivia",
+      "en": "Oruro, Bolivia",
+      "pt": "Oruro, Bolívia"
+    },
+    "primarySanctuary": {
+      "es": "Basílica Menor de Nuestra Señora del Socavón",
+      "en": "Minor Basilica of Our Lady of the Socavón",
+      "pt": "Basílica Menor de Nossa Senhora do Socavón"
+    },
+    "history": {
+      "es": "Nuestra Señora del Socavón es una advocación de la Candelaria venerada en Oruro y vinculada especialmente a la vida de las comunidades mineras. La Conferencia Episcopal Boliviana sitúa la pintura de su imagen sobre yeso aproximadamente entre 1550 y 1600; esa datación es estimativa. La devoción creció junto con el santuario y con las peregrinaciones que acompañan las celebraciones de carnaval. La danza puede expresar una promesa personal de los participantes, sin convertirse en compra de favores. El templo fue bendecido en 1884 y recibió el título de basílica menor en 2025. Su centro religioso es María que presenta a Jesús, luz para los pueblos.",
+      "en": "Our Lady of the Socavón is an invocation of Our Lady of Candelaria venerated in Oruro and particularly associated with mining communities. The Bolivian Bishops’ Conference dates the image painted on plaster approximately between 1550 and 1600; this is an estimate. The devotion grew alongside the shrine and the pilgrimages accompanying Carnival celebrations. Dance can express a participant’s personal religious commitment without becoming a purchase of favours. The church was blessed in 1884 and received the title of minor basilica in 2025. Its religious centre is Mary presenting Jesus, light for the peoples, within a living community of prayer.",
+      "pt": "Nossa Senhora do Socavón é uma invocação da Candelária venerada em Oruro e ligada especialmente à vida das comunidades mineiras. A Conferência Episcopal Boliviana situa a pintura de sua imagem sobre gesso aproximadamente entre 1550 e 1600; essa datação é estimativa. A devoção cresceu junto com o santuário e com as peregrinações que acompanham as celebrações de carnaval. A dança pode expressar uma promessa pessoal dos participantes, sem se transformar em compra de favores. O templo foi abençoado em 1884 e recebeu o título de basílica menor em 2025. Seu centro religioso é Maria que apresenta Jesus, luz para os povos."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "Se conservan relatos tradicionales de protección. El título de basílica no constituye un dictamen sobre cada prodigio narrado.",
+      "en": "Traditional accounts of protection are preserved. The basilica title is not a judgement on every reported prodigy.",
+      "pt": "Conservam-se relatos tradicionais de proteção. O título de basílica não constitui parecer sobre cada prodígio narrado."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "Bolivia",
+      "en": "Bolivia",
+      "pt": "Bolívia"
+    },
+    "patronageOf": {
+      "es": "Comunidades mineras y pueblo de Oruro.",
+      "en": "Mining communities and the people of Oruro.",
+      "pt": "Comunidades mineiras e povo de Oruro."
+    },
+    "recognition": {
+      "es": "La CEB publicó en 2025 la concesión del título de basílica menor por León XIV, comunicada por la Santa Sede el 16-VII-2025. No es una declaración de apariciones.",
+      "en": "In 2025 the Bolivian Bishops’ Conference published the grant of the minor basilica title by Leo XIV, communicated by the Holy See on 16 July 2025. It is not a declaration concerning apparitions.",
+      "pt": "A CEB publicou em 2025 a concessão do título de basílica menor por Leão XIV, comunicada pela Santa Sé em 16-VII-2025. Não é uma declaração sobre aparições."
+    },
+    "practice": {
+      "es": "La fiesta de la Candelaria y la peregrinación de carnaval unen Eucaristía, oración y expresiones culturales de las comunidades.",
+      "en": "The Candelaria feast and Carnival pilgrimage unite the Eucharist, prayer and communities’ cultural expressions.",
+      "pt": "A festa da Candelária e a peregrinação de carnaval unem Eucaristia, oração e expressões culturais das comunidades."
+    },
+    "sources": [
+      "Conferencia Episcopal Boliviana, Revista Misionera 5: Santuario del Socavón",
+      "Conferencia Episcopal Boliviana, elevación del santuario a basílica menor, agosto de 2025"
+    ]
+  },
+  {
+    "id": "virgen_zapopan",
+    "title": {
+      "es": "Nuestra Señora de Zapopan",
+      "en": "Our Lady of Zapopan",
+      "pt": "Nossa Senhora de Zapopan"
+    },
+    "feastDay": {
+      "es": "12 de octubre: romería",
+      "en": "12 October: pilgrimage",
+      "pt": "12 de outubro: romaria"
+    },
+    "year": "1734",
+    "location": {
+      "es": "Zapopan y Guadalajara, Jalisco, México",
+      "en": "Zapopan and Guadalajara, Jalisco, Mexico",
+      "pt": "Zapopan e Guadalajara, Jalisco, México"
+    },
+    "primarySanctuary": {
+      "es": "Basílica de Nuestra Señora de Zapopan",
+      "en": "Basilica of Our Lady of Zapopan",
+      "pt": "Basílica de Nossa Senhora de Zapopan"
+    },
+    "history": {
+      "es": "La Virgen de Zapopan es una imagen de la Inmaculada Concepción vinculada a la evangelización franciscana de la región de Guadalajara. Su devoción posee una expresión particular en el recorrido anual de la imagen por las comunidades y su regreso a la basílica el 12 de octubre. La UNESCO documenta el origen de ese ciclo ritual en 1734, año indicado aquí para la romería y no para una aparición. Juan Pablo II celebró en el santuario en enero de 1979. La participación de familias, comunidades indígenas y asociaciones muestra una tradición compartida de fe y cultura. Su sentido cristiano se centra en Cristo y en una vida de servicio.",
+      "en": "Our Lady of Zapopan is an image of the Immaculate Conception associated with Franciscan evangelization in the Guadalajara region. The devotion has a particular expression in the image’s annual journey through communities and its return to the basilica on 12 October. UNESCO documents the ritual cycle’s origins in 1734, the year given here for the pilgrimage rather than an apparition. John Paul II celebrated at the shrine in January 1979. The participation of families, Indigenous communities and associations shows a shared tradition of faith and culture. Its Christian meaning is centred on Christ and on living a life of service.",
+      "pt": "Nossa Senhora de Zapopan é uma imagem da Imaculada Conceição ligada à evangelização franciscana da região de Guadalajara. Sua devoção possui uma expressão particular no percurso anual da imagem pelas comunidades e no retorno à basílica em 12 de outubro. A UNESCO documenta a origem desse ciclo ritual em 1734, ano indicado aqui para a romaria e não para uma aparição. João Paulo II celebrou no santuário em janeiro de 1979. A participação de famílias, comunidades indígenas e associações mostra uma tradição compartilhada de fé e cultura. Seu sentido cristão se concentra em Cristo e em uma vida de serviço."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "Las tradiciones de protección no se convierten en una lista de milagros sin dictámenes particulares. El reconocimiento de la UNESCO es cultural.",
+      "en": "Traditions of protection are not turned into a list of miracles without particular judgements. UNESCO’s recognition is cultural.",
+      "pt": "As tradições de proteção não se transformam em lista de milagres sem pareceres particulares. O reconhecimento da UNESCO é cultural."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "México",
+      "en": "Mexico",
+      "pt": "México"
+    },
+    "patronageOf": {
+      "es": "Devoción de las comunidades de la arquidiócesis de Guadalajara.",
+      "en": "A devotion of communities in the Archdiocese of Guadalajara.",
+      "pt": "Devoção das comunidades da Arquidiocese de Guadalajara."
+    },
+    "recognition": {
+      "es": "La homilía de Juan Pablo II en Zapopan del 30-I-1979 documenta el culto eclesial. La inscripción de la romería por la UNESCO en 2018 es un reconocimiento cultural distinto.",
+      "en": "John Paul II’s Zapopan homily of 30 January 1979 documents the ecclesial devotion. UNESCO’s inscription of the pilgrimage in 2018 is a separate cultural recognition.",
+      "pt": "A homilia de João Paulo II em Zapopan de 30-I-1979 documenta o culto eclesial. A inscrição da romaria pela UNESCO em 2018 é um reconhecimento cultural distinto."
+    },
+    "practice": {
+      "es": "La romería del 12 de octubre culmina el recorrido de la imagen y se acompaña de Eucaristía, oración y participación comunitaria.",
+      "en": "The 12 October pilgrimage concludes the image’s journey and includes the Eucharist, prayer and community participation.",
+      "pt": "A romaria de 12 de outubro conclui o percurso da imagem e é acompanhada de Eucaristia, oração e participação comunitária."
+    },
+    "sources": [
+      "Juan Pablo II, homilía en el santuario de Zapopan, 30-I-1979",
+      "UNESCO, La romería de Zapopan, expediente 01400, inscripción de 2018"
+    ]
+  },
+  {
+    "id": "virgen_itati",
+    "title": {
+      "es": "Nuestra Señora de Itatí",
+      "en": "Our Lady of Itatí",
+      "pt": "Nossa Senhora de Itatí"
+    },
+    "feastDay": {
+      "es": "9 de julio; 16 de julio: coronación",
+      "en": "9 July; 16 July: coronation",
+      "pt": "9 de julho; 16 de julho: coroação"
+    },
+    "year": "1615",
+    "location": {
+      "es": "Itatí, Corrientes, Argentina",
+      "en": "Itatí, Corrientes, Argentina",
+      "pt": "Itatí, Corrientes, Argentina"
+    },
+    "primarySanctuary": {
+      "es": "Basílica de Nuestra Señora de Itatí",
+      "en": "Basilica of Our Lady of Itatí",
+      "pt": "Basílica de Nossa Senhora de Itatí"
+    },
+    "history": {
+      "es": "La devoción a Nuestra Señora de Itatí pertenece a la historia cristiana del nordeste argentino y a su encuentro con la cultura guaraní. La arquidiócesis de Corrientes vincula su desarrollo a la misión franciscana y al establecimiento de la parroquia de Itatí en 1615. La imagen de María reúne peregrinaciones y celebraciones de comunidades de la región. Su coronación pontificia se celebró el 16 de julio de 1900; la fiesta propia también se celebra el 9 de julio. Los relatos de favores forman parte de la memoria devocional y deben distinguirse de dictámenes individuales. El santuario invita a la oración, la comunión eclesial y la esperanza.",
+      "en": "Devotion to Our Lady of Itatí belongs to the Christian history of northeastern Argentina and its encounter with Guaraní culture. The Archdiocese of Corrientes links its development to Franciscan mission and the establishment of Itatí parish in 1615. The image of Mary gathers pilgrimages and celebrations from the region’s communities. Its pontifical coronation was celebrated on 16 July 1900; its particular feast is also celebrated on 9 July. Accounts of favours belong to devotional memory and should be distinguished from individual judgements. The shrine invites prayer, ecclesial communion and hope among the people who make the journey together in shared worship.",
+      "pt": "A devoção a Nossa Senhora de Itatí pertence à história cristã do nordeste argentino e ao seu encontro com a cultura guarani. A Arquidiocese de Corrientes vincula seu desenvolvimento à missão franciscana e ao estabelecimento da paróquia de Itatí em 1615. A imagem de Maria reúne peregrinações e celebrações de comunidades da região. Sua coroação pontifícia foi celebrada em 16 de julho de 1900; a festa própria também é celebrada em 9 de julho. Os relatos de graças fazem parte da memória devocional e devem ser distinguidos de pareceres individuais. O santuário convida à oração, à comunhão eclesial e à esperança."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La arquidiócesis conserva relatos tradicionales de favores. No se añade una lista de curaciones canónicamente declaradas sin expedientes concretos.",
+      "en": "The archdiocese preserves traditional accounts of favours. No list of canonically declared healings is added without specific records.",
+      "pt": "A arquidiocese conserva relatos tradicionais de graças. Não se acrescenta uma lista de curas canonicamente declaradas sem processos concretos."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "Argentina",
+      "en": "Argentina",
+      "pt": "Argentina"
+    },
+    "patronageOf": {
+      "es": "Patrona de Corrientes, según la documentación de la arquidiócesis.",
+      "en": "Patroness of Corrientes, according to the archdiocese’s documentation.",
+      "pt": "Padroeira de Corrientes, segundo a documentação da arquidiocese."
+    },
+    "recognition": {
+      "es": "La arquidiócesis documenta la coronación pontificia del 16-VII-1900 y el patronazgo proclamado en 1918. Son reconocimiento del culto, no de cada relato particular.",
+      "en": "The archdiocese documents the pontifical coronation of 16 July 1900 and the patronage proclaimed in 1918. These recognize the devotion rather than every particular account.",
+      "pt": "A arquidiocese documenta a coroação pontifícia de 16-VII-1900 e o padroeirado proclamado em 1918. Reconhecem o culto, não cada relato particular."
+    },
+    "practice": {
+      "es": "La fiesta de julio y las peregrinaciones se acompañan de Eucaristía y Rosario, con atención fraterna a los peregrinos.",
+      "en": "The July feast and pilgrimages include the Eucharist and Rosary, with fraternal care for pilgrims.",
+      "pt": "A festa de julho e as peregrinações são acompanhadas de Eucaristia e Rosário, com atenção fraterna aos peregrinos."
+    },
+    "sources": [
+      "Arzobispado de Corrientes, Basílica de Itatí: historia",
+      "AICA, obispo de Posadas sobre Itatí, 25-VII-2024"
+    ]
+  },
+  {
+    "id": "virgen_rocio",
+    "title": {
+      "es": "Nuestra Señora del Rocío",
+      "en": "Our Lady of El Rocío",
+      "pt": "Nossa Senhora do Rocío"
+    },
+    "feastDay": {
+      "es": "Pentecostés y su lunes",
+      "en": "Pentecost and the following Monday",
+      "pt": "Pentecostes e a segunda-feira seguinte"
+    },
+    "year": "1270–1284",
+    "location": {
+      "es": "El Rocío, Almonte, Huelva, España",
+      "en": "El Rocío, Almonte, Huelva, Spain",
+      "pt": "El Rocío, Almonte, Huelva, Espanha"
+    },
+    "primarySanctuary": {
+      "es": "Santuario de Nuestra Señora del Rocío",
+      "en": "Shrine of Our Lady of El Rocío",
+      "pt": "Santuário de Nossa Senhora do Rocío"
+    },
+    "history": {
+      "es": "La devoción del Rocío tiene su centro en Almonte y conserva una imagen de origen medieval, posteriormente vestida según distintas épocas. El estudio publicado por la Hermandad Matriz propone para su origen el intervalo 1270–1284 como hipótesis, no como fecha probada de aparición. La antigua advocación de las Rocinas dio paso al nombre del Rocío. Su romería de Pentecostés reúne hermandades y familias que caminan hacia el santuario con oración y expresiones de cultura popular. La imagen fue coronada canónicamente el 8 de junio de 1919. La devoción invita a reconocer a María como madre de Jesús y a vivir la fraternidad más allá de la celebración festiva.",
+      "en": "Devotion to Our Lady of El Rocío is centred in Almonte and preserves an image of medieval origin, subsequently dressed according to different periods. A study published by the Mother Brotherhood proposes 1270–1284 for its origins as a hypothesis rather than an established apparition date. The older invocation of Las Rocinas gave way to the name El Rocío. Its Pentecost pilgrimage gathers brotherhoods and families walking towards the shrine with prayer and expressions of popular culture. The image was canonically crowned on 8 June 1919. The devotion invites recognition of Mary as Jesus’ mother and the practice of fraternity beyond the festive celebration.",
+      "pt": "A devoção do Rocío tem seu centro em Almonte e conserva uma imagem de origem medieval, posteriormente vestida segundo diferentes épocas. O estudo publicado pela Irmandade Matriz propõe para sua origem o intervalo 1270–1284 como hipótese, não como data comprovada de aparição. A antiga invocação das Rocinas deu lugar ao nome Rocío. Sua romaria de Pentecostes reúne irmandades e famílias que caminham para o santuário com oração e expressões de cultura popular. A imagem foi coroada canonicamente em 8 de junho de 1919. A devoção convida a reconhecer Maria como mãe de Jesus e a viver a fraternidade além da celebração festiva."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "Los relatos de hallazgo y favores pertenecen a su tradición. No se incluye una declaración particular de milagro sin documento identificado.",
+      "en": "Accounts of discovery and favours belong to its tradition. No particular miracle declaration is included without an identified document.",
+      "pt": "Os relatos de encontro e graças pertencem à sua tradição. Não se inclui uma declaração particular de milagre sem documento identificado."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "España",
+      "en": "Spain",
+      "pt": "Espanha"
+    },
+    "patronageOf": {
+      "es": "Patrona de Almonte.",
+      "en": "Patroness of Almonte.",
+      "pt": "Padroeira de Almonte."
+    },
+    "recognition": {
+      "es": "La diócesis de Huelva documenta la coronación canónica del 8-VI-1919 y la visita de Juan Pablo II de 1993. No equivalen a certificar cada leyenda de origen.",
+      "en": "The Diocese of Huelva documents the canonical coronation of 8 June 1919 and John Paul II’s 1993 visit. They do not certify every origin legend.",
+      "pt": "A Diocese de Huelva documenta a coroação canônica de 8-VI-1919 e a visita de João Paulo II de 1993. Não equivalem a certificar cada lenda de origem."
+    },
+    "practice": {
+      "es": "La romería de Pentecostés se vive con peregrinación, Rosario y Eucaristía, respetando a las personas, el entorno y la vida de las comunidades.",
+      "en": "The Pentecost pilgrimage is lived through walking, the Rosary and the Eucharist, respecting people, the environment and community life.",
+      "pt": "A romaria de Pentecostes é vivida com peregrinação, Rosário e Eucaristia, respeitando as pessoas, o ambiente e a vida das comunidades."
+    },
+    "sources": [
+      "Diócesis de Huelva, historia de coronaciones canónicas, 2025: Rocío",
+      "Hermandad Matriz, Exvoto 5, 2016: Historia y teología de los títulos Rocío y Rocinas, pp. 159–166"
+    ]
+  },
+  {
+    "id": "virgen_covadonga",
+    "title": {
+      "es": "Nuestra Señora de Covadonga",
+      "en": "Our Lady of Covadonga",
+      "pt": "Nossa Senhora de Covadonga"
+    },
+    "feastDay": {
+      "es": "8 de septiembre",
+      "en": "8 September",
+      "pt": "8 de setembro"
+    },
+    "year": "1918",
+    "location": {
+      "es": "Covadonga, Asturias, España",
+      "en": "Covadonga, Asturias, Spain",
+      "pt": "Covadonga, Astúrias, Espanha"
+    },
+    "primarySanctuary": {
+      "es": "Santuario de Covadonga y Santa Cueva",
+      "en": "Shrine of Covadonga and Holy Cave",
+      "pt": "Santuário de Covadonga e Santa Gruta"
+    },
+    "history": {
+      "es": "Covadonga es un santuario mariano de Asturias situado junto a una cueva y a un paisaje de montaña. La devoción a la Santina posee una larga historia, vinculada a la memoria religiosa y cultural asturiana. Las tradiciones sobre Pelayo y los comienzos medievales deben distinguirse de la documentación de cada edificio e imagen. La cronología del santuario registra transformaciones, pérdidas y reconstrucciones a lo largo de los siglos. Las imágenes de María y del Niño fueron coronadas canónicamente el 8 de septiembre de 1918, año indicado aquí para ese reconocimiento. La peregrinación reúne oración, Eucaristía y encuentro con un lugar que invita al recogimiento y al cuidado de la creación.",
+      "en": "Covadonga is a Marian shrine in Asturias beside a cave and a mountain landscape. Devotion to the Santina has a long history linked to Asturian religious and cultural memory. Traditions about Pelayo and medieval beginnings should be distinguished from the documentation concerning each building and image. The shrine’s chronology records transformations, losses and reconstruction over the centuries. The images of Mary and the Child were canonically crowned on 8 September 1918, the year given here for that recognition. Pilgrimage brings together prayer, the Eucharist and encounter with a place inviting recollection and care for creation rather than a claim to automatic military protection.",
+      "pt": "Covadonga é um santuário mariano das Astúrias situado junto a uma gruta e a uma paisagem de montanha. A devoção à Santina possui uma longa história, ligada à memória religiosa e cultural asturiana. As tradições sobre Pelágio e os começos medievais devem ser distinguidas da documentação de cada edifício e imagem. A cronologia do santuário registra transformações, perdas e reconstruções ao longo dos séculos. As imagens de Maria e do Menino foram coroadas canonicamente em 8 de setembro de 1918, ano indicado aqui para esse reconhecimento. A peregrinação reúne oração, Eucaristia e encontro com um lugar que convida ao recolhimento e ao cuidado da criação."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "Las tradiciones medievales no se convierten en garantías de victoria o protección física. No se añaden milagros individuales sin dictamen verificado.",
+      "en": "Medieval traditions are not turned into guarantees of victory or physical protection. No individual miracles are added without a verified judgement.",
+      "pt": "As tradições medievais não se transformam em garantias de vitória ou proteção física. Não se acrescentam milagres individuais sem parecer verificado."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "España",
+      "en": "Spain",
+      "pt": "Espanha"
+    },
+    "patronageOf": {
+      "es": "Devoción mariana del pueblo asturiano.",
+      "en": "A Marian devotion of the Asturian people.",
+      "pt": "Devoção mariana do povo asturiano."
+    },
+    "recognition": {
+      "es": "El santuario documenta la coronación canónica de las imágenes el 8-IX-1918, concedida por Benedicto XV. Ese reconocimiento del culto se distingue de las tradiciones sobre batallas medievales.",
+      "en": "The shrine documents the images’ canonical coronation on 8 September 1918, granted by Benedict XV. That recognition of devotion is distinct from traditions about medieval battles.",
+      "pt": "O santuário documenta a coroação canônica das imagens em 8-IX-1918, concedida por Bento XV. Esse reconhecimento do culto se distingue das tradições sobre batalhas medievais."
+    },
+    "practice": {
+      "es": "La fiesta del 8 de septiembre y la visita a la Santa Cueva se acompañan de oración, Eucaristía y respeto al silencio del santuario.",
+      "en": "The 8 September feast and visits to the Holy Cave include prayer, the Eucharist and respect for the shrine’s silence.",
+      "pt": "A festa de 8 de setembro e a visita à Santa Gruta são acompanhadas de oração, Eucaristia e respeito ao silêncio do santuário."
+    },
+    "sources": [
+      "Santuario de Covadonga, Cronología: coronación de 1918",
+      "Catecismo de la Iglesia Católica, 971: culto mariano"
+    ]
+  },
+  {
+    "id": "virgen_montserrat",
+    "title": {
+      "es": "Nuestra Señora de Montserrat",
+      "en": "Our Lady of Montserrat",
+      "pt": "Nossa Senhora de Montserrat"
+    },
+    "feastDay": {
+      "es": "27 de abril",
+      "en": "27 April",
+      "pt": "27 de abril"
+    },
+    "year": "1025",
+    "location": {
+      "es": "Montserrat, Cataluña, España",
+      "en": "Montserrat, Catalonia, Spain",
+      "pt": "Montserrat, Catalunha, Espanha"
+    },
+    "primarySanctuary": {
+      "es": "Abadía y Santuario de Montserrat",
+      "en": "Abbey and Shrine of Montserrat",
+      "pt": "Abadia e Santuário de Montserrat"
+    },
+    "history": {
+      "es": "La devoción de Montserrat está unida a un monasterio benedictino fundado por el abad Oliba en 1025. La imagen actualmente venerada de María con el Niño es una talla románica, posterior a la fundación del monasterio, y es conocida popularmente como la Moreneta. La historia del santuario incluye peregrinación, vida monástica, música y distintas etapas de destrucción y reconstrucción. En 1881 se celebraron la coronación de la imagen y su proclamación como patrona de Cataluña. Las fiestas del 27 de abril y del 8 de septiembre mantienen una tradición viva de oración. La espiritualidad del lugar orienta a escuchar la Palabra, celebrar la Eucaristía y compartir la esperanza cristiana.",
+      "en": "Devotion to Our Lady of Montserrat is linked to a Benedictine monastery founded by Abbot Oliba in 1025. The presently venerated image of Mary with the Child is a Romanesque carving, later than the monastery’s foundation, popularly known as the Moreneta. The shrine’s history includes pilgrimage, monastic life, music and periods of destruction and rebuilding. The image’s coronation and proclamation as patroness of Catalonia were celebrated in 1881. The feasts of 27 April and 8 September maintain a living tradition of prayer. The place’s spirituality invites listening to the Word, celebrating the Eucharist and sharing Christian hope with other pilgrims.",
+      "pt": "A devoção de Montserrat está unida a um mosteiro beneditino fundado pelo abade Oliba em 1025. A imagem atualmente venerada de Maria com o Menino é uma escultura românica, posterior à fundação do mosteiro, conhecida popularmente como a Moreneta. A história do santuário inclui peregrinação, vida monástica, música e diferentes etapas de destruição e reconstrução. Em 1881 foram celebradas a coroação da imagem e sua proclamação como padroeira da Catalunha. As festas de 27 de abril e de 8 de setembro mantêm uma tradição viva de oração. A espiritualidade do lugar orienta a escutar a Palavra, celebrar a Eucaristia e compartilhar a esperança cristã."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "Las tradiciones de hallazgo y favores pertenecen a la historia devocional. No se incluyen curaciones particulares sin documentación canónica identificada.",
+      "en": "Traditions of discovery and favours belong to devotional history. No particular healings are included without identified canonical documentation.",
+      "pt": "As tradições de encontro e graças pertencem à história devocional. Não se incluem curas particulares sem documentação canônica identificada."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "España",
+      "en": "Spain",
+      "pt": "Espanha"
+    },
+    "patronageOf": {
+      "es": "Patrona de Cataluña.",
+      "en": "Patroness of Catalonia.",
+      "pt": "Padroeira da Catalunha."
+    },
+    "recognition": {
+      "es": "La abadía documenta la coronación y proclamación patronal de 1881. La cofradía del santuario documenta las fiestas montserratinas y la continuidad de su culto.",
+      "en": "The abbey documents the coronation and proclamation of patronage in 1881. The shrine’s confraternity documents the Montserrat feasts and the continuity of its devotion.",
+      "pt": "A abadia documenta a coroação e a proclamação do padroeirado em 1881. A confraria do santuário documenta as festas montserratinas e a continuidade de seu culto."
+    },
+    "practice": {
+      "es": "La peregrinación puede unirse a la liturgia benedictina, la oración ante la imagen y la fiesta del 27 de abril.",
+      "en": "Pilgrimage can be joined to the Benedictine liturgy, prayer before the image and the 27 April feast.",
+      "pt": "A peregrinação pode unir-se à liturgia beneditina, à oração diante da imagem e à festa de 27 de abril."
+    },
+    "sources": [
+      "Abadía de Montserrat, History: 1025 e imagen románica",
+      "Abadía de Montserrat, Confraria de la Mare de Déu: fiestas"
+    ]
+  },
+  {
+    "id": "virgen_loreto",
+    "title": {
+      "es": "Nuestra Señora de Loreto",
+      "en": "Our Lady of Loreto",
+      "pt": "Nossa Senhora de Loreto"
+    },
+    "feastDay": {
+      "es": "10 de diciembre",
+      "en": "10 December",
+      "pt": "10 de dezembro"
+    },
+    "year": "1294",
+    "location": {
+      "es": "Loreto, Marcas, Italia",
+      "en": "Loreto, Marche, Italy",
+      "pt": "Loreto, Marcas, Itália"
+    },
+    "primarySanctuary": {
+      "es": "Santuario Pontificio de la Santa Casa de Loreto",
+      "en": "Pontifical Shrine of the Holy House of Loreto",
+      "pt": "Santuário Pontifício da Santa Casa de Loreto"
+    },
+    "history": {
+      "es": "Loreto es un santuario dedicado al misterio de la Encarnación y a la vida de María junto a Jesús. Su tradición sitúa en 1294 la llegada de la Santa Casa desde Nazaret; la narración del traslado se presenta como tradición del santuario y se distingue de una conclusión histórica sobre cada detalle. Peregrinos de distintos países han acudido a este lugar para orar y discernir su vocación. Las letanías lauretanas expresan una devoción mariana difundida universalmente. En 2019 Francisco dispuso inscribir su memoria facultativa el 10 de diciembre en el calendario romano general. La celebración orienta a la fe de María, a la vida familiar y a la respuesta a Dios.",
+      "en": "Loreto is a shrine devoted to the mystery of the Incarnation and Mary’s life with Jesus. Its tradition places the Holy House’s arrival from Nazareth in 1294; the account of its transfer is presented as the shrine’s tradition and distinguished from a historical conclusion about every detail. Pilgrims from different countries have come to pray and discern their vocation. The Litany of Loreto expresses a Marian devotion spread throughout the world. In 2019 Francis ordered its optional memorial to be inscribed in the General Roman Calendar on 10 December. The celebration directs attention to Mary’s faith, family life and responding to God.",
+      "pt": "Loreto é um santuário dedicado ao mistério da Encarnação e à vida de Maria junto a Jesus. Sua tradição situa em 1294 a chegada da Santa Casa de Nazaré; a narrativa da transferência é apresentada como tradição do santuário e distinguida de uma conclusão histórica sobre cada detalhe. Peregrinos de diferentes países têm procurado esse lugar para rezar e discernir sua vocação. As ladainhas lauretanas expressam uma devoção mariana difundida universalmente. Em 2019 Francisco determinou inscrever sua memória facultativa em 10 de dezembro no calendário romano geral. A celebração orienta para a fé de Maria, a vida familiar e a resposta a Deus."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición de la Santa Casa no se transforma en una declaración sobre cada mecanismo de su traslado ni en promesa de curación individual.",
+      "en": "The Holy House tradition is not turned into a declaration about every mechanism of its transfer or a promise of individual healing.",
+      "pt": "A tradição da Santa Casa não se transforma em declaração sobre cada mecanismo de sua transferência nem em promessa de cura individual."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "Italia",
+      "en": "Italy",
+      "pt": "Itália"
+    },
+    "patronageOf": {
+      "es": "Devoción vinculada a familias y al discernimiento vocacional.",
+      "en": "A devotion associated with families and vocational discernment.",
+      "pt": "Devoção ligada às famílias e ao discernimento vocacional."
+    },
+    "recognition": {
+      "es": "Decreto de la Congregación para el Culto Divino del 7-X-2019: memoria facultativa de Nuestra Señora de Loreto el 10 de diciembre en el calendario romano general.",
+      "en": "Congregation for Divine Worship decree of 7 October 2019: optional memorial of Our Lady of Loreto on 10 December in the General Roman Calendar.",
+      "pt": "Decreto da Congregação para o Culto Divino de 7-X-2019: memória facultativa de Nossa Senhora de Loreto em 10 de dezembro no calendário romano geral."
+    },
+    "practice": {
+      "es": "La memoria del 10 de diciembre y la peregrinación se acompañan de Eucaristía, oración mariana y meditación del anuncio a María.",
+      "en": "The 10 December memorial and pilgrimage include the Eucharist, Marian prayer and meditation on the annunciation to Mary.",
+      "pt": "A memória de 10 de dezembro e a peregrinação são acompanhadas de Eucaristia, oração mariana e meditação do anúncio a Maria."
+    },
+    "sources": [
+      "Congregación para el Culto Divino, decreto de Loreto, 7-X-2019",
+      "Santuario Pontificio de Loreto, La Santa Casa da Nazareth a Loreto"
+    ]
+  },
+  {
+    "id": "virgen_czestochowa",
+    "title": {
+      "es": "Nuestra Señora de Częstochowa",
+      "en": "Our Lady of Częstochowa",
+      "pt": "Nossa Senhora de Częstochowa"
+    },
+    "feastDay": {
+      "es": "26 de agosto",
+      "en": "26 August",
+      "pt": "26 de agosto"
+    },
+    "year": "1384",
+    "location": {
+      "es": "Jasna Góra, Częstochowa, Polonia",
+      "en": "Jasna Góra, Częstochowa, Poland",
+      "pt": "Jasna Góra, Częstochowa, Polônia"
+    },
+    "primarySanctuary": {
+      "es": "Santuario de Jasna Góra",
+      "en": "Shrine of Jasna Góra",
+      "pt": "Santuário de Jasna Góra"
+    },
+    "history": {
+      "es": "La imagen de Nuestra Señora de Częstochowa, conocida como la Virgen Negra, se venera en el monasterio paulino de Jasna Góra. La cronología del santuario distingue la fundación de 1382 de la presencia de la imagen en su iglesia en 1384, año indicado aquí y no fecha de ejecución de la pintura. El icono muestra a María con Jesús y posee un lugar importante en la vida religiosa polaca. Su historia incluye peregrinaciones, momentos de conflicto, restauraciones y renovación espiritual. La coronación con diademas pontificias se celebró en 1717. La fiesta del 26 de agosto invita a unir identidad cultural, fe en Cristo y responsabilidad hacia los demás.",
+      "en": "The image of Our Lady of Częstochowa, known as the Black Madonna, is venerated in the Pauline monastery of Jasna Góra. The shrine’s chronology distinguishes the 1382 foundation from the image’s presence in its church in 1384, the year given here rather than the painting’s creation date. The icon shows Mary with Jesus and holds an important place in Polish religious life. Its history includes pilgrimages, periods of conflict, restoration and spiritual renewal. Coronation with papal diadems was celebrated in 1717. The 26 August feast invites people to unite cultural identity, faith in Christ and responsibility towards others.",
+      "pt": "A imagem de Nossa Senhora de Częstochowa, conhecida como a Virgem Negra, é venerada no mosteiro paulino de Jasna Góra. A cronologia do santuário distingue a fundação de 1382 da presença da imagem em sua igreja em 1384, ano indicado aqui e não data de execução da pintura. O ícone mostra Maria com Jesus e possui um lugar importante na vida religiosa polonesa. Sua história inclui peregrinações, momentos de conflito, restaurações e renovação espiritual. A coroação com diademas pontifícios foi celebrada em 1717. A festa de 26 de agosto convida a unir identidade cultural, fé em Cristo e responsabilidade pelos demais."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La historia conserva relatos de protección y favores. No se presenta cada episodio militar o restauración del icono como un milagro canónico individual.",
+      "en": "The history preserves accounts of protection and favours. Not every military episode or restoration of the icon is presented as an individual canonical miracle.",
+      "pt": "A história conserva relatos de proteção e graças. Não se apresenta cada episódio militar ou restauração do ícone como milagre canônico individual."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "Polonia",
+      "en": "Poland",
+      "pt": "Polônia"
+    },
+    "patronageOf": {
+      "es": "Venerada como Reina de Polonia.",
+      "en": "Venerated as Queen of Poland.",
+      "pt": "Venerada como Rainha da Polônia."
+    },
+    "recognition": {
+      "es": "El santuario documenta la coronación pontificia del 8-IX-1717 y la aprobación de la fiesta por Pío X en 1904. Su calendario mantiene la fiesta del 26 de agosto.",
+      "en": "The shrine documents the pontifical coronation of 8 September 1717 and Pius X’s approval of the feast in 1904. Its calendar retains the 26 August feast.",
+      "pt": "O santuário documenta a coroação pontifícia de 8-IX-1717 e a aprovação da festa por Pio X em 1904. Seu calendário mantém a festa de 26 de agosto."
+    },
+    "practice": {
+      "es": "La peregrinación a Jasna Góra se vive con oración ante el icono, reconciliación y Eucaristía, especialmente en agosto.",
+      "en": "Pilgrimage to Jasna Góra includes prayer before the icon, reconciliation and the Eucharist, particularly in August.",
+      "pt": "A peregrinação a Jasna Góra é vivida com oração diante do ícone, reconciliação e Eucaristia, especialmente em agosto."
+    },
+    "sources": [
+      "Jasna Góra, From the History of Jasna Góra",
+      "Jasna Góra, Major Marian Celebrations",
+      "Francisco, homilía en Częstochowa, 28-VII-2016"
+    ]
+  }
+]
