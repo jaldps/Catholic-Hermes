@@ -902,5 +902,192 @@
       "Ursulinas de la Unión Romana, History",
       "Catholic Encyclopedia: The Ursulines"
     ]
+  },
+  {
+    "id": "adoratrices-asc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa María De Mattias"
+      ],
+      "en": [
+        "Saint Maria De Mattias"
+      ],
+      "pt": [
+        "Santa Maria De Mattias"
+      ]
+    },
+    "presence": {
+      "es": "Las adoratrices unen oración y servicio en comunidades interculturales, con obras educativas, promoción de la justicia y atención a las necesidades de sus vecinos.",
+      "en": "The Adorers unite prayer and service in intercultural communities through educational works, the promotion of justice and care for their neighbours’ needs.",
+      "pt": "As adoradoras unem oração e serviço em comunidades interculturais, com obras educativas, promoção da justiça e atenção às necessidades das pessoas próximas."
+    },
+    "sources": [
+      "Adoratrices de la Sangre de Cristo, Dirección general: About Us",
+      "Santa Sede, biografía de María De Mattias, 18-V-2003"
+    ]
+  },
+  {
+    "id": "esclavas-sagrado-corazon-rshm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La congregación internacional sirve mediante educación y ministerios orientados a la dignidad y la vida, con comunidades y colaboradores en diversos países.",
+      "en": "The international congregation serves through education and ministries supporting dignity and life, with communities and collaborators in different countries.",
+      "pt": "A congregação internacional serve pela educação e por ministérios voltados à dignidade e à vida, com comunidades e colaboradores em diferentes países."
+    },
+    "sources": [
+      "Religiosas del Sagrado Corazón de María, sitio general",
+      "RSHM, Constitutions y proceso de revisión"
+    ]
+  },
+  {
+    "id": "hermanas-providencia-sp",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beata Émilie Tavernier-Gamelin"
+      ],
+      "en": [
+        "Blessed Émilie Tavernier-Gamelin"
+      ],
+      "pt": [
+        "Bem-aventurada Émilie Tavernier-Gamelin"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas y sus asociados continúan el servicio compasivo a personas pobres, enfermas y marginadas, manteniendo viva la herencia de Émilie Gamelin.",
+      "en": "The sisters and their associates continue compassionate service to poor, sick and marginalized people, keeping Émilie Gamelin’s heritage alive.",
+      "pt": "As irmãs e seus associados continuam o serviço compassivo às pessoas pobres, doentes e marginalizadas, mantendo viva a herança de Émilie Gamelin."
+    },
+    "sources": [
+      "Hermanas de la Providencia Émilie-Gamelin, sitio institucional",
+      "Providence International, Centre Émilie-Gamelin",
+      "Santa Sede, biografía para la beatificación de Émilie Gamelin, 7-X-2001"
+    ]
+  },
+  {
+    "id": "siervas-de-los-pobres-dss",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La congregación nacida en Kerala mantiene su identidad de servicio a personas pobres y marginadas, con vida comunitaria y apostolado social.",
+      "en": "The congregation originating in Kerala maintains its identity of service to poor and marginalized people through community life and social ministry.",
+      "pt": "A congregação nascida em Kerala mantém sua identidade de serviço às pessoas pobres e marginalizadas, com vida comunitária e apostolado social."
+    },
+    "sources": [
+      "Dinasevanasabha, sitio oficial",
+      "Ursulinas de la Unión Romana, Mother Petra Dinadasi"
+    ]
+  },
+  {
+    "id": "franciscanas-de-los-angeles-fsma",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Las hermanas unen adoración eucarística y misión, con servicios educativos y sanitarios y comunidades vinculadas a su fundación francesa.",
+      "en": "The sisters unite Eucharistic adoration and mission through educational and healthcare services and communities connected with their French foundation.",
+      "pt": "As irmãs unem adoração eucarística e missão, com serviços educativos e de saúde e comunidades ligadas à sua fundação francesa."
+    },
+    "sources": [
+      "Franciscaines de Sainte-Marie-des-Anges, provincia de Francia",
+      "Diócesis de Fréjus-Toulon, Franciscaines de Sainte-Marie des anges"
+    ]
+  },
+  {
+    "id": "religiosas-jesus-maria-rjm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Claudina Thévenet"
+      ],
+      "en": [
+        "Saint Claudine Thévenet"
+      ],
+      "pt": [
+        "Santa Claudina Thévenet"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades sirven mediante educación formal e informal, misión y pastoral, con especial atención a jóvenes, personas pobres y promoción de la dignidad de las mujeres.",
+      "en": "Their communities serve through formal and informal education, mission and pastoral ministries, with particular attention to young people, poor people and women’s dignity.",
+      "pt": "Suas comunidades servem pela educação formal e informal, pela missão e pela pastoral, com atenção especial aos jovens, às pessoas pobres e à dignidade das mulheres."
+    },
+    "sources": [
+      "Religiosas de Jesús-María, Who We Are",
+      "RJM, documentación histórica: Part II, Foundation of the Congregation"
+    ]
+  },
+  {
+    "id": "dominicanas-visitacion-dv",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La congregación filipina mantiene ministerios de educación, catequesis, retiros y salud, con presencia documentada en Filipinas, Estados Unidos, Kenia e Italia.",
+      "en": "The Philippine congregation undertakes education, catechesis, retreats and healthcare ministries, with documented presence in the Philippines, the United States, Kenya and Italy.",
+      "pt": "A congregação filipina mantém ministérios de educação, catequese, retiros e saúde, com presença documentada nas Filipinas, nos Estados Unidos, no Quênia e na Itália."
+    },
+    "sources": [
+      "Orden de Predicadores, historia de la congregación fundada por Rosario de la Visitación",
+      "Dominican Sisters International Confederation, Foundress of a Dominican Sisters’ Congregation in the Philippines"
+    ]
   }
 ]

@@ -1,6 +1,6 @@
 # T-016 · Informe de Codex
 
-Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega de **0 nuevas familias** (objetivo aproximado: 60) y **30 fichas ampliadas**. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
+Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega de **0 nuevas familias** (objetivo aproximado: 60) y **37 fichas ampliadas**. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
 
 Leídos el protocolo, las reglas editoriales, el contrato M6 y los datos existentes. Solo se crean los dos JSON autorizados y este informe. Redacción original ES/EN/PT; no se componen lemas, citas ni oraciones. Las aprobaciones no se deducen del año de fundación ni de una agregación a otra orden. `motto: null`, aprobaciones vacías y listas de santos vacías señalan que no se incorpora un dato suficientemente documentado, no que necesariamente carezcan de ellos.
 
@@ -231,6 +231,56 @@ kind order. No se confunde el proyecto inicial de visitas a enfermos con la orga
 
 El nombre genérico Ursulinas agrupa distintas formas canónicas. Se delimita congregation a la Unión Romana, rama representativa documentada en las fuentes, sin afirmar que todas las ursulinas tengan idéntica forma. La Compañía original de 1535 y la Unión de 1900 son diferentes etapas. No se convierte una aprobación verbal de 1900 en bula inventada.
 
+### 31. `adoratrices-asc` · `congregation`
+
+- [Adoratrices de la Sangre de Cristo, Dirección general: About Us](https://www.adoratrici-asc.org/en/about-us/)
+- [Santa Sede, biografía de María De Mattias, 18-V-2003](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20030518_de-mattias_en.html)
+
+kind congregation. Discrepancia importante del Kotlin: 1808 no es su fundación; la biografía pontificia documenta 4-III-1834. No se altera el archivo base por restricción del encargo. La referencia espiritual a san Gaspar del Búfalo no lo convierte en cofundador institucional. No se completa una aprobación pontificia sin documento.
+
+### 32. `esclavas-sagrado-corazon-rshm` · `congregation`
+
+- [Religiosas del Sagrado Corazón de María, sitio general](https://www.rscm-rshm.org/)
+- [RSHM, Constitutions y proceso de revisión](https://www.rscm-rshm.org/general/constitutions/)
+
+kind congregation. El identificador heredado dice esclavas-sagrado-corazon, pero el nombre, sigla y fundadores corresponden a RSHM: Religiosas del Sagrado Corazón de María, distintas de las Esclavas ACI y de las Religiosas del Sagrado Corazón RSCJ. Se conserva el id sin perpetuar esa confusión. No se presume santidad canonizada de sus fundadores ni una fecha exacta de aprobación.
+
+### 33. `hermanas-providencia-sp` · `congregation`
+
+- [Hermanas de la Providencia Émilie-Gamelin, sitio institucional](https://emilie-gamelin.ca/en/)
+- [Providence International, Centre Émilie-Gamelin](https://providenceintl.org/en/emilie-gamelin-centre-museum/)
+- [Santa Sede, biografía para la beatificación de Émilie Gamelin, 7-X-2001](https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20011007_beat-tavernier_en.html)
+
+kind congregation. Émilie Gamelin es beata en las fuentes verificadas, no santa como afirma el Kotlin. Se distingue esta fundación de Montreal de otras congregaciones homónimas de la Providencia. No se agregan cifras ni una aprobación pontificia sin documento.
+
+### 34. `siervas-de-los-pobres-dss` · `congregation`
+
+- [Dinasevanasabha, sitio oficial](https://dinasevanasabha.com/)
+- [Ursulinas de la Unión Romana, Mother Petra Dinadasi](https://ursulines-roman-union.org/en/mother-petra-dinadasi)
+
+kind congregation: Dinasevanasabha, no una categoría genérica de servidoras de los pobres. Petra Moennigmann, llamada Petra Dinadasi, figura como sierva de Dios en la fuente, no santa ni beata. La aprobación episcopal inicial no se convierte en pontificia. No se completa fecha y documento de derecho pontificio sin verificarlos.
+
+### 35. `franciscanas-de-los-angeles-fsma` · `congregation`
+
+- [Franciscaines de Sainte-Marie-des-Anges, provincia de Francia](https://fsmainstitute.org/index.php?province_id=12)
+- [Diócesis de Fréjus-Toulon, Franciscaines de Sainte-Marie des anges](https://frejustoulon.fr/diocese/communautes/franciscaines-sainte-marie-des-anges/)
+
+kind congregation; la diócesis confirma condición de instituto de derecho pontificio. La fuente diocesana identifica a Potton como capuchino y a la fundadora como Caroline Rurange, Marie-Chrysostome de la Croix. El sitio provincial usa OFM de modo genérico; no se reproduce como prueba de rama observante. Se omiten cifras diocesanas sin fecha y el día exacto de fundación, variable entre reseñas. No se identifica un documento pontificio de aprobación.
+
+### 36. `religiosas-jesus-maria-rjm` · `congregation`
+
+- [Religiosas de Jesús-María, Who We Are](https://www.rjmgeneral.org/en/who-we-are/)
+- [RJM, documentación histórica: Part II, Foundation of the Congregation](https://www.rjmgeneral.org/wp-content/uploads/2015/09/PART-II-FULL.pdf)
+
+kind congregation. La fuente institucional documenta fundación de 6-X-1818, distinta de 1821 en el Kotlin. La documentación histórica menciona aprobación en 1847, con referencias que deben distinguir aprobación de constituciones y del instituto; se deja approval vacío hasta fijar inequívocamente el documento. La fundadora figura expresamente como santa en el sitio actual.
+
+### 37. `dominicanas-visitacion-dv` · `congregation`
+
+- [Orden de Predicadores, historia de la congregación fundada por Rosario de la Visitación](https://www.op.org/foundress-of-a-dominican-sisters-congregation-in-the-philippines-on-the-road-to-beatification/)
+- [Dominican Sisters International Confederation, Foundress of a Dominican Sisters’ Congregation in the Philippines](https://dsiop.org/news/2021/foundress-of-a-dominican-sisters-congregation-in-the-philippines-on-the-road-to-beatification/)
+
+kind congregation. El nombre institucional documentado es Dominican Sisters of the Most Holy Rosary of the Philippines, no una orden independiente llamada de la Visitación; este último es el nombre religioso de la fundadora. Se conserva el identificador heredado. Las fuentes indican derecho pontificio desde 7-X-1985, pero no se completa un documento no localizado. Rosario es venerable, no santa ni beata; la lista queda vacía. No se reutilizan las cifras de la reseña de 2021 ni su cómputo cronológico inconsistente.
+
 ## Validación
 
 ```sh
@@ -240,8 +290,7 @@ python3 docs/tasks/tools/validate_orders.py details app/src/main/assets/orders/o
 
 ```text
 0 entries · 0 errors · 0 warnings
-WARN  partial: 30/37 orders
-30 entries · 0 errors · 1 warnings
+37 entries · 0 errors · 0 warnings
 ```
 
 Las entregas de fichas ampliadas aceptan un prefijo ordenado; el aviso de parcial no es un error. Se comprueban además las extensiones editoriales, las claves e identificadores y `git diff --check` antes de entregar. Integración y compilación a cargo del coordinador.
