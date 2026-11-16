@@ -58,9 +58,9 @@
     },
     "prayer": {
       "text": {
-        "es": "Flor del Carmelo, vid florecida, esplendor del cielo, Virgen que das a luz, singular. Madre bondadosa, que no conociste varón, sé propicia a los carmelitas, Estrella del mar.",
-        "en": "Flower of Carmel, flowering vine, splendour of heaven, unique Virgin who gives birth. Gentle Mother, who knew no man, be gracious to the Carmelites, Star of the Sea.",
-        "pt": "Flor do Carmelo, vide florescente, esplendor do céu, Virgem singular que dá à luz. Mãe bondosa, que não conheceste varão, sê propícia aos carmelitas, Estrela do mar."
+        "es": "Flor del Carmelo, vid florecida, esplendor del cielo, Virgen Madre singular. Madre bondadosa, que no conociste varón, sé propicia a los carmelitas, Estrella del mar.",
+        "en": "Flower of Carmel, flowering vine, splendour of heaven, Virgin Mother without equal. Gentle Mother, who knew no man, be gracious to the Carmelites, Star of the Sea.",
+        "pt": "Flor do Carmelo, vide florescente, esplendor do céu, Virgem Mãe singular. Mãe bondosa, que não conheceste varão, sê propícia aos carmelitas, Estrela do mar."
       },
       "source": "Flos Carmeli, dos estrofas iniciales; original latino tradicional cotejado en Our Lady of Mercy Lay Carmelite Community. Traducciones propias fieles."
     },
@@ -83,7 +83,17 @@
       "pt": "O culto de Guadalupe é afirmado em Ecclesia in America, 11 (1999), e na celebração papal de 12-XII-2024. Esse reconhecimento não confirma automaticamente cada número de conversões ou afirmação científica sobre a tilma."
     },
     "promises": {
-      "remove": true
+      "text": {
+        "es": "«¿No estoy yo aquí que soy tu Madre?»",
+        "en": "“Am I not here, I who am your Mother?”",
+        "pt": "«Não estou eu aqui, que sou tua Mãe?»"
+      },
+      "attribution": {
+        "es": "Fragmento de las palabras de María a Juan Diego en el Nican Mopohua, 119. Es consuelo materno en el relato guadalupano, no una garantía de ausencia de sufrimiento.",
+        "en": "Excerpt from Mary’s words to Juan Diego in the Nican Mopohua, 119. It expresses motherly comfort in the Guadalupe narrative, rather than a guarantee of freedom from suffering.",
+        "pt": "Trecho das palavras de Maria a Juan Diego no Nican Mopohua, 119. É consolo materno no relato de Guadalupe, não garantia de ausência de sofrimento."
+      },
+      "source": "Nican Mopohua, 119, traducción de Primo Feliciano Velázquez (publicada en 1926), transcripción de Proyecto Guadalupe reproducida por la Sociedad Genealógica y de Historia Familiar de México. Fragmento: ES literal; EN/PT traducciones propias fieles."
     },
     "miracles": {
       "text": {
@@ -102,7 +112,8 @@
     },
     "sources": [
       "Juan Pablo II, Ecclesia in America, 11, 1999",
-      "Francisco, homilía de Guadalupe, 12-XII-2024, cita de Nican Mopohua 118–119"
+      "Francisco, homilía de Guadalupe, 12-XII-2024, cita de Nican Mopohua 118–119",
+      "Nican Mopohua, 119, traducción de Primo Feliciano Velázquez, 1926; transcripción de Proyecto Guadalupe"
     ]
   },
   {
@@ -269,7 +280,17 @@
       "pt": "O bispo de Leiria José Alves Correia da Silva declarou dignas de crédito as visões de 1917 e autorizou o culto em sua carta pastoral de 13-X-1930. A publicação da Congregação para a Doutrina da Fé de 2000 distingue a revelação privada do depósito da fé."
     },
     "promises": {
-      "remove": true
+      "text": {
+        "es": "«Al fin, mi Corazón Inmaculado triunfará».",
+        "en": "“In the end, my Immaculate Heart will triumph.”",
+        "pt": "«Por fim, o Meu Imaculado Coração triunfará.»"
+      },
+      "attribution": {
+        "es": "Fragmento de las palabras de María a los pastorcitos el 13-VII-1917, según la cuarta memoria de Lucía. Su contexto es la llamada a la conversión, la consagración de Rusia y la comunión reparadora; es revelación privada.",
+        "en": "Excerpt from Mary’s words to the shepherd children on 13 July 1917, according to Lúcia’s fourth memoir. Its context is the call to conversion, the consecration of Russia and Communion of reparation; it is private revelation.",
+        "pt": "Trecho das palavras de Maria aos pastorinhos em 13-VII-1917, segundo a quarta memória de Lúcia. Seu contexto é o chamado à conversão, a consagração da Rússia e a comunhão reparadora; é revelação privada."
+      },
+      "source": "Irmã Lúcia, Memórias da Irmã Lúcia I, compilación de Luís Kondor, 13.ª edición, Secretariado dos Pastorinhos, Fátima, octubre de 2007, cuarta memoria, p. 177. Fragmento: PT literal; ES/EN traducciones propias fieles."
     },
     "miracles": {
       "text": {
@@ -287,14 +308,15 @@
       "source": "Oración transmitida por los videntes en 1917; Documentação Crítica de Fátima: Seleção de documentos (1917–1930), p. 58. PT original; traducciones propias fieles ES/EN."
     },
     "practice": {
-      "es": "Los cinco primeros sábados unen, durante cinco meses, confesión, comunión, Rosario y quince minutos de meditación de sus misterios, con intención reparadora. Según el relato de Lucía, se asocia a ellos la asistencia de María en la hora de la muerte con las gracias necesarias para la salvación. Es revelación privada y exige conversión, no solo cumplimiento exterior.",
-      "en": "The five first Saturdays unite confession, Communion, the Rosary and fifteen minutes of meditation on its mysteries over five months, with reparation as their intention. According to Lucia’s account, Mary’s assistance at death with the graces necessary for salvation is associated with them. This is private revelation and calls for conversion, not merely outward observance.",
-      "pt": "Os cinco primeiros sábados unem, durante cinco meses, confissão, comunhão, Rosário e quinze minutos de meditação de seus mistérios, com intenção reparadora. Segundo o relato de Lúcia, associa-se a eles a assistência de Maria na hora da morte com as graças necessárias para a salvação. É revelação privada e exige conversão, não apenas cumprimento exterior."
+      "es": "Durante cinco primeros sábados consecutivos se unen comunión, Rosario y quince minutos de meditación de sus misterios, con intención reparadora al Corazón Inmaculado de María y confesión, que puede hacerse otro día si se comulga en gracia. El relato de Lucía asocia a esta práctica la asistencia de María en la hora de la muerte con las gracias necesarias para la salvación. Es revelación privada y exige conversión, no solo cumplimiento exterior.",
+      "en": "On the first Saturday of five consecutive months, Communion, the Rosary and fifteen minutes of meditation on its mysteries are joined with reparation to Mary’s Immaculate Heart and confession, which may occur on another day if Communion is received in grace. Lucia’s account associates this practice with Mary’s assistance at death with the graces necessary for salvation. This is private revelation and calls for conversion, not merely outward observance.",
+      "pt": "Nos primeiros sábados de cinco meses consecutivos, unem-se comunhão, Rosário e quinze minutos de meditação de seus mistérios, com intenção reparadora ao Coração Imaculado de Maria e confissão, que pode ser feita em outro dia se a comunhão for recebida em graça. O relato de Lúcia associa à prática a assistência de Maria na hora da morte com as graças necessárias para a salvação. É revelação privada e exige conversão, não apenas cumprimento exterior."
     },
     "sources": [
       "Santuario de Fátima, Cronología: carta pastoral de 1930",
       "Congregación para la Doctrina de la Fe, El mensaje de Fátima, 26-VI-2000",
-      "Santuario de Fátima, Documentação Crítica: Seleção de documentos, 1917–1930"
+      "Santuario de Fátima, Documentação Crítica: Seleção de documentos, 1917–1930",
+      "Irmã Lúcia, Memórias da Irmã Lúcia I, 13.ª ed., Secretariado dos Pastorinhos, 2007, cuarta memoria, p. 177"
     ]
   },
   {
@@ -370,7 +392,17 @@
       "pt": "A capela da rue du Bac documenta a difusão eclesial da medalha desde 1832. Vatican News registra a bênção papal de uma imagem para a peregrinação de 2020; esse gesto não é transformado em nova declaração sobre cada relato de 1830."
     },
     "promises": {
-      "remove": true
+      "text": {
+        "es": "«… recibirán grandes gracias…»",
+        "en": "“… shall receive great graces …”",
+        "pt": "«… receberão grandes graças…»"
+      },
+      "attribution": {
+        "es": "Fragmento del relato de Catalina Labouré sobre el 27-XI-1830. La edición citada relaciona la promesa con llevar la medalla bendecida, especialmente al cuello, y con la confianza; se trata de revelación privada.",
+        "en": "Excerpt from Catherine Labouré’s account of 27 November 1830. The cited edition links the promise with wearing the blessed medal, especially around the neck, and with confidence; it is private revelation.",
+        "pt": "Trecho do relato de Catarina Labouré sobre 27-XI-1830. A edição citada relaciona a promessa ao uso da medalha abençoada, especialmente ao pescoço, e à confiança; trata-se de revelação privada."
+      },
+      "source": "Ernesto Cassinari, Life of blessed Catherine Labouré, traducción inglesa de una Hija de la Caridad, B. Herder, edición catalogada en 1935 por DePaul University, cap. VII, p. 70. Fragmento: EN literal; ES/PT traducciones propias fieles. Aviso de reproducción: consultar Special Collections and Archives, DePaul University; titular de derechos no especificado."
     },
     "miracles": {
       "text": {
@@ -395,7 +427,8 @@
     "sources": [
       "Capilla de la Medalla Milagrosa, 27 novembre 1830",
       "Capilla de la Medalla Milagrosa, Histoire de la Médaille",
-      "Vatican News, peregrinación de la imagen bendecida en 2020, noticia de mayo de 2025"
+      "Vatican News, peregrinación de la imagen bendecida en 2020, noticia de mayo de 2025",
+      "Ernesto Cassinari, Life of blessed Catherine Labouré, B. Herder, catálogo DePaul 1935, cap. VII, p. 70"
     ]
   },
   {
@@ -862,9 +895,9 @@
   {
     "id": "remedios_cholula",
     "recognition": {
-      "es": "Es un santuario de culto católico: la ficha patrimonial de la Secretaría de Cultura de México registra su bendición en 1874. No se ha verificado en esta auditoría un decreto específico de reconocimiento de apariciones, por lo que no se afirma que exista.",
-      "en": "It is a shrine of Catholic devotion: Mexico’s Secretariat of Culture heritage entry records its blessing in 1874. This audit has not verified a specific decree recognizing apparitions, so none is asserted.",
-      "pt": "É um santuário de culto católico: a ficha patrimonial da Secretaria de Cultura do México registra sua bênção em 1874. Não foi verificado nesta auditoria um decreto específico de reconhecimento de aparições; por isso não se afirma que exista."
+      "es": "La ficha patrimonial de la Secretaría de Cultura de México registra la bendición del santuario en 1874. El culto católico del lugar no debe confundirse con una declaración eclesial sobre apariciones.",
+      "en": "Mexico’s Secretariat of Culture heritage entry records the shrine’s blessing in 1874. The place’s Catholic devotion should not be confused with an ecclesial declaration concerning apparitions.",
+      "pt": "A ficha patrimonial da Secretaria de Cultura do México registra a bênção do santuário em 1874. O culto católico do lugar não deve ser confundido com declaração eclesial sobre aparições."
     },
     "promises": {
       "remove": true
