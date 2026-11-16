@@ -22,6 +22,11 @@ class StudyCourseIntegrityTest {
         try {
             val tracks = repository.scriptureStudyTracks
             val lessons = tracks.flatMap { it.lessons }
+            // Built-in tracks keep their positions; catalog (JSON) courses may only follow them.
+            val builtIn = listOf(CatholicBibleCourseData.track) + ScriptureStudyData.tracks
+            assertEquals(builtIn.map { it.id }, tracks.take(builtIn.size).map { it.id })
+            assertEquals(tracks.size, tracks.map { it.id }.toSet().size)
+            tracks.drop(builtIn.size).forEach { track -> assertTrue(track.lessons.all { it.trackId == track.id }) }
             assertEquals(lessons.size, lessons.map { it.id }.toSet().size)
             // Existing Room records must still point to the exact inherited lessons.
             assertTrue(lessons.containsAll(ScriptureStudyData.tracks.flatMap { it.lessons }))

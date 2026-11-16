@@ -92,6 +92,7 @@ android.sourceSets.getByName("test").resources.srcDir("src/main/assets/questions
 android.sourceSets.getByName("test").resources.srcDir("src/main/assets/saints")
 android.sourceSets.getByName("test").resources.srcDir("src/main/assets/orders")
 android.sourceSets.getByName("test").resources.srcDir("src/main/assets/devotions")
+android.sourceSets.getByName("test").resources.srcDir("src/main/assets/courses")
 
 // Configure the Secrets Gradle Plugin to use .env and .env.example files
 // to match the convention used in Web projects.

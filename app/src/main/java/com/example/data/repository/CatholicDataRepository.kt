@@ -74,7 +74,8 @@ class CatholicDataRepository(
     private val saintFetcher: DailySaintsFetcher = DailySaintsFetcher(),
     private val saintsCatalog: SaintsCatalog = SaintsCatalog.default,
     private val ordersCatalog: OrdersCatalog = OrdersCatalog.default,
-    private val devotionsCatalog: DevotionsCatalog = DevotionsCatalog.default
+    private val devotionsCatalog: DevotionsCatalog = DevotionsCatalog.default,
+    private val studyCoursesCatalog: StudyCoursesCatalog = StudyCoursesCatalog.default
 ) {
 
     /** Every Bible edition ships inside the app; there is nothing to download. */
@@ -792,7 +793,13 @@ class CatholicDataRepository(
 
     // Vatican Scripture Study Course
     val scriptureStudyTracks: List<com.example.data.models.ScriptureCourseTrack>
-        get() = listOf(CatholicBibleCourseData.track) + ScriptureStudyData.tracks
+        get() = studyTracks
+
+    // Built-in tracks first, so saved selection indices keep their meaning; JSON courses follow.
+    private val studyTracks: List<com.example.data.models.ScriptureCourseTrack> by lazy {
+        val builtIn = listOf(CatholicBibleCourseData.track) + ScriptureStudyData.tracks
+        builtIn + studyCoursesCatalog.tracks(builtIn)
+    }
 
     /** Study citations always resolve against the included edition, independent of optional downloads. */
     fun studyScriptureText(lesson: com.example.data.models.ScriptureLesson, language: AppLanguage): String {
