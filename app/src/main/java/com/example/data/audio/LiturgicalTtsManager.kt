@@ -86,6 +86,15 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     private val _voiceMode = MutableStateFlow(RecitationVoiceMode.DUAL_DIALOGUE)
     val voiceMode: StateFlow<RecitationVoiceMode> = _voiceMode.asStateFlow()
 
+    /** Offline voices of the current language, best first (labels are display-ready). */
+    data class VoiceOption(val name: String, val label: String)
+    private val _voiceOptions = MutableStateFlow<List<VoiceOption>>(emptyList())
+    val voiceOptions: StateFlow<List<VoiceOption>> = _voiceOptions.asStateFlow()
+    private var candidates: List<VoiceCandidate> = emptyList()
+    private var voiceByName: Map<String, android.speech.tts.Voice> = emptyMap()
+    /** Saved picks, keyed "es.leader" / "es.response"; absent means automatic. */
+    @Volatile private var savedVoices: Map<String, String> = emptyMap()
+
     private val mainHandler = Handler(Looper.getMainLooper())
     private var toneGenerator: ToneGenerator? = null
 
@@ -117,6 +126,9 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
             runCatching {
                 UserPreferencesStore(context.applicationContext).preferences.collect { prefs ->
                     speedMultiplier = prefs.audioNarrationSpeed.coerceIn(0.5f, 2.0f)
+                    if (savedVoices != prefs.narrationVoices) {
+                        savedVoices = prefs.narrationVoices
+                    }
                     if (prefs.hasChosenLanguage && requestedLanguage == null) {
                         mainHandler.post { setLanguage(prefs.language) }
                     }
@@ -181,6 +193,58 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
             else -> VoiceAvailability.ENGINE_ERROR
         }
         _isReady.value = _availability.value == VoiceAvailability.READY
+        refreshVoices(lang)
+    }
+
+    private fun langCode(lang: AppLanguage) = when (lang) { AppLanguage.ES -> "es"; AppLanguage.EN -> "en"; AppLanguage.PT -> "pt" }
+
+    private fun currentLangCode() = langCode(requestedLanguage ?: deviceLanguage())
+
+    /** Reads the engine's voices; failures just mean "no choice of voice". */
+    private fun refreshVoices(lang: AppLanguage) {
+        val raw = runCatching { tts?.voices }.getOrNull().orEmpty()
+        val map = LinkedHashMap<String, android.speech.tts.Voice>()
+        val list = raw.mapNotNull { v ->
+            runCatching {
+                map[v.name] = v
+                VoiceCandidate(
+                    name = v.name, language = v.locale.language, country = v.locale.country,
+                    quality = v.quality, latency = v.latency,
+                    networkRequired = v.isNetworkConnectionRequired,
+                    notInstalled = v.features?.contains(TextToSpeech.Engine.KEY_FEATURE_NOT_INSTALLED) == true
+                )
+            }.getOrNull()
+        }
+        voiceByName = map
+        candidates = list
+        val code = langCode(lang)
+        _voiceOptions.value = VoiceSelector.ranked(list, code, VoiceSelector.appCountry(code))
+            .mapIndexed { i, c -> VoiceOption(c.name, VoiceSelector.label(i, c, code)) }
+    }
+
+    private fun currentChoice(overrideLeader: String? = null, overrideResponse: String? = null): VoiceChoice {
+        val code = currentLangCode()
+        return VoiceSelector.choose(
+            candidates, code, VoiceSelector.appCountry(code),
+            overrideLeader ?: savedVoices["$code.leader"], overrideResponse ?: savedVoices["$code.response"]
+        )
+    }
+
+    /** Speaks a short sample with [voiceName] (null = automatic) in the given role. */
+    fun preview(response: Boolean, voiceName: String?, sample: String) {
+        if (sample.isBlank() || !requestPlayback()) return
+        stop()
+        val gen = generation
+        tracker.begin(sample)
+        publish()
+        val code = currentLangCode()
+        // Auto must preview the automatic pick, not the saved one.
+        val choice = VoiceSelector.choose(
+            candidates, code, VoiceSelector.appCountry(code),
+            if (response) savedVoices["$code.leader"] else voiceName,
+            if (response) voiceName else null
+        )
+        queuePart(gen, "preview", sample, female = response, flush = true, choice = choice)
     }
 
     fun setVoiceMode(mode: RecitationVoiceMode) {
@@ -204,8 +268,8 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
 
     /**
      * A prayer said as leader and response. In [RecitationVoiceMode.DUAL_DIALOGUE]
-     * the leader is read in a lower voice, then, after a breath, the response
-     * in a higher one; the other modes read only their half (a prayer with no
+     * the leader is read in one voice, then, after a breath, the response
+     * in another (a different system voice when the device has two); the other modes read only their half (a prayer with no
      * response is always read in full).
      */
     fun speakDialogue(leaderText: String, responseText: String) {
@@ -235,9 +299,15 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     }
 
     /** Queues [text] in engine-sized chunks under one logical part. */
-    private fun queuePart(gen: Int, part: String, text: String, female: Boolean, flush: Boolean) {
+    private fun queuePart(
+        gen: Int, part: String, text: String, female: Boolean, flush: Boolean,
+        choice: VoiceChoice = currentChoice()
+    ) {
         val engine = tts ?: return
-        engine.setPitch(if (female) 1.22f else 0.85f)
+        // Real voices, not pitch-shifting; a mild offset only if one voice plays both roles.
+        val name = if (female) choice.response else choice.leader
+        voiceByName[name]?.let { v -> runCatching { engine.setVoice(v) } }
+        engine.setPitch(if (female) choice.responsePitch else choice.leaderPitch)
         engine.setSpeechRate((0.92f * speedMultiplier).coerceIn(0.4f, 2.0f))
         val chunks = chunk(text, maxInput())
         chunks.forEachIndexed { i, piece ->

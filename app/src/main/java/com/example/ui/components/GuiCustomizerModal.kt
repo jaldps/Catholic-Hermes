@@ -1,5 +1,8 @@
 package com.example.ui.components
 
+import android.content.Context
+import android.content.Intent
+import android.speech.tts.TextToSpeech
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -11,6 +14,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.platform.LocalContext
+import com.example.data.audio.LiturgicalTtsManager
+import com.example.ui.design.AppGlassIconButton
+import com.example.ui.design.AppMenuChip
+import com.example.ui.design.AppMenuItem
+import com.example.ui.design.AppSecondaryButton
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
@@ -40,6 +52,18 @@ import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
 
+/** Opens the system's text-to-speech settings, or the voice-data installer as a fallback. */
+internal fun openVoiceSettings(context: Context) {
+    val attempts = listOf(
+        Intent("com.android.settings.TTS_SETTINGS"),
+        Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA)
+    )
+    for (intent in attempts) {
+        val opened = runCatching { context.startActivity(intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }.isSuccess
+        if (opened) return
+    }
+}
+
 /**
  * Appearance, as a Lumen sheet: every choice applies the moment it is made
  * (no Save button). Mode, tint, text size and narration speed — the font
@@ -50,6 +74,7 @@ fun GuiCustomizerModal(
     preferencesStore: UserPreferencesStore,
     preferences: UserPreferences,
     currentLanguage: AppLanguage = AppLanguage.ES,
+    ttsManager: LiturgicalTtsManager? = null,
     onDismiss: () -> Unit
 ) {
     val scope = rememberCoroutineScope()
@@ -151,6 +176,66 @@ fun GuiCustomizerModal(
             onSelect = { i -> scope.launch { preferencesStore.setAudioNarrationSpeed(speeds[i]) } },
             modifier = Modifier.testTag("appearance_narration_speed")
         )
+
+        Label(t("Voz de lectura", "Reading voice", "Voz de leitura"))
+        val langCode = when (currentLanguage) { AppLanguage.ES -> "es"; AppLanguage.EN -> "en"; AppLanguage.PT -> "pt" }
+        val voiceOptions = ttsManager?.voiceOptions?.collectAsState()?.value.orEmpty()
+        val auto = t("Automática (recomendada)", "Automatic (recommended)", "Automática (recomendada)")
+        val sample = t("Dios te salve, María, llena eres de gracia.", "Hail Mary, full of grace.", "Ave Maria, cheia de graça.")
+        @Composable
+        fun VoicePicker(role: String, title: String, previewDescription: String) {
+            val saved = preferences.narrationVoices["$langCode.$role"]
+            val selected = voiceOptions.firstOrNull { it.name == saved }
+            val isResponse = role == "response"
+            Text(
+                title, style = styles.subhead, color = p.textPrimary,
+                modifier = Modifier.padding(start = design.spacing.gutter + 4.dp, end = design.spacing.gutter, top = 4.dp, bottom = 6.dp)
+            )
+            Row(
+                Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                AppMenuChip(
+                    label = selected?.label ?: auto,
+                    items = listOf(AppMenuItem(auto, selected = selected == null) {
+                        scope.launch { preferencesStore.setNarrationVoice(langCode, role, null) }
+                    }) + voiceOptions.map { option ->
+                        AppMenuItem(option.label, selected = option.name == selected?.name) {
+                            scope.launch { preferencesStore.setNarrationVoice(langCode, role, option.name) }
+                        }
+                    },
+                    modifier = Modifier.weight(1f, fill = false),
+                    tag = "voice_${role}_picker"
+                )
+                Spacer(Modifier.width(8.dp))
+                AppGlassIconButton(
+                    icon = Icons.Filled.PlayArrow,
+                    contentDescription = previewDescription,
+                    onClick = { ttsManager?.preview(isResponse, selected?.name, sample) },
+                    tag = "voice_${role}_preview"
+                )
+            }
+        }
+        VoicePicker("leader", t("Voz que guía", "Leading voice", "Voz que conduz"),
+            t("Escuchar la voz que guía", "Play the leading voice", "Ouvir a voz que conduz"))
+        VoicePicker("response", t("Voz que responde", "Responding voice", "Voz que responde"),
+            t("Escuchar la voz que responde", "Play the responding voice", "Ouvir a voz que responde"))
+        val appContext = LocalContext.current
+        AppSecondaryButton(
+            label = t("Descargar voces de mejor calidad", "Get better voices", "Baixar vozes melhores"),
+            onClick = { openVoiceSettings(appContext) },
+            modifier = Modifier.padding(horizontal = design.spacing.gutter, vertical = 8.dp).testTag("voice_get_more")
+        )
+        Text(
+            t(
+                "El motor de voz de Google ofrece voces gratuitas sin conexión en español, inglés y portugués; una vez descargadas funcionan sin internet. Otros motores pueden ofrecer las suyas.",
+                "Google's speech engine offers free offline voices in Spanish, English and Portuguese; once downloaded they work without internet. Other engines may offer their own.",
+                "O motor de voz do Google oferece vozes gratuitas offline em espanhol, inglês e português; depois de baixadas, funcionam sem internet. Outros motores podem oferecer as suas."
+            ),
+            style = styles.footnote, color = p.textSecondary,
+            modifier = Modifier.padding(horizontal = design.spacing.gutter + 4.dp, vertical = 4.dp)
+        )
+
         Label(t("Accesibilidad", "Accessibility", "Acessibilidade"))
         AppToggleRow(
             title = t("Reducir movimiento", "Reduce motion", "Reduzir movimento"),

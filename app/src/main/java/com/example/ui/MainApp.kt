@@ -817,6 +817,7 @@ fun MainApp(
             preferencesStore = preferencesStore,
             preferences = preferences,
             currentLanguage = currentLanguage,
+            ttsManager = ttsManager,
             onDismiss = { showCustomizerModal = false }
         )
     }

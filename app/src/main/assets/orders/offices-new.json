@@ -1,0 +1,650 @@
+[
+  {
+    "id": "office_obispo_auxiliar",
+    "name": {
+      "es": "Obispo auxiliar",
+      "en": "Auxiliary Bishop",
+      "pt": "Bispo auxiliar"
+    },
+    "description": {
+      "es": "Es un obispo que el Sumo Pontífice nombra, a petición del obispo diocesano, para ayudarle en el gobierno de toda la diócesis; no tiene derecho de sucesión. El Código de Derecho Canónico (cc. 403-411) lo prevé cuando las necesidades pastorales lo aconsejan, y en circunstancias más graves puede dotársele de facultades especiales. Recibe la consagración episcopal, debe ser nombrado vicario general o, al menos, vicario episcopal, asiste al obispo en el gobierno de la diócesis y le suple cuando está ausente o impedido. Ha de consultarse con él en los asuntos de mayor importancia, residir en la diócesis y actuar en unión de acción e intenciones.",
+      "en": "He is a bishop whom the Supreme Pontiff appoints, at the request of the diocesan bishop, to help him govern the whole diocese; he has no right of succession. The Code of Canon Law (cc. 403-411) provides for him when pastoral needs advise it, and in more serious circumstances he may be given special faculties. He receives episcopal consecration, must be appointed vicar general or at least episcopal vicar, assists the bishop in the whole government and takes his place when he is absent or impeded. He must be consulted on matters of greater importance, reside in the diocese, and act in union of purpose and intention.",
+      "pt": "É um bispo que o Sumo Pontífice nomeia, a pedido do bispo diocesano, para ajudá-lo no governo de toda a diocese; não tem direito de sucessão. O Código de Direito Canônico (cc. 403-411) prevê-o quando as necessidades pastorais o aconselham, e em circunstâncias mais graves pode ser dotado de faculdades especiais. Recebe a consagração episcopal, deve ser nomeado vigário geral ou, ao menos, vigário episcopal, assiste o bispo no governo da diocese e substitui-o quando está ausente ou impedido. Deve ser consultado nos assuntos de maior importância, residir na diocese e agir em união de ação e intenções."
+    },
+    "group": "governance",
+    "after": "office_obispo",
+    "sources": [
+      "Código de Derecho Canónico, cc. 403-411",
+      "Catecismo de la Iglesia Católica, nn. 1555-1571"
+    ]
+  },
+  {
+    "id": "office_obispo_coadjutor",
+    "name": {
+      "es": "Obispo coadjutor",
+      "en": "Coadjutor Bishop",
+      "pt": "Bispo coadjutor"
+    },
+    "description": {
+      "es": "Es un obispo que el Sumo Pontífice nombra por propia iniciativa, con facultades especiales y derecho de sucesión, para que al quedar vacante la sede pase a ser obispo de la diócesis. El Código de Derecho Canónico (cc. 403 y 409) lo prevé en circunstancias graves, también de carácter personal. Debe ser nombrado vicario general, asiste al obispo diocesano en el gobierno de la diócesis y le suple cuando está ausente o impedido. Los tres se consultan mutuamente en los asuntos de mayor importancia, y el coadjutor debe residir en la diócesis y actuar en unión de intenciones. Toma posesión presentando las letras apostólicas al obispo y al colegio de consultores.",
+      "en": "He is a bishop whom the Supreme Pontiff appoints on his own initiative, with special faculties and the right of succession, so that when the see becomes vacant he becomes bishop of the diocese. The Code of Canon Law (cc. 403 and 409) provides for him in serious circumstances, including personal ones. He must be appointed vicar general, assists the diocesan bishop in the whole government, and takes his place when he is absent or impeded. The three consult one another on matters of greater importance, and the coadjutor must reside in the diocese and act in union of intention. He takes possession by presenting the apostolic letters to the bishop and the college of consultors.",
+      "pt": "É um bispo que o Sumo Pontífice nomeia por própria iniciativa, com faculdades especiais e direito de sucessão, para que, ao vagar a sé, torne-se bispo da diocese. O Código de Direito Canônico (cc. 403 e 409) prevê-o em circunstâncias graves, também de caráter pessoal. Deve ser nomeado vigário geral, assiste o bispo diocesano no governo da diocese e substitui-o quando está ausente ou impedido. Os três consultam-se mutuamente nos assuntos de maior importância, e o coadjutor deve residir na diocese e agir em união de intenções. Toma posse apresentando as letras apostólicas ao bispo e ao colégio de consultores."
+    },
+    "group": "governance",
+    "after": "office_obispo_auxiliar",
+    "sources": [
+      "Código de Derecho Canónico, cc. 403 y 409",
+      "Catecismo de la Iglesia Católica, nn. 1555-1571"
+    ]
+  },
+  {
+    "id": "office_obispo_emerito",
+    "name": {
+      "es": "Obispo emérito",
+      "en": "Bishop Emeritus",
+      "pt": "Bispo emérito"
+    },
+    "description": {
+      "es": "Es el obispo diocesano cuya renuncia al oficio ha sido aceptada por el Sumo Pontífice, por haber cumplido setenta y cinco años o por enfermedad u otra causa grave. El Código de Derecho Canónico (cc. 401 y 402) le conserva el título de obispo dimisionario de su diócesis y, si lo desea, puede seguir residiendo en ella. La Conferencia Episcopal debe cuidar su conveniente y digna sustentación, con obligación principal sobre la misma diócesis a la que sirvió. No gobierna ya la diócesis, pero sigue siendo obispo y conserva su misión de maestro y pastor según su estado y fuerzas.",
+      "en": "He is the diocesan bishop whose resignation from office has been accepted by the Supreme Pontiff, for having reached seventy-five years of age or for illness or another grave cause. The Code of Canon Law (cc. 401 and 402) preserves for him the title of bishop emeritus (dimissary bishop) of his diocese and, if he wishes, he may continue residing in it. The Episcopal Conference must provide for his suitable and dignified support, with the principal obligation falling on the very diocese he served. He no longer governs the diocese, but he remains a bishop and keeps his mission of teacher and shepherd according to his state and strength.",
+      "pt": "É o bispo diocesano cuja renúncia ao ofício foi aceita pelo Sumo Pontífice, por ter completado setenta e cinco anos ou por doença ou outra causa grave. O Código de Direito Canônico (cc. 401 e 402) conserva-lhe o título de bispo dimissionário de sua diocese e, se quiser, pode continuar residindo nela. A Conferência Episcopal deve prover a sua conveniente e digna sustentação, com obrigação principal sobre a própria diocese a que serviu. Não governa mais a diocese, mas continua sendo bispo e conserva sua missão de mestre e pastor segundo seu estado e forças."
+    },
+    "group": "governance",
+    "after": "office_obispo_coadjutor",
+    "sources": [
+      "Código de Derecho Canónico, cc. 401-402",
+      "Catecismo de la Iglesia Católica, nn. 1555-1571"
+    ]
+  },
+  {
+    "id": "office_administrador_apostolico",
+    "name": {
+      "es": "Administrador apostólico",
+      "en": "Apostolic Administrator",
+      "pt": "Administrador apostólico"
+    },
+    "description": {
+      "es": "Es quien rige una administración apostólica en nombre del Sumo Pontífice. El Código de Derecho Canónico (cc. 368 y 381 §2) la equipara a la diócesis: por razones especiales y particularmente graves, aquella porción del pueblo de Dios no se erige como diócesis, y su atención pastoral se encomienda al administrador, que la rige en nombre del Sumo Pontífice. Goza en derecho de las mismas potestades que el obispo diocesano, salvo lo que la naturaleza del asunto o la ley disponga. Su nombramiento corresponde a la autoridad competente, y la curia actúa con estructura diocesana.",
+      "en": "He is the one who governs an apostolic administration in the name of the Supreme Pontiff. The Code of Canon Law (cc. 368 and 381 §2) equates it to a diocese: for special and particularly grave reasons, that portion of the People of God is not erected as a diocese, and its pastoral care is entrusted to the administrator, who governs it in the name of the Supreme Pontiff. He enjoys in law the same powers as the diocesan bishop, except what the nature of the matter or the law provides. His appointment belongs to the competent authority, and the curia acts with a diocesan structure.",
+      "pt": "É quem rege uma administração apostólica em nome do Sumo Pontífice. O Código de Direito Canônico (cc. 368 e 381 §2) equipara-a à diocese: por razões especiais e particularmente graves, aquela porção do povo de Deus não é erigida como diocese, e sua atenção pastoral é confiada ao administrador, que a rege em nome do Sumo Pontífice. Goza em direito das mesmas potestades que o bispo diocesano, salvo o que a natureza do assunto ou a lei dispuser. Sua nomeação compete à autoridade competente, e a curia age com estrutura diocesana."
+    },
+    "group": "governance",
+    "after": "office_obispo_emerito",
+    "sources": [
+      "Código de Derecho Canónico, cc. 368 y 381 §2",
+      "Código de Derecho Canónico, cc. 412-430"
+    ]
+  },
+  {
+    "id": "office_vicario_general",
+    "name": {
+      "es": "Vicario general",
+      "en": "Vicar General",
+      "pt": "Vicário geral"
+    },
+    "description": {
+      "es": "Es el presbítero que el obispo diocesano nombra libremente para ayudarle en el gobierno de toda la diócesis, dotado de potestad ordinaria. El Código de Derecho Canónico (cc. 475-481) le confiere la potestad ejecutiva que corresponde por derecho al obispo, para realizar cualquier acto administrativo, salvo los que el obispo se haya reservado o que requieran mandato especial. Debe tener al menos treinta años, ser doctor o licenciado en derecho canónico o en teología, o verdaderamente experto en estas materias, y de sana doctrina y prudencia. Informa al obispo de los asuntos importantes y nunca actúa contra su voluntad.",
+      "en": "He is the presbyter whom the diocesan bishop freely appoints to help him govern the whole diocese, endowed with ordinary power. The Code of Canon Law (cc. 475-481) grants him the executive power that belongs by law to the bishop, to perform any administrative act, except those the bishop has reserved or that require a special mandate. He must be at least thirty years old, a doctor or licentiate in canon law or theology, or truly expert in these matters, and of sound doctrine and prudence. He informs the bishop of important matters and never acts against his will.",
+      "pt": "É o presbítero que o bispo diocesano nomeia livremente para ajudá-lo no governo de toda a diocese, dotado de potestade ordinária. O Código de Direito Canônico (cc. 475-481) confere-lhe a potestade executiva que compete por direito ao bispo, para realizar qualquer ato administrativo, exceto os que o bispo reservou ou que exigem mandato especial. Deve ter ao menos trinta anos, ser doutor ou licenciado em direito canônico ou em teologia, ou verdadeiro experto nestas matérias, e de sã doutrina e prudência. Informa o bispo dos assuntos importantes e nunca age contra a sua vontade."
+    },
+    "group": "governance",
+    "after": "office_administrador_apostolico",
+    "sources": [
+      "Código de Derecho Canónico, cc. 475-481",
+      "Código de Derecho Canónico, c. 477 §1"
+    ]
+  },
+  {
+    "id": "office_vicario_episcopal",
+    "name": {
+      "es": "Vicario episcopal",
+      "en": "Episcopal Vicar",
+      "pt": "Vicário episcopal"
+    },
+    "description": {
+      "es": "Es el presbítero que el obispo diocesano nombra, cuando el buen gobierno lo requiere, para una determinada circunscripción, para ciertos asuntos o respecto a fieles de un mismo rito o grupo. El Código de Derecho Canónico (cc. 476-481) le concede la misma potestad ordinaria que por derecho universal compete al vicario general, pero solo en su propio ámbito, con las mismas exigencias de edad, doctrina y prudencia. No puede ser obispo auxiliar no sea que lo sea obispo, y se le nombra para un tiempo determinado. Informa al obispo y no actúa contra su voluntad e intenciones.",
+      "en": "He is the presbyter whom the diocesan bishop appoints, when good government requires it, for a given circumscription, for certain matters, or with regard to the faithful of the same rite or group. The Code of Canon Law (cc. 476-481) grants him the same ordinary power that universal law grants to the vicar general, but only in his own sphere, with the same demands of age, doctrine, and prudence. He may be an auxiliary bishop, and otherwise is appointed for a determined time. He informs the bishop and does not act against his will and intentions.",
+      "pt": "É o presbítero que o bispo diocesano nomeia, quando o bom governo o exige, para uma determinada circunscrição, para certos assuntos ou relativamente aos fiéis do mesmo rito ou grupo. O Código de Direito Canônico (cc. 476-481) concede-lhe a mesma potestade ordinária que o direito universal confere ao vigário geral, mas apenas no seu próprio âmbito, com as mesmas exigências de idade, doutrina e prudência. Pode ser bispo auxiliar e, em caso contrário, é nomeado por tempo determinado. Informa o bispo e não age contra a sua vontade e intenções."
+    },
+    "group": "governance",
+    "after": "office_vicario_general",
+    "sources": [
+      "Código de Derecho Canónico, cc. 476-481",
+      "Código de Derecho Canónico, c. 478 §1"
+    ]
+  },
+  {
+    "id": "office_vicario_judicial",
+    "name": {
+      "es": "Vicario judicial",
+      "en": "Judicial Vicar",
+      "pt": "Vicário judicial"
+    },
+    "description": {
+      "es": "Es el presbítero que el obispo diocesano debe nombrar, distinto del vicario general, con potestad ordinaria de juzgar. El Código de Derecho Canónico (cc. 1419-1421) establece que el obispo es juez de primera instancia en la diócesis y puede ejercer la potestad judicial por sí o por medio de otros; el vicario judicial constituye un solo tribunal con el obispo, pero no juzga las causas que este se haya reservado. Debe ser doctor o licenciado en derecho canónico, de al menos treinta años y de buena fama. Al quedar vacante la sede no cesa ni puede ser removido por el administrador diocesano.",
+      "en": "He is the presbyter whom the diocesan bishop must appoint, distinct from the vicar general, with ordinary power to judge. The Code of Canon Law (cc. 1419-1421) establishes that the bishop is the judge of first instance in the diocese and may exercise judicial power himself or through others; the judicial vicar forms a single tribunal with the bishop, but does not judge the causes the bishop has reserved. He must be a doctor or licentiate in canon law, at least thirty years old, and of good reputation. When the see becomes vacant he does not cease and cannot be removed by the diocesan administrator.",
+      "pt": "É o presbítero que o bispo diocesano deve nomear, distinto do vigário geral, com potestade ordinária de julgar. O Código de Direito Canônico (cc. 1419-1421) estabelece que o bispo é juiz de primeira instância na diocese e pode exercer a potestade judicial por si ou por meio de outros; o vicário judicial constitui um só tribunal com o bispo, mas não julga as causas que este reservou. Deve ser doutor ou licenciado em direito canônico, de ao menos trinta anos e de boa fama. Ao vagar a sé, não cessa nem pode ser removido pelo administrador diocesano."
+    },
+    "group": "governance",
+    "after": "office_vicario_episcopal",
+    "sources": [
+      "Código de Derecho Canónico, cc. 1419-1421",
+      "Código de Derecho Canónico, cc. 1419-1446"
+    ]
+  },
+  {
+    "id": "office_canciller_curia",
+    "name": {
+      "es": "Canciller de la curia",
+      "en": "Chancellor of the Curia",
+      "pt": "Chanceler da cúria"
+    },
+    "description": {
+      "es": "Es quien cuida de que se redacten las actas de la curia, se expidan y se custodien en el archivo, según el Código de Derecho Canónico (cc. 482-486). Debe haber un canciller en cada curia y, si es necesario, un vicecanciller; ambos son de propio derecho notarios y secretarios de la curia. El canciller y los demás notarios deben ser personas de buena fama y por encima de toda sospecha, y el obispo puede removerlos libremente, salvo que el administrador diocesano lo haga sin el consentimiento del colegio de consultores. El archivo diocesano debe guardar con diligencia los documentos espirituales y temporales de la diócesis y de las parroquias.",
+      "en": "He is the one who sees to it that the acts of the curia are drawn up, dispatched, and kept in the archive, according to the Code of Canon Law (cc. 482-486). There must be a chancellor in each curia and, if necessary, a vice-chancellor; both are by office notaries and secretaries of the curia. The chancellor and the other notaries must be persons of good reputation and above all suspicion, and the bishop can remove them freely, unless the diocesan administrator does so without the consent of the college of consultors. The diocesan archive must carefully keep the spiritual and temporal documents of the diocese and the parishes.",
+      "pt": "É quem cuida para que as atas da cúria sejam redigidas, expedidas e guardadas no arquivo, segundo o Código de Direito Canônico (cc. 482-486). Deve haver um chanceler em cada cúria e, se necessário, um vice-chanceler; ambos são de próprio direito notários e secretários da cúria. O chanceler e os demais notários devem ser pessoas de boa fama e acima de toda suspeita, e o bispo pode removê-los livremente, salvo se o administrador diocesano o fizer sem o consentimento do colégio de consultores. O arquivo diocesano deve guardar com diligência os documentos espirituais e temporais da diocese e das paróquias."
+    },
+    "group": "governance",
+    "after": "office_vicario_judicial",
+    "sources": [
+      "Código de Derecho Canónico, cc. 482-486",
+      "Código de Derecho Canónico, c. 485"
+    ]
+  },
+  {
+    "id": "office_economo_diocesano",
+    "name": {
+      "es": "Ecónomo diocesano",
+      "en": "Diocesan Finance Officer",
+      "pt": "Economo diocesano"
+    },
+    "description": {
+      "es": "Es la persona que el obispo nombra, oído el colegio de consultores y el consejo de asuntos económicos, para administrar los bienes de la diócesis bajo la autoridad del obispo. El Código de Derecho Canónico (c. 494) pide que sea verdaderamente experto en materia económica y de reconocida honradez, lo nombra por cinco años, renovables, y no debe ser removido sin causa grave, que el obispo pondera oídos el colegio y el consejo. Corresponde al consejo aprobar el presupuesto anual de ingresos y gastos y las cuentas de fin de año. Al final de cada año, el ecónomo rinde cuentas al consejo.",
+      "en": "He is the person whom the bishop appoints, having heard the college of consultors and the finance council, to administer the goods of the diocese under the authority of the bishop. The Code of Canon Law (c. 494) requires that he be truly expert in financial matters and of proven honesty, appoints him for five years, renewable, and he is not to be removed without grave cause, which the bishop weighs having heard the college and the council. It belongs to the council to approve the annual budget of income and expenditure and the year-end accounts. At the end of each year the finance officer renders an account to the council.",
+      "pt": "É a pessoa que o bispo nomeia, ouvido o colégio de consultores e o conselho para os assuntos econômicos, para administrar os bens da diocese sob a autoridade do bispo. O Código de Direito Canônico (c. 494) pede que seja verdadeiro experto em matéria econômica e de reconhecida probidade, nomeia-o por cinco anos, renováveis, e não deve ser removido sem causa grave, que o bispo pondera ouvidos o colégio e o conselho. Compete ao conselho aprovar o orçamento anual de receitas e despesas e as contas de fim de ano. Ao final de cada ano, o economo presta contas ao conselho."
+    },
+    "group": "governance",
+    "after": "office_canciller_curia",
+    "sources": [
+      "Código de Derecho Canónico, c. 494",
+      "Código de Derecho Canónico, cc. 493-494"
+    ]
+  },
+  {
+    "id": "office_decano_colegio_cardenalicio",
+    "name": {
+      "es": "Decano del Colegio Cardenalicio",
+      "en": "Dean of the College of Cardinals",
+      "pt": "Decano do Colégio dos Cardeais"
+    },
+    "description": {
+      "es": "Es el cardenal que preside el Colegio cardenalicio y, impedido, hace sus veces el subdecano; ninguno de los dos tiene potestad de régimen sobre los demás cardenales, sino que se le considera primero entre iguales. El Código de Derecho Canónico (cc. 350 §4, 352 y 355) le da como título la diócesis de Ostia, junto con la Iglesia de la que ya era titular. Al quedar vacante el oficio, los cardenales con título suburbicario eligen al decano, y el Sumo Pontífice aprueba al elegido. Corresponde al decano ordenar de obispo al elegido Romano Pontífice si careciera de esa ordenación.",
+      "en": "He is the cardinal who presides over the College of Cardinals and, when impeded, is replaced by the subdean; neither of them has any power of governance over the other cardinals, but is considered first among equals. The Code of Canon Law (cc. 350 §4, 352 and 355) gives him as title the diocese of Ostia, together with the church of which he was already titular. When the office becomes vacant, the cardinals with a suburbicarian title elect the dean, and the Supreme Pontiff approves the one elected. It belongs to the dean to ordain as bishop the one elected Roman Pontiff if he lacked that ordination.",
+      "pt": "É o cardeal que preside o Colégio dos Cardeais e, impedido, é substituído pelo subdecano; nenhum dos dois tem potestade de regime sobre os demais cardeais, mas é considerado primeiro entre iguais. O Código de Direito Canônico (cc. 350 §4, 352 e 355) dá-lhe como título a diocese de Óstia, junto com a Igreja da qual já era titular. Ao vagar o ofício, os cardeais com título suburbicário elegem o decano, e o Sumo Pontífice aprova o eleito. Compete ao decano ordenar de bispo o eleito Romano Pontífice se carecesse dessa ordenação."
+    },
+    "group": "governance",
+    "after": "office_economo_diocesano",
+    "sources": [
+      "Código de Derecho Canónico, cc. 350 §4, 352 y 355",
+      "Código de Derecho Canónico, cc. 350-355"
+    ]
+  },
+  {
+    "id": "office_nuncio_apostolico",
+    "name": {
+      "es": "Nuncio apostólico",
+      "en": "Apostolic Nuncio",
+      "pt": "Núncio apostólico"
+    },
+    "description": {
+      "es": "Es el legado del Romano Pontífice que le representa de modo estable ante una Iglesia particular y ante un Estado o autoridad pública. El Código de Derecho Canónico (cc. 362-367) reconoce el derecho nativo e independiente del Papa de nombrar, trasladar y hacer cesar a sus legados, observando las normas del derecho internacional ante los Estados. Su función principal es procurar que los vínculos de unidad entre la Sede Apostólica y las Iglesias particulares sean cada vez más firmes y eficaces. Ante los Estados compete el oficio peculiar de la representación diplomática. El cargo no cesa al quedar vacante la Sede Apostólica, salvo lo dispuesto en las letras pontificias.",
+      "en": "He is the legate of the Roman Pontiff who represents him in a stable manner before a particular Church and before a State or public authority. The Code of Canon Law (cc. 362-367) recognizes the native and independent right of the Pope to appoint, transfer, and end his legates, observing the norms of international law before States. His principal function is to ensure that the bonds of unity between the Apostolic See and the particular Churches become ever firmer and more effective. Before States the peculiar office of diplomatic representation belongs to him. The office does not cease when the Apostolic See becomes vacant, unless the apostolic letters provide otherwise.",
+      "pt": "É o legado do Romano Pontífice que o representa de modo estável ante uma Igreja particular e ante um Estado ou autoridade pública. O Código de Direito Canônico (cc. 362-367) reconhece o direito nativo e independente do Papa de nomear, transferir e fazer cessar os seus legados, observando as normas do direito internacional perante os Estados. Sua função principal é procurar que os vínculos de união entre a Sé Apostólica e as Igrejas particulares sejam cada vez mais firmes e eficazes. Perante os Estados compete o ofício peculiar da representação diplomática. O cargo não cessa ao vagar a Sé Apostólica, salvo o disposto nas letras pontifícias."
+    },
+    "group": "governance",
+    "after": "office_decano_colegio_cardenalicio",
+    "sources": [
+      "Código de Derecho Canónico, cc. 362-367",
+      "Código de Derecho Canónico, c. 365 §1"
+    ]
+  },
+  {
+    "id": "office_delegado_apostolico",
+    "name": {
+      "es": "Delegado apostólico",
+      "en": "Apostolic Delegate",
+      "pt": "Delegado apostólico"
+    },
+    "description": {
+      "es": "Es el representante del Romano Pontífice enviado ante una misión pontificia, ante organismos internacionales o ante conferencias y reuniones. El Código de Derecho Canónico (cc. 362-367) equipara a los legados del Papa a quienes se envían como delegados u observadores, y les encomienda representar de modo estable a la Sede Apostólica. Su tarea es procurar la unidad entre la Sede Apostólica y las Iglesias particulares y dar cuenta de cuanto se le encomienda. El nombramiento, el traslado y el cese corresponden al Romano Pontífice, y ante los Estados se observan las normas del derecho internacional.",
+      "en": "He is the representative of the Roman Pontiff sent before a pontifical mission, before international organizations, or before conferences and meetings. The Code of Canon Law (cc. 362-367) places on the same level the legates of the Pope and those sent as delegates or observers, and entrusts them with stably representing the Apostolic See. His task is to foster unity between the Apostolic See and the particular Churches and to give an account of all that is entrusted to him. Appointment, transfer, and removal belong to the Roman Pontiff, and before States the norms of international law are observed.",
+      "pt": "É o representante do Romano Pontífice enviado ante uma missão pontifícia, ante organismos internacionais ou ante conferências e reuniões. O Código de Direito Canônico (cc. 362-367) equipara os legados do Papa aos que são enviados como delegados ou observadores, e confia-lhes representar de modo estável a Sé Apostólica. Sua tarefa é promover a união entre a Sé Apostólica e as Igrejas particulares e prestar contas do que lhe é confiado. A nomeação, a transferência e o cessar competem ao Romano Pontífice, e perante os Estados observam-se as normas do direito internacional."
+    },
+    "group": "governance",
+    "after": "office_nuncio_apostolico",
+    "sources": [
+      "Código de Derecho Canónico, cc. 362-367",
+      "Código de Derecho Canónico, c. 363 §2"
+    ]
+  },
+  {
+    "id": "office_secretario_de_estado",
+    "name": {
+      "es": "Secretario de Estado",
+      "en": "Secretary of State",
+      "pt": "Secretário de Estado"
+    },
+    "description": {
+      "es": "Es quien dirige la Secretaría de Estado y ayuda de cerca al Romano Pontífice en el ejercicio de su suprema misión. La constitución apostólica Praedicate Evangelium (arts. 44-52) la describe como secretaría papal y la divide en tres secciones: Asuntos Generales, Relaciones con los Estados y Organismos Internacionales, y Personal Diplomático de la Santa Sede. El secretario de Estado convoca y coordina las reuniones de los dirigentes de las instituciones curiales, y los documentos sobre relaciones con los Estados requieren el nihil obstat de la Secretaría. Es la institución que colabora más directamente con el Papa en el gobierno de la Iglesia universal.",
+      "en": "He is the one who directs the Secretariat of State and closely assists the Roman Pontiff in the exercise of his supreme mission. The apostolic constitution Praedicate Evangelium (arts. 44-52) describes it as the papal secretariat and divides it into three sections: General Affairs, Relations with States and International Organizations, and Diplomatic Personnel of the Holy See. The Secretary of State convenes and coordinates the meetings of the heads of the curial institutions, and documents concerning relations with States require the nihil obstat of the Secretariat. It is the institution that collaborates most directly with the Pope in the governance of the universal Church.",
+      "pt": "É quem dirige a Secretaria de Estado e auxilia de perto o Romano Pontífice no exercício de sua suprema missão. A constituição apostólica Praedicate Evangelium (arts. 44-52) descreve-a como secretaria papal e divide-a em três seções: Assuntos Gerais, Relações com os Estados e Organismos Internacionais e Pessoal Diplomático da Santa Sé. O Secretário de Estado convoca e coordena as reuniões dos dirigentes das instituições curiais, e os documentos sobre relações com os Estados requerem o nihil obstat da Secretaria. É a instituição que colabora mais diretamente com o Papa no governo da Igreja universal."
+    },
+    "group": "governance",
+    "after": "office_delegado_apostolico",
+    "sources": [
+      "Praedicate Evangelium, arts. 44-52",
+      "Praedicate Evangelium, arts. 163 y 170"
+    ]
+  },
+  {
+    "id": "office_prefecto_dicasterio",
+    "name": {
+      "es": "Prefecto de dicasterio",
+      "en": "Prefect of a Dicastery",
+      "pt": "Prefeito de dicastério"
+    },
+    "description": {
+      "es": "Es quien gobierna y representa un dicasterio de la Curia Romana. La constitución apostólica Praedicate Evangelium (arts. 174-188) dispone que cada institución curial se compone de un prefecto, o equiparado, de un número adecuado de miembros, secretarios, subsecretarios y oficiales. El prefecto la dirige y la representa, es nombrado por el Romano Pontífice por un período de cinco años, y debe presentar su renuncia al alcanzar la edad prevista por el Reglamento General de la Curia Romana. Verifica y evalúa periódicamente con el Papa la eficacia, la viabilidad y la oportunidad de las facultades de su dicasterio.",
+      "en": "He is the one who governs and represents a dicastery of the Roman Curia. The apostolic constitution Praedicate Evangelium (arts. 174-188) provides that each curial institution is composed of a prefect, or equivalent, an adequate number of members, secretaries, undersecretaries, and officials. The prefect directs and represents it, is appointed by the Roman Pontiff for a period of five years, and must present his resignation upon reaching the age set by the General Regulations of the Roman Curia. He periodically verifies and evaluates with the Pope the effectiveness, viability, and timeliness of the faculties of his dicastery.",
+      "pt": "É quem governa e representa um dicastério da Cúria Romana. A constituição apostólica Praedicate Evangelium (arts. 174-188) dispõe que cada instituição curial se compõe de um prefeito, ou equiparado, de número adequado de membros, secretários, subsecretários e oficiais. O prefeito dirige-o e representa-o, é nomeado pelo Romano Pontífice por um período de cinco anos, e deve apresentar sua renúncia ao atingir a idade prevista pelo Regulamento Geral da Cúria Romana. Verifica e avalia periodicamente com o Papa a eficácia, a viabilidade e a oportunidade das faculdades de seu dicastério."
+    },
+    "group": "governance",
+    "after": "office_secretario_de_estado",
+    "sources": [
+      "Praedicate Evangelium, arts. 174-188",
+      "Praedicate Evangelium, art. 177 §1"
+    ]
+  },
+  {
+    "id": "office_camarlengo",
+    "name": {
+      "es": "Camarlengo",
+      "en": "Camerlengo",
+      "pt": "Camerlengo"
+    },
+    "description": {
+      "es": "Es el cardenal al que la constitución apostólica Praedicate Evangelium (arts. 235-237) encomienda las funciones de la legislación especial sobre la Sede Apostólica vacante y la elección del Romano Pontífice. Durante la Sede vacante vela y administra los bienes y derechos temporales de la Sede Apostólica, y en caso de impedimento asume la función el vicecamarlengo. Es un cargo propio del gobierno de la Iglesia universal en el tiempo en que la Sede está vacante, y está previsto en la Curia Romana como oficina.",
+      "en": "He is the cardinal to whom the apostolic constitution Praedicate Evangelium (arts. 235-237) entrusts the functions of the special legislation on the vacant Apostolic See and the election of the Roman Pontiff. During the vacancy of the See he watches over and administers the goods and temporal rights of the Apostolic See, and in case of impediment the vice-camerlengo assumes the function. It is an office proper to the governance of the universal Church when the See is vacant, and it is provided for in the Roman Curia as an office.",
+      "pt": "É o cardeal a quem a constituição apostólica Praedicate Evangelium (arts. 235-237) confia as funções da legislação especial sobre a Sé Apostólica vacante e a eleição do Romano Pontífice. Durante a vacância da Sé, vela e administra os bens e direitos temporais da Sé Apostólica, e em caso de impedimento assume a função o vice-camerlengo. É um cargo próprio do governo da Igreja universal no tempo em que a Sé está vacante, e está previsto na Cúria Romana como ofício."
+    },
+    "group": "governance",
+    "after": "office_prefecto_dicasterio",
+    "sources": [
+      "Praedicate Evangelium, arts. 235-237",
+      "Praedicate Evangelium, art. 172 §3"
+    ]
+  },
+  {
+    "id": "office_penitenciario_mayor",
+    "name": {
+      "es": "Penitenciario mayor",
+      "en": "Major Penitentiary",
+      "pt": "Penitenciário mor"
+    },
+    "description": {
+      "es": "Es quien rige la Penitenciaría Apostólica, organismo ordinario de justicia de la Curia Romana. La constitución apostólica Praedicate Evangelium (arts. 190-193) le encomienda la jurisdicción sobre el fuero interno y las indulgencias como expresiones de la misericordia divina, y le asiste un regente. Concede absolución de censuras, dispensas, conmutaciones, sanaciones y otras gracias en el fuero interno, y provee a que en las Basílicas Papales de Roma haya penitenciarios con las oportunas facultades. En caso de Sede vacante sigue atendiendo los asuntos ordinarios de su competencia.",
+      "en": "He is the one who governs the Apostolic Penitentiary, an ordinary organ of justice of the Roman Curia. The apostolic constitution Praedicate Evangelium (arts. 190-193) entrusts him with jurisdiction over the internal forum and indulgences as expressions of divine mercy, and a regent assists him. He grants absolution from censures, dispensations, commutations, sanations, and other graces in the internal forum, and provides that in the Papal Basilicas of Rome there be penitentiaries with the appropriate faculties. In the event of a vacant See he continues to attend to the ordinary affairs of his competence.",
+      "pt": "É quem rege a Penitenciária Apostólica, organismo ordinário de justiça da Cúria Romana. A constituição apostólica Praedicate Evangelium (arts. 190-193) confia-lhe a jurisdição sobre o foro interno e as indulgências como expressões da misericórdia divina, e um regente o assiste. Concede absolvição de censuras, dispensas, comutações, saneamentos e outras graças no foro interno, e provê para que nas Basílicas Papais de Roma haja penitenciários com as oportunas faculdades. Em caso de Sé vacante, continua a tratar dos assuntos ordinários de sua competência."
+    },
+    "group": "governance",
+    "after": "office_camarlengo",
+    "sources": [
+      "Praedicate Evangelium, arts. 190-193",
+      "Praedicate Evangelium, art. 192 §1"
+    ]
+  },
+  {
+    "id": "office_ordinario_militar",
+    "name": {
+      "es": "Ordinario militar",
+      "en": "Military Ordinary",
+      "pt": "Ordinário militar"
+    },
+    "description": {
+      "es": "Es el obispo que rige un ordinariato militar, la circunscripción eclesiástica que atiende pastoralmente a los fieles católicos de las fuerzas armadas y a sus familias. La constitución apostólica Spirituali militum curae (Juan Pablo II, 1986) erige y regula el ordinariato militar y la figura del ordinario castrense, con su curia, la condición eclesiástica de los sacerdotes adscritos y las normas sobre la asistencia a los fieles. No es una diócesis: es una circunscripción especial de carácter personal, y sus estatutos los aprueba la Sede Apostólica.",
+      "en": "He is the bishop who governs a military ordinariate, the ecclesiastical circumscription that pastorally serves the Catholic faithful of the armed forces and their families. The apostolic constitution Spirituali militum curae (John Paul II, 1986) erects and regulates the military ordinariate and the figure of the military ordinary, with its curia, the ecclesiastical condition of the assigned priests, and the norms on the assistance to the faithful. It is not a diocese: it is a special circumscription of a personal character, and its statutes are approved by the Apostolic See.",
+      "pt": "É o bispo que rege um ordinariato militar, a circunscrição eclesiástica que atende pastoralmente aos fiéis católicos das forças armadas e às suas famílias. A constituição apostólica Spirituali militum curae (João Paulo II, 1986) erige e regula o ordinariato militar e a figura do ordinário castrense, com sua cúria, a condição eclesiástica dos presbíteros adscritos e as normas sobre a assistência aos fiéis. Não é uma diocese: é uma circunscrição especial de caráter pessoal, e seus estatutos são aprovados pela Sé Apostólica."
+    },
+    "group": "governance",
+    "after": "office_penitenciario_mayor",
+    "sources": [
+      "Spirituali militum curae (Juan Pablo II, 21-IV-1986)",
+      "Praedicate Evangelium, arts. 190-193"
+    ]
+  },
+  {
+    "id": "office_prelado_territorial",
+    "name": {
+      "es": "Prelado territorial",
+      "en": "Territorial Prelate",
+      "pt": "Prelado territorial"
+    },
+    "description": {
+      "es": "Es quien rige una prelatura territorial como pastor propio, del mismo modo que un obispo diocesano. El Código de Derecho Canónico (cc. 368 y 370) la define como una porción del pueblo de Dios, delimitada territorialmente, cuya atención se encomienda, por especiales circunstancias, a un prelado. La equipara a la diócesis y al vicariato y la prefectura apostólicos, y su titular goza en derecho de las potestades del obispo diocesano, salvo lo que la naturaleza del asunto o la ley disponga. Son realidades históricas poco frecuentes en la organización actual de la Iglesia.",
+      "en": "He is the one who governs a territorial prelature as its own pastor, in the same way as a diocesan bishop. The Code of Canon Law (cc. 368 and 370) defines it as a portion of the People of God, territorially delimited, whose care is entrusted, for special circumstances, to a prelate. It equates it to the diocese and to the apostolic vicariate and prefecture, and its holder enjoys in law the powers of the diocesan bishop, except what the nature of the matter or the law provides. They are historical realities, infrequent in the present organization of the Church.",
+      "pt": "É quem rege uma prelado territorial como pastor próprio, do mesmo modo que um bispo diocesano. O Código de Direito Canônico (cc. 368 e 370) define-a como uma porção do povo de Deus, delimitada territorialmente, cuja atenção é confiada, por circunstâncias especiais, a um prelado. Equipara-a à diocese e ao vicariato e à prefeitura apostólicos, e seu titular goza em direito das potestades do bispo diocesano, salvo o que a natureza do assunto ou a lei dispuser. São realidades históricas pouco frequentes na organização atual da Igreja."
+    },
+    "group": "governance",
+    "after": "office_ordinario_militar",
+    "sources": [
+      "Código de Derecho Canónico, cc. 368 y 370",
+      "Código de Derecho Canónico, c. 381 §2"
+    ]
+  },
+  {
+    "id": "office_abad_territorial",
+    "name": {
+      "es": "Abad territorial",
+      "en": "Territorial Abbot",
+      "pt": "Abade territorial"
+    },
+    "description": {
+      "es": "Es quien rige una abadía territorial como pastor propio, del mismo modo que un obispo diocesano. El Código de Derecho Canónico (cc. 368 y 370) la define como una porción del pueblo de Dios, delimitada territorialmente, cuya atención se encomienda, por especiales circunstancias, a un abad. La equipara a la diócesis y a la prelatura territorial, y su titular goza en derecho de las potestades del obispo diocesano, salvo lo que la naturaleza del asunto o la ley disponga. Son realidades históricas poco frecuentes, propias de la tradición monástica y de la historia de la Iglesia.",
+      "en": "He is the one who governs a territorial abbey as its own pastor, in the same way as a diocesan bishop. The Code of Canon Law (cc. 368 and 370) defines it as a portion of the People of God, territorially delimited, whose care is entrusted, for special circumstances, to an abbot. It equates it to the diocese and the territorial prelature, and its holder enjoys in law the powers of the diocesan bishop, except what the nature of the matter or the law provides. They are historical realities, infrequent, proper to the monastic tradition and the history of the Church.",
+      "pt": "É quem rege uma abadia territorial como pastor próprio, do mesmo modo que um bispo diocesano. O Código de Direito Canônico (cc. 368 e 370) define-a como uma porção do povo de Deus, delimitada territorialmente, cuja atenção é confiada, por circunstâncias especiais, a um abade. Equipara-a à diocese e ao prelado territorial, e seu titular goza em direito das potestades do bispo diocesano, salvo o que a natureza do assunto ou a lei dispuser. São realidades históricas pouco frequentes, próprias da tradição monástica e da história da Igreja."
+    },
+    "group": "governance",
+    "after": "office_prelado_territorial",
+    "sources": [
+      "Código de Derecho Canónico, cc. 368 y 370",
+      "Código de Derecho Canónico, c. 381 §2"
+    ]
+  },
+  {
+    "id": "office_prelado_personal",
+    "name": {
+      "es": "Prelado personal",
+      "en": "Personal Prelate",
+      "pt": "Prelado pessoal"
+    },
+    "description": {
+      "es": "Es el ordinario propio que gobierna una prelatura personal, erigida por la Sede Apostólica, oídas las Conferencias Episcopales, para promover una conveniente distribución de presbíteros o peculiares obras pastorales o misionales en favor de varias regiones o grupos sociales. El Código de Derecho Canónico (cc. 294-297) la compone de presbíteros y diáconos del clero secular, y el prelado tiene la potestad de erigir un seminario y de incardinar y promover a sus alumnos a título de servicio a la prelatura. Los laicos pueden cooperar según los estatutos, y se determinan las relaciones con los ordinarios locales.",
+      "en": "He is the proper ordinary who governs a personal prelature, erected by the Apostolic See, having heard the Episcopal Conferences, to promote a suitable distribution of presbyters or peculiar pastoral or missionary works for various regions or social groups. The Code of Canon Law (cc. 294-297) composes it of presbyters and deacons of the secular clergy, and the prelate has the power to erect a seminary and to incardinate and promote his students by title of service to the prelature. Lay people may cooperate according to the statutes, and the relations with the local ordinaries are determined.",
+      "pt": "É o ordinário próprio que governa uma prelado pessoal, erigida pela Sé Apostólica, ouvidas as Conferências Episcopais, para promover uma conveniente distribuição de presbíteros ou peculiares obras pastorais ou missionais em favor de várias regiões ou grupos sociais. O Código de Direito Canônico (cc. 294-297) compõe-a de presbíteros e diáconos do clero secular, e o prelado tem a potestade de erigir um seminário e de incardinar e promover seus alunos a título de serviço à prelado. Os leigos podem cooperar segundo os estatutos, e determinam-se as relações com os ordinários locais."
+    },
+    "group": "governance",
+    "after": "office_abad_territorial",
+    "sources": [
+      "Código de Derecho Canónico, cc. 294-297",
+      "Constitución Apostólica Ut sit (Juan Pablo II, 1982)"
+    ]
+  },
+  {
+    "id": "office_arzobispo_mayor",
+    "name": {
+      "es": "Arzobispo mayor",
+      "en": "Major Archbishop",
+      "pt": "Arcebispo maior"
+    },
+    "description": {
+      "es": "En las Iglesias orientales católicas, es el metropolita de una sede determinada o agrnóvida por la suprema autoridad de la Iglesia, que preside una Iglesia sui iuris que no tiene el título patriarcal. El Código de los Cánones de las Iglesias Orientales (cc. 151-154) define al archiepiscopus mayor y dispone que le valen las normas del derecho común sobre las Iglesias patriarcales y los patriarcas, salvo lo que expresamente se disponga o se deduzca de la naturaleza de la cosa. Se elige según los cánones 63-74 y obtiene la precedencia de honor inmediatamente después de los patriarcas, según el orden de erección.",
+      "en": "In the Eastern Catholic Churches, he is the metropolitan of a see determined or recognized by the supreme authority of the Church, who presides over a sui iuris Church that does not bear the patriarchal title. The Code of Canons of the Eastern Churches (cc. 151-154) defines the archiepiscopus major and provides that the norms of common law on patriarchal Churches and patriarchs apply to him, unless common law expressly provides otherwise or it is clear from the nature of the matter. He is elected according to canons 63-74 and holds the honor of precedence immediately after the patriarchs, according to the order of erection.",
+      "pt": "Nas Igrejas orientais católicas, é o metropolita de uma sede determinada ou reconhecida pela suprema autoridade da Igreja, que preside uma Igreja sui iuris que não tem o título patriarcal. O Código dos Cânones das Igrejas Orientais (cc. 151-154) define o archiepiscopus major e dispõe que se aplicam a ele as normas do direito comum sobre as Igrejas patriarcais e os patriarcas, salvo o que o direito comum expressamente dispuser ou se deduzir da natureza da coisa. Ele é eleito segundo os cânones 63-74 e obtém a precedência de honra imediatamente após os patriarcas, segundo a ordem de ereção."
+    },
+    "group": "clergy",
+    "after": "office_patriarca",
+    "sources": [
+      "Código de los Cánones de las Iglesias Orientales, cc. 151-154",
+      "Código de los Cánones de las Iglesias Orientales, c. 152"
+    ]
+  },
+  {
+    "id": "office_diacono_permanente",
+    "name": {
+      "es": "Diácono permanente",
+      "en": "Permanent Deacon",
+      "pt": "Diácono permanente"
+    },
+    "description": {
+      "es": "Es el diácono que no aspira al presbiterado y recibe el orden diaconal de manera estable, para servir en la caridad, la liturgia de la Palabra y el altar. El Código de Derecho Canónico (cc. 236 y 288) prevé su formación según las prescripciones de la Conferencia Episcopal y le aplica las normas de los clérigos con las excepciones propias de su estado. Quien no está casado ha de tener al menos veinticinco años, y quien está casado al menos treinta y cinco, con el consentimiento de su mujer. Puede estar casado si contrajo matrimonio antes de la ordenación, y no celebra la Eucaristía como presidente principal.",
+      "en": "He is the deacon who does not aspire to the presbyterate and receives the diaconal order in a stable manner, to serve in charity, the Liturgy of the Word, and the altar. The Code of Canon Law (cc. 236 and 288) provides for his formation according to the prescriptions of the Episcopal Conference and applies to him the norms of the clergy with the exceptions proper to his state. One who is not married must be at least twenty-five years old, and one who is married at least thirty-five, with the consent of his wife. He may be married if he contracted marriage before ordination, and he does not celebrate the Eucharist as principal celebrant.",
+      "pt": "É o diácono que não aspira ao presbiterado e recebe a ordem diaconal de maneira estável, para servir na caridade, na liturgia da Palavra e no altar. O Código de Direito Canônico (cc. 236 e 288) prevê sua formação segundo as prescrições da Conferência Episcopal e aplica-lhe as normas dos clérigos com as exceções próprias do seu estado. Quem não é casado deve ter ao menos vinte e cinco anos, e quem é casado ao menos trinta e cinco, com o consentimento da esposa. Pode ser casado se contraiu matrimônio antes da ordenação, e não celebra a Eucaristia como presidente principal."
+    },
+    "group": "clergy",
+    "after": "office_diacono",
+    "sources": [
+      "Código de Derecho Canónico, cc. 236 y 288",
+      "Código de Derecho Canónico, c. 1031 §2"
+    ]
+  },
+  {
+    "id": "office_rector_seminario",
+    "name": {
+      "es": "Rector del seminario",
+      "en": "Rector of the Seminary",
+      "pt": "Reitor do seminário"
+    },
+    "description": {
+      "es": "Es el presbítero que dirige el seminario y representa a la institución en todos los asuntos, salvo lo que la autoridad competente haya dispuesto. El Código de Derecho Canónico (cc. 235-264) exige que los candidatos al sacerdocio reciban en el seminario mayor la formación espiritual, humana, filosófica y teológica durante el tiempo de la formación, y el rector, con los superiores y profesores, cuida que los alumnos cumplan el Plan de formación sacerdotal y el reglamento. El rector y el maestro de novicios no deben oír confesiones de los alumnos residentes, salvo petición espontánea en casos particulares.",
+      "en": "He is the presbyter who directs the seminary and represents the institution in all matters, except what the competent authority has provided. The Code of Canon Law (cc. 235-264) requires that candidates for the priesthood receive in the major seminary the spiritual, human, philosophical, and theological formation for the whole time of formation, and the rector, with the superiors and professors, sees that the students fulfill the Plan of priestly formation and the regulations. The rector and the master of novices must not hear the confessions of the resident students, unless they spontaneously request it in particular cases.",
+      "pt": "É o presbítero que dirige o seminário e representa a instituição em todos os assuntos, salvo o que a autoridade competente dispuser. O Código de Direito Canônico (cc. 235-264) exige que os candidatos ao sacerdócio recebam no seminário maior a formação espiritual, humana, filosófica e teológica durante o tempo da formação, e o reitor, com os superiores e professores, cuida para que os alunos cumpram o Plano de formação sacerdotal e o regulamento. O reitor e o mestre de noviços não devem ouvir confissões dos alunos residentes, salvo pedido espontâneo em casos particulares."
+    },
+    "group": "clergy",
+    "after": "office_parroco",
+    "sources": [
+      "Código de Derecho Canónico, cc. 235-264",
+      "Código de Derecho Canónico, c. 238 §2"
+    ]
+  },
+  {
+    "id": "office_capellan",
+    "name": {
+      "es": "Capellán",
+      "en": "Chaplain",
+      "pt": "Capelão"
+    },
+    "description": {
+      "es": "Es el sacerdote a quien el Ordinario del lugar encomienda establemente, al menos en parte, la atención pastoral de alguna comunidad o grupo de fieles, para que la ejerza según el derecho universal y particular. El Código de Derecho Canónico (cc. 564-569) le nombra y le otorga las facultades necesarias: oír confesiones, predicar, administrar el Viático y la unción de los enfermos, y confirmar a quienes estén en peligro de muerte. En hospitales, cárceles y viajes marítimos puede absolver de censuras no reservadas. Se constituyen capellanías para quienes, por su género de vida, no pueden gozar de la atención parroquial ordinaria, como emigrantes, prófugos, nómadas y marinos.",
+      "en": "He is the priest to whom the local Ordinary stably entrusts, at least in part, the pastoral care of some community or group of the faithful, so that he may exercise it according to universal and particular law. The Code of Canon Law (cc. 564-569) appoints him and grants him the necessary faculties: to hear confessions, preach, administer Viaticum and the anointing of the sick, and confirm those in danger of death. In hospitals, prisons, and maritime journeys he can absolve from non-reserved censures. Chaplaincies are established for those who, by their way of life, cannot enjoy ordinary parish care, such as emigrants, refugees, nomads, and seafarers.",
+      "pt": "É o sacerdote a quem o Ordinário do lugar confia estavelmente, ao menos em parte, a atenção pastoral de alguma comunidade ou grupo de fiéis, para que a exerça segundo o direito universal e particular. O Código de Direito Canônico (cc. 564-569) nomeia-o e outorga-lhe as faculdades necessárias: ouvir confissões, pregar, administrar o Viático e a unção dos enfermos e confirmar quem estiver em perigo de morte. Em hospitais, cárceres e viagens marítimas, pode absolver de censuras não reservadas. Constituem-se capelanias para quem, por seu gênero de vida, não pode gozar da atenção paroquial ordinária, como emigrantes, prófugos, nômades e marinheiros."
+    },
+    "group": "clergy",
+    "after": "office_vicario_parroquial",
+    "sources": [
+      "Código de Derecho Canónico, cc. 564-569",
+      "Código de Derecho Canónico, c. 566 §1"
+    ]
+  },
+  {
+    "id": "office_monsenor",
+    "name": {
+      "es": "Monseñor",
+      "en": "Monsignor",
+      "pt": "Monsenhor"
+    },
+    "description": {
+      "es": "No es un sacramento ni un cargo de gobierno, sino un título honorífico que el Romano Pontífice concede a algunos sacerdotes en reconocimiento de un servicio. El motu proprio Pontificalis Domus (Pablo VI, 28 de marzo de 1968) reorganizó la Casa Pontificia y reguló estas distinciones, dividiéndola en la Capilla Pontificia y la Familia Pontificia. Los títulos actuales, como capellán de Su Santidad, prelado de honor y protonotario apostólico, expresan gratitud por un servicio y no confieren jurisdicción. Se usan como tratamiento reverencial y no forman parte de la estructura jerárquica de la Iglesia.",
+      "en": "It is neither a sacrament nor an office of governance, but an honorary title that the Roman Pontiff grants to some priests in recognition of a service. The motu proprio Pontificalis Domus (Paul VI, 28 March 1968) reorganized the Papal Household and regulated these distinctions, dividing it into the Papal Chapel and the Papal Family. The present titles, such as Chaplain of His Holiness, Prelate of Honor, and Apostolic Protonotary, express gratitude for a service and confer no jurisdiction. They are used as a reverential form of address and do not form part of the hierarchical structure of the Church.",
+      "pt": "Não é um sacramento nem um cargo de governo, mas um título honorífico que o Romano Pontífice concede a alguns sacerdotes em reconhecimento de um serviço. O motu proprio Pontificalis Domus (Paulo VI, 28 de março de 1968) reorganizou a Casa Pontificia e regulou essas distinções, dividindo-a na Capela Pontifícia e na Família Pontifícia. Os títulos atuais, como capelão de Sua Santidade, prelado de honra e protonotário apostólico, exprimem gratidão por um serviço e não conferem jurisdição. Usam-se como tratamento reverencial e não fazem parte da estrutura hierárquica da Igreja."
+    },
+    "group": "clergy",
+    "after": "office_canonigo",
+    "sources": [
+      "Motu proprio Pontificalis Domus (Pablo VI, 28-III-1968)",
+      "Código de Derecho Canónico, cc. 232-293"
+    ]
+  },
+  {
+    "id": "office_abad",
+    "name": {
+      "es": "Abad",
+      "en": "Abbot",
+      "pt": "Abade"
+    },
+    "description": {
+      "es": "Es el superior de un monasterio autónomo, que, aparte de su propio superior, no tiene otro superior mayor ni está asociado a un instituto de religiosos con potestad sobre él. El Código de Derecho Canónico (cc. 615-617 y 620) encomienda la vigilancia peculiar de ese monasterio al obispo diocesano, y el superior gobierna a su comunidad según el derecho universal y el propio, cumpliendo su función con espíritu de servicio. El abad recibe la obediencia de los monjes y los gobierna como a hijos de Dios, fomentando la obediencia voluntaria y escuchándolos. En la tradición monástica, el abad es padre y pastor del monasterio.",
+      "en": "He is the superior of an autonomous monastery which, apart from its own superior, has no other major superior and is not associated with an institute of religious with power over it. The Code of Canon Law (cc. 615-617 and 620) entrusts the peculiar vigilance of that monastery to the diocesan bishop, and the superior governs his community according to universal and proper law, fulfilling his function with a spirit of service. The abbot receives the obedience of the monks and governs them as children of God, fostering voluntary obedience and listening to them. In the monastic tradition, the abbot is the father and pastor of the monastery.",
+      "pt": "É o superior de um mosteiro autônomo que, além do seu próprio superior, não tem outro superior maior nem está associado a um instituto de religiosos com potestade sobre ele. O Código de Direito Canônico (cc. 615-617 e 620) confia a vigilância peculiar desse mosteiro ao bispo diocesano, e o superior governa sua comunidade segundo o direito universal e o próprio, cumprindo sua função com espírito de serviço. O abade recebe a obediência dos monges e governa-os como a filhos de Deus, fomentando a obediência voluntária e ouvindo-os. Na tradição monástica, o abade é pai e pastor do mosteiro."
+    },
+    "group": "consecrated",
+    "after": "office_madre_general",
+    "sources": [
+      "Código de Derecho Canónico, cc. 615-617 y 620",
+      "Código de Derecho Canónico, c. 618"
+    ]
+  },
+  {
+    "id": "office_prior",
+    "name": {
+      "es": "Prior",
+      "en": "Prior",
+      "pt": "Prior"
+    },
+    "description": {
+      "es": "Es un título de superior propio de algunas tradiciones e institutos, que preside una comunidad o una provincia. No es una figura definida por el derecho universal: el Código de Derecho Canónico (cc. 620-625) regula los superiores mayores y las provincias, y el Código de los Cánones de las Iglesias Orientales (cc. 418 y 508) llama superiores mayores al presidente de una federación monástica, al superior de un monasterio sui iuris, al superior general y al superior provincial. En la tradición de canónigos regulares, dominicos y cartujos, el prior gobierna un priorato o una provincia. Su denominación y su potestad dependen de las constituciones del instituto.",
+      "en": "It is a title of superior proper to some traditions and institutes, who presides over a community or a province. It is not a figure defined by universal law: the Code of Canon Law (cc. 620-625) regulates major superiors and provinces, and the Code of Canons of the Eastern Churches (cc. 418 and 508) calls major superiors the president of a monastic federation, the superior of a monastery sui iuris, the superior general, and the provincial superior. In the tradition of canons regular, Dominicans, and Carthusians, the prior governs a priory or a province. Its denomination and its power depend on the constitutions of the institute.",
+      "pt": "É um título de superior próprio de algumas tradições e institutos, que preside uma comunidade ou uma província. Não é uma figura definida pelo direito universal: o Código de Direito Canônico (cc. 620-625) regula os superiores maiores e as províncias, e o Código dos Cânones das Igrejas Orientais (cc. 418 e 508) chama superiores maiores o presidente de uma federação monástica, o superior de um mosteiro sui iuris, o superior geral e o superior provincial. Na tradição dos cónegos regulares, dominicanos e cartuxos, o prior rege um priorado ou uma província. Sua denominação e sua potestade dependem das constituições do instituto."
+    },
+    "group": "consecrated",
+    "after": "office_abad",
+    "sources": [
+      "Código de Derecho Canónico, cc. 620-625",
+      "Código de los Cánones de las Iglesias Orientales, cc. 418 y 508"
+    ]
+  },
+  {
+    "id": "office_superior_provincial",
+    "name": {
+      "es": "Superior provincial",
+      "en": "Provincial Superior",
+      "pt": "Superior provincial"
+    },
+    "description": {
+      "es": "Es el superior mayor que gobierna una provincia, el conjunto de varias casas erigido canónicamente que forma parte inmediata de un instituto bajo un mismo superior. El Código de Derecho Canónico (cc. 620-625) le reconoce la potestad dentro de los límites de su cargo, ser designado por un tiempo determinado y conveniente, y gobernar con espíritu de servicio y con su consejo propio. El superior general tiene potestad sobre todas las provincias, casas y miembros, y los demás superiores la tienen dentro de los límites de su cargo. El provincial reside en su propia casa y no se ausenta de ella sino a tenor del derecho propio.",
+      "en": "He is the major superior who governs a province, the group of several canonically erected houses that forms an immediate part of an institute under one superior. The Code of Canon Law (cc. 620-625) recognizes in him power within the limits of his office, to be appointed for a determined and suitable time, and to govern with a spirit of service and with his own council. The superior general has power over all the provinces, houses, and members, and the other superiors have it within the limits of their office. The provincial resides in his own house and does not leave it except in accordance with proper law.",
+      "pt": "É o superior maior que governa uma província, o conjunto de várias casas canonicamente erigidas que forma parte imediata de um instituto sob um mesmo superior. O Código de Direito Canônico (cc. 620-625) reconhece-lhe a potestade dentro dos limites do seu cargo, ser designado por tempo determinado e conveniente, e governar com espírito de serviço e com o seu conselho próprio. O superior geral tem potestade sobre todas as províncias, casas e membros, e os demais superiores a têm dentro dos limites do seu cargo. O provincial reside na sua própria casa e não se ausenta dela senão a tenor do direito próprio."
+    },
+    "group": "consecrated",
+    "after": "office_prior",
+    "sources": [
+      "Código de Derecho Canónico, cc. 620-625",
+      "Código de Derecho Canónico, c. 621"
+    ]
+  },
+  {
+    "id": "office_superior_general",
+    "name": {
+      "es": "Superior general",
+      "en": "Superior General",
+      "pt": "Superior geral"
+    },
+    "description": {
+      "es": "Es el superior mayor que tiene potestad sobre todas las provincias, casas y miembros del instituto, según el derecho propio. El Código de Derecho Canónico (cc. 622-625) dispone que debe ser designado por elección canónica de acuerdo con las constituciones, por un tiempo determinado y conveniente, y que gobierna con su consejo propio. Los demás superiores la tienen dentro de los límites de su cargo. Para ser nombrado válidamente se requiere un tiempo conveniente desde la profesión perpetua o definitiva, determinado en las constituciones. El superior general reside en su propia casa y no se ausenta de ella sino a tenor del derecho propio.",
+      "en": "He is the major superior who has power over all the provinces, houses, and members of the institute, according to proper law. The Code of Canon Law (cc. 622-625) provides that he is to be appointed by canonical election in accordance with the constitutions, for a determined and suitable time, and that he governs with his own council. The other superiors have it within the limits of their office. To be validly appointed, a suitable time is required since perpetual or definitive profession, determined in the constitutions. The superior general resides in his own house and does not leave it except in accordance with proper law.",
+      "pt": "É o superior maior que tem potestade sobre todas as províncias, casas e membros do instituto, segundo o direito próprio. O Código de Direito Canônico (cc. 622-625) dispõe que deve ser designado por eleição canónica de acordo com as constituições, por tempo determinado e conveniente, e que governa com o seu conselho próprio. Os demais superiores a têm dentro dos limites do seu cargo. Para ser nomeado validamente requer-se tempo conveniente desde a profissão perpétua ou definida, determinado nas constituições. O superior geral reside na sua própria casa e não se ausenta dela senão a tenor do direito próprio."
+    },
+    "group": "consecrated",
+    "after": "office_superior_provincial",
+    "sources": [
+      "Código de Derecho Canónico, cc. 622-625",
+      "Código de Derecho Canónico, c. 625 §1"
+    ]
+  },
+  {
+    "id": "office_virgen_consagrada",
+    "name": {
+      "es": "Virgen consagrada",
+      "en": "Consecrated Virgin",
+      "pt": "Virgem consagrada"
+    },
+    "description": {
+      "es": "Es la mujer que, formulando el propósito santo de seguir más de cerca a Cristo, es consagrada a Dios por el obispo diocesano según el rito litúrgico aprobado, celebra desposorios místicos con Jesucristo, Hijo de Dios, y se entrega al servicio de la Iglesia. El Código de Derecho Canónico (c. 604) reconoce este orden de vírgenes entre las formas de vida consagrada. El Ordo consecrationis virginum, promulgado el 31 de mayo de 1970, restauró la consagración para mujeres que permanecen en sus condiciones ordinarias de vida, y la instrucción Ecclesiae Sponsae Imago (2018) describe sus rasgos y disciplina. Pueden asociarse para cumplir mejor su propósito.",
+      "en": "She is the woman who, expressing the holy purpose of following Christ more closely, is consecrated to God by the diocesan bishop according to the approved liturgical rite, celebrates mystical espousals with Jesus Christ, Son of God, and gives herself to the service of the Church. The Code of Canon Law (c. 604) recognizes this order of virgins among the forms of consecrated life. The Ordo consecrationis virginum, promulgated on 31 May 1970, restored the consecration for women who remain in their ordinary conditions of life, and the instruction Ecclesiae Sponsae Imago (2018) describes its features and discipline. They may associate to fulfill their purpose better.",
+      "pt": "É a mulher que, formulando o santo propósito de seguir mais de perto a Cristo, é consagrada a Deus pelo bispo diocesano segundo o rito litúrgico aprovado, celebra desposórios místicos com Jesus Cristo, Filho de Deus, e se entrega ao serviço da Igreja. O Código de Direito Canônico (c. 604) reconhece essa ordem das virgens entre as formas de vida consagrada. O Ordo consecrationis virginum, promulgado em 31 de maio de 1970, restaurou a consagração para mulheres que permanecem em suas condições ordinárias de vida, e a instrução Ecclesiae Sponsae Imago (2018) descreve seus traços e disciplina. Podem associar-se para cumprir melhor seu propósito."
+    },
+    "group": "consecrated",
+    "after": "office_superior_general",
+    "sources": [
+      "Código de Derecho Canónico, c. 604 §1",
+      "Ordo consecrationis virginum (31-V-1970)",
+      "Instrucción Ecclesiae Sponsae Imago (8-VI-2018)"
+    ]
+  },
+  {
+    "id": "office_ermiteno",
+    "name": {
+      "es": "Ermitaño",
+      "en": "Hermit",
+      "pt": "Eremita"
+    },
+    "description": {
+      "es": "Es el fiel que, con un apartamiento más estricto del mundo, el silencio de la soledad, la oración asidua y la penitencia, dedica su vida a la alabanza de Dios y a la salvación del mundo. El Código de Derecho Canónico (c. 603) reconoce la vida eremítica o anacorética además de los institutos de vida consagrada, y llama ermitaño al que se entrega a Dios dentro de la vida consagrada si profiera públicamente los tres consejos evangélicos, corroborados mediante voto u otro vínculo sagrado, en manos del obispo diocesano, y sigue su forma propia de vida bajo la dirección de este. Es una consagración personal, no una pertenencia a un instituto.",
+      "en": "He is the faithful who, with a stricter withdrawal from the world, the silence of solitude, assiduous prayer, and penance, dedicates his life to the praise of God and the salvation of the world. The Code of Canon Law (c. 603) recognizes the eremitic or anchoritic life in addition to the institutes of consecrated life, and calls a hermit the one who gives himself to God within consecrated life if he publicly professes the three evangelical counsels, confirmed by vow or another sacred bond, in the hands of the diocesan bishop, and follows his own form of life under the direction of the bishop. It is a personal consecration, not a belonging to an institute.",
+      "pt": "É o fiel que, com um apartamento mais estrito do mundo, o silêncio da solidão, a oração assídua e a penitência, dedica sua vida ao louvor de Deus e à salvação do mundo. O Código de Direito Canônico (c. 603) reconhece a vida eremítica ou anacorética além dos institutos de vida consagrada, e chama eremita aquele que se entrega a Deus dentro da vida consagrada se professar publicamente os três conselhos evangélicos, corroborados por voto ou outro vínculo sagrado, nas mãos do bispo diocesano, e segue sua forma própria de vida sob a direção deste. É uma consagração pessoal, não uma pertença a um instituto."
+    },
+    "group": "consecrated",
+    "after": "office_virgen_consagrada",
+    "sources": [
+      "Código de Derecho Canónico, c. 603",
+      "Instrucción Ecclesiae Sponsae Imago (8-VI-2018)"
+    ]
+  },
+  {
+    "id": "office_viuda_consagrada",
+    "name": {
+      "es": "Viuda consagrada",
+      "en": "Consecrated Widow",
+      "pt": "Viúva consagrada"
+    },
+    "description": {
+      "es": "Su estatus canónico debe precisarse: el Código de Derecho Canónico de 1983 no la menciona. El canon 604 habla del orden de las vírgenes y no de las viudas, y el Ordo consecrationis virginum, promulgado en 1970, contempla dos formas, para mujeres que permanecen en el mundo y para monjas, sin incluir a las viudas. La liturgia latina distingue la consagración de vírgenes de la bendición de viudas (benedictio viduarum), rito propio y distinto, atestiguado en los pontificales. Quien recibe la bendición de viudas profesa un propósito de castidad perpetua y se entrega a la oración y al servicio de la Iglesia, pero su rito es una bendición, no una consagración equiparable a la de las vírgenes.",
+      "en": "Her canonical status must be made precise: the Code of Canon Law of 1983 does not mention her. Canon 604 speaks of the order of virgins and not of widows, and the Ordo consecrationis virginum, promulgated in 1970, contemplates two forms, for women who remain in the world and for nuns, without including widows. The Latin liturgy distinguishes the consecration of virgins from the blessing of widows (benedictio viduarum), a proper and distinct rite, attested in the pontificals. She who receives the blessing of widows professes a purpose of perpetual chastity and gives herself to prayer and the service of the Church, but her rite is a blessing, not a consecration comparable to that of virgins.",
+      "pt": "Seu estatuto canônico deve ser precisado: o Código de Direito Canônico de 1983 não a menciona. O canon 604 fala da ordem das virgens e não das viúvas, e o Ordo consecrationis virginum, promulgado em 1970, contempla duas formas, para mulheres que permanecem no mundo e para monjas, sem incluir as viúvas. A liturgia latina distingue a consagração de virgens da bênção das viúvas (benedictio viduarum), rito próprio e distinto, atestado nos pontifícios. Aquela que recebe a bênção das viúvas professa um propósito de castidade perpétua e se entrega à oração e ao serviço da Igreja, mas seu rito é uma bênção, não uma consagração equiparável à das virgens."
+    },
+    "group": "consecrated",
+    "after": "office_ermiteno",
+    "sources": [
+      "Código de Derecho Canónico, c. 604",
+      "Ordo consecrationis virginum (31-V-1970)",
+      "Pontificale Romanum, Benedictio viduarum"
+    ]
+  },
+  {
+    "id": "office_catequista_instituido",
+    "name": {
+      "es": "Catequista instituido",
+      "en": "Instituted Catechist",
+      "pt": "Catequista instituído"
+    },
+    "description": {
+      "es": "Es el laico que recibe de la Iglesia el ministerio estable de catequista, para transmitir la fe y acompañar a los fieles en la iniciación cristiana. La carta apostólica en forma de motu proprio Antiquum ministerium (Francisco, 10 de mayo de 2021) instituye el ministerio laical de Catequista y encarga a las Conferencias Episcopales el itinerario de formación y los criterios de admisión. Se trata de un ministerio laical, distinto del ministerio ordenado, que se presta en la Iglesia local según las necesidades pastorales del Ordinario del lugar. La Congregación para el Culto Divino publicó el rito de institución el 3 de diciembre de 2021.",
+      "en": "He is the layperson who receives from the Church the stable ministry of catechist, to transmit the faith and accompany the faithful in Christian initiation. The apostolic letter issued as a motu proprio Antiquum ministerium (Francis, 10 May 2021) institutes the lay ministry of Catechist and entrusts to the Episcopal Conferences the formation itinerary and the criteria for admission. It is a lay ministry, distinct from the ordained ministry, rendered in the local Church according to the pastoral needs of the local Ordinary. The Congregation for Divine Worship published the rite of institution on 3 December 2021.",
+      "pt": "É o leigo que recebe da Igreja o ministério estável de catequista, para transmitir a fé e acompanhar os fiéis na iniciação cristã. A carta apostólica em forma de motu proprio Antiquum ministerium (Francisco, 10 de maio de 2021) institui o ministério laical de Catequista e confia às Conferências Episcopais o itinerário de formação e os critérios de admissão. Trata-se de um ministério laical, distinto do ministério ordenado, prestado na Igreja local segundo as necessidades pastorais do Ordinário do lugar. A Congregação para o Culto Divino publicou o rito de instituição em 3 de dezembro de 2021."
+    },
+    "group": "mission",
+    "after": "office_misionero_laico",
+    "sources": [
+      "Motu proprio Antiquum ministerium (Francisco, 10-V-2021)",
+      "Carta sobre el rito de institución de los catequistas (3-XII-2021)"
+    ]
+  },
+  {
+    "id": "office_ministro_extraordinario_comunion",
+    "name": {
+      "es": "Ministro extraordinario de la comunión",
+      "en": "Extraordinary Minister of Holy Communion",
+      "pt": "Ministro extraordinário da comunhão"
+    },
+    "description": {
+      "es": "Es el acólito u otro fiel designado que, donde lo aconseja la necesidad de la Iglesia y no hay ministros ordinarios, puede ejercer el ministerio de la palabra, presidir las oraciones litúrgicas, administrar el bautismo y dar la sagrada Comunión. El Código de Derecho Canónico (cc. 230 §3 y 910 §2) distingue los ministros ordinarios de la sagrada comunión, que son el obispo, el presbítero y el diácono, del ministro extraordinario, que es el acólito o también otro fiel designado. El motu proprio Spiritus Domini (10 de enero de 2021) recordó que esos ministerios laicales pueden confiarse a todos los fieles, hombres y mujeres.",
+      "en": "He is the acolyte or other designated faithful who, where the need of the Church advises it and there are no ordinary ministers, may exercise the ministry of the word, preside over liturgical prayers, administer baptism, and give holy Communion. The Code of Canon Law (cc. 230 §3 and 910 §2) distinguishes the ordinary ministers of holy Communion, who are the bishop, the presbyter, and the deacon, from the extraordinary minister, who is the acolyte or also another designated faithful. The motu proprio Spiritus Domini (10 January 2021) recalled that these lay ministries may be entrusted to all the faithful, men and women.",
+      "pt": "É o acólito ou outro fiel designado que, onde o aconselha a necessidade da Igreja e não há ministros ordinários, pode exercer o ministério da palavra, presidir as orações litúrgicas, administrar o batismo e dar a sagrada Comunhão. O Código de Direito Canônico (cc. 230 §3 e 910 §2) distingue os ministros ordinários da sagrada comunhão, que são o bispo, o presbítero e o diácono, do ministro extraordinário, que é o acólito ou também outro fiel designado. O motu proprio Spiritus Domini (10 de janeiro de 2021) recordou que esses ministérios laicais podem confiar-se a todos os fiéis, homens e mulheres."
+    },
+    "group": "altar",
+    "after": "office_acolito",
+    "sources": [
+      "Código de Derecho Canónico, cc. 230 §3 y 910 §2",
+      "Motu proprio Spiritus Domini (Francisco, 10-I-2021)"
+    ]
+  }
+]

@@ -1,5 +1,26 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.12
+
+[Descargar Catholic Hermes 1.8.12](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.12.apk) · versión `1.8.12`, código 21. **Actualiza 1.8.1–1.8.11** y conserva el progreso.
+
+Novedades:
+- **Órdenes y congregaciones**: 60 familias nuevas (97 en total), cada una con su tipo (orden, congregación, sociedad, prelatura…), aprobación pontificia, santos destacados, presencia actual y fuentes.
+- **Cargos de la Iglesia**: 34 nuevos (obispo auxiliar, vicario general, nuncio, prefecto de dicasterio, catequista instituido, virgen consagrada…), con su base canónica y un grupo nuevo «Gobierno y Curia».
+- **Devociones marianas revisadas**: reconocimiento eclesial con documento y año, cómo se vive y fuentes; se retiran oraciones y promesas sin fuente verificable.
+
+[Metadatos](../docs/quality/release-1.8.12/APK.json). No se ha probado en un teléfono físico.
+
+## Catholic Hermes 1.8.11
+
+[Descargar Catholic Hermes 1.8.11](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.11.apk) · versión `1.8.11`, código 20. **Actualiza 1.8.1–1.8.10** y conserva el progreso.
+
+Novedades:
+- **Voz más natural**: la app ya no deforma el tono de una misma voz; usa las mejores voces sin conexión del teléfono, dos voces reales distintas para quien guía y quien responde.
+- **Ajustes → Voz de lectura**: elige la voz que guía y la que responde (con botón para escucharlas) y abre los ajustes de Android para **descargar voces de mejor calidad, gratis y sin conexión**, en español, inglés y portugués.
+
+[Metadatos](../docs/quality/release-1.8.11/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.10
 
 [Descargar Catholic Hermes 1.8.10](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.10.apk) · versión `1.8.10`, código 19. **Actualiza 1.8.1–1.8.9** y conserva el progreso.
