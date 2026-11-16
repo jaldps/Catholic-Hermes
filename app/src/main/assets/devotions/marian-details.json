@@ -345,5 +345,367 @@
       "Santuario de Lourdes, Miraculous Healings: Bernadette Moriau",
       "Santuario de Lourdes, Route 4: Bernadette’s Vocation"
     ]
+  },
+  {
+    "id": "virgen_del_pilar",
+    "recognition": {
+      "es": "El culto del Pilar está documentado en la oración de Juan Pablo II en su basílica del 10-X-1984. La tradición de la venida de María se distingue de una definición dogmática o de una fecha probada por documentación contemporánea del siglo I.",
+      "en": "The Pilar devotion is documented in John Paul II’s prayer at the basilica on 10 October 1984. The tradition of Mary’s coming is distinct from a dogmatic definition or a date established by contemporary first-century documents.",
+      "pt": "O culto do Pilar está documentado na oração de João Paulo II em sua basílica de 10-X-1984. A tradição da vinda de Maria se distingue de uma definição dogmática ou de uma data comprovada por documentos contemporâneos do século I."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El caso de Miguel Juan Pellicer en Calanda fue objeto de sentencia del arzobispo Pedro Apaolaza el 27-IV-1641, que lo declaró milagroso. Ese juicio histórico no se extiende automáticamente a otros relatos vinculados a la basílica.",
+        "en": "Miguel Juan Pellicer’s case at Calanda was the subject of Archbishop Pedro Apaolaza’s judgement of 27 April 1641, declaring it miraculous. That historical judgement does not automatically extend to other accounts associated with the basilica.",
+        "pt": "O caso de Miguel Juan Pellicer em Calanda foi objeto de sentença do arcebispo Pedro Apaolaza em 27-IV-1641, que o declarou milagroso. Esse juízo histórico não se estende automaticamente a outros relatos ligados à basílica."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Bendita y alabada sea la hora en que María Santísima vino en carne mortal a Zaragoza.",
+        "en": "Blessed and praised be the hour in which Mary Most Holy came in mortal flesh to Zaragoza.",
+        "pt": "Bendita e louvada seja a hora em que Maria Santíssima veio em carne mortal a Saragoça."
+      },
+      "source": "Jaculatoria tradicional transcrita en Catedrales de Zaragoza, La tradición de la venida. ES cotejado; traducciones propias fieles EN/PT."
+    },
+    "practice": {
+      "es": "La fiesta principal es el 12 de octubre; la vigilia del 2 de enero recuerda la tradición de la venida. La peregrinación y la oración se orientan a Cristo, con vida sacramental y caridad.",
+      "en": "The principal feast is on 12 October; the 2 January vigil recalls the tradition of Mary’s coming. Pilgrimage and prayer are directed towards Christ, with sacramental life and charity.",
+      "pt": "A festa principal é em 12 de outubro; a vigília de 2 de janeiro recorda a tradição da vinda. A peregrinação e a oração se orientam para Cristo, com vida sacramental e caridade."
+    },
+    "sources": [
+      "Juan Pablo II, plegaria en la Basílica del Pilar, 10-X-1984",
+      "Catedrales de Zaragoza, La tradición de la venida",
+      "Ayuntamiento de Zaragoza, Anales de Zaragoza: sentencia de Calanda"
+    ]
+  },
+  {
+    "id": "medalla_milagrosa",
+    "recognition": {
+      "es": "La capilla de la rue du Bac documenta la difusión eclesial de la medalla desde 1832. Vatican News atestigua la bendición papal de una imagen para la peregrinación de 2020; no se convierte ese gesto en una declaración nueva sobre cada relato de 1830.",
+      "en": "The rue du Bac chapel documents the medal’s ecclesial dissemination from 1832. Vatican News records the papal blessing of an image for the 2020 pilgrimage; that gesture is not turned into a new declaration about every account of 1830.",
+      "pt": "A capela da rue du Bac documenta a difusão eclesial da medalha desde 1832. Vatican News registra a bênção papal de uma imagem para a peregrinação de 2020; esse gesto não é transformado em nova declaração sobre cada relato de 1830."
+    },
+    "promises": {
+      "text": {
+        "es": "El relato de Catalina atribuye a María la promesa de grandes gracias para las personas que lleven la medalla con confianza. No especifica una curación, prosperidad o resultado material asegurado para cada portador.",
+        "en": "Catherine’s account attributes to Mary the promise of great graces for people who wear the medal with confidence. It does not specify a healing, prosperity or material outcome assured for every wearer.",
+        "pt": "O relato de Catarina atribui a Maria a promessa de grandes graças para as pessoas que usarem a medalha com confiança. Não especifica uma cura, prosperidade ou resultado material assegurado a cada pessoa."
+      },
+      "attribution": {
+        "es": "Relato de santa Catalina Labouré sobre el 27-XI-1830; revelación privada.",
+        "en": "Saint Catherine Labouré’s account of 27 November 1830; private revelation.",
+        "pt": "Relato de Santa Catarina Labouré sobre 27-XI-1830; revelação privada."
+      },
+      "source": "Capilla de Nuestra Señora de la Medalla Milagrosa, 27 novembre 1830: palabras sobre llevar la medalla con confianza. Paráfrasis fiel."
+    },
+    "miracles": {
+      "text": {
+        "es": "La capilla relata la conversión de Alphonse Ratisbonne en Roma en 1842 y la investigación canónica posterior. No se conserva la afirmación de millones de conversiones documentadas ni una enumeración de curaciones sin expedientes identificados.",
+        "en": "The chapel recounts Alphonse Ratisbonne’s conversion in Rome in 1842 and the subsequent canonical investigation. The claim of millions of documented conversions and a list of healings without identified records are not retained.",
+        "pt": "A capela relata a conversão de Alphonse Ratisbonne em Roma em 1842 e a investigação canônica posterior. Não se conserva a afirmação de milhões de conversões documentadas nem uma enumeração de curas sem processos identificados."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Oh María, concebida sin pecado, ruega por nosotros que recurrimos a ti.",
+        "en": "O Mary, conceived without sin, pray for us who have recourse to you.",
+        "pt": "Ó Maria, concebida sem pecado, rogai por nós que recorremos a vós."
+      },
+      "source": "Invocación de la medalla según el relato de Catalina Labouré: capilla de la rue du Bac, 27 novembre 1830. Original francés; traducciones propias fieles."
+    },
+    "practice": {
+      "es": "La medalla se lleva con confianza en Dios y compromiso cristiano, no como objeto mágico. Su invocación recuerda la gracia de Cristo y la intercesión de María; la celebración propia se asocia al 27 de noviembre.",
+      "en": "The medal is worn with trust in God and Christian commitment, not as a magical object. Its invocation recalls Christ’s grace and Mary’s intercession; its particular celebration is associated with 27 November.",
+      "pt": "A medalha é usada com confiança em Deus e compromisso cristão, não como objeto mágico. Sua invocação recorda a graça de Cristo e a intercessão de Maria; sua celebração própria se associa a 27 de novembro."
+    },
+    "sources": [
+      "Capilla de la Medalla Milagrosa, 27 novembre 1830",
+      "Capilla de la Medalla Milagrosa, Histoire de la Médaille",
+      "Vatican News, peregrinación de la imagen bendecida en 2020, noticia de mayo de 2025"
+    ]
+  },
+  {
+    "id": "rosa_mistica",
+    "recognition": {
+      "es": "El obispo de Brescia Pierantonio Tremolada decretó un nihil obstat el 8-VII-2024, tras la carta del DDF del 5-VII-2024. Permite una adhesión prudente y la promoción pastoral; no declara sobrenaturales los fenómenos ni obliga a creer en ellos.",
+      "en": "Bishop Pierantonio Tremolada of Brescia decreed a nihil obstat on 8 July 2024, following the DDF’s letter of 5 July 2024. It allows prudent adherence and pastoral promotion; it neither declares the phenomena supernatural nor obliges belief in them.",
+      "pt": "O bispo de Brescia Pierantonio Tremolada decretou um nihil obstat em 8-VII-2024, após a carta do DDF de 5-VII-2024. Permite adesão prudente e promoção pastoral; não declara os fenômenos sobrenaturais nem obriga a acreditar neles."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El decreto menciona testimonios de frutos espirituales y favores recibidos. No los convierte en declaraciones canónicas individuales de curación; por ello no se presenta una lista de milagros médicos reconocidos.",
+        "en": "The decree mentions testimonies of spiritual fruits and favours received. It does not turn them into individual canonical declarations of healing; therefore no list of recognized medical miracles is presented.",
+        "pt": "O decreto menciona testemunhos de frutos espirituais e graças recebidas. Não os transforma em declarações canônicas individuais de cura; por isso não se apresenta uma lista de milagres médicos reconhecidos."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Rosa mística, ruega por nosotros.",
+        "en": "Mystical Rose, pray for us.",
+        "pt": "Rosa mística, rogai por nós."
+      },
+      "source": "Letanías lauretanas, invocación Rosa mystica, ora pro nobis; original latino tradicional cotejado en el libreto del Rosario del 4-V-2013. Traducciones propias fieles."
+    },
+    "practice": {
+      "es": "La devoción aprobada se orienta a Jesucristo mediante oración, reconciliación y caridad, con especial intercesión por sacerdotes y consagrados. Los escritos de Pierina Gilli deben leerse junto con las aclaraciones doctrinales indicadas por el DDF.",
+      "en": "The approved devotion is directed towards Jesus Christ through prayer, reconciliation and charity, with particular intercession for priests and consecrated people. Pierina Gilli’s writings must be read alongside the doctrinal clarifications indicated by the DDF.",
+      "pt": "A devoção aprovada se orienta para Jesus Cristo por meio de oração, reconciliação e caridade, com especial intercessão por sacerdotes e consagrados. Os escritos de Pierina Gilli devem ser lidos junto aos esclarecimentos doutrinais indicados pelo DDF."
+    },
+    "sources": [
+      "DDF, carta al obispo de Brescia sobre Maria Rosa Mistica, 5-VII-2024",
+      "Diócesis de Brescia, decreto del 8-VII-2024, Rivista della Diocesi 04/2024, pp. 225–228",
+      "DDF, Normas de discernimiento, 17-V-2024, art. 22",
+      "Santa Sede, Rosario del 4-V-2013: letanías lauretanas"
+    ]
+  },
+  {
+    "id": "salus_populi_romani",
+    "recognition": {
+      "es": "Francisco presidió la fiesta de la traslación del icono el 28-I-2018. El comunicado de Santa María la Mayor del 20-I-2022 documenta su veneración y conservación; no atribuye certeza histórica a la autoría tradicional de san Lucas.",
+      "en": "Francis presided over the feast of the icon’s translation on 28 January 2018. Saint Mary Major’s statement of 20 January 2022 documents its veneration and conservation; it does not establish historical certainty for the traditional attribution to Saint Luke.",
+      "pt": "Francisco presidiu a festa da trasladação do ícone em 28-I-2018. O comunicado de Santa Maria Maior de 20-I-2022 documenta sua veneração e conservação; não atribui certeza histórica à autoria tradicional de São Lucas."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El icono ha acompañado la oración de Roma en tiempos de peligro. No se identifica automáticamente con cada imagen de las procesiones antiguas ni se presentan indulgencias como milagros físicos.",
+        "en": "The icon has accompanied Rome’s prayer in times of danger. It is not automatically identified with every image in ancient processions, nor are indulgences presented as physical miracles.",
+        "pt": "O ícone acompanhou a oração de Roma em tempos de perigo. Não é identificado automaticamente com cada imagem das procissões antigas nem se apresentam indulgências como milagres físicos."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Bajo tu protección nos refugiamos, santa Madre de Dios; no desprecies nuestras súplicas en las necesidades, sino líbranos siempre de todos los peligros, Virgen gloriosa y bendita.",
+        "en": "Under your protection we take refuge, holy Mother of God; do not despise our petitions in our needs, but deliver us always from all dangers, glorious and blessed Virgin.",
+        "pt": "Sob tua proteção nos refugiamos, santa Mãe de Deus; não desprezes nossas súplicas nas necessidades, mas livra-nos sempre de todos os perigos, Virgem gloriosa e bendita."
+      },
+      "source": "Sub tuum praesidium, oración mariana antigua; original latino en el apéndice del Compendio del Catecismo de la Iglesia Católica. Traducciones propias fieles."
+    },
+    "practice": {
+      "es": "Se venera en la capilla Paulina de Santa María la Mayor. La visita puede acompañarse de oración mariana, escucha del Evangelio y atención a quienes necesitan refugio y consuelo.",
+      "en": "It is venerated in Saint Mary Major’s Pauline Chapel. A visit may include Marian prayer, listening to the Gospel and care for those needing refuge and consolation.",
+      "pt": "É venerado na capela Paulina de Santa Maria Maior. A visita pode ser acompanhada de oração mariana, escuta do Evangelho e atenção a quem precisa de refúgio e consolo."
+    },
+    "sources": [
+      "Francisco, homilía por la traslación del icono, 28-I-2018",
+      "Basílica de Santa María la Mayor, comunicado de conservación, 20-I-2022",
+      "Compendio del Catecismo, apéndice: Sub tuum praesidium, original latino"
+    ]
+  },
+  {
+    "id": "virgen_dolores",
+    "recognition": {
+      "es": "Nuestra Señora de los Dolores tiene memoria litúrgica el 15 de septiembre. La ficha litúrgica de Vatican News documenta la extensión de la fiesta por Pío VII en 1814 y la fijación de la fecha por Pío X en 1913.",
+      "en": "Our Lady of Sorrows has a liturgical memorial on 15 September. Vatican News’s liturgical entry documents the feast’s extension by Pius VII in 1814 and the fixing of its date by Pius X in 1913.",
+      "pt": "Nossa Senhora das Dores tem memória litúrgica em 15 de setembro. A ficha litúrgica de Vatican News documenta a extensão da festa por Pio VII em 1814 e a fixação da data por Pio X em 1913."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La devoción contempla a María junto a la cruz y acompaña a quienes sufren. No se presenta el consuelo espiritual como una lista de milagros clínicos ni se añaden gracias particulares sin fuente.",
+        "en": "The devotion contemplates Mary beside the cross and accompanies those who suffer. Spiritual consolation is not presented as a list of clinical miracles, and particular favours are not added without a source.",
+        "pt": "A devoção contempla Maria junto à cruz e acompanha quem sofre. O consolo espiritual não é apresentado como lista de milagres clínicos nem se acrescentam graças particulares sem fonte."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Haz que mi corazón arda amando a Cristo Dios, para que le agrade.",
+        "en": "Make my heart burn with love for Christ, who is God, so that I may please him.",
+        "pt": "Faze que meu coração arda amando a Cristo Deus, para que eu lhe agrade."
+      },
+      "source": "Stabat Mater, estrofa Fac ut ardeat cor meum in amando Christum Deum, ut sibi complaceam. Texto latino tradicional cotejado en el libreto de oración mariana del 12-X-2013; traducciones propias fieles."
+    },
+    "practice": {
+      "es": "Puede vivirse meditando los dolores de María, leyendo Jn 19,25-27 y rezando por quienes sufren. El acompañamiento compasivo de enfermos y personas en duelo da expresión concreta a esa oración.",
+      "en": "It can be lived through meditation on Mary’s sorrows, reading John 19:25–27 and praying for those who suffer. Compassionate accompaniment of sick and bereaved people gives that prayer practical expression.",
+      "pt": "Pode ser vivida meditando as dores de Maria, lendo Jo 19,25-27 e rezando por quem sofre. O acompanhamento compassivo de enfermos e pessoas enlutadas dá expressão concreta a essa oração."
+    },
+    "sources": [
+      "Vatican News, ficha litúrgica de Nuestra Señora de los Dolores",
+      "Santa Sede, oración mariana del Año de la Fe, 12-X-2013: Stabat Mater",
+      "Catecismo de la Iglesia Católica, 964 y 971"
+    ]
+  },
+  {
+    "id": "inmaculada_concepcion",
+    "recognition": {
+      "es": "La Inmaculada Concepción es dogma definido por Pío IX en Ineffabilis Deus el 8-XII-1854, recordado por Pío XII en Fulgens corona (1953). Se refiere a la preservación de María del pecado original desde su concepción, por la gracia de Cristo.",
+      "en": "The Immaculate Conception is a dogma defined by Pius IX in Ineffabilis Deus on 8 December 1854, recalled by Pius XII in Fulgens corona (1953). It concerns Mary’s preservation from original sin from her conception through Christ’s grace.",
+      "pt": "A Imaculada Conceição é dogma definido por Pio IX em Ineffabilis Deus em 8-XII-1854, recordado por Pio XII em Fulgens corona (1953). Refere-se à preservação de Maria do pecado original desde sua concepção, pela graça de Cristo."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El dogma no es una lista de curaciones ni depende de una prueba material de una imagen. Lourdes y la Medalla Milagrosa tienen su propia historia y deben presentarse con sus fuentes particulares.",
+        "en": "The dogma is not a list of healings and does not depend on physical proof concerning an image. Lourdes and the Miraculous Medal have their own histories and should be presented with their particular sources.",
+        "pt": "O dogma não é uma lista de curas nem depende de uma prova material de uma imagem. Lourdes e a Medalha Milagrosa possuem história própria e devem ser apresentadas com suas fontes específicas."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Oh María, concebida sin pecado, ruega por nosotros que recurrimos a ti.",
+        "en": "O Mary, conceived without sin, pray for us who have recourse to you.",
+        "pt": "Ó Maria, concebida sem pecado, rogai por nós que recorremos a vós."
+      },
+      "source": "Invocación de la Medalla Milagrosa, testimonio de Catalina Labouré de 1830 según la capilla de la rue du Bac. Traducciones propias fieles del francés."
+    },
+    "practice": {
+      "es": "La solemnidad del 8 de diciembre invita a celebrar la Eucaristía y agradecer la gracia de Cristo. La oración mariana conduce a la conversión, la caridad y la vida sacramental.",
+      "en": "The 8 December solemnity invites celebration of the Eucharist and thanksgiving for Christ’s grace. Marian prayer leads towards conversion, charity and sacramental life.",
+      "pt": "A solenidade de 8 de dezembro convida a celebrar a Eucaristia e agradecer a graça de Cristo. A oração mariana conduz à conversão, à caridade e à vida sacramental."
+    },
+    "sources": [
+      "Pío XII, Fulgens corona, 8-IX-1953: Ineffabilis Deus de 1854",
+      "Capilla de la Medalla Milagrosa, invocación de 1830"
+    ]
+  },
+  {
+    "id": "asuncion",
+    "recognition": {
+      "es": "Pío XII definió la Asunción de María en cuerpo y alma a la gloria celestial en Munificentissimus Deus, 44, el 1-XI-1950. Es doctrina de fe, distinta de una revelación privada; la constitución no define cómo terminó su vida terrena.",
+      "en": "Pius XII defined Mary’s Assumption body and soul into heavenly glory in Munificentissimus Deus, 44, on 1 November 1950. It is a doctrine of faith, distinct from private revelation; the constitution does not define how her earthly life ended.",
+      "pt": "Pio XII definiu a Assunção de Maria em corpo e alma à glória celeste em Munificentissimus Deus, 44, em 1-XI-1950. É doutrina de fé, distinta de revelação privada; a constituição não define como terminou sua vida terrena."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La Asunción es un misterio profesado por la Iglesia, no una curación médica ni una conclusión arqueológica sobre un sepulcro. La celebración expresa la esperanza cristiana en la resurrección.",
+        "en": "The Assumption is a mystery professed by the Church, not a medical healing or an archaeological conclusion about a tomb. Its celebration expresses Christian hope in the resurrection.",
+        "pt": "A Assunção é um mistério professado pela Igreja, não uma cura médica nem uma conclusão arqueológica sobre um sepulcro. Sua celebração expressa a esperança cristã na ressurreição."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Reina asunta al cielo, ruega por nosotros.",
+        "en": "Queen assumed into heaven, pray for us.",
+        "pt": "Rainha elevada ao céu, rogai por nós."
+      },
+      "source": "Letanías lauretanas, Regina in caelum assumpta, ora pro nobis; original latino tradicional cotejado en el libreto del Rosario del 4-V-2013. Traducciones propias fieles."
+    },
+    "practice": {
+      "es": "La solemnidad se celebra el 15 de agosto. Se vive en la Eucaristía, la contemplación de los misterios gloriosos del Rosario y el cuidado esperanzado de quienes sufren.",
+      "en": "The solemnity is celebrated on 15 August. It is lived through the Eucharist, contemplation of the Rosary’s glorious mysteries and hopeful care for those who suffer.",
+      "pt": "A solenidade é celebrada em 15 de agosto. É vivida na Eucaristia, na contemplação dos mistérios gloriosos do Rosário e no cuidado esperançoso de quem sofre."
+    },
+    "sources": [
+      "Pío XII, Munificentissimus Deus, 1-XI-1950, 44",
+      "Catecismo de la Iglesia Católica, 966 y 971",
+      "Santa Sede, Rosario del 4-V-2013: letanías lauretanas"
+    ]
+  },
+  {
+    "id": "estrella_del_mar",
+    "recognition": {
+      "es": "Juan Pablo II reconoció la antigua invocación Stella Maris en el motu proprio del mismo nombre, fechado el 31-I-1997, sobre el apostolado marítimo. No establece una aparición particular ni una fiesta universal el último domingo de septiembre.",
+      "en": "John Paul II acknowledged the ancient invocation Stella Maris in the motu proprio of that name, dated 31 January 1997, on the maritime apostolate. It establishes neither a particular apparition nor a universal feast on the last Sunday of September.",
+      "pt": "João Paulo II reconheceu a antiga invocação Stella Maris no motu proprio de mesmo nome, datado de 31-I-1997, sobre o apostolado marítimo. Não estabelece uma aparição particular nem uma festa universal no último domingo de setembro."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "Los testimonios de auxilio en el mar pertenecen a la historia de la piedad de los navegantes. El documento citado no certifica una serie de rescates milagrosos concretos.",
+        "en": "Testimonies of help at sea belong to the history of seafarers’ devotion. The cited document does not certify a series of specific miraculous rescues.",
+        "pt": "Os testemunhos de auxílio no mar pertencem à história da piedade dos navegantes. O documento citado não certifica uma série de resgates milagrosos concretos."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Bajo tu protección nos refugiamos, santa Madre de Dios; no desprecies nuestras súplicas en las necesidades, sino líbranos siempre de todos los peligros, Virgen gloriosa y bendita.",
+        "en": "Under your protection we take refuge, holy Mother of God; do not despise our petitions in our needs, but deliver us always from all dangers, glorious and blessed Virgin.",
+        "pt": "Sob tua proteção nos refugiamos, santa Mãe de Deus; não desprezes nossas súplicas nas necessidades, mas livra-nos sempre de todos os perigos, Virgem gloriosa e bendita."
+      },
+      "source": "Sub tuum praesidium, oración mariana antigua; original latino en el apéndice del Compendio del Catecismo de la Iglesia Católica. Traducciones propias fieles."
+    },
+    "practice": {
+      "es": "La devoción acompaña la oración por marinos, pescadores y sus familias. Se expresa también en acogida en los puertos, defensa de su dignidad y asistencia pastoral y humana.",
+      "en": "The devotion accompanies prayer for seafarers, fishermen and their families. It also finds expression in welcome at ports, defence of their dignity and pastoral and human assistance.",
+      "pt": "A devoção acompanha a oração por marinheiros, pescadores e suas famílias. Também se expressa na acolhida nos portos, na defesa de sua dignidade e na assistência pastoral e humana."
+    },
+    "sources": [
+      "Juan Pablo II, Stella Maris, motu proprio del 31-I-1997",
+      "Compendio del Catecismo, apéndice: Sub tuum praesidium, original latino"
+    ]
+  },
+  {
+    "id": "rosario_lepanto",
+    "recognition": {
+      "es": "El Rosario es una práctica eclesial recomendada por Juan Pablo II en Rosarium Virginis Mariae (16-X-2002). La carta lo presenta como contemplación de Cristo con María; no convierte la victoria de Lepanto en una promesa de triunfos militares futuros.",
+      "en": "The Rosary is an ecclesial practice recommended by John Paul II in Rosarium Virginis Mariae (16 October 2002). The letter presents it as contemplation of Christ with Mary; it does not turn the victory of Lepanto into a promise of future military triumphs.",
+      "pt": "O Rosário é uma prática eclesial recomendada por João Paulo II em Rosarium Virginis Mariae (16-X-2002). A carta o apresenta como contemplação de Cristo com Maria; não transforma a vitória de Lepanto em promessa de triunfos militares futuros."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La memoria de Lepanto pertenece a la historia de esta devoción. Se retira la frase sobre cien mil avemarías y las victorias genéricas, sin fuente concreta, y no se presentan hechos militares como garantía de intervención milagrosa para cada devoto.",
+        "en": "The memory of Lepanto belongs to this devotion’s history. The phrase about a hundred thousand Hail Marys and unspecified victories is removed for lack of a specific source; military events are not presented as a guarantee of miraculous intervention for every devotee.",
+        "pt": "A memória de Lepanto pertence à história desta devoção. Retira-se a frase sobre cem mil ave-marias e as vitórias genéricas sem fonte concreta; fatos militares não são apresentados como garantia de intervenção milagrosa para cada devoto."
+      }
+    },
+    "prayer": {
+      "text": {
+        "es": "Reina del santísimo Rosario, ruega por nosotros.",
+        "en": "Queen of the most holy Rosary, pray for us.",
+        "pt": "Rainha do santíssimo Rosário, rogai por nós."
+      },
+      "source": "Letanías lauretanas, Regina sacratissimi Rosarii, ora pro nobis; original latino tradicional cotejado en el libreto del Rosario del 4-V-2013. Traducciones propias fieles."
+    },
+    "practice": {
+      "es": "La memoria de Nuestra Señora del Rosario es el 7 de octubre. Puede rezarse una decena con atención al Evangelio, creciendo gradualmente en la meditación de los misterios y en el compromiso por la paz.",
+      "en": "The memorial of Our Lady of the Rosary is on 7 October. One decade can be prayed attentively to the Gospel, gradually growing in meditation on the mysteries and commitment to peace.",
+      "pt": "A memória de Nossa Senhora do Rosário é em 7 de outubro. Pode-se rezar uma dezena com atenção ao Evangelho, crescendo gradualmente na meditação dos mistérios e no compromisso com a paz."
+    },
+    "sources": [
+      "Juan Pablo II, Rosarium Virginis Mariae, 16-X-2002",
+      "Santa Sede, Rosario del 4-V-2013: letanías lauretanas"
+    ]
+  },
+  {
+    "id": "candelaria",
+    "recognition": {
+      "es": "La Congregación para el Culto Divino otorgó al santuario de Candelaria el título de basílica menor por decreto del 24-I-2011. El documento reconoce su culto público, sin definir como sobrenaturales los detalles de la tradición de origen.",
+      "en": "The Congregation for Divine Worship granted Candelaria’s shrine the title of minor basilica by decree of 24 January 2011. The document acknowledges its public devotion without defining the details of its origin tradition as supernatural.",
+      "pt": "A Congregação para o Culto Divino concedeu ao santuário de Candelária o título de basílica menor por decreto de 24-I-2011. O documento reconhece seu culto público, sem definir como sobrenaturais os detalhes da tradição de origem."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El santuario de Tenerife conserva una tradición propia de hallazgo y veneración. No se mezclan con ella relatos de Copacabana o de otros lugares llamados Candelaria, ni se presentan fiestas multitudinarias como milagros clínicos.",
+        "en": "The Tenerife shrine preserves its own tradition of discovery and veneration. Accounts from Copacabana or other places named Candelaria are not mixed with it, nor are large festivals presented as clinical miracles.",
+        "pt": "O santuário de Tenerife conserva uma tradição própria de encontro e veneração. Não se misturam a ela relatos de Copacabana ou de outros lugares chamados Candelária, nem se apresentam festas numerosas como milagres clínicos."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La solemnidad del 2 de febrero se celebra con Eucaristía y peregrinación. La presentación de Jesús orienta la devoción hacia Cristo, luz para los pueblos, y hacia una vida de servicio.",
+      "en": "The 2 February solemnity is celebrated with the Eucharist and pilgrimage. Jesus’ presentation directs the devotion towards Christ, light for the peoples, and towards a life of service.",
+      "pt": "A solenidade de 2 de fevereiro é celebrada com Eucaristia e peregrinação. A apresentação de Jesus orienta a devoção para Cristo, luz para os povos, e para uma vida de serviço."
+    },
+    "sources": [
+      "Congregación para el Culto Divino, decreto del título de basílica, 24-I-2011",
+      "Dominicos, celebración de la Candelaria, 2-II-2024"
+    ]
   }
 ]

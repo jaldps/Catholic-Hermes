@@ -1,6 +1,6 @@
 # T-018 · Informe de Codex
 
-Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega de **10/30 auditorías** y **0 devociones nuevas** (objetivo aproximado: 25).
+Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega de **20/30 auditorías** y **0 devociones nuevas** (objetivo aproximado: 25).
 
 Leídos el protocolo, las reglas editoriales, el contrato M7 y los 30 registros originales. Solo se modifican los tres archivos autorizados. Explicaciones originales en ES/EN/PT; no se compone ninguna oración. Cada fórmula conservada o sustituida se documenta. Una retirada significa que no se ha comprobado la procedencia de esa redacción, no un juicio contra la devoción. Las promesas de revelación privada se atribuyen y no se presentan como garantías mecánicas. No se trasladan las categorías de 2024 retrospectivamente a declaraciones históricas.
 
@@ -82,13 +82,90 @@ Oración sustituida por la fórmula Ó meu Jesus documentada en el interrogatori
 
 Oración retirada: la fórmula exacta no se comprobó en las fuentes consultadas. La promesa actual se mantiene (null), cotejada con el relato de la tercera aparición en Route 4, que reproduce la promesa de felicidad en el otro mundo y no de salud. Se reemplaza miracles por un ejemplo identificado, conservando la distinción clínica/canónica ya correcta del catálogo. No se usa un recuento histórico como si fuera el total actual.
 
+### 11. `virgen_del_pilar` · oración sustituida por texto verificado
+
+- [Juan Pablo II, plegaria en la Basílica del Pilar, 10-X-1984](https://www.vatican.va/content/john-paul-ii/es/speeches/1984/october/documents/hf_jp-ii_spe_19841010_vergine-del-pilar.html)
+- [Catedrales de Zaragoza, La tradición de la venida](https://catedraldezaragoza.es/basilica/la-tradicion-de-la-venida/)
+- [Ayuntamiento de Zaragoza, Anales de Zaragoza: sentencia de Calanda](https://www.zaragoza.es/contenidos/cultura/publicaciones/568.pdf)
+
+Oración sustituida por la jaculatoria tradicional que transcribe el sitio de las catedrales, no por una composición nueva. No se añade Amén al texto cotejado. Calanda se mantiene con fecha y autoridad de la sentencia histórica, documentada en Anales; no se simula consulta del original del proceso. No se equipara una tradición sobre bombas de 1936 con ese juicio. Se retira la promesa genérica de permanencia hasta el fin de los tiempos, sin fuente.
+
+### 12. `medalla_milagrosa` · oración sustituida por texto verificado
+
+- [Capilla de la Medalla Milagrosa, 27 novembre 1830](https://www.chapellenotredamedelamedaillemiraculeuse.com/apparitions-et-medaille/27-novembre-1830/)
+- [Capilla de la Medalla Milagrosa, Histoire de la Médaille](https://www.chapellenotredamedelamedaillemiraculeuse.com/apparitions-et-medaille/medaille-miraculeuse/histoire-de-la-medaille/)
+- [Vatican News, peregrinación de la imagen bendecida en 2020, noticia de mayo de 2025](https://www.vaticannews.va/es/iglesia/news/2025-05/estatua-de-la-virgen-de-la-medalla-milagrosa-sicilia.html)
+
+Oración sustituida: el catálogo interpola derrama los rayos y altera la invocación; se restituye la fórmula breve que transcribe la capilla en francés. Traducciones propias fieles, sin añadido de Amén. Se conserva la promesa atribuida a Catalina con su condición de confianza, sin sumar condiciones textuales o resultados concretos que no trae la fuente. Ratisbonne se describe sin el calificativo incorrecto o despectivo de ateo judío.
+
+### 13. `rosa_mistica` · oración sustituida por texto verificado
+
+- [DDF, carta al obispo de Brescia sobre Maria Rosa Mistica, 5-VII-2024](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240705_lettera-devozione-mariarosamistica_en.html)
+- [Diócesis de Brescia, decreto del 8-VII-2024, Rivista della Diocesi 04/2024, pp. 225–228](https://www.diocesi.brescia.it/wp-content/uploads/sites/2/2025/03/Rivista-della-Diocesi-04-2024.pdf)
+- [DDF, Normas de discernimiento, 17-V-2024, art. 22](https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240517_norme-fenomeni-soprannaturali_sp.html)
+- [Santa Sede, Rosario del 4-V-2013: letanías lauretanas](https://www.vatican.va/news_services/liturgy/libretti/2013/20130504-libretto-rosario-smaria-maggiore.pdf)
+
+Oración sustituida: la fórmula exacta no fue verificada. Se usa la invocación tradicional de las letanías Rosa mystica, ora pro nobis, cotejada en el libreto vaticano de 2013 y traducida fielmente; no se presenta como un mensaje de Pierina Gilli ni oración exclusiva de Montichiari. Se retiran promesas genéricas y se describen los frutos sin inventar decretos médicos. Se consulta directamente el decreto en la revista diocesana; el PDF separado no entregó texto útil. El nihil obstat es de Tremolada el 8 de julio, no una declaración de sobrenaturalidad emitida por el DDF el día 5. Se aplican las precisiones cristológicas de la carta.
+
+### 14. `salus_populi_romani` · oración sustituida por texto verificado
+
+- [Francisco, homilía por la traslación del icono, 28-I-2018](https://www.vatican.va/content/francesco/en/homilies/2018/documents/papa-francesco_20180128_omelia-traslazione-icona.html)
+- [Basílica de Santa María la Mayor, comunicado de conservación, 20-I-2022](https://press.vatican.va/content/salastampa/en/info/2022/01/20/220120a.html)
+- [Compendio del Catecismo, apéndice: Sub tuum praesidium, original latino](https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html)
+
+Oración sustituida por Sub tuum praesidium, oración mariana antigua, no texto exclusivo de este icono. Traducciones propias fieles del latín publicado en el apéndice del Compendio; no se compone texto nuevo. La fecha de celebración de la traslación documentada es enero; el campo feastDay antiguo indica domingo después de la Asunción y requiere revisión del coordinador. No se confunde el cese de la peste en una leyenda de Gregorio Magno con un decreto sobre el icono.
+
+### 15. `virgen_dolores` · oración sustituida por texto verificado
+
+- [Vatican News, ficha litúrgica de Nuestra Señora de los Dolores](https://www.vaticannews.va/es/fiestas-liturgicas/santisima-virgen-de-los-dolores.html)
+- [Santa Sede, oración mariana del Año de la Fe, 12-X-2013: Stabat Mater](https://www.vatican.va/news_services/liturgy/libretti/2013/20131012-libretto-preghiera-mariana-anno-fede.pdf)
+- [Catecismo de la Iglesia Católica, 964 y 971](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_9/paragraph_6_mary_-_mother_of_christ%2C_mother_of_the_church.index.html)
+
+Oración sustituida por la estrofa Fac ut ardeat cor meum del Stabat Mater tradicional, cotejada en el libreto vaticano de 2013 y traducida fielmente; se identifica como estrofa, no oración recién compuesta. No se conserva una lista genérica de promesas ni un milagro sin fuente. No se atribuye autoría del himno como certeza histórica.
+
+### 16. `inmaculada_concepcion` · oración sustituida por texto verificado
+
+- [Pío XII, Fulgens corona, 8-IX-1953: Ineffabilis Deus de 1854](https://www.vatican.va/content/pius-xii/en/encyclicals/documents/hf_p-xii_enc_08091953_fulgens-corona.html)
+- [Capilla de la Medalla Milagrosa, invocación de 1830](https://www.chapellenotredamedelamedaillemiraculeuse.com/apparitions-et-medaille/27-novembre-1830/)
+
+La oración anterior contiene el error rugado y una ampliación no documentada. Se sustituye por la invocación auténtica de la medalla, identificándola como tal. No se interpreta el dogma como promesa individual de pureza o protección automática. El documento Ineffabilis Deus se identifica mediante la encíclica pontificia que lo cita; no se simula una consulta a su original.
+
+### 17. `asuncion` · oración sustituida por texto verificado
+
+- [Pío XII, Munificentissimus Deus, 1-XI-1950, 44](https://www.vatican.va/content/pius-xii/en/apost_constitutions/documents/hf_p-xii_apc_19501101_munificentissimus-deus.html)
+- [Catecismo de la Iglesia Católica, 966 y 971](https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_9/paragraph_6_mary_-_mother_of_christ%2C_mother_of_the_church.index.html)
+- [Santa Sede, Rosario del 4-V-2013: letanías lauretanas](https://www.vatican.va/news_services/liturgy/libretti/2013/20130504-libretto-rosario-smaria-maggiore.pdf)
+
+Oración sustituida por Regina in caelum assumpta, ora pro nobis, invocación real de las letanías cotejada en latín y traducida fielmente. Se retira la lista de bienes espirituales presentada como promesa particular. Se distingue dogma de tradición de la Dormición y de datos arqueológicos no probados.
+
+### 18. `estrella_del_mar` · oración sustituida por texto verificado
+
+- [Juan Pablo II, Stella Maris, motu proprio del 31-I-1997](https://www.vatican.va/content/john-paul-ii/en/motu_proprio/documents/hf_jp-ii_motu-proprio_17031999_stella-maris.html)
+- [Compendio del Catecismo, apéndice: Sub tuum praesidium, original latino](https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html)
+
+Oración sustituida: la fórmula anterior contiene texto sin procedencia y sintaxis defectuosa. Se ofrece la antigua oración Sub tuum, identificada como oración mariana común, no exclusiva de navegantes. El URL vaticano contiene 1999, pero el documento está fechado en 1997: se respeta la fecha real. El supuesto último domingo de septiembre universal no está probado en ese documento; queda señalado al coordinador para revisar feastDay.
+
+### 19. `rosario_lepanto` · oración sustituida por texto verificado
+
+- [Juan Pablo II, Rosarium Virginis Mariae, 16-X-2002](https://www.vatican.va/content/john-paul-ii/es/apost_letters/2002/documents/hf_jp-ii_apl_20021016_rosarium-virginis-mariae.html)
+- [Santa Sede, Rosario del 4-V-2013: letanías lauretanas](https://www.vatican.va/news_services/liturgy/libretti/2013/20130504-libretto-rosario-smaria-maggiore.pdf)
+
+Oración sustituida por la invocación tradicional Regina sacratissimi Rosarii, ora pro nobis, cotejada en latín. Se elimina el número sin fuente de cien mil avemarías y las garantías de victoria. No se añade una lista de quince promesas atribuidas a santos sin obra comprobada. La práctica conserva la meditación cristológica y ofrece un comienzo accesible.
+
+### 20. `candelaria` · oración retirada
+
+- [Congregación para el Culto Divino, decreto del título de basílica, 24-I-2011](https://www2.dominicos.org/kit_upload/file/noticias/titulo_basilica.pdf)
+- [Dominicos, celebración de la Candelaria, 2-II-2024](https://www.dominicos.org/noticia/solemnidad-de-la-virgen-de-candelaria-seamos-luz-del-mundo/)
+
+Oración retirada: no se verificó la procedencia de la fórmula del catálogo. Promesa retirada por carecer de atribución documental. Se delimita Tenerife, evitando mezclar sus relatos con la devoción boliviana de Copacabana. El título de basílica no prueba una aparición ni cada leyenda de origen.
+
 ## Devociones nuevas
 
 ## Validación
 
 ```text
-WARN  partial delivery: 10/30
-10 entries · 0 errors · 1 warnings
+WARN  partial delivery: 20/30
+20 entries · 0 errors · 1 warnings
 0 entries · 0 errors · 0 warnings
 ```
 
