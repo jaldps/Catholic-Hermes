@@ -59,6 +59,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -142,9 +143,16 @@ object LumenKit : AppKit {
 
         val statusTop = statusBarHeight()
 
-        CompositionLocalProvider(LocalBackOverrides provides overrides, LocalChrome provides chrome) {
+        val backdrop = rememberLiquidBackdrop()
+        val live = backdrop != null
+
+        CompositionLocalProvider(
+            LocalBackOverrides provides overrides,
+            LocalChrome provides chrome,
+            LocalLiquidBackdrop provides backdrop
+        ) {
             val effectiveBack = overrides.current ?: onBack
-            Box(Modifier.fillMaxSize().lumenCanvas()) {
+            Box(Modifier.fillMaxSize()) {
                 androidx.compose.material3.Scaffold(
                     containerColor = Color.Transparent,
                     contentWindowInsets = WindowInsets(0, 0, 0, 0),
@@ -162,13 +170,42 @@ object LumenKit : AppKit {
                         top = statusTop + if (effectiveBack != null) BarRow else 8.dp,
                         bottom = bottom
                     )
-                    Box(Modifier.fillMaxSize().nestedScroll(watcher)) {
-                        content(inner)
+                    Box(Modifier.fillMaxSize()) {
+                        // The ambient light and everything that scrolls are one
+                        // recorded layer: the floating glass above samples it.
+                        // Glass inside the content must never sample itself.
+                        val opaque = design.opaqueMaterial()
+                        val dockShown = !chrome.dockHidden
+                        Box(Modifier.fillMaxSize().liquidBackdropSource(backdrop)) {
+                            Box(Modifier.fillMaxSize().lumenCanvas())
+                            // Scroll edges: content dissolves into the ambient light
+                            // above the dock (and, without live blur, under the bar),
+                            // so nothing ghosts through the glass or hides a band.
+                            Box(
+                                Modifier.fillMaxSize()
+                                    .then(if (opaque) Modifier else Modifier.alphaMask {
+                                        val h = size.height
+                                        val fadeBottom = if (dockShown) (bottom + if (live) 0.dp else 26.dp).toPx() else 0f
+                                        val floor = if (live) 0.72f else 0.02f
+                                        val topSpan = (statusTop + BarRow + 28.dp).toPx()
+                                        val topAlpha = if (live) 1f else 1f - edge * 0.97f
+                                        Brush.verticalGradient(
+                                            0f to Color.Black.copy(alpha = topAlpha),
+                                            (topSpan * 0.55f / h) to Color.Black.copy(alpha = topAlpha + (1f - topAlpha) * 0.12f),
+                                            (topSpan / h) to Color.Black,
+                                            ((h - fadeBottom) / h).coerceIn(0.5f, 1f) to Color.Black,
+                                            ((h - fadeBottom * 0.62f) / h).coerceIn(0.5f, 1f) to Color.Black.copy(alpha = if (dockShown) floor + (1f - floor) * 0.30f else 1f),
+                                            1f to Color.Black.copy(alpha = if (dockShown) floor else 1f)
+                                        )
+                                    })
+                                    .nestedScroll(watcher)
+                            ) {
+                                CompositionLocalProvider(LocalLiquidBackdrop provides null) { content(inner) }
+                            }
+                        }
 
-                        // Content-under-bar fade: scrolling content dissolves into the
-                        // canvas over 20dp above the dock and is quiet behind it, so
-                        // nothing ghosts through the bar.
-                        if (!chrome.dockHidden) {
+                        // Opaque identities keep the solid fade under the dock.
+                        if (dockShown && opaque) {
                             val total = bottom + 24.dp
                             val lift = 24.dp / total
                             Box(
@@ -188,13 +225,51 @@ object LumenKit : AppKit {
                         }
 
                         // The bar material, only once content has scrolled under it.
-                        Column(Modifier.fillMaxWidth().graphicsLayer { alpha = edge }) {
-                            Box(
-                                Modifier
-                                    .fillMaxWidth()
-                                    .height(statusTop + BarRow)
-                                    .background(palette.canvasTop.copy(alpha = 0.95f))
-                            ) {
+                        if (design.opaqueMaterial()) {
+                            Column(Modifier.fillMaxWidth().graphicsLayer { alpha = edge }) {
+                                Box(
+                                    Modifier
+                                        .fillMaxWidth()
+                                        .height(statusTop + BarRow)
+                                        .background(palette.canvasTop.copy(alpha = 0.95f))
+                                ) {
+                                    Text(
+                                        text = chrome.titleOverride ?: title,
+                                        style = styles.headline,
+                                        color = palette.textPrimary,
+                                        maxLines = 1,
+                                        overflow = TextOverflow.Ellipsis,
+                                        textAlign = TextAlign.Center,
+                                        modifier = Modifier
+                                            .align(Alignment.BottomCenter)
+                                            .padding(horizontal = 72.dp)
+                                            .height(BarRow)
+                                            .padding(top = 15.dp)
+                                    )
+                                }
+                                Box(Modifier.fillMaxWidth().height(0.5.dp).background(palette.separator))
+                            }
+                        } else {
+                            // Progressive glass: with a live backdrop the content blurs
+                            // under the status bar and clears below the title; without
+                            // one it has already dissolved into the light (the mask above).
+                            val veil = statusTop + BarRow + 28.dp
+                            Box(Modifier.fillMaxWidth().height(veil).graphicsLayer { alpha = edge }) {
+                                if (live) {
+                                    Box(
+                                        Modifier.matchParentSize().alphaMask {
+                                            Brush.verticalGradient(
+                                                0f to Color.Black,
+                                                0.62f to Color.Black,
+                                                0.84f to Color.Black.copy(alpha = 0.45f),
+                                                1f to Color.Transparent
+                                            )
+                                        }
+                                    ) {
+                                        LiquidBackdropFill(androidx.compose.ui.graphics.RectangleShape, Modifier.matchParentSize(), blur = 18.dp, lens = false)
+                                        Box(Modifier.matchParentSize().background(palette.canvasTop.copy(alpha = 0.50f)))
+                                    }
+                                }
                                 Text(
                                     text = chrome.titleOverride ?: title,
                                     style = styles.headline,
@@ -203,13 +278,13 @@ object LumenKit : AppKit {
                                     overflow = TextOverflow.Ellipsis,
                                     textAlign = TextAlign.Center,
                                     modifier = Modifier
-                                        .align(Alignment.BottomCenter)
+                                        .fillMaxWidth()
+                                        .padding(top = statusTop)
                                         .padding(horizontal = 72.dp)
                                         .height(BarRow)
                                         .padding(top = 15.dp)
                                 )
                             }
-                            Box(Modifier.fillMaxWidth().height(0.5.dp).background(palette.separator))
                         }
 
                         Row(
@@ -250,38 +325,112 @@ object LumenKit : AppKit {
     /** Four primary destinations. Captions reflow and always retain their type size. */
     @Composable
     private fun Dock(navItems: List<AppNavItem>, selectedNavIndex: Int, onNavSelected: (Int) -> Unit) {
+        if (LocalAppDesign.current.isSanctuary) FolioDock(navItems, selectedNavIndex, onNavSelected)
+        else GlassDock(navItems, selectedNavIndex, onNavSelected)
+    }
+
+    /**
+     * Lumen's dock: one floating capsule of glass. The selected destination
+     * sits under a bright lens that slides between tabs on a spring.
+     */
+    @Composable
+    private fun GlassDock(navItems: List<AppNavItem>, selectedNavIndex: Int, onNavSelected: (Int) -> Unit) {
         val design = LocalAppDesign.current
         val p = design.palette
         val styles = LocalAppTextStyles.current
-        val sanctuary = design.isSanctuary
-        val shape = if (sanctuary) RoundedCornerShape(0.dp) else RoundedCornerShape(28.dp)
+        val radius = 32.dp
+        val shape = RoundedCornerShape(radius)
+        val live = LocalLiquidBackdrop.current != null
+        val still = design.reduceMotion || androidx.compose.ui.platform.LocalInspectionMode.current
+        val position by animateFloatAsState(
+            selectedNavIndex.coerceIn(0, (navItems.size - 1).coerceAtLeast(0)).toFloat(),
+            if (still) androidx.compose.animation.core.snap()
+            else androidx.compose.animation.core.spring(dampingRatio = 0.74f, stiffness = 380f),
+            label = "dockLens"
+        )
         Box(
             Modifier.fillMaxWidth().navigationBarsPadding()
-                .padding(horizontal = if (sanctuary) 0.dp else 12.dp,
-                    vertical = if (sanctuary) 0.dp else 8.dp),
+                .padding(start = 16.dp, end = 16.dp, top = 6.dp, bottom = 10.dp),
             contentAlignment = Alignment.Center
         ) {
+            Box(Modifier.widthIn(max = 560.dp).fillMaxWidth().testTag("bottom_nav_bar")) {
+                LiquidBackdropFill(shape, Modifier.matchParentSize(), blur = 22.dp, cornerRadius = radius)
+                Box(Modifier.matchParentSize().liquidPane(shape, design.chromeGlassSpec(live)))
+                val inset = 5.dp
+                Box(Modifier.fillMaxWidth().padding(inset)) {
+                    // The lens. Drawn behind the row, sized to one slot.
+                    if (navItems.isNotEmpty()) {
+                        val lensShape = RoundedCornerShape(radius - inset)
+                        Box(
+                            Modifier.matchParentSize().layout { measurable, constraints ->
+                                val slot = constraints.maxWidth / navItems.size
+                                val placeable = measurable.measure(
+                                    constraints.copy(minWidth = slot, maxWidth = slot)
+                                )
+                                layout(constraints.maxWidth, placeable.height) {
+                                    placeable.place((position * slot).toInt(), 0)
+                                }
+                            }
+                        ) {
+                            Box(Modifier.fillMaxSize().liquidPane(lensShape, design.glassSpec(GlassRole.Thumb)))
+                        }
+                    }
+                    Row(
+                        Modifier.fillMaxWidth().height(IntrinsicSize.Min),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        navItems.forEachIndexed { index, item ->
+                            val active = index == selectedNavIndex
+                            val tint by animateColorAsState(
+                                if (active) (if (design.opaqueMaterial()) p.onAction else p.accent) else p.textSecondary,
+                                tween(design.motion.fastMillis), label = "tabTint")
+                            Column(
+                                Modifier.weight(1f).heightIn(min = 56.dp)
+                                    .clip(RoundedCornerShape(radius - inset))
+                                    .lumenPress({ onNavSelected(index) }, 0.94f, Role.Tab)
+                                    .semantics { selected = active }
+                                    .testTag(item.tag)
+                                    .padding(horizontal = 4.dp, vertical = 6.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.Center
+                            ) {
+                                Icon(if (active) solidGlyph(item.selectedIcon) else item.icon, null,
+                                    tint = tint, modifier = Modifier.size(24.dp))
+                                Spacer(Modifier.height(3.dp))
+                                Text(item.label, style = styles.navLabel.copy(
+                                    fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
+                                    color = tint, textAlign = TextAlign.Center)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /** Sanctuary's ruled folio rail. */
+    @Composable
+    private fun FolioDock(navItems: List<AppNavItem>, selectedNavIndex: Int, onNavSelected: (Int) -> Unit) {
+        val design = LocalAppDesign.current
+        val p = design.palette
+        val styles = LocalAppTextStyles.current
+        Box(Modifier.fillMaxWidth().navigationBarsPadding(), contentAlignment = Alignment.Center) {
             Column(
-                Modifier.widthIn(max = 680.dp).fillMaxWidth()
-                    .then(if (sanctuary) Modifier.background(p.glassStrong)
-                        else Modifier.lumenGlass(shape, strong = true))
-                    .clip(shape).testTag("bottom_nav_bar")
+                Modifier.widthIn(max = 680.dp).fillMaxWidth().background(p.glassStrong).testTag("bottom_nav_bar")
             ) {
-                if (sanctuary) Box(Modifier.fillMaxWidth().height(1.dp).background(p.hairline))
+                Box(Modifier.fillMaxWidth().height(1.dp).background(p.hairline))
                 Row(
-                    Modifier.fillMaxWidth().height(IntrinsicSize.Min)
-                        .padding(horizontal = if (sanctuary) 12.dp else 4.dp, vertical = if (sanctuary) 6.dp else 5.dp),
+                    Modifier.fillMaxWidth().height(IntrinsicSize.Min).padding(horizontal = 12.dp, vertical = 6.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     navItems.forEachIndexed { index, item ->
                         val active = index == selectedNavIndex
                         val tint by animateColorAsState(
-                            if (active) (if (sanctuary) p.accent else p.textPrimary) else p.textSecondary,
+                            if (active) p.accent else p.textSecondary,
                             tween(design.motion.fastMillis), label = "tabTint")
                         Column(
                             Modifier.weight(1f).heightIn(min = 64.dp)
-                                .clip(if (sanctuary) RoundedCornerShape(6.dp) else RoundedCornerShape(24.dp))
-                                .background(if (active && !sanctuary) p.selectionTint else Color.Transparent)
+                                .clip(RoundedCornerShape(6.dp))
                                 .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab)
                                 .semantics { selected = active }
                                 .testTag(item.tag)
@@ -295,11 +444,9 @@ object LumenKit : AppKit {
                             Text(item.label, style = styles.navLabel.copy(
                                 fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
                                 color = tint, textAlign = TextAlign.Center)
-                            if (sanctuary) {
-                                Spacer(Modifier.height(5.dp))
-                                Box(Modifier.width(20.dp).height(2.dp)
-                                    .background(if (active) p.accent else Color.Transparent))
-                            }
+                            Spacer(Modifier.height(5.dp))
+                            Box(Modifier.width(20.dp).height(2.dp)
+                                .background(if (active) p.accent else Color.Transparent))
                         }
                     }
                 }
@@ -621,6 +768,9 @@ object LumenKit : AppKit {
         val styles = LocalAppTextStyles.current
         val shape = design.shapes.buttonSmall
         if (options.isEmpty()) return
+        val opaque = design.opaqueMaterial()
+        val thumb = design.glassSpec(GlassRole.Thumb)
+        val onThumb = if (opaque && !design.isSanctuary) p.onAction else if (design.isSanctuary) p.onAction else p.textPrimary
         BoxWithConstraints(modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
             val density = LocalDensity.current
             val measure = rememberTextMeasurer()
@@ -631,25 +781,54 @@ object LumenKit : AppKit {
             val scrolling = widths.any { it > slotWidth }
             val initialOffset = if (scrolling) ((widths.take(selectedIndex.coerceAtLeast(0)).sum() + selectedIndex * 4f) * density.density).toInt() else 0
             val scrollState = rememberScrollState(initial = initialOffset)
-            Row(
-                Modifier.fillMaxWidth().height(IntrinsicSize.Min).lumenGlass(shape, lifted = false)
-                    .clip(shape).then(if (scrolling) Modifier.horizontalScroll(scrollState) else Modifier).padding(4.dp),
-                horizontalArrangement = Arrangement.spacedBy(4.dp)
-            ) {
-                options.forEachIndexed { index, label ->
-                    val active = index == selectedIndex
+            val still = design.reduceMotion || androidx.compose.ui.platform.LocalInspectionMode.current
+            val position by animateFloatAsState(
+                selectedIndex.coerceIn(0, options.lastIndex).toFloat(),
+                if (still) androidx.compose.animation.core.snap()
+                else androidx.compose.animation.core.spring(dampingRatio = 0.76f, stiffness = 420f),
+                label = "segmentThumb"
+            )
+            Box(Modifier.fillMaxWidth().lumenGlass(shape, lifted = false).clip(shape)) {
+                // One thumb slides between equal slots; a scrolling track
+                // (labels wider than their slot) lights the selected item instead.
+                if (!scrolling && !design.isSanctuary) {
                     Box(
-                        (if (scrolling) Modifier.widthIn(min = 48.dp) else Modifier.weight(1f)).heightIn(min = 48.dp)
-                            .clip(shape)
-                            .background(if (active) p.action else Color.Transparent)
-                            .lumenPress({ onSelect(index) }, role = Role.Tab)
-                            .semantics { selected = active }
-                            .padding(horizontal = 12.dp, vertical = 11.dp),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(label, style = styles.subhead.copy(fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
-                            color = if (active) p.onAction else p.textSecondary,
-                            maxLines = 1, textAlign = TextAlign.Center)
+                        Modifier.matchParentSize().padding(4.dp).layout { measurable, constraints ->
+                            val gap = 4.dp.roundToPx()
+                            val slot = (constraints.maxWidth - gap * (options.size - 1)) / options.size
+                            val placeable = measurable.measure(constraints.copy(minWidth = slot, maxWidth = slot))
+                            layout(constraints.maxWidth, placeable.height) {
+                                placeable.place((position * (slot + gap)).toInt(), 0)
+                            }
+                        }
+                    ) { Box(Modifier.fillMaxSize().liquidPane(shape, thumb)) }
+                }
+                Row(
+                    Modifier.fillMaxWidth().height(IntrinsicSize.Min)
+                        .then(if (scrolling) Modifier.horizontalScroll(scrollState) else Modifier).padding(4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    options.forEachIndexed { index, label ->
+                        val active = index == selectedIndex
+                        val ink by animateColorAsState(if (active) onThumb else p.textSecondary,
+                            tween(design.motion.fastMillis), label = "segmentInk")
+                        Box(
+                            (if (scrolling) Modifier.widthIn(min = 48.dp) else Modifier.weight(1f)).heightIn(min = 48.dp)
+                                .then(
+                                    if (active && design.isSanctuary) Modifier.clip(shape).background(p.action)
+                                    else if (active && scrolling) Modifier.liquidPane(shape, thumb)
+                                    else Modifier
+                                )
+                                .clip(shape)
+                                .lumenPress({ onSelect(index) }, role = Role.Tab)
+                                .semantics { selected = active }
+                                .padding(horizontal = 12.dp, vertical = 11.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(label, style = styles.subhead.copy(fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
+                                color = ink,
+                                maxLines = 1, textAlign = TextAlign.Center)
+                        }
                     }
                 }
             }
