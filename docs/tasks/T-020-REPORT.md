@@ -6,6 +6,13 @@ Rama `ext/T-020`, base `origin/CatholicGPT` (`3576e6e`, justo encima de la versi
 
 No se ha tocado contenido (oraciones, Escritura, catálogos), navegación, IDs guardados, `dist/`, firma ni versiones. Se conservan los test tags y las etiquetas de accesibilidad.
 
+## Dos entregas en esta rama
+
+1. **Lumen rehecho** (identidad predeterminada): luz ambiental, cabezal único, paneles de cristal *denso*. Es vidrio esmerilado: los paneles de contenido tienen un 70 % de opacidad y el dock de respaldo un 85 %. **No se ve como Liquid Glass**, y así me lo señaló el dueño al ver las capturas.
+2. **Cristal** (identidad nueva, id `GLASS`, seleccionable en Apariencia → Estilo junto a Lumen y Sanctuary): cristal líquido de verdad, transparente y con refracción en todos los paneles. Ver «Identidad Cristal».
+
+Ambas comparten armazón, cabezal, componentes y pantallas; cambia solo el material.
+
 ## Qué es el rediseño
 
 Tres capas, las mismas en todas las pantallas:
@@ -15,6 +22,21 @@ Tres capas, las mismas en todas las pantallas:
 3. **Cristal de control.** Dock, barra, botones flotantes, chips y campos son cristal claro con borde especular. En Android 12+ desenfocan en vivo lo que pasa por debajo; en Android 13+ además lo refractan en el borde (shader AGSL propio).
 
 Todo panel se construye igual (`ui/design/LiquidGlass.kt`): sombra de color, relleno, brillo superior y un borde especular que entra por arriba a la izquierda y vuelve abajo a la derecha. Sanctuary, «reducir transparencia» y «alto contraste» reciben la misma geometría en material opaco.
+
+## Identidad Cristal
+
+- **Transparente.** Contenido al 22 % de tinte, controles al 14 %, dock al 22 % (14 % con desenfoque en vivo). En oscuro, 5–9 %. Lo que se ve dentro de un panel es la luz de detrás.
+- **Refracción en todos los paneles, sin shader.** Cada panel redibuja la luz ambiental ampliada un 12 % en su interior y un 38 % en una banda de 10 dp junto al borde, así que la imagen se dobla en el canto como en un vidrio grueso y se desliza al hacer scroll. Funciona en cualquier versión de Android y en las capturas.
+- **Brillo.** Borde especular más marcado, destello en la esquina por donde entra la luz y una sombra fina en el canto opuesto.
+- **Dock y barra** también transparentes. Sin desenfoque en vivo, el contenido se disuelve antes de llegar al dock, porque el cristal claro no tapa nada.
+- **Legibilidad.** Como el cristal no oscurece el fondo, la luz ambiental es un 40 % más intensa y las tintas se recalibran: 4,5:1 sobre la luz desnuda, sobre la luz vista a través de la lente y a través de cada panel, para los cinco colores litúrgicos y los cuatro tintes (`LiquidGlassTest`).
+- **Accesibilidad.** Con «reducir transparencia» o «alto contraste» pasa a material opaco, como las demás.
+
+Límites de Cristal:
+- La refracción dobla la **luz ambiental**, no el contenido. Un panel que quede sobre una pintura no la refracta; por eso los botones redondos sobre cabeceras no usan la lente.
+- Las barras que flotan *dentro* del contenido sobre texto que se desplaza (transporte, barra de acciones) siguen siendo esmeriladas (45–60 %): ahí no hay nada que muestrear y el texto de detrás las haría ilegibles.
+- Hojas, menús y diálogos siguen siendo paneles opacos iluminados; no los he hecho transparentes.
+- El desenfoque en vivo y la lente AGSL del dock (Android 12+/13+) siguen sin probarse en dispositivo, igual que en Lumen.
 
 **Luz litúrgica.** Con el tinte «Dinámico Litúrgico» (el predeterminado), el acento y la luz ambiental siguen ahora el color litúrgico del día: verde, morado, blanco/oro, rojo o rosa. Antes el nombre prometía eso, pero el acento era siempre verde. Es un cambio de comportamiento visible; ver «Propuestas».
 
@@ -79,6 +101,7 @@ En `docs/tasks/T-020-shots/`, a mitad de tamaño y ≤ 300 KB, con nombre `<pant
 - Claro y oscuro: `home`, `prayers`, `bible`, `more`, `rosary`, `habits_virtues`, `appearance`.
 - Solo claro: `catechism`, `saints`, `study_orders`, `beginner`, `pilgrimage_habits`, `reminders`, `questions`, `study_mary_jesus`, `spiritual_life`, `parishes`, `doctrine`, `study_history`, `order_detail`, `devotion_marian`, `novena_detail`, `prayer_detail`, `novenas`, `prayer_category`, `bible_reader`.
 - `home_sanctuary_light_after.png` (sin «antes»: no rendericé Sanctuary en la base).
+- **Cristal** (solo «después», es una identidad nueva): `home`, `prayers`, `bible`, `more`, `rosary`, `saints`, `habits_virtues`, `catechism` con sufijo `_glass_{light,dark}_after.png`.
 
 **Límite importante de las capturas.** Se renderizan por software (Robolectric), que no ejecuta el desenfoque en vivo ni la lente. Muestran por tanto el material de respaldo: el mismo que verá un teléfono con Android 11 o anterior. En algunas capturas de detalle el arte de cabecera sale en blanco porque ese arnés captura antes de que termine de decodificarse; no es un fallo de la pantalla.
 
@@ -88,19 +111,20 @@ Entorno: Java 21, Gradle 9.3.1 (wrapper), Android SDK 36.1, instalado en esta se
 
 **Compilación:** `./gradlew :app:assembleDebug` — correcta.
 
-**Suite completa:** `./gradlew :app:testDebugUnitTest` — 469 tests, 463 pasan y 6 fallan en la última pasada completa:
+**Suite completa (última pasada, con las tres identidades):** `./gradlew :app:assembleDebug :app:testDebugUnitTest` — 483 tests, **477 pasan y 6 fallan**. Los 6 son el mismo test:
 
 | Test | Estado | Causa |
 |---|---|---|
-| `AppNavigationTest` [SANCTUARY] | **Corregido y vuelto a pasar** | Regresión mía: la Biblia en Sanctuary tiene ahora cabezal con arte, y el `performScrollTo` mínimo dejaba la fila de Génesis detrás del dock. El test termina ahora el scroll hasta dejarla pulsable. Tras el cambio, la clase entera pasa (ejecutada sola). |
-| `RecoverySheetsScreenshotTest` (4 variantes) | Falla igual en la base | «Clipped sheet title». Falla idéntico en `3576e6e` sin tocar, en las cuatro variantes. No lo he resuelto. |
-| `HomePrayerPrioritiesTest` (1 de 4 variantes, cambia en cada pasada) | Inestable en la base | En tres pasadas sobre `3576e6e` sin tocar falló las tres, cada vez en variantes distintas (línea 145, selector de capítulo no visible). |
+| `RecoverySheetsScreenshotTest` (6 variantes: Lumen, Cristal y Sanctuary, claro y oscuro) | Falla igual en la base | «Clipped sheet title». En `3576e6e` sin tocar falla idéntico en sus 4 variantes; las otras 2 son las de la identidad nueva. No lo he resuelto. |
 
-No he vuelto a lanzar la suite completa después de corregir `AppNavigationTest`; solo esa clase.
+Otros dos tests dieron problemas durante el trabajo:
+
+- `AppNavigationTest` [SANCTUARY] falló en una pasada anterior por una regresión mía: la Biblia en Sanctuary tiene ahora cabezal con arte y el `performScrollTo` mínimo dejaba la fila de Génesis detrás del dock. El test termina ahora el scroll hasta dejarla pulsable; en la última pasada completa pasa en las cuatro identidades.
+- `HomePrayerPrioritiesTest` es inestable: en la última pasada pasó, en la anterior falló en una variante, y sobre `3576e6e` sin tocar falló en tres de tres pasadas, cada vez en variantes distintas (línea 145, selector de capítulo no visible).
 
 **Tests indicados en `T-020.md`:** `AppNavigationTest`, `DesignNavigationTest`, `DesignContrastTest`, `RosaryInteractionTest`, los de fuentes (`FontPickerInteractionTest`, `FontPreferencesTest`, `FontTypographyTest`, `ReaderFontChoiceTest`), `SaintsScreenTest`, `OrdersScreenTest`, `DevotionsScreenTest`, `VoiceSettingsUiTest` y `screenshots.FullAppScreenshotTest`: todos pasan. `VaticanNavigationLayoutTest` no existe en el repositorio.
 
-**Test nuevo:** `LiquidGlassTest` (6 tests): contraste 4,5:1 de cada tinta sobre lienzo, cristal y cada foco de luz para los cinco colores litúrgicos y los cuatro tintes; etiqueta de la acción primaria sobre el cristal teñido; resolución del color litúrgico; material opaco en Sanctuary, «reducir transparencia» y «alto contraste»; compilación del shader de la lente; respaldo en Android antiguo.
+**Test nuevo:** `LiquidGlassTest` (7 tests; uno específico de Cristal: tintas sobre la luz desnuda, a través de la lente y de cada panel, y comprobación de que los paneles son realmente transparentes): contraste 4,5:1 de cada tinta sobre lienzo, cristal y cada foco de luz para los cinco colores litúrgicos y los cuatro tintes; etiqueta de la acción primaria sobre el cristal teñido; resolución del color litúrgico; material opaco en Sanctuary, «reducir transparencia» y «alto contraste»; compilación del shader de la lente; respaldo en Android antiguo.
 
 **Tests modificados (dos, por la misma razón):** `AppNavigationTest` y `screenshots.DevotionalPrioritiesScreenshotTest` tocaban un objetivo tras un scroll mínimo que, con los cabezales nuevos, queda detrás del dock flotante. Ahora completan el scroll antes de tocar. No se ha relajado ninguna comprobación.
 
