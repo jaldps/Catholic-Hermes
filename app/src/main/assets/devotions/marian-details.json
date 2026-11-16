@@ -58,9 +58,9 @@
     },
     "prayer": {
       "text": {
-        "es": "Flor del Carmelo, vid florecida, esplendor del cielo, Virgen que das a luz, singular. Madre bondadosa, que no conociste varón, sé propicia a los carmelitas, Estrella del mar.",
-        "en": "Flower of Carmel, flowering vine, splendour of heaven, unique Virgin who gives birth. Gentle Mother, who knew no man, be gracious to the Carmelites, Star of the Sea.",
-        "pt": "Flor do Carmelo, vide florescente, esplendor do céu, Virgem singular que dá à luz. Mãe bondosa, que não conheceste varão, sê propícia aos carmelitas, Estrela do mar."
+        "es": "Flor del Carmelo, vid florecida, esplendor del cielo, Virgen Madre singular. Madre bondadosa, que no conociste varón, sé propicia a los carmelitas, Estrella del mar.",
+        "en": "Flower of Carmel, flowering vine, splendour of heaven, Virgin Mother without equal. Gentle Mother, who knew no man, be gracious to the Carmelites, Star of the Sea.",
+        "pt": "Flor do Carmelo, vide florescente, esplendor do céu, Virgem Mãe singular. Mãe bondosa, que não conheceste varão, sê propícia aos carmelitas, Estrela do mar."
       },
       "source": "Flos Carmeli, dos estrofas iniciales; original latino tradicional cotejado en Our Lady of Mercy Lay Carmelite Community. Traducciones propias fieles."
     },
@@ -97,9 +97,9 @@
     },
     "miracles": {
       "text": {
-        "es": "La tradición guadalupana relata el signo de las rosas y de la imagen en la tilma. Se retiran los números de conversiones y las afirmaciones oftalmológicas o de conservación inexplicable que aquí carecen de respaldo documental suficiente.",
-        "en": "Guadalupan tradition recounts the sign of the roses and the image on the tilma. Conversion figures and claims about eye examinations or inexplicable preservation are omitted here for lack of sufficient documentary support.",
-        "pt": "A tradição guadalupana relata o sinal das rosas e da imagem na tilma. Retiram-se números de conversões e afirmações oftalmológicas ou de conservação inexplicável que aqui carecem de apoio documental suficiente."
+        "es": "La tradición guadalupana relata el signo de las rosas y de la imagen en la tilma. Las cifras populares de conversiones y las afirmaciones oftalmológicas no equivalen a una declaración eclesial de milagro.",
+        "en": "Guadalupan tradition recounts the sign of the roses and the image on the tilma. Popular conversion figures and claims about the image’s eyes do not amount to an ecclesial declaration of a miracle.",
+        "pt": "A tradição guadalupana relata o sinal das rosas e da imagem na tilma. Números populares de conversões e afirmações oftalmológicas não equivalem a uma declaração eclesial de milagre."
       }
     },
     "prayer": {
@@ -307,9 +307,9 @@
       "source": "Oración transmitida por los videntes en 1917; Documentação Crítica de Fátima: Seleção de documentos (1917–1930), p. 58. PT original; traducciones propias fieles ES/EN."
     },
     "practice": {
-      "es": "Los cinco primeros sábados unen, durante cinco meses, confesión, comunión, Rosario y quince minutos de meditación de sus misterios, con intención reparadora. Según el relato de Lucía, se asocia a ellos la asistencia de María en la hora de la muerte con las gracias necesarias para la salvación. Es revelación privada y exige conversión, no solo cumplimiento exterior.",
-      "en": "The five first Saturdays unite confession, Communion, the Rosary and fifteen minutes of meditation on its mysteries over five months, with reparation as their intention. According to Lucia’s account, Mary’s assistance at death with the graces necessary for salvation is associated with them. This is private revelation and calls for conversion, not merely outward observance.",
-      "pt": "Os cinco primeiros sábados unem, durante cinco meses, confissão, comunhão, Rosário e quinze minutos de meditação de seus mistérios, com intenção reparadora. Segundo o relato de Lúcia, associa-se a eles a assistência de Maria na hora da morte com as graças necessárias para a salvação. É revelação privada e exige conversão, não apenas cumprimento exterior."
+      "es": "Durante cinco primeros sábados consecutivos se unen comunión, Rosario y quince minutos de meditación de sus misterios, con intención reparadora al Corazón Inmaculado de María y confesión, que puede hacerse otro día si se comulga en gracia. El relato de Lucía asocia a esta práctica la asistencia de María en la hora de la muerte con las gracias necesarias para la salvación. Es revelación privada y exige conversión, no solo cumplimiento exterior.",
+      "en": "On the first Saturday of five consecutive months, Communion, the Rosary and fifteen minutes of meditation on its mysteries are joined with reparation to Mary’s Immaculate Heart and confession, which may occur on another day if Communion is received in grace. Lucia’s account associates this practice with Mary’s assistance at death with the graces necessary for salvation. This is private revelation and calls for conversion, not merely outward observance.",
+      "pt": "Nos primeiros sábados de cinco meses consecutivos, unem-se comunhão, Rosário e quinze minutos de meditação de seus mistérios, com intenção reparadora ao Coração Imaculado de Maria e confissão, que pode ser feita em outro dia se a comunhão for recebida em graça. O relato de Lúcia associa à prática a assistência de Maria na hora da morte com as graças necessárias para a salvação. É revelação privada e exige conversão, não apenas cumprimento exterior."
     },
     "sources": [
       "Santuario de Fátima, Cronología: carta pastoral de 1930",
@@ -655,9 +655,9 @@
     },
     "miracles": {
       "text": {
-        "es": "La memoria de Lepanto pertenece a la historia de esta devoción. Se retira la frase sobre cien mil avemarías y las victorias genéricas, sin fuente concreta, y no se presentan hechos militares como garantía de intervención milagrosa para cada devoto.",
-        "en": "The memory of Lepanto belongs to this devotion’s history. The phrase about a hundred thousand Hail Marys and unspecified victories is removed for lack of a specific source; military events are not presented as a guarantee of miraculous intervention for every devotee.",
-        "pt": "A memória de Lepanto pertence à história desta devoção. Retira-se a frase sobre cem mil ave-marias e as vitórias genéricas sem fonte concreta; fatos militares não são apresentados como garantia de intervenção milagrosa para cada devoto."
+        "es": "Lepanto pertenece a la memoria de esta devoción. Rosarium Virginis Mariae presenta el Rosario como contemplación de Cristo y oración por la paz, sin ofrecer garantías de victorias militares futuras.",
+        "en": "Lepanto belongs to this devotion’s memory. Rosarium Virginis Mariae presents the Rosary as contemplation of Christ and prayer for peace, without offering guarantees of future military victories.",
+        "pt": "Lepanto pertence à memória desta devoção. Rosarium Virginis Mariae apresenta o Rosário como contemplação de Cristo e oração pela paz, sem oferecer garantias de vitórias militares futuras."
       }
     },
     "prayer": {
@@ -780,9 +780,9 @@
     },
     "miracles": {
       "text": {
-        "es": "El culto y la coronación documentados no autentican automáticamente cada leyenda sobre el origen del cuadro. Se retira el relato del hallazgo de los Astacio en 1515 como milagro probado, por falta de una fuente concreta en esta auditoría.",
-        "en": "The documented devotion and coronation do not automatically authenticate every legend about the painting’s origins. The account of the Astacio discovery in 1515 is removed as a proven miracle for lack of a specific source in this audit.",
-        "pt": "O culto e a coroação documentados não autenticam automaticamente cada lenda sobre a origem do quadro. Retira-se o relato do encontro dos Astacio em 1515 como milagre comprovado, por falta de fonte concreta nesta auditoria."
+        "es": "La tradición del cuadro y los testimonios de favores acompañan el culto de la Altagracia. El reconocimiento de su coronación no constituye una declaración sobre cada relato de origen o curación.",
+        "en": "The painting’s tradition and testimonies of favours accompany the Altagracia devotion. Recognition of its coronation does not constitute a declaration about every account of origins or healing.",
+        "pt": "A tradição do quadro e os testemunhos de graças acompanham o culto da Altagracia. O reconhecimento de sua coroação não constitui declaração sobre cada relato de origem ou cura."
       }
     },
     "prayer": {
@@ -840,9 +840,9 @@
     },
     "miracles": {
       "text": {
-        "es": "El convento conserva los relatos de lágrimas de la imagen, distintos de una lista de curaciones con dictamen individual. Se retira la enumeración imprecisa de un cáncer y una sordera sin personas ni documentos identificados.",
-        "en": "The convent preserves accounts of the image’s tears, distinct from a list of healings with individual judgements. The imprecise listing of a cancer and deafness without identified people or documents is removed.",
-        "pt": "O convento conserva os relatos de lágrimas da imagem, distintos de uma lista de curas com parecer individual. Retira-se a enumeração imprecisa de um câncer e de uma surdez sem pessoas nem documentos identificados."
+        "es": "El convento conserva relatos sobre las lágrimas de la imagen. La autorización del culto no debe confundirse con dictámenes individuales sobre cualquier curación atribuida a la devoción.",
+        "en": "The convent preserves accounts of the image’s tears. Authorization of the devotion should not be confused with individual judgements about every healing attributed to it.",
+        "pt": "O convento conserva relatos sobre as lágrimas da imagem. A autorização do culto não deve ser confundida com pareceres individuais sobre qualquer cura atribuída à devoção."
       }
     },
     "prayer": {
@@ -892,9 +892,9 @@
   {
     "id": "remedios_cholula",
     "recognition": {
-      "es": "Es un santuario de culto católico: la ficha patrimonial de la Secretaría de Cultura de México registra su bendición en 1874. No se ha verificado en esta auditoría un decreto específico de reconocimiento de apariciones, por lo que no se afirma que exista.",
-      "en": "It is a shrine of Catholic devotion: Mexico’s Secretariat of Culture heritage entry records its blessing in 1874. This audit has not verified a specific decree recognizing apparitions, so none is asserted.",
-      "pt": "É um santuário de culto católico: a ficha patrimonial da Secretaria de Cultura do México registra sua bênção em 1874. Não foi verificado nesta auditoria um decreto específico de reconhecimento de aparições; por isso não se afirma que exista."
+      "es": "La ficha patrimonial de la Secretaría de Cultura de México registra la bendición del santuario en 1874. El culto católico del lugar no debe confundirse con una declaración eclesial sobre apariciones.",
+      "en": "Mexico’s Secretariat of Culture heritage entry records the shrine’s blessing in 1874. The place’s Catholic devotion should not be confused with an ecclesial declaration concerning apparitions.",
+      "pt": "A ficha patrimonial da Secretaria de Cultura do México registra a bênção do santuário em 1874. O culto católico do lugar não deve ser confundido com declaração eclesial sobre aparições."
     },
     "promises": {
       "remove": true

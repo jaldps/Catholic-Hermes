@@ -1,6 +1,6 @@
 # T-018 · Informe de Codex
 
-Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega de **30/30 auditorías** y **20 devociones nuevas** (objetivo aproximado: 25).
+Rama `ext/T-018`, base inicial `origin/CatholicGPT` (`5ad50b8`). Entrega completa de **30/30 auditorías** y **25 devociones nuevas**.
 
 Leídos el protocolo, las reglas editoriales, el contrato M7 y los 30 registros originales. Solo se modifican los tres archivos autorizados. Explicaciones originales en ES/EN/PT; no se compone ninguna oración. Cada fórmula conservada o sustituida se documenta. Una retirada significa que no se ha comprobado la procedencia de esa redacción, no un juicio contra la devoción. Las promesas de revelación privada se atribuyen y no se presentan como garantías mecánicas. No se trasladan las categorías de 2024 retrospectivamente a declaraciones históricas.
 
@@ -221,7 +221,7 @@ Oración retirada: no se documentó la fórmula del catálogo; el homenaje de Fr
 - [Diócesis de San Juan de los Lagos, Boletín 295: centenario de la coronación](https://diocesisdesanjuan.org/boletin/bol_biblioteca/Boletin_295.pdf)
 - [Catedral Basílica de San Juan de los Lagos, Archivo Histórico](https://virgendesanjuan.org/?page_id=522)
 
-Oración retirada: la fórmula antigua mezcla destinatarios y no se documentó como oración real. Se retira la promesa de curación instantánea, que no figura como promesa general en las fuentes. El relato de 1623 se conserva como historia del santuario, sin atribuir al niño un expediente médico moderno ni convertir todos los exvotos en milagros reconocidos.
+Oración retirada: la fórmula antigua mezcla destinatarios y no se documentó como oración real. Se retira la promesa de curación instantánea, que no figura como promesa general en las fuentes. El relato de 1623 se conserva como historia del santuario, sin atribuir al niño un expediente médico moderno ni convertir todos los exvotos en milagros reconocidos. La página del archivo histórico se contrastó mediante contenido indexado ante bloqueo HTTP 406; el boletín diocesano del centenario sí se descargó y consultó directamente. La página del archivo histórico se contrastó mediante contenido indexado ante bloqueo HTTP 406; el boletín diocesano del centenario sí se descargó y consultó directamente.
 
 ### 30. `angeles_costa_rica` · oración sustituida por texto verificado
 
@@ -239,7 +239,7 @@ Oración sustituida por la invocación tradicional Regina angelorum, ora pro nob
 - [Arzobispo de Quito, homilía de El Quinche, 21-XI-2022](https://www.arquidiocesisdequito.com.ec/comunicacion/homilias/item/ella-es-nuestra-madre-madre-de-la-paz.html)
 - [Estudio histórico, El clero y los usos políticos de la Virgen del Quinche, Anuario de Historia Regional](https://revistas.uis.edu.co/index.php/anuariohistoria/article/download/8628/8827?inline=1)
 
-Year 1604 refiere al traslado documentado, no a fecha exacta de fabricación o aparición. No se mezcla 1586/1588/1598 entre fuentes. No se declara una aprobación particular de apariciones a partir de la visita papal. Oración y promesas null: no se compone fórmula ni se atribuyen garantías. No se reproduce la oración moderna de una web.
+Year 1604 refiere al traslado documentado, no a fecha exacta de fabricación o aparición. No se mezcla 1586/1588/1598 entre fuentes. No se declara una aprobación particular de apariciones a partir de la visita papal. Oración y promesas null: no se compone fórmula ni se atribuyen garantías. No se reproduce la oración moderna de una web. El estudio del Anuario se consultó mediante contenido indexado por fallo HTTP 503; la homilía arquidiocesana y el discurso papal sí se consultaron directamente. El estudio del Anuario se consultó mediante contenido indexado por fallo HTTP 503; la homilía arquidiocesana y el discurso papal sí se consultaron directamente.
 
 ### 2. `virgen_urkupina`
 
@@ -260,7 +260,7 @@ La datación 1550–1600 se conserva como estimación institucional de la pintur
 - [Juan Pablo II, homilía en el santuario de Zapopan, 30-I-1979](https://www.vatican.va/content/john-paul-ii/es/homilies/1979/documents/hf_jp-ii_hom_19790130_messico-zapopan.html)
 - [UNESCO, La romería de Zapopan, expediente 01400, inscripción de 2018](https://ich.unesco.org/es/RL/la-romeria-de-zapopan-ciclo-ritual-de-la-llevada-de-la-virgen-01400)
 
-Year 1734 es el inicio documentado del ciclo de la romería, no la talla de la imagen. No se confunde patrimonio cultural UNESCO con aprobación de apariciones o milagros. No se incorporan cifras de participantes como dato actual ni se inventan oraciones/promesas.
+Year 1734 es el inicio documentado del ciclo de la romería, no la talla de la imagen. No se confunde patrimonio cultural UNESCO con aprobación de apariciones o milagros. No se incorporan cifras de participantes como dato actual ni se inventan oraciones/promesas. La ficha UNESCO se verificó mediante contenido indexado porque el acceso directo devolvió una respuesta antibot; la homilía papal sí se consultó directamente. La ficha UNESCO se verificó mediante contenido indexado porque el acceso directo devolvió una respuesta antibot; la homilía papal sí se consultó directamente.
 
 ### 5. `virgen_itati`
 
@@ -382,11 +382,51 @@ La narración de 1682 procede de una síntesis devocional secundaria y se etique
 
 1747 se etiqueta como año del hallazgo según la tradición documentada por Suyapa Medios. No se inventa fecha o incipit del acto inicial de patronazgo; la homilía pontificia confirma el título recibido. No se copia la oración papal moderna ni se compone otra. Oración/promesas null.
 
+### 21. `virgen_desamparados_valencia`
+
+- [Arzobispado de Valencia, guía didáctica Virgen de los Desamparados](https://archivalencia.org/wp-content/uploads/2022/02/Guia-didactica-Desampara2.0_compressed.pdf)
+- [Boletín Oficial del Arzobispado de Valencia, mayo de 2023: coronación y fiesta](https://www.archivalencia.org/wp-content/uploads/2023/07/05-MAYO-2023-_-BOA-_-3484-_-CONSULTA_compressed.pdf)
+- [Basílica de los Desamparados, programa de mayo de 2025](https://basilicadesamparados.org/wp-content/uploads/2025/04/festa-mare-deu-programa-Actos-2025.pdf)
+
+1414 corresponde al privilegio de la cofradía; no se fecha una aparición ni se atribuye una aprobación papal universal a un personaje del Cisma de Occidente. Se distingue autorización de Benedicto XV en 1921 de coronación de 1923. La carta del arzobispo de mayo de 2023 confirma el segundo domingo de mayo. No se reutiliza la indulgencia del jubileo terminado en 2023. Oración/promesas null.
+
+### 22. `madre_buen_consejo_genazzano`
+
+- [Santa Sede, información sobre la visita de León XIV a Genazzano, 10-V-2025](https://press.vatican.va/content/salastampa/en/comunicazioni/2025/05/10/250510a.html)
+- [Santuario de Genazzano, Festa della Venuta, 25 aprile](https://www.madredelbuonconsiglio.it/festa-della-venuta-della-madre-del-buon-consiglio)
+- [Santuario de Genazzano, La tradizione popolare](https://www.madredelbuonconsiglio.it/tradizione-popolare)
+- [Santuario de Genazzano, San Luigi Orione: fiesta del 26 de abril](https://www.madredelbuonconsiglio.it/san-luigi-orione)
+- [Santa Sede, Rosario del 4-V-2013: letanías lauretanas](https://www.vatican.va/news_services/liturgy/libretti/2013/20130504-libretto-rosario-smaria-maggiore.pdf)
+
+Se distingue la fiesta de la Venida del 25 de abril de la celebración del 26 de abril, documentada por el santuario. El traslado desde Shkodër se etiqueta como tradición. No se convierte la visita de 2025 en un nuevo decreto de apariciones. La oración es la invocación antigua de las letanías, traducida fielmente; no se compone otra ni se repiten como declaraciones clínicas todos los testimonios del códice.
+
+### 23. `nuestra_senora_pontmain`
+
+- [Santuario de Pontmain, L’histoire y mandato de 1872](https://sanctuaire-pontmain.fr/lhistoire/)
+- [Diócesis de Laval, aniversario diocesano y reconocimiento de Pontmain, 2024](https://diocesedelaval.fr/lanniversaire-de-notre-diocese/)
+
+Se conserva el mensaje de esperanza con atribución y contexto, sin imponer un plazo para cada petición personal. No se inventa un decreto romano posterior ni se traslada el juicio de 1872 a las categorías de 2024. Oración null: no se compone fórmula ni se reproduce una oración histórica citada en un PDF que no pudo recuperarse de forma utilizable.
+
+### 24. `nossa_senhora_nazare_belem`
+
+- [Basílica de Nazaré, historia del primer Círio y calendario de celebraciones](https://www.basilicadenazare.com.br/post/belem-celebra-o-dia-municipal-de-nossa-senhora-de-nazare)
+- [Basílica de Nazaré, Linha do Tempo: 1923 y 2006](https://www.basilicadenazare.com.br/linha-do-tempo)
+- [UNESCO, Círio de Nazaré de Belém, expediente 00602, 2013](https://ich.unesco.org/en/RL/crio-de-nazar-the-taper-of-our-lady-of-nazareth-in-the-city-of-belm-par-00602)
+
+Se justifica la ficha separada de Nazaré de Portugal por su tradición local, santuario, historia y ciclo ritual propios, como ocurre con otras advocaciones compartidas entre santuarios. No se mezclan leyendas ni fechas. 1793 es primer Círio, no talla o hallazgo. Los títulos culturales y civiles no se usan como aprobación de apariciones. La página UNESCO se consultó por contenido indexado ante respuesta antibot; la cronología del santuario sí se consultó directamente. Sin cifras de peregrinos actuales ni oración compuesta.
+
+### 25. `maria_desatadora_nudos`
+
+- [Diócesis de Augsburgo, Novene Knotenlöserin, edición de abril de 2015](https://bistum-augsburg.de/content/download/124324/file/Novene%20Knotenl%C3%B6serin%20mit%20Bild%20und%20Lied%20%20Stand%2022.%20April%202015.pdf)
+- [Francisco, catequesis de la oración mariana, 12-X-2013: Ireneo, Adversus haereses III,22,4](https://www.vatican.va/content/francesco/en/speeches/2013/october/documents/papa-francesco_20131012_preghiera-mariana.html)
+
+Datación aproximada de la pintura comprobada en la guía diocesana. No se afirma que Francisco visitara personalmente Augsburgo en 1986 ni se le atribuye autoría de novenas comerciales. No se verifica una fiesta universal propia del 28 de septiembre, por lo que no se incorpora esa fecha. Se distingue imagen devocional y reflexión teológica de aparición. Oración/promesas null: no se copia o compone una novena moderna ni se promete un resultado automático.
+
 ## Validación
 
 ```text
 30 entries · 0 errors · 0 warnings
-20 entries · 0 errors · 0 warnings
+25 entries · 0 errors · 0 warnings
 ```
 
 Validador de detalles con `--partial` mientras no estén las 30 fichas; sin ese argumento al completar. Se ejecuta también `git diff --check` antes de entregar. No se modifica el Kotlin ni la implementación del coordinador, y no se afirma haber probado una instalación en dispositivo.
@@ -394,3 +434,31 @@ Validador de detalles con `--partial` mientras no estén las 30 fichas; sin ese 
 ## Datos no verificados y cuestiones para el coordinador
 
 Los límites de cada consulta y las inconsistencias del catálogo original que quedan fuera de los campos autorizados se detallan por entrada. No se deduce una ausencia universal de milagros de que esta auditoría no haya localizado una declaración particular.
+
+## Cierre y alcance de la entrega
+
+- **30 fichas auditadas y 25 nuevas**, completas en ES/EN/PT. Las 75 historias nuevas cumplen 100–220 palabras, tanto con el contador del validador como por separación de palabras. Identificadores únicos, claves y orden contractual comprobados.
+- Oraciones existentes: **13 sustituidas por textos verificados y 17 retiradas por no haberse comprobado su redacción**. No se confunde una oración papal distinta o una mera semejanza de palabras con la fuente de la fórmula antigua. Las sustituciones incluyen Flos Carmeli, invocación de Coromoto de 1922, oración de Fátima de 1917, jaculatoria del Pilar, invocación de la Medalla, Sub tuum, una estrofa del Stabat Mater y peticiones de las letanías. Todas se identifican y las traducciones son fieles, no composiciones nuevas.
+- Promesas existentes: se conserva con `null` la formulación ya correcta de Lourdes; **4 se sustituyen con atribución y fuente** (Carmen, Guadalupe, Medalla Milagrosa y Fátima); **25 listas genéricas sin procedencia se retiran**. Se conserva el sentido de las promesas documentadas, sin neutralizarlas por ser revelación privada ni convertirlas en efectos automáticos. Los primeros sábados se explican en Fátima, con cinco meses consecutivos, intención reparadora, confesión, comunión en gracia, Rosario y meditación; la confesión puede ser otro día según el texto documental consultado.
+- Las nuevas incorporan **3 invocaciones auténticas** y **3 promesas documentadas** (Banneux, Beauraing, Pontmain). `prayer: null` no significa que una devoción no tenga oraciones: significa que esta entrega no introduce una fórmula nueva sin procedencia verificada.
+- Se concreta «Virgen de la Paz» en El Salvador. Se añaden Suyapa, Desamparados de Valencia, Buen Consejo de Genazzano, Pontmain, el Círio de Belém y María Desatadora de los Nudos a la lista orientativa para alcanzar 25. Nazaré de Portugal y el Círio de Belém son fichas de tradiciones locales distintas, con identificación de país y santuario; no se mezclan sus relatos.
+- **Validación final:** `details marian` y `new marian`, sin `--partial`, terminan ambos con **0 errors · 0 warnings**. También se completó `git diff --check`. No se ha compilado Android ni se afirma una prueba en teléfono; la integración y compilación corresponden al coordinador.
+- Entregas publicadas en prefijos de 10, 20 y 30 auditorías; después 10, 20 y 25 nuevas, con su informe y fuentes. Solo se cambian los tres archivos autorizados. No hay APK, claves, modificaciones de Kotlin ni de encargos cerrados.
+
+### Límites de acceso documental
+
+Además de los declarados por entrada, se consultaron mediante contenido indexado la página del Flos Carmeli, el archivo histórico de San Juan de los Lagos, el estudio histórico del Quinche, Exvoto 5 sobre el Rocío, las páginas del santuario de La Salette y las fichas UNESCO de Zapopan y del Círio. Sus servidores devolvieron bloqueo, error HTTP o una respuesta antibot; no se afirma lectura directa íntegra de esas páginas o descarga utilizable de esos PDF. El pasaje de Anales de Zaragoza sobre la sentencia de Calanda se contrastó en su contenido indexado; el PDF disponible es escaneado y no se finge lectura del proceso original de 1641. Las otras fuentes institucionales citadas se consultaron directamente, incluidas la revista diocesana de Brescia, las transcripciones EWTN identificadas como tales y los documentos pontificios.
+
+### Correcciones pendientes fuera de los campos autorizados
+
+El contrato solo permite sobrescribir recognition, promises, miracles, prayer, practice y sources de las fichas existentes. Por ello, **no queda corregido el catálogo antiguo entero**: sus títulos, fechas, localizaciones e historias requieren revisión del coordinador. Destacan:
+
+- **Altagracia:** `feastDay` dice 15 de agosto; su fiesta propia es **21 de enero**, documentada en el Concordato de 1954. Esta entrega lo aclara en recognition/practice.
+- **Chiquinquirá:** el título mezcla el santuario colombiano con «La Chinita» del Zulia. No deben fusionarse sus imágenes ni relatos.
+- **Salus Populi Romani:** el domingo después de la Asunción no es la fecha de la traslación documentada en la celebración papal de enero de 2018; revisar su campo antiguo de fiesta y la cronología del icono.
+- **Stella Maris:** no se verificó una fiesta universal el último domingo de septiembre. El motu proprio está fechado el 31-I-1997 aunque el URL incluya 1999.
+- **Cholula:** la construcción del santuario se sitúa desde **1594** en las fichas patrimoniales consultadas, no en 1519 como afirma su campo antiguo.
+- **Valle, Carmen, Caacupé y Perpetuo Socorro:** las fechas exactas de llegada, la visión del escapulario como hecho documental indiscutido, 1760 como origen de Caacupé y «icono milenario» necesitan revisión. Las notas por familia explican las limitaciones concretas.
+- Las historias antiguas también contienen afirmaciones materiales o legendarias que el contrato no permite sobrescribir. Eliminar una exageración en miracles no corrige automáticamente la misma idea si se repite en historyAndApparition. Se recomienda habilitar una corrección editorial específica de esos campos, sin alterar los ids.
+
+No quedan preguntas que bloqueen la revisión de estos dos assets. Los datos no verificados se omiten o se identifican como tradición; no se han inventado oraciones, decretos, promesas o milagros para completar casillas.
