@@ -415,9 +415,9 @@ private fun AppHeaderFrame(
     ) {
         Box(Modifier.matchParentSize()) {
             if (assetPath != null) {
-                AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeStart = 0.34f)
+                AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeStart = 0.30f)
             } else {
-                Box(Modifier.fillMaxSize().fadeOutBottom(0.34f)) {
+                Box(Modifier.fillMaxSize().fadeOutBottom(0.30f)) {
                     AsyncImage(model = imageUrl, contentDescription = null, contentScale = ContentScale.Crop,
                         alignment = Alignment.TopCenter, modifier = Modifier.fillMaxSize())
                     Box(Modifier.fillMaxWidth().height(120.dp).background(Brush.verticalGradient(listOf(

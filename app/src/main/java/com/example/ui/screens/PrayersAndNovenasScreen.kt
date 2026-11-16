@@ -1355,19 +1355,13 @@ private fun HowToPrayPage(currentLanguage: AppLanguage, bottomPadding: Dp) {
             AppDetailHeader(
                 title = title,
                 assetPath = rememberFirstAsset(ArtSunrise, "heroes/sunrise_mountains.jpg"),
-                imageHeight = 300.dp
-            )
-            Text(
-                currentLanguage.pick(
+                meta = currentLanguage.pick(
                     "Cinco pasos para una oración más profunda.",
                     "Five steps to a deeper prayer.",
                     "Cinco passos para uma oração mais profunda."
-                ),
-                style = styles.title3.copy(fontWeight = FontWeight.Normal),
-                color = p.textPrimary,
-                modifier = Modifier.padding(horizontal = design.spacing.gutter)
+                )
             )
-            Spacer(Modifier.height(24.dp))
+            Spacer(Modifier.height(16.dp))
         }
         itemsIndexed(steps, key = { i, _ -> "step_$i" }) { index, step ->
             PrayerNumberedStep(
