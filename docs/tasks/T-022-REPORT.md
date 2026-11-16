@@ -16,10 +16,10 @@ No se asigna una lectura principal de los Salmos en estos cursos. Si se menciona
 
 El validador publicado exige cinco lecciones y no tiene opción `--partial`. En entregas de una o dos lecciones se ejecuta intacto mediante un envoltorio temporal externo al repositorio: conserva todos sus controles y descuenta únicamente el error de cantidad total, declarado como pendiente. El envoltorio además exige 70–110 palabras de contexto y 80–130 por desarrollo en cada idioma, con ambos contadores (espacios y regex). No se anuncian cinco lecciones cuando todavía hay un prefijo. Al completar cada curso se ejecuta el comando oficial sin envoltorio.
 
-## `track_jesus_paschal` · 3/5 lecciones
+## `track_jesus_paschal` · 5/5 lecciones
 
 ```text
-3/5 lessons (partial; exact-five completeness requirement pending) · 0 errors · 0 warnings
+5 lessons · 0 errors · 0 warnings
 ```
 
 ### 1. `jesus_1_incarnation`
@@ -62,6 +62,36 @@ Lecturas: `luk 22:14-20`, `joh 13:1-15`.
   - https://www.vatican.va/archive/catechism_sp/p2s2c1a3_sp.html
 
 CIC 610–611 sostiene la entrega libre y su anticipación en la Cena; 1337–1340 relaciona lavatorio, institución y Pascua; 1362–1367 distingue memorial eficaz y repetición de la muerte. Se amplía el rango propuesto 1362–1364 hasta 1367 para sostener directamente la unicidad del sacrificio y la diferencia del modo sacramental. No se armonizan a la fuerza las cronologías de Lucas y Juan, ni se traslada a Juan una institución que no narra en este pasaje. Se respeta el significado de la Pascua de Israel.
+
+### 4. `jesus_4_cross`
+
+Lecturas: `luk 23:33-49`.
+
+- CIC **595–598**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p122a4p2_sp.html
+- CIC **604–609**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p122a4p2_sp.html
+- CIC **610–618**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p122a4p2_sp.html
+- CIC **2264–2265**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p3s2c2a5_sp.html
+
+Anclajes separados: CIC 595–598 para complejidad histórica y prohibición de culpa colectiva, especialmente 597; 604–609 para iniciativa amorosa del Padre y entrega libre del Hijo; 610–618 para sacrificio, reparación, comunión y participación del discípulo. CIC 2264–2265 se añade como apoyo directo al derecho de proteger la vida y al deber de proteger a otros. La orientación para buscar seguridad y ayuda es aplicación pastoral editorial, no diagnóstico ni mandato de soportar abuso. No se presenta al Padre como enemigo del Hijo ni se define la redención como mera cantidad de dolor.
+
+### 5. `jesus_5_risen_mission`
+
+Lecturas: `luk 24:36-53`, `act 2:1-13`.
+
+- CIC **639–655**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p122a5p2_sp.html
+- CIC **659–667**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s2c2a6_sp.html
+- CIC **731–732**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p1s2c3a8_sp.html
+- CIC **767–768**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p123a9p1_sp.html
+
+CIC 639–655 distingue realidad corporal, signos históricos y misterio trascendente; especialmente 645–647 evita tanto fantasma como retorno a la vida mortal y reconoce que nadie observó el instante mismo. CIC 659–667 sostiene Ascensión, intercesión y esperanza; 731–732, don del Espíritu como Persona divina; se añade 767–768 para la manifestación pública y misión universal de la Iglesia. No se reduce Pascua a metáfora ni el Espíritu a energía. El cierre remite a los cursos existentes sin imponer Bautismo o comunión como requisito.
 
 ## Límites y revisión pendiente
 
