@@ -1089,5 +1089,461 @@
       "Orden de Predicadores, historia de la congregación fundada por Rosario de la Visitación",
       "Dominican Sisters International Confederation, Foundress of a Dominican Sisters’ Congregation in the Philippines"
     ]
+  },
+  {
+    "id": "mercedarios-odem",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Gregorio IX, bula Devotionis vestrae, 17-I-1235.",
+      "en": "Gregory IX, bull Devotionis vestrae, 17 January 1235.",
+      "pt": "Gregório IX, bula Devotionis vestrae, 17-I-1235."
+    },
+    "notableSaints": {
+      "es": [
+        "San Pedro Nolasco"
+      ],
+      "en": [
+        "Saint Peter Nolasco"
+      ],
+      "pt": [
+        "São Pedro Nolasco"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes sirven mediante evangelización y obras de redención y asistencia, con comunidades y apostolados en distintos países.",
+      "en": "The friars serve through evangelization and works of liberation and assistance, with communities and ministries in different countries.",
+      "pt": "Os frades servem pela evangelização e por obras de libertação e assistência, com comunidades e apostolados em diferentes países."
+    },
+    "sources": [
+      "Orden de la Merced, Our History",
+      "Provincia Mercedaria de Aragón, Manual de historia de la Orden Mercedaria",
+      "Catholic Encyclopedia: Mercedarians"
+    ]
+  },
+  {
+    "id": "trinitarios-osst",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Inocencio III, bula Operante divinae dispositionis clementia, 17-XII-1198.",
+      "en": "Innocent III, bull Operante divinae dispositionis clementia, 17 December 1198.",
+      "pt": "Inocêncio III, bula Operante divinae dispositionis clementia, 17-XII-1198."
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan de Mata",
+        "San Juan Bautista de la Concepción"
+      ],
+      "en": [
+        "Saint John of Matha",
+        "Saint John Baptist of the Conception"
+      ],
+      "pt": [
+        "São João da Mata",
+        "São João Batista da Conceição"
+      ]
+    },
+    "presence": {
+      "es": "La orden mantiene comunidades y servicios pastorales, junto con iniciativas de solidaridad con cristianos perseguidos y personas privadas de libertad.",
+      "en": "The order maintains communities and pastoral ministries alongside initiatives supporting persecuted Christians and people deprived of freedom.",
+      "pt": "A ordem mantém comunidades e serviços pastorais, além de iniciativas de solidariedade com cristãos perseguidos e pessoas privadas de liberdade."
+    },
+    "sources": [
+      "Orden Trinitaria, History",
+      "Orden Trinitaria, Apostolate Secretariat",
+      "Juan Pablo II, mensaje al ministro general, 7-VI-1998"
+    ]
+  },
+  {
+    "id": "servitas-osm",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Benedicto XI, bula Dum levamus, 11-II-1304.",
+      "en": "Benedict XI, bull Dum levamus, 11 February 1304.",
+      "pt": "Bento XI, bula Dum levamus, 11-II-1304."
+    },
+    "notableSaints": {
+      "es": [
+        "San Felipe Benizi"
+      ],
+      "en": [
+        "Saint Philip Benizi"
+      ],
+      "pt": [
+        "São Filipe Benizi"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes mantienen comunidades y ministerios pastorales; la familia servita incluye también monjas, congregaciones femeninas y laicos con vínculos propios.",
+      "en": "The friars maintain communities and pastoral ministries; the Servite family also includes nuns, women’s congregations and lay people with their own bonds.",
+      "pt": "Os frades mantêm comunidades e ministérios pastorais; a família servita também inclui monjas, congregações femininas e leigos com vínculos próprios."
+    },
+    "sources": [
+      "Orden de los Siervos de María, A Short History, capítulo I",
+      "Catholic Encyclopedia: Order of Servites"
+    ]
+  },
+  {
+    "id": "minimos-om",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Francisco de Paula"
+      ],
+      "en": [
+        "Saint Francis of Paola"
+      ],
+      "pt": [
+        "São Francisco de Paula"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades desarrollan oración, predicación y servicio pastoral, compartiendo su espiritualidad de conversión con otras ramas de la familia mínima.",
+      "en": "The communities undertake prayer, preaching and pastoral service, sharing their spirituality of conversion with other branches of the Minim family.",
+      "pt": "As comunidades desenvolvem oração, pregação e serviço pastoral, compartilhando sua espiritualidade de conversão com outros ramos da família mínima."
+    },
+    "sources": [
+      "Catholic Encyclopedia: Minimi",
+      "Juan Pablo II, discurso al capítulo general de los Mínimos, 3-VII-2000"
+    ]
+  },
+  {
+    "id": "premonstratenses-opraem",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Norberto de Xanten"
+      ],
+      "en": [
+        "Saint Norbert of Xanten"
+      ],
+      "pt": [
+        "São Norberto de Xanten"
+      ]
+    },
+    "presence": {
+      "es": "Las comunidades abaciales mantienen la oración coral y sirven a parroquias y otras obras; su presencia incluye casas activas en el ámbito anglófono.",
+      "en": "Abbatial communities maintain choral prayer and serve parishes and other ministries; their presence includes active houses in the English-speaking world.",
+      "pt": "As comunidades abaciais mantêm a oração coral e servem a paróquias e outras obras; sua presença inclui casas ativas no mundo de língua inglesa."
+    },
+    "sources": [
+      "Canónigos Regulares de Prémontré, History",
+      "Premonstratensian Abbeys in the UK, Origins and Organisation",
+      "Catholic Encyclopedia: Premonstratensian Canons"
+    ]
+  },
+  {
+    "id": "carmelitas-descalzos-ocd",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan de la Cruz",
+        "Santa Teresa de Jesús"
+      ],
+      "en": [
+        "Saint John of the Cross",
+        "Saint Teresa of Jesus"
+      ],
+      "pt": [
+        "São João da Cruz",
+        "Santa Teresa de Jesus"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes mantienen comunidades de formación y servicio pastoral, con retiros, acompañamiento espiritual y misión en diferentes regiones del mundo.",
+      "en": "The friars maintain communities of formation and pastoral service, offering retreats, spiritual accompaniment and mission in different world regions.",
+      "pt": "Os frades mantêm comunidades de formação e serviço pastoral, com retiros, acompanhamento espiritual e missão em diferentes regiões do mundo."
+    },
+    "sources": [
+      "Carmelitas Descalzos, Curia general",
+      "Carmelitas Descalzos, biografía de san Juan de la Cruz",
+      "Catholic Encyclopedia: The Carmelite Order, reforma descalza"
+    ]
+  },
+  {
+    "id": "agustinos-recoletos-oar",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "La orden sirve en comunidades y obras pastorales, educativas y sociales, organizadas en provincias que reúnen religiosos de distintos lugares.",
+      "en": "The order serves through communities and pastoral, educational and social works, organized in provinces gathering religious from different places.",
+      "pt": "A ordem serve em comunidades e obras pastorais, educativas e sociais, organizadas em províncias que reúnem religiosos de diferentes lugares."
+    },
+    "sources": [
+      "Agustinos Recoletos, Quiénes somos, sitio institucional actual",
+      "Agustinos Recoletos, Constituciones e identidad carismática"
+    ]
+  },
+  {
+    "id": "franciscanos-conventuales-ofmconv",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "León X, bula Ite vos, 29-V-1517: configuración separada de observantes y conventuales.",
+      "en": "Leo X, bull Ite vos, 29 May 1517: separate configuration of Observants and Conventuals.",
+      "pt": "Leão X, bula Ite vos, 29-V-1517: configuração separada de observantes e conventuais."
+    },
+    "notableSaints": {
+      "es": [
+        "San Maximiliano María Kolbe",
+        "San José de Cupertino"
+      ],
+      "en": [
+        "Saint Maximilian Mary Kolbe",
+        "Saint Joseph of Cupertino"
+      ],
+      "pt": [
+        "São Maximiliano Maria Kolbe",
+        "São José de Cupertino"
+      ]
+    },
+    "presence": {
+      "es": "Los frailes sostienen comunidades, santuarios y ministerios de evangelización en diversas regiones, con iniciativas pastorales, educativas y de comunicación.",
+      "en": "The friars sustain communities, shrines and evangelization ministries in different regions, with pastoral, educational and communication initiatives.",
+      "pt": "Os frades mantêm comunidades, santuários e ministérios de evangelização em diferentes regiões, com iniciativas pastorais, educativas e de comunicação."
+    },
+    "sources": [
+      "Curia general OFMConv, sitio institucional",
+      "OFMConv, Ordine dei Frati Minori Conventuali: historia y santos",
+      "Catholic Encyclopedia: Franciscan Order"
+    ]
+  },
+  {
+    "id": "tercera-orden-regular-tor",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Nicolás V, bula Pastoralis officii, 20-VII-1447: unión de fraternidades regulares.",
+      "en": "Nicholas V, bull Pastoralis officii, 20 July 1447: union of regular fraternities.",
+      "pt": "Nicolau V, bula Pastoralis officii, 20-VII-1447: união de fraternidades regulares."
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Los religiosos mantienen comunidades de vida fraterna y servicio apostólico, compartiendo la tradición de conversión franciscana con otras ramas de la familia.",
+      "en": "The religious maintain communities of fraternal life and apostolic service, sharing the Franciscan tradition of conversion with other branches of the family.",
+      "pt": "Os religiosos mantêm comunidades de vida fraterna e serviço apostólico, compartilhando a tradição de conversão franciscana com outros ramos da família."
+    },
+    "sources": [
+      "Tercera Orden Regular, History of the Order",
+      "Tercera Orden Regular, identidad y misión",
+      "Catholic Encyclopedia: Third Orders"
+    ]
+  },
+  {
+    "id": "escolapios-schp",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San José de Calasanz"
+      ],
+      "en": [
+        "Saint Joseph Calasanz"
+      ],
+      "pt": [
+        "São José de Calasanz"
+      ]
+    },
+    "presence": {
+      "es": "La orden desarrolla escuelas y proyectos educativos y pastorales, con religiosos y colaboradores laicos comprometidos con la formación integral de la juventud.",
+      "en": "The order runs schools and educational and pastoral projects, with religious and lay collaborators committed to the integral formation of young people.",
+      "pt": "A ordem desenvolve escolas e projetos educativos e pastorais, com religiosos e colaboradores leigos comprometidos com a formação integral da juventude."
+    },
+    "sources": [
+      "Escuelas Pías, sitio general",
+      "Penitenciaría Apostólica, documento del jubileo escolapio de 2016–2017, introducción histórica",
+      "Catholic Encyclopedia: St. Joseph Calasanctius"
+    ]
+  },
+  {
+    "id": "teatinos-cr",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Clemente VII, breve Exponi nobis, 24-VI-1524.",
+      "en": "Clement VII, brief Exponi nobis, 24 June 1524.",
+      "pt": "Papa Clemente VII, breve Exponi nobis, 24-VI-1524."
+    },
+    "notableSaints": {
+      "es": [
+        "San Cayetano de Thiene"
+      ],
+      "en": [
+        "Saint Cajetan of Thiene"
+      ],
+      "pt": [
+        "São Caetano de Thiene"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades conservan el servicio litúrgico y pastoral de iglesias, junto con predicación y formación en la espiritualidad de sus fundadores.",
+      "en": "Their communities maintain liturgical and pastoral service in churches, together with preaching and formation in their founders’ spirituality.",
+      "pt": "Suas comunidades mantêm o serviço litúrgico e pastoral em igrejas, junto com pregação e formação na espiritualidade dos fundadores."
+    },
+    "sources": [
+      "Teatinos, The Theatines: origen e identidad",
+      "Catholic Encyclopedia: Theatines"
+    ]
+  },
+  {
+    "id": "barnabitas-crsp",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "Clemente VII, breve Vota per quae vos, 18-II-1533.",
+      "en": "Clement VII, brief Vota per quae vos, 18 February 1533.",
+      "pt": "Papa Clemente VII, breve Vota per quae vos, 18-II-1533."
+    },
+    "notableSaints": {
+      "es": [
+        "San Antonio María Zaccaria"
+      ],
+      "en": [
+        "Saint Anthony Mary Zaccaria"
+      ],
+      "pt": [
+        "Santo Antônio Maria Zaccaria"
+      ]
+    },
+    "presence": {
+      "es": "La orden mantiene comunidades y obras pastorales, educativas y misioneras; su provincia norteamericana documenta ministerios en Estados Unidos y Canadá.",
+      "en": "The order maintains communities and pastoral, educational and missionary works; its North American province documents ministries in the United States and Canada.",
+      "pt": "A ordem mantém comunidades e obras pastorais, educativas e missionárias; sua província norte-americana documenta ministérios nos Estados Unidos e no Canadá."
+    },
+    "sources": [
+      "Barnabite Fathers USA, Pontifical Approval of the Barnabites",
+      "Catholic Encyclopedia: Barnabites"
+    ]
+  },
+  {
+    "id": "somascos-crs",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Jerónimo Emiliani"
+      ],
+      "en": [
+        "Saint Jerome Emiliani"
+      ],
+      "pt": [
+        "São Jerônimo Emiliani"
+      ]
+    },
+    "presence": {
+      "es": "Padres y hermanos desarrollan comunidades y obras de educación y atención a jóvenes, junto con servicios de evangelización y acompañamiento pastoral.",
+      "en": "Fathers and brothers maintain communities and works of education and care for young people, alongside evangelization and pastoral accompaniment.",
+      "pt": "Padres e irmãos mantêm comunidades e obras de educação e cuidado de jovens, além de serviços de evangelização e acompanhamento pastoral."
+    },
+    "sources": [
+      "Somascan Fathers, History",
+      "Catholic Encyclopedia: Somaschi"
+    ]
+  },
+  {
+    "id": "hermanos-lasalle-fsc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "Benedicto XIII, bula In apostolicae dignitatis solio, 26-I-1725.",
+      "en": "Benedict XIII, bull In apostolicae dignitatis solio, 26 January 1725.",
+      "pt": "Bento XIII, bula In apostolicae dignitatis solio, 26-I-1725."
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan Bautista de La Salle"
+      ],
+      "en": [
+        "Saint John Baptist de La Salle"
+      ],
+      "pt": [
+        "São João Batista de La Salle"
+      ]
+    },
+    "presence": {
+      "es": "La red lasaliana reúne hermanos y colaboradores laicos en instituciones educativas y proyectos de formación y promoción humana de diversas regiones.",
+      "en": "The Lasallian network brings brothers and lay partners together in educational institutions and projects of formation and human development in different regions.",
+      "pt": "A rede lassalista reúne irmãos e colaboradores leigos em instituições educativas e projetos de formação e promoção humana em diferentes regiões."
+    },
+    "sources": [
+      "Instituto de los Hermanos de las Escuelas Cristianas, sitio general",
+      "Instituto FSC, Boletín 262: análisis de la bula de aprobación, p. 24",
+      "Catholic Encyclopedia: Institute of the Brothers of the Christian Schools"
+    ]
+  },
+  {
+    "id": "hospitalarios-san-juan-dios-oh",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Juan de Dios"
+      ],
+      "en": [
+        "Saint John of God"
+      ],
+      "pt": [
+        "São João de Deus"
+      ]
+    },
+    "presence": {
+      "es": "Los hermanos comparten su misión con profesionales y voluntarios en centros sanitarios y sociales, atendiendo diferentes necesidades de salud y vulnerabilidad.",
+      "en": "The brothers share their mission with professionals and volunteers in healthcare and social centres, addressing different needs arising from illness and vulnerability.",
+      "pt": "Os irmãos compartilham sua missão com profissionais e voluntários em centros de saúde e sociais, atendendo diferentes necessidades de saúde e vulnerabilidade."
+    },
+    "sources": [
+      "Orden Hospitalaria de San Juan de Dios, Curia general",
+      "Orden Hospitalaria, El rostro de la Orden cambia, 26-IV-2009",
+      "Catholic Encyclopedia: Brothers Hospitallers of St. John of God"
+    ]
   }
 ]

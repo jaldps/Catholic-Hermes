@@ -1,6 +1,6 @@
 # T-016 · Informe de Codex
 
-Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega de **0 nuevas familias** (objetivo aproximado: 60) y **37 fichas ampliadas**. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
+Rama `ext/T-016`, base inicial `origin/CatholicGPT` (`18f0a67`). Entrega de **15 nuevas familias** (objetivo aproximado: 60) y **52 fichas ampliadas**. El orden conserva primero las 37 entradas Kotlin y después el orden del nuevo asset.
 
 Leídos el protocolo, las reglas editoriales, el contrato M6 y los datos existentes. Solo se crean los dos JSON autorizados y este informe. Redacción original ES/EN/PT; no se componen lemas, citas ni oraciones. Las aprobaciones no se deducen del año de fundación ni de una agregación a otra orden. `motto: null`, aprobaciones vacías y listas de santos vacías señalan que no se incorpora un dato suficientemente documentado, no que necesariamente carezcan de ellos.
 
@@ -281,6 +281,120 @@ kind congregation. La fuente institucional documenta fundación de 6-X-1818, dis
 
 kind congregation. El nombre institucional documentado es Dominican Sisters of the Most Holy Rosary of the Philippines, no una orden independiente llamada de la Visitación; este último es el nombre religioso de la fundadora. Se conserva el identificador heredado. Las fuentes indican derecho pontificio desde 7-X-1985, pero no se completa un documento no localizado. Rosario es venerable, no santa ni beata; la lista queda vacía. No se reutilizan las cifras de la reseña de 2021 ni su cómputo cronológico inconsistente.
 
+### 38. `mercedarios-odem` · `order`
+
+- [Orden de la Merced, Our History](https://www.orderofmercy.org/our-history)
+- [Provincia Mercedaria de Aragón, Manual de historia de la Orden Mercedaria](https://www.mercedaragon.org/wp-content/uploads/2021/01/manual-historia-de-la-orden-mercedaria.pdf)
+- [Catholic Encyclopedia: Mercedarians](https://www.newadvent.org/cathen/10197b.htm)
+
+Se toma 1218 como fecha fundacional tradicional de la orden. La enciclopedia ofrece 1230 para una confirmación; el manual institucional documenta Devotionis vestrae de 17-I-1235, que es la referencia utilizada. No se reproducen visiones de la fundación ni supuestos diálogos como hechos comprobados.
+
+### 39. `trinitarios-osst` · `order`
+
+- [Orden Trinitaria, History](https://www.trinitari.org/en/history/)
+- [Orden Trinitaria, Apostolate Secretariat](https://www.trinitari.org/en/apostolate-secretariat/)
+- [Juan Pablo II, mensaje al ministro general, 7-VI-1998](https://www.vatican.va/content/john-paul-ii/en/speeches/1998/june/documents/hf_jp-ii_spe_19980607_trinitarios.html)
+
+La referencia pontificia proporciona el incipit completo de la bula; la página de historia lo abrevia. No se añaden escenas fundacionales ni se resuelven por conjetura las cuestiones históricas sobre Félix de Valois. No se atribuye la fundación a la reforma posterior.
+
+### 40. `servitas-osm` · `order`
+
+- [Orden de los Siervos de María, A Short History, capítulo I](https://www.servidimaria.org/en/storia/breve_storia.htm)
+- [Catholic Encyclopedia: Order of Servites](https://www.newadvent.org/cathen/13736a.htm)
+
+La historia institucional utiliza ca. 1233 y distingue esa cronología convencional de la aprobación de 1304. No se presentan apariciones o relatos fundacionales tardíos como hechos históricos demostrados. La entrada corresponde a los frailes; no absorbe canónicamente todas las ramas de la familia.
+
+### 41. `minimos-om` · `order`
+
+- [Catholic Encyclopedia: Minimi](https://www.newadvent.org/cathen/10325a.htm)
+- [Juan Pablo II, discurso al capítulo general de los Mínimos, 3-VII-2000](https://www.vatican.va/content/john-paul-ii/en/speeches/2000/jul-sep/documents/hf_jp-ii_spe_20000703_minimi.html)
+
+1435 se presenta como comienzo aproximado de la fraternidad, no aprobación pontificia. El discurso papal confirma instituto clerical de votos solemnes. No se mezclan las diversas aprobaciones de versiones de la Regla ni se compone un incipit. No se proponen restricciones alimentarias de la orden como norma para los lectores.
+
+### 42. `premonstratenses-opraem` · `order`
+
+- [Canónigos Regulares de Prémontré, History](https://www.norbertines.org.uk/the-order/history)
+- [Premonstratensian Abbeys in the UK, Origins and Organisation](https://premon-abbeys-uk.org.uk/origins-and-organisation/)
+- [Catholic Encyclopedia: Premonstratensian Canons](https://www.newadvent.org/cathen/12387b.htm)
+
+La enciclopedia usa 1120 para los comienzos; se utiliza 1121 como profesión de la primera comunidad, explícita en la historia institucional. Son canónigos regulares, no monjes benedictinos. No se incorpora una aprobación pontificia de 1126 sin fijar el documento exacto.
+
+### 43. `carmelitas-descalzos-ocd` · `order`
+
+- [Carmelitas Descalzos, Curia general](https://www.carmelitaniscalzi.com/en/)
+- [Carmelitas Descalzos, biografía de san Juan de la Cruz](https://www.carmelitaniscalzi.com/es/quienes-somos/fundadores/san-juan-de-la-cruz/)
+- [Catholic Encyclopedia: The Carmelite Order, reforma descalza](https://www.newadvent.org/cathen/03354a.htm)
+
+Se añade específicamente la rama masculina iniciada en Duruelo, no una repetición de carmelitas-descalzas-ocd. Se distingue fundación de 1568 de independencia jurídica posterior. No se completa el documento pontificio de independencia sin cotejarlo.
+
+### 44. `agustinos-recoletos-oar` · `order`
+
+- [Agustinos Recoletos, Quiénes somos, sitio institucional actual](https://recoletos.org/quienes-somos/)
+- [Agustinos Recoletos, Constituciones e identidad carismática](https://agustinosrecoletos.com/wp-content/uploads/2016/09/3790834doc_constituciones_dia_orden.pdf)
+
+No se atribuye a san Agustín una fundación personal en 1588. La redacción de la Forma de vivir se distingue de sus autores jurídicos, el provincial y definidores. Se deja approval vacío para no confundir las etapas de autonomía, congregación y orden. Se utiliza recoletos.org, al que remite expresamente el antiguo dominio.
+
+### 45. `franciscanos-conventuales-ofmconv` · `order`
+
+- [Curia general OFMConv, sitio institucional](https://www.ofmconv.net/en/)
+- [OFMConv, Ordine dei Frati Minori Conventuali: historia y santos](https://www.ofmconv.net/ordine-dei-frati-minori-conventuali-ofmconv/)
+- [Catholic Encyclopedia: Franciscan Order](https://www.newadvent.org/cathen/06217a.htm)
+
+1517 expresa la configuración de la rama, no el inicio de la vocación franciscana ni una fundación personal tardía de Francisco. Ite vos se describe como separación/configuración de las ramas, no como primera aprobación de toda la familia.
+
+### 46. `tercera-orden-regular-tor` · `order`
+
+- [Tercera Orden Regular, History of the Order](https://francescanitor.org/language/en/history-of-the-order/)
+- [Tercera Orden Regular, identidad y misión](https://francescanitor.org/language/en/)
+- [Catholic Encyclopedia: Third Orders](https://www.newadvent.org/cathen/14637b.htm)
+
+1447 corresponde a la unión institucional, no a los comienzos del movimiento penitencial medieval. La historia institucional y portada se consultaron mediante contenido indexado, ya que el acceso HTTP directo dio 406. No se equipara la pertenencia a la OFS con profesión religiosa en TOR, ni se asignan indiscriminadamente santos terciarios seglares a la orden regular.
+
+### 47. `escolapios-schp` · `order`
+
+- [Escuelas Pías, sitio general](https://scolopi.org/)
+- [Penitenciaría Apostólica, documento del jubileo escolapio de 2016–2017, introducción histórica](https://scolopi.org/wp-content/uploads/2016/11/20161110-Indulgencia-Plenaria-por-el-A%C3%B1o-Jubilar-ENG.pdf)
+- [Catholic Encyclopedia: St. Joseph Calasanctius](https://www.newadvent.org/cathen/08518d.htm)
+
+1617 es la fundación canónica de la congregación; se distinguen 1597, comienzo de las escuelas, y 1621, elevación a orden. El documento jubilar se usa únicamente para su introducción histórica: no se traslada la indulgencia temporal caducada. Approval queda vacío al no identificar el documento original de 1621.
+
+### 48. `teatinos-cr` · `order`
+
+- [Teatinos, The Theatines: origen e identidad](https://teatinos.org/en/the-theatine/)
+- [Catholic Encyclopedia: Theatines](https://www.newadvent.org/cathen/14557a.htm)
+
+La aprobación de junio y la profesión de septiembre de 1524 son acontecimientos distintos. El campo founder resume a Cayetano y compañeros; el texto identifica a Carafa sin atribuirle canonización. El término histórico congregation no sustituye aquí la clasificación de orden de clérigos regulares.
+
+### 49. `barnabitas-crsp` · `order`
+
+- [Barnabite Fathers USA, Pontifical Approval of the Barnabites](https://www.barnabites.com/pontifical-approval-of-the-barnabites-feb-18-1533/)
+- [Catholic Encyclopedia: Barnabites](https://www.newadvent.org/cathen/02302a.htm)
+
+Se distingue el comienzo de 1530 de la aprobación de 1533 y del establecimiento posterior de la comunidad. Las fuentes institucionales también explican colaboraciones más amplias: no se pretende que la lista breve de fundadores agote todas las personas que ayudaron. Kind order por su condición de clérigos regulares.
+
+### 50. `somascos-crs` · `order`
+
+- [Somascan Fathers, History](https://somascans.org/history/)
+- [Catholic Encyclopedia: Somaschi](https://www.newadvent.org/cathen/14140a.htm)
+
+La página institucional se consultó mediante contenido indexado; el acceso HTTP directo dio 406. La fuente distingue la habilitación para votos solemnes de 1568: kind order. Se deja approval vacío porque no se localizó el documento original con incipit seguro. No se convierten estadísticas de 1907 en presencia actual.
+
+### 51. `hermanos-lasalle-fsc` · `congregation`
+
+- [Instituto de los Hermanos de las Escuelas Cristianas, sitio general](https://www.lasalle.org/en/)
+- [Instituto FSC, Boletín 262: análisis de la bula de aprobación, p. 24](https://www.lasalle.org/wp-content/uploads/2025/11/ESP_Bollettino_Istituto_n262.pdf)
+- [Catholic Encyclopedia: Institute of the Brothers of the Christian Schools](https://www.newadvent.org/cathen/08056a.htm)
+
+kind congregation de hermanos, no orden de sacerdotes. Se distingue FSC de los Christian Brothers CFC fundados por Edmund Rice. La bula se documenta en el boletín institucional; no se deduce del año de los comienzos ni de la canonización del fundador.
+
+### 52. `hospitalarios-san-juan-dios-oh` · `order`
+
+- [Orden Hospitalaria de San Juan de Dios, Curia general](https://www.ohsjd.org/)
+- [Orden Hospitalaria, El rostro de la Orden cambia, 26-IV-2009](https://www.ohsjd.org/Resource/Rinnovamento.SPAGNOLO_2.pdf)
+- [Catholic Encyclopedia: Brothers Hospitallers of St. John of God](https://www.newadvent.org/cathen/02802b.htm)
+
+1539 expresa el comienzo del servicio del fundador, no una orden canónicamente erigida ese año. Se distinguen reconocimiento inicial de 1572 y desarrollo posterior de la orden. No se completa el documento de aprobación con un título no cotejado ni se trasladan requisitos de admisión del artículo antiguo como actuales.
+
 ## Validación
 
 ```sh
@@ -289,8 +403,8 @@ python3 docs/tasks/tools/validate_orders.py details app/src/main/assets/orders/o
 ```
 
 ```text
-0 entries · 0 errors · 0 warnings
-37 entries · 0 errors · 0 warnings
+15 entries · 0 errors · 0 warnings
+52 entries · 0 errors · 0 warnings
 ```
 
 Las entregas de fichas ampliadas aceptan un prefijo ordenado; el aviso de parcial no es un error. Se comprueban además las extensiones editoriales, las claves e identificadores y `git diff --check` antes de entregar. Integración y compilación a cargo del coordinador.
