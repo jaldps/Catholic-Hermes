@@ -7,7 +7,7 @@
       "pt": "Bispo auxiliar"
     },
     "description": {
-      "es": "Es un obispo que el Sumo Pontífice nombra, a petición del obispo diocesano, para ayudarle en el gobierno de toda la diócesis; no tiene derecho de sucesión. El Código de Derecho Canónico (cc. 403-411) lo prevé cuando las necesidades pastorales lo aconsejan, y en circunstancias más graves puede dotarsele de facultades especiales. Recibe la consagración episcopal, debe ser nombrado vicario general o, al menos, vicario episcopal, asiste al obispo en el gobierno de la diócesis y le suple cuando está ausente o impedido. Ha de consultarse con él en los asuntos de mayor importancia, residir en la diócesis y actuar en unión de acción e intenciones.",
+      "es": "Es un obispo que el Sumo Pontífice nombra, a petición del obispo diocesano, para ayudarle en el gobierno de toda la diócesis; no tiene derecho de sucesión. El Código de Derecho Canónico (cc. 403-411) lo prevé cuando las necesidades pastorales lo aconsejan, y en circunstancias más graves puede dotársele de facultades especiales. Recibe la consagración episcopal, debe ser nombrado vicario general o, al menos, vicario episcopal, asiste al obispo en el gobierno de la diócesis y le suple cuando está ausente o impedido. Ha de consultarse con él en los asuntos de mayor importancia, residir en la diócesis y actuar en unión de acción e intenciones.",
       "en": "He is a bishop whom the Supreme Pontiff appoints, at the request of the diocesan bishop, to help him govern the whole diocese; he has no right of succession. The Code of Canon Law (cc. 403-411) provides for him when pastoral needs advise it, and in more serious circumstances he may be given special faculties. He receives episcopal consecration, must be appointed vicar general or at least episcopal vicar, assists the bishop in the whole government and takes his place when he is absent or impeded. He must be consulted on matters of greater importance, reside in the diocese, and act in union of purpose and intention.",
       "pt": "É um bispo que o Sumo Pontífice nomeia, a pedido do bispo diocesano, para ajudá-lo no governo de toda a diocese; não tem direito de sucessão. O Código de Direito Canônico (cc. 403-411) prevê-o quando as necessidades pastorais o aconselham, e em circunstâncias mais graves pode ser dotado de faculdades especiais. Recebe a consagração episcopal, deve ser nomeado vigário geral ou, ao menos, vigário episcopal, assiste o bispo no governo da diocese e substitui-o quando está ausente ou impedido. Deve ser consultado nos assuntos de maior importância, residir na diocese e agir em união de ação e intenções."
     },
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "id": "office_obispo_emperito",
+    "id": "office_obispo_emerito",
     "name": {
       "es": "Obispo emérito",
       "en": "Bishop Emeritus",
@@ -69,7 +69,7 @@
       "pt": "É quem rege uma administração apostólica em nome do Sumo Pontífice. O Código de Direito Canônico (cc. 368 e 381 §2) equipara-a à diocese: por razões especiais e particularmente graves, aquela porção do povo de Deus não é erigida como diocese, e sua atenção pastoral é confiada ao administrador, que a rege em nome do Sumo Pontífice. Goza em direito das mesmas potestades que o bispo diocesano, salvo o que a natureza do assunto ou a lei dispuser. Sua nomeação compete à autoridade competente, e a curia age com estrutura diocesana."
     },
     "group": "governance",
-    "after": "office_obispo_emperito",
+    "after": "office_obispo_emerito",
     "sources": [
       "Código de Derecho Canónico, cc. 368 y 381 §2",
       "Código de Derecho Canónico, cc. 412-430"
@@ -273,9 +273,9 @@
       "pt": "Camerlengo"
     },
     "description": {
-      "es": "Es el cardenal al que la constitución apostólica Praedicate Evangelium (arts. 235-237) encomienda las funciones de la legislación especial sobre la Sede Apostólica vacante y la elección del Romano Pontífice. Nombra al vicecamarlengo y es apoyado por tres cardenales asistentes. Durante la Sede vacante vela y administra los bienes y derechos temporales de la Sede Apostólica, y en caso de impedimento asume la función el vicecamarlengo. Es un cargo propio del gobierno de la Iglesia universal en el tiempo en que la Sede está vacante, y está previsto en la Curia Romana como oficina.",
-      "en": "He is the cardinal to whom the apostolic constitution Praedicate Evangelium (arts. 235-237) entrusts the functions of the special legislation on the vacant Apostolic See and the election of the Roman Pontiff. He appoints the vice-camerlengo and is assisted by three cardinal assistants. During the vacancy of the See he watches over and administers the goods and temporal rights of the Apostolic See, and in case of impediment the vice-camerlengo assumes the function. It is an office proper to the governance of the universal Church when the See is vacant, and it is provided for in the Roman Curia as an office.",
-      "pt": "É o cardeal a quem a constituição apostólica Praedicate Evangelium (arts. 235-237) confia as funções da legislação especial sobre a Sé Apostólica vacante e a eleição do Romano Pontífice. Nomeia o vice-camerlengo e é amparado por três cardeais assistentes. Durante a vacância da Sé, vela e administra os bens e direitos temporais da Sé Apostólica, e em caso de impedimento assume a função o vice-camerlengo. É um cargo próprio do governo da Igreja universal no tempo em que a Sé está vacante, e está previsto na Cúria Romana como ofício."
+      "es": "Es el cardenal al que la constitución apostólica Praedicate Evangelium (arts. 235-237) encomienda las funciones de la legislación especial sobre la Sede Apostólica vacante y la elección del Romano Pontífice. Durante la Sede vacante vela y administra los bienes y derechos temporales de la Sede Apostólica, y en caso de impedimento asume la función el vicecamarlengo. Es un cargo propio del gobierno de la Iglesia universal en el tiempo en que la Sede está vacante, y está previsto en la Curia Romana como oficina.",
+      "en": "He is the cardinal to whom the apostolic constitution Praedicate Evangelium (arts. 235-237) entrusts the functions of the special legislation on the vacant Apostolic See and the election of the Roman Pontiff. During the vacancy of the See he watches over and administers the goods and temporal rights of the Apostolic See, and in case of impediment the vice-camerlengo assumes the function. It is an office proper to the governance of the universal Church when the See is vacant, and it is provided for in the Roman Curia as an office.",
+      "pt": "É o cardeal a quem a constituição apostólica Praedicate Evangelium (arts. 235-237) confia as funções da legislação especial sobre a Sé Apostólica vacante e a eleição do Romano Pontífice. Durante a vacância da Sé, vela e administra os bens e direitos temporais da Sé Apostólica, e em caso de impedimento assume a função o vice-camerlengo. É um cargo próprio do governo da Igreja universal no tempo em que a Sé está vacante, e está previsto na Cúria Romana como ofício."
     },
     "group": "governance",
     "after": "office_prefecto_dicasterio",
@@ -392,7 +392,7 @@
       "pt": "Nas Igrejas orientais católicas, é o metropolita de uma sede determinada ou reconhecida pela suprema autoridade da Igreja, que preside uma Igreja sui iuris que não tem o título patriarcal. O Código dos Cânones das Igrejas Orientais (cc. 151-154) define o archiepiscopus major e dispõe que se aplicam a ele as normas do direito comum sobre as Igrejas patriarcais e os patriarcas, salvo o que o direito comum expressamente dispuser ou se deduzir da natureza da coisa. Ele é eleito segundo os cânones 63-74 e obtém a precedência de honra imediatamente após os patriarcas, segundo a ordem de ereção."
     },
     "group": "clergy",
-    "after": "office_monsenor",
+    "after": "office_patriarca",
     "sources": [
       "Código de los Cánones de las Iglesias Orientales, cc. 151-154",
       "Código de los Cánones de las Iglesias Orientales, c. 152"
@@ -411,7 +411,7 @@
       "pt": "É o diácono que não aspira ao presbiterado e recebe a ordem diaconal de maneira estável, para servir na caridade, na liturgia da Palavra e no altar. O Código de Direito Canônico (cc. 236 e 288) prevê sua formação segundo as prescrições da Conferência Episcopal e aplica-lhe as normas dos clérigos com as exceções próprias do seu estado. Quem não é casado deve ter ao menos vinte e cinco anos, e quem é casado ao menos trinta e cinco, com o consentimento da esposa. Pode ser casado se contraiu matrimônio antes da ordenação, e não celebra a Eucaristia como presidente principal."
     },
     "group": "clergy",
-    "after": "office_arzobispo_mayor",
+    "after": "office_diacono",
     "sources": [
       "Código de Derecho Canónico, cc. 236 y 288",
       "Código de Derecho Canónico, c. 1031 §2"
@@ -430,7 +430,7 @@
       "pt": "É o presbítero que dirige o seminário e representa a instituição em todos os assuntos, salvo o que a autoridade competente dispuser. O Código de Direito Canônico (cc. 235-264) exige que os candidatos ao sacerdócio recebam no seminário maior a formação espiritual, humana, filosófica e teológica durante o tempo da formação, e o reitor, com os superiores e professores, cuida para que os alunos cumpram o Plano de formação sacerdotal e o regulamento. O reitor e o mestre de noviços não devem ouvir confissões dos alunos residentes, salvo pedido espontâneo em casos particulares."
     },
     "group": "clergy",
-    "after": "office_diacono_permanente",
+    "after": "office_parroco",
     "sources": [
       "Código de Derecho Canónico, cc. 235-264",
       "Código de Derecho Canónico, c. 238 §2"
@@ -449,7 +449,7 @@
       "pt": "É o sacerdote a quem o Ordinário do lugar confia estavelmente, ao menos em parte, a atenção pastoral de alguma comunidade ou grupo de fiéis, para que a exerça segundo o direito universal e particular. O Código de Direito Canônico (cc. 564-569) nomeia-o e outorga-lhe as faculdades necessárias: ouvir confissões, pregar, administrar o Viático e a unção dos enfermos e confirmar quem estiver em perigo de morte. Em hospitais, cárceres e viagens marítimas, pode absolver de censuras não reservadas. Constituem-se capelanias para quem, por seu gênero de vida, não pode gozar da atenção paroquial ordinária, como emigrantes, prófugos, nômades e marinheiros."
     },
     "group": "clergy",
-    "after": "office_rector_seminario",
+    "after": "office_vicario_parroquial",
     "sources": [
       "Código de Derecho Canónico, cc. 564-569",
       "Código de Derecho Canónico, c. 566 §1"
@@ -468,7 +468,7 @@
       "pt": "Não é um sacramento nem um cargo de governo, mas um título honorífico que o Romano Pontífice concede a alguns sacerdotes em reconhecimento de um serviço. O motu proprio Pontificalis Domus (Paulo VI, 28 de março de 1968) reorganizou a Casa Pontificia e regulou essas distinções, dividindo-a na Capela Pontifícia e na Família Pontifícia. Os títulos atuais, como capelão de Sua Santidade, prelado de honra e protonotário apostólico, exprimem gratidão por um serviço e não conferem jurisdição. Usam-se como tratamento reverencial e não fazem parte da estrutura hierárquica da Igreja."
     },
     "group": "clergy",
-    "after": "office_capellan",
+    "after": "office_canonigo",
     "sources": [
       "Motu proprio Pontificalis Domus (Pablo VI, 28-III-1968)",
       "Código de Derecho Canónico, cc. 232-293"
@@ -636,7 +636,7 @@
       "pt": "Ministro extraordinário da comunhão"
     },
     "description": {
-      "es": "Es el acólito u otro fiel designado que, donde lo aconseja la necesidad de la Iglesia y no hay ministros ordinarios, puede ejercer el ministerio de la palabra, presidir las oraciones litúrgicas, administrar el bautismo y dar la sagrada Comunión. El Código de Derecho Canónico (cc. 230 §3 y 910 §2) distingue los ministros ordinarios de la sagrada comunión, que son el obispo, el presbítero y el diácono, del ministro extraordinario, que es el acólito o también otro fiel designado. El motu proprio Spiritus Domini (10 de enero de 2021) recordó que esos ministerios laicales pueden confiararse a todos los fieles, hombres y mujeres.",
+      "es": "Es el acólito u otro fiel designado que, donde lo aconseja la necesidad de la Iglesia y no hay ministros ordinarios, puede ejercer el ministerio de la palabra, presidir las oraciones litúrgicas, administrar el bautismo y dar la sagrada Comunión. El Código de Derecho Canónico (cc. 230 §3 y 910 §2) distingue los ministros ordinarios de la sagrada comunión, que son el obispo, el presbítero y el diácono, del ministro extraordinario, que es el acólito o también otro fiel designado. El motu proprio Spiritus Domini (10 de enero de 2021) recordó que esos ministerios laicales pueden confiarse a todos los fieles, hombres y mujeres.",
       "en": "He is the acolyte or other designated faithful who, where the need of the Church advises it and there are no ordinary ministers, may exercise the ministry of the word, preside over liturgical prayers, administer baptism, and give holy Communion. The Code of Canon Law (cc. 230 §3 and 910 §2) distinguishes the ordinary ministers of holy Communion, who are the bishop, the presbyter, and the deacon, from the extraordinary minister, who is the acolyte or also another designated faithful. The motu proprio Spiritus Domini (10 January 2021) recalled that these lay ministries may be entrusted to all the faithful, men and women.",
       "pt": "É o acólito ou outro fiel designado que, onde o aconselha a necessidade da Igreja e não há ministros ordinários, pode exercer o ministério da palavra, presidir as orações litúrgicas, administrar o batismo e dar a sagrada Comunhão. O Código de Direito Canônico (cc. 230 §3 e 910 §2) distingue os ministros ordinários da sagrada comunhão, que são o bispo, o presbítero e o diácono, do ministro extraordinário, que é o acólito ou também outro fiel designado. O motu proprio Spiritus Domini (10 de janeiro de 2021) recordou que esses ministérios laicais podem confiar-se a todos os fiéis, homens e mulheres."
     },
