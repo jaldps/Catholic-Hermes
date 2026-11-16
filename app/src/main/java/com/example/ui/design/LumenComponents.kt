@@ -357,8 +357,14 @@ private fun AppHeaderFrame(
             Text(meta, style = styles.subhead, color = p.textSecondary)
         }
     }
+    val density = androidx.compose.ui.platform.LocalDensity.current
     val text: @Composable (Modifier) -> Unit = { m ->
         Column(m) {
+            // On paper (title at the top) the eyebrow's line is always reserved,
+            // so titles share one line whether or not a screen has an eyebrow.
+            if (eyebrow == null && design.isSanctuary && root) {
+                Spacer(Modifier.height(with(density) { styles.eyebrow.lineHeight.toDp() } + 4.dp))
+            }
             if (eyebrow != null) {
                 Text(
                     eyebrow, style = styles.eyebrow,

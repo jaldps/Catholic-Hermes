@@ -178,7 +178,19 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         // The earlier New Testament filter is intentionally retained across tabs.
         compose.onNodeWithTag("bible_canon_filter").performScrollTo().performClick()
         compose.onNodeWithTag("bible_canon_0").performClick()
-        compose.onNodeWithTag("book_item_gen").performScrollTo().performClick()
+        compose.onNodeWithTag("book_item_gen").performScrollTo()
+        // The list scrolls under the floating dock: finish the scroll so the
+        // row is tappable above it (the root now opens with an art header in
+        // both identities, which moves where a minimal scroll-to lands).
+        val row = compose.onNodeWithTag("book_item_gen").fetchSemanticsNode().boundsInRoot
+        val dock = compose.onNodeWithTag("bottom_nav_bar").fetchSemanticsNode().boundsInRoot
+        if (row.bottom > dock.top) {
+            compose.onAllNodes(androidx.compose.ui.test.hasScrollToNodeAction() and
+                androidx.compose.ui.test.hasAnyDescendant(hasTestTag("book_item_gen")))[0]
+                .performSemanticsAction(SemanticsActions.ScrollBy) { it(0f, row.bottom - dock.top + 24f) }
+            compose.waitForIdle()
+        }
+        compose.onNodeWithTag("book_item_gen").performClick()
         compose.waitUntil(15_000) {
             compose.runOnUiThread { androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications() }
             compose.onAllNodesWithTag("bible_reader").fetchSemanticsNodes().isNotEmpty()
