@@ -1,4 +1,4 @@
-# Encargos para agentes externos (Hermes, Codex)
+# Encargos para agentes externos (Hermes, Codex, Polish)
 
 El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la rama `CatholicGPT`. Los agentes externos los ejecutan en el PC de Jose y entregan su trabajo en una rama propia. El coordinador revisa e integra; **nadie más escribe en `CatholicGPT`**.
 
@@ -53,3 +53,4 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-017](T-017.md) | Hermes | CERRADO ([revisión](T-017-REVIEW.md)) | M6 · ~30 cargos y ministerios nuevos → `assets/orders/offices-new.json` |
 | [T-018](T-018.md) | Codex | ABIERTO (auditoría integrada; faltan nuevas, [revisión](T-018-REVIEW.md)) | M7 · Devociones marianas: auditoría de 30 + ~25 nuevas → `assets/devotions/marian-*.json` |
 | [T-019](T-019.md) | Hermes | ABIERTO (cambios pedidos, [revisión](T-019-REVIEW.md)) | M7 · Devociones de Cristo: auditoría de 20 + ~20 nuevas → `assets/devotions/christ-*.json` |
+| [T-020](T-020.md) | Polish | ABIERTO | Pulido visual (Lumen/Sanctuary, claro/oscuro, 320 dp, 130 %): Santos, Órdenes, Devociones, Voz de lectura, Novenas |
