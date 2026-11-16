@@ -445,5 +445,462 @@
       "Ministros de los Enfermos, relación de la Familia Camiliana Laica con la orden",
       "Catholic Encyclopedia: St. Camillus de Lellis"
     ]
+  },
+  {
+    "id": "maristas-fms",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Marcelino Champagnat"
+      ],
+      "en": [
+        "Saint Marcellin Champagnat"
+      ],
+      "pt": [
+        "São Marcelino Champagnat"
+      ]
+    },
+    "presence": {
+      "es": "Los hermanos y sus colaboradores laicos se dedican a la educación cristiana de niños y jóvenes, especialmente de quienes tienen mayores necesidades.",
+      "en": "The brothers and their lay partners dedicate themselves to the Christian education of children and young people, especially those in greatest need.",
+      "pt": "Os irmãos e seus colaboradores leigos se dedicam à educação cristã de crianças e jovens, especialmente daqueles com maiores necessidades."
+    },
+    "sources": [
+      "Instituto Marista, Marist Institute",
+      "Juan Pablo II, homilía de canonización de Marcelino Champagnat, 18-IV-1999"
+    ]
+  },
+  {
+    "id": "oblato-maria-inmaculada-omi",
+    "kind": "congregation",
+    "motto": {
+      "es": "Evangelizare pauperibus misit me. Pauperes evangelizantur.",
+      "en": "Evangelizare pauperibus misit me. Pauperes evangelizantur.",
+      "pt": "Evangelizare pauperibus misit me. Pauperes evangelizantur."
+    },
+    "approval": {
+      "es": "León XII, breve de aprobación del instituto, 17-II-1826.",
+      "en": "Leo XII, brief approving the institute, 17 February 1826.",
+      "pt": "Leão XII, breve de aprovação do instituto, 17-II-1826."
+    },
+    "notableSaints": {
+      "es": [
+        "San Eugenio de Mazenod"
+      ],
+      "en": [
+        "Saint Eugène de Mazenod"
+      ],
+      "pt": [
+        "Santo Eugênio de Mazenod"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades misioneras atienden parroquias, santuarios, formación y evangelización en distintas regiones, con atención a comunidades pobres o poco acompañadas.",
+      "en": "Their missionary communities serve in parishes, shrines, formation and evangelization across different regions, with attention to poor or underserved communities.",
+      "pt": "Suas comunidades missionárias atuam em paróquias, santuários, formação e evangelização em diferentes regiões, com atenção a comunidades pobres ou pouco acompanhadas."
+    },
+    "sources": [
+      "Misioneros Oblatos de María Inmaculada, OMI World",
+      "OMI World, Coat of Arms of the Congregation",
+      "Catholic Encyclopedia: Oblates of Mary Immaculate"
+    ]
+  },
+  {
+    "id": "verbitas-svd",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Arnoldo Janssen",
+        "San José Freinademetz"
+      ],
+      "en": [
+        "Saint Arnold Janssen",
+        "Saint Joseph Freinademetz"
+      ],
+      "pt": [
+        "Santo Arnaldo Janssen",
+        "São José Freinademetz"
+      ]
+    },
+    "presence": {
+      "es": "Sacerdotes y hermanos viven en comunidades internacionales y desarrollan misión, animación bíblica, comunicación y servicios de justicia y paz.",
+      "en": "Priests and brothers live in international communities and undertake missionary work, biblical ministry, communication and services for justice and peace.",
+      "pt": "Sacerdotes e irmãos vivem em comunidades internacionais e desenvolvem missão, animação bíblica, comunicação e serviços de justiça e paz."
+    },
+    "sources": [
+      "Sociedad del Verbo Divino, Curia general",
+      "SVD, presentación de las Constituciones revisadas tras el capítulo de 2024",
+      "Juan Pablo II, canonización de Janssen, Freinademetz y Comboni, 5-X-2003",
+      "Catholic Encyclopedia: Society of the Divine Word"
+    ]
+  },
+  {
+    "id": "claretianos-cmf",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "Pío IX, aprobación del instituto el 22-XII-1865, formalizada por decreto el 27-I-1866.",
+      "en": "Pius IX, approval of the institute on 22 December 1865, formalized by decree on 27 January 1866.",
+      "pt": "Pio IX, aprovação do instituto em 22-XII-1865, formalizada por decreto em 27-I-1866."
+    },
+    "notableSaints": {
+      "es": [
+        "San Antonio María Claret"
+      ],
+      "en": [
+        "Saint Anthony Mary Claret"
+      ],
+      "pt": [
+        "Santo Antônio Maria Claret"
+      ]
+    },
+    "presence": {
+      "es": "Los misioneros claretianos sirven mediante predicación, pastoral bíblica, educación, medios de comunicación y acompañamiento de comunidades en distintos continentes.",
+      "en": "Claretian missionaries serve through preaching, biblical ministry, education, communication media and accompaniment of communities on different continents.",
+      "pt": "Os missionários claretianos servem pela pregação, pela pastoral bíblica, pela educação, pelos meios de comunicação e pelo acompanhamento de comunidades em diferentes continentes."
+    },
+    "sources": [
+      "Misioneros Claretianos, sitio general",
+      "Misioneros Claretianos, reflexión inicial del XXV capítulo general",
+      "Catholic Encyclopedia: St. Antonio María Claret y Clará"
+    ]
+  },
+  {
+    "id": "espiritanos-cssp",
+    "kind": "congregation",
+    "motto": {
+      "es": "Un solo corazón y una sola alma",
+      "en": "One heart and one soul",
+      "pt": "Um só coração e uma só alma"
+    },
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Los espiritanos evangelizan y acompañan comunidades especialmente desatendidas, con ministerios pastorales, educativos y sociales compartidos con colaboradores laicos.",
+      "en": "Spiritans evangelize and accompany particularly underserved communities through pastoral, educational and social ministries shared with lay partners.",
+      "pt": "Os espiritanos evangelizam e acompanham comunidades especialmente desassistidas, com ministérios pastorais, educativos e sociais compartilhados com colaboradores leigos."
+    },
+    "sources": [
+      "Congregación del Espíritu Santo, Spiritans Roma",
+      "Spiritans Roma, Spiritan Vocation, Regla de Vida 3–7",
+      "Catholic Encyclopedia: Religious Congregations of the Holy Ghost"
+    ]
+  },
+  {
+    "id": "paulinos-ssp",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beato Santiago Alberione"
+      ],
+      "en": [
+        "Blessed James Alberione"
+      ],
+      "pt": [
+        "Bem-aventurado Tiago Alberione"
+      ]
+    },
+    "presence": {
+      "es": "La congregación sirve al anuncio del Evangelio mediante edición, librerías, medios audiovisuales y comunicación digital en diversos países.",
+      "en": "The congregation serves the proclamation of the Gospel through publishing, bookshops, audiovisual media and digital communication in different countries.",
+      "pt": "A congregação serve ao anúncio do Evangelho por meio de editoras, livrarias, meios audiovisuais e comunicação digital em diferentes países."
+    },
+    "sources": [
+      "Sociedad de San Pablo, sitio general y circunscripciones",
+      "Santa Sede, biografía de Santiago Alberione para su beatificación, 27-IV-2003"
+    ]
+  },
+  {
+    "id": "hijas-caridad-dc",
+    "kind": "society",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "San Vicente de Paúl",
+        "Santa Luisa de Marillac"
+      ],
+      "en": [
+        "Saint Vincent de Paul",
+        "Saint Louise de Marillac"
+      ],
+      "pt": [
+        "São Vicente de Paulo",
+        "Santa Luísa de Marillac"
+      ]
+    },
+    "presence": {
+      "es": "La Compañía sirve en salud, educación, asistencia social y pastoral, compartiendo vida comunitaria y colaboración con otras personas para atender la pobreza.",
+      "en": "The Company serves in healthcare, education, social assistance and pastoral care, sharing community life and collaboration with others to address poverty.",
+      "pt": "A Companhia atua na saúde, na educação, na assistência social e na pastoral, unindo vida comunitária e colaboração com outras pessoas no serviço à pobreza."
+    },
+    "sources": [
+      "Hijas de la Caridad, We Are: identidad canónica y misión",
+      "Catholic Encyclopedia: Sisters of Charity of St. Vincent de Paul"
+    ]
+  },
+  {
+    "id": "hijas-maria-auxiliadora-fma",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Las salesianas desarrollan educación, formación y acompañamiento de jóvenes, con comunidades interculturales y atención a las nuevas formas de pobreza.",
+      "en": "The Salesian Sisters provide education, formation and accompaniment for young people, with intercultural communities and attention to new forms of poverty.",
+      "pt": "As salesianas desenvolvem educação, formação e acompanhamento de jovens, com comunidades interculturais e atenção às novas formas de pobreza."
+    },
+    "sources": [
+      "Francisco, discurso al capítulo general de las Hijas de María Auxiliadora, 22-X-2021",
+      "Catholic Encyclopedia: The Salesian Society, rama femenina"
+    ]
+  },
+  {
+    "id": "carmelitas-descalzas-ocd",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Teresa de Jesús"
+      ],
+      "en": [
+        "Saint Teresa of Jesus"
+      ],
+      "pt": [
+        "Santa Teresa de Jesus"
+      ]
+    },
+    "presence": {
+      "es": "Las monjas viven en monasterios contemplativos, con oración litúrgica, silencio y trabajo; conservan vínculos de formación y comunión dentro de la familia teresiana.",
+      "en": "The nuns live in contemplative monasteries with liturgical prayer, silence and work, maintaining bonds of formation and communion within the Teresian family.",
+      "pt": "As monjas vivem em mosteiros contemplativos, com oração litúrgica, silêncio e trabalho, mantendo vínculos de formação e comunhão na família teresiana."
+    },
+    "sources": [
+      "Carmelitas Descalzos, Curia general y familia carmelitana",
+      "Catholic Encyclopedia: The Carmelite Order, reforma teresiana"
+    ]
+  },
+  {
+    "id": "clarisas-osc",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Clara de Asís"
+      ],
+      "en": [
+        "Saint Clare of Assisi"
+      ],
+      "pt": [
+        "Santa Clara de Assis"
+      ]
+    },
+    "presence": {
+      "es": "Las clarisas viven en monasterios contemplativos, con oración, vida fraterna y trabajo; sus comunidades conservan diversas tradiciones y formas de asociación.",
+      "en": "Poor Clares live in contemplative monasteries with prayer, sisterly community and work; their communities preserve different traditions and forms of association.",
+      "pt": "As clarissas vivem em mosteiros contemplativos, com oração, vida fraterna e trabalho; suas comunidades conservam diferentes tradições e formas de associação."
+    },
+    "sources": [
+      "Benedicto XVI, audiencia sobre santa Clara, 15-IX-2010",
+      "Catholic Encyclopedia: Poor Clares"
+    ]
+  },
+  {
+    "id": "misioneras-caridad-mc",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Teresa de Calcuta"
+      ],
+      "en": [
+        "Saint Teresa of Calcutta"
+      ],
+      "pt": [
+        "Santa Teresa de Calcutá"
+      ]
+    },
+    "presence": {
+      "es": "Las hermanas combinan oración comunitaria y servicio gratuito a personas pobres, enfermas o abandonadas, con colaboración de voluntarios en diferentes regiones.",
+      "en": "The sisters combine community prayer and free service to poor, sick or abandoned people, collaborating with volunteers in different regions.",
+      "pt": "As irmãs unem oração comunitária e serviço gratuito a pessoas pobres, doentes ou abandonadas, com colaboração de voluntários em diferentes regiões."
+    },
+    "sources": [
+      "Mother Teresa Center, MC Family: asociados y servicio actual",
+      "Santa Sede, biografía de Teresa de Calcuta, 2003"
+    ]
+  },
+  {
+    "id": "franciscanas-misioneras-maria-fmm",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Beata María de la Pasión"
+      ],
+      "en": [
+        "Blessed Mary of the Passion"
+      ],
+      "pt": [
+        "Bem-aventurada Maria da Paixão"
+      ]
+    },
+    "presence": {
+      "es": "Sus comunidades internacionales unen adoración eucarística y misión, con servicios de educación, salud, pastoral y promoción humana según las necesidades locales.",
+      "en": "Their international communities unite Eucharistic adoration and mission, serving in education, healthcare, pastoral ministry and human development according to local needs.",
+      "pt": "Suas comunidades internacionais unem adoração eucarística e missão, com serviços de educação, saúde, pastoral e promoção humana conforme as necessidades locais."
+    },
+    "sources": [
+      "Franciscanas Misioneras de María, sitio general",
+      "FMM, Blessed Mary of the Passion",
+      "Juan Pablo II, homilía de beatificación, 20-X-2002"
+    ]
+  },
+  {
+    "id": "hermanas-caridad-santa-ana-csa",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [],
+      "en": [],
+      "pt": []
+    },
+    "presence": {
+      "es": "Las hermanas mantienen servicios sanitarios, educativos, sociales y pastorales en comunidades de Europa, América, Asia y África, con espíritu de hospitalidad.",
+      "en": "The sisters provide healthcare, educational, social and pastoral services in communities in Europe, the Americas, Asia and Africa, with a spirit of hospitality.",
+      "pt": "As irmãs mantêm serviços de saúde, educativos, sociais e pastorais em comunidades da Europa, das Américas, da Ásia e da África, com espírito de hospitalidade."
+    },
+    "sources": [
+      "Hermanas de la Caridad de Santa Ana, sitio institucional",
+      "Hermanas de la Caridad de Santa Ana, Historia"
+    ]
+  },
+  {
+    "id": "orden-visitacion-vhm",
+    "kind": "order",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Juana Francisca de Chantal",
+        "Santa Margarita María Alacoque"
+      ],
+      "en": [
+        "Saint Jane Frances de Chantal",
+        "Saint Margaret Mary Alacoque"
+      ],
+      "pt": [
+        "Santa Joana Francisca de Chantal",
+        "Santa Margarida Maria Alacoque"
+      ]
+    },
+    "presence": {
+      "es": "Los monasterios visitandinos sostienen vida comunitaria y oración litúrgica, con la espiritualidad de Francisco de Sales y Juana de Chantal.",
+      "en": "Visitation monasteries sustain community life and liturgical prayer in the spirituality of Francis de Sales and Jane de Chantal.",
+      "pt": "Os mosteiros visitandinos mantêm vida comunitária e oração litúrgica na espiritualidade de Francisco de Sales e Joana de Chantal."
+    },
+    "sources": [
+      "Monasterio de la Visitación de Georgetown, vida y comunidad actuales",
+      "Benedicto XVI, audiencia sobre san Francisco de Sales, 2-III-2011",
+      "Catholic Encyclopedia: Visitation Order"
+    ]
+  },
+  {
+    "id": "ursulinas-osu",
+    "kind": "congregation",
+    "motto": null,
+    "approval": {
+      "es": "",
+      "en": "",
+      "pt": ""
+    },
+    "notableSaints": {
+      "es": [
+        "Santa Ángela de Mérici"
+      ],
+      "en": [
+        "Saint Angela Merici"
+      ],
+      "pt": [
+        "Santa Ângela de Mérici"
+      ]
+    },
+    "presence": {
+      "es": "La Unión Romana reúne comunidades educativas y pastorales de distintos continentes; otras ramas ursulinas conservan organizaciones propias dentro de la familia de Ángela de Mérici.",
+      "en": "The Roman Union brings together educational and pastoral communities on different continents; other Ursuline branches retain their own organizations within Angela Merici’s family.",
+      "pt": "A União Romana reúne comunidades educativas e pastorais de diferentes continentes; outros ramos ursulinos conservam organizações próprias na família de Ângela de Mérici."
+    },
+    "sources": [
+      "Ursulinas de la Unión Romana, sitio general",
+      "Ursulinas de la Unión Romana, History",
+      "Catholic Encyclopedia: The Ursulines"
+    ]
   }
 ]
