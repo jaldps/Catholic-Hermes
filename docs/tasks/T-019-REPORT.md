@@ -69,33 +69,30 @@ Todas llevan `promises: null` y `prayer: null` (no se incluye oración nueva; no
 |---|---|
 | Pío XI, *Miserentissimus Redemptor* (1928) | https://www.vatican.va/content/pius-xi/en/encyclicals/documents/hf_p-xi_enc_19280508_miserentissimus-redemptor.html |
 | Pío XII, *Haurietis Aquas* (1956) | https://www.vatican.va/content/pius-xii/en/encyclicals/documents/hf_p-xii_enc_15051956_haurietis-aquas.html |
+| Juan XXIII, motu proprio *Inde a primis* (30-VI-1960): Pío IX extendió la fiesta de la Preciosísima Sangre | http://www.vatican.va/content/john-xxiii/es/apost_letters/1960/documents/hf_j-xxiii_apl_19600630_indeaprimis.html |
 | Decreto *Misericors et miserator* (5-V-2000) | https://thedivinemercy.org/message/tradition/pronouncements (texto del decreto) |
 | Divino Niño del 20 de Julio (Bogotá) | https://www.ninojesus20dejulio.org/santuario |
 | Iglesia del 20 de Julio (Bogotá) | https://www.sancristobal.gov.co/milocalidad/iglesia-del-20-julio |
-| Niño de Atocha (contraste de datos) | https://es.wikipedia.org/wiki/Ni%C3%B1o_de_Atocha |
 | Cronología del Niño Jesús de Praga | https://www.gesubambino.org/es/el-nino-jesus/la-historia-del-nino-jesus/cronologia-de-praga/ |
 | Señor de los Milagros (Lima), crónica | https://english.religion.info/2008/11/21/peru-the-festival-of-the-seor-de-los-milagros-lord-of-miracles |
 | Nazareno de San Pablo (Caracas) | https://en.ultimasnoticias.com.ve/life/Nazarene-of-San-Pablo-arrived-at-the-altar-and-goes-out-into-the-street-today |
-| Cristos Negros de Centroamérica y México | https://es.wikipedia.org/wiki/Cristos_Negros_de_Centroam%C3%A9rica_y_M%C3%A9xico |
 | Contrato de Quirio Cataño (1594) | https://muse.jhu.edu/article/713637 |
-| Santo Rostro de Jesús (contraste de datos) | https://es.wikipedia.org/wiki/Santo_Rostro_de_Jes%C3%BAs |
 | Señor de los Temblores (Cusco) | https://andina.pe/agencia/noticia-senor-los-temblores-por-se-llama-asi-y-tradiciones-acoge-esta-festividad-1048716.aspx |
-| Taytacha de los Temblores | http://www.taytachatemblores.com/ |
-| Chalma (Malinalco) | https://en.wikipedia.org/wiki/Chalma,_Malinalco |
-| The Black Christ of Chalma | https://mexicounexplained.com/black-christ-chalma |
-| Santo Niño de Cebú | https://en.wikipedia.org/wiki/Santo_Ni%C3%B1o_de_Ceb%C3%BA |
-| Santo Niño de Cebú (Cultural Center of the Philippines) | https://epa.culturalcenter.gov.ph/3/82/2291 |
-| Ocotlán (Tlaxcala, contraste de datos) | https://es.wikipedia.org/wiki/Ocotl%C3%A1n_(Tlaxcala) |
+| Chalma: tradición del Cristo moreno | https://mexicocity.cdmx.gob.mx/venues/capilla-del-senor-de-chalma?lang=en |
+| Santo Niño de Cebú: crónica de la coronación canónica (bula *Cunabula religionis*) | https://santoninodecebubasilica.org/chronicles/the-canonical-coronation-of-the-senor-sto-nino-de-cebu |
+| Santo Niño de Cebú: desarrollo de la devoción | https://santoninodecebubasilica.org/chronicles/development-of-the-santo-nino-devotion |
+| El Vía Crucis: origen y Clemente XII (1731) | https://concatedralalicante.com/el-via-crucis-origen-y-significado.html |
+| Los prodigios del Santo Cristo de Limpias (1919) | https://cristodelimpias.org/prodigios-del-santo-cristo/ |
+| *El Cristo de Limpias* (Biblioteca Digital de Castilla y León) | http://bibliotecadigital.jcyl.es/i18n/consulta/registro.cmd?id=11300 |
 | Unesco, Santuario de Bom Jesus do Congonhas | https://whc.unesco.org/en/list/334 |
 | Prefeitura de Congonhas, patrimônio histórico | https://www.congonhas.mg.gov.br/index.php/patrimonio-historico |
 | IPAC Bahia, Romaria do Senhor Bom Jesus da Lapa | https://www.ba.gov.br/ipac/romaria-do-senhor-bom-jesus-da-lapa |
 | Santuário do Bom Jesus da Lapa, historia | https://santuariodobomjesusdalapa.com/santuario/a-historia-do-santuario-do-bom-jesus-da-lapa/ |
 | Fundación Medinaceli, historia de la imagen | https://fundacionmedinaceli.org/en/intangible-heritage/jesus-medinaceli/history-and-vocation/prototype-jesus-medinaceli |
-| Basílica de Jesús de Medinaceli (contraste de datos) | https://en.wikipedia.org/wiki/Basilica_of_Jesus_de_Medinaceli |
-| Divino Salvador del Mundo (BBC) | https://bbc.com/news/world-latin-america-23585133 |
-| El Salvador Travel, Agostinas | https://elsalvador.travel/preforocimap/agostinas-festivities-begin-in-the-capital-of-el-salvador |
 | Calendario romano (Corpus Christi, Santísimo Nombre, Cinco Llagas) | https://www.vatican.va/roman_curia/congregations/ccdds/index.htm |
 | Concilio de Trento, doctrina de la presencia real | https://www.vatican.va/archive/hist_councils/iv_trent.htm |
+
+Fuentes institucionales sin URL pública citadas en las fichas: santuarios, cofradías y diócesis de Limpias, Esquipulas, Ocotlán, Medinaceli, Chalma, Cebú, San Francisco de La Paz, la Basílica del Santo Volto de Manoppello y la Arquidiócesis de San Salvador. Ya no se usa Wikipedia ni webs comerciales como fuente.
 
 ## Lo que no se pudo verificar
 
@@ -103,8 +100,18 @@ Todas llevan `promises: null` y `prayer: null` (no se incluye oración nueva; no
 - **`cristo_de_limpias` y `santo_cristo_de_la_victoria`**: no se localizó documento pontificio de aprobación; se describen como devociones diocesanas y populares.
 - **`jesus_de_ocotlan`**: la tradición de la aparición de la imagen en el encino se presenta como tradición; los datos del santuario y del «palo de Ocotlán» se describen sin pretender un documento pontificio.
 - **`cristo_de_la_agonia`**, **`cristo_camino`**, **`cristo_paciencia`**, **`cristo_humildad`**, **`cristo_sentenciado`**, **`senor_columna`**: devociones sin imagen histórica ni documento de aprobación; se describen como devociones inspiradas en los relatos evangélicos o en la piedad popular, sin afirmaciones de culto específico.
-- **`santo_nino_de_cebu`**: la coronación canónica se menciona por la fuente, sin indicar año ni autoría concreta porque la fuente consultada no lo precisaba.
+- **`santo_nino_de_cebu`**: la coronación canónica quedó precisada con la bula *Cunabula religionis* (27-II-1964) y la ceremonia del 28-IV-1965, tomadas de la Basílica del Santo Niño de Cebú.
+
+## Correcciones de la revisión intermedia 1 aplicadas
+
+- **`preciosa_sangre`**: Pío IX extendió la fiesta a la Iglesia universal por el decreto *Redempti sumus* (10-VIII-1849), no Pío V; se suprimió del Calendario Romano General en 1969 y hoy se conserva como misa votiva; se quitó la referencia a la Sangre de san Genaro y la invocación «Señor, ten piedad»; se corrigió «las/archicofradías».
+- **`senor_del_gran_poder`**: año `1660` sin fuente → `""`; eliminadas las frases repetidas.
+- **`cristo_de_limpias`**: ría del **Asón** (no del Pas); año `1400` sin fuente → `""`; eliminadas las repeticiones; se añadieron los fenómenos de 1919 como **relatos de testigos**, sin declararlos milagros.
+- **`via_crucis`**: eliminada la frase sin fuente sobre san Francisco; eliminada la frase repetida; se cita la fijación de las estaciones: **Clemente XII (1731)** y **Benedicto XIV (1742)**.
+- **`santo_nino_de_cebu`**: sustituida Wikipedia por la Basílica del Santo Niño y la bula *Cunabula religionis* (1964) / coronación (1965).
+- **Todas las entradas nuevas**: sin relleno ni frases repetidas; años y reconocimientos solo con fuente; eliminados Wikipedia y webs comerciales de las fuentes; repasada la ortografía.
+- **Las 20 existentes**: repasados años y documentos; sustituidas las fuentes de Wikipedia (Niño de Atocha, Niño de Praga, Esquipulas, Santo Rostro, Cristo Redentor) por fuentes institucionales; suavizadas las fórmulas sin respaldo (Santo Rostro, Cristo Redentor).
 
 ## Frecuencia de push
 
-`fork/ext/T-019`: `8d312db` (auditoría, 20), `821b1ef` (nuevas, 18).
+`fork/ext/T-019`: `8d312db` (auditoría, 20), `821b1ef` (nuevas, 18), `e9c4db4` (REPORT), más el `merge` de `origin/CatholicGPT` con `T-019-REVIEW.md` y la versión corregida.
