@@ -16,10 +16,10 @@ No se asigna una lectura principal de los Salmos en estos cursos. Si se menciona
 
 El validador publicado exige cinco lecciones y no tiene opción `--partial`. En entregas de una o dos lecciones se ejecuta intacto mediante un envoltorio temporal externo al repositorio: conserva todos sus controles y descuenta únicamente el error de cantidad total, declarado como pendiente. El envoltorio además exige 70–110 palabras de contexto y 80–130 por desarrollo en cada idioma, con ambos contadores (espacios y regex). No se anuncian cinco lecciones cuando todavía hay un prefijo. Al completar cada curso se ejecuta el comando oficial sin envoltorio.
 
-## `track_paul_life_in_christ` · 4/5 lecciones
+## `track_paul_life_in_christ` · 5/5 lecciones
 
 ```text
-4/5 lessons (partial; exact-five completeness requirement pending) · 0 errors · 0 warnings
+5 lessons · 0 errors · 0 warnings
 ```
 
 ### 1. `paul_1_damascus_encounter`
@@ -75,8 +75,45 @@ Lecturas: `1co 13:1-13`.
 
 CIC 1822–1829 sostiene caridad, amor de Dios y del prójimo, forma de las virtudes, verdad y corrección; se añade 1812–1813 para explicar virtud teologal como don de Dios y 2264–2265 para evitar interpretar paciencia como renuncia a proteger la vida. 1 Co 13 se lee dentro de la discusión sobre carismas, no solo como texto nupcial. No se compone una oración ni se reproduce de memoria una traducción moderna del himno. Las situaciones prácticas son ejemplos editoriales, no citas atribuidas a una persona real.
 
+### 5. `paul_5_hope_glory`
+
+Lecturas: `rom 8:18-39`.
+
+- CIC **1817–1821**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p3s1c1a7_sp.html
+- CIC **1042–1050**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p123a12_sp.html
+- CIC **1037–1037**, rango inclusivo comprobado.
+  - https://www.vatican.va/archive/catechism_sp/p123a12_sp.html
+
+CIC 1817–1821 sostiene esperanza, gracia, perseverancia y oración; 1042–1050, resurrección y renovación del universo, desconocimiento de cuándo y cómo (1048) y cuidado presente (1049). Se añade 1037 para evitar una lectura fatalista de Rm 8,29–30: Dios no predestina a nadie al infierno. No se fijan plazos ni se pretende explicar el motivo particular de una tragedia. Oratio recomienda el Padrenuestro por referencia, según 1820, sin reproducir o componer su texto. Rm 8,36 cita un salmo dentro del propio pasaje: no se crea un destino psa independiente que pueda confundir numeraciones. El siguiente curso propuesto, Sacramentos, ya existe; no se promete acceso al curso de Salmos todavía pendiente de otro encargo.
+
 ## Límites y revisión pendiente
 
 No se modifica Kotlin, navegación, progreso ni corpus bíblico. No se afirma haber probado la navegación en un dispositivo o haber compilado Android: la integración, pruebas del catálogo y compilación corresponden al coordinador. La revisión externa teológica y lingüística y la comprobación final del texto resuelto en las tres lenguas quedan a su cargo. Las duraciones son estimaciones pedagógicas; la lectura y el silencio pueden requerir más tiempo.
 
 No quedan datos históricos controvertidos presentados como fechas o autorías seguras. Los matices y límites concretos se documentan por lección. No se deducen decretos o aprobación eclesiástica del hecho de enlazar el Catecismo.
+
+## Cierre de T-024
+
+- **Cinco lecciones completas en ES/EN/PT**, con ids únicos, nivel FOUNDATION, 20 minutos sugeridos por encuentro y 100 por curso. Secuencia: Damasco, justificación, Cuerpo de Cristo, caridad y esperanza.
+- Comando oficial ejecutado:
+
+```sh
+python3 docs/tasks/tools/validate_courses.py app/src/main/assets/courses/track_paul_life_in_christ.json
+```
+
+```text
+5 lessons · 0 errors · 0 warnings
+```
+
+- Comprobación editorial de longitudes: 15 contextos de 70–110 palabras y 45 desarrollos de 80–130 palabras, tanto por espacios como por regex. Tres preguntas con respuesta razonada en cada lección; la tercera exige discernir una situación concreta.
+- Las cinco referencias bíblicas se comprobaron en cada corpus incluido ES/EN/PT: rangos completos y texto no vacío. La del capítulo 13 se explicita como `1co 13:1-13`. No se asigna ninguna lectura independiente de Salmos; la cita interna de Rm 8,36 permanece dentro del texto paulino resuelto y no se remapea a una numeración distinta.
+- Se compararon los ids con los otros dos cursos de T-022 y los cursos Kotlin existentes: quince ids nuevos únicos, sin colisiones. Se comprobó la existencia de todos los números del Catecismo citados en los tres idiomas; la revisión doctrinal se apoya en la lectura española oficial y las notas específicas de cada lección.
+- Las guías de oración no componen plegarias. La última remite al Padrenuestro, oración auténtica que CIC 1820 relaciona con la esperanza, sin copiar una traducción ni atribuir palabras nuevas a Jesús.
+- Se proponen próximos pasos ya disponibles, como Sacramentos; el curso de Salmos no se anuncia como accesible antes de su entrega por otro agente. No se certifica fe, santidad o formación sacramental al terminar.
+- Se completó `git diff --check`. Solo se han creado el JSON y este informe. Sin cambios de código, claves, APK, corpus bíblico o encargos ajenos.
+
+### Datos no verificados
+
+No se presentan fechas reconstruidas del viaje de Damasco, un caballo, un cambio de nombre en Hechos 9, citas de santos sin obra ni una datación precisa de la carta a los Romanos. No se afirma consulta independiente de los decretos originales de Trento: sus referencias se verificaron en el Catecismo y se identifican como tales. No se fija fecha o modo físico de la consumación del universo, que CIC 1048 declara desconocidos. El despliegue del catálogo y la lectura en dispositivo quedan para la integración del coordinador.
