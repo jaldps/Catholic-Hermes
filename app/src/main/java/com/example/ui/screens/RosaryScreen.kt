@@ -1295,7 +1295,7 @@ fun RosaryScreen(
                 }
                 Column(
                     Modifier.fillMaxWidth()
-                        .then(if (design.isSanctuary || design.reduceTransparency || design.highContrast) Modifier.background(p.canvasBottom) else Modifier)
+                        .then(if (design.isSanctuary || design.isClassic || design.reduceTransparency || design.highContrast) Modifier.background(p.canvasBottom) else Modifier)
                         .testTag("prayer_transport")
                         .then(if (design.isSanctuary) Modifier.drawBehind {
                             drawLine(p.separator, androidx.compose.ui.geometry.Offset.Zero,
@@ -1376,7 +1376,7 @@ private fun MysteryStage(
     // full colour and never gets a lift. Paintings are not lifted in light mode;
     // a scrim behind the top control keeps the status bar legible instead.
     val isMercyArt = assetPath?.endsWith("divine_mercy.jpg") == true
-    val dissolves = !(design.isSanctuary || design.reduceTransparency || design.highContrast)
+    val dissolves = !(design.isSanctuary || design.isClassic || design.reduceTransparency || design.highContrast)
     Box(
         modifier
             .then(if (dissolves) Modifier.alphaMask {
@@ -1554,7 +1554,7 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
         val sources = remember { List(2) { MutableInteractionSource() } }
         val firstPressed by sources[0].collectIsPressedAsState()
         val secondPressed by sources[1].collectIsPressedAsState()
-        val opaque = design.reduceTransparency || design.highContrast
+        val opaque = design.isClassic || design.reduceTransparency || design.highContrast
         LiquidGlassDevotionTrack(
             selected = selected, pressed = firstPressed || secondPressed,
             darkArt = darkArt, backdrop = backdrop, modifier = Modifier.fillMaxWidth()

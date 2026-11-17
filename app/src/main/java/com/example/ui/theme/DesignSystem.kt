@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.example.data.models.LocalizedText
 
 /**
- * The two visual identities the app can wear. Each one re-specifies the whole
+ * The visual identities the app can wear. Each one re-specifies the whole
  * surface — type, shape, spacing, depth, motion, navigation pattern, list
  * idiom, iconography and ornament — not merely the palette.
  */
@@ -29,6 +29,12 @@ enum class DesignLanguage(
     /** Legacy alias. Old IVE preferences resolve to Lumen. */
     IVE("IVE", LocalizedText("Lumen", "Lumen", "Lumen"),
         LocalizedText("Cristal líquido bajo la luz del día litúrgico.", "Liquid glass in the light of the liturgical day.", "Vidro líquido sob a luz do dia litúrgico.")),
+    /**
+     * The original Lumen (commit 3576e6e): neutral warm canvas, opaque material,
+     * plain icons, charcoal primary actions; the accent only marks small details.
+     */
+    CLASSIC("CLASSIC", LocalizedText("Tradicional", "Traditional", "Tradicional"),
+        LocalizedText("Lumen clásico: claro, sobrio y neutro.", "Classic Lumen: clear, sober and neutral.", "Lumen clássico: claro, sóbrio e neutro.")),
     /** Clear, refracting glass on every surface. */
     GLASS("GLASS", LocalizedText("Cristal", "Glass", "Vidro"),
         LocalizedText("Cristal líquido: transparencia, refracción y luz.", "Liquid glass: transparency, refraction and light.", "Vidro líquido: transparência, refração e luz.")),
@@ -36,8 +42,9 @@ enum class DesignLanguage(
         LocalizedText("La belleza de un misal personal.", "The beauty of a personal missal.", "A beleza de um missal pessoal."));
 
     companion object {
-        val selectable = listOf(APPLE, GLASS, SANCTUARY)
+        val selectable = listOf(APPLE, CLASSIC, GLASS, SANCTUARY)
         fun fromId(id: String?): DesignLanguage = when (id) {
+            "CLASSIC" -> CLASSIC
             "GLASS" -> GLASS
             "SANCTUARY", "VATICAN" -> SANCTUARY
             else -> APPLE
@@ -189,6 +196,8 @@ data class AppDesign(
     val isSanctuary: Boolean get() = language == DesignLanguage.SANCTUARY
     /** Clear liquid glass: thin tints, the light behind bent through every pane. */
     val isGlass: Boolean get() = language == DesignLanguage.GLASS
+    /** Tradicional: the original Lumen. Opaque, neutral, no ambient light, no icon wells. */
+    val isClassic: Boolean get() = language == DesignLanguage.CLASSIC
 }
 
 val LocalAppDesign = staticCompositionLocalOf {
@@ -373,6 +382,66 @@ object DesignTokens {
         ambient = LumenDark.ambient.map { it.copy(alpha = (it.alpha * 1.4f).coerceAtMost(1f)) }
     )
 
+    /** Tradicional, light: the original Lumen palette (3576e6e), neutral warm canvas, charcoal action. */
+    private val ClassicLight = AppPalette(
+        canvas = Color(0xFFF2F0ED),
+        groupedSurface = Color(0xFFFBFAF9),
+        raised = Color(0xFFFFFFFF),
+        hairline = Color(0x0F000000),
+        accent = Color(0xFF2D743B),
+        accentMuted = Color(0xFFE3EEDF),
+        gold = Color(0xFF8A6A1F),
+        textPrimary = Color(0xFF1D1C1A),
+        textSecondary = Color(0xFF6B6661),
+        textTertiary = Color(0xFF6C6762),
+        scrim = Color(0x52000000),
+        selectionTint = Color(0xFFE8E4DE),
+        canvasTop = Color(0xFFF6F4F1),
+        canvasBottom = Color(0xFFECE9E5),
+        glass = Color(0xB8FFFFFF),
+        glassStrong = Color(0xE0FFFFFF),
+        glassEdgeTop = Color(0xF2FFFFFF),
+        glassEdgeBottom = Color(0x59FFFFFF),
+        shadow = Color(0x143B2F22),
+        separator = Color(0x0F000000),
+        action = Color(0xFF2B2A28),
+        onAction = Color(0xFFFFFFFF),
+        success = Color(0xFF43A047),
+        ringStart = Color(0xFFCFE6C6),
+        ringEnd = Color(0xFF4E9F4A),
+        inkQuiet = Color(0xFF9C968F)
+    )
+
+    /** Tradicional, dark: warm charcoal, quiet surfaces, ivory action; nothing glows. */
+    private val ClassicDark = AppPalette(
+        canvas = Color(0xFF131211),
+        groupedSurface = Color(0xFF242321),
+        raised = Color(0xFF2E2D2B),
+        hairline = Color(0x14FFFFFF),
+        accent = Color(0xFF7FC48A),
+        accentMuted = Color(0xFF223326),
+        gold = Color(0xFFD9BC7A),
+        textPrimary = Color(0xFFF3F0EB),
+        textSecondary = Color(0xFFA8A29B),
+        textTertiary = Color(0xFF9A958F),
+        scrim = Color(0x8C000000),
+        selectionTint = Color(0xFF34322F),
+        canvasTop = Color(0xFF171614),
+        canvasBottom = Color(0xFF0E0D0C),
+        glass = Color(0xD92C2A27),
+        glassStrong = Color(0xF02C2A27),
+        glassEdgeTop = Color(0x24FFFFFF),
+        glassEdgeBottom = Color(0x0AFFFFFF),
+        shadow = Color(0x73000000),
+        separator = Color(0x14FFFFFF),
+        action = Color(0xFFF3F0EB),
+        onAction = Color(0xFF171614),
+        success = Color(0xFF5DB762),
+        ringStart = Color(0xFF2C4A2E),
+        ringEnd = Color(0xFF7FC48A),
+        inkQuiet = Color(0xFF77726C)
+    )
+
     private val SanctuaryShapes = AppShapes(
         card = RoundedCornerShape(10.dp), cardLarge = RoundedCornerShape(12.dp),
         button = RoundedCornerShape(8.dp), buttonSmall = RoundedCornerShape(8.dp),
@@ -423,6 +492,7 @@ object DesignTokens {
             palette = when {
                 sanctuary -> if (isDark) SanctuaryDark else SanctuaryLight
                 language == DesignLanguage.GLASS -> if (isDark) GlassDark else GlassLight
+                language == DesignLanguage.CLASSIC -> if (isDark) ClassicDark else ClassicLight
                 else -> if (isDark) LumenDark else LumenLight
             }
         )

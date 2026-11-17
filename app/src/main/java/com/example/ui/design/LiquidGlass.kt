@@ -101,7 +101,7 @@ enum class GlassRole {
     Thumb
 }
 
-internal fun AppDesign.opaqueMaterial(): Boolean = isSanctuary || reduceTransparency || highContrast
+internal fun AppDesign.opaqueMaterial(): Boolean = isSanctuary || isClassic || reduceTransparency || highContrast
 
 /** The spec for [role] in the current identity and mode. */
 fun AppDesign.glassSpec(role: GlassRole, lifted: Boolean = true): GlassSpec {

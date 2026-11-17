@@ -153,7 +153,7 @@ fun AppGlassIconButton(
 
 /**
  * A small bead of accent-tinted glass that carries a row's or card's glyph.
- * Sanctuary keeps the bare engraved glyph.
+ * Sanctuary keeps the bare engraved glyph; Tradicional a plain neutral one.
  */
 @Composable
 fun AppIconWell(icon: ImageVector, modifier: Modifier = Modifier, tint: Color? = null, size: Dp = 36.dp) {
@@ -161,6 +161,13 @@ fun AppIconWell(icon: ImageVector, modifier: Modifier = Modifier, tint: Color? =
     val p = design.palette
     if (design.isSanctuary) {
         Icon(icon, null, tint = tint ?: p.textPrimary, modifier = modifier.size(24.dp))
+        return
+    }
+    if (design.isClassic) {
+        // Tradicional: a plain neutral line glyph, no tinted bead.
+        Box(modifier.size(size), contentAlignment = Alignment.Center) {
+            Icon(icon, null, tint = tint ?: p.textSecondary, modifier = Modifier.size(24.dp))
+        }
         return
     }
     val ink = tint ?: p.accent
