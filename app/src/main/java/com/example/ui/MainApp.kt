@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.SaveAlt
 import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material.icons.outlined.Palette
@@ -171,7 +172,9 @@ fun MainApp(
     preferences: UserPreferences,
     initialDestination: AppDestination = AppDestination.HOME,
     initialReminderId: String? = null,
-    onReminderConsumed: () -> Unit = {}
+    onReminderConsumed: () -> Unit = {},
+    backupService: com.example.data.backup.BackupService? = null,
+    onBackupRestored: () -> Unit = {}
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
     val today by repository.currentDate.collectAsState()
@@ -260,6 +263,7 @@ fun MainApp(
     }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCalendarRules by remember { mutableStateOf(false) }
+    var showBackup by rememberSaveable { mutableStateOf(false) }
     var showPreferenceRecovery by remember { mutableStateOf(false) }
     val preferenceWrites by com.example.data.persistence.PersonalDataCommands.states.collectAsState()
     val failedPreferenceKeys = preferenceWrites.filter { (key, state) -> state.status == com.example.data.persistence.PersonalDataCommands.Status.ERROR }.keys.toList()
@@ -740,6 +744,10 @@ fun MainApp(
                                     icon = Icons.Outlined.TextFields
                                 ),
                                 MoreEntry(
+                                    title = when (currentLanguage) { AppLanguage.ES -> "Copia de seguridad"; AppLanguage.EN -> "Backup"; AppLanguage.PT -> "Cópia de segurança" },
+                                    iconSlot = AppIconSlot.MORE, tag = "backup_entry", onOpen = { showBackup = true }, icon = Icons.Outlined.SaveAlt
+                                ),
+                                MoreEntry(
                                     title = when (currentLanguage) { AppLanguage.ES -> "Calendario litúrgico"; AppLanguage.EN -> "Liturgical calendar"; AppLanguage.PT -> "Calendário litúrgico" },
                                     value = when (currentLanguage) { AppLanguage.ES -> "Traslados"; AppLanguage.EN -> "Transfers"; AppLanguage.PT -> "Transferências" },
                                     iconSlot = AppIconSlot.MORE, tag = "calendar_rules_settings",
@@ -793,6 +801,10 @@ fun MainApp(
             saving = preferenceWrites.values.any { it.status == com.example.data.persistence.PersonalDataCommands.Status.SAVING })
     }
 
+    if (showBackup) {
+        com.example.ui.backup.BackupSheet(preferencesStore, currentLanguage, backupService,
+            onDismiss = { showBackup = false }, onRestored = onBackupRestored)
+    }
     if (showCalendarRules) {
         CalendarRulesSheet(currentLanguage, activeCalendarRules, preferencesStore) { showCalendarRules = false }
     }

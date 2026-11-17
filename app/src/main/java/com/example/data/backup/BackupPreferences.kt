@@ -77,7 +77,10 @@ class BackupPreferences(
 
     /** Called within the coordinated restore; each DataStore write is itself atomic. */
     override suspend fun write(groups: List<BackupPreferenceGroup>) {
-        groups.forEach { group ->
+        require(groups.all { it.name in NAMES })
+        val incoming=groups.associateBy { it.name }
+        NAMES.forEach { name ->
+            val group=incoming[name] ?: BackupPreferenceGroup(name,emptyList())
             val store = stores[group.name]
             if (store != null) store.edit { prefs ->
                 prefs.asMap().keys.filter { portable(it.name) }.forEach { prefs.remove(it) }

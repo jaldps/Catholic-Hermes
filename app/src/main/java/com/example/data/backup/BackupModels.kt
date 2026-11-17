@@ -30,17 +30,19 @@ data class BackupPreferenceGroup(val name: String, val entries: List<BackupPrefe
 
 enum class RestoreMode { MERGE, REPLACE }
 class PreparedBackup internal constructor(internal val data: BackupData) {
+    private val prayedNovenas = data.novenaDays.mapTo(hashSetOf()) { it.novenaId }
     val summary = BackupSummary(data.createdAt, data.journalEntries.size,
-        data.novenaProgress.count { !it.isCompleted && (it.currentDay != 0 || it.startDate != 0L || it.personalIntention.isNotBlank()) },
+        data.novenaProgress.count { !it.isCompleted && (it.currentDay != 0 || it.startDate != 0L || it.personalIntention.isNotBlank() || it.novenaId in prayedNovenas) },
         data.novenaProgress.size, data.novenaDays.size, data.memorizedVerses.size,
         data.prayerStats.size, data.habits.size, data.habitLogs.size, data.sinLogs.size,
         data.studyProgress.size, data.studyProgress.count { it.personalNotes.isNotBlank() },
-        data.preferences.sumOf { it.entries.size })
+        data.preferences.sumOf { it.entries.size },data.prayerStats.sumOf { it.rosariesPrayed },data.prayerStats.sumOf { it.chapletsPrayed })
 }
 data class BackupSummary(
     val createdAt: Long, val journalEntries: Int, val activeNovenas: Int, val novenas: Int,
     val novenaDays: Int, val memorizedVerses: Int, val prayerStats: Int, val habits: Int,
-    val habitLogs: Int, val sinLogs: Int, val studyLessons: Int, val studyNotes: Int, val preferences: Int
+    val habitLogs: Int, val sinLogs: Int, val studyLessons: Int, val studyNotes: Int, val preferences: Int,
+    val rosariesPrayed: Int = 0, val chapletsPrayed: Int = 0
 )
 
 enum class BackupError { INVALID_FILE, UNSUPPORTED_VERSION, WRONG_PASSWORD_OR_DAMAGED, TOO_LARGE, PASSWORD_REQUIRED, STORAGE }

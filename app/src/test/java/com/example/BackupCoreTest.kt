@@ -128,6 +128,17 @@ class BackupCoreTest {
         assertTrue(target.dao.committed("novena-days-v1"))
     }
 
+    @Test fun replaceClearsPortablePreferenceGroupsAbsentFromTheFile() = runBlocking {
+        val source=device("source");val target=device("target");source.seed("source");target.seed("target")
+        val data=source.service.snapshot().let { d -> d.copy(preferences=d.preferences.filter { it.name=="settings" }) }
+        val prepared=target.service.preview(BackupCodec().encrypt(data,password.toCharArray()),password.toCharArray())
+        target.service.apply(prepared,RestoreMode.REPLACE)
+        assertTrue(target.temptation.fellCounts.first().isEmpty())
+        assertFalse(target.context.getSharedPreferences("reading_position",0).contains("book_id"))
+        assertEquals(AppLanguage.PT,target.store.preferences.first().language)
+        assertEquals(77L,target.reminders.calendarEvents.first()["coronilla"]) // This phone's calendar ids remain local.
+    }
+
     @Test fun combiningCollidingIdsKeepsBothNotesAndIsIdempotent() = runBlocking {
         val source=device("source");val target=device("target");source.seed("source");target.seed("target")
         target.store.recordTrackProgress(54)
@@ -199,6 +210,7 @@ class BackupCoreTest {
         source.dao.putNovenaProgress(listOf(NovenaProgressEntity("54-day",1,"",0,0,false)))
         source.context.getSharedPreferences("novena_extra_days",0).edit().putString("54-day","32,54").commit()
         val prepared=target.service.preview(source.service.export(password.toCharArray()),password.toCharArray())
+        assertEquals(1,prepared.summary.activeNovenas)
         target.service.apply(prepared,RestoreMode.REPLACE)
         assertEquals(setOf(1,32,54),target.dao.novenaDays().map { it.dayNumber }.toSet())
         assertTrue(target.dao.novenaDays().all { it.completedAt==0L })
