@@ -104,4 +104,18 @@ class DevotionsScreenTest {
         compose.onNodeWithTag("devotion_prayer_listen").assertDoesNotExist()
         compose.onNodeWithTag("devotion_promise_source").assertDoesNotExist()
     }
+
+    @Test fun marianDevotionShowsImageCredit() {
+        launch()
+        open("guadalupe")
+        compose.onNodeWithTag("devotion_image_credit").assertExists()
+        compose.onNodeWithTag("devotion_image_credit").assertTextContains("Imagen:", substring = true)
+    }
+
+    @Test fun christDevotionShowsImageCredit() {
+        launch()
+        compose.onNodeWithText("Cristo").performClick()
+        open("senor_milagros")
+        compose.onNodeWithTag("devotion_image_credit").assertExists()
+    }
 }

@@ -213,6 +213,8 @@ class FullAppScreenshotTest {
 
     @Test fun appleLight() = render(DesignLanguage.APPLE, false)
     @Test fun appleDark() = render(DesignLanguage.APPLE, true)
+    @Test fun classicLight() = render(DesignLanguage.CLASSIC, false)
+    @Test fun classicDark() = render(DesignLanguage.CLASSIC, true)
     @Test fun glassLight() = render(DesignLanguage.GLASS, false)
     @Test fun glassDark() = render(DesignLanguage.GLASS, true)
     @Test fun sanctuaryLight() = render(DesignLanguage.SANCTUARY, false)

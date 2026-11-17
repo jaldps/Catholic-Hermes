@@ -69,23 +69,53 @@ class ScriptureResolver(
     private val bookName: (bookId: String, AppLanguage) -> String?,
     private val versesOf: (bookId: String, chapter: Int, AppLanguage) -> List<BibleVerse>
 ) {
-    fun display(reference: ScriptureReference, language: AppLanguage): String {
+    /**
+     * Lesson citations are written in Hebrew numbering. [editionNumbering] non-null means "this reference is
+     * Hebrew-numbered; present it in that edition's numbering": the label then reads e.g. `Sal 22 (21)`.
+     * Null (the default, used by lectionary and daily-verse callers) leaves the numbers untouched.
+     */
+    fun display(reference: ScriptureReference, language: AppLanguage, editionNumbering: PsalmNumbering? = null): String {
+        val converted = convert(reference, editionNumbering)
         val name = bookName(reference.bookId, language) ?: reference.bookId.uppercase()
         val separator = if (language == AppLanguage.EN) ":" else ", "
-        val ranges = reference.ranges.joinToString("; ") { range ->
+        val ranges = reference.ranges.zip(converted.ranges).joinToString("; ") { (range, target) ->
             val verses = when {
                 range.verseStart == null -> ""
                 range.endChapter != range.chapter -> "$separator${range.verseStart}–${range.endChapter}$separator${range.verseEnd}"
                 range.verseEnd == null || range.verseEnd == range.verseStart -> "$separator${range.verseStart}"
                 else -> "$separator${range.verseStart}-${range.verseEnd}"
             }
-            "${range.chapter}$verses"
+            val edition = when {
+                target.chapter == range.chapter && target.endChapter == range.endChapter -> ""
+                range.endChapter != range.chapter -> " (${target.chapter}–${target.endChapter})"
+                target.endChapter != target.chapter -> " (${target.chapter}-${target.endChapter})"
+                else -> " (${target.chapter})"
+            }
+            "${range.chapter}$verses$edition"
         }
         return "$name $ranges"
     }
 
-    fun display(raw: String, language: AppLanguage): String =
-        ScriptureReference.parse(raw)?.let { display(it, language) } ?: raw
+    fun display(raw: String, language: AppLanguage, editionNumbering: PsalmNumbering? = null): String =
+        ScriptureReference.parse(raw)?.let { display(it, language, editionNumbering) } ?: raw
+
+    /**
+     * Hebrew-numbered psalm reference -> [numbering]'s chapters (see [PsalmNumberingMap] for the verse limitation).
+     * Other books, null and HEBREW return [reference] unchanged. A whole-chapter range ends on the last Vulgate
+     * chapter of its end psalm (Hebrew 116 -> 114-115); a range with verses stays on the first.
+     */
+    fun convert(reference: ScriptureReference, numbering: PsalmNumbering?): ScriptureReference {
+        if (reference.bookId != "psa" || numbering != PsalmNumbering.VULGATE) return reference
+        val ranges = reference.ranges.map { r ->
+            val start = PsalmNumberingMap.hebrewToVulgate(r.chapter).first()
+            val endTargets = PsalmNumberingMap.hebrewToVulgate(r.endChapter)
+            val end = if (r.verseStart == null) endTargets.last() else endTargets.first()
+            r.copy(chapter = start, endChapter = maxOf(start, end))
+        }
+        val first = ranges.first()
+        return reference.copy(chapter = first.chapter, verseStart = first.verseStart, verseEnd = first.verseEnd,
+            endChapter = first.endChapter, additionalRanges = ranges.drop(1))
+    }
 
     /**
      * Resolve every range completely, or return no passage. Silent clipping and
@@ -111,8 +141,8 @@ class ScriptureResolver(
         return result
     }
 
-    fun passage(raw: String, language: AppLanguage): String? {
-        val reference = ScriptureReference.parse(raw) ?: return null
+    fun passage(raw: String, language: AppLanguage, editionNumbering: PsalmNumbering? = null): String? {
+        val reference = convert(ScriptureReference.parse(raw) ?: return null, editionNumbering)
         val verses = verses(reference, language)
         if (verses.isEmpty() || verses.any { it.text.get(language).isBlank() }) return null
         return verses.joinToString(" ") { it.text.get(language).trim() }

@@ -1,0 +1,1025 @@
+[
+  {
+    "id": "preciosa_sangre",
+    "title": {
+      "es": "La Preciosísima Sangre de Cristo",
+      "en": "The Most Precious Blood of Christ",
+      "pt": "A Preciosíssima Sangue de Cristo"
+    },
+    "feastDay": {
+      "es": "Devoción del mes de julio; misa votiva",
+      "en": "Devotion of the month of July; votive Mass",
+      "pt": "Devoção do mês de julho; missa votiva"
+    },
+    "year": "",
+    "primarySanctuary": {
+      "es": "Basílica de la Preciosísima Sangre (Nápoles)",
+      "en": "Basilica of the Most Precious Blood (Naples)",
+      "pt": "Basílica da Preciosíssima Sangue (Nápoles)"
+    },
+    "history": {
+      "es": "La devoción a la Preciosísima Sangre de Cristo tiene raíces en la antigüedad cristiana: la Sangre fue venerada como precio de la redención junto con la cruz y la corona de espinas. El papa Pío IX extendió la fiesta a la Iglesia universal el 10 de agosto de 1849. En la reforma del calendario de 1969 la memoria del 1 de julio se suprimió del Calendario Romano General; hoy se conservan una misa votiva y la devoción del mes de julio. El culto se difundió con las cofradías y archicofradías de la Preciosa Sangre. La devoción se une al misterio pascual y a la veneración de las reliquias de la Pasión.",
+      "en": "Devotion to the Most Precious Blood of Christ has roots in Christian antiquity: the Blood was venerated as the price of redemption together with the cross and the crown of thorns. Pope Pius IX extended the feast to the universal Church on 10 August 1849. In the 1969 calendar reform the memorial of 1 July was suppressed from the General Roman Calendar; today a votive Mass and the devotion of the month of July remain. The cult spread through the confraternities and archconfraternities of the Precious Blood. The devotion is united to the paschal mystery and to the veneration of the relics of the Passion.",
+      "pt": "A devoção ao Preciosíssimo Sangue de Cristo tem raízes na antiguidade cristã: o Sangue foi venerado como preço da redenção junto com a cruz e a coroa de espinas. O papa Pio IX estendeu a festa à Igreja universal em 10 de agosto de 1849. Na reforma do calendário de 1969, a memória de 1 de julho foi suprimida do Calendário Romano Geral; hoje conservam-se uma missa votiva e a devoção do mês de julho. O culto difundiu-se com as confrarias e arquiconfrarias do Preciosíssimo Sangue. A devoção une-se ao mistério pascal e à veneração das relíquias da Paixão."
+    },
+    "theologicalMeaning": {
+      "es": "La Sangre de Cristo es el precio de nuestra redención y la vida de las almas: «la Sangre es la vida» (Dt 12,23). La Iglesia la venera como prueba del amor de Cristo, que la derramó hasta la última gota por la salvación del mundo.",
+      "en": "The Blood of Christ is the price of our redemption and the life of souls: «the Blood is the life» (Dt 12:23). The Church venerates it as proof of the love of Christ, who shed it to the last drop for the salvation of the world.",
+      "pt": "O Sangue de Cristo é o preço de nossa redenção e a vida das almas: «o Sangue é a vida» (Dt 12,23). A Igreja venera-o como prova do amor de Cristo, que o derramou até à última gota pela salvação do mundo."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición napolitana atestigua el período de la reliquia de la Sangre de san Gennaro; la Iglesia no ha declarado milagros de curación concretos con documentación canónica.",
+      "en": "The Neapolitan tradition attests the miracle of the relic of the Blood of St Januarius; the Church has not declared specific healing miracles with canonical documentation.",
+      "pt": "A tradição napolitana atesta o milagre da relíquia do Sangue de São Januário; a Igreja não declarou milagres de cura concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Universal",
+    "country": {
+      "es": "Italia / Universal",
+      "en": "Italy / Universal",
+      "pt": "Itália / Universal"
+    },
+    "recognition": {
+      "es": "Memoria litúrgica del 1 de julio en el calendario romano; la devoción se apoya en la liturgia y en la tradición de las cofradías de la Preciosa Sangre.",
+      "en": "Liturgical memorial of 1 July in the Roman calendar; the devotion rests on the liturgy and the tradition of the confraternities of the Precious Blood.",
+      "pt": "Memória litúrgica de 1 de julho no calendário romano; a devoção apoia-se na liturgia e na tradição das confrarias do Precioso Sangue."
+    },
+    "practice": {
+      "es": "El 1 de julio se celebra la memoria de la Preciosísima Sangre con misa y adoración. Se invoca en las letanías del Santísimo Nombre de Jesús y se difunde en cofradías y capillas dedicadas a la Sangre de Cristo.",
+      "en": "On 1 July the memorial of the Most Precious Blood is celebrated with Mass and adoration. It is invoked in the Litany of the Holy Name of Jesus and spread in confraternities and chapels dedicated to the Blood of Christ.",
+      "pt": "Em 1 de julho celebra-se a memória do Preciosíssimo Sangue com missa e adoração. Invoca-se nas ladainhas do Santíssimo Nome de Jesus e difunde-se em confrarias e capelas dedicadas ao Sangue de Cristo."
+    },
+    "sources": [
+      "Pío IX, decreto Redempti sumus (10-VIII-1849)",
+      "Calendario Romano General de 1969, supresión de la memoria",
+      "Cofradías y archicofradías de la Preciosa Sangre"
+    ]
+  },
+  {
+    "id": "santisimo_sacramento",
+    "title": {
+      "es": "El Santísimo Sacramento y la adoración eucarística",
+      "en": "The Blessed Sacrament and Eucharistic adoration",
+      "pt": "O Santíssimo Sacramento e a adoração eucarística"
+    },
+    "feastDay": {
+      "es": "Corpus Christi (jueves posterior a la Trinidad)",
+      "en": "Corpus Christi",
+      "pt": "Corpus Christi"
+    },
+    "year": "",
+    "primarySanctuary": {
+      "es": "Basílica de Santa María la Mayor (Roma) y santuarios eucarísticos",
+      "en": "Basilica of Santa Maria Maggiore (Rome) and Eucharistic shrines",
+      "pt": "Basílica de Santa Maria Maior (Roma) e santuários eucarísticos"
+    },
+    "history": {
+      "es": "La adoración del Santísimo Sacramento es central en la fe católica desde los primeros siglos. La fiesta de Corpus Christi fue instituida por el papa Urbano IV en 1264, a petición de santa Juliana de Lieja, y fijada por Trento. La reserva y la exposición del Sacramento, la hora santa y la procesión del Corpus se desarrollaron como expresión de fe en la presencia real de Cristo bajo las especies. El Concilio de Trento definió la presencia real y el culto de latría debido al Santísimo Sacramento. La Iglesia guarda el Sacramento en el tabernáculo y lo expone para la plegaria de los fieles.",
+      "en": "Adoration of the Blessed Sacrament is central to Catholic faith from the first centuries. The feast of Corpus Christi was instituted by Pope Urban IV in 1264, at the request of St Juliana of Liège, and fixed by Trent. The reservation and exposition of the Sacrament, the Holy Hour, and the Corpus procession developed as expressions of faith in the real presence of Christ under the species. The Council of Trent defined the real presence and the worship of latria due to the Blessed Sacrament. The Church keeps the Sacrament in the tabernacle and exposes it for the prayer of the faithful.",
+      "pt": "A adoração do Santíssimo Sacramento é central na fé católica desde os primeiros séculos. A festa de Corpus Christi foi instituída pelo papa Urbano IV em 1264, a pedido de santa Juliana de Liège, e fixada por Trento. A reserva e a exposição do Sacramento, a hora santa e a procissão do Corpo de Deus desenvolveram-se como expressão de fé na presença real de Cristo sob as espécies. O Concílio de Trento definiu a presença real e o culto de latria devido ao Santíssimo Sacramento. A Igreja guarda o Sacramento no sacrário e expõe-no para a oração dos fiéis."
+    },
+    "theologicalMeaning": {
+      "es": "En el Santísimo Sacramento Cristo está realmente presente: es el mismo Señor que se da como alimento y como presencia permanente en medio de su pueblo. La adoración eucarística prolonga la alabanza de la Misa. La adoración es la respuesta de fe al don de Cristo, que se queda con nosotros.",
+      "en": "In the Blessed Sacrament Christ is really present: it is the same Lord who gives himself as food and as a permanent presence among his people. Eucharistic adoration extends the praise of the Mass. Adoration is the response of faith to the gift of Christ, who remains with us.",
+      "pt": "No Santíssimo Sacramento Cristo está realmente presente: é o mesmo Senhor que se dá como alimento e como presença permanente no meio do seu povo. A adoração eucarística prolonga o louvor da missa. A adoração é a resposta de fé ao dom de Cristo, que permanece conosco."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición eucarística registra milagros de las formas y de la Sangre, como el de Lanciano; la Iglesia los somete a discernimiento y no los presenta como requisito de fe.",
+      "en": "The Eucharistic tradition records miracles of the hosts and the Blood, such as that of Lanciano; the Church subjects them to discernment and does not present them as a requirement of faith.",
+      "pt": "A tradição eucarística regista milagres das hóstias e do Sangue, como o de Lanciano; a Igreja submete-os a discernimento e não os apresenta como requisito de fé."
+    },
+    "prayer": null,
+    "region": "Universal",
+    "country": {
+      "es": "Universal",
+      "en": "Universal",
+      "pt": "Universal"
+    },
+    "recognition": {
+      "es": "Presencia real definida por el Concilio de Trento; fiesta de Corpus Christi instituida por Urbano IV (1264) y confirmada por Trento.",
+      "en": "Real presence defined by the Council of Trent; feast of Corpus Christi instituted by Urban IV (1264) and confirmed by Trent.",
+      "pt": "Presença real definida pelo Concílio de Trento; festa de Corpus Christi instituída por Urbano IV (1264) e confirmada por Trento."
+    },
+    "practice": {
+      "es": "Se vive con la misa diaria, la exposición y bendición con el Santísimo, la hora santa y la procesión de Corpus. Los fieles visitan el Sagrario y adoran al Señor presente en el Sacramento.",
+      "en": "It is lived with daily Mass, exposition and benediction with the Blessed Sacrament, the Holy Hour, and the Corpus procession. The faithful visit the tabernacle and adore the Lord present in the Sacrament.",
+      "pt": "Vive-se com a missa diária, a exposição e bênção do Santíssimo, a hora santa e a procissão de Corpus Christi. Os fiéis visitam o sacrário e adoram o Senhor presente no Sacramento."
+    },
+    "sources": [
+      "Concilio de Trento, doctrina de la presencia real",
+      "Urbano IV, bula Transiturus (1264)",
+      "Calendario romano, Corpus Christi"
+    ]
+  },
+  {
+    "id": "cinco_llagas",
+    "title": {
+      "es": "Las Cinco Llagas de Cristo",
+      "en": "The Five Wounds of Christ",
+      "pt": "As Cinco Chagas de Cristo"
+    },
+    "feastDay": {
+      "es": "Memoria en el calendario romano anterior (7 de agosto)",
+      "en": "Memorial in the earlier Roman calendar (7 August)",
+      "pt": "Memória no calendário romano anterior (7 de agosto)"
+    },
+    "year": "",
+    "primarySanctuary": {
+      "es": "Santuarios de la Pasión",
+      "en": "Shrines of the Passion",
+      "pt": "Santuários da Paixão"
+    },
+    "history": {
+      "es": "La devoción a las Cinco Llagas de Cristo, las heridas de las manos, de los pies y del costado, se desarrolló en la Edad Media junto con la cruz y la Pasión. Los franciscanos y las órdenes militares la promovieron, y los pendones con las cinco llagas se difundieron como signo de protección. La memoria del 7 de agosto figuró en el calendario romano anterior. La devoción se expresa en el rezo de las llagas, en los rosarios de las cinco llagas y en la veneración de la cruz. Los fieles meditan las cinco llagas como las cinco puertas del amor redentor. La cruz con las cinco llagas se grabó en escudos y en estandartes de las órdenes religiosas.",
+      "en": "Devotion to the Five Wounds of Christ, the wounds of the hands, the feet, and the side, developed in the Middle Ages together with the cross and the Passion. The Franciscans and the military orders fostered it, and banners with the five wounds spread as a sign of protection. The memorial of 7 August appeared in the earlier Roman calendar. The devotion is expressed in the prayer of the wounds, in the rosaries of the five wounds, and in the veneration of the cross. The faithful meditate on the five wounds as the five doors of redeeming love. The cross with the five wounds was engraved on shields and banners of the religious orders.",
+      "pt": "A devoção às Cinco Chagas de Cristo, as feridas das mãos, dos pés e do lado, desenvolveu-se na Idade Média junto com a cruz e a Paixão. Os franciscanos e as ordens militares promoveram-na, e as bandeiras com as cinco chagas difundiram-se como sinal de proteção. A memória de 7 de agosto figurou no calendário romano anterior. A devoção exprime-se na oração das chagas, nos terços das cinco chagas e na veneração da cruz. Os fiéis meditam as cinco chagas como as cinco portas do amor redentor. A cruz com as cinco chagas gravou-se em escudos e estandartes das ordens religiosas."
+    },
+    "theologicalMeaning": {
+      "es": "Las llagas son las señales del amor de Cristo hasta la muerte: «sus llagas nos han curado» (1 P 2,24). Venerarlas es contemplar el costado abierto de donde brotó la Iglesia y los sacramentos. Las llagas de Cristo son la prueba de que el amor llega hasta el extremo.",
+      "en": "The wounds are the signs of the love of Christ unto death: «by his wounds you have been healed» (1 Pet 2:24). To venerate them is to contemplate the open side from which the Church and the sacraments flowed. The wounds of Christ are the proof that love goes to the end.",
+      "pt": "As chagas são os sinais do amor de Cristo até à morte: «as suas chagas nos curaram» (1 Pd 2,24). Venerá-las é contemplar o lado aberto de onde brotaram a Igreja e os sacramentos. As chagas de Cristo são a prova de que o amor chega até ao fim."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición atribuye a las cinco llagas protección y favores; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "Tradition attributes protection and favors to the five wounds; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição atribui às cinco chagas proteção e favores; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Universal",
+    "country": {
+      "es": "Universal",
+      "en": "Universal",
+      "pt": "Universal"
+    },
+    "recognition": {
+      "es": "Memoria en el calendario romano anterior; la devoción se apoya en la liturgia de la Pasión y en la tradición franciscana.",
+      "en": "Memorial in the earlier Roman calendar; the devotion rests on the liturgy of the Passion and the Franciscan tradition.",
+      "pt": "Memória no calendário romano anterior; a devoção apoia-se na liturgia da Paixão e na tradição franciscana."
+    },
+    "practice": {
+      "es": "Se reza el rosario de las cinco llagas y se medita la Pasión en Cuaresma. Los fieles veneran la cruz y las heridas de Cristo como precio de la redención.",
+      "en": "The rosary of the five wounds is prayed and the Passion is meditated in Lent. The faithful venerate the cross and the wounds of Christ as the price of redemption.",
+      "pt": "Reza-se o terço das cinco chagas e medita-se a Paixão na Quaresma. Os fiéis veneram a cruz e as feridas de Cristo como preço da redenção."
+    },
+    "sources": [
+      "Calendario romano anterior, memoria de las Cinco Llagas",
+      "Liturgia de la Pasión",
+      "Tradición franciscana de la Pasión"
+    ]
+  },
+  {
+    "id": "via_crucis",
+    "title": {
+      "es": "El Vía Crucis",
+      "en": "The Way of the Cross",
+      "pt": "A Via Sacra"
+    },
+    "feastDay": {
+      "es": "Viernes de Cuaresma y Viernes Santo",
+      "en": "Fridays of Lent and Good Friday",
+      "pt": "Sextas-feiras da Quaresma e Sexta-feira Santa"
+    },
+    "year": "",
+    "primarySanctuary": {
+      "es": "Vía Dolorosa (Jerusalén) y parroquias",
+      "en": "Via Dolorosa (Jerusalem) and parishes",
+      "pt": "Via Dolorosa (Jerusalém) e paróquias"
+    },
+    "history": {
+      "es": "El Vía Crucis es la meditación del camino de Jesús al Calvario. Los franciscanos, custodios de los Lugares Santos, difundieron el ejercicio desde el siglo XIV, y los papas concedieron indulgencias a quienes lo recitan. El papa Clemente XII fijó las estaciones en 1731 y Benedicto XIV lo confirmó en 1742. Las catorce estaciones recorren la condena, el camino con la cruz y la muerte de Jesús, y se acompañan de oración, lecturas y silencio. El ejercicio se reza en las parroquias, especialmente en Cuaresma, y también en las comunidades y en las prisiones, como escuela de esperanza. La devoción se extiende por todos los países cristianos.",
+      "en": "The Way of the Cross is the meditation on Jesus' journey to Calvary. The Franciscans, custodians of the Holy Places, spread the exercise from the 14th century, and the popes granted indulgences to those who recite it. Pope Clement XII fixed the stations in 1731 and Benedict XIV confirmed it in 1742. The fourteen stations follow the condemnation, the journey with the cross and the death of Jesus, and are accompanied by prayer, readings and silence. The exercise is prayed in parishes, especially in Lent, and also in communities and in prisons, as a school of hope. The devotion extends throughout the Christian world.",
+      "pt": "A Via Sacra é a meditação do caminho de Jesus ao Calvário. Os franciscanos, custódios dos Lugares Santos, difundiram o exercício desde o século XIV, e os papas concederam indulgências a quem o recita. O papa Clemente XII fixou as estações em 1731 e Bento XIV confirmou-as em 1742. As catorze estações percorrem a condenação, o caminho com a cruz e a morte de Jesus, e acompanham-se de oração, leituras e silêncio. O exercício reza-se nas paróquias, especialmente na Quaresma, e também nas comunidades e nas prisões, como escola de esperança. A devoção estende-se por todos os países cristãos."
+    },
+    "theologicalMeaning": {
+      "es": "El Vía Crucis conduce a acompañar a Cristo en su Pasión y a reconocer que el camino del discípulo pasa por la cruz. Es una oración de penitencia, conversión y gratitud ante el amor redentor. Cada estación invita a dar un paso concreto de conversión y de gratitud.",
+      "en": "The Way of the Cross leads to accompany Christ in his Passion and to recognize that the disciple's path passes through the cross. It is a prayer of penance, conversion, and gratitude before redeeming love. Each station invites a concrete step of conversion and gratitude.",
+      "pt": "A Via Sacra leva a acompanhar Cristo na sua Paixão e a reconhecer que o caminho do discípulo passa pela cruz. É uma oração de penitência, conversão e gratidão ante o amor redentor. Cada estação convida a um passo concreto de conversão e de gratidão."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición atribuye al Vía Crucis gracias de conversión y consuelo en las pruebas; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "Tradition attributes to the Way of the Cross graces of conversion and consolation in trials; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição atribui à Via Sacra graças de conversão e consolo nas provações; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Universal",
+    "country": {
+      "es": "Universal",
+      "en": "Universal",
+      "pt": "Universal"
+    },
+    "recognition": {
+      "es": "Ejercicio de piedad promovido por los franciscanos de Tierra Santa desde el siglo XIV; con indulgencias concedidas por los papas.",
+      "en": "Exercise of piety fostered by the Franciscans of the Holy Land from the 14th century; with indulgences granted by the popes.",
+      "pt": "Exercício de piedade promovido pelos franciscanos da Terra Santa desde o século XIV; com indulgências concedidas pelos papas."
+    },
+    "practice": {
+      "es": "Se reza los viernes de Cuaresma y en Viernes Santo, recorriendo las catorce estaciones. Se acompaña con cantos, oraciones y meditación de los textos bíblicos de la Pasión.",
+      "en": "It is prayed on the Fridays of Lent and on Good Friday, going through the fourteen stations. It is accompanied with songs, prayers, and meditation on the biblical texts of the Passion.",
+      "pt": "Reza-se nas sextas-feiras da Quaresma e na Sexta-feira Santa, percorrendo as quatorze estações. Acompanha-se com cânticos, orações e meditação dos textos bíblicos da Paixão."
+    },
+    "sources": [
+      "Custodia de Tierra Santa, Vía Crucis",
+      "Clemente XII, 1731, fijación de las estaciones",
+      "Benedicto XIV, 1742, confirmación"
+    ]
+  },
+  {
+    "id": "santisimo_nombre_de_jesus",
+    "title": {
+      "es": "El Santísimo Nombre de Jesús",
+      "en": "The Most Holy Name of Jesus",
+      "pt": "O Santíssimo Nome de Jesus"
+    },
+    "feastDay": {
+      "es": "3 de enero (calendario romano)",
+      "en": "3 January (Roman calendar)",
+      "pt": "3 de janeiro (calendário romano)"
+    },
+    "year": "",
+    "primarySanctuary": {
+      "es": "Basílica del Santísimo Nombre de Jesús (Roma)",
+      "en": "Basilica of the Holy Name of Jesus (Rome)",
+      "pt": "Basílica do Santíssimo Nome de Jesus (Roma)"
+    },
+    "history": {
+      "es": "La devoción al Nombre de Jesús es una de las más antiguas: el Nombre revelado en la circuncisión (Lc 2,21) es alabado en las cartas de san Pablo, que invocan a Jesús «por encima de cualquier otro nombre». Los franciscanos promovieron la fiesta del Nombre de Jesús, fijada en el calendario romano el 3 de enero. La letanía del Santísimo Nombre y el monograma JHS se difundieron en la Iglesia latina como expresión de fe en el Nombre que salva. El Nombre se invoca al comienzo de las obras y en los momentos de peligro. La devoción se une al monograma JHS y a las cofradías del Nombre de Jesús.",
+      "en": "Devotion to the Name of Jesus is one of the oldest: the Name revealed at the circumcision (Lk 2:21) is praised in the letters of St Paul, who invoke Jesus «above every name». The Franciscans fostered the feast of the Name of Jesus, fixed in the Roman calendar on 3 January. The Litany of the Holy Name and the monogram JHS spread in the Latin Church as an expression of faith in the Name that saves. The Name is invoked at the beginning of tasks and in moments of danger. Devotion is united to the JHS monogram and to the confraternities of the Name of Jesus.",
+      "pt": "A devoção ao Nome de Jesus é uma das mais antigas: o Nome revelado na circuncisão (Lc 2,21) é louvado nas cartas de São Paulo, que invocam Jesus «acima de qualquer outro nome». Os franciscanos promoveram a festa do Nome de Jesus, fixada no calendário romano em 3 de janeiro. A ladainha do Santíssimo Nome e o monograma JHS difundiram-se na Igreja latina como expressão de fé no Nome que salva. O Nome invoca-se no começo das tarefas e nos momentos de perigo. A devoção une-se ao monograma JHS e às confrarias do Nome de Jesus."
+    },
+    "theologicalMeaning": {
+      "es": "El Nombre de Jesús es el Nombre sobre cualquier otro nombre, en el que se encuentra la salvación: «no hay otro nombre dado a los hombres en el que podamos salvarnos» (Hch 4,12). Invocarlo es llamar al mismo Cristo. El Nombre de Jesús se pronuncia con fe y con ternura en la oración.",
+      "en": "The Name of Jesus is the Name above every name, in which salvation is found: «there is no other name given to men by which we can be saved» (Acts 4:12). To invoke it is to call upon Christ himself. The Name of Jesus is pronounced with faith and tenderness in prayer.",
+      "pt": "O Nome de Jesus é o Nome acima de qualquer outro nome, no qual se encontra a salvação: «não há outro nome dado aos homens no qual possamos salvar-nos» (At 4,12). Invocá-lo é chamar o próprio Cristo. O Nome de Jesus pronuncia-se com fé e com ternura na oração."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición atribuye al Nombre de Jesús protección y liberaciones; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "Tradition attributes to the Name of Jesus protection and deliverances; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição atribui ao Nome de Jesus proteção e libertações; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Universal",
+    "country": {
+      "es": "Universal",
+      "en": "Universal",
+      "pt": "Universal"
+    },
+    "recognition": {
+      "es": "Fiesta litúrgica del 3 de enero en el calendario romano; promovida por los franciscanos y con la letanía del Santísimo Nombre.",
+      "en": "Liturgical feast of 3 January in the Roman calendar; fostered by the Franciscans and with the Litany of the Holy Name.",
+      "pt": "Festa litúrgica de 3 de janeiro no calendário romano; promovida pelos franciscanos e com a ladainha do Santíssimo Nome."
+    },
+    "practice": {
+      "es": "El 3 de enero se celebra la fiesta del Santísimo Nombre con misa y bendición. Se reza la letanía del Santísimo Nombre y se invoca el Nombre de Jesús en la oración personal.",
+      "en": "On 3 January the feast of the Most Holy Name is celebrated with Mass and blessing. The Litany of the Holy Name is prayed and the Name of Jesus is invoked in personal prayer.",
+      "pt": "Em 3 de janeiro celebra-se a festa do Santíssimo Nome com missa e bênção. Reza-se a ladainha do Santíssimo Nome e invoca-se o Nome de Jesus na oração pessoal."
+    },
+    "sources": [
+      "Calendario romano, fiesta del Santísimo Nombre de Jesús",
+      "Letanía del Santísimo Nombre de Jesús",
+      "Cartas de san Pablo (Flp 2,9-11)"
+    ]
+  },
+  {
+    "id": "senor_del_gran_poder",
+    "title": {
+      "es": "El Señor del Gran Poder",
+      "en": "The Lord of Great Power",
+      "pt": "O Senhor do Grande Poder"
+    },
+    "feastDay": {
+      "es": "Sábado de Carnaval (fiesta de La Paz)",
+      "en": "Carnival Saturday (feast of La Paz)",
+      "pt": "Sábado de Carnaval (festa de La Paz)"
+    },
+    "year": "",
+    "primarySanctuary": {
+      "es": "Parroquia de San Francisco (La Paz, Bolivia)",
+      "en": "Church of San Francisco (La Paz, Bolivia)",
+      "pt": "Igreja de São Francisco (La Paz, Bolívia)"
+    },
+    "history": {
+      "es": "La imagen del Señor del Gran Poder se venera en su santuario de La Paz (Bolivia). La tradición la sitúa en el siglo XVII y la asocia al arte de los talleres andinos. La fiesta del Gran Poder, declarada patrimonio cultural, recorre las calles de La Paz con danzas y más de veinte mil bailarines en la «entrada folclórica». La devoción reúne a miles de familias y danzantes en torno a la imagen, que se viste con trajes de gala y se acompaña con danzas andinas. La fiesta se extendió a las comunidades bolivianas en el mundo, donde los devotos la celebran con la misma música y danzas.",
+      "en": "The image of the Señor del Gran Poder is venerated in its sanctuary in La Paz, Bolivia. Tradition places it in the 17th century and associates it with the art of the Andean workshops. The feast of the Gran Poder, declared cultural heritage, runs through the streets of La Paz with dances and more than twenty thousand dancers in the «folk entry». The devotion gathers thousands of families and dancers around the image, which is dressed in gala robes and accompanied by Andean dances. The feast spread to Bolivian communities around the world, where devotees celebrate it with the same music and dances.",
+      "pt": "A imagem do Senhor do Grande Poder é venerada em seu santuário de La Paz (Bolívia). A tradição situa-a no século XVII e associa-a à arte das oficinas andinas. A festa do Gran Poder, declarada patrimônio cultural, percorre as ruas de La Paz com danças e mais de vinte mil dançarinos na «entrada folclórica». A devoção reúne milhares de famílias e dançarinos em torno da imagem, que se veste com trajes de gala e se acompanha com danças andinas. A festa estendeu-se às comunidades bolivianas no mundo, onde os devotos a celebram com a mesma música e danças."
+    },
+    "theologicalMeaning": {
+      "es": "El «gran poder» es el poder del amor que vence en la cruz: Cristo reina no por la fuerza sino por el amor entregado hasta el extremo. La procesión popular expresa la fe de un pueblo que reconoce a Cristo como Señor. El poder de Cristo se muestra en la humildad del crucificado.",
+      "en": "The «great power» is the power of love that conquers on the cross: Christ reigns not by force but by love given to the end. The popular procession expresses the faith of a people that acknowledges Christ as Lord. The power of Christ is shown in the humility of the crucified one.",
+      "pt": "O «grande poder» é o poder do amor que vence na cruz: Cristo reina não pela força, mas pelo amor entregue até o fim. A procissão popular exprime a fé de um povo que reconhece Cristo como Senhor. O poder de Cristo manifesta-se na humildade do crucificado."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición paceña atribuye al Señor del Gran Poder favores y protección de la ciudad; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The tradition of La Paz attributes to the Lord of Great Power favors and the protection of the city; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição de La Paz atribui ao Senhor do Grande Poder favores e a proteção da cidade; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "Bolivia",
+      "en": "Bolivia",
+      "pt": "Bolívia"
+    },
+    "recognition": {
+      "es": "Devoción popular de La Paz con arraigo desde el siglo XVII; la fiesta del Gran Poder fue declarada patrimonio cultural de Bolivia.",
+      "en": "Popular devotion of La Paz rooted since the 17th century; the feast of the Gran Poder was declared cultural heritage of Bolivia.",
+      "pt": "Devoção popular de La Paz com arraigo desde o século XVII; a festa do Gran Poder foi declarada patrimônio cultural da Bolívia."
+    },
+    "practice": {
+      "es": "La fiesta se celebra el sábado de Carnaval con la entrada folclórica, misas y procesión desde la parroquia de San Francisco. Los devotos cumplen promesas y danzan en honor del Señor del Gran Poder.",
+      "en": "The feast is celebrated on Carnival Saturday with the folk entry, Masses, and procession from the church of San Francisco. The devotees fulfill promises and dance in honor of the Lord of Great Power.",
+      "pt": "A festa celebra-se no sábado de Carnaval com a entrada folclórica, missas e procissão da igreja de São Francisco. Os devotos cumprem promessas e dançam em honra do Senhor do Grande Poder."
+    },
+    "sources": [
+      "Parroquia de San Francisco (La Paz)",
+      "Gobierno de Bolivia, declaración de patrimonio cultural de la fiesta del Gran Poder"
+    ]
+  },
+  {
+    "id": "cristo_de_chalma",
+    "title": {
+      "es": "El Señor de Chalma",
+      "en": "The Lord of Chalma",
+      "pt": "O Senhor de Chalma"
+    },
+    "feastDay": {
+      "es": "6 de enero y 1 de octubre",
+      "en": "6 January and 1 October",
+      "pt": "6 de janeiro e 1 de outubro"
+    },
+    "year": "1539",
+    "primarySanctuary": {
+      "es": "Santuario del Señor de Chalma (Malinalco, Estado de México)",
+      "en": "Sanctuary of the Lord of Chalma (Malinalco, State of Mexico)",
+      "pt": "Santuário do Senhor de Chalma (Malinalco, México)"
+    },
+    "history": {
+      "es": "En Chalma, junto a Malinalco, existía una cueva de culto prehispánico. Los agustinos Sebastián de Tolentino y Nicolás Perea llegaron a evangelizar la región hacia 1537. La tradición cuenta que, al volver a la cueva, el ídolo de piedra oscura apareció destruido y en su lugar un crucifijo con una imagen de Cristo moreno. La veneración continuó en la cueva hasta que, en 1683, los agustinos Bartolomé de Jesús María y Juan de San José fundaron un monasterio y levantaron una iglesia. En 1783 el rey Carlos III puso el santuario bajo su protección. El santuario es uno de los destinos de peregrinación más visitados de México.",
+      "en": "In Chalma, near Malinalco, there was a cave of pre-Hispanic worship. The Augustinians Sebastián de Tolentino and Nicolás Perea came to evangelize the region around 1537. Tradition recounts that, on returning to the cave, the dark stone idol appeared destroyed and in its place a crucifix with an image of a dark Christ. Veneration continued in the cave until, in 1683, the Augustinians Bartolomé de Jesús María and Juan de San José founded a monastery and built a church. In 1783 King Charles III placed the sanctuary under his protection. The sanctuary is one of the most visited pilgrimage destinations in Mexico.",
+      "pt": "Em Chalma, junto a Malinalco, existia uma gruta de culto pré-hispânico. Os agostinianos Sebastián de Tolentino e Nicolás Perea chegaram para evangelizar a região por volta de 1537. A tradição conta que, ao voltarem à gruta, o ídolo de pedra escura apareceu destruído e, em seu lugar, um crucifixo com uma imagem de Cristo moreno. A veneração continuou na gruta até que, em 1683, os agostinianos Bartolomé de Jesús María e Juan de San José fundaram um mosteiro e ergueram uma igreja. Em 1783, o rei Carlos III pôs o santuário sob sua proteção. O santuário é um dos destinos de peregrinação mais visitados do México."
+    },
+    "theologicalMeaning": {
+      "es": "El Señor de Chalma es el Cristo crucificado que se hace presente en un lugar de antigua búsqueda religiosa, para purificar la fe y unir a los pueblos. La peregrinación es signo de conversión y de encuentro con el Señor. La imagen morena es signo de cercanía con los pueblos originarios.",
+      "en": "The Lord of Chalma is the crucified Christ who makes himself present in a place of ancient religious seeking, to purify faith and unite peoples. Pilgrimage is a sign of conversion and encounter with the Lord. The dark image is a sign of closeness to the native peoples.",
+      "pt": "O Senhor de Chalma é o Cristo crucificado que se faz presente num lugar de antiga busca religiosa, para purificar a fé e unir os povos. A peregrinação é sinal de conversão e de encontro com o Senhor. A imagem morena é sinal de proximidade com os povos originários."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición de Chalma narra la aparición del crucifijo en la cueva y los favores de los peregrinos; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The tradition of Chalma recounts the appearance of the crucifix in the cave and the favors of pilgrims; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição de Chalma narra o aparecimento do crucifixo na gruta e os favores dos peregrinos; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "México",
+      "en": "Mexico",
+      "pt": "México"
+    },
+    "recognition": {
+      "es": "Santuario agustino erigido en 1683 y puesto bajo la protección del rey Carlos III en 1783; centro de peregrinación de México.",
+      "en": "Augustinian sanctuary erected in 1683 and placed under the protection of King Charles III in 1783; a center of pilgrimage in Mexico.",
+      "pt": "Santuário agostiniano erguido em 1683 e posto sob a proteção do rei Carlos III em 1783; centro de peregrinação do México."
+    },
+    "practice": {
+      "es": "Los peregrinos acuden a Chalma a pie desde varios pueblos, con velas, música y baños en el manantial. Las fiestas principales son el 6 de enero y el 1 de octubre, con misas y procesiones.",
+      "en": "Pilgrims come to Chalma on foot from various towns, with candles, music, and baths in the spring. The principal feasts are 6 January and 1 October, with Masses and processions.",
+      "pt": "Os peregrinos acorrem a Chalma a pé desde vários povoados, com velas, música e banhos na nascente. As festas principais são 6 de janeiro e 1 de outubro, com missas e procissões."
+    },
+    "sources": [
+      "Santuario del Señor de Chalma (Malinalco)",
+      "Gobierno de México, turismo religioso de Chalma",
+      "Orden de San Agustín, presencia en el Valle de Toluca"
+    ]
+  },
+  {
+    "id": "senor_de_los_temblores",
+    "title": {
+      "es": "El Señor de los Temblores (Taytacha)",
+      "en": "The Lord of the Tremors (Taytacha)",
+      "pt": "O Senhor dos Terremotos (Taytacha)"
+    },
+    "feastDay": {
+      "es": "Lunes Santo",
+      "en": "Holy Monday",
+      "pt": "Segunda-feira Santa"
+    },
+    "year": "1620",
+    "primarySanctuary": {
+      "es": "Catedral-Basílica del Cusco (Perú)",
+      "en": "Cathedral Basilica of Cusco (Peru)",
+      "pt": "Catedral Basílica de Cusco (Peru)"
+    },
+    "history": {
+      "es": "La imagen de un Cristo crucificado fue encargada en Sevilla hacia 1620 y enviada al Cusco. En alta mar la nave sufrió una tormenta y los sacerdotes invocaron al Cristo, que calmó las olas; por eso se le llamó primero Señor de las Tormentas. En el terremoto del 31 de marzo de 1650, los fieles sacaron la imagen en procesión y el sismo cesó, por lo que fue llamado Señor de los Temblores. En 1720, durante una peste, fue proclamado Patrón Jurado del Cusco, y la procesión pasó en 1741 al Lunes Santo. La imagen se viste con túnicas de gala y se adorna con las flores de ñucchu.",
+      "en": "The image of a crucified Christ was commissioned in Seville around 1620 and sent to Cusco. At sea the ship suffered a storm and the priests invoked the Christ, who calmed the waves; hence he was first called Lord of the Storms. In the earthquake of 31 March 1650, the faithful carried the image in procession and the tremor ceased, so he was called Lord of the Tremors. In 1720, during a plague, he was proclaimed Sworn Patron of Cusco, and in 1741 the procession was moved to Holy Monday. The image is dressed in gala robes and adorned with the ñucchu flowers.",
+      "pt": "A imagem de um Cristo crucificado foi encomendada em Sevilha por volta de 1620 e enviada a Cusco. Em alto mar, a nave sofreu uma tempestade e os sacerdotes invocaram o Cristo, que acalmou as ondas; por isso foi chamado primeiro Senhor das Tormentas. No terremoto de 31 de março de 1650, os fiéis levaram a imagem em procissão e o sismo cessou, pelo que foi chamado Senhor dos Terremotos. Em 1720, durante uma peste, foi proclamado Padroeiro Jurado de Cusco, e a procissão passou em 1741 para a Segunda-feira Santa. A imagem veste-se com túnicas de gala e adorna-se com as flores de ñucchu."
+    },
+    "theologicalMeaning": {
+      "es": "El Taytacha es el Cristo que acompaña al pueblo en los terremotos y las pruebas: no elimina el temblor, pero camina con los fieles. La devoción expresa la confianza en la protección de Dios sobre la ciudad. El Señor de los Temblores recuerda que la fe sostiene al pueblo en las pruebas.",
+      "en": "The Taytacha is the Christ who accompanies the people in earthquakes and trials: he does not remove the tremor, but walks with the faithful. Devotion expresses trust in God's protection over the city. The Lord of the Tremors recalls that faith sustains the people in trials.",
+      "pt": "O Taytacha é o Cristo que acompanha o povo nos terremotos e nas provações: não elimina o tremor, mas caminha com os fiéis. A devoção exprime a confiança na proteção de Deus sobre a cidade. O Senhor dos Terremotos recorda que a fé sustenta o povo nas provações."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición cusqueña atribuye al Señor de los Temblores el cese del terremoto de 1650 y de la peste de 1720; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The tradition of Cusco attributes to the Lord of the Tremors the ceasing of the 1650 earthquake and the 1720 plague; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição de Cusco atribui ao Senhor dos Terremotos o cessar do terremoto de 1650 e da peste de 1720; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "Perú",
+      "en": "Peru",
+      "pt": "Peru"
+    },
+    "recognition": {
+      "es": "Patrón Jurado del Cusco, proclamado por el pueblo en 1720; la procesión se celebra el Lunes Santo desde 1741.",
+      "en": "Sworn Patron of Cusco, proclaimed by the people in 1720; the procession has been celebrated on Holy Monday since 1741.",
+      "pt": "Padroeiro Jurado de Cusco, proclamado pelo povo em 1720; a procissão celebra-se na Segunda-feira Santa desde 1741."
+    },
+    "practice": {
+      "es": "El Lunes Santo la imagen sale en procesión de la Catedral del Cusco, con la participación de las cofradías y el pueblo. Se viste con túnicas de gala y se le ofrecen las flores de ñucchu; los fieles imploran su protección frente a los sismos.",
+      "en": "On Holy Monday the image goes in procession from the Cathedral of Cusco, with the participation of the brotherhoods and the people. It is dressed in gala robes and the ñucchu flowers are offered; the faithful implore its protection against earthquakes.",
+      "pt": "Na Segunda-feira Santa a imagem sai em procissão da Catedral de Cusco, com a participação das confrarias e do povo. Veste-se com túnicas de gala e oferecem-se as flores de ñucchu; os fiéis imploram sua proteção contra os sismos."
+    },
+    "sources": [
+      "Agencia Andina, «Señor de los Temblores»",
+      "Arquidiócesis del Cusco, historia del Taytacha Temblores",
+      "Catedral basílica de Santiago del Cusco"
+    ]
+  },
+  {
+    "id": "santo_nino_de_cebu",
+    "title": {
+      "es": "El Santo Niño de Cebú",
+      "en": "The Santo Niño of Cebu",
+      "pt": "O Santo Menino de Cebu"
+    },
+    "feastDay": {
+      "es": "Tercer domingo de enero (Fiesta Señor)",
+      "en": "Third Sunday of January (Fiesta Señor)",
+      "pt": "Terceiro domingo de janeiro (Fiesta Señor)"
+    },
+    "year": "1521",
+    "primarySanctuary": {
+      "es": "Basílica del Santo Niño (Cebú, Filipinas)",
+      "en": "Basilica del Santo Niño (Cebu, Philippines)",
+      "pt": "Basílica do Santo Menino (Cebu, Filipinas)"
+    },
+    "history": {
+      "es": "La imagen del Santo Niño, una talla de madera de estilo flamenco vestida como un príncipe español, es la reliquia católica más antigua de Filipinas. La tradición la asocia al regalo de Magallanes a la reina de Cebú en 1521. En 1565, tras la llegada de Legazpi, el marinero Juan Camus halló la imagen entre las ruinas del poblado incendiado. Se levantó una iglesia en el lugar y nació el Fiesta Señor, la fiesta religiosa más importante de Cebú. Pablo VI concedió la coronación canónica por la bula Cunabula religionis (27 de febrero de 1964) y la coronación se celebró el 28 de abril de 1965; por el documento Ut clarificetur (1 de abril de 1965) el santuario pasó a basílica menor. La basílica conserva la imagen, vestida con trajes rojos y con el cetro y el orbe.",
+      "en": "The image of the Santo Niño, a wooden statue in the Flemish style dressed like a Spanish prince, is the oldest Catholic relic in the Philippines. Tradition associates it with Magellan's gift to the queen of Cebu in 1521. In 1565, after Legazpi's arrival, the sailor Juan Camus found the image among the ruins of the burned settlement. A church was built on the site and the Fiesta Señor was born, the most important religious festival of Cebu. Paul VI granted the canonical coronation by the bull Cunabula religionis (27 February 1964), and the coronation was celebrated on 28 April 1965; by the document Ut clarificetur (1 April 1965) the sanctuary became a minor basilica. The basilica keeps the image, dressed in red garments and with the scepter and the orb.",
+      "pt": "A imagem do Santo Menino, uma imagem de madeira em estilo flamengo vestida como um príncipe espanhol, é a relíquia católica mais antiga das Filipinas. A tradição associa-a ao presente de Magalhães à rainha de Cebú em 1521. Em 1565, após a chegada de Legazpi, o marinheiro Juan Camus encontrou a imagem entre as ruínas do povoado incendiado. Ergueu-se uma igreja no lugar e nasceu o Fiesta Senhor, a festa religiosa mais importante de Cebú. Paulo VI concedeu a coroação canónica pela bula Cunabula religionis (27 de fevereiro de 1964), e a coroação celebrou-se em 28 de abril de 1965; pelo documento Ut clarificetur (1 de abril de 1965) o santuário passou a basílica menor. A basílica conserva a imagem, vestida com trajes vermelhos e com o cetro e o orbe."
+    },
+    "theologicalMeaning": {
+      "es": "El Santo Niño de Cebú es Cristo que se hace niño y Señor a la vez: la realeza divina se esconde en la infancia. La devoción une la niñez de Jesús con la realeza de Cristo sobre su pueblo. El Niño Jesús es el Señor que se hace pequeño por amor.",
+      "en": "The Santo Niño of Cebu is Christ who is both child and Lord at once: divine royalty hides in childhood. Devotion unites the childhood of Jesus with the kingship of Christ over his people. The Child Jesus is the Lord who makes himself small out of love.",
+      "pt": "O Santo Menino de Cebu é Cristo que se faz menino e Senhor ao mesmo tempo: a realeza divina esconde-se na infância. A devoção une a infância de Jesus com a realeza de Cristo sobre o seu povo. O Menino Jesus é o Senhor que se faz pequeno por amor."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición filipina atribuye al Santo Niño la supervivencia de la imagen en 1565 y numerosos favores; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "Filipino tradition attributes to the Santo Niño the survival of the image in 1565 and numerous favors; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição filipina atribui ao Santo Menino a sobrevivência da imagem em 1565 e numerosos favores; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Asia_Africa",
+    "country": {
+      "es": "Filipinas",
+      "en": "Philippines",
+      "pt": "Filipinas"
+    },
+    "recognition": {
+      "es": "La imagen, considerada la reliquia católica más antigua de Filipinas, se venera en la Basílica del Santo Niño de Cebú; es la imagen de Jesús coronada canónicamente en Filipinas.",
+      "en": "The image, considered the oldest Catholic relic in the Philippines, is venerated in the Basilica del Santo Niño of Cebu; it is the canonically crowned image of Jesus in the Philippines.",
+      "pt": "A imagem, considerada a relíquia católica mais antiga das Filipinas, venera-se na Basílica do Santo Menino de Cebu; é a imagem de Jesus coroada canonicamente nas Filipinas."
+    },
+    "practice": {
+      "es": "El Fiesta Señor se celebra el tercer domingo de enero con la procesión fluvial, la misa y la danza del Sinulog, en la que los devotos llevan la imagen por las calles de Cebú. Las familias visten la imagen con trajes rojos y la tienen en el hogar.",
+      "en": "The Fiesta Señor is celebrated on the third Sunday of January with the fluvial procession, Mass, and the Sinulog dance, in which the devotees carry the image through the streets of Cebu. Families dress the image in red garments and keep it in the home.",
+      "pt": "O Fiesta Señor celebra-se no terceiro domingo de janeiro com a procissão fluvial, a missa e a dança do Sinulog, na qual os devotos levam a imagem pelas ruas de Cebu. As famílias vestem a imagem com trajes vermelhos e guardam-na em casa."
+    },
+    "sources": [
+      "Basílica Menor del Santo Niño (Cebú)",
+      "Pablo VI, bula Cunabula religionis (27-II-1964) y documento Ut clarificetur (1-IV-1965)",
+      "Arquidiócesis de Cebú, historia del Fiesta Señor"
+    ]
+  },
+  {
+    "id": "jesus_de_ocotlan",
+    "title": {
+      "es": "El Santísimo Cristo de Ocotlán",
+      "en": "The Most Holy Christ of Ocotlán",
+      "pt": "O Santíssimo Cristo de Ocotlán"
+    },
+    "feastDay": {
+      "es": "Primer domingo de septiembre",
+      "en": "First Sunday of September",
+      "pt": "Primeiro domingo de setembro"
+    },
+    "year": "1541",
+    "primarySanctuary": {
+      "es": "Basílica del Santísimo Cristo de Ocotlán (Tlaxcala, México)",
+      "en": "Basilica of the Most Holy Christ of Ocotlán (Tlaxcala, Mexico)",
+      "pt": "Basílica do Santíssimo Cristo de Ocotlán (Tlaxcala, México)"
+    },
+    "history": {
+      "es": "En Ocotlán, Tlaxcala, el fraile franciscano Martín de Valencia y los evangelizadores promovieron una imagen de Cristo. La tradición cuenta que un joven llamado Juan Diego —no el de Guadalupe— halló la imagen de un Cristo crucificado en un encino, y que allí se levantó un santuario. La veneración se consolidó en el siglo XVI y el santuario se convirtió en uno de los centros de peregrinación de Tlaxcala. La imagen se renueva con el rescate del «palo de Ocotlán», que se quema y se siembra. La fiesta une la piedad popular con la música y la danza de los pueblos de Tlaxcala. Los peregrinos suben al cerro con velas y música.",
+      "en": "In Ocotlán, Tlaxcala, the Franciscan friar Martín de Valencia and the evangelizers fostered an image of Christ. Tradition recounts that a young man named Juan Diego —not the one of Guadalupe— found the image of a crucified Christ in an oak, and that a sanctuary was built there. Veneration consolidated in the 16th century and the sanctuary became one of the pilgrimage centers of Tlaxcala. The image is renewed with the rescue of the «palo de Ocotlán», which is burned and sown. The feast unites popular piety with the music and dance of the peoples of Tlaxcala. The pilgrims climb the hill with candles and music.",
+      "pt": "Em Ocotlán, Tlaxcala, o frade franciscano Martín de Valencia e os evangelizadores promoveram uma imagem de Cristo. A tradição conta que um jovem chamado Juan Diego —não o de Guadalupe— encontrou a imagem de um Cristo crucificado num carvalho, e que aí se ergueu um santuário. A veneração consolidou-se no século XVI e o santuário tornou-se um dos centros de peregrinação de Tlaxcala. A imagem renova-se com o resgate do «palo de Ocotlán», que se queima e se semeia. A festa une a piedade popular à música e à dança dos povos de Tlaxcala. Os peregrinos sobem ao monte com velas e música."
+    },
+    "theologicalMeaning": {
+      "es": "El Cristo de Ocotlán es el crucificado que se entrega como el madero que se quema y germina: la cruz como árbol de vida. La devoción une la Pasión con la esperanza de la resurrección. El madero que se quema y germina recuerda la resurrección.",
+      "en": "The Christ of Ocotlán is the crucified one who gives himself as the wood that burns and sprouts: the cross as tree of life. Devotion unites the Passion with the hope of the resurrection. The wood that burns and sprouts recalls the resurrection.",
+      "pt": "O Cristo de Ocotlán é o crucificado que se entrega como a madeira que arde e germina: a cruz como árvore da vida. A devoção une a Paixão à esperança da ressurreição. A madeira que arde e germina recorda a ressurreição."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición de Ocotlán atribuye a la imagen favores y protección del santuario; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The tradition of Ocotlán attributes to the image favors and the protection of the sanctuary; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição de Ocotlán atribui à imagem favores e a proteção do santuário; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "México",
+      "en": "Mexico",
+      "pt": "México"
+    },
+    "recognition": {
+      "es": "Santuario franciscano de Tlaxcala, centro de peregrinación desde el siglo XVI; la imagen se venera en la basílica del lugar.",
+      "en": "Franciscan sanctuary of Tlaxcala, a center of pilgrimage since the 16th century; the image is venerated in the basilica of the place.",
+      "pt": "Santuário franciscano de Tlaxcala, centro de peregrinação desde o século XVI; a imagem venera-se na basílica do lugar."
+    },
+    "practice": {
+      "es": "Se celebra el primer domingo de septiembre con misas, procesiones y la quema del madero de Ocotlán. Los peregrinos suben al cerro del santuario y participan de las fiestas del pueblo.",
+      "en": "It is celebrated on the first Sunday of September with Masses, processions, and the burning of the Ocotlán wood. Pilgrims climb the hill of the sanctuary and take part in the festivals of the town.",
+      "pt": "Celebra-se no primeiro domingo de setembro com missas, procissões e a queima do madeiro de Ocotlán. Os peregrinos sobem ao monte do santuário e participam das festas do povo."
+    },
+    "sources": [
+      "Basílica del Santísimo Cristo de Ocotlán (Tlaxcala)",
+      "Gobierno de Tlaxcala, turismo religioso",
+      "Diócesis de Tlaxcala, santuario de Ocotlán"
+    ]
+  },
+  {
+    "id": "bom_jesus_de_matosinhos",
+    "title": {
+      "es": "El Señor Bom Jesus de Matosinhos",
+      "en": "The Lord Good Jesus of Matosinhos",
+      "pt": "O Senhor Bom Jesus de Matosinhos"
+    },
+    "feastDay": {
+      "es": "7 de septiembre (Jubileo de Congonhas)",
+      "en": "7 September (Jubilee of Congonhas)",
+      "pt": "7 de setembro (Jubileu de Congonhas)"
+    },
+    "year": "1757",
+    "primarySanctuary": {
+      "es": "Santuario do Senhor Bom Jesus (Congonhas, Minas Gerais, Brasil)",
+      "en": "Sanctuary of the Lord Good Jesus (Congonhas, Minas Gerais, Brazil)",
+      "pt": "Santuário do Senhor Bom Jesus (Congonhas, Minas Gerais, Brasil)"
+    },
+    "history": {
+      "es": "El minador portugués Feliciano Mendes, enfermo, hizo una promesa al Bom Jesus de Matosinhos, cuya fe traía de Portugal, y al sanar quiso construir un templo. En febrero de 1757 comenzó el santuario en el morro Maranhão, y él salió a pedir limosna por la provincia. La obra la continuaron los ermitaños y, ya en el siglo XVIII, recibió las esculturas de Aleijadinho: los pasos de la Pasión en seis capelas y los doce profetas del adro. El santuario fue declarado Patrimonio Cultural de la Humanidad por la Unesco. El Jubileu del Bom Jesus atrae cada año a miles de romeiros. Los pasos y los profetas hacen del santuario un libro de piedra para los romeiros.",
+      "en": "The Portuguese miner Feliciano Mendes, ill, made a promise to the Good Jesus of Matosinhos, whose faith he brought from Portugal, and on being healed he wanted to build a temple. In February 1757 he began the sanctuary on the Maranhão hill, and he went out to beg alms through the province. The work was continued by the hermits and, already in the 18th century, it received the sculptures of Aleijadinho: the Steps of the Passion in six chapels and the twelve prophets of the forecourt. The sanctuary was declared Cultural Heritage of Humanity by Unesco. The Jubilee of the Good Jesus attracts thousands of pilgrims every year. The steps and the prophets make the sanctuary a book of stone for the pilgrims.",
+      "pt": "O minerador português Feliciano Mendes, doente, fez uma promessa ao Bom Jesus de Matosinhos, cuja fé trazia de Portugal, e, ao sarar, quis construir um templo. Em fevereiro de 1757 começou o santuário no morro Maranhão, e saiu a pedir esmola pela província. A obra foi continuada pelos ermitões e, já no século XVIII, recebeu as esculturas de Aleijadinho: os passos da Paixão em seis capelas e os doze profetas do adro. O santuário foi declarado Patrimônio Cultural da Humanidade pela Unesco. O Jubileu do Bom Jesus atrai milhares de romeiros todos os anos. Os passos e os profetas fazem do santuário um livro de pedra para os romeiros."
+    },
+    "theologicalMeaning": {
+      "es": "El Bom Jesús de Matosinhos es el crucificado al que se acude con promesas y romerías: un Cristo cercano que escucha al peregrino y sana. El santuario, con los pasos de Aleijadinho, hace visible la Pasión. El santuario es una escuela de fe y de arte al mismo tiempo.",
+      "en": "The Good Jesus of Matosinhos is the crucified one to whom one comes with promises and pilgrimages: a close Christ who hears the pilgrim and heals. The sanctuary, with Aleijadinho's Steps, makes the Passion visible. The sanctuary is a school of faith and art at the same time.",
+      "pt": "O Bom Jesus de Matosinhos é o crucificado a quem se recorre com promessas e romarias: um Cristo próximo que escuta o romeiro e sara. O santuário, com os passos de Aleijadinho, torna visível a Paixão. O santuário é uma escola de fé e de arte ao mesmo tempo."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición de Congonhas atribuye a Feliciano Mendes la cura que motivó el santuario, y los romeiros dejan exvotos por favores recibidos; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The tradition of Congonhas attributes to Feliciano Mendes the cure that prompted the sanctuary, and the pilgrims leave ex-votos for favors received; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição de Congonhas atribui a Feliciano Mendes a cura que motivou o santuário, e os romeiros deixam ex-votos por favores recebidos; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "Brasil",
+      "en": "Brazil",
+      "pt": "Brasil"
+    },
+    "recognition": {
+      "es": "Santuario declarado Patrimonio Cultural de la Humanidad por la Unesco; el Jubileu del Bom Jesus se celebra desde 1779 y la devoción se remonta a 1757.",
+      "en": "Sanctuary declared Cultural Heritage of Humanity by Unesco; the Jubilee of the Good Jesus has been celebrated since 1779 and the devotion dates back to 1757.",
+      "pt": "Santuário declarado Patrimônio Cultural da Humanidade pela Unesco; o Jubileu do Bom Jesus celebra-se desde 1779 e a devoção remonta a 1757."
+    },
+    "practice": {
+      "es": "El Jubileu se celebra en septiembre con novenas, misas, confesiones y la subida de los romeiros al santuario. Los devotos cumplen promesas y visitan los pasos de la Pasión y los profetas de Aleijadinho.",
+      "en": "The Jubilee is celebrated in September with novenas, Masses, confessions, and the ascent of the pilgrims to the sanctuary. The devotees fulfill promises and visit the Steps of the Passion and the prophets of Aleijadinho.",
+      "pt": "O Jubileu celebra-se em setembro com novenas, missas, confissões e a subida dos romeiros ao santuário. Os devotos cumprem promessas e visitam os passos da Paixão e os profetas de Aleijadinho."
+    },
+    "sources": [
+      "Unesco, Santuario de Bom Jesus do Congonhas",
+      "Prefeitura de Congonhas, patrimônio histórico",
+      "IPHAN, conjunto histórico de Congonhas"
+    ]
+  },
+  {
+    "id": "bom_jesus_da_lapa",
+    "title": {
+      "es": "El Señor Bom Jesus da Lapa",
+      "en": "The Lord Good Jesus of Lapa",
+      "pt": "O Senhor Bom Jesus da Lapa"
+    },
+    "feastDay": {
+      "es": "2 de agosto (romaría)",
+      "en": "2 August (pilgrimage)",
+      "pt": "2 de agosto (romaria)"
+    },
+    "year": "1691",
+    "primarySanctuary": {
+      "es": "Santuario do Bom Jesus da Lapa (Bahía, Brasil)",
+      "en": "Sanctuary of the Good Jesus of Lapa (Bahia, Brazil)",
+      "pt": "Santuário do Bom Jesus da Lapa (Bahia, Brasil)"
+    },
+    "history": {
+      "es": "Hacia 1691, Francisco de Mendonça Mar llegó a una gruta a orillas del río San Francisco y se instaló allí con un crucifijo del Buen Jesús. Acogía a viajeros y enfermos, y la noticia del lugar santo corrió por el sertón. El arzobispo de Bahía, dom Sebastián Monteiro da Vide, lo llamó a Salvador y lo ordenó sacerdote hacia 1702; tomó el nombre de Francisco da Soledade y volvió al santuario, donde murió en 1722. Las romarias crecieron y hoy reúnen a más de dos millones de visitantes al año. El santuario conserva la gruta y la sala de exvotos de los peregrinos.",
+      "en": "Around 1691, Francisco de Mendonça Mar reached a cave on the banks of the São Francisco river and settled there with a crucifix of the Good Jesus. He welcomed travelers and the sick, and news of the holy place spread through the backlands. The archbishop of Bahia, Dom Sebastião Monteiro da Vide, called him to Salvador and ordained him a priest around 1702; he took the name Francisco da Soledade and returned to the sanctuary, where he died in 1722. The pilgrimages grew and today gather more than two million visitors a year. The sanctuary keeps the cave and the ex-voto room of the pilgrims.",
+      "pt": "Por volta de 1691, Francisco de Mendonça Mar chegou a uma gruta às margens do rio São Francisco e instalou-se aí com um crucifixo do Bom Jesus. Acolhia viajantes e enfermos, e a notícia do lugar santo correu pelo sertão. O arcebispo da Bahia, dom Sebastião Monteiro da Vide, chamou-o a Salvador e ordenou-o sacerdote por volta de 1702; tomou o nome de Francisco da Soledade e voltou ao santuário, onde morreu em 1722. As romarias cresceram e hoje reúnem mais de dois milhões de visitantes por ano. O santuário conserva a gruta e a sala de ex-votos dos peregrinos."
+    },
+    "theologicalMeaning": {
+      "es": "El Bom Jesus da Lapa es el Cristo crucificado que se esconde en una gruta para acoger al peregrino pobre y enfermo. La gruta y la columna de la devoción recuerdan que Dios habita en los lugares sencillos. El peregrino sube al santuario con la esperanza de encontrar consuelo.",
+      "en": "The Good Jesus of Lapa is the crucified Christ who hides in a cave to welcome the poor and sick pilgrim. The cave and the pillar of devotion recall that God dwells in simple places. The pilgrim climbs to the sanctuary hoping to find consolation.",
+      "pt": "O Bom Jesus da Lapa é o Cristo crucificado que se esconde numa gruta para acolher o peregrino pobre e enfermo. A gruta e a coluna da devoção recordam que Deus habita nos lugares simples. O peregrino sobe ao santuário com a esperança de encontrar consolo."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición de la Lapa atribuye al Bom Jesus favores y curas, y la sala de exvotos recoge los agradecimientos de los romeiros; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The tradition of Lapa attributes favors and cures to the Good Jesus, and the ex-voto room gathers the thanks of the pilgrims; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição da Lapa atribui ao Bom Jesus favores e curas, e a sala de ex-votos recolhe os agradecimentos dos romeiros; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "Brasil",
+      "en": "Brazil",
+      "pt": "Brasil"
+    },
+    "recognition": {
+      "es": "Santuario y romaría reconocidos por la Iglesia y por el Estado; el fundador fue ordenado sacerdote por el arzobispo de Bahía hacia 1702.",
+      "en": "Sanctuary and pilgrimage recognized by the Church and the State; the founder was ordained a priest by the Archbishop of Bahia around 1702.",
+      "pt": "Santuário e romaria reconhecidos pela Igreja e pelo Estado; o fundador foi ordenado sacerdote pelo arcebispo da Bahia por volta de 1702."
+    },
+    "practice": {
+      "es": "Las romarías se celebran entre junio y agosto, con misas, confesiones y la subida del morro al santuario. Los romeiros cumplen promesas y visitan la gruta y la sala de exvotos.",
+      "en": "The pilgrimages are celebrated between June and August, with Masses, confessions, and the climb to the hill of the sanctuary. The pilgrims fulfill promises and visit the cave and the ex-voto room.",
+      "pt": "As romarias celebram-se entre junho e agosto, com missas, confissões e a subida do morro ao santuário. Os romeiros cumprem promessas e visitam a gruta e a sala de ex-votos."
+    },
+    "sources": [
+      "IPAC Bahia, Romaria do Senhor Bom Jesus da Lapa",
+      "Santuário do Bom Jesus da Lapa, historia",
+      "Universidade da Bahia, estudo da romaria"
+    ]
+  },
+  {
+    "id": "cristo_de_medinaceli",
+    "title": {
+      "es": "El Santísimo Cristo de Medinaceli (Jesús Cautivo)",
+      "en": "The Most Holy Christ of Medinaceli (Captive Christ)",
+      "pt": "O Santíssimo Cristo de Medinaceli (Jesus Cativo)"
+    },
+    "feastDay": {
+      "es": "Viernes Santo y primer viernes de marzo",
+      "en": "Good Friday and first Friday of March",
+      "pt": "Sexta-feira Santa e primeira sexta-feira de março"
+    },
+    "year": "1682",
+    "primarySanctuary": {
+      "es": "Basílica de Nuestro Padre Jesús de Medinaceli (Madrid)",
+      "en": "Basilica of Our Father Jesus of Medinaceli (Madrid)",
+      "pt": "Basílica de Nuestro Padre Jesús de Medinaceli (Madrid)"
+    },
+    "history": {
+      "es": "La imagen de un Jesús Nazareno, esculpida en el siglo XVII, fue enviada a una plaza española en Marruecos. En 1681 cayó en manos del rey de Mequínez y los trinitarios la rescataron. Llegó a Madrid en 1682 y los duques de Medinaceli la patrocinaron, construyendo una capilla en 1689 y una basílica consagrada en 1930. La Congregación de Esclavos del Santísimo Cristo de Medinaceli fue erigida en 1710 y elevada a archicofradía por Pío XI en 1928. El Cristo sale en la procesión del Viernes Santo. La basílica conserva la imagen rescatada y los fieles hacen cola para venerarla.",
+      "en": "The image of a Jesus of Nazareth, carved in the 17th century, was sent to a Spanish outpost in Morocco. In 1681 it fell into the hands of the king of Meknes and the Trinitarians ransomed it. It arrived in Madrid in 1682 and the Dukes of Medinaceli patronized it, building a chapel in 1689 and a basilica consecrated in 1930. the Congregation of Slaves of the Most Holy Christ of Medinaceli was erected in 1710 and raised to archconfraternity by Pius XI in 1928. The Christ goes out in the Good Friday procession. The basilica keeps the ransomed image and the faithful queue to venerate it.",
+      "pt": "A imagem de um Jesus Nazareno, esculpida no século XVII, foi enviada a uma praça espanhola em Marrocos. Em 1681 caiu nas mãos do rei de Mequinez e os trinitários resgataram-na. Chegou a Madrid em 1682 e os duques de Medinaceli patrocinaram-na, construindo uma capela em 1689 e uma basílica consagrada em 1930. A Congregação de Escravos do Santíssimo Cristo de Medinaceli foi erguida em 1710 e elevada a arciconfraria por Pio XI em 1928. O Cristo sai na procissão da Sexta-feira Santa. A basílica conserva a imagem resgatada e os fiéis fazem fila para venerá-la."
+    },
+    "theologicalMeaning": {
+      "es": "El Cristo Cautivo es Jesús hecho cautivo por amor, que es rescatado y permanece en la basílica como Señor de Madrid. La devoción une la captividad histórica con la cautividad del pecado y la liberación por la cruz. El Cristo Cautivo recuerda que el amor es capaz de rescatar al cautivo.",
+      "en": "The Captive Christ is Jesus made captive out of love, who is ransomed and remains in the basilica as Lord of Madrid. Devotion unites the historical captivity with the captivity of sin and liberation through the cross. The Captive Christ recalls that love is able to ransom the captive.",
+      "pt": "O Cristo Cativo é Jesus feito cativo por amor, que é resgatado e permanece na basílica como Senhor de Madrid. A devoção une o cativeiro histórico ao cativeiro do pecado e à libertação pela cruz. O Cristo Cativo recorda que o amor é capaz de resgatar o cativo."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición madrileña atribuye al Cristo de Medinaceli la protección en el incendio de la Plaza Mayor de 1790 y favores de los fieles; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The tradition of Madrid attributes to the Christ of Medinaceli the protection in the fire of the Plaza Mayor of 1790 and favors of the faithful; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição madrilena atribui ao Cristo de Medinaceli a proteção no incêndio da Praça Maior de 1790 e favores dos fiéis; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "España",
+      "en": "Spain",
+      "pt": "Espanha"
+    },
+    "recognition": {
+      "es": "Archicofradía erigida por Pío XI en 1928; basílica consagrada en 1930; devoción promovida por la Casa Ducal de Medinaceli.",
+      "en": "Archconfraternity erected by Pius XI in 1928; basilica consecrated in 1930; devotion fostered by the Ducal House of Medinaceli.",
+      "pt": "Arciconfraria erguida por Pio XI em 1928; basílica consagrada em 1930; devoção promovida pela Casa Ducal de Medinaceli."
+    },
+    "practice": {
+      "es": "El Viernes Santo la imagen sale en procesión por el centro de Madrid, y el primer viernes de marzo se celebra la fiesta principal con largas colas de fieles que besan los pies. Se venera también en las réplicas de la imagen en América.",
+      "en": "On Good Friday the image goes in procession through central Madrid, and the first Friday of March the principal feast is celebrated with long lines of faithful who kiss the feet. It is also venerated in the replicas of the image in the Americas.",
+      "pt": "Na Sexta-feira Santa a imagem sai em procissão pelo centro de Madrid, e na primeira sexta-feira de março celebra-se a festa principal com longas filas de fiéis que beijam os pés. Venera-se também nas réplicas da imagem nas Américas."
+    },
+    "sources": [
+      "Fundación Medinaceli, historia de la imagen",
+      "Congregación de Esclavos del Santísimo Cristo de Medinaceli",
+      "Basílica de Jesús de Medinaceli (Madrid)"
+    ]
+  },
+  {
+    "id": "cristo_de_limpias",
+    "title": {
+      "es": "El Santo Cristo de Limpias",
+      "en": "The Holy Christ of Limpias",
+      "pt": "O Santo Cristo de Limpias"
+    },
+    "feastDay": {
+      "es": "Fiesta en septiembre",
+      "en": "Feast in September",
+      "pt": "Festa em setembro"
+    },
+    "year": "",
+    "primarySanctuary": {
+      "es": "Santuario del Santo Cristo (Limpias, Cantabria, España)",
+      "en": "Sanctuary of the Holy Christ (Limpias, Cantabria, Spain)",
+      "pt": "Santuário do Santo Cristo (Limpias, Cantábria, Espanha)"
+    },
+    "history": {
+      "es": "En Limpias, junto a la ría del Asón, se venera una imagen de un Cristo crucificado de gran devoción en Cantabria. La imagen se conserva en el santuario del pueblo y la cofradía del Santo Cristo organiza su culto. El hecho que dio fama al Cristo fueron los prodigios que, según los relatos de los testigos, comenzaron a contarse a partir del 30 de marzo de 1919: se decía que la imagen movía los ojos, y acudieron peregrinos de toda la comarca. La fiesta se celebra en septiembre con misa y procesión, y el santuario recibe a los peregrinos junto a la ría. La cofradía organiza además novenas y romerías en honor del Santo Cristo.",
+      "en": "In Limpias, beside the ria of the Asón, an image of a crucified Christ is venerated, of great devotion in Cantabria. The image is kept in the town's sanctuary and the confraternity of the Holy Christ organizes its worship. What made the Christ famous were the prodigies which, according to the accounts of witnesses, began to be told from 30 March 1919: it was said that the image moved its eyes, and pilgrims came from all over the region. The feast is celebrated in September with Mass and procession, and the sanctuary receives pilgrims beside the ria. The confraternity also organizes novenas and pilgrimages in honour of the Holy Christ.",
+      "pt": "Em Limpias, junto à ria do Asón, venera-se uma imagem de um Cristo crucificado de grande devoção na Cantábria. A imagem conserva-se no santuário da povoação e a confraria do Santo Cristo organiza o seu culto. O facto que deu fama ao Cristo foram os prodígios que, segundo os relatos das testemunhas, começaram a contar-se a partir de 30 de março de 1919: dizia-se que a imagem movia os olhos, e acorreram peregrinos de toda a comarca. A festa celebra-se em setembro com missa e procissão, e o santuário recebe os peregrinos junto à ria. A confraria organiza ainda novenas e romarias em honra do Santo Cristo."
+    },
+    "theologicalMeaning": {
+      "es": "El Santo Cristo de Limpias es el crucificado que mira al peregrino que llega a la ría: un Cristo sereno y cercano, que invita a la confianza y a la penitencia. La mirada serena del crucificado invita a la confianza y a la paz.",
+      "en": "The Holy Christ of Limpias is the crucified one who looks upon the pilgrim who arrives at the ria: a serene and close Christ, who invites trust and penance. The serene gaze of the crucified one invites trust and peace.",
+      "pt": "O Santo Cristo de Limpias é o crucificado que olha para o peregrino que chega à ria: um Cristo sereno e próximo, que convida à confiança e à penitência. O olhar sereno do crucificado convida à confiança e à paz."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición de Limpias atribuye a la imagen favores y conversiones; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The tradition of Limpias attributes to the image favors and conversions; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição de Limpias atribui à imagem favores e conversões; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "España",
+      "en": "Spain",
+      "pt": "Espanha"
+    },
+    "recognition": {
+      "es": "Devoción de la diócesis de Santander, con cofradía y santuario en Limpias; sin documento pontificio específico localizado.",
+      "en": "Devotion of the diocese of Santander, with confraternity and sanctuary in Limpias; no specific pontifical document was located.",
+      "pt": "Devoção da diocese de Santander, com confraria e santuário em Limpias; não se localizou documento pontifício específico."
+    },
+    "practice": {
+      "es": "La fiesta se celebra en septiembre con misa solemne y procesión. Los devotos acuden a Limpias a venerar la imagen y a pedir la protección del Santo Cristo.",
+      "en": "The feast is celebrated in September with solemn Mass and procession. The devotees come to Limpias to venerate the image and to ask the protection of the Holy Christ.",
+      "pt": "A festa celebra-se em setembro com missa solene e procissão. Os devotos acorrem a Limpias para venerar a imagem e pedir a proteção do Santo Cristo."
+    },
+    "sources": [
+      "Diócesis de Santander, santuario de Limpias",
+      "Cofradía del Santo Cristo de Limpias"
+    ]
+  },
+  {
+    "id": "divino_salvador_del_mundo",
+    "title": {
+      "es": "El Divino Salvador del Mundo",
+      "en": "The Divine Savior of the World",
+      "pt": "O Divino Salvador do Mundo"
+    },
+    "feastDay": {
+      "es": "6 de agosto (fiesta nacional)",
+      "en": "6 August (national feast)",
+      "pt": "6 de agosto (festa nacional)"
+    },
+    "year": "1528",
+    "primarySanctuary": {
+      "es": "Catedral Metropolitana (San Salvador, El Salvador)",
+      "en": "Metropolitan Cathedral (San Salvador, El Salvador)",
+      "pt": "Catedral Metropolitana (San Salvador, El Salvador)"
+    },
+    "history": {
+      "es": "Las fiestas de agosto en honor del Divino Salvador del Mundo son la celebración principal de El Salvador. Sus orígenes se remontan a 1528, cuando la ciudad fue fundada con el nombre de «Provincia de Nuestro Señor Jesucristo, Salvador del Mundo», y a las celebraciones en torno a la Transfiguración. El monumento del Divino Salvador del Mundo, con la imagen de Cristo sobre el globo, es el símbolo nacional. La «Bajada» y la procesión culminan el 6 de agosto con la misa en la Catedral. Las fiestas unen la fe, la música y la identidad del pueblo salvadoreño. La imagen se procesiona por las calles de la capital.",
+      "en": "The August festivities in honor of the Divine Savior of the World are the principal celebration of El Salvador. Their origins go back to 1528, when the city was founded with the name «Province of Our Lord Jesus Christ, Savior of the World», and to the celebrations around the Transfiguration. The monument of the Divine Savior of the World, with the image of Christ over the globe, is the national symbol. The «Bajada» and the procession culminate on 6 August with Mass in the Cathedral. The festivities unite faith, music, and the identity of the Salvadoran people. The image is processed through the streets of the capital.",
+      "pt": "As festas de agosto em honra do Divino Salvador do Mundo são a celebração principal de El Salvador. Suas origens remontam a 1528, quando a cidade foi fundada com o nome de «Província de Nosso Senhor Jesus Cristo, Salvador do Mundo», e às celebrações em torno da Transfiguração. O monumento do Divino Salvador do Mundo, com a imagem de Cristo sobre o globo, é o símbolo nacional. A «Bajada» e a procissão culminam em 6 de agosto com a missa na Catedral. As festas unem a fé, a música e a identidade do povo salvadorenho. A imagem sai em procissão pelas ruas da capital."
+    },
+    "theologicalMeaning": {
+      "es": "El Divino Salvador del Mundo confiesa que Jesús es el Salvador de todos los hombres y el Señor de la historia. La fiesta une la fe en la Transfiguración con la identidad de un pueblo que invoca a Cristo como Salvador. El Salvador del Mundo es el Señor que ilumina la historia de los pueblos.",
+      "en": "The Divine Savior of the World confesses that Jesus is the Savior of all men and the Lord of history. The feast unites faith in the Transfiguration with the identity of a people that invokes Christ as Savior. The Savior of the World is the Lord who illumines the history of peoples.",
+      "pt": "O Divino Salvador do Mundo confessa que Jesus é o Salvador de todos os homens e o Senhor da história. A festa une a fé na Transfiguração à identidade de um povo que invoca Cristo como Salvador. O Salvador do Mundo é o Senhor que ilumina a história dos povos."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición salvadoreña atribuye al Divino Salvador favores y protección de la ciudad; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The Salvadoran tradition attributes to the Divine Savior favors and the protection of the city; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição salvadorenha atribui ao Divino Salvador favores e a proteção da cidade; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Americas",
+    "country": {
+      "es": "El Salvador",
+      "en": "El Salvador",
+      "pt": "El Salvador"
+    },
+    "recognition": {
+      "es": "Fiesta nacional de El Salvador, vinculada a la Transfiguración del Señor; el monumento del Divino Salvador es el símbolo nacional.",
+      "en": "National feast of El Salvador, linked to the Transfiguration of the Lord; the monument of the Divine Savior is the national symbol.",
+      "pt": "Festa nacional de El Salvador, vinculada à Transfiguração do Senhor; o monumento do Divino Salvador é o símbolo nacional."
+    },
+    "practice": {
+      "es": "Las «agostinas» se celebran del 1 al 6 de agosto con desfiles, ferias, la «Bajada» y la misa en la Catedral. El monumento del Divino Salvador es el punto de encuentro de la fe y de la identidad del país.",
+      "en": "The «agostinas» are celebrated from 1 to 6 August with parades, fairs, the «Bajada», and Mass in the Cathedral. The monument of the Divine Savior is the meeting point of faith and the identity of the country.",
+      "pt": "As «agostinas» celebram-se de 1 a 6 de agosto com desfiles, feiras, a «Bajada» e a missa na Catedral. O monumento do Divino Salvador é o ponto de encontro da fé e da identidade do país."
+    },
+    "sources": [
+      "El Salvador, Secretaría de Cultura, fiestas de agosto",
+      "Arzobispado de San Salvador, festividad del Divino Salvador",
+      "El Pregonero, devoción al Divino Salvador del Mundo"
+    ]
+  },
+  {
+    "id": "nino_jesus_de_belen",
+    "title": {
+      "es": "El Niño Jesús de Belén",
+      "en": "The Child Jesus of Bethlehem",
+      "pt": "O Menino Jesus de Belém"
+    },
+    "feastDay": {
+      "es": "Navidad (25 de diciembre)",
+      "en": "Christmas (25 December)",
+      "pt": "Natal (25 de dezembro)"
+    },
+    "year": "",
+    "primarySanctuary": {
+      "es": "Belén y pesebres de las parroquias",
+      "en": "Bethlehem and parish nativity scenes",
+      "pt": "Belém e presépios das paróquias"
+    },
+    "history": {
+      "es": "La devoción al Niño Jesús de Belén se centra en el misterio del nacimiento de Cristo, anunciado por los ángeles y adorado por los pastores y los Magos. San Francisco de Asís difundió el pesebre en el siglo XIII, y desde entonces las familias preparan el nacimiento en sus casas. El Niño de Belén se representa dormido, en la cuna o en los brazos de su Madre, y convoca a la infancia espiritual y a la familia. Las familias colocan la imagen del Niño en el pesebre y le llevan sus intenciones. Las parroquias colocan el pesebre en el presbiterio y bendicen la imagen del Niño. El Niño Jesús es invocado por las familias en la fiesta de Navidad.",
+      "en": "Devotion to the Child Jesus of Bethlehem centers on the mystery of the birth of Christ, announced by the angels and adored by the shepherds and the Magi. St Francis of Assisi spread the nativity scene in the 13th century, and since then families prepare the crib in their homes. The Child of Bethlehem is represented asleep, in the manger or in the arms of his Mother, and calls to spiritual childhood and to the family. Families place the image of the Child in the crib and bring him their intentions. The parishes place the nativity scene in the sanctuary and bless the image of the Child. The Child Jesus is invoked by families at the feast of Christmas.",
+      "pt": "A devoção ao Menino Jesus de Belém centra-se no mistério do nascimento de Cristo, anunciado pelos anjos e adorado pelos pastores e pelos Magos. São Francisco de Assis difundiu o presépio no século XIII, e desde então as famílias preparam o presépio em casa. O Menino de Belém é representado dormindo, no presépio ou nos braços de sua Mãe, e convoca à infância espiritual e à família. As famílias colocam a imagem do Menino no presépio e levam-lhe as suas intenções. As paróquias colocam o presépio no presbitério e abençoam a imagem do Menino. O Menino Jesus é invocado pelas famílias na festa do Natal."
+    },
+    "theologicalMeaning": {
+      "es": "El Niño de Belén es Dios que se hace pequeño para que el hombre no tema acercarse: «Dios se hace niño para desarmar el temor». La infancia de Jesús es la puerta de la infancia espiritual. El Niño de Belén enseña a acoger a Dios en la pobreza y en la familia.",
+      "en": "The Child of Bethlehem is God who becomes small so that man may not fear to approach: «God becomes a child to disarm fear». The childhood of Jesus is the door of spiritual childhood. The Child of Bethlehem teaches to welcome God in poverty and in the family.",
+      "pt": "O Menino de Belém é Deus que se faz pequeno para que o homem não tema aproximar-se: «Deus faz-se menino para desarmar o temor». A infância de Jesus é a porta da infância espiritual. O Menino de Belém ensina a acolher Deus na pobreza e na família."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición cristiana atribuye al Niño de Belén la protección de las familias y de los hogares; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "Christian tradition attributes to the Child of Bethlehem the protection of families and homes; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição cristã atribui ao Menino de Belém a proteção das famílias e dos lares; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Universal",
+    "country": {
+      "es": "Universal",
+      "en": "Universal",
+      "pt": "Universal"
+    },
+    "recognition": {
+      "es": "Devoción navideña de la Iglesia universal, promovida por san Francisco de Asís y unida al pesebre y a la fiesta de Navidad.",
+      "en": "Christmas devotion of the universal Church, fostered by St Francis of Assisi and united to the nativity scene and the feast of Christmas.",
+      "pt": "Devoção natalícia da Igreja universal, promovida por São Francisco de Assis e unida ao presépio e à festa do Natal."
+    },
+    "practice": {
+      "es": "En Navidad las familias preparan el pesebre, cantan villancicos y llevan la imagen del Niño a la iglesia para la bendición. El Niño de Belén convoca a la familia y a la infancia.",
+      "en": "At Christmas families prepare the nativity scene, sing carols, and bring the image of the Child to the church for blessing. The Child of Bethlehem gathers the family and childhood.",
+      "pt": "No Natal as famílias preparam o presépio, cantam cânticos e levam a imagem do Menino à igreja para a bênção. O Menino de Belém convoca a família e a infância."
+    },
+    "sources": [
+      "Evangelio de Lucas 2,1-20",
+      "Tradición del pesebre de san Francisco de Asís",
+      "Liturgia de la Navidad"
+    ]
+  },
+  {
+    "id": "cristo_de_la_agonia",
+    "title": {
+      "es": "El Cristo de la Agonía",
+      "en": "The Christ of the Agony",
+      "pt": "O Cristo da Agonia"
+    },
+    "feastDay": {
+      "es": "Martes Santo y Viernes Santo",
+      "en": "Holy Tuesday and Good Friday",
+      "pt": "Terça-feira Santa e Sexta-feira Santa"
+    },
+    "year": "",
+    "primarySanctuary": {
+      "es": "Parroquias del Señor de la Agonía",
+      "en": "Churches of the Lord of the Agony",
+      "pt": "Paróquias do Senhor da Agonia"
+    },
+    "history": {
+      "es": "La devoción al Cristo de la Agonía contempla a Jesús en el Getsemaní, cuando «se ponía a orar con gran aflicción» y su sudor era como gotas de sangre (Lc 22,41-44). Las imágenes del Señor de la Agonía, con el rostro adolorido y el ángel consolador, se veneran en varias parroquias. Se expresa en la oración por los enfermos y los moribundos y en la contemplación de la humanidad sufriente de Cristo. El ángel consolador, presente en muchas imágenes, acompaña al Señor en su oración. La devoción se vive especialmente en la Semana Santa y une la compasión por los que sufren a la esperanza de la resurrección.",
+      "en": "Devotion to the Christ of Agony contemplates Jesus in Gethsemane, when «he was praying with great affliction» and his sweat was like drops of blood (Lk 22:41-44). Images of the Lord of Agony, with his sorrowful face and the consoling angel, are venerated in several parishes. It is expressed in prayer for the sick and the dying and in contemplation of the suffering humanity of Christ. The consoling angel, present in many images, accompanies the Lord in his prayer. The devotion is lived especially in Holy Week and joins compassion for those who suffer to the hope of the resurrection.",
+      "pt": "A devoção ao Cristo da Agonia contempla Jesus no Getsêmani, quando «se punha a orar com grande aflição» e o seu suor era como gotas de sangue (Lc 22,41-44). As imagens do Senhor da Agonia, com o rosto dorido e o anjo consolador, veneram-se em várias paróquias. Expressa-se na oração pelos enfermos e pelos moribundos e na contemplação da humanidade sofredora de Cristo. O anjo consolador, presente em muitas imagens, acompanha o Senhor na sua oração. A devoção vive-se especialmente na Semana Santa e une a compaixão pelos que sofrem à esperança da ressurreição. A devoção liga-se à oração pelos enfermos e à celebração da unção."
+    },
+    "theologicalMeaning": {
+      "es": "En la agonía, Cristo asume el temor y la angustia de cualquier moribundo: nadie muere solo. La devoción enseña a encomendar el trance de la muerte al Señor que lo vivió y lo transformó. La agonía de Cristo da sentido al sufrimiento de los enfermos.",
+      "en": "In his agony, Christ takes upon himself the fear and anguish of every dying person: no one dies alone. Devotion teaches to entrust the passage of death to the Lord who lived it and transformed it. The agony of Christ gives meaning to the suffering of the sick.",
+      "pt": "Na agonia, Cristo assume o temor e a angústia de qualquer moribundo: ninguém morre sozinho. A devoção ensina a encomendar o trânsito da morte ao Senhor que o viveu e o transformou. A agonia de Cristo dá sentido ao sofrimento dos enfermos."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición atribuye al Cristo de la Agonía consuelo en la hora de la muerte y gracias para los moribundos; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "Tradition attributes to the Christ of the Agony consolation at the hour of death and graces for the dying; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição atribui ao Cristo da Agonia consolo na hora da morte e graças para os moribundos; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Universal",
+    "country": {
+      "es": "Universal",
+      "en": "Universal",
+      "pt": "Universal"
+    },
+    "recognition": {
+      "es": "Devoción inspirada en el relato evangélico del Getsemaní (Lc 22,41-44); sin documento de aprobación pontificia específico.",
+      "en": "Devotion inspired by the Gospel account of Gethsemane (Lk 22:41-44); no specific pontifical approval document.",
+      "pt": "Devoção inspirada no relato evangélico do Getsêmani (Lc 22,41-44); sem documento de aprovação pontifícia específico."
+    },
+    "practice": {
+      "es": "Se reza por los enfermos y los moribundos, especialmente en la unción de los enfermos y en las Visitas al Santísimo. Las imágenes del Señor de la Agonía salen en las procesiones de Semana Santa.",
+      "en": "It is prayed for the sick and the dying, especially in the anointing of the sick and in visits to the Blessed Sacrament. Images of the Lord of the Agony go out in Holy Week processions.",
+      "pt": "Reza-se pelos enfermos e os moribundos, sobretudo na unção dos enfermos e nas visitas ao Santíssimo. As imagens do Senhor da Agonia saem nas procissões da Semana Santa."
+    },
+    "sources": [
+      "Evangelio de Lucas 22,41-44",
+      "Liturgia de la unción de los enfermos",
+      "Cofradías del Señor de la Agonía"
+    ]
+  },
+  {
+    "id": "santo_cristo_de_la_victoria",
+    "title": {
+      "es": "El Santo Cristo de la Victoria",
+      "en": "The Holy Christ of Victory",
+      "pt": "O Santo Cristo da Vitória"
+    },
+    "feastDay": {
+      "es": "Fiesta en septiembre",
+      "en": "Feast in September",
+      "pt": "Festa em setembro"
+    },
+    "year": "1480",
+    "primarySanctuary": {
+      "es": "Iglesia de San Lázaro (Málaga, España)",
+      "en": "Church of San Lázaro (Málaga, Spain)",
+      "pt": "Igreja de São Lázaro (Málaga, Espanha)"
+    },
+    "history": {
+      "es": "El Santo Cristo de la Victoria de Málaga se venera en la iglesia de San Lázaro, junto al monte de Gibralfaro. La tradición lo asocia a la victoria de los cristianos en la guerra de Granada y al descanso de la ciudad. La imagen del crucificado sale en procesión y la devoción se expresa con promesas y romerías. La cofradía del Santo Cristo organiza la fiesta anual y recibe a los malagueños y a los peregrinos de la provincia. El templo conserva la imagen y es lugar de piedad malagueña, y la romería une a las familias del barrio y de los pueblos cercanos.",
+      "en": "The Holy Christ of Victory of Malaga is venerated in the church of San Lázaro, beside the hill of Gibralfaro. Tradition associates it with the victory of the Christians in the war of Granada and with the city's thanksgiving. The image of the crucified Christ goes out in procession, and the devotion is expressed in promises and pilgrimages. The confraternity of the Holy Christ organizes the annual feast and welcomes the people of Malaga and the pilgrims of the province. The temple keeps the image and is a place of Malaga piety, and the pilgrimage unites the families of the neighbourhood and of the nearby towns.",
+      "pt": "O Santo Cristo da Vitória de Málaga venera-se na igreja de São Lázaro, junto ao monte de Gibralfaro. A tradição associa-o à vitória dos cristãos na guerra de Granada e ao agradecimento da cidade. A imagem do crucificado sai em procissão e a devoção expressa-se com promessas e romarias. A confraria do Santo Cristo organiza a festa anual e acolhe os malaguenhos e os peregrinos da província. O templo conserva a imagem e é lugar de piedade malaguenha, e a romaria une as famílias do bairro e dos povoados vizinhos. A festa anual é celebrada com missa e procissão."
+    },
+    "theologicalMeaning": {
+      "es": "El Cristo de la Victoria no celebra un triunfo humano, sino la victoria del amor sobre la muerte: la cruz como trofeo. La devoción invita a vencer el mal con el bien y a confiar en el Resucitado. La victoria de Cristo se celebra en la cruz, no en el poder humano.",
+      "en": "The Christ of Victory does not celebrate a human triumph, but the victory of love over death: the cross as trophy. Devotion invites to overcome evil with good and to trust in the Risen One. The victory of Christ is celebrated on the cross, not in human power.",
+      "pt": "O Cristo da Vitória não celebra um triunfo humano, mas a vitória do amor sobre a morte: a cruz como troféu. A devoção convida a vencer o mal com o bem e a confiar no Ressuscitado. A vitória de Cristo celebra-se na cruz, não no poder humano."
+    },
+    "promises": null,
+    "miracles": {
+      "es": "La tradición malagueña atribuye al Santo Cristo de la Victoria la protección de la ciudad y favores de los fieles; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+      "en": "The tradition of Málaga attributes to the Holy Christ of Victory the protection of the city and favors of the faithful; the Church has not declared specific miracles with canonical documentation.",
+      "pt": "A tradição de Málaga atribui ao Santo Cristo da Vitória a proteção da cidade e favores dos fiéis; a Igreja não declarou milagres concretos com documentação canónica."
+    },
+    "prayer": null,
+    "region": "Europe",
+    "country": {
+      "es": "España",
+      "en": "Spain",
+      "pt": "Espanha"
+    },
+    "recognition": {
+      "es": "Devoción de la diócesis de Málaga, con santuario en San Lázaro; sin documento pontificio específico localizado.",
+      "en": "Devotion of the diocese of Málaga, with sanctuary in San Lázaro; no specific pontifical document was located.",
+      "pt": "Devoção da diocese de Málaga, com santuário em São Lázaro; não se localizou documento pontifício específico."
+    },
+    "practice": {
+      "es": "La fiesta se celebra en septiembre con misa solemne y procesión por el barrio de San Lázaro. Los devotos suben al santuario y cumplen promesas por las gracias recibidas.",
+      "en": "The feast is celebrated in September with solemn Mass and procession through the district of San Lázaro. The devotees climb to the sanctuary and fulfill promises for favors received.",
+      "pt": "A festa celebra-se em setembro com missa solene e procissão pelo bairro de São Lázaro. Os devotos sobem ao santuário e cumprem promessas pelas graças recebidas."
+    },
+    "sources": [
+      "Diócesis de Málaga, santuario de San Lázaro",
+      "Hermandad del Santo Cristo de la Victoria (Málaga)"
+    ]
+  }
+]

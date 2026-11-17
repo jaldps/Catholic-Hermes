@@ -59,22 +59,25 @@ fun SanctaFidesTheme(
 
     // The preset only tints: Lumen calibrates each preset's ink so it clears
     // 4.5:1 on canvas and glass in both modes.
-    val season = if (identity != DesignLanguage.SANCTUARY && themePreset == "LITURGICAL_DYNAMIC") LiturgicalLight.of(liturgicalColorHex) else null
+    // Sanctuary and Tradicional keep their own fixed accent under the dynamic tint.
+    val classic = identity == DesignLanguage.CLASSIC
+    val season = if (identity != DesignLanguage.SANCTUARY && !classic && themePreset == "LITURGICAL_DYNAMIC") LiturgicalLight.of(liturgicalColorHex) else null
     val glass = identity == DesignLanguage.GLASS
-    val accent = if (identity == DesignLanguage.SANCTUARY && themePreset == "LITURGICAL_DYNAMIC") base.palette.accent
-        else (season?.accent(isDark) ?: lumenAccent(themePreset, isDark)).let { if (glass) glassAccent(it, isDark) else it }
-    val liquid = identity != DesignLanguage.SANCTUARY
+    val accent = resolveAccent(themePreset, identity, isDark, season, base.palette.accent)
+    // Chrome (ring, muted accent) follows the tint everywhere but Sanctuary; the
+    // action fill and ambient light only in the liquid identities.
+    val tintsChrome = identity != DesignLanguage.SANCTUARY && !(classic && themePreset == "LITURGICAL_DYNAMIC")
+    val liquid = identity != DesignLanguage.SANCTUARY && !classic
     val tinted = base.palette.copy(
         accent = accent,
         ringEnd = if (themePreset == "LITURGICAL_DYNAMIC" && season == null) base.palette.ringEnd else accent,
-        ringStart = if (!liquid || (themePreset == "LITURGICAL_DYNAMIC" && season == null)) base.palette.ringStart
+        ringStart = if (!tintsChrome || (themePreset == "LITURGICAL_DYNAMIC" && season == null)) base.palette.ringStart
             else lerp(accent, if (isDark) Color(0xFF0A0E1C) else Color.White, 0.68f),
         // Liquid glass tints its primary actions with the preset's accent.
         action = if (liquid) accent else base.palette.action,
         onAction = if (liquid) (if (isDark) Color(0xFF070B16) else Color.White) else base.palette.onAction,
-        accentMuted = if (liquid) lerp(accent, if (isDark) Color(0xFF0A0E1C) else Color.White, if (isDark) 0.80f else 0.86f) else base.palette.accentMuted,
-        ambient = if (liquid) (season?.ambient(isDark) ?: lumenAmbient(themePreset, isDark)).let { if (glass) glassAmbient(it) else it }
-            else emptyList()
+        accentMuted = if (tintsChrome) lerp(accent, if (isDark) Color(0xFF0A0E1C) else Color.White, if (isDark) 0.80f else 0.86f) else base.palette.accentMuted,
+        ambient = if (liquid) resolveAmbient(themePreset, identity, isDark, season) else emptyList()
     )
     val accessible = if (highContrast) tinted.copy(
         textSecondary = tinted.textPrimary, textTertiary = tinted.textPrimary,
@@ -175,8 +178,34 @@ internal fun glassAmbient(pools: List<Color>): List<Color> =
 internal fun glassAccent(accent: Color, isDark: Boolean): Color =
     if (isDark) lerp(accent, Color.White, 0.45f) else lerp(accent, Color.Black, 0.15f)
 
-/** Lumen ink for each tint preset, light and dark. */
-internal fun lumenAccent(preset: String, isDark: Boolean): Color = when (preset) {
+/**
+ * The accent the app draws for [preset] in [identity]: the season's ink where
+ * the liquid identities follow it, [dynamicBase] for the dynamic tint without a
+ * season, else the preset's ink, derived to hold 4.5:1 for any base colour.
+ */
+internal fun resolveAccent(
+    preset: String, identity: DesignLanguage, isDark: Boolean,
+    season: LiturgicalLight?, dynamicBase: Color
+): Color {
+    if (preset == "LITURGICAL_DYNAMIC" && season == null &&
+        (identity == DesignLanguage.SANCTUARY || identity == DesignLanguage.CLASSIC)) return dynamicBase
+    val ink = season?.accent(isDark) ?: lumenAccent(preset, isDark, identity)
+    return if (identity == DesignLanguage.GLASS) glassAccent(ink, isDark) else ink
+}
+
+/** The four pools of light for [preset] in a liquid [identity]. */
+internal fun resolveAmbient(preset: String, identity: DesignLanguage, isDark: Boolean, season: LiturgicalLight?): List<Color> =
+    (season?.ambient(isDark) ?: lumenAmbient(preset, isDark)).let { if (identity == DesignLanguage.GLASS) glassAmbient(it) else it }
+
+/**
+ * Ink for each tint preset, light and dark. The four ecclesiastical presets are
+ * hand-calibrated; every other id (`NE_*`, `CUSTOM_RRGGBB`) is derived from its
+ * base colour for [identity] by [AccentColors.ink].
+ */
+internal fun lumenAccent(preset: String, isDark: Boolean, identity: DesignLanguage = DesignLanguage.APPLE): Color =
+    AccentColors.baseOf(preset)?.let { AccentColors.ink(it, identity, isDark) } ?: lumenAccentPreset(preset, isDark)
+
+private fun lumenAccentPreset(preset: String, isDark: Boolean): Color = when (preset) {
     "MONASTIC_MINIMALIST" -> if (isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
     "SACRED_BURGUNDY" -> if (isDark) Color(0xFFE59AA6) else Color(0xFF8A2D3B)
     "MARIAN_AZURE" -> if (isDark) Color(0xFF9DBDFF) else Color(0xFF2459B5)
@@ -187,7 +216,10 @@ internal fun lumenAccent(preset: String, isDark: Boolean): Color = when (preset)
  * The four pools of ambient light for each tint preset: the accent's own
  * light top-left, candle gold top-right, a violet shade and a cool return.
  */
-private fun lumenAmbient(preset: String, isDark: Boolean): List<Color> = when (preset) {
+private fun lumenAmbient(preset: String, isDark: Boolean): List<Color> =
+    AccentColors.baseOf(preset)?.let { AccentColors.ambient(it, isDark) } ?: lumenAmbientPreset(preset, isDark)
+
+private fun lumenAmbientPreset(preset: String, isDark: Boolean): List<Color> = when (preset) {
     "MONASTIC_MINIMALIST" ->
         if (isDark) listOf(Color(0x40485878), Color(0x1FC9A27A), Color(0x2E4A4A8C), Color(0x2E3C5A7A))
         else listOf(Color(0x8CC3D0E6), Color(0x66F3E0C0), Color(0x59D2CEEC), Color(0x66BFD2E8))
@@ -218,7 +250,7 @@ private fun buildColorScheme(
     val base = if (isDark) darkColorScheme() else lightColorScheme()
 
     return when (identity) {
-        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> base.copy(
+        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> base.copy(
             primary = accent,
             onPrimary = onAccent,
             primaryContainer = palette.accentMuted,

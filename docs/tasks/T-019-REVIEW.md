@@ -35,3 +35,16 @@ El validador da 0 errores, pero el muestreo de `christ-new.json` encontró error
 - Revisa la ortografía antes del push.
 
 Los detalles de las 20 existentes (`christ-details.json`) parecen razonables en el muestreo: Praga, Esquipulas, Divino Niño, Sagrado Corazón y Divina Misericordia. Repasa también sus años y documentos. Entrega todo junto corregido.
+
+## Revisión final (fork `3f434dc`) · CERRADO
+
+- **Validador:** `details christ` da 20 entradas y 0 errores; `new christ` da 18 entradas y 0 errores.
+- **Correcciones comprobadas:**
+  - **Preciosa Sangre:** Pío IX, 10-VIII-1849; memoria suprimida en 1969; sin san Genaro.
+  - **Limpias:** ría del Asón; relatos de 1919 presentados como testimonios.
+  - **Vía Crucis:** 1731 y 1742.
+  - **Años sin fuente:** vacíos.
+  - **Wikipedia:** ya no figura como fuente.
+  - **Frases repetidas:** eliminadas.
+- **Ajuste del coordinador:** en **Señor del Gran Poder**, la primera frase («un crucificado de gran tamaño… en la parroquia de San Francisco») no está respaldada por las fuentes citadas. La imagen del Gran Poder no es un crucificado y su sede es su propio santuario. Pasa a: «La imagen del Señor del Gran Poder se venera en su santuario de La Paz (Bolivia)», en ES/EN/PT.
+- **Integración:** merge en `CatholicGPT`. Las 18 devociones nuevas ya muestran su imagen y su crédito.
