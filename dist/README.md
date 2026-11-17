@@ -1,5 +1,18 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.15
+
+[Descargar Catholic Hermes 1.8.15](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.15.apk) · versión `1.8.15`, código 24. **Actualiza 1.8.1–1.8.14** y conserva el progreso.
+
+Novedades:
+- **Nuevo estilo «Tradicional»**: el Lumen de antes, neutro y sobrio, con el color solo en los detalles (Apariencia → Estilo).
+- **Más colores de acento**: grupos «Eclesiásticos» y «No eclesiásticos» (10 colores) y una **rueda de color** para elegir el tuyo.
+- **Cuatro cursos bíblicos nuevos**: Jesús y el misterio pascual, Historia de la salvación, Los Salmos y San Pablo.
+- **Salmos con la numeración correcta** en cada Biblia (se muestran ambos números, p. ej. «Sal 22 (21)»).
+- **Cada devoción con su imagen** en la cabecera, con su crédito.
+
+[Metadatos](../docs/quality/release-1.8.15/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.14
 
 [Descargar Catholic Hermes 1.8.14](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.14.apk) · versión `1.8.14`, código 23. **Actualiza 1.8.1–1.8.13** y conserva el progreso.
