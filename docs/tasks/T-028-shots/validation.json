@@ -1,0 +1,344 @@
+{
+  "base_commit": "5e7c564",
+  "protected_paths_unchanged": [
+    "app/src/main/assets/confession",
+    "dist",
+    "tools/hermes-preview.gradle",
+    "app/schemas"
+  ],
+  "android_configuration_unchanged": true,
+  "reviewed_assets_sha256": {
+    "guide.json": "223293a5fe0492e8fbb2df9eb282ad682b472880b7e6508337ebaa803105dfb4",
+    "examen.json": "9cedfa7dd1620cf5e3430e454896b395bb2d4338dcb951cbba9126fd81a5916b"
+  },
+  "tests": 36,
+  "failures": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "name": "com.example.AppNavigationTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.example.ConfessionCatalogTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.example.ConfessionInteractionTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.example.DesignContrastTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.example.DesignNavigationTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "com.example.screenshots.ConfessionScreenshotTest",
+      "tests": "16",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "cases": [
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[IVE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ConfessionCatalogTest",
+      "name": "privateDraftSaverSerializesOnlyAConstantAndRestoresAnEmptyDraft",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ConfessionCatalogTest",
+      "name": "reviewedAssetsLoadAllProfilesAndEveryGuidePartInThreeLanguages",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ConfessionCatalogTest",
+      "name": "malformedOrUnavailableContentReturnsFailureWithoutInventedFallbackText",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ConfessionInteractionTest",
+      "name": "navigationProfilePrivateListNotesAndEraseNeverPersistTheDraft",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ConfessionInteractionTest",
+      "name": "spiritualLifeProvidesTheSameConfessionEntryAndGuideShowsRealPrayerSources",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ConfessionInteractionTest",
+      "name": "androidStateRestorationDropsBothQuestionIdsAndNotes",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignContrastTest",
+      "name": "liturgicalCaptionsAndRubricsRemainReadableOnEveryPaperSurface",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[SANCTUARY, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "examinationPrivateListAndReviewedGuide[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "narrowLargeTextKeepsActionsReachable[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "examinationPrivateListAndReviewedGuide[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "narrowLargeTextKeepsActionsReachable[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "examinationPrivateListAndReviewedGuide[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "narrowLargeTextKeepsActionsReachable[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "examinationPrivateListAndReviewedGuide[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "narrowLargeTextKeepsActionsReachable[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "examinationPrivateListAndReviewedGuide[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "narrowLargeTextKeepsActionsReachable[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "examinationPrivateListAndReviewedGuide[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "narrowLargeTextKeepsActionsReachable[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "examinationPrivateListAndReviewedGuide[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "narrowLargeTextKeepsActionsReachable[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "examinationPrivateListAndReviewedGuide[SANCTUARY, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "name": "narrowLargeTextKeepsActionsReachable[SANCTUARY, dark=true]",
+      "status": "passed"
+    }
+  ],
+  "build_result": "BUILD SUCCESSFUL in 8m 3s",
+  "frames": [
+    {
+      "file": "lumen_light_overview.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "89761326f655e69a1ac697b8e92dbf5bdade0b3f569f4cf98d4621741d0f8dad"
+    },
+    {
+      "file": "lumen_dark_overview.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "2b0027f0be2cf089242e37c2e20ec2b77826775504b0e21352e234338ab77329"
+    },
+    {
+      "file": "classic_light_overview.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "ec0ee6b7794f1654185aecee309b589b70382d1bc229f0d701da78b6a0471fd5"
+    },
+    {
+      "file": "classic_dark_overview.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "e41c93fd1f68f12ec585780f7d312c8c2a00e397413f4e8e4cddbf6588bdb683"
+    },
+    {
+      "file": "glass_light_overview.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "5b777c7d88356f6984d847e3ee436e124e1675dbcd49ef843fa64a9576885bc4"
+    },
+    {
+      "file": "glass_dark_overview.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "a095225e501d93fdb2b9f6c1ede235ac580d460511a49aa13fc2b59e83927961"
+    },
+    {
+      "file": "sanctuary_light_overview.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "9288014e72eed93dc2f09921013ad1944ba4abd65b67b79c0f3b6306e80f0b48"
+    },
+    {
+      "file": "sanctuary_dark_overview.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "0f96404e90416ab277a188399c63d37e6e684043214de0cc5743dbde5ee73d3b"
+    },
+    {
+      "file": "lumen_light_list.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "bf32943be223c8e7233917712f64f86f6989d61b1e22b8040256497aa3ba8387"
+    },
+    {
+      "file": "lumen_light_guide.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "1369881b325993c9f345f9eaaab2f4f2a27da1d8357edadd8f19487eb510222e"
+    },
+    {
+      "file": "sanctuary_dark_list.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "5a11a84ae2d30063656c6d222e96fb64a1216c44b35268f0354b7a1c2ecb3519"
+    },
+    {
+      "file": "sanctuary_dark_guide.png",
+      "width": 822,
+      "height": 1782,
+      "sha256": "44e4f64a3b00b9699b44d907a5a5a50426e6a4923dcfd522546cd2ff1034dbd7"
+    },
+    {
+      "file": "lumen_light_320_130_list.png",
+      "width": 640,
+      "height": 1782,
+      "sha256": "aafe75a5504b00be358bf4ffb2f88bf7c6dbdedd2217457f30887d61b1dc7ae6"
+    },
+    {
+      "file": "classic_dark_320_130_list.png",
+      "width": 640,
+      "height": 1782,
+      "sha256": "e4be0fa0f4b867fbb7bdc14ebf19d8c1d4cc33ffe7fba8ee60803b685a52187a"
+    },
+    {
+      "file": "glass_light_320_130_list.png",
+      "width": 640,
+      "height": 1782,
+      "sha256": "3086b9bd61b76cd40a874ea358bccff4815a798382b77809f05bc7992c417529"
+    },
+    {
+      "file": "sanctuary_dark_320_130_list.png",
+      "width": 640,
+      "height": 1782,
+      "sha256": "a9ebcef3d1ffe07c2aaa45fa8a776922aa78f79ca46db195c4bc0c47117abd2c"
+    }
+  ],
+  "generated_frame_count": 56,
+  "physical_device_tested": false
+}

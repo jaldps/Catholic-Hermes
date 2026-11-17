@@ -57,9 +57,13 @@ data class UserPreferences(
     /** Chosen narration voice names, keyed "es.leader" / "es.response"; a missing key means automatic. */
     val narrationVoices: Map<String, String> = emptyMap(),
     /** Narration sleep timer in minutes (0 = off, otherwise 15/30/60). */
-    val narrationSleepMinutes: Int = 0
+    val narrationSleepMinutes: Int = 0,
+    /** Only the public examination profile; private confession lists never enter preferences. */
+    val confessionProfileId: String = "single"
 ) {
     companion object {
+        /** Public profile identifiers; confession drafts are never preference values. */
+        val CONFESSION_PROFILES = setOf("children", "youth", "married", "single", "consecrated")
         /** Allowed sleep-timer lengths in minutes; 0 means off. */
         val SLEEP_TIMER_OPTIONS = listOf(0, 15, 30, 60)
         const val DEFAULT_DESIGN_LANGUAGE = "LUMEN"
@@ -113,6 +117,7 @@ class UserPreferencesStore(
         val FONT_FAMILY = stringPreferencesKey("font_family_choice")
         val FONT_SCALE = floatPreferencesKey("font_size_scale")
         val NARRATION_SPEED = floatPreferencesKey("audio_narration_speed")
+        val CONFESSION_PROFILE = stringPreferencesKey("confession_profile")
         val NARRATION_SLEEP_MINUTES = intPreferencesKey("narration_sleep_minutes")
         val BIBLE_TRANSLATION = stringPreferencesKey("active_bible_translation_id")
         val BIBLE_DEFAULTS = stringPreferencesKey("bible_default_editions")
@@ -214,6 +219,7 @@ class UserPreferencesStore(
                     ?: UserPreferences.DEFAULT_FONT_FAMILY,
                 fontSizeScale = stored[Keys.FONT_SCALE] ?: 1.0f,
                 audioNarrationSpeed = stored[Keys.NARRATION_SPEED] ?: 1.0f,
+                confessionProfileId = stored[Keys.CONFESSION_PROFILE]?.takeIf { it in UserPreferences.CONFESSION_PROFILES } ?: "single",
                 narrationSleepMinutes = (stored[Keys.NARRATION_SLEEP_MINUTES] ?: 0).takeIf { it in UserPreferences.SLEEP_TIMER_OPTIONS } ?: 0,
                 activeBibleTranslationId = stored[Keys.BIBLE_TRANSLATION] ?: "jerusalem",
                 isFullCccDownloaded = stored[Keys.FULL_CCC_DOWNLOADED] ?: false,
@@ -221,6 +227,11 @@ class UserPreferencesStore(
                 narrationVoices = VOICE_KEYS.mapNotNull { (id, key) -> stored[key]?.takeIf { it.isNotBlank() }?.let { id to it } }.toMap(),
             )
         }
+
+    suspend fun setConfessionProfile(id: String) {
+        require(id in UserPreferences.CONFESSION_PROFILES)
+        editPreference("setConfessionProfile") { it[Keys.CONFESSION_PROFILE] = id }
+    }
 
     suspend fun setCalendarRules(rules: CalendarRules) {
         editPreference("setCalendarRules") {

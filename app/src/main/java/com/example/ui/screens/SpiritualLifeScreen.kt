@@ -233,7 +233,8 @@ fun SpiritualLifeScreen(
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
     initialTab: Int = 0,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onOpenConfession: () -> Unit = {}
 ) {
     AppEdgeToEdge()
     val design = LocalAppDesign.current
@@ -348,6 +349,7 @@ fun SpiritualLifeScreen(
                     onFilter = { filterIndex = it },
                     language = currentLanguage,
                     onOpenPage = { page = it },
+                    onOpenConfession = onOpenConfession,
                     onToggleAnswered = { entry ->
                         scope.launch { dao.updateJournalEntry(entry.copy(isAnswered = !entry.isAnswered)) }
                     },
@@ -419,6 +421,7 @@ private fun SpiritualHub(
     onFilter: (Int) -> Unit,
     language: AppLanguage,
     onOpenPage: (Int) -> Unit,
+    onOpenConfession: () -> Unit,
     onToggleAnswered: (JournalEntryEntity) -> Unit,
     onRequestDelete: (JournalEntryEntity) -> Unit,
     onCompose: (prompt: String?, category: String?) -> Unit
@@ -445,6 +448,12 @@ private fun SpiritualHub(
                     title = language.pick("Vida espiritual", "Spiritual life", "Vida espiritual"),
                     assetPath = hero,
                     root = true
+                )
+            }
+            item(key = "confession_entry") {
+                com.example.ui.design.AppSecondaryButton(
+                    language.pick("Confesión", "Confession", "Confissão"), onOpenConfession,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).testTag("spiritual_confession_entry")
                 )
             }
             item(key = "life_practices") {

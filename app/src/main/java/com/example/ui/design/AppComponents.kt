@@ -1,5 +1,10 @@
 package com.example.ui.design
 
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.RowScope
@@ -168,3 +173,23 @@ fun AppBanner(
     onClick: (() -> Unit)? = null,
     modifier: Modifier = Modifier
 ) = appKit().Banner(title, body, accentColorHex, onClick, modifier)
+
+/** Multiline notes using the shared card, type and colours. The caller owns the transient value. */
+@Composable
+fun AppNotesField(value: String, onValueChange: (String) -> Unit, label: String, modifier: Modifier = Modifier) {
+    val p = LocalAppDesign.current.palette
+    val styles = com.example.ui.theme.LocalAppTextStyles.current
+    AppCard {
+        androidx.compose.material3.Text(label, style = styles.footnote, color = p.textSecondary)
+        androidx.compose.foundation.layout.Spacer(Modifier.height(8.dp))
+        androidx.compose.foundation.text.BasicTextField(
+            value = value, onValueChange = onValueChange,
+            textStyle = styles.body.copy(color = p.textPrimary),
+            cursorBrush = androidx.compose.ui.graphics.SolidColor(p.accent), minLines = 4, maxLines = 8,
+            // Visible text, requesting a keyboard without spelling suggestions.
+            keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(
+                keyboardType = androidx.compose.ui.text.input.KeyboardType.Password, autoCorrectEnabled = false),
+            modifier = modifier.fillMaxWidth().semantics { contentDescription = label }
+        )
+    }
+}
