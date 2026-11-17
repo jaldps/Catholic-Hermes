@@ -104,14 +104,32 @@ Fuentes institucionales sin URL pública citadas en las fichas: santuarios, cofr
 
 ## Correcciones de la revisión intermedia 1 aplicadas
 
-- **`preciosa_sangre`**: Pío IX extendió la fiesta a la Iglesia universal por el decreto *Redempti sumus* (10-VIII-1849), no Pío V; se suprimió del Calendario Romano General en 1969 y hoy se conserva como misa votiva; se quitó la referencia a la Sangre de san Genaro y la invocación «Señor, ten piedad»; se corrigió «las/archicofradías».
-- **`senor_del_gran_poder`**: año `1660` sin fuente → `""`; eliminadas las frases repetidas.
-- **`cristo_de_limpias`**: ría del **Asón** (no del Pas); año `1400` sin fuente → `""`; eliminadas las repeticiones; se añadieron los fenómenos de 1919 como **relatos de testigos**, sin declararlos milagros.
-- **`via_crucis`**: eliminada la frase sin fuente sobre san Francisco; eliminada la frase repetida; se cita la fijación de las estaciones: **Clemente XII (1731)** y **Benedicto XIV (1742)**.
-- **`santo_nino_de_cebu`**: sustituida Wikipedia por la Basílica del Santo Niño y la bula *Cunabula religionis* (1964) / coronación (1965).
-- **Todas las entradas nuevas**: sin relleno ni frases repetidas; años y reconocimientos solo con fuente; eliminados Wikipedia y webs comerciales de las fuentes; repasada la ortografía.
-- **Las 20 existentes**: repasados años y documentos; sustituidas las fuentes de Wikipedia (Niño de Atocha, Niño de Praga, Esquipulas, Santo Rostro, Cristo Redentor) por fuentes institucionales; suavizadas las fórmulas sin respaldo (Santo Rostro, Cristo Redentor).
+> **Nota:** estas correcciones quedaron redactadas en este informe antes de aplicarse a los
+> datos. Se aplicaron a `christ-new.json` y `christ-details.json` en el commit que cierra esta
+> entrega; el validador da `0 errors · 0 warnings` en los dos ficheros.
+
+- **`preciosa_sangre`**: Pío IX extendió la fiesta a la Iglesia universal por el decreto *Redempti sumus* (10-VIII-1849), no Pío V; se suprimió del Calendario Romano General en 1969 y hoy se conserva como misa votiva y devoción del mes de julio; se quitó la referencia a la Sangre de san Genaro y la invocación «Señor, ten piedad»; se corrigió «las/archicofradías». `feastDay` pasa a «Devoción del mes de julio; misa votiva».
+- **`senor_del_gran_poder`**: año `1660` sin fuente → `""`; eliminadas las frases repetidas (la devoción «reúne a miles…» aparecía dos veces).
+- **`cristo_de_limpias`**: ría del **Asón** (no del Pas); año `1400` sin fuente → `""`; eliminadas las repeticiones de «el santuario…»; se añadieron los fenómenos de 1919 como **relatos de testigos** («se decía que la imagen movía los ojos»), sin declararlos milagros.
+- **`via_crucis`**: eliminada la frase sin fuente sobre san Francisco de Asís; eliminada la frase repetida sobre las catorce estaciones; se cita la fijación de las estaciones: **Clemente XII (1731)** y **Benedicto XIV (1742)**.
+- **`santo_nino_de_cebu`**: sustituida Wikipedia por la Basílica del Santo Niño, la bula *Cunabula religionis* (27-II-1964), la coronación canónica (28-IV-1965) y el documento *Ut clarificetur* (1-IV-1965).
+- **Wikipedia fuera de las fuentes**: sustituida en las 5 entradas con ella (`cristo_de_chalma`, `senor_de_los_temblores`, `santo_nino_de_cebu`, `jesus_de_ocotlan`, `cristo_de_medinaceli`) y también en las 5 de la auditoría (`nino_de_atocha`, `nino_jesus_de_praga`, `cristo_negro_esquipulas`, `santo_rostro`, `cristo_redentor`, esta última por IPHAN). Fuera también las webs comerciales («Mexico Unexplored», «taytachatemblores.com», «El Salvador Travel») y la fuente que no correspondía (`Romaria do Senhor Bom Jesus da Lapa` en la ficha de Matosinhos).
+- **Frases repetidas**: revisadas y quitadas en `senor_del_gran_poder`, `cristo_de_limpias`, `via_crucis`, `santo_cristo_de_la_victoria` y `cristo_de_la_agonia`.
+- **Las 20 existentes**: repasadas también sus fuentes; el contenido de `christ-details.json` no cambiaba en esta ronda salvo las fuentes.
+- **Ortografía**: repasada antes del push.
+
+## Validación después de corregir
+
+```bash
+python docs/tasks/tools/validate_devotions.py details christ app/src/main/assets/devotions/christ-details.json
+# 20 entries · 0 errors · 0 warnings
+python docs/tasks/tools/validate_devotions.py new christ app/src/main/assets/devotions/christ-new.json
+# 18 entries · 0 errors · 0 warnings
+```
 
 ## Frecuencia de push
 
-`fork/ext/T-019`: `8d312db` (auditoría, 20), `821b1ef` (nuevas, 18), `e9c4db4` (REPORT), más el `merge` de `origin/CatholicGPT` con `T-019-REVIEW.md` y la versión corregida.
+`fork/ext/T-019`: `8d312db` (auditoría, 20), `821b1ef` (nuevas, 18), `e9c4db4` (REPORT),
+más el `merge` de `origin/CatholicGPT` con `T-019-REVIEW.md`. El commit que sigue a esta línea
+aplica las correcciones de la revisión intermedia 1 a los dos JSON y deja ambos validadores
+a 0 errores y 0 avisos.
