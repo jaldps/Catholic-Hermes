@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import com.example.data.models.AppLanguage
 import com.example.data.models.BibleVerse
@@ -57,6 +59,7 @@ class BibleTextProvider internal constructor(
                 .use { it.readText() }
             JSONObject(json)
         } catch (e: Exception) {
+            AppLog.failure(LogEvent.BIBLE_BUNDLED,e)
             null
         }
         if (parsed != null) bundledRoots[language] = parsed

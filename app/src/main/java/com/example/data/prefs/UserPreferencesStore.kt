@@ -1,5 +1,7 @@
 package com.example.data.prefs
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -81,7 +83,7 @@ class UserPreferencesStore(
     @OptIn(ExperimentalCoroutinesApi::class)
     private val snapshots: Flow<ReadSnapshot> = readRevision.flatMapLatest {
         dataStore.data.map { ReadSnapshot(true, it) }.catch { error ->
-            if (error is IOException) emit(ReadSnapshot(false, lastGood ?: emptyPreferences()))
+            if (error is IOException) {AppLog.failure(LogEvent.PREFERENCES_READ,error);emit(ReadSnapshot(false, lastGood ?: emptyPreferences()))}
             else throw error
         }
     }.onEach { if (it.available) lastGood = it.data }

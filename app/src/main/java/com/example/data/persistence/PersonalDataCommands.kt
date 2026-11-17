@@ -1,5 +1,7 @@
 package com.example.data.persistence
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
@@ -56,7 +58,7 @@ object PersonalDataCommands {
         check(queue.trySend {
             val status = try { command.write(); Status.SAVED }
                 catch (cancelled: CancellationException) { currentCoroutineContext().ensureActive(); Status.ERROR }
-                catch (_: Exception) { Status.ERROR }
+                catch (e: Exception) { AppLog.failure(LogEvent.PERSONAL_WRITE,e);Status.ERROR }
             if (_states.value[key]?.revision == command.revision) {
                 if (status == Status.ERROR) failed[key] = command.write else failed.remove(key)
             }

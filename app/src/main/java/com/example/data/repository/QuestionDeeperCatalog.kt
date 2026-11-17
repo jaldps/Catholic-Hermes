@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import android.content.res.AssetManager
 import android.util.Log
@@ -42,6 +44,7 @@ class QuestionDeeperCatalog(private val open: (String) -> InputStream) {
     private fun read(name: String): List<RawQuestionDeeper>? = try {
         open(name).bufferedReader().use { adapter.fromJson(it.readText()) }
     } catch (e: Exception) {
+        AppLog.failure(LogEvent.QUESTION_CATALOG,e)
         if (e !is java.io.FileNotFoundException && e.message?.contains("unavailable") != true)
             runCatching { Log.w("QuestionDeeperCatalog", "Ignoring $name: ${e.message}") }
         null

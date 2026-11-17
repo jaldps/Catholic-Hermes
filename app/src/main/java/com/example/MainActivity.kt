@@ -1,5 +1,7 @@
 package com.example
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.os.Bundle
 import android.content.Intent
 import androidx.activity.ComponentActivity
@@ -96,7 +98,7 @@ class MainActivity : ComponentActivity() {
         lifecycleScope.launch {
             try { backupService.recoverPendingRestore() }
             catch (e: kotlinx.coroutines.CancellationException) { throw e }
-            catch (_: Exception) { backupRecoveryFailed = true; return@launch }
+            catch (e: Exception) { AppLog.failure(LogEvent.BACKUP_RECOVERY,e);backupRecoveryFailed = true; return@launch }
             val dao = SanctaFidesDatabase.getInstance(applicationContext).dao()
             com.example.data.persistence.PersonalDataCommands.submit("initial-content") {
                 dao.insertDefaultHabits(com.example.data.repository.PilgrimageAndHabitsData.defaultHabitsToSeed)

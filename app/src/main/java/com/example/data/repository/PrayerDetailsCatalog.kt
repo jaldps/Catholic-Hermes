@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import android.content.res.AssetManager
 import android.util.Log
@@ -69,6 +71,7 @@ class PrayerDetailsCatalog(private val open: (String) -> InputStream) {
     private fun read(name: String): List<RawPrayerEntry>? = try {
         open("$name").bufferedReader().use { adapter.fromJson(it.readText()) }
     } catch (e: Exception) {
+        AppLog.failure(LogEvent.PRAYER_CATALOG,e)
         // Missing file is expected while content is being delivered.
         if (e !is java.io.FileNotFoundException && e.message?.contains("unavailable") != true)
             runCatching { Log.w("PrayerDetailsCatalog", "Ignoring $name: ${e.message}") }

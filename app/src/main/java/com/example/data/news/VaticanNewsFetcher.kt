@@ -1,5 +1,7 @@
 package com.example.data.news
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import com.example.data.models.AppLanguage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -72,7 +74,7 @@ class VaticanNewsFetcher(
                     ?: return@use NewsResult.Failure("empty response")
                 NewsResult.Success(parse(body, limit))
             }
-        }.getOrElse { NewsResult.Failure(it.message ?: it::class.java.simpleName) }
+        }.getOrElse { AppLog.failure(LogEvent.NEWS_FEED,it);NewsResult.Failure(it.message ?: it::class.java.simpleName) }
     }
 
     /**

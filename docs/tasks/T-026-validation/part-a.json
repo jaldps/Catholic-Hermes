@@ -1,0 +1,240 @@
+{
+  "suites": [
+    {
+      "name": "com.example.AppLogTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.1"
+    },
+    {
+      "name": "com.example.AppNavigationTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "136.915"
+    },
+    {
+      "name": "com.example.BackupCoreTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "13.112"
+    },
+    {
+      "name": "com.example.ErrorReportProviderTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.787"
+    },
+    {
+      "name": "com.example.ErrorReportUiTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "35.023"
+    },
+    {
+      "name": "com.example.NarrationPlaybackTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.686"
+    },
+    {
+      "name": "com.example.PreferenceStorageReliabilityTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.993"
+    }
+  ],
+  "cases": [
+    {
+      "class": "com.example.AppLogTest",
+      "name": "everyLineHasIsoTimeLevelTagAndOnlyFourStackFrames",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppLogTest",
+      "name": "safeHelperDoesNotSerializePersonalTextMessagesCausesOrInjectedStackNames",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppLogTest",
+      "name": "reportIsAStableSnapshotOfBothFilesAndSnapshotCountIsBounded",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppLogTest",
+      "name": "rotatesBeforeTheLimitAndKeepsOnlyOnePreviousFile",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[IVE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "preferenceFailureRollsBackRoomAndAllPreviouslyWrittenPreferences",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "replaceClearsPortablePreferenceGroupsAbsentFromTheFile",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "portablePbkdf2MatchesPublishedVectorAndJcaWithUnicodePasswords",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "collidingCustomHabitsAreRemappedTogetherWithTheirLogsOnlyOnce",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "wrongPasswordAndDamagedFileNeverChangeData",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "interruptedCrossStoreCommitRecoversOldPreferencesUnlessRoomCommitted",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "formatAndWorkFactorAreBoundedBeforeKeyDerivationAndMetadataIsAuthenticated",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "combiningCollidingIdsKeepsBothNotesAndIsIdempotent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "answeredJournalUpdatesMergeIntoTheSameNaturalEntryAndMalformedPreferenceTypesAreRejected",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "everyTableAndPortablePreferenceRoundTripsWithoutCachesOrSecrets",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "replacingRemovesOldRowsAndRestoresNotesAndPreferences",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "legacyBitmaskAndDaysBeyond31RemainPortableWithoutExportingMigrationTables",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ErrorReportProviderTest",
+      "name": "safePublicHelperExcludesPersonalExceptionDataFromTheSharedSnapshot",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ErrorReportProviderTest",
+      "name": "sharedReportUsesAReadableContentUriWithReadPermissionOnly",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ErrorReportProviderTest",
+      "name": "providerCannotExposeOtherPersonalFiles",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ErrorReportUiTest",
+      "name": "settingsEntryExplainsTheReportAndOnlySharesAfterAnExplicitClick",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "focusLossStopsNarrationAndContinueSpeaksTheSamePartAgain",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "serviceStartsWithRecitationAndStopsAfterStop",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "becomingNoisyStopsNarration",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "focusIsRequestedOnSpeakAndAbandonedOnStop",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "serviceShowsMediaNotificationInForeground",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "sleepTimerPersistsAndStopsNarration",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PreferenceStorageReliabilityTest",
+      "name": "cancellingTheCallerDoesNotCancelAnAcceptedPreferenceWrite",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PreferenceStorageReliabilityTest",
+      "name": "aFailedSettingRemainsRetryableWithoutAnUncaughtCallerException",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PreferenceStorageReliabilityTest",
+      "name": "nestedPreferenceCommandDoesNotDeadlockAndPreservesTheActualQuestion",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PreferenceStorageReliabilityTest",
+      "name": "aReadFailureKeepsKnownValuesAndReportsUnavailabilityUntilRetry",
+      "status": "passed"
+    }
+  ],
+  "tests": 35,
+  "failures": 0,
+  "skipped": 0
+}

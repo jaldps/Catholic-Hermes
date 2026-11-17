@@ -1,5 +1,7 @@
 package com.example.data.backup
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import android.util.AtomicFile
 import androidx.room.withTransaction
@@ -137,8 +139,9 @@ class BackupService(
                 dao.mark(PersonalDataMigrationEntity(marker))
             }
         } catch (e: Exception) {
+            AppLog.failure(LogEvent.BACKUP_WRITE,e)
             try { preferences.write(oldPreferences); journal.delete() }
-            catch (rollback: Exception) { e.addSuppressed(rollback) } // The durable journal remains for startup recovery.
+            catch (rollback: Exception) { AppLog.failure(LogEvent.BACKUP_ROLLBACK,rollback);e.addSuppressed(rollback) } // The durable journal remains for startup recovery.
             throw BackupException(BackupError.STORAGE,e)
         }
         journal.delete()

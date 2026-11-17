@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import android.content.res.AssetManager
 import android.util.Log
@@ -49,6 +51,7 @@ class SaintsCatalog(private val open: (String) -> InputStream) {
     private fun read(name: String): List<RawSaint>? = try {
         open(name).bufferedReader().use { adapter.fromJson(it.readText()) }
     } catch (e: Exception) {
+        AppLog.failure(LogEvent.SAINT_CATALOG,e)
         if (e !is java.io.FileNotFoundException && e.message?.contains("unavailable") != true)
             runCatching { Log.w("SaintsCatalog", "Ignoring $name: ${e.message}") }
         null

@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 
 import com.example.data.models.AppLanguage
@@ -342,7 +344,7 @@ class CatholicDataRepository(
             _novenaCatalogError.value=false
             try { _novenaCatalog.value=NovenaCatalog.default.allNovenas }
             catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled }
-            catch (_: Exception) { _novenaCatalogError.value=true }
+            catch (e: Exception) { AppLog.failure(LogEvent.NOVENA_CATALOG,e);_novenaCatalogError.value=true }
         }
     }
     suspend fun loadNovena(id: String): Novena = withContext(Dispatchers.IO) { NovenaCatalog.default.preload(id) }

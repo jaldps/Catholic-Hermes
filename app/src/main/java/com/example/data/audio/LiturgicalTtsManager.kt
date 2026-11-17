@@ -1,5 +1,7 @@
 package com.example.data.audio
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -209,7 +211,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
                 ContextCompat.RECEIVER_NOT_EXPORTED
             )
             noisyReceiver = receiver
-        }
+        }.onFailure {AppLog.failure(LogEvent.TTS_RECEIVER,it)}
     }
 
     private fun unregisterNoisy() {
@@ -252,7 +254,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         if (serviceRunning) {
             serviceRunning = false
             lastServiceSignature = null
-            runCatching { context.applicationContext.stopService(NarrationService.intent(context.applicationContext)) }
+            runCatching { context.applicationContext.stopService(NarrationService.intent(context.applicationContext)) }.onFailure {AppLog.failure(LogEvent.TTS_SERVICE,it)}
         }
     }
 
@@ -278,7 +280,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         lastServiceSignature = state
         runCatching {
             ContextCompat.startForegroundService(context.applicationContext, NarrationService.intent(context.applicationContext))
-        }
+        }.onFailure {AppLog.failure(LogEvent.TTS_SERVICE,it)}
     }
 
     /** Stops speech now and remembers what was being said so [resume] can say it again. */
@@ -311,7 +313,8 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         tts = TextToSpeech(context.applicationContext, this)
         try {
             toneGenerator = ToneGenerator(AudioManager.STREAM_MUSIC, 70)
-        } catch (_: Exception) {
+        } catch (e: Exception) {
+            AppLog.failure(LogEvent.TTS_TONE,e)
             toneGenerator = null
         }
         // Follow the saved narration speed (and the saved language, so the
@@ -328,7 +331,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
                         mainHandler.post { setLanguage(prefs.language) }
                     }
                 }
-            }
+            }.onFailure {AppLog.failure(LogEvent.TTS_PREFERENCES,it)}
         }
     }
 
@@ -350,10 +353,12 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
                 @Deprecated("Deprecated in Java")
                 override fun onError(utteranceId: String?) {
                     val id = utteranceId ?: return
+                    AppLog.failure(LogEvent.TTS_PLAYBACK)
                     mainHandler.post { tracker.onError(id); publish(); _playbackIssue.value = VoiceAvailability.PLAYBACK_ERROR }
                 }
             })
         } else {
+            AppLog.failure(LogEvent.TTS_ENGINE)
             isInitialized = false
             _isReady.value = false
             _availability.value = VoiceAvailability.ENGINE_ERROR
@@ -384,7 +389,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
             AppLanguage.EN -> Locale("en", "US")
             AppLanguage.PT -> Locale("pt", "BR")
         }
-        val result = runCatching { tts?.setLanguage(targetLocale) }.getOrNull()
+        val result = runCatching { tts?.setLanguage(targetLocale) }.onFailure {AppLog.failure(LogEvent.TTS_LANGUAGE,it)}.getOrNull()
         _availability.value = when {
             result == null -> VoiceAvailability.ENGINE_ERROR
             result >= TextToSpeech.LANG_AVAILABLE -> VoiceAvailability.READY
@@ -529,6 +534,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
             // A refused request never reports back; without this the narrator
             // would look busy forever.
             if (result == TextToSpeech.ERROR) {
+                AppLog.failure(LogEvent.TTS_PLAYBACK)
                 tracker.onError(id)
                 publish()
                 _playbackIssue.value = VoiceAvailability.PLAYBACK_ERROR

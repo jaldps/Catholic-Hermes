@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import android.content.res.AssetManager
 import android.util.Log
@@ -98,6 +100,7 @@ class StudyCoursesCatalog(
     private fun parse(name: String): RawCourse? = try {
         open(name).bufferedReader().use { adapter.fromJson(it.readText()) }
     } catch (e: Exception) {
+        AppLog.failure(LogEvent.COURSE_CATALOG,e)
         if (e !is java.io.FileNotFoundException && e.message?.contains("unavailable") != true) warn(name, e.message.orEmpty())
         null
     }
