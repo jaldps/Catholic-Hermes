@@ -31,6 +31,8 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
 import com.example.data.prefs.UserPreferencesStore
+import com.example.data.repository.CatechismLabels
+import com.example.data.repository.CatechismStructureCatalog
 import com.example.data.repository.CatholicDataRepository
 import com.example.data.repository.PlanProgress
 import com.example.data.repository.PlanProgressMath
@@ -221,6 +223,7 @@ private fun PlanDetail(
     val chips = rememberLazyListState(initialFirstVisibleItemIndex = (viewDay - 1).coerceAtLeast(0))
     LaunchedEffect(viewDay) { chips.animateScrollToItem((viewDay - 1).coerceAtLeast(0)) }
     val english = language == AppLanguage.EN
+    val catechismStructure = remember { CatechismStructureCatalog.default.structure }
 
     LazyColumn(
         Modifier.fillMaxSize().testTag("plan_detail_screen"),
@@ -263,8 +266,10 @@ private fun PlanDetail(
             if (day != null) item("readings") {
                 AppListGroup {
                     if (day.paragraphs != null) {
+                        // Where the day sits in the book (the deepest division holding it, or the two it crosses).
                         AppListRow(ReadingPlanLinks.catechismLabel(day.paragraphs, english),
-                            subtitle = tr("Catecismo de la Iglesia Católica", "Catechism of the Catholic Church", "Catecismo da Igreja Católica"),
+                            subtitle = CatechismLabels.planSubtitle(catechismStructure, day.paragraphs, language)
+                                ?: tr("Catecismo de la Iglesia Católica", "Catechism of the Catholic Church", "Catecismo da Igreja Católica"),
                             onClick = { onOpenCatechism(day.paragraphs.first) }, modifier = Modifier.testTag("plan_reading_0"))
                     } else day.readings.forEachIndexed { index, raw ->
                         AppListRow(bibleLabel(raw), onClick = { onOpenBibleReading(raw) }, modifier = Modifier.testTag("plan_reading_$index"))

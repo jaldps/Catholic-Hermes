@@ -100,7 +100,12 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.LocalizedText
 import com.example.data.prefs.UserPreferences
 import com.example.data.repository.CatechismData
+import com.example.data.repository.CatechismLabels
+import com.example.data.repository.CatechismNode
+import com.example.data.repository.CatechismNodeKind
 import com.example.data.repository.CatechismOutlineSection
+import com.example.data.repository.CatechismStructure
+import com.example.data.repository.CatechismStructureCatalog
 import com.example.data.repository.CatholicDataRepository
 import com.example.data.repository.CatechismCompendiumData
 import com.example.data.repository.CompendiumQA
@@ -176,7 +181,18 @@ fun CatechismScreen(
     fun replaceTop(page: CccPage) { stack = encodeStack(pages.dropLast(1) + page) }
     fun backToIndex() { stack = "" }
     fun openReader(section: CatechismOutlineSection, focus: Int?) =
-        push(CccPage.Reader(section.firstNumber, focus ?: -1))
+        push(CccPage.Reader(section.firstNumber, focus ?: -1, section.lastNumber))
+    fun openNode(node: CatechismNode) = push(CccPage.Reader(node.first, -1, node.last))
+
+    // The reviewed hierarchy of the book; the hand-written outline stands in if its asset cannot be read.
+    val structure = remember { CatechismStructureCatalog.default.structure }
+    // Which tree rows are open survives leaving the page for a reader and coming back.
+    var expandedRaw by rememberSaveable { mutableStateOf("") }
+    val expanded = remember(expandedRaw) { expandedRaw.split(',').filter { it.isNotEmpty() }.toSet() }
+    fun toggleNode(id: String) {
+        expandedRaw = (if (id in expanded) expanded - id else expanded + id).joinToString(",")
+    }
+    val partStates = remember { mutableMapOf<Int, LazyListState>() }
 
     // The page being left keeps its state: the contents list, the queries and
     // the Compendium filters live here, above the page switch.
@@ -227,6 +243,7 @@ fun CatechismScreen(
                     query = query,
                     onQueryChange = { query = it },
                     lastRead = lastRead,
+                    structure = structure,
                     onOpenReader = { section, focus -> openReader(section, focus) },
                     onOpenPart = { push(CccPage.Part(it)) },
                     onOpenCompendium = { push(CccPage.Compendium) },
@@ -236,26 +253,39 @@ fun CatechismScreen(
 
                 is CccPage.Part -> CccPartPage(
                     repository = repository,
+                    structure = structure,
                     lang = lang,
                     insets = insets,
                     part = page.part,
                     lastRead = lastRead,
+                    expanded = expanded,
+                    listState = partStates.getOrPut(page.part) { LazyListState() },
+                    onToggle = { toggleNode(it) },
+                    onOpenNode = { node ->
+                        val outlineHit = repository.catechismOutline
+                            .firstOrNull { it.firstNumber == node.first && it.lastNumber == node.last }
+                        if (outlineHit != null) openReader(outlineHit, null) else openNode(node)
+                    },
                     onOpenReader = { section, focus -> openReader(section, focus) }
                 )
 
                 is CccPage.Reader -> {
-                    val section = repository.catechismOutline.firstOrNull { it.firstNumber == page.section }
-                        ?: repository.catechismOutline.first()
+                    val section = resolveSection(repository, structure, page.section, page.last)
                     CccReaderPage(
                         repository = repository,
+                        structure = structure,
                         lang = lang,
                         insets = insets,
                         section = section,
                         focus = page.focus.takeIf { it > 0 },
                         onOpenSection = { next, focus ->
-                            replaceTop(CccPage.Reader(next.firstNumber, focus ?: -1))
+                            replaceTop(CccPage.Reader(next.firstNumber, focus ?: -1, next.lastNumber))
                         },
-                        onOpenPart = { part -> replaceTop(CccPage.Part(part)) },
+                        onOpenPart = { part, path ->
+                            // The index opens with the reader's own place unfolded.
+                            expandedRaw = (expanded + path).joinToString(",")
+                            replaceTop(CccPage.Part(part))
+                        },
                         onIndex = { backToIndex() }
                     )
                 }
@@ -301,7 +331,8 @@ fun CatechismScreen(
 private sealed interface CccPage {
     data object Index : CccPage
     data class Part(val part: Int) : CccPage
-    data class Reader(val section: Int, val focus: Int) : CccPage
+    /** [last] is the end of the range read; -1 (old saved state) means "the outline section that starts at [section]". */
+    data class Reader(val section: Int, val focus: Int, val last: Int = -1) : CccPage
     data object Compendium : CccPage
     data class Answer(val first: Int) : CccPage
     data object Formulas : CccPage
@@ -310,7 +341,7 @@ private sealed interface CccPage {
 private fun encodePage(page: CccPage): String = when (page) {
     CccPage.Index -> "i"
     is CccPage.Part -> "p:${page.part}"
-    is CccPage.Reader -> "r:${page.section}:${page.focus}"
+    is CccPage.Reader -> "r:${page.section}:${page.focus}:${page.last}"
     CccPage.Compendium -> "c"
     is CccPage.Answer -> "a:${page.first}"
     CccPage.Formulas -> "f"
@@ -322,7 +353,7 @@ private fun decodePage(token: String): CccPage? {
         "p" -> parts.getOrNull(1)?.toIntOrNull()?.let { CccPage.Part(it) }
         "r" -> {
             val s = parts.getOrNull(1)?.toIntOrNull() ?: return null
-            CccPage.Reader(s, parts.getOrNull(2)?.toIntOrNull() ?: -1)
+            CccPage.Reader(s, parts.getOrNull(2)?.toIntOrNull() ?: -1, parts.getOrNull(3)?.toIntOrNull() ?: -1)
         }
         "c" -> CccPage.Compendium
         "a" -> parts.getOrNull(1)?.toIntOrNull()?.let { CccPage.Answer(it) }
@@ -339,7 +370,47 @@ private fun decodeStack(stack: String): List<CccPage> =
 private fun initialStack(initialParagraph: Int?, repository: CatholicDataRepository): String {
     val n = initialParagraph?.takeIf { it in 1..2865 } ?: return ""
     val section = repository.catechismSectionFor(n) ?: return ""
-    return encodePage(CccPage.Reader(section.firstNumber, n))
+    return encodePage(CccPage.Reader(section.firstNumber, n, section.lastNumber))
+}
+
+/**
+ * What the reader shows for a stretch of the book: the hand-written outline section when it is one, else
+ * a section-shaped value built from the hierarchy node that spans exactly that range (or the one holding
+ * its first paragraph). This is how the reader takes any [first]..[last].
+ */
+private fun resolveSection(
+    repository: CatholicDataRepository,
+    structure: CatechismStructure,
+    first: Int,
+    last: Int
+): CatechismOutlineSection {
+    val outline = repository.catechismOutline
+    outline.firstOrNull { it.firstNumber == first && (last < first || it.lastNumber == last) }?.let { return it }
+    if (last < first) return outline.first()
+    val node = structure.nodeForRange(first, last) ?: structure.deepestNode(first)
+    val top = structure.breadcrumb(first).firstOrNull()
+    val fallback = LocalizedText("§§ $first–$last", "§§ $first–$last", "§§ $first–$last")
+    return CatechismOutlineSection(
+        partTitle = top?.title ?: fallback,
+        title = node?.title ?: fallback,
+        firstNumber = first,
+        lastNumber = last,
+        biblicalReferences = ""
+    )
+}
+
+/** The reading that follows or precedes [section]: its outline neighbour, or the neighbouring division of the tree. */
+private fun neighbourSection(
+    repository: CatholicDataRepository,
+    structure: CatechismStructure,
+    section: CatechismOutlineSection,
+    forward: Boolean
+): CatechismOutlineSection? {
+    val outline = repository.catechismOutline
+    val index = outline.indexOf(section)
+    if (index >= 0) return outline.getOrNull(index + if (forward) 1 else -1)
+    val range = structure.adjacent(section.firstNumber, section.lastNumber, forward) ?: return null
+    return resolveSection(repository, structure, range.first, range.last)
 }
 
 // ------------------------------------------------------- book structure
@@ -712,6 +783,8 @@ private fun CatRowShell(
     chevron: Boolean = true,
     divider: Boolean = true,
     minHeight: Dp? = null,
+    /** Extra start inset for rows nested in the contents tree; the hairline follows it. */
+    indent: Dp = 0.dp,
     content: @Composable ColumnScope.() -> Unit
 ) {
     val design = LocalAppDesign.current
@@ -722,7 +795,7 @@ private fun CatRowShell(
                 .fillMaxWidth()
                 .lumenPress(onClick, 0.99f)
                 .heightIn(min = minHeight ?: design.spacing.rowMinHeight)
-                .padding(horizontal = 18.dp, vertical = 12.dp),
+                .padding(start = 18.dp + indent, end = 18.dp, top = 12.dp, bottom = 12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             if (leadingIcon != null) {
@@ -742,7 +815,7 @@ private fun CatRowShell(
             }
         }
         if (divider) {
-            val inset = 18.dp + when {
+            val inset = 18.dp + indent + when {
                 leadingIcon != null -> 38.dp
                 leading != null -> leadingWidth
                 else -> 0.dp
@@ -766,7 +839,8 @@ private fun CatRow(
     trailing: (@Composable () -> Unit)? = null,
     chevron: Boolean = true,
     divider: Boolean = true,
-    minHeight: Dp? = null
+    minHeight: Dp? = null,
+    indent: Dp = 0.dp
 ) {
     val styles = LocalAppTextStyles.current
     val p = LocalAppDesign.current.palette
@@ -785,7 +859,8 @@ private fun CatRow(
         },
         chevron = chevron,
         divider = divider,
-        minHeight = minHeight
+        minHeight = minHeight,
+        indent = indent
     ) {
         Text(title, style = styles.body, color = p.textPrimary)
         if (subtitle != null) {
@@ -894,6 +969,7 @@ private fun CccIndexPage(
     query: String,
     onQueryChange: (String) -> Unit,
     lastRead: Int?,
+    structure: CatechismStructure,
     onOpenReader: (CatechismOutlineSection, Int?) -> Unit,
     onOpenPart: (Int) -> Unit,
     onOpenCompendium: () -> Unit,
@@ -1090,29 +1166,28 @@ private fun CccIndexPage(
                 CatSectionHeader(lang.pick("Contenido", "Contents", "Conteúdo"))
             }
             item(key = "contents_group") {
-                val lastPart = lastRead?.let { CccStructure.sectionFor(it)?.part }
-                AppListGroup {
-                    (0..4).forEach { part ->
-                        val range = CccStructure.partRange(part)
-                        val title = CccStructure.partTitles[part].get(lang)
-                        val subtitle = if (part == 0) {
-                            "§§ ${range.first}–${range.last}"
-                        } else {
-                            "${CccStructure.ordinal(part, lang)} · §§ ${range.first}–${range.last}"
+                val lastPart = lastRead?.let { n -> structure.nodes.indexOfFirst { n in it.range } }
+                // Level 0 of the hierarchy: the Prologue and the four Parts. Each Part opens its own page, where
+                // sections, chapters and articles unfold.
+                AppListGroup(Modifier.testTag("ccc_index")) {
+                    structure.nodes.forEachIndexed { part, node ->
+                        val label = CatechismLabels.label(node, lang)
+                        val range = CatechismLabels.rangeLabel(node.range, lang)
+                        Box(Modifier.testTag("ccc_node_${node.id}")) {
+                            CatRow(
+                                title = node.title.get(lang),
+                                subtitle = if (label != null) "$label · $range" else range,
+                                minHeight = 64.dp,
+                                divider = part < structure.nodes.lastIndex,
+                                trailing = if (lastPart == part) ({
+                                    AppSeasonDot(p.accent, size = 8.dp)
+                                }) else null,
+                                onClick = {
+                                    if (part == 0) onOpenReader(outline.first(), null) else onOpenPart(part)
+                                },
+                                modifier = Modifier.testTag("catechism_part_$part")
+                            )
                         }
-                        CatRow(
-                            title = title,
-                            subtitle = subtitle,
-                            minHeight = 64.dp,
-                            divider = part < 4,
-                            trailing = if (lastPart == part) ({
-                                AppSeasonDot(p.accent, size = 8.dp)
-                            }) else null,
-                            onClick = {
-                                if (part == 0) onOpenReader(outline.first(), null) else onOpenPart(part)
-                            },
-                            modifier = Modifier.testTag("catechism_part_$part")
-                        )
                     }
                 }
             }
@@ -1433,21 +1508,47 @@ private fun OfficialTexts(
 
 // ------------------------------------------------------------------ part
 
+/** One visible row of a part's tree: a node, or the "Read" entry that opens a node's whole range. */
+private data class CccTreeRow(val node: CatechismNode, val level: Int, val read: Boolean = false)
+
+/**
+ * The rows showing now: the part's own "Read" entry, then its sections; a node that is open lists its own
+ * "Read" entry and then its children, one step further in.
+ */
+private fun cccTreeRows(root: CatechismNode, expanded: Set<String>): List<CccTreeRow> = buildList {
+    add(CccTreeRow(root, 0, read = true))
+    fun walk(parent: CatechismNode, level: Int) {
+        for (child in parent.children) {
+            add(CccTreeRow(child, level))
+            if (child.children.isNotEmpty() && child.id in expanded) {
+                add(CccTreeRow(child, level + 1, read = true))
+                walk(child, level + 1)
+            }
+        }
+    }
+    walk(root, 1)
+}
+
 @Composable
 private fun CccPartPage(
     repository: CatholicDataRepository,
+    structure: CatechismStructure,
     lang: AppLanguage,
     insets: PaddingValues,
     part: Int,
     lastRead: Int?,
+    expanded: Set<String>,
+    listState: LazyListState,
+    onToggle: (String) -> Unit,
+    onOpenNode: (CatechismNode) -> Unit,
     onOpenReader: (CatechismOutlineSection, Int?) -> Unit
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
     val safePart = part.coerceIn(1, 4)
-    val title = CccStructure.partTitles[safePart].get(lang)
-    val range = CccStructure.partRange(safePart)
+    val root = structure.nodes.getOrNull(safePart) ?: structure.nodes.last()
+    val title = root.title.get(lang)
     AppInlineTitle(title)
 
     val description = repository.catechismParts.getOrNull(safePart - 1)?.description?.get(lang)
@@ -1455,9 +1556,11 @@ private fun CccPartPage(
         repository.catechismParts.getOrNull(safePart - 1)
             ?.sections?.flatMap { it.chapters }?.flatMap { it.articles }.orEmpty()
     }
+    val rows = remember(root, expanded) { cccTreeRows(root, expanded) }
 
     LazyColumn(
         Modifier.fillMaxSize(),
+        state = listState,
         contentPadding = PaddingValues(
             top = insets.calculateTopPadding() + 4.dp,
             bottom = insets.calculateBottomPadding() + 24.dp
@@ -1467,7 +1570,8 @@ private fun CccPartPage(
             MeasureColumn {
                 Column(Modifier.padding(horizontal = design.spacing.gutter)) {
                     Text(
-                        "${CccStructure.ordinal(safePart, lang)} · §§ ${range.first}–${range.last}",
+                        listOfNotNull(CatechismLabels.label(root, lang), CatechismLabels.rangeLabel(root.range, lang))
+                            .joinToString(" · "),
                         style = styles.eyebrow,
                         color = p.textSecondary
                     )
@@ -1486,28 +1590,20 @@ private fun CccPartPage(
             }
         }
 
-        CccStructure.sectionsOfPart(safePart).forEachIndexed { sectionIndex, book ->
-            val sections = repository.catechismOutline.filter { it.firstNumber in book.first..book.last }
-            item(key = "book_${book.first}") {
-                Spacer(Modifier.height(32.dp))
-                CatSectionHeader(
-                    text = book.title.get(lang),
-                    eyebrow = CccStructure.sectionOrdinal(sectionIndex, lang)
-                )
-                AppListGroup {
-                    sections.forEachIndexed { i, section ->
-                        val isLast = lastRead != null && lastRead in section.numbers
-                        CatRow(
-                            title = section.title.get(lang),
-                            subtitle = "§§ ${section.firstNumber}–${section.lastNumber} · " +
-                                section.paragraphCount.paragraphs(lang),
-                            trailingText = if (isLast) "§ $lastRead" else null,
-                            minHeight = 64.dp,
-                            divider = i < sections.lastIndex,
-                            onClick = { onOpenReader(section, null) },
-                            modifier = Modifier.testTag("catechism_section_${section.firstNumber}")
-                        )
-                    }
+        item(key = "part_tree") {
+            Spacer(Modifier.height(28.dp))
+            CatSectionHeader(lang.pick("Contenido", "Contents", "Conteúdo"))
+            AppListGroup(Modifier.testTag("ccc_tree")) {
+                rows.forEachIndexed { i, row ->
+                    CccTreeRowView(
+                        row = row,
+                        lang = lang,
+                        lastRead = lastRead,
+                        open = row.node.id in expanded,
+                        divider = i < rows.lastIndex,
+                        onToggle = onToggle,
+                        onOpenNode = onOpenNode
+                    )
                 }
             }
         }
@@ -1539,17 +1635,84 @@ private fun CccPartPage(
     }
 }
 
+/** A row of the contents tree: opens/closes when the node has children, reads when it is a leaf or a "Read" entry. */
+@Composable
+private fun CccTreeRowView(
+    row: CccTreeRow,
+    lang: AppLanguage,
+    lastRead: Int?,
+    open: Boolean,
+    divider: Boolean,
+    onToggle: (String) -> Unit,
+    onOpenNode: (CatechismNode) -> Unit
+) {
+    val p = LocalAppDesign.current.palette
+    val node = row.node
+    val indent = ((row.level - 1).coerceAtLeast(0) * 14).dp
+    val range = CatechismLabels.rangeLabel(node.range, lang)
+    if (row.read) {
+        CatRow(
+            title = lang.pick("Leer", "Read", "Ler"),
+            subtitle = range + " · " + node.paragraphCount.paragraphs(lang),
+            leadingIcon = Icons.Outlined.MenuBook,
+            minHeight = 52.dp,
+            divider = divider,
+            indent = indent,
+            onClick = { onOpenNode(node) },
+            modifier = Modifier.testTag("ccc_read_${node.id}")
+        )
+        return
+    }
+    val label = CatechismLabels.label(node, lang)
+    val expandable = node.children.isNotEmpty()
+    val here = lastRead != null && lastRead in node.range && !(expandable && open)
+    val stateText = lang.pick(
+        if (open) "Desplegado" else "Plegado",
+        if (open) "Expanded" else "Collapsed",
+        if (open) "Expandido" else "Recolhido"
+    )
+    CatRow(
+        title = node.title.get(lang),
+        subtitle = if (label != null) "$label · $range" else range,
+        minHeight = 64.dp,
+        divider = divider,
+        indent = indent,
+        chevron = !expandable,
+        trailing = if (expandable || here) ({
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (here) {
+                    AppSeasonDot(p.accent, size = 8.dp)
+                    Spacer(Modifier.width(8.dp))
+                }
+                if (expandable) {
+                    Icon(
+                        if (open) Icons.Outlined.KeyboardArrowUp else Icons.Outlined.KeyboardArrowDown,
+                        null,
+                        tint = p.textSecondary,
+                        modifier = Modifier.size(22.dp)
+                    )
+                }
+            }
+        }) else null,
+        onClick = { if (expandable) onToggle(node.id) else onOpenNode(node) },
+        modifier = Modifier
+            .testTag("ccc_node_${node.id}")
+            .then(if (expandable) Modifier.semantics { stateDescription = stateText } else Modifier)
+    )
+}
+
 // ---------------------------------------------------------------- reader
 
 @Composable
 private fun CccReaderPage(
     repository: CatholicDataRepository,
+    structure: CatechismStructure,
     lang: AppLanguage,
     insets: PaddingValues,
     section: CatechismOutlineSection,
     focus: Int?,
     onOpenSection: (CatechismOutlineSection, Int?) -> Unit,
-    onOpenPart: (Int) -> Unit,
+    onOpenPart: (part: Int, path: List<String>) -> Unit,
     onIndex: () -> Unit
 ) {
     val design = LocalAppDesign.current
@@ -1557,10 +1720,12 @@ private fun CccReaderPage(
     val styles = LocalAppTextStyles.current
     val context = LocalContext.current
     val density = LocalDensity.current
-    val outline = repository.catechismOutline
-    val sectionIndex = outline.indexOf(section).coerceAtLeast(0)
     val book = CccStructure.sectionFor(section.firstNumber)
     val count = section.paragraphCount
+    // A range that is not one of the outline's sections was opened from the tree: its own label heads it.
+    val fromTree = remember(section) { repository.catechismOutline.none { it == section } }
+    val previous = remember(section) { neighbourSection(repository, structure, section, forward = false) }
+    val next = remember(section) { neighbourSection(repository, structure, section, forward = true) }
     val sectionTitle = section.title.get(lang)
 
     AppHideTabBar(true)
@@ -1583,6 +1748,20 @@ private fun CccReaderPage(
                 .coerceIn(section.firstNumber, section.lastNumber)
         }
     }
+
+    // The place of the paragraph at the top of the page; only a change of division recomposes the strip.
+    // The first paragraph whose middle is on the page, so a paragraph that only peeks in at the top is not "it".
+    val crumbNumber by remember(section.firstNumber) {
+        derivedStateOf {
+            val info = listState.layoutInfo
+            val hit = info.visibleItemsInfo.firstOrNull {
+                it.index in 1..count && it.offset + it.size / 2 >= info.viewportStartOffset
+            }
+            hit?.let { section.firstNumber + it.index - 1 } ?: currentNumber
+        }
+    }
+    val deepestId by remember(structure) { derivedStateOf { structure.deepestNode(crumbNumber)?.id } }
+    val path = remember(deepestId) { structure.breadcrumb(crumbNumber) }
 
     // Where the reader is, kept for "Continue reading": a second after it
     // settles, and at once on leaving.
@@ -1610,45 +1789,18 @@ private fun CccReaderPage(
     }
 
     Box(Modifier.fillMaxSize()) {
-        LazyColumn(
-            state = listState,
-            modifier = Modifier.fillMaxSize().testTag("catechism_reader_scroll").graphicsLayer { alpha = if (ready) 1f else 0f },
-            contentPadding = PaddingValues(top = topInset, bottom = dockInset + 104.dp)
-        ) {
-            item(key = "paragraph_range_title") {
-                ReaderHeader(
-                    lang = lang,
-                    section = section,
-                    book = book,
-                    onOpenPart = onOpenPart
-                )
+      Column(Modifier.fillMaxSize().padding(top = topInset)) {
+        CccBreadcrumb(
+            path = path,
+            lang = lang,
+            onOpenPart = {
+                val part = structure.nodes.indexOf(path.first())
+                onOpenPart(part, path.map { it.id })
             }
-            items(count, key = { "paragraph_${section.firstNumber + it}" }) { offset ->
-                val number = section.firstNumber + offset
-                ParagraphBlock(
-                    repository = repository,
-                    lang = lang,
-                    number = number,
-                    focused = focus == number
-                )
-            }
-            item(key = "paragraph_navigation") {
-                ReaderFooter(
-                    lang = lang,
-                    previous = outline.getOrNull(sectionIndex - 1),
-                    next = outline.getOrNull(sectionIndex + 1),
-                    onOpenSection = { onOpenSection(it, null) },
-                    onIndex = onIndex
-                )
-            }
-        }
-
-        // The reading line along the bottom edge of the bar, once the page
-        // has scrolled under it.
+        )
+        // The reading line, under the breadcrumb, once the page has scrolled.
         Box(
             Modifier
-                .align(Alignment.TopStart)
-                .padding(top = topInset)
                 .fillMaxWidth()
                 .height(2.dp)
                 .graphicsLayer { alpha = if (barVisible) 1f else 0f }
@@ -1667,6 +1819,40 @@ private fun CccReaderPage(
                     .testTag("catechism_chapter_progress")
             )
         }
+        LazyColumn(
+            state = listState,
+            modifier = Modifier.fillMaxWidth().weight(1f).testTag("catechism_reader_scroll").graphicsLayer { alpha = if (ready) 1f else 0f },
+            contentPadding = PaddingValues(top = 0.dp, bottom = dockInset + 104.dp)
+        ) {
+            item(key = "paragraph_range_title") {
+                ReaderHeader(
+                    lang = lang,
+                    section = section,
+                    book = book,
+                    treeLabel = if (fromTree) structure.nodeForRange(section.firstNumber, section.lastNumber)
+                        ?.let { CatechismLabels.label(it, lang) } else null
+                )
+            }
+            items(count, key = { "paragraph_${section.firstNumber + it}" }) { offset ->
+                val number = section.firstNumber + offset
+                ParagraphBlock(
+                    repository = repository,
+                    lang = lang,
+                    number = number,
+                    focused = focus == number
+                )
+            }
+            item(key = "paragraph_navigation") {
+                ReaderFooter(
+                    lang = lang,
+                    previous = previous,
+                    next = next,
+                    onOpenSection = { onOpenSection(it, null) },
+                    onIndex = onIndex
+                )
+            }
+        }
+      }
 
         AppActionBar(
             Modifier
@@ -1706,19 +1892,87 @@ private fun CccReaderPage(
     }
 }
 
+/**
+ * Where the paragraph at the top of the page sits in the book: "Parte 2 › Sección 2 › Capítulo 1 › Artículo 1"
+ * and, under it, the title of that division. It follows the scroll; tapping it opens the part's index, unfolded
+ * to this place.
+ */
+@Composable
+private fun CccBreadcrumb(
+    path: List<CatechismNode>,
+    lang: AppLanguage,
+    onOpenPart: (CatechismNode) -> Unit
+) {
+    if (path.isEmpty()) return
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val p = design.palette
+    val last = path.last()
+    val segments = path.map { CatechismLabels.shortLabel(it, lang) ?: it.title.get(lang) }
+    val trail = remember(segments, p.textPrimary) {
+        buildAnnotatedString {
+            segments.forEachIndexed { i, text ->
+                if (i > 0) append(" › ")
+                if (i == segments.lastIndex) withStyle(SpanStyle(color = p.textPrimary, fontWeight = FontWeight.SemiBold)) { append(text) }
+                else append(text)
+            }
+        }
+    }
+    val title = last.title.get(lang).takeIf { CatechismLabels.shortLabel(last, lang) != null }
+    val spoken = lang.pick("Ubicación", "Location", "Localização") + ": " +
+        segments.joinToString(", ") + (title?.let { " · $it" } ?: "")
+    val canOpen = path.first().kind == CatechismNodeKind.PART
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .semantics(mergeDescendants = true) { contentDescription = spoken }
+            .testTag("ccc_breadcrumb"),
+        contentAlignment = Alignment.TopCenter
+    ) {
+        Column(
+            Modifier
+                .widthIn(max = design.spacing.readingMaxWidth + design.spacing.gutter * 2)
+                .fillMaxWidth()
+                .then(
+                    if (canOpen) Modifier
+                        .heightIn(min = 44.dp)
+                        .clickable(
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null,
+                            role = Role.Button,
+                            onClickLabel = lang.pick(
+                                "Volver al índice del Catecismo",
+                                "Back to the Catechism index",
+                                "Voltar ao índice do Catecismo"
+                            )
+                        ) { onOpenPart(path.first()) }
+                        .testTag("back_to_catechism_outline")
+                    else Modifier
+                )
+                .padding(horizontal = design.spacing.gutter, vertical = 6.dp)
+        ) {
+            Text(trail, style = styles.caption, color = p.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
+            if (title != null) {
+                Text(title, style = styles.footnote, color = p.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
+            }
+        }
+    }
+}
+
 /** The title block that scrolls with the text. */
 @Composable
 private fun ReaderHeader(
     lang: AppLanguage,
     section: CatechismOutlineSection,
     book: CccBookSection?,
-    onOpenPart: (Int) -> Unit
+    /** "Artículo 1", "Capítulo segundo"… when the range is a node of the tree; replaces the part line. */
+    treeLabel: String?
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
     val part = book?.part ?: 0
-    val crumb = buildString {
+    val crumb = treeLabel ?: buildString {
         append(CccStructure.ordinal(part, lang))
         if (book != null && part != 0) append(" · ").append(book.title.get(lang))
     }
@@ -1728,24 +1982,7 @@ private fun ReaderHeader(
             Text(
                 crumb,
                 style = styles.eyebrow,
-                color = p.textSecondary,
-                modifier = Modifier
-                    .then(
-                        if (part != 0) Modifier
-                            .heightIn(min = 44.dp)
-                            .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null,
-                                role = Role.Button,
-                                onClickLabel = lang.pick(
-                                    "Volver al índice del Catecismo",
-                                    "Back to the Catechism index",
-                                    "Voltar ao índice do Catecismo"
-                                )
-                            ) { onOpenPart(part) }
-                            .testTag("back_to_catechism_outline")
-                        else Modifier
-                    )
+                color = p.textSecondary
             )
             Spacer(Modifier.height(6.dp))
             Text(
