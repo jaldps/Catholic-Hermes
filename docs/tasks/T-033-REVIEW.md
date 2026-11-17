@@ -11,7 +11,7 @@
 
 ## Ajustes del coordinador
 
-- **Bienvenida sin género** en «Explorando»: «Bienvenido» pasa a «Te damos la bienvenida» en ES, y «Bem-vindo» a «Que bom ter você aqui» en PT.
+- **Bienvenida sin género** en «Explorando»: «Bienvenido» pasa a «Te damos la bienvenida» en ES, y «Bem-vindo» a «Que bom ter você conosco» en PT.
 - **`returning_saint`:** «Santos que también volvieron» prometía una selección que la pantalla de Santos no tiene. Ahora es «Conocer la vida de un santo», con un `why` que no promete un filtro inexistente.
 - **`practicing_saints`:** el título «Santos y oficios» mezclaba dos pantallas. Ahora es «Los santos del calendario».
 
