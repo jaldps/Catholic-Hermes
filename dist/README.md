@@ -1,5 +1,15 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.17
+
+[Descargar Catholic Hermes 1.8.17](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.17.apk) · versión `1.8.17`, código 26. **Actualiza 1.8.1–1.8.16** y conserva el progreso.
+
+Novedades:
+- **Enviar informe de errores** (Explorar → Ajustes): la app guarda en el teléfono un registro técnico de fallos, sin datos personales, y solo lo comparte si tú decides enviarlo.
+- **Limpieza interna**: unas 5.900 líneas de código sin uso y 86 bibliotecas que nada usaba, retiradas sin cambiar el funcionamiento.
+
+[Metadatos](../docs/quality/release-1.8.17/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.16
 
 [Descargar Catholic Hermes 1.8.16](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.16.apk) · versión `1.8.16`, código 25. **Actualiza 1.8.1–1.8.15** y conserva el progreso.

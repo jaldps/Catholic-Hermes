@@ -1,0 +1,34 @@
+{
+  "version_name": "1.8.17",
+  "version_code": 26,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.17",
+  "sha256": "d8e2f3466017c3f4e249fef5a9f52348b7e54752c5aeb44815c473285d291927",
+  "bytes": 93062889,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.16 (same package and key)",
+  "built_from": "git archive of CatholicGPT at the version commit (clean tree)",
+  "changes": [
+    "Local error log (no personal data) and Settings > Send error report, shared only when the user chooses (T-026).",
+    "Hygiene: about 5,900 lines of dead UI kits and 86 unused library modules removed (Navigation, Retrofit, Firebase AI, App Check, Secrets and Google Services plugins); no behaviour change."
+  ],
+  "tests": [
+    "AppNavigationTest",
+    "DesignNavigationTest",
+    "Font*",
+    "Backup*",
+    "Narration*",
+    "ErrorReport*",
+    "AppLogTest",
+    "Devotion*",
+    "LiquidGlassTest",
+    "AccentPickerUiTest"
+  ],
+  "known_limitations": [
+    "HomePrayerPrioritiesTest Sanctuary variant is intermittent (audit D4); diagnosis in progress.",
+    "Not tested on a physical phone."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}
