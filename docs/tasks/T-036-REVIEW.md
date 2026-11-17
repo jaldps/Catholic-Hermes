@@ -34,3 +34,34 @@ Añade estas comprobaciones:
 - ningún título con más de 3 palabras seguidas en mayúsculas;
 - ningún título que empiece por «Artículo / Article / Capítulo / Chapter / Sección / Section / Parte / Part / Secção / Artigo / Capítulo» seguido de número u ordinal;
 - un control fijo con los rangos de los artículos de la Parte 4.
+
+---
+
+# T-036 · Revisión del coordinador (2)
+
+- **Entrega:** `ext/T-036` (fork) @ `e0c1932`
+- **Estado:** **APROBADO · CERRADO**, integrado en `CatholicGPT`
+
+Todos los puntos de la revisión 1 están resueltos:
+- los dos artículos de la Cuarta Parte;
+- el título EN de la Sección Segunda;
+- los apartados «Los Símbolos de la fe» y «Amén»;
+- la mayúscula inicial y los títulos sin número;
+- las erratas;
+- el validador ampliado.
+
+El árbol tiene 123 nodos.
+
+**Ajustes del coordinador:**
+- Al pasar los títulos a minúscula se perdieron algunos nombres propios. Quedan restituidos:
+  - María / Mary / Maria;
+  - Poncio Pilato / Pontius Pilate / Pôncio Pilatos;
+  - Israel;
+  - Espíritu / Spirit / Espírito, en la vida en el Espíritu;
+  - Evangelio / Gospel / Evangelho;
+  - Holy Orders.
+- Otros retoques:
+  - «hell. on the third day» pasa a «hell; on the third day»;
+  - «A Igreja. mãe e educadora» pasa a «A Igreja, mãe e educadora»;
+  - en EN, «I. The Creeds» pasa a «The Creeds», igual que en ES y PT;
+  - «The Lord's prayer» pasa a «The Lord's Prayer: "Our Father"».

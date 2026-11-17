@@ -174,7 +174,7 @@
               "kind": "HEADING",
               "title": {
                 "es": "Los Símbolos de la fe",
-                "en": "I. The Creeds",
+                "en": "The Creeds",
                 "pt": "Os Símbolos da Fé"
               },
               "range": [
@@ -342,9 +342,9 @@
                   "id": "p1s2c2a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "«Jesucristo fue concebido por obra y gracia del Espíritu Santo y nació de santa maría Virgen»",
-                    "en": "\"He was conceived by the power of the Holy Spirit, and was born of the Virgin mary\"",
-                    "pt": "«Jesus Cristo foi concebido pelo Espírito Santo e nasceu da Virgem maria»"
+                    "es": "«Jesucristo fue concebido por obra y gracia del Espíritu Santo y nació de santa María Virgen»",
+                    "en": "\"He was conceived by the power of the Holy Spirit, and was born of the Virgin Mary\"",
+                    "pt": "«Jesus Cristo foi concebido pelo Espírito Santo e nasceu da Virgem Maria»"
                   },
                   "range": [
                     456,
@@ -369,9 +369,9 @@
                       "id": "p1s2c2a3p2",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "«...Concebido por obra y gracia del Espíritu Santo, nació de santa maría Virgen»",
-                        "en": "\"Conceived by the power of the Holy Spirit and born of the Virgin mary\"",
-                        "pt": "«... Concebido pelo Espírito Santo, nascido da Virgem maria»"
+                        "es": "«...Concebido por obra y gracia del Espíritu Santo, nació de santa María Virgen»",
+                        "en": "\"Conceived by the power of the Holy Spirit and born of the Virgin Mary\"",
+                        "pt": "«... Concebido pelo Espírito Santo, nascido da Virgem Maria»"
                       },
                       "range": [
                         484,
@@ -399,9 +399,9 @@
                   "id": "p1s2c2a4",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "«Jesucristo padeció bajo poncio pilato, fue crucificado, muerto y sepultado»",
-                    "en": "\"Jesus Christ suffered under pontius pilate, was crucified, died and was buried\"",
-                    "pt": "«Jesus Cristo padeceu sob pôncio pilatos, foi crucificado, morto e sepultado»"
+                    "es": "«Jesucristo padeció bajo Poncio Pilato, fue crucificado, muerto y sepultado»",
+                    "en": "\"Jesus Christ suffered under Pontius Pilate, was crucified, died and was buried\"",
+                    "pt": "«Jesus Cristo padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado»"
                   },
                   "range": [
                     571,
@@ -412,9 +412,9 @@
                       "id": "p1s2c2a4p1",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Jesús e israel",
-                        "en": "Jesus and israel",
-                        "pt": "Jesus e israel"
+                        "es": "Jesús e Israel",
+                        "en": "Jesus and Israel",
+                        "pt": "Jesus e Israel"
                       },
                       "range": [
                         571,
@@ -457,7 +457,7 @@
                   "kind": "ARTICLE",
                   "title": {
                     "es": "«Jesucristo descendió a los infiernos, al tercer día resucitó de entre los muertos»",
-                    "en": "\"He descended into hell. on the third day he rose again\"",
+                    "en": "\"He descended into hell; on the third day he rose again\"",
                     "pt": "«Jesus Cristo desceu à mansão dos mortos, ao terceiro dia ressuscitou dos mortos»"
                   },
                   "range": [
@@ -958,7 +958,7 @@
                   "kind": "ARTICLE",
                   "title": {
                     "es": "El sacramento del orden",
-                    "en": "The sacrament of holy orders",
+                    "en": "The sacrament of Holy Orders",
                     "pt": "O sacramento da ordem"
                   },
                   "range": [
@@ -1047,9 +1047,9 @@
           "id": "p3s1",
           "kind": "SECTION",
           "title": {
-            "es": "La vocación del hombre: la vida en el espíritu",
-            "en": "Man's vocation life in the spirit",
-            "pt": "A vocação do homem: a vida no espírito"
+            "es": "La vocación del hombre: la vida en el Espíritu",
+            "en": "Man's vocation: life in the Spirit",
+            "pt": "A vocação do homem: a vida no Espírito"
           },
           "range": [
             1699,
@@ -1287,7 +1287,7 @@
                   "title": {
                     "es": "La Iglesia, madre y maestra",
                     "en": "The Church, mother and teacher",
-                    "pt": "A Igreja. mãe e educadora"
+                    "pt": "A Igreja, mãe e educadora"
                   },
                   "range": [
                     2030,
@@ -1672,7 +1672,7 @@
                   "kind": "ARTICLE",
                   "title": {
                     "es": "La oración de la Hora de Jesús",
-                    "en": "The Prayer of the Hour of Jesus",
+                    "en": "The prayer of the Hour of Jesus",
                     "pt": "A oração da Hora de Jesus"
                   },
                   "range": [
@@ -1690,7 +1690,7 @@
           "kind": "SECTION",
           "title": {
             "es": "La oración del Señor: «Padre nuestro»",
-            "en": "The Lord's prayer",
+            "en": "The Lord's Prayer: \"Our Father\"",
             "pt": "A oração do Senhor: «Pai nosso»"
           },
           "range": [
@@ -1702,9 +1702,9 @@
               "id": "p4s2a1",
               "kind": "ARTICLE",
               "title": {
-                "es": "«Resumen de todo el evangelio»",
-                "en": "\"The summary of the whole gospel\"",
-                "pt": "«O resumo de todo o evangelho»"
+                "es": "«Resumen de todo el Evangelio»",
+                "en": "\"The summary of the whole Gospel\"",
+                "pt": "«O resumo de todo o Evangelho»"
               },
               "range": [
                 2761,
@@ -1745,7 +1745,7 @@
               "kind": "ARTICLE",
               "title": {
                 "es": "La doxología final",
-                "en": "The Final Doxology",
+                "en": "The final doxology",
                 "pt": "A doxologia final"
               },
               "range": [
