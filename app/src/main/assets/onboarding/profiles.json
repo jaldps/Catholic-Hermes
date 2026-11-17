@@ -1,0 +1,337 @@
+{
+  "profiles": [
+    {
+      "id": "exploring",
+      "index": 0,
+      "welcome": {
+        "es": "Bienvenido. Aquí no hace falta saber nada: empieza por donde quieras y ve a tu ritmo.",
+        "en": "Welcome. You do not need to know anything here: start wherever you like and go at your own pace.",
+        "pt": "Bem-vindo. Aqui não é preciso saber nada: comece por onde quiser e vá no seu ritmo."
+      },
+      "description": {
+        "es": "En esta app encontrarás oraciones, la Biblia, el Catecismo y lugares para aprender. Puedes leer sin compromiso, probar una oración corta o conocer a los santos. Todo está en tu idioma y puedes cambiar de idea cuando quieras.",
+        "en": "In this app you will find prayers, the Bible, the Catechism and places to learn. You can read with no commitment, try a short prayer or meet the saints. Everything is in your language and you can change your mind whenever you want.",
+        "pt": "Nesta app você encontrará orações, a Bíblia, o Catecismo e lugares para aprender. Pode ler sem compromisso, experimentar uma oração curta ou conhecer os santos. Tudo está no seu idioma e você pode mudar de ideia quando quiser."
+      },
+      "suggestions": [
+        {
+          "id": "exploring_gospel",
+          "destination": "BIBLE",
+          "minutes": 2,
+          "title": {
+            "es": "El Evangelio de hoy",
+            "en": "Today's Gospel",
+            "pt": "O Evangelho de hoje"
+          },
+          "why": {
+            "es": "Un relato corto de Jesús, sin palabras complicadas, para empezar por lo esencial.",
+            "en": "A short account of Jesus, without complicated words, to begin with what matters.",
+            "pt": "Um relato curto de Jesus, sem palavras complicadas, para começar pelo essencial."
+          }
+        },
+        {
+          "id": "exploring_our_father",
+          "destination": "PRAYERS",
+          "minutes": 2,
+          "title": {
+            "es": "Rezar el Padrenuestro",
+            "en": "Pray the Our Father",
+            "pt": "Rezar o Pai-Nosso"
+          },
+          "why": {
+            "es": "La oración que Jesús enseñó, para empezar con algo conocido por todos.",
+            "en": "The prayer Jesus taught, to begin with something everyone knows.",
+            "pt": "A oração que Jesus ensinou, para começar com algo que todos conhecem."
+          }
+        },
+        {
+          "id": "exploring_rosary",
+          "destination": "ROSARY",
+          "minutes": 5,
+          "title": {
+            "es": "Un misterio del Rosario",
+            "en": "One mystery of the Rosary",
+            "pt": "Um mistério do Terço"
+          },
+          "why": {
+            "es": "Cinco minutos con un pasaje del Evangelio y la Virgen, sin prisa.",
+            "en": "Five minutes with a passage from the Gospel and Our Lady, unhurried.",
+            "pt": "Cinco minutos com um trecho do Evangelho e a Virgem, sem pressa."
+          }
+        },
+        {
+          "id": "exploring_saint",
+          "destination": "SAINTS",
+          "minutes": 5,
+          "title": {
+            "es": "Conocer a un santo",
+            "en": "Meet a saint",
+            "pt": "Conhecer um santo"
+          },
+          "why": {
+            "es": "Una historia real de alguien que intentó seguir a Jesús a su manera.",
+            "en": "A true story of someone who tried to follow Jesus in their own way.",
+            "pt": "Uma história real de alguém que tentou seguir Jesus à sua maneira."
+          }
+        },
+        {
+          "id": "exploring_catechism",
+          "destination": "CATECHISM",
+          "minutes": 5,
+          "title": {
+            "es": "Una pregunta del Catecismo",
+            "en": "One question from the Catechism",
+            "pt": "Uma pergunta do Catecismo"
+          },
+          "why": {
+            "es": "Un párrafo breve que responde una duda concreta, sin tecnicismos.",
+            "en": "A short paragraph that answers one specific question, without jargon.",
+            "pt": "Um parágrafo breve que responde a uma dúvida concreta, sem tecnicismos."
+          }
+        },
+        {
+          "id": "exploring_questions",
+          "destination": "QUESTIONS",
+          "minutes": 10,
+          "title": {
+            "es": "101 preguntas sobre la fe",
+            "en": "101 questions about the faith",
+            "pt": "101 perguntas sobre a fé"
+          },
+          "why": {
+            "es": "Por si prefieres recorrer las dudas más comunes, cada una con su respuesta.",
+            "en": "In case you prefer to browse the most common questions, each with its answer.",
+            "pt": "Para o caso de preferir percorrer as dúvidas mais comuns, cada uma com a sua resposta."
+          }
+        }
+      ]
+    },
+    {
+      "id": "returning",
+      "index": 1,
+      "welcome": {
+        "es": "Qué alegría que vuelvas. No hace falta explicar nada: aquí tienes tu sitio y puedes retomar donde quieras.",
+        "en": "What a joy to have you back. You do not need to explain anything: you have your place here and can pick up wherever you like.",
+        "pt": "Que alegria tê-lo de volta. Não é preciso explicar nada: aqui você tem o seu lugar e pode retomar de onde quiser."
+      },
+      "description": {
+        "es": "Si llevas un tiempo sin rezar o sin acercarte a la Iglesia, aquí puedes retomar con calma. Encontrarás la Confesión como una puerta de vuelta, el Evangelio del día, el Rosario y los santos. Sin prisas y sin juicios: empieza por lo que te resulte más sencillo.",
+        "en": "If it has been a while since you prayed or drew close to the Church, here you can take it up again calmly. You will find Confession as a door back, the Gospel of the day, the Rosary and the saints. No hurry and no judgement: begin with whatever feels easiest.",
+        "pt": "Se faz tempo que você não reza ou não se aproxima da Igreja, aqui pode retomar com calma. Você encontrará a Confissão como uma porta de volta, o Evangelho do dia, o Terço e os santos. Sem pressa e sem julgamentos: comece pelo que for mais simples."
+      },
+      "suggestions": [
+        {
+          "id": "returning_gospel",
+          "destination": "BIBLE",
+          "minutes": 2,
+          "title": {
+            "es": "El Evangelio de hoy",
+            "en": "Today's Gospel",
+            "pt": "O Evangelho de hoje"
+          },
+          "why": {
+            "es": "Un relato breve para volver a encontrarte con Jesús sin exigirte nada.",
+            "en": "A short account to meet Jesus again without demanding anything of you.",
+            "pt": "Um relato breve para reencontrar Jesus sem exigir nada de você."
+          }
+        },
+        {
+          "id": "returning_our_father",
+          "destination": "PRAYERS",
+          "minutes": 2,
+          "title": {
+            "es": "Volver al Padrenuestro",
+            "en": "Return to the Our Father",
+            "pt": "Voltar ao Pai-Nosso"
+          },
+          "why": {
+            "es": "Una oración sencilla que no se ha olvidado de ti, para retomar la costumbre.",
+            "en": "A simple prayer that has not forgotten you, to take the habit back up.",
+            "pt": "Uma oração simples que não se esqueceu de você, para retomar o costume."
+          }
+        },
+        {
+          "id": "returning_confession",
+          "destination": "CONFESSION",
+          "minutes": 5,
+          "title": {
+            "es": "Preparar una confesión",
+            "en": "Prepare a confession",
+            "pt": "Preparar uma confissão"
+          },
+          "why": {
+            "es": "Una guía serena, sin culpa, para quien quiere volver a encontrarse con la misericordia.",
+            "en": "A calm guide, without guilt, for anyone who wants to meet mercy again.",
+            "pt": "Um guia sereno, sem culpa, para quem quer reencontrar a misericórdia."
+          }
+        },
+        {
+          "id": "returning_rosary",
+          "destination": "ROSARY",
+          "minutes": 5,
+          "title": {
+            "es": "Rezar un misterio del Rosario",
+            "en": "Pray one mystery of the Rosary",
+            "pt": "Rezar um mistério do Terço"
+          },
+          "why": {
+            "es": "Cinco minutos de siempre, con un pasaje del Evangelio y la Virgen.",
+            "en": "Five familiar minutes, with a passage from the Gospel and Our Lady.",
+            "pt": "Cinco minutos de sempre, com um trecho do Evangelho e a Virgem."
+          }
+        },
+        {
+          "id": "returning_home",
+          "destination": "HOME",
+          "minutes": 10,
+          "title": {
+            "es": "Empezar por la pantalla de Hoy",
+            "en": "Begin with the Today screen",
+            "pt": "Começar pela tela de Hoje"
+          },
+          "why": {
+            "es": "Un vistazo a lo que la app te propone cada día, sin tener que decidir mucho.",
+            "en": "A look at what the app offers you each day, without having to decide much.",
+            "pt": "Uma olhada no que a app lhe propõe a cada dia, sem ter de decidir muito."
+          }
+        },
+        {
+          "id": "returning_saint",
+          "destination": "SAINTS",
+          "minutes": 10,
+          "title": {
+            "es": "Santos que también volvieron",
+            "en": "Saints who also came back",
+            "pt": "Santos que também voltaram"
+          },
+          "why": {
+            "es": "Vidas de santos que pasaron por alejamientos y regresos, para compañía.",
+            "en": "Lives of saints who went through distance and return, for company.",
+            "pt": "Vidas de santos que passaram por afastamentos e retornos, para companhia."
+          }
+        }
+      ]
+    },
+    {
+      "id": "practicing",
+      "index": 2,
+      "welcome": {
+        "es": "Gracias por estar aquí. Si ya tienes una vida de oración, aquí encontrarás profundidad sin perder lo esencial.",
+        "en": "Thank you for being here. If you already have a life of prayer, here you will find depth without losing what matters.",
+        "pt": "Obrigado por estar aqui. Se você já tem uma vida de oração, aqui encontrará profundidade sem perder o essencial."
+      },
+      "description": {
+        "es": "Si ya rezas habitualmente, esta app te acompaña con el Catecismo, la Biblia, los santos y cursos para profundizar. También puedes cuidar tus hábitos y virtudes o seguir la vida espiritual. Elige un ritmo y ve a por la siguiente meta.",
+        "en": "If you already pray regularly, this app walks with you through the Catechism, the Bible, the saints and courses to go deeper. You can also tend your habits and virtues or follow the spiritual life. Choose a pace and go for the next goal.",
+        "pt": "Se você já reza habitualmente, esta app o acompanha com o Catecismo, a Bíblia, os santos e cursos para aprofundar. Você também pode cuidar dos seus hábitos e virtudes ou seguir a vida espiritual. Escolha um ritmo e vá em busca da próxima meta."
+      },
+      "suggestions": [
+        {
+          "id": "practicing_gospel",
+          "destination": "BIBLE",
+          "minutes": 2,
+          "title": {
+            "es": "Lectura del Evangelio",
+            "en": "Reading the Gospel",
+            "pt": "Leitura do Evangelho"
+          },
+          "why": {
+            "es": "El evangelio del día, para empezar la jornada con la Palabra.",
+            "en": "The gospel of the day, to begin the day with the Word.",
+            "pt": "O evangelho do dia, para começar a jornada com a Palavra."
+          }
+        },
+        {
+          "id": "practicing_rosary",
+          "destination": "ROSARY",
+          "minutes": 5,
+          "title": {
+            "es": "Rezar un misterio",
+            "en": "Pray one mystery",
+            "pt": "Rezar um mistério"
+          },
+          "why": {
+            "es": "Un misterio del día, con su pasaje, para no quedarse solo en las palabras.",
+            "en": "One mystery of the day, with its passage, so as not to stay only with words.",
+            "pt": "Um mistério do dia, com o seu trecho, para não ficar só nas palavras."
+          }
+        },
+        {
+          "id": "practicing_catechism",
+          "destination": "CATECHISM",
+          "minutes": 5,
+          "title": {
+            "es": "Profundizar en el Catecismo",
+            "en": "Go deeper into the Catechism",
+            "pt": "Aprofundar no Catecismo"
+          },
+          "why": {
+            "es": "Un párrafo al día para conocer mejor lo que crees, con calma.",
+            "en": "One paragraph a day to know better what you believe, calmly.",
+            "pt": "Um parágrafo por dia para conhecer melhor o que se crê, com calma."
+          }
+        },
+        {
+          "id": "practicing_habits",
+          "destination": "HABITS_VIRTUES",
+          "minutes": 5,
+          "title": {
+            "es": "Hábitos y virtudes",
+            "en": "Habits and virtues",
+            "pt": "Hábitos e virtudes"
+          },
+          "why": {
+            "es": "Para ordenar la jornada y trabajar una virtud concreta cada semana.",
+            "en": "To order the day and work on one concrete virtue each week.",
+            "pt": "Para ordenar a jornada e trabalhar uma virtude concreta a cada semana."
+          }
+        },
+        {
+          "id": "practicing_doctrine",
+          "destination": "STUDY_DOCTRINE",
+          "minutes": 10,
+          "title": {
+            "es": "Curso de doctrina",
+            "en": "Doctrine course",
+            "pt": "Curso de doutrina"
+          },
+          "why": {
+            "es": "Un curso breve para asentar la fe con buen fundamento, paso a paso.",
+            "en": "A short course to settle the faith on good ground, step by step.",
+            "pt": "Um curso breve para firmar a fé em bom fundamento, passo a passo."
+          }
+        },
+        {
+          "id": "practicing_spiritual",
+          "destination": "SPIRITUAL_LIFE",
+          "minutes": 10,
+          "title": {
+            "es": "Vida espiritual",
+            "en": "Spiritual life",
+            "pt": "Caminho espiritual"
+          },
+          "why": {
+            "es": "Recursos para la oración y el discernimiento, cuando la costumbre ya no basta.",
+            "en": "Resources for prayer and discernment, when habit is no longer enough.",
+            "pt": "Recursos para a oração e o discernimento, quando o costume já não basta."
+          }
+        },
+        {
+          "id": "practicing_saints",
+          "destination": "SAINTS",
+          "minutes": 10,
+          "title": {
+            "es": "Santos y oficios",
+            "en": "Saints and offices",
+            "pt": "Santos e ofícios"
+          },
+          "why": {
+            "es": "Maestros de vida cristiana para imitar lo que de verdad conviene.",
+            "en": "Teachers of Christian life, to imitate what truly helps.",
+            "pt": "Mestres de vida cristã para imitar o que verdadeiramente convém."
+          }
+        }
+      ]
+    }
+  ]
+}
