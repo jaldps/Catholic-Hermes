@@ -64,8 +64,9 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-028](T-028.md) | Codex | CERRADO ([revisión](T-028-REVIEW.md)) | M12.1 · Pantalla de Confesión (usa `assets/confession/`) |
 | [T-029](T-029.md) | Hermes | CERRADO ([revisión](T-029-REVIEW.md)) | M12.5 (contenido) · Planes: Biblia en un año y Catecismo en un año |
 | [T-030](T-030.md) | Coordinador (Sonnet local; Codex sin cuota hasta el 21-nov) | CERRADO ([informe](T-030-REPORT.md)) | M12.2 · Búsqueda global |
-| [T-031](T-031.md) | Codex (21-nov) o Sonnet local | ABIERTO | M12.3 · «Mi camino»: unir Hábitos y Vida espiritual |
+| [T-031](T-031.md) | Coordinador (Sonnet local) | EN CURSO | M12.3 · «Mi camino»: unir Hábitos y Vida espiritual |
 | T-032 | Codex | EN COLA (tras T-031) | M12.4 · Widgets y avisos litúrgicos |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
-| [T-035](T-035.md) | Hermes | ABIERTO | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
-| [T-034](T-034.md) | Hermes | EN COLA (tras T-035; prioridad baja) | Imágenes de las 215 fichas de santos (rama `media/saint-images` del fork) |
+| [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
+| [T-036](T-036.md) | Hermes | ABIERTO | Índice completo del Catecismo (partes → artículos, con rangos) |
+| [T-034](T-034.md) | Hermes | EN COLA (tras T-036; prioridad baja) | Imágenes de las 215 fichas de santos (rama `media/saint-images` del fork) |
