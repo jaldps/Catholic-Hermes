@@ -1,0 +1,573 @@
+[
+  {
+    "id": "sacred_heart_jesus",
+    "recognition": {
+      "es": "Fiesta extendida a la Iglesia universal por Pío IX (decreto de la Sagrada Congregación de Ritos, 23-VIII-1856) y elevada por Pío XI en la encíclica Miserentissimus Redemptor (8-V-1928); Pío XII la fundamentó en Haurietis Aquas (15-V-1956).",
+      "en": "Feast extended to the universal Church by Pius IX (decree of the Sacred Congregation of Rites, 23 August 1856) and raised by Pius XI in the encyclical Miserentissimus Redemptor (8 May 1928); Pius XII grounded it in Haurietis Aquas (15 May 1956).",
+      "pt": "Festa estendida à Igreja universal por Pio IX (decreto da Sagrada Congregação dos Ritos, 23-VIII-1856) e elevada por Pio XI na encíclica Miserentissimus Redemptor (8-V-1928); Pio XII fundamentou-a em Haurietis Aquas (15-V-1956)."
+    },
+    "promises": null,
+    "miracles": null,
+    "prayer": null,
+    "practice": {
+      "es": "Se celebra la solemnísima fiesta del Sagrado Corazón el viernes posterior a la octava de Corpus Christi, con misa y comodidad eucarística. Son frecuentes la consagración de las familias, la hora santa y la devoción a la primera viernes de mes, promovidas por la tradición de Paray-le-Monial.",
+      "en": "The solemn feast of the Sacred Heart is celebrated on the Friday after the octave of Corpus Christi, with Mass and Eucharistic adoration. Family consecration, the Holy Hour, and the First Friday devotion, fostered by the tradition of Paray-le-Monial, are common.",
+      "pt": "Celebra-se a soleníssima festa do Sagrado Coração na sexta-feira posterior à oitava de Corpus Christi, com missa e adoração eucarística. São frequentes a consagração das famílias, a hora santa e a devoção da primeira sexta-feira do mês, promovidas pela tradição de Paray-le-Monial."
+    },
+    "sources": [
+      "Pío IX, decreto de la Sagrada Congregación de Ritos (23-VIII-1856)",
+      "Pío XI, encíclica Miserentissimus Redemptor (1928)",
+      "Pío XII, encíclica Haurietis Aquas (1956)"
+    ]
+  },
+  {
+    "id": "divina_misericordia",
+    "recognition": {
+      "es": "Culto aprobado; el II Domingo de Pascua fue dedicado a la Divina Misericordia por Juan Pablo II (decreto Misericors et miserator de la Congregación para el Culto Divino, 5-V-2000). Santa Faustina Kowalska fue canonizada el 30-IV-2000.",
+      "en": "Approved worship; the Second Sunday of Easter was dedicated to Divine Mercy by John Paul II (decree Misericors et miserator of the Congregation for Divine Worship, 5 May 2000). Saint Faustina Kowalska was canonized on 30 April 2000.",
+      "pt": "Culto aprovado; o II Domingo da Páscoa foi dedicado à Divina Misericórdia por João Paulo II (decreto Misericors et miserator da Congregação para o Culto Divino, 5-V-2000). Santa Faustina Kowalska foi canonizada em 30-IV-2000."
+    },
+    "promises": null,
+    "miracles": null,
+    "prayer": null,
+    "practice": {
+      "es": "Se celebra la Fiesta de la Divina Misericordia el II Domingo de Pascua, con la coronilla, la hora de la misericordia (las tres de la tarde) y la confesión. La imagen con los rayos rojo y pálido y la firma «Jesús, en Ti confío» se difunde en iglesias y hogares.",
+      "en": "The Feast of Divine Mercy is celebrated on the Second Sunday of Easter, with the Chaplet, the Hour of Mercy (three o'clock), and confession. The image with the red and pale rays and the signature «Jesus, I trust in You» is spread in churches and homes.",
+      "pt": "Celebra-se a Festa da Divina Misericórdia no II Domingo da Páscoa, com a tercinha, a hora da misericórdia (às três da tarde) e a confissão. A imagem com os raios vermelho e pálido e a inscrição «Jesus, eu confio em Vós» difunde-se em igrejas e lares."
+    },
+    "sources": [
+      "Congregación para el Culto Divino, decreto Misericors et miserator (5-V-2000)",
+      "Diario de santa Faustina Kowalska",
+      "Juan Pablo II, canonización de santa Faustina (30-IV-2000)"
+    ]
+  },
+  {
+    "id": "divino_nino",
+    "recognition": {
+      "es": "Devoción promovida por el salesiano Juan del Rizzo desde 1935 en el barrio 20 de Julio de Bogotá; la parroquia El Niño Jesús fue erigida por el arzobispo Ismael Perdomo (decreto arquidiocesano 12-III-1942). No hay definición doctrinal específica.",
+      "en": "Devotion fostered by the Salesian Juan del Rizzo from 1935 in the 20 de Julio district of Bogotá; the parish of El Niño Jesús was erected by Archbishop Ismael Perdomo (archdiocesan decree 12 March 1942). There is no specific doctrinal definition.",
+      "pt": "Devoção promovida pelo salesiano Juan del Rizzo desde 1935 no bairro 20 de Julho de Bogotá; a paróquia El Niño Jesús foi erigida pelo arcebispo Ismael Perdomo (decreto arquidiocesano 12-III-1942). Não há definição doutrinal específica."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición de la Obra Salesiana del Niño Jesús atribuye favores y curaciones a esta advocación; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "The tradition of the Salesian Work of the Child Jesus attributes favors and healings to this title; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição da Obra Salesiana do Menino Jesus attribui favores e curas a esta invocação; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se celebra la fiesta el primer domingo de septiembre y el 20 de julio, con novenas de los primeros domingos y romerías dominicales al santuario del barrio 20 de Julio. La devoción se expresa en la confesión, la eucaristía y la solidaridad con los niños y los necesitados.",
+      "en": "The feast is celebrated on the first Sunday of September and on 20 July, with novenas of the first Sundays and Sunday pilgrimages to the shrine of the 20 de Julio district. Devotion is expressed in confession, the Eucharist, and solidarity with children and the needy.",
+      "pt": "Celebra-se a festa no primeiro domingo de setembro e em 20 de julho, com novenas dos primeiros domingos e romarias dominicais ao santuário do bairro 20 de Julho. A devoção exprime-se na confissão, na eucaristia e na solidariedade com as crianças e os necessitados."
+    },
+    "sources": [
+      "Obra Salesiana del Niño Jesús (Bogotá), historia del santuario",
+      "Decreto de erección de la parroquia El Niño Jesús (Arquidiócesis de Bogotá, 1942)",
+      "Gaudium Press, entrevista al p. Raúl Rojas (2013)"
+    ]
+  },
+  {
+    "id": "nino_de_atocha",
+    "recognition": {
+      "es": "Devoción histórica originada en Atocha (Madrid) y difundida en América, especialmente en Plateros (Fresnillo, Zacatecas). No se localizó documento pontificio de aprobación específica; el santuario mexicano depende del obispo diocesano.",
+      "en": "Historical devotion originating in Atocha (Madrid) and spread in the Americas, especially in Plateros (Fresnillo, Zacatecas). No specific pontifical approval document was located; the Mexican shrine depends on the diocesan bishop.",
+      "pt": "Devoção histórica originada em Atocha (Madrid) e difundida nas Américas, sobretudo em Plateros (Fresnillo, Zacatecas). Não se localizou documento pontifício de aprovação específica; o santuário mexicano depende do bispo diocesano."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición narra que un niño peregrino sustentó a los presos cristianos con pan y agua que no se agotaba, y que acudió en socorro de mineros atrapados; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition recounts that a pilgrim boy sustained the Christian prisoners with bread and water that never ran out, and that he came to the aid of trapped miners; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição narra que um menino peregrino sustentou os prisioneiros cristãos com pão e água que não se esgotavam, e que socorreu mineiros presos; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se celebra el 8 de septiembre y en Navidad, con peregrinaciones a Plateros (Fresnillo) y a Atocha. Se invoca como patrono de los cautivos, los viajeros y los mineros, y se le ofrecen romerías y peregrinaciones a pie.",
+      "en": "It is celebrated on 8 September and at Christmas, with pilgrimages to Plateros (Fresnillo) and to Atocha. He is invoked as patron of captives, travelers, and miners, and pilgrimages on foot are offered to him.",
+      "pt": "Celebra-se em 8 de setembro e no Natal, com peregrinações a Plateros (Fresnillo) e a Atocha. Invoca-se como padroeiro dos cativos, dos viajantes e dos mineiros, e oferecem-se romarias e peregrinações a pé."
+    },
+    "sources": [
+      "Santuario del Santo Niño de Atocha (Plateros, Zacatecas)",
+      "Devoción del Santo Niño de Atocha (Madrid)"
+    ]
+  },
+  {
+    "id": "nino_jesus_de_praga",
+    "recognition": {
+      "es": "Culto aprobado por el arzobispo de Praga (1639) y por la Orden Carmelita (24-X-1648); coronación de la imagen en 1651. León XIII instituyó la Congregación del Niño de Praga (1896), Pío X organizó la Cofradía (1913) y Benedicto XVI donó una corona de oro (2009).",
+      "en": "Worship approved by the Archbishop of Prague (1639) and by the Carmelite Order (24 October 1648); coronation of the image in 1651. Leo XIII instituted the Confraternity of the Infant of Prague (1896), Pius X organized the Confraternity (1913), and Benedict XVI donated a golden crown (2009).",
+      "pt": "Culto aprovado pelo arcebispo de Praga (1639) e pela Ordem Carmelita (24-X-1648); coroação da imagem em 1651. Leão XIII instituiu a Confraria do Menino de Praga (1896), Pio X organizou a Cofraria (1913) e Bento XVI doou uma coroa de ouro (2009)."
+    },
+    "promises": null,
+    "miracles": {
+      "text": {
+        "es": "La tradición carmelita atribuye a la intercesión del Niño de Praga la protección de la ciudad en 1639 y 1648 y numerosos favores; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "The Carmelite tradition attributes to the intercession of the Infant of Prague the protection of the city in 1639 and 1648 and numerous favors; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição carmelita attribui à intercessão do Menino de Praga a proteção da cidade em 1639 e 1648 e numerosos favores; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se celebra el primer domingo de mayo y la Navidad, con novena, bendición de las manos y difusión de la imagen en hogares. Los Carmelitas Descalzos promueven la devoción, que se extendió desde Praga a España y a América.",
+      "en": "It is celebrated on the first Sunday of May and at Christmas, with a novena, the blessing of the hands, and the spread of the image in homes. The Discalced Carmelites foster the devotion, which spread from Prague to Spain and the Americas.",
+      "pt": "Celebra-se no primeiro domingo de maio e no Natal, com novena, bênção das mãos e difusão da imagem nos lares. Os Carmelitas Descalços promovem a devoção, que se difundiu de Praga para a Espanha e para as Américas."
+    },
+    "sources": [
+      "Cronología del Niño Jesús de Praga (Santuario Gesù Bambino di Praga)",
+      "Monasterio de Santa Clara de Calabazanos, historia"
+    ]
+  },
+  {
+    "id": "senor_milagros",
+    "recognition": {
+      "es": "Devoción surgida en Lima tras el terremoto del 13-XI-1655, cuando el muro con la imagen quedó en pie; la Hermandad del Señor de los Milagros de Nazarenas y el Arzobispado de Lima convocan la procesión. No se localizó documento pontificio específico.",
+      "en": "Devotion arising in Lima after the earthquake of 13 November 1655, when the wall with the image remained standing; the Brotherhood of the Lord of Miracles of Nazarenas and the Archdiocese of Lima convene the procession. No specific pontifical document was located.",
+      "pt": "Devoção surgida em Lima após o terremoto de 13-XI-1655, quando o muro com a imagem permaneceu de pé; a Irmandade do Senhor dos Milagres de Nazarenas e a Arquidiocese de Lima convocam a procissão. Não se localizou documento pontifício específico."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "El muro con la imagen crucificado permaneció intacto en los terremotos de 1655 y 1687, según el relato de la Hermandad; la Iglesia no ha declarado milagros de curación concretos con documentación canónica.",
+        "en": "The wall with the crucified image remained intact in the earthquakes of 1655 and 1687, according to the account of the Brotherhood; the Church has not declared specific healing miracles with canonical documentation.",
+        "pt": "O muro com a imagem do crucificado permaneceu intacto nos terremotos de 1655 e 1687, segundo o relato da Irmandade; a Igreja não declarou milagres de cura concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Octubre es el mes morado: la imagen sale en procesión desde el Santuario de las Nazarenas en varios recorridos, y los fieles visten túnicas moradas. La devoción se vive con confesiones, misas y promesas, y es una de las procesiones más concurridas de América.",
+      "en": "October is the purple month: the image goes in procession from the Sanctuary of Las Nazarenas on several routes, and the faithful wear purple robes. Devotion is lived with confessions, Masses, and promises, and it is one of the most crowded processions in the Americas.",
+      "pt": "Outubro é o mês roxo: a imagem sai em procissão do Santuário das Nazarenas em vários percursos, e os fiéis vestem túnicas roxas. A devoção vive-se com confissões, missas e promessas, e é uma das procissões mais concorridas das Américas."
+    },
+    "sources": [
+      "Hermandad del Señor de los Milagros de Nazarenas (Lima)",
+      "Arzobispado de Lima, programación del mes morado",
+      "religion.info, crónica de la fiesta (2008)"
+    ]
+  },
+  {
+    "id": "nazareno_de_san_pablo",
+    "recognition": {
+      "es": "Devoción de Caracas documentada desde el siglo XVII; la primera procesión de rogativa se data en 1696. La imagen se venera en la Basílica de Santa Teresa. No se localizó documento pontificio de aprobación específica.",
+      "en": "Devotion of Caracas documented since the 17th century; the first rogation procession is dated to 1696. The image is venerated in the Basilica of Saint Teresa. No specific pontifical approval document was located.",
+      "pt": "Devoção de Caracas documentada desde o século XVII; a primeira procissão de rogação data de 1696. A imagem venera-se na Basílica de Santa Teresa. Não se localizou documento pontifício de aprovação específica."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición caraqueña recuerda el «milagro del limonero» de 1696, durante la epidemia de fiebre amarilla; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "The tradition of Caracas recalls the «miracle of the lemon tree» of 1696, during the yellow fever epidemic; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição caraquenha recorda o «milagre do limoeiro» de 1696, durante a epidemia de febre amarela; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "El Miércoles Santo la imagen sale en procesión desde la Basílica de Santa Teresa, y los devotos visten morado y cumplen promesas. La devoción está unida a la de la Virgen de la Soledad y a la identidad religiosa de Caracas.",
+      "en": "On Holy Wednesday the image goes in procession from the Basilica of Saint Teresa, and the devotees wear purple and fulfill promises. The devotion is linked to that of Our Lady of Solitude and to the religious identity of Caracas.",
+      "pt": "Na Quarta-feira Santa a imagem sai em procissão da Basílica de Santa Teresa, e os devotos vestem roxo e cumprem promessas. A devoção está unida à de Nossa Senhora da Solidão e à identidade religiosa de Caracas."
+    },
+    "sources": [
+      "Últimas Noticias (Caracas), crónicas del Nazareno de San Pablo",
+      "Basílica de Santa Teresa (Caracas)",
+      "Cofradía del Nazareno de San Pablo"
+    ]
+  },
+  {
+    "id": "cristo_negro_esquipulas",
+    "recognition": {
+      "es": "Imagen tallada por Quirio Cataño e instalada en 1595; la basílica se construyó por mandato del arzobispo de Guatemala Pedro Pardo de Figueroa tras su curación en 1735 y se concluyó en 1758. La fiesta principal es el 15 de enero.",
+      "en": "Image carved by Quirio Cataño and installed in 1595; the basilica was built at the mandate of the Archbishop of Guatemala, Pedro Pardo de Figueroa, after his cure in 1735 and completed in 1758. The principal feast is 15 January.",
+      "pt": "Imagem esculpida por Quirio Cataño e instalada em 1595; a basílica foi construída por mandato do arcebispo da Guatemala, Pedro Pardo de Figueroa, após sua cura em 1735, e concluída em 1758. A festa principal é 15 de janeiro."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye la curación del arzobispo Pedro Pardo de Figueroa en 1735, que impulsó la basílica, y favores de los peregrinos; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes the cure of Archbishop Pedro Pardo de Figueroa in 1735, which prompted the basilica, and favors of pilgrims; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui a cura do arcebispo Pedro Pardo de Figueroa em 1735, que impulsionou a basílica, e favores dos peregrinos; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "El 15 de enero y el 9 de marzo la basílica recibe a miles de peregrinos de Centroamérica. Se vive con romerías, mandas, promesas y la visita a la imagen, y es el gran santuario de peregrinación centroamericano.",
+      "en": "On 15 January and 9 March the basilica receives thousands of pilgrims from Central America. It is lived with pilgrimages, vows, promises, and the visit to the image, and it is the great Central American pilgrimage shrine.",
+      "pt": "Em 15 de janeiro e 9 de março a basílica recebe milhares de peregrinos da América Central. Vive-se com romarias, promessas e a visita à imagem, e é o grande santuário de peregrinação centro-americano."
+    },
+    "sources": [
+      "Basílica del Cristo Negro de Esquipulas (Guatemala)",
+      "Journal of Hispanic/Latino Studies, contrato de Quirio Cataño (1594)"
+    ]
+  },
+  {
+    "id": "cristo_rey",
+    "recognition": {
+      "es": "Fiesta instituida por Pío XI en la encíclica Quas Primas (11-XII-1925), como conclusión del Año Santo. La Iglesia la celebra el último domingo del Tiempo Ordinario.",
+      "en": "Feast instituted by Pius XI in the encyclical Quas Primas (11 December 1925), as the conclusion of the Holy Year. The Church celebrates it on the last Sunday of Ordinary Time.",
+      "pt": "Festa instituída por Pio XI na encíclica Quas Primas (11-XII-1925), como conclusão do Ano Santo. A Igreja celebra-a no último domingo do Tempo Comum."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": null,
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se celebra con misa, adoración y procesiones, y con la consagración de familias y pueblos a Cristo Rey. La fiesta concluye el año litúrgico y prepara el Adviento.",
+      "en": "It is celebrated with Mass, adoration, and processions, and with the consecration of families and peoples to Christ the King. The feast closes the liturgical year and prepares for Advent.",
+      "pt": "Celebra-se com missa, adoração e procissões, e com a consagração de famílias e povos a Cristo Rei. A festa encerra o ano litúrgico e prepara o Advento."
+    },
+    "sources": [
+      "Pío XI, encíclica Quas Primas (11-XII-1925)",
+      "Calendario romano, solemnidad de Cristo Rey del Universo"
+    ]
+  },
+  {
+    "id": "cristo_milagros",
+    "recognition": {
+      "es": "Devoción chilena bajo la advocación del Señor de los Milagros; la fecha y el origen de la imagen requieren verificación documental y la Iglesia no se ha pronunciado sobre su estatus.",
+      "en": "Chilean devotion under the title of the Lord of Miracles; the date and origin of the image require documentary verification and the Church has not pronounced on its status.",
+      "pt": "Devoção chilena sob a invocação do Senhor dos Milagres; a data e a origem da imagem requerem verificação documental e a Igreja não se pronunciou sobre o seu estatuto."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": null,
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "La ficha actual no documenta una práctica devocional específica; se invoca a Cristo bajo esta advocación en el Templo de San Agustín de Santiago. Queda pendiente de verificación.",
+      "en": "The present entry does not document a specific devotional practice; Christ is invoked under this title in the Church of San Agustín in Santiago. It remains to be verified.",
+      "pt": "A ficha atual não documenta uma prática devocional específica; invoca-se Cristo sob esta invocação na Igreja de Santo Agostinho em Santiago. Permanece por verificar."
+    },
+    "sources": [
+      "Templo de San Agustín (Santiago de Chile)",
+      "Ficha actual de la app (sin verificación documental)"
+    ]
+  },
+  {
+    "id": "santo_rostro",
+    "recognition": {
+      "es": "Devoción a la Santa Faz promovida en el siglo XIX, especialmente por la bienaventurada María de San Pedro y el papa León XIII. La imagen de Manoppello se conserva en la basílica del mismo nombre; no se localizó documento pontificio específico.",
+      "en": "Devotion to the Holy Face fostered in the 19th century, especially by Blessed Mary of Saint Peter and Pope Leo XIII. The image of Manoppello is kept in the basilica of the same name; no specific pontifical document was located.",
+      "pt": "Devoção à Santa Face promovida no século XIX, sobretudo pela beata Maria de São Pedro e pelo papa Leão XIII. A imagem de Manoppello conserva-se na basílica do mesmo nome; não se localizou documento pontifício específico."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye a la Santa Faz favores y conversiones, y el lienzo de Manoppello se conserva sin corrosión; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes favors and conversions to the Holy Face, and the cloth of Manoppello is preserved without decay; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui à Santa Face favores e conversões, e o pano de Manoppello conserva-se sem corrosão; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se celebra el martes de Carnaval y en el tiempo de Cuaresma, con oración de reparación y la devoción a la Santa Faz. Los fieles contemplan el rostro de Cristo en la Verónica y en la imagen de Manoppello.",
+      "en": "It is celebrated on Shrove Tuesday and in Lent, with prayer of reparation and devotion to the Holy Face. The faithful contemplate the face of Christ in Veronica's veil and in the image of Manoppello.",
+      "pt": "Celebra-se na terça-feira de Carnaval e no tempo da Quaresma, com oração de reparação e devoção à Santa Face. Os fiéis contemplam o rosto de Cristo no véu de Verônica e na imagem de Manoppello."
+    },
+    "sources": [
+      "Basílica del Santo Volto (Manoppello)",
+      "Devoción a la Santa Faz (siglo XIX)"
+    ]
+  },
+  {
+    "id": "cristo_redentor",
+    "recognition": {
+      "es": "Estatua del Corcovado inaugurada en 1931; el santuario fue declarado de utilidad pública y es lugar de peregrinación. No se localizó documento de aprobación pontificia específico.",
+      "en": "Statue of Corcovado inaugurated in 1931; the sanctuary was declared of public utility and is a place of pilgrimage. No specific pontifical approval document was located.",
+      "pt": "Estátua do Corcovado inaugurada em 1931; o santuário foi declarado de utilidade pública e é lugar de peregrinação. Não se localizou documento de aprovação pontifícia específico."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye a la imagen la protección de la ciudad y los favores de los peregrinos; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes to the image the protection of the city and the favors of pilgrims; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui à imagem a proteção da cidade e os favores dos peregrinos; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "El santuario del Corcovado recibe peregrinos a lo largo del año, con misa dominical y adoración. Es símbolo de la fe de Brasil y de la acogida, con los brazos abiertos sobre la bahía de Guanabara.",
+      "en": "The sanctuary of Corcovado receives pilgrims throughout the year, with Sunday Mass and adoration. It is a symbol of the faith of Brazil and of welcome, with open arms over Guanabara Bay.",
+      "pt": "O santuário do Corcovado recebe peregrinos ao longo do ano, com missa dominical e adoração. É símbolo da fé do Brasil e do acolhimento, de braços abertos sobre a baía de Guanabara."
+    },
+    "sources": [
+      "Santuário do Cristo Redentor (Río de Janeiro)",
+      "Instituto do Patrimônio Histórico e Artístico Nacional (IPHAN), monumento ao Cristo Redentor"
+    ]
+  },
+  {
+    "id": "buen_pastor",
+    "recognition": {
+      "es": "El IV Domingo de Pascua está dedicado a las vocaciones y al Buen Pastor (Jornada Mundial de Oraciones por las Vocaciones). La iconografía del Buen Pastor se atestigua en el arte de las catacumbas de los siglos II y III.",
+      "en": "The Fourth Sunday of Easter is dedicated to vocations and to the Good Shepherd (World Day of Prayer for Vocations). The iconography of the Good Shepherd is attested in the art of the catacombs of the 2nd and 3rd centuries.",
+      "pt": "O IV Domingo da Páscoa é dedicado às vocações e ao Bom Pastor (Jornada Mundial de Oração pelas Vocações). A iconografia do Bom Pastor atesta-se na arte das catacumbas dos séculos II e III."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye a la intercesión de Cristo Buen Pastor vocaciones y conversiones; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes to the intercession of Christ the Good Shepherd vocations and conversions; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui à intercessão de Cristo Bom Pastor vocações e conversões; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "El IV Domingo de Pascua se reza por las vocaciones sacerdotales y religiosas, y se contempla a Cristo que da la vida por sus ovejas. Las imágenes del Buen Pastor se difundieron en las catacumbas y en el arte cristiano primitivo.",
+      "en": "On the Fourth Sunday of Easter one prays for priestly and religious vocations, and Christ who lays down His life for His sheep is contemplated. Images of the Good Shepherd spread in the catacombs and in early Christian art.",
+      "pt": "No IV Domingo da Páscoa reza-se pelas vocações sacerdotais e religiosas, e contempla-se Cristo que dá a vida pelas suas ovelhas. As imagens do Bom Pastor difundiram-se nas catacumbas e na arte cristã primitiva."
+    },
+    "sources": [
+      "Calendario romano, IV Domingo de Pascua (Jornada de oraciones por las vocaciones)",
+      "Arte paleocristiano de las catacumbas (Buen Pastor)"
+    ]
+  },
+  {
+    "id": "cristo_veracruz",
+    "recognition": {
+      "es": "Devoción a la Vera Cruz de La Laguna (Tenerife), documentada en la ermita de la Vera Cruz. No se localizó documento de aprobación pontificia específico.",
+      "en": "Devotion to the Vera Cruz of La Laguna (Tenerife), documented in the hermitage of Vera Cruz. No specific pontifical approval document was located.",
+      "pt": "Devoção à Vera Cruz de La Laguna (Tenerife), documentada na ermida da Vera Cruz. Não se localizou documento de aprovação pontifícia específico."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición de La Laguna atribuye a la Vera Cruz el amparo de los navegantes y náufragos; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "The tradition of La Laguna attributes to the Vera Cruz the protection of sailors and the shipwrecked; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição de La Laguna atribui à Vera Cruz o amparo dos navegantes e náufragos; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "El Viernes Santo y en las fiestas de la Vera Cruz, los fieles de La Laguna acuden a la ermita. La devoción se unió a los marineros canarios y a la identidad de la ciudad.",
+      "en": "On Good Friday and on the feasts of the Vera Cruz, the faithful of La Laguna go to the hermitage. The devotion joined the Canarian sailors and the identity of the city.",
+      "pt": "Na Sexta-feira Santa e nas festas da Vera Cruz, os fiéis de La Laguna acorrem à ermida. A devoção uniu-se aos marinheiros canários e à identidade da cidade."
+    },
+    "sources": [
+      "Ermita de la Vera Cruz (La Laguna, Tenerife)",
+      "Cabildo de Tenerife, patrimonio religioso"
+    ]
+  },
+  {
+    "id": "senor_columna",
+    "recognition": {
+      "es": "Devoción a la Flagelación del Señor, difundida en América Latina con imágenes del Señor atado a la columna. No se localizó documento de aprobación pontificia específico.",
+      "en": "Devotion to the Flagellation of the Lord, spread in Latin America with images of the Lord bound to the column. No specific pontifical approval document was located.",
+      "pt": "Devoção à Flagelação do Senhor, difundida na América Latina com imagens do Senhor atado à coluna. Não se localizou documento de aprovação pontifício específico."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye al Señor de la Columna la sanación de las heridas del maltrato y reconciliaciones familiares; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes to the Lord of the Column the healing of the wounds of abuse and family reconciliations; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui ao Senhor da Coluna a cura das feridas do maltrato e reconciliações familiares; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se venera en Lunes Santo y en Cuaresma, con estaciones de penitencia y con la contemplación de la Flagelación. Las imágenes del Señor de la Columna salen en procesión en varias ciudades latinoamericanas.",
+      "en": "It is venerated on Holy Monday and in Lent, with stations of penance and the contemplation of the Flagellation. Images of the Lord of the Column go in procession in several Latin American cities.",
+      "pt": "Venera-se na Segunda-feira Santa e na Quaresma, com estações de penitência e a contemplação da Flagelação. As imagens do Senhor da Coluna saem em procissão em várias cidades latino-americanas."
+    },
+    "sources": [
+      "Cofradías del Señor de la Columna (América Latina)",
+      "Liturgia de la Semana Santa (Flagelación)"
+    ]
+  },
+  {
+    "id": "cristo_yacente",
+    "recognition": {
+      "es": "Devoción litúrgica al Cristo muerto en el sepulcro o en el regazo de la Madre, propia del Viernes Santo y del Santo Entierro. No requiere aprobación específica: se enmarca en la liturgia de la Semana Santa.",
+      "en": "Liturgical devotion to the dead Christ in the tomb or in the Mother's lap, proper to Good Friday and the Entombment. It requires no specific approval: it is framed within the liturgy of Holy Week.",
+      "pt": "Devoção litúrgica ao Cristo morto no sepulcro ou no colo da Mãe, própria da Sexta-feira Santa e do Santo Enterro. Não requer aprovação específica: enquadra-se na liturgia da Semana Santa."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye al Cristo Yacente consuelo a los dolientes y conversiones en la Semana Santa; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes to the Recumbent Christ consolation to the grieving and conversions in Holy Week; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui ao Cristo Jacente consolo aos enlutados e conversões na Semana Santa; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "El Viernes Santo se venera la imagen del Santo Entierro y del Cristo Yacente, con adoración y visita de fieles. La devoción prepara la Pascua y recuerda el descanso del cuerpo antes de la Resurrección.",
+      "en": "On Good Friday the image of the Entombment and of the Recumbent Christ is venerated, with adoration and visits of the faithful. The devotion prepares for Easter and recalls the rest of the body before the Resurrection.",
+      "pt": "Na Sexta-feira Santa venera-se a imagem do Santo Enterro e do Cristo Jacente, com adoração e visita dos fiéis. A devoção prepara a Páscoa e recorda o descanso do corpo antes da Ressurreição."
+    },
+    "sources": [
+      "Liturgia del Viernes Santo y del Santo Entierro",
+      "Cofradías del Santo Entierro (Semana Santa)"
+    ]
+  },
+  {
+    "id": "cristo_camino",
+    "recognition": {
+      "es": "Devoción inspirada en el relato de Emaús (Lc 24), sin imagen ni advocación histórica propia. No se localizó documento de aprobación específico.",
+      "en": "Devotion inspired by the account of Emmaus (Lk 24), without a proper image or historical title. No specific approval document was located.",
+      "pt": "Devoção inspirada no relato de Emaús (Lc 24), sem imagem nem invocação histórica própria. Não se localizou documento de aprovação específico."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye al Cristo del Camino el amparo de peregrinos y migrantes; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes to the Christ of the Way the protection of pilgrims and migrants; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui ao Cristo do Caminho o amparo de peregrinos e migrantes; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se reza en el V Domingo de Cuaresma y en los caminos de peregrinación, con la meditación del relato de Emaús y la petición de reconocer al Señor en la fracción del pan.",
+      "en": "It is prayed on the Fifth Sunday of Lent and on pilgrimage routes, with meditation on the account of Emmaus and the request to recognize the Lord in the breaking of bread.",
+      "pt": "Reza-se no V Domingo da Quaresma e nos caminhos de peregrinação, com a meditação do relato de Emaús e o pedido de reconhecer o Senhor na fração do pão."
+    },
+    "sources": [
+      "Evangelio de Lucas 24, 13-35",
+      "Devoción de peregrinos y migrantes"
+    ]
+  },
+  {
+    "id": "cristo_paciencia",
+    "recognition": {
+      "es": "Devoción a la mansedumbre de Cristo en la Pasión, expresada en la iconografía del Señor de la Paciencia. No se localizó documento de aprobación pontificia específico.",
+      "en": "Devotion to the meekness of Christ in the Passion, expressed in the iconography of the Lord of Patience. No specific pontifical approval document was located.",
+      "pt": "Devoção à mansidão de Cristo na Paixão, expressa na iconografia do Senhor da Paciência. Não se localizou documento de aprovação pontifício específico."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye al Cristo de la Paciencia reconciliaciones y paciencia heroica en los enfermos; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes to the Christ of Patience reconciliations and heroic patience in the sick; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui ao Cristo da Paciência reconciliações e paciência heróica nos enfermos; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se venera en Jueves Santo y en Cuaresma, con la contemplación de la mansedumbre de Cristo ante los acusadores. Se pide paciencia en las pruebas y serenidad ante la ofensa.",
+      "en": "It is venerated on Holy Thursday and in Lent, with the contemplation of the meekness of Christ before his accusers. Patience in trials and serenity before offense are asked.",
+      "pt": "Venera-se na Quinta-feira Santa e na Quaresma, com a contemplação da mansidão de Cristo ante os acusadores. Pede-se paciência nas provações e serenidade ante a ofensa."
+    },
+    "sources": [
+      "Liturgia del Jueves Santo",
+      "Iconografía del Señor de la Paciencia"
+    ]
+  },
+  {
+    "id": "cristo_humildad",
+    "recognition": {
+      "es": "Devoción popular a Cristo humilde, con arraigo en México y en la iconografía del Niño pobre de Belén. No se localizó documento de aprobación pontificia específico.",
+      "en": "Popular devotion to the humble Christ, rooted in Mexico and in the iconography of the Poor Child of Bethlehem. No specific pontifical approval document was located.",
+      "pt": "Devoção popular a Cristo humilde, com arraigo no México e na iconografia do Menino pobre de Belém. Não se localizou documento de aprovação pontifício específico."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye al Cristo de la Humildad limosnas y dignificación de los pobres; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes to the Christ of Humility alms and the dignification of the poor; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui ao Cristo da Humildade esmolas e dignificação dos pobres; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se celebra en el II Domingo de Adviento y en Navidad, con la contemplación del Niño pobre de Belén. Se pide desprendimiento del orgullo y reconocimiento de la grandeza de Dios en la sencillez.",
+      "en": "It is celebrated on the Second Sunday of Advent and at Christmas, with the contemplation of the Poor Child of Bethlehem. Detachment from pride and recognition of the greatness of God in simplicity are asked.",
+      "pt": "Celebra-se no II Domingo do Advento e no Natal, com a contemplação do Menino pobre de Belém. Pede-se desprendimento do orgulho e reconhecimento da grandeza de Deus na simplicidade."
+    },
+    "sources": [
+      "Devoción popular mexicana del Cristo de la Humildad",
+      "Liturgia del Adviento y de la Navidad"
+    ]
+  },
+  {
+    "id": "cristo_sentenciado",
+    "recognition": {
+      "es": "Devoción popular al Cristo condenado por Pilatos, venerado como Padre Jesús Sentenciado en Tecla (El Salvador) y en La Plata (Bolivia). No se localizó documento de aprobación pontificia específico.",
+      "en": "Popular devotion to Christ condemned by Pilate, venerated as Father Jesus Sentenced in Tecla (El Salvador) and La Plata (Bolivia). No specific pontifical approval document was located.",
+      "pt": "Devoção popular a Cristo condenado por Pilatos, venerado como Padre Jesús Sentenciado em Tecla (El Salvador) e em La Plata (Bolívia). Não se localizou documento de aprovação pontifício específico."
+    },
+    "promises": {
+      "remove": true
+    },
+    "miracles": {
+      "text": {
+        "es": "La tradición atribuye al Padre Jesús Sentenciado la liberación de presos y la paciencia ante sentencias injustas; la Iglesia no ha declarado milagros concretos con documentación canónica.",
+        "en": "Tradition attributes to Father Jesus Sentenced the release of prisoners and patience before unjust sentences; the Church has not declared specific miracles with canonical documentation.",
+        "pt": "A tradição atribui ao Padre Jesús Sentenciado a libertação de presos e a paciência ante sentenças injustas; a Igreja não declarou milagres concretos com documentação canónica."
+      }
+    },
+    "prayer": {
+      "remove": true
+    },
+    "practice": {
+      "es": "Se venera en el Viernes de Dolores y en Semana Santa, con procesiones de penitencia y con la contemplación de Cristo condenado por nosotros. Se pide fortaleza ante sentencias injustas.",
+      "en": "It is venerated on the Friday of Sorrows and in Holy Week, with penitential processions and the contemplation of Christ condemned for us. Strength before unjust sentences is asked.",
+      "pt": "Venera-se na Sexta-feira das Dores e na Semana Santa, com procissões penitenciais e a contemplação de Cristo condenado por nós. Pede-se força ante sentenças injustas."
+    },
+    "sources": [
+      "Templo de Padre Jesús Sentenciado (Tecla, El Salvador)",
+      "Devoción del Señor Sentenciado (La Plata, Bolivia)"
+    ]
+  }
+]
