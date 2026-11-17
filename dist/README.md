@@ -1,5 +1,13 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.18
+
+[Descargar Catholic Hermes 1.8.18](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.18.apk) · versión `1.8.18`, código 27. **Actualiza 1.8.1–1.8.17** y conserva el progreso.
+
+- **Orar**: el selector Oraciones · Novenas · Noche va justo debajo del título y ya no salta al cambiar de sección; el Rosario, la Coronilla y «Ayúdame a orar» quedan debajo, en Oraciones.
+
+[Metadatos](../docs/quality/release-1.8.18/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.17
 
 [Descargar Catholic Hermes 1.8.17](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.17.apk) · versión `1.8.17`, código 26. **Actualiza 1.8.1–1.8.16** y conserva el progreso.

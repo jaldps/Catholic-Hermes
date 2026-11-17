@@ -1,0 +1,28 @@
+{
+  "version_name": "1.8.18",
+  "version_code": 27,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.18",
+  "sha256": "cdcd46e8b84ab28f4cc3dec7b1722cf7239eb9d146954ec7dda3e6931bb83d6a",
+  "bytes": 93062889,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.17 (same package and key)",
+  "built_from": "git archive of CatholicGPT at the version commit (clean tree)",
+  "changes": [
+    "Pray: the Prayers / Novenas / Night control now sits right under the header and keeps its position when switching; Rosary, Chaplet and 'Help me pray' follow it in Prayers."
+  ],
+  "tests": [
+    "AppNavigationTest",
+    "NovenaIndexJourneyTest",
+    "Prayer*",
+    "DesignNavigationTest",
+    "RosaryInteractionTest",
+    "FullAppScreenshotTest (prayers)"
+  ],
+  "known_limitations": [
+    "Not tested on a physical phone."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}
