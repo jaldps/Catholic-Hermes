@@ -1,0 +1,684 @@
+{
+ "images": [
+  {
+   "id": "virgen_del_valle",
+   "title": "Nuestra Señora del Valle (Virgen del Valle)",
+   "author": "Wilfredor",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_del_Valle,_Isla_de_Margarita,_Venezuela.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "virgen_del_carmen",
+   "title": "Nuestra Señora del Carmen (Virgen del Monte Carmelo)",
+   "author": "Jerrydestiny",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Mount_Carmel_Statue.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "guadalupe",
+   "title": "Nuestra Señora de Guadalupe",
+   "author": "",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:1531_Nuestra_Señora_de_Guadalupe_anagoria.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "caridad_del_cobre",
+   "title": "Nuestra Señora de la Caridad del Cobre (Cachita)",
+   "author": "Hyppolyte de Saint-Rambert",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Santiago_Virgen_de_La_Caridad_del_Cobre_hdsr_S5is_Cuba2_834.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "aparecida",
+   "title": "Nuestra Señora de la Concepción Aparecida",
+   "author": "",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:NS_Aparecida.png",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "coromoto",
+   "title": "Nuestra Señora de Coromoto",
+   "author": "",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Santa_Reliquia_de_la_Santísima_Virgen_de_Coromoto.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "lujan",
+   "title": "Nuestra Señora de Luján",
+   "author": "Madamebiblio",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_de_Luján_(1).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "chiquinquira",
+   "title": "Nuestra Señora del Rosario de Chiquinquirá (La Chinita)",
+   "author": "Rjcastillo",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_del_Rosario_de_Chiquinquira.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "fatima",
+   "title": "Nuestra Señora del Rosario de Fátima",
+   "author": "",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Escultura_de_Nossa_Senhora_do_Rosário_de_Fátima_(Capelinha_das_Aparições,_Fátima).png",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "lourdes",
+   "title": "Nuestra Señora de Lourdes",
+   "author": "Fernando Martello",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Estatua_virgen_lourdes_entrada_santuario.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "virgen_del_pilar",
+   "title": "Nuestra Señora del Pilar",
+   "author": "David Abián",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_del_Pilar_sin_manto.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "medalla_milagrosa",
+   "title": "Nuestra Señora de la Medalla Milagrosa",
+   "author": "Jenny Rabosto",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:\"_La_Medalla_Milagrosa_\".JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "rosa_mistica",
+   "title": "María Rosa Mística (María, Rosa Mística)",
+   "author": "Cornelis van Merlen",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Koperplaatje_met_voorstelling_van_'Maria_Rosa_Mistica'_met_Kind,_asset_c2dmPSYTFdMMCGlNaPtRvQgd.tif",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "salus_populi_romani",
+   "title": "Nuestra Señora Salus Populi Romani (Salvación del Pueblo Romano)",
+   "author": "Sandro Overend Rigillo",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Salus_Populi_Romani.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "virgen_dolores",
+   "title": "Nuestra Señora de los Dolores (Piedad)",
+   "author": "Lancastermerrin88",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Imágen_de_la_Virgen_de_los_Dolores._Iglesia_de_los_Dolores_de_Córdoba.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "inmaculada_concepcion",
+   "title": "Nuestra Señora de la Inmaculada Concepción",
+   "author": "Jl FilpoC",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Inmaculada_Concepción,_la_Colosal_(Bartolomé_Esteban_Murillo).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "asuncion",
+   "title": "Nuestra Señora de la Asunción (Dormición y Asunción)",
+   "author": "Jl FilpoC",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Imagen_de_la_Asunción_de_María,_Convento_de_la_Asunción_(Sevilla).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "estrella_del_mar",
+   "title": "Nuestra Señora Estrella del Mar (Stella Maris)",
+   "author": "Maria Piera Barella",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Tramonto_sulla_statua_di_Stella_Maris.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "rosario_lepanto",
+   "title": "Nuestra Señora del Rosario (Lepanto / Victoria)",
+   "author": "Anual",
+   "license": "CC BY 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:La_Virgen_del_Rosario_protegiendo_las_naves_españolas_en_la_Batalla_de_Lepanto.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "candelaria",
+   "title": "Nuestra Señora de la Candelaria",
+   "author": "CARLOS TEIXIDOR CADENAS",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:La_Virgen_de_Candelaria,_en_Tenerife,_Patrona_de_las_Islas_Canarias,_España.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "mercedes",
+   "title": "Nuestra Señora de la Merced (Redentora de Cautivos)",
+   "author": "anónimo",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_de_la_Merced_(Convento_de_la_Merced,_Sevilla).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "caacupe",
+   "title": "Nuestra Señora de los Milagros de Caacupé",
+   "author": "Mateuverte",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_de_Caacupé_tallada_en_palo_santo.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "altagracia",
+   "title": "Nuestra Señora de la Altagracia",
+   "author": "Rita Grimaldi",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_de_La_Altagracia_-_Victor_Grimaldi.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "perpetuo_socorro",
+   "title": "Nuestra Señora del Perpetuo Socorro",
+   "author": "Bjankuloski06",
+   "license": "CC BY 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Perpetual_Help_icon,_Christ_the_King_Catholic_Church,_Auckland.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "akita",
+   "title": "Nuestra Señora de Akita",
+   "author": "SICDAMNOME",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgin_Mary_of_Akita_Japan.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "kibeho",
+   "title": "Nuestra Señora de Kibeho (Madre del Verbo)",
+   "author": "Celestin KANUMA",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Ishusho_ya_Bikira_Mariya_Nyina_wa_Jambo.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "remedios_cholula",
+   "title": "Nuestra Señora de los Remedios (Cholula)",
+   "author": "Diego Delso",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Nuestra_Señora_de_los_Remedios,_Cholula,_Puebla,_México,_2013-10-12,_DD_01.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "copacabana",
+   "title": "Nuestra Señora de Copacabana",
+   "author": "Mferjh",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_de_Copacabana,_ubicado_en_el_Santuario_Nacional_de_la_Virgen_de_Copacabana_en_Bolivia.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "san_juan_lagos",
+   "title": "Nuestra Señora de San Juan de los Lagos",
+   "author": "Metropolitanogto",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_de_San_Juan_de_los_Lagos_(2023).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "angeles_costa_rica",
+   "title": "Nuestra Señora de los Ángeles (Patrona de Costa Rica)",
+   "author": "Mariordo (Mario Roberto Durán Ortiz)",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_de_los_Angeles_CRI_07_2018_0349.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "sacred_heart_jesus",
+   "title": "El Sagrado Corazón de Jesús",
+   "author": "Rodelar",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Sagrado_Corazón_de_Jesús,_Oviedo.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "divina_misericordia",
+   "title": "Señor de la Divina Misericordia (Jesús Misericordioso)",
+   "author": "Eugeniusz Kazimirowski",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Divina_Misericordia_(Eugeniusz_Kazimirowski,_1934).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "divino_nino",
+   "title": "El Divino Niño Jesús (20 de Julio)",
+   "author": "JimmyHerrera86",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Divino_Nino_Jesus_Santuario_20_de_Julio_Bogota_Colombia.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "nino_de_atocha",
+   "title": "El Santo Niño de Atocha",
+   "author": "anonymous",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Anonymous_-_El_Santo_Nino_de_Atocha,_santo_de_retablo_-_1933.405_-_Cleveland_Museum_of_Art.tiff",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "nino_jesus_de_praga",
+   "title": "El Santo Niño Jesús de Praga",
+   "author": "Fotobanka ČTK, René Fluger;",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Child_Jesus_of_Prague_(original_statue).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "senor_milagros",
+   "title": "El Señor de los Milagros (Cristo Moreno)",
+   "author": "Richar Gamarra",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Señor_de_los_Milagros,_Lima_-_Perú.png",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "nazareno_de_san_pablo",
+   "title": "El Nazareno de San Pablo",
+   "author": "Guillermo Ramos Flamerich",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Nazareno_de_San_Pablo_-_Caracas.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_negro_esquipulas",
+   "title": "El Cristo Negro de Esquipulas",
+   "author": "Roberto Urrea",
+   "license": "CC BY-SA 2.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Cristo_negro_de_Esquipulas.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_rey",
+   "title": "Cristo Rey del Universo (Cristo Rey)",
+   "author": "Matt0962",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Cristo_Rey,_Cali.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_milagros",
+   "title": "Cristo de los Milagros (Señor de los Milagros de Chile)",
+   "author": "NomadGhost",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:El_cristo_de_los_milagros.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "santo_rostro",
+   "title": "El Santo Rostro de Jesús (de Verónica)",
+   "author": "Ra Boe",
+   "license": "CC BY-SA 2.5",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Manoppello_volto_santo_10.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_redentor",
+   "title": "Cristo Redentor (Corcovado)",
+   "author": "Arne Müseler",
+   "license": "CC BY-SA 3.0 de",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Christ_the_Redeemer_-_Cristo_Redentor.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "buen_pastor",
+   "title": "Cristo Buen Pastor (Buen Pastor de Ovejas)",
+   "author": "Bartolomé Esteban Murillo",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:BuenPastorMurillo1660.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_veracruz",
+   "title": "Santo Cristo de Veracruz (Cristo de la Veracruz)",
+   "author": "Yo",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Cristodelalaguna01.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "senor_columna",
+   "title": "El Señor de la Columna (Cristo de la Columna)",
+   "author": "Laci3",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Cristo_atado_a_la_columna_-_Gregorio_Fernández_-_Iglesia_de_la_Santa_Vera_Cruz_de_Valladolid_(1).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_yacente",
+   "title": "El Santo Cristo Yacente (Cristo Muerto)",
+   "author": "Rodelar",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Gregorio_Fernández,_Cristo_yacente,_1627.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_camino",
+   "title": "Cristo del Camino (Cristo Peregrino)",
+   "author": "Semanasantafn05",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Santísimo_Cristo_del_Camino.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_paciencia",
+   "title": "El Cristo de la Paciencia (Señor de la Paciencia)",
+   "author": "Francisco Rizi",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:El_Expolio_de_Cristo_(Cristo_de_la_Paciencia)_(1).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_humildad",
+   "title": "Cristo de la Humildad y Paciencia (Cristo Humilde)",
+   "author": "PEPE GADEIRAS",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:CRISTO_DE_LA_HUMILDAD_Y_PACIENCIA,_CHICLANA.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "preciosa_sangre",
+   "title": "La Preciosísima Sangre de Cristo",
+   "author": "José Luis Filpo Cabana",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Santo_Cristo_de_la_Preciosa_Sangre_(Valladolid).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "santisimo_sacramento",
+   "title": "El Santísimo Sacramento y la adoración eucarística",
+   "author": "Wilfredor",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Cálice,_Patena_e_Colherinha.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cinco_llagas",
+   "title": "Las Cinco Llagas de Cristo",
+   "author": "Mflito",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Santísimo_Cristo_de_las_Cinco_Llagas.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "via_crucis",
+   "title": "El Vía Crucis",
+   "author": "Yann (talk)",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Stations_of_the_Cross,_5,_Saint-Jean-Baptiste_au_Beguinage,_Brussels.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "santisimo_nombre_de_jesus",
+   "title": "El Santísimo Nombre de Jesús",
+   "author": "user:AnonMoos (changes by Rabanus Flavus",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:IHS_with_cross.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "senor_del_gran_poder",
+   "title": "El Señor del Gran Poder",
+   "author": "Cacope",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Señor_Del_Gran_Poder.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_de_chalma",
+   "title": "El Señor de Chalma",
+   "author": "Antonio Vanegas Arroyo (Firm), publisher; Posada, José Guadalupe, 1852-1913, artist",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Verdadera_imagen_del_Señor_de_Chalma_LCCN99615958.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "senor_de_los_temblores",
+   "title": "El Señor de los Temblores (Taytacha)",
+   "author": "PPazo1995",
+   "license": "CC BY 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Anónimo_cuzqueño_-_Señor_de_los_Temblores_(Convento_de_Santa_Catalina,_Cuzco).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "santo_nino_de_cebu",
+   "title": "El Santo Niño de Cebú",
+   "author": "SantoNinoDeCebu",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Image_of_the_Santo_Niño_de_Cebu.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "bom_jesus_de_matosinhos",
+   "title": "El Señor Bom Jesus de Matosinhos",
+   "author": "Rkieferbaum",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Santuário_do_Bom_Jesus_de_Matosinhos_-_Congonhas_-_20121029101721.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "bom_jesus_da_lapa",
+   "title": "El Señor Bom Jesus da Lapa",
+   "author": "Turismo Bahia",
+   "license": "CC BY-SA 2.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Interior_da_Gruta_na_Romaria_em_Bom_Jesus_da_Lapa,_2011.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_de_medinaceli",
+   "title": "El Santísimo Cristo de Medinaceli (Jesús Cautivo)",
+   "author": "",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Cristo_de_Medinaceli_(1695).jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_de_limpias",
+   "title": "El Santo Cristo de Limpias",
+   "author": "Jose33luis",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Cristo_de_Limpias.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "divino_salvador_del_mundo",
+   "title": "El Divino Salvador del Mundo",
+   "author": "Ruth Preza",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Divino_Salvador_Del_Mundo.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "nino_jesus_de_belen",
+   "title": "El Niño Jesús de Belén",
+   "author": "Godspeldemedianoche",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Santo_niño_de_belen.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_de_la_agonia",
+   "title": "El Cristo de la Agonía",
+   "author": "José Luis Filpo Cabana",
+   "license": "CC BY 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Cristo_de_la_Agonía,_Juan_de_Mesa.jpg",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "santo_cristo_de_la_victoria",
+   "title": "El Santo Cristo de la Victoria",
+   "author": "Bocachete",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:CatedralMàlaga-CapellaCristoVictoria.JPG",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "jesus_de_ocotlan",
+   "title": "El Santísimo Cristo de Ocotlán",
+   "author": "Desconocido",
+   "license": "Desconocida (Derechos: desconocidos; no consta el autor de la fotografía)",
+   "source": "Imagen proporcionada por el usuario, procedente de un perfil de Facebook",
+   "url": "https://www.facebook.com/calimaya04031824/posts/san-andr%C3%A9s-ocotl%C3%A1n-el-pueblo-inicia-el-a%C3%B1o-con-fiesta-y-lo-termina-con-fiest/1276837529817570/",
+   "referential": false,
+   "note": ""
+  },
+  {
+   "id": "cristo_sentenciado",
+   "title": "Cristo Sentenciado (Padre Jesús Sentenciado)",
+   "author": "A. Fedriani",
+   "license": "Derechos: Hermandad de la Sentencia (Córdoba) · foto A. Fedriani · uso referencial",
+   "source": "Imagen REFERENCIAL proporcionada por el usuario (Hermandad de la Sentencia, Córdoba, España); no es la imagen de Tecla ni de La Plata",
+   "url": "https://hermandaddelasentencia.org/ntro-padre-jesus-de-la-sentencia/",
+   "referential": true,
+   "note": ""
+  }
+ ]
+}
