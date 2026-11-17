@@ -200,4 +200,48 @@ class BibleTextProvider internal constructor(
         }
         return results
     }
+    /**
+     * Verses whose text has every one of [foldedTokens] (already folded: lower case, no accents) at the start of a
+     * word, compared accent- and case-insensitively, as (bookId, chapter, verse) in canonical order. Used by the global search;
+     * it scans the parsed bundled text without allocating per verse. Call it off the main thread.
+     */
+    fun searchFolded(
+        foldedTokens: List<String>,
+        requested: AppLanguage = AppLanguage.EN,
+        limit: Int = 50,
+        editionId: String? = null
+    ): List<Triple<String, Int, BibleVerse>> {
+        if (foldedTokens.isEmpty() || limit <= 0) return emptyList()
+        val language = lang(requested, editionId)
+        fun matches(text: String) = foldedTokens.all { com.example.data.search.SearchText.containsWordFolded(text, it) }
+        val results = mutableListOf<Triple<String, Int, BibleVerse>>()
+        if (isAlternate(editionId)) {
+            for (bookId in catalog.bookIds(editionId!!)) {
+                for (chapter in 1..chapterCount(bookId, language, editionId)) {
+                    for (verse in getVerses(bookId, chapter, language, editionId)) {
+                        if (matches(verse.text.get(language))) {
+                            results += Triple(bookId, chapter, verse)
+                            if (results.size >= limit) return results
+                        }
+                    }
+                }
+            }
+            return results
+        }
+        val root = root(language) ?: return emptyList()
+        for (book in BibleData.catholicCanonBooks) {
+            val chapters = root.optJSONObject(book.id) ?: continue
+            val numbers = chapters.keys().asSequence().mapNotNull { it.toIntOrNull() }.sorted().toList()
+            for (chapterNumber in numbers) {
+                val arr = chapters.optJSONArray(chapterNumber.toString()) ?: continue
+                for (i in 0 until arr.length()) {
+                    val text = arr.optString(i, "")
+                    if (!matches(text)) continue
+                    results += Triple(book.id, chapterNumber, BibleVerse(i + 1, LocalizedText(text, text, text)))
+                    if (results.size >= limit) return results
+                }
+            }
+        }
+        return results
+    }
 }

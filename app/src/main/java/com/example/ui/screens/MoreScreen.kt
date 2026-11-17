@@ -139,7 +139,8 @@ fun MoreScreen(
 
     val all = sections.flatMap { it.entries }
     val byTag = all.associateBy { it.tag }
-    val known = (StudyTags + InnerLifeTags + ChurchTodayTags + SettingsTags).toSet()
+    val search = byTag["nav_search"]
+    val known = (StudyTags + InnerLifeTags + ChurchTodayTags + SettingsTags + "nav_search").toSet()
     val study = StudyTags.mapNotNull { byTag[it] }
     val innerLife = InnerLifeTags.mapNotNull { byTag[it] }
     val churchToday = ChurchTodayTags.mapNotNull { byTag[it] }
@@ -177,6 +178,14 @@ fun MoreScreen(
             item(key = "more_header_$key") {
                 if (index > 0) Spacer(Modifier.height(design.spacing.sectionGap - 8.dp))
                 AppSectionHeader(title = title, modifier = Modifier.testTag("more_section_$index"))
+            }
+        }
+
+        if (search != null) item(key = "more_search") {
+            Column {
+                Spacer(Modifier.height(design.spacing.cardGap))
+                EntryGroup(listOf(search), currentLanguage, modeFallback)
+                Spacer(Modifier.height(design.spacing.cardGap))
             }
         }
 

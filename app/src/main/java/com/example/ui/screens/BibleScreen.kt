@@ -399,7 +399,9 @@ fun BibleScreen(
     initialVerseStart: Int? = null,
     modifier: Modifier = Modifier,
     onExitContext: (() -> Unit)? = null,
-    onOpenCatechism: ((Int) -> Unit)? = null
+    onOpenCatechism: ((Int) -> Unit)? = null,
+    /** Study tab: opens this lesson on arrival (the global search). */
+    initialLessonId: String? = null
 ) {
     var pendingListen by remember { mutableStateOf<Triple<BibleBook, Int, Int?>?>(null) }
     val context = LocalContext.current
@@ -601,7 +603,9 @@ fun BibleScreen(
                                 dao = dao,
                                 ttsManager = ttsManager,
                                 currentLanguage = currentLanguage,
-                                onOpenCatechism = onOpenCatechism
+                                onOpenCatechism = onOpenCatechism,
+                                initialLessonId = initialLessonId,
+                                onExitContext = onExitContext
                             )
                         } else {
                             LazyColumn(Modifier.fillMaxSize(), contentPadding = listBottom) {

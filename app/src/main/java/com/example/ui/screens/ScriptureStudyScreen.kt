@@ -130,11 +130,16 @@ fun ScriptureStudyScreen(
     modifier: Modifier = Modifier,
     /** The host screen's title and view switcher, set as the first rows. */
     header: LazyListScope.() -> Unit = {},
-    onOpenCatechism: ((Int) -> Unit)? = null
+    onOpenCatechism: ((Int) -> Unit)? = null,
+    /** Opens this lesson on arrival (the global search); an unknown id shows the course list. */
+    initialLessonId: String? = null,
+    /** Back from the lesson opened by [initialLessonId] leaves to the caller instead of the course list. */
+    onExitContext: (() -> Unit)? = null
 ) {
     val tracks = repository.scriptureStudyTracks
-    var selectedTrackIndex by rememberSaveable { mutableIntStateOf(0) }
-    var activeLessonId by rememberSaveable { mutableStateOf<String?>(null) }
+    val linked = initialLessonId?.let { id -> tracks.firstOrNull { t -> t.lessons.any { it.id == id } } }
+    var selectedTrackIndex by rememberSaveable { mutableIntStateOf(linked?.let { tracks.indexOf(it) } ?: 0) }
+    var activeLessonId by rememberSaveable { mutableStateOf<String?>(initialLessonId?.takeIf { linked != null }) }
 
     val allProgress by dao.getAllScriptureProgress().collectAsState(initial = emptyList())
     val completedLessonIds = remember(allProgress) {
@@ -181,8 +186,11 @@ fun ScriptureStudyScreen(
             val isLessonDone = completedLessonIds.contains(lesson.id)
             val currentEntity = allProgress.firstOrNull { it.lessonId == lesson.id }
             AppBackHandler {
-                selectedTrackIndex = tracks.indexOfFirst { it.id == lesson.trackId }.coerceAtLeast(0)
-                activeLessonId = null
+                if (onExitContext != null && lesson.id == initialLessonId) onExitContext()
+                else {
+                    selectedTrackIndex = tracks.indexOfFirst { it.id == lesson.trackId }.coerceAtLeast(0)
+                    activeLessonId = null
+                }
             }
             lessonState.SaveableStateProvider(lesson.id) {
             LessonDetailView(

@@ -85,15 +85,23 @@ internal fun saintCelebrations(): List<GeneralCelebration> =
  * with an editorial profile open a detail page, the others show title and date.
  */
 @Composable
-fun SaintsScreen(currentLanguage: AppLanguage, modifier: Modifier = Modifier) {
+fun SaintsScreen(
+    currentLanguage: AppLanguage,
+    modifier: Modifier = Modifier,
+    /** Opens this celebration's profile on arrival (the global search); an unknown key shows the list. */
+    initialKey: String? = null,
+    /** Back from the profile opened by [initialKey] leaves to the caller (the global search) instead of the list. */
+    onExitContext: (() -> Unit)? = null
+) {
     val catalog = remember { SaintsCatalog.default }
     val profiles = catalog.byKey
-    var selectedKey by rememberSaveable { mutableStateOf<String?>(null) }
+    var selectedKey by rememberSaveable { mutableStateOf<String?>(initialKey?.takeIf { it in profiles }) }
     val selected = selectedKey?.let { k -> saintCelebrations().firstOrNull { it.key == k } }
 
     if (selected != null) {
-        AppBackHandler { selectedKey = null }
-        SaintDetail(selected, profiles[selected.key], currentLanguage, { selectedKey = null }, modifier)
+        val back = { if (onExitContext != null && selectedKey == initialKey) onExitContext() else selectedKey = null }
+        AppBackHandler { back() }
+        SaintDetail(selected, profiles[selected.key], currentLanguage, { back() }, modifier)
     } else {
         SaintsList(profiles, currentLanguage, { selectedKey = it }, modifier)
     }

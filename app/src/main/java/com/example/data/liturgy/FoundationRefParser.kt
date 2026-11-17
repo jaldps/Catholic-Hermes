@@ -83,7 +83,7 @@ private fun aliasForms(book: BibleBook): Set<String> {
     return out
 }
 
-private data class BiblePattern(val regex: Regex, val aliasToBook: Map<String, String>)
+private data class BiblePattern(val regex: Regex, val aliasToBook: Map<String, String>, val alternation: String)
 
 private fun compileBiblePattern(books: List<BibleBook>): BiblePattern? {
     val aliasToBook = LinkedHashMap<String, String>()
@@ -106,7 +106,8 @@ private fun compileBiblePattern(books: List<BibleBook>): BiblePattern? {
         regex = Regex(
             """(?<![a-z0-9])(?<book>$alternation)\.?\s+(?<citation>\d{1,3}\s*[:,]\s*\d{1,3}[a-d]?(?:\s*[-,:;]\s*\d{1,3}[a-d]?)*)(?!(?:\s*[-,:;]\s*\d)|[a-z0-9:,-])"""
         ),
-        aliasToBook = aliasToBook
+        aliasToBook = aliasToBook,
+        alternation = alternation
     )
 }
 
@@ -167,4 +168,33 @@ fun parseFoundation(text: String, language: AppLanguage, books: List<BibleBook>)
     }
 
     return hits.sortedBy { it.first }.map { it.second }.distinct()
+}
+
+
+/**
+ * Reads a whole query as one Bible reference, with or without verses: "Jn 3,16", "Luke 1:1-4", "Sal 23",
+ * "gen 1", "1 Cor 13". The book is matched the same way [parseFoundation] does it (localized names and
+ * abbreviations in ES/EN/PT, accent- and case-insensitive); the chapter must exist in the book. The numbers
+ * are returned as typed; converting Hebrew psalm numbers to an edition's numbering is the caller's concern.
+ */
+class BibleReferenceQuery(private val books: List<BibleBook>) {
+    private val pattern = compileBiblePattern(books)
+    private val regex: Regex? = pattern?.let {
+        Regex(
+            """^(?<book>${it.alternation})\.?\s*(?<chapter>\d{1,3})(?:\s*[:,.]\s*(?<v1>\d{1,3})(?:\s*-\s*(?<v2>\d{1,3}))?)?$"""
+        )
+    }
+
+    fun parse(query: String): ScriptureReference? {
+        val pattern = pattern ?: return null
+        val match = regex?.matchEntire(fold(query.trim())) ?: return null
+        val alias = match.groups["book"]!!.value.replace(Regex("\\s+"), " ").replace(Regex("^([1-3])\\s*"), "$1")
+        val bookId = pattern.aliasToBook[alias] ?: return null
+        val chapter = match.groups["chapter"]!!.value.toIntOrNull()?.takeIf { it > 0 } ?: return null
+        if (chapter > books.first { it.id == bookId }.chaptersCount) return null
+        val first = match.groups["v1"]?.value?.toIntOrNull()?.takeIf { it > 0 }
+        if (match.groups["v1"] != null && first == null) return null
+        val last = match.groups["v2"]?.value?.toIntOrNull()?.takeIf { first != null && it > first }
+        return ScriptureReference(bookId, chapter, first, last)
+    }
 }

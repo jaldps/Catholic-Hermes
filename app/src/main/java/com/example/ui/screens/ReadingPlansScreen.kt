@@ -67,7 +67,11 @@ fun ReadingPlansRoute(
     repository: CatholicDataRepository,
     language: AppLanguage,
     onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit,
-    onOpenCatechism: (paragraph: Int) -> Unit
+    onOpenCatechism: (paragraph: Int) -> Unit,
+    /** Opens this plan's page on arrival (the global search). */
+    initialPlanId: String? = null,
+    /** Back from the plan opened by [initialPlanId] leaves to the caller (the global search) instead of the list. */
+    onExitContext: (() -> Unit)? = null
 ) {
     val scope = rememberCoroutineScope()
     val progress by store.planProgress.collectAsState(initial = emptyMap())
@@ -87,7 +91,9 @@ fun ReadingPlansRoute(
         onRebase = { id, total -> save { store.rebasePlan(id, date.toEpochDay(), total) } },
         onRestart = { id -> save { store.restartPlan(id) } },
         onOpenBibleReading = { raw -> ReadingPlanLinks.bibleTarget(raw, edition)?.let { onOpenBible(it.bookId, it.chapter, it.verse) } },
-        onOpenCatechism = onOpenCatechism
+        onOpenCatechism = onOpenCatechism,
+        initialPlanId = initialPlanId,
+        onExitContext = onExitContext
     )
 }
 
@@ -102,7 +108,9 @@ fun ReadingPlansScreen(
     onRebase: (planId: String, totalDays: Int) -> Unit,
     onRestart: (planId: String) -> Unit,
     onOpenBibleReading: (raw: String) -> Unit,
-    onOpenCatechism: (paragraph: Int) -> Unit
+    onOpenCatechism: (paragraph: Int) -> Unit,
+    initialPlanId: String? = null,
+    onExitContext: (() -> Unit)? = null
 ) {
     AppEdgeToEdge()
     fun tr(es: String, en: String, pt: String) = when (language) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
@@ -115,14 +123,16 @@ fun ReadingPlansScreen(
         plans = withContext(Dispatchers.IO) { catalog.load() }
         loading = false
     }
-    var selectedId by rememberSaveable { mutableStateOf<String?>(null) }
+    var selectedId by rememberSaveable { mutableStateOf<String?>(initialPlanId) }
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
     val gutter = Modifier.padding(horizontal = design.spacing.gutter)
     val loaded = plans
     val selected = loaded?.firstOrNull { it.id == selectedId }
-    AppBackHandler(enabled = selected != null) { selectedId = null }
+    AppBackHandler(enabled = selected != null) {
+        if (onExitContext != null && selectedId == initialPlanId) onExitContext() else selectedId = null
+    }
     val title = tr("Planes de lectura", "Reading plans", "Planos de leitura")
 
     fun progressLine(plan: ReadingPlan): String {

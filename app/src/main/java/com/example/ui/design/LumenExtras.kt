@@ -65,6 +65,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
@@ -395,12 +397,16 @@ fun AppSearchBar(
     placeholder: String,
     modifier: Modifier = Modifier,
     onSubmit: ((String) -> Unit)? = null,
-    tag: String? = null
+    tag: String? = null,
+    /** Takes the keyboard focus when the bar first appears (the global search opens ready to type). */
+    autoFocus: Boolean = false
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
     val shape = design.shapes.field
+    val focusRequester = remember { FocusRequester() }
+    if (autoFocus) LaunchedEffect(Unit) { runCatching { focusRequester.requestFocus() } }
     Row(
         modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).heightIn(min = 48.dp)
             .lumenGlass(shape, lifted = false).semantics { contentDescription = placeholder }
@@ -419,7 +425,7 @@ fun AppSearchBar(
                 cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
                 keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
                 keyboardActions = KeyboardActions(onSearch = { onSubmit?.invoke(value) }),
-                modifier = Modifier.fillMaxWidth().tag(tag)
+                modifier = Modifier.fillMaxWidth().tag(tag).focusRequester(focusRequester)
             )
         }
         if (value.isNotEmpty()) {

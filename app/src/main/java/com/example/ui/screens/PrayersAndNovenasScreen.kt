@@ -237,6 +237,8 @@ fun PrayersAndNovenasScreen(
     modifier: Modifier = Modifier,
     dao: SanctaFidesDao? = null,
     initialPrayerId: String? = null,
+    /** Opens this novena's overview on arrival (the global search); an unknown id is ignored. */
+    initialNovenaId: String? = null,
     /** Tab opened on arrival (0 = Prayers, 1 = Novenas, 2 = Night). */
     initialTab: Int = 0,
     /** Night office opened on arrival when [initialTab] is 2. */
@@ -245,7 +247,9 @@ fun PrayersAndNovenasScreen(
     initialOpenChaplet: Boolean = false,
     onOpenRosary: () -> Unit = {},
     /** Opens the full guide; the devotional page remains available below. */
-    onOpenGuidedChaplet: (() -> Unit)? = null
+    onOpenGuidedChaplet: (() -> Unit)? = null,
+    /** Back from the prayer or novena opened by a deep link leaves to the caller (the global search) rather than the list. */
+    onExitContext: (() -> Unit)? = null
 ) {
     val insets = AppEdgeToEdge()
     val scope = rememberCoroutineScope()
@@ -298,6 +302,16 @@ fun PrayersAndNovenasScreen(
     val catalog by repository.novenaCatalog.collectAsState()
     val catalogError by repository.novenaCatalogError.collectAsState()
     val novenas = catalog.orEmpty()
+    // A deep link opens its novena once per arrival, as soon as the catalogue has loaded it.
+    var consumedNovenaLink by rememberSaveable { mutableStateOf<String?>(null) }
+    LaunchedEffect(initialNovenaId, novenas.size) {
+        if (initialNovenaId != null && initialNovenaId != consumedNovenaLink && novenas.any { it.id == initialNovenaId }) {
+            consumedNovenaLink = initialNovenaId
+            selectedTab = 1
+            novenaId = initialNovenaId
+            novenaReaderDay = 0
+        }
+    }
 
     // One Room source of truth; old preferences are read only for the idempotent import.
     val extraStore = remember(context) { NovenaExtraDaysStore(context.applicationContext) }
@@ -524,7 +538,7 @@ fun PrayersAndNovenasScreen(
 
                 is PrayersRoute.Prayer -> {
                     val prayer = repository.vaticanPrayers.first { it.id == r.id }
-                    AppBackHandler { openPrayerId = null }
+                    AppBackHandler { if (onExitContext != null && openPrayerId == consumedPrayerLink) onExitContext() else openPrayerId = null }
                     PrayerDetailView(
                         prayer = prayer,
                         currentLanguage = currentLanguage,
@@ -563,7 +577,7 @@ fun PrayersAndNovenasScreen(
                 )
 
                 is PrayersRoute.NovenaOverview -> {
-                    AppBackHandler { novenaId = null }
+                    AppBackHandler { if (onExitContext != null && novenaId == consumedNovenaLink) onExitContext() else novenaId = null }
                     NovenaBodyContent(repository, r.id, currentLanguage) { novena ->
                     NovenaOverviewView(
                         novena = novena,
