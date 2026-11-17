@@ -199,6 +199,23 @@ fun GuiCustomizerModal(
             t("Escuchar la voz que guía", "Play the leading voice", "Ouvir a voz que conduz"))
         VoicePicker("response", t("Voz que responde", "Responding voice", "Voz que responde"),
             t("Escuchar la voz que responde", "Play the responding voice", "Ouvir a voz que responde"))
+        Text(
+            t("Temporizador de apagado", "Sleep timer", "Temporizador para desligar"), style = styles.subhead, color = p.textPrimary,
+            modifier = Modifier.padding(start = design.spacing.gutter + 4.dp, end = design.spacing.gutter, top = 8.dp, bottom = 6.dp)
+        )
+        val sleepOff = t("Desactivado", "Off", "Desativado")
+        fun sleepLabel(minutes: Int) = if (minutes == 0) sleepOff else t("$minutes min", "$minutes min", "$minutes min")
+        Row(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
+            AppMenuChip(
+                label = sleepLabel(preferences.narrationSleepMinutes),
+                items = UserPreferences.SLEEP_TIMER_OPTIONS.map { minutes ->
+                    AppMenuItem(sleepLabel(minutes), selected = minutes == preferences.narrationSleepMinutes) {
+                        scope.launch { preferencesStore.setNarrationSleepMinutes(minutes) }
+                    }
+                },
+                tag = "narration_sleep_timer"
+            )
+        }
         val appContext = LocalContext.current
         AppSecondaryButton(
             label = t("Descargar voces de mejor calidad", "Get better voices", "Baixar vozes melhores"),

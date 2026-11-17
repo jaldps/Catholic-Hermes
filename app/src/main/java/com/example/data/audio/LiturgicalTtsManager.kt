@@ -1,8 +1,14 @@
 package com.example.data.audio
 
+import android.content.BroadcastReceiver
 import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
+import android.media.AudioAttributes
+import android.media.AudioFocusRequest
 import android.media.AudioManager
 import android.media.ToneGenerator
+import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.speech.tts.TextToSpeech
@@ -16,6 +22,7 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import androidx.core.content.ContextCompat
 import kotlinx.coroutines.launch
 import java.util.Locale
 
@@ -113,7 +120,194 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
 
+    // ---- audio focus, foreground service and sleep timer -------------------
+
+    /** True while narration was paused by the system or the user and can be continued with [resume]. */
+    private val _interrupted = MutableStateFlow(false)
+    val interrupted: StateFlow<Boolean> = _interrupted.asStateFlow()
+
+    /** Bumped by every explicit [stop] (user, notification, sleep timer), never by starting the next part. */
+    private val _stopCount = MutableStateFlow(0)
+    val stopCount: StateFlow<Int> = _stopCount.asStateFlow()
+
+    /** Optional title for the notification (the prayer being recited). */
+    @Volatile var narrationTitle: String? = null
+
+    /** Sleep timer minutes (0 = off), followed from the saved preference. */
+    @Volatile internal var sleepTimerMinutes: Int = 0
+
+    private val audioManager = context.applicationContext.getSystemService(Context.AUDIO_SERVICE) as? AudioManager
+    private val sessionHandler = Handler(Looper.getMainLooper())
+    private var sessionActive = false
+    private var serviceRunning = false
+    private var focusRequest: AudioFocusRequest? = null
+    private var noisyReceiver: BroadcastReceiver? = null
+    private var lastRequest: (() -> Unit)? = null
+    private var resumeRequest: (() -> Unit)? = null
+    private var lastText: String = ""
+    private var lastServiceSignature: NarrationState? = null
+
+    /**
+     * Narration is spoken content the user chose to play, so it is media
+     * ([AudioAttributes.USAGE_MEDIA], speech content type): it pauses music
+     * like a podcast and is controlled by the media notification.
+     * USAGE_ASSISTANCE_ACCESSIBILITY is meant for screen readers and would
+     * wrongly bypass the user's media volume and muting.
+     */
+    private val focusAttributes = AudioAttributes.Builder()
+        .setUsage(AudioAttributes.USAGE_MEDIA)
+        .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
+        .build()
+
+    /** Focus changes from the system. Exposed internally so tests can drive it. */
+    internal val focusListener = AudioManager.OnAudioFocusChangeListener { change -> handleFocusChange(change) }
+
+    internal fun handleFocusChange(change: Int) {
+        when (change) {
+            AudioManager.AUDIOFOCUS_LOSS -> interrupt(giveUpFocus = true)
+            // TTS cannot pause mid-utterance (or duck): stop now, continue on request.
+            AudioManager.AUDIOFOCUS_LOSS_TRANSIENT,
+            AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK -> interrupt(giveUpFocus = false)
+        }
+    }
+
+    @Suppress("DEPRECATION")
+    private fun requestFocus(): Boolean {
+        val am = audioManager ?: return true
+        val granted = if (Build.VERSION.SDK_INT >= 26) {
+            val request = focusRequest ?: AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
+                .setAudioAttributes(focusAttributes)
+                .setWillPauseWhenDucked(true)
+                .setOnAudioFocusChangeListener(focusListener, sessionHandler)
+                .build().also { focusRequest = it }
+            am.requestAudioFocus(request)
+        } else {
+            am.requestAudioFocus(focusListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN)
+        }
+        return granted == AudioManager.AUDIOFOCUS_REQUEST_GRANTED
+    }
+
+    @Suppress("DEPRECATION")
+    private fun abandonFocus() {
+        val am = audioManager ?: return
+        if (Build.VERSION.SDK_INT >= 26) {
+            focusRequest?.let { am.abandonAudioFocusRequest(it) }
+            focusRequest = null
+        } else am.abandonAudioFocus(focusListener)
+    }
+
+    private fun registerNoisy() {
+        if (noisyReceiver != null) return
+        val receiver = object : BroadcastReceiver() {
+            override fun onReceive(c: Context?, intent: Intent?) {
+                if (intent?.action == AudioManager.ACTION_AUDIO_BECOMING_NOISY) interrupt(giveUpFocus = false)
+            }
+        }
+        runCatching {
+            ContextCompat.registerReceiver(
+                context.applicationContext, receiver, IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY),
+                ContextCompat.RECEIVER_NOT_EXPORTED
+            )
+            noisyReceiver = receiver
+        }
+    }
+
+    private fun unregisterNoisy() {
+        noisyReceiver?.let { runCatching { context.applicationContext.unregisterReceiver(it) } }
+        noisyReceiver = null
+    }
+
+    /**
+     * Gets focus, listens for headphone unplugging, starts the foreground
+     * service (unless [withService] is false, as for short voice previews)
+     * and arms the sleep timer. False when the system refuses focus.
+     */
+    private fun beginSession(withService: Boolean): Boolean {
+        sessionHandler.removeCallbacks(idleEnd)
+        sleepHandler.removeCallbacks(sleepStale)
+        if (!requestFocus()) { if (!sessionActive) abandonFocus(); return false }
+        if (!sessionActive) {
+            sessionActive = true
+            registerNoisy()
+        }
+        // The timer counts from the first narration and survives the short
+        // gaps between parts; a long silence (stale) disarms it.
+        val minutes = sleepTimerMinutes
+        if (!sleepArmed && minutes > 0) {
+            sleepArmed = true
+            sleepHandler.postDelayed(sleepStop, minutes * 60_000L)
+        }
+        if (withService && !serviceRunning) {
+            serviceRunning = true
+            lastServiceSignature = null
+        }
+        syncService()
+        return true
+    }
+
+    private fun endSession() {
+        sessionHandler.removeCallbacksAndMessages(null)
+        if (sleepArmed) sleepHandler.postDelayed(sleepStale, SLEEP_STALE_MS)
+        if (sessionActive) { sessionActive = false; abandonFocus(); unregisterNoisy() }
+        if (serviceRunning) {
+            serviceRunning = false
+            lastServiceSignature = null
+            runCatching { context.applicationContext.stopService(NarrationService.intent(context.applicationContext)) }
+        }
+    }
+
+    private val idleEnd = Runnable { if (!tracker.playing && !_interrupted.value) endSession() }
+    private val sleepHandler = Handler(Looper.getMainLooper())
+    private var sleepArmed = false
+    private val sleepStop = Runnable { stop() }
+    private val sleepStale = Runnable { sleepArmed = false; sleepHandler.removeCallbacksAndMessages(null) }
+
+    internal fun narrationState(): NarrationState? {
+        if (!sessionActive) return null
+        val text = (_currentlySpeaking.value ?: lastText).replace(Regex("\\s+"), " ").trim()
+        return NarrationState(
+            narrationTitle.orEmpty(), if (text.length > 90) text.take(89) + "…" else text,
+            paused = _interrupted.value, language = requestedLanguage ?: deviceLanguage()
+        )
+    }
+
+    private fun syncService() {
+        if (!serviceRunning) return
+        val state = narrationState() ?: return
+        if (state == lastServiceSignature) return
+        lastServiceSignature = state
+        runCatching {
+            ContextCompat.startForegroundService(context.applicationContext, NarrationService.intent(context.applicationContext))
+        }
+    }
+
+    /** Stops speech now and remembers what was being said so [resume] can say it again. */
+    private fun interrupt(giveUpFocus: Boolean) {
+        if (!sessionActive || !tracker.playing) return
+        resumeRequest = lastRequest
+        _interrupted.value = true
+        halt()
+        if (giveUpFocus) abandonFocus()
+        // A forgotten pause must not keep a notification forever.
+        sessionHandler.removeCallbacks(idleEnd)
+        sessionHandler.postDelayed({ if (_interrupted.value) stop() }, 10 * 60_000L)
+        syncService()
+    }
+
+    /** Pause from the notification or lock screen. */
+    fun pauseNarration() = interrupt(giveUpFocus = false)
+
+    /** «Continuar»: says the interrupted part again from its start. No-op unless interrupted. */
+    fun resume() {
+        if (!_interrupted.value) return
+        val again = resumeRequest
+        _interrupted.value = false
+        resumeRequest = null
+        if (again != null) again() else endSession()
+    }
+
     init {
+        active = this
         tts = TextToSpeech(context.applicationContext, this)
         try {
             toneGenerator = ToneGenerator(AudioManager.STREAM_MUSIC, 70)
@@ -126,6 +320,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
             runCatching {
                 UserPreferencesStore(context.applicationContext).preferences.collect { prefs ->
                     speedMultiplier = prefs.audioNarrationSpeed.coerceIn(0.5f, 2.0f)
+                    sleepTimerMinutes = prefs.narrationSleepMinutes
                     if (savedVoices != prefs.narrationVoices) {
                         savedVoices = prefs.narrationVoices
                     }
@@ -169,6 +364,11 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     private fun publish() {
         _isPlaying.value = tracker.playing
         _currentlySpeaking.value = tracker.speaking
+        if (sessionActive) {
+            if (tracker.playing || _interrupted.value) sessionHandler.removeCallbacks(idleEnd)
+            else { sessionHandler.removeCallbacks(idleEnd); sessionHandler.postDelayed(idleEnd, IDLE_GRACE_MS) }
+            syncService()
+        }
     }
 
     fun setLanguage(lang: AppLanguage) {
@@ -233,7 +433,11 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     /** Speaks a short sample with [voiceName] (null = automatic) in the given role. */
     fun preview(response: Boolean, voiceName: String?, sample: String) {
         if (sample.isBlank() || !requestPlayback()) return
-        stop()
+        halt()
+        _interrupted.value = false
+        if (!beginSession(withService = false)) return
+        lastRequest = { preview(response, voiceName, sample) }
+        lastText = sample
         val gen = generation
         tracker.begin(sample)
         publish()
@@ -259,7 +463,11 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
 
     fun speakSingle(text: String, isFemaleVoice: Boolean = false) {
         if (text.isBlank() || !requestPlayback()) return
-        stop()
+        halt()
+        _interrupted.value = false
+        if (!beginSession(withService = true)) return
+        lastRequest = { speakSingle(text, isFemaleVoice) }
+        lastText = text
         val gen = generation
         tracker.begin(text)
         publish()
@@ -275,7 +483,11 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     fun speakDialogue(leaderText: String, responseText: String) {
         if (leaderText.isBlank() && responseText.isBlank()) return
         if (!requestPlayback()) return
-        stop()
+        halt()
+        _interrupted.value = false
+        if (!beginSession(withService = true)) return
+        lastRequest = { speakDialogue(leaderText, responseText) }
+        lastText = leaderText.ifBlank { responseText }
         val gen = generation
         val mode = _voiceMode.value
         val hasResponse = responseText.isNotBlank()
@@ -335,7 +547,8 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     private fun maxInput(): Int =
         runCatching { TextToSpeech.getMaxSpeechInputLength() }.getOrDefault(4000).coerceAtLeast(500) - 100
 
-    fun stop() {
+    /** Cancels speech only; the session (focus, service) is left for the caller to keep or end. */
+    private fun halt() {
         generation++
         mainHandler.removeCallbacksAndMessages(null)
         tracker.stop()
@@ -343,8 +556,20 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         publish()
     }
 
+    /** Stops narration for good: releases audio focus and the foreground service. */
+    fun stop() {
+        _interrupted.value = false
+        resumeRequest = null
+        sleepArmed = false
+        sleepHandler.removeCallbacksAndMessages(null)
+        _stopCount.value++
+        halt()
+        endSession()
+    }
+
     fun release() {
         stop()
+        if (active === this) active = null
         scope.cancel()
         tts?.shutdown()
         tts = null
@@ -355,6 +580,13 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     }
 
     companion object {
+        /** The manager the notification buttons talk to (the app has one). */
+        @Volatile internal var active: LiturgicalTtsManager? = null
+        /** Pause between parts that does not yet count as «narration ended». */
+        internal const val IDLE_GRACE_MS = 4_000L
+        /** Silence after which a running sleep timer is forgotten. */
+        internal const val SLEEP_STALE_MS = 2 * 60_000L
+
         private fun deviceLanguage(): AppLanguage = when (Locale.getDefault().language) {
             "es" -> AppLanguage.ES
             "pt" -> AppLanguage.PT

@@ -53,9 +53,13 @@ data class UserPreferences(
     /** Default Bible edition per app language code (es/en/pt); a missing entry means that language's bundled Bible. */
     val bibleDefaultEditions: Map<String, String> = emptyMap(),
     /** Chosen narration voice names, keyed "es.leader" / "es.response"; a missing key means automatic. */
-    val narrationVoices: Map<String, String> = emptyMap()
+    val narrationVoices: Map<String, String> = emptyMap(),
+    /** Narration sleep timer in minutes (0 = off, otherwise 15/30/60). */
+    val narrationSleepMinutes: Int = 0
 ) {
     companion object {
+        /** Allowed sleep-timer lengths in minutes; 0 means off. */
+        val SLEEP_TIMER_OPTIONS = listOf(0, 15, 30, 60)
         const val DEFAULT_DESIGN_LANGUAGE = "LUMEN"
         const val DEFAULT_THEME_PRESET = "LITURGICAL_DYNAMIC"
         const val DEFAULT_DARK_MODE = "SYSTEM"
@@ -105,6 +109,7 @@ class UserPreferencesStore(
         val FONT_FAMILY = stringPreferencesKey("font_family_choice")
         val FONT_SCALE = floatPreferencesKey("font_size_scale")
         val NARRATION_SPEED = floatPreferencesKey("audio_narration_speed")
+        val NARRATION_SLEEP_MINUTES = intPreferencesKey("narration_sleep_minutes")
         val BIBLE_TRANSLATION = stringPreferencesKey("active_bible_translation_id")
         val BIBLE_DEFAULTS = stringPreferencesKey("bible_default_editions")
         val FULL_CCC_DOWNLOADED = booleanPreferencesKey("is_full_ccc_downloaded")
@@ -205,10 +210,11 @@ class UserPreferencesStore(
                     ?: UserPreferences.DEFAULT_FONT_FAMILY,
                 fontSizeScale = stored[Keys.FONT_SCALE] ?: 1.0f,
                 audioNarrationSpeed = stored[Keys.NARRATION_SPEED] ?: 1.0f,
+                narrationSleepMinutes = (stored[Keys.NARRATION_SLEEP_MINUTES] ?: 0).takeIf { it in UserPreferences.SLEEP_TIMER_OPTIONS } ?: 0,
                 activeBibleTranslationId = stored[Keys.BIBLE_TRANSLATION] ?: "jerusalem",
                 isFullCccDownloaded = stored[Keys.FULL_CCC_DOWNLOADED] ?: false,
                 bibleDefaultEditions = parseBibleDefaults(stored[Keys.BIBLE_DEFAULTS]),
-                narrationVoices = VOICE_KEYS.mapNotNull { (id, key) -> stored[key]?.takeIf { it.isNotBlank() }?.let { id to it } }.toMap()
+                narrationVoices = VOICE_KEYS.mapNotNull { (id, key) -> stored[key]?.takeIf { it.isNotBlank() }?.let { id to it } }.toMap(),
             )
         }
 
@@ -280,6 +286,11 @@ class UserPreferencesStore(
     suspend fun setNarrationVoice(language: String, role: String, name: String?) {
         val key = VOICE_KEYS["$language.$role"] ?: return
         editPreference("setNarrationVoice") { if (name.isNullOrBlank()) it.remove(key) else it[key] = name }
+    }
+
+    suspend fun setNarrationSleepMinutes(minutes: Int) {
+        val value = minutes.takeIf { it in UserPreferences.SLEEP_TIMER_OPTIONS } ?: 0
+        editPreference("setNarrationSleepMinutes") { it[Keys.NARRATION_SLEEP_MINUTES] = value }
     }
 
     suspend fun setAudioNarrationSpeed(speed: Float) {

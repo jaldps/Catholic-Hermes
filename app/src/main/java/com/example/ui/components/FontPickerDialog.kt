@@ -235,12 +235,23 @@ internal fun LumenSheetHeader(
     val actionWidth = maxOf(48.dp, with(density) {
         measurer.measure(AnnotatedString(doneLabel), actionStyle, softWrap = false).size.width.toDp()
     } + 24.dp)
-    val titleWidth = with(density) {
-        measurer.measure(AnnotatedString(title), styles.headline, softWrap = false).size.width.toDp()
-    }
-    val action: @Composable (Modifier) -> Unit = { modifier ->
+    // The title is centred between two reserved gutters (the action's width
+    // on each side, so it stays optically centred) and wraps instead of being
+    // cut when it does not fit; it is never measured ahead of layout.
+    Box(
+        Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter - 8.dp)
+            .padding(top = 6.dp, bottom = 10.dp).heightIn(min = 48.dp)
+    ) {
+        Text(
+            title, style = styles.headline, color = palette.textPrimary,
+            textAlign = TextAlign.Center,
+            // fillMaxWidth: a centred text that wraps its content is laid out wider
+            // than its node, which Compose reports as visual overflow.
+            modifier = Modifier.align(Alignment.Center).fillMaxWidth().padding(horizontal = actionWidth + 8.dp)
+                .semantics { heading() }
+        )
         Box(
-            modifier.heightIn(min = 48.dp).widthIn(min = 48.dp)
+            Modifier.align(Alignment.CenterEnd).heightIn(min = 48.dp).widthIn(min = 48.dp)
                 .clip(androidx.compose.foundation.shape.RoundedCornerShape(percent = 50))
                 .clickable(role = Role.Button, onClick = onDone)
                 .then(if (doneTag != null) Modifier.testTag(doneTag) else Modifier)
@@ -248,28 +259,6 @@ internal fun LumenSheetHeader(
             contentAlignment = Alignment.Center
         ) {
             Text(doneLabel, style = actionStyle, color = palette.textPrimary, maxLines = 1)
-        }
-    }
-    BoxWithConstraints(
-        Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter - 8.dp)
-            .padding(top = 6.dp, bottom = 10.dp).heightIn(min = 48.dp)
-    ) {
-        if (titleWidth + actionWidth * 2 + 16.dp <= maxWidth) {
-            Box(Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                Text(title, style = styles.headline, color = palette.textPrimary,
-                    textAlign = TextAlign.Center, maxLines = 1,
-                    modifier = Modifier.align(Alignment.Center).padding(horizontal = actionWidth + 8.dp)
-                        .semantics { heading() })
-                action(Modifier.align(Alignment.CenterEnd))
-            }
-        } else {
-            Row(Modifier.fillMaxWidth().heightIn(min = 48.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                Text(title, style = styles.headline, color = palette.textPrimary,
-                    modifier = Modifier.weight(1f).padding(start = 8.dp).semantics { heading() })
-                action(Modifier)
-            }
         }
     }
 }

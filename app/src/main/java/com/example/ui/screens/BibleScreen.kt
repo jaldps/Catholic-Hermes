@@ -184,6 +184,7 @@ import com.example.ui.theme.LocalAppTextStyles
 import com.example.ui.theme.ReaderFontChoice
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -348,6 +349,7 @@ internal fun rememberSpeechQueue(tts: LiturgicalTtsManager?): SpeechQueue {
             queue.stop()
             return@LaunchedEffect
         }
+        val stopsBefore = engine.stopCount.value
         engine.speakSingle(queue.segments[i])
         // The engine was not ready (or the text was blank): stop rather than
         // racing through the queue in silence.
@@ -356,6 +358,15 @@ internal fun rememberSpeechQueue(tts: LiturgicalTtsManager?): SpeechQueue {
             return@LaunchedEffect
         }
         engine.isPlaying.first { !it }
+        // Interrupted by a call, other audio or headphones unplugged: wait for
+        // «Continuar» (which re-reads this passage) instead of moving on.
+        while (engine.interrupted.value) {
+            combine(engine.isPlaying, engine.interrupted) { playing, paused -> playing || !paused }.first { it }
+            if (!engine.isPlaying.value) { queue.active = false; return@LaunchedEffect }
+            engine.isPlaying.first { !it }
+        }
+        // Stopped from the notification or the sleep timer: keep the place, don't advance.
+        if (engine.stopCount.value != stopsBefore) { queue.active = false; return@LaunchedEffect }
         delay(260)
         if (queue.active && queue.index == i) queue.index = i + 1
     }
