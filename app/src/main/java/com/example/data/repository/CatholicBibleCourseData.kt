@@ -129,7 +129,7 @@ object CatholicBibleCourseData {
             lesson(
                 "bible_3_genre_context", 3,
                 t("Leer con atención: contexto y género", "Reading carefully: context and genre", "Ler com atenção: contexto e gênero"),
-                listOf("psa 22:1-6"),
+                listOf("psa 23:1-6"),
                 t("El salmo del Buen Pastor aparece como 22 en las ediciones incluidas y como 23 en muchas Biblias de numeración hebrea. Es una oración poética de confianza. Sus imágenes de pastor y anfitrión comunican cuidado y comunión; no son una descripción literal de la forma física de Dios.", "The Shepherd Psalm is numbered 22 in the bundled editions and 23 in many Bibles using Hebrew numbering. It is a poetic prayer of trust. Its shepherd and host images communicate care and fellowship; they do not literally describe God's physical form.", "O salmo do Bom Pastor é numerado como 22 nas edições incluídas e como 23 em muitas Bíblias de numeração hebraica. É uma oração poética de confiança. As imagens de pastor e anfitrião comunicam cuidado e comunhão; não descrevem literalmente a forma física de Deus."),
                 listOf(
                     section(t("El sentido literal no es literalismo", "Literal meaning is not literalism", "Sentido literal não é literalismo"), t(

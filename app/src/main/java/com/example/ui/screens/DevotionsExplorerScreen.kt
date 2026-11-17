@@ -1,5 +1,6 @@
 package com.example.ui.screens
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
@@ -16,6 +17,7 @@ import androidx.compose.material.icons.outlined.Stop
 import androidx.compose.material.icons.outlined.VolumeUp
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -24,7 +26,10 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontStyle
@@ -34,6 +39,8 @@ import com.example.data.models.ChristManifestation
 import com.example.data.models.LocalizedText
 import com.example.data.models.MarianApparition
 import com.example.data.repository.CatholicDataRepository
+import com.example.data.repository.DevotionImageCredit
+import com.example.data.repository.DevotionImageCredits
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppFilterChips
 import com.example.ui.design.AppFilterMenu
@@ -220,14 +227,20 @@ internal fun DevotionDetail(
 ) {
     val marian = repository.marianApparitions.firstOrNull { it.id == id }
     val christ = repository.christManifestations.firstOrNull { it.id == id }
-    when {
-        marian != null -> MarianPage(marian, language, nav)
-        christ != null -> ChristPage(christ, language, nav)
+    val context = LocalContext.current
+    val credits = remember(context) { DevotionImageCredits.install(context); DevotionImageCredits.default }
+    val credit = remember(credits, id) { credits.imagePath(id)?.let { credits.credit(id) } }
+    // The devotion's own picture heads its page; without one, the section's art stays.
+    CompositionLocalProvider(LocalReaderArt provides (credit?.let { credits.imagePath(id) } ?: LocalReaderArt.current)) {
+        when {
+            marian != null -> MarianPage(marian, language, nav, credit)
+            christ != null -> ChristPage(christ, language, nav, credit)
+        }
     }
 }
 
 @Composable
-private fun MarianPage(item: MarianApparition, language: AppLanguage, nav: DoctrineNav) {
+private fun MarianPage(item: MarianApparition, language: AppLanguage, nav: DoctrineNav, credit: DevotionImageCredit?) {
     val ta = splitAlias(item.title.get(language))
     AppInlineTitle(ta.title)
     val year = devotionYear(item.year, language)
@@ -258,12 +271,13 @@ private fun MarianPage(item: MarianApparition, language: AppLanguage, nav: Doctr
             "Oração de veneração e intercessão"
         ),
         prayer = item.venerationPrayer.get(language),
-        extras = item.extras(language)
+        extras = item.extras(language),
+        credit = credit
     )
 }
 
 @Composable
-private fun ChristPage(item: ChristManifestation, language: AppLanguage, nav: DoctrineNav) {
+private fun ChristPage(item: ChristManifestation, language: AppLanguage, nav: DoctrineNav, credit: DevotionImageCredit?) {
     val ta = splitAlias(item.title.get(language))
     AppInlineTitle(ta.title)
     DevotionPage(
@@ -288,8 +302,20 @@ private fun ChristPage(item: ChristManifestation, language: AppLanguage, nav: Do
         miracles = item.recordedMiracles.get(language),
         prayerTitle = language.tr("Oración devocional", "Devotional prayer", "Oração devocional"),
         prayer = item.officialPrayer.get(language),
-        extras = item.extras(language)
+        extras = item.extras(language),
+        credit = credit
     )
+}
+
+/** «Imagen: autor · licencia · fuente», with the author left out when unknown. */
+internal fun imageCreditLine(c: DevotionImageCredit, language: AppLanguage): String {
+    if (c.referential) {
+        val prefix = language.tr("Imagen referencial: ", "Reference image: ", "Imagem de referência: ")
+        return prefix + c.license.removePrefix("Derechos: ").trim()
+    }
+    if (c.userSupplied) return language.tr("Foto aportada por el usuario", "Photo supplied by the user", "Foto enviada pelo usuário")
+    val parts = listOf(c.author, c.license, c.source).map { it.trim() }.filter { it.isNotEmpty() }
+    return language.tr("Imagen: ", "Image: ", "Imagem: ") + parts.joinToString(" · ")
 }
 
 /** Optional editorial material for a devotion; blank pieces are not shown. */
@@ -332,7 +358,8 @@ private fun DevotionPage(
     miracles: String,
     prayerTitle: String,
     prayer: String,
-    extras: DevotionExtras = DevotionExtras()
+    extras: DevotionExtras = DevotionExtras(),
+    credit: DevotionImageCredit? = null
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -344,6 +371,17 @@ private fun DevotionPage(
         meta = alias,
         pageTag = "devotion_detail_$id"
     ) {
+        if (credit != null) item(key = "image_credit") {
+            val uriHandler = LocalUriHandler.current
+            val url = credit.safeUrl
+            Text(
+                imageCreditLine(credit, language), style = styles.footnote, color = p.textSecondary,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)
+                    .then(if (url != null) Modifier.clickable(role = Role.Button) { runCatching { uriHandler.openUri(url) } } else Modifier)
+                    .testTag("devotion_image_credit")
+            )
+            BlockGap(20.dp)
+        }
         item(key = "facts") {
             FactsGroup(facts)
             BlockGap(28.dp)

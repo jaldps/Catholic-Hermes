@@ -64,7 +64,7 @@ internal fun LiquidGlassDevotionTrack(
         label = "devotionGlassPressure")
     var origin by remember { mutableStateOf(Offset.Zero) }
     val renderer = remember { DevotionalGlassRenderer() }
-    val opaque = design.reduceTransparency || design.highContrast
+    val opaque = design.isClassic || design.reduceTransparency || design.highContrast
     Box(modifier) {
         Canvas(Modifier.matchParentSize().onGloballyPositioned { origin = it.positionInRoot() }) {
             drawIntoCanvas { canvas ->

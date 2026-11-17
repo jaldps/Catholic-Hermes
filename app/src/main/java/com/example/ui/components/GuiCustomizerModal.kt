@@ -8,6 +8,8 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -17,6 +19,15 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.semantics.heading
+import com.example.ui.theme.AccentColors
+import com.example.ui.theme.NonEcclesialAccent
 import androidx.compose.ui.platform.LocalContext
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.ui.design.AppGlassIconButton
@@ -122,42 +133,10 @@ fun GuiCustomizerModal(
         )
 
         Label(t("Color de acento", "Accent colour", "Cor de destaque"))
-        Row(
-            Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
-            horizontalArrangement = Arrangement.SpaceEvenly
-        ) {
-            AppThemePreset.entries.forEach { preset ->
-                val selected = preferences.themePreset == preset.id
-                val swatch = when (preset.id) {
-                    "MONASTIC_MINIMALIST" -> if (design.isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
-                    "SACRED_BURGUNDY" -> if (design.isDark) Color(0xFFE59AA6) else Color(0xFF8A2D3B)
-                    "MARIAN_AZURE" -> if (design.isDark) Color(0xFF9DBDFF) else Color(0xFF2459B5)
-                    else -> if (design.isSanctuary) (if (design.isDark) Color(0xFFE5A4AE) else Color(0xFF7A293A)) else if (design.isDark) Color(0xFF7FC48A) else Color(0xFF2A6E38)
-                }
-                Box(
-                    Modifier
-                        .size(52.dp)
-                        .lumenPress({ scope.launch { preferencesStore.setThemePreset(preset.id) } }, 0.9f)
-                        .semantics {
-                            this.selected = selected
-                            contentDescription = preset.label.get(currentLanguage)
-                        }
-                        .testTag("theme_preset_${preset.id}"),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Box(
-                        Modifier
-                            .size(40.dp)
-                            .border(if (selected) 2.dp else 0.dp, if (selected) p.textPrimary else Color.Transparent, CircleShape)
-                            .padding(if (selected) 4.dp else 0.dp)
-                            .background(swatch, CircleShape),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        if (selected) Icon(Icons.Filled.Check, null, tint = if (swatch.luminance() > 0.35f) Color(0xFF211D19) else Color.White, modifier = Modifier.size(16.dp))
-                    }
-                }
-            }
-        }
+        AccentPicker(
+            selectedPreset = preferences.themePreset, language = currentLanguage,
+            onSelect = { id -> scope.launch { preferencesStore.setThemePreset(id) } }
+        )
 
         Label(t("Tamaño del texto", "Text size", "Tamanho do texto"))
         val scales = listOf(0.9f, 1.0f, 1.15f, 1.3f)
@@ -256,5 +235,108 @@ fun GuiCustomizerModal(
             modifier = Modifier.testTag("appearance_high_contrast")
         )
         Spacer(Modifier.height(20.dp))
+    }
+}
+
+/** One round accent swatch: 52 dp target, check mark when selected. */
+@Composable
+private fun AccentSwatch(
+    fill: Brush, selected: Boolean, tag: String, description: String,
+    checkTint: Color, onClick: () -> Unit
+) {
+    val p = LocalAppDesign.current.palette
+    Box(
+        Modifier
+            .size(52.dp)
+            .lumenPress(onClick, 0.9f)
+            .semantics { this.selected = selected; contentDescription = description }
+            .testTag(tag),
+        contentAlignment = Alignment.Center
+    ) {
+        Box(
+            Modifier
+                .size(40.dp)
+                .border(if (selected) 2.dp else 0.dp, if (selected) p.textPrimary else Color.Transparent, CircleShape)
+                .padding(if (selected) 4.dp else 0.dp)
+                .background(fill, CircleShape),
+            contentAlignment = Alignment.Center
+        ) {
+            if (selected) Icon(Icons.Filled.Check, null, tint = checkTint, modifier = Modifier.size(16.dp))
+        }
+    }
+}
+
+/**
+ * The accent colour choice in two labelled groups: the four ecclesiastical
+ * presets, then ten fixed non-ecclesiastical swatches and a custom colour that
+ * opens a wheel. Swatches show the ink the identity will really draw.
+ */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun AccentPicker(selectedPreset: String, language: AppLanguage, onSelect: (String) -> Unit) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    fun t(es: String, en: String, pt: String) = when (language) {
+        AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt
+    }
+    var wheelOpen by remember { mutableStateOf(false) }
+    val custom = AccentColors.parseCustom(selectedPreset)
+    fun inkOf(base: Color) = AccentColors.ink(base, design.language, design.isDark)
+    fun checkOn(swatch: Color) = if (swatch.luminance() > 0.35f) Color(0xFF211D19) else Color.White
+    val gutter = design.spacing.gutter
+
+    @Composable
+    fun GroupLabel(text: String, tag: String) {
+        Text(
+            text, style = styles.subhead, color = p.textPrimary,
+            modifier = Modifier.padding(start = gutter + 4.dp, end = gutter, top = 4.dp, bottom = 2.dp)
+                .semantics { heading() }.testTag(tag)
+        )
+    }
+
+    GroupLabel(t("Eclesiásticos", "Ecclesiastical", "Eclesiásticos"), "accent_group_ecclesial")
+    FlowRow(
+        Modifier.fillMaxWidth().padding(horizontal = gutter),
+        horizontalArrangement = Arrangement.spacedBy(4.dp), verticalArrangement = Arrangement.spacedBy(2.dp)
+    ) {
+        AppThemePreset.entries.forEach { preset ->
+            val swatch = when (preset.id) {
+                "MONASTIC_MINIMALIST" -> if (design.isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
+                "SACRED_BURGUNDY" -> if (design.isDark) Color(0xFFE59AA6) else Color(0xFF8A2D3B)
+                "MARIAN_AZURE" -> if (design.isDark) Color(0xFF9DBDFF) else Color(0xFF2459B5)
+                else -> if (design.isSanctuary) (if (design.isDark) Color(0xFFE5A4AE) else Color(0xFF7A293A)) else if (design.isDark) Color(0xFF7FC48A) else Color(0xFF2A6E38)
+            }
+            AccentSwatch(SolidColor(swatch), selectedPreset == preset.id, "theme_preset_${preset.id}",
+                preset.label.get(language), checkOn(swatch)) { onSelect(preset.id) }
+        }
+    }
+
+    GroupLabel(t("No eclesiásticos", "Other colours", "Não eclesiásticos"), "accent_group_other")
+    FlowRow(
+        Modifier.fillMaxWidth().padding(horizontal = gutter),
+        horizontalArrangement = Arrangement.spacedBy(4.dp), verticalArrangement = Arrangement.spacedBy(2.dp)
+    ) {
+        NonEcclesialAccent.entries.forEach { accent ->
+            val swatch = remember(accent, design.language, design.isDark) { inkOf(accent.base) }
+            AccentSwatch(SolidColor(swatch), selectedPreset == accent.id, "theme_preset_${accent.id}",
+                accent.label.get(language), checkOn(swatch)) { onSelect(accent.id) }
+        }
+        val customSwatch = custom?.let { remember(it, design.language, design.isDark) { inkOf(it) } }
+        AccentSwatch(
+            fill = if (customSwatch != null) SolidColor(customSwatch) else Brush.sweepGradient(
+                listOf(Color(0xFFE5484D), Color(0xFFE5A31C), Color(0xFF5DB762), Color(0xFF14958F), Color(0xFF4A57D0), Color(0xFFD64C87), Color(0xFFE5484D))),
+            selected = custom != null, tag = "theme_preset_CUSTOM",
+            description = t("Personalizado", "Custom", "Personalizado"),
+            checkTint = customSwatch?.let { checkOn(it) } ?: Color.White
+        ) { wheelOpen = true }
+    }
+    if (wheelOpen) {
+        AccentColorWheelDialog(
+            initial = custom ?: AccentColors.baseOf(selectedPreset) ?: p.accent,
+            language = language,
+            onSave = { color -> wheelOpen = false; onSelect(AccentColors.customId(color)) },
+            onDismiss = { wheelOpen = false }
+        )
     }
 }

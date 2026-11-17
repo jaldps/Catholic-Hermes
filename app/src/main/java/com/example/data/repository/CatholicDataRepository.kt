@@ -41,6 +41,7 @@ import com.example.data.xref.VerseRef
 import com.example.data.liturgy.LectionaryData
 import com.example.data.liturgy.CelebrationRank
 import com.example.data.liturgy.LiturgicalCalendar
+import com.example.data.liturgy.PsalmNumberingMap
 import com.example.data.liturgy.ScriptureResolver
 import com.example.data.models.LocalizedText
 import com.example.data.news.DailySaint
@@ -801,17 +802,33 @@ class CatholicDataRepository(
         builtIn + studyCoursesCatalog.tracks(builtIn)
     }
 
-    /** Study citations always resolve against the included edition, independent of optional downloads. */
-    fun studyScriptureText(lesson: com.example.data.models.ScriptureLesson, language: AppLanguage): String {
+    /**
+     * Study citations are Hebrew-numbered (Catechism) and resolve, by default, against the included edition
+     * (never an optional one). [editionId] selects another edition; the psalm numbers are converted to its
+     * numbering and the label shows both, e.g. "Sal 22 (21)". Mass readings and the verse of the day do not use this.
+     */
+    private fun studyResolver(editionId: String) = ScriptureResolver(
+        bookName = { bookId, language -> BibleData.catholicCanonBooks.firstOrNull { it.id == bookId }?.name?.get(language) },
+        versesOf = { bookId, chapter, language -> bibleProvider?.getVerses(bookId, chapter, language, editionId) ?: emptyList() }
+    )
+
+    fun studyScriptureText(
+        lesson: com.example.data.models.ScriptureLesson,
+        language: AppLanguage,
+        editionId: String = BibleEditionCatalog.initialDefault(language)
+    ): String {
         if (lesson.scriptureReferences.isEmpty()) return lesson.biblicalPassageText.get(language)
+        val resolver = studyResolver(editionId)
+        val numbering = PsalmNumberingMap.numberingOf(editionId)
         val passages = lesson.scriptureReferences.map { raw ->
-            val text = scriptureResolver.passage(raw, language) ?: return ""
-            "${scriptureResolver.display(raw, language)}\n$text"
+            val text = resolver.passage(raw, language, numbering) ?: return ""
+            "${resolver.display(raw, language, numbering)}\n$text"
         }
         return passages.joinToString("\n\n")
     }
 
-    fun studyScriptureLabel(raw: String, language: AppLanguage): String = scriptureResolver.display(raw, language)
+    fun studyScriptureLabel(raw: String, language: AppLanguage, editionId: String = BibleEditionCatalog.initialDefault(language)): String =
+        studyResolver(editionId).display(raw, language, PsalmNumberingMap.numberingOf(editionId))
 
     fun referenceLabel(reference: com.example.data.liturgy.ScriptureReference, language: AppLanguage): String =
         scriptureResolver.display(reference, language)

@@ -107,4 +107,24 @@ class FontPreferencesTest {
         } finally { job.cancelAndJoin() }
     }
 
+    @Test fun everyAccentPresetAndCustomColourPersists() = runBlocking {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        val job = SupervisorJob()
+        val data = PreferenceDataStoreFactory.create(scope = CoroutineScope(Dispatchers.IO + job)) {
+            folder.newFolder().resolve("accent.preferences_pb")
+        }
+        try {
+            val store = UserPreferencesStore(context, data)
+            val ids = com.example.ui.theme.AppThemePreset.entries.map { it.id } +
+                com.example.ui.theme.NonEcclesialAccent.entries.map { it.id } + listOf("CUSTOM_3A7BD5", "CUSTOM_000000")
+            for (id in ids) {
+                store.setThemePreset(id)
+                assertEquals(id, store.preferences.first().themePreset)
+            }
+            // The stored identity survives alongside the new tints.
+            store.setDesignLanguage("CLASSIC")
+            assertEquals("CLASSIC", store.preferences.first().designLanguage)
+            assertEquals("CUSTOM_000000", store.preferences.first().themePreset)
+        } finally { job.cancelAndJoin() }
+    }
 }
