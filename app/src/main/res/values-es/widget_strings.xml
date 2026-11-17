@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="widget_liturgical_day_label">Día litúrgico</string>
+    <string name="widget_liturgical_day_description">La celebración, el tiempo y su color, y la referencia del Evangelio del día</string>
+    <string name="widget_my_path_label">Mi camino</string>
+    <string name="widget_my_path_description">Los hábitos de hoy y la novena o el plan de lectura en curso</string>
+</resources>

@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Text
 import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material.icons.automirrored.outlined.OpenInNew
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
@@ -13,6 +14,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
@@ -20,24 +22,119 @@ import com.example.ui.design.*
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
-/** A small independent store: journey choices never depend on database migrations. */
+/** What the welcome chose: whether it was answered, the profile (0 exploring, 1 returning, 2 practicing) and the minutes. */
+internal data class JourneyChoice(val welcomed: Boolean, val profile: Int, val minutes: Int)
+
+/** A small independent store: journey choices never depend on database migrations. The backup carries it as `shared:beginner_journey`. */
 internal class BeginnerJourneyStore(context: Context) {
     private val prefs = context.applicationContext.getSharedPreferences("beginner_journey", Context.MODE_PRIVATE)
     val welcomed get() = prefs.getBoolean("welcomed", false)
+    val profile get() = prefs.getInt("profile", 0).takeIf { it in 0..2 } ?: 0
     val minutes get() = prefs.getInt("minutes", 5).takeIf { it in listOf(2, 5, 10) } ?: 5
     val step get() = prefs.getInt("step", 0).coerceIn(0, 6)
-    fun welcome(profile: Int, minutes: Int) { prefs.edit().putBoolean("welcomed", true).putInt("profile", profile).putInt("minutes", minutes).putInt("step", when(profile) { 1 -> 4; 2 -> 6; else -> 0 }).apply() }
+    fun choice() = JourneyChoice(welcomed, profile, minutes)
+    /**
+     * Saves the profile and time. The first-steps page starts at the profile's own step (returning 4, practicing 6) when the
+     * answer is new or the profile changes; choosing only another time keeps the step already reached.
+     */
+    fun welcome(profile: Int, minutes: Int) {
+        val moved = !welcomed || this.profile != profile
+        prefs.edit().putBoolean("welcomed", true).putInt("profile", profile).putInt("minutes", minutes).apply {
+            if (moved) putInt("step", when (profile) { 1 -> 4; 2 -> 6; else -> 0 })
+        }.apply()
+    }
     fun advance(step: Int) { prefs.edit().putInt("step", step.coerceIn(0, 6)).apply() }
+    /** The caller keeps the returned listener: SharedPreferences holds it weakly. */
+    fun listen(onChange: () -> Unit): android.content.SharedPreferences.OnSharedPreferenceChangeListener =
+        android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, _ -> onChange() }.also { prefs.registerOnSharedPreferenceChangeListener(it) }
+    fun stopListening(listener: android.content.SharedPreferences.OnSharedPreferenceChangeListener) = prefs.unregisterOnSharedPreferenceChangeListener(listener)
 }
 
-private fun AppLanguage.journey(es: String, en: String, pt: String) = when (this) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
+/** The stored choice as Compose state: Home, Settings and the welcome all see a change the moment it is saved. */
+@Composable
+internal fun rememberJourney(): State<JourneyChoice> {
+    val context = LocalContext.current
+    val store = remember { BeginnerJourneyStore(context) }
+    val state = remember { mutableStateOf(store.choice()) }
+    DisposableEffect(store) {
+        val listener = store.listen { state.value = store.choice() }
+        state.value = store.choice()
+        onDispose { store.stopListening(listener) }
+    }
+    return state
+}
+
+internal fun AppLanguage.journey(es: String, en: String, pt: String) = when (this) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
+
+internal fun journeyProfileLabel(language: AppLanguage, profile: Int) = when (profile) {
+    1 -> language.journey("Estoy regresando", "I'm returning", "Estou voltando")
+    2 -> language.journey("Estoy practicando", "I'm practicing", "Estou praticando")
+    else -> language.journey("Estoy explorando", "I'm exploring", "Estou explorando")
+}
+
+/** The profile as a short noun, for a settings value. */
+internal fun journeyProfileShort(language: AppLanguage, profile: Int) = when (profile) {
+    1 -> language.journey("Regresando", "Returning", "Voltando")
+    2 -> language.journey("Practicando", "Practicing", "Praticando")
+    else -> language.journey("Explorando", "Exploring", "Explorando")
+}
+
+/**
+ * The profile list and the time chips, shared by the welcome dialog and the Settings sheet. [welcomeLine] is the
+ * reviewed line of the chosen profile and sits right under the profile list.
+ */
+@Composable
+private fun JourneyChoicePicker(
+    language: AppLanguage, profile: Int, onProfile: (Int) -> Unit, minutes: Int, onMinutes: (Int) -> Unit,
+    welcomeLine: String?
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    // With very large text "10 min" no longer fits a third of a 320 dp screen: the chips keep the number, the label names the unit.
+    val compact = styles.subhead.fontSize.value * LocalDensity.current.fontScale > 18.5f
+    Column {
+        AppListGroup {
+            (0..2).forEach { i ->
+                AppListRow(
+                    title = journeyProfileLabel(language, i), selected = profile == i, showsNavigationAffordance = false,
+                    trailingText = if (profile == i) "✓" else null,
+                    onClick = { onProfile(i) },
+                    modifier = Modifier.testTag("welcome_profile_$i").semantics { selected = profile == i }
+                )
+            }
+        }
+        if (welcomeLine != null) {
+            Spacer(Modifier.height(12.dp))
+            Text(welcomeLine, style = styles.subhead, color = p.textPrimary,
+                modifier = Modifier.padding(horizontal = 24.dp).testTag("welcome_profile_line"))
+        }
+        Spacer(Modifier.height(18.dp))
+        Text(
+            if (compact) language.journey("Tiempo para hoy, en minutos", "Time for today, in minutes", "Tempo para hoje, em minutos")
+            else language.journey("Tiempo para hoy", "Time for today", "Tempo para hoje"),
+            style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(horizontal = 24.dp)
+        )
+        Spacer(Modifier.height(8.dp))
+        Row(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            listOf(2, 5, 10).forEach { m ->
+                AppChip(if (compact) "$m" else "$m min", selected = minutes == m, onClick = { onMinutes(m) },
+                    modifier = Modifier.weight(1f).testTag("welcome_minutes_$m").semantics { contentDescription = "$m min" })
+            }
+        }
+    }
+}
 
 @Composable
 internal fun WelcomeChoices(language: AppLanguage, onChooseLanguage: () -> Unit = {}, onClose: () -> Unit) {
     val context = LocalContext.current
     val store = remember { BeginnerJourneyStore(context) }
     var profile by rememberSaveable { mutableIntStateOf(0) }
+    // The line of a profile appears once the person has picked one, so the dialog stays short until then.
+    var picked by rememberSaveable { mutableStateOf(false) }
     var time by rememberSaveable { mutableIntStateOf(store.minutes) }
+    val profiles = rememberOnboardingProfiles()
+    val welcomeLine = if (picked) profiles?.firstOrNull { it.index == profile }?.welcome?.get(language) else null
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
@@ -48,34 +145,11 @@ internal fun WelcomeChoices(language: AppLanguage, onChooseLanguage: () -> Unit 
             style = styles.subhead, color = p.textSecondary, modifier = Modifier.padding(horizontal = 24.dp)
         )
         Spacer(Modifier.height(18.dp))
-        AppListGroup {
-            listOf(
-                language.journey("Estoy explorando", "I'm exploring", "Estou explorando"),
-                language.journey("Estoy regresando", "I'm returning", "Estou voltando"),
-                language.journey("Estoy practicando", "I'm practicing", "Estou praticando")
-            ).forEachIndexed { i, label ->
-                AppListRow(
-                    title = label, selected = profile == i, showsNavigationAffordance = false,
-                    trailingText = if (profile == i) "✓" else null,
-                    onClick = { profile = i },
-                    modifier = Modifier.testTag("welcome_profile_$i").semantics { selected = profile == i }
-                )
-            }
-        }
-        Spacer(Modifier.height(18.dp))
-        Text(language.journey("Tiempo para hoy", "Time for today", "Tempo para hoje"), style = styles.footnote, color = p.textSecondary,
-            modifier = Modifier.padding(horizontal = 24.dp))
-        Spacer(Modifier.height(8.dp))
-        Row(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            listOf(2, 5, 10).forEach { minutes ->
-                AppChip("$minutes min", selected = time == minutes, onClick = { time = minutes },
-                    modifier = Modifier.weight(1f).testTag("welcome_minutes_$minutes"))
-            }
-        }
+        JourneyChoicePicker(language, profile, { profile = it; picked = true }, time, { time = it }, welcomeLine)
         Spacer(Modifier.height(14.dp))
         AppListGroup {
             AppListRow(
-                title = language.journey("Idioma", "Language", "Idioma"), trailingText = language.displayName,
+                title = language.journey("Idioma", "Language", "Idioma"), subtitle = language.displayName,
                 leadingIcon = androidx.compose.material.icons.Icons.Outlined.Language,
                 onClick = onChooseLanguage, modifier = Modifier.testTag("welcome_language")
             )
@@ -84,6 +158,34 @@ internal fun WelcomeChoices(language: AppLanguage, onChooseLanguage: () -> Unit 
         Column(Modifier.padding(horizontal = design.spacing.gutter), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             AppPrimaryCapsule(language.journey("Comenzar", "Begin", "Começar"), onClick = finish, tag = "welcome_begin")
             AppSecondaryCapsule(language.journey("Omitir", "Skip", "Pular"), onClick = finish, fillWidth = true, tag = "welcome_skip")
+        }
+    }
+}
+
+/** Settings → «Tu camino»: the same profile-and-time choice as the welcome, saved the moment it changes. */
+@Composable
+internal fun JourneyChoiceSheet(language: AppLanguage, onDismiss: () -> Unit) {
+    val context = LocalContext.current
+    val store = remember { BeginnerJourneyStore(context) }
+    var profile by rememberSaveable { mutableIntStateOf(store.profile) }
+    var time by rememberSaveable { mutableIntStateOf(store.minutes) }
+    val profiles = rememberOnboardingProfiles()
+    val chosen = profiles?.firstOrNull { it.index == profile }
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    AppSheet(onDismiss = onDismiss, title = language.journey("Tu camino", "Your path", "Seu caminho"), tag = "welcome_profile_sheet") {
+        Text(
+            language.journey("Elige cómo vienes y cuánto tiempo tienes.", "Choose how you are coming and how much time you have.", "Escolha como você vem e quanto tempo tem."),
+            style = styles.subhead, color = design.palette.textSecondary, modifier = Modifier.padding(horizontal = 24.dp)
+        )
+        Spacer(Modifier.height(16.dp))
+        JourneyChoicePicker(
+            language, profile, { profile = it; store.welcome(it, time) }, time, { time = it; store.welcome(profile, it) },
+            welcomeLine = chosen?.welcome?.get(language)
+        )
+        Spacer(Modifier.height(20.dp))
+        Column(Modifier.padding(horizontal = design.spacing.gutter)) {
+            AppPrimaryCapsule(language.journey("Listo", "Done", "Pronto"), onClick = { store.welcome(profile, time); onDismiss() }, tag = "welcome_profile_done")
         }
     }
 }

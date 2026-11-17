@@ -46,6 +46,7 @@ import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
@@ -101,7 +102,7 @@ private val StudyTags = listOf(
 )
 private val InnerLifeTags = listOf("nav_my_path")
 private val ChurchTodayTags = listOf("nav_parishes", "nav_pilgrimage", "nav_churches_news")
-private val SettingsTags = listOf("app_bar_theme_button", "font_settings_button", "backup_entry", "error_report_entry", "calendar_rules_settings", "app_bar_lang_button")
+private val SettingsTags = listOf("app_bar_theme_button", "font_settings_button", "settings_welcome_profile", "backup_entry", "error_report_entry", "calendar_rules_settings", "app_bar_lang_button")
 
 /**
  * Explore — the sixth tab: everything that does not earn a place in the tab
@@ -513,14 +514,17 @@ private fun EntryRow(
             if (design.isSanctuary) Icon(icon, contentDescription = null, tint = p.textPrimary, modifier = Modifier.size(GlyphSize))
             else AppIconWell(icon)
             Spacer(Modifier.width(if (design.isSanctuary) GlyphGap else 14.dp))
+            // With very large text a trailing value leaves the title a few letters of width: the value joins the second line.
+            val stacked = !value.isNullOrBlank() && styles.body.fontSize.value * LocalDensity.current.fontScale > 22f
             Column(Modifier.weight(1f)) {
                 Text(title, style = styles.body, color = p.textPrimary)
-                if (subtitle != null) {
+                val second = if (stacked) listOfNotNull(subtitle, value).joinToString(" · ") else subtitle
+                if (second != null) {
                     Spacer(Modifier.height(2.dp))
-                    Text(subtitle, style = styles.footnote, color = p.textSecondary)
+                    Text(second, style = styles.footnote, color = p.textSecondary)
                 }
             }
-            if (!value.isNullOrBlank()) {
+            if (!value.isNullOrBlank() && !stacked) {
                 Spacer(Modifier.width(12.dp))
                 Text(value, style = styles.body, color = p.textSecondary, maxLines = 1)
             }

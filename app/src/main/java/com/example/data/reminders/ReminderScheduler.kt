@@ -83,9 +83,12 @@ object ReminderScheduler {
     }
 
     fun schedule(context: Context, reminder: DevotionReminder, hour: Int, minute: Int, language: String) {
+        setAlarm(context, nextTriggerMillis(hour, minute), pendingFor(context, reminder, language))
+    }
+
+    /** Exact while-idle alarm when the system allows it, otherwise the inexact fallback (shared with notices). */
+    fun setAlarm(context: Context, trigger: Long, pi: PendingIntent) {
         val alarms = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val trigger = nextTriggerMillis(hour, minute)
-        val pi = pendingFor(context, reminder, language)
         try {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && !alarms.canScheduleExactAlarms()) {
                 alarms.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, trigger, pi)
@@ -113,7 +116,7 @@ object ReminderScheduler {
     fun rescheduleAll(context: Context, language: String) {
         val app = context.applicationContext
         schedulerScope.launch {
-            try { withTimeout(15_000) { scheduleEnabled(app, language) } }
+            try { withTimeout(15_000) { scheduleEnabled(app, language); com.example.data.notices.NoticeScheduler.scheduleEnabled(app) } }
             catch (cancelled: kotlinx.coroutines.TimeoutCancellationException) { _schedulingError.value = true }
             catch (cancelled: CancellationException) { throw cancelled }
             catch (e: Exception) { AppLog.failure(LogEvent.REMINDER_SCHEDULE,e);_schedulingError.value = true }
@@ -212,6 +215,13 @@ private fun BroadcastReceiver.finishAsync(work: suspend () -> Unit) {
 
 class ReminderReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
+        if (intent?.action == com.example.data.notices.NoticeScheduler.ACTION_NOTICE_FIRE) {
+            val app = context.applicationContext
+            val type = intent.getStringExtra(com.example.data.notices.NoticeScheduler.EXTRA_NOTICE_TYPE)
+            val day = intent.getLongExtra(com.example.data.notices.NoticeScheduler.EXTRA_NOTICE_DAY, Long.MIN_VALUE)
+            finishAsync { com.example.data.notices.NoticeScheduler.onFire(app, type, day) }
+            return
+        }
         if (intent?.action != ReminderScheduler.ACTION_FIRE) return
         val id = intent.getStringExtra(ReminderScheduler.EXTRA_ID) ?: return
         val reminder = ReminderCatalog.byId(id) ?: return
@@ -244,13 +254,16 @@ class ReminderReceiver : BroadcastReceiver() {
 class ReminderBootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
         if (intent?.action !in setOf(Intent.ACTION_BOOT_COMPLETED, Intent.ACTION_TIME_CHANGED,
-                Intent.ACTION_TIMEZONE_CHANGED, Intent.ACTION_MY_PACKAGE_REPLACED,
+                Intent.ACTION_TIMEZONE_CHANGED, Intent.ACTION_MY_PACKAGE_REPLACED, Intent.ACTION_LOCALE_CHANGED,
                 "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED")) return
         val app = context.applicationContext
+        // Widgets show the day: a new clock, zone or locale redraws them at once (no-op when none is placed).
+        com.example.widget.AppWidgets.refreshAll(app)
         finishAsync {
             val language = com.example.data.prefs.UserPreferencesStore(app).preferences.first().language.code
             // Await the actual scheduling; a nested fire-and-forget job would outlive goAsync.
-            ReminderScheduler.scheduleEnabled(app, language)
+            try { ReminderScheduler.scheduleEnabled(app, language) }
+            finally { com.example.data.notices.NoticeScheduler.scheduleEnabled(app) }
         }
     }
 }

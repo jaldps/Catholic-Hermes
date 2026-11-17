@@ -65,8 +65,8 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-029](T-029.md) | Hermes | CERRADO ([revisión](T-029-REVIEW.md)) | M12.5 (contenido) · Planes: Biblia en un año y Catecismo en un año |
 | [T-030](T-030.md) | Coordinador (Sonnet local; Codex sin cuota hasta el 21-nov) | CERRADO ([informe](T-030-REPORT.md)) | M12.2 · Búsqueda global |
 | [T-031](T-031.md) | Coordinador (Sonnet local) | CERRADO ([informe](T-031-REPORT.md)) | M12.3 · «Mi camino»: unir Hábitos y Vida espiritual |
-| [T-032](T-032.md) | Coordinador (Opus local) | EN CURSO | M12.4 · Widgets y avisos litúrgicos |
-| T-037 | Coordinador (Sonnet local) | EN CURSO | M12.6 · Bienvenida personalizada con los textos de T-033 (sugerencias por perfil y tiempo; cambiable en Ajustes) |
+| [T-032](T-032.md) | Coordinador (Opus local) | CERRADO ([informe](T-032-REPORT.md)) | M12.4 · Widgets y avisos litúrgicos |
+| T-037 | Coordinador (Sonnet local) | CERRADO ([informe](T-037-REPORT.md)) | M12.6 · Bienvenida personalizada con los textos de T-033 (sugerencias por perfil y tiempo; cambiable en Ajustes) |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |

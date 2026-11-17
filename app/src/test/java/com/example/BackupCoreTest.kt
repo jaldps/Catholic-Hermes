@@ -111,6 +111,23 @@ class BackupCoreTest {
         assertFalse(target.journal.exists())
     }
 
+    @Test fun theWelcomeProfileAndTimeTravelInTheBackupAndMergeKeepsTheFurthestStep() = runBlocking {
+        val source=device("source");val target=device("target")
+        val welcomed = { d: Device -> d.context.getSharedPreferences("beginner_journey",0) }
+        welcomed(source).edit().putBoolean("welcomed",true).putInt("profile",1).putInt("minutes",10).putInt("step",4).commit()
+        val exported=source.service.export(password.toCharArray())
+        target.service.apply(target.service.preview(exported,password.toCharArray()),RestoreMode.REPLACE)
+        val restored=welcomed(target)
+        assertTrue(restored.getBoolean("welcomed",false));assertEquals(1,restored.getInt("profile",-1))
+        assertEquals(10,restored.getInt("minutes",-1));assertEquals(4,restored.getInt("step",-1))
+        // The restored choice is what the app reads.
+        com.example.ui.screens.BeginnerJourneyStore(target.context).let { assertEquals(com.example.ui.screens.JourneyChoice(true,1,10),it.choice()) }
+        // Combining keeps the furthest first-steps page and takes the file's profile and time.
+        welcomed(target).edit().putInt("profile",0).putInt("minutes",2).putInt("step",6).commit()
+        target.service.apply(target.service.preview(exported,password.toCharArray()),RestoreMode.MERGE)
+        assertEquals(6,welcomed(target).getInt("step",-1));assertEquals(1,welcomed(target).getInt("profile",-1));assertEquals(10,welcomed(target).getInt("minutes",-1))
+    }
+
     @Test fun wrongPasswordAndDamagedFileNeverChangeData() = runBlocking {
         val source=device("source");val target=device("target");source.seed("source");target.seed("target")
         val original=stable(target.service.snapshot());val file=source.service.export(password.toCharArray())

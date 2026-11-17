@@ -26,6 +26,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Bookmark
@@ -97,6 +98,7 @@ import com.example.ui.components.TextFormat
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppCategoryTile
 import com.example.ui.design.AppChevron
+import com.example.ui.AppDestination
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppGlassSurface
@@ -183,6 +185,8 @@ fun HomeScreen(
     /** "Santuarios" tile; defaults to the calendar destination (MainApp opens the shrines tab). */
     onNavigateToShrines: () -> Unit = onNavigateToPilgrimage,
     onOpenBeginner: () -> Unit = {},
+    /** «Para ti hoy»: opens the destination of a welcome suggestion (never [AppDestination.HOME]; Home handles that itself). */
+    onOpenSuggestion: (AppDestination) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -191,9 +195,24 @@ fun HomeScreen(
     val styles = LocalAppTextStyles.current
     val now = rememberLifecycleClock()
     val journeyStore = remember { BeginnerJourneyStore(context) }
-    var welcomed by rememberSaveable { mutableStateOf(journeyStore.welcomed) }
+    // The stored welcome choice, live: a change in Settings or in the welcome reaches this screen at once.
+    val journey by rememberJourney()
+    val welcomed = journey.welcomed
     var showWelcome by rememberSaveable { mutableStateOf(false) }
-    if (showWelcome) WelcomeChoices(currentLanguage, onChooseLanguage = onOpenLanguageSelector) { showWelcome = false; welcomed = true }
+    if (showWelcome) WelcomeChoices(currentLanguage, onChooseLanguage = onOpenLanguageSelector) { showWelcome = false }
+    val onboardingProfiles = rememberOnboardingProfiles()
+    val forYouAll = remember(onboardingProfiles, journey) {
+        if (journey.welcomed) forYouItems(onboardingProfiles?.firstOrNull { it.index == journey.profile }, journey.minutes) else emptyList()
+    }
+    val forYouHome = remember(forYouAll) { forYouOnHome(forYouAll) }
+    var showForYou by rememberSaveable { mutableStateOf(false) }
+    val listState = rememberLazyListState()
+    val homeScope = rememberCoroutineScope()
+    // A pointer to Home itself (for a returning reader) simply brings the top of the screen back.
+    val openSuggestion: (AppDestination) -> Unit = { destination ->
+        if (destination == AppDestination.HOME) homeScope.launch { listState.scrollToItem(0) } else onOpenSuggestion(destination)
+    }
+    if (showForYou) ForYouSheet(currentLanguage, forYouAll, onOpen = { showForYou = false; openSuggestion(it) }, onDismiss = { showForYou = false })
 
     fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
         AppLanguage.ES -> es
@@ -350,6 +369,7 @@ fun HomeScreen(
     val gutter = design.spacing.gutter
 
     LazyColumn(
+        state = listState,
         modifier = modifier
             .fillMaxSize()
             // The hero still reaches the top edge; scroll-to and keyboard
@@ -580,6 +600,12 @@ fun HomeScreen(
             Spacer(Modifier.height(ClusterGap))
         }
 
+        // «Para ti hoy»: the welcome profile's suggestions, after the primary daily content and before the collapsed extras.
+        if (forYouHome.isNotEmpty()) item(key = "for_you_today") {
+            ForYouToday(currentLanguage, forYouHome, onOpen = openSuggestion, onSeeAll = { showForYou = true })
+            Spacer(Modifier.height(ClusterGap))
+        }
+
         item(key = "today_more_toggle") {
             AppListGroup {
                 AppListRow(strings("Más para hoy", "More for today", "Mais para hoje"), subtitle = strings("Santo, otras lecturas y oraciones", "Saint, more Scripture and prayers", "Santo, mais leituras e orações"), onClick = { showMoreToday = !showMoreToday }, modifier = Modifier.testTag("today_more_toggle").semantics { stateDescription = if (showMoreToday) strings("Expandido", "Expanded", "Expandido") else strings("Contraído", "Collapsed", "Recolhido") })
@@ -638,14 +664,14 @@ fun HomeScreen(
             AppCard(Modifier.padding(horizontal = gutter).testTag("today_next_action")) {
                 Text(strings("Un momento con Dios", "A moment with God", "Um momento com Deus"), style = styles.title2, color = palette.textPrimary)
                 Spacer(Modifier.height(6.dp))
-                Text(strings("${journeyStore.minutes} min · Un paso sencillo, a tu ritmo", "${journeyStore.minutes} min · One simple step, at your pace", "${journeyStore.minutes} min · Um passo simples, no seu ritmo"), style = styles.callout, color = palette.textSecondary)
+                Text(strings("${journey.minutes} min · Un paso sencillo, a tu ritmo", "${journey.minutes} min · One simple step, at your pace", "${journey.minutes} min · Um passo simples, no seu ritmo"), style = styles.callout, color = palette.textSecondary)
                 Spacer(Modifier.height(16.dp))
                 AppSecondaryCapsule(strings("Comenzar", "Begin", "Começar"), onClick = onOpenBeginner, tag = "today_begin")
                 if (!welcomed) {
                     Spacer(Modifier.height(8.dp))
                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                         androidx.compose.material3.TextButton(onClick = { showWelcome = true }, modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("welcome_personalize")) { Text(strings("Elige tu ritmo", "Choose your pace", "Escolha seu ritmo"), style = styles.footnote) }
-                        androidx.compose.material3.TextButton(onClick = { journeyStore.welcome(0, 5); welcomed = true }, modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("welcome_skip")) { Text(strings("Ahora no", "Not now", "Agora não"), style = styles.footnote) }
+                        androidx.compose.material3.TextButton(onClick = { journeyStore.welcome(0, 5) }, modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("welcome_skip")) { Text(strings("Ahora no", "Not now", "Agora não"), style = styles.footnote) }
                     }
                 }
             }
