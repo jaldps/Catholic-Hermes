@@ -1,0 +1,300 @@
+{
+  "steps": [
+    {
+      "id": "prep",
+      "title": {
+        "es": "Preparación y examen de conciencia",
+        "en": "Preparation and examination of conscience",
+        "pt": "Preparação e exame de consciência"
+      },
+      "basis": "CIC 1454",
+      "body": {
+        "es": "Busca un momento tranquilo y pide al Espíritu Santo que ilumine tu conciencia. Repasa tu vida desde la última confesión a la luz de la Palabra de Dios y de los mandamientos, con calma y sin escrúpulo. No buscas una lista interminable, sino reconocer ante Dios lo que te aleja de Él y de los demás. El Catecismo aconseja este examen antes de recibir el sacramento.",
+        "en": "Find a quiet moment and ask the Holy Spirit to enlighten your conscience. Review your life since your last confession in the light of God's Word and of the commandments, calmly and without scrupulosity. You are not looking for an endless list, but to recognize before God what draws you away from him and from others. The Catechism advises this examination before receiving the sacrament.",
+        "pt": "Procura um momento tranquilo e pede ao Espírito Santo que ilumine a tua consciência. Revê a tua vida desde a última confissão à luz da Palavra de Deus e dos mandamentos, com calma e sem escrúpulo. Não procuras uma lista interminável, mas reconhecer diante de Deus o que te afasta dele e dos outros. O Catecismo aconselha este exame antes de receber o sacramento."
+      }
+    },
+    {
+      "id": "contrition",
+      "title": {
+        "es": "Arrepentimiento",
+        "en": "Repentance",
+        "pt": "Arrependimento"
+      },
+      "basis": "CIC 1451-1453",
+      "body": {
+        "es": "El arrepentimiento es un dolor del alma y un rechazo del pecado, con el propósito de no volver a caer. Si nace del amor a Dios sobre todas las cosas es contrición perfecta; si nace del temor o de la fealdad del pecado, es atrición, que también es gracia de Dios. Pide a Dios ese dolor y no te desanimes si no sientes emoción: lo importante es la resolución.",
+        "en": "Repentance is a sorrow of the soul and a rejection of sin, with the purpose of not falling again. If it springs from love of God above all things it is perfect contrition; if it springs from fear or from the ugliness of sin, it is imperfect contrition, which is also God's grace. Ask God for that sorrow and do not be discouraged if you feel no emotion: what matters is the resolution.",
+        "pt": "O arrependimento é uma dor da alma e uma rejeição do pecado, com o propósito de não voltar a cair. Se nasce do amor de Deus sobre todas as coisas é contrição perfeita; se nasce do temor ou da fealdade do pecado, é contrição imperfeita, que também é graça de Deus. Pede a Deus essa dor e não te desanimes se não sentes emoção: o importante é a resolução."
+      }
+    },
+    {
+      "id": "approach",
+      "title": {
+        "es": "Acercarse al sacerdote",
+        "en": "Approaching the priest",
+        "pt": "Aproximar-se do sacerdote"
+      },
+      "basis": "CIC 1461-1466",
+      "body": {
+        "es": "Acércate al sacerdote con confianza: es un hombre pecador a su vez, servidor del perdón de Dios, no su dueño. El Catecismo recuerda que el sacerdote ejerce el ministerio del Buen Pastor que busca la oveja perdida. Puedes saludarle, hacer la señal de la cruz y empezar cuando estés listo.",
+        "en": "Approach the priest with trust: he is himself a sinner, a servant of God's forgiveness, not its master. The Catechism recalls that the priest exercises the ministry of the Good Shepherd who seeks the lost sheep. You may greet him, make the sign of the cross, and begin when you are ready.",
+        "pt": "Aproxima-te do sacerdote com confiança: ele é também um homem pecador, servidor do perdão de Deus, não seu dono. O Catecismo recorda que o sacerdote exerce o ministério do Bom Pastor que procura a ovelha perdida. Podes saudá-lo, fazer o sinal da cruz e começar quando estiveres pronto."
+      }
+    },
+    {
+      "id": "confess",
+      "title": {
+        "es": "Decir los pecados",
+        "en": "Confessing your sins",
+        "pt": "Dizer os pecados"
+      },
+      "basis": "CIC 1456-1458",
+      "body": {
+        "es": "Di tus pecados con sinceridad, humildad y brevedad: los mortales, con su especie y el número de veces que puedas recordar; los veniales pueden decirse en general. No escondas nada por vergüenza: el sacerdote está obligado a guardar un secreto absoluto. Si no sabes cómo decir algo, pide ayuda.",
+        "en": "Tell your sins with sincerity, humility and brevity: mortal sins, with their kind and the number of times you can recall; venial sins may be mentioned in general. Do not hide anything out of shame: the priest is bound to keep an absolute secret. If you do not know how to say something, ask for help.",
+        "pt": "Dize os teus pecados com sinceridade, humildade e brevidade: os mortais, com a sua espécie e o número de vezes que puderes recordar; os veniais podem dizer-se em geral. Não escondas nada por vergonha: o sacerdote está obrigado a guardar segredo absoluto. Se não sabes como dizer algo, pede ajuda."
+      }
+    },
+    {
+      "id": "counsel",
+      "title": {
+        "es": "Escuchar el consejo y la penitencia",
+        "en": "Listening to the counsel and the penance",
+        "pt": "Ouvir o conselho e a penitência"
+      },
+      "basis": "CIC 1459-1460",
+      "body": {
+        "es": "Escucha el consejo y la penitencia con humildad. La penitencia no es un castigo, sino una ayuda para curar el desorden que el pecado causó y para configurarte con Cristo. Debe corresponder a la gravedad y a la naturaleza de los pecados y tener en cuenta tu situación personal.",
+        "en": "Listen to the counsel and the penance with humility. The penance is not a punishment, but a help to heal the disorder that sin caused and to conform you to Christ. It should correspond to the gravity and nature of the sins and take your personal situation into account.",
+        "pt": "Ouve o conselho e a penitência com humildade. A penitência não é um castigo, mas uma ajuda para curar a desordem que o pecado causou e para te configurar com Cristo. Deve corresponder à gravidade e à natureza dos pecados e ter em conta a tua situação pessoal."
+      }
+    },
+    {
+      "id": "act",
+      "title": {
+        "es": "Acto de contrición",
+        "en": "Act of contrition",
+        "pt": "Ato de contrição"
+      },
+      "basis": "CIC 1451-1455",
+      "body": {
+        "es": "El sacerdote te invitará a recitar el acto de contrición. Puedes decirlo con tus palabras o con una fórmula tradicional. Lo esencial es el dolor de los pecados y el propósito de enmienda, que el sacerdote escucha en silencio. Termina y escucha la invitación a la absolución.",
+        "en": "The priest will invite you to recite the act of contrition. You may say it in your own words or with a traditional formula. What matters is sorrow for your sins and the purpose of amendment, which the priest listens to in silence. Finish and hear the invitation to absolution.",
+        "pt": "O sacerdote convidar-te-á a recitar o ato de contrição. Podes dizê-lo com as tuas palavras ou com uma fórmula tradicional. O essencial é a dor pelos pecados e o propósito de emenda, que o sacerdote escuta em silêncio. Termina e escuta o convite à absolvição."
+      }
+    },
+    {
+      "id": "absolution",
+      "title": {
+        "es": "Absolución",
+        "en": "Absolution",
+        "pt": "Absolvição"
+      },
+      "basis": "CIC 1468-1469",
+      "body": {
+        "es": "El sacerdote extiende las manos sobre tu cabeza y pronuncia la fórmula de la absolución. En ese momento, por el poder que Cristo confió a la Iglesia, se te perdona el pecado y quedas reconciliado con Dios y con la Iglesia. Responde «Amén» con confianza y da gracias a Dios.",
+        "en": "The priest extends his hands over your head and pronounces the formula of absolution. In that moment, by the power Christ entrusted to the Church, your sin is forgiven and you are reconciled with God and with the Church. Answer «Amen» with trust and give thanks to God.",
+        "pt": "O sacerdote estende as mãos sobre a tua cabeça e pronuncia a fórmula da absolvição. Nesse momento, pelo poder que Cristo confiou à Igreja, o teu pecado é perdoado e ficas reconciliado com Deus e com a Igreja. Responde «Amém» com confiança e dá graças a Deus."
+      }
+    },
+    {
+      "id": "penance",
+      "title": {
+        "es": "Cumplir la penitencia",
+        "en": "Fulfilling the penance",
+        "pt": "Cumprir a penitência"
+      },
+      "basis": "CIC 1468-1470",
+      "body": {
+        "es": "Al terminar, el sacerdote te despide con una bendición. Cumple la penitencia cuanto antes y da gracias a Dios por el perdón recibido. La confesión no es solo un momento de tensión, sino el retorno del hijo pródigo: la misericordia de Dios te espera siempre.",
+        "en": "At the end, the priest dismisses you with a blessing. Fulfil the penance as soon as possible and give thanks to God for the forgiveness received. Confession is not only a moment of tension, but the return of the prodigal son: God's mercy is always waiting for you.",
+        "pt": "No fim, o sacerdote despede-te com uma bênção. Cumpre a penitência o mais cedo possível e dá graças a Deus pelo perdão recebido. A confissão não é só um momento de tensão, mas o regresso do filho pródigo: a misericórdia de Deus espera-te sempre."
+      }
+    }
+  ],
+  "contrition": [
+    {
+      "id": "senor_mio_jesucristo",
+      "title": {
+        "es": "Señor mío Jesucristo",
+        "en": "My Lord Jesus Christ",
+        "pt": "Senhor meu Jesus Cristo"
+      },
+      "source": {
+        "es": "Devocionario tradicional; forma recogida por la Arquidiócesis de Monterrey (México) en su guía de la confesión.",
+        "en": "Traditional prayer book; form collected by the Archdiocese of Monterrey (Mexico) in its confession guide.",
+        "pt": "Devocionário tradicional; forma recolhida pela Arquidiocese de Monterrey (México) no seu guia da confissão."
+      },
+      "text": {
+        "es": "Señor mío, Jesucristo, Dios y hombre verdadero, Creador, Padre, Redentor mío, por ser tú quien eres, bondad infinita y porque te amo sobre todas las cosas, me pesa de todo corazón haberte ofendido, también me pesa porque podrías castigarme con las penas del infierno. Animado con tu divina gracia, propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuera impuesta, para el perdón de mis pecados. Amén.",
+        "en": "My Lord Jesus Christ, true God and true man, Creator, Father and Redeemer of mine, because you are who you are, infinite goodness, and because I love you above all things, I am heartily sorry for having offended you; I am sorry also because you could punish me with the pains of hell. Strengthened by your divine grace, I firmly propose never to sin again, to confess and to fulfil the penance imposed on me, for the forgiveness of my sins. Amen.",
+        "pt": "Senhor meu Jesus Cristo, Deus e homem verdadeiro, Criador, Pai e Redentor meu, por seres tu quem és, bondade infinita, e porque te amo sobre todas as coisas, pesa-me de todo o coração Vos ter ofendido; pesa-me também porque poderíeis castigar-me com as penas do inferno. Animado com a vossa divina graça, proponho firmemente nunca mais pecar, confessar-me e cumprir a penitência que me for imposta, para o perdão dos meus pecados. Amém."
+      }
+    },
+    {
+      "id": "pesame_dios_mio",
+      "title": {
+        "es": "Pésame, Dios mío",
+        "en": "I am sorry, my God",
+        "pt": "Pesa-me, Deus meu"
+      },
+      "source": {
+        "es": "Devocionario tradicional; forma recogida en el folleto «Aid for Confessions» del National Shrine y en devocionarios parroquiales.",
+        "en": "Traditional prayer book; form collected in the National Shrine booklet «Aid for Confessions» and in parish prayer books.",
+        "pt": "Devocionário tradicional; forma recolhida no folheto «Aid for Confessions» do National Shrine e em devocionários paroquiais."
+      },
+      "text": {
+        "es": "Pésame, Dios mío, y me arrepiento de todo corazón de haberos ofendido. Pésame por el Infierno que merecí y por el Cielo que perdí; pero mucho más me pesa porque, pecando ofendí a un Dios tan bueno y tan grande como Vos. Antes querría haber muerto que haberos ofendido, y propongo firmemente no pecar más, y evitar las ocasiones próximas de pecado. Amén.",
+        "en": "I am sorry, my God, and I repent with all my heart of having offended you. I am sorry for the hell I deserved and for the heaven I lost; but most of all I am sorry because, by sinning, I offended a God so good and so great as you. I would rather have died than have offended you, and I firmly propose not to sin again and to avoid the near occasions of sin. Amen.",
+        "pt": "Pesa-me, Deus meu, e arrependo-me de todo o coração de Vos ter ofendido. Pesa-me pelo inferno que mereci e pelo céu que perdi; mas muito mais me pesa porque, pecando, ofendi um Deus tão bom e tão grande como Vós. Antes queria ter morrido do que Vos ter ofendido, e proponho firmemente não pecar mais e evitar as ocasiões próximas do pecado. Amém."
+      }
+    },
+    {
+      "id": "baltimore",
+      "title": {
+        "es": "Acto de contrición del Catecismo de Baltimore",
+        "en": "Act of Contrition from the Baltimore Catechism",
+        "pt": "Ato de contrição do Catecismo de Baltimore"
+      },
+      "source": {
+        "es": "Baltimore Catechism No. 1 (1885), «An Act of Contrition», aprobado por el III Concilio Plenario de Baltimore.",
+        "en": "Baltimore Catechism No. 1 (1885), «An Act of Contrition», approved by the Third Plenary Council of Baltimore.",
+        "pt": "Catecismo de Baltimore No. 1 (1885), «Ato de Contrição», aprovado pelo III Concílio Plenário de Baltimore."
+      },
+      "text": {
+        "es": "Señor mío, Dios todopoderoso, me pesa de todo corazón haberos ofendido y detesto todos mis pecados, porque temo la pérdida del cielo y los dolores del infierno, pero sobre todo porque ofenden a vos, Dios mío, que sois todo bondad y digno de todo amor. Propongo firmemente, con la ayuda de vuestra gracia, confesar mis pecados, hacer penitencia y enmendar mi vida. Amén.",
+        "en": "O my God! I am heartily sorry for having offended Thee, and I detest all my sins, because I dread the loss of heaven and the pains of hell, but most of all because they offend Thee, my God, who art all-good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life. Amen.",
+        "pt": "Meu Deus! Arrependo-me de todo o coração de Vos ter ofendido e detesto todos os meus pecados, porque temo a perda do céu e as dores do inferno, mas sobretudo porque eles Vos ofendem, meu Deus, que sois todo bondade e digno de todo o amor. Proponho firmemente, com o auxílio da vossa graça, confessar os meus pecados, fazer penitência e emendar a minha vida. Amém."
+      }
+    }
+  ],
+  "faq": [
+    {
+      "id": "how_often",
+      "question": {
+        "es": "¿Cada cuánto conviene confesarse?",
+        "en": "How often should one go to confession?",
+        "pt": "Quantas vezes convém confessar-se?"
+      },
+      "answer": {
+        "es": "La Iglesia manda confesar los pecados graves al menos una vez al año y recomienda vivamente la confesión habitual de los veniales. No hay un plazo fijo: conviene ir cuando la conciencia lo pide y con la frecuencia que ayude a crecer.",
+        "en": "The Church commands the confession of grave sins at least once a year and strongly recommends the habitual confession of venial sins. There is no fixed interval: it is good to go when your conscience asks and as often as helps you grow.",
+        "pt": "A Igreja manda confessar os pecados graves ao menos uma vez ao ano e recomenda vivamente a confissão habitual dos veniais. Não há prazo fixo: convém ir quando a consciência o pede e com a frequência que ajuda a crescer."
+      },
+      "basis": "CIC 1457-1458"
+    },
+    {
+      "id": "forgotten",
+      "question": {
+        "es": "¿Qué pasa si olvido un pecado mortal?",
+        "en": "What happens if I forget a mortal sin?",
+        "pt": "O que acontece se me esqueço de um pecado mortal?"
+      },
+      "answer": {
+        "es": "Si lo olvidaste sin querer, se perdona en la confesión. Si te acuerdas después, conviene decirlo en la siguiente confesión. Lo que no vale es callar a propósito un pecado por vergüenza: entonces no se recibe la absolución de ese pecado.",
+        "en": "If you forgot it unwillingly, it is forgiven in confession. If you remember it later, it is good to mention it at your next confession. What is not valid is deliberately hiding a sin out of shame: then you do not receive absolution for that sin.",
+        "pt": "Se o esqueceste sem querer, ele é perdoado na confissão. Se te lembrares depois, convém dizê-lo na confissão seguinte. O que não vale é esconder de propósito um pecado por vergonha: então não recebes a absolvição desse pecado."
+      },
+      "basis": "CIC 1456"
+    },
+    {
+      "id": "secret",
+      "question": {
+        "es": "¿Qué es el secreto de confesión?",
+        "en": "What is the seal of confession?",
+        "pt": "O que é o sigilo da confissão?"
+      },
+      "answer": {
+        "es": "Es el deber absoluto del sacerdote de no revelar jamás lo que se le ha confesado, ni siquiera con señales o indirectas. El Catecismo lo llama «secreto inviolable». No pierde su fuerza por nada, ni siquiera fuera del confesionario.",
+        "en": "It is the priest's absolute duty never to reveal what has been confessed to him, not even by signs or hints. The Catechism calls it an «inviolable secret». It is not lost for any reason, even outside the confessional.",
+        "pt": "É o dever absoluto do sacerdote de nunca revelar o que lhe foi confessado, nem mesmo por sinais ou insinuações. O Catecismo chama-lhe «sigilo inviolável». Não se perde por nada, nem fora do confessionário."
+      },
+      "basis": "CIC 1467"
+    },
+    {
+      "id": "mortal_venial",
+      "question": {
+        "es": "¿Qué diferencia hay entre pecado mortal y venial?",
+        "en": "What is the difference between mortal and venial sin?",
+        "pt": "Qual a diferença entre pecado mortal e venial?"
+      },
+      "answer": {
+        "es": "El pecado mortal destruye la caridad en el corazón y nos separa de Dios; exige materia grave, pleno conocimiento y consentimiento deliberado. El venial la debilita pero no la rompe. Ambos se perdonan en la confesión, pero el mortal exige confesarlo en especie y número.",
+        "en": "Mortal sin destroys charity in the heart and separates us from God; it requires grave matter, full knowledge and deliberate consent. Venial sin weakens charity but does not break it. Both are forgiven in confession, but mortal sin must be confessed in kind and number.",
+        "pt": "O pecado mortal destrói a caridade no coração e separa-nos de Deus; exige matéria grave, pleno conhecimento e consentimento deliberado. O venial enfraquece-a mas não a rompe. Ambos se perdoam na confissão, mas o mortal exige ser confessado em espécie e número."
+      },
+      "basis": "CIC 1855-1861"
+    },
+    {
+      "id": "without_priest",
+      "question": {
+        "es": "¿Se puede obtener perdón sin sacerdote?",
+        "en": "Can one obtain forgiveness without a priest?",
+        "pt": "Pode obter-se perdão sem sacerdote?"
+      },
+      "answer": {
+        "es": "Solo Dios perdona los pecados, y la contrición perfecta, que nace del amor de Dios, perdona las faltas con el deseo de confesarse. Pero el sacramento sigue siendo el modo ordinario que Cristo quiso para reconciliarse con la Iglesia.",
+        "en": "Only God forgives sins, and perfect contrition, born of love of God, forgives offences together with the desire to confess. But the sacrament remains the ordinary way Christ willed for reconciliation with the Church.",
+        "pt": "Só Deus perdoa os pecados, e a contrição perfeita, nascida do amor de Deus, perdoa as faltas com o desejo de se confessar. Mas o sacramento continua a ser o modo ordinário que Cristo quis para a reconciliação com a Igreja."
+      },
+      "basis": "CIC 1441-1452"
+    },
+    {
+      "id": "number",
+      "question": {
+        "es": "¿Y si no recuerdo el número de veces?",
+        "en": "What if I do not remember the number of times?",
+        "pt": "E se não me lembrar do número de vezes?"
+      },
+      "answer": {
+        "es": "Di el número aproximado y, si no lo sabes, di que no lo recuerdas. No hace falta una precisión que no sea posible; lo importante es la sinceridad. En caso de duda, puedes indicar que te cuesta precisarlo.",
+        "en": "Give an approximate number and, if you do not know it, say that you do not remember. A precision that is not possible is not required; sincerity is what matters. In doubt, you may say that it is hard for you to tell.",
+        "pt": "Dize o número aproximado e, se não o sabes, di que não te lembras. Não é precisa uma precisão que não é possível; o importante é a sinceridade. Em caso de dúvida, podes dizer que te é difícil precisar."
+      },
+      "basis": "CIC 1456"
+    },
+    {
+      "id": "penance_what",
+      "question": {
+        "es": "¿Qué es la penitencia que impone el confesor?",
+        "en": "What is the penance the confessor imposes?",
+        "pt": "O que é a penitência que o confessor impõe?"
+      },
+      "answer": {
+        "es": "Es una oración, una obra de misericordia, un sacrificio o un servicio que el sacerdote señala para ayudarte a reparar el daño del pecado y a crecer en la virtud. No es un precio ni un castigo, y debe corresponder a tus pecados y a tu situación.",
+        "en": "It is a prayer, a work of mercy, a sacrifice or a service the priest points out to help you repair the harm of sin and grow in virtue. It is not a price or a punishment, and it should correspond to your sins and your situation.",
+        "pt": "É uma oração, uma obra de misericórdia, um sacrifício ou um serviço que o sacerdote indica para te ajudar a reparar o dano do pecado e a crescer na virtude. Não é um preço nem um castigo, e deve corresponder aos teus pecados e à tua situação."
+      },
+      "basis": "CIC 1459-1460"
+    },
+    {
+      "id": "again",
+      "question": {
+        "es": "¿Qué pasa si vuelvo a caer después de confesarme?",
+        "en": "What happens if I fall again after confessing?",
+        "pt": "O que acontece se volto a cair depois de me confessar?"
+      },
+      "answer": {
+        "es": "El perdón no depende de que no vuelvas a caer. La gracia te fortalece, pero la libertad sigue abierta. Vuelve al sacramento sin desanimarte: el Catecismo lo llama «la vuelta al Padre del que el hombre se había alejado por el pecado».",
+        "en": "Forgiveness does not depend on your not falling again. Grace strengthens you, but freedom remains open. Return to the sacrament without discouragement: the Catechism calls it «the return to the Father from whom man had been estranged by sin».",
+        "pt": "O perdão não depende de não voltares a cair. A graça fortalece-te, mas a liberdade continua aberta. Volta ao sacramento sem te desanimar: o Catecismo chama-lhe «o regresso ao Pai de quem o homem se tinha afastado pelo pecado»."
+      },
+      "basis": "CIC 1446-1447"
+    },
+    {
+      "id": "communion",
+      "question": {
+        "es": "¿Puedo comulgar si estoy en pecado mortal?",
+        "en": "May I receive Communion if I am in mortal sin?",
+        "pt": "Posso comungar se estou em pecado mortal?"
+      },
+      "answer": {
+        "es": "No. Quien tiene conciencia de pecado grave debe recibir antes el sacramento de la penitencia. Comulgar en pecado mortal es una falta grave contra el mismo Cristo. Si no puedes confesarte y tienes verdadera contrición, reza un acto de contrición y busca la confesión cuanto antes.",
+        "en": "No. One who is aware of grave sin must first receive the sacrament of penance. Receiving Communion in mortal sin is a grave offense against Christ himself. If you cannot confess and have true contrition, pray an act of contrition and seek confession as soon as possible.",
+        "pt": "Não. Quem tem consciência de pecado grave deve receber antes o sacramento da penitência. Comungar em pecado mortal é uma falta grave contra o próprio Cristo. Se não podes confessar e tens verdadeira contrição, reza um ato de contrição e procura a confissão o mais cedo possível."
+      },
+      "basis": "CIC 1457"
+    }
+  ]
+}
