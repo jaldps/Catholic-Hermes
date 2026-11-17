@@ -1,5 +1,26 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.21
+
+[Descargar Catholic Hermes 1.8.21](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.21.apk) · versión `1.8.21`, código 30. **Actualiza 1.8.1–1.8.20** y conserva el progreso.
+
+Novedades:
+- **Avisos litúrgicos** (Explorar → Recordatorios).
+  - Qué avisa:
+    - el comienzo de cada tiempo y una propuesta semanal;
+    - la víspera y el día de las solemnidades y fiestas;
+    - misa del domingo, día de novena y de plan;
+    - Rosario por la tarde, examen de la noche;
+    - una invitación mensual y delicada a la Confesión.
+  - Todo viene apagado y cada aviso tiene su hora.
+  - Los días de precepto solo avisan de los días que tú marques, porque los decide la conferencia episcopal de cada país.
+- **Dos widgets** para la pantalla de inicio del teléfono:
+  - «Día litúrgico»: celebración, tiempo, color y Evangelio;
+  - «Mi camino»: hábitos de hoy, novena y plan en curso.
+- **Bienvenida personalizada.** Según tu perfil y el tiempo que elijas, Hoy muestra un bloque «Para ti hoy». Lo cambias cuando quieras en Ajustes → «Tu camino».
+
+[Metadatos](../docs/quality/release-1.8.21/APK.json). No se ha probado en un teléfono físico: la puntualidad de los avisos con ahorro de batería y el aspecto real de los widgets dependen del fabricante.
+
 ## Catholic Hermes 1.8.20
 
 [Descargar Catholic Hermes 1.8.20](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.20.apk) · versión `1.8.20`, código 29. **Actualiza 1.8.1–1.8.19** y conserva el progreso.

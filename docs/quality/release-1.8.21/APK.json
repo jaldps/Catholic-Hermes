@@ -1,0 +1,29 @@
+{
+  "version_name": "1.8.21",
+  "version_code": 30,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.21",
+  "sha256": "50b648a9f25fce652793d522a8df3cd04b47a1f0c2ba995d3317a636d0b0552e",
+  "bytes": 93476980,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.20 (same package and key)",
+  "built_from": "git archive of CatholicGPT at the version commit (clean tree)",
+  "changes": [
+    "Liturgical notices (Explore > Reminders): season start and weekly proposal, eve and day of solemnities and feasts, Sunday Mass, novena and plan days, evening Rosary, night examen and a gentle monthly invitation to Confession; all off by default, each with its own time; holy days of obligation only for the days the user selects (T-032, texts T-035).",
+    "Two home-screen widgets: Liturgical day (celebration, season, colour and Gospel) and My path (today's habits, novena and plan in progress) (T-032).",
+    "Personalized welcome: the chosen profile and time order a 'For you today' block on Today; 'Your path' in Settings changes them; included in backup (T-037, texts T-033).",
+    "Complete Catechism index bundled for a future navigable index (T-036); not yet shown."
+  ],
+  "tests": [
+    "Full unit suite: 761 tests, 1 known failure (ExampleRobolectricTest app_name under the preview init script)",
+    "NoticeSelectorTest", "NoticeSchedulingTest", "NoticeUiTest", "WidgetRemoteViewsTest", "NoticeBackupTest",
+    "OnboardingCatalogTest", "WelcomePersonalizationTest", "AppNavigationTest", "DesignNavigationTest", "DesignContrastTest"
+  ],
+  "known_limitations": [
+    "Not tested on a physical phone.",
+    "Alarm timing with exact alarms denied, OEM battery restrictions, Doze and real launcher rendering of the widgets could not be verified in Robolectric."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}
