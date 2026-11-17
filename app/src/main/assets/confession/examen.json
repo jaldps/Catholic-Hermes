@@ -1,0 +1,1959 @@
+{
+  "profiles": [
+    {
+      "id": "children",
+      "title": {
+        "es": "Niños y niñas (7-12 años)",
+        "en": "Children (7-12 years old)",
+        "pt": "Crianças (7-12 anos)"
+      },
+      "intro": {
+        "es": "Un examen sencillo para ayudarte a hablar con Dios de lo que haces cada día, con palabras que puedas entender.",
+        "en": "A simple examination to help you speak with God about what you do each day, in words you can understand.",
+        "pt": "Um exame simples para te ajudar a falar com Deus do que fazes cada dia, com palavras que podes entender."
+      },
+      "sections": [
+        {
+          "id": "c1",
+          "title": {
+            "es": "Amarás al Señor tu Dios sobre todas las cosas",
+            "en": "You shall love the Lord your God above all things",
+            "pt": "Amarás ao Senhor teu Deus sobre todas as coisas"
+          },
+          "basis": "CIC 2083-2141",
+          "questions": [
+            {
+              "es": "¿He rezado con atención y ganas, o solo por costumbre?",
+              "en": "Have I prayed with attention and desire, or only out of habit?",
+              "pt": "Rezei com atenção e vontade, ou só por costume?"
+            },
+            {
+              "es": "¿He puesto a Dios en primer lugar en mi día, o lo he dejado para el final?",
+              "en": "Have I put God first in my day, or left him for last?",
+              "pt": "Coloquei Deus em primeiro lugar no meu dia, ou deixei-o para o fim?"
+            },
+            {
+              "es": "¿He tratado con respeto el nombre de Dios y las cosas de la Iglesia?",
+              "en": "Have I treated God's name and the things of the Church with respect?",
+              "pt": "Tratei com respeito o nome de Deus e as coisas da Igreja?"
+            },
+            {
+              "es": "¿He dado gracias a Dios por lo que tengo?",
+              "en": "Have I given thanks to God for what I have?",
+              "pt": "Agradeceu a Deus pelo que tem?"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "title": {
+            "es": "No tomarás el nombre del Señor en vano",
+            "en": "You shall not take the name of the Lord in vain",
+            "pt": "Não tomarás o nome do Senhor em vão"
+          },
+          "basis": "CIC 2142-2167",
+          "questions": [
+            {
+              "es": "¿He pronunciado el nombre de Dios con respeto, o para molestar o presumir?",
+              "en": "Have I spoken God's name with respect, or to annoy or to show off?",
+              "pt": "Pronunciei o nome de Deus com respeito, ou para incomodar ou me exibir?"
+            },
+            {
+              "es": "¿He hecho promesas a Dios sin cumplirlas?",
+              "en": "Have I made promises to God without keeping them?",
+              "pt": "Fiz promessas a Deus sem cumpri-las?"
+            },
+            {
+              "es": "¿He usado el nombre de Dios para mentir o engañar?",
+              "en": "Have I used God's name to lie or to deceive?",
+              "pt": "Usei o nome de Deus para mentir ou enganar?"
+            },
+            {
+              "es": "¿He tratado con respeto a las personas consagradas y a los lugares de culto?",
+              "en": "Have I treated consecrated persons and places of worship with respect?",
+              "pt": "Tratei com respeito as pessoas consagradas e os lugares de culto?"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "title": {
+            "es": "Santificarás las fiestas",
+            "en": "You shall keep the feast days holy",
+            "pt": "Santificarás as festas"
+          },
+          "basis": "CIC 2168-2195",
+          "questions": [
+            {
+              "es": "¿He asistido a misa los domingos y fiestas, o me he quedado sin venir?",
+              "en": "Have I attended Mass on Sundays and feast days, or stayed away?",
+              "pt": "Assisti à missa aos domingos e festas, ou fiquei sem vir?"
+            },
+            {
+              "es": "¿He atendido en misa o he estado distraído a propósito?",
+              "en": "Have I paid attention in Mass, or distracted myself on purpose?",
+              "pt": "Atendi na missa, ou distraí-me de propósito?"
+            },
+            {
+              "es": "¿He hecho trabajos innecesarios los domingos?",
+              "en": "Have I done unnecessary work on Sundays?",
+              "pt": "Fiz trabalhos desnecessários aos domingos?"
+            },
+            {
+              "es": "¿He dejado tiempo para rezar y estar con Dios el día del Señor?",
+              "en": "Have I left time to pray and be with God on the Lord's day?",
+              "pt": "Deixei tempo para rezar e estar com Deus no dia do Senhor?"
+            }
+          ]
+        },
+        {
+          "id": "c4",
+          "title": {
+            "es": "Honra a tu padre y a tu madre",
+            "en": "Honour your father and your mother",
+            "pt": "Honra teu pai e tua mãe"
+          },
+          "basis": "CIC 2196-2257",
+          "questions": [
+            {
+              "es": "¿He obedecido a mis padres con respeto y sin pereza?",
+              "en": "Have I obeyed my parents with respect and without laziness?",
+              "pt": "Obedeci aos meus pais com respeito e sem preguiça?"
+            },
+            {
+              "es": "¿He tratado con cariño a mis hermanos y a mi familia?",
+              "en": "Have I treated my brothers, sisters and family with affection?",
+              "pt": "Tratei com carinho os meus irmãos e a minha família?"
+            },
+            {
+              "es": "¿He ayudado en casa sin que me lo pidan?",
+              "en": "Have I helped at home without being asked?",
+              "pt": "Ajudei em casa sem que me pedissem?"
+            },
+            {
+              "es": "¿He respondido con malas palabras o con rebeldía?",
+              "en": "Have I answered with harsh words or rebellion?",
+              "pt": "Respondi com más palavras ou com rebeldia?"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "title": {
+            "es": "No matarás",
+            "en": "You shall not kill",
+            "pt": "Não matarás"
+          },
+          "basis": "CIC 2258-2330",
+          "questions": [
+            {
+              "es": "¿He pegado, empujado o hecho daño a otros?",
+              "en": "Have I hit, pushed or harmed others?",
+              "pt": "Bati, empurrei ou causei dano aos outros?"
+            },
+            {
+              "es": "¿He dicho palabras que hieren a mis compañeros?",
+              "en": "Have I said words that wound my classmates?",
+              "pt": "Disse palavras que ferem os meus colegas?"
+            },
+            {
+              "es": "¿He hecho burla o he dejado a alguien solo?",
+              "en": "Have I mocked others or left someone alone?",
+              "pt": "Zombei dos outros ou deixei alguém sozinho?"
+            },
+            {
+              "es": "¿He cuidado mi cuerpo y mi salud, que son de Dios?",
+              "en": "Have I cared for my body and health, which belong to God?",
+              "pt": "Cuidei do meu corpo e da minha saúde, que pertencem a Deus?"
+            }
+          ]
+        },
+        {
+          "id": "c6",
+          "title": {
+            "es": "No cometerás adulterio",
+            "en": "You shall not commit adultery",
+            "pt": "Não cometerás adultério"
+          },
+          "basis": "CIC 2331-2400",
+          "questions": [
+            {
+              "es": "¿He tratado a los demás con respeto y sin burlarme de su cuerpo?",
+              "en": "Have I treated others with respect and without mocking their bodies?",
+              "pt": "Tratei os outros com respeito e sem zombar do seu corpo?"
+            },
+            {
+              "es": "¿He cuidado mis amistades y evitado lo que me aparta del bien?",
+              "en": "Have I cared for my friendships and avoided what leads me from the good?",
+              "pt": "Cuidei das minhas amizades e evitei o que me afasta do bem?"
+            },
+            {
+              "es": "¿He sido puro en mis palabras y en mis juegos?",
+              "en": "Have I been pure in my words and in my games?",
+              "pt": "Fui puro nas minhas palavras e nos meus jogos?"
+            },
+            {
+              "es": "¿He respetado a los demás y a mí mismo como hijos de Dios?",
+              "en": "Have I respected others and myself as children of God?",
+              "pt": "Respeitei os outros e a mim mesmo como filhos de Deus?"
+            }
+          ]
+        },
+        {
+          "id": "c7",
+          "title": {
+            "es": "No robarás",
+            "en": "You shall not steal",
+            "pt": "Não roubarás"
+          },
+          "basis": "CIC 2401-2463",
+          "questions": [
+            {
+              "es": "¿He tomado algo que no es mío sin permiso?",
+              "en": "Have I taken something that is not mine without permission?",
+              "pt": "Tomei algo que não é meu sem permissão?"
+            },
+            {
+              "es": "¿He devuelto lo que me han prestado?",
+              "en": "Have I returned what was lent to me?",
+              "pt": "Devolvi o que me emprestaram?"
+            },
+            {
+              "es": "¿He cuidado los bienes de la escuela y de los demás?",
+              "en": "Have I cared for the goods of the school and of others?",
+              "pt": "Cuidei dos bens da escola e dos outros?"
+            },
+            {
+              "es": "¿He sido honrado en los juegos y en los trabajos?",
+              "en": "Have I been honest in games and in my work?",
+              "pt": "Fui honesto nos jogos e nos trabalhos?"
+            }
+          ]
+        },
+        {
+          "id": "c8",
+          "title": {
+            "es": "No darás falso testimonio",
+            "en": "You shall not bear false witness",
+            "pt": "Não darás falso testemunho"
+          },
+          "basis": "CIC 2464-2513",
+          "questions": [
+            {
+              "es": "¿He dicho mentiras?",
+              "en": "Have I told lies?",
+              "pt": "Disse mentiras?"
+            },
+            {
+              "es": "¿He contado secretos o dichos que dañan a otros?",
+              "en": "Have I repeated secrets or remarks that harm others?",
+              "pt": "Contei segredos ou ditos que prejudicam os outros?"
+            },
+            {
+              "es": "¿He acusado a alguien sin saber si era verdad?",
+              "en": "Have I accused someone without knowing whether it was true?",
+              "pt": "Acusei alguém sem saber se era verdade?"
+            },
+            {
+              "es": "¿He reparado el daño cuando he hablado mal de alguien?",
+              "en": "Have I repaired the harm when I have spoken ill of someone?",
+              "pt": "Reparei o dano quando falei mal de alguém?"
+            }
+          ]
+        },
+        {
+          "id": "c9",
+          "title": {
+            "es": "No consentirás pensamientos ni deseos impuros",
+            "en": "You shall not consent to impure thoughts or desires",
+            "pt": "Não consentirás pensamentos nem desejos impuros"
+          },
+          "basis": "CIC 2514-2533",
+          "questions": [
+            {
+              "es": "¿He consentido en pensamientos o miradas que no son buenos?",
+              "en": "Have I consented to thoughts or looks that are not good?",
+              "pt": "Consenti em pensamentos ou olhares que não são bons?"
+            },
+            {
+              "es": "¿He visto o leído cosas que no convienen a un hijo de Dios?",
+              "en": "Have I watched or read things unfitting for a child of God?",
+              "pt": "Vi ou li coisas que não convêm a um filho de Deus?"
+            },
+            {
+              "es": "¿He hablado con pureza y evitado bromas que hacen mal?",
+              "en": "Have I spoken with purity and avoided jokes that do harm?",
+              "pt": "Falei com pureza e evitei piadas que fazem mal?"
+            },
+            {
+              "es": "¿He pedido ayuda cuando algo me inquietaba?",
+              "en": "Have I asked for help when something troubled me?",
+              "pt": "Pedi ajuda quando algo me inquietava?"
+            }
+          ]
+        },
+        {
+          "id": "c10",
+          "title": {
+            "es": "No codiciarás los bienes ajenos",
+            "en": "You shall not covet what belongs to others",
+            "pt": "Não cobiçarás os bens alheios"
+          },
+          "basis": "CIC 2534-2557",
+          "questions": [
+            {
+              "es": "¿He tenido envidia de lo que tienen otros?",
+              "en": "Have I envied what others have?",
+              "pt": "Tive inveja do que os outros têm?"
+            },
+            {
+              "es": "¿He deseado tener lo de los demás con avaricia?",
+              "en": "Have I desired what belongs to others with greed?",
+              "pt": "Desejei ter o dos outros com avareza?"
+            },
+            {
+              "es": "¿He dado gracias por lo que tengo?",
+              "en": "Have I given thanks for what I have?",
+              "pt": "Dei graças pelo que tenho?"
+            },
+            {
+              "es": "¿He compartido mis cosas con los demás?",
+              "en": "Have I shared my things with others?",
+              "pt": "Partilhei as minhas coisas com os outros?"
+            }
+          ]
+        },
+        {
+          "id": "church",
+          "title": {
+            "es": "Preceptos de la Iglesia",
+            "en": "Precepts of the Church",
+            "pt": "Preceitos da Igreja"
+          },
+          "basis": "CIC 2041-2043",
+          "questions": [
+            {
+              "es": "¿He oído misa entera los domingos?",
+              "en": "Have I heard Mass in full on Sundays?",
+              "pt": "Ouvi missa inteira aos domingos?"
+            },
+            {
+              "es": "¿He confesado mis pecados y comulgado en la Pascua, al menos una vez?",
+              "en": "Have I confessed my sins and received Communion at Easter at least once?",
+              "pt": "Confessei os meus pecados e comunguei na Páscoa ao menos uma vez?"
+            },
+            {
+              "es": "¿He ayunado o me he abstenido de carne los días que manda la Iglesia?",
+              "en": "Have I fasted or abstained from meat on the days the Church appoints?",
+              "pt": "Jejuei ou abstive-me de carne nos dias que a Igreja manda?"
+            },
+            {
+              "es": "¿He ayudado a la Iglesia en sus necesidades?",
+              "en": "Have I helped the Church in her needs?",
+              "pt": "Ajudei a Igreja nas suas necessidades?"
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "title": {
+            "es": "Obras de misericordia y deberes del propio estado",
+            "en": "Works of mercy and the duties of one's state",
+            "pt": "Obras de misericórdia e deveres do próprio estado"
+          },
+          "basis": "CIC 2447",
+          "questions": [
+            {
+              "es": "¿He ayudado a quien tiene hambre, sed o necesidad?",
+              "en": "Have I helped those who are hungry, thirsty or in need?",
+              "pt": "Ajudei quem tem fome, sede ou necessidade?"
+            },
+            {
+              "es": "¿He visitado o consolado a alguien que está enfermo o solo?",
+              "en": "Have I visited or consoled someone who is sick or alone?",
+              "pt": "Visitei ou consolei alguém que está doente ou sozinho?"
+            },
+            {
+              "es": "¿He enseñado o aconsejado a alguien que lo necesitaba?",
+              "en": "Have I taught or advised someone who needed it?",
+              "pt": "Ensinei ou aconselhei alguém que precisava?"
+            },
+            {
+              "es": "¿He perdonado y consolado a quien está triste?",
+              "en": "Have I forgiven and consoled those who are sad?",
+              "pt": "Perdoei e consolei quem está triste?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "youth",
+      "title": {
+        "es": "Jóvenes",
+        "en": "Youth",
+        "pt": "Jovens"
+      },
+      "intro": {
+        "es": "Un examen para revisar tu vida ante Dios con sinceridad y confianza, sin miedo y sin morbosidad.",
+        "en": "An examination to review your life before God with sincerity and trust, without fear and without morbidity.",
+        "pt": "Um exame para rever a tua vida diante de Deus com sinceridade e confiança, sem medo nem morbidez."
+      },
+      "sections": [
+        {
+          "id": "c1",
+          "title": {
+            "es": "Amarás al Señor tu Dios sobre todas las cosas",
+            "en": "You shall love the Lord your God above all things",
+            "pt": "Amarás ao Senhor teu Deus sobre todas as coisas"
+          },
+          "basis": "CIC 2083-2141",
+          "questions": [
+            {
+              "es": "¿He buscado a Dios de verdad, o me he quedado en lo superficial?",
+              "en": "Have I sought God in earnest, or stayed on the surface?",
+              "pt": "Busquei Deus de verdade, ou fiquei no superficial?"
+            },
+            {
+              "es": "¿He descuidado la fe por vergüenza ante los amigos?",
+              "en": "Have I neglected the faith out of shame before my friends?",
+              "pt": "Descuidei a fé por vergonha diante dos amigos?"
+            },
+            {
+              "es": "¿He recurrido a horóscopos, adivinaciones o amuletos con supuesto poder?",
+              "en": "Have I turned to horoscopes, fortune-telling or amulets with supposed power?",
+              "pt": "Recorri a horóscopos, adivinhações ou amuletos com suposto poder?"
+            },
+            {
+              "es": "¿He estudiado y defendido mi fe con respeto?",
+              "en": "Have I studied and defended my faith with respect?",
+              "pt": "Estudei e defendi a minha fé com respeito?"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "title": {
+            "es": "No tomarás el nombre del Señor en vano",
+            "en": "You shall not take the name of the Lord in vain",
+            "pt": "Não tomarás o nome do Senhor em vão"
+          },
+          "basis": "CIC 2142-2167",
+          "questions": [
+            {
+              "es": "¿He usado el nombre de Dios en bromas, en juegos o en internet sin respeto?",
+              "en": "Have I used God's name in jokes, games or online without respect?",
+              "pt": "Usei o nome de Deus em piadas, jogos ou na internet sem respeito?"
+            },
+            {
+              "es": "¿He jurado o prometido algo importante sin cumplirlo?",
+              "en": "Have I sworn or promised something important without keeping it?",
+              "pt": "Jurei ou prometi algo importante sem cumpri-lo?"
+            },
+            {
+              "es": "¿He mentido invocando a Dios para dar crédito a una mentira?",
+              "en": "Have I lied by invoking God to lend credit to a lie?",
+              "pt": "Menti invocando Deus para dar crédito a uma mentira?"
+            },
+            {
+              "es": "¿He blasfemado o animado a otros a hacerlo?",
+              "en": "Have I blasphemed or encouraged others to do so?",
+              "pt": "Blasfemei ou animei outros a fazê-lo?"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "title": {
+            "es": "Santificarás las fiestas",
+            "en": "You shall keep the feast days holy",
+            "pt": "Santificarás as festas"
+          },
+          "basis": "CIC 2168-2195",
+          "questions": [
+            {
+              "es": "¿He faltado a misa los domingos sin motivo serio?",
+              "en": "Have I missed Sunday Mass without a serious reason?",
+              "pt": "Faltei à missa aos domingos sem motivo sério?"
+            },
+            {
+              "es": "¿He aprovechado el domingo para el descanso, la familia y Dios?",
+              "en": "Have I used Sunday for rest, family and God?",
+              "pt": "Aproveitei o domingo para o descanso, a família e Deus?"
+            },
+            {
+              "es": "¿He hecho trabajos o planes que me impiden santificarlo?",
+              "en": "Have I taken on work or plans that keep me from sanctifying it?",
+              "pt": "Fiz trabalhos ou planos que me impedem de o santificar?"
+            },
+            {
+              "es": "¿He vivido el domingo como un regalo y no como un día más?",
+              "en": "Have I lived Sunday as a gift and not as one more day?",
+              "pt": "Vivi o domingo como um dom e não como mais um dia?"
+            }
+          ]
+        },
+        {
+          "id": "c4",
+          "title": {
+            "es": "Honra a tu padre y a tu madre",
+            "en": "Honour your father and your mother",
+            "pt": "Honra teu pai e tua mãe"
+          },
+          "basis": "CIC 2196-2257",
+          "questions": [
+            {
+              "es": "¿He respetado y obedecido a mis padres en lo que es justo?",
+              "en": "Have I respected and obeyed my parents in what is just?",
+              "pt": "Respeitei e obedeci aos meus pais no que é justo?"
+            },
+            {
+              "es": "¿He cuidado a mi familia y evitado avergonzarla?",
+              "en": "Have I cared for my family and avoided shaming it?",
+              "pt": "Cuidei da minha família e evitei envergonhá-la?"
+            },
+            {
+              "es": "¿He usado bien el tiempo y el dinero que mi familia me da?",
+              "en": "Have I used well the time and money my family gives me?",
+              "pt": "Usei bem o tempo e o dinheiro que a minha família me dá?"
+            },
+            {
+              "es": "¿He honrado a mis profesores y a quienes me educan?",
+              "en": "Have I honoured my teachers and those who educate me?",
+              "pt": "Honrei os meus professores e quem me educa?"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "title": {
+            "es": "No matarás",
+            "en": "You shall not kill",
+            "pt": "Não matarás"
+          },
+          "basis": "CIC 2258-2330",
+          "questions": [
+            {
+              "es": "¿He hecho daño a otros con peleas, burlas o exclusiones?",
+              "en": "Have I harmed others through fights, mockery or exclusion?",
+              "pt": "Causa dano aos outros com brigas, zombarias ou exclusões?"
+            },
+            {
+              "es": "¿He cuidado mi vida y mi salud, evitando lo que me hace daño?",
+              "en": "Have I cared for my life and health, avoiding what harms me?",
+              "pt": "Cuidei da minha vida e da minha saúde, evitando o que me faz mal?"
+            },
+            {
+              "es": "¿He herido a alguien con palabras o en internet?",
+              "en": "Have I wounded someone with words or online?",
+              "pt": "Feri alguém com palavras ou na internet?"
+            },
+            {
+              "es": "¿He respetado la vida de los demás en mis gestos y decisiones?",
+              "en": "Have I respected the lives of others in my gestures and decisions?",
+              "pt": "Respeitei a vida dos outros nos meus gestos e decisões?"
+            }
+          ]
+        },
+        {
+          "id": "c6",
+          "title": {
+            "es": "No cometerás adulterio",
+            "en": "You shall not commit adultery",
+            "pt": "Não cometerás adultério"
+          },
+          "basis": "CIC 2331-2400",
+          "questions": [
+            {
+              "es": "¿He vivido la castidad según mi estado y con respeto a los demás?",
+              "en": "Have I lived chastity according to my state and with respect for others?",
+              "pt": "Vivi a castidade segundo o meu estado e com respeito aos outros?"
+            },
+            {
+              "es": "¿He respetado a los demás y evitado la mirada que usa a las personas?",
+              "en": "Have I respected others and avoided the look that uses people?",
+              "pt": "Respeitei os outros e evitei o olhar que usa as pessoas?"
+            },
+            {
+              "es": "¿He hablado con pureza y evitado conversaciones que hacen mal?",
+              "en": "Have I spoken with purity and avoided conversations that do harm?",
+              "pt": "Falei com pureza e evitei conversas que fazem mal?"
+            },
+            {
+              "es": "¿He guardado mi corazón y mi cuerpo como don de Dios?",
+              "en": "Have I kept my heart and my body as a gift from God?",
+              "pt": "Guardei o meu coração e o meu corpo como dom de Deus?"
+            }
+          ]
+        },
+        {
+          "id": "c7",
+          "title": {
+            "es": "No robarás",
+            "en": "You shall not steal",
+            "pt": "Não roubarás"
+          },
+          "basis": "CIC 2401-2463",
+          "questions": [
+            {
+              "es": "¿He robado o conservado algo que no es mío?",
+              "en": "Have I stolen or kept something that is not mine?",
+              "pt": "Roubei ou guardei algo que não é meu?"
+            },
+            {
+              "es": "¿He sido honrado con el dinero y los bienes de otros?",
+              "en": "Have I been honest with the money and goods of others?",
+              "pt": "Fui honesto com o dinheiro e os bens dos outros?"
+            },
+            {
+              "es": "¿He trabajado con esfuerzo y sin engañar?",
+              "en": "Have I worked with effort and without cheating?",
+              "pt": "Trabalhei com esforço e sem enganar?"
+            },
+            {
+              "es": "¿He compartido con quien tiene menos?",
+              "en": "Have I shared with those who have less?",
+              "pt": "Partilhei com quem tem menos?"
+            }
+          ]
+        },
+        {
+          "id": "c8",
+          "title": {
+            "es": "No darás falso testimonio",
+            "en": "You shall not bear false witness",
+            "pt": "Não darás falso testemunho"
+          },
+          "basis": "CIC 2464-2513",
+          "questions": [
+            {
+              "es": "¿He mentido o exagerado para quedar bien?",
+              "en": "Have I lied or exaggerated to look good?",
+              "pt": "Menti ou exagerei para ficar bem?"
+            },
+            {
+              "es": "¿He difundido rumores o hablado mal de otros sin confirmarlo?",
+              "en": "Have I spread rumours or spoken ill of others without checking?",
+              "pt": "Espalhei rumores ou falei mal dos outros sem confirmar?"
+            },
+            {
+              "es": "¿He guardado los secretos que me confiaron?",
+              "en": "Have I kept the secrets entrusted to me?",
+              "pt": "Guardei os segredos que me confiaram?"
+            },
+            {
+              "es": "¿He defendido a quien hablan mal sin razón?",
+              "en": "Have I defended those who are spoken ill of without reason?",
+              "pt": "Defendi quem é difamado sem razão?"
+            }
+          ]
+        },
+        {
+          "id": "c9",
+          "title": {
+            "es": "No consentirás pensamientos ni deseos impuros",
+            "en": "You shall not consent to impure thoughts or desires",
+            "pt": "Não consentirás pensamentos nem desejos impuros"
+          },
+          "basis": "CIC 2514-2533",
+          "questions": [
+            {
+              "es": "¿He consentido en pensamientos impuros y los he alimentado?",
+              "en": "Have I consented to impure thoughts and nourished them?",
+              "pt": "Consenti em pensamentos impuros e alimentei-os?"
+            },
+            {
+              "es": "¿He cuidado lo que veo y leo, y he huido de lo que me hace caer?",
+              "en": "Have I guarded what I see and read, and fled from what makes me fall?",
+              "pt": "Cuidei do que vejo e leio, e fugi do que me faz cair?"
+            },
+            {
+              "es": "¿He hablado con pureza y respeto?",
+              "en": "Have I spoken with purity and respect?",
+              "pt": "Falei com pureza e respeito?"
+            },
+            {
+              "es": "¿He pedido ayuda al Señor y a alguien de confianza cuando lo necesitaba?",
+              "en": "Have I asked the Lord and someone I trust for help when I needed it?",
+              "pt": "Pedi ajuda ao Senhor e a alguém de confiança quando precisei?"
+            }
+          ]
+        },
+        {
+          "id": "c10",
+          "title": {
+            "es": "No codiciarás los bienes ajenos",
+            "en": "You shall not covet what belongs to others",
+            "pt": "Não cobiçarás os bens alheios"
+          },
+          "basis": "CIC 2534-2557",
+          "questions": [
+            {
+              "es": "¿He tenido envidia del dinero, los estudios o la suerte de otros?",
+              "en": "Have I envied the money, studies or luck of others?",
+              "pt": "Tive inveja do dinheiro, dos estudos ou da sorte dos outros?"
+            },
+            {
+              "es": "¿He deseado lo ajeno de modo desordenado?",
+              "en": "Have I desired what belongs to others in a disordered way?",
+              "pt": "Desejei o alheio de modo desordenado?"
+            },
+            {
+              "es": "¿He dado gracias por lo que tengo?",
+              "en": "Have I given thanks for what I have?",
+              "pt": "Dei graças pelo que tenho?"
+            },
+            {
+              "es": "¿He sido generoso con lo mío?",
+              "en": "Have I been generous with what is mine?",
+              "pt": "Fui generoso com o que é meu?"
+            }
+          ]
+        },
+        {
+          "id": "church",
+          "title": {
+            "es": "Preceptos de la Iglesia",
+            "en": "Precepts of the Church",
+            "pt": "Preceitos da Igreja"
+          },
+          "basis": "CIC 2041-2043",
+          "questions": [
+            {
+              "es": "¿He cumplido el precepto de la misa dominical y de las fiestas?",
+              "en": "Have I kept the precept of Sunday and feast-day Mass?",
+              "pt": "Cumpri o preceito da missa dominical e das festas?"
+            },
+            {
+              "es": "¿Me he confesado y he comulgado al menos una vez al año?",
+              "en": "Have I confessed and received Communion at least once a year?",
+              "pt": "Confessei e comunguei ao menos uma vez ao ano?"
+            },
+            {
+              "es": "¿He guardado el ayuno y la abstinencia los días establecidos?",
+              "en": "Have I kept the fast and abstinence on the appointed days?",
+              "pt": "Guardei o jejum e a abstinência nos dias estabelecidos?"
+            },
+            {
+              "es": "¿He colaborado con la Iglesia según mis posibilidades?",
+              "en": "Have I cooperated with the Church as I am able?",
+              "pt": "Colaborei com a Igreja segundo as minhas possibilidades?"
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "title": {
+            "es": "Obras de misericordia y deberes del propio estado",
+            "en": "Works of mercy and the duties of one's state",
+            "pt": "Obras de misericórdia e deveres do próprio estado"
+          },
+          "basis": "CIC 2447",
+          "questions": [
+            {
+              "es": "¿He visitado a los enfermos y a los que están solos?",
+              "en": "Have I visited the sick and those who are alone?",
+              "pt": "Visitei os doentes e os que estão sozinhos?"
+            },
+            {
+              "es": "¿He ayudado a quien no tiene pan, techo o trabajo?",
+              "en": "Have I helped those without bread, shelter or work?",
+              "pt": "Ajudei quem não tem pão, teto ou trabalho?"
+            },
+            {
+              "es": "¿He enseñado al que no sabe y aconsejado al que está perdido?",
+              "en": "Have I taught the one who does not know and advised the one who is lost?",
+              "pt": "Ensinei quem não sabe e aconselhei quem está perdido?"
+            },
+            {
+              "es": "¿He consolado al triste y perdonado al que me ofendió?",
+              "en": "Have I consoled the sad and forgiven the one who offended me?",
+              "pt": "Consoliez o triste e perdoei quem me ofendeu?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "married",
+      "title": {
+        "es": "Matrimonio y familia",
+        "en": "Marriage and family",
+        "pt": "Casados e família"
+      },
+      "intro": {
+        "es": "Un examen pensado para quienes viven el matrimonio y la familia, con sus deberes propios.",
+        "en": "An examination for those who live marriage and family life, with their own duties.",
+        "pt": "Um exame pensado para quem vive o matrimônio e a família, com os seus deveres próprios."
+      },
+      "sections": [
+        {
+          "id": "c1",
+          "title": {
+            "es": "Amarás al Señor tu Dios sobre todas las cosas",
+            "en": "You shall love the Lord your God above all things",
+            "pt": "Amarás ao Senhor teu Deus sobre todas as coisas"
+          },
+          "basis": "CIC 2083-2141",
+          "questions": [
+            {
+              "es": "¿He puesto a Dios por delante de mi familia, o he hecho de ellos un ídolo?",
+              "en": "Have I put God before my family, or made them an idol?",
+              "pt": "Coloquei Deus à frente da minha família, ou fiz deles um ídolo?"
+            },
+            {
+              "es": "¿He rezado con mi familia y dado testimonio de fe en casa?",
+              "en": "Have I prayed with my family and given witness to the faith at home?",
+              "pt": "Rezei com a minha família e dei testemunho de fé em casa?"
+            },
+            {
+              "es": "¿He cumplido las promesas que hice a Dios?",
+              "en": "Have I kept the promises I made to God?",
+              "pt": "Cumpri as promessas que fiz a Deus?"
+            },
+            {
+              "es": "¿He dado a Dios el primer lugar en el tiempo y en el dinero?",
+              "en": "Have I given God first place in my time and my money?",
+              "pt": "Dei a Deus o primeiro lugar no tempo e no dinheiro?"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "title": {
+            "es": "No tomarás el nombre del Señor en vano",
+            "en": "You shall not take the name of the Lord in vain",
+            "pt": "Não tomarás o nome do Senhor em vão"
+          },
+          "basis": "CIC 2142-2167",
+          "questions": [
+            {
+              "es": "¿He invocado el nombre de Dios para dar testimonio, o lo he usado a la ligera?",
+              "en": "Have I invoked God's name to bear witness, or used it lightly?",
+              "pt": "Invoquei o nome de Deus para dar testemunho, ou usei-o à-toa?"
+            },
+            {
+              "es": "¿He hecho promesas o votos sin cumplirlos?",
+              "en": "Have I made promises or vows without keeping them?",
+              "pt": "Fiz promessas ou votos sem cumpri-los?"
+            },
+            {
+              "es": "¿He hablado de Dios con respeto delante de mi familia?",
+              "en": "Have I spoken of God with respect before my family?",
+              "pt": "Falei de Deus com respeito diante da minha família?"
+            },
+            {
+              "es": "¿He jurado en falso o usado el nombre de Dios para engañar?",
+              "en": "Have I sworn falsely or used God's name to deceive?",
+              "pt": "Jurei em falso ou usei o nome de Deus para enganar?"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "title": {
+            "es": "Santificarás las fiestas",
+            "en": "You shall keep the feast days holy",
+            "pt": "Santificarás as festas"
+          },
+          "basis": "CIC 2168-2195",
+          "questions": [
+            {
+              "es": "¿He llevado a mi familia a misa los domingos?",
+              "en": "Have I brought my family to Sunday Mass?",
+              "pt": "Levei a minha família à missa aos domingos?"
+            },
+            {
+              "es": "¿He evitado encargos de trabajo que impiden santificar el domingo?",
+              "en": "Have I avoided work that keeps me from sanctifying Sunday?",
+              "pt": "Evitei tarefas de trabalho que impedem de santificar o domingo?"
+            },
+            {
+              "es": "¿He dedicado el domingo al descanso, a la familia y a Dios?",
+              "en": "Have I given Sunday to rest, family and God?",
+              "pt": "Dediquei o domingo ao descanso, à família e a Deus?"
+            },
+            {
+              "es": "¿He dado ejemplo de fidelidad al día del Señor?",
+              "en": "Have I given example of faithfulness to the Lord's day?",
+              "pt": "Dei exemplo de fidelidade ao dia do Senhor?"
+            }
+          ]
+        },
+        {
+          "id": "c4",
+          "title": {
+            "es": "Honra a tu padre y a tu madre",
+            "en": "Honour your father and your mother",
+            "pt": "Honra teu pai e tua mãe"
+          },
+          "basis": "CIC 2196-2257",
+          "questions": [
+            {
+              "es": "¿He honrado a mis padres y cuidado de ellos?",
+              "en": "Have I honoured my parents and cared for them?",
+              "pt": "Honrei os meus pais e cuidei deles?"
+            },
+            {
+              "es": "¿He sido fiel a mi cónyuge y guardado la promesa del matrimonio?",
+              "en": "Have I been faithful to my spouse and kept the promise of marriage?",
+              "pt": "Fui fiel ao meu cônjuge e guardei a promessa do matrimônio?"
+            },
+            {
+              "es": "¿He educado a mis hijos en la fe y en las virtudes?",
+              "en": "Have I raised my children in the faith and in the virtues?",
+              "pt": "Eduquei os meus filhos na fé e nas virtudes?"
+            },
+            {
+              "es": "¿He atendido las necesidades de mi familia, también las económicas?",
+              "en": "Have I met my family's needs, including the financial ones?",
+              "pt": "Atendi às necessidades da minha família, também as econômicas?"
+            },
+            {
+              "es": "¿He tratado a mi cónyuge con respeto y paciencia?",
+              "en": "Have I treated my spouse with respect and patience?",
+              "pt": "Tratei o meu cônjuge com respeito e paciência?"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "title": {
+            "es": "No matarás",
+            "en": "You shall not kill",
+            "pt": "Não matarás"
+          },
+          "basis": "CIC 2258-2330",
+          "questions": [
+            {
+              "es": "¿He cuidado la vida y la salud de mi familia y la mía?",
+              "en": "Have I cared for the life and health of my family and my own?",
+              "pt": "Cuidei da vida e da saúde da minha família e da minha?"
+            },
+            {
+              "es": "¿He evitado la violencia, también la de palabra, en casa?",
+              "en": "Have I avoided violence, including verbal, at home?",
+              "pt": "Evitei a violência, também a verbal, em casa?"
+            },
+            {
+              "es": "¿He acogido y respetado la vida de los hijos que Dios me ha dado?",
+              "en": "Have I welcomed and respected the lives of the children God gave me?",
+              "pt": "Acolhi e respeitei a vida dos filhos que Deus me deu?"
+            },
+            {
+              "es": "¿He sido causa de división o de paz en mi familia?",
+              "en": "Have I been a cause of division or of peace in my family?",
+              "pt": "Fui causa de divisão ou de paz na minha família?"
+            }
+          ]
+        },
+        {
+          "id": "c6",
+          "title": {
+            "es": "No cometerás adulterio",
+            "en": "You shall not commit adultery",
+            "pt": "Não cometerás adultério"
+          },
+          "basis": "CIC 2331-2400",
+          "questions": [
+            {
+              "es": "¿He sido fiel a mi cónyuge y guardado la promesa del matrimonio?",
+              "en": "Have I been faithful to my spouse and kept the promise of marriage?",
+              "pt": "Fui fiel ao meu cônjuge e guardei a promessa do matrimônio?"
+            },
+            {
+              "es": "¿He sido exclusivo y sincero en mi amor?",
+              "en": "Have I been exclusive and sincere in my love?",
+              "pt": "Fui exclusivo e sincero no meu amor?"
+            },
+            {
+              "es": "¿He evitado lo que pone en peligro la fidelidad?",
+              "en": "Have I avoided what endangers faithfulness?",
+              "pt": "Evitei o que põe em perigo a fidelidade?"
+            },
+            {
+              "es": "¿He honrado el matrimonio con mi palabra y mi conducta?",
+              "en": "Have I honoured marriage by my word and my conduct?",
+              "pt": "Honrei o matrimônio com a minha palavra e a minha conduta?"
+            }
+          ]
+        },
+        {
+          "id": "c7",
+          "title": {
+            "es": "No robarás",
+            "en": "You shall not steal",
+            "pt": "Não roubarás"
+          },
+          "basis": "CIC 2401-2463",
+          "questions": [
+            {
+              "es": "¿He sido honrado en el trabajo y en el dinero de la familia?",
+              "en": "Have I been honest in work and in the family's money?",
+              "pt": "Fui honesto no trabalho e no dinheiro da família?"
+            },
+            {
+              "es": "¿He administrado con justicia los bienes que Dios me confió?",
+              "en": "Have I administered justly the goods God entrusted to me?",
+              "pt": "Administrei com justiça os bens que Deus me confiou?"
+            },
+            {
+              "es": "¿He pagado lo que debo y restituido lo que no era mío?",
+              "en": "Have I paid what I owe and restored what was not mine?",
+              "pt": "Paguei o que devo e restituí o que não era meu?"
+            },
+            {
+              "es": "¿He sido generoso con los necesitados?",
+              "en": "Have I been generous with those in need?",
+              "pt": "Fui generoso com os necessitados?"
+            }
+          ]
+        },
+        {
+          "id": "c8",
+          "title": {
+            "es": "No darás falso testimonio",
+            "en": "You shall not bear false witness",
+            "pt": "Não darás falso testemunho"
+          },
+          "basis": "CIC 2464-2513",
+          "questions": [
+            {
+              "es": "¿He sido sincero con mi cónyuge y con mi familia?",
+              "en": "Have I been sincere with my spouse and my family?",
+              "pt": "Fui sincero com o meu cônjuge e a minha família?"
+            },
+            {
+              "es": "¿He evitado la calumnia, la maledicencia y los rumores?",
+              "en": "Have I avoided slander, detraction and rumours?",
+              "pt": "Evitei a calúnia, a maledicência e os rumores?"
+            },
+            {
+              "es": "¿He guardado la confianza que otros me han dado?",
+              "en": "Have I kept the trust others have placed in me?",
+              "pt": "Guardei a confiança que os outros me deram?"
+            },
+            {
+              "es": "¿He reparado el daño cuando he hablado mal de alguien?",
+              "en": "Have I repaired the harm when I have spoken ill of someone?",
+              "pt": "Reparei o dano quando falei mal de alguém?"
+            }
+          ]
+        },
+        {
+          "id": "c9",
+          "title": {
+            "es": "No consentirás pensamientos ni deseos impuros",
+            "en": "You shall not consent to impure thoughts or desires",
+            "pt": "Não consentirás pensamentos nem desejos impuros"
+          },
+          "basis": "CIC 2514-2533",
+          "questions": [
+            {
+              "es": "¿He guardado el corazón y la mirada con fidelidad?",
+              "en": "Have I kept my heart and my gaze faithful?",
+              "pt": "Guardei o coração e o olhar com fidelidade?"
+            },
+            {
+              "es": "¿He evitado lo que pone en peligro la fidelidad conyugal?",
+              "en": "Have I avoided what endangers marital faithfulness?",
+              "pt": "Evitei o que põe em perigo a fidelidade conjugal?"
+            },
+            {
+              "es": "¿He respetado a mi cónyuge también en la afectividad y en la mirada?",
+              "en": "Have I respected my spouse also in affection and in my gaze?",
+              "pt": "Respeitei o meu cônjuge também na afetividade e no olhar?"
+            },
+            {
+              "es": "¿He pedido la gracia de la pureza cuando la necesité?",
+              "en": "Have I asked for the grace of purity when I needed it?",
+              "pt": "Pedi a graça da pureza quando precisei?"
+            }
+          ]
+        },
+        {
+          "id": "c10",
+          "title": {
+            "es": "No codiciarás los bienes ajenos",
+            "en": "You shall not covet what belongs to others",
+            "pt": "Não cobiçarás os bens alheios"
+          },
+          "basis": "CIC 2534-2557",
+          "questions": [
+            {
+              "es": "¿He tenido envidia de la vida o de los bienes de otros?",
+              "en": "Have I envied the life or the goods of others?",
+              "pt": "Tive inveja da vida ou dos bens dos outros?"
+            },
+            {
+              "es": "¿He deseado lo ajeno de modo desordenado?",
+              "en": "Have I desired what belongs to others in a disordered way?",
+              "pt": "Desejei o alheio de modo desordenado?"
+            },
+            {
+              "es": "¿He sido agradecido con lo que Dios nos ha dado?",
+              "en": "Have I been grateful for what God has given us?",
+              "pt": "Fui grato pelo que Deus nos deu?"
+            },
+            {
+              "es": "¿He sido generoso con los necesitados?",
+              "en": "Have I been generous with those in need?",
+              "pt": "Fui generoso com os necessitados?"
+            }
+          ]
+        },
+        {
+          "id": "church",
+          "title": {
+            "es": "Preceptos de la Iglesia",
+            "en": "Precepts of the Church",
+            "pt": "Preceitos da Igreja"
+          },
+          "basis": "CIC 2041-2043",
+          "questions": [
+            {
+              "es": "¿He cumplido los preceptos de la Iglesia y enseñado a mi familia a cumplirlos?",
+              "en": "Have I kept the precepts of the Church and taught my family to keep them?",
+              "pt": "Cumpri os preceitos da Igreja e ensinei a minha família a cumpri-los?"
+            },
+            {
+              "es": "¿Me he confesado y comulgado en la Pascua de resurrección?",
+              "en": "Have I confessed and received Communion at the Easter season?",
+              "pt": "Confessei e comunguei no tempo Pascal?"
+            },
+            {
+              "es": "¿He guardado el ayuno y la abstinencia?",
+              "en": "Have I kept the fast and abstinence?",
+              "pt": "Guardei o jejum e a abstinência?"
+            },
+            {
+              "es": "¿He sostenido a la Iglesia y a las obras de caridad?",
+              "en": "Have I supported the Church and works of charity?",
+              "pt": "Sustentei a Igreja e as obras de caridade?"
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "title": {
+            "es": "Obras de misericordia y deberes del propio estado",
+            "en": "Works of mercy and the duties of one's state",
+            "pt": "Obras de misericórdia e deveres do próprio estado"
+          },
+          "basis": "CIC 2447",
+          "questions": [
+            {
+              "es": "¿He atendido las obras de misericordia en mi familia y fuera de ella?",
+              "en": "Have I attended to the works of mercy in my family and beyond it?",
+              "pt": "Atendi às obras de misericórdia na minha família e fora dela?"
+            },
+            {
+              "es": "¿He visitado a los enfermos y a los que están solos?",
+              "en": "Have I visited the sick and those who are alone?",
+              "pt": "Visitei os doentes e os que estão sozinhos?"
+            },
+            {
+              "es": "¿He acogido al forastero y ayudado al necesitado?",
+              "en": "Have I welcomed the stranger and helped the one in need?",
+              "pt": "Acolhi o forasteiro e ajudei o necessitado?"
+            },
+            {
+              "es": "¿He perdonado y consolado a los que sufren?",
+              "en": "Have I forgiven and consoled those who suffer?",
+              "pt": "Perdoei e consolei os que sofrem?"
+            },
+            {
+              "es": "¿He cumplido los deberes de mi estado como servicio?",
+              "en": "Have I fulfilled the duties of my state as a service?",
+              "pt": "Cumpri os deveres do meu estado como serviço?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "single",
+      "title": {
+        "es": "Solteros",
+        "en": "Single",
+        "pt": "Solteiros"
+      },
+      "intro": {
+        "es": "Un examen para quien vive la soltería, con sus deberes y su vocación propia.",
+        "en": "An examination for those who live the single life, with its duties and its own vocation.",
+        "pt": "Um exame para quem vive a solteiria, com os seus deveres e a sua vocação própria."
+      },
+      "sections": [
+        {
+          "id": "c1",
+          "title": {
+            "es": "Amarás al Señor tu Dios sobre todas las cosas",
+            "en": "You shall love the Lord your God above all things",
+            "pt": "Amarás ao Senhor teu Deus sobre todas as coisas"
+          },
+          "basis": "CIC 2083-2141",
+          "questions": [
+            {
+              "es": "¿He buscado la felicidad en Dios o en las criaturas?",
+              "en": "Have I sought happiness in God or in creatures?",
+              "pt": "Procurei a felicidade em Deus ou nas criaturas?"
+            },
+            {
+              "es": "¿He cultivado la oración y los sacramentos como centro de mi vida?",
+              "en": "Have I cultivated prayer and the sacraments as the centre of my life?",
+              "pt": "Cultivei a oração e os sacramentos como centro da minha vida?"
+            },
+            {
+              "es": "¿He caído en la indiferencia o la desesperanza respecto a Dios?",
+              "en": "Have I fallen into indifference or despair regarding God?",
+              "pt": "Caí na indiferença ou no desespero em relação a Deus?"
+            },
+            {
+              "es": "¿He respetado la fe de los demás y su libertad?",
+              "en": "Have I respected the faith and freedom of others?",
+              "pt": "Respeitei a fé e a liberdade dos outros?"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "title": {
+            "es": "No tomarás el nombre del Señor en vano",
+            "en": "You shall not take the name of the Lord in vain",
+            "pt": "Não tomarás o nome do Senhor em vão"
+          },
+          "basis": "CIC 2142-2167",
+          "questions": [
+            {
+              "es": "¿He pronunciado el nombre de Dios con respeto en mi trabajo y en mi vida?",
+              "en": "Have I spoken God's name with respect in my work and in my life?",
+              "pt": "Pronunciei o nome de Deus com respeito no meu trabalho e na minha vida?"
+            },
+            {
+              "es": "¿He cumplido las promesas que hice a Dios?",
+              "en": "Have I kept the promises I made to God?",
+              "pt": "Cumpri as promessas que fiz a Deus?"
+            },
+            {
+              "es": "¿He participado en blasfemias o las he callado por miedo?",
+              "en": "Have I taken part in blasphemies or stayed silent out of fear?",
+              "pt": "Participei em blasfêmias ou calei-as por medo?"
+            },
+            {
+              "es": "¿He dado buen testimonio del nombre de Cristo ante los demás?",
+              "en": "Have I given good witness to the name of Christ before others?",
+              "pt": "Dei bom testemunho do nome de Cristo diante dos outros?"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "title": {
+            "es": "Santificarás las fiestas",
+            "en": "You shall keep the feast days holy",
+            "pt": "Santificarás as festas"
+          },
+          "basis": "CIC 2168-2195",
+          "questions": [
+            {
+              "es": "¿He faltado a misa los domingos por pereza o por planes?",
+              "en": "Have I missed Sunday Mass out of laziness or plans?",
+              "pt": "Faltei à missa aos domingos por preguiça ou por planos?"
+            },
+            {
+              "es": "¿He respetado el descanso y la oración del domingo?",
+              "en": "Have I respected the rest and prayer of Sunday?",
+              "pt": "Respeitei o descanso e a oração do domingo?"
+            },
+            {
+              "es": "¿He elegido un trabajo que me permita santificar las fiestas?",
+              "en": "Have I chosen work that lets me sanctify feast days?",
+              "pt": "Escolhi um trabalho que me permite santificar as festas?"
+            },
+            {
+              "es": "¿He aprovechado el domingo para servir a otros?",
+              "en": "Have I used Sunday to serve others?",
+              "pt": "Aproveitei o domingo para servir os outros?"
+            }
+          ]
+        },
+        {
+          "id": "c4",
+          "title": {
+            "es": "Honra a tu padre y a tu madre",
+            "en": "Honour your father and your mother",
+            "pt": "Honra teu pai e tua mãe"
+          },
+          "basis": "CIC 2196-2257",
+          "questions": [
+            {
+              "es": "¿He honrado a mis padres y ayudado a mi familia?",
+              "en": "Have I honoured my parents and helped my family?",
+              "pt": "Honrei os meus pais e ajudei a minha família?"
+            },
+            {
+              "es": "¿He respetado a quienes tienen autoridad sobre mí?",
+              "en": "Have I respected those in authority over me?",
+              "pt": "Respeitei quem tem autoridade sobre mim?"
+            },
+            {
+              "es": "¿He cuidado a mis hermanos, abuelos o familiares necesitados?",
+              "en": "Have I cared for my siblings, grandparents or needy relatives?",
+              "pt": "Cuidei dos meus irmãos, avós ou familiares necessitados?"
+            },
+            {
+              "es": "¿He usado bien la libertad que da no tener obligaciones de familia?",
+              "en": "Have I used well the freedom that comes from having no family duties?",
+              "pt": "Usei bem a liberdade de não ter obrigações de família?"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "title": {
+            "es": "No matarás",
+            "en": "You shall not kill",
+            "pt": "Não matarás"
+          },
+          "basis": "CIC 2258-2330",
+          "questions": [
+            {
+              "es": "¿He respetado mi cuerpo y mi salud como don de Dios?",
+              "en": "Have I respected my body and health as a gift from God?",
+              "pt": "Respeitei o meu corpo e a minha saúde como dom de Deus?"
+            },
+            {
+              "es": "¿He hecho daño a otros con violencia, palabras o desprecio?",
+              "en": "Have I harmed others with violence, words or contempt?",
+              "pt": "Causei dano aos outros com violência, palavras ou desprezo?"
+            },
+            {
+              "es": "¿He evitado conductas que ponen en riesgo mi vida o la de otros?",
+              "en": "Have I avoided behaviour that puts my life or others' at risk?",
+              "pt": "Evitei condutas que põem em risco a minha vida ou a dos outros?"
+            },
+            {
+              "es": "¿He cuidado a quien está solo, enfermo o necesitado?",
+              "en": "Have I cared for those who are alone, sick or in need?",
+              "pt": "Cuidei de quem está sozinho, doente ou necessitado?"
+            }
+          ]
+        },
+        {
+          "id": "c6",
+          "title": {
+            "es": "No cometerás adulterio",
+            "en": "You shall not commit adultery",
+            "pt": "Não cometerás adultério"
+          },
+          "basis": "CIC 2331-2400",
+          "questions": [
+            {
+              "es": "¿He vivido la castidad con respeto y libertad?",
+              "en": "Have I lived chastity with respect and freedom?",
+              "pt": "Vivi a castidade com respeito e liberdade?"
+            },
+            {
+              "es": "¿He tratado a los demás como personas y no como objetos?",
+              "en": "Have I treated others as persons and not as objects?",
+              "pt": "Tratei os outros como pessoas e não como objetos?"
+            },
+            {
+              "es": "¿He guardado mi corazón de la envidia y del deseo desordenado?",
+              "en": "Have I kept my heart from envy and disordered desire?",
+              "pt": "Guardei o meu coração da inveja e do desejo desordenado?"
+            },
+            {
+              "es": "¿He hablado y actuado con pureza?",
+              "en": "Have I spoken and acted with purity?",
+              "pt": "Falei e atuei com pureza?"
+            }
+          ]
+        },
+        {
+          "id": "c7",
+          "title": {
+            "es": "No robarás",
+            "en": "You shall not steal",
+            "pt": "Não roubarás"
+          },
+          "basis": "CIC 2401-2463",
+          "questions": [
+            {
+              "es": "¿He sido honrado en el trabajo y en el dinero?",
+              "en": "Have I been honest in work and in money?",
+              "pt": "Fui honesto no trabalho e no dinheiro?"
+            },
+            {
+              "es": "¿He evitado el engaño, la trampa y aprovecharme de otros?",
+              "en": "Have I avoided deceit, trickery and taking advantage of others?",
+              "pt": "Evitei o engano, a armadilha e aproveitar-me dos outros?"
+            },
+            {
+              "es": "¿He pagado mis deudas y cumplido mis obligaciones?",
+              "en": "Have I paid my debts and fulfilled my obligations?",
+              "pt": "Paguei as minhas dívidas e cumpri as minhas obrigações?"
+            },
+            {
+              "es": "¿He compartido con quien tiene menos?",
+              "en": "Have I shared with those who have less?",
+              "pt": "Partilhei com quem tem menos?"
+            }
+          ]
+        },
+        {
+          "id": "c8",
+          "title": {
+            "es": "No darás falso testimonio",
+            "en": "You shall not bear false witness",
+            "pt": "Não darás falso testemunho"
+          },
+          "basis": "CIC 2464-2513",
+          "questions": [
+            {
+              "es": "¿He dicho la verdad aunque me cueste?",
+              "en": "Have I told the truth even when it cost me?",
+              "pt": "Disse a verdade mesmo quando me custou?"
+            },
+            {
+              "es": "¿He evitado la maledicencia, la calumnia y la envidia en el hablar?",
+              "en": "Have I avoided detraction, slander and envy in my speech?",
+              "pt": "Evitei a maledicência, a calúnia e a inveja no falar?"
+            },
+            {
+              "es": "¿He guardado los secretos que me confiaron?",
+              "en": "Have I kept the secrets entrusted to me?",
+              "pt": "Guardei os segredos que me confiaram?"
+            },
+            {
+              "es": "¿He hablado bien de los ausentes y defendido su fama?",
+              "en": "Have I spoken well of the absent and defended their good name?",
+              "pt": "Falei bem dos ausentes e defendi a sua fama?"
+            }
+          ]
+        },
+        {
+          "id": "c9",
+          "title": {
+            "es": "No consentirás pensamientos ni deseos impuros",
+            "en": "You shall not consent to impure thoughts or desires",
+            "pt": "Não consentirás pensamentos nem desejos impuros"
+          },
+          "basis": "CIC 2514-2533",
+          "questions": [
+            {
+              "es": "¿He guardado la pureza del corazón y de la mirada?",
+              "en": "Have I kept the purity of heart and of my gaze?",
+              "pt": "Guardei a pureza do coração e do olhar?"
+            },
+            {
+              "es": "¿He evitado alimentar deseos desordenados?",
+              "en": "Have I avoided nourishing disordered desires?",
+              "pt": "Evitei alimentar desejos desordenados?"
+            },
+            {
+              "es": "¿He cuidado lo que veo, leo y comparto?",
+              "en": "Have I guarded what I see, read and share?",
+              "pt": "Cuidei do que vejo, leio e partilho?"
+            },
+            {
+              "es": "¿He pedido la gracia de la castidad y buscado ayuda cuando la necesité?",
+              "en": "Have I asked for the grace of chastity and sought help when I needed it?",
+              "pt": "Pedi a graça da castidade e busquei ajuda quando precisei?"
+            }
+          ]
+        },
+        {
+          "id": "c10",
+          "title": {
+            "es": "No codiciarás los bienes ajenos",
+            "en": "You shall not covet what belongs to others",
+            "pt": "Não cobiçarás os bens alheios"
+          },
+          "basis": "CIC 2534-2557",
+          "questions": [
+            {
+              "es": "¿He caído en la envidia de lo que tienen otros?",
+              "en": "Have I fallen into envy of what others have?",
+              "pt": "Caí na inveja do que os outros têm?"
+            },
+            {
+              "es": "¿He deseado lo ajeno de modo desordenado?",
+              "en": "Have I desired what belongs to others in a disordered way?",
+              "pt": "Desejei o alheio de modo desordenado?"
+            },
+            {
+              "es": "¿He dado gracias por lo que tengo?",
+              "en": "Have I given thanks for what I have?",
+              "pt": "Dei graças pelo que tenho?"
+            },
+            {
+              "es": "¿He compartido con quien tiene menos?",
+              "en": "Have I shared with those who have less?",
+              "pt": "Partilhei com quem tem menos?"
+            }
+          ]
+        },
+        {
+          "id": "church",
+          "title": {
+            "es": "Preceptos de la Iglesia",
+            "en": "Precepts of the Church",
+            "pt": "Preceitos da Igreja"
+          },
+          "basis": "CIC 2041-2043",
+          "questions": [
+            {
+              "es": "¿He cumplido los preceptos de la Iglesia?",
+              "en": "Have I kept the precepts of the Church?",
+              "pt": "Cumpri os preceitos da Igreja?"
+            },
+            {
+              "es": "¿Me he confesado y comulgado al menos una vez al año?",
+              "en": "Have I confessed and received Communion at least once a year?",
+              "pt": "Confessei e comunguei ao menos uma vez ao ano?"
+            },
+            {
+              "es": "¿He guardado el ayuno y la abstinencia?",
+              "en": "Have I kept the fast and abstinence?",
+              "pt": "Guardei o jejum e a abstinência?"
+            },
+            {
+              "es": "¿He colaborado con la Iglesia según mis posibilidades?",
+              "en": "Have I cooperated with the Church as I am able?",
+              "pt": "Colaborei com a Igreja segundo as minhas possibilidades?"
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "title": {
+            "es": "Obras de misericordia y deberes del propio estado",
+            "en": "Works of mercy and the duties of one's state",
+            "pt": "Obras de misericórdia e deveres do próprio estado"
+          },
+          "basis": "CIC 2447",
+          "questions": [
+            {
+              "es": "¿He visitado a los enfermos y a los que están solos?",
+              "en": "Have I visited the sick and those who are alone?",
+              "pt": "Visitei os doentes e os que estão sozinhos?"
+            },
+            {
+              "es": "¿He ayudado a quien no tiene pan, techo o trabajo?",
+              "en": "Have I helped those without bread, shelter or work?",
+              "pt": "Ajudei quem não tem pão, teto ou trabalho?"
+            },
+            {
+              "es": "¿He enseñado, aconsejado y consolado a quien lo necesitaba?",
+              "en": "Have I taught, advised and consoled those who needed it?",
+              "pt": "Ensinei, aconselhei e consolei quem precisava?"
+            },
+            {
+              "es": "¿He perdonado al que me ofendió?",
+              "en": "Have I forgiven the one who offended me?",
+              "pt": "Perdoei quem me ofendeu?"
+            },
+            {
+              "es": "¿He cumplido los deberes de mi estado?",
+              "en": "Have I fulfilled the duties of my state?",
+              "pt": "Cumpri os deveres do meu estado?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consecrated",
+      "title": {
+        "es": "Consagrados",
+        "en": "Consecrated",
+        "pt": "Consagrados"
+      },
+      "intro": {
+        "es": "Un examen para religiosos, religiosas y sacerdotes, con los votos y el carisma que profesan.",
+        "en": "An examination for religious and priests, with the vows and charism they profess.",
+        "pt": "Um exame para religiosos e sacerdotes, com os votos e o carisma que professam."
+      },
+      "sections": [
+        {
+          "id": "c1",
+          "title": {
+            "es": "Amarás al Señor tu Dios sobre todas las cosas",
+            "en": "You shall love the Lord your God above all things",
+            "pt": "Amarás ao Senhor teu Deus sobre todas as coisas"
+          },
+          "basis": "CIC 2083-2141",
+          "questions": [
+            {
+              "es": "¿He guardado fidelidad a mis votos y al carisma de mi instituto?",
+              "en": "Have I kept faithfulness to my vows and to the charism of my institute?",
+              "pt": "Guardei fidelidade aos meus votos e ao carisma do meu instituto?"
+            },
+            {
+              "es": "¿He dado a Dios el primer lugar por encima del trabajo y de la comunidad?",
+              "en": "Have I given God first place above work and community?",
+              "pt": "Dei a Deus o primeiro lugar acima do trabalho e da comunidade?"
+            },
+            {
+              "es": "¿He evitado la rutina y la pereza en la oración?",
+              "en": "Have I avoided routine and laziness in prayer?",
+              "pt": "Evitei a rotina e a preguiça na oração?"
+            },
+            {
+              "es": "¿He sido testigo de Dios ante los hermanos y ante el mundo?",
+              "en": "Have I been a witness to God before my brothers and before the world?",
+              "pt": "Fui testemunha de Deus diante dos irmãos e do mundo?"
+            }
+          ]
+        },
+        {
+          "id": "c2",
+          "title": {
+            "es": "No tomarás el nombre del Señor en vano",
+            "en": "You shall not take the name of the Lord in vain",
+            "pt": "Não tomarás o nome do Senhor em vão"
+          },
+          "basis": "CIC 2142-2167",
+          "questions": [
+            {
+              "es": "¿He pronunciado el nombre de Dios con la reverencia que pide mi consagración?",
+              "en": "Have I spoken God's name with the reverence my consecration demands?",
+              "pt": "Pronunciei o nome de Deus com a reverência que a minha consagração pede?"
+            },
+            {
+              "es": "¿He cumplido los votos y promesas hechos a Dios?",
+              "en": "Have I kept the vows and promises made to God?",
+              "pt": "Cumpri os votos e promessas feitos a Deus?"
+            },
+            {
+              "es": "¿He dado ejemplo de reverencia en la liturgia y en la oración comunitaria?",
+              "en": "Have I given example of reverence in the liturgy and in community prayer?",
+              "pt": "Dei exemplo de reverência na liturgia e na oração comunitária?"
+            },
+            {
+              "es": "¿He evitado la familiaridad irrespetuosa con lo sagrado?",
+              "en": "Have I avoided disrespectful familiarity with what is sacred?",
+              "pt": "Evitei a familiaridade desrespeitosa com o sagrado?"
+            }
+          ]
+        },
+        {
+          "id": "c3",
+          "title": {
+            "es": "Santificarás las fiestas",
+            "en": "You shall keep the feast days holy",
+            "pt": "Santificarás as festas"
+          },
+          "basis": "CIC 2168-2195",
+          "questions": [
+            {
+              "es": "¿He santificado el domingo con la comunidad y la liturgia?",
+              "en": "Have I sanctified Sunday with the community and the liturgy?",
+              "pt": "Santifiquei o domingo com a comunidade e a liturgia?"
+            },
+            {
+              "es": "¿He respetado el espíritu de fiesta y descanso del día del Señor?",
+              "en": "Have I respected the spirit of feast and rest of the Lord's day?",
+              "pt": "Respeitei o espírito de festa e descanso do dia do Senhor?"
+            },
+            {
+              "es": "¿He servido la liturgia con reverencia y entrega?",
+              "en": "Have I served the liturgy with reverence and devotion?",
+              "pt": "Servi a liturgia com reverência e entrega?"
+            },
+            {
+              "es": "¿He dado testimonio del domingo como día de Dios?",
+              "en": "Have I borne witness to Sunday as God's day?",
+              "pt": "Dei testemunho do domingo como dia de Deus?"
+            }
+          ]
+        },
+        {
+          "id": "c4",
+          "title": {
+            "es": "Honra a tu padre y a tu madre",
+            "en": "Honour your father and your mother",
+            "pt": "Honra teu pai e tua mãe"
+          },
+          "basis": "CIC 2196-2257",
+          "questions": [
+            {
+              "es": "¿He honrado a mis padres y a mi familia según mi estado?",
+              "en": "Have I honoured my parents and family according to my state?",
+              "pt": "Honrei os meus pais e a minha família segundo o meu estado?"
+            },
+            {
+              "es": "¿He guardado la obediencia y la caridad con los superiores y con los hermanos?",
+              "en": "Have I kept obedience and charity toward superiors and brothers?",
+              "pt": "Guardei a obediência e a caridade com os superiores e os irmãos?"
+            },
+            {
+              "es": "¿He tratado con respeto a quienes me han sido confiados en la comunidad?",
+              "en": "Have I treated with respect those entrusted to me in the community?",
+              "pt": "Tratei com respeito quem me foi confiado na comunidade?"
+            },
+            {
+              "es": "¿He cuidado la familia religiosa que el Señor me ha dado?",
+              "en": "Have I cared for the religious family the Lord has given me?",
+              "pt": "Cuidei da família religiosa que o Senhor me deu?"
+            }
+          ]
+        },
+        {
+          "id": "c5",
+          "title": {
+            "es": "No matarás",
+            "en": "You shall not kill",
+            "pt": "Não matarás"
+          },
+          "basis": "CIC 2258-2330",
+          "questions": [
+            {
+              "es": "¿He respetado la vida y la salud de los hermanos y la mía?",
+              "en": "Have I respected the life and health of my brothers and my own?",
+              "pt": "Respeitei a vida e a saúde dos irmãos e a minha?"
+            },
+            {
+              "es": "¿He sembrado paz en la comunidad y evitado la división?",
+              "en": "Have I sown peace in the community and avoided division?",
+              "pt": "Semeiei a paz na comunidade e evitei a divisão?"
+            },
+            {
+              "es": "¿He cuidado a los mayores y a los enfermos de la comunidad?",
+              "en": "Have I cared for the elderly and the sick of the community?",
+              "pt": "Cuidei dos idosos e dos doentes da comunidade?"
+            },
+            {
+              "es": "¿He sido fiel a la vida consagrada y a la entrega que prometí?",
+              "en": "Have I been faithful to consecrated life and to the gift I promised?",
+              "pt": "Fui fiel à vida consagrada e à entrega que prometi?"
+            }
+          ]
+        },
+        {
+          "id": "c6",
+          "title": {
+            "es": "No cometerás adulterio",
+            "en": "You shall not commit adultery",
+            "pt": "Não cometerás adultério"
+          },
+          "basis": "CIC 2331-2400",
+          "questions": [
+            {
+              "es": "¿He guardado la castidad consagrada con fidelidad y alegría?",
+              "en": "Have I kept consecrated chastity with faithfulness and joy?",
+              "pt": "Guardei a castidade consagrada com fidelidade e alegria?"
+            },
+            {
+              "es": "¿He tratado a todos con respeto y sin confundir la caridad con la afectividad?",
+              "en": "Have I treated all with respect and without confusing charity with affection?",
+              "pt": "Tratei todos com respeito e sem confundir a caridade com afeição?"
+            },
+            {
+              "es": "¿He sido fiel al voto de castidad en la vida cotidiana?",
+              "en": "Have I been faithful to the vow of chastity in daily life?",
+              "pt": "Fui fiel ao voto de castidade na vida cotidiana?"
+            },
+            {
+              "es": "¿He dado testimonio de la virginidad consagrada?",
+              "en": "Have I borne witness to consecrated virginity?",
+              "pt": "Dei testemunho da virgindade consagrada?"
+            }
+          ]
+        },
+        {
+          "id": "c7",
+          "title": {
+            "es": "No robarás",
+            "en": "You shall not steal",
+            "pt": "Não roubarás"
+          },
+          "basis": "CIC 2401-2463",
+          "questions": [
+            {
+              "es": "¿He sido honrado con los bienes de la comunidad?",
+              "en": "Have I been honest with the goods of the community?",
+              "pt": "Fui honesto com os bens da comunidade?"
+            },
+            {
+              "es": "¿He guardado la pobreza o la sencillez que prometí?",
+              "en": "Have I kept the poverty or simplicity I promised?",
+              "pt": "Guardei a pobreza ou a simplicidade que prometi?"
+            },
+            {
+              "es": "¿He administrado con justicia lo que se me confió?",
+              "en": "Have I administered justly what was entrusted to me?",
+              "pt": "Administrei com justiça o que me foi confiado?"
+            },
+            {
+              "es": "¿He evitado aprovecharme de mi puesto o de la confianza de otros?",
+              "en": "Have I avoided taking advantage of my position or of others' trust?",
+              "pt": "Evitei aproveitar-me do meu cargo ou da confiança dos outros?"
+            }
+          ]
+        },
+        {
+          "id": "c8",
+          "title": {
+            "es": "No darás falso testimonio",
+            "en": "You shall not bear false witness",
+            "pt": "Não darás falso testemunho"
+          },
+          "basis": "CIC 2464-2513",
+          "questions": [
+            {
+              "es": "¿He sido veraz en la comunidad y con los superiores?",
+              "en": "Have I been truthful in the community and with superiors?",
+              "pt": "Fui veraz na comunidade e com os superiores?"
+            },
+            {
+              "es": "¿He evitado la maledicencia y los rumores?",
+              "en": "Have I avoided detraction and rumours?",
+              "pt": "Evitei a maledicência e os rumores?"
+            },
+            {
+              "es": "¿He guardado la confianza y los secretos que me confiaron?",
+              "en": "Have I kept the trust and secrets entrusted to me?",
+              "pt": "Guardei a confiança e os segredos que me confiaram?"
+            },
+            {
+              "es": "¿He sido sencillo en el trato y veraz en el testimonio?",
+              "en": "Have I been straightforward in my dealings and truthful in witness?",
+              "pt": "Fui simples no trato e veraz no testemunho?"
+            }
+          ]
+        },
+        {
+          "id": "c9",
+          "title": {
+            "es": "No consentirás pensamientos ni deseos impuros",
+            "en": "You shall not consent to impure thoughts or desires",
+            "pt": "Não consentirás pensamentos nem desejos impuros"
+          },
+          "basis": "CIC 2514-2533",
+          "questions": [
+            {
+              "es": "¿He guardado la pureza del corazón y la mirada?",
+              "en": "Have I kept the purity of heart and of my gaze?",
+              "pt": "Guardei a pureza do coração e do olhar?"
+            },
+            {
+              "es": "¿He sido fiel a la castidad consagrada en lo secreto?",
+              "en": "Have I been faithful to consecrated chastity in secret?",
+              "pt": "Fui fiel à castidade consagrada no secreto?"
+            },
+            {
+              "es": "¿He cuidado lo que veo, leo y comparto?",
+              "en": "Have I guarded what I see, read and share?",
+              "pt": "Cuidei do que vejo, leio e partilho?"
+            },
+            {
+              "es": "¿He pedido la gracia de la pureza y evitado la ocasión de caer?",
+              "en": "Have I asked for the grace of purity and avoided the near occasion of sin?",
+              "pt": "Pedi a graça da pureza e evitei a ocasião de cair?"
+            }
+          ]
+        },
+        {
+          "id": "c10",
+          "title": {
+            "es": "No codiciarás los bienes ajenos",
+            "en": "You shall not covet what belongs to others",
+            "pt": "Não cobiçarás os bens alheios"
+          },
+          "basis": "CIC 2534-2557",
+          "questions": [
+            {
+              "es": "¿He vivido la pobreza o la sencillez con alegría?",
+              "en": "Have I lived poverty or simplicity with joy?",
+              "pt": "Vivi a pobreza ou a simplicidade com alegria?"
+            },
+            {
+              "es": "¿He tenido envidia de la vida o de los bienes de otros?",
+              "en": "Have I envied the life or the goods of others?",
+              "pt": "Tive inveja da vida ou dos bens dos outros?"
+            },
+            {
+              "es": "¿He deseado lo ajeno de modo desordenado?",
+              "en": "Have I desired what belongs to others in a disordered way?",
+              "pt": "Desejei o alheio de modo desordenado?"
+            },
+            {
+              "es": "¿He dado gracias por lo que Dios me ha dado?",
+              "en": "Have I given thanks for what God has given me?",
+              "pt": "Dei graças pelo que Deus me deu?"
+            }
+          ]
+        },
+        {
+          "id": "church",
+          "title": {
+            "es": "Preceptos de la Iglesia",
+            "en": "Precepts of the Church",
+            "pt": "Preceitos da Igreja"
+          },
+          "basis": "CIC 2041-2043",
+          "questions": [
+            {
+              "es": "¿He cumplido fielmente los preceptos de la Iglesia?",
+              "en": "Have I faithfully kept the precepts of the Church?",
+              "pt": "Cumpri fielmente os preceitos da Igreja?"
+            },
+            {
+              "es": "¿He dado ejemplo a los fieles en el cumplimiento de los preceptos?",
+              "en": "Have I given the faithful example in keeping the precepts?",
+              "pt": "Dei aos fiéis exemplo no cumprimento dos preceitos?"
+            },
+            {
+              "es": "¿He guardado el ayuno y la abstinencia?",
+              "en": "Have I kept the fast and abstinence?",
+              "pt": "Guardei o jejum e a abstinência?"
+            },
+            {
+              "es": "¿He sostenido a la Iglesia con la oración y el servicio?",
+              "en": "Have I supported the Church with prayer and service?",
+              "pt": "Sustentei a Igreja com a oração e o serviço?"
+            }
+          ]
+        },
+        {
+          "id": "mercy",
+          "title": {
+            "es": "Obras de misericordia y deberes del propio estado",
+            "en": "Works of mercy and the duties of one's state",
+            "pt": "Obras de misericórdia e deveres do próprio estado"
+          },
+          "basis": "CIC 2447",
+          "questions": [
+            {
+              "es": "¿He vivido las obras de misericordia en la comunidad y fuera de ella?",
+              "en": "Have I lived the works of mercy in the community and beyond it?",
+              "pt": "Vivi as obras de misericórdia na comunidade e fora dela?"
+            },
+            {
+              "es": "¿He visitado a los enfermos y a los que están solos?",
+              "en": "Have I visited the sick and those who are alone?",
+              "pt": "Visitei os doentes e os que estão sozinhos?"
+            },
+            {
+              "es": "¿He acogido al forastero y ayudado al necesitado?",
+              "en": "Have I welcomed the stranger and helped the one in need?",
+              "pt": "Acolhi o forasteiro e ajudei o necessitado?"
+            },
+            {
+              "es": "¿He consolado y perdonado a los que sufren?",
+              "en": "Have I consoled and forgiven those who suffer?",
+              "pt": "Consoliez e perdoei os que sofrem?"
+            },
+            {
+              "es": "¿He cumplido los deberes de mi estado según el carisma?",
+              "en": "Have I fulfilled the duties of my state according to my charism?",
+              "pt": "Cumpri os deveres do meu estado segundo o carisma?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
