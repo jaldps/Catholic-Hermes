@@ -61,9 +61,9 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-025](T-025.md) | Codex | CERRADO ([revisión](T-025-REVIEW.md)) | M9 · Copia de seguridad y traspaso cifrado de los datos personales |
 | [T-026](T-026.md) | Codex | CERRADO ([revisión](T-026-REVIEW.md)) | M9/M10 · Registro local de errores + higiene (código muerto, dependencias sin uso) |
 | [T-027](T-027.md) | Hermes | CERRADO ([revisión](T-027-REVIEW.md)) | M12 (contenido) · Confesión: examen de conciencia por estado de vida y guía del sacramento |
-| [T-028](T-028.md) | Codex | ABIERTO | M12.1 · Pantalla de Confesión (usa `assets/confession/`) |
-| [T-029](T-029.md) | Hermes | ABIERTO | M12.5 (contenido) · Planes: Biblia en un año y Catecismo en un año |
-| T-030 | Codex | EN COLA (tras T-028) | M12.2 · Búsqueda global y búsqueda en Orar |
+| [T-028](T-028.md) | Codex | CERRADO ([revisión](T-028-REVIEW.md)) | M12.1 · Pantalla de Confesión (usa `assets/confession/`) |
+| [T-029](T-029.md) | Hermes | CERRADO ([revisión](T-029-REVIEW.md)) | M12.5 (contenido) · Planes: Biblia en un año y Catecismo en un año |
+| [T-030](T-030.md) | Codex | ABIERTO | M12.2 · Búsqueda global |
 | T-031 | Codex | EN COLA (tras T-030) | M12.3 · «Mi camino»: unir Hábitos y Vida espiritual |
 | T-032 | Codex | EN COLA (tras T-031) | M12.4 · Widgets y avisos litúrgicos |
-| T-033 | Hermes | EN COLA (tras T-029) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
+| [T-033](T-033.md) | Hermes | ABIERTO | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
