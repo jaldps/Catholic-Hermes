@@ -68,6 +68,8 @@ class UserPreferencesStore(
     private val dataStore: DataStore<Preferences> = context.preferencesDataStore
 ) {
 
+    internal val backupDataStore: DataStore<Preferences> get() = dataStore
+
     private data class ReadSnapshot(val available: Boolean, val data: Preferences)
     private val readRevision = MutableStateFlow(0)
     @Volatile private var lastGood: Preferences? = null

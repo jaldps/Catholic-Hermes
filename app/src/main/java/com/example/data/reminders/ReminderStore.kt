@@ -38,6 +38,8 @@ class ReminderStore(
     private val context: Context,
     private val dataStore: DataStore<Preferences> = context.reminderDataStore,
 ) {
+
+    internal val backupDataStore: DataStore<Preferences> get() = dataStore
     private object Keys {
         val READ_FAILED = booleanPreferencesKey("internal_read_failed")
         val NOVENA_NAME = stringPreferencesKey("novena_name")

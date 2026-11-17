@@ -28,6 +28,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 )
 abstract class SanctaFidesDatabase : RoomDatabase() {
     abstract fun dao(): SanctaFidesDao
+    abstract fun backupDao(): BackupDao
 
     companion object {
         // The initial repository revision (edeab98) is schema 3. Revision

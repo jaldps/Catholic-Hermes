@@ -35,6 +35,8 @@ class TemptationStore(
     private val context: Context,
     private val dataStore: DataStore<Preferences> = context.temptationDataStore,
 ) {
+
+    internal val backupDataStore: DataStore<Preferences> get() = dataStore
     private fun keyFor(dateKey: String) = intPreferencesKey("temptation_count_$dateKey")
     private fun fellKeyFor(dateKey: String) = intPreferencesKey("temptation_fall_count_$dateKey")
 
