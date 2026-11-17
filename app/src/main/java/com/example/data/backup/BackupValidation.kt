@@ -51,7 +51,8 @@ internal object BackupValidation {
                         "font_size_scale", "audio_narration_speed" -> "FLOAT"
                         "last_read_question" -> "INT"
                         "read_questions_v2" -> "STRING_SET"
-                        else -> if (pref.key.startsWith("narration_voice_")) "STRING" else null
+                        else -> if (pref.key.startsWith("narration_voice_") || pref.key.startsWith("plan_done_")) "STRING"
+                            else if (pref.key.startsWith("plan_start_")) "LONG" else null
                     }
                     "temptations" -> "INT"
                     "reminders" -> when {
