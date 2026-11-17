@@ -105,6 +105,7 @@ enum class AppDestination(
     STUDY_ORDERS("Órdenes y oficios", "Orders & Offices", "Ordens e ofícios", AppIconSlot.DOCTRINE, "nav_study_orders"),
     SPIRITUAL_LIFE("Vida espiritual", "Spiritual Life", "Vida espiritual", AppIconSlot.JOURNAL, "nav_spiritual"),
     CONFESSION("Confesión", "Confession", "Confissão", AppIconSlot.PRAYERS, "nav_confession"),
+    PLANS("Planes de lectura", "Reading plans", "Planos de leitura", AppIconSlot.BIBLE, "nav_plans"),
     REMINDERS("Recordatorios", "Reminders", "Lembretes", AppIconSlot.HABITS, "nav_reminders"),
     BEGINNER("Primeros pasos", "Start here", "Primeiros passos", AppIconSlot.DOCTRINE, "nav_beginner"),
     MORE("Explorar", "Explore", "Explorar", AppIconSlot.MORE, "nav_more");
@@ -679,6 +680,14 @@ fun MainApp(
                         preferencesStore, currentLanguage, active = current == AppDestination.CONFESSION
                     )
 
+                    AppDestination.PLANS -> com.example.ui.screens.ReadingPlansRoute(
+                        store = preferencesStore,
+                        repository = repository,
+                        language = currentLanguage,
+                        onOpenBible = onOpenBible,
+                        onOpenCatechism = onOpenCatechism
+                    )
+
                     AppDestination.REMINDERS -> RemindersScreen(
                         repository = repository,
                         onBack = { pop() }
@@ -868,6 +877,7 @@ private fun moreSections(
             pick("Estudio", "Study", "Estudo"),
             listOf(
                 MoreEntry(pick("Cursos bíblicos", "Scripture courses", "Cursos bíblicos"), AppDestination.BIBLE.iconSlot, "nav_scripture_study") { open(AppDestination.BIBLE) },
+                entry(AppDestination.PLANS),
                 entry(AppDestination.CATECHISM),
                 entry(AppDestination.STUDY_DOCTRINE),
                 entry(AppDestination.STUDY_MARY_JESUS),

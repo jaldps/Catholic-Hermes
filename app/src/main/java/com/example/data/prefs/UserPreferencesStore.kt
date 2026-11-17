@@ -13,6 +13,9 @@ import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.core.stringSetPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.longPreferencesKey
+import com.example.data.repository.PlanProgress
+import com.example.data.repository.PlanProgressMath
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.data.models.AppLanguage
 import com.example.data.liturgy.CalendarRules
@@ -127,6 +130,60 @@ class UserPreferencesStore(
         val TRACK_PROGRESS = stringPreferencesKey("track_progress")
         val READ_QUESTIONS = stringSetPreferencesKey("read_questions_v2")
         val LAST_QUESTION = intPreferencesKey("last_read_question")
+    }
+
+    // ---- Reading plans: per plan id, the start epoch day (LONG) and completed days (compact STRING).
+    // Plain preference keys, so the settings backup group carries them without a schema change.
+    private fun planStartKey(id: String) = longPreferencesKey("plan_start_$id")
+    private fun planDoneKey(id: String) = stringPreferencesKey("plan_done_$id")
+    private fun requirePlanId(id: String) = require(id.matches(Regex("[a-z0-9_]{1,40}")))
+
+    private fun readPlan(prefs: Preferences, id: String) = PlanProgress(
+        startEpochDay = prefs[planStartKey(id)],
+        done = PlanProgressMath.decode(prefs[planDoneKey(id)])
+    )
+
+    /** Progress of every plan that has a start date or any completed day, by plan id. */
+    val planProgress: Flow<Map<String, PlanProgress>> = snapshots.map { snapshot ->
+        val ids = snapshot.data.asMap().keys.mapNotNull { key ->
+            when {
+                key.name.startsWith("plan_start_") -> key.name.removePrefix("plan_start_")
+                key.name.startsWith("plan_done_") -> key.name.removePrefix("plan_done_")
+                else -> null
+            }
+        }.toSet()
+        ids.associateWith { readPlan(snapshot.data, it) }
+    }
+
+    /** Starts (or re-dates) a plan; completed days are kept. */
+    suspend fun setPlanStart(id: String, epochDay: Long) {
+        requirePlanId(id)
+        editPreference("setPlanStart") { it[planStartKey(id)] = epochDay }
+    }
+
+    suspend fun setPlanDayDone(id: String, day: Int, done: Boolean) {
+        requirePlanId(id)
+        require(day in 1..3660)
+        editPreference("setPlanDayDone") { prefs ->
+            val current = PlanProgressMath.decode(prefs[planDoneKey(id)])
+            val next = if (done) current + day else current - day
+            if (next.isEmpty()) prefs.remove(planDoneKey(id)) else prefs[planDoneKey(id)] = PlanProgressMath.encode(next)
+        }
+    }
+
+    /** Moves the start so the first uncompleted day is [todayEpochDay]'s day; completed days are kept. */
+    suspend fun rebasePlan(id: String, todayEpochDay: Long, totalDays: Int) {
+        requirePlanId(id)
+        editPreference("rebasePlan") { prefs ->
+            PlanProgressMath.rebasedStart(todayEpochDay, PlanProgressMath.decode(prefs[planDoneKey(id)]), totalDays)
+                ?.let { prefs[planStartKey(id)] = it }
+        }
+    }
+
+    /** Forgets the start date and every completed day of the plan. */
+    suspend fun restartPlan(id: String) {
+        requirePlanId(id)
+        editPreference("restartPlan") { it.remove(planStartKey(id)); it.remove(planDoneKey(id)) }
     }
 
     /** Track index for a 1-based question number in the three guided tracks

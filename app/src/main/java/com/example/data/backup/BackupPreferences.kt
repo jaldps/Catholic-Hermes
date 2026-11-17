@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.*
 import com.example.data.prefs.UserPreferencesStore
+import com.example.data.repository.PlanProgressMath
 import com.example.data.reminders.ReminderStore
 import com.example.data.temptation.TemptationStore
 import kotlinx.coroutines.flow.first
@@ -46,6 +47,10 @@ class BackupPreferences(
                         p.type == "STRING_SET" && old?.type == "STRING_SET" -> p.copy(values=(old.values.orEmpty()+p.values.orEmpty()).distinct().sorted())
                         group.name == "temptations" && p.type == "INT" && old?.type == "INT" -> p.copy(value=maxOf(old.value!!.toInt(),p.value!!.toInt()).toString())
                         group.name == "shared:beginner_journey" && p.key == "step" && old?.type == "INT" -> p.copy(value=maxOf(old.value!!.toInt(),p.value!!.toInt()).toString())
+                        group.name == "settings" && p.key.startsWith("plan_done_") && old?.type == "STRING" -> p.copy(value=PlanProgressMath.encode(
+                            PlanProgressMath.decode(old.value) + PlanProgressMath.decode(p.value)))
+                        group.name == "settings" && p.key.startsWith("plan_start_") && old?.type == "LONG" ->
+                            p.copy(value=minOf(old.value!!.toLong(), p.value!!.toLong()).toString())
                         group.name == "settings" && p.key == "track_progress" -> p.copy(value=(progress(old?.value).toMutableMap().apply {
                             progress(p.value).forEach { (k,v) -> this[k]=maxOf(this[k] ?: 0,v) }
                         }).entries.sortedBy { it.key }.joinToString(",") { "${it.key}:${it.value}" })

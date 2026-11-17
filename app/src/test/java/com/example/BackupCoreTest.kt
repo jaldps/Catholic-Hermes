@@ -66,6 +66,7 @@ class BackupCoreTest {
             store.setLanguage(AppLanguage.PT);store.setDesignLanguage("SANCTUARY");store.setFontFamilyChoice("EB_GARAMOND")
             store.setFontSizeScale(1.3f);store.setReduceTransparency(true);store.setNarrationVoice("pt","leader","chosen-voice")
             store.recordTrackProgress(12)
+            store.setPlanStart("bible_year",20_000);store.setPlanDayDone("bible_year",1,true);store.setPlanDayDone("bible_year",2,true);store.setPlanDayDone("bible_year",9,true)
             temptation.recordFall(LocalDate.of(2026,11,17));temptation.recordVictory(LocalDate.of(2026,11,17))
             reminders.setEnabled("coronilla",false);reminders.setTime("coronilla",16,30);reminders.setCalendarEvent("coronilla",77)
             context.getSharedPreferences("reading_position",0).edit().putString("book_id","joh").putInt("chapter",3).commit()
@@ -106,6 +107,7 @@ class BackupCoreTest {
         assertEquals("chosen-voice",prefs.narrationVoices["pt.leader"])
         assertTrue(prefs.reduceTransparency);assertEquals(setOf(12),target.store.visitedQuestions.first())
         assertEquals(1,target.temptation.fellCounts.first()["2026-11-17"])
+        assertEquals(com.example.data.repository.PlanProgress(20_000,setOf(1,2,9)),target.store.planProgress.first()["bible_year"])
         assertFalse(target.journal.exists())
     }
 
