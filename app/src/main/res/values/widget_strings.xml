@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Labels in the system widget picker (system language). Widget content follows the app's own language. -->
+<resources>
+    <string name="widget_liturgical_day_label">Liturgical day</string>
+    <string name="widget_liturgical_day_description">Today\'s celebration, season and colour, and the Gospel reference</string>
+    <string name="widget_my_path_label">My path</string>
+    <string name="widget_my_path_description">Today\'s habits and the novena or reading plan in progress</string>
+</resources>

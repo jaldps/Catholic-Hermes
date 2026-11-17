@@ -33,6 +33,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var ttsManager: LiturgicalTtsManager
     private lateinit var backupService: com.example.data.backup.BackupService
     private var backupRecoveryFailed by mutableStateOf(false)
+    private var widgetSync: kotlinx.coroutines.Job? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -110,6 +111,9 @@ class MainActivity : ComponentActivity() {
             ttsManager.setLanguage(repository.currentLanguage.value)
             appReady = true
             com.example.data.reminders.ReminderScheduler.rescheduleAll(applicationContext, repository.currentLanguage.value.code)
+            // Home-screen widgets follow the data while the app runs (no-op when none is placed).
+            if (widgetSync == null) widgetSync = com.example.widget.AppWidgets.observe(lifecycleScope, applicationContext, dao, preferencesStore)
+            com.example.widget.AppWidgets.refreshAll(applicationContext)
         }
     }
 

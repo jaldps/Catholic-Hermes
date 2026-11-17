@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home-screen widgets: warm paper by day, warm ink by night (values-night). Body text keeps >= 4.5:1. -->
+<resources>
+    <color name="widget_surface">#FFF7F4EE</color>
+    <color name="widget_ink">#FF1E1C1A</color>
+    <color name="widget_ink_secondary">#FF5C5751</color>
+    <color name="widget_hairline">#1F1E1C1A</color>
+</resources>

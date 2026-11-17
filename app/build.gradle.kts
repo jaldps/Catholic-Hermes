@@ -91,6 +91,7 @@ android.sourceSets.getByName("test").resources.srcDir("src/main/assets/devotions
 android.sourceSets.getByName("test").resources.srcDir("src/main/assets/courses")
 android.sourceSets.getByName("test").resources.srcDir("src/main/assets/confession")
 android.sourceSets.getByName("test").resources.srcDir("src/main/assets/plans")
+android.sourceSets.getByName("test").resources.srcDir("src/main/assets/onboarding")
 
 // Some unused dependencies are commented out below instead of being removed.
 // This makes it easy to add them back in the future if needed.

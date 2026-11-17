@@ -21,6 +21,7 @@ import androidx.compose.material.icons.outlined.Palette
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Translate
 import androidx.compose.material.icons.outlined.TextFields
+import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material.icons.sharp.Palette
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.Icon
@@ -360,6 +361,23 @@ fun MainApp(
             }
         }
     }
+    /**
+     * «Para ti hoy» and the welcome suggestions. Every reviewed BIBLE suggestion is the Gospel of the day, which lives on the
+     * Read tab's daily-Mass page; the other destinations open as the search opens them («Mi camino» sections included).
+     */
+    fun openSuggestion(destination: AppDestination) {
+        when (destination) {
+            AppDestination.BIBLE -> {
+                bibleInitialBook = null; bibleInitialChapter = null; bibleInitialVerse = null; bibleInitialTab = 1
+                go(AppDestination.BIBLE)
+            }
+            AppDestination.PRAYERS -> {
+                prayersInitialPrayerId = null; prayersInitialTab = 0; prayersInitialNightTab = 0; prayersInitialOpenChaplet = false
+                go(AppDestination.PRAYERS)
+            }
+            else -> openSection(destination)
+        }
+    }
     fun openFromSearch(target: SearchTarget) {
         when (target) {
             is SearchTarget.Prayer -> {
@@ -405,6 +423,8 @@ fun MainApp(
     }
     var showCustomizerModal by remember { mutableStateOf(false) }
     var showFontPicker by remember { mutableStateOf(false) }
+    var showJourneyChoice by rememberSaveable { mutableStateOf(false) }
+    val journey by com.example.ui.screens.rememberJourney()
 
     // Screens the search can open by name; the titles are the destinations' own.
     val searchSections = remember(currentLanguage) {
@@ -590,6 +610,7 @@ fun MainApp(
                         onOpenFontPicker = { showFontPicker = true },
                         onNavigateToMore = { go(AppDestination.MORE) },
                         onOpenBeginner = { go(AppDestination.BEGINNER) },
+                        onOpenSuggestion = { openSuggestion(it) },
                         onNavigateToHabits = { openHabits() },
                         onOpenTemptations = { openHabits(temptations = true) },
                         onOpenDailyVerse = { bookId, chapter, verseStart ->
@@ -952,6 +973,13 @@ fun MainApp(
                                     icon = Icons.Outlined.TextFields
                                 ),
                                 MoreEntry(
+                                    title = when (currentLanguage) { AppLanguage.ES -> "Tu camino"; AppLanguage.EN -> "Your path"; AppLanguage.PT -> "Seu caminho" },
+                                    subtitle = when (currentLanguage) { AppLanguage.ES -> "Perfil y tiempo para hoy"; AppLanguage.EN -> "Profile and time for today"; AppLanguage.PT -> "Perfil e tempo para hoje" },
+                                    value = if (journey.welcomed) com.example.ui.screens.journeyProfileShort(currentLanguage, journey.profile) else null,
+                                    iconSlot = AppIconSlot.MORE, tag = "settings_welcome_profile",
+                                    onOpen = { showJourneyChoice = true }, icon = Icons.Outlined.Tune
+                                ),
+                                MoreEntry(
                                     title = when (currentLanguage) { AppLanguage.ES -> "Enviar informe de errores"; AppLanguage.EN -> "Send error report"; AppLanguage.PT -> "Enviar relatório de erros" },
                                     iconSlot = AppIconSlot.MORE, tag = "error_report_entry", onOpen = { showErrorReport = true }, icon = Icons.Outlined.BugReport
                                 ),
@@ -998,6 +1026,19 @@ fun MainApp(
             id == "coronilla" -> openRosary(1)
             id == "night_prayer" -> { prayersInitialTab = 2; prayersInitialNightTab = 2; go(AppDestination.PRAYERS) }
             id == "daily_reading" -> { bibleInitialTab = 1; go(AppDestination.BIBLE) }
+            // Liturgical notices and widgets: `notice:<source>:<destination>` (T-032).
+            id.startsWith(com.example.data.notices.NoticeScheduler.OPEN_PREFIX) -> {
+                val action = com.example.data.notices.NoticeScheduler.actionOf(id)
+                when (val target = AppDestination.entries.firstOrNull { it.name == action } ?: AppDestination.HOME) {
+                    AppDestination.HOME -> go(AppDestination.HOME)
+                    // A notice's Gospel or reading opens the day's Mass readings.
+                    AppDestination.BIBLE -> {
+                        bibleInitialBook = null; bibleInitialChapter = null; bibleInitialVerse = null; bibleInitialTab = 1
+                        go(AppDestination.BIBLE)
+                    }
+                    else -> openSection(target)
+                }
+            }
         }
         onReminderConsumed()
     }
@@ -1033,6 +1074,10 @@ fun MainApp(
             },
             onDismissRequest = { showLanguageSelector = false }
         )
+    }
+
+    if (showJourneyChoice) {
+        com.example.ui.screens.JourneyChoiceSheet(currentLanguage) { showJourneyChoice = false }
     }
 
     if (showFontPicker) {

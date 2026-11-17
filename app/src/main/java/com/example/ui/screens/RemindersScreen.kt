@@ -400,6 +400,19 @@ fun RemindersScreen(
                 ))
             }
 
+            // Liturgical notices (T-032): Tiempo litúrgico · Fiestas · Recordatorios, all OFF until turned on.
+            item(key = "notices") {
+                NoticeSettingsSection(
+                    lang = lang,
+                    onFirstEnable = {
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && !hasNotificationPermission()) {
+                            notificationLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                        }
+                    },
+                    onSaved = { toast = it }
+                )
+            }
+
             item(key = "novena") {
                 Column(
                     Modifier
@@ -768,7 +781,7 @@ private fun ActiveNovena(novena: NovenaState, lang: AppLanguage, onFinish: () ->
 }
 
 @Composable
-private fun NotificationPreview(title: String, body: String, time: String) {
+internal fun NotificationPreview(title: String, body: String, time: String) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
@@ -833,7 +846,7 @@ private const val WheelRepeat = 200
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun TimeWheel(
+internal fun TimeWheel(
     hour: Int,
     minute: Int,
     is24h: Boolean,
