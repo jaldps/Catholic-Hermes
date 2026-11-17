@@ -1,5 +1,17 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.20
+
+[Descargar Catholic Hermes 1.8.20](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.20.apk) · versión `1.8.20`, código 29. **Actualiza 1.8.1–1.8.19** y conserva el progreso.
+
+Novedades:
+- **Mi camino** (Explorar): Hábitos y Vida espiritual quedan en un solo lugar.
+  - Un resumen del día: hábitos, días seguidos de fidelidad, plan de lectura y novenas en curso.
+  - Las secciones de siempre: Hábitos, Diario, Tentaciones y victorias, Prácticas y Confesión.
+  - No se quitó nada.
+
+[Metadatos](../docs/quality/release-1.8.20/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.19
 
 [Descargar Catholic Hermes 1.8.19](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.19.apk) · versión `1.8.19`, código 28. **Actualiza 1.8.1–1.8.18** y conserva el progreso.
