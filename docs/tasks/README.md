@@ -66,4 +66,4 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-030](T-030.md) | Coordinador (Sonnet local; Codex sin cuota hasta el 21-nov) | EN CURSO | M12.2 · Búsqueda global |
 | T-031 | Codex | EN COLA (tras T-030) | M12.3 · «Mi camino»: unir Hábitos y Vida espiritual |
 | T-032 | Codex | EN COLA (tras T-031) | M12.4 · Widgets y avisos litúrgicos |
-| [T-033](T-033.md) | Hermes | ABIERTO | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
+| [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |

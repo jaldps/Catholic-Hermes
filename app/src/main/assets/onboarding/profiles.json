@@ -4,9 +4,9 @@
       "id": "exploring",
       "index": 0,
       "welcome": {
-        "es": "Bienvenido. Aquí no hace falta saber nada: empieza por donde quieras y ve a tu ritmo.",
+        "es": "Te damos la bienvenida. Aquí no hace falta saber nada: empieza por donde quieras y ve a tu ritmo.",
         "en": "Welcome. You do not need to know anything here: start wherever you like and go at your own pace.",
-        "pt": "Bem-vindo. Aqui não é preciso saber nada: comece por onde quiser e vá no seu ritmo."
+        "pt": "Que bom ter você aqui. Aqui não é preciso saber nada: comece por onde quiser e vá no seu ritmo."
       },
       "description": {
         "es": "En esta app encontrarás oraciones, la Biblia, el Catecismo y lugares para aprender. Puedes leer sin compromiso, probar una oración corta o conocer a los santos. Todo está en tu idioma y puedes cambiar de idea cuando quieras.",
@@ -200,14 +200,14 @@
           "destination": "SAINTS",
           "minutes": 10,
           "title": {
-            "es": "Santos que también volvieron",
-            "en": "Saints who also came back",
-            "pt": "Santos que também voltaram"
+            "es": "Conocer la vida de un santo",
+            "en": "Meet a saint",
+            "pt": "Conhecer a vida de um santo"
           },
           "why": {
-            "es": "Vidas de santos que pasaron por alejamientos y regresos, para compañía.",
-            "en": "Lives of saints who went through distance and return, for company.",
-            "pt": "Vidas de santos que passaram por afastamentos e retornos, para companhia."
+            "es": "Historias reales de personas que buscaron a Dios entre caídas y comienzos, para hacerte compañía.",
+            "en": "Real stories of people who sought God through falls and new beginnings, to keep you company.",
+            "pt": "Histórias reais de pessoas que buscaram a Deus entre quedas e recomeços, para lhe fazer companhia."
           }
         }
       ]
@@ -321,9 +321,9 @@
           "destination": "SAINTS",
           "minutes": 10,
           "title": {
-            "es": "Santos y oficios",
-            "en": "Saints and offices",
-            "pt": "Santos e ofícios"
+            "es": "Los santos del calendario",
+            "en": "Saints of the calendar",
+            "pt": "Os santos do calendário"
           },
           "why": {
             "es": "Maestros de vida cristiana para imitar lo que de verdad conviene.",
