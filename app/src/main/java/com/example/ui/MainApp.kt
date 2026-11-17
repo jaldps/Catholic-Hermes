@@ -104,6 +104,7 @@ enum class AppDestination(
     SAINTS("Santos", "Saints", "Santos", AppIconSlot.DOCTRINE, "nav_saints"),
     STUDY_ORDERS("Órdenes y oficios", "Orders & Offices", "Ordens e ofícios", AppIconSlot.DOCTRINE, "nav_study_orders"),
     SPIRITUAL_LIFE("Vida espiritual", "Spiritual Life", "Vida espiritual", AppIconSlot.JOURNAL, "nav_spiritual"),
+    CONFESSION("Confesión", "Confession", "Confissão", AppIconSlot.PRAYERS, "nav_confession"),
     REMINDERS("Recordatorios", "Reminders", "Lembretes", AppIconSlot.HABITS, "nav_reminders"),
     BEGINNER("Primeros pasos", "Start here", "Primeiros passos", AppIconSlot.DOCTRINE, "nav_beginner"),
     MORE("Explorar", "Explore", "Explorar", AppIconSlot.MORE, "nav_more");
@@ -280,11 +281,12 @@ fun MainApp(
     val tabs = AppDestination.tabs
     val isPushed = stack.isNotEmpty() || current !in tabs
 
+    val compactNavigation = androidx.compose.ui.platform.LocalConfiguration.current.screenWidthDp <= 360
     val largeNavigationText = LocalAppTextStyles.current.navLabel.fontSize.value * androidx.compose.ui.platform.LocalDensity.current.fontScale > 18f
     val navItems = tabs.map { destination ->
         val (resting, active) = AppIcons.pair(destination.iconSlot)
         AppNavItem(
-            label = if (destination == AppDestination.MORE && largeNavigationText) when (currentLanguage) {
+            label = if (destination == AppDestination.MORE && (largeNavigationText || compactNavigation)) when (currentLanguage) {
                 AppLanguage.ES -> "Más"; AppLanguage.EN -> "More"; AppLanguage.PT -> "Mais"
             } else destination.tabLabel(currentLanguage),
             icon = resting,
@@ -669,7 +671,12 @@ fun MainApp(
                         dao = dao,
                         ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
-                        initialTab = spiritualLifeInitialTab
+                        initialTab = spiritualLifeInitialTab,
+                        onOpenConfession = { go(AppDestination.CONFESSION) }
+                    )
+
+                    AppDestination.CONFESSION -> com.example.ui.confession.ConfessionRoute(
+                        preferencesStore, currentLanguage, active = current == AppDestination.CONFESSION
                     )
 
                     AppDestination.REMINDERS -> RemindersScreen(
@@ -876,7 +883,8 @@ private fun moreSections(
             listOf(
                 entry(AppDestination.HABITS_VIRTUES),
                 entry(AppDestination.SPIRITUAL_LIFE)
-                    .copy(icon = Icons.Outlined.AutoStories)
+                    .copy(icon = Icons.Outlined.AutoStories),
+                entry(AppDestination.CONFESSION)
             )
         ),
         MoreSection(

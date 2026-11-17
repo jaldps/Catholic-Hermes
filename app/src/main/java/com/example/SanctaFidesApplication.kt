@@ -8,6 +8,7 @@ class SanctaFidesApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         com.example.data.diagnostics.AppLog.initialize(this)
+        com.example.data.repository.ConfessionCatalog.install(this)
         NovenaCatalog.install(this)
         PrayerDetailsCatalog.install(this)
         com.example.data.repository.QuestionDeeperCatalog.install(this)
