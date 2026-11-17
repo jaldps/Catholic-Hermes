@@ -59,3 +59,5 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-023](T-023.md) | Hermes | CERRADO ([revisión](T-023-REVIEW.md)) | M8 · Curso D (Los Salmos, escuela de oración) → `assets/courses/track_psalms_prayer.json` |
 | [T-024](T-024.md) | Codex | CERRADO ([revisión](T-024-REVIEW.md)) | M8 · Curso E (San Pablo y la vida en Cristo) → `assets/courses/track_paul_life_in_christ.json` |
 | [T-025](T-025.md) | Codex | CERRADO ([revisión](T-025-REVIEW.md)) | M9 · Copia de seguridad y traspaso cifrado de los datos personales |
+| [T-026](T-026.md) | Codex | ABIERTO | M9/M10 · Registro local de errores + higiene (código muerto, dependencias sin uso) |
+| [T-027](T-027.md) | Hermes | ABIERTO | M12 (contenido) · Confesión: examen de conciencia por estado de vida y guía del sacramento |
