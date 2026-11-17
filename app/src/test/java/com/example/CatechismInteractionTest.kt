@@ -180,11 +180,14 @@ class CatechismInteractionTest {
     @Test fun backPopsOnePageAtATime() {
         show()
         tag("catechism_part_2").performClick()
-        waitForTag("catechism_section_1066")
-        tag("catechism_section_1210").performClick()
+        waitForTag("ccc_node_p2s2")
+        tag("ccc_node_p2s2").performClick()
+        waitForTag("ccc_read_p2s2")
+        tag("ccc_read_p2s2").performClick()
         waitForTag("catechism_article_1210")
         pressBack()
-        waitForTag("catechism_section_1210")
+        // The part page comes back with its section still unfolded.
+        waitForTag("ccc_read_p2s2")
         pressBack()
         waitForTag("catechism_part_2")
     }

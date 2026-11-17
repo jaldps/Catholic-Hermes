@@ -116,6 +116,27 @@ class ReadingPlansUiTest {
         compose.waitUntil(15_000) { compose.onAllNodesWithTag("catechism_screen").fetchSemanticsNodes().isNotEmpty() }
     }
 
+    @Test fun catechismDaysNameTheDivisionOfTheBookTheyBelongTo() {
+        launch { s, now -> s.setPlanStart("catechism_year", now) }
+        compose.onNodeWithTag("plan_card_catechism_year").performClick()
+        waitFor("plan_reading_0")
+        // Day 1 (§§ 1–8) is the Prologue.
+        compose.onNodeWithText("CIC 1–8", useUnmergedTree = true).assertExists()
+        compose.onNodeWithText("Prólogo", useUnmergedTree = true).assertExists()
+        // Day 153 (§§ 1217–1224) lies inside the article on Baptism.
+        compose.onNodeWithTag("plan_day_picker").performScrollToNode(hasTestTag("plan_day_153"))
+        compose.onNodeWithTag("plan_day_153").performClick()
+        compose.onNodeWithText("CIC 1217–1224", useUnmergedTree = true).assertExists()
+        compose.onNodeWithText("El sacramento del Bautismo", useUnmergedTree = true).assertExists()
+        // Day 161 (§§ 1281–1288) crosses from Baptism into Confirmation: both are named, joined with a dot.
+        compose.onNodeWithTag("plan_day_picker").performScrollToNode(hasTestTag("plan_day_161"))
+        compose.onNodeWithTag("plan_day_161").performClick()
+        compose.onNodeWithText("El sacramento del Bautismo · El sacramento de la Confirmación", useUnmergedTree = true).assertExists()
+        // The reading still opens the Catechism at its first paragraph.
+        compose.onNodeWithTag("plan_reading_0").performClick()
+        compose.waitUntil(15_000) { compose.onAllNodesWithTag("catechism_article_1281").fetchSemanticsNodes().isNotEmpty() }
+    }
+
     @Test fun restartNeedsConfirmation() {
         launch { s, now -> s.setPlanStart("bible_year", now); s.setPlanDayDone("bible_year", 1, true) }
         compose.onNodeWithTag("plan_card_bible_year").performClick()

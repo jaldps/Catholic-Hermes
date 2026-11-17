@@ -29,6 +29,7 @@ enum class LogEvent(val tag: String, val description: String) {
     CONFESSION_CATALOG("Assets", "Confession catalog could not be read"),
     COURSE_CATALOG("Assets", "Study course catalog could not be read"),
     PLAN_CATALOG("Assets", "Reading plan catalog could not be read"),
+    CATECHISM_STRUCTURE("Assets", "Catechism structure could not be read; using the outline"),
     NOTICE_CATALOG("Assets", "Liturgical notice catalog could not be read"),
     ONBOARDING_CATALOG("Assets", "Onboarding catalog could not be read"),
     NOVENA_PROVENANCE("Assets", "Novena provenance could not be read"),

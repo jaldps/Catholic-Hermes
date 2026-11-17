@@ -108,6 +108,14 @@ class CatechismScreenshotTest {
         compose.waitForIdle()
     }
 
+    /** Part 2 › Section 2 › Chapter 1 › Article 3 (the Eucharist, §§ 1322–1419), through the contents tree. */
+    private fun openEucharist() {
+        tap("catechism_part_2"); waitFor("ccc_node_p2s2")
+        tap("ccc_node_p2s2"); waitFor("ccc_node_p2s2c1")
+        tap("ccc_node_p2s2c1"); waitFor("ccc_node_p2s2c1a3")
+        tap("ccc_node_p2s2c1a3"); waitFor("catechism_article_1322")
+    }
+
     private val repo by lazy { CatholicDataRepository(context) }
     private val biggestGroup by lazy { compendiumGroups(repo.compendiumQAEntries).maxBy { it.size } }
 
@@ -121,8 +129,8 @@ class CatechismScreenshotTest {
             type("ccc_search_input", "zzqxv")
             waitFor("ccc_search_empty")
         },
-        "part" to { tap("catechism_part_2"); waitFor("catechism_section_1322") },
-        "part_scrolled" to { tap("catechism_part_2"); waitFor("catechism_section_1322"); scrollTo("catechism_key_1324") },
+        "part" to { tap("catechism_part_2"); waitFor("ccc_node_p2s2") },
+        "part_scrolled" to { tap("catechism_part_2"); waitFor("ccc_node_p2s2"); scrollTo("catechism_key_1324") },
         "reader_focus" to {
             type("ccc_search_input", "1324")
             waitFor("catechism_search_result_1324")
@@ -130,17 +138,14 @@ class CatechismScreenshotTest {
             waitFor("catechism_article_1324")
         },
         "reader" to {
-            tap("catechism_part_2"); waitFor("catechism_section_1322")
-            tap("catechism_section_1322"); waitFor("catechism_article_1322")
+            openEucharist()
         },
         "reader_scrolled" to {
-            tap("catechism_part_2"); waitFor("catechism_section_1322")
-            tap("catechism_section_1322"); waitFor("catechism_article_1322")
+            openEucharist()
             scrollTo("catechism_article_1340")
         },
         "reader_end" to {
-            tap("catechism_part_2"); waitFor("catechism_section_1322")
-            tap("catechism_section_1322"); waitFor("catechism_article_1322")
+            openEucharist()
             scrollTo("paragraph_next_button")
         },
         "reader_prologue" to { tap("catechism_part_0"); waitFor("catechism_article_1") },

@@ -17,6 +17,7 @@ class SanctaFidesApplication : Application() {
         com.example.data.repository.DevotionsCatalog.install(this)
         com.example.data.repository.StudyCoursesCatalog.install(this)
         com.example.data.repository.ReadingPlansCatalog.install(this)
+        com.example.data.repository.CatechismStructureCatalog.install(this)
         com.example.data.notices.NoticesCatalog.install(this)
         com.example.data.repository.OnboardingCatalog.install(this)
     }
