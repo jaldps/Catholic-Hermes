@@ -643,6 +643,14 @@ private fun LessonDetailView(
                             onClick = { onOpenCatechism(source.catechismStart) },
                             tag = "study_source_${source.id}"
                         )
+                    } else if (source.url != null && source.url.get(currentLanguage).startsWith("https://")) {
+                        // Other documents: the official page opens outside the app, which the arrow signals.
+                        val uriHandler = androidx.compose.ui.platform.LocalUriHandler.current
+                        AppSecondaryCapsule(
+                            label = source.title.get(currentLanguage) + " \u2197",
+                            onClick = { runCatching { uriHandler.openUri(source.url.get(currentLanguage)) } },
+                            tag = "study_source_${source.id}"
+                        )
                     } else Text(source.title.get(currentLanguage), style = styles.footnote, color = p.textSecondary)
                 }
             }

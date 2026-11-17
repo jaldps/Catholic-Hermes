@@ -128,6 +128,7 @@ import androidx.compose.ui.layout.boundsInRoot
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import com.example.ui.design.AppSheet
 import com.example.ui.design.AppStatusBarGlyphs
+import com.example.ui.design.alphaMask
 import com.example.ui.design.lumenGlass
 import com.example.ui.design.lumenPress
 import com.example.ui.design.rememberAssetBitmap
@@ -1293,7 +1294,9 @@ fun RosaryScreen(
                     prayer()
                 }
                 Column(
-                    Modifier.fillMaxWidth().background(p.canvasBottom).testTag("prayer_transport")
+                    Modifier.fillMaxWidth()
+                        .then(if (design.isSanctuary || design.reduceTransparency || design.highContrast) Modifier.background(p.canvasBottom) else Modifier)
+                        .testTag("prayer_transport")
                         .then(if (design.isSanctuary) Modifier.drawBehind {
                             drawLine(p.separator, androidx.compose.ui.geometry.Offset.Zero,
                                 androidx.compose.ui.geometry.Offset(size.width, 0f), 1.dp.toPx())
@@ -1373,9 +1376,23 @@ private fun MysteryStage(
     // full colour and never gets a lift. Paintings are not lifted in light mode;
     // a scrim behind the top control keeps the status bar legible instead.
     val isMercyArt = assetPath?.endsWith("divine_mercy.jpg") == true
+    val dissolves = !(design.isSanctuary || design.reduceTransparency || design.highContrast)
     Box(
         modifier
-            .background(canvas)
+            .then(if (dissolves) Modifier.alphaMask {
+                // Clear painting down to the label, then it dissolves into the ambient light.
+                val labelTop = labelTopPx().takeIf { it > 0f && it < size.height } ?: size.height
+                val start = (labelTop - (if (isMercyArt) 60 else 48).dp.toPx()).coerceAtLeast(size.height * 0.30f)
+                val end = (labelTop + (if (isMercyArt) 26 else 56).dp.toPx()).coerceAtMost(size.height)
+                val a = (start / size.height).coerceIn(0f, 0.98f)
+                val b = (end / size.height).coerceIn(a + 0.01f, 1f)
+                Brush.verticalGradient(
+                    0f to Color.Black, a to Color.Black,
+                    (a + (b - a) * 0.4f) to Color.Black.copy(alpha = 0.58f),
+                    (a + (b - a) * 0.75f) to Color.Black.copy(alpha = 0.18f),
+                    b to Color.Transparent, 1f to Color.Transparent
+                )
+            } else Modifier.background(canvas))
             .testTag("rosary_hero_photo")
             .semantics {
                 if (credit != null) {
@@ -1457,6 +1474,7 @@ private fun MysteryStage(
                         ),
                         size = androidx.compose.ui.geometry.Size(size.width, veil)
                     )
+                    if (dissolves) return@drawBehind
                     val labelTop = labelTopPx().takeIf { it > 0f && it < size.height } ?: size.height
                     // Clear painting down to the label, dissolving under its first line.
                     val start = (labelTop - (if (isMercyArt) 52 else 36).dp.toPx()).coerceAtLeast(size.height * 0.30f)

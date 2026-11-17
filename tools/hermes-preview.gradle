@@ -1,8 +1,8 @@
 // Catholic Hermes 1.8.x preview: stable separate package installable beside 1.7 and 1.8.
 // Usage: ./gradlew -I tools/hermes-preview.gradle :app:assembleDebug
 // Production applicationId, signing and version stay untouched.
-def HERMES_VERSION_CODE = 21
-def HERMES_VERSION_NAME = '1.8.12'
+def HERMES_VERSION_CODE = 23
+def HERMES_VERSION_NAME = '1.8.14'
 
 gradle.beforeProject { project ->
     project.pluginManager.withPlugin('com.android.application') {

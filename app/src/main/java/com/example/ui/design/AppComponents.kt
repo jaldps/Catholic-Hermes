@@ -17,7 +17,7 @@ import com.example.ui.theme.LocalAppDesign
 @Composable
 @ReadOnlyComposable
 fun appKit(): AppKit = when (LocalAppDesign.current.language) {
-    DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.SANCTUARY -> LumenKit
+    DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> LumenKit
 }
 
 // Screens call these. They carry the default arguments an interface cannot, and

@@ -211,5 +211,35 @@
     "year": "c. 1821–1822",
     "license": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:Wiesen_bei_Greifswald_(1821-1822)_-_Caspar_David_Friedrich_(Hamburger_Kunsthalle).jpg"
+  },
+  "saints.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.36,
+    "tone": "light",
+    "title": "Adoration of the Trinity (Landauer Altarpiece)",
+    "artist": "Albrecht Dürer",
+    "year": "1511",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_(Landauer_Altar)_-_Google_Art_Project.jpg"
+  },
+  "begin.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.12,
+    "tone": "dark",
+    "title": "The Light of the World",
+    "artist": "William Holman Hunt",
+    "year": "1851–1852",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hunt-light-of-the-world.jpeg"
+  },
+  "john.jpg": {
+    "focusX": 0.6,
+    "focusY": 0.22,
+    "tone": "dark",
+    "title": "Saint John the Evangelist on Patmos",
+    "artist": "Diego Velázquez",
+    "year": "1619–1620",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_018_(John_the_Evangelist_from_Patmos).jpg"
   }
 }

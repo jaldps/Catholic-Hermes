@@ -154,10 +154,10 @@ object AppTypographyFactory {
             lineHeightStyle = tightLineHeight
         )
 
-        val display = style(44.0, 48.0, FontWeight.Normal, -1.0)
-        val largeTitle = style(34.0, 40.0, FontWeight.Normal, -0.6)
-        val title1 = style(28.0, 34.0, FontWeight.Normal, -0.4)
-        val title2 = style(22.0, 28.0, FontWeight.Medium, -0.2)
+        val display = style(44.0, 48.0, FontWeight.SemiBold, -1.5)
+        val largeTitle = style(34.0, 40.0, FontWeight.SemiBold, -1.0)
+        val title1 = style(28.0, 34.0, FontWeight.SemiBold, -0.7)
+        val title2 = style(22.0, 28.0, FontWeight.SemiBold, -0.4)
         val title3 = style(20.0, 25.0, FontWeight.SemiBold, -0.3)
         val headline = style(17.0, 22.0, FontWeight.SemiBold, -0.2)
         val body = style(17.0, 24.0, FontWeight.Normal, -0.2)

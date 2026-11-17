@@ -89,6 +89,11 @@ class FontPreferencesTest {
                 data.edit { it[stringPreferencesKey("design_language")] = legacyId }
                 assertEquals("LUMEN", store.preferences.first().designLanguage)
             }
+            // Every selectable identity must persist (regression: Cristal was saved as Lumen).
+            for (identity in com.example.ui.theme.DesignLanguage.selectable) {
+                store.setDesignLanguage(identity.id)
+                assertEquals(identity.id, store.preferences.first().designLanguage)
+            }
             store.setDesignLanguage("SANCTUARY")
             val appearance = store.preferences.first()
             assertEquals("SANCTUARY", appearance.designLanguage)

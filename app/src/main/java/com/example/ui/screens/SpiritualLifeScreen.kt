@@ -444,7 +444,7 @@ private fun SpiritualHub(
                 AppDetailHeader(
                     title = language.pick("Vida espiritual", "Spiritual life", "Vida espiritual"),
                     assetPath = hero,
-                    imageHeight = 180.dp
+                    root = true
                 )
             }
             item(key = "life_practices") {
@@ -566,7 +566,7 @@ private fun SectionTitle(text: String, top: androidx.compose.ui.unit.Dp = LocalA
     val design = LocalAppDesign.current
     Text(
         text,
-        style = LocalAppTextStyles.current.headline,
+        style = LocalAppTextStyles.current.title3,
         color = design.palette.textPrimary,
         modifier = Modifier
             .padding(horizontal = design.spacing.gutter)

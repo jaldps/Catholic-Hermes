@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.lifecycleScope
@@ -68,7 +69,14 @@ class MainActivity : ComponentActivity() {
             val preferences = storedPreferences
             if (!appReady || preferences == null) return@setContent
 
+            // The day's liturgical colour lights the whole app (Liturgical Dynamic tint).
+            val today by repository.currentDate.collectAsState()
+            val liturgicalColorHex = remember(today) {
+                runCatching { repository.getLiturgicalDay(today, includeText = false).liturgicalColorHex }.getOrNull()
+            }
+
             SanctaFidesTheme(
+                liturgicalColorHex = liturgicalColorHex,
                 designLanguage = preferences.designLanguage,
                 themePreset = preferences.themePreset,
                 darkModeSetting = preferences.darkModeSetting,

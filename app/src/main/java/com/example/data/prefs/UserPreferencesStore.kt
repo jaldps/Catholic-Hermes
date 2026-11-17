@@ -243,6 +243,7 @@ class UserPreferencesStore(
 
     private fun canonicalDesign(id: String?): String = when (id) {
         "SANCTUARY", "VATICAN" -> "SANCTUARY"
+        "GLASS" -> "GLASS"
         else -> UserPreferences.DEFAULT_DESIGN_LANGUAGE
     }
 

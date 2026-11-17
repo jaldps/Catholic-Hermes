@@ -86,7 +86,7 @@ internal fun RootHeader(spec: RootSpec) {
             title = spec.title,
             assetPath = spec.asset,
             eyebrow = spec.eyebrow,
-            imageHeight = 280.dp,
+            root = true,
             titleTag = "doctrine_title"
         )
     }
@@ -161,7 +161,10 @@ fun DoctrineAndHistoryScreen(
     val saveable = rememberSaveableStateHolder()
     val spec = rootSpec(initialTopTab, currentLanguage, repository)
 
-    CompositionLocalProvider(LocalBottomPad provides insets.calculateBottomPadding() + 24.dp) {
+    CompositionLocalProvider(
+        LocalBottomPad provides insets.calculateBottomPadding() + 24.dp,
+        LocalReaderArt provides spec.asset
+    ) {
         Box(modifier.fillMaxSize().testTag("doctrine_and_history_screen")) {
             AnimatedContent(
                 targetState = stack,

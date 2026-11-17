@@ -51,6 +51,11 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-015](T-015.md) | Hermes | CERRADO ([revisión](T-015-REVIEW.md)) | Las 8 novenas pendientes de T-008, con las fuentes elegidas por el usuario (EWTN, CEH, devocionario, ipray…) → cuerpos 269–276 y `provenance/new-d.json` |
 | [T-016](T-016.md) | Codex | CERRADO ([revisión](T-016-REVIEW.md)) | M6 · ~60 órdenes nuevas + fichas ampliadas de todas → `assets/orders/orders-new.json`, `orders-details.json` |
 | [T-017](T-017.md) | Hermes | CERRADO ([revisión](T-017-REVIEW.md)) | M6 · ~30 cargos y ministerios nuevos → `assets/orders/offices-new.json` |
-| [T-018](T-018.md) | Codex | ABIERTO (auditoría integrada; faltan nuevas, [revisión](T-018-REVIEW.md)) | M7 · Devociones marianas: auditoría de 30 + ~25 nuevas → `assets/devotions/marian-*.json` |
+| [T-018](T-018.md) | Codex | CERRADO ([revisión](T-018-REVIEW.md)) | M7 · Devociones marianas: auditoría de 30 + ~25 nuevas → `assets/devotions/marian-*.json` |
 | [T-019](T-019.md) | Hermes | ABIERTO (cambios pedidos, [revisión](T-019-REVIEW.md)) | M7 · Devociones de Cristo: auditoría de 20 + ~20 nuevas → `assets/devotions/christ-*.json` |
-| [T-020](T-020.md) | Polish | ABIERTO | Pulido visual (Lumen/Sanctuary, claro/oscuro, 320 dp, 130 %): Santos, Órdenes, Devociones, Voz de lectura, Novenas |
+| [T-020](T-020.md) | Diseño | CERRADO ([revisión](T-020-REVIEW.md)) | Rediseño Liquid Glass de Lumen, identidad Cristal, cabezal único, luz litúrgica |
+| [T-021](T-021.md) | Polish | ABIERTO | Pulido visual sobre el rediseño (3 identidades, claro/oscuro, 320 dp, 130 %) |
+| [T-022](T-022.md) | Codex | CERRADO ([revisión](T-022-REVIEW.md)) | M8 · Cursos B (Jesús y el misterio pascual) y C (Historia de la salvación) → `assets/courses/` |
+| [T-023](T-023.md) | Hermes | CERRADO ([revisión](T-023-REVIEW.md)) | M8 · Curso D (Los Salmos, escuela de oración) → `assets/courses/track_psalms_prayer.json` |
+| [T-024](T-024.md) | Codex | CERRADO ([revisión](T-024-REVIEW.md)) | M8 · Curso E (San Pablo y la vida en Cristo) → `assets/courses/track_paul_life_in_christ.json` |
+| [T-025](T-025.md) | Codex | ABIERTO | M9 · Copia de seguridad y traspaso cifrado de los datos personales |

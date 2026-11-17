@@ -28,3 +28,15 @@ Completa `marian-new.json` (~25 nuevas) con el mismo rigor.
 En `miracles` de **Guadalupe**, **Lepanto**, **Altagracia** y **Akita** había frases dirigidas al editor y no al lector, como «Se retiran los números de conversiones…» o «Se retira el relato…». Se quitaron esas frases en ES/EN/PT, y se conserva solo la parte informativa.
 
 Lo que retires o por qué lo retiras va en el REPORT, nunca en el texto que lee el usuario.
+
+## Revisión final (`409cca0`) · CERRADO
+
+- **Validador:** `details` da 30 entradas y 0 errores; `new` da 25 entradas y 0 errores.
+- **Promesas recuperadas** como citas literales breves con edición y lugar:
+  - Guadalupe: *Nican Mopohua* 119, traducción de Velázquez (1926).
+  - Fátima: *Memórias* de la hermana Lucía, cuarta memoria, 13-VII-1917.
+  - Medalla Milagrosa: relato de santa Catalina Labouré, en la edición citada.
+
+  Correcto.
+- **Muestreo de nuevas:** Quinche, Covadonga, Beauraing, Virgen de la Paz y Desatanudos son prudentes y con fuentes primarias. No hay frases dirigidas al editor.
+- **Integración:** merge en `CatholicGPT`. Los tests de devociones pasan.

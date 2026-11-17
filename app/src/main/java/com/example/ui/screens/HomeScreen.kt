@@ -362,8 +362,6 @@ fun HomeScreen(
                 assetPath = heroAsset,
                 title = strings("Hoy", "Today", "Hoje"),
                 eyebrow = dateEyebrow,
-                height = 212.dp,
-                overlap = 24.dp,
                 modifier = Modifier.testTag("screen_header_illustration")
             ) {
                 AppGlassIconButton(

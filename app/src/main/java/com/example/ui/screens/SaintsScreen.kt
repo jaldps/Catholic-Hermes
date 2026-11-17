@@ -1,6 +1,17 @@
 package com.example.ui.screens
 
-import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.ArrowBack
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.semantics.clearAndSetSemantics
+import com.example.ui.design.AppBackHandler
+import com.example.ui.design.AppDetailHeader
+import com.example.ui.design.AppEdgeToEdge
+import com.example.ui.design.appScreenInsets
+import com.example.ui.design.appDockInset
+import com.example.ui.design.AppHeroHeader
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -81,7 +92,7 @@ fun SaintsScreen(currentLanguage: AppLanguage, modifier: Modifier = Modifier) {
     val selected = selectedKey?.let { k -> saintCelebrations().firstOrNull { it.key == k } }
 
     if (selected != null) {
-        BackHandler { selectedKey = null }
+        AppBackHandler { selectedKey = null }
         SaintDetail(selected, profiles[selected.key], currentLanguage, { selectedKey = null }, modifier)
     } else {
         SaintsList(profiles, currentLanguage, { selectedKey = it }, modifier)
@@ -95,6 +106,7 @@ private fun SaintsList(
     onOpen: (String) -> Unit,
     modifier: Modifier
 ) {
+    AppEdgeToEdge()
     val design = LocalAppDesign.current
     val gutter = design.spacing.gutter
     var query by rememberSaveable { mutableStateOf("") }
@@ -115,33 +127,39 @@ private fun SaintsList(
     val monthLabel = if (month == 0) tr("Todos los meses", "All months", "Todos os meses") else saintMonthName(month, language)
 
     LazyColumn(
-        modifier = modifier.fillMaxSize().testTag("saints_screen"),
-        contentPadding = PaddingValues(bottom = 96.dp)
+        // The header reaches the top edge; scroll-to and keyboard focus stop
+        // above the floating dock, where rows can be tapped.
+        modifier = modifier.fillMaxSize().padding(bottom = appScreenInsets().calculateBottomPadding()).testTag("saints_screen"),
+        contentPadding = PaddingValues(bottom = 32.dp)
     ) {
         item(key = "title") {
-            AppScreenTitle(
+            AppHeroHeader(
+                assetPath = "heroes/lumen/saints.jpg",
                 title = tr("Santos", "Saints", "Santos"),
-                subtitle = tr("Calendario Romano General", "General Roman Calendar", "Calendário Romano Geral")
+                eyebrow = tr("Calendario Romano General", "General Roman Calendar", "Calendário Romano Geral")
             )
+            Spacer(Modifier.height(6.dp))
         }
         item(key = "filters") {
-            Column(Modifier.padding(horizontal = gutter), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 AppSearchField(
                     value = query,
                     onValueChange = { query = it },
                     placeholder = tr("Buscar un santo", "Search for a saint", "Buscar um santo"),
                     modifier = Modifier.fillMaxWidth().testTag("saints_search")
                 )
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Row(
+                    Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = gutter),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
                     AppMenuChip(
                         label = monthLabel,
                         tag = "saints_month_picker",
                         items = listOf(AppMenuItem(tr("Todos los meses", "All months", "Todos os meses"), selected = month == 0, tag = "saints_month_0") { month = 0 }) +
                             (1..12).map { m -> AppMenuItem(saintMonthName(m, language), selected = month == m, tag = "saints_month_$m") { month = m } }
                     )
-                }
-                if (profiles.isNotEmpty()) {
-                    Row {
+                    if (profiles.isNotEmpty()) {
                         AppChip(
                             label = tr("Solo con ficha", "With profile only", "Só com ficha"),
                             selected = profilesOnly,
@@ -150,6 +168,7 @@ private fun SaintsList(
                         )
                     }
                 }
+                Spacer(Modifier.height(6.dp))
             }
         }
         if (visible.isEmpty()) {
@@ -167,8 +186,8 @@ private fun SaintsList(
                     AppSectionHeader(title = saintMonthName(m, language), modifier = Modifier.testTag("saints_month_header_$m"))
                 }
                 item(key = "group_$m") {
-                    AppListGroup(Modifier.padding(horizontal = gutter)) {
-                        entries.forEachIndexed { i, c ->
+                    AppListGroup {
+                        entries.forEach { c ->
                             val has = c.key in profiles
                             AppListRow(
                                 title = c.title.get(language),
@@ -177,9 +196,9 @@ private fun SaintsList(
                                 onClick = if (has) ({ onOpen(c.key) }) else null,
                                 modifier = Modifier.testTag("saint_row_${c.key}")
                             )
-                            if (i < entries.lastIndex) AppDivider()
                         }
                     }
+                    Spacer(Modifier.height(design.spacing.cardGap))
                 }
             }
         }
@@ -203,50 +222,48 @@ private fun SaintDetail(
     val quote = profile?.quote
     val quoteText = quote?.text?.get(language).orEmpty()
 
+    val gutter = design.spacing.gutter
+    val card = Modifier.fillMaxWidth().padding(horizontal = gutter).widthIn(max = design.spacing.readingMaxWidth + gutter * 2)
     LazyColumn(
         modifier = modifier.fillMaxSize().testTag("saint_detail"),
-        contentPadding = PaddingValues(bottom = 96.dp)
+        contentPadding = PaddingValues(bottom = appScreenInsets().calculateBottomPadding() + 32.dp),
+        verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
     ) {
         item {
-            Column(Modifier.padding(horizontal = design.spacing.gutter).widthIn(max = design.spacing.readingMaxWidth)) {
-                Spacer(Modifier.height(8.dp))
-                Row { AppSecondaryButton(tr("Todos los santos", "All saints", "Todos os santos"), onBack, modifier = Modifier.testTag("saint_detail_back")) }
-                Spacer(Modifier.height(16.dp))
-                Text(
-                    celebration.title.get(language), style = styles.title1, color = palette.textPrimary,
-                    modifier = Modifier.semantics { heading() }
-                )
+            AppDetailHeader(
+                title = celebration.title.get(language),
+                assetPath = "heroes/lumen/saints.jpg",
+                eyebrow = saintDateLabel(celebration.month, celebration.day, language) + " · " + celebration.rank.displayName.get(language)
+            )
+            Row(Modifier.padding(horizontal = gutter).padding(top = 4.dp)) {
+                AppSecondaryButton(tr("Todos los santos", "All saints", "Todos os santos"), onBack, leadingIcon = Icons.AutoMirrored.Outlined.ArrowBack, modifier = Modifier.testTag("saint_detail_back"))
+            }
+        }
+        if (bio.isNotBlank()) item {
+            AppCard(card) { Text(bio, style = styles.body, color = palette.textPrimary) }
+        }
+        if (patronages.isNotEmpty()) item {
+            AppCard(card) {
+                Text(tr("Patronazgos", "Patronage", "Padroados"), style = styles.headline, color = palette.textPrimary, modifier = Modifier.semantics { heading() })
                 Spacer(Modifier.height(6.dp))
-                Text(
-                    saintDateLabel(celebration.month, celebration.day, language) + " · " + celebration.rank.displayName.get(language),
-                    style = styles.subhead, color = palette.textSecondary
-                )
-                if (bio.isNotBlank()) {
-                    Spacer(Modifier.height(20.dp))
-                    Text(bio, style = styles.body, color = palette.textPrimary)
-                }
-                if (patronages.isNotEmpty()) {
-                    Spacer(Modifier.height(20.dp))
-                    Text(tr("Patronazgos", "Patronage", "Padroados"), style = styles.headline, color = palette.textPrimary, modifier = Modifier.semantics { heading() })
-                    Spacer(Modifier.height(6.dp))
-                    Text(patronages.joinToString(" · "), style = styles.callout, color = palette.textSecondary, modifier = Modifier.testTag("saint_patronages"))
-                }
-                if (quote != null && quoteText.isNotBlank()) {
-                    Spacer(Modifier.height(20.dp))
-                    AppCard(Modifier.fillMaxWidth().testTag("saint_quote")) {
-                        Text(quoteText, style = styles.quote, color = palette.textPrimary)
-                        Spacer(Modifier.height(8.dp))
-                        Text(quote.source, style = styles.footnote, color = palette.textSecondary)
-                    }
-                }
-                val sources = profile?.sources.orEmpty()
-                if (sources.isNotEmpty()) {
-                    Spacer(Modifier.height(20.dp))
-                    Text(tr("Fuentes", "Sources", "Fontes"), style = styles.headline, color = palette.textPrimary, modifier = Modifier.semantics { heading() })
-                    Spacer(Modifier.height(6.dp))
-                    Column(Modifier.testTag("saint_sources"), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                        sources.forEach { Text(it, style = styles.footnote, color = palette.textSecondary) }
-                    }
+                Text(patronages.joinToString(" · "), style = styles.callout, color = palette.textSecondary, modifier = Modifier.testTag("saint_patronages"))
+            }
+        }
+        if (quote != null && quoteText.isNotBlank()) item {
+            AppCard(card.testTag("saint_quote")) {
+                Text("\u201C", style = styles.display, color = palette.accent, modifier = Modifier.height(34.dp).clearAndSetSemantics { })
+                Text(quoteText, style = styles.quote, color = palette.textPrimary)
+                Spacer(Modifier.height(10.dp))
+                Text(quote.source, style = styles.footnote, color = palette.textSecondary)
+            }
+        }
+        val sources = profile?.sources.orEmpty()
+        if (sources.isNotEmpty()) item {
+            Column(Modifier.padding(horizontal = gutter + 4.dp).padding(top = 6.dp).widthIn(max = design.spacing.readingMaxWidth)) {
+                Text(tr("Fuentes", "Sources", "Fontes"), style = styles.eyebrow, color = palette.textSecondary, modifier = Modifier.semantics { heading() })
+                Spacer(Modifier.height(6.dp))
+                Column(Modifier.testTag("saint_sources"), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    sources.forEach { Text(it, style = styles.footnote, color = palette.textSecondary) }
                 }
             }
         }

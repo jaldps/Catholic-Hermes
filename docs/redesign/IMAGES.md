@@ -32,6 +32,9 @@ Per-image focus point and tone (for cropping and scrims) live in each folder's `
 | `parishes.jpg` | Chartres Cathedral | Jean-Baptiste Camille Corot | 1830 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Corot_-_La_cath%C3%A9drale_de_Chartres._RF_1614.jpg) | cropped to remove canvas edges and signature |
 | `news.jpg` | View of Rome: The Bridge and Castel Sant'Angelo with the Cupola of St. Peter's | Jean-Baptiste Camille Corot | 1826–1827 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:View_of_Rome_-_The_Bridge_and_Castel_Sant%27Angelo_with_the_Cupola_of_St._Peter%27s.jpg) |  |
 | `explore.jpg` | Meadows near Greifswald | Caspar David Friedrich | c. 1821–1822 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Wiesen_bei_Greifswald_(1821-1822)_-_Caspar_David_Friedrich_(Hamburger_Kunsthalle).jpg) |  |
+| `saints.jpg` | Adoration of the Trinity (Landauer Altarpiece) | Albrecht Dürer | 1511 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_(Landauer_Altar)_-_Google_Art_Project.jpg) | Saints header (T-020) |
+| `begin.jpg` | The Light of the World | William Holman Hunt | 1851–1852 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Hunt-light-of-the-world.jpeg) | Start here header (T-020); cropped to the figure |
+| `john.jpg` | Saint John the Evangelist on Patmos | Diego Velázquez | 1619–1620 | Public domain | [Commons](https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_018_(John_the_Evangelist_from_Patmos).jpg) | Gospel of John card on the Bible tab (T-020) |
 
 ## Rosary mysteries: `app/src/main/assets/heroes/mysteries/`
 

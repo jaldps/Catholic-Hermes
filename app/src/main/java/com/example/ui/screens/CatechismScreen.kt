@@ -676,7 +676,7 @@ private fun MeasureColumn(
     }
 }
 
-/** A section header: `headline`, with an optional quiet eyebrow line above it. */
+/** A section header: `title3` like every other screen, with an optional quiet eyebrow line above it. */
 @Composable
 private fun CatSectionHeader(text: String, modifier: Modifier = Modifier, eyebrow: String? = null) {
     val design = LocalAppDesign.current
@@ -686,13 +686,13 @@ private fun CatSectionHeader(text: String, modifier: Modifier = Modifier, eyebro
         modifier
             .fillMaxWidth()
             .padding(horizontal = design.spacing.gutter)
-            .padding(bottom = 10.dp)
+            .padding(bottom = 12.dp)
     ) {
         if (eyebrow != null) {
             Text(eyebrow, style = styles.footnote, color = p.textSecondary)
             Spacer(Modifier.height(2.dp))
         }
-        Text(text, style = styles.headline, color = p.textPrimary, modifier = Modifier.semantics { heading() })
+        Text(text, style = styles.title3, color = p.textPrimary, modifier = Modifier.semantics { heading() })
     }
 }
 
@@ -949,7 +949,7 @@ private fun CccIndexPage(
                 title = lang.pick("Catecismo", "Catechism", "Catecismo"),
                 assetPath = "heroes/lumen/catechism.jpg",
                 meta = lang.pick("de la Iglesia Católica", "of the Catholic Church", "da Igreja Católica"),
-                imageHeight = 220.dp,
+                root = true,
                 modifier = Modifier.testTag("catechism_hero_photo")
             )
         }
