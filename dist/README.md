@@ -1,5 +1,16 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.16
+
+[Descargar Catholic Hermes 1.8.16](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.16.apk) · versión `1.8.16`, código 25. **Actualiza 1.8.1–1.8.15** y conserva el progreso.
+
+Novedades:
+- **Copia de seguridad cifrada** (Explorar → Ajustes): exporta e importa tu diario, hábitos, novenas en curso, progreso y preferencias en un archivo protegido con tu contraseña.
+- **La narración sigue con la pantalla apagada**, con controles en la pantalla de bloqueo; se pausa con llamadas o música (y se puede continuar), se detiene al desconectar los auriculares, y tiene **temporizador de apagado** (Apariencia → Voz de lectura).
+- **Devociones de Cristo revisadas** y **18 nuevas**, cada una con su imagen.
+
+[Metadatos](../docs/quality/release-1.8.16/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.15
 
 [Descargar Catholic Hermes 1.8.15](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.15.apk) · versión `1.8.15`, código 24. **Actualiza 1.8.1–1.8.14** y conserva el progreso.
