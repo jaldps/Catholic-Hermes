@@ -283,7 +283,7 @@ fun millisUntilNextDay(now: LocalDateTime): Long =
  * after midnight are written to the new day and the ring resets.
  */
 @Composable
-private fun rememberToday(): LocalDate {
+internal fun rememberToday(): LocalDate {
     var today by remember { mutableStateOf(LocalDate.now()) }
     val lifecycle = LocalLifecycleOwner.current.lifecycle
     DisposableEffect(lifecycle) {
@@ -349,7 +349,12 @@ fun HabitsAndVirtuesScreen(
     /** A Home shortcut opens the existing support page without changing any records. */
     initialOpenTemptations: Boolean = false,
     /** Read the existing explanation of sin and sacramental confession. */
-    onOpenSinAndConfession: (() -> Unit)? = null
+    onOpenSinAndConfession: (() -> Unit)? = null,
+    /**
+     * «Mi camino» opens the temptation page as a section of its own: back from it leaves to the caller
+     * rather than falling through to the habits list.
+     */
+    onExitTemptations: (() -> Unit)? = null
 ) {
     val insets = AppEdgeToEdge()
     val design = LocalAppDesign.current
@@ -396,6 +401,7 @@ fun HabitsAndVirtuesScreen(
 
     fun closePage() {
         ttsManager.stop()
+        if (page == HabitsPage.TEMPTATION && onExitTemptations != null) { onExitTemptations(); return }
         page = if (page == HabitsPage.GUIDE) HabitsPage.TEMPTATION else HabitsPage.ROOT
     }
     AppBackHandler(enabled = page != HabitsPage.ROOT && page != HabitsPage.REMINDERS) { closePage() }

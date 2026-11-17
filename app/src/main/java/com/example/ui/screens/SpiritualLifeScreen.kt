@@ -218,6 +218,12 @@ private const val PAGE_STATIONS = 2
 private const val PAGE_CHANT = 3
 
 /**
+ * Which part of the inner life the hub page shows. [ALL] is the whole screen as it has always been;
+ * «Mi camino» shows the journal ([JOURNAL]) and the practices ([PRACTICES]) as two sections of its own.
+ */
+enum class SpiritualFocus { ALL, JOURNAL, PRACTICES }
+
+/**
  * The inner life: a journal, with the Way of the Cross, a faith quiz and
  * Gregorian chant one tap away.
  *
@@ -234,7 +240,8 @@ fun SpiritualLifeScreen(
     currentLanguage: AppLanguage,
     initialTab: Int = 0,
     modifier: Modifier = Modifier,
-    onOpenConfession: () -> Unit = {}
+    onOpenConfession: () -> Unit = {},
+    focus: SpiritualFocus = SpiritualFocus.ALL
 ) {
     AppEdgeToEdge()
     val design = LocalAppDesign.current
@@ -344,6 +351,7 @@ fun SpiritualLifeScreen(
 
                 else -> SpiritualHub(
                     listState = hubListState,
+                    focus = focus,
                     entries = journal,
                     filterIndex = filterIndex,
                     onFilter = { filterIndex = it },
@@ -411,11 +419,12 @@ fun SpiritualLifeScreen(
 
 // ----------------------------------------------------------------------- hub
 
-private data class Practice(val label: String, val icon: androidx.compose.ui.graphics.vector.ImageVector, val page: Int)
+private data class Practice(val label: String, val icon: androidx.compose.ui.graphics.vector.ImageVector, val page: Int, val subtitle: String)
 
 @Composable
 private fun SpiritualHub(
     listState: androidx.compose.foundation.lazy.LazyListState,
+    focus: SpiritualFocus,
     entries: List<JournalEntryEntity>?,
     filterIndex: Int,
     onFilter: (Int) -> Unit,
@@ -432,10 +441,16 @@ private fun SpiritualHub(
     val dock = appDockInset()
     val hero = rememberFirstAsset("heroes/lumen/spiritual.jpg", "heroes/sunrise_mountains.jpg")
     val practices = listOf(
-        Practice(language.pick("Vía Crucis", "Stations of the Cross", "Via-Sacra"), LumenGlyphs.cross, PAGE_STATIONS),
-        Practice(language.pick("Preguntas de fe", "Faith quiz", "Quiz da fé"), Icons.Outlined.Quiz, PAGE_QUIZ),
-        Practice(language.pick("Canto gregoriano", "Gregorian chant", "Canto gregoriano"), Icons.Outlined.MusicNote, PAGE_CHANT)
+        Practice(language.pick("Vía Crucis", "Stations of the Cross", "Via-Sacra"), LumenGlyphs.cross, PAGE_STATIONS,
+            language.pick("Las estaciones, con meditación y oración", "The stations, with meditation and prayer", "As estações, com meditação e oração")),
+        Practice(language.pick("Preguntas de fe", "Faith quiz", "Quiz da fé"), Icons.Outlined.Quiz, PAGE_QUIZ,
+            language.pick("Preguntas para repasar la fe", "Questions to review the faith", "Perguntas para rever a fé")),
+        Practice(language.pick("Canto gregoriano", "Gregorian chant", "Canto gregoriano"), Icons.Outlined.MusicNote, PAGE_CHANT,
+            language.pick("Cantos para escuchar", "Chants to listen to", "Cantos para ouvir"))
     )
+
+    val showJournal = focus != SpiritualFocus.PRACTICES
+    val showPractices = focus != SpiritualFocus.JOURNAL
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
@@ -445,22 +460,38 @@ private fun SpiritualHub(
         ) {
             item(key = "life_header") {
                 AppDetailHeader(
-                    title = language.pick("Vida espiritual", "Spiritual life", "Vida espiritual"),
+                    title = when (focus) {
+                        SpiritualFocus.JOURNAL -> language.pick("Diario", "Journal", "Diário")
+                        SpiritualFocus.PRACTICES -> language.pick("Prácticas", "Practices", "Práticas")
+                        SpiritualFocus.ALL -> language.pick("Vida espiritual", "Spiritual life", "Vida espiritual")
+                    },
                     assetPath = hero,
                     root = true
                 )
             }
-            item(key = "confession_entry") {
+            if (showJournal) item(key = "confession_entry") {
                 com.example.ui.design.AppSecondaryButton(
                     language.pick("Confesión", "Confession", "Confissão"), onOpenConfession,
                     modifier = Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).testTag("spiritual_confession_entry")
                 )
             }
-            item(key = "life_practices") {
+            if (showPractices) item(key = "life_practices") {
                 Column {
-                    SectionTitle(language.pick("Prácticas", "Practices", "Práticas"), top = 0.dp)
+                    if (focus == SpiritualFocus.ALL) SectionTitle(language.pick("Prácticas", "Practices", "Práticas"), top = 0.dp)
                     Box(Modifier.testTag("spiritual_life_learn_picker")) {
-                        AppGrid(practices, columns = 3) { practice, cell ->
+                        if (focus == SpiritualFocus.PRACTICES) {
+                            // Its own section: a list, so the names and what they hold read in full at any text size.
+                            com.example.ui.design.AppListGroup(Modifier.padding(horizontal = design.spacing.gutter)) {
+                                practices.forEach { practice ->
+                                    com.example.ui.design.AppListRow(
+                                        title = practice.label,
+                                        subtitle = practice.subtitle,
+                                        leadingIcon = practice.icon,
+                                        onClick = { onOpenPage(practice.page) }
+                                    )
+                                }
+                            }
+                        } else AppGrid(practices, columns = 3) { practice, cell ->
                             AppCategoryTile(
                                 label = practice.label,
                                 icon = practice.icon,
@@ -472,14 +503,15 @@ private fun SpiritualHub(
                 }
             }
 
-            item(key = "journal_title") {
+            if (showJournal) item(key = "journal_title") {
                 val granted = entries?.count { it.isAnswered } ?: 0
                 Column(
                     Modifier
                         .padding(horizontal = design.spacing.gutter)
                         .padding(top = design.spacing.sectionGap)
                 ) {
-                    Text(language.pick("Diario", "Journal", "Diário"), style = styles.headline, color = p.textPrimary)
+                    // Inside «Mi camino» the header already says «Diario».
+                    if (focus == SpiritualFocus.ALL) Text(language.pick("Diario", "Journal", "Diário"), style = styles.headline, color = p.textPrimary)
                     if (!entries.isNullOrEmpty()) {
                         Spacer(Modifier.height(2.dp))
                         Text(
@@ -492,7 +524,7 @@ private fun SpiritualHub(
                 }
             }
 
-            when {
+            if (showJournal) when {
                 entries == null -> {
                     items(2, key = { "journal_skeleton_$it" }) { JournalSkeleton() }
                 }
@@ -543,7 +575,7 @@ private fun SpiritualHub(
             }
         }
 
-        if (!entries.isNullOrEmpty()) {
+        if (showJournal && !entries.isNullOrEmpty()) {
             Box(
                 Modifier
                     .align(Alignment.BottomCenter)

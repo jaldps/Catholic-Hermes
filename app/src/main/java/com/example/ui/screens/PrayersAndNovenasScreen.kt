@@ -323,13 +323,7 @@ fun PrayersAndNovenasScreen(
         if (dao != null) PersonalDataCommands.submit("novena-import") { dao.importLegacyNovenaDays(legacyExtras) }
     }
     val startedOn = remember(persistedProgress) { persistedProgress.filter { it.startDate > 0L }.associate { it.novenaId to it.startDate } }
-    val daysPrayed = remember(persistedProgress, daySnapshot, imported) {
-        if (imported) daySnapshot.filter { it.novenaId != null && it.dayNumber != null }.groupBy { it.novenaId!! }.mapValues { (_, days) -> days.map { it.dayNumber!! }.toSet() }
-        else {
-            val first = persistedProgress.associate { it.novenaId to decodeNovenaDays(it.currentDay) }
-            (first.keys + legacyExtras.keys).associateWith { first[it].orEmpty() + legacyExtras[it].orEmpty() }
-        }
-    }
+    val daysPrayed = remember(persistedProgress, daySnapshot, imported) { novenaDaysPrayed(persistedProgress, daySnapshot, legacyExtras) }
     fun toggleNovenaDay(novena: Novena, day: Int) {
         val target = dao ?: return
         val id = novena.id
@@ -2855,6 +2849,22 @@ internal fun encodeNovenaDays(days: Set<Int>): Int =
 
 internal fun decodeNovenaDays(mask: Int): Set<Int> =
     (1..31).filterTo(mutableSetOf()) { mask and (1 shl (it - 1)) != 0 }
+
+/**
+ * Days prayed per novena. Once the legacy import has run (the snapshot carries its marker row) the day table is the
+ * only source; before that, the old bitmask and the long-novena preferences are read.
+ */
+internal fun novenaDaysPrayed(
+    persisted: List<NovenaProgressEntity>,
+    snapshot: List<com.example.data.local.NovenaDaySnapshotRow>,
+    legacyExtras: Map<String, Set<Int>>
+): Map<String, Set<Int>> =
+    if (snapshot.isNotEmpty()) snapshot.filter { it.novenaId != null && it.dayNumber != null }
+        .groupBy { it.novenaId!! }.mapValues { (_, days) -> days.map { it.dayNumber!! }.toSet() }
+    else {
+        val first = persisted.associate { it.novenaId to decodeNovenaDays(it.currentDay) }
+        (first.keys + legacyExtras.keys).associateWith { first[it].orEmpty() + legacyExtras[it].orEmpty() }
+    }
 
 /** Days > 31 of long novenas, keyed by novena id ("32,33,40"). */
 internal class NovenaExtraDaysStore(context: Context) {
