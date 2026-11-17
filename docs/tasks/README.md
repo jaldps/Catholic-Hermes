@@ -58,4 +58,4 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-022](T-022.md) | Codex | CERRADO ([revisión](T-022-REVIEW.md)) | M8 · Cursos B (Jesús y el misterio pascual) y C (Historia de la salvación) → `assets/courses/` |
 | [T-023](T-023.md) | Hermes | CERRADO ([revisión](T-023-REVIEW.md)) | M8 · Curso D (Los Salmos, escuela de oración) → `assets/courses/track_psalms_prayer.json` |
 | [T-024](T-024.md) | Codex | CERRADO ([revisión](T-024-REVIEW.md)) | M8 · Curso E (San Pablo y la vida en Cristo) → `assets/courses/track_paul_life_in_christ.json` |
-| [T-025](T-025.md) | Codex | ABIERTO | M9 · Copia de seguridad y traspaso cifrado de los datos personales |
+| [T-025](T-025.md) | Codex | CERRADO ([revisión](T-025-REVIEW.md)) | M9 · Copia de seguridad y traspaso cifrado de los datos personales |
