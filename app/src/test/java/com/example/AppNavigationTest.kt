@@ -138,9 +138,14 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("catechism_screen").assertIsDisplayed()
         pressBackToMore()
 
-        // Practices is a secondary screen and returns to its Explore origin.
-        clickMoreRow("nav_habits")
+        // «Mi camino» replaced the two Explore rows: a section is reached from its hub, and back returns to the hub,
+        // then to Explore.
+        clickMoreRow("nav_my_path")
+        compose.onNodeWithTag("my_path_screen").assertIsDisplayed()
+        compose.onNodeWithTag("my_path_section_habits").performScrollTo().performClick()
         compose.onNodeWithTag("habits_and_virtues_screen").assertIsDisplayed()
+        compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
+        compose.onNodeWithTag("my_path_screen").assertIsDisplayed()
         pressBackToMore()
 
         goToMoreFromHome()

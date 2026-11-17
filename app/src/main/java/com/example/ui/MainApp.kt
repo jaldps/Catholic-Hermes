@@ -62,6 +62,7 @@ import com.example.data.liturgy.SeasonalMarianPrayer
 import com.example.data.search.GlobalSearch
 import com.example.data.search.SearchSection
 import com.example.data.search.SearchTarget
+import com.example.ui.design.AppBackHandler
 import com.example.ui.design.AppIconSlot
 import com.example.ui.design.AppIcons
 import com.example.ui.design.AppNavItem
@@ -72,6 +73,10 @@ import com.example.ui.screens.DoctrineAndHistoryScreen
 import com.example.ui.screens.HabitsAndVirtuesScreen
 import com.example.ui.screens.HomeScreen
 import com.example.ui.screens.MoreEntry
+import com.example.ui.screens.MyPathHub
+import com.example.ui.screens.MyPathSection
+import com.example.ui.screens.MyPathSwitcher
+import com.example.ui.screens.SpiritualFocus
 import com.example.ui.screens.MoreScreen
 import com.example.ui.screens.MoreSection
 import com.example.ui.screens.ParishFinderScreen
@@ -93,6 +98,7 @@ enum class AppDestination(
 ) {
     HOME("Hoy", "Today", "Hoje", AppIconSlot.HOME, "nav_home"),
     HABITS_VIRTUES("Hábitos y Virtudes", "Habits & Virtues", "Hábitos e Virtudes", AppIconSlot.HABITS, "nav_habits"),
+    MY_PATH("Mi camino", "My path", "Meu caminho", AppIconSlot.HABITS, "nav_my_path"),
     BIBLE("Leer", "Read", "Ler", AppIconSlot.BIBLE, "nav_bible"),
     CATECHISM("Catecismo", "Catechism", "Catecismo", AppIconSlot.CATECHISM, "nav_catechism"),
     ROSARY("Rosario", "Rosary", "Terço", AppIconSlot.ROSARY, "nav_rosary"),
@@ -116,6 +122,17 @@ enum class AppDestination(
     MORE("Explorar", "Explore", "Explorar", AppIconSlot.MORE, "nav_more");
 
     companion object {
+        /**
+         * The destinations «Mi camino» absorbed, and the section each one opens. They keep existing as names for deep
+         * links, the global search, welcome suggestions and notices, but never as a screen of their own.
+         */
+        fun myPathSectionFor(destination: AppDestination): MyPathSection? = when (destination) {
+            MY_PATH -> MyPathSection.HUB
+            HABITS_VIRTUES -> MyPathSection.HABITS
+            SPIRITUAL_LIFE -> MyPathSection.DIARY
+            else -> null
+        }
+
         /**
          * What the tab bar carries. Habits sits next to Prayers as a
          * first-class tab, and [MORE] (with Settings) is the sixth tab;
@@ -195,13 +212,20 @@ fun MainApp(
     // A real back stack, saved across rotation and process death: pushing
     // from a pushed screen (101 Questions → Catechism) pops back to it, and
     // the tab bar highlights the tab at the bottom of the stack.
-    var currentName by rememberSaveable { mutableStateOf(initialDestination.name) }
+    var currentName by rememberSaveable {
+        mutableStateOf(if (AppDestination.myPathSectionFor(initialDestination) != null) AppDestination.MY_PATH.name else initialDestination.name)
+    }
+    var myPathSection by rememberSaveable {
+        mutableStateOf((AppDestination.myPathSectionFor(initialDestination) ?: MyPathSection.HUB).name)
+    }
     var stackNames by rememberSaveable {
         mutableStateOf(if (initialDestination in AppDestination.tabs) "" else AppDestination.MORE.name)
     }
-    val current = AppDestination.valueOf(currentName)
+    // A stored name of an absorbed destination is the hub: «Mi camino» is the only screen they have.
+    fun screenOf(name: String) = AppDestination.valueOf(name).let { if (AppDestination.myPathSectionFor(it) != null) AppDestination.MY_PATH else it }
+    val current = screenOf(currentName)
     val screenStateHolder = rememberSaveableStateHolder()
-    val stack = stackNames.split(',').filter { it.isNotEmpty() }.map { AppDestination.valueOf(it) }
+    val stack = stackNames.split(',').filter { it.isNotEmpty() }.map { screenOf(it) }
     val origin = stack.firstOrNull { it in AppDestination.tabs }
         ?: if (current in AppDestination.tabs) current else AppDestination.MORE
     // Deep links that only the global search sets. Every other way into a screen must start from none, so
@@ -216,22 +240,39 @@ fun MainApp(
         saintsInitialKey = null; studyInitialEntry = null; prayersInitialNovenaId = null
         bibleInitialLesson = null; plansInitialId = null
     }
-    fun go(destination: AppDestination) {
-        if (destination == current) return
-        clearSearchLinks()
-        stackNames = if (destination in AppDestination.tabs) "" else (stack + current).joinToString(",") { it.name }
-        currentName = destination.name
-    }
+    // «Mi camino»: the section on show, the Practices page a deep link opens (0 = the list, 1 quiz, 2 Stations, 3 chant),
+    // whether the reader came down from the hub (back returns to it) or arrived by a link (back leaves to the caller),
+    // and ids that give every arrival (entryId) and every hub choice (sectionId) a fresh first page.
     var spiritualLifeInitialTab by rememberSaveable { mutableIntStateOf(0) }
-    var habitsInitialOpenTemptations by rememberSaveable { mutableStateOf(false) }
-    var habitsEntryId by rememberSaveable { mutableIntStateOf(0) }
+    var myPathFromHub by rememberSaveable { mutableStateOf(false) }
+    var myPathEntryId by rememberSaveable { mutableIntStateOf(0) }
+    var myPathSectionId by rememberSaveable { mutableIntStateOf(0) }
+    fun enterMyPath(section: MyPathSection, practicesTab: Int = 0) {
+        if (current != AppDestination.MY_PATH) screenStateHolder.removeState("${AppDestination.MY_PATH.name}:$myPathEntryId")
+        myPathSection = section.name
+        spiritualLifeInitialTab = practicesTab
+        myPathFromHub = false
+        myPathEntryId++
+        myPathSectionId++
+    }
+    fun go(destination: AppDestination) {
+        // Hábitos y Virtudes and Vida espiritual are sections of «Mi camino» now; opening either by name lands there.
+        val absorbed = AppDestination.myPathSectionFor(destination)
+        if (absorbed != null && destination != AppDestination.MY_PATH) enterMyPath(absorbed)
+        val target = if (absorbed != null) AppDestination.MY_PATH else destination
+        if (target == current) return
+        clearSearchLinks()
+        stackNames = if (target in AppDestination.tabs) "" else (stack + current).joinToString(",") { it.name }
+        currentName = target.name
+    }
     fun openHabits(temptations: Boolean = false) {
-        if (current != AppDestination.HABITS_VIRTUES) {
-            screenStateHolder.removeState("${AppDestination.HABITS_VIRTUES.name}:$habitsEntryId:$habitsInitialOpenTemptations")
-        }
-        habitsInitialOpenTemptations = temptations
-        habitsEntryId++
-        go(AppDestination.HABITS_VIRTUES)
+        enterMyPath(if (temptations) MyPathSection.TEMPTATIONS else MyPathSection.HABITS)
+        go(AppDestination.MY_PATH)
+    }
+    /** Home's shortcuts: 0 the journal, 1 the faith quiz, 2 the Way of the Cross, 3 Gregorian chant. */
+    fun openSpiritual(tab: Int) {
+        enterMyPath(if (tab == 0) MyPathSection.DIARY else MyPathSection.PRACTICES, practicesTab = tab)
+        go(AppDestination.MY_PATH)
     }
     var doctrineInitialEntry by rememberSaveable { mutableStateOf<String?>(null) }
     var bibleInitialTab by rememberSaveable { mutableIntStateOf(0) }
@@ -300,6 +341,8 @@ fun MainApp(
         when (destination) {
             AppDestination.ROSARY -> openRosary(0)
             AppDestination.HABITS_VIRTUES -> openHabits()
+            AppDestination.SPIRITUAL_LIFE -> openSpiritual(0)
+            AppDestination.MY_PATH -> { enterMyPath(MyPathSection.HUB); go(AppDestination.MY_PATH) }
             AppDestination.BIBLE -> {
                 bibleInitialBook = null; bibleInitialChapter = null; bibleInitialVerse = null; bibleInitialTab = 0
                 pushOnSearch(destination)
@@ -311,7 +354,6 @@ fun MainApp(
             else -> {
                 if (destination == AppDestination.QUESTIONS) questionsInitialIndex = null
                 if (destination == AppDestination.CATECHISM) catechismInitialParagraph = null
-                if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
                 if (destination == AppDestination.PILGRIMAGE_HABITS) pilgrimageInitialTab = 0
                 if (destination == AppDestination.DOCTRINE) doctrineInitialEntry = null
                 go(destination)
@@ -369,7 +411,7 @@ fun MainApp(
         listOf(
             AppDestination.PRAYERS, AppDestination.ROSARY, AppDestination.BIBLE, AppDestination.PLANS, AppDestination.CATECHISM,
             AppDestination.QUESTIONS, AppDestination.SAINTS, AppDestination.STUDY_DOCTRINE, AppDestination.STUDY_MARY_JESUS,
-            AppDestination.STUDY_HISTORY, AppDestination.STUDY_ORDERS, AppDestination.HABITS_VIRTUES, AppDestination.SPIRITUAL_LIFE,
+            AppDestination.STUDY_HISTORY, AppDestination.STUDY_ORDERS, AppDestination.MY_PATH, AppDestination.HABITS_VIRTUES, AppDestination.SPIRITUAL_LIFE,
             AppDestination.CONFESSION, AppDestination.PARISHES, AppDestination.PILGRIMAGE_HABITS, AppDestination.REMINDERS,
             AppDestination.BEGINNER
         ).map { SearchSection(it.name, it.title(currentLanguage)) }
@@ -506,7 +548,7 @@ fun MainApp(
                   AppDestination.QUESTIONS -> "${target.name}:$questionsInitialIndex:$studyInitialEntry"
                   AppDestination.PLANS -> "${target.name}:$plansInitialId"
                   AppDestination.ROSARY -> "${target.name}:$rosaryEntryId"
-                  AppDestination.HABITS_VIRTUES -> "${target.name}:$habitsEntryId:$habitsInitialOpenTemptations"
+                  AppDestination.MY_PATH -> "${target.name}:$myPathEntryId"
                   AppDestination.DOCTRINE -> "${target.name}:$doctrineInitialEntry"
                   else -> target.name
               }) {
@@ -597,53 +639,95 @@ fun MainApp(
                             go(AppDestination.PILGRIMAGE_HABITS)
                         },
                         onNavigateToDoctrine = { doctrineInitialEntry = null; go(AppDestination.DOCTRINE) },
-                        onNavigateToSpiritualLife = {
-                            spiritualLifeInitialTab = 0
-                            go(AppDestination.SPIRITUAL_LIFE)
-                        },
-                        onNavigateToQuiz = {
-                            spiritualLifeInitialTab = 1
-                            go(AppDestination.SPIRITUAL_LIFE)
-                        },
+                        onNavigateToSpiritualLife = { openSpiritual(0) },
+                        onNavigateToQuiz = { openSpiritual(1) },
                         onOpenReminders = { go(AppDestination.REMINDERS) },
                         onOpenSearch = { openSearch() },
                         onNavigateToChurches = { go(AppDestination.PARISHES) },
                         ttsManager = ttsManager
                     )
 
-                    AppDestination.HABITS_VIRTUES -> HabitsAndVirtuesScreen(
-                        repository = repository,
-                        dao = dao,
-                        ttsManager = ttsManager,
-                        onOpenPrayer = onOpenPrayer,
-                        initialOpenTemptations = habitsInitialOpenTemptations,
-                        onOpenSinAndConfession = {
-                            doctrineInitialEntry = "grav:0"
-                            go(AppDestination.DOCTRINE)
-                        },
-                        onOpenPrayers = {
-                            prayersInitialPrayerId = null
-                            prayersInitialTab = 0
-                            go(AppDestination.PRAYERS)
-                        },
-                        onOpenRosary = { tab ->
-                            openRosary(tab)
-                        },
-                        onOpenMissal = {
-                            bibleInitialBook = null
-                            bibleInitialChapter = null
-                            bibleInitialVerse = null
-                            bibleInitialTab = 1
-                            go(AppDestination.BIBLE)
-                        },
-                        onOpenNight = { office ->
-                            prayersInitialPrayerId = null
-                            prayersInitialTab = 2
-                            prayersInitialNightTab = office
-                            go(AppDestination.PRAYERS)
-                        },
-                        onOpenReminders = { go(AppDestination.REMINDERS) }
-                    )
+                    // «Mi camino» is the only screen of the three destinations; the sections reuse the screens
+                    // Hábitos y Virtudes and Vida espiritual always had.
+                    AppDestination.MY_PATH, AppDestination.HABITS_VIRTUES, AppDestination.SPIRITUAL_LIFE -> {
+                        val section = MyPathSection.valueOf(myPathSection)
+                        // Down from the hub, back returns to it; arriving by a link, back leaves to the caller.
+                        AppBackHandler(enabled = myPathFromHub && section != MyPathSection.HUB) {
+                            myPathSection = MyPathSection.HUB.name
+                            myPathSectionId++
+                        }
+                        MyPathSwitcher(section, myPathSectionId) { shown ->
+                            when (shown) {
+                                MyPathSection.HUB -> MyPathHub(
+                                    repository = repository,
+                                    dao = dao,
+                                    store = preferencesStore,
+                                    language = currentLanguage,
+                                    onOpenSection = { next ->
+                                        myPathSection = next.name
+                                        spiritualLifeInitialTab = 0
+                                        myPathFromHub = true
+                                        myPathSectionId++
+                                    },
+                                    onOpenConfession = { go(AppDestination.CONFESSION) },
+                                    onOpenPlan = { id -> go(AppDestination.PLANS); plansInitialId = id },
+                                    onOpenNovena = { id ->
+                                        prayersInitialPrayerId = null; prayersInitialTab = 1; prayersInitialNightTab = 0; prayersInitialOpenChaplet = false
+                                        pushOnSearch(AppDestination.PRAYERS)
+                                        prayersInitialNovenaId = id
+                                    }
+                                )
+
+                                MyPathSection.HABITS, MyPathSection.TEMPTATIONS -> HabitsAndVirtuesScreen(
+                                    repository = repository,
+                                    dao = dao,
+                                    ttsManager = ttsManager,
+                                    onOpenPrayer = onOpenPrayer,
+                                    initialOpenTemptations = shown == MyPathSection.TEMPTATIONS,
+                                    onExitTemptations = if (shown == MyPathSection.TEMPTATIONS && myPathFromHub) ({
+                                        myPathSection = MyPathSection.HUB.name
+                                        myPathSectionId++
+                                    }) else null,
+                                    onOpenSinAndConfession = {
+                                        doctrineInitialEntry = "grav:0"
+                                        go(AppDestination.DOCTRINE)
+                                    },
+                                    onOpenPrayers = {
+                                        prayersInitialPrayerId = null
+                                        prayersInitialTab = 0
+                                        go(AppDestination.PRAYERS)
+                                    },
+                                    onOpenRosary = { tab ->
+                                        openRosary(tab)
+                                    },
+                                    onOpenMissal = {
+                                        bibleInitialBook = null
+                                        bibleInitialChapter = null
+                                        bibleInitialVerse = null
+                                        bibleInitialTab = 1
+                                        go(AppDestination.BIBLE)
+                                    },
+                                    onOpenNight = { office ->
+                                        prayersInitialPrayerId = null
+                                        prayersInitialTab = 2
+                                        prayersInitialNightTab = office
+                                        go(AppDestination.PRAYERS)
+                                    },
+                                    onOpenReminders = { go(AppDestination.REMINDERS) }
+                                )
+
+                                MyPathSection.DIARY, MyPathSection.PRACTICES -> SpiritualLifeScreen(
+                                    repository = repository,
+                                    dao = dao,
+                                    ttsManager = ttsManager,
+                                    currentLanguage = currentLanguage,
+                                    initialTab = if (shown == MyPathSection.PRACTICES) spiritualLifeInitialTab else 0,
+                                    focus = if (shown == MyPathSection.PRACTICES) SpiritualFocus.PRACTICES else SpiritualFocus.JOURNAL,
+                                    onOpenConfession = { go(AppDestination.CONFESSION) }
+                                )
+                            }
+                        }
+                    }
 
                     AppDestination.BIBLE -> BibleScreen(
                         repository = repository,
@@ -685,7 +769,7 @@ fun MainApp(
                         onOpenRosary = { openRosary(0) },
                         onOpenGuidedChaplet = { openRosary(1) },
                         initialOpenChaplet = prayersInitialOpenChaplet,
-                        onExitContext = if (stack.lastOrNull() == AppDestination.SEARCH) ({ pop() }) else null
+                        onExitContext = if (stack.lastOrNull() == AppDestination.SEARCH || stack.lastOrNull() == AppDestination.MY_PATH) ({ pop() }) else null
                     )
 
                     AppDestination.PILGRIMAGE_HABITS -> PilgrimageAndHabitsScreen(
@@ -779,15 +863,6 @@ fun MainApp(
                         onOpenPrayer = onOpenPrayer
                     )
 
-                    AppDestination.SPIRITUAL_LIFE -> SpiritualLifeScreen(
-                        repository = repository,
-                        dao = dao,
-                        ttsManager = ttsManager,
-                        currentLanguage = currentLanguage,
-                        initialTab = spiritualLifeInitialTab,
-                        onOpenConfession = { go(AppDestination.CONFESSION) }
-                    )
-
                     AppDestination.CONFESSION -> com.example.ui.confession.ConfessionRoute(
                         preferencesStore, currentLanguage, active = current == AppDestination.CONFESSION
                     )
@@ -799,7 +874,7 @@ fun MainApp(
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
                         initialPlanId = plansInitialId,
-                        onExitContext = if (stack.lastOrNull() == AppDestination.SEARCH && plansInitialId != null) ({ pop() }) else null
+                        onExitContext = if ((stack.lastOrNull() == AppDestination.SEARCH || stack.lastOrNull() == AppDestination.MY_PATH) && plansInitialId != null) ({ pop() }) else null
                     )
 
                     AppDestination.SEARCH -> {
@@ -824,12 +899,7 @@ fun MainApp(
                         onOpenBeginner = { go(AppDestination.BEGINNER) },
                         sections = moreSections(currentLanguage) { destination ->
                             if (destination == AppDestination.SEARCH) { openSearch(); return@moreSections }
-                            if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
-                            if (destination == AppDestination.HABITS_VIRTUES) {
-                                screenStateHolder.removeState("${AppDestination.HABITS_VIRTUES.name}:$habitsEntryId:$habitsInitialOpenTemptations")
-                                habitsInitialOpenTemptations = false
-                                habitsEntryId++
-                            }
+                            if (destination == AppDestination.MY_PATH) enterMyPath(MyPathSection.HUB)
                             if (destination == AppDestination.QUESTIONS) questionsInitialIndex = null
                             if (destination == AppDestination.PILGRIMAGE_HABITS) pilgrimageInitialTab = 0
                             if (destination == AppDestination.BIBLE) {
@@ -1018,9 +1088,7 @@ private fun moreSections(
         MoreSection(
             pick("Vida interior", "Inner life", "Vida interior"),
             listOf(
-                entry(AppDestination.HABITS_VIRTUES),
-                entry(AppDestination.SPIRITUAL_LIFE)
-                    .copy(icon = Icons.Outlined.AutoStories),
+                entry(AppDestination.MY_PATH),
                 entry(AppDestination.CONFESSION)
             )
         ),

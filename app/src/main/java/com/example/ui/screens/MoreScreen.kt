@@ -27,7 +27,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Church
 import androidx.compose.material.icons.outlined.Collections
-import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Newspaper
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material3.Icon
@@ -100,7 +99,7 @@ private val StudyTags = listOf(
     "nav_catechism", "nav_study_doctrine", "nav_study_mary_jesus",
     "nav_study_history", "nav_questions", "nav_study_orders"
 )
-private val InnerLifeTags = listOf("nav_spiritual", "nav_habits")
+private val InnerLifeTags = listOf("nav_my_path")
 private val ChurchTodayTags = listOf("nav_parishes", "nav_pilgrimage", "nav_churches_news")
 private val SettingsTags = listOf("app_bar_theme_button", "font_settings_button", "backup_entry", "error_report_entry", "calendar_rules_settings", "app_bar_lang_button")
 
@@ -419,13 +418,9 @@ private fun rowInfo(tag: String, language: AppLanguage): RowInfo? {
         AppLanguage.PT -> pt
     }
     return when (tag) {
-        "nav_spiritual" -> RowInfo(
-            pick("Vida espiritual", "Spiritual Life", "Vida espiritual"),
-            pick("Diario, Vía Crucis y canto gregoriano", "Journal, Stations and Gregorian chant", "Diário, Via-Sacra e canto gregoriano")
-        )
-        "nav_habits" -> RowInfo(
-            pick("Hábitos y virtudes", "Habits & Virtues", "Hábitos e virtudes"),
-            pick("Tu regla de vida, día a día", "Your rule of life, day by day", "Sua regra de vida, dia a dia")
+        "nav_my_path" -> RowInfo(
+            pick("Mi camino", "My path", "Meu caminho"),
+            pick("Hábitos, diario, tentaciones y prácticas", "Habits, journal, temptations and practices", "Hábitos, diário, tentações e práticas")
         )
         "nav_parishes" -> RowInfo(
             pick("Parroquias", "Parishes", "Paróquias"),
@@ -445,9 +440,8 @@ private fun rowInfo(tag: String, language: AppLanguage): RowInfo? {
 
 @Composable
 private fun glyphFor(entry: MoreEntry): ImageVector = when (entry.tag) {
-    "nav_spiritual" -> Icons.Outlined.FavoriteBorder
-    // The same glyph as the Habits tab, so the two read as one place.
-    "nav_habits" -> AppIcons.pair(AppIconSlot.HABITS).first
+    // The glyph of the habits, which are where the path starts.
+    "nav_my_path" -> AppIcons.pair(AppIconSlot.HABITS).first
     "nav_parishes" -> Icons.Outlined.Church
     "nav_pilgrimage" -> Icons.Outlined.Place
     "nav_churches_news" -> Icons.Outlined.Newspaper
