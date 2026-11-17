@@ -1,6 +1,6 @@
 # T-036 · Índice completo del Catecismo
 
-- **Asignado:** Hermes · **Rama:** `ext/T-036` (fork) · **Estado:** ABIERTO, entregado.
+- **Asignado:** Hermes · **Rama:** `ext/T-036` (fork) · **Estado:** ABIERTO, cambios de la revisión aplicados.
 - **Archivos creados:** `app/src/main/assets/catechism/structure.json`,
   `docs/tasks/tools/validate_catechism_structure.py`, `docs/tasks/T-036-REPORT.md`.
 - No se tocó ningún otro archivo.
@@ -10,7 +10,7 @@ Solo **títulos**: no se copia ni un párrafo del Catecismo. La app ya tiene los
 
 ## Contenido
 
-`{"nodes": [...]}` con el árbol completo. **119 nodos**:
+`{"nodes": [...]}` con el árbol completo. **123 nodos**:
 
 | Nivel | Cantidad |
 |---|---|
@@ -18,8 +18,25 @@ Solo **títulos**: no se copia ni un párrafo del Catecismo. La app ya tiene los
 | `PART` | 4 |
 | `SECTION` | 8 |
 | `CHAPTER` | 20 |
-| `ARTICLE` | 65 |
+| `ARTICLE` | 67 |
 | `PARAGRAPH` | 21 |
+| `HEADING` | 2 |
+
+## Cambios de la revisión (1) aplicados
+
+1. **Artículos que faltaban** (existen en el libro; el índice PT no los listaba como artículos):
+   - `p4s1c3a3` **La oración de la Hora de Jesús** (2746-2758); el artículo 2 queda en 2725-2745.
+   - `p4s2a4` **La doxología final** (2855-2865); el artículo 3 queda en 2803-2854.
+2. **Título EN de la sección 2 de la parte 1**: «The profession of the Christian faith» (el índice EN
+   lo juntaba con el apartado siguiente). El apartado **«I. The Creeds»** (185-197) queda como nodo
+   `HEADING` `p1s2h1`, con «Los Símbolos de la fe» en ES y «Os Símbolos da Fé» en PT.
+3. **«Amén»** (1061-1065) como `HEADING` `p1s2c3h1`, hermano del artículo 12, que termina en 1060.
+4. **Mayúsculas**: todos los títulos pasan a mayúscula inicial, conservando los nombres propios
+   (Dios, Jesucristo, Espíritu Santo, Iglesia, Padre, Credo…). Las comillas latinas van sin espacios
+   interiores («Creo en el Espíritu Santo»).
+5. **Número del nodo fuera del título**: se quitó «Artículo 1:», «CAPÍTULO PRIMERO:», «Article 7»,
+   «Artigo 1», etc. La app lo compone con `kind` y la posición.
+6. **Erratas corregidas**: «AGAlN» → «again» y «DEL LA INICIACIÓN» → «de la iniciación».
 
 Cada nodo lleva `id` jerárquico (`prologue`, `p1`, `p1s2`, `p1s2c3`, `p1s2c3a9`, `p1s2c3a9p4`),
 `kind`, `title` en **es/en/pt** y `range` `[a, b]` inclusivo.
@@ -87,9 +104,11 @@ $ python docs/tasks/tools/validate_catechism_structure.py \
 
 El script (dejado en `docs/tasks/tools/validate_catechism_structure.py`) comprueba: JSON válido;
 claves de cada nodo; `kind` dentro de la lista; `id` único y `snake_case`; títulos es/en/pt no
-vacíos; que cada hijo cae dentro del rango de su padre; que los hermanos no se solapan; que hay 4
-partes con los rangos del libro; un prólogo con rango 1-25; y que prólogo + partes cubren 1..2865
-sin huecos.
+vacíos; **ningún título con más de 3 palabras seguidas en mayúsculas**; **ningún título que empiece
+por el número del nodo**; que cada hijo caiga dentro del rango de su padre; que los hermanos no se
+solapen; que hay 4 partes con los rangos del libro; un prólogo con rango 1-25; que prólogo + partes
+cubren 1..2865 sin huecos; y **los rangos fijos de los 13 artículos de la Parte 4**
+(`ARTICULOS_P4`, fijados en la revisión).
 
 ## Lo que no se pudo verificar
 

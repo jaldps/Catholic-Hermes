@@ -4,9 +4,9 @@
       "id": "prologue",
       "kind": "PROLOGUE",
       "title": {
-        "es": "PRÓLOGO",
-        "en": "PROLOGUE",
-        "pt": "PRÓLOGO"
+        "es": "Prólogo",
+        "en": "Prologue",
+        "pt": "Prólogo"
       },
       "range": [
         1,
@@ -18,9 +18,9 @@
       "id": "p1",
       "kind": "PART",
       "title": {
-        "es": "PRIMERA PARTE LA PROFESIÓN DE LA FE",
-        "en": "PART ONE: THE PROFESSION OF FAITH",
-        "pt": "PRIMEIRA PARTE A PROFISSÃO DA FÉ"
+        "es": "La profesión de la fe",
+        "en": "The profession of faith",
+        "pt": "A profissão da fé"
       },
       "range": [
         26,
@@ -31,9 +31,9 @@
           "id": "p1s1",
           "kind": "SECTION",
           "title": {
-            "es": "PRIMERA SECCIÓN: «CREO» - «CREEMOS»",
-            "en": "SECTION ONE \"I BELIEVE\" - \"WE BELIEVE\"",
-            "pt": "PRIMEIRA SECÇÃO «EU CREIO»"
+            "es": "«Creo» - «creemos»",
+            "en": "\"I believe\"-\"we believe\"",
+            "pt": "«Eu creio» – «nós cremos»"
           },
           "range": [
             26,
@@ -44,9 +44,9 @@
               "id": "p1s1c1",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO PRIMERO: EL HOMBRE ES «CAPAZ» DE DIOS",
-                "en": "CHAPTER ONE MAN'S CAPACITY FOR GOD",
-                "pt": "CAPÍTULO PRIMEIRO O HOMEM É «CAPAZ» DE DEUS"
+                "es": "El hombre es «capaz» de Dios",
+                "en": "Man's capacity for God",
+                "pt": "O homem é «capaz» de Deus"
               },
               "range": [
                 26,
@@ -58,9 +58,9 @@
               "id": "p1s1c2",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO SEGUNDO: DIOS AL ENCUENTRO DEL HOMBRE",
-                "en": "CHAPTER TWO GOD COMES TO MEET MAN",
-                "pt": "CAPÍTULO SEGUNDO DEUS AO ENCONTRO DO HOMEM"
+                "es": "Dios al encuentro del hombre",
+                "en": "God comes to meet man",
+                "pt": "Deus ao encontro do homem"
               },
               "range": [
                 50,
@@ -71,9 +71,9 @@
                   "id": "p1s1c2a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: La Revelación de Dios",
-                    "en": "Article 1 THE REVELATION OF GOD",
-                    "pt": "ARTIGO 1 A Revelação de Deus"
+                    "es": "La revelación de Dios",
+                    "en": "The revelation of God",
+                    "pt": "A revelação de Deus"
                   },
                   "range": [
                     50,
@@ -85,9 +85,9 @@
                   "id": "p1s1c2a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: La transmisión de la Revelación divina",
-                    "en": "Article 2 THE TRANSMISSION OF DIVINE REVELATION",
-                    "pt": "ARTIGO 2 A transmissão da Revelação divina"
+                    "es": "La transmisión de la revelación divina",
+                    "en": "The transmission of divine revelation",
+                    "pt": "A transmissão da revelação divina"
                   },
                   "range": [
                     74,
@@ -99,9 +99,9 @@
                   "id": "p1s1c2a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 3: La Sagrada Escritura",
-                    "en": "Article 3 SACRED SCRIPTURE",
-                    "pt": "ARTIGO 3 A Sagrada Escritura"
+                    "es": "La Sagrada Escritura",
+                    "en": "Sacred scripture",
+                    "pt": "A Sagrada Escritura"
                   },
                   "range": [
                     101,
@@ -115,9 +115,9 @@
               "id": "p1s1c3",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO TERCERO: LA RESPUESTA DEL HOMBRE A DIOS",
-                "en": "CHAPTER THREE MAN'S RESPONSE TO GOD",
-                "pt": "CAPÍTULO TERCEIRO A RESPOSTA DO HOMEM A DEUS"
+                "es": "La respuesta del hombre a Dios",
+                "en": "Man's response to God",
+                "pt": "A resposta do homem a Deus"
               },
               "range": [
                 142,
@@ -128,9 +128,9 @@
                   "id": "p1s1c3a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: Creo",
-                    "en": "Article 1 I BELIEVE",
-                    "pt": "ARTIGO 1 Eu creio"
+                    "es": "Creo",
+                    "en": "I believe",
+                    "pt": "Eu creio"
                   },
                   "range": [
                     142,
@@ -142,9 +142,9 @@
                   "id": "p1s1c3a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: Creemos",
-                    "en": "Article 2 WE BELIEVE",
-                    "pt": "ARTIGO 2 Nós cremos"
+                    "es": "Creemos",
+                    "en": "We believe",
+                    "pt": "Nós cremos"
                   },
                   "range": [
                     166,
@@ -160,9 +160,9 @@
           "id": "p1s2",
           "kind": "SECTION",
           "title": {
-            "es": "SEGUNDA SECCIÓN: LA PROFESIÓN DE LA FE CRISTIANA",
-            "en": "SECTION TWO I. THE CREEDS",
-            "pt": "SEGUNDA SECÇÃO A PROFISSÃO DA FÉ CRISTÃ"
+            "es": "La profesión de la fe cristiana",
+            "en": "The profession of the Christian faith",
+            "pt": "A profissão da fé cristã"
           },
           "range": [
             185,
@@ -170,12 +170,26 @@
           ],
           "children": [
             {
+              "id": "p1s2h1",
+              "kind": "HEADING",
+              "title": {
+                "es": "Los Símbolos de la fe",
+                "en": "I. The Creeds",
+                "pt": "Os Símbolos da Fé"
+              },
+              "range": [
+                185,
+                197
+              ],
+              "children": []
+            },
+            {
               "id": "p1s2c1",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO PRIMERO: CREO EN DIOS PADRE",
-                "en": "CHAPTER ONE I BELIEVE IN GOD THE FATHER",
-                "pt": "CAPÍTULO PRIMEIRO CREIO EM DEUS PAI"
+                "es": "Creo en Dios Padre",
+                "en": "I believe in God the Father",
+                "pt": "Creio em Deus Pai"
               },
               "range": [
                 198,
@@ -186,9 +200,9 @@
                   "id": "p1s2c1a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: « Creo en Dios, Padre todopoderoso, creador del cielo y de la tierra »",
-                    "en": "Article 1 \"I BELIEVE IN GOD THE FATHER ALMIGHTY, CREATOR OF HEAVEN AND EARTH\"",
-                    "pt": "ARTIGO 1 «Creio em Deus Pai Todo-Poderoso, Criador do céu e da terra»"
+                    "es": "«Creo en Dios, Padre todopoderoso, creador del cielo y de la tierra»",
+                    "en": "\"I believe in God the Father almighty, creator of heaven and earth\"",
+                    "pt": "«Creio em Deus Pai todo-poderoso, criador do céu e da terra»"
                   },
                   "range": [
                     198,
@@ -199,9 +213,9 @@
                       "id": "p1s2c1a1p1",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 1: Creo en Dios",
-                        "en": "Paragraph 1. I BELIEVE IN GOD",
-                        "pt": "PARÁGRAFO 1 Creio em Deus"
+                        "es": "Creo en Dios",
+                        "en": "I believe in God",
+                        "pt": "Creio em Deus"
                       },
                       "range": [
                         198,
@@ -213,9 +227,9 @@
                       "id": "p1s2c1a1p2",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 2: El Padre",
-                        "en": "Paragraph 2. THE FATHER",
-                        "pt": "PARÁGRAFO 2 O Pai"
+                        "es": "El Padre",
+                        "en": "The Father",
+                        "pt": "O Pai"
                       },
                       "range": [
                         232,
@@ -227,9 +241,9 @@
                       "id": "p1s2c1a1p3",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 3: El Todopoderoso",
-                        "en": "Paragraph 3. THE ALMIGHTY",
-                        "pt": "PARÁGRAFO 3 O Todo-Poderoso"
+                        "es": "El todopoderoso",
+                        "en": "The almighty",
+                        "pt": "O todo-poderoso"
                       },
                       "range": [
                         268,
@@ -241,9 +255,9 @@
                       "id": "p1s2c1a1p4",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 4: El Creador",
-                        "en": "Paragraph 4. THE CREATOR",
-                        "pt": "PARÁGRAFO 4 O Criador"
+                        "es": "El creador",
+                        "en": "The creator",
+                        "pt": "O criador"
                       },
                       "range": [
                         279,
@@ -255,9 +269,9 @@
                       "id": "p1s2c1a1p5",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 5: El cielo y la tierra",
-                        "en": "Paragraph 5. HEAVEN AND EARTH",
-                        "pt": "PARÁGRAFO 5 O céu e a terra"
+                        "es": "El cielo y la tierra",
+                        "en": "Heaven and earth",
+                        "pt": "O céu e a terra"
                       },
                       "range": [
                         325,
@@ -269,9 +283,9 @@
                       "id": "p1s2c1a1p6",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 6: El hombre",
-                        "en": "Paragraph 6. MAN",
-                        "pt": "PARÁGRAFO 6 O homem"
+                        "es": "El hombre",
+                        "en": "Man",
+                        "pt": "O homem"
                       },
                       "range": [
                         355,
@@ -283,9 +297,9 @@
                       "id": "p1s2c1a1p7",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 7: La caída",
-                        "en": "Paragraph 7. THE FALL",
-                        "pt": "PARÁGRAFO 7 A queda"
+                        "es": "La caída",
+                        "en": "The fall",
+                        "pt": "A queda"
                       },
                       "range": [
                         385,
@@ -301,9 +315,9 @@
               "id": "p1s2c2",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO SEGUNDO: CREO EN JESUCRISTO, HIJO ÚNICO DE DIOS",
-                "en": "CHAPTER TWO I BELIEVE IN JESUS CHRIST, THE ONLY SON OF GOD",
-                "pt": "CAPÍTULO SEGUNDO CREIO EM JESUS CRISTO, FILHO ÚNICO DE DEUS"
+                "es": "Creo en Jesucristo, Hijo único de Dios",
+                "en": "I believe in Jesus Christ, the only Son of God",
+                "pt": "Creio em Jesus Cristo, Filho único de Deus"
               },
               "range": [
                 422,
@@ -311,12 +325,12 @@
               ],
               "children": [
                 {
-                  "id": "p1s2c2a1",
+                  "id": "p1s2c2a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: « Y en Jesucristo, su único Hijo, Nuestro Señor »",
-                    "en": "ARTICLE 2 \"AND IN JESUS CHRIST, HIS ONLY SON, OUR LORD\"",
-                    "pt": "ARTIGO 2 «E em Jesus Cristo, seu Filho único, Nosso Senhor»"
+                    "es": "«Y en Jesucristo, su único Hijo, nuestro Señor»",
+                    "en": "\"And in Jesus Christ, his only Son, our Lord\"",
+                    "pt": "«E em Jesus Cristo, seu Filho único, nosso Senhor»"
                   },
                   "range": [
                     430,
@@ -325,12 +339,12 @@
                   "children": []
                 },
                 {
-                  "id": "p1s2c2a2",
+                  "id": "p1s2c2a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 3: « Jesucristo fue concebido por obra y gracia del Espíritu Santo y nació de Santa María Virgen »",
-                    "en": "Article 3 \"HE WAS CONCEIVED BY THE POWER OF THE HOLY SPIRIT, AND WAS BORN OF THE VIRGIN MARY\"",
-                    "pt": "ARTIGO 3 «Jesus Cristo foi concebido pelo Espírito Santo e nasceu da Virgem Maria»"
+                    "es": "«Jesucristo fue concebido por obra y gracia del Espíritu Santo y nació de santa maría Virgen»",
+                    "en": "\"He was conceived by the power of the Holy Spirit, and was born of the Virgin mary\"",
+                    "pt": "«Jesus Cristo foi concebido pelo Espírito Santo e nasceu da Virgem maria»"
                   },
                   "range": [
                     456,
@@ -338,12 +352,12 @@
                   ],
                   "children": [
                     {
-                      "id": "p1s2c2a2p1",
+                      "id": "p1s2c2a3p1",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 1: El Hijo de Dios se hizo hombre",
-                        "en": "Paragraph 1. THE SON OF GOD BECAME MAN",
-                        "pt": "PARÁGRAFO 1 O Filho de Deus fez-Se homem"
+                        "es": "El Hijo de Dios se hizo hombre",
+                        "en": "The Son of God became man",
+                        "pt": "O Filho de Deus fez-se homem"
                       },
                       "range": [
                         456,
@@ -352,12 +366,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c2a2p2",
+                      "id": "p1s2c2a3p2",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 2: « ...Concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen »",
-                        "en": "Paragraph 2. \"CONCEIVED BY THE POWER OF THE HOLY SPIRIT AND BORN OF THE VIRGIN MARY\"",
-                        "pt": "PARÁGRAFO 2 «... Concebido pelo Espírito Santo, nascido da Virgem Maria»"
+                        "es": "«...Concebido por obra y gracia del Espíritu Santo, nació de santa maría Virgen»",
+                        "en": "\"Conceived by the power of the Holy Spirit and born of the Virgin mary\"",
+                        "pt": "«... Concebido pelo Espírito Santo, nascido da Virgem maria»"
                       },
                       "range": [
                         484,
@@ -366,12 +380,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c2a2p3",
+                      "id": "p1s2c2a3p3",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 3: Los misterios de la vida de Cristo",
-                        "en": "Paragraph 3. THE MYSTERIES OF CHRIST'S LIFE",
-                        "pt": "PARÁGRAFO 3 Os Mistérios da vida de Cristo"
+                        "es": "Los misterios de la vida de Cristo",
+                        "en": "The mysteries of Christ's life",
+                        "pt": "Os mistérios da vida de Cristo"
                       },
                       "range": [
                         512,
@@ -382,12 +396,12 @@
                   ]
                 },
                 {
-                  "id": "p1s2c2a3",
+                  "id": "p1s2c2a4",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 4: « Jesucristo padeció bajo Poncio Pilato, fue crucificado, muerto y sepultado »",
-                    "en": "Article 4 \"JESUS CHRIST SUFFERED UNDER PONTIUS PILATE, WAS CRUCIFIED, DIED AND WAS BURIED\"",
-                    "pt": "ARTIGO 4 «Jesus Cristo padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado»"
+                    "es": "«Jesucristo padeció bajo poncio pilato, fue crucificado, muerto y sepultado»",
+                    "en": "\"Jesus Christ suffered under pontius pilate, was crucified, died and was buried\"",
+                    "pt": "«Jesus Cristo padeceu sob pôncio pilatos, foi crucificado, morto e sepultado»"
                   },
                   "range": [
                     571,
@@ -395,12 +409,12 @@
                   ],
                   "children": [
                     {
-                      "id": "p1s2c2a3p1",
+                      "id": "p1s2c2a4p1",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 1: Jesús e Israel",
-                        "en": "Paragraph 1. JESUS AND ISRAEL",
-                        "pt": "PARÁGRAFO 1 Jesus e Israel"
+                        "es": "Jesús e israel",
+                        "en": "Jesus and israel",
+                        "pt": "Jesus e israel"
                       },
                       "range": [
                         571,
@@ -409,12 +423,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c2a3p2",
+                      "id": "p1s2c2a4p2",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 2: Jesús murió crucificado",
-                        "en": "Paragraph 2. JESUS DIED CRUCIFIED",
-                        "pt": "PARÁGRAFO 2 Jesus morreu crucificado"
+                        "es": "Jesús murió crucificado",
+                        "en": "Jesus died crucified",
+                        "pt": "Jesus morreu crucificado"
                       },
                       "range": [
                         595,
@@ -423,12 +437,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c2a3p3",
+                      "id": "p1s2c2a4p3",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 3: Jesucristo fue sepultado",
-                        "en": "Paragraph 3. JESUS CHRIST WAS BURIED",
-                        "pt": "PARÁGRAFO 3 Jesus Cristo foi sepultado"
+                        "es": "Jesucristo fue sepultado",
+                        "en": "Jesus Christ was buried",
+                        "pt": "Jesus Cristo foi sepultado"
                       },
                       "range": [
                         624,
@@ -439,12 +453,12 @@
                   ]
                 },
                 {
-                  "id": "p1s2c2a4",
+                  "id": "p1s2c2a5",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 5: « Jesucristo descendió a los infiernos, al tercer día resucitó de entre los muertos »",
-                    "en": "Article 5 \"HE DESCENDED INTO HELL. ON THE THIRD DAY HE ROSE AGAIN\"",
-                    "pt": "ARTIGO 5 «Jesus Cristo desceu à mansão dos mortos, ao terceiro dia ressuscitou dos mortos»"
+                    "es": "«Jesucristo descendió a los infiernos, al tercer día resucitó de entre los muertos»",
+                    "en": "\"He descended into hell. on the third day he rose again\"",
+                    "pt": "«Jesus Cristo desceu à mansão dos mortos, ao terceiro dia ressuscitou dos mortos»"
                   },
                   "range": [
                     631,
@@ -452,12 +466,12 @@
                   ],
                   "children": [
                     {
-                      "id": "p1s2c2a4p1",
+                      "id": "p1s2c2a5p1",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 1: Cristo descendió a los infiernos",
-                        "en": "Paragraph 1. CHRIST DESCENDED INTO HELL",
-                        "pt": "PARÁGRAFO 1 Cristo desceu à mansão dos mortos"
+                        "es": "Cristo descendió a los infiernos",
+                        "en": "Christ descended into hell",
+                        "pt": "Cristo desceu à mansão dos mortos"
                       },
                       "range": [
                         631,
@@ -466,12 +480,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c2a4p2",
+                      "id": "p1s2c2a5p2",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 2: Al tercer día resucitó de entre los muertos",
-                        "en": "Paragraph 2. ON THE THIRD DAY HE ROSE FROM THE DEAD",
-                        "pt": "PARÁGRAFO 2 Ao terceiro dia ressuscitou dos mortos"
+                        "es": "Al tercer día resucitó de entre los muertos",
+                        "en": "On the third day he rose from the dead",
+                        "pt": "Ao terceiro dia ressuscitou dos mortos"
                       },
                       "range": [
                         638,
@@ -482,12 +496,12 @@
                   ]
                 },
                 {
-                  "id": "p1s2c2a5",
+                  "id": "p1s2c2a6",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 6: « Jesucristo subió a los cielos, y está sentado a la derecha de Dios, Padre Todopoderoso »",
-                    "en": "Article 6 \"HE ASCENDED INTO HEAVEN AND IS SEATED AT THE RIGHT HAND OF THE FATHER\"",
-                    "pt": "ARTIGO 6 «JESUS SUBIU AOS CÉUS E ESTÁ SENTADO À DIREITA DE DEUS, PAI TODO-PODEROSO»"
+                    "es": "«Jesucristo subió a los cielos, y está sentado a la derecha de Dios, Padre todopoderoso»",
+                    "en": "\"He ascended into heaven and is seated at the right hand of the Father\"",
+                    "pt": "«Jesus subiu aos céus e está sentado à direita de Deus, Pai todo-poderoso»"
                   },
                   "range": [
                     659,
@@ -496,12 +510,12 @@
                   "children": []
                 },
                 {
-                  "id": "p1s2c2a6",
+                  "id": "p1s2c2a7",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 7: « Desde allí ha de venir a juzgar a vivos y a muertos »",
-                    "en": "Article 7 \"FROM THENCE HE WILL COME AGAlN TO JUDGE THE LIVING AND THE DEAD\"",
-                    "pt": "ARTIGO 7 «Donde há-de vir julgar os vivos e os mortos»"
+                    "es": "«Desde allí ha de venir a juzgar a vivos y a muertos»",
+                    "en": "\"From thence he will come again to judge the living and the dead\"",
+                    "pt": "«Donde há-de vir julgar os vivos e os mortos»"
                   },
                   "range": [
                     668,
@@ -515,9 +529,9 @@
               "id": "p1s2c3",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO TERCERO: CREO EN EL ESPÍRITU SANTO",
-                "en": "CHAPTER THREE I BELIEVE IN THE HOLY SPIRIT",
-                "pt": "CAPÍTULO TERCEIRO CREIO NO ESPÍRITO SANTO"
+                "es": "Creo en el Espíritu Santo",
+                "en": "I believe in the Holy Spirit",
+                "pt": "Creio no Espírito Santo"
               },
               "range": [
                 683,
@@ -525,12 +539,26 @@
               ],
               "children": [
                 {
-                  "id": "p1s2c3a1",
+                  "id": "p1s2c3h1",
+                  "kind": "HEADING",
+                  "title": {
+                    "es": "«Amén»",
+                    "en": "\"Amen\"",
+                    "pt": "«Amen»"
+                  },
+                  "range": [
+                    1061,
+                    1065
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s2c3a8",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 8: « Creo en el Espíritu Santo »",
-                    "en": "ARTICLE 8 \"I BELIEVE IN THE HOLY SPIRIT\"",
-                    "pt": "ARTIGO 8 «Creio no Espírito Santo»"
+                    "es": "«Creo en el Espíritu Santo»",
+                    "en": "\"I believe in the Holy Spirit\"",
+                    "pt": "«Creio no Espírito Santo»"
                   },
                   "range": [
                     687,
@@ -539,12 +567,12 @@
                   "children": []
                 },
                 {
-                  "id": "p1s2c3a2",
+                  "id": "p1s2c3a9",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 9: « Creo en la Santa Iglesia Católica »",
-                    "en": "Article 9 \"I BELIEVE IN THE HOLY CATHOLIC CHURCH\"",
-                    "pt": "ARTIGO 9 «Creio na Santa Igreja Católica»"
+                    "es": "«Creo en la santa Iglesia católica»",
+                    "en": "\"I believe in the holy catholic Church\"",
+                    "pt": "«Creio na santa Igreja católica»"
                   },
                   "range": [
                     748,
@@ -552,12 +580,12 @@
                   ],
                   "children": [
                     {
-                      "id": "p1s2c3a2p1",
+                      "id": "p1s2c3a9p1",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 1: La Iglesia en el designio de Dios",
-                        "en": "Paragraph 1. THE CHURCH IN GOD'S PLAN",
-                        "pt": "PARÁGRAFO 1 A Igreja no Desígnio de Deus"
+                        "es": "La Iglesia en el designio de Dios",
+                        "en": "The Church in God's plan",
+                        "pt": "A Igreja no desígnio de Deus"
                       },
                       "range": [
                         751,
@@ -566,12 +594,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c3a2p2",
+                      "id": "p1s2c3a9p2",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 2: La Iglesia, Pueblo de Dios, Cuerpo de Cristo, Templo del Espíritu Santo",
-                        "en": "Paragraph 2. THE CHURCH - PEOPLE OF GOD, BODY OF CHRIST, TEMPLE OF THE HOLY SPIRIT",
-                        "pt": "PARÁGRAFO 2 A Igreja"
+                        "es": "La Iglesia, pueblo de Dios, cuerpo de Cristo, templo del Espíritu Santo",
+                        "en": "The Church - people of God, body of Christ, temple of the Holy Spirit",
+                        "pt": "A Igreja – povo de Deus, corpo de Cristo, templo do Espírito Santo"
                       },
                       "range": [
                         781,
@@ -580,12 +608,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c3a2p3",
+                      "id": "p1s2c3a9p3",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 3: La Iglesia es una, santa, católica y apostólica",
-                        "en": "Paragraph 3. THE CHURCH IS ONE, HOLY, CATHOLIC, AND APOSTOLIC",
-                        "pt": "PARÁGRAFO 3 A Igreja é una, santa, católica e apostólica"
+                        "es": "La Iglesia es una, santa, católica y apostólica",
+                        "en": "The Church is one, holy, catholic, and apostolic",
+                        "pt": "A Igreja é una, santa, católica e apostólica"
                       },
                       "range": [
                         811,
@@ -594,12 +622,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c3a2p4",
+                      "id": "p1s2c3a9p4",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 4: Los fieles de Cristo: jerarquía, laicos, vida consagrada",
-                        "en": "Paragraph 4. CHRIST'S FAITHFUL - HIERARCHY, LAITY, CONSECRATED LIFE",
-                        "pt": "PARÁGRAFO 4 Os fiéis de Cristo"
+                        "es": "Los fieles de Cristo: jerarquía, laicos, vida consagrada",
+                        "en": "Christ's faithful - hierarchy, laity, consecrated life",
+                        "pt": "Os fiéis de Cristo – hierarquia, leigos, vida consagrada"
                       },
                       "range": [
                         871,
@@ -608,12 +636,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c3a2p5",
+                      "id": "p1s2c3a9p5",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 5: La comunión de los santos",
-                        "en": "Paragraph 5. THE COMMUNION OF SAINTS",
-                        "pt": "PARÁGRAFO 5 A comunhão dos santos"
+                        "es": "La comunión de los santos",
+                        "en": "The communion of saints",
+                        "pt": "A comunhão dos santos"
                       },
                       "range": [
                         946,
@@ -622,12 +650,12 @@
                       "children": []
                     },
                     {
-                      "id": "p1s2c3a2p6",
+                      "id": "p1s2c3a9p6",
                       "kind": "PARAGRAPH",
                       "title": {
-                        "es": "Párrafo 6: María, Madre de Cristo, Madre de la Iglesia",
-                        "en": "Paragraph 6. MARY - MOTHER OF CHRIST, MOTHER OF THE CHURCH",
-                        "pt": "PARÁGRAFO 6 Maria"
+                        "es": "María, madre de Cristo, madre de la Iglesia",
+                        "en": "Mary - mother of Christ, mother of the Church",
+                        "pt": "Maria – mãe de Cristo, mãe da Igreja"
                       },
                       "range": [
                         963,
@@ -638,12 +666,12 @@
                   ]
                 },
                 {
-                  "id": "p1s2c3a3",
+                  "id": "p1s2c3a10",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 10: « Creo en el perdón de los pecados »",
-                    "en": "Article 10 \"I BELIEVE IN THE FORGIVENESS OF SINS\"",
-                    "pt": "ARTIGO 10 «Creio na remissão dos pecados»"
+                    "es": "«Creo en el perdón de los pecados»",
+                    "en": "\"I believe in the forgiveness of sins\"",
+                    "pt": "«Creio na remissão dos pecados»"
                   },
                   "range": [
                     976,
@@ -652,12 +680,12 @@
                   "children": []
                 },
                 {
-                  "id": "p1s2c3a4",
+                  "id": "p1s2c3a11",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 11: « Creo en la resurrección de la carne »",
-                    "en": "Article 11 \"I BELIEVE IN THE RESURRECTION OF THE BODY\"",
-                    "pt": "ARTIGO 11 «Creio na ressurreição da carne»"
+                    "es": "«Creo en la resurrección de la carne»",
+                    "en": "\"I believe in the resurrection of the body\"",
+                    "pt": "«Creio na ressurreição da carne»"
                   },
                   "range": [
                     988,
@@ -666,16 +694,16 @@
                   "children": []
                 },
                 {
-                  "id": "p1s2c3a5",
+                  "id": "p1s2c3a12",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 12: « Creo en la vida eterna »",
-                    "en": "Article 12 \"I BELIEVE IN LIFE EVERLASTING\"",
-                    "pt": "ARTIGO 12 «Creio na vida eterna»"
+                    "es": "«Creo en la vida eterna»",
+                    "en": "\"I believe in life everlasting\"",
+                    "pt": "«Creio na vida eterna»"
                   },
                   "range": [
                     1020,
-                    1065
+                    1060
                   ],
                   "children": []
                 }
@@ -689,9 +717,9 @@
       "id": "p2",
       "kind": "PART",
       "title": {
-        "es": "SEGUNDA PARTE LA CELEBRACIÓN DEL MISTERIO CRISTIANO",
-        "en": "PART TWO: THE CELEBRATION OF THE CHRISTIAN MYSTERY",
-        "pt": "SEGUNDA PARTE A CELEBRAÇÃO DO MISTÉRIO CRISTÃO"
+        "es": "La celebración del misterio cristiano",
+        "en": "The celebration of the christian mystery",
+        "pt": "A celebração do mistério cristão"
       },
       "range": [
         1066,
@@ -702,9 +730,9 @@
           "id": "p2s1",
           "kind": "SECTION",
           "title": {
-            "es": "PRIMERA SECCIÓN: LA ECONOMÍA SACRAMENTAL",
-            "en": "SECTION ONE THE SACRAMENTAL ECONOMY",
-            "pt": "PRIMEIRA SECÇÃO A ECONOMIA SACRAMENTAL"
+            "es": "La economía sacramental",
+            "en": "The sacramental economy",
+            "pt": "A economia sacramental"
           },
           "range": [
             1076,
@@ -715,9 +743,9 @@
               "id": "p2s1c1",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO PRIMERO: EL MISTERIO PASCUAL EN EL TIEMPO DE LA IGLESIA",
-                "en": "CHAPTER ONE THE PASCHAL MYSTERY IN THE AGE OF THE CHURCH",
-                "pt": "CAPÍTULO PRIMEIRO O MISTÉRIO PASCAL NO TEMPO DA IGREJA"
+                "es": "El misterio pascual en el tiempo de la Iglesia",
+                "en": "The paschal mystery in the age of the Church",
+                "pt": "O mistério pascal no tempo da Igreja"
               },
               "range": [
                 1077,
@@ -728,9 +756,9 @@
                   "id": "p2s1c1a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: La liturgia, obra de la Santísima Trinidad",
-                    "en": "Article 1 THE LITURGY - WORK OF THE HOLY TRINITY",
-                    "pt": "ARTIGO 1 A Liturgia"
+                    "es": "La liturgia, obra de la Santísima Trinidad",
+                    "en": "The liturgy - work of the Holy Trinity",
+                    "pt": "A liturgia – obra da santíssima trin"
                   },
                   "range": [
                     1077,
@@ -742,9 +770,9 @@
                   "id": "p2s1c1a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: El misterio pascual en los sacramentos de la Iglesia",
-                    "en": "Article 2 THE PASCHAL MYSTERY IN THE CHURCH'S SACRAMENTS",
-                    "pt": "ARTIGO 2 O Mistério Pascal nos sacramentos da Igreja"
+                    "es": "El misterio pascual en los sacramentos de la Iglesia",
+                    "en": "The paschal mystery in the Church's sacraments",
+                    "pt": "O mistério pascal nos sacramentos da Igreja"
                   },
                   "range": [
                     1113,
@@ -758,9 +786,9 @@
               "id": "p2s1c2",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO SEGUNDO: LA CELEBRACIÓN SACRAMENTAL DEL MISTERIO PASCUAL",
-                "en": "CHAPTER TWO THE SACRAMENTAL CELEBRATION OF THE PASCHAL MYSTERY",
-                "pt": "CAPÍTULO SEGUNDO A CELEBRAÇÃO SACRAMENTAL DO MISTÉRIO PASCAL"
+                "es": "La celebración sacramental del misterio pascual",
+                "en": "The sacramental celebration of the paschal mystery",
+                "pt": "A celebração sacramental do mistério pascal"
               },
               "range": [
                 1135,
@@ -771,9 +799,9 @@
                   "id": "p2s1c2a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: Celebrar la Liturgia de la Iglesia",
-                    "en": "Article 1 CELEBRATING THE CHURCH'S LITURGY",
-                    "pt": "ARTIGO 1 Celebrar a liturgia da Igreja"
+                    "es": "Celebrar la liturgia de la Iglesia",
+                    "en": "Celebrating the Church's liturgy",
+                    "pt": "Celebrar a liturgia da Igreja"
                   },
                   "range": [
                     1136,
@@ -785,9 +813,9 @@
                   "id": "p2s1c2a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: Diversidad litúrgica y unidad del misterio",
-                    "en": "Article 2 LITURGICAL DIVERSITY AND THE UNITY OF THE MYSTERY",
-                    "pt": "ARTIGO 2 Diversidade litúrgica e unidade do mistério"
+                    "es": "Diversidad litúrgica y unidad del misterio",
+                    "en": "Liturgical diversity and the unity of the mystery",
+                    "pt": "Diversidade litúrgica e unidade do mistério"
                   },
                   "range": [
                     1200,
@@ -803,9 +831,9 @@
           "id": "p2s2",
           "kind": "SECTION",
           "title": {
-            "es": "SEGUNDA SECCIÓN: « LOS SIETE SACRAMENTOS DE LA IGLESIA »",
-            "en": "SECTION TWO THE SEVEN SACRAMENTS OF THE CHURCH",
-            "pt": "SEGUNDA SECÇÃO OS SETE SACRAMENTOS DA IGREJA"
+            "es": "«Los siete sacramentos de la Iglesia»",
+            "en": "The seven sacraments of the Church",
+            "pt": "Os sete sacramentos da Igreja"
           },
           "range": [
             1210,
@@ -816,9 +844,9 @@
               "id": "p2s2c1",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO PRIMERO: LOS SACRAMENTOS DEL LA INICIACIÓN CRISTIANA",
-                "en": "CHAPTER ONE THE SACRAMENTS OF CHRISTIAN INITIATION",
-                "pt": "CAPÍTULO PRIMEIRO OS SACRAMENTOS DA INICIAÇÃO CRISTÃ"
+                "es": "Los sacramentos de la iniciación cristiana",
+                "en": "The sacraments of christian initiation",
+                "pt": "Os sacramentos da iniciação cristã"
               },
               "range": [
                 1212,
@@ -829,9 +857,9 @@
                   "id": "p2s2c1a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: El sacramento del Bautismo",
-                    "en": "Article 1 THE SACRAMENT OF BAPTISM",
-                    "pt": "ARTIGO 1 O sacramento do Baptismo"
+                    "es": "El sacramento del bautismo",
+                    "en": "The sacrament of baptism",
+                    "pt": "O sacramento do baptismo"
                   },
                   "range": [
                     1213,
@@ -843,9 +871,9 @@
                   "id": "p2s2c1a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: El sacramento de la Confirmación",
-                    "en": "Article 2 THE SACRAMENT OF CONFIRMATION",
-                    "pt": "ARTIGO 2 O sacramento da Confirmação"
+                    "es": "El sacramento de la confirmación",
+                    "en": "The sacrament of confirmation",
+                    "pt": "O sacramento da confirmação"
                   },
                   "range": [
                     1285,
@@ -857,9 +885,9 @@
                   "id": "p2s2c1a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 3: El sacramento de la Eucaristía",
-                    "en": "Article 3 THE SACRAMENT OF THE EUCHARIST",
-                    "pt": "ARTIGO 3 O sacramento da Eucaristia"
+                    "es": "El sacramento de la Eucaristía",
+                    "en": "The sacrament of the Eucharist",
+                    "pt": "O sacramento da Eucaristia"
                   },
                   "range": [
                     1322,
@@ -873,9 +901,9 @@
               "id": "p2s2c2",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO SEGUNDO: LOS SACRAMENTOS DE CURACIÓN",
-                "en": "CHAPTER TWO THE SACRAMENTS OF HEALING",
-                "pt": "CAPÍTULO SEGUNDO OS SACRAMENTOS DE CURA"
+                "es": "Los sacramentos de curación",
+                "en": "The sacraments of healing",
+                "pt": "Os sacramentos de cura"
               },
               "range": [
                 1420,
@@ -883,12 +911,12 @@
               ],
               "children": [
                 {
-                  "id": "p2s2c2a1",
+                  "id": "p2s2c2a4",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 4: El sacramento de la Penitencia y de la Reconciliación",
-                    "en": "Article 4 THE SACRAMENT OF PENANCE AND RECONCILIATION",
-                    "pt": "ARTIGO 4 O sacramento da Penitência e da Reconciliação"
+                    "es": "El sacramento de la penitencia y de la reconciliación",
+                    "en": "The sacrament of penance and reconciliation",
+                    "pt": "O sacramento da penitência e da reconciliação"
                   },
                   "range": [
                     1422,
@@ -897,12 +925,12 @@
                   "children": []
                 },
                 {
-                  "id": "p2s2c2a2",
+                  "id": "p2s2c2a5",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 5: La Unción de los enfermos",
-                    "en": "Article 5 THE ANOINTING OF THE SICK",
-                    "pt": "ARTIGO 5 A Unção dos doentes"
+                    "es": "La unción de los enfermos",
+                    "en": "The anointing of the sick",
+                    "pt": "A unção dos doentes"
                   },
                   "range": [
                     1499,
@@ -916,9 +944,9 @@
               "id": "p2s2c3",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO TERCERO: LOS SACRAMENTOS AL SERVICIO DE LA COMUNIDAD",
-                "en": "CHAPTER THREE THE SACRAMENTS AT THE SERVICE OF COMMUNION",
-                "pt": "CAPÍTULO TERCEIRO OS SACRAMENTOS DO SERVIÇO DA COMUNHÃO"
+                "es": "Los sacramentos al servicio de la comunidad",
+                "en": "The sacraments at the service of communion",
+                "pt": "Os sacramentos do serviço da comunhão"
               },
               "range": [
                 1533,
@@ -926,12 +954,12 @@
               ],
               "children": [
                 {
-                  "id": "p2s2c3a1",
+                  "id": "p2s2c3a6",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 6: El sacramento del Orden",
-                    "en": "ARTICLE 6 THE SACRAMENT OF HOLY ORDERS",
-                    "pt": "ARTIGO 6 O sacramento da Ordem"
+                    "es": "El sacramento del orden",
+                    "en": "The sacrament of holy orders",
+                    "pt": "O sacramento da ordem"
                   },
                   "range": [
                     1536,
@@ -940,12 +968,12 @@
                   "children": []
                 },
                 {
-                  "id": "p2s2c3a2",
+                  "id": "p2s2c3a7",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 7: El sacramento del Matrimonio",
-                    "en": "Article 7 THE SACRAMENT OF MATRIMONY",
-                    "pt": "ARTIGO 7 O sacramento do Matrimónio"
+                    "es": "El sacramento del matrimonio",
+                    "en": "The sacrament of matrimony",
+                    "pt": "O sacramento do matrimónio"
                   },
                   "range": [
                     1601,
@@ -959,9 +987,9 @@
               "id": "p2s2c4",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO CUARTO: OTRAS CELEBRACIONES LITÚRGICAS",
-                "en": "CHAPTER FOUR OTHER LITURGICAL CELEBRATIONS",
-                "pt": "CAPÍTULO QUARTO AS OUTRAS CELEBRAÇÕES LITÚRGICAS"
+                "es": "Otras celebraciones litúrgicas",
+                "en": "Other liturgical celebrations",
+                "pt": "As outras celebrações litúrgicas"
               },
               "range": [
                 1667,
@@ -972,9 +1000,9 @@
                   "id": "p2s2c4a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: Los sacramentales",
-                    "en": "Article 1 SACRAMENTALS",
-                    "pt": "ARTIGO 1 Os sacramentais"
+                    "es": "Los sacramentales",
+                    "en": "Sacramentals",
+                    "pt": "Os sacramentais"
                   },
                   "range": [
                     1667,
@@ -986,9 +1014,9 @@
                   "id": "p2s2c4a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: Las exequias cristianas",
-                    "en": "Article 2 CHRISTIAN FUNERALS",
-                    "pt": "ARTIGO 2 As exéquias cristãs"
+                    "es": "Las exequias cristianas",
+                    "en": "Christian funerals",
+                    "pt": "As exéquias cristãs"
                   },
                   "range": [
                     1680,
@@ -1006,9 +1034,9 @@
       "id": "p3",
       "kind": "PART",
       "title": {
-        "es": "TERCERA PARTE LA VIDA EN CRISTO",
-        "en": "PART THREE: LIFE IN CHRIST",
-        "pt": "TERCEIRA PARTE A VIDA EM CRISTO"
+        "es": "La vida en Cristo",
+        "en": "Life in Christ",
+        "pt": "A vida em Cristo"
       },
       "range": [
         1691,
@@ -1019,9 +1047,9 @@
           "id": "p3s1",
           "kind": "SECTION",
           "title": {
-            "es": "PRIMERA SECCIÓN: LA VOCACIÓN DEL HOMBRE: LA VIDA EN EL ESPÍRITU",
-            "en": "SECTION ONE MAN'S VOCATION LIFE IN THE SPIRIT",
-            "pt": "PRIMEIRA SECÇÃO A VOCAÇÃO DO HOMEM: A VIDA NO ESPÍRITO"
+            "es": "La vocación del hombre: la vida en el espíritu",
+            "en": "Man's vocation life in the spirit",
+            "pt": "A vocação do homem: a vida no espírito"
           },
           "range": [
             1699,
@@ -1032,9 +1060,9 @@
               "id": "p3s1c1",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO PRIMERO: LA DIGNIDAD DE LA PERSONA HUMANA",
-                "en": "CHAPTER ONE THE DIGNITY OF THE HUMAN PERSON",
-                "pt": "CAPÍTULO PRIMEIRO A DIGNIDADE DA PESSOA HUMANA"
+                "es": "La dignidad de la persona humana",
+                "en": "The dignity of the human person",
+                "pt": "A dignidade da pessoa humana"
               },
               "range": [
                 1700,
@@ -1045,9 +1073,9 @@
                   "id": "p3s1c1a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: El hombre, imagen de Dios",
-                    "en": "Article 1 MAN: THE IMAGE OF GOD",
-                    "pt": "ARTIGO 1 O homem, imagem de Deus"
+                    "es": "El hombre, imagen de Dios",
+                    "en": "Man: the image of God",
+                    "pt": "O homem, imagem de Deus"
                   },
                   "range": [
                     1701,
@@ -1059,9 +1087,9 @@
                   "id": "p3s1c1a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: Nuestra vocación a la bienaventuranza",
-                    "en": "Article 2 OUR VOCATION TO BEATITUDE",
-                    "pt": "ARTIGO 2 A nossa vocação à bem-aventurança"
+                    "es": "Nuestra vocación a la bienaventuranza",
+                    "en": "Our vocation to beatitude",
+                    "pt": "A nossa vocação à bem-aventurança"
                   },
                   "range": [
                     1716,
@@ -1073,9 +1101,9 @@
                   "id": "p3s1c1a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 3: La libertad del hombre",
-                    "en": "Article 3 MAN'S FREEDOM",
-                    "pt": "ARTIGO 3 A LIBERDADE DO HOMEM"
+                    "es": "La libertad del hombre",
+                    "en": "Man's freedom",
+                    "pt": "A liberdade do homem"
                   },
                   "range": [
                     1730,
@@ -1087,9 +1115,9 @@
                   "id": "p3s1c1a4",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 4: La moralidad de los actos humanos",
-                    "en": "Article 4 THE MORALITY OF HUMAN ACTS",
-                    "pt": "ARTIGO 4 A moralidade dos actos humanos"
+                    "es": "La moralidad de los actos humanos",
+                    "en": "The morality of human acts",
+                    "pt": "A moralidade dos actos humanos"
                   },
                   "range": [
                     1749,
@@ -1101,9 +1129,9 @@
                   "id": "p3s1c1a5",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 5: La moralidad de las pasiones",
-                    "en": "Article 5 THE MORALITY OF THE PASSIONS",
-                    "pt": "ARTIGO 5 A moralidade das paixões"
+                    "es": "La moralidad de las pasiones",
+                    "en": "The morality of the passions",
+                    "pt": "A moralidade das paixões"
                   },
                   "range": [
                     1762,
@@ -1115,9 +1143,9 @@
                   "id": "p3s1c1a6",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 6: La conciencia moral",
-                    "en": "Article 6 MORAL CONSCIENCE",
-                    "pt": "ARTIGO 6 A consciência moral"
+                    "es": "La conciencia moral",
+                    "en": "Moral conscience",
+                    "pt": "A consciência moral"
                   },
                   "range": [
                     1776,
@@ -1129,9 +1157,9 @@
                   "id": "p3s1c1a7",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 7: Las virtudes",
-                    "en": "Article 7 THE VIRTUES",
-                    "pt": "ARTIGO 7 As virtudes"
+                    "es": "Las virtudes",
+                    "en": "The virtues",
+                    "pt": "As virtudes"
                   },
                   "range": [
                     1803,
@@ -1143,9 +1171,9 @@
                   "id": "p3s1c1a8",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 8: El pecado",
-                    "en": "Article 8 SIN",
-                    "pt": "ARTIGO 8 O pecado"
+                    "es": "El pecado",
+                    "en": "Sin",
+                    "pt": "O pecado"
                   },
                   "range": [
                     1846,
@@ -1159,9 +1187,9 @@
               "id": "p3s1c2",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO SEGUNDO: LA COMUNIDAD HUMANA",
-                "en": "CHAPTER TWO THE HUMAN COMMUNION",
-                "pt": "CAPÍTULO SEGUNDO A COMUNIDADE HUMANA"
+                "es": "La comunidad humana",
+                "en": "The human communion",
+                "pt": "A comunidade humana"
               },
               "range": [
                 1877,
@@ -1172,9 +1200,9 @@
                   "id": "p3s1c2a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: La persona y la sociedad",
-                    "en": "Article 1 THE PERSON AND SOCIETY",
-                    "pt": "ARTIGO 1 A Pessoa e a Sociedade"
+                    "es": "La persona y la sociedad",
+                    "en": "The person and society",
+                    "pt": "A pessoa e a sociedade"
                   },
                   "range": [
                     1878,
@@ -1186,9 +1214,9 @@
                   "id": "p3s1c2a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: La participación en la vida social",
-                    "en": "Article 2 PARTICIPATION IN SOCIAL LIFE",
-                    "pt": "ARTIGO 2 A participação na vida social"
+                    "es": "La participación en la vida social",
+                    "en": "Participation in social life",
+                    "pt": "A participação na vida social"
                   },
                   "range": [
                     1897,
@@ -1200,9 +1228,9 @@
                   "id": "p3s1c2a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 3: La justicia social",
-                    "en": "Article 3 SOCIAL JUSTICE",
-                    "pt": "ARTIGO 3 A Justiça Social"
+                    "es": "La justicia social",
+                    "en": "Social justice",
+                    "pt": "A justiça social"
                   },
                   "range": [
                     1928,
@@ -1216,9 +1244,9 @@
               "id": "p3s1c3",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO TERCERO: LA SALVACIÓN DE DIOS: LA LEY Y LA GRACIA",
-                "en": "CHAPTER THREE GOD'S SALVATION: LAW AND GRACE",
-                "pt": "CAPITULO TERCEIRO A SALVAÇÃO DE DEUS: A LEI E A GRAÇA"
+                "es": "La salvación de Dios: la ley y la gracia",
+                "en": "God's salvation: law and grace",
+                "pt": "A salvação de Deus: a lei e a graça"
               },
               "range": [
                 1949,
@@ -1229,9 +1257,9 @@
                   "id": "p3s1c3a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: La ley moral",
-                    "en": "Article 1 THE MORAL LAW",
-                    "pt": "ARTIGO 1 A lei moral"
+                    "es": "La ley moral",
+                    "en": "The moral law",
+                    "pt": "A lei moral"
                   },
                   "range": [
                     1950,
@@ -1243,9 +1271,9 @@
                   "id": "p3s1c3a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: Gracia y justificación",
-                    "en": "Article 2 GRACE AND JUSTIFICATION",
-                    "pt": "ARTIGO 2 Graça e justificação"
+                    "es": "Gracia y justificación",
+                    "en": "Grace and justification",
+                    "pt": "Graça e justificação"
                   },
                   "range": [
                     1987,
@@ -1257,9 +1285,9 @@
                   "id": "p3s1c3a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 3: La Iglesia, madre y maestra",
-                    "en": "Article 3 THE CHURCH, MOTHER AND TEACHER",
-                    "pt": "ARTIGO 3 A Igreja. Mãe e educadora"
+                    "es": "La Iglesia, madre y maestra",
+                    "en": "The Church, mother and teacher",
+                    "pt": "A Igreja. mãe e educadora"
                   },
                   "range": [
                     2030,
@@ -1275,9 +1303,9 @@
           "id": "p3s2",
           "kind": "SECTION",
           "title": {
-            "es": "SEGUNDA SECCIÓN: LOS DIEZ MANDAMIENTOS",
-            "en": "SECTION TWO THE TEN COMMANDMENTS",
-            "pt": "SEGUNDA SECÇÃO OS DEZ MANDAMENTOS"
+            "es": "Los diez mandamientos",
+            "en": "The ten commandments",
+            "pt": "Os dez mandamentos"
           },
           "range": [
             2052,
@@ -1288,9 +1316,9 @@
               "id": "p3s2c1",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO PRIMERO: « AMARÁS AL SEÑOR TU DIOS CON TODO TU CORAZÓN, CON TODA TU ALMA Y CON TODAS TUS FUERZAS »",
-                "en": "CHAPTER ONE YOU SHALL LOVE THE LORD YOUR GOD WITH ALL YOUR HEART, AND WITH ALL YOUR SOUL, AND WITH ALL YOUR MIND",
-                "pt": "CAPÍTULO PRIMEIRO «AMARÁS O SENHOR TEU DEUS COM TODO O TEU CORAÇÃO, COM TODA A TUA ALMA E COM TODAS AS TUAS FORÇAS»"
+                "es": "«Amarás al Señor tu Dios con todo tu corazón, con toda tu alma y con todas tus fuerzas»",
+                "en": "You shall love the Lord your God with all your heart, and with all your soul, and with all your mind",
+                "pt": "«Amarás o Senhor teu Deus com todo o teu coração, com toda a tua alma e com todas as tuas forças»"
               },
               "range": [
                 2083,
@@ -1301,9 +1329,9 @@
                   "id": "p3s2c1a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: El primer mandamiento",
-                    "en": "Article 1 THE FIRST COMMANDMENT",
-                    "pt": "ARTIGO I O primeiro mandamento"
+                    "es": "El primer mandamiento",
+                    "en": "The first commandment",
+                    "pt": "O primeiro mandamento"
                   },
                   "range": [
                     2084,
@@ -1315,9 +1343,9 @@
                   "id": "p3s2c1a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: El segundo mandamiento",
-                    "en": "Article 2 THE SECOND COMMANDMENT",
-                    "pt": "ARTIGO 2 O segundo mandamento"
+                    "es": "El segundo mandamiento",
+                    "en": "The second commandment",
+                    "pt": "O segundo mandamento"
                   },
                   "range": [
                     2142,
@@ -1329,9 +1357,9 @@
                   "id": "p3s2c1a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 3: El tercer mandamiento",
-                    "en": "Article 3 THE THIRD COMMANDMENT",
-                    "pt": "ARTIGO 3 O terceiro mandamento"
+                    "es": "El tercer mandamiento",
+                    "en": "The third commandment",
+                    "pt": "O terceiro mandamento"
                   },
                   "range": [
                     2168,
@@ -1345,9 +1373,9 @@
               "id": "p3s2c2",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO SEGUNDO: « AMARÁS A TU PRÓJIMO COMO A TI MISMO »",
-                "en": "CHAPTER TWO YOU SHALL LOVE YOUR NEIGHBOR AS YOURSELF",
-                "pt": "CAPÍTULO SEGUNDO «AMARÁS O TEU PRÓXIMO COMO A TI MESMO»"
+                "es": "«Amarás a tu prójimo como a ti mismo»",
+                "en": "You shall love your neighbor as yourself",
+                "pt": "«Amarás o teu próximo como a ti mesmo»"
               },
               "range": [
                 2196,
@@ -1355,12 +1383,12 @@
               ],
               "children": [
                 {
-                  "id": "p3s2c2a1",
+                  "id": "p3s2c2a4",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 4: El cuarto mandamiento",
-                    "en": "ARTICLE 4 THE FOURTH COMMANDMENT",
-                    "pt": "ARTIGO 4 O quarto mandamento"
+                    "es": "El cuarto mandamiento",
+                    "en": "The fourth commandment",
+                    "pt": "O quarto mandamento"
                   },
                   "range": [
                     2197,
@@ -1369,12 +1397,12 @@
                   "children": []
                 },
                 {
-                  "id": "p3s2c2a2",
+                  "id": "p3s2c2a5",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 5: El quinto mandamiento",
-                    "en": "Article 5 THE FIFTH COMMANDMENT",
-                    "pt": "ARTIGO 5 O quinto mandamento"
+                    "es": "El quinto mandamiento",
+                    "en": "The fifth commandment",
+                    "pt": "O quinto mandamento"
                   },
                   "range": [
                     2258,
@@ -1383,12 +1411,12 @@
                   "children": []
                 },
                 {
-                  "id": "p3s2c2a3",
+                  "id": "p3s2c2a6",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 6: El sexto mandamiento",
-                    "en": "Article 6 THE SIXTH COMMANDMENT",
-                    "pt": "ARTIGO 6 O sexto mandamento"
+                    "es": "El sexto mandamiento",
+                    "en": "The sixth commandment",
+                    "pt": "O sexto mandamento"
                   },
                   "range": [
                     2331,
@@ -1397,12 +1425,12 @@
                   "children": []
                 },
                 {
-                  "id": "p3s2c2a4",
+                  "id": "p3s2c2a7",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 7: El séptimo mandamiento",
-                    "en": "Article 7 THE SEVENTH COMMANDMENT",
-                    "pt": "ARTIGO 7 O sétimo mandamento"
+                    "es": "El séptimo mandamiento",
+                    "en": "The seventh commandment",
+                    "pt": "O sétimo mandamento"
                   },
                   "range": [
                     2401,
@@ -1411,12 +1439,12 @@
                   "children": []
                 },
                 {
-                  "id": "p3s2c2a5",
+                  "id": "p3s2c2a8",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 8: El octavo mandamiento",
-                    "en": "Article 8 THE EIGHTH COMMANDMENT",
-                    "pt": "ARTIGO 8 O oitavo mandamento"
+                    "es": "El octavo mandamiento",
+                    "en": "The eighth commandment",
+                    "pt": "O oitavo mandamento"
                   },
                   "range": [
                     2464,
@@ -1425,12 +1453,12 @@
                   "children": []
                 },
                 {
-                  "id": "p3s2c2a6",
+                  "id": "p3s2c2a9",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 9: El noveno mandamiento",
-                    "en": "Article 9 THE NINTH COMMANDMENT",
-                    "pt": "ARTIGO 9 O nono mandamento"
+                    "es": "El noveno mandamiento",
+                    "en": "The ninth commandment",
+                    "pt": "O nono mandamento"
                   },
                   "range": [
                     2514,
@@ -1439,12 +1467,12 @@
                   "children": []
                 },
                 {
-                  "id": "p3s2c2a7",
+                  "id": "p3s2c2a10",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 10: El décimo mandamiento",
-                    "en": "Article 10 THE TENTH COMMANDMENT",
-                    "pt": "ARTIGO 10 O décimo mandamento"
+                    "es": "El décimo mandamiento",
+                    "en": "The tenth commandment",
+                    "pt": "O décimo mandamento"
                   },
                   "range": [
                     2534,
@@ -1462,9 +1490,9 @@
       "id": "p4",
       "kind": "PART",
       "title": {
-        "es": "CUARTA PARTE LA ORACIÓN CRISTIANA",
-        "en": "PART FOUR: CHRISTIAN PRAYER",
-        "pt": "QUARTA PARTE A ORAÇÃO CRISTÃ"
+        "es": "La oración cristiana",
+        "en": "Christian prayer",
+        "pt": "A oração cristã"
       },
       "range": [
         2558,
@@ -1475,9 +1503,9 @@
           "id": "p4s1",
           "kind": "SECTION",
           "title": {
-            "es": "PRIMERA SECCIÓN: LA ORACIÓN EN LA VIDA CRISTIANA",
-            "en": "SECTION ONE PRAYER IN THE CHRISTIAN LIFE",
-            "pt": "PRIMEIRA SECÇÃO ORAÇÃO NA VIDA CRISTÃ"
+            "es": "La oración en la vida cristiana",
+            "en": "Prayer in the christian life",
+            "pt": "Oração na vida cristã"
           },
           "range": [
             2558,
@@ -1488,9 +1516,9 @@
               "id": "p4s1c1",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO PRIMERO: LA REVELACIÓN DE LA ORACIÓN",
-                "en": "CHAPTER ONE THE REVELATION OF PRAYER - THE UNIVERSAL CALL TO PRAYER",
-                "pt": "CAPÍTULO PRIMEIRO REVELAÇÃO DA ORAÇÃO"
+                "es": "La revelación de la oración",
+                "en": "The revelation of prayer - the universal call to prayer",
+                "pt": "Revelação da oração"
               },
               "range": [
                 2566,
@@ -1501,9 +1529,9 @@
                   "id": "p4s1c1a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: En el Antiguo Testamento",
-                    "en": "Article 1 IN THE OLD TESTAMENT",
-                    "pt": "ARTIGO I No Antigo Testamento"
+                    "es": "En el antiguo testamento",
+                    "en": "In the old testament",
+                    "pt": "No antigo testamento"
                   },
                   "range": [
                     2568,
@@ -1515,9 +1543,9 @@
                   "id": "p4s1c1a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: En la plenitud de los tiempos",
-                    "en": "Article 2 IN THE FULLNESS OF TIME",
-                    "pt": "ARTIGO 2 Na plenitude do tempo"
+                    "es": "En la plenitud de los tiempos",
+                    "en": "In the fullness of time",
+                    "pt": "Na plenitude do tempo"
                   },
                   "range": [
                     2598,
@@ -1529,9 +1557,9 @@
                   "id": "p4s1c1a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 3: En el tiempo de la Iglesia",
-                    "en": "Article 3 IN THE AGE OF THE CHURCH",
-                    "pt": "ARTIGO 3 No tempo da Igreja"
+                    "es": "En el tiempo de la Iglesia",
+                    "en": "In the age of the Church",
+                    "pt": "No tempo da Igreja"
                   },
                   "range": [
                     2623,
@@ -1545,9 +1573,9 @@
               "id": "p4s1c2",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO SEGUNDO: LA TRADICIÓN DE LA ORACIÓN",
-                "en": "CHAPTER TWO THE TRADITION OF PRAYER",
-                "pt": "CAPÍTULO SEGUNDO A TRADIÇÃO DA ORAÇÃO"
+                "es": "La tradición de la oración",
+                "en": "The tradition of prayer",
+                "pt": "A tradição da oração"
               },
               "range": [
                 2650,
@@ -1558,9 +1586,9 @@
                   "id": "p4s1c2a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: Fuentes de la oración",
-                    "en": "Article 1 AT THE WELLSPRINGS OF PRAYER",
-                    "pt": "ARTIGO 1 Nas fontes da oração"
+                    "es": "Fuentes de la oración",
+                    "en": "At the wellsprings of prayer",
+                    "pt": "Nas fontes da oração"
                   },
                   "range": [
                     2652,
@@ -1572,9 +1600,9 @@
                   "id": "p4s1c2a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: El camino de la oración",
-                    "en": "Article 2 THE WAY OF PRAYER",
-                    "pt": "ARTIGO 2 O caminho da oração"
+                    "es": "El camino de la oración",
+                    "en": "The way of prayer",
+                    "pt": "O caminho da oração"
                   },
                   "range": [
                     2663,
@@ -1586,9 +1614,9 @@
                   "id": "p4s1c2a3",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 3: Maestros de oración",
-                    "en": "Article 3 GUIDES FOR PRAYER",
-                    "pt": "ARTIGO 3 Guias para a oração"
+                    "es": "Maestros de oración",
+                    "en": "Guides for prayer",
+                    "pt": "Guias para a oração"
                   },
                   "range": [
                     2683,
@@ -1602,9 +1630,9 @@
               "id": "p4s1c3",
               "kind": "CHAPTER",
               "title": {
-                "es": "CAPÍTULO TERCERO: LA VIDA DE ORACIÓN",
-                "en": "CHAPTER THREE THE LIFE OF PRAYER",
-                "pt": "CAPÍTULO TERCEIRO A VIDA DE ORAÇÃO"
+                "es": "La vida de oración",
+                "en": "The life of prayer",
+                "pt": "A vida de oração"
               },
               "range": [
                 2697,
@@ -1615,9 +1643,9 @@
                   "id": "p4s1c3a1",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 1: Expresiones de la oración",
-                    "en": "Article 1 EXPRESSIONS OF PRAYER",
-                    "pt": "ARTIGO 1 As expressões da oração"
+                    "es": "Expresiones de la oración",
+                    "en": "Expressions of prayer",
+                    "pt": "As expressões da oração"
                   },
                   "range": [
                     2700,
@@ -1629,12 +1657,26 @@
                   "id": "p4s1c3a2",
                   "kind": "ARTICLE",
                   "title": {
-                    "es": "Artículo 2: El combate de la oración",
-                    "en": "Article 2 THE BATTLE OF PRAYER",
-                    "pt": "ARTIGO 2 O combate da oração"
+                    "es": "El combate de la oración",
+                    "en": "The battle of prayer",
+                    "pt": "O combate da oração"
                   },
                   "range": [
                     2725,
+                    2745
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p4s1c3a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La oración de la Hora de Jesús",
+                    "en": "The Prayer of the Hour of Jesus",
+                    "pt": "A oração da Hora de Jesus"
+                  },
+                  "range": [
+                    2746,
                     2758
                   ],
                   "children": []
@@ -1647,9 +1689,9 @@
           "id": "p4s2",
           "kind": "SECTION",
           "title": {
-            "es": "SEGUNDA SECCIÓN: LA ORACIÓN DEL SEÑOR: « PADRE NUESTRO »",
-            "en": "SECTION TWO THE LORD'S PRAYER",
-            "pt": "SEGUNDA SECÇÃO A ORAÇÃO DO SENHOR: «PAI NOSSO»"
+            "es": "La oración del Señor: «Padre nuestro»",
+            "en": "The Lord's prayer",
+            "pt": "A oração do Senhor: «Pai nosso»"
           },
           "range": [
             2759,
@@ -1660,9 +1702,9 @@
               "id": "p4s2a1",
               "kind": "ARTICLE",
               "title": {
-                "es": "Artículo 1: « Resumen de todo el Evangelio »",
-                "en": "Article 1 \"THE SUMMARY OF THE WHOLE GOSPEL\"",
-                "pt": "ARTIGO 1 « O resumo de todo o Evangelho»"
+                "es": "«Resumen de todo el evangelio»",
+                "en": "\"The summary of the whole gospel\"",
+                "pt": "«O resumo de todo o evangelho»"
               },
               "range": [
                 2761,
@@ -1674,9 +1716,9 @@
               "id": "p4s2a2",
               "kind": "ARTICLE",
               "title": {
-                "es": "Artículo 2: « Padre nuestro que estás en el cielo »",
-                "en": "Article 2 \"OUR FATHER WHO ART IN HEAVEN\"",
-                "pt": "ARTIGO 2 «Pai nosso, que estais nos céus»"
+                "es": "«Padre nuestro que estás en el cielo»",
+                "en": "\"Our Father who art in heaven\"",
+                "pt": "«Pai nosso, que estais nos céus»"
               },
               "range": [
                 2777,
@@ -1688,12 +1730,26 @@
               "id": "p4s2a3",
               "kind": "ARTICLE",
               "title": {
-                "es": "Artículo 3: Las siete peticiones",
-                "en": "Article 3 THE SEVEN PETITIONS",
-                "pt": "ARTIGO 3 As sete petições"
+                "es": "Las siete peticiones",
+                "en": "The seven petitions",
+                "pt": "As sete petições"
               },
               "range": [
                 2803,
+                2854
+              ],
+              "children": []
+            },
+            {
+              "id": "p4s2a4",
+              "kind": "ARTICLE",
+              "title": {
+                "es": "La doxología final",
+                "en": "The Final Doxology",
+                "pt": "A doxologia final"
+              },
+              "range": [
+                2855,
                 2865
               ],
               "children": []

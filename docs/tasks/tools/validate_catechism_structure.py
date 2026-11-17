@@ -15,6 +15,19 @@ LANGS = ("es", "en", "pt")
 KINDS = {"PROLOGUE", "PART", "SECTION", "CHAPTER", "ARTICLE", "PARAGRAPH", "HEADING"}
 RANGO_PARTES = [(26, 1065), (1066, 1690), (1691, 2557), (2558, 2865)]
 PROLOGO = (1, 25)
+# rangos de los articulos de la Parte 4, fijados por el coordinador en la revision
+ARTICULOS_P4 = {
+    "p4s1c1a1": (2568, 2597), "p4s1c1a2": (2598, 2622), "p4s1c1a3": (2623, 2649),
+    "p4s1c2a1": (2652, 2662), "p4s1c2a2": (2663, 2682), "p4s1c2a3": (2683, 2696),
+    "p4s1c3a1": (2700, 2724), "p4s1c3a2": (2725, 2745), "p4s1c3a3": (2746, 2758),
+    "p4s2a1": (2761, 2776), "p4s2a2": (2777, 2802), "p4s2a3": (2803, 2854),
+    "p4s2a4": (2855, 2865),
+}
+PREFIJO_TITULO = re.compile(
+    r"^(art[íi]culo|article|artigo|cap[ií]tulo|chapter|secci[oó]n|section|parte|part|"
+    r"sec[cç][aã]o|par[áa]grafo|paragraph|pr[oó]logo|prologue)\s*[\dlivx]+",
+    re.I)
+MAYUS3 = re.compile(r"\b[A-ZÁÉÍÓÚÑÃÕÇ]{2,}(?:\s+[A-ZÁÉÍÓÚÑÃÕÇ]{2,}){3,}")
 SNAKE = re.compile(r"^[a-z0-9]+([a-z0-9_]*[a-z0-9])?$")
 errors, warns = [], []
 
@@ -64,6 +77,13 @@ def main():
         if not isinstance(n.get("id"), str) or not SNAKE.match(n["id"]):
             errors.append(f"{donde}: id no es snake_case")
         lt_ok(n.get("title"), f"{donde}.title")
+        titulo = n.get("title", {})
+        for lang in LANGS:
+            v = titulo.get(lang, "") if isinstance(titulo, dict) else ""
+            if MAYUS3.search(v):
+                errors.append(f"{donde}.title.{lang}: más de 3 palabras seguidas en mayúsculas")
+            if PREFIJO_TITULO.match(v):
+                errors.append(f"{donde}.title.{lang}: el título empieza por el número del nodo")
         r = n.get("range")
         if not (isinstance(r, list) and len(r) == 2 and all(isinstance(x, int) for x in r)):
             errors.append(f"{donde}: range debe ser [a, b] de enteros")
@@ -109,6 +129,19 @@ def main():
         huecos.append((esperado, 2865))
     if huecos:
         errors.append(f"el prólogo y las partes no cubren 1..2865 sin huecos: {huecos}")
+
+    rangos_p4 = {}
+    def recoge_p4(nodos):
+        for n in nodos:
+            if n.get("id") in ARTICULOS_P4:
+                rangos_p4[n["id"]] = tuple(n.get("range", [0, 0]))
+            recoge_p4(n.get("children", []))
+    recoge_p4(raiz)
+    for id_nodo, esperado in ARTICULOS_P4.items():
+        if id_nodo not in rangos_p4:
+            errors.append(f"falta el artículo de la parte 4: {id_nodo}")
+        elif rangos_p4[id_nodo] != esperado:
+            errors.append(f"{id_nodo}: rango {rangos_p4[id_nodo]} no coincide con {esperado}")
 
     for w in warns:
         print("WARN ", w)
