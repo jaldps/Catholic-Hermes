@@ -319,6 +319,15 @@ class CatholicDataRepository(
         return bibleProvider?.search(query, language, limit, editionId) ?: emptyList()
     }
 
+    /** Global search: verses of the edition being read containing every folded token (see [BibleTextProvider.searchFolded]). */
+    fun searchBibleText(
+        foldedTokens: List<String>,
+        limit: Int = 50,
+        language: AppLanguage = _currentLanguage.value,
+        editionId: String = _activeBibleEditionId.value
+    ): List<Triple<String, Int, com.example.data.models.BibleVerse>> =
+        bibleProvider?.searchFolded(foldedTokens, language, limit, editionId) ?: emptyList()
+
     // Rosary & Divine Mercy
     fun getTodayRosaryMystery(): RosaryMystery = getRosaryMystery(RosaryMysterySchedule.today())
 

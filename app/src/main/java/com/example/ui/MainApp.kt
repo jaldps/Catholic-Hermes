@@ -18,6 +18,7 @@ import androidx.compose.material.icons.outlined.SaveAlt
 import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material.icons.outlined.Palette
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Translate
 import androidx.compose.material.icons.outlined.TextFields
 import androidx.compose.material.icons.sharp.Palette
@@ -58,6 +59,9 @@ import com.example.ui.components.LanguageSelectorDialog
 import androidx.compose.material.icons.outlined.DateRange
 import com.example.ui.components.CalendarRulesSheet
 import com.example.data.liturgy.SeasonalMarianPrayer
+import com.example.data.search.GlobalSearch
+import com.example.data.search.SearchSection
+import com.example.data.search.SearchTarget
 import com.example.ui.design.AppIconSlot
 import com.example.ui.design.AppIcons
 import com.example.ui.design.AppNavItem
@@ -106,6 +110,7 @@ enum class AppDestination(
     SPIRITUAL_LIFE("Vida espiritual", "Spiritual Life", "Vida espiritual", AppIconSlot.JOURNAL, "nav_spiritual"),
     CONFESSION("Confesión", "Confession", "Confissão", AppIconSlot.PRAYERS, "nav_confession"),
     PLANS("Planes de lectura", "Reading plans", "Planos de leitura", AppIconSlot.BIBLE, "nav_plans"),
+    SEARCH("Buscar", "Search", "Buscar", AppIconSlot.MORE, "nav_search"),
     REMINDERS("Recordatorios", "Reminders", "Lembretes", AppIconSlot.HABITS, "nav_reminders"),
     BEGINNER("Primeros pasos", "Start here", "Primeiros passos", AppIconSlot.DOCTRINE, "nav_beginner"),
     MORE("Explorar", "Explore", "Explorar", AppIconSlot.MORE, "nav_more");
@@ -199,8 +204,21 @@ fun MainApp(
     val stack = stackNames.split(',').filter { it.isNotEmpty() }.map { AppDestination.valueOf(it) }
     val origin = stack.firstOrNull { it in AppDestination.tabs }
         ?: if (current in AppDestination.tabs) current else AppDestination.MORE
+    // Deep links that only the global search sets. Every other way into a screen must start from none, so
+    // they are cleared by each navigation helper before it (optionally) sets one.
+    var searchEntryId by rememberSaveable { mutableIntStateOf(0) }
+    var saintsInitialKey by rememberSaveable { mutableStateOf<String?>(null) }
+    var studyInitialEntry by rememberSaveable { mutableStateOf<String?>(null) }
+    var prayersInitialNovenaId by rememberSaveable { mutableStateOf<String?>(null) }
+    var bibleInitialLesson by rememberSaveable { mutableStateOf<String?>(null) }
+    var plansInitialId by rememberSaveable { mutableStateOf<String?>(null) }
+    fun clearSearchLinks() {
+        saintsInitialKey = null; studyInitialEntry = null; prayersInitialNovenaId = null
+        bibleInitialLesson = null; plansInitialId = null
+    }
     fun go(destination: AppDestination) {
         if (destination == current) return
+        clearSearchLinks()
         stackNames = if (destination in AppDestination.tabs) "" else (stack + current).joinToString(",") { it.name }
         currentName = destination.name
     }
@@ -226,6 +244,7 @@ fun MainApp(
     var catechismInitialParagraph by rememberSaveable { mutableStateOf<Int?>(null) }
     val onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit =
         { bookId, chapter, verseStart ->
+            clearSearchLinks()
             bibleInitialBook = bookId
             bibleInitialChapter = chapter
             bibleInitialVerse = verseStart
@@ -264,6 +283,73 @@ fun MainApp(
         prayersInitialTab = 0
         go(AppDestination.PRAYERS)
     }
+    // Global search. It opens with an empty field every time (a new entry id drops the saved state of the last
+    // visit); coming back from a result keeps the query. Results open the app's own screens; a screen that is
+    // also a tab is pushed on top of the search, so back returns to the results.
+    fun openSearch() {
+        if (current != AppDestination.SEARCH) screenStateHolder.removeState("${AppDestination.SEARCH.name}:$searchEntryId")
+        searchEntryId++
+        go(AppDestination.SEARCH)
+    }
+    fun pushOnSearch(destination: AppDestination) {
+        clearSearchLinks()
+        stackNames = (stack + current).joinToString(",") { it.name }
+        currentName = destination.name
+    }
+    fun openSection(destination: AppDestination) {
+        when (destination) {
+            AppDestination.ROSARY -> openRosary(0)
+            AppDestination.HABITS_VIRTUES -> openHabits()
+            AppDestination.BIBLE -> {
+                bibleInitialBook = null; bibleInitialChapter = null; bibleInitialVerse = null; bibleInitialTab = 0
+                pushOnSearch(destination)
+            }
+            AppDestination.PRAYERS -> {
+                prayersInitialPrayerId = null; prayersInitialTab = 0; prayersInitialNightTab = 0; prayersInitialOpenChaplet = false
+                pushOnSearch(destination)
+            }
+            else -> {
+                if (destination == AppDestination.QUESTIONS) questionsInitialIndex = null
+                if (destination == AppDestination.CATECHISM) catechismInitialParagraph = null
+                if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
+                if (destination == AppDestination.PILGRIMAGE_HABITS) pilgrimageInitialTab = 0
+                if (destination == AppDestination.DOCTRINE) doctrineInitialEntry = null
+                go(destination)
+            }
+        }
+    }
+    fun openFromSearch(target: SearchTarget) {
+        when (target) {
+            is SearchTarget.Prayer -> {
+                prayersInitialTab = 0; prayersInitialNightTab = 0; prayersInitialOpenChaplet = false
+                pushOnSearch(AppDestination.PRAYERS)
+                prayersInitialPrayerId = target.id
+            }
+            is SearchTarget.Novena -> {
+                prayersInitialPrayerId = null; prayersInitialTab = 1; prayersInitialNightTab = 0; prayersInitialOpenChaplet = false
+                pushOnSearch(AppDestination.PRAYERS)
+                prayersInitialNovenaId = target.id
+            }
+            is SearchTarget.Saint -> { go(AppDestination.SAINTS); saintsInitialKey = target.key }
+            is SearchTarget.Devotion -> { go(AppDestination.STUDY_MARY_JESUS); studyInitialEntry = "devotion:${target.id}" }
+            is SearchTarget.Order -> { go(AppDestination.STUDY_ORDERS); studyInitialEntry = "order:${target.index}" }
+            is SearchTarget.Office -> { go(AppDestination.STUDY_ORDERS); studyInitialEntry = "office:${target.index}" }
+            is SearchTarget.Question -> {
+                questionsInitialIndex = null
+                go(AppDestination.QUESTIONS)
+                studyInitialEntry = "qa:${target.index}"
+            }
+            is SearchTarget.Lesson -> {
+                bibleInitialBook = null; bibleInitialChapter = null; bibleInitialVerse = null; bibleInitialTab = 3
+                pushOnSearch(AppDestination.BIBLE)
+                bibleInitialLesson = target.lessonId
+            }
+            is SearchTarget.Catechism -> onOpenCatechism(target.paragraph)
+            is SearchTarget.Bible -> onOpenBible(target.bookId, target.chapter, target.verse)
+            is SearchTarget.Plan -> { go(AppDestination.PLANS); plansInitialId = target.planId }
+            is SearchTarget.Section -> openSection(AppDestination.valueOf(target.destination))
+        }
+    }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCalendarRules by remember { mutableStateOf(false) }
     var showBackup by rememberSaveable { mutableStateOf(false) }
@@ -278,6 +364,16 @@ fun MainApp(
     var showCustomizerModal by remember { mutableStateOf(false) }
     var showFontPicker by remember { mutableStateOf(false) }
 
+    // Screens the search can open by name; the titles are the destinations' own.
+    val searchSections = remember(currentLanguage) {
+        listOf(
+            AppDestination.PRAYERS, AppDestination.ROSARY, AppDestination.BIBLE, AppDestination.PLANS, AppDestination.CATECHISM,
+            AppDestination.QUESTIONS, AppDestination.SAINTS, AppDestination.STUDY_DOCTRINE, AppDestination.STUDY_MARY_JESUS,
+            AppDestination.STUDY_HISTORY, AppDestination.STUDY_ORDERS, AppDestination.HABITS_VIRTUES, AppDestination.SPIRITUAL_LIFE,
+            AppDestination.CONFESSION, AppDestination.PARISHES, AppDestination.PILGRIMAGE_HABITS, AppDestination.REMINDERS,
+            AppDestination.BEGINNER
+        ).map { SearchSection(it.name, it.title(currentLanguage)) }
+    }
     val design = LocalAppDesign.current
     val tabs = AppDestination.tabs
     val isPushed = stack.isNotEmpty() || current !in tabs
@@ -326,6 +422,7 @@ fun MainApp(
             if (dest == AppDestination.PRAYERS) {
                 prayersInitialPrayerId = null; prayersInitialTab = 0; prayersInitialNightTab = 0; prayersInitialOpenChaplet = false
             }
+            clearSearchLinks()
             stackNames = ""
             currentName = dest.name
         },
@@ -401,8 +498,13 @@ fun MainApp(
                 label = "screen_transition"
             ) { target ->
               screenStateHolder.SaveableStateProvider(when (target) {
-                  AppDestination.BIBLE -> "${target.name}:$bibleInitialTab:$bibleInitialBook:$bibleInitialChapter:$bibleInitialVerse"
-                  AppDestination.PRAYERS -> "${target.name}:$prayersInitialTab:$prayersInitialPrayerId:$prayersInitialNightTab:$prayersInitialOpenChaplet"
+                  AppDestination.BIBLE -> "${target.name}:$bibleInitialTab:$bibleInitialBook:$bibleInitialChapter:$bibleInitialVerse:$bibleInitialLesson"
+                  AppDestination.PRAYERS -> "${target.name}:$prayersInitialTab:$prayersInitialPrayerId:$prayersInitialNightTab:$prayersInitialOpenChaplet:$prayersInitialNovenaId"
+                  AppDestination.SEARCH -> "${target.name}:$searchEntryId"
+                  AppDestination.SAINTS -> "${target.name}:$saintsInitialKey"
+                  AppDestination.STUDY_MARY_JESUS, AppDestination.STUDY_ORDERS -> "${target.name}:$studyInitialEntry"
+                  AppDestination.QUESTIONS -> "${target.name}:$questionsInitialIndex:$studyInitialEntry"
+                  AppDestination.PLANS -> "${target.name}:$plansInitialId"
                   AppDestination.ROSARY -> "${target.name}:$rosaryEntryId"
                   AppDestination.HABITS_VIRTUES -> "${target.name}:$habitsEntryId:$habitsInitialOpenTemptations"
                   AppDestination.DOCTRINE -> "${target.name}:$doctrineInitialEntry"
@@ -504,6 +606,7 @@ fun MainApp(
                             go(AppDestination.SPIRITUAL_LIFE)
                         },
                         onOpenReminders = { go(AppDestination.REMINDERS) },
+                        onOpenSearch = { openSearch() },
                         onNavigateToChurches = { go(AppDestination.PARISHES) },
                         ttsManager = ttsManager
                     )
@@ -547,19 +650,20 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         dao = dao,
                         ttsManager = ttsManager,
-                        onExitContext = if (stack.isNotEmpty() && bibleInitialBook != null) ({ pop() }) else null,
+                        onExitContext = if (stack.isNotEmpty() && (bibleInitialBook != null || bibleInitialLesson != null)) ({ pop() }) else null,
                         initialMainTab = bibleInitialTab,
                         initialBookId = bibleInitialBook,
                         initialChapter = bibleInitialChapter,
                         initialVerseStart = bibleInitialVerse,
-                        onOpenCatechism = onOpenCatechism
+                        onOpenCatechism = onOpenCatechism,
+                        initialLessonId = bibleInitialLesson
                     )
 
                     AppDestination.CATECHISM -> CatechismScreen(
                         repository = repository,
                         currentLanguage = currentLanguage,
                         initialParagraph = catechismInitialParagraph,
-                        onExitContext = if (stack.lastOrNull() == AppDestination.BIBLE && catechismInitialParagraph != null) ({ pop() }) else null
+                        onExitContext = if ((stack.lastOrNull() == AppDestination.BIBLE || stack.lastOrNull() == AppDestination.SEARCH) && catechismInitialParagraph != null) ({ pop() }) else null
                     )
 
                     AppDestination.ROSARY -> RosaryScreen(
@@ -575,11 +679,13 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         dao = dao,
                         initialPrayerId = prayersInitialPrayerId,
+                        initialNovenaId = prayersInitialNovenaId,
                         initialTab = prayersInitialTab,
                         initialNightOfficeTab = prayersInitialNightTab,
                         onOpenRosary = { openRosary(0) },
                         onOpenGuidedChaplet = { openRosary(1) },
-                        initialOpenChaplet = prayersInitialOpenChaplet
+                        initialOpenChaplet = prayersInitialOpenChaplet,
+                        onExitContext = if (stack.lastOrNull() == AppDestination.SEARCH) ({ pop() }) else null
                     )
 
                     AppDestination.PILGRIMAGE_HABITS -> PilgrimageAndHabitsScreen(
@@ -613,6 +719,7 @@ fun MainApp(
                         repository = repository,
                         currentLanguage = currentLanguage,
                         initialTopTab = 1,
+                        initialEntry = studyInitialEntry,
                         showTabs = false,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
@@ -633,13 +740,17 @@ fun MainApp(
                         repository = repository,
                         currentLanguage = currentLanguage,
                         initialTopTab = 4,
+                        initialEntry = studyInitialEntry,
                         showTabs = false,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
                         onOpenPrayer = onOpenPrayer
                     )
 
-                    AppDestination.SAINTS -> com.example.ui.screens.SaintsScreen(currentLanguage)
+                    AppDestination.SAINTS -> com.example.ui.screens.SaintsScreen(
+                        currentLanguage, initialKey = saintsInitialKey,
+                        onExitContext = if (stack.lastOrNull() == AppDestination.SEARCH && saintsInitialKey != null) ({ pop() }) else null
+                    )
 
                     AppDestination.PARISHES -> ParishFinderScreen(
                         repository = repository,
@@ -662,6 +773,7 @@ fun MainApp(
                         initialTopTab = 3,
                         showTabs = false,
                         initialQuestionIndex = questionsInitialIndex,
+                        initialEntry = studyInitialEntry,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
                         onOpenPrayer = onOpenPrayer
@@ -685,8 +797,15 @@ fun MainApp(
                         repository = repository,
                         language = currentLanguage,
                         onOpenBible = onOpenBible,
-                        onOpenCatechism = onOpenCatechism
+                        onOpenCatechism = onOpenCatechism,
+                        initialPlanId = plansInitialId,
+                        onExitContext = if (stack.lastOrNull() == AppDestination.SEARCH && plansInitialId != null) ({ pop() }) else null
                     )
+
+                    AppDestination.SEARCH -> {
+                        val search = remember(repository, searchSections) { GlobalSearch(repository, searchSections) }
+                        com.example.ui.screens.SearchScreen(currentLanguage, search, onOpen = { openFromSearch(it) })
+                    }
 
                     AppDestination.REMINDERS -> RemindersScreen(
                         repository = repository,
@@ -704,6 +823,7 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         onOpenBeginner = { go(AppDestination.BEGINNER) },
                         sections = moreSections(currentLanguage) { destination ->
+                            if (destination == AppDestination.SEARCH) { openSearch(); return@moreSections }
                             if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
                             if (destination == AppDestination.HABITS_VIRTUES) {
                                 screenStateHolder.removeState("${AppDestination.HABITS_VIRTUES.name}:$habitsEntryId:$habitsInitialOpenTemptations")
@@ -873,6 +993,13 @@ private fun moreSections(
     fun entry(d: AppDestination) =
         MoreEntry(d.title(language), d.iconSlot, d.tag) { open(d) }
     return listOf(
+        MoreSection(
+            pick("Buscar", "Search", "Buscar"),
+            listOf(entry(AppDestination.SEARCH).copy(
+                icon = Icons.Outlined.Search,
+                subtitle = pick("Oraciones, santos, Catecismo, Biblia…", "Prayers, saints, Catechism, Bible…", "Orações, santos, Catecismo, Bíblia…")
+            ))
+        ),
         MoreSection(
             pick("Estudio", "Study", "Estudo"),
             listOf(

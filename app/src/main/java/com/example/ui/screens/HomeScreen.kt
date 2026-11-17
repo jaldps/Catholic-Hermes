@@ -37,6 +37,7 @@ import androidx.compose.material.icons.outlined.LightMode
 import androidx.compose.material.icons.outlined.MenuBook
 import androidx.compose.material.icons.outlined.NightsStay
 import androidx.compose.material.icons.outlined.NotificationsNone
+import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Spa
 import androidx.compose.material.icons.outlined.StarOutline
@@ -175,6 +176,8 @@ fun HomeScreen(
     dao: SanctaFidesDao? = null,
     liturgicalDay: LiturgicalCalendarDay = PilgrimageAndHabitsData.upcomingLiturgicalDays.first(),
     onOpenReminders: () -> Unit = {},
+    /** The magnifier in the header: opens the global search. */
+    onOpenSearch: () -> Unit = {},
     onNavigateToChurches: () -> Unit = onNavigateToDoctrine,
     ttsManager: com.example.data.audio.LiturgicalTtsManager? = null,
     /** "Santuarios" tile; defaults to the calendar destination (MainApp opens the shrines tab). */
@@ -364,6 +367,13 @@ fun HomeScreen(
                 eyebrow = dateEyebrow,
                 modifier = Modifier.testTag("screen_header_illustration")
             ) {
+                AppGlassIconButton(
+                    icon = Icons.Outlined.Search,
+                    contentDescription = strings("Buscar", "Search", "Buscar"),
+                    onClick = onOpenSearch,
+                    onImage = true,
+                    tag = "global_search_button"
+                )
                 AppGlassIconButton(
                     icon = Icons.Outlined.NotificationsNone,
                     contentDescription = strings("Recordatorios", "Reminders", "Lembretes"),
