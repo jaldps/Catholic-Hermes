@@ -1,0 +1,1762 @@
+{
+  "nodes": [
+    {
+      "id": "prologue",
+      "kind": "PROLOGUE",
+      "title": {
+        "es": "Prólogo",
+        "en": "Prologue",
+        "pt": "Prólogo"
+      },
+      "range": [
+        1,
+        25
+      ],
+      "children": []
+    },
+    {
+      "id": "p1",
+      "kind": "PART",
+      "title": {
+        "es": "La profesión de la fe",
+        "en": "The profession of faith",
+        "pt": "A profissão da fé"
+      },
+      "range": [
+        26,
+        1065
+      ],
+      "children": [
+        {
+          "id": "p1s1",
+          "kind": "SECTION",
+          "title": {
+            "es": "«Creo» - «creemos»",
+            "en": "\"I believe\"-\"we believe\"",
+            "pt": "«Eu creio» – «nós cremos»"
+          },
+          "range": [
+            26,
+            184
+          ],
+          "children": [
+            {
+              "id": "p1s1c1",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "El hombre es «capaz» de Dios",
+                "en": "Man's capacity for God",
+                "pt": "O homem é «capaz» de Deus"
+              },
+              "range": [
+                26,
+                49
+              ],
+              "children": []
+            },
+            {
+              "id": "p1s1c2",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "Dios al encuentro del hombre",
+                "en": "God comes to meet man",
+                "pt": "Deus ao encontro do homem"
+              },
+              "range": [
+                50,
+                141
+              ],
+              "children": [
+                {
+                  "id": "p1s1c2a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La revelación de Dios",
+                    "en": "The revelation of God",
+                    "pt": "A revelação de Deus"
+                  },
+                  "range": [
+                    50,
+                    73
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s1c2a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La transmisión de la revelación divina",
+                    "en": "The transmission of divine revelation",
+                    "pt": "A transmissão da revelação divina"
+                  },
+                  "range": [
+                    74,
+                    100
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s1c2a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La Sagrada Escritura",
+                    "en": "Sacred scripture",
+                    "pt": "A Sagrada Escritura"
+                  },
+                  "range": [
+                    101,
+                    141
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p1s1c3",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "La respuesta del hombre a Dios",
+                "en": "Man's response to God",
+                "pt": "A resposta do homem a Deus"
+              },
+              "range": [
+                142,
+                184
+              ],
+              "children": [
+                {
+                  "id": "p1s1c3a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Creo",
+                    "en": "I believe",
+                    "pt": "Eu creio"
+                  },
+                  "range": [
+                    142,
+                    165
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s1c3a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Creemos",
+                    "en": "We believe",
+                    "pt": "Nós cremos"
+                  },
+                  "range": [
+                    166,
+                    184
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1s2",
+          "kind": "SECTION",
+          "title": {
+            "es": "La profesión de la fe cristiana",
+            "en": "The profession of the Christian faith",
+            "pt": "A profissão da fé cristã"
+          },
+          "range": [
+            185,
+            1065
+          ],
+          "children": [
+            {
+              "id": "p1s2h1",
+              "kind": "HEADING",
+              "title": {
+                "es": "Los Símbolos de la fe",
+                "en": "I. The Creeds",
+                "pt": "Os Símbolos da Fé"
+              },
+              "range": [
+                185,
+                197
+              ],
+              "children": []
+            },
+            {
+              "id": "p1s2c1",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "Creo en Dios Padre",
+                "en": "I believe in God the Father",
+                "pt": "Creio em Deus Pai"
+              },
+              "range": [
+                198,
+                421
+              ],
+              "children": [
+                {
+                  "id": "p1s2c1a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Creo en Dios, Padre todopoderoso, creador del cielo y de la tierra»",
+                    "en": "\"I believe in God the Father almighty, creator of heaven and earth\"",
+                    "pt": "«Creio em Deus Pai todo-poderoso, criador do céu e da terra»"
+                  },
+                  "range": [
+                    198,
+                    421
+                  ],
+                  "children": [
+                    {
+                      "id": "p1s2c1a1p1",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "Creo en Dios",
+                        "en": "I believe in God",
+                        "pt": "Creio em Deus"
+                      },
+                      "range": [
+                        198,
+                        231
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c1a1p2",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "El Padre",
+                        "en": "The Father",
+                        "pt": "O Pai"
+                      },
+                      "range": [
+                        232,
+                        267
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c1a1p3",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "El todopoderoso",
+                        "en": "The almighty",
+                        "pt": "O todo-poderoso"
+                      },
+                      "range": [
+                        268,
+                        278
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c1a1p4",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "El creador",
+                        "en": "The creator",
+                        "pt": "O criador"
+                      },
+                      "range": [
+                        279,
+                        324
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c1a1p5",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "El cielo y la tierra",
+                        "en": "Heaven and earth",
+                        "pt": "O céu e a terra"
+                      },
+                      "range": [
+                        325,
+                        354
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c1a1p6",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "El hombre",
+                        "en": "Man",
+                        "pt": "O homem"
+                      },
+                      "range": [
+                        355,
+                        384
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c1a1p7",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "La caída",
+                        "en": "The fall",
+                        "pt": "A queda"
+                      },
+                      "range": [
+                        385,
+                        421
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "p1s2c2",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "Creo en Jesucristo, Hijo único de Dios",
+                "en": "I believe in Jesus Christ, the only Son of God",
+                "pt": "Creio em Jesus Cristo, Filho único de Deus"
+              },
+              "range": [
+                422,
+                682
+              ],
+              "children": [
+                {
+                  "id": "p1s2c2a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Y en Jesucristo, su único Hijo, nuestro Señor»",
+                    "en": "\"And in Jesus Christ, his only Son, our Lord\"",
+                    "pt": "«E em Jesus Cristo, seu Filho único, nosso Senhor»"
+                  },
+                  "range": [
+                    430,
+                    455
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s2c2a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Jesucristo fue concebido por obra y gracia del Espíritu Santo y nació de santa maría Virgen»",
+                    "en": "\"He was conceived by the power of the Holy Spirit, and was born of the Virgin mary\"",
+                    "pt": "«Jesus Cristo foi concebido pelo Espírito Santo e nasceu da Virgem maria»"
+                  },
+                  "range": [
+                    456,
+                    570
+                  ],
+                  "children": [
+                    {
+                      "id": "p1s2c2a3p1",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "El Hijo de Dios se hizo hombre",
+                        "en": "The Son of God became man",
+                        "pt": "O Filho de Deus fez-se homem"
+                      },
+                      "range": [
+                        456,
+                        483
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c2a3p2",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "«...Concebido por obra y gracia del Espíritu Santo, nació de santa maría Virgen»",
+                        "en": "\"Conceived by the power of the Holy Spirit and born of the Virgin mary\"",
+                        "pt": "«... Concebido pelo Espírito Santo, nascido da Virgem maria»"
+                      },
+                      "range": [
+                        484,
+                        511
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c2a3p3",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "Los misterios de la vida de Cristo",
+                        "en": "The mysteries of Christ's life",
+                        "pt": "Os mistérios da vida de Cristo"
+                      },
+                      "range": [
+                        512,
+                        570
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "p1s2c2a4",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Jesucristo padeció bajo poncio pilato, fue crucificado, muerto y sepultado»",
+                    "en": "\"Jesus Christ suffered under pontius pilate, was crucified, died and was buried\"",
+                    "pt": "«Jesus Cristo padeceu sob pôncio pilatos, foi crucificado, morto e sepultado»"
+                  },
+                  "range": [
+                    571,
+                    630
+                  ],
+                  "children": [
+                    {
+                      "id": "p1s2c2a4p1",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "Jesús e israel",
+                        "en": "Jesus and israel",
+                        "pt": "Jesus e israel"
+                      },
+                      "range": [
+                        571,
+                        594
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c2a4p2",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "Jesús murió crucificado",
+                        "en": "Jesus died crucified",
+                        "pt": "Jesus morreu crucificado"
+                      },
+                      "range": [
+                        595,
+                        623
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c2a4p3",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "Jesucristo fue sepultado",
+                        "en": "Jesus Christ was buried",
+                        "pt": "Jesus Cristo foi sepultado"
+                      },
+                      "range": [
+                        624,
+                        630
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "p1s2c2a5",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Jesucristo descendió a los infiernos, al tercer día resucitó de entre los muertos»",
+                    "en": "\"He descended into hell. on the third day he rose again\"",
+                    "pt": "«Jesus Cristo desceu à mansão dos mortos, ao terceiro dia ressuscitou dos mortos»"
+                  },
+                  "range": [
+                    631,
+                    658
+                  ],
+                  "children": [
+                    {
+                      "id": "p1s2c2a5p1",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "Cristo descendió a los infiernos",
+                        "en": "Christ descended into hell",
+                        "pt": "Cristo desceu à mansão dos mortos"
+                      },
+                      "range": [
+                        631,
+                        637
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c2a5p2",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "Al tercer día resucitó de entre los muertos",
+                        "en": "On the third day he rose from the dead",
+                        "pt": "Ao terceiro dia ressuscitou dos mortos"
+                      },
+                      "range": [
+                        638,
+                        658
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "p1s2c2a6",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Jesucristo subió a los cielos, y está sentado a la derecha de Dios, Padre todopoderoso»",
+                    "en": "\"He ascended into heaven and is seated at the right hand of the Father\"",
+                    "pt": "«Jesus subiu aos céus e está sentado à direita de Deus, Pai todo-poderoso»"
+                  },
+                  "range": [
+                    659,
+                    667
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s2c2a7",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Desde allí ha de venir a juzgar a vivos y a muertos»",
+                    "en": "\"From thence he will come again to judge the living and the dead\"",
+                    "pt": "«Donde há-de vir julgar os vivos e os mortos»"
+                  },
+                  "range": [
+                    668,
+                    682
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p1s2c3",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "Creo en el Espíritu Santo",
+                "en": "I believe in the Holy Spirit",
+                "pt": "Creio no Espírito Santo"
+              },
+              "range": [
+                683,
+                1065
+              ],
+              "children": [
+                {
+                  "id": "p1s2c3h1",
+                  "kind": "HEADING",
+                  "title": {
+                    "es": "«Amén»",
+                    "en": "\"Amen\"",
+                    "pt": "«Amen»"
+                  },
+                  "range": [
+                    1061,
+                    1065
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s2c3a8",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Creo en el Espíritu Santo»",
+                    "en": "\"I believe in the Holy Spirit\"",
+                    "pt": "«Creio no Espírito Santo»"
+                  },
+                  "range": [
+                    687,
+                    747
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s2c3a9",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Creo en la santa Iglesia católica»",
+                    "en": "\"I believe in the holy catholic Church\"",
+                    "pt": "«Creio na santa Igreja católica»"
+                  },
+                  "range": [
+                    748,
+                    975
+                  ],
+                  "children": [
+                    {
+                      "id": "p1s2c3a9p1",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "La Iglesia en el designio de Dios",
+                        "en": "The Church in God's plan",
+                        "pt": "A Igreja no desígnio de Deus"
+                      },
+                      "range": [
+                        751,
+                        780
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c3a9p2",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "La Iglesia, pueblo de Dios, cuerpo de Cristo, templo del Espíritu Santo",
+                        "en": "The Church - people of God, body of Christ, temple of the Holy Spirit",
+                        "pt": "A Igreja – povo de Deus, corpo de Cristo, templo do Espírito Santo"
+                      },
+                      "range": [
+                        781,
+                        810
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c3a9p3",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "La Iglesia es una, santa, católica y apostólica",
+                        "en": "The Church is one, holy, catholic, and apostolic",
+                        "pt": "A Igreja é una, santa, católica e apostólica"
+                      },
+                      "range": [
+                        811,
+                        870
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c3a9p4",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "Los fieles de Cristo: jerarquía, laicos, vida consagrada",
+                        "en": "Christ's faithful - hierarchy, laity, consecrated life",
+                        "pt": "Os fiéis de Cristo – hierarquia, leigos, vida consagrada"
+                      },
+                      "range": [
+                        871,
+                        945
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c3a9p5",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "La comunión de los santos",
+                        "en": "The communion of saints",
+                        "pt": "A comunhão dos santos"
+                      },
+                      "range": [
+                        946,
+                        962
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "p1s2c3a9p6",
+                      "kind": "PARAGRAPH",
+                      "title": {
+                        "es": "María, madre de Cristo, madre de la Iglesia",
+                        "en": "Mary - mother of Christ, mother of the Church",
+                        "pt": "Maria – mãe de Cristo, mãe da Igreja"
+                      },
+                      "range": [
+                        963,
+                        975
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "p1s2c3a10",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Creo en el perdón de los pecados»",
+                    "en": "\"I believe in the forgiveness of sins\"",
+                    "pt": "«Creio na remissão dos pecados»"
+                  },
+                  "range": [
+                    976,
+                    987
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s2c3a11",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Creo en la resurrección de la carne»",
+                    "en": "\"I believe in the resurrection of the body\"",
+                    "pt": "«Creio na ressurreição da carne»"
+                  },
+                  "range": [
+                    988,
+                    1019
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p1s2c3a12",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "«Creo en la vida eterna»",
+                    "en": "\"I believe in life everlasting\"",
+                    "pt": "«Creio na vida eterna»"
+                  },
+                  "range": [
+                    1020,
+                    1060
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "kind": "PART",
+      "title": {
+        "es": "La celebración del misterio cristiano",
+        "en": "The celebration of the christian mystery",
+        "pt": "A celebração do mistério cristão"
+      },
+      "range": [
+        1066,
+        1690
+      ],
+      "children": [
+        {
+          "id": "p2s1",
+          "kind": "SECTION",
+          "title": {
+            "es": "La economía sacramental",
+            "en": "The sacramental economy",
+            "pt": "A economia sacramental"
+          },
+          "range": [
+            1076,
+            1209
+          ],
+          "children": [
+            {
+              "id": "p2s1c1",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "El misterio pascual en el tiempo de la Iglesia",
+                "en": "The paschal mystery in the age of the Church",
+                "pt": "O mistério pascal no tempo da Igreja"
+              },
+              "range": [
+                1077,
+                1134
+              ],
+              "children": [
+                {
+                  "id": "p2s1c1a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La liturgia, obra de la Santísima Trinidad",
+                    "en": "The liturgy - work of the Holy Trinity",
+                    "pt": "A liturgia – obra da santíssima trin"
+                  },
+                  "range": [
+                    1077,
+                    1112
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p2s1c1a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El misterio pascual en los sacramentos de la Iglesia",
+                    "en": "The paschal mystery in the Church's sacraments",
+                    "pt": "O mistério pascal nos sacramentos da Igreja"
+                  },
+                  "range": [
+                    1113,
+                    1134
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p2s1c2",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "La celebración sacramental del misterio pascual",
+                "en": "The sacramental celebration of the paschal mystery",
+                "pt": "A celebração sacramental do mistério pascal"
+              },
+              "range": [
+                1135,
+                1209
+              ],
+              "children": [
+                {
+                  "id": "p2s1c2a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Celebrar la liturgia de la Iglesia",
+                    "en": "Celebrating the Church's liturgy",
+                    "pt": "Celebrar a liturgia da Igreja"
+                  },
+                  "range": [
+                    1136,
+                    1199
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p2s1c2a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Diversidad litúrgica y unidad del misterio",
+                    "en": "Liturgical diversity and the unity of the mystery",
+                    "pt": "Diversidade litúrgica e unidade do mistério"
+                  },
+                  "range": [
+                    1200,
+                    1209
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2s2",
+          "kind": "SECTION",
+          "title": {
+            "es": "«Los siete sacramentos de la Iglesia»",
+            "en": "The seven sacraments of the Church",
+            "pt": "Os sete sacramentos da Igreja"
+          },
+          "range": [
+            1210,
+            1690
+          ],
+          "children": [
+            {
+              "id": "p2s2c1",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "Los sacramentos de la iniciación cristiana",
+                "en": "The sacraments of christian initiation",
+                "pt": "Os sacramentos da iniciação cristã"
+              },
+              "range": [
+                1212,
+                1419
+              ],
+              "children": [
+                {
+                  "id": "p2s2c1a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El sacramento del bautismo",
+                    "en": "The sacrament of baptism",
+                    "pt": "O sacramento do baptismo"
+                  },
+                  "range": [
+                    1213,
+                    1284
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p2s2c1a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El sacramento de la confirmación",
+                    "en": "The sacrament of confirmation",
+                    "pt": "O sacramento da confirmação"
+                  },
+                  "range": [
+                    1285,
+                    1321
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p2s2c1a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El sacramento de la Eucaristía",
+                    "en": "The sacrament of the Eucharist",
+                    "pt": "O sacramento da Eucaristia"
+                  },
+                  "range": [
+                    1322,
+                    1419
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p2s2c2",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "Los sacramentos de curación",
+                "en": "The sacraments of healing",
+                "pt": "Os sacramentos de cura"
+              },
+              "range": [
+                1420,
+                1532
+              ],
+              "children": [
+                {
+                  "id": "p2s2c2a4",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El sacramento de la penitencia y de la reconciliación",
+                    "en": "The sacrament of penance and reconciliation",
+                    "pt": "O sacramento da penitência e da reconciliação"
+                  },
+                  "range": [
+                    1422,
+                    1498
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p2s2c2a5",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La unción de los enfermos",
+                    "en": "The anointing of the sick",
+                    "pt": "A unção dos doentes"
+                  },
+                  "range": [
+                    1499,
+                    1532
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p2s2c3",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "Los sacramentos al servicio de la comunidad",
+                "en": "The sacraments at the service of communion",
+                "pt": "Os sacramentos do serviço da comunhão"
+              },
+              "range": [
+                1533,
+                1666
+              ],
+              "children": [
+                {
+                  "id": "p2s2c3a6",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El sacramento del orden",
+                    "en": "The sacrament of holy orders",
+                    "pt": "O sacramento da ordem"
+                  },
+                  "range": [
+                    1536,
+                    1600
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p2s2c3a7",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El sacramento del matrimonio",
+                    "en": "The sacrament of matrimony",
+                    "pt": "O sacramento do matrimónio"
+                  },
+                  "range": [
+                    1601,
+                    1666
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p2s2c4",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "Otras celebraciones litúrgicas",
+                "en": "Other liturgical celebrations",
+                "pt": "As outras celebrações litúrgicas"
+              },
+              "range": [
+                1667,
+                1690
+              ],
+              "children": [
+                {
+                  "id": "p2s2c4a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Los sacramentales",
+                    "en": "Sacramentals",
+                    "pt": "Os sacramentais"
+                  },
+                  "range": [
+                    1667,
+                    1679
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p2s2c4a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Las exequias cristianas",
+                    "en": "Christian funerals",
+                    "pt": "As exéquias cristãs"
+                  },
+                  "range": [
+                    1680,
+                    1690
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "kind": "PART",
+      "title": {
+        "es": "La vida en Cristo",
+        "en": "Life in Christ",
+        "pt": "A vida em Cristo"
+      },
+      "range": [
+        1691,
+        2557
+      ],
+      "children": [
+        {
+          "id": "p3s1",
+          "kind": "SECTION",
+          "title": {
+            "es": "La vocación del hombre: la vida en el espíritu",
+            "en": "Man's vocation life in the spirit",
+            "pt": "A vocação do homem: a vida no espírito"
+          },
+          "range": [
+            1699,
+            2051
+          ],
+          "children": [
+            {
+              "id": "p3s1c1",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "La dignidad de la persona humana",
+                "en": "The dignity of the human person",
+                "pt": "A dignidade da pessoa humana"
+              },
+              "range": [
+                1700,
+                1876
+              ],
+              "children": [
+                {
+                  "id": "p3s1c1a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El hombre, imagen de Dios",
+                    "en": "Man: the image of God",
+                    "pt": "O homem, imagem de Deus"
+                  },
+                  "range": [
+                    1701,
+                    1715
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c1a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Nuestra vocación a la bienaventuranza",
+                    "en": "Our vocation to beatitude",
+                    "pt": "A nossa vocação à bem-aventurança"
+                  },
+                  "range": [
+                    1716,
+                    1729
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c1a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La libertad del hombre",
+                    "en": "Man's freedom",
+                    "pt": "A liberdade do homem"
+                  },
+                  "range": [
+                    1730,
+                    1748
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c1a4",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La moralidad de los actos humanos",
+                    "en": "The morality of human acts",
+                    "pt": "A moralidade dos actos humanos"
+                  },
+                  "range": [
+                    1749,
+                    1761
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c1a5",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La moralidad de las pasiones",
+                    "en": "The morality of the passions",
+                    "pt": "A moralidade das paixões"
+                  },
+                  "range": [
+                    1762,
+                    1775
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c1a6",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La conciencia moral",
+                    "en": "Moral conscience",
+                    "pt": "A consciência moral"
+                  },
+                  "range": [
+                    1776,
+                    1802
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c1a7",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Las virtudes",
+                    "en": "The virtues",
+                    "pt": "As virtudes"
+                  },
+                  "range": [
+                    1803,
+                    1845
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c1a8",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El pecado",
+                    "en": "Sin",
+                    "pt": "O pecado"
+                  },
+                  "range": [
+                    1846,
+                    1876
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p3s1c2",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "La comunidad humana",
+                "en": "The human communion",
+                "pt": "A comunidade humana"
+              },
+              "range": [
+                1877,
+                1948
+              ],
+              "children": [
+                {
+                  "id": "p3s1c2a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La persona y la sociedad",
+                    "en": "The person and society",
+                    "pt": "A pessoa e a sociedade"
+                  },
+                  "range": [
+                    1878,
+                    1896
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c2a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La participación en la vida social",
+                    "en": "Participation in social life",
+                    "pt": "A participação na vida social"
+                  },
+                  "range": [
+                    1897,
+                    1927
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c2a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La justicia social",
+                    "en": "Social justice",
+                    "pt": "A justiça social"
+                  },
+                  "range": [
+                    1928,
+                    1948
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p3s1c3",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "La salvación de Dios: la ley y la gracia",
+                "en": "God's salvation: law and grace",
+                "pt": "A salvação de Deus: a lei e a graça"
+              },
+              "range": [
+                1949,
+                2051
+              ],
+              "children": [
+                {
+                  "id": "p3s1c3a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La ley moral",
+                    "en": "The moral law",
+                    "pt": "A lei moral"
+                  },
+                  "range": [
+                    1950,
+                    1986
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c3a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Gracia y justificación",
+                    "en": "Grace and justification",
+                    "pt": "Graça e justificação"
+                  },
+                  "range": [
+                    1987,
+                    2029
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s1c3a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La Iglesia, madre y maestra",
+                    "en": "The Church, mother and teacher",
+                    "pt": "A Igreja. mãe e educadora"
+                  },
+                  "range": [
+                    2030,
+                    2051
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3s2",
+          "kind": "SECTION",
+          "title": {
+            "es": "Los diez mandamientos",
+            "en": "The ten commandments",
+            "pt": "Os dez mandamentos"
+          },
+          "range": [
+            2052,
+            2557
+          ],
+          "children": [
+            {
+              "id": "p3s2c1",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "«Amarás al Señor tu Dios con todo tu corazón, con toda tu alma y con todas tus fuerzas»",
+                "en": "You shall love the Lord your God with all your heart, and with all your soul, and with all your mind",
+                "pt": "«Amarás o Senhor teu Deus com todo o teu coração, com toda a tua alma e com todas as tuas forças»"
+              },
+              "range": [
+                2083,
+                2195
+              ],
+              "children": [
+                {
+                  "id": "p3s2c1a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El primer mandamiento",
+                    "en": "The first commandment",
+                    "pt": "O primeiro mandamento"
+                  },
+                  "range": [
+                    2084,
+                    2141
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s2c1a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El segundo mandamiento",
+                    "en": "The second commandment",
+                    "pt": "O segundo mandamento"
+                  },
+                  "range": [
+                    2142,
+                    2167
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s2c1a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El tercer mandamiento",
+                    "en": "The third commandment",
+                    "pt": "O terceiro mandamento"
+                  },
+                  "range": [
+                    2168,
+                    2195
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p3s2c2",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "«Amarás a tu prójimo como a ti mismo»",
+                "en": "You shall love your neighbor as yourself",
+                "pt": "«Amarás o teu próximo como a ti mesmo»"
+              },
+              "range": [
+                2196,
+                2557
+              ],
+              "children": [
+                {
+                  "id": "p3s2c2a4",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El cuarto mandamiento",
+                    "en": "The fourth commandment",
+                    "pt": "O quarto mandamento"
+                  },
+                  "range": [
+                    2197,
+                    2257
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s2c2a5",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El quinto mandamiento",
+                    "en": "The fifth commandment",
+                    "pt": "O quinto mandamento"
+                  },
+                  "range": [
+                    2258,
+                    2330
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s2c2a6",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El sexto mandamiento",
+                    "en": "The sixth commandment",
+                    "pt": "O sexto mandamento"
+                  },
+                  "range": [
+                    2331,
+                    2400
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s2c2a7",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El séptimo mandamiento",
+                    "en": "The seventh commandment",
+                    "pt": "O sétimo mandamento"
+                  },
+                  "range": [
+                    2401,
+                    2463
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s2c2a8",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El octavo mandamiento",
+                    "en": "The eighth commandment",
+                    "pt": "O oitavo mandamento"
+                  },
+                  "range": [
+                    2464,
+                    2513
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s2c2a9",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El noveno mandamiento",
+                    "en": "The ninth commandment",
+                    "pt": "O nono mandamento"
+                  },
+                  "range": [
+                    2514,
+                    2533
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p3s2c2a10",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El décimo mandamiento",
+                    "en": "The tenth commandment",
+                    "pt": "O décimo mandamento"
+                  },
+                  "range": [
+                    2534,
+                    2557
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "kind": "PART",
+      "title": {
+        "es": "La oración cristiana",
+        "en": "Christian prayer",
+        "pt": "A oração cristã"
+      },
+      "range": [
+        2558,
+        2865
+      ],
+      "children": [
+        {
+          "id": "p4s1",
+          "kind": "SECTION",
+          "title": {
+            "es": "La oración en la vida cristiana",
+            "en": "Prayer in the christian life",
+            "pt": "Oração na vida cristã"
+          },
+          "range": [
+            2558,
+            2758
+          ],
+          "children": [
+            {
+              "id": "p4s1c1",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "La revelación de la oración",
+                "en": "The revelation of prayer - the universal call to prayer",
+                "pt": "Revelação da oração"
+              },
+              "range": [
+                2566,
+                2649
+              ],
+              "children": [
+                {
+                  "id": "p4s1c1a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "En el antiguo testamento",
+                    "en": "In the old testament",
+                    "pt": "No antigo testamento"
+                  },
+                  "range": [
+                    2568,
+                    2597
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p4s1c1a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "En la plenitud de los tiempos",
+                    "en": "In the fullness of time",
+                    "pt": "Na plenitude do tempo"
+                  },
+                  "range": [
+                    2598,
+                    2622
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p4s1c1a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "En el tiempo de la Iglesia",
+                    "en": "In the age of the Church",
+                    "pt": "No tempo da Igreja"
+                  },
+                  "range": [
+                    2623,
+                    2649
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p4s1c2",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "La tradición de la oración",
+                "en": "The tradition of prayer",
+                "pt": "A tradição da oração"
+              },
+              "range": [
+                2650,
+                2696
+              ],
+              "children": [
+                {
+                  "id": "p4s1c2a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Fuentes de la oración",
+                    "en": "At the wellsprings of prayer",
+                    "pt": "Nas fontes da oração"
+                  },
+                  "range": [
+                    2652,
+                    2662
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p4s1c2a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El camino de la oración",
+                    "en": "The way of prayer",
+                    "pt": "O caminho da oração"
+                  },
+                  "range": [
+                    2663,
+                    2682
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p4s1c2a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Maestros de oración",
+                    "en": "Guides for prayer",
+                    "pt": "Guias para a oração"
+                  },
+                  "range": [
+                    2683,
+                    2696
+                  ],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "p4s1c3",
+              "kind": "CHAPTER",
+              "title": {
+                "es": "La vida de oración",
+                "en": "The life of prayer",
+                "pt": "A vida de oração"
+              },
+              "range": [
+                2697,
+                2758
+              ],
+              "children": [
+                {
+                  "id": "p4s1c3a1",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "Expresiones de la oración",
+                    "en": "Expressions of prayer",
+                    "pt": "As expressões da oração"
+                  },
+                  "range": [
+                    2700,
+                    2724
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p4s1c3a2",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "El combate de la oración",
+                    "en": "The battle of prayer",
+                    "pt": "O combate da oração"
+                  },
+                  "range": [
+                    2725,
+                    2745
+                  ],
+                  "children": []
+                },
+                {
+                  "id": "p4s1c3a3",
+                  "kind": "ARTICLE",
+                  "title": {
+                    "es": "La oración de la Hora de Jesús",
+                    "en": "The Prayer of the Hour of Jesus",
+                    "pt": "A oração da Hora de Jesus"
+                  },
+                  "range": [
+                    2746,
+                    2758
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p4s2",
+          "kind": "SECTION",
+          "title": {
+            "es": "La oración del Señor: «Padre nuestro»",
+            "en": "The Lord's prayer",
+            "pt": "A oração do Senhor: «Pai nosso»"
+          },
+          "range": [
+            2759,
+            2865
+          ],
+          "children": [
+            {
+              "id": "p4s2a1",
+              "kind": "ARTICLE",
+              "title": {
+                "es": "«Resumen de todo el evangelio»",
+                "en": "\"The summary of the whole gospel\"",
+                "pt": "«O resumo de todo o evangelho»"
+              },
+              "range": [
+                2761,
+                2776
+              ],
+              "children": []
+            },
+            {
+              "id": "p4s2a2",
+              "kind": "ARTICLE",
+              "title": {
+                "es": "«Padre nuestro que estás en el cielo»",
+                "en": "\"Our Father who art in heaven\"",
+                "pt": "«Pai nosso, que estais nos céus»"
+              },
+              "range": [
+                2777,
+                2802
+              ],
+              "children": []
+            },
+            {
+              "id": "p4s2a3",
+              "kind": "ARTICLE",
+              "title": {
+                "es": "Las siete peticiones",
+                "en": "The seven petitions",
+                "pt": "As sete petições"
+              },
+              "range": [
+                2803,
+                2854
+              ],
+              "children": []
+            },
+            {
+              "id": "p4s2a4",
+              "kind": "ARTICLE",
+              "title": {
+                "es": "La doxología final",
+                "en": "The Final Doxology",
+                "pt": "A doxologia final"
+              },
+              "range": [
+                2855,
+                2865
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
