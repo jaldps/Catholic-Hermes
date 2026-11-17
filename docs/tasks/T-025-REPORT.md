@@ -1,6 +1,6 @@
 # T-025 · Informe de Codex
 
-Rama `ext/T-025`, desde `origin/CatholicGPT` (`697eb6d`). Primer push: núcleo y 11 pruebas (`c31ce23`). Segunda entrega: interfaz, navegación, recuperación al arranque y capturas. Validación final después de integrar los cambios recientes del coordinador: en curso.
+Rama `ext/T-025`, desde `origin/CatholicGPT` (`697eb6d`), actualizada mediante merge de `930a228` (`a1bb1f0`). Primer push: núcleo y 11 pruebas (`c31ce23`). Segunda entrega: interfaz, navegación, recuperación al arranque y capturas. La base actual incluye las cuatro identidades del coordinador; no hay modificaciones propias de los archivos protegidos, versiones, esquema ni `dist/`. Entrega completa para revisión del coordinador.
 
 ## Formato y cifrado
 
@@ -39,7 +39,7 @@ Las operaciones se coordinan con `PersonalDataCommands`; los errores de la copia
 
 Robolectric API 34, Room en memoria y DataStores temporales separados. Cobertura: ida y vuelta de las nueve tablas y preferencias; contraseña errónea; archivo manipulado/truncado; reemplazo; combinación repetida; colisiones de IDs; hábitos personalizados; notas y respuestas actualizadas; rollback si falla una preferencia; recuperación simulada entre commits; días de novena superiores a 31; cabecera autenticada; límites de trabajo criptográfico y compatibilidad de PBKDF2.
 
-La compilación de Kotlin pasa. **BackupCoreTest: 11 pruebas pasan, 0 fallos, 0 errores**. Incluye actualización de una entrada contestada y rechazo de tipos de preferencias incompatibles. Resultado: BUILD SUCCESSFUL.
+**BackupCoreTest: 12 pruebas pasan, 0 fallos, 0 errores** sobre la base actualizada. Incluye actualización de una entrada contestada, rechazo de tipos de preferencias incompatibles y vaciado de grupos portátiles ausentes al reemplazar.
 
 Para este contenedor, Robolectric necesita un directorio `user.home` escribible. Se usa un init script temporal, fuera del repositorio:
 
@@ -64,11 +64,49 @@ La primera ejecución sin esa configuración falló al crear el bloqueo de desca
 
 - Explorar → Ajustes → Copia de seguridad. Crear copia / Abrir una copia, contraseña oculta, resumen de fecha y cantidades, elección Combinar/Reemplazar y confirmación destructiva separada. Todos los textos en ES/EN/PT y todos los tags solicitados.
 - SAF con `CreateDocument` (`ACTION_CREATE_DOCUMENT`) y `OpenDocument` (`ACTION_OPEN_DOCUMENT`), sin permisos nuevos. La contraseña de exportación se confirma y exige al menos 10 caracteres; se explica que perderla impide abrir el archivo.
-- Estado de trabajo en ViewModel, operaciones de cifrado e I/O fuera del hilo principal, botones y cierre bloqueados mientras se aplica. Solo datos cifrados y la previsualización en memoria; no hay contraseña ni datos descifrados en el estado guardado del sistema. La hoja se conserva al recrear la composición; el campo de contraseña se vacía.
+- Estado de trabajo en ViewModel, operaciones de cifrado e I/O fuera del hilo principal, botones y cierre bloqueados mientras se aplica. Solo datos cifrados y la previsualización en memoria; no hay contraseña ni datos descifrados en el estado guardado del sistema. La hoja se conserva al recrear la composición; el campo de contraseña se vacía. El contenedor usa `imePadding` para reservar espacio al teclado.
 - Después de restaurar, Listo actualiza la actividad para recargar repositorios, ajustes, posiciones y recordatorios. Si se cierra la hoja de éxito, se realiza la misma recarga.
 - Hojas, tarjetas, filas, botones, avisos y confirmación usan los wrappers existentes. Las opciones de modo ocupan filas completas: en la revisión visual, el control horizontal dejaba parte de «Reemplazar» fuera de vista a 320 dp/130 %.
 - **Especialización del campo protegido:** el único campo público compartido es `AppSearchField`, que no permite ocultar la contraseña. Dentro de `AppCard` se usa `BasicTextField` con `PasswordVisualTransformation`, teclado Password y autocorrección desactivada; tipografía, colores y material vienen del diseño compartido. No se modifica `ui/design`, ni se crea otro sistema de componentes. La ventana de la hoja real activa `FLAG_SECURE`; las capturas se dibujan con datos sintéticos en el arnés de pruebas.
-- Capturas y resultados finales se añadirán a `docs/tasks/T-025-shots/` después de validar la base actualizada.
+- Capturas de la composición real con datos de ejemplo: 411 dp, las cuatro identidades en claro/oscuro; 320 dp y texto al 130 %, las cuatro identidades y los tres idiomas. Se generaron 76 capturas de las hojas y se conservan 24 representativas, sin datos personales reales, en [T-025-shots](T-025-shots/). Los controles de restauración se comprueban por límites de cada línea y ausencia de elipsis.
+
+| Identidad | Inicio claro / oscuro | Contraseña | Resumen oscuro | Acciones a 320 dp / 130 % |
+|---|---|---|---|---|
+| Lumen | [Claro](T-025-shots/lumen_light_overview.png) · [Oscuro](T-025-shots/lumen_dark_overview.png) | [ES](T-025-shots/lumen_light_password.png) | [Resumen](T-025-shots/lumen_dark_summary.png) | [ES](T-025-shots/lumen_es_320_130_actions.png) |
+| Tradicional | [Claro](T-025-shots/classic_light_overview.png) · [Oscuro](T-025-shots/classic_dark_overview.png) | [ES](T-025-shots/classic_light_password.png) | [Resumen](T-025-shots/classic_dark_summary.png) | [EN](T-025-shots/classic_en_320_130_actions.png) |
+| Cristal | [Claro](T-025-shots/glass_light_overview.png) · [Oscuro](T-025-shots/glass_dark_overview.png) | [ES](T-025-shots/glass_light_password.png) | [Resumen](T-025-shots/glass_dark_summary.png) | [PT](T-025-shots/glass_pt_320_130_actions.png) |
+| Sanctuary | [Claro](T-025-shots/sanctuary_light_overview.png) · [Oscuro](T-025-shots/sanctuary_dark_overview.png) | [ES](T-025-shots/sanctuary_light_password.png) | [Resumen](T-025-shots/sanctuary_dark_summary.png) | [ES](T-025-shots/sanctuary_es_320_130_actions.png) |
+
+También: confirmación de Reemplazar en [Lumen oscuro](T-025-shots/lumen_dark_replace_confirmation.png) y [Sanctuary claro](T-025-shots/sanctuary_light_replace_confirmation.png); contraseña ampliada en [inglés](T-025-shots/glass_en_320_130_password.png) y [portugués](T-025-shots/sanctuary_pt_320_130_password.png).
+
+## Resultado de verificación
+
+**64 casos distintos pasan, 0 fallos, 0 errores y 0 omitidos** (último resultado por clase, API 34). [Resultados por suite](T-025-shots/validation.json).
+
+| Suite | Casos |
+|---|---:|
+| BackupCoreTest | 12 |
+| BackupUiTest | 3 |
+| AppNavigationTest | 5 |
+| DesignNavigationTest | 8 |
+| screenshots.BackupScreenshotTest | 24 |
+| screenshots.BackupNarrowScreenshotTest | 12 |
+
+La prueba de UI recorre la entrada real de Ajustes y los botones, comprueba el campo protegido, la confirmación de contraseña, la previsualización sin aplicar, la confirmación separada de Reemplazar y el bloqueo mientras se restaura. También reconstruye el estado guardado de la composición: la hoja permanece abierta y la contraseña no reaparece.
+
+Comando reproducible de la matriz completa (con el init script temporal mostrado arriba):
+
+```sh
+source /workspace/.cloud-setup/env.sh
+flock /tmp/gradle.lock gradle --no-daemon --max-workers=4 --no-configuration-cache --no-build-cache \
+  -I /tmp/t025-runner.gradle :app:testDebugUnitTest \
+  --tests com.example.BackupCoreTest --tests com.example.BackupUiTest \
+  --tests com.example.AppNavigationTest --tests com.example.DesignNavigationTest \
+  --tests com.example.screenshots.BackupScreenshotTest \
+  --tests com.example.screenshots.BackupNarrowScreenshotTest :app:assembleDebug
+```
+
+Núcleo, navegación y capturas de 411 dp pasan sobre el merge del coordinador. Tras el ajuste del teclado y la comprobación de límites de texto, se repitieron `BackupUiTest` y `BackupNarrowScreenshotTest` junto a `assembleDebug`: **15 pruebas pasan, BUILD SUCCESSFUL**. La compilación genera el APK solo en `app/build`; no se publica ni modifica `dist/`.
 
 ## Fuentes y alcance
 
@@ -77,3 +115,5 @@ Contrato local: `docs/tasks/T-025.md`, `AGENTS.md`, entidades/DAOs actuales y lo
 ## Pruebas en teléfono
 
 No se ha probado todavía en un teléfono real, ni con proveedores documentales externos o Google Drive, ni con un apagado físico durante el commit. La recuperación se simula con los registros privados y los marcadores reales en Room. La disponibilidad criptográfica en Android 24–25 se cubre por vectores del fallback, no por una prueba física en esos sistemas.
+
+Sin preguntas de contrato pendientes. Falta la revisión/integración del coordinador y la prueba del selector de archivos y teclado en un teléfono real.

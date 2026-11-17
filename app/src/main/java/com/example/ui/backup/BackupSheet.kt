@@ -58,7 +58,7 @@ fun BackupSheet(store:UserPreferencesStore,language:AppLanguage,service:BackupSe
             catch(_:Exception) {model.pickerFailed()}
         }
     }
-    AppSheet(onDismiss=::dismiss,title=language.backup("Copia de seguridad","Backup","Cópia de segurança"),tag="backup_sheet") {
+    AppSheet(onDismiss=::dismiss,modifier=Modifier.imePadding(),title=language.backup("Copia de seguridad","Backup","Cópia de segurança"),tag="backup_sheet") {
         // Protect the real dialog window; screenshot tests use synthetic fixtures and a Canvas.
         val view=LocalView.current
         DisposableEffect(view) {

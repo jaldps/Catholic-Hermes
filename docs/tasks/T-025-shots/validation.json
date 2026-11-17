@@ -1,0 +1,61 @@
+{
+  "task": "T-025",
+  "base": "930a228",
+  "sdk": 34,
+  "tests": 64,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "assembleDebug": "BUILD SUCCESSFUL",
+  "suites": [
+    {
+      "suite": "com.example.AppNavigationTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-17T01:44:22.428Z"
+    },
+    {
+      "suite": "com.example.BackupCoreTest",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-17T01:46:24.144Z"
+    },
+    {
+      "suite": "com.example.DesignNavigationTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-17T01:47:11.058Z"
+    },
+    {
+      "suite": "com.example.screenshots.BackupScreenshotTest",
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-17T01:47:19.658Z"
+    },
+    {
+      "suite": "com.example.BackupUiTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-17T02:00:49.450Z"
+    },
+    {
+      "suite": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "timestamp": "2026-11-17T01:51:13.764Z"
+    }
+  ],
+  "physical_device_tested": false
+}

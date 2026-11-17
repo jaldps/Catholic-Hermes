@@ -54,15 +54,9 @@ class BackupUiTest {
             CompositionLocalProvider(LocalInspectionMode provides true) {MainApp(repo,database.dao(),tts,store,prefs)}
         }}
         compose.onNodeWithTag("nav_more").performClick()
-        compose.onNodeWithTag("backup_entry").performScrollTo().assertHasClickAction()
-        compose.runOnIdle {
-            val view=compose.activity.window.decorView
-            val bitmap=android.graphics.Bitmap.createBitmap(view.width,view.height,android.graphics.Bitmap.Config.ARGB_8888)
-            view.draw(android.graphics.Canvas(bitmap))
-            val file=java.io.File("build/screenshots/backup/lumen_light_settings.png");file.parentFile!!.mkdirs()
-            file.outputStream().use {bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it)}
-            bitmap.recycle()
-        }
+        compose.onNodeWithTag("backup_entry").performScrollTo().assertIsDisplayed().assertHasClickAction()
+        compose.mainClock.advanceTimeByFrame()
+        compose.waitForIdle()
         compose.onNodeWithTag("backup_entry").performClick()
         compose.onNodeWithTag("backup_export_button").assertIsDisplayed().assertIsEnabled()
         compose.onNodeWithTag("backup_import_button").assertIsDisplayed().assertIsEnabled()

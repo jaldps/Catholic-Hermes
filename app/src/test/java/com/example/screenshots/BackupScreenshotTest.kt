@@ -90,7 +90,14 @@ class BackupNarrowScreenshotTest(private val identity:DesignLanguage,private val
             getResults(layouts)
             check(layouts.size==1) {"Expected one layout for $replace, got ${layouts.size}"}
             val layout=layouts.single()
-            check(!layout.hasVisualOverflow) {"$replace overflow: size=${layout.size}, paragraph=${layout.multiParagraph.width}x${layout.multiParagraph.height}, lines=${layout.lineCount}, width=${layout.didOverflowWidth}, height=${layout.didOverflowHeight}"}
+            // Paragraph width can remain the available column width when Text shrinks to its glyphs.
+            // Check the rendered lines instead of treating that spare paragraph width as clipping.
+            check(layout.multiParagraph.height<=layout.size.height+1f) {"$replace is clipped vertically"}
+            repeat(layout.lineCount) { line ->
+                check(!layout.isLineEllipsized(line)&&layout.getLineLeft(line)>=-1f&&layout.getLineRight(line)<=layout.size.width+1f) {
+                    "$replace line $line is clipped: ${layout.getLineLeft(line)}..${layout.getLineRight(line)} in ${layout.size.width}px"
+                }
+            }
         }
         compose.onNodeWithTag("backup_apply_button").performScrollTo().assertIsDisplayed()
         compose.runOnIdle {captureBackup("${prefix}_actions")}
