@@ -1,0 +1,3175 @@
+{
+  "id": "bible_year",
+  "title": {
+    "es": "La Biblia en un año",
+    "en": "The Bible in a year",
+    "pt": "A Bíblia num ano"
+  },
+  "description": {
+    "es": "365 días para leer la Biblia católica completa (73 libros), con el Antiguo Testamento, el Nuevo Testamento y un salmo o un proverbio cada día.",
+    "en": "365 days to read the whole Catholic Bible (73 books), with the Old Testament, the New Testament and a psalm or a proverb each day.",
+    "pt": "365 dias para ler a Bíblia católica completa (73 livros), com o Antigo Testamento, o Novo Testamento e um salmo ou um provérbio a cada dia."
+  },
+  "days": [
+    {
+      "day": 1,
+      "readings": [
+        "gen 1",
+        "gen 2",
+        "mat 1",
+        "psa 1"
+      ]
+    },
+    {
+      "day": 2,
+      "readings": [
+        "gen 3",
+        "gen 4",
+        "gen 5"
+      ]
+    },
+    {
+      "day": 3,
+      "readings": [
+        "gen 6",
+        "gen 7",
+        "mat 2",
+        "psa 2"
+      ]
+    },
+    {
+      "day": 4,
+      "readings": [
+        "gen 8",
+        "gen 9",
+        "gen 10",
+        "mat 3"
+      ]
+    },
+    {
+      "day": 5,
+      "readings": [
+        "gen 11",
+        "gen 12",
+        "mat 4",
+        "psa 3"
+      ]
+    },
+    {
+      "day": 6,
+      "readings": [
+        "gen 13",
+        "gen 14",
+        "gen 15"
+      ]
+    },
+    {
+      "day": 7,
+      "readings": [
+        "gen 16",
+        "gen 17",
+        "mat 5",
+        "psa 4"
+      ]
+    },
+    {
+      "day": 8,
+      "readings": [
+        "gen 18",
+        "gen 19",
+        "gen 20",
+        "mat 6"
+      ]
+    },
+    {
+      "day": 9,
+      "readings": [
+        "gen 21",
+        "gen 22"
+      ]
+    },
+    {
+      "day": 10,
+      "readings": [
+        "gen 23",
+        "gen 24",
+        "mat 7",
+        "psa 5"
+      ]
+    },
+    {
+      "day": 11,
+      "readings": [
+        "gen 25",
+        "gen 26",
+        "gen 27",
+        "mat 8",
+        "psa 6"
+      ]
+    },
+    {
+      "day": 12,
+      "readings": [
+        "gen 28",
+        "gen 29",
+        "mat 9"
+      ]
+    },
+    {
+      "day": 13,
+      "readings": [
+        "gen 30",
+        "gen 31",
+        "gen 32"
+      ]
+    },
+    {
+      "day": 14,
+      "readings": [
+        "gen 33",
+        "gen 34",
+        "mat 10",
+        "psa 7"
+      ]
+    },
+    {
+      "day": 15,
+      "readings": [
+        "gen 35",
+        "gen 36",
+        "gen 37",
+        "mat 11",
+        "psa 8"
+      ]
+    },
+    {
+      "day": 16,
+      "readings": [
+        "gen 38",
+        "gen 39"
+      ]
+    },
+    {
+      "day": 17,
+      "readings": [
+        "gen 40",
+        "gen 41",
+        "gen 42",
+        "mat 12",
+        "psa 9"
+      ]
+    },
+    {
+      "day": 18,
+      "readings": [
+        "gen 43",
+        "gen 44",
+        "mat 13"
+      ]
+    },
+    {
+      "day": 19,
+      "readings": [
+        "gen 45",
+        "gen 46",
+        "mat 14",
+        "psa 10"
+      ]
+    },
+    {
+      "day": 20,
+      "readings": [
+        "gen 47",
+        "gen 48",
+        "gen 49"
+      ]
+    },
+    {
+      "day": 21,
+      "readings": [
+        "gen 50",
+        "exo 1",
+        "mat 15",
+        "psa 11"
+      ]
+    },
+    {
+      "day": 22,
+      "readings": [
+        "exo 2",
+        "exo 3",
+        "exo 4",
+        "mat 16"
+      ]
+    },
+    {
+      "day": 23,
+      "readings": [
+        "exo 5",
+        "exo 6"
+      ]
+    },
+    {
+      "day": 24,
+      "readings": [
+        "exo 7",
+        "exo 8",
+        "exo 9",
+        "mat 17",
+        "psa 12"
+      ]
+    },
+    {
+      "day": 25,
+      "readings": [
+        "exo 10",
+        "exo 11",
+        "mat 18",
+        "psa 13"
+      ]
+    },
+    {
+      "day": 26,
+      "readings": [
+        "exo 12",
+        "exo 13",
+        "exo 14",
+        "mat 19"
+      ]
+    },
+    {
+      "day": 27,
+      "readings": [
+        "exo 15",
+        "exo 16"
+      ]
+    },
+    {
+      "day": 28,
+      "readings": [
+        "exo 17",
+        "exo 18",
+        "exo 19",
+        "mat 20",
+        "psa 14"
+      ]
+    },
+    {
+      "day": 29,
+      "readings": [
+        "exo 20",
+        "exo 21",
+        "mat 21",
+        "psa 15"
+      ]
+    },
+    {
+      "day": 30,
+      "readings": [
+        "exo 22",
+        "exo 23"
+      ]
+    },
+    {
+      "day": 31,
+      "readings": [
+        "exo 24",
+        "exo 25",
+        "exo 26",
+        "mat 22",
+        "psa 16"
+      ]
+    },
+    {
+      "day": 32,
+      "readings": [
+        "exo 27",
+        "exo 28",
+        "mat 23"
+      ]
+    },
+    {
+      "day": 33,
+      "readings": [
+        "exo 29",
+        "exo 30",
+        "exo 31",
+        "mat 24",
+        "psa 17"
+      ]
+    },
+    {
+      "day": 34,
+      "readings": [
+        "exo 32",
+        "exo 33"
+      ]
+    },
+    {
+      "day": 35,
+      "readings": [
+        "exo 34",
+        "exo 35",
+        "exo 36",
+        "mat 25",
+        "psa 18"
+      ]
+    },
+    {
+      "day": 36,
+      "readings": [
+        "exo 37",
+        "exo 38",
+        "mat 26"
+      ]
+    },
+    {
+      "day": 37,
+      "readings": [
+        "exo 39",
+        "exo 40",
+        "lev 1"
+      ]
+    },
+    {
+      "day": 38,
+      "readings": [
+        "lev 2",
+        "lev 3",
+        "mat 27",
+        "psa 19"
+      ]
+    },
+    {
+      "day": 39,
+      "readings": [
+        "lev 4",
+        "lev 5",
+        "mat 28",
+        "psa 20"
+      ]
+    },
+    {
+      "day": 40,
+      "readings": [
+        "lev 6",
+        "lev 7",
+        "lev 8"
+      ]
+    },
+    {
+      "day": 41,
+      "readings": [
+        "lev 9",
+        "lev 10",
+        "mar 1"
+      ]
+    },
+    {
+      "day": 42,
+      "readings": [
+        "lev 11",
+        "lev 12",
+        "lev 13",
+        "mar 2",
+        "psa 21"
+      ]
+    },
+    {
+      "day": 43,
+      "readings": [
+        "lev 14",
+        "lev 15",
+        "mar 3",
+        "psa 22"
+      ]
+    },
+    {
+      "day": 44,
+      "readings": [
+        "lev 16",
+        "lev 17",
+        "lev 18"
+      ]
+    },
+    {
+      "day": 45,
+      "readings": [
+        "lev 19",
+        "lev 20",
+        "mar 4",
+        "psa 23"
+      ]
+    },
+    {
+      "day": 46,
+      "readings": [
+        "lev 21",
+        "lev 22",
+        "lev 23",
+        "mar 5"
+      ]
+    },
+    {
+      "day": 47,
+      "readings": [
+        "lev 24",
+        "lev 25"
+      ]
+    },
+    {
+      "day": 48,
+      "readings": [
+        "lev 26",
+        "lev 27",
+        "mar 6",
+        "psa 24"
+      ]
+    },
+    {
+      "day": 49,
+      "readings": [
+        "num 1",
+        "num 2",
+        "num 3",
+        "mar 7",
+        "psa 25"
+      ]
+    },
+    {
+      "day": 50,
+      "readings": [
+        "num 4",
+        "num 5",
+        "mar 8"
+      ]
+    },
+    {
+      "day": 51,
+      "readings": [
+        "num 6",
+        "num 7",
+        "num 8"
+      ]
+    },
+    {
+      "day": 52,
+      "readings": [
+        "num 9",
+        "num 10",
+        "mar 9",
+        "psa 26"
+      ]
+    },
+    {
+      "day": 53,
+      "readings": [
+        "num 11",
+        "num 12",
+        "num 13",
+        "mar 10",
+        "psa 27"
+      ]
+    },
+    {
+      "day": 54,
+      "readings": [
+        "num 14",
+        "num 15"
+      ]
+    },
+    {
+      "day": 55,
+      "readings": [
+        "num 16",
+        "num 17",
+        "num 18",
+        "mar 11"
+      ]
+    },
+    {
+      "day": 56,
+      "readings": [
+        "num 19",
+        "num 20",
+        "mar 12",
+        "psa 28"
+      ]
+    },
+    {
+      "day": 57,
+      "readings": [
+        "num 21",
+        "num 22",
+        "mar 13",
+        "psa 29"
+      ]
+    },
+    {
+      "day": 58,
+      "readings": [
+        "num 23",
+        "num 24",
+        "num 25"
+      ]
+    },
+    {
+      "day": 59,
+      "readings": [
+        "num 26",
+        "num 27",
+        "mar 14",
+        "psa 30"
+      ]
+    },
+    {
+      "day": 60,
+      "readings": [
+        "num 28",
+        "num 29",
+        "num 30",
+        "mar 15"
+      ]
+    },
+    {
+      "day": 61,
+      "readings": [
+        "num 31",
+        "num 32"
+      ]
+    },
+    {
+      "day": 62,
+      "readings": [
+        "num 33",
+        "num 34",
+        "num 35",
+        "mar 16",
+        "psa 31"
+      ]
+    },
+    {
+      "day": 63,
+      "readings": [
+        "num 36",
+        "deu 1",
+        "luk 1",
+        "psa 32"
+      ]
+    },
+    {
+      "day": 64,
+      "readings": [
+        "deu 2",
+        "deu 3",
+        "deu 4",
+        "luk 2"
+      ]
+    },
+    {
+      "day": 65,
+      "readings": [
+        "deu 5",
+        "deu 6"
+      ]
+    },
+    {
+      "day": 66,
+      "readings": [
+        "deu 7",
+        "deu 8",
+        "luk 3",
+        "psa 33"
+      ]
+    },
+    {
+      "day": 67,
+      "readings": [
+        "deu 9",
+        "deu 10",
+        "deu 11",
+        "luk 4",
+        "psa 34"
+      ]
+    },
+    {
+      "day": 68,
+      "readings": [
+        "deu 12",
+        "deu 13"
+      ]
+    },
+    {
+      "day": 69,
+      "readings": [
+        "deu 14",
+        "deu 15",
+        "deu 16",
+        "luk 5"
+      ]
+    },
+    {
+      "day": 70,
+      "readings": [
+        "deu 17",
+        "deu 18",
+        "luk 6",
+        "psa 35"
+      ]
+    },
+    {
+      "day": 71,
+      "readings": [
+        "deu 19",
+        "deu 20",
+        "deu 21",
+        "luk 7",
+        "psa 36"
+      ]
+    },
+    {
+      "day": 72,
+      "readings": [
+        "deu 22",
+        "deu 23"
+      ]
+    },
+    {
+      "day": 73,
+      "readings": [
+        "deu 24",
+        "deu 25",
+        "deu 26",
+        "luk 8"
+      ]
+    },
+    {
+      "day": 74,
+      "readings": [
+        "deu 27",
+        "deu 28",
+        "luk 9",
+        "psa 37"
+      ]
+    },
+    {
+      "day": 75,
+      "readings": [
+        "deu 29",
+        "deu 30"
+      ]
+    },
+    {
+      "day": 76,
+      "readings": [
+        "deu 31",
+        "deu 32",
+        "deu 33",
+        "luk 10",
+        "psa 38"
+      ]
+    },
+    {
+      "day": 77,
+      "readings": [
+        "deu 34",
+        "jos 1",
+        "luk 11",
+        "psa 39"
+      ]
+    },
+    {
+      "day": 78,
+      "readings": [
+        "jos 2",
+        "jos 3",
+        "jos 4",
+        "luk 12"
+      ]
+    },
+    {
+      "day": 79,
+      "readings": [
+        "jos 5",
+        "jos 6"
+      ]
+    },
+    {
+      "day": 80,
+      "readings": [
+        "jos 7",
+        "jos 8",
+        "jos 9",
+        "luk 13",
+        "psa 40"
+      ]
+    },
+    {
+      "day": 81,
+      "readings": [
+        "jos 10",
+        "jos 11",
+        "luk 14",
+        "psa 41"
+      ]
+    },
+    {
+      "day": 82,
+      "readings": [
+        "jos 12",
+        "jos 13",
+        "jos 14"
+      ]
+    },
+    {
+      "day": 83,
+      "readings": [
+        "jos 15",
+        "jos 16",
+        "luk 15"
+      ]
+    },
+    {
+      "day": 84,
+      "readings": [
+        "jos 17",
+        "jos 18",
+        "jos 19",
+        "luk 16",
+        "psa 42"
+      ]
+    },
+    {
+      "day": 85,
+      "readings": [
+        "jos 20",
+        "jos 21",
+        "luk 17",
+        "psa 43"
+      ]
+    },
+    {
+      "day": 86,
+      "readings": [
+        "jos 22",
+        "jos 23"
+      ]
+    },
+    {
+      "day": 87,
+      "readings": [
+        "jos 24",
+        "jud 1",
+        "jud 2",
+        "luk 18"
+      ]
+    },
+    {
+      "day": 88,
+      "readings": [
+        "jud 3",
+        "jud 4",
+        "luk 19",
+        "psa 44"
+      ]
+    },
+    {
+      "day": 89,
+      "readings": [
+        "jud 5",
+        "jud 6",
+        "jud 7"
+      ]
+    },
+    {
+      "day": 90,
+      "readings": [
+        "jud 8",
+        "jud 9",
+        "luk 20",
+        "psa 45"
+      ]
+    },
+    {
+      "day": 91,
+      "readings": [
+        "jud 10",
+        "jud 11",
+        "jud 12",
+        "luk 21",
+        "psa 46"
+      ]
+    },
+    {
+      "day": 92,
+      "readings": [
+        "jud 13",
+        "jud 14",
+        "luk 22"
+      ]
+    },
+    {
+      "day": 93,
+      "readings": [
+        "jud 15",
+        "jud 16",
+        "jud 17"
+      ]
+    },
+    {
+      "day": 94,
+      "readings": [
+        "jud 18",
+        "jud 19",
+        "luk 23",
+        "psa 47"
+      ]
+    },
+    {
+      "day": 95,
+      "readings": [
+        "jud 20",
+        "jud 21",
+        "luk 24",
+        "psa 48"
+      ]
+    },
+    {
+      "day": 96,
+      "readings": [
+        "rut 1",
+        "rut 2",
+        "rut 3"
+      ]
+    },
+    {
+      "day": 97,
+      "readings": [
+        "rut 4",
+        "1sa 1",
+        "joh 1"
+      ]
+    },
+    {
+      "day": 98,
+      "readings": [
+        "1sa 2",
+        "1sa 3",
+        "1sa 4",
+        "joh 2",
+        "psa 49"
+      ]
+    },
+    {
+      "day": 99,
+      "readings": [
+        "1sa 5",
+        "1sa 6",
+        "joh 3",
+        "psa 50"
+      ]
+    },
+    {
+      "day": 100,
+      "readings": [
+        "1sa 7",
+        "1sa 8",
+        "1sa 9"
+      ]
+    },
+    {
+      "day": 101,
+      "readings": [
+        "1sa 10",
+        "1sa 11",
+        "joh 4"
+      ]
+    },
+    {
+      "day": 102,
+      "readings": [
+        "1sa 12",
+        "1sa 13",
+        "1sa 14",
+        "joh 5",
+        "psa 51"
+      ]
+    },
+    {
+      "day": 103,
+      "readings": [
+        "1sa 15",
+        "1sa 16"
+      ]
+    },
+    {
+      "day": 104,
+      "readings": [
+        "1sa 17",
+        "1sa 18",
+        "joh 6",
+        "psa 52"
+      ]
+    },
+    {
+      "day": 105,
+      "readings": [
+        "1sa 19",
+        "1sa 20",
+        "1sa 21",
+        "joh 7",
+        "psa 53"
+      ]
+    },
+    {
+      "day": 106,
+      "readings": [
+        "1sa 22",
+        "1sa 23",
+        "joh 8"
+      ]
+    },
+    {
+      "day": 107,
+      "readings": [
+        "1sa 24",
+        "1sa 25",
+        "1sa 26"
+      ]
+    },
+    {
+      "day": 108,
+      "readings": [
+        "1sa 27",
+        "1sa 28",
+        "joh 9",
+        "psa 54"
+      ]
+    },
+    {
+      "day": 109,
+      "readings": [
+        "1sa 29",
+        "1sa 30",
+        "1sa 31",
+        "joh 10",
+        "psa 55"
+      ]
+    },
+    {
+      "day": 110,
+      "readings": [
+        "2sa 1",
+        "2sa 2"
+      ]
+    },
+    {
+      "day": 111,
+      "readings": [
+        "2sa 3",
+        "2sa 4",
+        "2sa 5",
+        "joh 11"
+      ]
+    },
+    {
+      "day": 112,
+      "readings": [
+        "2sa 6",
+        "2sa 7",
+        "joh 12",
+        "psa 56"
+      ]
+    },
+    {
+      "day": 113,
+      "readings": [
+        "2sa 8",
+        "2sa 9"
+      ]
+    },
+    {
+      "day": 114,
+      "readings": [
+        "2sa 10",
+        "2sa 11",
+        "2sa 12",
+        "joh 13",
+        "psa 57"
+      ]
+    },
+    {
+      "day": 115,
+      "readings": [
+        "2sa 13",
+        "2sa 14",
+        "joh 14"
+      ]
+    },
+    {
+      "day": 116,
+      "readings": [
+        "2sa 15",
+        "2sa 16",
+        "2sa 17",
+        "joh 15",
+        "psa 58"
+      ]
+    },
+    {
+      "day": 117,
+      "readings": [
+        "2sa 18",
+        "2sa 19"
+      ]
+    },
+    {
+      "day": 118,
+      "readings": [
+        "2sa 20",
+        "2sa 21",
+        "2sa 22",
+        "joh 16",
+        "psa 59"
+      ]
+    },
+    {
+      "day": 119,
+      "readings": [
+        "2sa 23",
+        "2sa 24",
+        "joh 17",
+        "psa 60"
+      ]
+    },
+    {
+      "day": 120,
+      "readings": [
+        "1ki 1",
+        "1ki 2",
+        "1ki 3"
+      ]
+    },
+    {
+      "day": 121,
+      "readings": [
+        "1ki 4",
+        "1ki 5",
+        "joh 18"
+      ]
+    },
+    {
+      "day": 122,
+      "readings": [
+        "1ki 6",
+        "1ki 7",
+        "joh 19",
+        "psa 61"
+      ]
+    },
+    {
+      "day": 123,
+      "readings": [
+        "1ki 8",
+        "1ki 9",
+        "1ki 10",
+        "joh 20",
+        "psa 62"
+      ]
+    },
+    {
+      "day": 124,
+      "readings": [
+        "1ki 11",
+        "1ki 12"
+      ]
+    },
+    {
+      "day": 125,
+      "readings": [
+        "1ki 13",
+        "1ki 14",
+        "1ki 15",
+        "joh 21"
+      ]
+    },
+    {
+      "day": 126,
+      "readings": [
+        "1ki 16",
+        "1ki 17",
+        "act 1",
+        "psa 63"
+      ]
+    },
+    {
+      "day": 127,
+      "readings": [
+        "1ki 18",
+        "1ki 19",
+        "1ki 20"
+      ]
+    },
+    {
+      "day": 128,
+      "readings": [
+        "1ki 21",
+        "1ki 22",
+        "act 2",
+        "psa 64"
+      ]
+    },
+    {
+      "day": 129,
+      "readings": [
+        "2ki 1",
+        "2ki 2",
+        "2ki 3",
+        "act 3"
+      ]
+    },
+    {
+      "day": 130,
+      "readings": [
+        "2ki 4",
+        "2ki 5",
+        "act 4",
+        "psa 65"
+      ]
+    },
+    {
+      "day": 131,
+      "readings": [
+        "2ki 6",
+        "2ki 7",
+        "2ki 8"
+      ]
+    },
+    {
+      "day": 132,
+      "readings": [
+        "2ki 9",
+        "2ki 10",
+        "act 5",
+        "psa 66"
+      ]
+    },
+    {
+      "day": 133,
+      "readings": [
+        "2ki 11",
+        "2ki 12",
+        "act 6",
+        "psa 67"
+      ]
+    },
+    {
+      "day": 134,
+      "readings": [
+        "2ki 13",
+        "2ki 14",
+        "2ki 15"
+      ]
+    },
+    {
+      "day": 135,
+      "readings": [
+        "2ki 16",
+        "2ki 17",
+        "act 7"
+      ]
+    },
+    {
+      "day": 136,
+      "readings": [
+        "2ki 18",
+        "2ki 19",
+        "2ki 20",
+        "act 8",
+        "psa 68"
+      ]
+    },
+    {
+      "day": 137,
+      "readings": [
+        "2ki 21",
+        "2ki 22",
+        "act 9",
+        "psa 69"
+      ]
+    },
+    {
+      "day": 138,
+      "readings": [
+        "2ki 23",
+        "2ki 24",
+        "2ki 25"
+      ]
+    },
+    {
+      "day": 139,
+      "readings": [
+        "1ch 1",
+        "1ch 2",
+        "act 10"
+      ]
+    },
+    {
+      "day": 140,
+      "readings": [
+        "1ch 3",
+        "1ch 4",
+        "1ch 5",
+        "act 11",
+        "psa 70"
+      ]
+    },
+    {
+      "day": 141,
+      "readings": [
+        "1ch 6",
+        "1ch 7"
+      ]
+    },
+    {
+      "day": 142,
+      "readings": [
+        "1ch 8",
+        "1ch 9",
+        "act 12",
+        "psa 71"
+      ]
+    },
+    {
+      "day": 143,
+      "readings": [
+        "1ch 10",
+        "1ch 11",
+        "1ch 12",
+        "act 13"
+      ]
+    },
+    {
+      "day": 144,
+      "readings": [
+        "1ch 13",
+        "1ch 14",
+        "act 14",
+        "psa 72"
+      ]
+    },
+    {
+      "day": 145,
+      "readings": [
+        "1ch 15",
+        "1ch 16",
+        "1ch 17"
+      ]
+    },
+    {
+      "day": 146,
+      "readings": [
+        "1ch 18",
+        "1ch 19",
+        "act 15",
+        "psa 73"
+      ]
+    },
+    {
+      "day": 147,
+      "readings": [
+        "1ch 20",
+        "1ch 21",
+        "1ch 22",
+        "act 16",
+        "psa 74"
+      ]
+    },
+    {
+      "day": 148,
+      "readings": [
+        "1ch 23",
+        "1ch 24"
+      ]
+    },
+    {
+      "day": 149,
+      "readings": [
+        "1ch 25",
+        "1ch 26",
+        "1ch 27",
+        "act 17"
+      ]
+    },
+    {
+      "day": 150,
+      "readings": [
+        "1ch 28",
+        "1ch 29",
+        "act 18",
+        "psa 75"
+      ]
+    },
+    {
+      "day": 151,
+      "readings": [
+        "2ch 1",
+        "2ch 2",
+        "act 19",
+        "psa 76"
+      ]
+    },
+    {
+      "day": 152,
+      "readings": [
+        "2ch 3",
+        "2ch 4",
+        "2ch 5"
+      ]
+    },
+    {
+      "day": 153,
+      "readings": [
+        "2ch 6",
+        "2ch 7",
+        "act 20"
+      ]
+    },
+    {
+      "day": 154,
+      "readings": [
+        "2ch 8",
+        "2ch 9",
+        "2ch 10",
+        "act 21",
+        "psa 77"
+      ]
+    },
+    {
+      "day": 155,
+      "readings": [
+        "2ch 11",
+        "2ch 12"
+      ]
+    },
+    {
+      "day": 156,
+      "readings": [
+        "2ch 13",
+        "2ch 14",
+        "2ch 15",
+        "act 22",
+        "psa 78"
+      ]
+    },
+    {
+      "day": 157,
+      "readings": [
+        "2ch 16",
+        "2ch 17",
+        "act 23"
+      ]
+    },
+    {
+      "day": 158,
+      "readings": [
+        "2ch 18",
+        "2ch 19",
+        "2ch 20",
+        "act 24",
+        "psa 79"
+      ]
+    },
+    {
+      "day": 159,
+      "readings": [
+        "2ch 21",
+        "2ch 22"
+      ]
+    },
+    {
+      "day": 160,
+      "readings": [
+        "2ch 23",
+        "2ch 24",
+        "act 25",
+        "psa 80"
+      ]
+    },
+    {
+      "day": 161,
+      "readings": [
+        "2ch 25",
+        "2ch 26",
+        "2ch 27",
+        "act 26",
+        "psa 81"
+      ]
+    },
+    {
+      "day": 162,
+      "readings": [
+        "2ch 28",
+        "2ch 29"
+      ]
+    },
+    {
+      "day": 163,
+      "readings": [
+        "2ch 30",
+        "2ch 31",
+        "2ch 32",
+        "act 27"
+      ]
+    },
+    {
+      "day": 164,
+      "readings": [
+        "2ch 33",
+        "2ch 34",
+        "act 28",
+        "psa 82"
+      ]
+    },
+    {
+      "day": 165,
+      "readings": [
+        "2ch 35",
+        "2ch 36",
+        "ezr 1",
+        "rom 1",
+        "psa 83"
+      ]
+    },
+    {
+      "day": 166,
+      "readings": [
+        "ezr 2",
+        "ezr 3"
+      ]
+    },
+    {
+      "day": 167,
+      "readings": [
+        "ezr 4",
+        "ezr 5",
+        "ezr 6",
+        "rom 2"
+      ]
+    },
+    {
+      "day": 168,
+      "readings": [
+        "ezr 7",
+        "ezr 8",
+        "rom 3",
+        "psa 84"
+      ]
+    },
+    {
+      "day": 169,
+      "readings": [
+        "ezr 9",
+        "ezr 10"
+      ]
+    },
+    {
+      "day": 170,
+      "readings": [
+        "neh 1",
+        "neh 2",
+        "neh 3",
+        "rom 4",
+        "psa 85"
+      ]
+    },
+    {
+      "day": 171,
+      "readings": [
+        "neh 4",
+        "neh 5",
+        "rom 5"
+      ]
+    },
+    {
+      "day": 172,
+      "readings": [
+        "neh 6",
+        "neh 7",
+        "neh 8",
+        "rom 6",
+        "psa 86"
+      ]
+    },
+    {
+      "day": 173,
+      "readings": [
+        "neh 9",
+        "neh 10"
+      ]
+    },
+    {
+      "day": 174,
+      "readings": [
+        "neh 11",
+        "neh 12",
+        "neh 13",
+        "rom 7",
+        "psa 87"
+      ]
+    },
+    {
+      "day": 175,
+      "readings": [
+        "tob 1",
+        "tob 2",
+        "rom 8",
+        "psa 88"
+      ]
+    },
+    {
+      "day": 176,
+      "readings": [
+        "tob 3",
+        "tob 4",
+        "tob 5"
+      ]
+    },
+    {
+      "day": 177,
+      "readings": [
+        "tob 6",
+        "tob 7",
+        "rom 9"
+      ]
+    },
+    {
+      "day": 178,
+      "readings": [
+        "tob 8",
+        "tob 9",
+        "rom 10",
+        "psa 89"
+      ]
+    },
+    {
+      "day": 179,
+      "readings": [
+        "tob 10",
+        "tob 11",
+        "tob 12",
+        "rom 11",
+        "psa 90"
+      ]
+    },
+    {
+      "day": 180,
+      "readings": [
+        "tob 13",
+        "tob 14"
+      ]
+    },
+    {
+      "day": 181,
+      "readings": [
+        "jdt 1",
+        "jdt 2",
+        "jdt 3",
+        "rom 12"
+      ]
+    },
+    {
+      "day": 182,
+      "readings": [
+        "jdt 4",
+        "jdt 5",
+        "rom 13",
+        "psa 91"
+      ]
+    },
+    {
+      "day": 183,
+      "readings": [
+        "jdt 6",
+        "jdt 7",
+        "jdt 8"
+      ]
+    },
+    {
+      "day": 184,
+      "readings": [
+        "jdt 9",
+        "jdt 10",
+        "rom 14",
+        "psa 92"
+      ]
+    },
+    {
+      "day": 185,
+      "readings": [
+        "jdt 11",
+        "jdt 12",
+        "jdt 13",
+        "rom 15"
+      ]
+    },
+    {
+      "day": 186,
+      "readings": [
+        "jdt 14",
+        "jdt 15"
+      ]
+    },
+    {
+      "day": 187,
+      "readings": [
+        "jdt 16",
+        "est 1",
+        "est 2",
+        "rom 16",
+        "psa 93"
+      ]
+    },
+    {
+      "day": 188,
+      "readings": [
+        "est 3",
+        "est 4",
+        "1co 1",
+        "psa 94"
+      ]
+    },
+    {
+      "day": 189,
+      "readings": [
+        "est 5",
+        "est 6",
+        "1co 2"
+      ]
+    },
+    {
+      "day": 190,
+      "readings": [
+        "est 7",
+        "est 8",
+        "est 9"
+      ]
+    },
+    {
+      "day": 191,
+      "readings": [
+        "est 10",
+        "est 11",
+        "1co 3",
+        "psa 95"
+      ]
+    },
+    {
+      "day": 192,
+      "readings": [
+        "est 12",
+        "est 13",
+        "est 14",
+        "1co 4",
+        "psa 96"
+      ]
+    },
+    {
+      "day": 193,
+      "readings": [
+        "est 15",
+        "est 16"
+      ]
+    },
+    {
+      "day": 194,
+      "readings": [
+        "1ma 1",
+        "1ma 2",
+        "1ma 3",
+        "1co 5",
+        "psa 97"
+      ]
+    },
+    {
+      "day": 195,
+      "readings": [
+        "1ma 4",
+        "1ma 5",
+        "1co 6"
+      ]
+    },
+    {
+      "day": 196,
+      "readings": [
+        "1ma 6",
+        "1ma 7",
+        "1ma 8",
+        "1co 7",
+        "psa 98"
+      ]
+    },
+    {
+      "day": 197,
+      "readings": [
+        "1ma 9",
+        "1ma 10"
+      ]
+    },
+    {
+      "day": 198,
+      "readings": [
+        "1ma 11",
+        "1ma 12",
+        "1co 8",
+        "psa 99"
+      ]
+    },
+    {
+      "day": 199,
+      "readings": [
+        "1ma 13",
+        "1ma 14",
+        "1ma 15",
+        "1co 9"
+      ]
+    },
+    {
+      "day": 200,
+      "readings": [
+        "1ma 16",
+        "2ma 1"
+      ]
+    },
+    {
+      "day": 201,
+      "readings": [
+        "2ma 2",
+        "2ma 3",
+        "2ma 4",
+        "1co 10",
+        "psa 100"
+      ]
+    },
+    {
+      "day": 202,
+      "readings": [
+        "2ma 5",
+        "2ma 6",
+        "1co 11",
+        "psa 101"
+      ]
+    },
+    {
+      "day": 203,
+      "readings": [
+        "2ma 7",
+        "2ma 8",
+        "2ma 9",
+        "1co 12"
+      ]
+    },
+    {
+      "day": 204,
+      "readings": [
+        "2ma 10",
+        "2ma 11"
+      ]
+    },
+    {
+      "day": 205,
+      "readings": [
+        "2ma 12",
+        "2ma 13",
+        "2ma 14",
+        "1co 13",
+        "psa 102"
+      ]
+    },
+    {
+      "day": 206,
+      "readings": [
+        "2ma 15",
+        "job 1",
+        "1co 14",
+        "psa 103"
+      ]
+    },
+    {
+      "day": 207,
+      "readings": [
+        "job 2",
+        "job 3"
+      ]
+    },
+    {
+      "day": 208,
+      "readings": [
+        "job 4",
+        "job 5",
+        "job 6",
+        "1co 15",
+        "psa 104"
+      ]
+    },
+    {
+      "day": 209,
+      "readings": [
+        "job 7",
+        "job 8",
+        "1co 16"
+      ]
+    },
+    {
+      "day": 210,
+      "readings": [
+        "job 9",
+        "job 10",
+        "job 11",
+        "2co 1",
+        "psa 105"
+      ]
+    },
+    {
+      "day": 211,
+      "readings": [
+        "job 12",
+        "job 13"
+      ]
+    },
+    {
+      "day": 212,
+      "readings": [
+        "job 14",
+        "job 15",
+        "job 16",
+        "2co 2",
+        "psa 106"
+      ]
+    },
+    {
+      "day": 213,
+      "readings": [
+        "job 17",
+        "job 18",
+        "2co 3"
+      ]
+    },
+    {
+      "day": 214,
+      "readings": [
+        "job 19",
+        "job 20",
+        "job 21"
+      ]
+    },
+    {
+      "day": 215,
+      "readings": [
+        "job 22",
+        "job 23",
+        "2co 4",
+        "psa 107"
+      ]
+    },
+    {
+      "day": 216,
+      "readings": [
+        "job 24",
+        "job 25",
+        "2co 5",
+        "psa 108"
+      ]
+    },
+    {
+      "day": 217,
+      "readings": [
+        "job 26",
+        "job 27",
+        "job 28",
+        "2co 6"
+      ]
+    },
+    {
+      "day": 218,
+      "readings": [
+        "job 29",
+        "job 30"
+      ]
+    },
+    {
+      "day": 219,
+      "readings": [
+        "job 31",
+        "job 32",
+        "job 33",
+        "2co 7",
+        "psa 109"
+      ]
+    },
+    {
+      "day": 220,
+      "readings": [
+        "job 34",
+        "job 35",
+        "2co 8",
+        "psa 110"
+      ]
+    },
+    {
+      "day": 221,
+      "readings": [
+        "job 36",
+        "job 37",
+        "job 38"
+      ]
+    },
+    {
+      "day": 222,
+      "readings": [
+        "job 39",
+        "job 40",
+        "2co 9",
+        "psa 111"
+      ]
+    },
+    {
+      "day": 223,
+      "readings": [
+        "job 41",
+        "job 42",
+        "ecc 1",
+        "2co 10"
+      ]
+    },
+    {
+      "day": 224,
+      "readings": [
+        "ecc 2",
+        "ecc 3",
+        "2co 11",
+        "psa 112"
+      ]
+    },
+    {
+      "day": 225,
+      "readings": [
+        "ecc 4",
+        "ecc 5"
+      ]
+    },
+    {
+      "day": 226,
+      "readings": [
+        "ecc 6",
+        "ecc 7",
+        "ecc 8",
+        "2co 12",
+        "psa 113"
+      ]
+    },
+    {
+      "day": 227,
+      "readings": [
+        "ecc 9",
+        "ecc 10",
+        "2co 13"
+      ]
+    },
+    {
+      "day": 228,
+      "readings": [
+        "ecc 11",
+        "ecc 12",
+        "sng 1"
+      ]
+    },
+    {
+      "day": 229,
+      "readings": [
+        "sng 2",
+        "sng 3",
+        "gal 1",
+        "psa 114"
+      ]
+    },
+    {
+      "day": 230,
+      "readings": [
+        "sng 4",
+        "sng 5",
+        "sng 6",
+        "gal 2",
+        "psa 115"
+      ]
+    },
+    {
+      "day": 231,
+      "readings": [
+        "sng 7",
+        "sng 8",
+        "gal 3"
+      ]
+    },
+    {
+      "day": 232,
+      "readings": [
+        "wis 1",
+        "wis 2",
+        "wis 3"
+      ]
+    },
+    {
+      "day": 233,
+      "readings": [
+        "wis 4",
+        "wis 5",
+        "gal 4",
+        "psa 116"
+      ]
+    },
+    {
+      "day": 234,
+      "readings": [
+        "wis 6",
+        "wis 7",
+        "gal 5",
+        "psa 117"
+      ]
+    },
+    {
+      "day": 235,
+      "readings": [
+        "wis 8",
+        "wis 9",
+        "wis 10"
+      ]
+    },
+    {
+      "day": 236,
+      "readings": [
+        "wis 11",
+        "wis 12",
+        "gal 6",
+        "psa 118"
+      ]
+    },
+    {
+      "day": 237,
+      "readings": [
+        "wis 13",
+        "wis 14",
+        "wis 15",
+        "eph 1"
+      ]
+    },
+    {
+      "day": 238,
+      "readings": [
+        "wis 16",
+        "wis 17",
+        "eph 2",
+        "psa 119:1-88"
+      ]
+    },
+    {
+      "day": 239,
+      "readings": [
+        "wis 18",
+        "wis 19",
+        "sir 1"
+      ]
+    },
+    {
+      "day": 240,
+      "readings": [
+        "sir 2",
+        "sir 3",
+        "eph 3",
+        "psa 119:89-176"
+      ]
+    },
+    {
+      "day": 241,
+      "readings": [
+        "sir 4",
+        "sir 5",
+        "sir 6",
+        "eph 4"
+      ]
+    },
+    {
+      "day": 242,
+      "readings": [
+        "sir 7",
+        "sir 8"
+      ]
+    },
+    {
+      "day": 243,
+      "readings": [
+        "sir 9",
+        "sir 10",
+        "sir 11",
+        "eph 5",
+        "psa 120"
+      ]
+    },
+    {
+      "day": 244,
+      "readings": [
+        "sir 12",
+        "sir 13",
+        "eph 6",
+        "psa 121"
+      ]
+    },
+    {
+      "day": 245,
+      "readings": [
+        "sir 14",
+        "sir 15",
+        "phi 1"
+      ]
+    },
+    {
+      "day": 246,
+      "readings": [
+        "sir 16",
+        "sir 17",
+        "sir 18"
+      ]
+    },
+    {
+      "day": 247,
+      "readings": [
+        "sir 19",
+        "sir 20",
+        "phi 2",
+        "psa 122"
+      ]
+    },
+    {
+      "day": 248,
+      "readings": [
+        "sir 21",
+        "sir 22",
+        "sir 23",
+        "phi 3",
+        "psa 123"
+      ]
+    },
+    {
+      "day": 249,
+      "readings": [
+        "sir 24",
+        "sir 25"
+      ]
+    },
+    {
+      "day": 250,
+      "readings": [
+        "sir 26",
+        "sir 27",
+        "sir 28",
+        "phi 4",
+        "psa 124"
+      ]
+    },
+    {
+      "day": 251,
+      "readings": [
+        "sir 29",
+        "sir 30",
+        "col 1"
+      ]
+    },
+    {
+      "day": 252,
+      "readings": [
+        "sir 31",
+        "sir 32",
+        "sir 33",
+        "col 2",
+        "psa 125"
+      ]
+    },
+    {
+      "day": 253,
+      "readings": [
+        "sir 34",
+        "sir 35"
+      ]
+    },
+    {
+      "day": 254,
+      "readings": [
+        "sir 36",
+        "sir 37",
+        "col 3",
+        "psa 126"
+      ]
+    },
+    {
+      "day": 255,
+      "readings": [
+        "sir 38",
+        "sir 39",
+        "sir 40",
+        "col 4"
+      ]
+    },
+    {
+      "day": 256,
+      "readings": [
+        "sir 41",
+        "sir 42"
+      ]
+    },
+    {
+      "day": 257,
+      "readings": [
+        "sir 43",
+        "sir 44",
+        "sir 45",
+        "1th 1",
+        "psa 127"
+      ]
+    },
+    {
+      "day": 258,
+      "readings": [
+        "sir 46",
+        "sir 47",
+        "1th 2",
+        "psa 128"
+      ]
+    },
+    {
+      "day": 259,
+      "readings": [
+        "sir 48",
+        "sir 49",
+        "sir 50"
+      ]
+    },
+    {
+      "day": 260,
+      "readings": [
+        "sir 51",
+        "isa 1",
+        "1th 3"
+      ]
+    },
+    {
+      "day": 261,
+      "readings": [
+        "isa 2",
+        "isa 3",
+        "isa 4",
+        "1th 4",
+        "psa 129"
+      ]
+    },
+    {
+      "day": 262,
+      "readings": [
+        "isa 5",
+        "isa 6",
+        "1th 5",
+        "psa 130"
+      ]
+    },
+    {
+      "day": 263,
+      "readings": [
+        "isa 7",
+        "isa 8"
+      ]
+    },
+    {
+      "day": 264,
+      "readings": [
+        "isa 9",
+        "isa 10",
+        "isa 11",
+        "2th 1",
+        "psa 131"
+      ]
+    },
+    {
+      "day": 265,
+      "readings": [
+        "isa 12",
+        "isa 13",
+        "2th 2"
+      ]
+    },
+    {
+      "day": 266,
+      "readings": [
+        "isa 14",
+        "isa 15",
+        "isa 16"
+      ]
+    },
+    {
+      "day": 267,
+      "readings": [
+        "isa 17",
+        "isa 18",
+        "2th 3",
+        "psa 132"
+      ]
+    },
+    {
+      "day": 268,
+      "readings": [
+        "isa 19",
+        "isa 20",
+        "isa 21",
+        "1ti 1",
+        "psa 133"
+      ]
+    },
+    {
+      "day": 269,
+      "readings": [
+        "isa 22",
+        "isa 23",
+        "1ti 2"
+      ]
+    },
+    {
+      "day": 270,
+      "readings": [
+        "isa 24",
+        "isa 25",
+        "isa 26"
+      ]
+    },
+    {
+      "day": 271,
+      "readings": [
+        "isa 27",
+        "isa 28",
+        "1ti 3",
+        "psa 134"
+      ]
+    },
+    {
+      "day": 272,
+      "readings": [
+        "isa 29",
+        "isa 30",
+        "1ti 4",
+        "psa 135"
+      ]
+    },
+    {
+      "day": 273,
+      "readings": [
+        "isa 31",
+        "isa 32",
+        "isa 33"
+      ]
+    },
+    {
+      "day": 274,
+      "readings": [
+        "isa 34",
+        "isa 35",
+        "1ti 5"
+      ]
+    },
+    {
+      "day": 275,
+      "readings": [
+        "isa 36",
+        "isa 37",
+        "isa 38",
+        "1ti 6",
+        "psa 136"
+      ]
+    },
+    {
+      "day": 276,
+      "readings": [
+        "isa 39",
+        "isa 40",
+        "2ti 1",
+        "psa 137"
+      ]
+    },
+    {
+      "day": 277,
+      "readings": [
+        "isa 41",
+        "isa 42",
+        "isa 43"
+      ]
+    },
+    {
+      "day": 278,
+      "readings": [
+        "isa 44",
+        "isa 45",
+        "2ti 2",
+        "psa 138"
+      ]
+    },
+    {
+      "day": 279,
+      "readings": [
+        "isa 46",
+        "isa 47",
+        "isa 48",
+        "2ti 3"
+      ]
+    },
+    {
+      "day": 280,
+      "readings": [
+        "isa 49",
+        "isa 50"
+      ]
+    },
+    {
+      "day": 281,
+      "readings": [
+        "isa 51",
+        "isa 52",
+        "2ti 4",
+        "psa 139"
+      ]
+    },
+    {
+      "day": 282,
+      "readings": [
+        "isa 53",
+        "isa 54",
+        "isa 55",
+        "tit 1",
+        "psa 140"
+      ]
+    },
+    {
+      "day": 283,
+      "readings": [
+        "isa 56",
+        "isa 57",
+        "tit 2"
+      ]
+    },
+    {
+      "day": 284,
+      "readings": [
+        "isa 58",
+        "isa 59",
+        "isa 60"
+      ]
+    },
+    {
+      "day": 285,
+      "readings": [
+        "isa 61",
+        "isa 62",
+        "tit 3",
+        "psa 141"
+      ]
+    },
+    {
+      "day": 286,
+      "readings": [
+        "isa 63",
+        "isa 64",
+        "isa 65",
+        "phm 1",
+        "psa 142"
+      ]
+    },
+    {
+      "day": 287,
+      "readings": [
+        "isa 66",
+        "jer 1"
+      ]
+    },
+    {
+      "day": 288,
+      "readings": [
+        "jer 2",
+        "jer 3",
+        "jer 4",
+        "heb 1"
+      ]
+    },
+    {
+      "day": 289,
+      "readings": [
+        "jer 5",
+        "jer 6",
+        "heb 2",
+        "psa 143"
+      ]
+    },
+    {
+      "day": 290,
+      "readings": [
+        "jer 7",
+        "jer 8",
+        "jer 9",
+        "heb 3",
+        "psa 144"
+      ]
+    },
+    {
+      "day": 291,
+      "readings": [
+        "jer 10",
+        "jer 11"
+      ]
+    },
+    {
+      "day": 292,
+      "readings": [
+        "jer 12",
+        "jer 13",
+        "heb 4",
+        "psa 145"
+      ]
+    },
+    {
+      "day": 293,
+      "readings": [
+        "jer 14",
+        "jer 15",
+        "jer 16",
+        "heb 5"
+      ]
+    },
+    {
+      "day": 294,
+      "readings": [
+        "jer 17",
+        "jer 18"
+      ]
+    },
+    {
+      "day": 295,
+      "readings": [
+        "jer 19",
+        "jer 20",
+        "jer 21",
+        "heb 6",
+        "psa 146"
+      ]
+    },
+    {
+      "day": 296,
+      "readings": [
+        "jer 22",
+        "jer 23",
+        "heb 7",
+        "psa 147"
+      ]
+    },
+    {
+      "day": 297,
+      "readings": [
+        "jer 24",
+        "jer 25",
+        "jer 26",
+        "heb 8"
+      ]
+    },
+    {
+      "day": 298,
+      "readings": [
+        "jer 27",
+        "jer 28"
+      ]
+    },
+    {
+      "day": 299,
+      "readings": [
+        "jer 29",
+        "jer 30",
+        "jer 31",
+        "heb 9",
+        "psa 148"
+      ]
+    },
+    {
+      "day": 300,
+      "readings": [
+        "jer 32",
+        "jer 33",
+        "heb 10",
+        "psa 149"
+      ]
+    },
+    {
+      "day": 301,
+      "readings": [
+        "jer 34",
+        "jer 35"
+      ]
+    },
+    {
+      "day": 302,
+      "readings": [
+        "jer 36",
+        "jer 37",
+        "jer 38",
+        "heb 11"
+      ]
+    },
+    {
+      "day": 303,
+      "readings": [
+        "jer 39",
+        "jer 40",
+        "heb 12",
+        "psa 150"
+      ]
+    },
+    {
+      "day": 304,
+      "readings": [
+        "jer 41",
+        "jer 42",
+        "jer 43",
+        "heb 13",
+        "pro 1"
+      ]
+    },
+    {
+      "day": 305,
+      "readings": [
+        "jer 44",
+        "jer 45"
+      ]
+    },
+    {
+      "day": 306,
+      "readings": [
+        "jer 46",
+        "jer 47",
+        "jer 48",
+        "jam 1"
+      ]
+    },
+    {
+      "day": 307,
+      "readings": [
+        "jer 49",
+        "jer 50",
+        "jam 2",
+        "pro 2"
+      ]
+    },
+    {
+      "day": 308,
+      "readings": [
+        "jer 51",
+        "jer 52",
+        "lam 1"
+      ]
+    },
+    {
+      "day": 309,
+      "readings": [
+        "lam 2",
+        "lam 3",
+        "jam 3",
+        "pro 3"
+      ]
+    },
+    {
+      "day": 310,
+      "readings": [
+        "lam 4",
+        "lam 5",
+        "jam 4",
+        "pro 4"
+      ]
+    },
+    {
+      "day": 311,
+      "readings": [
+        "bar 1",
+        "bar 2",
+        "bar 3",
+        "jam 5"
+      ]
+    },
+    {
+      "day": 312,
+      "readings": [
+        "bar 4",
+        "bar 5"
+      ]
+    },
+    {
+      "day": 313,
+      "readings": [
+        "bar 6",
+        "eze 1",
+        "eze 2",
+        "1pe 1",
+        "pro 5"
+      ]
+    },
+    {
+      "day": 314,
+      "readings": [
+        "eze 3",
+        "eze 4",
+        "1pe 2",
+        "pro 6"
+      ]
+    },
+    {
+      "day": 315,
+      "readings": [
+        "eze 5",
+        "eze 6",
+        "eze 7"
+      ]
+    },
+    {
+      "day": 316,
+      "readings": [
+        "eze 8",
+        "eze 9",
+        "1pe 3"
+      ]
+    },
+    {
+      "day": 317,
+      "readings": [
+        "eze 10",
+        "eze 11",
+        "eze 12",
+        "1pe 4",
+        "pro 7"
+      ]
+    },
+    {
+      "day": 318,
+      "readings": [
+        "eze 13",
+        "eze 14",
+        "1pe 5",
+        "pro 8"
+      ]
+    },
+    {
+      "day": 319,
+      "readings": [
+        "eze 15",
+        "eze 16"
+      ]
+    },
+    {
+      "day": 320,
+      "readings": [
+        "eze 17",
+        "eze 18",
+        "eze 19",
+        "2pe 1"
+      ]
+    },
+    {
+      "day": 321,
+      "readings": [
+        "eze 20",
+        "eze 21",
+        "2pe 2",
+        "pro 9"
+      ]
+    },
+    {
+      "day": 322,
+      "readings": [
+        "eze 22",
+        "eze 23",
+        "eze 24"
+      ]
+    },
+    {
+      "day": 323,
+      "readings": [
+        "eze 25",
+        "eze 26",
+        "2pe 3",
+        "pro 10"
+      ]
+    },
+    {
+      "day": 324,
+      "readings": [
+        "eze 27",
+        "eze 28",
+        "eze 29",
+        "1jo 1",
+        "pro 11"
+      ]
+    },
+    {
+      "day": 325,
+      "readings": [
+        "eze 30",
+        "eze 31",
+        "1jo 2"
+      ]
+    },
+    {
+      "day": 326,
+      "readings": [
+        "eze 32",
+        "eze 33",
+        "eze 34"
+      ]
+    },
+    {
+      "day": 327,
+      "readings": [
+        "eze 35",
+        "eze 36",
+        "1jo 3",
+        "pro 12"
+      ]
+    },
+    {
+      "day": 328,
+      "readings": [
+        "eze 37",
+        "eze 38",
+        "1jo 4",
+        "pro 13"
+      ]
+    },
+    {
+      "day": 329,
+      "readings": [
+        "eze 39",
+        "eze 40",
+        "eze 41"
+      ]
+    },
+    {
+      "day": 330,
+      "readings": [
+        "eze 42",
+        "eze 43",
+        "1jo 5"
+      ]
+    },
+    {
+      "day": 331,
+      "readings": [
+        "eze 44",
+        "eze 45",
+        "eze 46",
+        "2jo 1",
+        "pro 14"
+      ]
+    },
+    {
+      "day": 332,
+      "readings": [
+        "eze 47",
+        "eze 48"
+      ]
+    },
+    {
+      "day": 333,
+      "readings": [
+        "dan 1",
+        "dan 2",
+        "dan 3",
+        "3jo 1",
+        "pro 15"
+      ]
+    },
+    {
+      "day": 334,
+      "readings": [
+        "dan 4",
+        "dan 5",
+        "jde 1"
+      ]
+    },
+    {
+      "day": 335,
+      "readings": [
+        "dan 6",
+        "dan 7",
+        "dan 8",
+        "rev 1",
+        "pro 16"
+      ]
+    },
+    {
+      "day": 336,
+      "readings": [
+        "dan 9",
+        "dan 10"
+      ]
+    },
+    {
+      "day": 337,
+      "readings": [
+        "dan 11",
+        "dan 12",
+        "rev 2",
+        "pro 17"
+      ]
+    },
+    {
+      "day": 338,
+      "readings": [
+        "dan 13",
+        "dan 14",
+        "hos 1",
+        "rev 3",
+        "pro 18"
+      ]
+    },
+    {
+      "day": 339,
+      "readings": [
+        "hos 2",
+        "hos 3"
+      ]
+    },
+    {
+      "day": 340,
+      "readings": [
+        "hos 4",
+        "hos 5",
+        "hos 6",
+        "rev 4"
+      ]
+    },
+    {
+      "day": 341,
+      "readings": [
+        "hos 7",
+        "hos 8",
+        "rev 5",
+        "pro 19"
+      ]
+    },
+    {
+      "day": 342,
+      "readings": [
+        "hos 9",
+        "hos 10",
+        "hos 11",
+        "rev 6",
+        "pro 20"
+      ]
+    },
+    {
+      "day": 343,
+      "readings": [
+        "hos 12",
+        "hos 13"
+      ]
+    },
+    {
+      "day": 344,
+      "readings": [
+        "hos 14",
+        "joe 1",
+        "joe 2",
+        "rev 7"
+      ]
+    },
+    {
+      "day": 345,
+      "readings": [
+        "joe 3",
+        "amo 1",
+        "rev 8",
+        "pro 21"
+      ]
+    },
+    {
+      "day": 346,
+      "readings": [
+        "amo 2",
+        "amo 3",
+        "amo 4"
+      ]
+    },
+    {
+      "day": 347,
+      "readings": [
+        "amo 5",
+        "amo 6",
+        "rev 9",
+        "pro 22"
+      ]
+    },
+    {
+      "day": 348,
+      "readings": [
+        "amo 7",
+        "amo 8",
+        "rev 10"
+      ]
+    },
+    {
+      "day": 349,
+      "readings": [
+        "amo 9",
+        "oba 1",
+        "jon 1",
+        "rev 11",
+        "pro 23"
+      ]
+    },
+    {
+      "day": 350,
+      "readings": [
+        "jon 2",
+        "jon 3"
+      ]
+    },
+    {
+      "day": 351,
+      "readings": [
+        "jon 4",
+        "mic 1",
+        "mic 2",
+        "rev 12",
+        "pro 24"
+      ]
+    },
+    {
+      "day": 352,
+      "readings": [
+        "mic 3",
+        "mic 4",
+        "rev 13",
+        "pro 25"
+      ]
+    },
+    {
+      "day": 353,
+      "readings": [
+        "mic 5",
+        "mic 6",
+        "mic 7"
+      ]
+    },
+    {
+      "day": 354,
+      "readings": [
+        "nah 1",
+        "nah 2",
+        "rev 14"
+      ]
+    },
+    {
+      "day": 355,
+      "readings": [
+        "nah 3",
+        "hab 1",
+        "hab 2",
+        "rev 15",
+        "pro 26"
+      ]
+    },
+    {
+      "day": 356,
+      "readings": [
+        "hab 3",
+        "zep 1",
+        "rev 16",
+        "pro 27"
+      ]
+    },
+    {
+      "day": 357,
+      "readings": [
+        "zep 2",
+        "zep 3"
+      ]
+    },
+    {
+      "day": 358,
+      "readings": [
+        "hag 1",
+        "hag 2",
+        "zec 1",
+        "rev 17"
+      ]
+    },
+    {
+      "day": 359,
+      "readings": [
+        "zec 2",
+        "zec 3",
+        "rev 18",
+        "pro 28"
+      ]
+    },
+    {
+      "day": 360,
+      "readings": [
+        "zec 4",
+        "zec 5",
+        "zec 6"
+      ]
+    },
+    {
+      "day": 361,
+      "readings": [
+        "zec 7",
+        "zec 8",
+        "rev 19",
+        "pro 29"
+      ]
+    },
+    {
+      "day": 362,
+      "readings": [
+        "zec 9",
+        "zec 10",
+        "zec 11",
+        "rev 20"
+      ]
+    },
+    {
+      "day": 363,
+      "readings": [
+        "zec 12",
+        "zec 13",
+        "rev 21",
+        "pro 30"
+      ]
+    },
+    {
+      "day": 364,
+      "readings": [
+        "zec 14",
+        "mal 1",
+        "mal 2"
+      ]
+    },
+    {
+      "day": 365,
+      "readings": [
+        "mal 3",
+        "mal 4",
+        "rev 22",
+        "pro 31"
+      ]
+    }
+  ]
+}
