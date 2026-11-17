@@ -389,35 +389,6 @@ fun PrayersAndNovenasScreen(
                 }
             }
         }
-        if (selectedTab == 0) item(key = "pray_start_here") {
-            val twoColumns = LocalConfiguration.current.screenWidthDp >= 360 && LocalDensity.current.fontScale < 1.4f
-            data class Guide(val title: String, val asset: String, val action: () -> Unit, val tag: String)
-            val guides = listOf(
-                Guide(currentLanguage.pick("Rosario", "Rosary", "Terço"), ArtMary, onOpenRosary, "nav_rosary"),
-                Guide(currentLanguage.pick("Coronilla", "Divine Mercy", "Coroa da Misericórdia"), ArtDivineMercy, onOpenGuidedChaplet ?: { showChaplet = true }, "open_chaplet_row")
-            )
-            AppGrid(guides, columns = if (twoColumns) 2 else 1, modifier = Modifier.testTag("pray_primary_guides")) { guide, cell ->
-                AppImageCard(
-                    title = guide.title,
-                    meta = currentLanguage.pick("Oración guiada", "Guided prayer", "Oração guiada"),
-                    assetPath = guide.asset,
-                    onClick = guide.action,
-                    aspectRatio = if (twoColumns) 0.95f else 1.35f,
-                    modifier = cell,
-                    tag = guide.tag
-                )
-            }
-            Spacer(Modifier.height(8.dp))
-            com.example.ui.design.AppListGroup(Modifier.testTag("pray_beginner_start")) {
-                com.example.ui.design.AppListRow(
-                    currentLanguage.pick("Ayúdame a orar", "Help me pray", "Ajude-me a rezar"),
-                    subtitle = currentLanguage.pick("Una guía sencilla para empezar", "A simple guide to begin", "Um guia simples para começar"),
-                    onClick = { showHowTo = true },
-                    modifier = Modifier.testTag("how_to_pray_toggle")
-                )
-            }
-            Spacer(Modifier.height(12.dp))
-        }
         item(key = "prayers_screen_tabs") {
             AppSegmentedTabs(
                 options = listOf(
@@ -451,6 +422,38 @@ fun PrayersAndNovenasScreen(
                     tag = "novena_search_input"
                 )
             }
+        }
+        // Guided prayers sit below the segmented control so the control keeps
+        // the same position on every segment (Prayers, Novenas, Night).
+        if (selectedTab == 0) item(key = "pray_start_here") {
+            Spacer(Modifier.height(14.dp))
+            val twoColumns = LocalConfiguration.current.screenWidthDp >= 360 && LocalDensity.current.fontScale < 1.4f
+            data class Guide(val title: String, val asset: String, val action: () -> Unit, val tag: String)
+            val guides = listOf(
+                Guide(currentLanguage.pick("Rosario", "Rosary", "Terço"), ArtMary, onOpenRosary, "nav_rosary"),
+                Guide(currentLanguage.pick("Coronilla", "Divine Mercy", "Coroa da Misericórdia"), ArtDivineMercy, onOpenGuidedChaplet ?: { showChaplet = true }, "open_chaplet_row")
+            )
+            AppGrid(guides, columns = if (twoColumns) 2 else 1, modifier = Modifier.testTag("pray_primary_guides")) { guide, cell ->
+                AppImageCard(
+                    title = guide.title,
+                    meta = currentLanguage.pick("Oración guiada", "Guided prayer", "Oração guiada"),
+                    assetPath = guide.asset,
+                    onClick = guide.action,
+                    aspectRatio = if (twoColumns) 0.95f else 1.35f,
+                    modifier = cell,
+                    tag = guide.tag
+                )
+            }
+            Spacer(Modifier.height(8.dp))
+            com.example.ui.design.AppListGroup(Modifier.testTag("pray_beginner_start")) {
+                com.example.ui.design.AppListRow(
+                    currentLanguage.pick("Ayúdame a orar", "Help me pray", "Ajude-me a rezar"),
+                    subtitle = currentLanguage.pick("Una guía sencilla para empezar", "A simple guide to begin", "Um guia simples para começar"),
+                    onClick = { showHowTo = true },
+                    modifier = Modifier.testTag("how_to_pray_toggle")
+                )
+            }
+            Spacer(Modifier.height(12.dp))
         }
     }
 
