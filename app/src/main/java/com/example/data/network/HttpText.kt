@@ -1,5 +1,7 @@
 package com.example.data.network
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import kotlinx.coroutines.suspendCancellableCoroutine
 import okhttp3.Call
 import okhttp3.Callback
@@ -16,7 +18,10 @@ internal suspend fun OkHttpClient.awaitText(request: Request, maxBytes: Int = 2 
         val call = newCall(request)
         continuation.invokeOnCancellation { call.cancel() }
         call.enqueue(object : Callback {
-            override fun onFailure(call: Call, error: IOException) { continuation.resume(null) }
+            override fun onFailure(call: Call, error: IOException) {
+                if(!call.isCanceled()) AppLog.failure(LogEvent.HTTP_REQUEST,error)
+                continuation.resume(null)
+            }
             override fun onResponse(call: Call, response: Response) {
                 val text = try {
                     response.use {
@@ -34,7 +39,7 @@ internal suspend fun OkHttpClient.awaitText(request: Request, maxBytes: Int = 2 
                             output.toByteArray().toString(body.contentType()?.charset(Charsets.UTF_8) ?: Charsets.UTF_8)
                         }
                     }
-                } catch (_: IOException) { null }
+                } catch (e: IOException) { if(!call.isCanceled())AppLog.failure(LogEvent.HTTP_BODY,e);null }
                 continuation.resume(text)
             }
         })

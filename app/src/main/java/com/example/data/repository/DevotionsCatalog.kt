@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import android.content.res.AssetManager
 import android.util.Log
@@ -61,6 +63,7 @@ class DevotionsCatalog(private val open: (String) -> InputStream) {
         val adapter = moshi.adapter<List<T>>(Types.newParameterizedType(List::class.java, T::class.java))
         open(name).bufferedReader().use { adapter.fromJson(it.readText()) }.orEmpty().filterNotNull()
     } catch (e: Exception) {
+        AppLog.failure(LogEvent.DEVOTION_CATALOG,e)
         if (e !is java.io.FileNotFoundException && e.message?.contains("unavailable") != true)
             runCatching { Log.w("DevotionsCatalog", "Ignoring $name: ${e.message}") }
         emptyList()

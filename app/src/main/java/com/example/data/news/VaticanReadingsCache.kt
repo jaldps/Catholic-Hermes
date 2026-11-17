@@ -1,5 +1,7 @@
 package com.example.data.news
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import com.example.data.models.AppLanguage
 import java.io.File
@@ -28,12 +30,12 @@ class VaticanReadingsCache(private val dir: File, private val keepDays: Int = 7)
             tmp.writeText(xml)
             if (!tmp.renameTo(target)) { target.writeText(xml); tmp.delete() }
             prune(isoDate)
-        }
+        }.onFailure {AppLog.failure(LogEvent.READINGS_CACHE_WRITE,it)}
     }
 
     fun read(language: AppLanguage, isoDate: String): String? =
         runCatching { file(language, isoDate).takeIf { it.isFile }?.readText()?.takeIf { it.isNotBlank() } }
-            .getOrNull()
+            .onFailure {AppLog.failure(LogEvent.READINGS_CACHE_READ,it)}.getOrNull()
 
     /** Deletes cached feeds older than [keepDays] days before [isoDate]. */
     fun prune(isoDate: String) {

@@ -1,0 +1,32 @@
+[
+  {
+    "stage": "navigation",
+    "result": "BUILD SUCCESSFUL in 4m 41s",
+    "apk_bytes": 96426659
+  },
+  {
+    "stage": "retrofit",
+    "result": "BUILD SUCCESSFUL in 5m 6s",
+    "apk_bytes": 96393891
+  },
+  {
+    "stage": "firebase-ai",
+    "result": "BUILD SUCCESSFUL in 5m 7s",
+    "apk_bytes": 94487634
+  },
+  {
+    "stage": "appcheck",
+    "result": "BUILD SUCCESSFUL in 4m 46s",
+    "apk_bytes": 93016884
+  },
+  {
+    "stage": "secrets",
+    "result": "BUILD SUCCESSFUL in 4m 52s",
+    "apk_bytes": 93016884
+  },
+  {
+    "stage": "google-services",
+    "result": "BUILD SUCCESSFUL in 4m 39s",
+    "apk_bytes": 93016884
+  }
+]

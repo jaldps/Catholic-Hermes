@@ -1,5 +1,7 @@
 package com.example.data.news
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import com.example.data.models.AppLanguage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -181,6 +183,7 @@ class VaticanGospelFetcher(
         parse(body, isoDate).also { if (it is ReadingsResult.Success) cache?.write(language, isoDate, body) }
     }.getOrElse {
         if (it is CancellationException) throw it
+        AppLog.failure(LogEvent.READINGS_FEED,it)
         ReadingsResult.Failure(it.message ?: it::class.java.simpleName)
     }
 
@@ -189,6 +192,7 @@ class VaticanGospelFetcher(
         val date = runCatching { LocalDate.parse(isoDate) }.getOrNull()
             ?: return ReadingsResult.Failure("invalid requested date")
         val items = runCatching { items(xml) }.getOrElse {
+            AppLog.failure(LogEvent.READINGS_PARSE,it)
             return ReadingsResult.Failure("invalid readings feed")
         }
         if (items.isEmpty()) return ReadingsResult.Failure("no readings in feed")

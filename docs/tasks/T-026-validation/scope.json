@@ -1,0 +1,21 @@
+{
+  "base_commit": "3172bed",
+  "protected_paths_unchanged": [
+    "dist",
+    "tools/hermes-preview.gradle",
+    "app/schemas",
+    "app/src/main/assets/novenas"
+  ],
+  "android_configuration_block_unchanged": true,
+  "existing_tests_modified": [],
+  "new_test_files": [
+    "app/src/test/java/com/example/AppLogTest.kt",
+    "app/src/test/java/com/example/ErrorReportProviderTest.kt",
+    "app/src/test/java/com/example/ErrorReportUiTest.kt"
+  ],
+  "reader_and_test_files_identical_to_baseline_sha256": {
+    "app/src/main/java/com/example/ui/screens/HomeScreen.kt": "b0a37c45c53164372e6a6f51842f4377302b617d1fb70c4ba97ad03452dfc204",
+    "app/src/main/java/com/example/ui/screens/BibleScreen.kt": "c6f4257668cbc8bc5253853ea137ed48b05a9780fd362ab384923de17b7a015d",
+    "app/src/test/java/com/example/HomePrayerPrioritiesTest.kt": "81dacd15a173be0a98f00e969423d3f1788b58f161375565860c852f7a02d3b0"
+  }
+}

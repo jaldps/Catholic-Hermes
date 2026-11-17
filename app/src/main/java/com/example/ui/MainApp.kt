@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.BugReport
 import androidx.compose.material.icons.outlined.SaveAlt
 import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Language
@@ -264,6 +265,7 @@ fun MainApp(
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCalendarRules by remember { mutableStateOf(false) }
     var showBackup by rememberSaveable { mutableStateOf(false) }
+    var showErrorReport by rememberSaveable { mutableStateOf(false) }
     var showPreferenceRecovery by remember { mutableStateOf(false) }
     val preferenceWrites by com.example.data.persistence.PersonalDataCommands.states.collectAsState()
     val failedPreferenceKeys = preferenceWrites.filter { (key, state) -> state.status == com.example.data.persistence.PersonalDataCommands.Status.ERROR }.keys.toList()
@@ -744,6 +746,10 @@ fun MainApp(
                                     icon = Icons.Outlined.TextFields
                                 ),
                                 MoreEntry(
+                                    title = when (currentLanguage) { AppLanguage.ES -> "Enviar informe de errores"; AppLanguage.EN -> "Send error report"; AppLanguage.PT -> "Enviar relatório de erros" },
+                                    iconSlot = AppIconSlot.MORE, tag = "error_report_entry", onOpen = { showErrorReport = true }, icon = Icons.Outlined.BugReport
+                                ),
+                                MoreEntry(
                                     title = when (currentLanguage) { AppLanguage.ES -> "Copia de seguridad"; AppLanguage.EN -> "Backup"; AppLanguage.PT -> "Cópia de segurança" },
                                     iconSlot = AppIconSlot.MORE, tag = "backup_entry", onOpen = { showBackup = true }, icon = Icons.Outlined.SaveAlt
                                 ),
@@ -801,6 +807,9 @@ fun MainApp(
             saving = preferenceWrites.values.any { it.status == com.example.data.persistence.PersonalDataCommands.Status.SAVING })
     }
 
+    if (showErrorReport) {
+        com.example.ui.diagnostics.ErrorReportSheet(currentLanguage) { showErrorReport = false }
+    }
     if (showBackup) {
         com.example.ui.backup.BackupSheet(preferencesStore, currentLanguage, backupService,
             onDismiss = { showBackup = false }, onRestored = onBackupRestored)

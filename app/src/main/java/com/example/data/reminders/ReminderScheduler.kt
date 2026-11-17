@@ -1,5 +1,7 @@
 package com.example.data.reminders
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.app.AlarmManager
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -90,7 +92,8 @@ object ReminderScheduler {
             } else {
                 alarms.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, trigger, pi)
             }
-        } catch (_: SecurityException) {
+        } catch (e: SecurityException) {
+            AppLog.failure(LogEvent.REMINDER_EXACT,e)
             alarms.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, trigger, pi)
         }
     }
@@ -113,7 +116,7 @@ object ReminderScheduler {
             try { withTimeout(15_000) { scheduleEnabled(app, language) } }
             catch (cancelled: kotlinx.coroutines.TimeoutCancellationException) { _schedulingError.value = true }
             catch (cancelled: CancellationException) { throw cancelled }
-            catch (_: Exception) { _schedulingError.value = true }
+            catch (e: Exception) { AppLog.failure(LogEvent.REMINDER_SCHEDULE,e);_schedulingError.value = true }
         }
     }
 

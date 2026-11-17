@@ -1,0 +1,3929 @@
+{
+  "suites": [
+    {
+      "name": "com.example.AccentColorsTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.492"
+    },
+    {
+      "name": "com.example.AccentPickerUiTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "7.913"
+    },
+    {
+      "name": "com.example.AppNavigationTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "135.359"
+    },
+    {
+      "name": "com.example.AppearanceInteractionTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "7.83"
+    },
+    {
+      "name": "com.example.AssetImageReplacementTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "6.096"
+    },
+    {
+      "name": "com.example.AtomicPersonalProgressTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "5.052"
+    },
+    {
+      "name": "com.example.AuditScriptureLiturgyRegressionTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.202"
+    },
+    {
+      "name": "com.example.BackupCoreTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "12.963"
+    },
+    {
+      "name": "com.example.BackupUiTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "34.831"
+    },
+    {
+      "name": "com.example.BibleEditionPickerTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "9.084"
+    },
+    {
+      "name": "com.example.BibleEditionSelectionTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.097"
+    },
+    {
+      "name": "com.example.BibleEditionsTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "6.424"
+    },
+    {
+      "name": "com.example.BibleIntegrityTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.922"
+    },
+    {
+      "name": "com.example.BiblePositionMappingTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.022"
+    },
+    {
+      "name": "com.example.BibleReadingJourneyTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "35.505"
+    },
+    {
+      "name": "com.example.CalendarPickerInteractionTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "6.754"
+    },
+    {
+      "name": "com.example.CalendarRulesJourneyTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "32.284"
+    },
+    {
+      "name": "com.example.CalendarSelectionSafetyTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.08"
+    },
+    {
+      "name": "com.example.CatechismCoverageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.369"
+    },
+    {
+      "name": "com.example.CatechismInteractionTest",
+      "tests": "11",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "147.381"
+    },
+    {
+      "name": "com.example.CatechismReaderLogicTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.887"
+    },
+    {
+      "name": "com.example.CatholicQuestionsDataTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.057"
+    },
+    {
+      "name": "com.example.CrossReferenceEditionTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.096"
+    },
+    {
+      "name": "com.example.CrossReferenceTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "5.758"
+    },
+    {
+      "name": "com.example.DailyContextReliabilityTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.459"
+    },
+    {
+      "name": "com.example.DailySaintsFetcherTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.036"
+    },
+    {
+      "name": "com.example.DailyVerseEditionTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.837"
+    },
+    {
+      "name": "com.example.DatabaseMigrationPreservationTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "5.056"
+    },
+    {
+      "name": "com.example.DesignContrastTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.063"
+    },
+    {
+      "name": "com.example.DesignNavigationTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "8.171"
+    },
+    {
+      "name": "com.example.DevotionImageCreditsTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.569"
+    },
+    {
+      "name": "com.example.DevotionalGlassShaderTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "7.3"
+    },
+    {
+      "name": "com.example.DevotionsCatalogTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.636"
+    },
+    {
+      "name": "com.example.DevotionsScreenTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "163.204"
+    },
+    {
+      "name": "com.example.DidacheDataTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.047"
+    },
+    {
+      "name": "com.example.DoctrineFormatTest",
+      "tests": "17",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.155"
+    },
+    {
+      "name": "com.example.EditorialReliabilityTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.736"
+    },
+    {
+      "name": "com.example.ExampleRobolectricTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "7.051"
+    },
+    {
+      "name": "com.example.ExampleUnitTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.004"
+    },
+    {
+      "name": "com.example.FontPickerInteractionTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "10.239"
+    },
+    {
+      "name": "com.example.FontPreferencesTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.104"
+    },
+    {
+      "name": "com.example.FontTypographyTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.063"
+    },
+    {
+      "name": "com.example.FoundationRefParserTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.151"
+    },
+    {
+      "name": "com.example.GroupedPickersTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "59.962"
+    },
+    {
+      "name": "com.example.HabitsLogicTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.054"
+    },
+    {
+      "name": "com.example.HomePrayerPrioritiesTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "113.47"
+    },
+    {
+      "name": "com.example.HomeTextTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.045"
+    },
+    {
+      "name": "com.example.JournalTemptationInteractionTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "37.398"
+    },
+    {
+      "name": "com.example.LearningProgressReliabilityTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.314"
+    },
+    {
+      "name": "com.example.LectionaryEditionTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.363"
+    },
+    {
+      "name": "com.example.LiquidGlassTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "5.689"
+    },
+    {
+      "name": "com.example.LitanyOfLoretoTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.03"
+    },
+    {
+      "name": "com.example.LiturgicalCalendarTest",
+      "tests": "15",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.503"
+    },
+    {
+      "name": "com.example.LiturgicalRegressionTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.069"
+    },
+    {
+      "name": "com.example.MassVaticanSourceTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "33.072"
+    },
+    {
+      "name": "com.example.MissalTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "6.602"
+    },
+    {
+      "name": "com.example.NarrationAvailabilityTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.12"
+    },
+    {
+      "name": "com.example.NarrationPlaybackTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.444"
+    },
+    {
+      "name": "com.example.NovenaAssetIntegrityTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.32"
+    },
+    {
+      "name": "com.example.NovenaCatalogLoadingTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.518"
+    },
+    {
+      "name": "com.example.NovenaIndexJourneyTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "10.094"
+    },
+    {
+      "name": "com.example.NovenaProgressTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.781"
+    },
+    {
+      "name": "com.example.NovenaProvenanceTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.648"
+    },
+    {
+      "name": "com.example.NovenaProvenanceUiTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "7.901"
+    },
+    {
+      "name": "com.example.OrdersCatalogTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.499"
+    },
+    {
+      "name": "com.example.OrdersScreenTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "107.323"
+    },
+    {
+      "name": "com.example.ParishFinderTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "23.867"
+    },
+    {
+      "name": "com.example.ParishScheduleTextTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.06"
+    },
+    {
+      "name": "com.example.PrayerDetailsCatalogTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.4"
+    },
+    {
+      "name": "com.example.PrayerDetailsContentTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.501"
+    },
+    {
+      "name": "com.example.PrayerDetailsUiTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "55.245"
+    },
+    {
+      "name": "com.example.PrayerExtrasIntegrationTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.423"
+    },
+    {
+      "name": "com.example.PreferenceRecoveryJourneyTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "9.635"
+    },
+    {
+      "name": "com.example.PreferenceStorageReliabilityTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.591"
+    },
+    {
+      "name": "com.example.PsalmNumberingTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "6.454"
+    },
+    {
+      "name": "com.example.QuestionDeeperCatalogTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.543"
+    },
+    {
+      "name": "com.example.QuestionDeeperContentTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.511"
+    },
+    {
+      "name": "com.example.QuestionDeeperUiTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "7.655"
+    },
+    {
+      "name": "com.example.ReaderFontChoiceTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.058"
+    },
+    {
+      "name": "com.example.ReligiousOrdersDataTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.039"
+    },
+    {
+      "name": "com.example.ReminderIntentTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.055"
+    },
+    {
+      "name": "com.example.ReminderReliabilityRegressionTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.402"
+    },
+    {
+      "name": "com.example.ReminderSchedulingTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "5.615"
+    },
+    {
+      "name": "com.example.RemindersTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.035"
+    },
+    {
+      "name": "com.example.RetainedNavigationTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "62.952"
+    },
+    {
+      "name": "com.example.RosaryInteractionTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "12.955"
+    },
+    {
+      "name": "com.example.RosaryNarrationTest",
+      "tests": "17",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.117"
+    },
+    {
+      "name": "com.example.RosaryPersistenceTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.737"
+    },
+    {
+      "name": "com.example.RosarySessionTest",
+      "tests": "25",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.088"
+    },
+    {
+      "name": "com.example.RosaryTextTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.033"
+    },
+    {
+      "name": "com.example.SacredHeartPromisesTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.039"
+    },
+    {
+      "name": "com.example.SaintsCatalogTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.879"
+    },
+    {
+      "name": "com.example.SaintsScreenTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "59.96"
+    },
+    {
+      "name": "com.example.ScriptureRangeTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.064"
+    },
+    {
+      "name": "com.example.StudyCourseCatalogUiTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "34.944"
+    },
+    {
+      "name": "com.example.StudyCourseIntegrityTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "4.71"
+    },
+    {
+      "name": "com.example.StudyCoursesCatalogTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.604"
+    },
+    {
+      "name": "com.example.StudyJourneyTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "84.373"
+    },
+    {
+      "name": "com.example.TemptationGuideInteractionTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "33.952"
+    },
+    {
+      "name": "com.example.TemptationGuidesDataTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.057"
+    },
+    {
+      "name": "com.example.VaticanGospelTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.286"
+    },
+    {
+      "name": "com.example.VaticanNewsTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.951"
+    },
+    {
+      "name": "com.example.VaticanReadingsCacheTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.28"
+    },
+    {
+      "name": "com.example.ViaCrucisDataTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.047"
+    },
+    {
+      "name": "com.example.VoiceSelectorTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.047"
+    },
+    {
+      "name": "com.example.VoiceSettingsUiTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "7.585"
+    },
+    {
+      "name": "com.example.WebNavigationPolicyTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.145"
+    },
+    {
+      "name": "com.example.screenshots.AppScreenshotTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "14.498"
+    },
+    {
+      "name": "com.example.screenshots.AppearanceScreenshotTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "9.331"
+    },
+    {
+      "name": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "18.169"
+    },
+    {
+      "name": "com.example.screenshots.BackupScreenshotTest",
+      "tests": "24",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "19.902"
+    },
+    {
+      "name": "com.example.screenshots.BibleAreaScreenshotTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "130.264"
+    },
+    {
+      "name": "com.example.screenshots.CatechismScreenshotTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "82.392"
+    },
+    {
+      "name": "com.example.screenshots.CrossReferenceScreenshotTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "33.094"
+    },
+    {
+      "name": "com.example.screenshots.DevotionalPrioritiesScreenshotTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "194.932"
+    },
+    {
+      "name": "com.example.screenshots.DoctrineAreaScreenshotTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "44.289"
+    },
+    {
+      "name": "com.example.screenshots.ExploreScreenshotTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "69.419"
+    },
+    {
+      "name": "com.example.screenshots.FullAppScreenshotTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "502.762"
+    },
+    {
+      "name": "com.example.screenshots.GroupedPickersShotTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "36.693"
+    },
+    {
+      "name": "com.example.screenshots.PrayersScreenshotTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "87.677"
+    },
+    {
+      "name": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "16.263"
+    },
+    {
+      "name": "com.example.screenshots.RosaryStatesShotTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "6.087"
+    },
+    {
+      "name": "com.example.screenshots.SacredArtScreenshotTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "11.322"
+    },
+    {
+      "name": "com.example.screenshots.ScreenshotTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "10.726"
+    },
+    {
+      "name": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "194.478"
+    }
+  ],
+  "cases": [
+    {
+      "class": "com.example.AccentColorsTest",
+      "name": "fixedSwatchesAndCustomIdsParse",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AccentColorsTest",
+      "name": "inkReachesFourPointFiveOnCanvasCardsAndPanesInEveryIdentity",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AccentColorsTest",
+      "name": "actionLabelReadsOnTheAccentFilledButtonOfLumenAndCristal",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AccentColorsTest",
+      "name": "classicKeepsItsNeutralActionAndFixedGreenUnderTheDynamicTint",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AccentPickerUiTest",
+      "name": "cancellingTheWheelStoresNothing",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AccentPickerUiTest",
+      "name": "traditionalIdentityCanBeSelectedAndPersists",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AccentPickerUiTest",
+      "name": "colourWheelSavesACustomColour",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AccentPickerUiTest",
+      "name": "accentColoursAreInTwoGroupsAndPersist",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[IVE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppearanceInteractionTest",
+      "name": "smallestTextAndSlowestVoiceRemainSelectedAfterReopeningAppearance",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AssetImageReplacementTest",
+      "name": "changingAssetAtTheSameCompositionSiteLoadsTheNewBitmapAndClearsMissingArt",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AtomicPersonalProgressTest",
+      "name": "failedCommandCanBeRetriedWithoutCancellingTheQueue",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AtomicPersonalProgressTest",
+      "name": "idempotentDayWritesKeepAllDaysAndCompletionMetadataInOneTransaction",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AtomicPersonalProgressTest",
+      "name": "concurrentHabitRequestsCannotDuplicateAHabitDate",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AtomicPersonalProgressTest",
+      "name": "importPreservesIntentionDatesAndLongDaysAndResetDoesNotResurrectThem",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "name": "humanReferencesPreserveWholeCrossChapterAndDisjointRanges",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "name": "unsupportedVersePartsAndMalformedRangesAreNeverSilentlyClipped",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "name": "octaveWeekdaysAreSolemnitiesWithProperSelectionsAndNoFridayAbstinence",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "name": "wrongCycleGospelsAreCorrected",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "name": "generalCalendarIncludesMotherOfChurchVisitationAndUniversalMemorials",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "name": "sundayAndLentenPrecedenceDoNotTurnEveryMemorialIntoAnObligation",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "name": "commonAliasesAndUnicodeDashesAreRecognized",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "name": "memorialCollisionOffersBothOptionsAndPreservesHigherSolemnity",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "name": "roseIsAnAlternativeAndSaturdayDoesNotClaimDaytimeVigil",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "preferenceFailureRollsBackRoomAndAllPreviouslyWrittenPreferences",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "replaceClearsPortablePreferenceGroupsAbsentFromTheFile",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "portablePbkdf2MatchesPublishedVectorAndJcaWithUnicodePasswords",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "collidingCustomHabitsAreRemappedTogetherWithTheirLogsOnlyOnce",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "wrongPasswordAndDamagedFileNeverChangeData",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "interruptedCrossStoreCommitRecoversOldPreferencesUnlessRoomCommitted",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "formatAndWorkFactorAreBoundedBeforeKeyDerivationAndMetadataIsAuthenticated",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "combiningCollidingIdsKeepsBothNotesAndIsIdempotent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "answeredJournalUpdatesMergeIntoTheSameNaturalEntryAndMalformedPreferenceTypesAreRejected",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "everyTableAndPortablePreferenceRoundTripsWithoutCachesOrSecrets",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "replacingRemovesOldRowsAndRestoresNotesAndPreferences",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "name": "legacyBitmaskAndDaysBeyond31RemainPortableWithoutExportingMigrationTables",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupUiTest",
+      "name": "passwordConfirmationAndReadOnlyPreviewProtectTheApplyAction",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupUiTest",
+      "name": "backupEntryAndExportImportButtonsAreReachableFromRealSettings",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BackupUiTest",
+      "name": "replaceRequiresSeparateConfirmationAndCannotBeAppliedWhileBusy",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionPickerTest",
+      "name": "pickingLatinInTheReaderShowsItsText",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionPickerTest",
+      "name": "chooserShowsAllTenEditionsInFourLanguageGroups",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionSelectionTest",
+      "name": "failedSelectionCanRetryTheSameChoiceWithoutPretendingItWasSaved",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionSelectionTest",
+      "name": "anOlderPreferenceEmissionCannotUndoANewerIncludedBibleRequest",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionSelectionTest",
+      "name": "selectionValidationRunsOffTheCallingThread",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionsTest",
+      "name": "defaultsStartAsTheOriginalBiblesAndPersistPerLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionsTest",
+      "name": "latinJohnOneOneAndOriginalBiblesKeepTheirOwnLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionsTest",
+      "name": "allTenEditionsLoadSeventyThreeBooksAndJohnThreeSixteen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionsTest",
+      "name": "storedLegacyBundledStillMeansTheAppLanguagesOriginalBible",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionsTest",
+      "name": "changingTheAppLanguageOpensThatLanguagesDefaultBible",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleEditionsTest",
+      "name": "everyEditionsOwnCrossReferencesResolveInThatEdition",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleIntegrityTest",
+      "name": "allSeventyThreeBooksHaveEveryDeclaredChapterInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleIntegrityTest",
+      "name": "verseNumbersAreContiguousAndLanguageOwned",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleIntegrityTest",
+      "name": "declaredChapterCountsMatchTheBundledText",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleIntegrityTest",
+      "name": "theShepherdPsalmIsPsalmTwentyTwo",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleIntegrityTest",
+      "name": "bookIdsHoldTheRightBook",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleIntegrityTest",
+      "name": "psaltersAreAlignedAcrossLanguages",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleIntegrityTest",
+      "name": "psalmOneHundredFiftyIsReachable",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleIntegrityTest",
+      "name": "spanishAndPortugueseReturnTheirOwnText",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BiblePositionMappingTest",
+      "name": "unavailableChapterDoesNotSaveAnInventedVerse",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BiblePositionMappingTest",
+      "name": "openingAndFirstVerseBothResumeAtFirstVerse",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BiblePositionMappingTest",
+      "name": "middleAndFinalVerseKeepTheirOwnPosition",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleReadingJourneyTest",
+      "name": "aDeepLinkedVerseRemainsReachableAfterAsynchronousChapterLoading",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.BibleReadingJourneyTest",
+      "name": "aSearchCanContinueBeyondItsFirstTwentyResults",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CalendarPickerInteractionTest",
+      "name": "calendarSelectionRequiresAnExplicitConfirmation",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CalendarRulesJourneyTest",
+      "name": "transfersAreReachableAndSurviveClosingAndReopeningSettings",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CalendarSelectionSafetyTest",
+      "name": "chosenCalendarReceivesEventAndLostLocalLinkDoesNotDuplicateIt",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CalendarSelectionSafetyTest",
+      "name": "listsWritableAccountsIncludingContributorWithoutChoosingOne",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CalendarSelectionSafetyTest",
+      "name": "legacyEventInAnotherAccountIsNeverOverwritten",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CalendarSelectionSafetyTest",
+      "name": "readOnlyCalendarCannotReceiveWrites",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismCoverageTest",
+      "name": "theOutlineTilesTheWholeCatechismWithoutGapOrOverlap",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismCoverageTest",
+      "name": "everyParagraphCarriesRealTextInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismCoverageTest",
+      "name": "everyParagraphIsReachableFromTheIndex",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismCoverageTest",
+      "name": "theRepositoryExposesTheWholeIndex",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "outOfRangeGoToShowsAHint",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "compendiumRowsCollapseIdenticalAnswersAndOpen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "nextSectionMovesTheReaderOn",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "contentsSheetReachesAnyParagraph",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "opensOnTheBookNotOnALinkList",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "anUnknownTopicShowsADesignedEmptyState",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "aTopicListsTappableResults",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "appearanceSheetOpensTheSharedReadingSettings",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "aParagraphNumberOpensItsText",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "aDeepLinkLandsOnAndMarksItsParagraph",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "name": "backPopsOnePageAtATime",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "name": "displayTextHasNoHardWrapsStrayFootnotesOrPaddedParentheses",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "name": "aCompendiumReferenceNamesItsFirstParagraphRange",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "name": "englishParagraphIsJoinedAndFreeOfFootnoteDigits",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "name": "aParagraphQueryAcceptsSectionSignsAndHashes",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "name": "theBookStructureTilesTheWholeCatechism",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "name": "theCompendiumIsGroupedWithoutLosingAnyNumber",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "name": "hardWrappedNotesAtTheEndOfASectionAreCut",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "name": "snippetsCentreOnTheFirstMatchAndMarkIt",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "name": "citationsAreNormalisedAndScriptureReferencesSurvive",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatholicQuestionsDataTest",
+      "name": "everyQuestionExistsInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatholicQuestionsDataTest",
+      "name": "everyLanguageGroupsTheSameElevenThemes",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatholicQuestionsDataTest",
+      "name": "elevenSectionsPresent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatholicQuestionsDataTest",
+      "name": "oneHundredOneQuestionsNumberedInOrder",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CatholicQuestionsDataTest",
+      "name": "noClarificationStartsWithAStrayColon",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CrossReferenceEditionTest",
+      "name": "editionTableIsPreferredWhenPresent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CrossReferenceEditionTest",
+      "name": "bundledSpanishGenesisOneTwoReachesPsalm103Verse30",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CrossReferenceEditionTest",
+      "name": "missingOrBundledEditionFallsBackToTheBundledLanguageTable",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CrossReferenceTest",
+      "name": "referenceLabelsAreLocalized",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CrossReferenceTest",
+      "name": "johnThreeSixteenIsRichAndPreviewed",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CrossReferenceTest",
+      "name": "bibleLineCoversTheWholeCanon",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CrossReferenceTest",
+      "name": "shepherdPsalmUsesVulgateNumbering",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CrossReferenceTest",
+      "name": "miserereTitleVersesAreSkipped",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CrossReferenceTest",
+      "name": "genesisOneOneReachesJohnOne",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DailyContextReliabilityTest",
+      "name": "saintMappingUsesCapturedRequestDate",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DailyContextReliabilityTest",
+      "name": "dailyContentAndSaintRefreshTogetherAcrossDateRollover",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DailyContextReliabilityTest",
+      "name": "transfersChangeReadingsAndCacheWithoutChangingLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DailyContextReliabilityTest",
+      "name": "oversizedHttpBodiesAreUnavailableRatherThanReadWithoutLimit",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DailyContextReliabilityTest",
+      "name": "marianPrayerChangesForEasterThroughPentecost",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DailySaintsFetcherTest",
+      "name": "portuguesePageSkipsBusca",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DailySaintsFetcherTest",
+      "name": "spanishPageSkipsBuscarAndPageTitle",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DailySaintsFetcherTest",
+      "name": "englishPageStillWorks",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DailyVerseEditionTest",
+      "name": "spanishNeverRequestsLatinOrReusesAnOldApiCache",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DatabaseMigrationPreservationTest",
+      "name": "unknownOldSchemaFailsWithoutDestroyingJournal",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DatabaseMigrationPreservationTest",
+      "name": "upgradeFourToFivePreservesPrivateDataAndConsolidatesHabitDates",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DatabaseMigrationPreservationTest",
+      "name": "upgradeThreeToFourPreservesPersonalRecordsAndAddsTables",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignContrastTest",
+      "name": "liturgicalCaptionsAndRubricsRemainReadableOnEveryPaperSurface",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "name": "navigationAndPrimaryActionRemainUsableInEveryIdentity[SANCTUARY, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionImageCreditsTest",
+      "name": "parsesBundledFileAndFindsGuadalupe",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionImageCreditsTest",
+      "name": "flagsReferentialAndUserSupplied",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionImageCreditsTest",
+      "name": "omitsEmptyAuthorAndBlocksNonHttps",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionImageCreditsTest",
+      "name": "ignoresUnknownIdsAndMissingFiles",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionalGlassShaderTest",
+      "name": "theRefractiveShaderCompilesOnSupportedAndroid",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionalGlassShaderTest",
+      "name": "olderAndroidUsesTheSupportedFallback",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsCatalogTest",
+      "name": "missingFilesLeaveBaseData",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsCatalogTest",
+      "name": "removeEmptiesPrayerAndPromises",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsCatalogTest",
+      "name": "newEntriesAreAppendedAndDuplicatesOrIncompleteIgnored",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsCatalogTest",
+      "name": "replacementSetsTextAndCredit",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsCatalogTest",
+      "name": "malformedFilesAreIgnored",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsCatalogTest",
+      "name": "nullKeepsCurrentText",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsScreenTest",
+      "name": "marianDevotionShowsDetailsInSanctuary",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsScreenTest",
+      "name": "marianDevotionShowsImageCredit",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsScreenTest",
+      "name": "marianDevotionShowsDetailsInLumen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsScreenTest",
+      "name": "newMarianDevotionWithoutPrayerOpens",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsScreenTest",
+      "name": "christDevotionShowsImageCredit",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DevotionsScreenTest",
+      "name": "christDevotionShowsPrayerSourceAndHidesRemovedPromises",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DidacheDataTest",
+      "name": "translationsAgreeOnChapterDivisions",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DidacheDataTest",
+      "name": "everyChapterExistsInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DidacheDataTest",
+      "name": "sixteenChaptersNumberedInOrder",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "romanNumeralsRoundTrip",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "itinerariesResumeAtTheFirstUnreadQuestion",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "marianYearsAreNotLeftInSpanishForOtherLanguages",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "elevenThemesInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "clarificationsLoseTheirStrayColon",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "newsDatesAreRelativeThenAbsolute",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "centuriesAreLocalised",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "citationLists_arePrintedOnlyAsChips",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "firstSentenceStopsAtTheFirstFullStop",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "everyOfficeHasAGroupAndOrdersDropPlaceholderAbbreviations",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "aliasesMoveOutOfTheTitle",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "yearsGetAnEraOnlyWhenTheyNeedOne",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "schismsSitBeforeTheEpochThatFollowsThem",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "numberedBlocksSplitIntoSteps",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "epochsReadInChronologicalOrder",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "everyEpochRangeParsesInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "name": "citationsUseTheLanguagesSeparators",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.EditorialReliabilityTest",
+      "name": "reviewedCatalogMetadataKeepsAllDaysAndMarksPastoralContext",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.EditorialReliabilityTest",
+      "name": "itineraryChecksBelongToStudiedTopicsAndUseNewStableAnswerIdentities",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.EditorialReliabilityTest",
+      "name": "descriptiveSaintFeedFieldsNeverBecomeInventedQuotations",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "name": "verify room habit seeding and sin overcome logging",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "name": "verify catechism 4 pillars and article lookup",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "name": "verify complete 9-day novenas have all nine authentic days",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "name": "verify editorial scripture study retains original tracks and lectio divina",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "name": "read string from context",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "name": "verify extensive marian apparitions and christ devotions directory",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "name": "verify parishes, pilgrimages, and habits data",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "name": "verify compline night office and marian antiphons",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "name": "verify full catholic 73 books and real chapter text",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ExampleUnitTest",
+      "name": "addition_isCorrect",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "name": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "name": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "name": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "name": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "name": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "name": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "name": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "name": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[SANCTUARY, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "name": "everyAccentPresetAndCustomColourPersists",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "name": "fontAndSizeSurviveReopeningAndAppearanceDoesNotOverwriteFont",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "name": "legacyStoredIdsRemainReadableAndNormalizeWhenSelected",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "name": "legacyIdentitiesMigrateAndChangingStylePreservesReadingAndAccessibilityChoices",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontTypographyTest",
+      "name": "identityDefaultsRetainDistinctEditorialHierarchyAndLegacyFontPreferencesWork",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontTypographyTest",
+      "name": "explicitFamiliesChangeReadingAndChromeInEveryIdentityWithoutChangingScale",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "name": "psalmSingularAndPluralMatch",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "name": "q1EnglishParsesJohnRomansRevelationAndCatechismRange",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "name": "accentInsensitiveMatching",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "name": "refsComeInTextOrderAndDuplicatesAreRemoved",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "name": "singleParagraphCatechismHasNullEnd",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "name": "q1PortugueseParsesJohnRomansRevelationAndCatechismRange",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "name": "numberedDeuterocanonicalBookMatches",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "name": "q1SpanishParsesJohnRomansRevelationAndCatechismRange",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "name": "nonReferenceTextYieldsEmpty",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.GroupedPickersTest",
+      "name": "lessonContentsPickerJumpsToSection",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.GroupedPickersTest",
+      "name": "foundationPickerShowsFirstReferenceAndSwitches",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HabitsLogicTest",
+      "name": "todayRollsOverAtMidnight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HabitsLogicTest",
+      "name": "genericVictoryIsNotLoggedAsTheFirstRoot",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HabitsLogicTest",
+      "name": "ruleHasTwelvePracticesInThreeGroups",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HabitsLogicTest",
+      "name": "ruleCountsIgnoreLegacyHabits",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HabitsLogicTest",
+      "name": "rootVictoryKeepsItsRootAndVirtue",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HabitsLogicTest",
+      "name": "nightGroupIsSpanishInSpanish",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "explicitGuidesOverrideLastDevotionAndKeepBothSavedPositions[APPLE-LIGHT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[APPLE-LIGHT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "explicitGuidesOverrideLastDevotionAndKeepBothSavedPositions[APPLE-DARK]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[APPLE-DARK]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "explicitGuidesOverrideLastDevotionAndKeepBothSavedPositions[SANCTUARY-LIGHT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[SANCTUARY-LIGHT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "explicitGuidesOverrideLastDevotionAndKeepBothSavedPositions[SANCTUARY-DARK]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[SANCTUARY-DARK]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomeTextTest",
+      "name": "threeDotsBecomeTheRealEllipsis",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomeTextTest",
+      "name": "saintHeadingWritesOutTheAbbreviationAndSplitsTheRole",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomeTextTest",
+      "name": "cleanScriptureCollapsesDoubledGuillemetsAndSpaces",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomeTextTest",
+      "name": "clauseCutUsesTheRealEllipsisAndNeverEndsMidWord",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomeTextTest",
+      "name": "saintHeadingKeepsParentheticalsAndEmptyRoles",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomeTextTest",
+      "name": "hintFitsOneLineWithoutEllipsis",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomeTextTest",
+      "name": "saintHeadingHandlesEveryHonorific",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.JournalTemptationInteractionTest",
+      "name": "sanctuaryPortugueseDropdownSavesOriginalCategoryAtTwoHundredPercent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.JournalTemptationInteractionTest",
+      "name": "contextualDoctrinePopsNestedReadersBeforeReturningToItsCaller",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.JournalTemptationInteractionTest",
+      "name": "homeSupportRecordsBothKindsAndKeepsHistoryAndPendingConfessionContext",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.JournalTemptationInteractionTest",
+      "name": "lumenSpanishDropdownSavesOriginalCategoryAtTwoHundredPercent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LearningProgressReliabilityTest",
+      "name": "legacyHighWaterMarkDoesNotInventCompletedQuestions",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LearningProgressReliabilityTest",
+      "name": "writeFailureIsVisibleAndDoesNotStopFollowingWrites",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LearningProgressReliabilityTest",
+      "name": "itinerariesCoverEveryQuestionExactlyOnce",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LearningProgressReliabilityTest",
+      "name": "outOfOrderReadingCreditsOnlyVisitedQuestionsAndRemembersLatest",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LectionaryEditionTest",
+      "name": "goodFridayRangesResolveCompletelyInAllBundledLanguages",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LectionaryEditionTest",
+      "name": "goodFridayPsalmSelectsEightVersesInEachEditionWithoutItsTitle",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LectionaryEditionTest",
+      "name": "holyFamilySelectionIncludesCareForElderlyParentsInVulgateNumbering",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiquidGlassTest",
+      "name": "clearGlassKeepsEveryInkReadableOnTheLightItLetsThrough",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiquidGlassTest",
+      "name": "opaqueModesReplaceGlassWithSolidMaterial",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiquidGlassTest",
+      "name": "everyInkStaysReadableOnGlassOverEveryLiturgicalLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiquidGlassTest",
+      "name": "theLensShaderCompilesOnSupportedAndroid",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiquidGlassTest",
+      "name": "everyTintPresetKeepsItsAccentAndPrimaryActionReadable",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiquidGlassTest",
+      "name": "liturgicalColoursResolveToTheirOwnLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiquidGlassTest",
+      "name": "olderAndroidFallsBackToDenseGlass",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LitanyOfLoretoTest",
+      "name": "everyMarianInvocationIsAnsweredPrayForUs",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LitanyOfLoretoTest",
+      "name": "theOpeningIsRepeatedByThePeople",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LitanyOfLoretoTest",
+      "name": "theLitanyEndsWithTheLambOfGodAndAPrayer",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LitanyOfLoretoTest",
+      "name": "everyLanguageHasTheSameInvocations",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "movableFeastsMatchPublishedDates",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "postPentecostOrdinaryWeekdaysShareTheirContainingSundayWeek",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "adventBeginsFourSundaysBeforeChristmas",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "dayOfWeekMatchesKnownDates",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "seasonsCoverTheWholeYearWithoutGaps",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "christTheKingIsTheSundayBeforeAdvent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "easterMatchesPublishedDates",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "ordinaryTimeIsNumberedToThirtyFour",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "christmasAndEasterAreSolemnities",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "epochDayRoundTrips",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "coloursFollowTheSeason",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "fastAndAbstinenceFallOnTheRightDays",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "cyclesTurnOverAtAdvent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "ordinaryWeekdaysFollowSundayThroughTheAdventBoundary",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "name": "easterSeasonIsNotMisreportedAsHolyWeek",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalRegressionTest",
+      "name": "saintFeastsYieldToSundayAndLordFeastsReplaceOrdinarySunday",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalRegressionTest",
+      "name": "annunciationTransfersPastHolyWeekAndEntireEasterOctave",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalRegressionTest",
+      "name": "seasonalSundaysYieldNoPlaceToFixedSolemnities",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalRegressionTest",
+      "name": "generalRomanAndExplicitSundayTransferPoliciesRemainDistinct",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalRegressionTest",
+      "name": "firstFridayAfterAshWednesdayAndHolyWeekColors",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LiturgicalRegressionTest",
+      "name": "christmasOctaveAndBaptismBoundaries",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MassVaticanSourceTest",
+      "name": "mismatchingTransfersStillShowVaticanReadingsWithLocalNote",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MassVaticanSourceTest",
+      "name": "matchingCalendarShowsNoLocalNote",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MissalTest",
+      "name": "theDeuterocanonicalAdditionsArePresentInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MissalTest",
+      "name": "easterShowsTheEasterGospel",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MissalTest",
+      "name": "liturgicalDayFollowsTheDate",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MissalTest",
+      "name": "christmasShowsTheChristmasGospel",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MissalTest",
+      "name": "todayResolvesWithoutError",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MissalTest",
+      "name": "differentDaysGiveDifferentReadings",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MissalTest",
+      "name": "everyLectionaryCitationRendersInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MissalTest",
+      "name": "readingsFollowTheSelectedLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationAvailabilityTest",
+      "name": "missingLanguageCannotPretendToBePlayingAndCanRecoverWithoutAutoPlay",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationAvailabilityTest",
+      "name": "requestedLanguageBeforeInitializationIsActuallyApplied",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationAvailabilityTest",
+      "name": "initializationFailureIsReportedOnlyAfterListeningIsRequested",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "focusLossStopsNarrationAndContinueSpeaksTheSamePartAgain",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "serviceStartsWithRecitationAndStopsAfterStop",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "becomingNoisyStopsNarration",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "focusIsRequestedOnSpeakAndAbandonedOnStop",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "serviceShowsMediaNotificationInForeground",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "name": "sleepTimerPersistsAndStopsNarration",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaAssetIntegrityTest",
+      "name": "everyPrayerBodyStillMatchesThePreservedCorpus",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaCatalogLoadingTest",
+      "name": "indexAndProgressChecksDoNotLoadAnyPrayerBody",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaIndexJourneyTest",
+      "name": "catalogBrowseDoesNotLoadBodiesAndSelectedPrayerOpens",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProgressTest",
+      "name": "extraStorePersistsLongNovenaDays",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProgressTest",
+      "name": "daysBeyondThirtyOneAreNotLostByTheMask",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProgressTest",
+      "name": "legacyMaskKeepsItsMeaning",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProgressTest",
+      "name": "bitmaskRoundTripsDaysOneToThirtyOne",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProvenanceTest",
+      "name": "everyIndexIdHasExactlyOneProvenanceEntryAndNoStrays",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProvenanceTest",
+      "name": "rawKindAndStatusValuesAreValid",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProvenanceTest",
+      "name": "provenanceContentIsCompleteAndConsistent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProvenanceUiTest",
+      "name": "historyAndPromiseRenderInLumen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProvenanceUiTest",
+      "name": "warningAndPastoralNoteAppearWhenPresent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.NovenaProvenanceUiTest",
+      "name": "historyAndPromiseRenderInSanctuary",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.OrdersCatalogTest",
+      "name": "newOrdersAreAppendedAndDuplicatesIgnored",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.OrdersCatalogTest",
+      "name": "mergesDetailsIntoExistingOrders",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.OrdersCatalogTest",
+      "name": "missingOrMalformedFilesAreIgnored",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.OrdersCatalogTest",
+      "name": "officesInsertedAfterTheRightId",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.OrdersCatalogTest",
+      "name": "governanceGroup",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.OrdersScreenTest",
+      "name": "newOrderWithoutPngOpens",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.OrdersScreenTest",
+      "name": "governanceOfficeOpensWithSources",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.OrdersScreenTest",
+      "name": "orderReaderShowsDetailsInLumen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.OrdersScreenTest",
+      "name": "orderReaderShowsDetailsInSanctuary",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ParishFinderTest",
+      "name": "oneFastMirrorAnswersWithoutWaitingForTheSlowOnes",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ParishFinderTest",
+      "name": "aHangingNetworkEndsInFailureNotAnEndlessSpinner",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ParishScheduleTextTest",
+      "name": "referencesTakeAnEnDash",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ParishScheduleTextTest",
+      "name": "englishNotesCarryNoSpanish",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ParishScheduleTextTest",
+      "name": "timesFollowTheReadersClock",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ParishScheduleTextTest",
+      "name": "everyConfessionAndAdorationNoteIsRestated",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerDetailsCatalogTest",
+      "name": "missingAndMalformedFilesAreIgnored",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerDetailsCatalogTest",
+      "name": "extraPrayersMapFieldsAndCollisionsAreSkipped",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerDetailsCatalogTest",
+      "name": "textOverridesReplaceTextAndKeepNullFields",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerDetailsCatalogTest",
+      "name": "missingOrMalformedOverridesLeaveExistingUntouched",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerDetailsCatalogTest",
+      "name": "parsesAllFieldsAndPromiseKinds",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerDetailsContentTest",
+      "name": "detailsCoverEveryExistingPrayerExactlyOnce",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerDetailsUiTest",
+      "name": "blankApprovalIsHiddenInSanctuary",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerDetailsUiTest",
+      "name": "sectionsRenderInLumen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerExtrasIntegrationTest",
+      "name": "extrasAreMergedWithDetails",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PrayerExtrasIntegrationTest",
+      "name": "authenticTextOverridesApply",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PreferenceRecoveryJourneyTest",
+      "name": "aNestedQuestionWriteFailureCanBeRetriedFromTheGlobalRecoverySheet",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PreferenceStorageReliabilityTest",
+      "name": "cancellingTheCallerDoesNotCancelAnAcceptedPreferenceWrite",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PreferenceStorageReliabilityTest",
+      "name": "aFailedSettingRemainsRetryableWithoutAnUncaughtCallerException",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PreferenceStorageReliabilityTest",
+      "name": "nestedPreferenceCommandDoesNotDeadlockAndPreservesTheActualQuestion",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PreferenceStorageReliabilityTest",
+      "name": "aReadFailureKeepsKnownValuesAndReportsUnavailabilityUntilRetry",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "shepherdPsalmInBundledEditions",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "editionTableMatchesAssetText",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "everyPsalmsCourseLessonResolvesInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "editionNumberingTable",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "lamentPsalmTwentyTwoIsHebrewTwentyTwo",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "hebrewEditionNeedsNoConversion",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "courseALessonThreeIsShepherdPsalm",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "convertAndLabel",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "mappingTable",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "name": "miserereInBundledEditions",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.QuestionDeeperCatalogTest",
+      "name": "missingAndMalformedAreIgnored",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.QuestionDeeperCatalogTest",
+      "name": "parsesBothFilesByNumber",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.QuestionDeeperContentTest",
+      "name": "coversQuestions1To101ExactlyOnce",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.QuestionDeeperUiTest",
+      "name": "collapsedThenExpandsInLumen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.QuestionDeeperUiTest",
+      "name": "collapsedThenExpandsInSanctuary",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReaderFontChoiceTest",
+      "name": "cycleReturnsToTheAppChoiceAndLabelsAreLocalized",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReaderFontChoiceTest",
+      "name": "readerFollowsEveryGlobalFamilyUntilAnExplicitLocalChoice",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReligiousOrdersDataTest",
+      "name": "ordersCoverMenAndWomen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReligiousOrdersDataTest",
+      "name": "idsUnique",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReligiousOrdersDataTest",
+      "name": "officesRunFromAltarServerToPope",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReminderIntentTest",
+      "name": "tappingReminderOpensExplicitActivityWithDevotionId",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReminderIntentTest",
+      "name": "changedTimezoneUsesLocalPrayerHourAndNextOccurrence",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReminderReliabilityRegressionTest",
+      "name": "blockedNotificationChannelDoesNotReportTestSuccess",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReminderReliabilityRegressionTest",
+      "name": "failedReadDoesNotEnableDefaultRemindersAndRetryRestoresActualChoices",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReminderReliabilityRegressionTest",
+      "name": "failedReconciliationPreservesExistingAlarms",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReminderReliabilityRegressionTest",
+      "name": "notificationAndCalendarTitlesHandleEasterWithoutFreezingARecurrence",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReminderSchedulingTest",
+      "name": "defaultRemindersAreScheduledWithoutAReboot",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReminderSchedulingTest",
+      "name": "calendarEventIdRoundTrips",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RemindersTest",
+      "name": "catalogHasSevenDailyDevotionsWithTrilingualText",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RemindersTest",
+      "name": "novenaStartsAtDayOne",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RemindersTest",
+      "name": "novenaCountsUpAndCompletesOnDayNine",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RemindersTest",
+      "name": "novenaClampsAfterCompletion",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RetainedNavigationTest",
+      "name": "questionReferenceReturnsToSameExpandedExplanation",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RetainedNavigationTest",
+      "name": "ordinaryPrayerReaderSurvivesReadTabRoundTrip",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "translatedControlsStayWholeAndReachableAtLargeType[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[IVE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "translatedControlsStayWholeAndReachableAtLargeType[IVE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "translatedControlsStayWholeAndReachableAtLargeType[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "translatedControlsStayWholeAndReachableAtLargeType[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "name": "translatedControlsStayWholeAndReachableAtLargeType[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "playStartsSpeakingAndPauseStopsIt",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "engineReadyRespeaksTheCurrentPrayer",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "singlePartPlaysThenGoesSilent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "everyStepChangeSpeaksWhileTheModeIsOn",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "tapHitsTheNearestBeadWithinSlopOnly",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "anErrorInAMiddleChunkDoesNotCutTheRestOfTheQueue",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "controllerRunsCommandsInOrder",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "refusedRequestForTheOnlyPartEndsPlaying",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "staleCallbacksFromAStoppedRecitationAreIgnored",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "narrationSurvivesChangingMysterySetDevotionLanguageAndVoice",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "leavingTheScreenStopsTheVoiceAndGoesIdle",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "stopClearsEverythingAndLateDoneCannotRevive",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "idleIgnoresEverythingExceptPlay",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "dragEndSelectsTheLandedBeadOrSnapsBack",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "blankInitialTextMeansNothingHighlighted",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "dialogueHighlightMovesFromLeaderToResponseAndEndsOnLastChunk",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "name": "anEqualTargetIsNotSpokenTwice",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryPersistenceTest",
+      "name": "weekdayChoiceIsFrozenForAnInterruptedSession",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryPersistenceTest",
+      "name": "freshScreenRestoresExactDevotionMysteryAndBothPrayerPositions",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "rosaryOpeningAndClosingOrder",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "nextAndPreviousClampAtTheEnds",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "weekdaySelectsTheTraditionalSet",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "initialTabIsPulledIntoRange",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "chapletHas68StepsOn60Beads",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "pickingTheCurrentSetKeepsThePosition",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "everyBeadHasAtLeastOneStepAndFirstStepOnBeadIsTheLowest",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "skippingTheChapletOpeningLandsOnTheOurFather",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "rosaryHas85StepsOn61BeadsInSevenSections",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "decadeHasTenHailMarysCountedOneToTen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "skippingTheLitanyLandsOnPrayForUs",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "freshSessionFollowsTheWeekdayUntilThePersonPicks",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "instructionsStayOnAcrossStepsAndDevotions",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "skippingWithNothingRequiredAfterDoesNothing",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "eachDevotionKeepsItsOwnPosition",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "mysteryTypeDoesNotChangeShape",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "whereLineNamesTheSection",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "goToIsClampedAndNeverStoredOutOfRange",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "finishingADecadeIsTheLastHailMaryToTheNextDecade",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "saverRoundTripsEveryField",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "optionalStepsAreExactlyTheOnesTheGuideFlags",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "skippingTheLitanyPrayerLandsOnTheCollect",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "rosarySectionsStartWhereTheyShould",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "pickingADifferentSetRestartsTheRosaryOnly",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "name": "skipEventMovesTheSessionInTheCurrentDevotion",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryTextTest",
+      "name": "nameRepeatingTheFirstLineIsDetected",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryTextTest",
+      "name": "portugueseFollowsAndEnglishIsUntouched",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryTextTest",
+      "name": "spanishFruitIsSentenceCase",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.SacredHeartPromisesTest",
+      "name": "theTraditionalPromisesAndTheirAttributionRemainAvailableInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.SaintsCatalogTest",
+      "name": "saintOfTheDayFallsBackWithoutProfile",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.SaintsCatalogTest",
+      "name": "malformedFileIsIgnoredAndQuoteWithoutSourceDropped",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.SaintsCatalogTest",
+      "name": "parsesFixtureAndIgnoresMissingFiles",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.SaintsCatalogTest",
+      "name": "saintOfTheDayUsesProfileWhenPresent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.SaintsScreenTest",
+      "name": "exploreFilterAndDetailInSanctuary",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.SaintsScreenTest",
+      "name": "exploreFilterAndDetailInLumen",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ScriptureRangeTest",
+      "name": "missingChaptersAndMissingIndividualVersesNeverProduceTruncatedPassages",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ScriptureRangeTest",
+      "name": "omittedVersesAreNotBridged",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ScriptureRangeTest",
+      "name": "absentRequestedLanguageIsNotSilentlyReplacedByEnglish",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ScriptureRangeTest",
+      "name": "invalidRangesAndUnsupportedVersePartsFailClearly",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ScriptureRangeTest",
+      "name": "goodFridayIncludesBothPassionChaptersAndAllHebrewsSegments",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyCourseCatalogUiTest",
+      "name": "fixtureCourseIsAppendedAndItsLessonRenders",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyCourseIntegrityTest",
+      "name": "shepherdPsalmUsesIncludedEditionNumbering",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyCourseIntegrityTest",
+      "name": "everyCitationResolvesAndSourcesExistInEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyCoursesCatalogTest",
+      "name": "malformedAndMissingFilesAreIgnored",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyCoursesCatalogTest",
+      "name": "rejectsDuplicateLessonIdsWithinAndAcrossCourses",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyCoursesCatalogTest",
+      "name": "mapsFixtureCourseToTrackAndLessons",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyCoursesCatalogTest",
+      "name": "rejectsWrongLessonNumbersTrackIdCollisionAndBadLevel",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyCoursesCatalogTest",
+      "name": "ordersKnownCoursesFirstThenOthersById",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyJourneyTest",
+      "name": "answersAndUnsavedNotesSurviveCatechismRoundTrip",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyJourneyTest",
+      "name": "draftSurvivesCourseBackAndIsPersistedWithoutCompletingLesson",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.StudyJourneyTest",
+      "name": "continuingSavesNotesWithoutFalselyCompletingLesson",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TemptationGuideInteractionTest",
+      "name": "moreButtonOpensGuideAndBackReturnsToTemptations",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TemptationGuidesDataTest",
+      "name": "guidesAreCompleteAndTrilingual",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TemptationGuidesDataTest",
+      "name": "everyCatalogKeyHasExactlyOneGuide",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanGospelTest",
+      "name": "malformedFeedOrDateIsReportedAsFailure",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanGospelTest",
+      "name": "dateMustBeTheDatedItemPathNotAnUnrelatedSubstring",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanGospelTest",
+      "name": "absentRequestedDayIsUnavailableInsteadOfRelabelingNewestItem",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanGospelTest",
+      "name": "splitsSpanishIntoReadingsWithCitations",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanGospelTest",
+      "name": "picksTheItemForTheRequestedDay",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanGospelTest",
+      "name": "splitsEnglishAndPortuguese",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanGospelTest",
+      "name": "noMarkupOrEntitiesSurvive",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanNewsTest",
+      "name": "respectsTheRequestedLimit",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanNewsTest",
+      "name": "readsEachStoryPhoto",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanNewsTest",
+      "name": "feedUrlsCoverEveryLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanNewsTest",
+      "name": "parsesTheRealFeed",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanNewsTest",
+      "name": "reportsFailureRatherThanThrowing",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanReadingsCacheTest",
+      "name": "choiceShowsLocalNoteOnlyWhenVaticanReadingsAndCalendarDiffers",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanReadingsCacheTest",
+      "name": "orderIsNetworkThenCacheThenNothing",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanReadingsCacheTest",
+      "name": "keepsOnlyTheLastSevenDays",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VaticanReadingsCacheTest",
+      "name": "writesAndReadsKeyedByLanguageAndDate",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ViaCrucisDataTest",
+      "name": "translationsAreDistinctAndScriptureCitesAReference",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ViaCrucisDataTest",
+      "name": "everyFieldIsFilledInSpanishEnglishAndPortuguese",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ViaCrucisDataTest",
+      "name": "hasTheFourteenTraditionalStationsInOrder",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSelectorTest",
+      "name": "prefersQualityThenAppLocaleWithinSameLanguage",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSelectorTest",
+      "name": "secondVoiceIsDistinctWithNoPitchShift",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSelectorTest",
+      "name": "noVoiceKeepsLanguageDefaultWithMildPitch",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSelectorTest",
+      "name": "labelsAreReadable",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSelectorTest",
+      "name": "prefersOfflineOverNetworkAndSkipsNotInstalled",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSelectorTest",
+      "name": "oneVoiceServesBothRolesWithMildPitch",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSelectorTest",
+      "name": "storedVoiceIsUsedAndMissingStoredNameFallsBackToAuto",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSelectorTest",
+      "name": "prefersHigherQualityThenLowerLatency",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSettingsUiTest",
+      "name": "lumenShowsVoiceSection",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.VoiceSettingsUiTest",
+      "name": "sanctuaryShowsVoiceSection",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.WebNavigationPolicyTest",
+      "name": "localAndExecutableSchemesNeverLoadEvenWithAGesture",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.WebNavigationPolicyTest",
+      "name": "scriptsAreLimitedToTheSupportedMapOriginAndRevokedAfterNavigation",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.WebNavigationPolicyTest",
+      "name": "externalActionsRequireATopLevelUserGesture",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppScreenshotTest",
+      "name": "catechismApple",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppScreenshotTest",
+      "name": "catechismMaterial",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppScreenshotTest",
+      "name": "parishesMaterial",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppScreenshotTest",
+      "name": "parishesApple",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppScreenshotTest",
+      "name": "homeMaterial",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppScreenshotTest",
+      "name": "homeApple",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppearanceScreenshotTest",
+      "name": "lumenLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppearanceScreenshotTest",
+      "name": "sanctuaryLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppearanceScreenshotTest",
+      "name": "sanctuaryDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.AppearanceScreenshotTest",
+      "name": "lumenDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[APPLE, ES]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[APPLE, EN]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[APPLE, PT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[CLASSIC, ES]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[CLASSIC, EN]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[CLASSIC, PT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[GLASS, ES]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[GLASS, EN]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[GLASS, PT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[SANCTUARY, ES]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[SANCTUARY, EN]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "name": "enlargedTextStillReachesRestoreAndPasswordActions[SANCTUARY, PT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "overviewAndPassword[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "explicitReplacementConfirmation[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "summaryAndMergeActions[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "overviewAndPassword[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "explicitReplacementConfirmation[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "summaryAndMergeActions[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "overviewAndPassword[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "explicitReplacementConfirmation[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "summaryAndMergeActions[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "overviewAndPassword[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "explicitReplacementConfirmation[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "summaryAndMergeActions[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "overviewAndPassword[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "explicitReplacementConfirmation[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "summaryAndMergeActions[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "overviewAndPassword[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "explicitReplacementConfirmation[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "summaryAndMergeActions[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "overviewAndPassword[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "explicitReplacementConfirmation[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "summaryAndMergeActions[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "overviewAndPassword[SANCTUARY, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "explicitReplacementConfirmation[SANCTUARY, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "name": "summaryAndMergeActions[SANCTUARY, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BibleAreaScreenshotTest",
+      "name": "sanctuaryLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BibleAreaScreenshotTest",
+      "name": "sanctuaryDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BibleAreaScreenshotTest",
+      "name": "dark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.BibleAreaScreenshotTest",
+      "name": "light",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.CatechismScreenshotTest",
+      "name": "dark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.CatechismScreenshotTest",
+      "name": "light",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.CrossReferenceScreenshotTest",
+      "name": "materialDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.CrossReferenceScreenshotTest",
+      "name": "appleLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.DevotionalPrioritiesScreenshotTest",
+      "name": "lumenLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.DevotionalPrioritiesScreenshotTest",
+      "name": "sanctuaryLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.DevotionalPrioritiesScreenshotTest",
+      "name": "sanctuaryDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.DevotionalPrioritiesScreenshotTest",
+      "name": "lumenDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.DoctrineAreaScreenshotTest",
+      "name": "dark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.DoctrineAreaScreenshotTest",
+      "name": "light",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ExploreScreenshotTest",
+      "name": "dark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ExploreScreenshotTest",
+      "name": "light",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "name": "appleDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "name": "glassLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "name": "appleLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "name": "sanctuaryLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "name": "classicDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "name": "classicLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "name": "sanctuaryDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "name": "glassDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.GroupedPickersShotTest",
+      "name": "foundationPickerShowsFirstReferenceAndSwitches",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.PrayersScreenshotTest",
+      "name": "dark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.PrayersScreenshotTest",
+      "name": "light",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "name": "captureCurrentRecoverySheetsInSpanish[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "name": "captureCurrentRecoverySheetsInSpanish[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "name": "captureCurrentRecoverySheetsInSpanish[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "name": "captureCurrentRecoverySheetsInSpanish[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "name": "captureCurrentRecoverySheetsInSpanish[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "name": "captureCurrentRecoverySheetsInSpanish[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "name": "captureCurrentRecoverySheetsInSpanish[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "name": "captureCurrentRecoverySheetsInSpanish[SANCTUARY, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RosaryStatesShotTest",
+      "name": "sanctuaryLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RosaryStatesShotTest",
+      "name": "sanctuaryDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RosaryStatesShotTest",
+      "name": "dark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.RosaryStatesShotTest",
+      "name": "light",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.SacredArtScreenshotTest",
+      "name": "materialDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.SacredArtScreenshotTest",
+      "name": "appleDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.SacredArtScreenshotTest",
+      "name": "materialLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.SacredArtScreenshotTest",
+      "name": "appleLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ScreenshotTest",
+      "name": "materialDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ScreenshotTest",
+      "name": "appleDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ScreenshotTest",
+      "name": "materialLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.ScreenshotTest",
+      "name": "appleLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "name": "captureGuide[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "name": "captureGuide[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "name": "captureGuide[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "name": "captureGuide[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "name": "captureGuide[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "name": "captureGuide[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "name": "captureGuide[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "name": "captureGuide[SANCTUARY, dark=true]",
+      "status": "passed"
+    }
+  ],
+  "tests": 584,
+  "failures": 0,
+  "skipped": 0
+}

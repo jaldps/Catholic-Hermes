@@ -1,0 +1,81 @@
+{
+  "baseline_commit": "3172bed",
+  "baseline_tests": 584,
+  "final_tests": 592,
+  "missing_baseline_cases": [],
+  "initially_failed_cases": [
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[SANCTUARY-LIGHT]"
+    }
+  ],
+  "new_tests": [
+    {
+      "class": "com.example.AppLogTest",
+      "name": "everyLineHasIsoTimeLevelTagAndOnlyFourStackFrames"
+    },
+    {
+      "class": "com.example.AppLogTest",
+      "name": "reportIsAStableSnapshotOfBothFilesAndSnapshotCountIsBounded"
+    },
+    {
+      "class": "com.example.AppLogTest",
+      "name": "rotatesBeforeTheLimitAndKeepsOnlyOnePreviousFile"
+    },
+    {
+      "class": "com.example.AppLogTest",
+      "name": "safeHelperDoesNotSerializePersonalTextMessagesCausesOrInjectedStackNames"
+    },
+    {
+      "class": "com.example.ErrorReportProviderTest",
+      "name": "providerCannotExposeOtherPersonalFiles"
+    },
+    {
+      "class": "com.example.ErrorReportProviderTest",
+      "name": "safePublicHelperExcludesPersonalExceptionDataFromTheSharedSnapshot"
+    },
+    {
+      "class": "com.example.ErrorReportProviderTest",
+      "name": "sharedReportUsesAReadableContentUriWithReadPermissionOnly"
+    },
+    {
+      "class": "com.example.ErrorReportUiTest",
+      "name": "settingsEntryExplainsTheReportAndOnlySharesAfterAnExplicitClick"
+    }
+  ],
+  "full_suite_failures": 1,
+  "full_suite_skipped": 0,
+  "baseline_apk_bytes": 100143113,
+  "part_a_apk_bytes": 100144862,
+  "final_apk_bytes": 93033268,
+  "baseline_build_result": "BUILD SUCCESSFUL in 54m 41s",
+  "final_build_result": "BUILD FAILED in 1h 21s",
+  "known_instability_source": "docs/AUDIT-2026-11.md, D4; HomePrayerPrioritiesTest line 145",
+  "retry_pending": false,
+  "reader_retry_tests": 8,
+  "reader_retry_failures": 1,
+  "reader_retry_build_result": "BUILD FAILED in 2m 26s",
+  "reader_retry_failed_cases": [
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[SANCTUARY-DARK]",
+      "status": "failed"
+    }
+  ],
+  "unique_cases_passed_across_full_and_retry": 592,
+  "isolated_baseline_reader_tests": 8,
+  "isolated_baseline_reader_failures": 0,
+  "isolated_baseline_build_result": "BUILD SUCCESSFUL in 2m 37s",
+  "final_reader_check_tests": 8,
+  "final_reader_check_failures": 1,
+  "final_reader_check_build_result": "BUILD FAILED in 4m 40s",
+  "final_reader_failed_cases": [
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[SANCTUARY-DARK]",
+      "status": "failed"
+    }
+  ],
+  "remaining_known_instability": "HomePrayerPrioritiesTest line 145; chapter selector visibility; not fixed in this task",
+  "final_assemble_result": "BUILD SUCCESSFUL in 14s"
+}

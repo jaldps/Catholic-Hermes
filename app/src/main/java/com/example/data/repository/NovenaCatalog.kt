@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import android.content.res.AssetManager
 import com.example.data.models.LocalizedText
@@ -59,7 +61,7 @@ class NovenaCatalog(private val open: (String) -> InputStream) {
         for (name in ProvenanceFiles) {
             val raw = runCatching {
                 open("provenance/$name").bufferedReader().use { provenanceAdapter.fromJson(it.readText()) }
-            }.getOrNull() ?: continue
+            }.onFailure {AppLog.failure(LogEvent.NOVENA_PROVENANCE,it)}.getOrNull() ?: continue
             for (r in raw) {
                 val promise = r.promise
                 result[r.id] = NovenaProvenance(

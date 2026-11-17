@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import com.example.data.models.AppLanguage
 import org.json.JSONObject
@@ -40,7 +42,7 @@ class BibleEditionCatalog(private val context: Context) {
                 bundledLanguage = if (e.optBoolean("bundled")) AppLanguage.entries.firstOrNull { id == "bundled-${it.code}" } else null
             )
         }
-    }.getOrDefault(emptyList())
+    }.onFailure {AppLog.failure(LogEvent.BIBLE_EDITIONS,it)}.getOrDefault(emptyList())
 
     fun edition(id: String?): BibleEdition? = editions.firstOrNull { it.id == id }
 
@@ -61,7 +63,7 @@ class BibleEditionCatalog(private val context: Context) {
 
     /** bookId -> asset file name, e.g. "joh" -> "50-joh.json". */
     private fun files(id: String): Map<String, String> = bookFiles.getOrPut(id) {
-        runCatching { context.assets.list("bibles/$id").orEmpty() }.getOrDefault(emptyArray())
+        runCatching { context.assets.list("bibles/$id").orEmpty() }.onFailure {AppLog.failure(LogEvent.BIBLE_BOOK_LIST,it)}.getOrDefault(emptyArray())
             .filter { it.endsWith(".json") }.sorted()
             .associateBy { it.substringAfter('-').removeSuffix(".json") }
     }
@@ -71,7 +73,7 @@ class BibleEditionCatalog(private val context: Context) {
 
     fun readBook(id: String, bookId: String): JSONObject? {
         val file = files(id)[bookId] ?: return null
-        return runCatching { JSONObject(context.assets.open("bibles/$id/$file").bufferedReader().use { it.readText() }) }.getOrNull()
+        return runCatching { JSONObject(context.assets.open("bibles/$id/$file").bufferedReader().use { it.readText() }) }.onFailure {AppLog.failure(LogEvent.BIBLE_BOOK,it)}.getOrNull()
     }
 
     /** Asset path of the cross-reference table for [id]; null falls back to the app language's table. */

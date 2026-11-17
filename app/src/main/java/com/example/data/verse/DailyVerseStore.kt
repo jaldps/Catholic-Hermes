@@ -1,5 +1,7 @@
 package com.example.data.verse
 
+import com.example.data.diagnostics.LogEvent
+import com.example.data.diagnostics.AppLog
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -157,7 +159,7 @@ class DailyVerseFetcher(
                 val body = response.body?.string() ?: return@use null
                 parseText(body)
             }
-        }.getOrNull()?.takeIf { it.isNotBlank() }
+        }.onFailure {AppLog.failure(LogEvent.VERSE_FETCH,it)}.getOrNull()?.takeIf { it.isNotBlank() }
     }
 
     /** Translates the canonical id into a bible-api.com URL, or null. */
@@ -180,7 +182,7 @@ class DailyVerseFetcher(
     /** Reads the `text` field of a bible-api.com response; null when absent. */
     fun parseText(json: String): String? =
         runCatching { JSONObject(json).optString("text", "").trim() }
-            .getOrNull()?.takeIf { it.isNotBlank() }
+            .onFailure {AppLog.failure(LogEvent.VERSE_PARSE,it)}.getOrNull()?.takeIf { it.isNotBlank() }
 
     companion object {
         private const val TIMEOUT_MS = 20_000L
