@@ -17,7 +17,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 6. **Entregar.** Haz commit con `T-00N: <resumen>` y `git push -u origin ext/T-00N`. Si no tienes permiso de push en `jaldps/Catholic-Hermes`, haz push de la misma rama a tu fork: el coordinador lo lee desde ahí. Puedes subir entregas parciales: cada push es un punto de revisión.
 7. **Correcciones.** El coordinador responde en `docs/tasks/T-00N-REVIEW.md`, dentro de tu rama o en `CatholicGPT`. Si pide cambios, corrígelos en la misma rama y vuelve a hacer push.
 
-8. **Siguiente encargo.** Al terminar un encargo, o tras aplicar una revisión, haz `git fetch origin` y vuelve a leer este README en `origin/CatholicGPT`. Sigue sin esperar con el siguiente encargo `ABIERTO` asignado a ti, o con un `T-0NN-REVIEW.md` que pida cambios. Si no hay nada, avisa a Jose y para.
+8. **Siguiente encargo.** Los encargos con estado `EN COLA` todavía no se pueden empezar: el coordinador los abre de uno en uno cuando el anterior se cierra. Al terminar un encargo, o tras aplicar una revisión, haz `git fetch origin` y vuelve a leer este README en `origin/CatholicGPT`. Sigue sin esperar con el siguiente encargo `ABIERTO` asignado a ti, o con un `T-0NN-REVIEW.md` que pida cambios. Si no hay nada, avisa a Jose y para.
 
 ## Reglas fijas
 
@@ -61,3 +61,9 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-025](T-025.md) | Codex | CERRADO ([revisión](T-025-REVIEW.md)) | M9 · Copia de seguridad y traspaso cifrado de los datos personales |
 | [T-026](T-026.md) | Codex | CERRADO ([revisión](T-026-REVIEW.md)) | M9/M10 · Registro local de errores + higiene (código muerto, dependencias sin uso) |
 | [T-027](T-027.md) | Hermes | CERRADO ([revisión](T-027-REVIEW.md)) | M12 (contenido) · Confesión: examen de conciencia por estado de vida y guía del sacramento |
+| [T-028](T-028.md) | Codex | ABIERTO | M12.1 · Pantalla de Confesión (usa `assets/confession/`) |
+| [T-029](T-029.md) | Hermes | ABIERTO | M12.5 (contenido) · Planes: Biblia en un año y Catecismo en un año |
+| T-030 | Codex | EN COLA (tras T-028) | M12.2 · Búsqueda global y búsqueda en Orar |
+| T-031 | Codex | EN COLA (tras T-030) | M12.3 · «Mi camino»: unir Hábitos y Vida espiritual |
+| T-032 | Codex | EN COLA (tras T-031) | M12.4 · Widgets y avisos litúrgicos |
+| T-033 | Hermes | EN COLA (tras T-029) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
