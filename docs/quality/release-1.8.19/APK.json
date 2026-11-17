@@ -1,0 +1,35 @@
+{
+  "version_name": "1.8.19",
+  "version_code": 28,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.19",
+  "sha256": "49ca49368fdc36a2493a71d13d73bf22b1cee208265f6537853a024ad6e81e80",
+  "bytes": 93258822,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.18 (same package and key)",
+  "built_from": "git archive of CatholicGPT at the version commit (clean tree)",
+  "changes": [
+    "Confession (Explore and Spiritual life): examination of conscience by state of life, a temporary private list kept only in memory, the steps of the sacrament, sourced acts of contrition and FAQ (T-027/T-028).",
+    "Reading plans (Explore > Study): the Bible in a year and the Catechism in a year, with daily readings, progress, gentle catch-up and backup support (T-029).",
+    "Global search (Home header and Explore): offline search across prayers, novenas, saints, devotions, orders, questions, lessons, the Catechism, plans and the Bible, with direct references such as 'Jn 3,16' or 'Sal 23' (T-030)."
+  ],
+  "tests": [
+    "Confession*",
+    "ReadingPlans*",
+    "GlobalSearchIndexTest",
+    "SearchUiTest",
+    "SearchScreenshotTest",
+    "Backup*",
+    "AppNavigationTest",
+    "DesignNavigationTest",
+    "DesignContrastTest",
+    "FontPreferencesTest"
+  ],
+  "known_limitations": [
+    "Not tested on a physical phone.",
+    "ExampleRobolectricTest 'read string from context' fails only when the preview init script renames app_name; unrelated to these changes."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}
