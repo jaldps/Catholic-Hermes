@@ -1,0 +1,1962 @@
+{
+  "seasons": {
+    "ADVENT": {
+      "start": {
+        "title": {
+          "es": "Comienza el Adviento",
+          "en": "Advent begins",
+          "pt": "Começa o Advento"
+        },
+        "body": {
+          "es": "Cuatro semanas para preparar el nacimiento de Jesús, con una espera alegre y sencilla.",
+          "en": "Four weeks to prepare for the birth of Jesus, with a glad and simple waiting.",
+          "pt": "Quatro semanas para preparar o nascimento de Jesus, numa espera alegre e simples."
+        },
+        "action": "ROSARY"
+      },
+      "weekly": [
+        {
+          "id": "advent_w1",
+          "title": {
+            "es": "Preparar el corazón",
+            "en": "Preparing the heart",
+            "pt": "Preparar o coração"
+          },
+          "body": {
+            "es": "Dedica un rato cada día a preparar el corazón para la Navidad.",
+            "en": "Spend a little time each day preparing your heart for Christmas.",
+            "pt": "Dedica um pouco de tempo a preparar o coração para o Natal."
+          },
+          "action": "PRAYERS"
+        },
+        {
+          "id": "advent_w2",
+          "title": {
+            "es": "La corona de Adviento",
+            "en": "The Advent wreath",
+            "pt": "A coroa do Advento"
+          },
+          "body": {
+            "es": "Enciende la vela de la corona de Adviento y reza un misterio del Rosario.",
+            "en": "Light the candle on the Advent wreath and pray one mystery of the Rosary.",
+            "pt": "Acende a vela da coroa do Advento e reza um mistério do Terço."
+          },
+          "action": "ROSARY"
+        },
+        {
+          "id": "advent_w3",
+          "title": {
+            "es": "Una palabra de aliento",
+            "en": "A word of encouragement",
+            "pt": "Uma palavra de ânimo"
+          },
+          "body": {
+            "es": "Escribe o llama a alguien para compartir una palabra de aliento.",
+            "en": "Write to or call someone to share a word of encouragement.",
+            "pt": "Escreva ou ligue a alguém para partilhar uma palavra de ânimo."
+          },
+          "action": "HOME"
+        },
+        {
+          "id": "advent_w4",
+          "title": {
+            "es": "Reconciliarse antes de Navidad",
+            "en": "Reconciled before Christmas",
+            "pt": "Reconciliar-se antes do Natal"
+          },
+          "body": {
+            "es": "Si puedes, acércate al sacramento de la Confesión para llegar ligero a la Navidad.",
+            "en": "If you can, go to the sacrament of Confession to arrive at Christmas unburdened.",
+            "pt": "Se puderes, aproxima-te do sacramento da Confissão para chegar leve ao Natal."
+          },
+          "action": "CONFESSION"
+        }
+      ]
+    },
+    "CHRISTMAS": {
+      "start": {
+        "title": {
+          "es": "El Señor ha nacido",
+          "en": "The Lord is born",
+          "pt": "O Senhor nasceu"
+        },
+        "body": {
+          "es": "Hoy celebramos que Dios se hizo hombre. El tiempo de Navidad dura hasta el Bautismo del Señor.",
+          "en": "Today we celebrate that God became man. Christmastide lasts until the Baptism of the Lord.",
+          "pt": "Hoje celebramos que Deus se fez homem. O tempo do Natal vai até o Batismo do Senhor."
+        },
+        "action": "BIBLE"
+      },
+      "weekly": [
+        {
+          "id": "christmas_w1",
+          "title": {
+            "es": "Dar gracias",
+            "en": "Give thanks",
+            "pt": "Dar graças"
+          },
+          "body": {
+            "es": "Haz una pausa hoy para dar gracias por el misterio de la encarnación.",
+            "en": "Pause today to give thanks for the mystery of the incarnation.",
+            "pt": "Faz uma pausa hoje para dar graças pelo mistério da encarnação."
+          },
+          "action": "PRAYERS"
+        },
+        {
+          "id": "christmas_w2",
+          "title": {
+            "es": "Contemplar al Niño",
+            "en": "Behold the Child",
+            "pt": "Contemplar o Menino"
+          },
+          "body": {
+            "es": "Mira un belén o una imagen del Niño y déjate mirar por Él.",
+            "en": "Look at a nativity scene or an image of the Child and let Him look at you.",
+            "pt": "Olha um presépio ou uma imagem do Menino e deixa-te olhar por Ele."
+          },
+          "action": "HOME"
+        },
+        {
+          "id": "christmas_w3",
+          "title": {
+            "es": "La Sagrada Familia",
+            "en": "The Holy Family",
+            "pt": "A Sagrada Família"
+          },
+          "body": {
+            "es": "Reza por tu familia y pídele a la Sagrada Familia que la guarde.",
+            "en": "Pray for your family and ask the Holy Family to keep it.",
+            "pt": "Reza pela tua família e pede à Sagrada Família que a guarde."
+          },
+          "action": "PRAYERS"
+        },
+        {
+          "id": "christmas_w4",
+          "title": {
+            "es": "María, Madre de Dios",
+            "en": "Mary, Mother of God",
+            "pt": "Maria, Mãe de Deus"
+          },
+          "body": {
+            "es": "Empieza el año pidiéndole a María que te acompañe en lo que viene.",
+            "en": "Begin the year asking Mary to accompany you in what lies ahead.",
+            "pt": "Começa o ano pedindo a Maria que te acompanhe no que vem."
+          },
+          "action": "SAINTS"
+        },
+        {
+          "id": "christmas_w5",
+          "title": {
+            "es": "El Bautismo del Señor",
+            "en": "The Baptism of the Lord",
+            "pt": "O Batismo do Senhor"
+          },
+          "body": {
+            "es": "Recuerda tu bautismo y lo que prometiste: perteneces a Dios.",
+            "en": "Remember your baptism and what you promised: you belong to God.",
+            "pt": "Lembra-te do teu batismo e do que prometeste: pertences a Deus."
+          },
+          "action": "BIBLE"
+        }
+      ]
+    },
+    "ORDINARY_TIME": {
+      "start": {
+        "title": {
+          "es": "Tiempo Ordinario",
+          "en": "Ordinary Time",
+          "pt": "Tempo Comum"
+        },
+        "body": {
+          "es": "El tiempo más largo del año, dedicado a crecer en la vida cristiana de cada día.",
+          "en": "The longest season of the year, for growing in everyday Christian life.",
+          "pt": "O tempo mais longo do ano, dedicado a crescer na vida cristã de cada dia."
+        },
+        "action": "HOME"
+      },
+      "weekly": [
+        {
+          "id": "ordinary_w1",
+          "title": {
+            "es": "Orar con el Evangelio",
+            "en": "Pray with the Gospel",
+            "pt": "Rezar com o Evangelho"
+          },
+          "body": {
+            "es": "Lee el Evangelio del día y quédate con una palabra que te hable.",
+            "en": "Read the Gospel of the day and keep one word that speaks to you.",
+            "pt": "Lê o Evangelho do dia e fica com uma palavra que te fale."
+          },
+          "action": "BIBLE"
+        },
+        {
+          "id": "ordinary_w2",
+          "title": {
+            "es": "Un hábito pequeño",
+            "en": "One small habit",
+            "pt": "Um hábito pequeno"
+          },
+          "body": {
+            "es": "Elige un hábito pequeño para este tiempo y repítelo cada día.",
+            "en": "Choose one small habit for this season and repeat it each day.",
+            "pt": "Escolhe um hábito pequeno para este tempo e repete-o cada dia."
+          },
+          "action": "HABITS_VIRTUES"
+        },
+        {
+          "id": "ordinary_w3",
+          "title": {
+            "es": "Conocer el Catecismo",
+            "en": "Know the Catechism",
+            "pt": "Conhecer o Catecismo"
+          },
+          "body": {
+            "es": "Lee un párrafo del Catecismo y deja que la fe se ordene.",
+            "en": "Read one paragraph of the Catechism and let your faith find its order.",
+            "pt": "Lê um parágrafo do Catecismo e deixa que a fé se ordene."
+          },
+          "action": "CATECHISM"
+        },
+        {
+          "id": "ordinary_w4",
+          "title": {
+            "es": "Acompañar a alguien",
+            "en": "Accompany someone",
+            "pt": "Acompanhar alguém"
+          },
+          "body": {
+            "es": "Busca a alguien que esté solo o enfermo y hazle una visita o una llamada.",
+            "en": "Look for someone who is alone or ill and visit or call them.",
+            "pt": "Procura alguém que esteja só ou doente e faz-lhe uma visita ou uma chamada."
+          },
+          "action": "HOME"
+        },
+        {
+          "id": "ordinary_w5",
+          "title": {
+            "es": "Revisar la vida",
+            "en": "Review the day",
+            "pt": "Rever a vida"
+          },
+          "body": {
+            "es": "Haz un breve examen de conciencia al final del día, sin prisa.",
+            "en": "Make a short examination of conscience at the end of the day, unhurried.",
+            "pt": "Faz um breve exame de consciência no fim do dia, sem pressa."
+          },
+          "action": "CONFESSION"
+        }
+      ]
+    },
+    "LENT": {
+      "start": {
+        "title": {
+          "es": "Comienza la Cuaresma",
+          "en": "Lent begins",
+          "pt": "Começa a Quaresma"
+        },
+        "body": {
+          "es": "Cuarenta días para volver a Dios, con conversión, ayuno y limosna.",
+          "en": "Forty days to turn back to God, with conversion, fasting and almsgiving.",
+          "pt": "Quarenta dias para voltar a Deus, com conversão, jejum e esmola."
+        },
+        "action": "CONFESSION"
+      },
+      "weekly": [
+        {
+          "id": "lent_w1",
+          "title": {
+            "es": "Ayuno y limosna",
+            "en": "Fasting and almsgiving",
+            "pt": "Jejum e esmola"
+          },
+          "body": {
+            "es": "Elige una forma concreta de ayuno y otra de limosna para estos cuarenta días.",
+            "en": "Choose one concrete form of fasting and one of almsgiving for these forty days.",
+            "pt": "Escolhe uma forma concreta de jejum e outra de esmola para estes quarenta dias."
+          },
+          "action": "HABITS_VIRTUES"
+        },
+        {
+          "id": "lent_w2",
+          "title": {
+            "es": "El Evangelio del día",
+            "en": "The Gospel of the day",
+            "pt": "O Evangelho do dia"
+          },
+          "body": {
+            "es": "Lee el Evangelio del día con calma, como quien escucha a alguien que quiere.",
+            "en": "Read the Gospel of the day calmly, as one who listens to someone they love.",
+            "pt": "Lê o Evangelho do dia com calma, como quem escuta alguém que ama."
+          },
+          "action": "BIBLE"
+        },
+        {
+          "id": "lent_w3",
+          "title": {
+            "es": "El Vía Crucis",
+            "en": "The Stations of the Cross",
+            "pt": "A Via-Sacra"
+          },
+          "body": {
+            "es": "Reza el Vía Crucis y acompaña a Jesús en el camino de la cruz.",
+            "en": "Pray the Stations of the Cross and accompany Jesus on the way of the cross.",
+            "pt": "Reza a Via-Sacra e acompanha Jesus no caminho da cruz."
+          },
+          "action": "PRAYERS"
+        },
+        {
+          "id": "lent_w4",
+          "title": {
+            "es": "Pedir perdón",
+            "en": "Ask forgiveness",
+            "pt": "Pedir perdão"
+          },
+          "body": {
+            "es": "Pide perdón a alguien a quien hayas hecho daño, si puedes hacerlo bien.",
+            "en": "Ask forgiveness of anyone you have hurt, if you can do it well.",
+            "pt": "Pede perdão a alguém a quem tenhas feito mal, se o puderes fazer bem."
+          },
+          "action": "CONFESSION"
+        },
+        {
+          "id": "lent_w5",
+          "title": {
+            "es": "La reconciliación",
+            "en": "Reconciliation",
+            "pt": "A reconciliação"
+          },
+          "body": {
+            "es": "Acércate al sacramento de la Confesión para recibir de nuevo la misericordia.",
+            "en": "Go to the sacrament of Confession to receive mercy again.",
+            "pt": "Aproxima-te do sacramento da Confissão para receber de novo a misericórdia."
+          },
+          "action": "CONFESSION"
+        }
+      ]
+    },
+    "HOLY_WEEK": {
+      "start": {
+        "title": {
+          "es": "Semana Santa",
+          "en": "Holy Week",
+          "pt": "Semana da Paixão"
+        },
+        "body": {
+          "es": "La semana en que acompañamos a Jesús en sus últimos días, desde la entrada en Jerusalén.",
+          "en": "The week we accompany Jesus in his last days, from his entry into Jerusalem.",
+          "pt": "A semana em que acompanhamos Jesus nos seus últimos dias, desde a entrada em Jerusalém."
+        },
+        "action": "BIBLE"
+      },
+      "weekly": [
+        {
+          "id": "holyweek_w1",
+          "title": {
+            "es": "Domingo de Ramos",
+            "en": "Palm Sunday",
+            "pt": "Domingo das Palmas"
+          },
+          "body": {
+            "es": "Participa de la misa del Domingo de Ramos y lleva a casa una palma.",
+            "en": "Attend Mass on Palm Sunday and bring a palm home.",
+            "pt": "Participa na missa do Domingo de Ramos e leva para casa uma palma."
+          },
+          "action": "HOME"
+        },
+        {
+          "id": "holyweek_w2",
+          "title": {
+            "es": "El Evangelio de la Pasión",
+            "en": "The Gospel of the Passion",
+            "pt": "O Evangelho da Paixão"
+          },
+          "body": {
+            "es": "Lee con calma un pasaje de la Pasión según uno de los evangelios.",
+            "en": "Read calmly a passage of the Passion from one of the Gospels.",
+            "pt": "Lê com calma um trecho da Paixão segundo um dos evangelhos."
+          },
+          "action": "BIBLE"
+        },
+        {
+          "id": "holyweek_w3",
+          "title": {
+            "es": "Visitar al Señor",
+            "en": "Visit the Lord",
+            "pt": "Visitar o Senhor"
+          },
+          "body": {
+            "es": "Visita al Santísimo o reza ante la cruz en una iglesia.",
+            "en": "Visit the Blessed Sacrament or pray before the cross in a church.",
+            "pt": "Visita o Santíssimo ou reza diante da cruz numa igreja."
+          },
+          "action": "PRAYERS"
+        },
+        {
+          "id": "holyweek_w4",
+          "title": {
+            "es": "Acompañar a María",
+            "en": "Accompany Mary",
+            "pt": "Acompanhar Maria"
+          },
+          "body": {
+            "es": "Reza un misterio doloroso del Rosario junto a María, al pie de la cruz.",
+            "en": "Pray a sorrowful mystery of the Rosary with Mary, at the foot of the cross.",
+            "pt": "Reza um mistério doloroso do Terço com Maria, aos pés da cruz."
+          },
+          "action": "ROSARY"
+        }
+      ]
+    },
+    "TRIDUUM": {
+      "start": {
+        "title": {
+          "es": "Triduo Pascual",
+          "en": "The Paschal Triduum",
+          "pt": "O Tríduo Pascal"
+        },
+        "body": {
+          "es": "Tres días para el centro de la fe: la muerte y la resurrección de Jesús.",
+          "en": "Three days for the heart of the faith: the death and resurrection of Jesus.",
+          "pt": "Três dias para o centro da fé: a morte e a ressurreição de Jesus."
+        },
+        "action": "BIBLE"
+      },
+      "weekly": [
+        {
+          "id": "triduum_w1",
+          "title": {
+            "es": "El mandamiento nuevo",
+            "en": "The new commandment",
+            "pt": "O mandamento novo"
+          },
+          "body": {
+            "es": "Recuerda las palabras de Jesús: amaos como yo os he amado.",
+            "en": "Remember the words of Jesus: love one another as I have loved you.",
+            "pt": "Lembra-te das palavras de Jesus: amai-vos como Eu vos amei."
+          },
+          "action": "BIBLE"
+        },
+        {
+          "id": "triduum_w2",
+          "title": {
+            "es": "Viernes Santo",
+            "en": "Good Friday",
+            "pt": "Sexta-Feira Santa"
+          },
+          "body": {
+            "es": "Guarda silencio y adora la cruz en este día de la pasión del Señor.",
+            "en": "Keep silence and adore the cross on this day of the Lord's passion.",
+            "pt": "Guarda silêncio e adora a cruz neste dia da paixão do Senhor."
+          },
+          "action": "PRAYERS"
+        },
+        {
+          "id": "triduum_w3",
+          "title": {
+            "es": "La Vigilia Pascual",
+            "en": "The Easter Vigil",
+            "pt": "A Vigília Pascal"
+          },
+          "body": {
+            "es": "Si puedes, participa de la Vigilia Pascual, la madre de todas las vigilias.",
+            "en": "If you can, take part in the Easter Vigil, the mother of all vigils.",
+            "pt": "Se puderes, participa na Vigília Pascal, a mãe de todas as vigílias."
+          },
+          "action": "HOME"
+        },
+        {
+          "id": "triduum_w4",
+          "title": {
+            "es": "El Sábado de la espera",
+            "en": "The waiting Saturday",
+            "pt": "O Sábado de espera"
+          },
+          "body": {
+            "es": "Acompaña a María en la espera y deja que la esperanza vuelva.",
+            "en": "Accompany Mary in her waiting and let hope return.",
+            "pt": "Acompanha Maria na espera e deixa que a esperança volte."
+          },
+          "action": "ROSARY"
+        }
+      ]
+    },
+    "EASTER": {
+      "start": {
+        "title": {
+          "es": "Cincuenta días de Pascua",
+          "en": "Fifty days of Easter",
+          "pt": "Cinquenta dias de Páscoa"
+        },
+        "body": {
+          "es": "El tiempo de Pascua dura cincuenta días, hasta Pentecostés. Un tiempo de alegría.",
+          "en": "Eastertide lasts fifty days, until Pentecost. A time of joy.",
+          "pt": "O tempo da Páscoa dura cinquenta dias, até Pentecostes. Um tempo de alegria."
+        },
+        "action": "HOME"
+      },
+      "weekly": [
+        {
+          "id": "easter_w1",
+          "title": {
+            "es": "Contar la Pascua",
+            "en": "Tell of Easter",
+            "pt": "Contar a Páscoa"
+          },
+          "body": {
+            "es": "Habla con alguien de lo que la Pascua cambia en tu vida.",
+            "en": "Tell someone what Easter changes in your life.",
+            "pt": "Fala com alguém do que a Páscoa muda na tua vida."
+          },
+          "action": "HOME"
+        },
+        {
+          "id": "easter_w2",
+          "title": {
+            "es": "El relato de la Resurrección",
+            "en": "The account of the Resurrection",
+            "pt": "O relato da Ressurreição"
+          },
+          "body": {
+            "es": "Lee un relato de la Resurrección y detente en lo que te llama la atención.",
+            "en": "Read an account of the Resurrection and pause at what strikes you.",
+            "pt": "Lê um relato da Ressurreição e detém-te no que te chama a atenção."
+          },
+          "action": "BIBLE"
+        },
+        {
+          "id": "easter_w3",
+          "title": {
+            "es": "La misericordia de Dios",
+            "en": "The mercy of God",
+            "pt": "A misericórdia de Deus"
+          },
+          "body": {
+            "es": "Reza una oración a la misericordia de Dios y confía en su bondad.",
+            "en": "Pray a prayer to the mercy of God and trust in his goodness.",
+            "pt": "Reza uma oração à misericórdia de Deus e confia na sua bondade."
+          },
+          "action": "PRAYERS"
+        },
+        {
+          "id": "easter_w4",
+          "title": {
+            "es": "Servir a alguien",
+            "en": "Serve someone",
+            "pt": "Servir alguém"
+          },
+          "body": {
+            "es": "Haz un gesto concreto de servicio o limosna en este tiempo de alegría.",
+            "en": "Make a concrete gesture of service or almsgiving in this time of joy.",
+            "pt": "Faz um gesto concreto de serviço ou esmola neste tempo de alegria."
+          },
+          "action": "HOME"
+        },
+        {
+          "id": "easter_w5",
+          "title": {
+            "es": "Ven, Espíritu Santo",
+            "en": "Come, Holy Spirit",
+            "pt": "Vem, Espírito Santo"
+          },
+          "body": {
+            "es": "Prepara tu corazón para Pentecostés pidiendo el don del Espíritu.",
+            "en": "Prepare your heart for Pentecost by asking for the gift of the Spirit.",
+            "pt": "Prepara o teu coração para Pentecostes pedindo o dom do Espírito."
+          },
+          "action": "SPIRITUAL_LIFE"
+        }
+      ]
+    }
+  },
+  "celebrations": {
+    "ash_wednesday": {
+      "eve": {
+        "title": {
+          "es": "Víspera de Ceniza",
+          "en": "Eve of Ash Wednesday",
+          "pt": "Véspera de Quarta-Feira de Cinzas"
+        },
+        "body": {
+          "es": "Mañana comienza la Cuaresma. Hoy es día de preparar el corazón.",
+          "en": "Lent begins tomorrow. Today is a day to prepare the heart.",
+          "pt": "Amanhã começa a Quaresma. Hoje é dia de preparar o coração."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Miércoles de Ceniza",
+          "en": "Ash Wednesday",
+          "pt": "Quarta-Feira de Cinzas"
+        },
+        "body": {
+          "es": "Recibimos la ceniza: polvo somos y al polvo volveremos. Empieza la Cuaresma.",
+          "en": "We receive ashes: dust we are and to dust we shall return. Lent begins.",
+          "pt": "Recebemos a cinza: pó somos e ao pó voltaremos. Começa a Quaresma."
+        },
+        "action": "CONFESSION"
+      }
+    },
+    "palm_sunday": {
+      "eve": {
+        "title": {
+          "es": "Víspera de Ramos",
+          "en": "Eve of Palm Sunday",
+          "pt": "Véspera de Ramos"
+        },
+        "body": {
+          "es": "Mañana entrará Jesús en Jerusalén. Prepara tu corazón para acompañarle.",
+          "en": "Tomorrow Jesus enters Jerusalem. Prepare your heart to accompany him.",
+          "pt": "Amanhã Jesus entrará em Jerusalém. Prepara o teu coração para O acompanhar."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Domingo de Ramos",
+          "en": "Palm Sunday",
+          "pt": "Domingo das Palmas"
+        },
+        "body": {
+          "es": "Bendecimos las palmas: Hosanna al Hijo de David. Comienza la Semana Santa.",
+          "en": "We bless the palms: Hosanna to the Son of David. Holy Week begins.",
+          "pt": "Benzeimos as palmas: Hosana ao Filho de David. Começa a Semana Santa."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "holy_thursday_evening": {
+      "eve": {
+        "title": {
+          "es": "Víspera del Jueves Santo",
+          "en": "Eve of Holy Thursday",
+          "pt": "Véspera de Quinta-Feira Santa"
+        },
+        "body": {
+          "es": "Mañana noche Jesús instituye la Eucaristía y nos deja el mandamiento nuevo.",
+          "en": "Tomorrow evening Jesus institutes the Eucharist and leaves us the new commandment.",
+          "pt": "Amanhã à noite Jesus institui a Eucaristia e deixa-nos o mandamento novo."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Jueves Santo",
+          "en": "Holy Thursday",
+          "pt": "Quinta-Feira Santa"
+        },
+        "body": {
+          "es": "En la cena, Jesús se hace pan y vino. Le adoramos en el Sagrario.",
+          "en": "At the supper, Jesus becomes bread and wine. We adore him in the tabernacle.",
+          "pt": "Na ceia, Jesus faz-se pão e vinho. Adoramo-Lo no sacrário."
+        },
+        "action": "PRAYERS"
+      }
+    },
+    "good_friday": {
+      "eve": {
+        "title": {
+          "es": "Víspera del Viernes Santo",
+          "en": "Eve of Good Friday",
+          "pt": "Véspera de Sexta-Feira Santa"
+        },
+        "body": {
+          "es": "Mañana es el día de la cruz. Prepara el corazón para el silencio.",
+          "en": "Tomorrow is the day of the cross. Prepare your heart for silence.",
+          "pt": "Amanhã é o dia da cruz. Prepara o coração para o silêncio."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Viernes Santo",
+          "en": "Good Friday",
+          "pt": "Sexta-Feira Santa"
+        },
+        "body": {
+          "es": "Hoy adoramos la cruz del Señor. No hay misa; hay adoración y silencio.",
+          "en": "Today we adore the cross of the Lord. There is no Mass; there is adoration and silence.",
+          "pt": "Hoje adoramos a cruz do Senhor. Não há missa; há adoração e silêncio."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "easter_sunday": {
+      "eve": {
+        "title": {
+          "es": "Vigilia Pascual",
+          "en": "Easter Vigil",
+          "pt": "Vigília Pascal"
+        },
+        "body": {
+          "es": "Esta noche es la madre de todas las vigilias: Cristo ha resucitado.",
+          "en": "Tonight is the mother of all vigils: Christ is risen.",
+          "pt": "Esta noite é a mãe de todas as vigílias: Cristo ressuscitou."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Domingo de Resurrección",
+          "en": "Easter Sunday",
+          "pt": "Domingo de Páscoa"
+        },
+        "body": {
+          "es": "Ha resucitado. El Señor vive y está en medio de nosotros. Aleluya.",
+          "en": "He is risen. The Lord lives and is in our midst. Alleluia.",
+          "pt": "Ressuscitou. O Senhor vive e está no meio de nós. Aleluia."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "divine_mercy_sunday": {
+      "eve": {
+        "title": {
+          "es": "Víspera de la Divina Misericordia",
+          "en": "Eve of Divine Mercy",
+          "pt": "Véspera da Divina Misericórdia"
+        },
+        "body": {
+          "es": "Mañana celebramos la confianza en la misericordia de Jesús.",
+          "en": "Tomorrow we celebrate trust in the mercy of Jesus.",
+          "pt": "Amanhã celebramos a confiança na misericórdia de Jesus."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Domingo de la Divina Misericordia",
+          "en": "Divine Mercy Sunday",
+          "pt": "Domingo da Divina Misericórdia"
+        },
+        "body": {
+          "es": "La misericordia de Dios es más grande que nuestras faltas. Confía en Él.",
+          "en": "The mercy of God is greater than our faults. Trust in him.",
+          "pt": "A misericórdia de Deus é maior que as nossas faltas. Confia nEle."
+        },
+        "action": "PRAYERS"
+      }
+    },
+    "ascension": {
+      "eve": {
+        "title": {
+          "es": "Víspera de la Ascensión",
+          "en": "Eve of the Ascension",
+          "pt": "Véspera da Ascensão"
+        },
+        "body": {
+          "es": "Mañana Jesús sube al cielo y no nos deja: nos prepara un lugar.",
+          "en": "Tomorrow Jesus ascends to heaven and does not leave us: he prepares a place for us.",
+          "pt": "Amanhã Jesus sobe ao céu e não nos deixa: prepara-nos um lugar."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Ascensión del Señor",
+          "en": "The Ascension of the Lord",
+          "pt": "Ascensão do Senhor"
+        },
+        "body": {
+          "es": "Cristo sube al Padre y nos abre el cielo. Él estará con nosotros siempre.",
+          "en": "Christ ascends to the Father and opens heaven for us. He will be with us always.",
+          "pt": "Cristo sobe ao Pai e abre-nos o céu. Ele estará sempre connosco."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "pentecost": {
+      "eve": {
+        "title": {
+          "es": "Víspera de Pentecostés",
+          "en": "Eve of Pentecost",
+          "pt": "Véspera de Pentecostes"
+        },
+        "body": {
+          "es": "Mañana vendrá el Espíritu Santo. Prepara tu corazón para su venida.",
+          "en": "Tomorrow the Holy Spirit will come. Prepare your heart for his coming.",
+          "pt": "Amanhã virá o Espírito Santo. Prepara o teu coração para a sua vinda."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Pentecostés",
+          "en": "Pentecost",
+          "pt": "Pentecostes"
+        },
+        "body": {
+          "es": "El Espíritu Santo desciende sobre la Iglesia. Ven, Espíritu Santo.",
+          "en": "The Holy Spirit descends upon the Church. Come, Holy Spirit.",
+          "pt": "O Espírito Santo desce sobre a Igreja. Vem, Espírito Santo."
+        },
+        "action": "SPIRITUAL_LIFE"
+      }
+    },
+    "trinity": {
+      "eve": {
+        "title": {
+          "es": "Víspera de la Santísima Trinidad",
+          "en": "Eve of the Holy Trinity",
+          "pt": "Véspera da Santíssima Trindade"
+        },
+        "body": {
+          "es": "Mañana celebramos al Dios uno y trino, misterio de amor.",
+          "en": "Tomorrow we celebrate the one and triune God, a mystery of love.",
+          "pt": "Amanhã celebramos o Deus uno e trino, mistério de amor."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Santísima Trinidad",
+          "en": "The Holy Trinity",
+          "pt": "Santíssima Trindade"
+        },
+        "body": {
+          "es": "Gloria al Padre, al Hijo y al Espíritu Santo: un solo Dios en tres Personas.",
+          "en": "Glory to the Father, the Son and the Holy Spirit: one God in three Persons.",
+          "pt": "Glória ao Pai, ao Filho e ao Espírito Santo: um só Deus em três Pessoas."
+        },
+        "action": "CATECHISM"
+      }
+    },
+    "corpus_christi": {
+      "eve": {
+        "title": {
+          "es": "Víspera del Corpus Christi",
+          "en": "Eve of Corpus Christi",
+          "pt": "Véspera de Corpus Christi"
+        },
+        "body": {
+          "es": "Mañana la Iglesia saca a Jesús sacramentado por las calles.",
+          "en": "Tomorrow the Church carries Jesus in the Blessed Sacrament through the streets.",
+          "pt": "Amanhã a Igreja leva Jesus sacramentado pelas ruas."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Corpus Christi",
+          "en": "Body of Christ",
+          "pt": "Corpo de Deus"
+        },
+        "body": {
+          "es": "Hoy adoramos a Cristo presente en la Eucaristía, alimento de la vida eterna.",
+          "en": "Today we adore Christ present in the Eucharist, the food of eternal life.",
+          "pt": "Hoje adoramos Cristo presente na Eucaristia, alimento da vida eterna."
+        },
+        "action": "PRAYERS"
+      }
+    },
+    "sacred_heart": {
+      "eve": {
+        "title": {
+          "es": "Víspera del Sagrado Corazón",
+          "en": "Eve of the Sacred Heart",
+          "pt": "Véspera do Sagrado Coração"
+        },
+        "body": {
+          "es": "Mañana celebramos el corazón amoroso de Jesús.",
+          "en": "Tomorrow we celebrate the loving heart of Jesus.",
+          "pt": "Amanhã celebramos o coração amoroso de Jesus."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Sagrado Corazón de Jesús",
+          "en": "Sacred Heart of Jesus",
+          "pt": "Sagrado Coração de Jesus"
+        },
+        "body": {
+          "es": "Mira el corazón de Jesús: herido por amor y lleno de misericordia.",
+          "en": "Look at the heart of Jesus: wounded by love and full of mercy.",
+          "pt": "Olha o coração de Jesus: ferido por amor e cheio de misericórdia."
+        },
+        "action": "PRAYERS"
+      }
+    },
+    "christ_the_king": {
+      "eve": {
+        "title": {
+          "es": "Víspera de Cristo Rey",
+          "en": "Eve of Christ the King",
+          "pt": "Véspera de Cristo Rei"
+        },
+        "body": {
+          "es": "Mañana cerramos el año litúrgico con la fiesta de Cristo Rey del universo.",
+          "en": "Tomorrow we close the liturgical year with the feast of Christ the King of the universe.",
+          "pt": "Amanhã encerramos o ano litúrgico com a festa de Cristo Rei do universo."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Cristo Rey del Universo",
+          "en": "Christ the King",
+          "pt": "Cristo Rei do Universo"
+        },
+        "body": {
+          "es": "Cristo es el Señor de todo lo creado. A Él pertenece el reino que no acaba.",
+          "en": "Christ is the Lord of all creation. His is the kingdom that will not end.",
+          "pt": "Cristo é o Senhor de toda a criação. DEle é o reino que não acaba."
+        },
+        "action": "CATECHISM"
+      }
+    },
+    "holy_family": {
+      "eve": {
+        "title": {
+          "es": "Víspera de la Sagrada Familia",
+          "en": "Eve of the Holy Family",
+          "pt": "Véspera da Sagrada Família"
+        },
+        "body": {
+          "es": "Mañana celebramos a Jesús, María y José en la casa de Nazaret.",
+          "en": "Tomorrow we celebrate Jesus, Mary and Joseph in the house of Nazareth.",
+          "pt": "Amanhã celebramos Jesus, Maria e José na casa de Nazaré."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "La Sagrada Familia",
+          "en": "The Holy Family",
+          "pt": "A Sagrada Família"
+        },
+        "body": {
+          "es": "En Nazaret, Jesús creció en sabiduría y gracia. Reza por tu familia.",
+          "en": "In Nazareth, Jesus grew in wisdom and grace. Pray for your family.",
+          "pt": "Em Nazaré, Jesus cresceu em sabedoria e graça. Reza pela tua família."
+        },
+        "action": "PRAYERS"
+      }
+    },
+    "epiphany": {
+      "eve": {
+        "title": {
+          "es": "Víspera de la Epifanía",
+          "en": "Eve of the Epiphany",
+          "pt": "Véspera da Epifania"
+        },
+        "body": {
+          "es": "Mañana los Magos adoran al Niño en Belén. Dios se da a conocer a todos.",
+          "en": "Tomorrow the Magi adore the Child in Bethlehem. God makes himself known to all.",
+          "pt": "Amanhã os Magos adoram o Menino em Belém. Deus dá-se a conhecer a todos."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Epifanía del Señor",
+          "en": "The Epiphany of the Lord",
+          "pt": "Epifania do Senhor"
+        },
+        "body": {
+          "es": "Los Magos de Oriente adoran al Niño. Cristo se manifiesta a todos los pueblos.",
+          "en": "The Magi of the East adore the Child. Christ is made manifest to all peoples.",
+          "pt": "Os Magos do Oriente adoram o Menino. Cristo manifesta-se a todos os povos."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "baptism_of_the_lord": {
+      "eve": {
+        "title": {
+          "es": "Víspera del Bautismo del Señor",
+          "en": "Eve: the Baptism of the Lord",
+          "pt": "Véspera do Batismo do Senhor"
+        },
+        "body": {
+          "es": "Mañana cierra la Navidad: Jesús se bautiza en el Jordán.",
+          "en": "Tomorrow Christmastide closes: Jesus is baptized in the Jordan.",
+          "pt": "Amanhã fecha-se o Natal: Jesus é batizado no Jordão."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Bautismo del Señor",
+          "en": "The Baptism of the Lord",
+          "pt": "Batismo do Senhor"
+        },
+        "body": {
+          "es": "En el Jordán, Jesús se bautiza y el Padre le llama Hijo amado. Cierra la Navidad.",
+          "en": "In the Jordan, Jesus is baptized and the Father calls him beloved Son. Christmastide closes.",
+          "pt": "No Jordão, Jesus é batizado e o Pai chama-Lhe Filho amado. Fecha-se o Natal."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "christmas_day": {
+      "eve": {
+        "title": {
+          "es": "Nochebuena",
+          "en": "Christmas Eve",
+          "pt": "Véspera de Natal"
+        },
+        "body": {
+          "es": "Esta noche nace Jesús en Belén. Dios se hace niño.",
+          "en": "Tonight Jesus is born in Bethlehem. God becomes a child.",
+          "pt": "Esta noite nasce Jesus em Belém. Deus faz-se menino."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Natividad del Señor",
+          "en": "The Nativity of the Lord",
+          "pt": "Natividade do Senhor"
+        },
+        "body": {
+          "es": "Hoy nace el Salvador en Belén. Gloria a Dios en las alturas y paz a los hombres.",
+          "en": "Today the Savior is born in Bethlehem. Glory to God in the highest and peace to people.",
+          "pt": "Hoje nasce o Salvador em Belém. Glória a Deus nas alturas e paz aos homens."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "mary_mother_of_god": {
+      "eve": {
+        "title": {
+          "es": "Víspera: Santa María, Madre de Dios",
+          "en": "Eve: Mary, Mother of God",
+          "pt": "Véspera: Santa Maria, Mãe de Deus"
+        },
+        "body": {
+          "es": "Mañana comienza el año bajo el nombre de María, Madre de Dios.",
+          "en": "Tomorrow the year begins under the name of Mary, Mother of God.",
+          "pt": "Amanhã começa o ano sob o nome de Maria, Mãe de Deus."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Santa María, Madre de Dios",
+          "en": "Mary, Mother of God",
+          "pt": "Santa Maria, Mãe de Deus"
+        },
+        "body": {
+          "es": "Primer día del año: bendita entre las mujeres, Madre del Señor.",
+          "en": "First day of the year: blessed among women, Mother of the Lord.",
+          "pt": "Primeiro dia do ano: bendita entre as mulheres, Mãe do Senhor."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "conversion_of_saint_paul_the_apostle": {
+      "eve": {
+        "title": {
+          "es": "Víspera: la conversión de san Pablo",
+          "en": "Eve: the Conversion of Saint Paul",
+          "pt": "Véspera: a Conversão de São Paulo"
+        },
+        "body": {
+          "es": "Mañana celebramos a Pablo, de perseguidor a apóstol de Cristo.",
+          "en": "Tomorrow we celebrate Paul, from persecutor to apostle of Christ.",
+          "pt": "Amanhã celebramos Paulo, de perseguidor a apóstolo de Cristo."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Conversión de san Pablo",
+          "en": "Conversion of Saint Paul",
+          "pt": "Conversão de São Paulo"
+        },
+        "body": {
+          "es": "En el camino de Damasco, Pablo se encuentra con el Resucitado. Deja que Dios te cambie.",
+          "en": "On the road to Damascus, Paul meets the Risen One. Let God change you.",
+          "pt": "No caminho de Damasco, Paulo encontra o Ressuscitado. Deixa que Deus te mude."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "presentation_of_the_lord": {
+      "eve": {
+        "title": {
+          "es": "Víspera: la Presentación del Señor",
+          "en": "Eve: the Presentation of the Lord",
+          "pt": "Véspera: a Apresentação do Senhor"
+        },
+        "body": {
+          "es": "Mañana la Iglesia presenta a Jesús en el templo y enciende las candelas.",
+          "en": "Tomorrow the Church presents Jesus in the temple and lights the candles.",
+          "pt": "Amanhã a Igreja apresenta Jesus no templo e acende as candeias."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Presentación del Señor",
+          "en": "The Presentation of the Lord",
+          "pt": "Apresentação do Senhor"
+        },
+        "body": {
+          "es": "Jesús es presentado en el templo: luz que alumbra a las naciones.",
+          "en": "Jesus is presented in the temple: a light that enlightens the nations.",
+          "pt": "Jesus é apresentado no templo: luz que ilumina as nações."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "chair_of_saint_peter_the_apostle": {
+      "eve": {
+        "title": {
+          "es": "Víspera: la Cátedra de san Pedro",
+          "en": "Eve: the Chair of Saint Peter",
+          "pt": "Véspera: a Cátedra de São Pedro"
+        },
+        "body": {
+          "es": "Mañana celebramos el ministerio de san Pedro y de sus sucesores.",
+          "en": "Tomorrow we celebrate the ministry of Saint Peter and of his successors.",
+          "pt": "Amanhã celebramos o ministério de São Pedro e dos seus sucessores."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Cátedra de san Pedro",
+          "en": "Chair of Saint Peter",
+          "pt": "Cátedra de São Pedro"
+        },
+        "body": {
+          "es": "Cristo dio a Pedro el oficio de confirmar a sus hermanos en la fe.",
+          "en": "Christ gave Peter the office of confirming his brothers and sisters in the faith.",
+          "pt": "Cristo deu a Pedro o ofício de confirmar os seus irmãos na fé."
+        },
+        "action": "CATECHISM"
+      }
+    },
+    "joseph_spouse_of_mary": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san José",
+          "en": "Eve of Saint Joseph",
+          "pt": "Véspera de São José"
+        },
+        "body": {
+          "es": "Mañana celebramos a san José, esposo de María y custodio de Jesús.",
+          "en": "Tomorrow we celebrate Saint Joseph, husband of Mary and guardian of Jesus.",
+          "pt": "Amanhã celebramos São José, esposo de Maria e guardião de Jesus."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San José, esposo de María",
+          "en": "Saint Joseph, husband of Mary",
+          "pt": "São José, esposo de Maria"
+        },
+        "body": {
+          "es": "San José guardó a Jesús y a María con fe y trabajo. Reza por los padres de familia.",
+          "en": "Saint Joseph kept Jesus and Mary with faith and work. Pray for fathers.",
+          "pt": "São José guardou Jesus e Maria com fé e trabalho. Reza pelos pais de família."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "annunciation_of_the_lord": {
+      "eve": {
+        "title": {
+          "es": "Víspera de la Anunciación",
+          "en": "Eve of the Annunciation",
+          "pt": "Véspera da Anunciação"
+        },
+        "body": {
+          "es": "Mañana el ángel anuncia a María que será la Madre de Dios.",
+          "en": "Tomorrow the angel announces to Mary that she will be the Mother of God.",
+          "pt": "Amanhã o anjo anuncia a Maria que será a Mãe de Deus."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Anunciación del Señor",
+          "en": "The Annunciation of the Lord",
+          "pt": "Anunciação do Senhor"
+        },
+        "body": {
+          "es": "María dice que sí al ángel: hágase en mí según tu palabra.",
+          "en": "Mary says yes to the angel: let it be done to me according to your word.",
+          "pt": "Maria diz sim ao anjo: faça-se em mim segundo a tua palavra."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "mark_evangelist": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san Marcos",
+          "en": "Eve of Saint Mark",
+          "pt": "Véspera de São Marcos"
+        },
+        "body": {
+          "es": "Mañana celebramos a san Marcos, autor del segundo evangelio.",
+          "en": "Tomorrow we celebrate Saint Mark, author of the second Gospel.",
+          "pt": "Amanhã celebramos São Marcos, autor do segundo evangelho."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Marcos, evangelista",
+          "en": "Saint Mark, evangelist",
+          "pt": "São Marcos, evangelista"
+        },
+        "body": {
+          "es": "San Marcos nos transmite el evangelio de Pedro. Lee hoy un fragmento suyo.",
+          "en": "Saint Mark hands on Peter's Gospel. Read a passage of his today.",
+          "pt": "São Marcos transmite-nos o evangelho de Pedro. Lê hoje um trecho seu."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "philip_and_james_apostles": {
+      "eve": {
+        "title": {
+          "es": "Víspera: san Felipe y Santiago",
+          "en": "Eve: Saints Philip and James",
+          "pt": "Véspera: São Filipe e São Tiago"
+        },
+        "body": {
+          "es": "Mañana celebramos a dos apóstoles: Felipe y Santiago el Menor.",
+          "en": "Tomorrow we celebrate two apostles: Philip and James the Lesser.",
+          "pt": "Amanhã celebramos dois apóstolos: Filipe e Tiago Menor."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Felipe y Santiago, apóstoles",
+          "en": "Saints Philip and James, apostles",
+          "pt": "São Filipe e São Tiago, apóstolos"
+        },
+        "body": {
+          "es": "Los apóstoles dejaron las redes para seguir a Jesús. Ora por quienes anuncian el evangelio.",
+          "en": "The apostles left their nets to follow Jesus. Pray for those who proclaim the Gospel.",
+          "pt": "Os apóstolos deixaram as redes para seguir Jesus. Reza por quem anuncia o evangelho."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "matthias_apostle": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san Matías",
+          "en": "Eve of Saint Matthias",
+          "pt": "Véspera de São Matias"
+        },
+        "body": {
+          "es": "Mañana celebramos a san Matías, elegido para completar a los Doce.",
+          "en": "Tomorrow we celebrate Saint Matthias, chosen to complete the Twelve.",
+          "pt": "Amanhã celebramos São Matias, escolhido para completar os Doze."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Matías, apóstol",
+          "en": "Saint Matthias, apostle",
+          "pt": "São Matias, apóstolo"
+        },
+        "body": {
+          "es": "San Matías fue elegido apóstol en lugar de Judas. Ora por los ministros de la Iglesia.",
+          "en": "Saint Matthias was chosen apostle in place of Judas. Pray for the ministers of the Church.",
+          "pt": "São Matias foi escolhido apóstolo no lugar de Judas. Reza pelos ministros da Igreja."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "visitation": {
+      "eve": {
+        "title": {
+          "es": "Víspera de la Visitación",
+          "en": "Eve of the Visitation",
+          "pt": "Véspera da Visitação"
+        },
+        "body": {
+          "es": "Mañana María visita a su prima Isabel, ya encinta de Juan.",
+          "en": "Tomorrow Mary visits her cousin Elizabeth, already expecting John.",
+          "pt": "Amanhã Maria visita a sua prima Isabel, já grávida de João."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "La Visitación de María",
+          "en": "The Visitation of Mary",
+          "pt": "A Visitação de Maria"
+        },
+        "body": {
+          "es": "María lleva a Jesús a casa de Isabel. Reza el Magníficat en tu casa.",
+          "en": "Mary brings Jesus to Elizabeth's house. Pray the Magnificat in your home.",
+          "pt": "Maria leva Jesus a casa de Isabel. Reza o Magníficat em tua casa."
+        },
+        "action": "ROSARY"
+      }
+    },
+    "nativity_of_john_the_baptist": {
+      "eve": {
+        "title": {
+          "es": "Víspera: san Juan Bautista",
+          "en": "Eve: Saint John the Baptist",
+          "pt": "Véspera: São João Batista"
+        },
+        "body": {
+          "es": "Mañana celebramos el nacimiento del precursor, san Juan Bautista.",
+          "en": "Tomorrow we celebrate the birth of the forerunner, Saint John the Baptist.",
+          "pt": "Amanhã celebramos o nascimento do precursor, São João Batista."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Nacimiento de san Juan Bautista",
+          "en": "Birth of Saint John the Baptist",
+          "pt": "Nascimento de São João Batista"
+        },
+        "body": {
+          "es": "Juan nace para preparar los caminos del Señor. Alégrate por quien Dios envía.",
+          "en": "John is born to prepare the ways of the Lord. Rejoice in the one God sends.",
+          "pt": "João nasce para preparar os caminhos do Senhor. Alegra-te por quem Deus envia."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "peter_and_paul_apostles": {
+      "eve": {
+        "title": {
+          "es": "Víspera: san Pedro y san Pablo",
+          "en": "Eve: Saints Peter and Paul",
+          "pt": "Véspera: São Pedro e São Paulo"
+        },
+        "body": {
+          "es": "Mañana celebramos a los dos pilares de la Iglesia de Roma.",
+          "en": "Tomorrow we celebrate the two pillars of the Church of Rome.",
+          "pt": "Amanhã celebramos os dois pilares da Igreja de Roma."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Pedro y san Pablo, apóstoles",
+          "en": "Saints Peter and Paul, apostles",
+          "pt": "São Pedro e São Paulo, apóstolos"
+        },
+        "body": {
+          "es": "Pedro y Pablo dieron la vida por Cristo en Roma. Ora por la unidad de la Iglesia.",
+          "en": "Peter and Paul gave their lives for Christ in Rome. Pray for the unity of the Church.",
+          "pt": "Pedro e Paulo deram a vida por Cristo em Roma. Reza pela unidade da Igreja."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "thomas_apostle": {
+      "eve": {
+        "title": {
+          "es": "Víspera de santo Tomás",
+          "en": "Eve of Saint Thomas",
+          "pt": "Véspera de São Tomé"
+        },
+        "body": {
+          "es": "Mañana celebramos a santo Tomás, el apóstol que pidió ver.",
+          "en": "Tomorrow we celebrate Saint Thomas, the apostle who asked to see.",
+          "pt": "Amanhã celebramos São Tomé, o apóstolo que pediu para ver."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Santo Tomás apóstol",
+          "en": "Saint Thomas, apostle",
+          "pt": "São Tomé, apóstolo"
+        },
+        "body": {
+          "es": "Tomás dijo: Señor mío y Dios mío. La fe vale más que las pruebas.",
+          "en": "Thomas said: My Lord and my God. Faith is worth more than proofs.",
+          "pt": "Tomé disse: Senhor meu e Deus meu. A fé vale mais que as provas."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "mary_magdalene": {
+      "eve": {
+        "title": {
+          "es": "Víspera de santa María Magdalena",
+          "en": "Eve of Saint Mary Magdalene",
+          "pt": "Véspera de Santa Maria Madalena"
+        },
+        "body": {
+          "es": "Mañana celebramos a María Magdalena, testigo de la Resurrección.",
+          "en": "Tomorrow we celebrate Mary Magdalene, witness of the Resurrection.",
+          "pt": "Amanhã celebramos Maria Madalena, testemunha da Ressurreição."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Santa María Magdalena",
+          "en": "Saint Mary Magdalene",
+          "pt": "Santa Maria Madalena"
+        },
+        "body": {
+          "es": "María Magdalena anunció la Resurrección a los discípulos. Da tú también buenas noticias.",
+          "en": "Mary Magdalene announced the Resurrection to the disciples. Bring good news too.",
+          "pt": "Maria Madalena anunciou a Ressurreição aos discípulos. Leva tu também boas novas."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "james_apostle": {
+      "eve": {
+        "title": {
+          "es": "Víspera de santiago apóstol",
+          "en": "Eve of Saint James, apostle",
+          "pt": "Véspera de Santiago, apóstolo"
+        },
+        "body": {
+          "es": "Mañana celebramos a Santiago, el primero de los apóstoles en dar la vida.",
+          "en": "Tomorrow we celebrate James, the first of the apostles to give his life.",
+          "pt": "Amanhã celebramos Santiago, o primeiro dos apóstolos a dar a vida."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Santiago, apóstol",
+          "en": "Saint James, apostle",
+          "pt": "Santiago, apóstolo"
+        },
+        "body": {
+          "es": "Santiago bebió el cáliz del Señor. Ora por los que peregrinan a Compostela.",
+          "en": "James drank the chalice of the Lord. Pray for those who pilgrimage to Compostela.",
+          "pt": "Santiago bebeu o cálice do Senhor. Reza pelos que peregrinam a Compostela."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "transfiguration_of_the_lord": {
+      "eve": {
+        "title": {
+          "es": "Víspera de la Transfiguración",
+          "en": "Eve of the Transfiguration",
+          "pt": "Véspera da Transfiguração"
+        },
+        "body": {
+          "es": "Mañana celebramos a Jesús transfigurado en el monte Tabor.",
+          "en": "Tomorrow we celebrate Jesus transfigured on Mount Tabor.",
+          "pt": "Amanhã celebramos Jesus transfigurado no monte Tabor."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Transfiguración del Señor",
+          "en": "The Transfiguration of the Lord",
+          "pt": "Transfiguração do Senhor"
+        },
+        "body": {
+          "es": "En el Tabor, Jesús resplandece: este es mi Hijo amado, escuchadle.",
+          "en": "On Tabor, Jesus shines: this is my beloved Son, listen to him.",
+          "pt": "No Tabor, Jesus resplandece: este é o meu Filho amado, escutai-O."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "lawrence_of_rome_deacon": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san Lorenzo",
+          "en": "Eve of Saint Lawrence",
+          "pt": "Véspera de São Lourenço"
+        },
+        "body": {
+          "es": "Mañana celebramos a san Lorenzo, diácono y mártir de Roma.",
+          "en": "Tomorrow we celebrate Saint Lawrence, deacon and martyr of Rome.",
+          "pt": "Amanhã celebramos São Lourenço, diácono e mártir de Roma."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Lorenzo, diácono y mártir",
+          "en": "Saint Lawrence, deacon and martyr",
+          "pt": "São Lourenço, diácono e mártir"
+        },
+        "body": {
+          "es": "San Lorenzo sirvió a los pobres hasta dar la vida. Reza por los que pasan necesidad.",
+          "en": "Saint Lawrence served the poor until he gave his life. Pray for those in need.",
+          "pt": "São Lourenço serviu os pobres até dar a vida. Reza pelos que passam necessidade."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "bartholomew_apostle": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san Bartolomé",
+          "en": "Eve of Saint Bartholomew",
+          "pt": "Véspera de São Bartolomeu"
+        },
+        "body": {
+          "es": "Mañana celebramos a san Bartolomé, apóstol de Jesús.",
+          "en": "Tomorrow we celebrate Saint Bartholomew, apostle of Jesus.",
+          "pt": "Amanhã celebramos São Bartolomeu, apóstolo de Jesus."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Bartolomé, apóstol",
+          "en": "Saint Bartholomew, apostle",
+          "pt": "São Bartolomeu, apóstolo"
+        },
+        "body": {
+          "es": "Bartolomé siguió a Jesús hasta el martirio. Sé testigo donde estés.",
+          "en": "Bartholomew followed Jesus to martyrdom. Be a witness wherever you are.",
+          "pt": "Bartolomeu seguiu Jesus até ao martírio. Sê testemunha onde estás."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "nativity_of_the_blessed_virgin_mary": {
+      "eve": {
+        "title": {
+          "es": "Víspera del nacimiento de María",
+          "en": "Eve of the Birth of Mary",
+          "pt": "Véspera do Nascimento de Maria"
+        },
+        "body": {
+          "es": "Mañana celebramos el nacimiento de la Virgen María.",
+          "en": "Tomorrow we celebrate the birth of the Virgin Mary.",
+          "pt": "Amanhã celebramos o nascimento da Virgem Maria."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Natividad de la Virgen María",
+          "en": "Birth of the Blessed Virgin Mary",
+          "pt": "Natividade da Virgem Maria"
+        },
+        "body": {
+          "es": "Hoy nace María, la llena de gracia. Reza el Ave María en familia.",
+          "en": "Today Mary is born, full of grace. Pray the Hail Mary as a family.",
+          "pt": "Hoje nasce Maria, a cheia de graça. Reza a Ave-Maria em família."
+        },
+        "action": "ROSARY"
+      }
+    },
+    "exaltation_of_the_holy_cross": {
+      "eve": {
+        "title": {
+          "es": "Víspera: la Exaltación de la Cruz",
+          "en": "Eve: the Exaltation of the Cross",
+          "pt": "Véspera: a Exaltação da Santa Cruz"
+        },
+        "body": {
+          "es": "Mañana celebramos la cruz de Cristo, signo de salvación.",
+          "en": "Tomorrow we celebrate the cross of Christ, sign of salvation.",
+          "pt": "Amanhã celebramos a cruz de Cristo, sinal de salvação."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Exaltación de la Santa Cruz",
+          "en": "Exaltation of the Holy Cross",
+          "pt": "Exaltação da Santa Cruz"
+        },
+        "body": {
+          "es": "Adoramos la cruz, de donde pende el Salvador. Mira la cruz con fe.",
+          "en": "We adore the cross, from which the Saviour hangs. Look at the cross with faith.",
+          "pt": "Adoramos a cruz, de onde pende o Salvador. Olha a cruz com fé."
+        },
+        "action": "PRAYERS"
+      }
+    },
+    "matthew_apostle": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san Mateo",
+          "en": "Eve of Saint Matthew",
+          "pt": "Véspera de São Mateus"
+        },
+        "body": {
+          "es": "Mañana celebramos a san Mateo, el recaudador llamado por Jesús.",
+          "en": "Tomorrow we celebrate Saint Matthew, the tax collector called by Jesus.",
+          "pt": "Amanhã celebramos São Mateus, o cobrador chamado por Jesus."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Mateo, apóstol y evangelista",
+          "en": "Saint Matthew, apostle and evangelist",
+          "pt": "São Mateus, apóstolo e evangelista"
+        },
+        "body": {
+          "es": "Mateo dejó las cuentas por seguir a Jesús. Él te llama por tu nombre.",
+          "en": "Matthew left his accounts to follow Jesus. He calls you by name.",
+          "pt": "Mateus deixou as contas para seguir Jesus. Ele chama-te pelo teu nome."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "michael_gabriel_and_raphael_archangels": {
+      "eve": {
+        "title": {
+          "es": "Víspera de los arcángeles",
+          "en": "Eve of the Archangels",
+          "pt": "Véspera dos Arcanjos"
+        },
+        "body": {
+          "es": "Mañana celebramos a Miguel, Gabriel y Rafael, mensajeros de Dios.",
+          "en": "Tomorrow we celebrate Michael, Gabriel and Raphael, messengers of God.",
+          "pt": "Amanhã celebramos Miguel, Gabriel e Rafael, mensageiros de Deus."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Miguel, Gabriel y Rafael",
+          "en": "Michael, Gabriel and Raphael",
+          "pt": "Miguel, Gabriel e Rafael"
+        },
+        "body": {
+          "es": "Los arcángeles custodian y anuncian. Invoca a tu ángel de la guarda.",
+          "en": "The archangels guard and announce. Call on your guardian angel.",
+          "pt": "Os arcanjos guardam e anunciam. Invoca o teu anjo da guarda."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "luke_evangelist": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san Lucas",
+          "en": "Eve of Saint Luke",
+          "pt": "Véspera de São Lucas"
+        },
+        "body": {
+          "es": "Mañana celebramos a san Lucas, evangelista y médico.",
+          "en": "Tomorrow we celebrate Saint Luke, evangelist and physician.",
+          "pt": "Amanhã celebramos São Lucas, evangelista e médico."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Lucas, evangelista",
+          "en": "Saint Luke, evangelist",
+          "pt": "São Lucas, evangelista"
+        },
+        "body": {
+          "es": "San Lucas escribió el evangelio y los Hechos. Lee un pasaje suyo.",
+          "en": "Saint Luke wrote the Gospel and Acts. Read a passage of his.",
+          "pt": "São Lucas escreveu o evangelho e os Atos. Lê um trecho seu."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "simon_and_jude_apostles": {
+      "eve": {
+        "title": {
+          "es": "Víspera: san Simón y san Judas",
+          "en": "Eve: Saints Simon and Jude",
+          "pt": "Véspera: São Simão e São Judas"
+        },
+        "body": {
+          "es": "Mañana celebramos a los apóstoles Simón y Judas Tadeo.",
+          "en": "Tomorrow we celebrate the apostles Simon and Jude Thaddeus.",
+          "pt": "Amanhã celebramos os apóstolos Simão e Judas Tadeu."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Simón y san Judas, apóstoles",
+          "en": "Saints Simon and Jude, apostles",
+          "pt": "São Simão e São Judas, apóstolos"
+        },
+        "body": {
+          "es": "Judas Tadeo es patrono de las causas difíciles. Ora por tus peticiones.",
+          "en": "Jude Thaddeus is patron of difficult causes. Pray for your petitions.",
+          "pt": "Judas Tadeu é padroeiro das causas difíceis. Reza pelas tuas petições."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "all_saints": {
+      "eve": {
+        "title": {
+          "es": "Víspera de Todos los Santos",
+          "en": "Eve of All Saints",
+          "pt": "Véspera de Todos os Santos"
+        },
+        "body": {
+          "es": "Mañana celebramos a todos los santos, conocidos y desconocidos.",
+          "en": "Tomorrow we celebrate all the saints, known and unknown.",
+          "pt": "Amanhã celebramos todos os santos, conhecidos e desconhecidos."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Todos los Santos",
+          "en": "All Saints",
+          "pt": "Todos os Santos"
+        },
+        "body": {
+          "es": "La Iglesia celebra a la multitud de los que ya están con Dios. Ora por tus difuntos.",
+          "en": "The Church celebrates the multitude of those already with God. Pray for your dead.",
+          "pt": "A Igreja celebra a multidão dos que já estão com Deus. Reza pelos teus defuntos."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "commemoration_of_all_the_faithful_departed": {
+      "eve": {
+        "title": {
+          "es": "Víspera de los fieles difuntos",
+          "en": "Eve of the Faithful Departed",
+          "pt": "Véspera dos Fiéis Defuntos"
+        },
+        "body": {
+          "es": "Mañana recordamos a los fieles difuntos y rezamos por ellos.",
+          "en": "Tomorrow we remember the faithful departed and pray for them.",
+          "pt": "Amanhã recordamos os fiéis defuntos e rezamos por eles."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Conmemoración de los fieles difuntos",
+          "en": "Commemoration of All the Faithful Departed",
+          "pt": "Comemoração de Todos os Fiéis Defuntos"
+        },
+        "body": {
+          "es": "Hoy la Iglesia recuerda a los que han muerto en Cristo. Reza por ellos.",
+          "en": "Today the Church remembers those who have died in Christ. Pray for them.",
+          "pt": "Hoje a Igreja recorda os que morreram em Cristo. Reza por eles."
+        },
+        "action": "PRAYERS"
+      }
+    },
+    "dedication_lateran": {
+      "eve": {
+        "title": {
+          "es": "Víspera: la Dedicación de Letrán",
+          "en": "Eve: the Dedication of the Lateran",
+          "pt": "Véspera: a Dedicação do Latrão"
+        },
+        "body": {
+          "es": "Mañana celebramos la basílica de Letrán, cabeza de las iglesias.",
+          "en": "Tomorrow we celebrate the Lateran basilica, the head of the churches.",
+          "pt": "Amanhã celebramos a basílica do Latrão, cabeça das igrejas."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Dedicación de la basílica de Letrán",
+          "en": "Dedication of the Lateran Basilica",
+          "pt": "Dedicação da Basílica do Latrão"
+        },
+        "body": {
+          "es": "Letrán es la cabeza de las iglesias de Roma y del mundo. Ora por tu obispo.",
+          "en": "The Lateran is the head of the churches of Rome and of the world. Pray for your bishop.",
+          "pt": "O Latrão é a cabeça das igrejas de Roma e do mundo. Reza pelo teu bispo."
+        },
+        "action": "CATECHISM"
+      }
+    },
+    "andrew_apostle": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san Andrés",
+          "en": "Eve of Saint Andrew",
+          "pt": "Véspera de Santo André"
+        },
+        "body": {
+          "es": "Mañana celebramos a san Andrés, que llevó a Pedro a Jesús.",
+          "en": "Tomorrow we celebrate Saint Andrew, who brought Peter to Jesus.",
+          "pt": "Amanhã celebramos Santo André, que levou Pedro a Jesus."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Andrés, apóstol",
+          "en": "Saint Andrew, apostle",
+          "pt": "Santo André, apóstolo"
+        },
+        "body": {
+          "es": "Andrés presentó a su hermano Pedro a Jesús. Presenta tú también a otros a Cristo.",
+          "en": "Andrew presented his brother Peter to Jesus. Present others to Christ too.",
+          "pt": "André apresentou o seu irmão Pedro a Jesus. Apresenta tu também outros a Cristo."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "immaculate_conception_of_the_blessed_virgin_mary": {
+      "eve": {
+        "title": {
+          "es": "Víspera de la Inmaculada",
+          "en": "Eve of the Immaculate Conception",
+          "pt": "Véspera da Imaculada Conceição"
+        },
+        "body": {
+          "es": "Mañana celebramos a María, preservada del pecado desde el primer instante.",
+          "en": "Tomorrow we celebrate Mary, preserved from sin from the first instant.",
+          "pt": "Amanhã celebramos Maria, preservada do pecado desde o primeiro instante."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Inmaculada Concepción de María",
+          "en": "Immaculate Conception of Mary",
+          "pt": "Imaculada Conceição de Maria"
+        },
+        "body": {
+          "es": "María es llena de gracia. Reza el Rosario o un Ave María en su fiesta.",
+          "en": "Mary is full of grace. Pray the Rosary or a Hail Mary on her feast.",
+          "pt": "Maria é cheia de graça. Reza o Terço ou uma Ave-Maria na sua festa."
+        },
+        "action": "ROSARY"
+      }
+    },
+    "stephen_the_first_martyr": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san Esteban",
+          "en": "Eve of Saint Stephen",
+          "pt": "Véspera de Santo Estêvão"
+        },
+        "body": {
+          "es": "Mañana celebramos a san Esteban, el primer mártir.",
+          "en": "Tomorrow we celebrate Saint Stephen, the first martyr.",
+          "pt": "Amanhã celebramos Santo Estêvão, o primeiro mártir."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Esteban, protomártir",
+          "en": "Saint Stephen, first martyr",
+          "pt": "Santo Estêvão, protomártir"
+        },
+        "body": {
+          "es": "Esteban perdona a quienes lo apedrean. Pide fuerza para perdonar.",
+          "en": "Stephen forgives those who stone him. Ask for strength to forgive.",
+          "pt": "Estêvão perdoa aos que o apedrejam. Pede força para perdoar."
+        },
+        "action": "SAINTS"
+      }
+    },
+    "john_apostle": {
+      "eve": {
+        "title": {
+          "es": "Víspera de san Juan evangelista",
+          "en": "Eve of Saint John the Evangelist",
+          "pt": "Véspera de São João Evangelista"
+        },
+        "body": {
+          "es": "Mañana celebramos a san Juan, el discípulo amado.",
+          "en": "Tomorrow we celebrate Saint John, the beloved disciple.",
+          "pt": "Amanhã celebramos São João, o discípulo amado."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "San Juan, apóstol y evangelista",
+          "en": "Saint John, apostle and evangelist",
+          "pt": "São João, apóstolo e evangelista"
+        },
+        "body": {
+          "es": "Juan estuvo al pie de la cruz y nos entregó su evangelio. Lee un poco hoy.",
+          "en": "John stood at the foot of the cross and gave us his Gospel. Read a little today.",
+          "pt": "João esteve aos pés da cruz e entregou-nos o seu evangelho. Lê um pouco hoje."
+        },
+        "action": "BIBLE"
+      }
+    },
+    "holy_innocents_martyrs": {
+      "eve": {
+        "title": {
+          "es": "Víspera de los Santos Inocentes",
+          "en": "Eve of the Holy Innocents",
+          "pt": "Véspera dos Santos Inocentes"
+        },
+        "body": {
+          "es": "Mañana recordamos a los niños inocentes de Belén.",
+          "en": "Tomorrow we remember the innocent children of Bethlehem.",
+          "pt": "Amanhã recordamos as crianças inocentes de Belém."
+        }
+      },
+      "day": {
+        "title": {
+          "es": "Los Santos Inocentes",
+          "en": "The Holy Innocents",
+          "pt": "Os Santos Inocentes"
+        },
+        "body": {
+          "es": "Los niños de Belén dieron la vida por el Niño. Reza por los niños que sufren.",
+          "en": "The children of Bethlehem gave their lives for the Child. Pray for children who suffer.",
+          "pt": "As crianças de Belém deram a vida pelo Menino. Reza pelas crianças que sofrem."
+        },
+        "action": "PRAYERS"
+      }
+    }
+  },
+  "reminders": {
+    "sunday_mass": {
+      "title": {
+        "es": "Misa del domingo",
+        "en": "Sunday Mass",
+        "pt": "Missa do domingo"
+      },
+      "body": {
+        "es": "Mañana es domingo. Prepara tu corazón y reserva un rato para la eucaristía.",
+        "en": "Tomorrow is Sunday. Prepare your heart and set aside a moment for the Eucharist.",
+        "pt": "Amanhã é domingo. Prepara o coração e reserva um momento para a eucaristia."
+      },
+      "action": "HOME"
+    },
+    "holy_day_of_obligation": {
+      "title": {
+        "es": "Víspera de precepto",
+        "en": "Eve of a holy day",
+        "pt": "Véspera de preceito"
+      },
+      "body": {
+        "es": "Mañana es día de precepto en tu diócesis. Prepara tu corazón para la eucaristía.",
+        "en": "Tomorrow is a day of obligation in your diocese. Prepare your heart for the Eucharist.",
+        "pt": "Amanhã é dia de preceito na tua diocese. Prepara o coração para a eucaristia."
+      },
+      "action": "HOME"
+    },
+    "novena_day": {
+      "title": {
+        "es": "Novena: día {{day}}",
+        "en": "Novena: day {{day}}",
+        "pt": "Novena: dia {{day}}"
+      },
+      "body": {
+        "es": "Hoy es el día {{day}} de la novena de {{novena}}. Reza hoy con confianza.",
+        "en": "Today is day {{day}} of the novena of {{novena}}. Pray today with trust.",
+        "pt": "Hoje é o dia {{day}} da novena de {{novena}}. Reza hoje com confiança."
+      },
+      "action": "ROSARY"
+    },
+    "plan_day": {
+      "title": {
+        "es": "Plan: {{plan}}, día {{day}}",
+        "en": "Plan: {{plan}}, day {{day}}",
+        "pt": "Plano: {{plan}}, dia {{day}}"
+      },
+      "body": {
+        "es": "Hoy toca el día {{day}} del plan {{plan}}. Lee la propuesta de hoy.",
+        "en": "Today is day {{day}} of the {{plan}} plan. Read today's proposal.",
+        "pt": "Hoje é o dia {{day}} do plano {{plan}}. Lê a proposta de hoje."
+      },
+      "action": "PLANS"
+    },
+    "rosary_evening": {
+      "title": {
+        "es": "Rosario de la tarde",
+        "en": "Evening Rosary",
+        "pt": "Terço da tarde"
+      },
+      "body": {
+        "es": "Al final del día, reza un misterio del Rosario y encomienda el día a Dios.",
+        "en": "At the end of the day, pray one mystery of the Rosary and entrust the day to God.",
+        "pt": "No fim do dia, reza um mistério do Terço e confia o dia a Deus."
+      },
+      "action": "ROSARY"
+    },
+    "examen_night": {
+      "title": {
+        "es": "Examen de la noche",
+        "en": "Night examination",
+        "pt": "Exame da noite"
+      },
+      "body": {
+        "es": "Antes de dormir, haz un breve examen: gracias, perdón y propósito.",
+        "en": "Before sleeping, make a brief examination: thanks, forgiveness and purpose.",
+        "pt": "Antes de dormir, faz um breve exame: graças, perdão e propósito."
+      },
+      "action": "CONFESSION"
+    },
+    "confession_gentle": {
+      "title": {
+        "es": "Un gesto de vuelta",
+        "en": "A gesture of return",
+        "pt": "Um gesto de volta"
+      },
+      "body": {
+        "es": "Si lo deseas, la confesión es una puerta abierta. Aquí tienes una guía sencilla.",
+        "en": "If you wish, confession is an open door. Here is a simple guide.",
+        "pt": "Se desejas, a confissão é uma porta aberta. Aqui tens uma guia simples."
+      },
+      "action": "CONFESSION"
+    }
+  }
+}
