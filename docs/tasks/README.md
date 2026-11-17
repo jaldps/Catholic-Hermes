@@ -67,4 +67,5 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | T-031 | Codex | EN COLA (tras T-030) | M12.3 · «Mi camino»: unir Hábitos y Vida espiritual |
 | T-032 | Codex | EN COLA (tras T-031) | M12.4 · Widgets y avisos litúrgicos |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
-| [T-034](T-034.md) | Hermes | ABIERTO | Imágenes de las 215 fichas de santos (rama `media/saint-images` del fork) |
+| [T-035](T-035.md) | Hermes | ABIERTO | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
+| [T-034](T-034.md) | Hermes | EN COLA (tras T-035; prioridad baja) | Imágenes de las 215 fichas de santos (rama `media/saint-images` del fork) |
