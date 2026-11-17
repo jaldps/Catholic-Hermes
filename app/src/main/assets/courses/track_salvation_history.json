@@ -1,0 +1,917 @@
+{
+  "id": "track_salvation_history",
+  "level": "FOUNDATION",
+  "estimatedMinutes": 100,
+  "iconName": "AutoStories",
+  "title": {
+    "es": "Historia de la salvación",
+    "en": "Salvation history",
+    "pt": "História da salvação"
+  },
+  "description": {
+    "es": "Un recorrido para principiantes por la creación, las promesas, la alianza y su plenitud en Cristo. Cinco lecciones para reconocer el hilo que une ambos Testamentos, leer cada pasaje en su contexto y responder al Dios que toma la iniciativa.",
+    "en": "A beginner’s journey through creation, promises, covenant and their fullness in Christ. Five lessons explore the thread connecting both Testaments, help you read each passage in context and invite a response to God who takes the initiative.",
+    "pt": "Um percurso para iniciantes pela criação, pelas promessas, pela aliança e sua plenitude em Cristo. Cinco lições para reconhecer o fio que une os dois Testamentos, ler cada passagem em seu contexto e responder a Deus que toma a iniciativa."
+  },
+  "objectives": [
+    {
+      "es": "Reconocer creación, promesa, alianza y cumplimiento en sus pasajes bíblicos.",
+      "en": "Recognize creation, promise, covenant and fulfilment in their biblical passages.",
+      "pt": "Reconhecer criação, promessa, aliança e cumprimento nas passagens bíblicas."
+    },
+    {
+      "es": "Explicar la unidad de los Testamentos respetando a Israel y la Antigua Alianza.",
+      "en": "Explain the unity of the Testaments while respecting Israel and the Old Covenant.",
+      "pt": "Explicar a unidade dos Testamentos respeitando Israel e a Antiga Aliança."
+    },
+    {
+      "es": "Relacionar una etapa de esta historia con una respuesta concreta de fe y cuidado.",
+      "en": "Connect a stage of this history with a practical response of faith and care.",
+      "pt": "Relacionar uma etapa dessa história com uma resposta concreta de fé e cuidado."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "salvation_1_creation_fall",
+      "lessonNumber": 1,
+      "title": {
+        "es": "Creación y caída: don y esperanza",
+        "en": "Creation and fall: gift and hope",
+        "pt": "Criação e queda: dom e esperança"
+      },
+      "scriptureReferences": [
+        "gen 1:1-2:3",
+        "gen 3:1-24"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Identificar la bondad de la creación y la dignidad de la persona.",
+          "en": "Identify creation’s goodness and the dignity of the human person.",
+          "pt": "Identificar a bondade da criação e a dignidade da pessoa."
+        },
+        {
+          "es": "Distinguir pecado original, faltas personales y promesa de salvación.",
+          "en": "Distinguish original sin, personal wrongdoing and the promise of salvation.",
+          "pt": "Distinguir pecado original, faltas pessoais e promessa de salvação."
+        }
+      ],
+      "summary": {
+        "es": "La historia comienza con un don bueno, no con el pecado. La ruptura de la confianza hiere a la humanidad, pero Dios no abandona a sus criaturas y abre una esperanza de salvación.",
+        "en": "The story begins with a good gift, before sin. Broken trust wounds humanity, but God does not abandon his creatures and opens a hope of salvation.",
+        "pt": "A história começa com um dom bom, antes do pecado. A ruptura da confiança fere a humanidade, mas Deus não abandona suas criaturas e abre uma esperança de salvação."
+      },
+      "historicalContext": {
+        "es": "Los primeros capítulos del Génesis abren la historia bíblica con relatos sobre Dios, el mundo y la condición humana. La primera lectura organiza la creación en días y culmina en el descanso; la segunda presenta tentación, desobediencia y consecuencias. Entre ellas, el capítulo segundo desarrolla la vida del ser humano en el jardín. Son textos con imágenes y una intención religiosa, no una cronología científica del universo. El Catecismo invita a atender a ese lenguaje sin vaciar su enseñanza sobre la creación real, la libertad humana y la realidad del pecado original.",
+        "en": "Genesis opens biblical history with narratives about God, the world and the human condition. The first reading arranges creation in days and culminates in rest; the second presents temptation, disobedience and consequences. Between them, chapter two develops human life in the garden. These texts use imagery and have a religious purpose, rather than offering a scientific chronology of the universe. The Catechism invites attention to that language without emptying its teaching about real creation, human freedom and the reality of original sin or treating the narratives as meaningless decoration.",
+        "pt": "Os primeiros capítulos do Gênesis abrem a história bíblica com relatos sobre Deus, o mundo e a condição humana. A primeira leitura organiza a criação em dias e culmina no descanso; a segunda apresenta tentação, desobediência e consequências. Entre elas, o segundo capítulo desenvolve a vida humana no jardim. São textos com imagens e uma intenção religiosa, não uma cronologia científica do universo. O Catecismo convida a considerar essa linguagem sem esvaziar seu ensinamento sobre a criação real, a liberdade humana e a realidade do pecado original."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "La vida se recibe como un bien",
+            "en": "Life is received as a good gift",
+            "pt": "A vida é recebida como um bem"
+          },
+          "body": {
+            "es": "La repetición de la bondad de lo creado impide comenzar la fe despreciando la materia o el cuerpo. Dios crea libremente, sin necesitar un mundo que complete alguna carencia suya, y sostiene lo que ha creado. La persona humana, varón y mujer, posee una dignidad singular como imagen de Dios: es alguien llamado a conocer, amar y entrar en comunión. El descanso del séptimo día orienta la creación hacia la relación con su Creador. Leer estos signos puede suscitar gratitud y cuidado, sin convertir la Biblia en una explicación rival de las ciencias naturales.",
+            "en": "The repeated goodness of creation prevents faith from beginning with contempt for matter or the body. God creates freely, without needing a world to complete something missing in himself, and sustains what he has made. Human persons, male and female, have a particular dignity as God’s image: each is someone called to know, love and enter communion. Rest on the seventh day directs creation towards relationship with its Creator. Reading these signs can encourage gratitude and care without turning the Bible into a competing account of the natural sciences.",
+            "pt": "A repetição da bondade do que foi criado impede começar a fé desprezando a matéria ou o corpo. Deus cria livremente, sem precisar de um mundo que complete alguma carência sua, e sustenta o que criou. A pessoa humana, homem e mulher, possui uma dignidade singular como imagem de Deus: é alguém chamado a conhecer, amar e entrar em comunhão. O descanso do sétimo dia orienta a criação para a relação com seu Criador. Ler esses sinais pode suscitar gratidão e cuidado, sem transformar a Bíblia numa explicação rival das ciências naturais."
+          }
+        },
+        {
+          "title": {
+            "es": "La confianza herida y la libertad",
+            "en": "Wounded trust and human freedom",
+            "pt": "A confiança ferida e a liberdade"
+          },
+          "body": {
+            "es": "En Génesis 3, la tentación presenta a Dios como rival y su límite como privación. La desobediencia expresa una libertad que deja de confiar; después aparecen miedo, acusaciones y ruptura. El Catecismo explica que el lenguaje de imágenes afirma un pecado primordial real, no solo un mal ejemplo. Sus consecuencias afectan a la humanidad: nacemos privados de la santidad original, con una naturaleza herida. Este estado no es una falta personal cometida por un recién nacido, ni destruye la dignidad de la persona. La inclinación al mal tampoco elimina la libertad o la necesidad de ayuda.",
+            "en": "In Genesis 3, temptation portrays God as a rival and his limit as deprivation. Disobedience expresses freedom ceasing to trust; fear, accusations and division follow. The Catechism explains that this imagery affirms a real primordial sin, rather than merely a bad example. Its consequences affect humanity: we are born deprived of original holiness, with a wounded nature. This condition is not a personal fault committed by a newborn, nor does it destroy human dignity. Inclination towards evil does not abolish freedom or the need for help in learning to choose the good.",
+            "pt": "Em Gênesis 3, a tentação apresenta Deus como rival e seu limite como privação. A desobediência expressa uma liberdade que deixa de confiar; depois surgem medo, acusações e ruptura. O Catecismo explica que a linguagem de imagens afirma um pecado primordial real, não apenas um mau exemplo. Suas consequências atingem a humanidade: nascemos privados da santidade original, com uma natureza ferida. Esse estado não é uma falta pessoal cometida por um recém-nascido, nem destrói a dignidade da pessoa. A inclinação ao mal também não elimina a liberdade ou a necessidade de ajuda."
+          }
+        },
+        {
+          "title": {
+            "es": "Dios no abandona la historia",
+            "en": "God does not abandon history",
+            "pt": "Deus não abandona a história"
+          },
+          "body": {
+            "es": "Dios busca a quienes se esconden y el relato conserva un anuncio de victoria sobre el mal. La tradición cristiana reconoce en Génesis 3,15 una primera promesa que se comprende plenamente a la luz de Cristo; el Catecismo la llama protoevangelio, primer anuncio de salvación. Eso no convierte cada detalle del jardín en un código secreto ni vuelve bueno el pecado. Significa que el mal no tiene la última palabra. La historia de la salvación continuará con personas y alianzas concretas. Podemos reconocer daños, pedir ayuda y reparar sin reducir nuestra identidad a una caída.",
+            "en": "God seeks those who hide, and the narrative preserves an announcement of victory over evil. Christian tradition recognizes Genesis 3:15 as an initial promise understood fully in Christ’s light; the Catechism calls it the protoevangelium, the first announcement of salvation. This does not turn every detail of the garden into a secret code or make sin good. It means evil does not have the final word. Salvation history will continue through particular people and covenants. We can acknowledge harm, seek help and make amends without reducing our identity to a fall.",
+            "pt": "Deus procura aqueles que se escondem, e o relato conserva um anúncio de vitória sobre o mal. A tradição cristã reconhece em Gênesis 3,15 uma primeira promessa compreendida plenamente à luz de Cristo; o Catecismo a chama de protoevangelho, primeiro anúncio da salvação. Isso não transforma cada detalhe do jardim num código secreto nem torna bom o pecado. Significa que o mal não tem a última palavra. A história da salvação continuará com pessoas e alianças concretas. Podemos reconhecer danos, pedir ajuda e reparar sem reduzir nossa identidade a uma queda."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "En Gn 1,1–2,3 observa las repeticiones sobre la bondad y el descanso. En Gn 3,1–24 distingue la voz que tienta, las decisiones humanas y la respuesta de Dios. No confundas las palabras de la serpiente con la enseñanza del narrador.",
+        "en": "In Genesis 1:1–2:3, notice the repetitions about goodness and rest. In Genesis 3:1–24, distinguish the tempting voice, human decisions and God’s response. Do not confuse the serpent’s words with the narrator’s teaching.",
+        "pt": "Em Gn 1,1–2,3 observe as repetições sobre a bondade e o descanso. Em Gn 3,1–24 distinga a voz que tenta, as decisões humanas e a resposta de Deus. Não confunda as palavras da serpente com o ensinamento do narrador."
+      },
+      "meditatio": {
+        "es": "¿Qué bien de la creación necesitas aprender a recibir con gratitud? ¿En qué situación la desconfianza te lleva a esconder una dificultad en lugar de buscar ayuda o reparar un daño?",
+        "en": "What good within creation do you need to learn to receive gratefully? In what situation does distrust lead you to hide a difficulty instead of seeking help or repairing harm?",
+        "pt": "Que bem da criação você precisa aprender a receber com gratidão? Em que situação a desconfiança o leva a esconder uma dificuldade em vez de buscar ajuda ou reparar um dano?"
+      },
+      "oratio": {
+        "es": "Agradece a Dios, con tus palabras, un bien concreto de tu vida. Si lo deseas, presenta también una ruptura que necesite sanación y pide ayuda para responder a su búsqueda con sinceridad.",
+        "en": "Thank God in your own words for one particular good in your life. If you wish, also bring a broken relationship needing healing and ask for help to respond honestly to his search for you.",
+        "pt": "Agradeça a Deus, com suas palavras, um bem concreto de sua vida. Se desejar, apresente também uma ruptura que precise de cura e peça ajuda para responder à sua busca com sinceridade."
+      },
+      "contemplatio": {
+        "es": "Guarda entre sesenta y noventa segundos de silencio, recordando la bondad de la creación ante Dios. No prepares explicaciones sobre tus fallas; permanece disponible y vuelve suavemente a esa bondad cuando aparezca una distracción.",
+        "en": "Keep silence for sixty to ninety seconds, recalling creation’s goodness before God. Do not prepare explanations about your failures; remain available and return gently to that goodness whenever distraction appears.",
+        "pt": "Guarde entre sessenta e noventa segundos de silêncio, recordando a bondade da criação diante de Deus. Não prepare explicações sobre suas falhas; permaneça disponível e volte suavemente a essa bondade quando surgir uma distração."
+      },
+      "actionStep": {
+        "es": "Realiza un gesto pequeño de cuidado de una persona o de tu entorno. Si reconociste un daño propio, elige una reparación posible y prudente; evita atribuir a otra persona la responsabilidad de tu decisión.",
+        "en": "Carry out a small act of care for a person or your surroundings. If you recognized harm you caused, choose a realistic and prudent way to repair it; avoid shifting responsibility for your decision onto someone else.",
+        "pt": "Realize um pequeno gesto de cuidado por uma pessoa ou pelo ambiente. Se reconheceu um dano que causou, escolha uma reparação possível e prudente; evite atribuir a outra pessoa a responsabilidade por sua decisão."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿La fe en la creación exige despreciar el cuerpo o la investigación científica?",
+            "en": "Does belief in creation require contempt for the body or scientific research?",
+            "pt": "A fé na criação exige desprezar o corpo ou a pesquisa científica?"
+          },
+          "answer": {
+            "es": "No. La creación material es buena y la persona posee dignidad. El Catecismo reconoce el valor de investigar los orígenes y distingue esas preguntas del sentido último de existir como criaturas de un Dios bueno.",
+            "en": "No. Material creation is good, and human persons have dignity. The Catechism recognizes the value of researching origins and distinguishes those questions from the ultimate meaning of existing as creatures of a good God.",
+            "pt": "Não. A criação material é boa e a pessoa possui dignidade. O Catecismo reconhece o valor de pesquisar as origens e distingue essas perguntas do sentido último de existir como criaturas de um Deus bom."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿El pecado original es una falta personal del recién nacido?",
+            "en": "Is original sin a newborn child’s personal wrongdoing?",
+            "pt": "O pecado original é uma falta pessoal do recém-nascido?"
+          },
+          "answer": {
+            "es": "No. Es un estado recibido, la privación de la santidad original, no un acto cometido por el niño. La naturaleza queda herida, no totalmente destruida; el Bautismo comunica la gracia de Cristo y llama a una vida nueva.",
+            "en": "No. It is a received condition, deprivation of original holiness, rather than an act committed by the child. Human nature is wounded, not totally destroyed; Baptism communicates Christ’s grace and calls us into new life.",
+            "pt": "Não. É um estado recebido, a privação da santidade original, não um ato cometido pela criança. A natureza fica ferida, não totalmente destruída; o Batismo comunica a graça de Cristo e chama a uma vida nova."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo responder a quien dice que una caída lo vuelve incapaz de cambiar?",
+            "en": "How would you answer someone who says a fall makes change impossible?",
+            "pt": "Como responder a quem diz que uma queda o torna incapaz de mudar?"
+          },
+          "answer": {
+            "es": "La herida del pecado es real, pero no elimina la libertad ni la ayuda de Dios. El relato abre una promesa de salvación. Reconocer la responsabilidad, buscar apoyo y reparar son pasos posibles; una caída no define la dignidad de la persona.",
+            "en": "The wound of sin is real, but does not eliminate freedom or God’s help. The narrative opens a promise of salvation. Accepting responsibility, seeking support and making amends remain possible; a fall does not define a person’s dignity.",
+            "pt": "A ferida do pecado é real, mas não elimina a liberdade nem a ajuda de Deus. O relato abre uma promessa de salvação. Reconhecer a responsabilidade, buscar apoio e reparar são passos possíveis; uma queda não define a dignidade da pessoa."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_279_301",
+          "title": {
+            "es": "Catecismo §§279–301",
+            "en": "Catechism §§279–301",
+            "pt": "Catecismo, parágrafos 279–301"
+          },
+          "catechismStart": 279,
+          "catechismEnd": 301,
+          "url": null
+        },
+        {
+          "id": "ccc_337_349",
+          "title": {
+            "es": "Catecismo §§337–349",
+            "en": "Catechism §§337–349",
+            "pt": "Catecismo, parágrafos 337–349"
+          },
+          "catechismStart": 337,
+          "catechismEnd": 349,
+          "url": null
+        },
+        {
+          "id": "ccc_355_357",
+          "title": {
+            "es": "Catecismo §§355–357",
+            "en": "Catechism §§355–357",
+            "pt": "Catecismo, parágrafos 355–357"
+          },
+          "catechismStart": 355,
+          "catechismEnd": 357,
+          "url": null
+        },
+        {
+          "id": "ccc_385_412",
+          "title": {
+            "es": "Catecismo §§385–412",
+            "en": "Catechism §§385–412",
+            "pt": "Catecismo, parágrafos 385–412"
+          },
+          "catechismStart": 385,
+          "catechismEnd": 412,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "salvation_2_abraham_promise",
+      "lessonNumber": 2,
+      "title": {
+        "es": "Abrahán: la promesa abre un camino",
+        "en": "Abraham: the promise opens a journey",
+        "pt": "Abraão: a promessa abre um caminho"
+      },
+      "scriptureReferences": [
+        "gen 12:1-9",
+        "gen 15:1-21"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Identificar la iniciativa de Dios y el alcance de la bendición a Abrahán.",
+          "en": "Identify God’s initiative and the scope of Abraham’s blessing.",
+          "pt": "Identificar a iniciativa de Deus e o alcance da bênção a Abraão."
+        },
+        {
+          "es": "Explicar por qué confiar permite preguntar y caminar sin controlar el futuro.",
+          "en": "Explain why trust allows questions and a journey without control of the future.",
+          "pt": "Explicar por que confiar permite perguntar e caminhar sem controlar o futuro."
+        }
+      ],
+      "summary": {
+        "es": "Dios llama a Abrahán para que su bendición alcance a las naciones. La fe responde a una promesa fiable sin convertirse en posesión del futuro.",
+        "en": "God calls Abraham so that his blessing may reach the nations. Faith responds to a trustworthy promise without taking possession of the future.",
+        "pt": "Deus chama Abraão para que sua bênção alcance as nações. A fé responde a uma promessa confiável sem se tornar posse do futuro."
+      },
+      "historicalContext": {
+        "es": "Después de los relatos sobre los orígenes y la dispersión de la humanidad, Génesis sigue a una familia concreta. En estas escenas el patriarca todavía se llama Abram; el nombre Abrahán aparece más adelante. El capítulo doce presenta salida, desplazamientos, promesa y altares. El quince recoge su inquietud por la falta de descendencia, su confianza y una alianza representada mediante signos. Estamos leyendo la historia bíblica de una promesa, no una biografía moderna con fechas reconstruidas. Conserva la diferencia entre lo que Dios anuncia, lo que Abram pregunta y lo que el narrador afirma sobre su fe.",
+        "en": "After the accounts of origins and humanity’s dispersal, Genesis follows a particular family. In these scenes the patriarch is still called Abram; the name Abraham comes later. Chapter twelve presents departure, journeys, promise and altars. Chapter fifteen records his concern about having no descendant, his trust and a covenant expressed through signs. We are reading the biblical story of a promise, rather than a modern biography with reconstructed dates. Keep distinct what God announces, what Abram asks and what the narrator says about his faith as the story unfolds.",
+        "pt": "Depois dos relatos sobre as origens e a dispersão da humanidade, Gênesis acompanha uma família concreta. Nessas cenas o patriarca ainda se chama Abrão; o nome Abraão aparece mais adiante. O capítulo doze apresenta saída, deslocamentos, promessa e altares. O quinze registra sua inquietação pela falta de descendência, sua confiança e uma aliança representada por sinais. Lemos a história bíblica de uma promessa, não uma biografia moderna com datas reconstruídas. Preserve a diferença entre o que Deus anuncia, o que Abrão pergunta e o que o narrador afirma sobre sua fé."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Elegido para ser bendición",
+            "en": "Chosen to become a blessing",
+            "pt": "Escolhido para ser bênção"
+          },
+          "body": {
+            "es": "Dios llama a una persona dentro de una familia y una tierra concretas, pero el horizonte de la promesa alcanza a las naciones. La elección no permite tratar a otros pueblos como personas de menor dignidad. El Catecismo presenta a Abrahán como comienzo de una reunión de la humanidad dispersa y al pueblo nacido de él como depositario de la promesa. La particularidad de Israel pertenece a la forma histórica del don, no es un obstáculo que debamos borrar. Para leer cristianamente este camino hay que recibir esa raíz con gratitud y respeto.",
+            "en": "God calls a person within a particular family and land, yet the promise’s horizon reaches the nations. Election does not permit treating other peoples as less worthy. The Catechism presents Abraham as the beginning of a gathering of scattered humanity, and the people born from him as entrusted with the promise. Israel’s particularity belongs to the historical form of this gift; it is not an obstacle we should erase. Reading this journey as Christians requires receiving that root with gratitude and respect, rather than treating the earlier story as disposable background.",
+            "pt": "Deus chama uma pessoa dentro de uma família e uma terra concretas, mas o horizonte da promessa alcança as nações. A eleição não permite tratar outros povos como pessoas de menor dignidade. O Catecismo apresenta Abraão como início de uma reunião da humanidade dispersa e o povo nascido dele como depositário da promessa. A particularidade de Israel pertence à forma histórica do dom, não é um obstáculo que devemos apagar. Para ler esse caminho cristãmente é preciso receber essa raiz com gratidão e respeito, sem descartar a história anterior."
+          }
+        },
+        {
+          "title": {
+            "es": "Creer sin tener el futuro en las manos",
+            "en": "Believing without possessing the future",
+            "pt": "Crer sem ter o futuro nas mãos"
+          },
+          "body": {
+            "es": "Abram sale, pero no recibe un mapa de cada acontecimiento. En el capítulo quince expresa con claridad que sigue sin descendencia y pregunta por la promesa. El relato no opone automáticamente esas preguntas a la fe: reconoce su confianza en Dios. El Catecismo llama obediencia de la fe a la respuesta libre a una palabra cuya verdad garantiza Dios. Eso no exige creer a cualquier persona que afirme hablar en su nombre. La pregunta decisiva es en quién se confía y por qué; escuchar, estudiar y discernir pueden formar parte de una respuesta creyente.",
+            "en": "Abram sets out without receiving a map of every event. In chapter fifteen he plainly says that he remains without a descendant and asks about the promise. The narrative does not automatically oppose such questions to faith: it recognizes his trust in God. The Catechism calls the free response to a word guaranteed by God the obedience of faith. This does not require believing anyone who claims to speak in his name. The decisive questions concern whom we trust and why; listening, study and discernment can belong within a believing response.",
+            "pt": "Abrão parte, mas não recebe um mapa de cada acontecimento. No capítulo quinze expressa claramente que continua sem descendência e pergunta pela promessa. O relato não opõe automaticamente essas perguntas à fé: reconhece sua confiança em Deus. O Catecismo chama de obediência da fé a resposta livre a uma palavra cuja verdade é garantida por Deus. Isso não exige acreditar em qualquer pessoa que afirme falar em seu nome. A pergunta decisiva é em quem se confia e por quê; escutar, estudar e discernir podem fazer parte de uma resposta de fé."
+          }
+        },
+        {
+          "title": {
+            "es": "Una alianza que no podemos convertir en contrato privado",
+            "en": "A covenant we cannot turn into a private contract",
+            "pt": "Uma aliança que não podemos tornar contrato privado"
+          },
+          "body": {
+            "es": "Génesis quince expresa la fidelidad de Dios mediante una alianza y anuncia una historia que continuará más allá de la vida del patriarca. La promesa no termina en la satisfacción inmediata de Abram. El Catecismo lo reconoce como padre de los creyentes y honra a los patriarcas como santos. Leer su camino alimenta la confianza, pero no convierte su promesa particular de descendencia y tierra en un derecho personal a obtener hijos o propiedades. Tampoco autoriza reproducir sus signos rituales. Nuestra respuesta puede aprender su orientación: recibir el don y caminar con responsabilidad, sin exigir plazos.",
+            "en": "Genesis fifteen expresses God’s faithfulness through a covenant and announces a history extending beyond the patriarch’s lifetime. The promise is not exhausted by Abram’s immediate satisfaction. The Catechism recognizes him as father of believers and honours the patriarchs as saints. Reading his journey nourishes trust, but does not turn his particular promise of descendants and land into a personal entitlement to children or property. Nor does it authorize reproducing its ritual signs. We can learn the direction of his response: receiving the gift and walking responsibly without demanding a deadline for results.",
+            "pt": "Gênesis quinze expressa a fidelidade de Deus por meio de uma aliança e anuncia uma história que continuará além da vida do patriarca. A promessa não termina na satisfação imediata de Abrão. O Catecismo o reconhece como pai dos crentes e honra os patriarcas como santos. Ler seu caminho alimenta a confiança, mas não transforma sua promessa particular de descendência e terra num direito pessoal de obter filhos ou propriedades. Também não autoriza reproduzir seus sinais rituais. Nossa resposta pode aprender sua orientação: receber o dom e caminhar com responsabilidade, sem exigir prazos."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Compara Gn 12,1–9 y Gn 15,1–21. Señala qué se promete, qué acciones realiza Abram y qué preguntas formula. Observa cuánto del futuro anunciado todavía no se cumple dentro de estas dos escenas.",
+        "en": "Compare Genesis 12:1–9 and 15:1–21. Identify what is promised, Abram’s actions and his questions. Notice how much of the announced future remains unfulfilled within these two scenes.",
+        "pt": "Compare Gn 12,1–9 e Gn 15,1–21. Identifique o que se promete, as ações de Abrão e suas perguntas. Observe quanto do futuro anunciado ainda não se cumpre nessas duas cenas."
+      },
+      "meditatio": {
+        "es": "¿En qué asunto confundes confiar con conocer de antemano el resultado? ¿Cómo podrías expresar una pregunta o una espera ante Dios sin convertirla en exigencia de un plazo concreto?",
+        "en": "In what matter do you confuse trusting with knowing the outcome in advance? How could you express a question or a period of waiting before God without demanding a particular deadline?",
+        "pt": "Em que assunto você confunde confiar com conhecer antecipadamente o resultado? Como poderia expressar uma pergunta ou uma espera diante de Deus sem transformá-la na exigência de um prazo concreto?"
+      },
+      "oratio": {
+        "es": "Habla con Dios sobre una espera real, respetando lo que no puedes controlar. Puedes agradecer su fidelidad y pedir luz para el siguiente paso responsable; utiliza tus propias palabras sin atribuirte una promesa particular del patriarca.",
+        "en": "Speak with God about a real experience of waiting, respecting what you cannot control. You may thank him for his faithfulness and ask for light for the next responsible step; use your own words without claiming the patriarch’s particular promise.",
+        "pt": "Converse com Deus sobre uma espera real, respeitando o que não pode controlar. Você pode agradecer sua fidelidade e pedir luz para o próximo passo responsável; use suas palavras sem atribuir a si a promessa particular do patriarca."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio, recordando a Abram ante el cielo estrellado. No intentes adivinar una respuesta sobre tu futuro. Vuelve con calma a la presencia de Dios si surge una distracción.",
+        "en": "Remain silent for sixty to ninety seconds, recalling Abram beneath the starry sky. Do not try to predict an answer about your future. Return calmly to God’s presence whenever distraction arises.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio, recordando Abrão diante do céu estrelado. Não tente adivinhar uma resposta sobre seu futuro. Volte com calma à presença de Deus quando surgir uma distração."
+      },
+      "actionStep": {
+        "es": "Anota una decisión pendiente y distingue un paso que depende de ti de un resultado que no controlas. Realiza ese paso prudente o busca orientación, sin usar un versículo aislado como garantía de éxito.",
+        "en": "Write down a pending decision and distinguish a step within your responsibility from an outcome you cannot control. Take that prudent step or seek guidance, without using an isolated verse as a guarantee of success.",
+        "pt": "Anote uma decisão pendente e distinga um passo sob sua responsabilidade de um resultado que não controla. Realize esse passo prudente ou procure orientação, sem usar um versículo isolado como garantia de sucesso."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿La elección de Abrahán beneficia únicamente a su familia?",
+            "en": "Does Abraham’s election benefit only his family?",
+            "pt": "A eleição de Abraão beneficia apenas sua família?"
+          },
+          "answer": {
+            "es": "No. La llamada es concreta, pero la bendición se abre a las naciones. El Catecismo presenta a su pueblo como depositario de una promesa que sirve a la reunión de la humanidad, no como permiso para despreciar a otros.",
+            "en": "No. The call is particular, but its blessing opens towards the nations. The Catechism presents his people as entrusted with a promise serving humanity’s gathering, rather than permission to despise others or erase their dignity.",
+            "pt": "Não. O chamado é concreto, mas a bênção se abre às nações. O Catecismo apresenta seu povo como depositário de uma promessa a serviço da reunião da humanidade, não como autorização para desprezar outras pessoas."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Las preguntas de Abram demuestran necesariamente falta de fe?",
+            "en": "Do Abram’s questions necessarily demonstrate lack of faith?",
+            "pt": "As perguntas de Abrão demonstram necessariamente falta de fé?"
+          },
+          "answer": {
+            "es": "No. El relato recoge sus preguntas y afirma que confía en Dios. La obediencia de la fe es una respuesta libre a quien es fiable; no exige fingir que se conocen de antemano los caminos de la promesa.",
+            "en": "No. The narrative records his questions and affirms his trust in God. The obedience of faith is a free response to one who is trustworthy; it does not require pretending to know the promise’s path in advance.",
+            "pt": "Não. O relato registra suas perguntas e afirma sua confiança em Deus. A obediência da fé é uma resposta livre a quem é confiável; não exige fingir que se conhecem antecipadamente os caminhos da promessa."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo discernir una oferta que promete riqueza porque uno tiene la fe de Abrahán?",
+            "en": "How would you discern an offer promising wealth because you have Abraham’s faith?",
+            "pt": "Como discernir uma oferta que promete riqueza por você ter a fé de Abraão?"
+          },
+          "answer": {
+            "es": "La promesa particular del relato no garantiza el mismo resultado material a cada lector. Conviene comprobar qué dice el texto, rechazar manipulaciones y buscar consejo. Aprender la confianza de Abrahán no permite convertir a Dios en un contrato de beneficios.",
+            "en": "The narrative’s particular promise does not guarantee the same material outcome for every reader. Check what the text says, reject manipulation and seek advice. Learning Abraham’s trust does not turn relationship with God into a contract for benefits.",
+            "pt": "A promessa particular do relato não garante o mesmo resultado material a cada leitor. Convém verificar o que o texto diz, rejeitar manipulações e buscar conselho. Aprender a confiança de Abraão não permite transformar Deus num contrato de benefícios."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_59_61",
+          "title": {
+            "es": "Catecismo §§59–61",
+            "en": "Catechism §§59–61",
+            "pt": "Catecismo, parágrafos 59–61"
+          },
+          "catechismStart": 59,
+          "catechismEnd": 61,
+          "url": null
+        },
+        {
+          "id": "ccc_144_147",
+          "title": {
+            "es": "Catecismo §§144–147",
+            "en": "Catechism §§144–147",
+            "pt": "Catecismo, parágrafos 144–147"
+          },
+          "catechismStart": 144,
+          "catechismEnd": 147,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "salvation_3_exodus_covenant",
+      "lessonNumber": 3,
+      "title": {
+        "es": "Éxodo y alianza: una libertad que aprende a vivir",
+        "en": "Exodus and covenant: freedom learning how to live",
+        "pt": "Êxodo e aliança: uma liberdade que aprende a viver"
+      },
+      "scriptureReferences": [
+        "exo 3:1-15",
+        "exo 19:1-20:17"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar el orden entre liberación, alianza y mandamientos.",
+          "en": "Explain the order of liberation, covenant and commandments.",
+          "pt": "Explicar a ordem entre libertação, aliança e mandamentos."
+        },
+        {
+          "es": "Relacionar un mandamiento con la protección de una vida libre y fraterna.",
+          "en": "Connect a commandment with protecting a free and fraternal life.",
+          "pt": "Relacionar um mandamento com a proteção de uma vida livre e fraterna."
+        }
+      ],
+      "summary": {
+        "es": "Dios escucha la opresión de Israel y lo libera antes de darle la Ley. La alianza y los mandamientos enseñan a vivir como pueblo que ha recibido libertad y una vocación.",
+        "en": "God hears Israel’s oppression and frees the people before giving the Law. Covenant and commandments teach a people to live from the freedom and calling they have received.",
+        "pt": "Deus escuta a opressão de Israel e o liberta antes de lhe dar a Lei. A aliança e os mandamentos ensinam a viver como povo que recebeu liberdade e uma vocação."
+      },
+      "historicalContext": {
+        "es": "Éxodo continúa la historia de los descendientes de Abrahán en Egipto. La primera lectura presenta a Moisés ante la zarza y su envío para sacar al pueblo de la esclavitud. La segunda salta hasta el Sinaí: recuerda la liberación, propone la alianza y presenta las palabras del Decálogo. Entre ambas escenas se narra la salida de Egipto y el camino por el desierto. Observa esa secuencia antes de leer la Ley como una lista aislada. El curso sigue el orden del relato sin fijar fechas históricas o identificar un faraón que estos pasajes no nombran.",
+        "en": "Exodus continues the story of Abraham’s descendants in Egypt. The first reading presents Moses at the bush and his commissioning to bring the people out of slavery. The second moves forward to Sinai: it recalls liberation, proposes the covenant and presents the Decalogue. Between these scenes the book narrates departure from Egypt and the journey through the wilderness. Notice that sequence before reading the Law as an isolated list. The course follows the narrative’s order without assigning historical dates or identifying a Pharaoh whom these passages do not name.",
+        "pt": "Êxodo continua a história dos descendentes de Abraão no Egito. A primeira leitura apresenta Moisés diante da sarça e seu envio para tirar o povo da escravidão. A segunda avança até o Sinai: recorda a libertação, propõe a aliança e apresenta as palavras do Decálogo. Entre as cenas se narra a saída do Egito e o caminho pelo deserto. Observe essa sequência antes de ler a Lei como uma lista isolada. O curso segue a ordem do relato sem fixar datas históricas ou identificar um faraó que essas passagens não nomeiam."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "El Dios que escucha y envía",
+            "en": "The God who hears and sends",
+            "pt": "O Deus que escuta e envia"
+          },
+          "body": {
+            "es": "En la zarza, Dios se presenta en continuidad con los patriarcas y atiende al sufrimiento de sus descendientes. Su respuesta incluye el envío de Moisés: escuchar el dolor conduce a una acción liberadora, no a pedir resignación frente a la opresión. Moisés pregunta por su misión y por el nombre de quien lo envía. El relato une presencia divina y responsabilidad humana sin hacer del enviado el dueño del pueblo. Según el Catecismo, mediante esta liberación Dios constituye a Israel como su pueblo. La relación comienza por una iniciativa fiel a la promesa.",
+            "en": "At the bush, God identifies himself in continuity with the patriarchs and attends to their descendants’ suffering. His response includes sending Moses: hearing pain leads to liberating action rather than demanding resignation before oppression. Moses asks about his mission and the name of the one sending him. The narrative connects divine presence and human responsibility without making the messenger the people’s owner. According to the Catechism, God constitutes Israel as his people through this liberation. The relationship begins with an initiative faithful to the promise, before the commandments are delivered at Sinai.",
+            "pt": "Na sarça, Deus se apresenta em continuidade com os patriarcas e atende ao sofrimento de seus descendentes. Sua resposta inclui o envio de Moisés: escutar a dor conduz a uma ação libertadora, não a pedir resignação diante da opressão. Moisés pergunta por sua missão e pelo nome de quem o envia. O relato une presença divina e responsabilidade humana sem tornar o enviado dono do povo. Segundo o Catecismo, por meio dessa libertação Deus constitui Israel como seu povo. A relação começa por uma iniciativa fiel à promessa, antes dos mandamentos no Sinai."
+          }
+        },
+        {
+          "title": {
+            "es": "La alianza da forma a una pertenencia",
+            "en": "The covenant gives belonging a form",
+            "pt": "A aliança dá forma a uma pertença"
+          },
+          "body": {
+            "es": "En el Sinaí, el pueblo escucha primero lo que Dios ha hecho a su favor. La alianza establece una relación que compromete a la comunidad y a cada persona. Ser pueblo sacerdotal significa una vocación de pertenencia y servicio a Dios; no autoriza a considerar inferiores a otros pueblos. El Catecismo vincula alianza, revelación y esperanza del Salvador. Esta etapa conserva su valor dentro de la fe cristiana: el Antiguo Testamento no pierde su verdad cuando llega el Nuevo. Israel no es un ejemplo desechable de fracaso, sino el pueblo al que Dios habló primero.",
+            "en": "At Sinai, the people first hear what God has done for them. The covenant establishes a relationship involving both the community and each person. Being a priestly people expresses a calling to belong to God and serve him; it does not authorize treating other peoples as inferior. The Catechism connects covenant, revelation and hope for the Saviour. This stage retains its value within Christian faith: the Old Testament does not lose its truth when the New arrives. Israel is not a disposable example of failure, but the people to whom God first spoke.",
+            "pt": "No Sinai, o povo escuta primeiro o que Deus fez em seu favor. A aliança estabelece uma relação que compromete a comunidade e cada pessoa. Ser povo sacerdotal significa uma vocação de pertença e serviço a Deus; não autoriza considerar outros povos inferiores. O Catecismo relaciona aliança, revelação e esperança do Salvador. Essa etapa conserva seu valor na fé cristã: o Antigo Testamento não perde sua verdade quando chega o Novo. Israel não é um exemplo descartável de fracasso, mas o povo ao qual Deus falou primeiro."
+          }
+        },
+        {
+          "title": {
+            "es": "Mandamientos dentro de una historia de libertad",
+            "en": "Commandments within a history of freedom",
+            "pt": "Mandamentos numa história de liberdade"
+          },
+          "body": {
+            "es": "El comienzo del Decálogo recuerda quién ha liberado a Israel. Por eso los mandamientos no son el precio que el pueblo paga para conseguir que Dios lo saque de Egipto: vienen después del don y expresan sus consecuencias. Orientan el culto, el descanso y las relaciones, protegiendo vida, fidelidad, verdad y bienes del prójimo. El Catecismo los comprende dentro de la alianza como respuesta moral a una iniciativa amorosa. Vivirlos exige más que marcar prohibiciones cumplidas: invita a reconocer qué bien custodia cada palabra y cómo cuidar ese bien en circunstancias concretas.",
+            "en": "The Decalogue begins by recalling who liberated Israel. The commandments are therefore not the price the people pay to persuade God to bring them out of Egypt: they follow the gift and express its implications. They guide worship, rest and relationships, protecting life, faithfulness, truth and a neighbour’s goods. The Catechism understands them within the covenant as a moral response to a loving initiative. Living them requires more than checking off prohibitions: it invites us to recognize the good each word safeguards and how to care for that good in particular circumstances.",
+            "pt": "O início do Decálogo recorda quem libertou Israel. Por isso os mandamentos não são o preço que o povo paga para conseguir que Deus o tire do Egito: vêm depois do dom e expressam suas consequências. Orientam o culto, o descanso e as relações, protegendo vida, fidelidade, verdade e bens do próximo. O Catecismo os compreende dentro da aliança como resposta moral a uma iniciativa amorosa. Vivê-los exige mais do que marcar proibições cumpridas: convida a reconhecer o bem que cada palavra protege e como cuidar dele em circunstâncias concretas."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "En Ex 3,1–15 señala lo que Dios ve, escucha y decide hacer. En Ex 19,1–20,17 identifica el recuerdo de la liberación antes de los mandamientos. Elige uno y describe qué relación o bien humano protege.",
+        "en": "In Exodus 3:1–15, identify what God sees, hears and decides to do. In Exodus 19:1–20:17, locate the reminder of liberation before the commandments. Choose one commandment and describe the relationship or human good it protects.",
+        "pt": "Em Ex 3,1–15 identifique o que Deus vê, escuta e decide fazer. Em Ex 19,1–20,17 localize a lembrança da libertação antes dos mandamentos. Escolha um e descreva a relação ou o bem humano que protege."
+      },
+      "meditatio": {
+        "es": "¿Qué cambia al leer un mandamiento como respuesta a un bien recibido? ¿A qué persona podrías tratar con más respeto si reconocieras que la libertad incluye responsabilidad por los demás?",
+        "en": "What changes when you read a commandment as a response to a good received? Whom could you treat with greater respect if you recognized that freedom includes responsibility for others?",
+        "pt": "O que muda ao ler um mandamento como resposta a um bem recebido? Que pessoa você poderia tratar com mais respeito ao reconhecer que a liberdade inclui responsabilidade pelos outros?"
+      },
+      "oratio": {
+        "es": "Habla con Dios sobre una libertad que agradeces y una responsabilidad que necesitas asumir. Puedes pedir ayuda para cuidar la vida y la verdad en tus relaciones, usando palabras propias y sin convertir la oración en negociación.",
+        "en": "Speak with God about a freedom you appreciate and a responsibility you need to accept. You may ask for help to protect life and truth in your relationships, using your own words without turning prayer into bargaining.",
+        "pt": "Converse com Deus sobre uma liberdade que agradece e uma responsabilidade que precisa assumir. Você pode pedir ajuda para cuidar da vida e da verdade em suas relações, com palavras próprias e sem transformar a oração em negociação."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio ante el Dios que escucha la aflicción. Deja por un momento la lista de tareas y permite que esa presencia acompañe tu descanso; vuelve serenamente si te distraes.",
+        "en": "Remain silent for sixty to ninety seconds before the God who hears affliction. Set your task list aside for a moment and let that presence accompany your rest; return gently if you become distracted.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio diante do Deus que escuta a aflição. Deixe por um momento a lista de tarefas e permita que essa presença acompanhe seu descanso; volte serenamente se houver distração."
+      },
+      "actionStep": {
+        "es": "Escoge un bien protegido por el Decálogo y una acción pequeña para cuidarlo hoy: respetar el descanso ajeno, corregir una mentira o devolver algo prestado. Hazlo como respuesta agradecida, no para comprar el favor de Dios.",
+        "en": "Choose a good protected by the Decalogue and a small action to care for it today: respecting someone’s rest, correcting a lie or returning something borrowed. Act gratefully rather than trying to purchase God’s favour.",
+        "pt": "Escolha um bem protegido pelo Decálogo e uma pequena ação para cuidar dele hoje: respeitar o descanso alheio, corrigir uma mentira ou devolver algo emprestado. Aja como resposta agradecida, não para comprar o favor de Deus."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Qué sucede primero: la liberación o la entrega de los mandamientos?",
+            "en": "Which comes first: liberation or the giving of the commandments?",
+            "pt": "O que acontece primeiro: a libertação ou a entrega dos mandamentos?"
+          },
+          "answer": {
+            "es": "La liberación precede a la alianza del Sinaí y al Decálogo. El propio comienzo de los mandamientos recuerda la salida de Egipto. La vida moral responde a la iniciativa amorosa de Dios; no compra retrospectivamente su ayuda.",
+            "en": "Liberation precedes the Sinai covenant and the Decalogue. The commandments’ own beginning recalls departure from Egypt. Moral life responds to God’s loving initiative; it does not retrospectively buy his help or cause the earlier deliverance.",
+            "pt": "A libertação precede a aliança do Sinai e o Decálogo. O próprio início dos mandamentos recorda a saída do Egito. A vida moral responde à iniciativa amorosa de Deus; não compra retrospectivamente sua ajuda."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Por qué los mandamientos no deben leerse como una lista aislada?",
+            "en": "Why should the commandments not be read as an isolated list?",
+            "pt": "Por que os mandamentos não devem ser lidos como uma lista isolada?"
+          },
+          "answer": {
+            "es": "Pertenecen a la alianza entre Dios e Israel y orientan una vida liberada. Su contexto permite comprender a quién se responde y qué bienes se protegen. Sin él, la lectura puede reducirse a control externo o cumplimiento mecánico.",
+            "en": "They belong to the covenant between God and Israel and guide a liberated life. Their context helps us understand whom we answer and which goods are protected. Without it, reading can shrink to external control or mechanical compliance.",
+            "pt": "Eles pertencem à aliança entre Deus e Israel e orientam uma vida libertada. Seu contexto permite compreender a quem se responde e quais bens se protegem. Sem ele, a leitura pode reduzir-se a controle externo ou cumprimento mecânico."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Es correcto presentar a Israel como puro legalismo que los cristianos ya pueden despreciar?",
+            "en": "Is it right to portray Israel as mere legalism that Christians may now despise?",
+            "pt": "É correto apresentar Israel como puro legalismo que os cristãos já podem desprezar?"
+          },
+          "answer": {
+            "es": "No. Esa caricatura ignora que el relato empieza por el don liberador de Dios y una relación de alianza. El Antiguo Testamento conserva su valor; la lectura cristiana debe reconocer esa raíz y evitar despreciar al pueblo judío.",
+            "en": "No. That caricature ignores the narrative’s beginning in God’s liberating gift and covenant relationship. The Old Testament retains its value; Christian reading must recognize that root and avoid contempt for the Jewish people.",
+            "pt": "Não. Essa caricatura ignora que o relato começa pelo dom libertador de Deus e por uma relação de aliança. O Antigo Testamento conserva seu valor; a leitura cristã deve reconhecer essa raiz e evitar desprezar o povo judeu."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_62_64",
+          "title": {
+            "es": "Catecismo §§62–64",
+            "en": "Catechism §§62–64",
+            "pt": "Catecismo, parágrafos 62–64"
+          },
+          "catechismStart": 62,
+          "catechismEnd": 64,
+          "url": null
+        },
+        {
+          "id": "ccc_2056_2063",
+          "title": {
+            "es": "Catecismo §§2056–2063",
+            "en": "Catechism §§2056–2063",
+            "pt": "Catecismo, parágrafos 2056–2063"
+          },
+          "catechismStart": 2056,
+          "catechismEnd": 2063,
+          "url": null
+        },
+        {
+          "id": "ccc_121_123",
+          "title": {
+            "es": "Catecismo §§121–123",
+            "en": "Catechism §§121–123",
+            "pt": "Catecismo, parágrafos 121–123"
+          },
+          "catechismStart": 121,
+          "catechismEnd": 123,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "salvation_4_david_prophets",
+      "lessonNumber": 4,
+      "title": {
+        "es": "David y los profetas: una esperanza más grande",
+        "en": "David and the prophets: a greater hope",
+        "pt": "Davi e os profetas: uma esperança maior"
+      },
+      "scriptureReferences": [
+        "2sa 7:1-17",
+        "isa 52:13-53:12"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Distinguir la promesa a la casa de David de la perfección de sus reyes.",
+          "en": "Distinguish the promise to David’s house from the perfection of its kings.",
+          "pt": "Distinguir a promessa à casa de Davi da perfeição de seus reis."
+        },
+        {
+          "es": "Explicar cómo la lectura cristiana relaciona al Mesías y al Siervo sufriente.",
+          "en": "Explain how Christian reading connects the Messiah and the suffering Servant.",
+          "pt": "Explicar como a leitura cristã relaciona o Messias e o Servo sofredor."
+        }
+      ],
+      "summary": {
+        "es": "La promesa a David mantiene abierta la esperanza de un Reino fiel a Dios. Los profetas profundizan esa espera, y la Iglesia reconoce en el Siervo una clave para comprender la entrega de Jesús.",
+        "en": "The promise to David keeps hope open for a Kingdom faithful to God. The prophets deepen that expectation, and the Church recognizes the Servant as a key to understanding Jesus’ self offering.",
+        "pt": "A promessa a Davi mantém aberta a esperança de um Reino fiel a Deus. Os profetas aprofundam essa espera, e a Igreja reconhece no Servo uma chave para compreender a entrega de Jesus."
+      },
+      "historicalContext": {
+        "es": "En Segundo Samuel, David desea construir una casa para Dios y recibe por medio de Natán una promesa sobre su propia casa, es decir, su descendencia real. El relato pertenece a la historia de la monarquía de Israel. Isaías ofrece después un poema sobre un siervo humillado y exaltado, dentro de una sección de consuelo y restauración. Son géneros y escenas diferentes. Escucha primero qué anuncia cada texto; luego considera cómo la fe cristiana los relaciona con Jesús. No se fija aquí una identificación histórica única del siervo ni una fecha exacta de composición del poema.",
+        "en": "In Second Samuel, David wishes to build God a house and receives through Nathan a promise concerning his own house, meaning his royal descendants. The narrative belongs to Israel’s monarchy story. Isaiah later offers a poem about a humiliated and exalted servant within a section of consolation and restoration. These texts have different genres and settings. First hear what each announces; then consider how Christian faith relates them to Jesus. This lesson does not assign one definitive historical identification to the servant or an exact date to the poem’s composition.",
+        "pt": "Em Segundo Samuel, Davi deseja construir uma casa para Deus e recebe por meio de Natã uma promessa sobre sua própria casa, isto é, sua descendência real. O relato pertence à história da monarquia de Israel. Isaías oferece depois um poema sobre um servo humilhado e exaltado, numa seção de consolo e restauração. São gêneros e cenas diferentes. Escute primeiro o que cada texto anuncia; depois considere como a fé cristã os relaciona com Jesus. Não se fixa aqui uma identificação histórica única do servo nem uma data exata de composição do poema."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Una casa que Dios promete sostener",
+            "en": "A house God promises to sustain",
+            "pt": "Uma casa que Deus promete sustentar"
+          },
+          "body": {
+            "es": "David piensa en un edificio; la respuesta de Dios abre el futuro de una descendencia y un reino. La repetición de la palabra casa permite reconocer esa diferencia. La promesa no declara impecables a los sucesores del rey ni vuelve sagrada cualquier decisión política suya: el propio pasaje incluye la posibilidad de corregir sus faltas. El Catecismo conecta la esperanza davídica con un Reino que será obra del Espíritu. Por eso la fe no identifica el cumplimiento con el éxito de un gobernante presente; aprende a esperar la fidelidad de Dios más allá de los límites humanos.",
+            "en": "David thinks of a building; God’s reply opens the future of descendants and a kingdom. The repeated word house helps reveal that difference. The promise does not declare the king’s successors sinless or make every political decision sacred: the passage itself includes correction of their wrongdoing. The Catechism connects Davidic hope with a Kingdom brought about by the Spirit. Faith therefore does not identify fulfilment with a present ruler’s success. It learns to await God’s faithfulness beyond human limitations, without giving religious immunity to authority or denying accountability for its actions.",
+            "pt": "Davi pensa num edifício; a resposta de Deus abre o futuro de uma descendência e de um reino. A repetição da palavra casa permite reconhecer essa diferença. A promessa não declara impecáveis os sucessores do rei nem torna sagrada qualquer decisão política sua: a própria passagem inclui a possibilidade de corrigir suas faltas. O Catecismo relaciona a esperança davídica a um Reino que será obra do Espírito. Por isso a fé não identifica o cumprimento com o sucesso de um governante atual; aprende a esperar a fidelidade de Deus além dos limites humanos."
+          }
+        },
+        {
+          "title": {
+            "es": "Los profetas educan la esperanza",
+            "en": "The prophets form hope",
+            "pt": "Os profetas educam a esperança"
+          },
+          "body": {
+            "es": "La misión profética no se reduce a adivinar acontecimientos futuros. Dios forma a su pueblo para reconocer la infidelidad y esperar una renovación que alcance el corazón y las naciones. El Catecismo presenta la espera del Mesías y el anuncio del Espíritu como líneas que convergen en esa esperanza. El poema del Siervo muestra un camino desconcertante: humillación y sufrimiento aparecen unidos a una acción salvadora y a la exaltación. Conviene leer sus imágenes con atención, sin convertirlas en una celebración del mal ni suponer que cada dolor prueba el rechazo de Dios.",
+            "en": "The prophetic mission involves more than predicting future events. God forms his people to recognize infidelity and await renewal reaching the heart and the nations. The Catechism presents expectation of the Messiah and announcement of the Spirit as converging lines within that hope. The Servant poem shows a disconcerting path: humiliation and suffering appear together with saving action and exaltation. Read its images carefully, without making them a celebration of evil or assuming that every experience of pain proves rejection by God. The poem invites a deeper account of apparent failure and hope.",
+            "pt": "A missão profética não se reduz a adivinhar acontecimentos futuros. Deus forma seu povo para reconhecer a infidelidade e esperar uma renovação que alcance o coração e as nações. O Catecismo apresenta a espera do Messias e o anúncio do Espírito como linhas que convergem nessa esperança. O poema do Servo mostra um caminho desconcertante: humilhação e sofrimento aparecem unidos a uma ação salvadora e à exaltação. Convém ler suas imagens com atenção, sem transformá-las numa celebração do mal nem supor que cada dor prove a rejeição de Deus."
+          }
+        },
+        {
+          "title": {
+            "es": "Leer en Cristo sin borrar a Israel",
+            "en": "Reading in Christ without erasing Israel",
+            "pt": "Ler em Cristo sem apagar Israel"
+          },
+          "body": {
+            "es": "La Iglesia reconoce que la muerte redentora de Jesús cumple la profecía del Siervo y comprende su realeza desde la cruz y la resurrección. Es una lectura cristológica: contempla los textos a la luz de Cristo, sin fingir que originalmente narraban una biografía moderna suya. El Catecismo enseña que esta unidad no elimina el valor propio del Antiguo Testamento. La promesa a David y la voz de los profetas deben escucharse también dentro de la historia de Israel. Esperar al Mesías no autoriza despreciar a los judíos ni imponer una lectura por la fuerza.",
+            "en": "The Church recognizes Jesus’ redeeming death as fulfilling the Servant prophecy and understands his kingship through cross and resurrection. This is a Christological reading: it considers the texts in Christ’s light without pretending that they originally narrated a modern biography of him. The Catechism teaches that such unity does not remove the Old Testament’s own value. The promise to David and the prophets’ voices must also be heard within Israel’s history. Awaiting the Messiah does not authorize contempt for Jewish people or imposing an interpretation by force on someone who reads differently.",
+            "pt": "A Igreja reconhece que a morte redentora de Jesus cumpre a profecia do Servo e compreende sua realeza a partir da cruz e da ressurreição. É uma leitura cristológica: contempla os textos à luz de Cristo, sem fingir que originalmente narravam uma biografia moderna dele. O Catecismo ensina que essa unidade não elimina o valor próprio do Antigo Testamento. A promessa a Davi e a voz dos profetas devem ser ouvidas também na história de Israel. Esperar o Messias não autoriza desprezar os judeus nem impor uma leitura pela força."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "En 2 S 7,1–17 compara la casa que David quiere construir con la que Dios promete. En Is 52,13–53,12 observa los cambios entre humillación y exaltación, y distingue la voz que describe al siervo de lo que él hace.",
+        "en": "In 2 Samuel 7:1–17, compare the house David wishes to build with the one God promises. In Isaiah 52:13–53:12, notice shifts between humiliation and exaltation, distinguishing the voice describing the servant from the servant’s actions.",
+        "pt": "Em 2 Sm 7,1–17 compare a casa que Davi quer construir com aquela que Deus promete. Em Is 52,13–53,12 observe as mudanças entre humilhação e exaltação e distinga a voz que descreve o servo daquilo que ele faz."
+      },
+      "meditatio": {
+        "es": "¿En qué persona o institución colocas una confianza que debería admitir límites y responsabilidad? ¿Cómo cambia tu mirada sobre quien parece derrotado al leer la esperanza del Siervo desde la Pascua de Jesús?",
+        "en": "In what person or institution do you place trust that should acknowledge limits and accountability? How does reading the Servant’s hope through Jesus’ Pasch change your view of someone who seems defeated?",
+        "pt": "Em que pessoa ou instituição você deposita uma confiança que deveria admitir limites e responsabilidade? Como muda seu olhar para quem parece derrotado ao ler a esperança do Servo a partir da Páscoa de Jesus?"
+      },
+      "oratio": {
+        "es": "Presenta a Dios una esperanza que no quieres apoyar solo en el poder o el éxito. Puedes pedir una confianza humilde y el deseo de servir a quienes han sido despreciados, con palabras propias.",
+        "en": "Bring to God a hope you do not wish to rest solely on power or success. In your own words, you may ask for humble trust and a desire to serve those who have been despised.",
+        "pt": "Apresente a Deus uma esperança que não deseja apoiar apenas no poder ou no sucesso. Com suas palavras, pode pedir uma confiança humilde e o desejo de servir aqueles que foram desprezados."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio ante Cristo, a quien la Iglesia reconoce como Siervo y Rey. No necesitas descifrar nuevas predicciones; vuelve serenamente a su entrega amorosa si aparecen distracciones.",
+        "en": "Remain silent for sixty to ninety seconds before Christ, whom the Church recognizes as Servant and King. You need not decipher new predictions; return gently to his loving self offering when distractions arise.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio diante de Cristo, que a Igreja reconhece como Servo e Rei. Não precisa decifrar novas previsões; volte serenamente à sua entrega amorosa se surgirem distrações."
+      },
+      "actionStep": {
+        "es": "Haz un gesto de respeto hacia alguien a quien se escucha poco: pide su opinión o reconoce una aportación concreta. Si ejerces autoridad, revisa una decisión para comprobar si sirve al bien de otros y admite rendición de cuentas.",
+        "en": "Show respect to someone whose voice is rarely heard: ask their opinion or acknowledge a particular contribution. If you exercise authority, review one decision to see whether it serves others’ good and allows accountability.",
+        "pt": "Faça um gesto de respeito por alguém pouco ouvido: peça sua opinião ou reconheça uma contribuição concreta. Se exerce autoridade, reveja uma decisão para verificar se serve ao bem dos outros e admite prestação de contas."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿La promesa a David garantiza que sus sucesores nunca obrarán mal?",
+            "en": "Does the promise to David guarantee that his successors will never do wrong?",
+            "pt": "A promessa a Davi garante que seus sucessores nunca agirão mal?"
+          },
+          "answer": {
+            "es": "No. El mismo pasaje contempla corregir sus faltas. La fidelidad de Dios mantiene abierta la promesa, pero no convierte a cada rey en impecable ni justifica sus decisiones. La esperanza del Reino supera el éxito de un gobernante.",
+            "en": "No. The passage itself allows for correction of their wrongdoing. God’s faithfulness keeps the promise open, but does not make each king sinless or justify his decisions. Hope for the Kingdom exceeds any ruler’s success.",
+            "pt": "Não. A própria passagem contempla corrigir suas faltas. A fidelidade de Deus mantém aberta a promessa, mas não torna cada rei impecável nem justifica suas decisões. A esperança do Reino ultrapassa o sucesso de um governante."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo relaciona la Iglesia el Siervo de Isaías con Jesús?",
+            "en": "How does the Church relate Isaiah’s Servant to Jesus?",
+            "pt": "Como a Igreja relaciona o Servo de Isaías com Jesus?"
+          },
+          "answer": {
+            "es": "Reconoce en su muerte redentora el cumplimiento de la profecía del Siervo y lee la realeza mesiánica desde la Pascua. Esa lectura mantiene el contexto de los textos y el valor propio de la revelación recibida por Israel.",
+            "en": "It recognizes his redeeming death as fulfilling the Servant prophecy and reads messianic kingship through the Pasch. This reading preserves the texts’ context and the proper value of the revelation received by Israel.",
+            "pt": "Reconhece em sua morte redentora o cumprimento da profecia do Servo e lê a realeza messiânica a partir da Páscoa. Essa leitura mantém o contexto dos textos e o valor próprio da revelação recebida por Israel."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Qué falta en una lectura que convierte la profecía en pronóstico de mi éxito?",
+            "en": "What is missing when prophecy becomes a forecast of my success?",
+            "pt": "O que falta numa leitura que transforma a profecia em previsão do meu sucesso?"
+          },
+          "answer": {
+            "es": "Se pierde la formación de un pueblo en fidelidad, conversión y esperanza, y se ignora al Siervo que atraviesa el rechazo. El texto no promete prestigio personal; invita a escuchar la acción de Dios y a servir con responsabilidad.",
+            "en": "It loses the formation of a people in faithfulness, conversion and hope, and ignores the Servant who encounters rejection. The text does not promise personal prestige; it invites attention to God’s action and responsible service.",
+            "pt": "Perde-se a formação de um povo em fidelidade, conversão e esperança, e se ignora o Servo que atravessa a rejeição. O texto não promete prestígio pessoal; convida a escutar a ação de Deus e a servir com responsabilidade."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_64_64",
+          "title": {
+            "es": "Catecismo §§64–64",
+            "en": "Catechism §§64–64",
+            "pt": "Catecismo, parágrafos 64–64"
+          },
+          "catechismStart": 64,
+          "catechismEnd": 64,
+          "url": null
+        },
+        {
+          "id": "ccc_709_716",
+          "title": {
+            "es": "Catecismo §§709–716",
+            "en": "Catechism §§709–716",
+            "pt": "Catecismo, parágrafos 709–716"
+          },
+          "catechismStart": 709,
+          "catechismEnd": 716,
+          "url": null
+        },
+        {
+          "id": "ccc_601_601",
+          "title": {
+            "es": "Catecismo §§601–601",
+            "en": "Catechism §§601–601",
+            "pt": "Catecismo, parágrafos 601–601"
+          },
+          "catechismStart": 601,
+          "catechismEnd": 601,
+          "url": null
+        },
+        {
+          "id": "ccc_128_130",
+          "title": {
+            "es": "Catecismo §§128–130",
+            "en": "Catechism §§128–130",
+            "pt": "Catecismo, parágrafos 128–130"
+          },
+          "catechismStart": 128,
+          "catechismEnd": 130,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "salvation_5_christ_fulfilment",
+      "lessonNumber": 5,
+      "title": {
+        "es": "Cristo, plenitud de las promesas",
+        "en": "Christ, fullness of the promises",
+        "pt": "Cristo, plenitude das promessas"
+      },
+      "scriptureReferences": [
+        "heb 1:1-4",
+        "luk 24:44-49"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar la revelación definitiva en Cristo y el crecimiento de su comprensión.",
+          "en": "Explain definitive revelation in Christ and growth in understanding it.",
+          "pt": "Explicar a revelação definitiva em Cristo e o crescimento de sua compreensão."
+        },
+        {
+          "es": "Leer promesa y cumplimiento sin desechar el Antiguo Testamento ni a Israel.",
+          "en": "Read promise and fulfilment without discarding the Old Testament or Israel.",
+          "pt": "Ler promessa e cumprimento sem descartar o Antigo Testamento nem Israel."
+        }
+      ],
+      "summary": {
+        "es": "Dios lleva a plenitud su palabra en el Hijo y permite comprender en él la unidad de la historia bíblica. Esa plenitud confirma la fidelidad de Dios y no cancela el valor de Israel ni del Antiguo Testamento.",
+        "en": "God brings his word to fullness in the Son and enables us to understand biblical history’s unity in him. That fullness confirms God’s faithfulness without cancelling the value of Israel or the Old Testament.",
+        "pt": "Deus leva sua palavra à plenitude no Filho e permite compreender nele a unidade da história bíblica. Essa plenitude confirma a fidelidade de Deus sem cancelar o valor de Israel nem do Antigo Testamento."
+      },
+      "historicalContext": {
+        "es": "Hebreos comienza con una exposición solemne sobre el Hijo, en contraste con los diversos modos anteriores de la palabra profética. Este inicio no identifica al autor humano del escrito; no lo atribuiremos aquí a Pablo. Lucas presenta al Resucitado explicando las Escrituras y enviando a sus discípulos como testigos de conversión y perdón. Leemos dos formas de proclamar la centralidad de Cristo: una presentación doctrinal y una escena narrativa. Ambas requieren recordar lo recorrido desde la creación y las alianzas, para que la palabra cumplimiento no se convierta en una excusa para olvidar esa historia.",
+        "en": "Hebrews begins with a solemn exposition about the Son, set alongside the earlier diversity of prophetic speech. This opening does not identify the writing’s human author; we will not attribute it to Paul here. Luke presents the risen Lord explaining Scripture and sending his disciples as witnesses of conversion and forgiveness. We read two ways of proclaiming Christ’s centrality: a doctrinal presentation and a narrative scene. Both require remembering the journey from creation and the covenants, so that fulfilment does not become an excuse to forget the history being fulfilled.",
+        "pt": "Hebreus começa com uma exposição solene sobre o Filho, em contraste com os diversos modos anteriores da palavra profética. Esse início não identifica o autor humano do escrito; não o atribuiremos aqui a Paulo. Lucas apresenta o Ressuscitado explicando as Escrituras e enviando seus discípulos como testemunhas de conversão e perdão. Lemos duas formas de proclamar a centralidade de Cristo: uma apresentação doutrinal e uma cena narrativa. Ambas exigem recordar o percurso desde a criação e as alianças, para que a palavra cumprimento não se torne desculpa para esquecer essa história."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "La palabra definitiva es una Persona",
+            "en": "The definitive Word is a Person",
+            "pt": "A palavra definitiva é uma Pessoa"
+          },
+          "body": {
+            "es": "Hebreos no anuncia simplemente un nuevo mensaje junto a los antiguos: presenta al Hijo, por quien Dios se da a conocer de modo pleno. El Catecismo reconoce en Cristo la Palabra definitiva del Padre y enseña que no esperamos otra revelación pública que la sustituya antes de su manifestación gloriosa. Esto no significa que cada cristiano comprenda ya su profundidad. La Iglesia continúa aprendiendo a explicitar y vivir lo recibido. Una doctrina puede ser comprendida mejor sin que se invente otro salvador o se declare insuficiente el don de Dios en Jesús.",
+            "en": "Hebrews announces more than another message alongside the earlier ones: it presents the Son, through whom God makes himself fully known. The Catechism recognizes Christ as the Father’s definitive Word and teaches that we await no further public revelation replacing it before his glorious manifestation. This does not mean every Christian already comprehends its depth. The Church continues learning to unfold and live what she has received. A doctrine can be understood more deeply without inventing another saviour or declaring God’s gift in Jesus insufficient. Learning continues because the gift exceeds our present understanding.",
+            "pt": "Hebreus não anuncia simplesmente uma nova mensagem ao lado das antigas: apresenta o Filho, por quem Deus se dá a conhecer plenamente. O Catecismo reconhece em Cristo a Palavra definitiva do Pai e ensina que não esperamos outra revelação pública que a substitua antes de sua manifestação gloriosa. Isso não significa que cada cristão já compreenda sua profundidade. A Igreja continua aprendendo a explicitar e viver o que recebeu. Uma doutrina pode ser compreendida melhor sem inventar outro salvador ou declarar insuficiente o dom de Deus em Jesus."
+          }
+        },
+        {
+          "title": {
+            "es": "Promesa y cumplimiento se iluminan mutuamente",
+            "en": "Promise and fulfilment illuminate one another",
+            "pt": "Promessa e cumprimento se iluminam mutuamente"
+          },
+          "body": {
+            "es": "En Lucas, Jesús abre la comprensión de los discípulos para reconocer la relación entre las Escrituras y su Pascua. La lectura cristiana llamada tipología reconoce en obras anteriores de Dios figuras que alcanzan plenitud en Cristo. No convierte cada objeto o número en una contraseña escondida. Se apoya en el sentido de los relatos y en la unidad de la fe. El Catecismo insiste en las dos direcciones: leemos el Antiguo Testamento desde Cristo y necesitamos el Antiguo para comprender el Nuevo. Sin creación, promesa y éxodo, se empobrece el significado de la salvación anunciada.",
+            "en": "In Luke, Jesus opens the disciples’ understanding to recognize the relationship between Scripture and his Pasch. Christian reading called typology recognizes earlier works of God as figures reaching fullness in Christ. It does not make every object or number a hidden password. It rests on the narratives’ meaning and the unity of faith. The Catechism insists on both directions: we read the Old Testament through Christ and need the Old to understand the New. Without creation, promise and exodus, our understanding of the proclaimed salvation becomes poorer and loses its historical depth.",
+            "pt": "Em Lucas, Jesus abre a compreensão dos discípulos para reconhecer a relação entre as Escrituras e sua Páscoa. A leitura cristã chamada tipologia reconhece em obras anteriores de Deus figuras que alcançam plenitude em Cristo. Não transforma cada objeto ou número numa senha escondida. Apoia-se no sentido dos relatos e na unidade da fé. O Catecismo insiste nas duas direções: lemos o Antigo Testamento a partir de Cristo e precisamos do Antigo para compreender o Novo. Sem criação, promessa e êxodo, empobrece-se o significado da salvação anunciada."
+          }
+        },
+        {
+          "title": {
+            "es": "Fidelidad que exige respeto y discernimiento",
+            "en": "Faithfulness calls for respect and discernment",
+            "pt": "Fidelidade que exige respeito e discernimento"
+          },
+          "body": {
+            "es": "El Catecismo afirma el valor permanente del Antiguo Testamento porque la Antigua Alianza no ha sido revocada. Reconoce además el vínculo singular de la Iglesia con el pueblo judío y la irrevocabilidad de los dones de Dios. Cumplimiento no significa que podamos despreciar esa fe o borrar su historia. También orienta nuestro discernimiento: una revelación privada reconocida puede ayudar a vivir el Evangelio, pero no completarlo o corregir a Cristo. Las devociones sirven a esa relación central. Al cerrar el curso, la respuesta adecuada es gratitud, aprendizaje y servicio, sin pretender poseer una clave secreta de la historia.",
+            "en": "The Catechism affirms the Old Testament’s permanent value because the Old Covenant has never been revoked. It also recognizes the Church’s distinctive bond with the Jewish people and the irrevocability of God’s gifts. Fulfilment does not permit contempt for that faith or erasure of its history. It also guides discernment: a recognized private revelation may help people live the Gospel, but cannot complete it or correct Christ. Devotions serve this central relationship. Finishing the course invites gratitude, learning and service, rather than claiming possession of a secret key to history.",
+            "pt": "O Catecismo afirma o valor permanente do Antigo Testamento porque a Antiga Aliança não foi revogada. Reconhece também o vínculo singular da Igreja com o povo judeu e a irrevogabilidade dos dons de Deus. Cumprimento não significa que possamos desprezar essa fé ou apagar sua história. Também orienta nosso discernimento: uma revelação privada reconhecida pode ajudar a viver o Evangelho, mas não completá-lo ou corrigir Cristo. As devoções servem a essa relação central. Ao concluir o curso, a resposta adequada é gratidão, aprendizado e serviço, sem pretender possuir uma chave secreta da história."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "En Hb 1,1–4 identifica lo que se dice del Hijo y su relación con la palabra profética. En Lc 24,44–49 observa qué comprende la comunidad, qué debe anunciar y qué don debe esperar antes de salir.",
+        "en": "In Hebrews 1:1–4, identify what is said of the Son and his relationship with prophetic speech. In Luke 24:44–49, notice what the community understands, what it must proclaim and what gift it must await before going out.",
+        "pt": "Em Hb 1,1–4 identifique o que se diz do Filho e sua relação com a palavra profética. Em Lc 24,44–49 observe o que a comunidade compreende, o que deve anunciar e que dom deve esperar antes de partir."
+      },
+      "meditatio": {
+        "es": "¿Qué parte del Antiguo Testamento te gustaría volver a leer después de este recorrido? ¿Alguna devoción o mensaje ocupa en tu vida el lugar central que debería tener el encuentro con Cristo?",
+        "en": "Which part of the Old Testament would you like to reread after this journey? Does any devotion or message occupy the central place in your life that belongs to encountering Christ?",
+        "pt": "Que parte do Antigo Testamento você gostaria de reler depois deste percurso? Alguma devoção ou mensagem ocupa em sua vida o lugar central que deveria pertencer ao encontro com Cristo?"
+      },
+      "oratio": {
+        "es": "Agradece a Dios, con palabras propias, su fidelidad a través de esta historia. Puedes pedir ayuda para escuchar a Cristo, respetar al pueblo judío y vivir una esperanza que se traduzca en cuidado del prójimo.",
+        "en": "Thank God in your own words for his faithfulness throughout this history. You may ask for help to listen to Christ, respect the Jewish people and live a hope expressed in care for neighbours.",
+        "pt": "Agradeça a Deus, com palavras próprias, sua fidelidade ao longo dessa história. Você pode pedir ajuda para escutar Cristo, respeitar o povo judeu e viver uma esperança que se traduza no cuidado com o próximo."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio ante Cristo que abre la comprensión de las Escrituras. No necesitas resumir ahora cada etapa. Vuelve suavemente a su presencia, dejando descansar también las preguntas pendientes.",
+        "en": "Remain silent for sixty to ninety seconds before Christ who opens understanding of Scripture. You need not summarize every stage now. Return gently to his presence, allowing your remaining questions to rest as well.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio diante de Cristo que abre a compreensão das Escrituras. Não precisa resumir agora cada etapa. Volte suavemente à sua presença, deixando descansar também as perguntas pendentes."
+      },
+      "actionStep": {
+        "es": "Dibuja un recorrido con cinco etapas: creación, Abrahán, éxodo, David y profetas, Cristo. Añade una referencia de cada lección y una pregunta pendiente. Para profundizar, continúa con Jesús y el misterio pascual o vuelve al curso de lectura bíblica.",
+        "en": "Draw a journey with five stages: creation, Abraham, exodus, David and prophets, Christ. Add one reference from each lesson and one remaining question. Continue with Jesus and the Paschal Mystery or return to the course on reading the Bible.",
+        "pt": "Desenhe um percurso com cinco etapas: criação, Abraão, êxodo, Davi e profetas, Cristo. Acrescente uma referência de cada lição e uma pergunta pendente. Para aprofundar, continue com Jesus e o mistério pascal ou retorne ao curso de leitura bíblica."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿La revelación definitiva significa que ya no podemos aprender nada sobre la fe?",
+            "en": "Does definitive revelation mean we can learn nothing more about faith?",
+            "pt": "A revelação definitiva significa que já não podemos aprender nada sobre a fé?"
+          },
+          "answer": {
+            "es": "No. Cristo es la plenitud del don de Dios, pero su contenido se comprende gradualmente. El crecimiento doctrinal y la vida de fe buscan explicitar lo recibido; no necesitan una revelación pública que reemplace o corrija al Hijo.",
+            "en": "No. Christ is the fullness of God’s gift, but its content is understood gradually. Growth in doctrine and faith seeks to unfold what has been received; it does not require a public revelation replacing or correcting the Son.",
+            "pt": "Não. Cristo é a plenitude do dom de Deus, mas seu conteúdo é compreendido gradualmente. O crescimento doutrinal e a vida de fé procuram explicitar o que foi recebido; não precisam de uma revelação pública que substitua ou corrija o Filho."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Por qué el cumplimiento en Cristo no permite descartar el Antiguo Testamento?",
+            "en": "Why does fulfilment in Christ not permit discarding the Old Testament?",
+            "pt": "Por que o cumprimento em Cristo não permite descartar o Antigo Testamento?"
+          },
+          "answer": {
+            "es": "Conserva valor propio de revelación y permite comprender el Nuevo; la Antigua Alianza no ha sido revocada. La unidad de la historia muestra la fidelidad de Dios, no el derecho cristiano a despreciar las raíces recibidas de Israel.",
+            "en": "It retains its own value as revelation and helps us understand the New; the Old Covenant has never been revoked. History’s unity shows God’s faithfulness, rather than a Christian right to despise roots received from Israel.",
+            "pt": "Ele conserva valor próprio de revelação e permite compreender o Novo; a Antiga Aliança não foi revogada. A unidade da história mostra a fidelidade de Deus, não um direito cristão de desprezar as raízes recebidas de Israel."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo discernir un mensaje que se presenta como una corrección necesaria del Evangelio?",
+            "en": "How would you discern a message presented as a necessary correction of the Gospel?",
+            "pt": "Como discernir uma mensagem apresentada como correção necessária do Evangelho?"
+          },
+          "answer": {
+            "es": "Una revelación privada no puede completar o corregir la plenitud de Cristo. Conviene contrastar el mensaje con la fe de la Iglesia y buscar orientación. Una devoción legítima ayuda a vivir el Evangelio, no exige abandonarlo por una novedad.",
+            "en": "A private revelation cannot complete or correct Christ’s fullness. Compare the message with the Church’s faith and seek guidance. A legitimate devotion helps people live the Gospel; it does not require abandoning it for a novelty.",
+            "pt": "Uma revelação privada não pode completar ou corrigir a plenitude de Cristo. Convém comparar a mensagem com a fé da Igreja e buscar orientação. Uma devoção legítima ajuda a viver o Evangelho, não exige abandoná-lo por uma novidade."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_65_67",
+          "title": {
+            "es": "Catecismo §§65–67",
+            "en": "Catechism §§65–67",
+            "pt": "Catecismo, parágrafos 65–67"
+          },
+          "catechismStart": 65,
+          "catechismEnd": 67,
+          "url": null
+        },
+        {
+          "id": "ccc_128_130",
+          "title": {
+            "es": "Catecismo §§128–130",
+            "en": "Catechism §§128–130",
+            "pt": "Catecismo, parágrafos 128–130"
+          },
+          "catechismStart": 128,
+          "catechismEnd": 130,
+          "url": null
+        },
+        {
+          "id": "ccc_121_123",
+          "title": {
+            "es": "Catecismo §§121–123",
+            "en": "Catechism §§121–123",
+            "pt": "Catecismo, parágrafos 121–123"
+          },
+          "catechismStart": 121,
+          "catechismEnd": 123,
+          "url": null
+        },
+        {
+          "id": "ccc_839_839",
+          "title": {
+            "es": "Catecismo §§839–839",
+            "en": "Catechism §§839–839",
+            "pt": "Catecismo, parágrafos 839–839"
+          },
+          "catechismStart": 839,
+          "catechismEnd": 839,
+          "url": null
+        }
+      ]
+    }
+  ]
+}

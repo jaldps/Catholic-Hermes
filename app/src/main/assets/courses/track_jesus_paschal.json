@@ -1,0 +1,925 @@
+{
+  "id": "track_jesus_paschal",
+  "level": "FOUNDATION",
+  "estimatedMinutes": 100,
+  "iconName": "AutoStories",
+  "title": {
+    "es": "Jesús y el misterio pascual",
+    "en": "Jesus and the Paschal Mystery",
+    "pt": "Jesus e o mistério pascal"
+  },
+  "description": {
+    "es": "Cinco encuentros para quien empieza o desea ordenar su fe: descubrir quién es Jesús y cómo su Encarnación, Reino, Cena, cruz y resurrección forman una misma obra de salvación. Lectura guiada, preguntas y oración personal, sin requisitos previos.",
+    "en": "Five encounters for beginners and anyone seeking a clearer understanding of faith: discover who Jesus is and how his Incarnation, Kingdom, Supper, cross and resurrection belong to one saving work. Guided reading, questions and personal prayer, with no prerequisites.",
+    "pt": "Cinco encontros para quem começa ou deseja organizar sua fé: descobrir quem é Jesus e como sua Encarnação, Reino, Ceia, cruz e ressurreição formam uma mesma obra de salvação. Leitura guiada, perguntas e oração pessoal, sem requisitos prévios."
+  },
+  "objectives": [
+    {
+      "es": "Explicar por qué Jesús es verdadero Dios y verdadero hombre.",
+      "en": "Explain why Jesus is true God and true man.",
+      "pt": "Explicar por que Jesus é verdadeiro Deus e verdadeiro homem."
+    },
+    {
+      "es": "Relacionar el anuncio del Reino, la Cena, la cruz y la resurrección.",
+      "en": "Connect the proclamation of the Kingdom, the Supper, the cross and the resurrection.",
+      "pt": "Relacionar o anúncio do Reino, a Ceia, a cruz e a ressurreição."
+    },
+    {
+      "es": "Elegir una respuesta de fe, servicio y misión sostenida por el Espíritu.",
+      "en": "Choose a response of faith, service and mission sustained by the Spirit.",
+      "pt": "Escolher uma resposta de fé, serviço e missão sustentada pelo Espírito."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "jesus_1_incarnation",
+      "lessonNumber": 1,
+      "title": {
+        "es": "El Verbo se hace hombre",
+        "en": "The Word becomes human",
+        "pt": "O Verbo se faz homem"
+      },
+      "scriptureReferences": [
+        "luk 1:26-38"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Distinguir la identidad divina de Jesús de su humanidad verdadera.",
+          "en": "Distinguish Jesus’ divine identity from his genuine humanity.",
+          "pt": "Distinguir a identidade divina de Jesus de sua humanidade verdadeira."
+        },
+        {
+          "es": "Explicar cómo la respuesta libre de María acoge una iniciativa de Dios.",
+          "en": "Explain how Mary’s free response welcomes God’s initiative.",
+          "pt": "Explicar como a resposta livre de Maria acolhe uma iniciativa de Deus."
+        }
+      ],
+      "summary": {
+        "es": "En Jesús, Dios entra realmente en nuestra vida humana para salvarnos. La Anunciación une el don del Espíritu, la promesa a Israel y la respuesta libre de María.",
+        "en": "In Jesus, God truly enters our human life to save us. The Annunciation brings together the Spirit’s gift, the promise to Israel and Mary’s free response.",
+        "pt": "Em Jesus, Deus entra realmente em nossa vida humana para nos salvar. A Anunciação une o dom do Espírito, a promessa a Israel e a resposta livre de Maria."
+      },
+      "historicalContext": {
+        "es": "Lucas sitúa la Anunciación en Nazaret y presenta a María como una joven judía comprometida con José, de la casa de David. El anuncio a Zacarías precede esta escena; la visita a Isabel la sigue. Es un relato de vocación y promesa dentro de los capítulos sobre los orígenes de Jesús, no una explicación biológica de su concepción. Observa los nombres, las preguntas y las respuestas. El trono de David y el reinado sin fin conectan al niño anunciado con la esperanza de Israel, antes de que comience su ministerio público.",
+        "en": "Luke places the Annunciation in Nazareth and introduces Mary as a Jewish woman betrothed to Joseph, of David’s house. The announcement to Zechariah precedes this scene; the visit to Elizabeth follows it. This is a narrative of calling and promise within the chapters about Jesus’ beginnings, rather than a biological explanation of his conception. Notice the names, questions and replies. David’s throne and the reign without end connect the announced child with Israel’s hope, before the account of his public ministry begins.",
+        "pt": "Lucas situa a Anunciação em Nazaré e apresenta Maria como uma jovem judia prometida em casamento a José, da casa de Davi. O anúncio a Zacarias precede essa cena; a visita a Isabel vem depois. É um relato de vocação e promessa nos capítulos sobre as origens de Jesus, não uma explicação biológica de sua concepção. Observe os nomes, as perguntas e as respostas. O trono de Davi e o reinado sem fim ligam a criança anunciada à esperança de Israel, antes do início de seu ministério público."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Una promesa que toma rostro",
+            "en": "A promise with a human face",
+            "pt": "Uma promessa que ganha rosto"
+          },
+          "body": {
+            "es": "El ángel no ofrece primero un programa de perfeccionamiento personal: anuncia a alguien. Jesús recibe un nombre y es presentado como Hijo del Altísimo y heredero del trono de David. La salvación cristiana empieza por el don de Dios, no por una conquista humana. Según el Catecismo, el Hijo se encarna para reconciliarnos con Dios, manifestar su amor, enseñarnos la santidad y hacernos participar de su vida. Estas finalidades se iluminan entre sí: salvar no es solo borrar una deuda, sino restaurar una relación y abrirnos a la comunión con Dios.",
+            "en": "The angel first announces a person, rather than a programme of self improvement. Jesus receives a name and is presented as Son of the Most High and heir to David’s throne. Christian salvation begins with God’s gift, rather than a human achievement. The Catechism explains that the Son becomes incarnate to reconcile us with God, reveal his love, teach us holiness and share divine life with us. These purposes illuminate one another: salvation involves more than cancelling a debt. It restores a relationship and opens human beings to communion with God.",
+            "pt": "O anjo não oferece primeiro um programa de aperfeiçoamento pessoal: anuncia alguém. Jesus recebe um nome e é apresentado como Filho do Altíssimo e herdeiro do trono de Davi. A salvação cristã começa pelo dom de Deus, não por uma conquista humana. Segundo o Catecismo, o Filho se encarna para nos reconciliar com Deus, manifestar seu amor, ensinar a santidade e nos fazer participar de sua vida. Essas finalidades se iluminam: salvar é mais do que apagar uma dívida. É restaurar uma relação e nos abrir à comunhão com Deus."
+          }
+        },
+        {
+          "title": {
+            "es": "Verdadero Dios y verdadero hombre",
+            "en": "True God and true man",
+            "pt": "Verdadeiro Deus e verdadeiro homem"
+          },
+          "body": {
+            "es": "Encarnación significa que el Hijo eterno asumió una naturaleza humana real sin dejar de ser Dios. No son dos personas que se turnan ni una mezcla que reduce su humanidad. El mismo Jesús tiene cuerpo, inteligencia y voluntad humanos; su vida no es un disfraz. Esta precisión importa para la salvación: quien comparte nuestra condición es realmente el Hijo, y lo que vive humanamente es auténtico. Llamar a María Madre de Dios identifica a la persona de su Hijo; no significa que ella haya creado la divinidad o sea anterior a Dios.",
+            "en": "Incarnation means that the eternal Son assumed a real human nature without ceasing to be God. He is neither two alternating persons nor a mixture that diminishes his humanity. This same Jesus has a human body, intelligence and will; his life is not a disguise. The distinction matters for salvation: the one who shares our condition really is the Son, and his human experience is genuine. Calling Mary Mother of God identifies the person of her Son. It does not mean that she created his divinity or existed before God.",
+            "pt": "Encarnação significa que o Filho eterno assumiu uma natureza humana real sem deixar de ser Deus. Não são duas pessoas que se alternam, nem uma mistura que diminui sua humanidade. O mesmo Jesus possui corpo, inteligência e vontade humanos; sua vida não é um disfarce. Essa precisão importa para a salvação: quem partilha nossa condição é realmente o Filho, e sua experiência humana é autêntica. Chamar Maria de Mãe de Deus identifica a pessoa de seu Filho; não significa que ela tenha criado a divindade ou existido antes de Deus."
+          }
+        },
+        {
+          "title": {
+            "es": "La gracia suscita una respuesta libre",
+            "en": "Grace invites a free response",
+            "pt": "A graça suscita uma resposta livre"
+          },
+          "body": {
+            "es": "María escucha, pregunta cómo sucederá y da su consentimiento. Su pregunta no rompe el diálogo: permite escuchar que la iniciativa procede del Espíritu Santo. Dios prepara y sostiene su respuesta sin convertirla en un objeto pasivo. El Catecismo presenta su consentimiento como obediencia de la fe y cooperación libre con la obra del Hijo. Para quien empieza, esto distingue confianza y credulidad: preguntar con sinceridad puede formar parte de creer. La respuesta de María es única en la historia de la salvación; nuestra respuesta cotidiana recibe su ejemplo, sin repetir su maternidad.",
+            "en": "Mary listens, asks how this will happen and gives her consent. Her question continues the dialogue and allows her to hear that the initiative belongs to the Holy Spirit. God prepares and sustains her response without making her a passive object. The Catechism describes her consent as the obedience of faith and free cooperation with her Son’s work. For a beginner, this distinguishes trust from gullibility: sincere questions can belong within belief. Mary’s response is unique in salvation history. Our everyday response follows her example without repeating her motherhood.",
+            "pt": "Maria escuta, pergunta como isso acontecerá e dá seu consentimento. Sua pergunta não rompe o diálogo: permite ouvir que a iniciativa procede do Espírito Santo. Deus prepara e sustenta sua resposta sem torná-la um objeto passivo. O Catecismo apresenta seu consentimento como obediência da fé e cooperação livre com a obra do Filho. Para quem começa, isso distingue confiança e credulidade: perguntar com sinceridade pode fazer parte da fé. A resposta de Maria é única na história da salvação; nossa resposta cotidiana segue seu exemplo, sem repetir sua maternidade."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Relee Lc 1,26–38. Distingue lo que Gabriel anuncia, lo que María pregunta y lo que responde. Localiza la referencia a David y el papel del Espíritu; evita sustituir estos detalles por una idea general sobre obedecer.",
+        "en": "Reread Luke 1:26–38. Distinguish Gabriel’s announcement, Mary’s question and her response. Locate the reference to David and the Spirit’s role; keep these details in view before drawing a general lesson about obedience.",
+        "pt": "Releia Lc 1,26–38. Distinga o anúncio de Gabriel, a pergunta de Maria e sua resposta. Localize a referência a Davi e o papel do Espírito; observe esses detalhes antes de tirar uma lição geral sobre obedecer."
+      },
+      "meditatio": {
+        "es": "¿Qué cambia en tu idea de Dios al contemplar que el Hijo comparte una vida humana real? ¿Qué pregunta sincera querrías seguir estudiando antes de dar un próximo paso de fe?",
+        "en": "How does the Son sharing a genuine human life change your understanding of God? What sincere question would you like to explore before taking your next step in faith?",
+        "pt": "O que muda em sua ideia de Deus ao considerar que o Filho partilha uma vida humana real? Que pergunta sincera você gostaria de estudar antes de dar um próximo passo na fé?"
+      },
+      "oratio": {
+        "es": "Habla con Dios, con tus propias palabras, sobre lo que comprendiste y lo que todavía te cuesta. Puedes agradecer la cercanía de Jesús y pedir ayuda para responder con libertad y confianza.",
+        "en": "Speak to God in your own words about what you understood and what remains difficult. You may give thanks for Jesus’ closeness and ask for help to respond freely and trustfully.",
+        "pt": "Converse com Deus, com suas próprias palavras, sobre o que compreendeu e o que ainda é difícil. Você pode agradecer a proximidade de Jesus e pedir ajuda para responder com liberdade e confiança."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio ante Dios, recordando la escena del anuncio. No necesitas resolver tu pregunta ni sentir una emoción especial; si te distraes, vuelve serenamente a la presencia de Jesús.",
+        "en": "Remain quietly before God for sixty to ninety seconds, recalling the scene of the announcement. You need not solve your question or feel a special emotion; if distracted, return gently to Jesus’ presence.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio diante de Deus, recordando a cena do anúncio. Não precisa resolver sua pergunta nem sentir uma emoção especial; se houver distração, volte serenamente à presença de Jesus."
+      },
+      "actionStep": {
+        "es": "Anota una pregunta sobre Jesús y consulta uno de los rangos del Catecismo de esta lección. Escribe después una frase propia que distinga lo que entendiste de lo que deseas seguir aprendiendo.",
+        "en": "Write down one question about Jesus and consult one of this lesson’s Catechism ranges. Then write a sentence distinguishing what you understood from what you wish to explore further.",
+        "pt": "Anote uma pergunta sobre Jesus e consulte um dos trechos do Catecismo desta lição. Depois escreva uma frase distinguindo o que compreendeu do que deseja continuar aprendendo."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Jesús es mitad Dios y mitad hombre?",
+            "en": "Is Jesus half God and half human?",
+            "pt": "Jesus é metade Deus e metade homem?"
+          },
+          "answer": {
+            "es": "No. Es una sola persona, el Hijo eterno, con naturaleza divina y naturaleza humana verdaderas. No se reparten porcentajes: su humanidad no desaparece y su divinidad no se transforma en otra cosa.",
+            "en": "No. He is one person, the eternal Son, with true divine and human natures. These are not percentages: his humanity does not disappear, and his divinity does not turn into something else.",
+            "pt": "Não. Ele é uma só pessoa, o Filho eterno, com natureza divina e natureza humana verdadeiras. Não se dividem porcentagens: sua humanidade não desaparece e sua divindade não se transforma em outra coisa."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿La pregunta de María elimina su respuesta de fe?",
+            "en": "Does Mary’s question cancel her response of faith?",
+            "pt": "A pergunta de Maria elimina sua resposta de fé?"
+          },
+          "answer": {
+            "es": "No. El relato muestra una pregunta, una explicación sobre la acción del Espíritu y un consentimiento. El Catecismo presenta esa respuesta como cooperación libre sostenida por la gracia, no como comprensión completa de todos los acontecimientos futuros.",
+            "en": "No. The narrative includes a question, an explanation of the Spirit’s action and consent. The Catechism presents her response as free cooperation sustained by grace, rather than complete understanding of every future event.",
+            "pt": "Não. O relato apresenta uma pergunta, uma explicação sobre a ação do Espírito e um consentimento. O Catecismo mostra essa resposta como cooperação livre sustentada pela graça, não como compreensão completa de todos os acontecimentos futuros."
+          }
+        },
+        {
+          "prompt": {
+            "es": "Alguien dice que la fe exige apagar la inteligencia. ¿Qué muestra esta escena?",
+            "en": "Someone says faith requires switching off reason. What does this scene show?",
+            "pt": "Alguém diz que a fé exige desligar a inteligência. O que esta cena mostra?"
+          },
+          "answer": {
+            "es": "María dialoga y pregunta; el texto no propone fingir una claridad completa. Una respuesta responsable puede incluir estudio y acompañamiento. Acoger el don de Dios no significa aceptar sin discernimiento cualquier afirmación religiosa.",
+            "en": "Mary enters into dialogue and asks a question; the text does not require pretending everything is clear. Responsible faith can include study and guidance. Welcoming God’s gift does not mean accepting every religious claim without discernment.",
+            "pt": "Maria dialoga e pergunta; o texto não propõe fingir que tudo está claro. Uma resposta responsável pode incluir estudo e acompanhamento. Acolher o dom de Deus não significa aceitar qualquer afirmação religiosa sem discernimento."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_456_460",
+          "title": {
+            "es": "Catecismo §§456–460",
+            "en": "Catechism §§456–460",
+            "pt": "Catecismo, parágrafos 456–460"
+          },
+          "catechismStart": 456,
+          "catechismEnd": 460,
+          "url": null
+        },
+        {
+          "id": "ccc_464_469",
+          "title": {
+            "es": "Catecismo §§464–469",
+            "en": "Catechism §§464–469",
+            "pt": "Catecismo, parágrafos 464–469"
+          },
+          "catechismStart": 464,
+          "catechismEnd": 469,
+          "url": null
+        },
+        {
+          "id": "ccc_484_489",
+          "title": {
+            "es": "Catecismo §§484–489",
+            "en": "Catechism §§484–489",
+            "pt": "Catecismo, parágrafos 484–489"
+          },
+          "catechismStart": 484,
+          "catechismEnd": 489,
+          "url": null
+        },
+        {
+          "id": "ccc_494_494",
+          "title": {
+            "es": "Catecismo §§494–494",
+            "en": "Catechism §§494–494",
+            "pt": "Catecismo, parágrafos 494–494"
+          },
+          "catechismStart": 494,
+          "catechismEnd": 494,
+          "url": null
+        },
+        {
+          "id": "ccc_470_475",
+          "title": {
+            "es": "Catecismo §§470–475",
+            "en": "Catechism §§470–475",
+            "pt": "Catecismo, parágrafos 470–475"
+          },
+          "catechismStart": 470,
+          "catechismEnd": 475,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "jesus_2_kingdom",
+      "lessonNumber": 2,
+      "title": {
+        "es": "El Reino llega: conversión y seguimiento",
+        "en": "The Kingdom draws near: conversion and discipleship",
+        "pt": "O Reino se aproxima: conversão e seguimento"
+      },
+      "scriptureReferences": [
+        "mar 1:14-20"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar qué anuncia Jesús al proclamar la cercanía del Reino.",
+          "en": "Explain what Jesus announces when proclaiming the nearness of the Kingdom.",
+          "pt": "Explicar o que Jesus anuncia ao proclamar a proximidade do Reino."
+        },
+        {
+          "es": "Distinguir conversión sostenida por la gracia y mera autosuperación.",
+          "en": "Distinguish conversion sustained by grace from mere self improvement.",
+          "pt": "Distinguir a conversão sustentada pela graça do mero aperfeiçoamento pessoal."
+        }
+      ],
+      "summary": {
+        "es": "El Reino se acerca en la persona y la obra de Jesús. Su llamada a convertirse reúne discípulos que aprenden a responder al amor recibido.",
+        "en": "The Kingdom draws near in Jesus’ person and work. His call to conversion gathers disciples who learn to respond to the love they receive.",
+        "pt": "O Reino se aproxima na pessoa e na obra de Jesus. Seu chamado à conversão reúne discípulos que aprendem a responder ao amor recebido."
+      },
+      "historicalContext": {
+        "es": "Marcos comienza el ministerio de Jesús en Galilea después del arresto de Juan. La proclamación del Reino precede a dos escenas de llamada junto al mar: Simón y Andrés dejan sus redes; Santiago y Juan dejan la barca y a su padre. El estilo es breve y concentra la atención en la iniciativa de Jesús y la respuesta de los discípulos. No contiene un manual para cada decisión familiar o laboral. Lee estas llamadas como el comienzo de un camino que el Evangelio seguirá mostrando, con aprendizaje, incomprensiones y misericordia.",
+        "en": "Mark begins Jesus’ ministry in Galilee after John’s arrest. The proclamation of the Kingdom precedes two calling scenes beside the sea: Simon and Andrew leave their nets; James and John leave the boat and their father. The narrative is brief and directs attention to Jesus’ initiative and the disciples’ response. It does not offer a manual for every family or employment decision. Read these calls as the beginning of a journey that the Gospel will continue to unfold, including learning, misunderstanding and mercy along the way.",
+        "pt": "Marcos inicia o ministério de Jesus na Galileia depois da prisão de João. A proclamação do Reino precede duas cenas de chamado junto ao mar: Simão e André deixam as redes; Tiago e João deixam a barca e o pai. O estilo é breve e concentra a atenção na iniciativa de Jesus e na resposta dos discípulos. Não contém um manual para cada decisão familiar ou profissional. Leia esses chamados como o início de um caminho que o Evangelho continuará mostrando, com aprendizado, incompreensões e misericórdia."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "El Reino tiene un centro: Jesús",
+            "en": "The Kingdom has a centre: Jesus",
+            "pt": "O Reino tem um centro: Jesus"
+          },
+          "body": {
+            "es": "Reino de Dios designa su acción salvadora que llega en Jesús, no un territorio que sus seguidores deban conquistar. Cristo reúne personas alrededor de sí y les comunica la vida del Padre. Sus palabras y signos anuncian lo que se manifestará de modo decisivo en su muerte y resurrección. El Catecismo llama a la Iglesia germen y comienzo del Reino: por eso no se confunden sin más sus miembros con la plenitud de lo que Dios promete. El Reino incluye una esperanza futura y transforma ya las relaciones, especialmente la acogida de pobres y pecadores.",
+            "en": "The Kingdom of God means his saving action arriving in Jesus, rather than territory his followers must conquer. Christ gathers people around himself and shares the Father’s life with them. His words and signs announce what will become decisive through his death and resurrection. The Catechism calls the Church the seed and beginning of the Kingdom; its members therefore cannot simply be equated with the fullness of God’s promise. The Kingdom includes future hope while already transforming relationships, especially through the welcome offered to poor people and sinners who hear Jesus’ call.",
+            "pt": "Reino de Deus designa sua ação salvadora que chega em Jesus, não um território que seus seguidores devam conquistar. Cristo reúne pessoas ao seu redor e lhes comunica a vida do Pai. Suas palavras e sinais anunciam o que se manifestará de modo decisivo em sua morte e ressurreição. O Catecismo chama a Igreja de germe e começo do Reino: por isso seus membros não se confundem simplesmente com a plenitude da promessa de Deus. O Reino inclui esperança futura e já transforma as relações, especialmente a acolhida dos pobres e pecadores."
+          }
+        },
+        {
+          "title": {
+            "es": "Convertirse es responder a un amor previo",
+            "en": "Conversion responds to a love already given",
+            "pt": "Converter-se é responder a um amor anterior"
+          },
+          "body": {
+            "es": "La llamada a convertirse no exige comprar la atención de Dios mediante una vida impecable. Jesús ofrece la buena noticia y llama a abandonar el pecado para acogerla. La gracia, ayuda gratuita de Dios, mueve una respuesta que sigue siendo libre. Para quien comienza, el Bautismo es el lugar de la conversión primera; para quien ya está bautizado, la conversión continúa. El Catecismo recuerda a Pedro, cuyo arrepentimiento nace del encuentro con la misericordia de Jesús. Reconocer una falta puede abrir un camino concreto de reparación y renovación, sin convertir la culpa en identidad permanente.",
+            "en": "The call to conversion does not mean buying God’s attention through an impeccable life. Jesus offers good news and calls people to turn away from sin in order to receive it. Grace, God’s freely given help, moves a response that remains free. Baptism is the place of initial conversion for someone entering Christian life; conversion continues for the baptized. The Catechism recalls Peter, whose repentance follows his encounter with Jesus’ mercy. Acknowledging wrongdoing can open a practical path of repair and renewal, without making guilt a person’s permanent identity or final destination.",
+            "pt": "O chamado à conversão não exige comprar a atenção de Deus por meio de uma vida impecável. Jesus oferece a boa notícia e chama a abandonar o pecado para acolhê-la. A graça, ajuda gratuita de Deus, move uma resposta que continua livre. Para quem começa, o Batismo é o lugar da conversão primeira; para quem já é batizado, a conversão continua. O Catecismo recorda Pedro, cujo arrependimento nasce do encontro com a misericórdia de Jesus. Reconhecer uma falta pode abrir um caminho concreto de reparação e renovação, sem tornar a culpa uma identidade permanente."
+          }
+        },
+        {
+          "title": {
+            "es": "Seguirlo modifica la vida cotidiana",
+            "en": "Following him changes everyday life",
+            "pt": "Segui-lo transforma a vida cotidiana"
+          },
+          "body": {
+            "es": "Los pescadores no reciben primero una lista de logros: reciben una invitación a estar con Jesús y participar de su misión. Dejar las redes expresa la prioridad de esa llamada, pero no autoriza a despreciar responsabilidades o imponer decisiones repentinas a otra persona. El seguimiento necesita discernimiento y se vive en comunidad. Tampoco garantiza riqueza, influencia o ausencia de dificultades; el arresto de Juan ya impide esa lectura cómoda. Una primera respuesta puede ser sencilla: escuchar el Evangelio, conocer una comunidad cristiana o corregir una conducta que perjudica al prójimo.",
+            "en": "The fishermen first receive an invitation to accompany Jesus and share his mission, rather than a list of achievements. Leaving their nets expresses the priority of his call, but does not authorize contempt for responsibilities or pressure on someone else to make sudden decisions. Discipleship requires discernment and is lived within a community. It promises neither wealth nor influence nor freedom from difficulties; John’s arrest already challenges that comfortable reading. A first response can be simple: listening to the Gospel, getting to know a Christian community or correcting behaviour that harms a neighbour.",
+            "pt": "Os pescadores não recebem primeiro uma lista de conquistas: recebem um convite para estar com Jesus e participar de sua missão. Deixar as redes expressa a prioridade desse chamado, mas não autoriza desprezar responsabilidades nem impor decisões repentinas a outra pessoa. O seguimento precisa de discernimento e se vive em comunidade. Também não garante riqueza, influência ou ausência de dificuldades; a prisão de João já impede essa leitura cômoda. Uma primeira resposta pode ser simples: escutar o Evangelho, conhecer uma comunidade cristã ou corrigir uma conduta que prejudica o próximo."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Relee Mc 1,14–20 y observa el orden: anuncio, invitación y respuesta. Identifica qué hacen Jesús y cada pareja de hermanos. Después compara sus acciones con lo que el pasaje no promete.",
+        "en": "Reread Mark 1:14–20 and notice the sequence: proclamation, invitation and response. Identify what Jesus and each pair of brothers do. Then compare their actions with what the passage does not promise.",
+        "pt": "Releia Mc 1,14–20 e observe a ordem: anúncio, convite e resposta. Identifique o que fazem Jesus e cada dupla de irmãos. Depois compare suas ações com aquilo que a passagem não promete."
+      },
+      "meditatio": {
+        "es": "¿En qué situación tiendes a medir la fe por los resultados materiales? ¿Qué cambio concreto podrías discernir como respuesta al amor de Dios, sin compararte con el camino de otra persona?",
+        "en": "In what situation do you tend to measure faith by material results? What practical change could you discern as a response to God’s love, without comparing yourself with another person’s journey?",
+        "pt": "Em que situação você tende a medir a fé pelos resultados materiais? Que mudança concreta poderia discernir como resposta ao amor de Deus, sem se comparar com o caminho de outra pessoa?"
+      },
+      "oratio": {
+        "es": "Presenta a Dios una resistencia o una inquietud que haya surgido en la lectura. Pide, con tus palabras, luz para discernir y ayuda para responder; puedes agradecer una ocasión concreta de misericordia recibida.",
+        "en": "Bring to God a hesitation or concern raised by your reading. In your own words, ask for light to discern and help to respond; you may give thanks for a particular experience of mercy.",
+        "pt": "Apresente a Deus uma resistência ou preocupação que tenha surgido na leitura. Peça, com suas palavras, luz para discernir e ajuda para responder; você pode agradecer uma ocasião concreta de misericórdia recebida."
+      },
+      "contemplatio": {
+        "es": "Guarda entre sesenta y noventa segundos de silencio, recordando a Jesús que se acerca a los pescadores. Permanece ante él sin preparar una respuesta brillante. Si te distraes, vuelve con calma a esa escena.",
+        "en": "Keep silence for sixty to ninety seconds, recalling Jesus approaching the fishermen. Remain before him without preparing an impressive response. If you become distracted, return gently to that scene.",
+        "pt": "Guarde entre sessenta e noventa segundos de silêncio, recordando Jesus que se aproxima dos pescadores. Permaneça diante dele sem preparar uma resposta brilhante. Se houver distração, volte com calma a essa cena."
+      },
+      "actionStep": {
+        "es": "Elige una conducta pequeña que puedas cambiar esta semana para tratar mejor a alguien. Decide cuándo intentarlo y, si necesitas orientación, consulta a una persona prudente de tu comunidad; evita decisiones drásticas improvisadas.",
+        "en": "Choose one small change that could help you treat someone better this week. Decide when to try it and seek guidance from a wise person in your community if needed; avoid sudden drastic decisions.",
+        "pt": "Escolha uma pequena mudança que possa ajudá-lo a tratar melhor alguém nesta semana. Decida quando tentar e, se precisar de orientação, procure uma pessoa prudente de sua comunidade; evite decisões drásticas improvisadas."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿El Reino equivale al éxito material de los creyentes?",
+            "en": "Does the Kingdom mean believers’ material success?",
+            "pt": "O Reino equivale ao sucesso material dos fiéis?"
+          },
+          "answer": {
+            "es": "No. Se centra en la acción salvadora de Dios en Jesús y llama a la comunión con él. Acoge a pobres y pecadores y transforma relaciones; ni la riqueza ni el poder son su medida.",
+            "en": "No. It centres on God’s saving action in Jesus and calls people into communion with him. It welcomes poor people and sinners and transforms relationships; neither wealth nor power measures its presence.",
+            "pt": "Não. Ele se centra na ação salvadora de Deus em Jesus e chama à comunhão com ele. Acolhe pobres e pecadores e transforma relações; nem a riqueza nem o poder são sua medida."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Por qué la conversión no termina al comenzar la vida cristiana?",
+            "en": "Why does conversion continue after Christian life begins?",
+            "pt": "Por que a conversão continua depois do início da vida cristã?"
+          },
+          "answer": {
+            "es": "El Bautismo inicia una vida nueva, pero los bautizados siguen necesitando purificación y renovación. La gracia no elimina su libertad. El arrepentimiento de Pedro muestra que Jesús vuelve a llamar también a quienes ya lo siguen.",
+            "en": "Baptism begins a new life, but the baptized still need purification and renewal. Grace does not remove their freedom. Peter’s repentance shows that Jesus calls again even those who are already following him.",
+            "pt": "O Batismo inicia uma vida nova, mas os batizados continuam precisando de purificação e renovação. A graça não elimina sua liberdade. O arrependimento de Pedro mostra que Jesus chama novamente também aqueles que já o seguem."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo responder a quien exige abandonar hoy cualquier responsabilidad para demostrar fe?",
+            "en": "How would you respond to someone demanding that you abandon every responsibility today to prove faith?",
+            "pt": "Como responder a quem exige abandonar hoje qualquer responsabilidade para provar a fé?"
+          },
+          "answer": {
+            "es": "Las llamadas del Evangelio muestran la prioridad de Jesús, no una regla de impulsividad impuesta a otra persona. Conviene discernir una respuesta libre, considerar los deberes reales y buscar acompañamiento; una presión manipuladora no sustituye la voz de Cristo.",
+            "en": "The Gospel calls show Jesus’ priority, rather than a rule of impulsiveness imposed on another person. Discern a free response, consider real responsibilities and seek guidance; manipulative pressure cannot replace the voice of Christ.",
+            "pt": "Os chamados do Evangelho mostram a prioridade de Jesus, não uma regra de impulsividade imposta a outra pessoa. Convém discernir uma resposta livre, considerar os deveres reais e buscar acompanhamento; a pressão manipuladora não substitui a voz de Cristo."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_541_546",
+          "title": {
+            "es": "Catecismo §§541–546",
+            "en": "Catechism §§541–546",
+            "pt": "Catecismo, parágrafos 541–546"
+          },
+          "catechismStart": 541,
+          "catechismEnd": 546,
+          "url": null
+        },
+        {
+          "id": "ccc_1427_1429",
+          "title": {
+            "es": "Catecismo §§1427–1429",
+            "en": "Catechism §§1427–1429",
+            "pt": "Catecismo, parágrafos 1427–1429"
+          },
+          "catechismStart": 1427,
+          "catechismEnd": 1429,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "jesus_3_supper_service",
+      "lessonNumber": 3,
+      "title": {
+        "es": "La Cena: don, alianza y servicio",
+        "en": "The Supper: gift, covenant and service",
+        "pt": "A Ceia: dom, aliança e serviço"
+      },
+      "scriptureReferences": [
+        "luk 22:14-20",
+        "joh 13:1-15"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Relacionar la Cena con la entrega de Jesús en la cruz.",
+          "en": "Connect the Supper with Jesus’ self offering on the cross.",
+          "pt": "Relacionar a Ceia com a entrega de Jesus na cruz."
+        },
+        {
+          "es": "Distinguir memorial sacramental, recuerdo y servicio al prójimo.",
+          "en": "Distinguish sacramental memorial, recollection and service to others.",
+          "pt": "Distinguir memorial sacramental, lembrança e serviço ao próximo."
+        }
+      ],
+      "summary": {
+        "es": "La Cena anticipa la entrega pascual de Jesús, y el lavatorio muestra la forma de su amor. La Eucaristía hace presente su único sacrificio y llama a vivirlo sirviendo.",
+        "en": "The Supper anticipates Jesus’ Paschal self offering, and the washing of feet reveals the form of his love. The Eucharist makes his one sacrifice present and calls us to live through service.",
+        "pt": "A Ceia antecipa a entrega pascal de Jesus, e o lava-pés mostra a forma de seu amor. A Eucaristia torna presente seu único sacrifício e chama a vivê-lo no serviço."
+      },
+      "historicalContext": {
+        "es": "Lucas presenta la comida de Jesús con los apóstoles como celebración pascual, antes de la pasión. Juan abre el relato de la cena destacando el amor de Jesús y narra el lavatorio de los pies. Son dos testimonios con acentos propios: Juan no repite aquí las palabras sobre el pan y el cáliz. Lee cada escena por separado antes de relacionarlas. Los relatos permiten reconocer la libertad con que Jesús se entrega y el desconcierto de sus discípulos, sin exigir que resolvamos en esta lección las cuestiones de cronología entre los evangelios.",
+        "en": "Luke presents Jesus’ meal with the apostles as a Passover celebration before the passion. John opens his account of the supper by emphasizing Jesus’ love and narrates the washing of feet. These are two witnesses with distinct emphases: John does not repeat the words over bread and cup here. Read each scene separately before connecting them. The accounts reveal Jesus’ freedom in giving himself and the disciples’ bewilderment, without requiring this lesson to settle the questions of chronology between the Gospels or merge their distinctive narrative details.",
+        "pt": "Lucas apresenta a refeição de Jesus com os apóstolos como celebração pascal, antes da paixão. João abre o relato da ceia destacando o amor de Jesus e narra o lava-pés. São dois testemunhos com acentos próprios: João não repete aqui as palavras sobre o pão e o cálice. Leia cada cena separadamente antes de relacioná-las. Os relatos permitem reconhecer a liberdade com que Jesus se entrega e a perplexidade dos discípulos, sem exigir que resolvamos nesta lição as questões de cronologia entre os evangelhos."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Un don que precede a la violencia",
+            "en": "A gift that precedes the violence",
+            "pt": "Um dom que precede a violência"
+          },
+          "body": {
+            "es": "En Lucas, Jesús habla de su cuerpo entregado y de la alianza en su sangre antes de ser detenido. La violencia no convierte de repente su vida en salvación: él da libremente lo que otros intentarán arrebatarle. El contexto pascual recuerda la liberación de Israel y sitúa su entrega dentro de la fidelidad de Dios. El Catecismo relaciona esta Cena con el paso de Jesús al Padre por su muerte y resurrección. Así, Cena y cruz no son historias rivales: la primera anuncia sacramentalmente el don que la segunda llevará hasta el extremo.",
+            "en": "In Luke, Jesus speaks of his body given and the covenant in his blood before his arrest. Violence does not suddenly turn his life into salvation: he freely gives what others will try to take from him. The Passover setting recalls Israel’s liberation and places his self offering within God’s faithfulness. The Catechism connects this Supper with Jesus’ passage to the Father through death and resurrection. Supper and cross are therefore not competing stories: the first sacramentally anticipates the gift that the second will carry to its fullest expression.",
+            "pt": "Em Lucas, Jesus fala de seu corpo entregue e da aliança em seu sangue antes de ser preso. A violência não transforma de repente sua vida em salvação: ele oferece livremente o que outros tentarão tirar dele. O contexto pascal recorda a libertação de Israel e situa sua entrega na fidelidade de Deus. O Catecismo relaciona essa Ceia com a passagem de Jesus ao Pai por sua morte e ressurreição. Assim, Ceia e cruz não são histórias rivais: a primeira antecipa sacramentalmente o dom que a segunda levará até o extremo."
+          }
+        },
+        {
+          "title": {
+            "es": "Memorial: el acontecimiento se hace presente",
+            "en": "Memorial: the event becomes present",
+            "pt": "Memorial: o acontecimento se torna presente"
+          },
+          "body": {
+            "es": "Recordar a un ser querido puede cambiar nuestros sentimientos, pero el memorial eucarístico significa algo más. En la celebración de la Iglesia, la Pascua de Cristo se hace presente sacramentalmente: se participa de su único sacrificio, no se organiza una nueva muerte de Jesús. El Catecismo explica esta relación a partir del memorial bíblico y de las palabras de la institución. La presencia no depende de que el participante consiga imaginar la escena con intensidad. Acercarse a la Misa supone aprender a recibir un don, además de comprender y recordar un hecho del pasado.",
+            "en": "Remembering someone we love can change our feelings, but the Eucharistic memorial means something more. In the Church’s celebration, Christ’s Pasch becomes sacramentally present: we share in his one sacrifice rather than arranging a new death of Jesus. The Catechism explains this relationship through biblical memorial and the words of institution. This presence does not depend on a participant imagining the scene with sufficient intensity. Approaching Mass means learning to receive a gift, alongside understanding and remembering a past event. Its reality rests on Christ’s action rather than the strength of our emotions.",
+            "pt": "Lembrar uma pessoa querida pode mudar nossos sentimentos, mas o memorial eucarístico significa algo mais. Na celebração da Igreja, a Páscoa de Cristo se torna presente sacramentalmente: participa-se de seu único sacrifício, não se organiza uma nova morte de Jesus. O Catecismo explica essa relação a partir do memorial bíblico e das palavras da instituição. A presença não depende de o participante conseguir imaginar a cena com intensidade. Aproximar-se da Missa significa aprender a receber um dom, além de compreender e recordar um acontecimento do passado. Sua realidade se apoia na ação de Cristo."
+          }
+        },
+        {
+          "title": {
+            "es": "Recibir su amor y aprender a servir",
+            "en": "Receive his love and learn to serve",
+            "pt": "Receber seu amor e aprender a servir"
+          },
+          "body": {
+            "es": "Pedro se resiste a que Jesús le lave los pies. El relato muestra que ser discípulo incluye dejarse servir antes de pretender dar algo a los demás. Después, el Maestro propone su gesto como ejemplo: el amor recibido cambia la manera de ejercer autoridad y tratar al prójimo. El lavatorio no vuelve innecesaria la Eucaristía ni la Eucaristía hace innecesario el servicio. El Catecismo une ambos en el amor de Cristo hasta el fin. Para un principiante, participar con respeto y aprender a ayudar son respuestas complementarias; nadie necesita comulgar para estudiar esta lección.",
+            "en": "Peter resists letting Jesus wash his feet. The narrative shows that discipleship includes accepting service before trying to give something to others. The Master then offers his action as an example: received love changes how authority is exercised and neighbours are treated. Washing feet does not make the Eucharist unnecessary, nor does the Eucharist make service unnecessary. The Catechism places both within Christ’s love to the end. For a beginner, respectful participation and learning to help are complementary responses. Nobody needs to receive Communion in order to study or complete this lesson.",
+            "pt": "Pedro resiste a deixar Jesus lavar seus pés. O relato mostra que ser discípulo inclui deixar-se servir antes de pretender oferecer algo aos outros. Depois, o Mestre propõe seu gesto como exemplo: o amor recebido muda a maneira de exercer autoridade e tratar o próximo. O lava-pés não torna a Eucaristia desnecessária, nem a Eucaristia torna desnecessário o serviço. O Catecismo une ambos no amor de Cristo até o fim. Para quem começa, participar com respeito e aprender a ajudar são respostas complementares; ninguém precisa comungar para estudar esta lição."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Lee primero Lc 22,14–20 y observa los verbos de la entrega. Después lee Jn 13,1–15: identifica la resistencia de Pedro y la explicación de Jesús. Relaciona ambas escenas sin atribuir a una las palabras de la otra.",
+        "en": "First read Luke 22:14–20 and notice the actions of self giving. Then read John 13:1–15: identify Peter’s resistance and Jesus’ explanation. Connect the scenes without assigning one account’s words to the other.",
+        "pt": "Leia primeiro Lc 22,14–20 e observe os verbos da entrega. Depois leia Jo 13,1–15: identifique a resistência de Pedro e a explicação de Jesus. Relacione as cenas sem atribuir a uma as palavras da outra."
+      },
+      "meditatio": {
+        "es": "¿Te resulta más difícil recibir ayuda o ofrecerla sin buscar reconocimiento? ¿Qué cambia al entender que el servicio cristiano nace de un don recibido y no de demostrar superioridad moral?",
+        "en": "Is it harder for you to accept help or offer it without seeking recognition? What changes when Christian service begins with a received gift rather than proving moral superiority?",
+        "pt": "É mais difícil para você receber ajuda ou oferecê-la sem buscar reconhecimento? O que muda ao entender que o serviço cristão nasce de um dom recebido, não da demonstração de superioridade moral?"
+      },
+      "oratio": {
+        "es": "Habla con Jesús sobre tu manera de recibir y de servir. Puedes agradecer un gesto concreto de cuidado y pedir ayuda para participar con más atención en su amor, sin compararte con otras personas.",
+        "en": "Speak with Jesus about how you receive care and offer service. You may thank him for a particular act of care and ask for help to share his love more attentively, without comparing yourself with others.",
+        "pt": "Converse com Jesus sobre seu modo de receber cuidado e de servir. Você pode agradecer um gesto concreto de carinho e pedir ajuda para participar com mais atenção de seu amor, sem se comparar com outras pessoas."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio, ante la imagen de Jesús arrodillado para lavar los pies. No prepares ahora una tarea ni un discurso; deja que esa escena acompañe tu presencia ante él.",
+        "en": "Remain in silence for sixty to ninety seconds with the image of Jesus kneeling to wash feet. Do not prepare a task or speech now; let the scene accompany your presence before him.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio, diante da imagem de Jesus ajoelhado para lavar os pés. Não prepare agora uma tarefa nem um discurso; deixe essa cena acompanhar sua presença diante dele."
+      },
+      "actionStep": {
+        "es": "Elige un servicio discreto y realizable: escuchar, colaborar en una tarea o pedir perdón por una falta concreta. Hazlo sin exigir agradecimiento. Si deseas asistir a Misa, puedes hacerlo respetuosamente aunque todavía estés aprendiendo.",
+        "en": "Choose one quiet, realistic act of service: listening, helping with a task or apologizing for a particular wrong. Do it without demanding thanks. If you wish to attend Mass, you can participate respectfully while still learning.",
+        "pt": "Escolha um serviço discreto e realizável: escutar, colaborar numa tarefa ou pedir perdão por uma falta concreta. Faça isso sem exigir agradecimento. Se desejar assistir à Missa, pode participar respeitosamente mesmo enquanto ainda está aprendendo."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Por qué la Cena ayuda a comprender la cruz?",
+            "en": "Why does the Supper help us understand the cross?",
+            "pt": "Por que a Ceia ajuda a compreender a cruz?"
+          },
+          "answer": {
+            "es": "Antes de ser detenido, Jesús expresa libremente su entrega por los demás. La Cena anticipa sacramentalmente su Pascua y permite leer la cruz desde ese amor ofrecido, sin llamar buena a la violencia de quienes lo matan.",
+            "en": "Before his arrest, Jesus freely expresses his self offering for others. The Supper sacramentally anticipates his Pasch and allows us to read the cross through that love, without calling his killers’ violence good.",
+            "pt": "Antes de ser preso, Jesus expressa livremente sua entrega pelos outros. A Ceia antecipa sacramentalmente sua Páscoa e permite ler a cruz a partir desse amor oferecido, sem chamar de boa a violência daqueles que o matam."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Memorial significa solo pensar con fuerza en el pasado?",
+            "en": "Does memorial mean only thinking intensely about the past?",
+            "pt": "Memorial significa apenas pensar intensamente no passado?"
+          },
+          "answer": {
+            "es": "No. En la Eucaristía se hace presente sacramentalmente el único sacrificio pascual de Cristo. La celebración no repite su muerte ni depende de la intensidad de nuestra imaginación; su don puede formar nuestra vida.",
+            "en": "No. The Eucharist sacramentally makes Christ’s one Paschal sacrifice present. The celebration neither repeats his death nor depends on the intensity of our imagination; the gift we receive can shape our lives.",
+            "pt": "Não. Na Eucaristia se torna presente sacramentalmente o único sacrifício pascal de Cristo. A celebração não repete sua morte nem depende da intensidade de nossa imaginação; o dom recebido pode formar nossa vida."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Es coherente usar la Misa como excusa para no ayudar a nadie?",
+            "en": "Is it consistent to use Mass as an excuse never to help anyone?",
+            "pt": "É coerente usar a Missa como desculpa para nunca ajudar ninguém?"
+          },
+          "answer": {
+            "es": "No. La Cena y el lavatorio muestran un mismo amor que se entrega. El servicio no reemplaza la realidad sacramental, pero recibir ese don llama a responder en el trato concreto al prójimo, según las posibilidades reales de cada persona.",
+            "en": "No. The Supper and washing of feet reveal the same self giving love. Service does not replace sacramental reality, but receiving that gift calls for a response in practical care for neighbours, according to each person’s real circumstances.",
+            "pt": "Não. A Ceia e o lava-pés mostram um mesmo amor que se entrega. O serviço não substitui a realidade sacramental, mas receber esse dom chama a responder no cuidado concreto com o próximo, segundo as possibilidades reais de cada pessoa."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_610_611",
+          "title": {
+            "es": "Catecismo §§610–611",
+            "en": "Catechism §§610–611",
+            "pt": "Catecismo, parágrafos 610–611"
+          },
+          "catechismStart": 610,
+          "catechismEnd": 611,
+          "url": null
+        },
+        {
+          "id": "ccc_1337_1340",
+          "title": {
+            "es": "Catecismo §§1337–1340",
+            "en": "Catechism §§1337–1340",
+            "pt": "Catecismo, parágrafos 1337–1340"
+          },
+          "catechismStart": 1337,
+          "catechismEnd": 1340,
+          "url": null
+        },
+        {
+          "id": "ccc_1362_1367",
+          "title": {
+            "es": "Catecismo §§1362–1367",
+            "en": "Catechism §§1362–1367",
+            "pt": "Catecismo, parágrafos 1362–1367"
+          },
+          "catechismStart": 1362,
+          "catechismEnd": 1367,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "jesus_4_cross",
+      "lessonNumber": 4,
+      "title": {
+        "es": "La cruz: amor que se entrega",
+        "en": "The cross: love that gives itself",
+        "pt": "A cruz: amor que se entrega"
+      },
+      "scriptureReferences": [
+        "luk 23:33-49"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar la muerte de Jesús como entrega libre por amor y reconciliación.",
+          "en": "Explain Jesus’ death as a free self offering of love and reconciliation.",
+          "pt": "Explicar a morte de Jesus como entrega livre por amor e reconciliação."
+        },
+        {
+          "es": "Rechazar la culpa colectiva y distinguir seguimiento de tolerancia del abuso.",
+          "en": "Reject collective blame and distinguish discipleship from tolerating abuse.",
+          "pt": "Rejeitar a culpa coletiva e distinguir o seguimento da tolerância ao abuso."
+        }
+      ],
+      "summary": {
+        "es": "En la cruz, Jesús ofrece su vida en comunión de amor con el Padre para reconciliarnos con Dios. La fe reconoce esa salvación sin justificar a los agresores ni culpar colectivamente a un pueblo.",
+        "en": "On the cross, Jesus offers his life in loving communion with the Father to reconcile us with God. Faith recognizes this salvation without justifying aggressors or collectively blaming a people.",
+        "pt": "Na cruz, Jesus oferece sua vida em comunhão de amor com o Pai para nos reconciliar com Deus. A fé reconhece essa salvação sem justificar os agressores nem culpar coletivamente um povo."
+      },
+      "historicalContext": {
+        "es": "Lucas narra la crucifixión después del proceso ante autoridades religiosas y romanas y de la sentencia de Pilato. La escena reúne soldados, dirigentes, espectadores, dos condenados y personas que conocen a Jesús. Sus reacciones son distintas: burlas, reconocimiento, súplica, duelo. La crucifixión pertenece al sistema romano de ejecución, y Jesús y sus primeros discípulos son judíos. Observa la oración de Jesús y las respuestas de los personajes antes de emitir juicios sobre grupos enteros. El evangelista presenta su muerte dentro de la historia de salvación, sin borrar la violencia del acontecimiento.",
+        "en": "Luke narrates the crucifixion after proceedings before religious and Roman authorities and Pilate’s sentence. The scene includes soldiers, leaders, spectators, two condemned men and people who know Jesus. Their reactions differ: mockery, recognition, appeal and grief. Crucifixion belongs to the Roman system of execution, while Jesus and his first disciples are Jewish. Notice Jesus’ prayer and the characters’ responses before making judgements about entire groups. The evangelist presents his death within salvation history without erasing the violence of the event or reducing every witness to the same response.",
+        "pt": "Lucas narra a crucifixão depois do processo diante de autoridades religiosas e romanas e da sentença de Pilatos. A cena reúne soldados, dirigentes, espectadores, dois condenados e pessoas que conhecem Jesus. Suas reações são diferentes: zombaria, reconhecimento, súplica e luto. A crucifixão pertence ao sistema romano de execução, e Jesus e seus primeiros discípulos são judeus. Observe a oração de Jesus e as respostas das personagens antes de julgar grupos inteiros. O evangelista apresenta sua morte dentro da história da salvação, sem apagar a violência do acontecimento."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "La responsabilidad no pertenece a un pueblo entero",
+            "en": "Responsibility does not belong to an entire people",
+            "pt": "A responsabilidade não pertence a um povo inteiro"
+          },
+          "body": {
+            "es": "El Catecismo reconoce la complejidad del proceso y prohíbe atribuir la muerte de Jesús indistintamente a los judíos de entonces o de hoy. Tampoco todas las autoridades actuaron del mismo modo. En Lucas, los personajes que rodean la cruz responden de maneras diferentes; convertirlos en un bloque enemigo falsea el relato. La fe contempla además el alcance universal del pecado y de la redención: el lector está llamado a reconocer su propia necesidad de misericordia. Esta perspectiva excluye el antisemitismo y evita usar la pasión para legitimar hostilidad religiosa o acusaciones hereditarias.",
+            "en": "The Catechism recognizes the trial’s complexity and forbids indiscriminately blaming either the Jews of Jesus’ time or Jewish people today for his death. Nor did every authority act in the same way. In Luke, the people around the cross respond differently; turning them into one hostile bloc falsifies the narrative. Faith also considers the universal scope of sin and redemption: readers are invited to recognize their own need for mercy. This perspective excludes antisemitism and prevents the passion from becoming a justification for religious hostility or accusations passed down through generations.",
+            "pt": "O Catecismo reconhece a complexidade do processo e proíbe atribuir a morte de Jesus indistintamente aos judeus daquele tempo ou de hoje. Nem todas as autoridades agiram da mesma forma. Em Lucas, as personagens ao redor da cruz respondem de maneiras diferentes; transformá-las num bloco inimigo falseia o relato. A fé contempla também o alcance universal do pecado e da redenção: o leitor é chamado a reconhecer sua própria necessidade de misericórdia. Essa perspectiva exclui o antissemitismo e impede usar a paixão para legitimar hostilidade religiosa ou acusações hereditárias."
+          }
+        },
+        {
+          "title": {
+            "es": "El Padre y el Hijo actúan por amor",
+            "en": "The Father and Son act in love",
+            "pt": "O Pai e o Filho agem por amor"
+          },
+          "body": {
+            "es": "La cruz no enfrenta a un Padre que odia con un Hijo que consigue volverlo amable. La iniciativa de reconciliarnos procede del amor de Dios, antes de cualquier mérito nuestro. El Hijo hecho hombre ofrece libremente su vida en comunión con el Padre y por el Espíritu. Su sufrimiento es real; el valor salvador no consiste en acumular dolor, sino en su amor obediente y en la identidad de quien se entrega por nosotros. Hablar de sacrificio expresa esa ofrenda que repara el pecado y restablece la comunión, no la aprobación de una crueldad.",
+            "en": "The cross does not set a hateful Father against a Son who persuades him to become kind. The initiative of reconciliation comes from God’s love before any merit of ours. The incarnate Son freely offers his life in communion with the Father and through the Spirit. His suffering is real; its saving value lies not in accumulating pain but in his obedient love and the identity of the one giving himself for us. Sacrifice names this offering that repairs sin and restores communion, rather than divine approval of cruelty or violence.",
+            "pt": "A cruz não coloca um Pai que odeia contra um Filho que consegue torná-lo bondoso. A iniciativa de nos reconciliar procede do amor de Deus, antes de qualquer mérito nosso. O Filho feito homem oferece livremente sua vida em comunhão com o Pai e pelo Espírito. Seu sofrimento é real; o valor salvador não está em acumular dor, mas em seu amor obediente e na identidade de quem se entrega por nós. Falar de sacrifício expressa essa oferta que repara o pecado e restabelece a comunhão, não a aprovação de uma crueldade."
+          }
+        },
+        {
+          "title": {
+            "es": "Seguir a Cristo también significa proteger la vida",
+            "en": "Following Christ also means protecting life",
+            "pt": "Seguir Cristo também significa proteger a vida"
+          },
+          "body": {
+            "es": "Unir a Cristo un sufrimiento inevitable puede convertirse en oración y amor, pero no vuelve bueno el mal recibido. Nadie está obligado a permanecer bajo violencia para demostrar fe, ni el perdón elimina la protección, la justicia o la responsabilidad del agresor. El Catecismo reconoce el derecho a defender la vida y el deber de proteger a otras personas. Si existe abuso, busca un lugar seguro y ayuda de personas fiables, profesionales y autoridades según la situación. La cruz permite acompañar a quien sufre; nunca concede a otro permiso para dañarlo o silenciarlo.",
+            "en": "Uniting unavoidable suffering with Christ can become prayer and love, but does not make the harm received good. Nobody must remain under violence to prove faith, and forgiveness does not remove protection, justice or an aggressor’s responsibility. The Catechism recognizes the right to defend life and the duty to protect others. If abuse is occurring, seek safety and support from trustworthy people, professionals and authorities as the situation requires. The cross enables companionship with those who suffer; it never gives another person permission to harm them or silence their cry for help.",
+            "pt": "Unir a Cristo um sofrimento inevitável pode tornar-se oração e amor, mas não transforma em bom o mal recebido. Ninguém é obrigado a permanecer sob violência para demonstrar fé, nem o perdão elimina a proteção, a justiça ou a responsabilidade do agressor. O Catecismo reconhece o direito de defender a vida e o dever de proteger outras pessoas. Se houver abuso, procure um lugar seguro e ajuda de pessoas confiáveis, profissionais e autoridades conforme a situação. A cruz permite acompanhar quem sofre; nunca autoriza outra pessoa a feri-lo ou silenciá-lo."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Relee Lc 23,33–49 y distingue las voces: Jesús, los condenados y el centurión. Observa también a quienes miran o se retiran. ¿Qué detalles impiden presentar a cada grupo como si tuviera una única reacción?",
+        "en": "Reread Luke 23:33–49 and distinguish the voices of Jesus, the condemned men and the centurion. Notice those watching or leaving too. Which details prevent us from assigning one identical reaction to each group?",
+        "pt": "Releia Lc 23,33–49 e distinga as vozes: Jesus, os condenados e o centurião. Observe também quem olha ou se retira. Que detalhes impedem apresentar cada grupo como se tivesse uma única reação?"
+      },
+      "meditatio": {
+        "es": "¿Qué imagen del Padre necesitas revisar al considerar la entrega de Jesús? ¿Cómo podrías acompañar a una persona que sufre sin minimizar su dolor ni decirle que debe aceptar una situación peligrosa?",
+        "en": "What picture of the Father needs reconsidering as you contemplate Jesus’ self offering? How could you accompany someone in distress without minimizing their pain or telling them to accept a dangerous situation?",
+        "pt": "Que imagem do Pai você precisa rever ao considerar a entrega de Jesus? Como poderia acompanhar uma pessoa que sofre sem minimizar sua dor nem dizer que ela deve aceitar uma situação perigosa?"
+      },
+      "oratio": {
+        "es": "Presenta a Dios un sufrimiento propio o ajeno sin justificar a quien causa daño. Puedes pedir consuelo, lucidez y ayuda concreta. Si el pasaje te resulta doloroso, puedes detenerte y buscar acompañamiento seguro.",
+        "en": "Bring your own or another person’s suffering to God without excusing anyone who causes harm. You may ask for comfort, clarity and practical help. If the passage is distressing, you may pause and seek safe support.",
+        "pt": "Apresente a Deus um sofrimento seu ou de outra pessoa sem justificar quem causa dano. Você pode pedir consolo, lucidez e ajuda concreta. Se a passagem for dolorosa, pode parar e buscar um acompanhamento seguro."
+      },
+      "contemplatio": {
+        "es": "Si te resulta posible, permanece entre sesenta y noventa segundos en silencio ante Jesús crucificado. No necesitas revivir una experiencia traumática ni provocar tristeza. Puedes descansar en su amor o terminar el silencio si lo necesitas.",
+        "en": "If you are able, remain quietly before the crucified Jesus for sixty to ninety seconds. You need not relive a traumatic experience or produce sadness. You may rest in his love or end the silence if needed.",
+        "pt": "Se for possível, permaneça entre sessenta e noventa segundos em silêncio diante de Jesus crucificado. Não precisa reviver uma experiência traumática nem provocar tristeza. Pode descansar em seu amor ou encerrar o silêncio se precisar."
+      },
+      "actionStep": {
+        "es": "Elige un gesto seguro de cuidado: escuchar sin juzgar, ofrecer ayuda práctica o facilitar un contacto profesional solicitado. Respeta la libertad y la privacidad de la otra persona; ante un peligro inmediato, busca ayuda de emergencia.",
+        "en": "Choose one safe act of care: listening without judging, offering practical help or facilitating a requested professional contact. Respect the other person’s freedom and privacy; seek emergency help when danger is immediate.",
+        "pt": "Escolha um gesto seguro de cuidado: escutar sem julgar, oferecer ajuda prática ou facilitar um contato profissional solicitado. Respeite a liberdade e a privacidade da outra pessoa; diante de perigo imediato, procure ajuda de emergência."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Se puede culpar de la muerte de Jesús a los judíos como pueblo?",
+            "en": "Can Jewish people as a whole be blamed for Jesus’ death?",
+            "pt": "Pode-se culpar os judeus como povo pela morte de Jesus?"
+          },
+          "answer": {
+            "es": "No. CIC 597 rechaza expresamente esa culpa colectiva, tanto para los contemporáneos de Jesús como para los judíos actuales. Los relatos distinguen actores y decisiones; la pertenencia a un pueblo no transmite responsabilidad penal ni culpa hereditaria.",
+            "en": "No. CCC 597 expressly rejects collective blame both for Jesus’ contemporaries and for Jewish people today. The narratives distinguish actors and decisions; belonging to a people does not transmit criminal responsibility or inherited guilt.",
+            "pt": "Não. O CIC 597 rejeita expressamente essa culpa coletiva, tanto para os contemporâneos de Jesus como para os judeus atuais. Os relatos distinguem agentes e decisões; pertencer a um povo não transmite responsabilidade penal nem culpa hereditária."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿La reconciliación obliga al Hijo a convencer a un Padre sin amor?",
+            "en": "Does reconciliation require the Son to persuade an unloving Father?",
+            "pt": "A reconciliação exige que o Filho convença um Pai sem amor?"
+          },
+          "answer": {
+            "es": "No. El amor del Padre precede a nuestros méritos, y el Hijo se entrega libremente en comunión con él. El sacrificio es una única obra divina de salvación, no un conflicto de voluntades enemigas dentro de Dios.",
+            "en": "No. The Father’s love precedes our merits, and the Son freely gives himself in communion with him. The sacrifice belongs to one divine saving work, rather than a conflict between hostile wills within God.",
+            "pt": "Não. O amor do Pai precede nossos méritos, e o Filho se entrega livremente em comunhão com ele. O sacrifício é uma única obra divina de salvação, não um conflito entre vontades inimigas dentro de Deus."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Qué responder a quien usa la cruz para exigir que alguien permanezca bajo abuso?",
+            "en": "How should we respond when the cross is used to demand that someone remain under abuse?",
+            "pt": "Como responder a quem usa a cruz para exigir que alguém permaneça sob abuso?"
+          },
+          "answer": {
+            "es": "Esa exigencia es incorrecta. La entrega libre de Cristo no autoriza a un agresor ni elimina la defensa de la vida. Corresponde priorizar seguridad, acompañamiento y ayuda adecuada; el perdón no sustituye la justicia ni la protección.",
+            "en": "That demand is wrong. Christ’s free self offering does not authorize an aggressor or remove the defence of life. Safety, support and appropriate assistance take priority; forgiveness does not replace justice or protection.",
+            "pt": "Essa exigência é incorreta. A entrega livre de Cristo não autoriza um agressor nem elimina a defesa da vida. É preciso priorizar segurança, acompanhamento e ajuda adequada; o perdão não substitui a justiça nem a proteção."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_595_598",
+          "title": {
+            "es": "Catecismo §§595–598",
+            "en": "Catechism §§595–598",
+            "pt": "Catecismo, parágrafos 595–598"
+          },
+          "catechismStart": 595,
+          "catechismEnd": 598,
+          "url": null
+        },
+        {
+          "id": "ccc_604_609",
+          "title": {
+            "es": "Catecismo §§604–609",
+            "en": "Catechism §§604–609",
+            "pt": "Catecismo, parágrafos 604–609"
+          },
+          "catechismStart": 604,
+          "catechismEnd": 609,
+          "url": null
+        },
+        {
+          "id": "ccc_610_618",
+          "title": {
+            "es": "Catecismo §§610–618",
+            "en": "Catechism §§610–618",
+            "pt": "Catecismo, parágrafos 610–618"
+          },
+          "catechismStart": 610,
+          "catechismEnd": 618,
+          "url": null
+        },
+        {
+          "id": "ccc_2264_2265",
+          "title": {
+            "es": "Catecismo §§2264–2265",
+            "en": "Catechism §§2264–2265",
+            "pt": "Catecismo, parágrafos 2264–2265"
+          },
+          "catechismStart": 2264,
+          "catechismEnd": 2265,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "jesus_5_risen_mission",
+      "lessonNumber": 5,
+      "title": {
+        "es": "Resucitado, Espíritu y misión",
+        "en": "Risen Lord, Spirit and mission",
+        "pt": "Ressuscitado, Espírito e missão"
+      },
+      "scriptureReferences": [
+        "luk 24:36-53",
+        "act 2:1-13"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Distinguir resurrección gloriosa, vuelta a la vida anterior y símbolo de ánimo.",
+          "en": "Distinguish glorious resurrection, return to ordinary life and a symbol of encouragement.",
+          "pt": "Distinguir ressurreição gloriosa, retorno à vida anterior e símbolo de ânimo."
+        },
+        {
+          "es": "Relacionar Pascua, Ascensión y Pentecostés con el testimonio de la Iglesia.",
+          "en": "Connect Easter, Ascension and Pentecost with the Church’s witness.",
+          "pt": "Relacionar Páscoa, Ascensão e Pentecostes com o testemunho da Igreja."
+        }
+      ],
+      "summary": {
+        "es": "El Crucificado vive con una humanidad glorificada y abre una vida nueva. Jesús forma testigos y comunica el Espíritu para que su salvación sea anunciada a todas las naciones.",
+        "en": "The Crucified One lives with glorified humanity and opens a new life. Jesus forms witnesses and gives the Spirit so that his salvation may be proclaimed to every nation.",
+        "pt": "O Crucificado vive com uma humanidade glorificada e abre uma vida nova. Jesus forma testemunhas e comunica o Espírito para que sua salvação seja anunciada a todas as nações."
+      },
+      "historicalContext": {
+        "es": "La conclusión de Lucas reúne el encuentro del Resucitado con los discípulos, la explicación de las Escrituras, el envío y la Ascensión. El relato no oculta su miedo ni su dificultad para creer. Hechos continúa esa historia y presenta Pentecostés en Jerusalén, donde personas de distintos pueblos escuchan las maravillas de Dios. No son escenas intercambiables: primero observa lo que Jesús hace y después lo que reciben y anuncian los discípulos. Lucas conduce desde el grupo desconcertado hasta una comunidad llamada a dar testimonio; no describe físicamente el instante de la resurrección.",
+        "en": "Luke’s conclusion brings together the risen Lord’s encounter with the disciples, his explanation of Scripture, their commissioning and the Ascension. The account does not hide their fear or difficulty in believing. Acts continues the story and presents Pentecost in Jerusalem, where people from different nations hear God’s mighty works. These scenes are distinct: first notice what Jesus does, then what the disciples receive and proclaim. Luke moves from a bewildered group towards a community called to witness; he does not physically describe the moment when Jesus rose from the dead.",
+        "pt": "A conclusão de Lucas reúne o encontro do Ressuscitado com os discípulos, a explicação das Escrituras, o envio e a Ascensão. O relato não esconde seu medo nem sua dificuldade para crer. Atos continua essa história e apresenta Pentecostes em Jerusalém, onde pessoas de diferentes povos escutam as maravilhas de Deus. As cenas não são intercambiáveis: primeiro observe o que Jesus faz e depois o que os discípulos recebem e anunciam. Lucas conduz do grupo perplexo a uma comunidade chamada a testemunhar; não descreve fisicamente o instante da ressurreição."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "El mismo Jesús, una vida transformada",
+            "en": "The same Jesus, a transformed life",
+            "pt": "O mesmo Jesus, uma vida transformada"
+          },
+          "body": {
+            "es": "Jesús muestra sus manos y pies y come ante los discípulos: el que vive es el mismo que fue crucificado, no un recuerdo sin cuerpo. Al mismo tiempo, su resurrección no es un regreso a la vida ordinaria para morir de nuevo, como en los relatos de personas reanimadas por él. Su humanidad participa definitivamente de la gloria divina. El Catecismo mantiene ambas afirmaciones: acontecimiento real, con signos y testigos, y misterio que supera lo que la historia puede describir. Ningún evangelista narra el instante mismo de la resurrección como una escena observada.",
+            "en": "Jesus shows his hands and feet and eats before the disciples: the living one is the same person who was crucified, rather than a memory without a body. Yet his resurrection is not a return to ordinary life followed by another death, as with people he restored to earthly life. His humanity shares definitively in divine glory. The Catechism holds both truths together: a real event with signs and witnesses, and a mystery exceeding what historical description can contain. No evangelist narrates the moment of resurrection as an event someone watched.",
+            "pt": "Jesus mostra as mãos e os pés e come diante dos discípulos: quem vive é o mesmo que foi crucificado, não uma lembrança sem corpo. Ao mesmo tempo, sua ressurreição não é um retorno à vida comum para morrer novamente, como nos relatos de pessoas reanimadas por ele. Sua humanidade participa definitivamente da glória divina. O Catecismo mantém as duas afirmações: acontecimento real, com sinais e testemunhas, e mistério que ultrapassa aquilo que a história pode descrever. Nenhum evangelista narra o próprio instante da ressurreição como uma cena observada."
+          }
+        },
+        {
+          "title": {
+            "es": "Comprender la Pascua y convertirse en testigos",
+            "en": "Understand the Pasch and become witnesses",
+            "pt": "Compreender a Páscoa e tornar-se testemunhas"
+          },
+          "body": {
+            "es": "El encuentro no termina en comprobar que Jesús está vivo. Él abre la inteligencia de los discípulos para comprender las Escrituras y relacionar su pasión y resurrección con la historia de las promesas. Después les encomienda anunciar conversión y perdón. La misión nace de un acontecimiento recibido y comprendido, no de inventar mensajes para impresionar. La Ascensión tampoco significa que Jesús abandone a los suyos: su humanidad entra definitivamente en la gloria del Padre y él intercede por nosotros. Por eso la esperanza cristiana puede sostener la vida presente sin reducirse a un consuelo psicológico.",
+            "en": "The encounter involves more than establishing that Jesus is alive. He opens the disciples’ minds to understand Scripture and connect his passion and resurrection with the history of God’s promises. He then entrusts them with proclaiming conversion and forgiveness. Mission grows from an event received and understood, rather than invented messages intended to impress. Nor does the Ascension mean that Jesus abandons his followers: his humanity enters definitively into the Father’s glory, and he intercedes for us. Christian hope can therefore sustain present life without becoming merely a form of psychological reassurance.",
+            "pt": "O encontro não termina em comprovar que Jesus está vivo. Ele abre a inteligência dos discípulos para compreender as Escrituras e relacionar sua paixão e ressurreição com a história das promessas. Depois lhes confia o anúncio da conversão e do perdão. A missão nasce de um acontecimento recebido e compreendido, não de inventar mensagens para impressionar. A Ascensão também não significa que Jesus abandona os seus: sua humanidade entra definitivamente na glória do Pai e ele intercede por nós. Por isso a esperança cristã pode sustentar a vida presente sem se reduzir a consolo psicológico."
+          }
+        },
+        {
+          "title": {
+            "es": "El Espíritu hace posible la misión",
+            "en": "The Spirit makes mission possible",
+            "pt": "O Espírito torna possível a missão"
+          },
+          "body": {
+            "es": "En Pentecostés, el Espíritu Santo se da como Persona divina, no como una energía que la comunidad aprende a controlar. Las diferentes lenguas de Hechos muestran que la buena noticia alcanza pueblos diversos; la unidad no exige borrar sus identidades. El Catecismo vincula este don con la manifestación pública de la Iglesia y su misión universal. Lo recibido impulsa a anunciar, servir y formar comunidad, no a buscar prestigio espiritual. Quien empieza puede aprender, preguntar y colaborar según sus posibilidades. La esperanza de resucitar con Cristo orienta esas decisiones sin prometer una vida sin dificultad.",
+            "en": "At Pentecost, the Holy Spirit gives himself as a divine Person, rather than an energy the community learns to control. The different languages in Acts show good news reaching diverse peoples; unity does not require erasing their identities. The Catechism connects this gift with the Church’s public manifestation and universal mission. What is received inspires proclamation, service and community, rather than a search for spiritual prestige. Beginners can learn, ask questions and contribute according to their circumstances. Hope of rising with Christ guides those choices without promising a life free from difficulty.",
+            "pt": "Em Pentecostes, o Espírito Santo se dá como Pessoa divina, não como uma energia que a comunidade aprende a controlar. As diferentes línguas de Atos mostram que a boa notícia alcança povos diversos; a unidade não exige apagar suas identidades. O Catecismo relaciona esse dom à manifestação pública da Igreja e à sua missão universal. O que se recebe impulsiona a anunciar, servir e formar comunidade, não a buscar prestígio espiritual. Quem começa pode aprender, perguntar e colaborar conforme suas possibilidades. A esperança de ressuscitar com Cristo orienta essas decisões sem prometer uma vida sem dificuldades."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "En Lc 24,36–53 identifica los signos de identidad de Jesús, la explicación de las Escrituras y el envío. Después, en Hch 2,1–13, observa quién actúa, quién escucha y qué diversidad de pueblos aparece.",
+        "en": "In Luke 24:36–53, identify the signs of Jesus’ identity, the explanation of Scripture and the commissioning. Then, in Acts 2:1–13, notice who acts, who listens and which diverse peoples appear.",
+        "pt": "Em Lc 24,36–53 identifique os sinais da identidade de Jesus, a explicação das Escrituras e o envio. Depois, em At 2,1–13, observe quem age, quem escuta e que diversidade de povos aparece."
+      },
+      "meditatio": {
+        "es": "¿Qué diferencia hay para ti entre admirar a un maestro del pasado y confiar en Cristo vivo? ¿Qué persona o ambiente podrías acoger mejor sin exigir que se parezca a ti?",
+        "en": "What difference is there for you between admiring a teacher from the past and trusting the living Christ? What person or setting could you welcome better without demanding similarity to yourself?",
+        "pt": "Que diferença existe para você entre admirar um mestre do passado e confiar em Cristo vivo? Que pessoa ou ambiente poderia acolher melhor sem exigir que se pareça com você?"
+      },
+      "oratio": {
+        "es": "Dirígete a Cristo con tus palabras: presenta tus dudas sobre la Pascua y tu deseo de esperanza. Puedes pedir al Espíritu ayuda para comprender y dar un testimonio sencillo y respetuoso.",
+        "en": "Address Christ in your own words: bring your questions about Easter and your desire for hope. You may ask the Spirit for help to understand and offer a simple, respectful witness.",
+        "pt": "Dirija-se a Cristo com suas palavras: apresente suas dúvidas sobre a Páscoa e seu desejo de esperança. Você pode pedir ao Espírito ajuda para compreender e dar um testemunho simples e respeitoso."
+      },
+      "contemplatio": {
+        "es": "Permanece entre sesenta y noventa segundos en silencio recordando a Jesús vivo en medio de los discípulos. No busques señales extraordinarias ni fuerces alegría; vuelve serenamente a su presencia cuando llegue una distracción.",
+        "en": "Remain silent for sixty to ninety seconds, recalling the living Jesus among his disciples. Do not seek extraordinary signs or force yourself to feel joy; return gently to his presence when distraction comes.",
+        "pt": "Permaneça entre sessenta e noventa segundos em silêncio recordando Jesus vivo no meio dos discípulos. Não busque sinais extraordinários nem force alegria; volte serenamente à sua presença quando surgir uma distração."
+      },
+      "actionStep": {
+        "es": "Explica con palabras propias cómo se unen entrega, resurrección y misión; elige después un gesto concreto de servicio esta semana. Para continuar, puedes estudiar Sacramentos o Parábolas, según la pregunta que haya quedado abierta.",
+        "en": "Explain in your own words how self offering, resurrection and mission belong together; then choose a practical act of service this week. Continue with Sacraments or Parables, depending on the question you wish to explore.",
+        "pt": "Explique com suas palavras como entrega, ressurreição e missão se unem; depois escolha um gesto concreto de serviço nesta semana. Para continuar, pode estudar Sacramentos ou Parábolas, conforme a pergunta que permaneceu aberta."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Qué distingue la resurrección de Jesús de volver a la vida anterior?",
+            "en": "What distinguishes Jesus’ resurrection from returning to his previous life?",
+            "pt": "O que distingue a ressurreição de Jesus do retorno à vida anterior?"
+          },
+          "answer": {
+            "es": "Jesús resucita realmente con su cuerpo, pero entra en una vida gloriosa que ya no termina en otra muerte. No es un fantasma, una simple reanimación ni únicamente un recuerdo inspirador conservado por sus discípulos.",
+            "en": "Jesus truly rises with his body, but enters a glorious life that does not end in another death. He is neither a ghost nor simply restored to ordinary life nor merely an inspiring memory kept by his disciples.",
+            "pt": "Jesus ressuscita realmente com seu corpo, mas entra numa vida gloriosa que já não termina em outra morte. Não é um fantasma, uma simples reanimação nem apenas uma lembrança inspiradora conservada pelos discípulos."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Por qué Pentecostés pertenece a la misión y no solo a una experiencia privada?",
+            "en": "Why does Pentecost concern mission rather than only private experience?",
+            "pt": "Por que Pentecostes diz respeito à missão, não apenas a uma experiência privada?"
+          },
+          "answer": {
+            "es": "El don del Espíritu lleva al anuncio público y a una comunidad enviada a distintos pueblos. Es la acción de una Persona divina que comunica vida y edifica la Iglesia, no un poder privado para prestigiar al individuo.",
+            "en": "The Spirit’s gift leads to public proclamation and a community sent to different peoples. A divine Person communicates life and builds up the Church; this is not a private power intended to enhance individual prestige.",
+            "pt": "O dom do Espírito leva ao anúncio público e a uma comunidade enviada a diferentes povos. É a ação de uma Pessoa divina que comunica vida e edifica a Igreja, não um poder privado para dar prestígio ao indivíduo."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo cerrar este curso sin convertirlo en un examen de fe personal?",
+            "en": "How can you finish this course without making it an examination of personal faith?",
+            "pt": "Como concluir este curso sem transformá-lo num exame de fé pessoal?"
+          },
+          "answer": {
+            "es": "Puedes explicar la relación entre Encarnación, Reino, Cena, cruz y Pascua y elegir una acción de servicio. Reconocer preguntas pendientes forma parte del aprendizaje; completar lecciones no certifica santidad, estado sacramental ni experiencias del Espíritu.",
+            "en": "You can explain the relationship between Incarnation, Kingdom, Supper, cross and Easter and choose an act of service. Acknowledging remaining questions belongs to learning; completing lessons does not certify holiness, sacramental status or experiences of the Spirit.",
+            "pt": "Você pode explicar a relação entre Encarnação, Reino, Ceia, cruz e Páscoa e escolher uma ação de serviço. Reconhecer perguntas pendentes faz parte do aprendizado; concluir lições não certifica santidade, estado sacramental nem experiências do Espírito."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_639_655",
+          "title": {
+            "es": "Catecismo §§639–655",
+            "en": "Catechism §§639–655",
+            "pt": "Catecismo, parágrafos 639–655"
+          },
+          "catechismStart": 639,
+          "catechismEnd": 655,
+          "url": null
+        },
+        {
+          "id": "ccc_659_667",
+          "title": {
+            "es": "Catecismo §§659–667",
+            "en": "Catechism §§659–667",
+            "pt": "Catecismo, parágrafos 659–667"
+          },
+          "catechismStart": 659,
+          "catechismEnd": 667,
+          "url": null
+        },
+        {
+          "id": "ccc_731_732",
+          "title": {
+            "es": "Catecismo §§731–732",
+            "en": "Catechism §§731–732",
+            "pt": "Catecismo, parágrafos 731–732"
+          },
+          "catechismStart": 731,
+          "catechismEnd": 732,
+          "url": null
+        },
+        {
+          "id": "ccc_767_768",
+          "title": {
+            "es": "Catecismo §§767–768",
+            "en": "Catechism §§767–768",
+            "pt": "Catecismo, parágrafos 767–768"
+          },
+          "catechismStart": 767,
+          "catechismEnd": 768,
+          "url": null
+        }
+      ]
+    }
+  ]
+}
