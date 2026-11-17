@@ -1,0 +1,880 @@
+{
+  "id": "track_psalms_prayer",
+  "level": "FOUNDATION",
+  "estimatedMinutes": 100,
+  "iconName": "AutoStories",
+  "title": {
+    "es": "Los Salmos, escuela de oración",
+    "en": "The Psalms, a school of prayer",
+    "pt": "Os Salmos, escola de oração"
+  },
+  "description": {
+    "es": "Cinco encuentros para aprender a rezar con los salmos: la oración de Israel y de Jesús, la alabanza, el lamento, la penitencia y la liturgia. Texto, contexto, enseñanza y oración, con el Catecismo y la Biblia.",
+    "en": "Five encounters to learn to pray with the psalms: the prayer of Israel and of Jesus, praise, lament, penance and the liturgy. Text, context, teaching and prayer, with the Catechism and the Bible.",
+    "pt": "Cinco encontros para aprender a rezar com os salmos: a oração de Israel e de Jesus, o louvor, o lamento, a penitência e a liturgia. Texto, contexto, ensino e oração, com o Catecismo e a Bíblia."
+  },
+  "objectives": [
+    {
+      "es": "Reconocer los salmos como oración de Israel, de Jesús y de la Iglesia",
+      "en": "Recognize the psalms as the prayer of Israel, of Jesus and of the Church",
+      "pt": "Reconhecer os salmos como oração de Israel, de Jesus e da Igreja"
+    },
+    {
+      "es": "Distinguir la alabanza, la súplica, el lamento y la penitencia en el Salterio",
+      "en": "Distinguish praise, supplication, lament and penance in the Psalter",
+      "pt": "Distinguir o louvor, a súplica, o lamento e a penitência no Saltério"
+    },
+    {
+      "es": "Rezar un salmo con lectio, meditación y silencio, y reconocerlo en la liturgia",
+      "en": "Pray a psalm with lectio, meditation and silence, and recognize it in the liturgy",
+      "pt": "Rezar um salmo com lectio, meditação e silêncio, e reconhecê-lo na liturgia"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "psalms_1_israel_jesus",
+      "lessonNumber": 1,
+      "title": {
+        "es": "Los Salmos, oración de Israel y de Jesús",
+        "en": "The Psalms, prayer of Israel and of Jesus",
+        "pt": "Os Salmos, oração de Israel e de Jesus"
+      },
+      "scriptureReferences": [
+        "psa 23"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar qué es el Salterio y cómo llegó a formarse",
+          "en": "Explain what the Psalter is and how it came to be formed",
+          "pt": "Explicar o que é o Saltério e como ele chegou a se formar"
+        },
+        {
+          "es": "Señalar qué cambia cuando Cristo recita los salmos",
+          "en": "Point out what changes when Christ recites the psalms",
+          "pt": "Apontar o que muda quando Cristo recita os salmos"
+        },
+        {
+          "es": "Aplicar el Sal 23 a la propia oración",
+          "en": "Apply Psalm 23 to one's own prayer",
+          "pt": "Aplicar o Sl 23 à própria oração"
+        }
+      ],
+      "summary": {
+        "es": "Los salmos, reunidos en cinco libros, son la obra maestra de la oración del Antiguo Testamento; Cristo los recitó y en él encuentran su cumplimiento.",
+        "en": "The psalms, gathered into five books, are the masterwork of Old Testament prayer; Christ recited them, and in him they find their fulfilment.",
+        "pt": "Os salmos, reunidos em cinco livros, são a obra-prima da oração do Antigo Testamento; Cristo os recitou e neles encontram seu cumprimento."
+      },
+      "historicalContext": {
+        "es": "Desde David hasta la venida del Mesías, las Escrituras de Israel reunieron textos de oración que expresan la oración por uno mismo y por los demás. Los salmos se recopilaron poco a poco en un conjunto de cinco libros. Se usaron en las grandes fiestas de Jerusalén y, más tarde, en los sábados de las sinagogas. Son oración a la vez individual y comunitaria: brota de la Tierra santa y de las comunidades de la Diáspora, recuerda los actos de salvación y espera al Mesías que les dará cumplimiento.",
+        "en": "From David to the coming of the Messiah, Israel's Scriptures gathered prayer texts expressing prayer for oneself and for others. The psalms were gradually collected into a set of five books. They were used in the great feasts of Jerusalem and, later, on the sabbaths of the synagogues. They are at once individual and communal prayer: they spring from the Holy Land and from the Diaspora communities, recall the acts of salvation, and await the Messiah who will bring them fulfilment.",
+        "pt": "De David até a vinda do Messias, as Escrituras de Israel reuniram textos de oração que expressam a oração por si mesmo e pelos outros. Os salmos foram reunidos pouco a pouco num conjunto de cinco livros. Foram usados nas grandes festas de Jerusalém e, mais tarde, nos sábados das sinagogas. São oração ao mesmo tempo individual e comunitária: brotam da Terra santa e das comunidades da Diáspora, recordam os atos de salvação e esperam o Messias que lhes dará cumprimento."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Cinco libros, una sola oración",
+            "en": "Five books, one prayer",
+            "pt": "Cinco livros, uma só oração"
+          },
+          "body": {
+            "es": "Los salmos no se compusieron de una vez ni por una sola persona. Desde la época de David hasta la venida del Mesías, Israel rezó y dejó por escrito esa oración: súplicas, alabanzas, lamentos y acciones de gracias. Esos textos se reunieron poco a poco en cinco libros, llamados Salterio o, en hebreo, «alabanzas». El Catecismo lo llama la obra maestra de la oración del Antiguo Testamento. No conviene leerlos como sentencias sueltas: cada salmo tiene un género, un emisor y una situación, y el conjunto tiene una unidad que vale la pena descubrir.",
+            "en": "The psalms were not composed at one time or by a single person. From the time of David to the coming of the Messiah, Israel prayed and wrote that prayer down: petitions, praises, laments and thanksgivings. Those texts were gradually gathered into five books called the Psalter or, in Hebrew, “praises”. The Catechism calls it the masterwork of Old Testament prayer. They should not be read as isolated sayings: each psalm has a genre, a speaker and a situation, and the whole has a unity worth discovering.",
+            "pt": "Os salmos não foram compostos de uma vez nem por uma só pessoa. Desde a época de David até a vinda do Messias, Israel rezou e deixou por escrito essa oração: súplicas, louvores, lamentos e ações de graças. Esses textos foram reunidos pouco a pouco em cinco livros, chamados Saltério ou, em hebraico, «louvores». O Catecismo chama-o de obra-prima da oração do Antigo Testamento. Não convém lê-los como sentenças soltas: cada salmo tem um gênero, um emissor e uma situação, e o conjunto tem uma unidade que vale a pena descobrir."
+          }
+        },
+        {
+          "title": {
+            "es": "Oración de asamblea y oración personal",
+            "en": "Assembly prayer and personal prayer",
+            "pt": "Oração da assembleia e oração pessoal"
+          },
+          "body": {
+            "es": "Los salmos alimentan la oración del pueblo de Dios como asamblea, principalmente en las grandes fiestas de Jerusalén y en el sábado de la sinagoga. Pero no son solo oración comunitaria: expresan también la oración de cada persona, con sus situaciones y sus relaciones con los demás. El Catecismo subraya que son indisociablemente individuales y comunitarios, que brotan de la Tierra santa y de la Diáspora, recuerdan los acontecimientos salvadores y esperan al Mesías. Un salmo puede reflejar un hecho pasado y, sin embargo, ser sobrio para que oren con él personas de toda condición y de todas las épocas.",
+            "en": "The psalms nourish the prayer of God's people as an assembly, above all at the great feasts of Jerusalem and on the sabbath of the synagogue. But they are not only communal prayer: they also express the prayer of each person, with their situations and relationships. The Catechism stresses that they are inseparably individual and communal, that they spring from the Holy Land and the Diaspora, recall the saving events and await the Messiah. A psalm can reflect a past event and yet be restrained enough for people of every condition and age to pray it.",
+            "pt": "Os salmos alimentam a oração do povo de Deus como assembleia, sobretudo nas grandes festas de Jerusalém e no sábado da sinagoga. Mas não são só oração comunitária: expressam também a oração de cada pessoa, com suas situações e suas relações com os outros. O Catecismo sublinha que são indissociavelmente individuais e comunitários, que brotam da Terra santa e da Diáspora, recordam os acontecimentos salvadores e esperam o Messias. Um salmo pode refletir um fato passado e, contudo, ser sóbrio para que pessoas de toda condição e de todas as épocas orem com ele."
+          }
+        },
+        {
+          "title": {
+            "es": "Cristo hace suya esta oración",
+            "en": "Christ makes this prayer his own",
+            "pt": "Cristo faz desta oração a sua"
+          },
+          "body": {
+            "es": "El Catecismo enseña que los salmos fueron recitados por Cristo en su oración y que en él encuentran su cumplimiento. El Salterio es el libro en que la Palabra de Dios se convierte en oración del hombre: en los demás libros las palabras proclaman las obras de Dios y explican su misterio; en el Salterio, el salmista expresa ante Dios esas obras. El mismo Espíritu inspira la obra de Dios y la respuesta del hombre, y Cristo une ambas. Por eso los salmos no son solo un tesoro antiguo: son una escuela para aprender a orar como él.",
+            "en": "The Catechism teaches that the psalms were recited by Christ in his prayer and that in him they find their fulfilment. The Psalter is the book in which God's Word becomes the prayer of man: in the other books the words proclaim God's works and explain his mystery; in the Psalter the psalmist expresses those works before God. The same Spirit inspires God's work and man's response, and Christ unites both. That is why the psalms are not only an ancient treasure: they are a school for learning to pray as he did.",
+            "pt": "O Catecismo ensina que os salmos foram recitados por Cristo em sua oração e que neles encontram seu cumprimento. O Saltério é o livro em que a Palavra de Deus se torna oração do homem: nos outros livros as palavras proclamam as obras de Deus e explicam seu mistério; no Saltério, o salmista expressa essas obras diante de Deus. O mesmo Espírito inspira a obra de Deus e a resposta do homem, e Cristo une ambas. Por isso os salmos não são só um tesouro antigo: são uma escola para aprender a orar como ele."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Lee despacio el Sal 23. Observa quién habla, qué pide y en quién confía; anota las palabras que se repiten.",
+        "en": "Read Psalm 23 slowly. Notice who speaks, what is asked and in whom the speaker trusts; note the words that recur.",
+        "pt": "Leia devagar o Sl 23. Observe quem fala, o que pede e em quem confia; anote as palavras que se repetem."
+      },
+      "meditatio": {
+        "es": "¿Qué significa para ti que el Señor sea tu pastor? ¿Qué «zonas áridas» o «enemigos» aparecen hoy en tu vida y cómo los nombras ante Dios?",
+        "en": "What does it mean for you that the Lord is your shepherd? What “dry lands” or “enemies” appear in your life today, and how do you name them before God?",
+        "pt": "O que significa para você que o Senhor seja o seu pastor? Que “terras áridas” ou “inimigos” aparecem hoje na sua vida e como você os nomeia diante de Deus?"
+      },
+      "oratio": {
+        "es": "Reza despacio el Sal 23, haciéndolo tuyo. Pronuncia en voz alta la frase que más te llegue y, después, habla con Dios de lo que esa frase despierta en ti. No hace falta buscar sentimientos nuevos: basta con rezar el salmo tal como está.",
+        "en": "Pray Psalm 23 slowly, making it your own. Say aloud the line that reaches you most and then speak with God about what that line awakens in you. You need not seek new feelings: it is enough to pray the psalm as it stands.",
+        "pt": "Reze devagar o Sl 23, fazendo-o seu. Pronuncie em voz alta a frase que mais o toca e, depois, fale com Deus sobre o que essa frase desperta em você. Não é preciso buscar sentimentos novos: basta rezar o salmo tal como ele é."
+      },
+      "contemplatio": {
+        "es": "Permanece uno o dos minutos en silencio ante Dios. No buscas producir una idea nueva ni sentir algo especial; te dejas sostener por la palabra que has leído. Si algo te distrae, vuelve suavemente al versículo que elegiste.",
+        "en": "Remain quietly before God for a minute or two. You need not produce a new idea or feel anything special; let the word you have read hold you. If something distracts you, gently return to the verse you chose.",
+        "pt": "Permaneça um ou dois minutos em silêncio diante de Deus. Você não precisa produzir uma ideia nova nem sentir algo especial; deixe-se sustentar pela palavra que leu. Se algo o distrair, volte suavemente ao versículo que escolheu."
+      },
+      "actionStep": {
+        "es": "Esta semana reza cada día el Sal 23 con calma, una vez por la mañana. Al terminar, escribe una línea sobre lo que cambió en tu modo de pedir.",
+        "en": "This week pray Psalm 23 slowly once each morning. Afterwards, write one line about what changed in the way you ask.",
+        "pt": "Esta semana reze todos os dias o Sl 23 com calma, uma vez pela manhã. Ao terminar, escreva uma linha sobre o que mudou no seu modo de pedir."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Qué es el Salterio y cómo se formó?",
+            "en": "What is the Psalter and how was it formed?",
+            "pt": "O que é o Saltério e como ele se formou?"
+          },
+          "answer": {
+            "es": "Es el conjunto de los salmos, la obra maestra de la oración del Antiguo Testamento. Esos textos se reunieron poco a poco en cinco libros, desde la época de David hasta la venida del Mesías, y se usaron en las fiestas de Jerusalén y en el sábado de la sinagoga. El Catecismo lo presenta así en los párrafos 2585 y 2586.",
+            "en": "It is the collection of the psalms, the masterwork of Old Testament prayer. Those texts were gradually gathered into five books, from the time of David to the coming of the Messiah, and were used in the feasts of Jerusalem and on the sabbath of the synagogue. The Catechism presents it this way in paragraphs 2585 and 2586.",
+            "pt": "É o conjunto dos salmos, a obra-prima da oração do Antigo Testamento. Esses textos foram reunidos pouco a pouco em cinco livros, desde a época de David até a vinda do Messias, e foram usados nas festas de Jerusalém e no sábado da sinagoga. O Catecismo apresenta-o assim nos parágrafos 2585 e 2586."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Qué cambia al decir que Cristo recitó los salmos?",
+            "en": "What changes when we say Christ recited the psalms?",
+            "pt": "O que muda ao dizer que Cristo recitou os salmos?"
+          },
+          "answer": {
+            "es": "Que la oración del salmista no queda como un documento antiguo: en Cristo, el mismo Espíritu que inspira la obra de Dios inspira también la respuesta del hombre, y los salmos alcanzan su cumplimiento. Por eso la Iglesia los reza como oración de Cristo y como escuela para orar como él.",
+            "en": "That the psalmist's prayer does not remain an ancient document: in Christ, the same Spirit who inspires God's work also inspires man's response, and the psalms find their fulfilment. That is why the Church prays them as Christ's prayer and as a school for praying as he did.",
+            "pt": "Que a oração do salmista não fica como um documento antigo: em Cristo, o mesmo Espírito que inspira a obra de Deus inspira também a resposta do homem, e os salmos encontram seu cumprimento. Por isso a Igreja os reza como oração de Cristo e como escola para orar como ele."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Por qué un salmo puede orarlo cualquiera, aunque hable de otra época?",
+            "en": "Why can anyone pray a psalm even though it speaks of another time?",
+            "pt": "Por que qualquer pessoa pode rezar um salmo, ainda que ele fale de outra época?"
+          },
+          "answer": {
+            "es": "Porque, como enseña el Catecismo, un salmo puede reflejar un acontecimiento pasado y ser de una sobriedad tal que verdaderamente puedan orar con él los hombres de toda condición y de todas las épocas. El salmo se sitúa en una situación concreta, pero no la cierra: abre el lamento, la alabanza y la confianza a cualquier vida.",
+            "en": "Because, as the Catechism teaches, a psalm can reflect a past event and yet be restrained enough that people of every condition and age can truly pray it. The psalm stands in a concrete situation, but it does not close it: it opens lament, praise and trust to any life.",
+            "pt": "Porque, como ensina o Catecismo, um salmo pode refletir um acontecimento passado e ser de uma sobriedade tal que pessoas de toda condição e de todas as épocas possam rezar com ele. O salmo situa-se numa situação concreta, mas não a fecha: abre o lamento, o louvor e a confiança a qualquer vida."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_2585_2589",
+          "title": {
+            "es": "Catecismo §§2585–2589",
+            "en": "Catechism §§2585–2589",
+            "pt": "Catecismo, §§ 2585–2589"
+          },
+          "catechismStart": 2585,
+          "catechismEnd": 2589,
+          "url": null
+        },
+        {
+          "id": "dv_2",
+          "title": {
+            "es": "Dei Verbum, 2 · Constitución dogmática sobre la divina revelación",
+            "en": "Dei Verbum, 2 · Dogmatic Constitution on Divine Revelation",
+            "pt": "Dei Verbum, 2 · Constituição dogmática sobre a divina revelação"
+          },
+          "catechismStart": null,
+          "catechismEnd": null,
+          "url": {
+            "es": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_sp.html",
+            "en": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_en.html",
+            "pt": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_po.html"
+          }
+        }
+      ]
+    },
+    {
+      "id": "psalms_2_praise",
+      "lessonNumber": 2,
+      "title": {
+        "es": "Alabanza",
+        "en": "Praise",
+        "pt": "Louvor"
+      },
+      "scriptureReferences": [
+        "psa 103"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Distinguir la alabanza de otras formas de oración",
+          "en": "Distinguish praise from other forms of prayer",
+          "pt": "Distinguir o louvor de outras formas de oração"
+        },
+        {
+          "es": "Explicar qué hace la alabanza con quien la reza",
+          "en": "Explain what praise does to the one who prays it",
+          "pt": "Explicar o que o louvor faz com quem o reza"
+        },
+        {
+          "es": "Rezar el Sal 103 como alabanza",
+          "en": "Pray Psalm 103 as praise",
+          "pt": "Rezar o Sl 103 como louvor"
+        }
+      ],
+      "summary": {
+        "es": "La alabanza reconoce en primer lugar que Dios es Dios: le canta por lo que es, no solo por lo que hace. El Sal 103 la muestra al pedirle al alma que bendiga al Señor.",
+        "en": "Praise recognizes first of all that God is God: it sings to him for what he is, not only for what he does. Psalm 103 shows this by asking the soul to bless the Lord.",
+        "pt": "O louvor reconhece antes de tudo que Deus é Deus: canta-lhe por aquilo que ele é, não só pelo que faz. O Sl 103 mostra-o ao pedir à alma que bendiga ao Senhor."
+      },
+      "historicalContext": {
+        "es": "Los salmos de alabanza invitan a la creación entera a glorificar a Dios. No nacen solo de un sentimiento agradable: brotan de la convicción de que el Señor es fiel y de que su amor puede cantarse en cualquier situación. El Catecismo dedica a la alabanza un lugar propio entre las formas de oración. Los evangelios muestran la admiración y la alabanza ante las obras de Cristo, y las primeras comunidades cristianas releyeron el Salterio cantando en él el misterio de Cristo, y compusieron también himnos y cánticos nuevos.",
+        "en": "The psalms of praise invite all creation to glorify God. They are born not only from a pleasant feeling: they spring from the conviction that the Lord is faithful and that his love can be sung in any situation. The Catechism gives praise its own place among the forms of prayer. The gospels show admiration and praise before Christ's works, and the first Christian communities reread the Psalter singing in it the mystery of Christ, and also composed new hymns and canticles.",
+        "pt": "Os salmos de louvor convidam toda a criatura a glorificar Deus. Não nascem só de um sentimento agradável: brotam da convicção de que o Senhor é fiel e de que o seu amor pode ser cantado em qualquer situação. O Catecismo dedica ao louvor um lugar próprio entre as formas de oração. Os evangelhos mostram a admiração e o louvor diante das obras de Cristo, e as primeiras comunidades cristãs releram o Saltério cantando nele o mistério de Cristo, e compuseram também hinos e cânticos novos."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Cantar a Dios por lo que es",
+            "en": "Singing to God for what he is",
+            "pt": "Cantar a Deus por aquilo que ele é"
+          },
+          "body": {
+            "es": "La alabanza es la forma de orar que reconoce de la manera más directa que Dios es Dios. Le canta por él mismo, le da gloria no por lo que hace, sino por lo que él es. Participa ya de la bienaventuranza de los corazones puros que le aman en la fe antes de verle en la gloria. En el Sal 103, el salmista empieza dirigiéndose a su propia alma: «Bendice, alma mía, al Señor». La alabanza no depende de que las cosas vayan bien; depende de quién es aquel a quien se alaba.",
+            "en": "Praise is the form of prayer that recognizes most directly that God is God. It sings to him for himself, giving him glory not for what he does but for what he is. It already shares in the blessedness of the pure of heart who love him in faith before seeing him in glory. In Psalm 103 the psalmist begins by addressing his own soul: “Bless the Lord, O my soul”. Praise does not depend on everything going well; it depends on who the one praised is.",
+            "pt": "O louvor é a forma de orar que reconhece de maneira mais direta que Deus é Deus. Canta-lhe por ele mesmo, dá-lhe glória não pelo que faz, mas pelo que ele é. Participa já da bem-aventurança dos corações puros que o amam na fé antes de o verem na glória. No Sl 103, o salmista começa dirigindo-se à sua própria alma: «Bendiz, ó minha alma, o Senhor». O louvor não depende de que tudo corra bem; depende de quem é aquele que é louvado."
+          }
+        },
+        {
+          "title": {
+            "es": "La alabanza integra las demás formas",
+            "en": "Praise integrates the other forms",
+            "pt": "O louvor integra as outras formas"
+          },
+          "body": {
+            "es": "El Catecismo enseña que la alabanza integra las otras formas de oración y las lleva hacia aquel que es su fuente y su término. Quien solo pide se acostumbra a mirarse a sí mismo; la alabanza vuelve la mirada a Dios y ordena los pedidos a la luz de su grandeza. Por eso no es una forma menor ni un adorno: es la actitud que sostiene al que alaba en medio de la prueba, porque el motivo de la alabanza no es el ánimo del momento, sino la fidelidad de Dios, que permanece cuando los sentimientos cambian.",
+            "en": "The Catechism teaches that praise integrates the other forms of prayer and carries them toward the one who is their source and their end. One who only asks grows used to looking at himself; praise turns the gaze back to God and orders our petitions in the light of his greatness. It is therefore not a lesser form or an ornament: it is the attitude that sustains the one who praises in the midst of trial, because the reason for praise is not the mood of the moment but God's fidelity, which remains when feelings change.",
+            "pt": "O Catecismo ensina que o louvor integra as outras formas de oração e as leva para aquele que é a sua fonte e o seu termo. Quem só pede acostuma-se a olhar para si mesmo; o louvor volta o olhar para Deus e ordena os pedidos à luz da sua grandeza. Por isso não é uma forma menor nem um enfeite: é a atitude que sustenta quem louva no meio da provação, porque o motivo do louvor não é o ânimo do momento, mas a fidelidade de Deus, que permanece quando os sentimentos mudam."
+          }
+        },
+        {
+          "title": {
+            "es": "La Iglesia canta el Salterio",
+            "en": "The Church sings the Psalter",
+            "pt": "A Igreja canta o Saltério"
+          },
+          "body": {
+            "es": "San Lucas menciona con frecuencia en su evangelio la admiración y la alabanza ante las maravillas de Cristo. El Catecismo recuerda que las primeras comunidades cristianas releyeron el libro de los Salmos cantando en él el misterio de Cristo, y que compusieron también himnos y cánticos nuevos a partir de lo que Dios había realizado en su Hijo. De esa maravilla brota la doxología, la alabanza a Dios. El Apocalipsis, a su vez, está sostenido por los cánticos de la liturgia celestial, y la Iglesia terrestre canta en comunión con esos coros.",
+            "en": "Saint Luke frequently mentions in his gospel the wonder and praise before Christ's marvels. The Catechism recalls that the first Christian communities reread the book of Psalms singing in it the mystery of Christ, and that they also composed new hymns and canticles from what God had accomplished in his Son. From that wonder springs doxology, praise to God. The Apocalypse, in turn, is sustained by the songs of the heavenly liturgy, and the earthly Church sings in communion with those choirs.",
+            "pt": "São Lucas menciona com frequência no seu evangelho a admiração e o louvor diante das maravilhas de Cristo. O Catecismo recorda que as primeiras comunidades cristãs releram o livro dos Salmos cantando nele o mistério de Cristo, e que compuseram também hinos e cânticos novos a partir do que Deus realizara em seu Filho. Dessa maravilha brota a doxologia, o louvor a Deus. O Apocalipse, por sua vez, é sustentado pelos cânticos da liturgia celeste, e a Igreja terrestre canta em comunhão com esses coros."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Lee el Sal 103 y subraya quién es invitado a bendecir al Señor y qué motivos se dan.",
+        "en": "Read Psalm 103 and underline who is invited to bless the Lord and what reasons are given.",
+        "pt": "Leia o Sl 103 e sublinhe quem é convidado a bendizer ao Senhor e que motivos são dados."
+      },
+      "meditatio": {
+        "es": "¿Qué motivos concretos tendrías hoy para bendecir a Dios? ¿Te resulta más fácil pedir o alabar? ¿Qué te pide la alabanza?",
+        "en": "What concrete reasons would you have today to bless God? Is it easier for you to ask or to praise? What does praise ask of you?",
+        "pt": "Que motivos concretos você teria hoje para bendizer a Deus? É mais fácil pedir ou louvar? O que o louvor lhe pede?"
+      },
+      "oratio": {
+        "es": "Reza despacio el Sal 103. Empieza por la invitación a tu propia alma y luego amplía el círculo a la creación entera. No reduzcas la oración a pedir; termina alabando por lo que Dios es.",
+        "en": "Pray Psalm 103 slowly. Begin with the invitation to your own soul and then widen the circle to all creation. Do not reduce prayer to asking; end by praising God for what he is.",
+        "pt": "Reze devagar o Sl 103. Comece pelo convite à sua própria alma e depois amplie o círculo a toda a criação. Não reduza a oração ao pedir; termine louvando pelo que Deus é."
+      },
+      "contemplatio": {
+        "es": "Permanece uno o dos minutos en silencio ante Dios. No buscas producir una idea nueva ni sentir algo especial; te dejas sostener por la palabra que has leído. Si algo te distrae, vuelve suavemente al versículo que elegiste.",
+        "en": "Remain quietly before God for a minute or two. You need not produce a new idea or feel anything special; let the word you have read hold you. If something distracts you, gently return to the verse you chose.",
+        "pt": "Permaneça um ou dois minutos em silêncio diante de Deus. Você não precisa produzir uma ideia nova nem sentir algo especial; deixe-se sustentar pela palavra que leu. Se algo o distrair, volte suavemente ao versículo que escolheu."
+      },
+      "actionStep": {
+        "es": "Esta semana, al empezar el día, bendice al Señor en voz alta una vez con las palabras del Sal 103 o con las tuyas. Hazlo también cuando algo te salga bien, antes de pedir nada.",
+        "en": "This week, at the start of the day, bless the Lord aloud once with the words of Psalm 103 or with your own. Do the same when something goes well for you, before asking for anything.",
+        "pt": "Esta semana, ao começar o dia, bendiga ao Senhor em voz alta uma vez com as palavras do Sl 103 ou com as suas. Faça-o também quando algo lhe correr bem, antes de pedir qualquer coisa."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Qué reconoce la alabanza?",
+            "en": "What does praise recognize?",
+            "pt": "O que o louvor reconhece?"
+          },
+          "answer": {
+            "es": "Que Dios es Dios. Le canta por él mismo y le da gloria no por lo que hace, sino por lo que es. Por eso la alabanza participa ya de la bienaventuranza de los corazones puros que le aman en la fe antes de verle en la gloria, y no depende de que las cosas vayan bien.",
+            "en": "That God is God. It sings to him for himself and gives him glory not for what he does but for what he is. That is why praise already shares in the blessedness of the pure of heart who love him in faith before seeing him in glory, and it does not depend on everything going well.",
+            "pt": "Que Deus é Deus. Canta-lhe por ele mesmo e dá-lhe glória não pelo que faz, mas pelo que é. Por isso o louvor participa já da bem-aventurança dos corações puros que o amam na fé antes de o verem na glória, e não depende de que tudo corra bem."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Qué hace la alabanza con las demás formas de oración?",
+            "en": "What does praise do with the other forms of prayer?",
+            "pt": "O que o louvor faz com as outras formas de oração?"
+          },
+          "answer": {
+            "es": "Las integra y las lleva hacia su fuente y su término. Quien solo pide se acostumbra a mirarse; la alabanza vuelve la mirada a Dios y ordena los pedidos a la luz de su grandeza. Por eso la alabanza sostiene al que sufre, no porque niegue la prueba, sino porque recuerda quién es el fiel.",
+            "en": "It integrates them and carries them toward their source and their end. One who only asks grows used to looking at himself; praise turns the gaze back to God and orders petitions in the light of his greatness. That is why praise sustains the sufferer: not because it denies the trial, but because it recalls who the faithful one is.",
+            "pt": "Integra-as e leva-as para a sua fonte e o seu termo. Quem só pede acostuma-se a olhar para si; o louvor volta o olhar para Deus e ordena os pedidos à luz da sua grandeza. Por isso o louvor sustenta quem sofre, não porque negue a provação, mas porque recorda quem é o fiel."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo pasa la alabanza del salmo a la vida cotidiana?",
+            "en": "How does praise move from the psalm to daily life?",
+            "pt": "Como o louvor passa do salmo à vida cotidiana?"
+          },
+          "answer": {
+            "es": "Se reza y se vive. El Catecismo dice que la alabanza reconoce de la manera más directa que Dios es Dios; de ahí se sigue una actitud concreta: bendecirlo por lo que es, darle gracias antes de pedir y reconocer en los demás la obra que él sostiene. La alabanza no es solo un género de oración, sino el clima de quien cree.",
+            "en": "It is prayed and it is lived. The Catechism says that praise recognizes most directly that God is God; from this follows a concrete attitude: blessing him for what he is, thanking him before asking, and recognizing in others the work he sustains. Praise is not only a genre of prayer; it is the climate of the believer.",
+            "pt": "Reza-se e vive-se. O Catecismo diz que o louvor reconhece de maneira mais direta que Deus é Deus; daí decorre uma atitude concreta: bendizê-lo pelo que é, dar-lhe graças antes de pedir e reconhecer nos outros a obra que ele sustenta. O louvor não é só um gênero de oração; é o clima de quem crê."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_2639_2643",
+          "title": {
+            "es": "Catecismo §§2639–2643",
+            "en": "Catechism §§2639–2643",
+            "pt": "Catecismo, §§ 2639–2643"
+          },
+          "catechismStart": 2639,
+          "catechismEnd": 2643,
+          "url": null
+        },
+        {
+          "id": "ccc_2588_2588",
+          "title": {
+            "es": "Catecismo §2588",
+            "en": "Catechism §2588",
+            "pt": "Catecismo, § 2588"
+          },
+          "catechismStart": 2588,
+          "catechismEnd": 2588,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "psalms_3_lament",
+      "lessonNumber": 3,
+      "title": {
+        "es": "Súplica y lamento",
+        "en": "Supplication and lament",
+        "pt": "Súplica e lamento"
+      },
+      "scriptureReferences": [
+        "psa 22",
+        "mar 15:34"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Distinguir el lamento de la queja estéril",
+          "en": "Distinguish lament from fruitless complaining",
+          "pt": "Distinguir o lamento da queixa estéril"
+        },
+        {
+          "es": "Explicar por qué Jesús recita el Sal 22 en la cruz",
+          "en": "Explain why Jesus recites Psalm 22 on the cross",
+          "pt": "Explicar por que Jesus recita o Sl 22 na cruz"
+        },
+        {
+          "es": "Acompañar con un salmo a quien sufre",
+          "en": "Accompany someone who suffers with a psalm",
+          "pt": "Acompanhar com um salmo quem sofre"
+        }
+      ],
+      "summary": {
+        "es": "El lamento expresa desamparo y súplica a un Dios que escucha. El Sal 22 nace del abandono y termina en alabanza; Jesús lo recita en la cruz y la Iglesia lo une a su queja.",
+        "en": "Lament expresses abandonment and supplication to a God who listens. Psalm 22 is born of desertion and ends in praise; Jesus recites it on the cross and the Church joins it to her complaint.",
+        "pt": "O lamento expressa desamparo e súplica a um Deus que escuta. O Sl 22 nasce do abandono e termina em louvor; Jesus recita-o na cruz e a Igreja une-o à sua queixa."
+      },
+      "historicalContext": {
+        "es": "El Sal 22 es un lamento individual: el salmista se siente abandonado, sufre y, sin embargo, habla con Dios. Los salmos de desamparo forman parte de la oración del pueblo, no son una falta de fe. El Catecismo los tiene en cuenta al hablar de la oración del salmista y de la confianza en la prueba. En la cruz, Jesús cita las primeras palabras de este salmo, y el Catecismo lo menciona para decir que asumió el alejamiento causado por nuestro pecado.",
+        "en": "Psalm 22 is an individual lament: the psalmist feels abandoned, suffers and yet speaks to God. The psalms of desertion are part of the people's prayer; they are not a lack of faith. The Catechism takes them into account when speaking of the psalmist's prayer and of trust in trial. On the cross Jesus quotes the first words of this psalm, and the Catechism mentions it to say that he took upon himself the estrangement caused by our sin.",
+        "pt": "O Sl 22 é um lamento individual: o salmista sente-se abandonado, sofre e, contudo, fala com Deus. Os salmos de desamparo fazem parte da oração do povo; não são falta de fé. O Catecismo tem-nos em conta ao falar da oração do salmista e da confiança na provação. Na cruz, Jesus cita as primeiras palavras deste salmo, e o Catecismo menciona-o para dizer que assumiu o afastamento causado pelo nosso pecado."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "Lamentarse no es lo mismo que quejarse",
+            "en": "Lamenting is not the same as complaining",
+            "pt": "Lamentar não é o mesmo que queixar-se"
+          },
+          "body": {
+            "es": "El lamento del salmo se dirige a Dios: el salmista no habla de espaldas a él, sino ante él. Eso cambia la queja en súplica. El Catecismo recuerda que los salmos son el espejo de las maravillas de Dios en la historia de su pueblo y en las situaciones humanas vividas por el salmista, y que pueden orarlos personas de toda condición. El lamento no cierra la puerta a la esperanza: el mismo salmo que empieza con el abandono termina alabando al Señor, porque la queja se formula ante alguien que puede responder.",
+            "en": "The psalm's lament is addressed to God: the psalmist does not speak behind his back but before him. That changes complaint into supplication. The Catechism recalls that the psalms are the mirror of God's wonders in the history of his people and in the human situations lived by the psalmist, and that people of every condition can pray them. Lament does not close the door to hope: the same psalm that begins with abandonment ends by praising the Lord, because the complaint is made before someone who can answer.",
+            "pt": "O lamento do salmo dirige-se a Deus: o salmista não fala às costas dele, mas diante dele. Isso muda a queixa em súplica. O Catecismo recorda que os salmos são o espelho das maravilhas de Deus na história do seu povo e nas situações humanas vividas pelo salmista, e que pessoas de toda condição os podem rezar. O lamento não fecha a porta à esperança: o mesmo salmo que começa com o abandono termina louvando ao Senhor, porque a queixa se formula diante de alguém que pode responder."
+          }
+        },
+        {
+          "title": {
+            "es": "Jesús recita el salmo en la cruz",
+            "en": "Jesus recites the psalm on the cross",
+            "pt": "Jesus recita o salmo na cruz"
+          },
+          "body": {
+            "es": "En la cruz, Jesús grita las primeras palabras del Sal 22: «Dios mío, Dios mío, ¿por qué me has abandonado?». No inventa una oración nueva: reza con la oración de Israel. El Catecismo cita este salmo en el párrafo 603 para decir que Jesús, sin haber pecado él, asumió el alejamiento con relación a Dios causado por nuestro pecado. El Hijo se dirige al Padre con la palabra de un salmista que sufre. La escena no muestra a un Jesús que rechaza el lamento, sino a uno que lo transforma en confianza, porque sigue hablando con el Padre.",
+            "en": "On the cross, Jesus cries out the first words of Psalm 22: “My God, my God, why have you forsaken me?”. He does not invent a new prayer: he prays with Israel's prayer. The Catechism cites this psalm in paragraph 603 to say that Jesus, without having sinned, took upon himself the estrangement from God caused by our sin. The Son addresses the Father with the words of a suffering psalmist. The scene does not show a Jesus who rejects lament, but one who transforms it into trust, because he keeps speaking to the Father.",
+            "pt": "Na cruz, Jesus grita as primeiras palavras do Sl 22: «Meu Deus, meu Deus, por que me abandonaste?». Ele não inventa uma oração nova: reza com a oração de Israel. O Catecismo cita este salmo no parágrafo 603 para dizer que Jesus, sem ter pecado, assumiu o afastamento de Deus causado pelo nosso pecado. O Filho dirige-se ao Pai com a palavra de um salmista que sofre. A cena não mostra um Jesus que rejeita o lamento, mas um que o transforma em confiança, porque continua a falar com o Pai."
+          }
+        },
+        {
+          "title": {
+            "es": "La Iglesia se reconoce en el lamento",
+            "en": "The Church recognizes herself in lament",
+            "pt": "A Igreja reconhece-se no lamento"
+          },
+          "body": {
+            "es": "Si los salmos son la oración de Cristo, la Iglesia no puede rezar solo los salmos alegres. El Catecismo dice que las múltiples expresiones de oración de los salmos se hacen realidad viva tanto en la liturgia del templo como en el corazón del hombre, y nombra entre ellas la oración de desamparo. Rezar el lamento no es hundirse: es llevar ante Dios lo que no se puede resolver solo. Por eso la Iglesia, en las pruebas de sus hijos, no les pide que disimulen el dolor, sino que lo digan con las palabras que él mismo rezó.",
+            "en": "If the psalms are Christ's prayer, the Church cannot pray only the cheerful ones. The Catechism says that the many expressions of prayer in the psalms become living reality both in the temple liturgy and in the human heart, and it names among them the prayer of desertion. To pray lament is not to sink: it is to bring before God what cannot be resolved alone. That is why the Church, in her children's trials, does not ask them to hide their pain but to speak it with the very words he prayed.",
+            "pt": "Se os salmos são a oração de Cristo, a Igreja não pode rezar só os salmos alegres. O Catecismo diz que as múltiplas expressões de oração dos salmos se tornam realidade viva tanto na liturgia do templo como no coração do homem, e nomeia entre elas a oração de desamparo. Rezar o lamento não é afundar: é levar diante de Deus o que não se pode resolver sozinho. Por isso a Igreja, nas provações dos seus filhos, não lhes pede que dissimulem a dor, mas que a digam com as palavras que ele mesmo rezou."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Lee el Sal 22 y luego Mc 15,34. Observa que Jesús reza con las palabras de un salmo, no con frases propias.",
+        "en": "Read Psalm 22 and then Mark 15:34. Notice that Jesus prays with the words of a psalm, not with his own phrases.",
+        "pt": "Leia o Sl 22 e depois Mc 15,34. Observe que Jesus reza com as palavras de um salmo, não com frases próprias."
+      },
+      "meditatio": {
+        "es": "¿Qué palabras del salmo te ayudan cuando no tienes ganas de rezar? ¿Cómo cambia una queja el hecho de dirigirla a Dios?",
+        "en": "Which words of the psalm help you when you do not feel like praying? How does directing a complaint to God change it?",
+        "pt": "Que palavras do salmo o ajudam quando você não tem vontade de rezar? Como muda uma queixa o fato de dirigi-la a Deus?"
+      },
+      "oratio": {
+        "es": "Si lo necesitas, reza despacio el Sal 22, incluso en silencio. El salmo te da palabras para lo que no puedes poner en frases; úsalas y no las corrijas.",
+        "en": "If you need it, pray Psalm 22 slowly, even in silence. The psalm gives you words for what you cannot put into phrases; use them and do not correct them.",
+        "pt": "Se precisar, reze devagar o Sl 22, mesmo em silêncio. O salmo lhe dá palavras para o que você não consegue pôr em frases; use-as e não as corrija."
+      },
+      "contemplatio": {
+        "es": "Permanece uno o dos minutos en silencio ante Dios. No buscas producir una idea nueva ni sentir algo especial; te dejas sostener por la palabra que has leído. Si algo te distrae, vuelve suavemente al versículo que elegiste.",
+        "en": "Remain quietly before God for a minute or two. You need not produce a new idea or feel anything special; let the word you have read hold you. If something distracts you, gently return to the verse you chose.",
+        "pt": "Permaneça um ou dois minutos em silêncio diante de Deus. Você não precisa produzir uma ideia nova nem sentir algo especial; deixe-se sustentar pela palavra que leu. Se algo o distrair, volte suavemente ao versículo que escolheu."
+      },
+      "actionStep": {
+        "es": "Elige a una persona que esté sufriendo y ofrécele rezar contigo el Sal 22, o acompáñala con tu presencia. No busques darle soluciones rápidas.",
+        "en": "Choose someone who is suffering and offer to pray Psalm 22 with them, or be present to them. Do not look for quick solutions to give them.",
+        "pt": "Escolha uma pessoa que esteja sofrendo e ofereça rezar com ela o Sl 22, ou acompanhe-a com a sua presença. Não procure dar-lhe soluções rápidas."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Qué dice el Sal 22 sobre el abandono y la confianza?",
+            "en": "What does Psalm 22 say about abandonment and trust?",
+            "pt": "O que diz o Sl 22 sobre o abandono e a confiança?"
+          },
+          "answer": {
+            "es": "Que el salmista se siente abandonado y, sin embargo, habla con Dios. El salmo va del desamparo a la alabanza, porque la queja se formula ante alguien que puede responder. El Catecismo sitúa estos salmos entre las expresiones de oración que se hacen realidad viva en la liturgia y en el corazón del hombre.",
+            "en": "That the psalmist feels abandoned and yet speaks to God. The psalm goes from desertion to praise, because the complaint is made before someone who can answer. The Catechism places these psalms among the expressions of prayer that become living reality in the liturgy and in the human heart.",
+            "pt": "Que o salmista sente-se abandonado e, contudo, fala com Deus. O salmo vai do desamparo ao louvor, porque a queixa se formula diante de alguém que pode responder. O Catecismo situa esses salmos entre as expressões de oração que se tornam realidade viva na liturgia e no coração do homem."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Qué significa que Jesús citara el Sal 22 en la cruz?",
+            "en": "What does it mean that Jesus quoted Psalm 22 on the cross?",
+            "pt": "O que significa que Jesus citou o Sl 22 na cruz?"
+          },
+          "answer": {
+            "es": "Que Jesús reza con la oración de Israel: se hace solidario con nuestro alejamiento de Dios y, sin pecar él, asume esa distancia por nosotros. El Catecismo cita el Sal 22,2 en Mc 15,34 para mostrar que Cristo nos asumió «desde el alejamiento con relación a Dios por nuestro pecado». El lamento no desaparece: se transforma en confianza, porque Jesús sigue hablando con el Padre.",
+            "en": "That Jesus prays with Israel's prayer: he makes himself one with our estrangement from God and, without sinning himself, takes that distance upon himself for us. The Catechism cites Psalm 22:2 in Mark 15:34 to show that Christ took us upon himself “from the estrangement with regard to God because of our sin”. Lament does not disappear: it becomes trust, because Jesus keeps speaking to the Father.",
+            "pt": "Que Jesus reza com a oração de Israel: faz-se solidário do nosso afastamento de Deus e, sem pecar, assume essa distância por nós. O Catecismo cita o Sl 22,2 em Mc 15,34 para mostrar que Cristo nos assumiu «a partir do afastamento de Deus por causa do nosso pecado». O lamento não desaparece: transforma-se em confiança, porque Jesus continua a falar com o Pai."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo acompañar con un salmo a quien sufre?",
+            "en": "How do you accompany someone who suffers with a psalm?",
+            "pt": "Como acompanhar com um salmo quem sofre?"
+          },
+          "answer": {
+            "es": "Sin prisa y sin cerrar el dolor. Un salmo de lamento da palabras para la queja y sitúa a la persona ante Dios, que es quien escucha. La presencia y la oración son dos formas de la misma caridad: neither replaces the other, and both keep the sufferer company.",
+            "en": "Without haste and without closing off the pain. A psalm of lament gives words for the complaint and places the person before God, who is the one who listens. Presence and prayer are two forms of the same charity: neither replaces the other, and both keep the sufferer company.",
+            "pt": "Sem pressa e sem fechar a dor. Um salmo de lamento dá palavras para a queixa e situa a pessoa diante de Deus, que é quem escuta. A presença e a oração são duas formas da mesma caridade: nem uma substitui a outra, e ambas fazem companhia a quem sofre."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_2585_2589",
+          "title": {
+            "es": "Catecismo §§2585–2589",
+            "en": "Catechism §§2585–2589",
+            "pt": "Catecismo, §§ 2585–2589"
+          },
+          "catechismStart": 2585,
+          "catechismEnd": 2589,
+          "url": null
+        },
+        {
+          "id": "ccc_603_603",
+          "title": {
+            "es": "Catecismo §603",
+            "en": "Catechism §603",
+            "pt": "Catecismo, § 603"
+          },
+          "catechismStart": 603,
+          "catechismEnd": 603,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "psalms_4_penance",
+      "lessonNumber": 4,
+      "title": {
+        "es": "Penitencia",
+        "en": "Penance",
+        "pt": "Penitência"
+      },
+      "scriptureReferences": [
+        "psa 51"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Distinguir la penitencia exterior de la conversión del corazón",
+          "en": "Distinguish exterior penance from conversion of the heart",
+          "pt": "Distinguir a penitência exterior da conversão do coração"
+        },
+        {
+          "es": "Explicar qué pide el Sal 51",
+          "en": "Explain what Psalm 51 asks",
+          "pt": "Explicar o que o Sl 51 pede"
+        },
+        {
+          "es": "Rezar el Sal 51 como súplica de perdón",
+          "en": "Pray Psalm 51 as a plea for forgiveness",
+          "pt": "Rezar o Sl 51 como súplica de perdão"
+        }
+      ],
+      "summary": {
+        "es": "El Sal 51 es la petición de perdón del pecador que sabe a quién pide. El Catecismo lo usa para hablar de la penitencia interior y del corazón nuevo que solo Dios puede dar.",
+        "en": "Psalm 51 is the plea for forgiveness of a sinner who knows whom he asks. The Catechism uses it to speak of interior penance and of the new heart that only God can give.",
+        "pt": "O Sl 51 é o pedido de perdão do pecador que sabe a quem pede. O Catecismo usa-o para falar da penitência interior e do coração novo que só Deus pode dar."
+      },
+      "historicalContext": {
+        "es": "Los salmos de súplica incluyen peticiones de perdón. El Catecismo enseña que la penitencia a la que llama Jesús mira primero la conversión del corazón, no las obras exteriores. Sin esa conversión interior, las prácticas de penitencia quedan estériles. El Catecismo habla de una reorientación radical de toda la vida, de un corazón nuevo y de la gracia que hace volver a Dios, y cita el Sal 51 al hablar del lamento y del perdón.",
+        "en": "The psalms of supplication include pleas for forgiveness. The Catechism teaches that the penance to which Jesus calls us looks first to the conversion of the heart, not to exterior works. Without that interior conversion, practices of penance remain sterile. The Catechism speaks of a radical reorientation of the whole of life, of a new heart and of the grace that brings us back to God, and it cites Psalm 51 when speaking of lament and forgiveness.",
+        "pt": "Os salmos de súplica incluem pedidos de perdão. O Catecismo ensina que a penitência a que Jesus chama olha primeiro para a conversão do coração, não para as obras exteriores. Sem essa conversão interior, as práticas de penitência ficam estéreis. O Catecismo fala de uma reorientação radical de toda a vida, de um coração novo e da graça que faz voltar a Deus, e cita o Sl 51 ao falar do lamento e do perdão."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "El saco y la ceniza no bastan",
+            "en": "Sackcloth and ashes are not enough",
+            "pt": "O saco e a cinza não bastam"
+          },
+          "body": {
+            "es": "El Catecismo dice que la llamada de Jesús a la conversión no mira en primer lugar a las obras exteriores —el saco y la ceniza, los ayunos y las mortificaciones—, sino a la conversión del corazón, la penitencia interior. Sin ella, esas obras permanecen estériles y engañosas; con ella, la actitud interior encuentra expresión en signos visibles, gestos y obras. La penitencia no es, por tanto, una técnica de apariencias: es un giro del corazón que se hace visible. Por eso el salmista no pide solo que le quite la culpa, sino que le cambie el corazón.",
+            "en": "The Catechism says that Jesus' call to conversion looks first not to exterior works — sackcloth and ashes, fasts and mortifications — but to the conversion of the heart, interior penance. Without it those works remain sterile and deceptive; with it, the interior attitude finds expression in visible signs, gestures and deeds. Penance is therefore not a technique of appearances: it is a turning of the heart that becomes visible. That is why the psalmist asks not only to be freed from guilt but to have his heart changed.",
+            "pt": "O Catecismo diz que o chamado de Jesus à conversão não olha em primeiro lugar para as obras exteriores — o saco e a cinza, os jejuns e as mortificações —, mas para a conversão do coração, a penitência interior. Sem ela, essas obras permanecem estéreis e enganadoras; com ela, a atitude interior encontra expressão em sinais visíveis, gestos e obras. A penitência não é, portanto, uma técnica de aparências: é uma virada do coração que se torna visível. Por isso o salmista não pede só que lhe tire a culpa, mas que lhe mude o coração."
+          }
+        },
+        {
+          "title": {
+            "es": "Un corazón nuevo",
+            "en": "A new heart",
+            "pt": "Um coração novo"
+          },
+          "body": {
+            "es": "La penitencia interior es una reorientación radical de toda la vida: un retorno a Dios con el corazón entero, una ruptura con el pecado y el deseo de cambiar de vida con esperanza en la misericordia. El Catecismo subraya que el corazón humano está torpe y endurecido, y que es preciso que Dios dé un corazón nuevo. La conversión es primeramente obra de la gracia. El salmista lo sabe cuando pide: «Crea en mí, oh Dios, un corazón limpio». No se trata de sentir culpa, sino de dejarse transformar por quien puede renovar el corazón.",
+            "en": "Interior penance is a radical reorientation of the whole of life: a return to God with all one's heart, a break with sin and the desire to change one's life in hope of mercy. The Catechism stresses that the human heart is dull and hardened, and that God must give a new heart. Conversion is first of all the work of grace. The psalmist knows this when he asks: “Create in me a clean heart, O God”. This is not about feeling guilty but about letting oneself be transformed by the one who can renew the heart.",
+            "pt": "A penitência interior é uma reorientação radical de toda a vida: um retorno a Deus com o coração inteiro, uma ruptura com o pecado e o desejo de mudar de vida com esperança na misericórdia. O Catecismo sublinha que o coração humano está pesado e endurecido, e que é preciso que Deus dê um coração novo. A conversão é primeiramente obra da graça. O salmista sabe-o quando pede: «Cria em mim, ó Deus, um coração puro». Não se trata de sentir culpa, mas de deixar-se transformar por quem pode renovar o coração."
+          }
+        },
+        {
+          "title": {
+            "es": "Rezar el salmo del perdón",
+            "en": "Praying the psalm of forgiveness",
+            "pt": "Rezar o salmo do perdão"
+          },
+          "body": {
+            "es": "El Sal 51 reconoce la culpa y confía en la bondad de Dios: pide perdón, un corazón limpio y un espíritu firme. El Catecismo recuerda que las expresiones de oración de los salmos se hacen realidad viva en la liturgia y en el corazón del hombre, y nombra entre ellas la súplica. Después de Pascua, el Espíritu es el Consolador que da la gracia del arrepentimiento. Rezar este salmo no es un ejercicio de autoacusación: es poner la propia vida ante la misericordia, que es mayor que la culpa.",
+            "en": "Psalm 51 acknowledges guilt and trusts in God's goodness: it asks for forgiveness, a clean heart and a steadfast spirit. The Catechism recalls that the expressions of prayer in the psalms become living reality in the liturgy and in the human heart, and it names supplication among them. After Easter, the Spirit is the Consoler who gives the grace of repentance. To pray this psalm is not an exercise in self-accusation: it is to place one's life before a mercy greater than guilt.",
+            "pt": "O Sl 51 reconhece a culpa e confia na bondade de Deus: pede perdão, um coração puro e um espírito firme. O Catecismo recorda que as expressões de oração dos salmos se tornam realidade viva na liturgia e no coração do homem, e nomeia entre elas a súplica. Depois da Páscoa, o Espírito é o Consolador que dá a graça do arrependimento. Rezar este salmo não é um exercício de autoacusação: é pôr a própria vida diante da misericórdia, que é maior que a culpa."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Lee con calma el Sal 51 y fíjate en las peticiones concretas que el salmista dirige a Dios.",
+        "en": "Read Psalm 51 slowly and notice the concrete petitions the psalmist addresses to God.",
+        "pt": "Leia o Sl 51 devagar e repare nos pedidos concretos que o salmista dirige a Deus."
+      },
+      "meditatio": {
+        "es": "¿Qué pide el salmista que no sea solo «que me quite la culpa»? ¿Qué «corazón nuevo» estás pidiendo tú?",
+        "en": "What does the psalmist ask that is not only “take away my guilt”? What “new heart” are you asking for?",
+        "pt": "O que o salmista pede que não seja apenas «que me tires a culpa»? Que «coração novo» você está pedindo?"
+      },
+      "oratio": {
+        "es": "Reza despacio el Sal 51 y hazlo tuyo. El salmo te da las palabras: no las mejores. Puedes terminar pidiendo con las tuyas un corazón limpio.",
+        "en": "Pray Psalm 51 slowly and make it your own. The psalm gives you the words: do not improve them. You can end by asking in your own words for a clean heart.",
+        "pt": "Reze devagar o Sl 51 e faça-o seu. O salmo lhe dá as palavras: não as melhore. Você pode terminar pedindo com as suas um coração puro."
+      },
+      "contemplatio": {
+        "es": "Permanece uno o dos minutos en silencio ante Dios. No buscas producir una idea nueva ni sentir algo especial; te dejas sostener por la palabra que has leído. Si algo te distrae, vuelve suavemente al versículo que elegiste.",
+        "en": "Remain quietly before God for a minute or two. You need not produce a new idea or feel anything special; let the word you have read hold you. If something distracts you, gently return to the verse you chose.",
+        "pt": "Permaneça um ou dois minutos em silêncio diante de Deus. Você não precisa produzir uma ideia nova nem sentir algo especial; deixe-se sustentar pela palavra que leu. Se algo o distrair, volte suavemente ao versículo que escolheu."
+      },
+      "actionStep": {
+        "es": "Esta semana reza el Sal 51 una vez y escribe después una petición breve de conversión. Si hay una amistad rota que te toca de cerca, da un paso concreto para repararla.",
+        "en": "This week pray Psalm 51 once and afterwards write a brief petition for conversion. If there is a broken friendship close to you, take a concrete step to repair it.",
+        "pt": "Esta semana reze o Sl 51 uma vez e depois escreva um breve pedido de conversão. Se houver uma amizade rompida que lhe toque de perto, dê um passo concreto para repará-la."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Qué pide el Sal 51?",
+            "en": "What does Psalm 51 ask?",
+            "pt": "O que o Sl 51 pede?"
+          },
+          "answer": {
+            "es": "El salmista pide perdón, un corazón limpio y un espíritu firme; reconoce su falta y confía en la bondad de Dios. Es una oración de penitencia y de súplica: la culpa se reconoce ante el único que puede perdonar, y la confianza no depende de haber merecido nada.",
+            "en": "The psalmist asks for forgiveness, a clean heart and a steadfast spirit; he acknowledges his fault and trusts in God's goodness. It is a prayer of penance and supplication: guilt is acknowledged before the only one who can forgive, and trust does not depend on having deserved anything.",
+            "pt": "O salmista pede perdão, um coração puro e um espírito firme; reconhece a sua falta e confia na bondade de Deus. É uma oração de penitência e de súplica: a culpa reconhece-se diante do único que pode perdoar, e a confiança não depende de ter merecido nada."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Por qué la penitencia empieza en el corazón?",
+            "en": "Why does penance begin in the heart?",
+            "pt": "Por que a penitência começa no coração?"
+          },
+          "answer": {
+            "es": "Porque la llamada de Jesús mira primero la conversión interior. Sin ella, las obras exteriores quedan estériles. El corazón nuevo es obra de la gracia: la conversión consiste en volverse a Dios con el corazón entero y en confiar en su misericordia, no en sentir culpa.",
+            "en": "Because Jesus' call looks first to interior conversion. Without it, exterior works remain sterile. The new heart is the work of grace: conversion consists in turning to God with all one's heart and trusting in his mercy, not in feeling guilty.",
+            "pt": "Porque o chamado de Jesus olha primeiro para a conversão interior. Sem ela, as obras exteriores ficam estéreis. O coração novo é obra da graça: a conversão consiste em voltar-se a Deus com o coração inteiro e confiar na sua misericórdia, não em sentir culpa."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Cómo rezar el Sal 51 si no te sientes culpable?",
+            "en": "How do you pray Psalm 51 if you do not feel guilty?",
+            "pt": "Como rezar o Sl 51 se você não se sente culpado?"
+          },
+          "answer": {
+            "es": "Se puede rezar por otros, en penitencia o como reconocimiento de la propia fragilidad. Lo importante es no usar el salmo como un discurso de autoacusación, sino como una petición humilde de gracia. El Catecismo recuerda que la penitencia interior es una reorientación de toda la vida, no un estado de ánimo.",
+            "en": "It can be prayed for others, in penance, or as an acknowledgment of one's own fragility. What matters is not to use the psalm as a speech of self-accusation but as a humble petition for grace. The Catechism recalls that interior penance is a reorientation of the whole of life, not a mood.",
+            "pt": "Pode-se rezar pelos outros, em penitência ou como reconhecimento da própria fragilidade. O importante é não usar o salmo como um discurso de autoacusação, mas como um pedido humilde de graça. O Catecismo recorda que a penitência interior é uma reorientação de toda a vida, não um estado de ânimo."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_1430_1433",
+          "title": {
+            "es": "Catecismo §§1430–1433",
+            "en": "Catechism §§1430–1433",
+            "pt": "Catecismo, §§ 1430–1433"
+          },
+          "catechismStart": 1430,
+          "catechismEnd": 1433,
+          "url": null
+        },
+        {
+          "id": "ccc_2588_2588",
+          "title": {
+            "es": "Catecismo §2588",
+            "en": "Catechism §2588",
+            "pt": "Catecismo, § 2588"
+          },
+          "catechismStart": 2588,
+          "catechismEnd": 2588,
+          "url": null
+        }
+      ]
+    },
+    {
+      "id": "psalms_5_liturgy",
+      "lessonNumber": 5,
+      "title": {
+        "es": "Los Salmos en la liturgia de la Iglesia",
+        "en": "The Psalms in the Church's liturgy",
+        "pt": "Os Salmos na liturgia da Igreja"
+      },
+      "scriptureReferences": [
+        "psa 95"
+      ],
+      "estimatedMinutes": 20,
+      "objectives": [
+        {
+          "es": "Explicar qué es la Liturgia de las Horas",
+          "en": "Explain what the Liturgy of the Hours is",
+          "pt": "Explicar o que é a Liturgia das Horas"
+        },
+        {
+          "es": "Señalar el lugar de los salmos en la oración de la Iglesia",
+          "en": "Point out the place of the psalms in the Church's prayer",
+          "pt": "Apontar o lugar dos salmos na oração da Igreja"
+        },
+        {
+          "es": "Unirse a la alabanza de la liturgia",
+          "en": "Join in the praise of the liturgy",
+          "pt": "Unir-se ao louvor da liturgia"
+        }
+      ],
+      "summary": {
+        "es": "La Liturgia de las Horas estructura el día y la noche en la alabanza de Dios, y los salmos son su oración principal. El Sal 95 la introduce con una invitación a aclamar al Señor.",
+        "en": "The Liturgy of the Hours structures day and night in the praise of God, and the psalms are its principal prayer. Psalm 95 opens it with an invitation to acclaim the Lord.",
+        "pt": "A Liturgia das Horas estrutura o dia e a noite no louvor de Deus, e os salmos são a sua oração principal. O Sl 95 abre-a com um convite a aclamar ao Senhor."
+      },
+      "historicalContext": {
+        "es": "La Liturgia de las Horas, «el Oficio divino», celebra el misterio de Cristo y transfigura el tiempo de cada día; está llamada a ser la oración del Pueblo de Dios en su conjunto. El Catecismo cita la constitución Sacrosanctum Concilium para pedir una instrucción litúrgica y bíblica más rica sobre los salmos, y recuerda que los himnos, las lecturas y la lectio divina ayudan a inteligirlos y preparan la oración silenciosa. La Liturgia de las Horas no excluye las demás devociones: las acoge de manera complementaria.",
+        "en": "The Liturgy of the Hours, “the Divine Office”, celebrates the mystery of Christ and transfigures the time of each day; it is called to be the prayer of the whole People of God. The Catechism cites the constitution Sacrosanctum Concilium to ask for a richer liturgical and biblical instruction on the psalms, and recalls that the hymns, the readings and lectio divina help to understand them and prepare silent prayer. The Liturgy of the Hours does not exclude other devotions: it welcomes them in a complementary way.",
+        "pt": "A Liturgia das Horas, «o Ofício divino», celebra o mistério de Cristo e transfigura o tempo de cada dia; está chamada a ser a oração do Povo de Deus no seu conjunto. O Catecismo cita a constituição Sacrosanctum Concilium para pedir uma instrução litúrgica e bíblica mais rica sobre os salmos, e recorda que os hinos, as leituras e a lectio divina ajudam a inteligi-los e preparam a oração silenciosa. A Liturgia das Horas não exclui as demais devoções: acolhe-as de maneira complementar."
+      },
+      "teachingSections": [
+        {
+          "title": {
+            "es": "La oración que consagra el día",
+            "en": "The prayer that consecrates the day",
+            "pt": "A oração que consagra o dia"
+          },
+          "body": {
+            "es": "El Catecismo enseña que la Liturgia de las Horas penetra y transfigura el tiempo de cada día mediante la celebración del Oficio divino. Está estructurada de tal manera que la alabanza de Dios consagra el curso entero del día y de la noche, en fidelidad a las recomendaciones apostólicas de orar sin cesar. Es la oración pública de la Iglesia, en la que los fieles —clérigos, religiosos y laicos— ejercen el sacerdocio real de los bautizados. En ella, Cristo sigue ejerciendo su función sacerdotal a través de su Iglesia, y cada uno participa según su lugar y sus circunstancias.",
+            "en": "The Catechism teaches that the Liturgy of the Hours penetrates and transfigures the time of each day through the celebration of the Divine Office. It is structured so that the praise of God consecrates the whole course of day and night, in fidelity to the apostolic recommendations to pray without ceasing. It is the public prayer of the Church, in which the faithful — clergy, religious and lay people — exercise the royal priesthood of the baptized. In it, Christ continues to exercise his priestly function through his Church, and each one participates according to their place and circumstances.",
+            "pt": "O Catecismo ensina que a Liturgia das Horas penetra e transfigura o tempo de cada dia mediante a celebração do Ofício divino. Ela está estruturada de tal maneira que o louvor de Deus consagra o curso inteiro do dia e da noite, em fidelidade às recomendações apostólicas de orar sem cessar. É a oração pública da Igreja, na qual os fiéis — clérigos, religiosos e leigos — exercem o sacerdócio real dos batizados. Nela, Cristo continua a exercer sua função sacerdotal por meio de sua Igreja, e cada um participa segundo o seu lugar e as suas circunstâncias."
+          }
+        },
+        {
+          "title": {
+            "es": "Los salmos, el corazón de la liturgia",
+            "en": "The psalms, the heart of the liturgy",
+            "pt": "Os salmos, o coração da liturgia"
+          },
+          "body": {
+            "es": "Celebrar la Liturgia de las Horas exige armonizar la voz con el corazón que ora y adquirir una instrucción litúrgica y bíblica más rica, especialmente sobre los salmos. Los himnos y las letanías de la Oración de las Horas insertan la oración de los salmos en el tiempo de la Iglesia, y la lectura de la Palabra en cada hora, con los responsorios y los troparios, ayuda a la inteligencia de los salmos y prepara la oración silenciosa. La lectio divina se enraíza así en la celebración litúrgica: la Palabra es leída y meditada para convertirse en oración.",
+            "en": "Celebrating the Liturgy of the Hours demands harmonizing the voice with the heart that prays and acquiring a richer liturgical and biblical instruction, especially on the psalms. The hymns and litanies of the Prayer of the Hours insert the prayer of the psalms into the time of the Church, and the reading of the Word at each hour, with the responsories and troparia, helps the understanding of the psalms and prepares silent prayer. Lectio divina thus takes root in the liturgical celebration: the Word is read and meditated in order to become prayer.",
+            "pt": "Celebrar a Liturgia das Horas exige harmonizar a voz com o coração que ora e adquirir uma instrução litúrgica e bíblica mais rica, especialmente sobre os salmos. Os hinos e as ladainhas da Oração das Horas inserem a oração dos salmos no tempo da Igreja, e a leitura da Palavra em cada hora, com os responsórios e os troparios, ajuda a inteligência dos salmos e prepara a oração silenciosa. A lectio divina enraíza-se assim na celebração litúrgica: a Palavra é lida e meditada para tornar-se oração."
+          }
+        },
+        {
+          "title": {
+            "es": "La liturgia no encierra la oración",
+            "en": "The liturgy does not enclose prayer",
+            "pt": "A liturgia não encerra a oração"
+          },
+          "body": {
+            "es": "La Liturgia de las Horas, que es como una prolongación de la celebración eucarística, no excluye las diversas devociones del Pueblo de Dios: las acoge de manera complementaria, particularmente la adoración y el culto del Santísimo Sacramento. Los salmos, por eso, no pertenecen solo al templo ni a un pasado lejano. El Sal 95 lo muestra con una invitación que la liturgia usa como apertura del día: cantad al Señor un cántico nuevo. La misma voz que invita a aclamar advierte que no se endurezca el corazón, y une la alabanza a la escucha.",
+            "en": "The Liturgy of the Hours, which is like a prolongation of the Eucharistic celebration, does not exclude the various devotions of the People of God: it welcomes them in a complementary way, particularly adoration and the worship of the Blessed Sacrament. The psalms therefore belong not only to the temple or to a distant past. Psalm 95 shows this with an invitation the liturgy uses to open the day: sing to the Lord a new song. The same voice that invites us to acclaim warns not to harden the heart, and joins praise to listening.",
+            "pt": "A Liturgia das Horas, que é como uma prolongação da celebração eucarística, não exclui as diversas devoções do Povo de Deus: acolhe-as de maneira complementar, particularmente a adoração e o culto do Santíssimo Sacramento. Os salmos, por isso, não pertencem só ao templo nem a um passado distante. O Sl 95 mostra-o com um convite que a liturgia usa como abertura do dia: cantai ao Senhor um cântico novo. A mesma voz que convida a aclamar adverte que não se endureça o coração, e une o louvor à escuta."
+          }
+        }
+      ],
+      "lectio": {
+        "es": "Lee el Sal 95 y observa cómo pasa de la invitación a la alabanza a la advertencia sobre la dureza de corazón.",
+        "en": "Read Psalm 95 and notice how it moves from the invitation to praise to the warning about hardness of heart.",
+        "pt": "Leia o Sl 95 e observe como passa do convite ao louvor à advertência sobre a dureza de coração."
+      },
+      "meditatio": {
+        "es": "¿Cómo está estructurado tu tiempo de oración? ¿Qué salmo te gustaría tener presente por la mañana o antes de dormir?",
+        "en": "How is your prayer time structured? Which psalm would you like to keep in mind in the morning or before sleep?",
+        "pt": "Como está estruturado o seu tempo de oração? Que salmo você gostaria de ter presente pela manhã ou antes de dormir?"
+      },
+      "oratio": {
+        "es": "Reza despacio el Sal 95 con el ritmo de la liturgia: empieza invitando a tu propio corazón a aclamar al Señor y termina pidiendo escuchar hoy su voz.",
+        "en": "Pray Psalm 95 slowly with the rhythm of the liturgy: begin by inviting your own heart to acclaim the Lord, and end by asking to hear his voice today.",
+        "pt": "Reze devagar o Sl 95 com o ritmo da liturgia: comece convidando o seu próprio coração a aclamar ao Senhor e termine pedindo para ouvir hoje a sua voz."
+      },
+      "contemplatio": {
+        "es": "Permanece uno o dos minutos en silencio ante Dios. No buscas producir una idea nueva ni sentir algo especial; te dejas sostener por la palabra que has leído. Si algo te distrae, vuelve suavemente al versículo que elegiste.",
+        "en": "Remain quietly before God for a minute or two. You need not produce a new idea or feel anything special; let the word you have read hold you. If something distracts you, gently return to the verse you chose.",
+        "pt": "Permaneça um ou dois minutos em silêncio diante de Deus. Você não precisa produzir uma ideia nova nem sentir algo especial; deixe-se sustentar pela palavra que leu. Se algo o distrair, volte suavemente ao versículo que escolheu."
+      },
+      "actionStep": {
+        "es": "Esta semana reza el Sal 95 al despertarte o antes de dormir, uniéndote a la oración de la Iglesia. Si puedes, asiste a alguna Hora de la Liturgia de las Horas o escúchala.",
+        "en": "This week pray Psalm 95 on waking or before sleep, joining the Church's prayer. If you can, attend an Hour of the Liturgy of the Hours or listen to it.",
+        "pt": "Esta semana reze o Sl 95 ao acordar ou antes de dormir, unindo-se à oração da Igreja. Se puder, participe de alguma Hora da Liturgia das Horas ou ouça-a."
+      },
+      "reviewQuestions": [
+        {
+          "prompt": {
+            "es": "¿Qué es la Liturgia de las Horas?",
+            "en": "What is the Liturgy of the Hours?",
+            "pt": "O que é a Liturgia das Horas?"
+          },
+          "answer": {
+            "es": "Es la oración pública de la Iglesia que, en fidelidad a las recomendaciones apostólicas de orar sin cesar, estructura la alabanza de Dios a lo largo del día y de la noche. En ella, Cristo sigue ejerciendo su función sacerdotal a través de la Iglesia y los fieles participan según su lugar y sus circunstancias.",
+            "en": "It is the public prayer of the Church which, in fidelity to the apostolic recommendations to pray without ceasing, structures the praise of God throughout day and night. In it, Christ continues to exercise his priestly function through his Church, and the faithful participate according to their place and circumstances.",
+            "pt": "É a oração pública da Igreja que, em fidelidade às recomendações apostólicas de orar sem cessar, estrutura o louvor de Deus ao longo do dia e da noite. Nela, Cristo continua a exercer sua função sacerdotal por meio da Igreja, e os fiéis participam segundo o seu lugar e as suas circunstâncias."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿Qué lugar ocupan los salmos?",
+            "en": "What place do the psalms occupy?",
+            "pt": "Que lugar ocupam os salmos?"
+          },
+          "answer": {
+            "es": "Son su oración principal: la Liturgia de las Horas exige una instrucción litúrgica y bíblica más rica sobre ellos. Los himnos y las lecturas los insertan en el tiempo de la Iglesia y ayudan a inteligirlos y preparan la oración silenciosa. La lectio divina se enraíza así en la celebración litúrgica.",
+            "en": "They are its principal prayer: the Liturgy of the Hours demands a richer liturgical and biblical instruction on them. The hymns and readings insert them into the Church's time and help us understand them and prepare silent prayer. Lectio divina thus takes root in the liturgical celebration.",
+            "pt": "São a sua oração principal: a Liturgia das Horas exige uma instrução litúrgica e bíblica mais rica sobre eles. Os hinos e as leituras inserem-nos no tempo da Igreja e ajudam a inteligi-los e preparam a oração silenciosa. A lectio divina enraíza-se assim na celebração litúrgica."
+          }
+        },
+        {
+          "prompt": {
+            "es": "¿La liturgia reemplaza la oración personal?",
+            "en": "Does the liturgy replace personal prayer?",
+            "pt": "A liturgia substitui a oração pessoal?"
+          },
+          "answer": {
+            "es": "No. El Catecismo dice que la Liturgia de las Horas no excluye sino que acoge de manera complementaria las diversas devociones del Pueblo de Dios, particularmente la adoración y el culto del Santísimo Sacramento. La liturgia da forma a la oración personal; no la sustituye.",
+            "en": "No. The Catechism says that the Liturgy of the Hours does not exclude but welcomes in a complementary way the various devotions of the People of God, particularly adoration and the worship of the Blessed Sacrament. The liturgy gives shape to personal prayer; it does not replace it.",
+            "pt": "Não. O Catecismo diz que a Liturgia das Horas não exclui, mas acolhe de maneira complementar as diversas devoções do Povo de Deus, particularmente a adoração e o culto do Santíssimo Sacramento. A liturgia dá forma à oração pessoal; não a substitui."
+          }
+        }
+      ],
+      "sourceReferences": [
+        {
+          "id": "ccc_1174_1178",
+          "title": {
+            "es": "Catecismo §§1174–1178",
+            "en": "Catechism §§1174–1178",
+            "pt": "Catecismo, §§ 1174–1178"
+          },
+          "catechismStart": 1174,
+          "catechismEnd": 1178,
+          "url": null
+        },
+        {
+          "id": "ccc_2586_2586",
+          "title": {
+            "es": "Catecismo §2586",
+            "en": "Catechism §2586",
+            "pt": "Catecismo, § 2586"
+          },
+          "catechismStart": 2586,
+          "catechismEnd": 2586,
+          "url": null
+        },
+        {
+          "id": "sc_90",
+          "title": {
+            "es": "Sacrosanctum Concilium, 90 · Constitución sobre la sagrada liturgia",
+            "en": "Sacrosanctum Concilium, 90 · Constitution on the Sacred Liturgy",
+            "pt": "Sacrosanctum Concilium, 90 · Constituição sobre a sagrada liturgia"
+          },
+          "catechismStart": null,
+          "catechismEnd": null,
+          "url": {
+            "es": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_sp.html",
+            "en": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_en.html",
+            "pt": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19631204_sacrosanctum-concilium_po.html"
+          }
+        }
+      ]
+    }
+  ]
+}
