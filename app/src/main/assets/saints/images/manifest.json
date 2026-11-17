@@ -1,0 +1,922 @@
+{
+ "adalbert_of_prague_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "agatha_of_sicily_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "agnes_of_rome_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "albert_the_great_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "aloysius_gonzaga_religious.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "alphonsus_mary_liguori_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "ambrose_of_milan_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "andrew_apostle.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "andrew_dung_lac_priest_and_companions_martyrs.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "andrew_kim_tae_gon_priest_paul_chong_ha_sang_and_companions_martyrs.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "angela_merici_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "annunciation_of_the_lord.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "ansgar_of_hamburg_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "anthony_mary_claret_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "anthony_of_egypt_abbot.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "anthony_of_padua_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "anthony_zaccaria_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "apollinaris_of_ravenna_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "athanasius_of_alexandria_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "augustine_of_canterbury_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "augustine_of_hippo_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "barnabas_apostle.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "bartholomew_apostle.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "basil_the_great_and_gregory_nazianzen_bishops.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "benedict_of_nursia_abbot.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "bernard_of_clairvaux_abbot.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "blaise_of_sebaste_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "bonaventure_of_bagnoregio_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "boniface_of_mainz_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "bridget_of_sweden_religious.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "bruno_of_cologne_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "cajetan_of_thiene_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "callistus_i_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "camillus_de_lellis_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "casimir_of_poland.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "catherine_of_alexandria_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "catherine_of_siena_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "cecilia_of_rome_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "chair_of_saint_peter_the_apostle.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "charles_borromeo_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "charles_lwanga_and_companions_martyrs.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "clare_of_assisi_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "clement_i_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "conversion_of_saint_paul_the_apostle.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "cyril_constantine_the_philosopher_monk_and_methodius_michael_of_thessaloniki_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "cyril_of_alexandria_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "cyril_of_jerusalem_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "damasus_i_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "dedication_of_the_basilicas_of_saints_peter_and_paul_apostles.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "elizabeth_of_hungary_religious.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "elizabeth_of_portugal.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "ephrem_the_syrian_deacon.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "eusebius_of_vercelli_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "fabian_i_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "faustina_kowalska_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "fidelis_of_sigmaringen_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "frances_of_rome_religious.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "francis_de_sales_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "francis_of_assisi.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "francis_of_paola_hermit.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "francis_xavier_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "george_of_lydda_martyr.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "gertrude_the_great_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "gregory_i_the_great_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "gregory_of_narek_abbot.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "gregory_vii_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "hedwig_of_silesia_religious.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "henry_ii_emperor.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "hilary_of_poitiers_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "hildegard_of_bingen_abbess.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "holy_guardian_angels.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "ignatius_of_antioch_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "ignatius_of_loyola_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "immaculate_conception_of_the_blessed_virgin_mary.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "irenaeus_of_lyon_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "isidore_of_seville_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "james_apostle.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "jane_frances_de_chantal_religious.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "januarius_i_of_benevento_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "jerome_emiliani.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "jerome_of_stridon_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "joachim_and_anne_parents_of_mary.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_apostle.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_baptist_de_la_salle_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_bosco_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_chrysostom_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_damascene_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_de_brebeuf_isaac_jogues_priests_and_companions_martyrs.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "john_eudes_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_fisher_bishop_and_thomas_more_martyrs.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "john_henry_newman_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_i_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "john_leonardi_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_mary_vianney_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "john_of_avila_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_of_capistrano_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "john_of_god_duarte_cidade_religious.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_of_kanty_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_of_the_cross_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_paul_ii_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "john_xxiii_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "joseph_of_calasanz_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "joseph_spouse_of_mary.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "joseph_the_worker.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "josephine_bakhita_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "juan_diego_cuauhtlatoatzin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "justin_martyr.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "lawrence_of_rome_deacon.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "leo_i_the_great_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "louis_grignion_de_montfort_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "louis_ix_of_france.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "lucy_of_syracuse_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "luke_evangelist.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "margaret_mary_alacoque_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "margaret_of_scotland.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "maria_goretti_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "mark_evangelist.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "martha_of_bethany_mary_of_bethany_and_lazarus_of_bethany.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "martin_de_porres_religious.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "martin_i_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "martin_of_tours_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "mary_magdalene.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "matthias_apostle.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "maximilian_mary_raymund_kolbe_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "michael_gabriel_and_raphael_archangels.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "monica_of_hippo.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "most_holy_name_of_jesus.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "most_holy_name_of_mary.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "nativity_of_john_the_baptist.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "nativity_of_the_blessed_virgin_mary.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "nicholas_of_myra_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "norbert_of_xanten_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "our_lady_of_fatima.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "our_lady_of_guadalupe.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "our_lady_of_loreto.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "our_lady_of_lourdes.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "our_lady_of_mount_carmel.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "pancras_of_rome_martyr.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "passion_of_saint_john_the_baptist.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "patrick_of_ireland_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "paul_miki_and_companions_martyrs.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "paul_of_the_cross_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "paul_vi_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "paulinus_of_nola_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "perpetua_of_carthage_and_felicity_of_carthage_martyrs.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "peter_and_paul_apostles.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "peter_canisius_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "peter_chanel_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "peter_chrysologus_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "peter_claver_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "peter_julian_eymard_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "philip_and_james_apostles.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "philip_neri_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "pius_francesco_forgione_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "pius_v_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "pius_x_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "polycarp_of_smyrna_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "presentation_of_the_blessed_virgin_mary.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "queenship_of_the_blessed_virgin_mary.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "raymond_of_penyafort_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "rita_of_cascia_religious.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "robert_bellarmine_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "romuald_of_ravenna_abbot.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "rose_of_lima_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "scholastica_of_nursia_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "sebastian_of_milan_martyr.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "seven_holy_founders_of_the_servite_order.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "stanislaus_of_szczepanow_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "stephen_i_of_hungary.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "stephen_the_first_martyr.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "sylvester_i_pope.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "teresa_benedicta_of_the_cross_stein_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "teresa_of_calcutta_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "teresa_of_jesus_of_avila_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "therese_of_the_child_jesus_and_the_holy_face_of_lisieux_virgin.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "thomas_apostle.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "thomas_aquinas_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "thomas_becket_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "turibius_of_mogrovejo_bishop.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
+ },
+ "vincent_de_paul_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "vincent_ferrer_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "vincent_of_saragossa_deacon.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "visitation.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ },
+ "wenceslaus_i_of_bohemia_martyr.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "dark"
+ }
+}

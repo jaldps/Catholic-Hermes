@@ -76,6 +76,9 @@ class SaintsScreenTest {
         compose.onNodeWithTag("saint_detail").assertIsDisplayed()
         compose.onNodeWithText("Obispo de Ginebra.").assertExists()
         compose.onNodeWithText("Introducción a la vida devota, I, 3").assertExists()
+        // T-034: the bundled saint picture is credited under the header.
+        compose.onNodeWithTag("saint_image_credit").assertExists()
+            .assert(androidx.compose.ui.test.hasText("Imagen: ", substring = true))
         compose.onNodeWithTag("saint_detail_back").performClick()
         compose.onNodeWithTag("saints_screen").assertIsDisplayed()
     }

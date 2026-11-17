@@ -1,5 +1,10 @@
 package com.example.ui.screens
 
+import com.example.data.repository.DevotionImageCredits
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
@@ -232,6 +237,10 @@ private fun SaintDetail(
 
     val gutter = design.spacing.gutter
     val card = Modifier.fillMaxWidth().padding(horizontal = gutter).widthIn(max = design.spacing.readingMaxWidth + gutter * 2)
+    val context = LocalContext.current
+    val images = remember(context) { DevotionImageCredits.install(context); DevotionImageCredits.saints }
+    val imagePath = remember(images, celebration.key) { images.imagePath(celebration.key) }
+    val credit = remember(images, imagePath) { imagePath?.let { images.credit(celebration.key) } }
     LazyColumn(
         modifier = modifier.fillMaxSize().testTag("saint_detail"),
         contentPadding = PaddingValues(bottom = appScreenInsets().calculateBottomPadding() + 32.dp),
@@ -240,9 +249,19 @@ private fun SaintDetail(
         item {
             AppDetailHeader(
                 title = celebration.title.get(language),
-                assetPath = "heroes/lumen/saints.jpg",
+                assetPath = imagePath ?: "heroes/lumen/saints.jpg",
                 eyebrow = saintDateLabel(celebration.month, celebration.day, language) + " · " + celebration.rank.displayName.get(language)
             )
+            if (credit != null) {
+                val uriHandler = LocalUriHandler.current
+                val url = credit.safeUrl
+                Text(
+                    imageCreditLine(credit, language), style = styles.footnote, color = palette.textSecondary,
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = gutter).padding(bottom = 6.dp)
+                        .then(if (url != null) Modifier.clickable(role = Role.Button) { runCatching { uriHandler.openUri(url) } } else Modifier)
+                        .testTag("saint_image_credit")
+                )
+            }
             Row(Modifier.padding(horizontal = gutter).padding(top = 4.dp)) {
                 AppSecondaryButton(tr("Todos los santos", "All saints", "Todos os santos"), onBack, leadingIcon = Icons.AutoMirrored.Outlined.ArrowBack, modifier = Modifier.testTag("saint_detail_back"))
             }

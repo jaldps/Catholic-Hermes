@@ -33,7 +33,8 @@ private data class RawCredits(val images: List<DevotionImageCredit?>? = null)
  */
 class DevotionImageCredits(
     private val open: (String) -> InputStream,
-    private val exists: (String) -> Boolean = { false }
+    private val exists: (String) -> Boolean = { false },
+    private val folder: String = FOLDER
 ) {
     companion object {
         const val FOLDER = "devotions/images"
@@ -57,6 +58,23 @@ class DevotionImageCredits(
             )
         }
         val default: DevotionImageCredits get() = override ?: bundled
+
+        /** The saint pictures (T-034) use the same credits format in their own folder. */
+        const val SAINTS_FOLDER = "saints/images"
+        /** Test hook: replaces [saints] while set. */
+        @Volatile internal var saintsOverride: DevotionImageCredits? = null
+        private val bundledSaints by lazy {
+            DevotionImageCredits(
+                open = {
+                    assets?.open("$SAINTS_FOLDER/$it")
+                        ?: DevotionImageCredits::class.java.classLoader!!.getResourceAsStream("$SAINTS_FOLDER/$it")
+                        ?: error("Saint image credits unavailable")
+                },
+                exists = ::assetExists,
+                folder = SAINTS_FOLDER
+            )
+        }
+        val saints: DevotionImageCredits get() = saintsOverride ?: bundledSaints
     }
 
     private val credits: Map<String, DevotionImageCredit> by lazy {
@@ -74,5 +92,5 @@ class DevotionImageCredits(
 
     /** Asset path of the devotion's picture when it is credited and the file exists, else null. */
     fun imagePath(id: String): String? =
-        if (credits.containsKey(id)) "$FOLDER/$id.jpg".takeIf(exists) else null
+        if (credits.containsKey(id)) "$folder/$id.jpg".takeIf(exists) else null
 }
