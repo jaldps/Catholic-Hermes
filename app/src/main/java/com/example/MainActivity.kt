@@ -29,6 +29,8 @@ class MainActivity : ComponentActivity() {
     private lateinit var preferencesStore: UserPreferencesStore
     private lateinit var repository: CatholicDataRepository
     private lateinit var ttsManager: LiturgicalTtsManager
+    private lateinit var backupService: com.example.data.backup.BackupService
+    private var backupRecoveryFailed by mutableStateOf(false)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,33 +43,20 @@ class MainActivity : ComponentActivity() {
         val database = SanctaFidesDatabase.getInstance(this)
         val dao = database.dao()
 
-        com.example.data.persistence.PersonalDataCommands.submit("initial-content") {
-            dao.insertDefaultHabits(com.example.data.repository.PilgrimageAndHabitsData.defaultHabitsToSeed)
-            dao.insertLiturgicalDays(com.example.data.repository.PilgrimageAndHabitsData.defaultLiturgicalDaysToSeed)
-        }
-
-        // Restore the stored language before the first frame so the UI never
-        // flashes the device-locale default over the user's own choice.
-        lifecycleScope.launch {
-            val stored = preferencesStore.preferences.first()
-            repository.applyCalendarRules(stored.calendarRules)
-            if (stored.hasChosenLanguage) {
-                repository.applyPersistedLanguage(stored.language)
-            }
-            ttsManager.setLanguage(repository.currentLanguage.value)
-            appReady = true
-            // Reminders that are ON by default (midday Angelus, Chaplet) are
-            // scheduled at app start, not only after a reboot; idempotent.
-            com.example.data.reminders.ReminderScheduler.rescheduleAll(
-                applicationContext,
-                repository.currentLanguage.value.code
-            )
-        }
+        backupService = com.example.data.backup.BackupService.create(applicationContext, preferencesStore)
+        finishStartup()
 
         setContent {
             val storedPreferences by preferencesStore.preferences.collectAsState<UserPreferences, UserPreferences?>(initial = null)
             val preferences = storedPreferences
-            if (!appReady || preferences == null) return@setContent
+            if (!appReady || preferences == null) {
+                if (backupRecoveryFailed) SanctaFidesTheme {
+                    com.example.ui.backup.BackupRecoverySheet(
+                        com.example.data.models.AppLanguage.fromCode(""),
+                        onRetry = { finishStartup() }, onExit = { finish() })
+                }
+                return@setContent
+            }
 
             // The day's liturgical colour lights the whole app (Liturgical Dynamic tint).
             val today by repository.currentDate.collectAsState()
@@ -94,9 +83,31 @@ class MainActivity : ComponentActivity() {
                     preferencesStore = preferencesStore,
                     preferences = preferences,
                     initialReminderId = pendingReminderId,
-                    onReminderConsumed = { pendingReminderId = null }
+                    onReminderConsumed = { pendingReminderId = null },
+                    backupService = backupService,
+                    onBackupRestored = { recreate() }
                 )
             }
+        }
+    }
+
+    private fun finishStartup() {
+        backupRecoveryFailed = false
+        lifecycleScope.launch {
+            try { backupService.recoverPendingRestore() }
+            catch (e: kotlinx.coroutines.CancellationException) { throw e }
+            catch (_: Exception) { backupRecoveryFailed = true; return@launch }
+            val dao = SanctaFidesDatabase.getInstance(applicationContext).dao()
+            com.example.data.persistence.PersonalDataCommands.submit("initial-content") {
+                dao.insertDefaultHabits(com.example.data.repository.PilgrimageAndHabitsData.defaultHabitsToSeed)
+                dao.insertLiturgicalDays(com.example.data.repository.PilgrimageAndHabitsData.defaultLiturgicalDaysToSeed)
+            }
+            val stored = preferencesStore.preferences.first()
+            repository.applyCalendarRules(stored.calendarRules)
+            if (stored.hasChosenLanguage) repository.applyPersistedLanguage(stored.language)
+            ttsManager.setLanguage(repository.currentLanguage.value)
+            appReady = true
+            com.example.data.reminders.ReminderScheduler.rescheduleAll(applicationContext, repository.currentLanguage.value.code)
         }
     }
 
