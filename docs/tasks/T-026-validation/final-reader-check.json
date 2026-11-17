@@ -1,0 +1,57 @@
+{
+  "suites": [
+    {
+      "name": "com.example.HomePrayerPrioritiesTest",
+      "tests": "8",
+      "failures": "1",
+      "errors": "0",
+      "skipped": "0",
+      "time": "121.527"
+    }
+  ],
+  "cases": [
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "explicitGuidesOverrideLastDevotionAndKeepBothSavedPositions[APPLE-LIGHT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[APPLE-LIGHT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "explicitGuidesOverrideLastDevotionAndKeepBothSavedPositions[APPLE-DARK]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[APPLE-DARK]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "explicitGuidesOverrideLastDevotionAndKeepBothSavedPositions[SANCTUARY-LIGHT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[SANCTUARY-LIGHT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "explicitGuidesOverrideLastDevotionAndKeepBothSavedPositions[SANCTUARY-DARK]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "name": "prayerFollowsSeasonAndCounterPrecedesLiturgyWithExactVerseReader[SANCTUARY-DARK]",
+      "status": "failed"
+    }
+  ],
+  "tests": 8,
+  "failures": 1,
+  "skipped": 0
+}

@@ -1,0 +1,46 @@
+{
+  "baseline_commit": "3172bed",
+  "part_a_commit": "8af52f3",
+  "existing_case_count": 584,
+  "source_patterns_without_consumers": [
+    "androidx.navigation",
+    "retrofit2",
+    "com.google.firebase"
+  ],
+  "dead_declaration_matches_before": [
+    "8af52f3:app/src/main/java/com/example/ui/design/AppleKit.kt:122:object AppleKit : AppKit {",
+    "8af52f3:app/src/main/java/com/example/ui/design/MaterialKit.kt:143:object MaterialKit : AppKit {",
+    "8af52f3:app/src/main/java/com/example/ui/design/VaticanKit.kt:128:object VaticanKit : AppKit {",
+    "8af52f3:app/src/main/java/com/example/ui/theme/ThemePresets.kt:37:object ThemePalettes {"
+  ],
+  "dead_symbol_matches_after": [],
+  "ive_production_references": [
+    "app/src/main/java/com/example/ui/design/AppComponents.kt:20:    DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> LumenKit",
+    "app/src/main/java/com/example/ui/components/IllustratedScreenHeader.kt:44:        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.GLASS, DesignLanguage.CLASSIC -> {",
+    "app/src/main/java/com/example/ui/components/SacredArt.kt:152:                    DesignLanguage.IVE -> MaterialPainter(stage, inks, transparentBackground)",
+    "app/src/main/java/com/example/ui/theme/Theme.kt:253:        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> base.copy(",
+    "app/src/main/java/com/example/ui/theme/AccentColors.kt:152:        val fillsButton = identity == DesignLanguage.APPLE || identity == DesignLanguage.GLASS || identity == DesignLanguage.IVE"
+  ],
+  "code_removal": [
+    {
+      "file": "app/src/main/java/com/example/ui/design/AppleKit.kt",
+      "removed_lines": 1892,
+      "saved_bytes": 86731
+    },
+    {
+      "file": "app/src/main/java/com/example/ui/design/MaterialKit.kt",
+      "removed_lines": 1653,
+      "saved_bytes": 77217
+    },
+    {
+      "file": "app/src/main/java/com/example/ui/design/VaticanKit.kt",
+      "removed_lines": 2085,
+      "saved_bytes": 96611
+    },
+    {
+      "file": "app/src/main/java/com/example/ui/theme/ThemePresets.kt",
+      "removed_lines": 245,
+      "saved_bytes": 9371
+    }
+  ]
+}
