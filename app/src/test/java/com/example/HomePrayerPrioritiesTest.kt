@@ -13,6 +13,7 @@ import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.assertTextContains
 import androidx.compose.ui.test.assertWidthIsAtLeast
 import androidx.compose.ui.test.getUnclippedBoundsInRoot
+import androidx.compose.ui.test.hasContentDescription
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -142,8 +143,18 @@ class HomePrayerPrioritiesTest(private val identity: DesignLanguage, private val
         compose.onNodeWithTag("verse_of_the_day_card").performClick()
         val reference = requireNotNull(ScriptureReference.parse(DailyVerseRotation.referenceFor(LocalDate.now())))
         val book = BibleData.catholicCanonBooks.single { it.id == reference.bookId }
+        // Opening the verse is asynchronous: the chapter loads off the main
+        // thread and the screen then transitions in. Wait for the reader to
+        // settle instead of asserting in the same frame as the tap.
+        val chapterPicker = hasContentDescription("Elegir capítulo. ${book.name.get(AppLanguage.ES)}, capítulo ${reference.chapter} de", substring = true)
+        compose.waitUntil(10_000) {
+            runCatching {
+                compose.onNodeWithTag("bible_reader").assertIsDisplayed()
+                compose.onNode(chapterPicker).assertIsDisplayed()
+            }.isSuccess
+        }
         compose.onNodeWithTag("bible_reader").assertIsDisplayed()
-        compose.onNodeWithContentDescription("Elegir capítulo. ${book.name.get(AppLanguage.ES)}, capítulo ${reference.chapter} de", substring = true).assertIsDisplayed()
+        compose.onNode(chapterPicker).assertIsDisplayed()
         compose.onNodeWithTag("verse_${reference.verseStart}").assertIsDisplayed()
         assertEquals("bundled", repository.activeBibleEditionId.value)
         // Inspect the actual verse's text, rather than merely arriving at the Bible tab.
