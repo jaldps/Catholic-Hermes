@@ -2,7 +2,7 @@
 
 ## Catholic Hermes 1.8.22
 
-[Descargar Catholic Hermes 1.8.22](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.22.apk) · versión `1.8.22`, código 31. **Actualiza 1.8.1–1.8.21** y conserva el progreso. También está en **Releases → v1.8.22**, en la columna derecha del repositorio.
+[Descargar Catholic Hermes 1.8.22](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.22.apk) · versión `1.8.22`, código 31. **Actualiza 1.8.1–1.8.21** y conserva el progreso.
 
 Novedades:
 - **Índice completo del Catecismo.**
