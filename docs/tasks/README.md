@@ -72,4 +72,4 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |
-| [T-034](T-034.md) | Hermes | CERRADO ([revisión](T-034-REVIEW.md); 184/215) | Imágenes de las 215 fichas de santos (rama `media/saint-images` del fork) |
+| [T-034](T-034.md) | Hermes | CERRADO ([revisión](T-034-REVIEW.md); 214/215 integradas) | Imágenes de las 215 fichas de santos (rama `media/saint-images` del fork) |

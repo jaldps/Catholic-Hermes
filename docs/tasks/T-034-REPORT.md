@@ -4,17 +4,17 @@
 - **Nota de estado:** el coordinador dijo en 17-nov que se empezara al terminar T-036. La tabla de
   `origin` seguía marcándolo `EN COLA`, así que se adelantó la primera entrega y **queda constancia de
   que se trabaja en él**, como pidió el usuario. No se ha tocado `CatholicGPT`.
-- **Cobertura:** 184 de las 215 fichas tienen imagen. Quedan 31 sin imagen (abajo).
+- **Cobertura:** **las 215 fichas tienen imagen** (0 sin imagen).
 
 ## Recuento
 
 | | Cantidad |
 |---|---|
 | Fichas totales (`saints.tsv`) | 215 |
-| **Con imagen** | **184** |
-| Sin imagen | 31 |
+| **Con imagen** | **215** |
+| Sin imagen | 0 |
 | Referenciales | 0 |
-| Tamaño total de `saints/` | ~42 MB (184 JPG a ≤1200 px por lado) |
+| Tamaño total de `saints/` | ~50 MB (215 JPG a ≤1200 px por lado) |
 
 ## Auditoría externa (17-nov, modelo de visión de Google)
 
@@ -39,38 +39,66 @@ representan al santo:
 | `matthew_apostle` | es el *ángel* de San Mateo, no Mateo |
 | `simon_and_jude_apostles` | políptico de Ugolino di Nerio sin categorías que lo confirmen |
 
-## Las 31 sin imagen
+## Tercera ronda: los 31 que quedaban
 
-Sin obra fiable **del santo concreto** en Commons, o con un candidato que era otra cosa:
+Tras cerrar la segunda pasada, se buscó de nuevo para los 31 que no tenían imagen: cuatro rondas de
+consultas en Commons (el nombre de la ficha, el nombre en inglés claro, «icon / painting / portrait»
+y búsquedas dirigidas por nombre y obra). **Se consiguió imagen para los 31.**
 
-`timothy_of_ephesus_and_titus_of_crete_bishops`, `peter_damian_bishop`,
-`anselm_of_canterbury_bishop`, `nereus_of_terracina_and_achilleus_of_terracina_martyrs`,
-`bernardine_of_siena_priest`, `christopher_magallanes_priest_and_companions_martyrs`,
-`bede_the_venerable_priest`, `mary_magdalene_de_pazzi_virgin`,
-`marcellinus_of_rome_and_peter_the_exorcist_martyrs`, `first_martyrs_of_the_holy_roman_church`,
-`augustine_zhao_rong_priest_and_companions_martyrs`, `lawrence_of_brindisi_priest`,
-`sharbel_makhluf_priest`, `dedication_of_the_basilic_of_saint_mary_major`,
-`sixtus_ii_pope_and_companions_martyrs`, `dominic_de_guzman_priest`,
-`pontian_i_pope_and_hippolytus_of_rome_priest`, `assumption_of_the_blessed_virgin_mary`,
-`our_lady_of_sorrows`, `cornelius_i_pope_and_cyprian_of_carthage_bishop_martyrs`,
-`matthew_apostle`, `cosmas_of_cilicia_and_damian_of_cilicia_martyrs`,
-`lawrence_ruiz_and_companions_martyrs`, `our_lady_of_the_rosary`,
-`denis_of_paris_bishop_and_companions_martyrs`, `simon_and_jude_apostles`, `all_saints`,
-`commemoration_of_all_the_faithful_departed`, `josaphat_kuntsevych_bishop`,
-`columban_of_luxeuil_abbot`, `holy_innocents_martyrs`.
+| Santo | Obra | Licencia |
+|---|---|---|
+| Timoteo y Tito | `Saint Timothy.jpg` (icono) | Public domain |
+| Pedro Damián | `Pierodamiani2.JPG` | Public domain |
+| Anselmo de Canterbury | `Anselm-CanterburyVit.jpg` (vidriera) | Public domain |
+| Nereo y Aquileo | `Rome, Chiesa di Santa Maria in Vallicella 010.JPG` (Rubens) | CC BY-SA 4.0 |
+| Bernardino de Siena | `St. Bernardine of Siena Met DP890968.jpg` | CC0 |
+| Cristóbal Magallanes | `Cristobal.jpg` | Public domain |
+| Beda el Venerable | `Venerable Bede, Bramley.jpg` (vidriera) | CC BY 2.0 |
+| María Magdalena de Pazzi | `Maria Maddalena de' Pazzi.jpg` | Public domain |
+| Marcelino y Pedro | `Marcellinus Petrus.jpg` | Public domain |
+| Primeros mártires de Roma | `Siemiradski Fackeln.jpg` (Siemiradzki) | Public domain |
+| Agustín Zhao Rong | `Saint Augustine Tchao.png` | CC0 |
+| Lorenzo de Brindisi | `Slorenzo5.jpg` | Public domain |
+| Sarbelio Makhluf | `Charbel.jpg` | Public domain |
+| Dedicación de Santa María Mayor | `Basilica di Santa Maria Maggiore abside a Roma.jpg` | CC BY-SA 3.0 |
+| Sixto II y compañeros | `Pope St. Sixtus II -Mission San Miguel.png` | CC0 |
+| Domingo de Guzmán | `Santo Domingo de Guzmán, Museo de Bellas Artes de Córdoba.jpg` | CC BY-SA 4.0 |
+| Ponciano e Hipólito | `18-St.Pontian.jpg` | Public domain |
+| Asunción de María | `Tizian 041.jpg` (la asmunsión de Tiziano) | Public domain |
+| Virgen María de los Dolores | `Painting of Our Lady of Sorrows in Pleinfeld.jpg` | CC BY-SA 4.0 |
+| Cornelio y Cipriano | `Paus Cornelius (tg-uact-408).jpg` | CC0 |
+| San Mateo | `St. Matthew, Apostle Met DP891126.jpg` | CC0 |
+| Cosme y Damián | `French - Saint Cosmas - Walters 27283.jpg` | Public domain |
+| Lorenzo Ruiz | `San Lorenzo Ruiz Monument, Manila, Jun 2024.jpg` | CC BY-SA 4.0 |
+| Virgen María del Rosario | `Matka Boża Pompejańska…` (Nuestra Señora del Rosario) | Public domain |
+| Dionisio de París | `Enthauptung des Heiligen Dionysius auf dem Montmartre.jpg` | CC BY-SA 4.0 |
+| Simón y Judas | `El Greco - St. Simon - Google Art Project.jpg` | Public domain |
+| Todos los Santos | `Pala Ognissanti - Antonio Boselli.jpg` | CC BY-SA 4.0 |
+| Fieles difuntos | `William-Adolphe Bouguereau… The Day of the Dead (1859)` | Public domain |
+| Josafat Kuncewicz | `Simmler Martyrdom of Josaphat Kuntsevych.jpg` | Public domain |
+| Columbano | `Columbanus at Bobbio.jpg` | CC BY-SA 3.0 |
+| Santos Inocentes | `Daniele da Volterra - The Massacre of the Innocents…` | Public domain |
+
+Dos salvedades que conviene que el coordinador conozca:
+
+- `dedication_of_the_basilic_of_saint_mary_major` estaba creado con una errata en la clave
+  («basilic»); se renombró a la clave del TSV (`…basilica…`) y se actualizó `credits.json`.
+- Varias de estas 31 vienen de vidrieras, monumentos o retruques de cuadros; son la obra que
+  representa al santo, no una iglesia ni una calle. Se han preferido a dejar la ficha vacía.
 
 ## Licencias
 
 | Licencia | Cantidad |
 |---|---|
-| Public domain | 120 |
-| CC0 | 28 |
-| CC BY-SA 4.0 | 19 |
+| Public domain | 137 |
+| CC0 | 33 |
+| CC BY-SA 4.0 | 25 |
+| CC BY-SA 3.0 | 9 |
 | CC BY 4.0 | 7 |
-| CC BY-SA 3.0 | 7 |
 | CC BY 2.0 / CC BY-SA 2.0 / CC BY 3.0 | 1 cada una |
 
-Todas permitidas (dominio público, CC0, CC BY, CC BY-SA). **Ninguna NC ni ND.**
+Todas permitidas (dominio público, CC0, CC BY, CC BY-SA). **Ninguna NC ni ND.** Solo una entrada
+tiene el autor vacío (la ficha de Commons no lo tiene legible).
 
 ## Fuentes
 
@@ -78,6 +106,8 @@ Todas permitidas (dominio público, CC0, CC BY, CC BY-SA). **Ninguna NC ni ND.**
   exacto del archivo y su `url` en `credits.json` apunta a la **página del archivo**, no a la imagen.
 - Autor y licencia se tomaron de `extmetadata` (`Artist`, `LicenseShortName`); solo una entrada tiene
   el autor vacío (no consta en la ficha). No se ha inventado ningún autor.
+- La tercera ronda (los 31 restantes) se hizo entera por la API de Commons y se descargó igual que
+  las sustituciones: miniaturas de 1280 px vía `images.weserv.nl`, reducidas después a 1200 px.
 - El grueso de las descargas se hizo de `upload.wikimedia.org`. Wikimedia cortó el acceso a los
   originales por exceso de peticiones (HTTP 429 con `retry-after: 120`), así que las sustituciones de
   la auditoría se bajaron como **miniaturas de 1280 px** a través de la caché `images.weserv.nl` y
@@ -123,6 +153,8 @@ Todas permitidas (dominio público, CC0, CC BY, CC BY-SA). **Ninguna NC ni ND.**
 
 ## Pendiente
 
-- Buscar obra para los 31 que se han quedado sin imagen (de los que 27 ya se buscaron en tres rondas).
+- Pasada visual de las 31 imágenes de la tercera ronda (no se han revisado de visu; la selección se
+  hizo por título, descripción y categorías de Commons, y se descartaron las que eran iglesias,
+  calles, monumentos genéricos o páginas de libro).
 - Verificar que el coordinador apruebe las dos ramas (`media/saint-images` y
   `media/saint-images-hojas`, la segunda es solo de verificación y no se integra).
