@@ -1,0 +1,20 @@
+{
+  "version_name": "1.8.24",
+  "version_code": 33,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.24",
+  "sha256": "8f739f10afaf34d77add6c53a6ccbc6d1814c41a581a41351b5ac5e2033fb0db",
+  "bytes": 99751272,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.23 (same package and key)",
+  "built_from": "git archive of CatholicGPT at the version commit b20234e (clean tree)",
+  "also_published_as": "GitHub Release v1.8.24 (identical SHA-256)",
+  "changes": [
+    "Cross-references in Bible courses and in the 'Bible in a year' plan: each cited passage or daily reading offers related passages with text, grouped by verse; psalm numbers follow the chosen Bible; tapping opens the reader and Back returns (T-040). Mass readings unchanged."
+  ],
+  "tests": ["PassageCrossReferencesTest", "CrossReferencesUiTest", "CrossRefsScreenshotTest", "ReadingPlans*", "CrossReference*", "Study*", "Bible*", "SearchUiTest", "AppNavigationTest", "DesignNavigationTest", "DesignContrastTest"],
+  "known_limitations": ["Not tested on a physical phone.", "Deuterocanonical books have no cross-references in the open source data."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

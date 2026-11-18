@@ -2,6 +2,17 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.8.24
+
+[Descargar Catholic Hermes 1.8.24](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.24.apk) · versión `1.8.24`, código 33. **Actualiza 1.8.1–1.8.23** y conserva el progreso. También en [Releases → v1.8.24](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.24).
+
+- **Referencias cruzadas en los cursos bíblicos y en «La Biblia en un año».**
+  - Cada pasaje citado o lectura del día ofrece los pasajes relacionados, con su texto.
+  - La numeración de los Salmos sigue la Biblia que elegiste.
+  - Las lecturas de la Misa no cambian.
+
+[Metadatos](../docs/quality/release-1.8.24/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.23
 
 [Descargar Catholic Hermes 1.8.23](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.23.apk) · versión `1.8.23`, código 32. **Actualiza 1.8.1–1.8.22** y conserva el progreso. También en [Releases → v1.8.23](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.23).
