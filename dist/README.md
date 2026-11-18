@@ -2,6 +2,18 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.8.26
+
+[Descargar Catholic Hermes 1.8.26](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.26.apk) · versión `1.8.26`, código 35. **Actualiza 1.8.1–1.8.25** y conserva el progreso. También en [Releases → v1.8.26](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.26).
+
+- **Narración mejorada.**
+  - La notificación y la pantalla de bloqueo muestran qué se está leyendo.
+  - Los controles funcionan en todas las pantallas.
+  - La voz se detiene al salir de la pantalla.
+  - «Escuchar» nuevo en la ficha de cada santo y en la historia de cada devoción.
+
+[Metadatos](../docs/quality/release-1.8.26/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.25
 
 [Descargar Catholic Hermes 1.8.25](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.25.apk) · versión `1.8.25`, código 34. **Actualiza 1.8.1–1.8.24** y conserva el progreso. También en [Releases → v1.8.25](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.25).
