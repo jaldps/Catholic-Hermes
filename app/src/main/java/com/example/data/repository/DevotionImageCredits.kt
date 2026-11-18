@@ -34,7 +34,8 @@ private data class RawCredits(val images: List<DevotionImageCredit?>? = null)
 class DevotionImageCredits(
     private val open: (String) -> InputStream,
     private val exists: (String) -> Boolean = { false },
-    private val folder: String = FOLDER
+    private val folder: String = FOLDER,
+    private val extension: String = "jpg"
 ) {
     companion object {
         const val FOLDER = "devotions/images"
@@ -75,6 +76,24 @@ class DevotionImageCredits(
             )
         }
         val saints: DevotionImageCredits get() = saintsOverride ?: bundledSaints
+
+        /** Credits of the order emblems added with T-039 (the 37 original emblems carry none). */
+        const val ORDERS_FOLDER = "orders"
+        /** Test hook: replaces [orders] while set. */
+        @Volatile internal var ordersOverride: DevotionImageCredits? = null
+        private val bundledOrders by lazy {
+            DevotionImageCredits(
+                open = {
+                    assets?.open("$ORDERS_FOLDER/$it")
+                        ?: DevotionImageCredits::class.java.classLoader!!.getResourceAsStream(it)
+                        ?: error("Order emblem credits unavailable")
+                },
+                exists = ::assetExists,
+                folder = ORDERS_FOLDER,
+                extension = "png"
+            )
+        }
+        val orders: DevotionImageCredits get() = ordersOverride ?: bundledOrders
     }
 
     private val credits: Map<String, DevotionImageCredit> by lazy {
@@ -92,5 +111,5 @@ class DevotionImageCredits(
 
     /** Asset path of the devotion's picture when it is credited and the file exists, else null. */
     fun imagePath(id: String): String? =
-        if (credits.containsKey(id)) "$folder/$id.jpg".takeIf(exists) else null
+        if (credits.containsKey(id)) "$folder/$id.$extension".takeIf(exists) else null
 }

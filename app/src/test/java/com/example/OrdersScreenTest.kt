@@ -81,13 +81,16 @@ class OrdersScreenTest {
     @Test fun orderReaderShowsDetailsInLumen() = scenario("LUMEN")
     @Test fun orderReaderShowsDetailsInSanctuary() = scenario("SANCTUARY")
 
-    @Test fun newOrderWithoutPngOpens() {
+    @Test fun newOrderWithEmblemShowsItsCredit() {
         launch()
         compose.onNodeWithTag("orders_list").performScrollToNode(hasTestTag("order_mercedarios-odem"))
         compose.onNodeWithTag("order_mercedarios-odem").performClick()
         scroll("order_sources")
         compose.onNodeWithTag("order_sources").assertExists()
         compose.onNodeWithTag("order_motto").assertDoesNotExist()
+        // T-039: the emblem added for this order is credited; the original emblems carry no credit.
+        scroll("order_emblem_credit")
+        compose.onNodeWithTag("order_emblem_credit").assert(hasText("Emblema: ", substring = true))
     }
 
     @Test fun governanceOfficeOpensWithSources() {

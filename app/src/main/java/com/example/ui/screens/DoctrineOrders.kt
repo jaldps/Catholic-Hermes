@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
@@ -163,6 +165,13 @@ private fun OrderPage(
         language.tr("Fundador: $it", "Founder: $it", "Fundador: $it")
     }
     val progressLabel = language.tr("Orden ${index + 1} de $total", "Order ${index + 1} of $total", "Ordem ${index + 1} de $total")
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val emblemCredits = androidx.compose.runtime.remember(context) {
+        com.example.data.repository.DevotionImageCredits.install(context); com.example.data.repository.DevotionImageCredits.orders
+    }
+    val emblemCredit = androidx.compose.runtime.remember(emblemCredits, order.id) {
+        emblemCredits.imagePath(order.id)?.let { emblemCredits.credit(order.id) }
+    }
     ReaderPage(
         title = name,
         eyebrow = listOfNotNull(abbreviation, founded).joinToString(" · ").ifEmpty { null },
@@ -188,6 +197,20 @@ private fun OrderPage(
             BlockGap(28.dp)
         }
         orderExtras(order, language)
+        if (emblemCredit != null) item(key = "emblem_credit") {
+            val uriHandler = androidx.compose.ui.platform.LocalUriHandler.current
+            val url = emblemCredit.safeUrl
+            val parts = listOf(emblemCredit.author, emblemCredit.license, emblemCredit.source).map { it.trim() }.filter { it.isNotEmpty() }
+            androidx.compose.material3.Text(
+                language.tr("Emblema: ", "Emblem: ", "Emblema: ") + parts.joinToString(" · "),
+                style = com.example.ui.theme.LocalAppTextStyles.current.footnote,
+                color = com.example.ui.theme.LocalAppDesign.current.palette.textSecondary,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = com.example.ui.theme.LocalAppDesign.current.spacing.gutter)
+                    .then(if (url != null) Modifier.clickable(role = androidx.compose.ui.semantics.Role.Button) { runCatching { uriHandler.openUri(url) } } else Modifier)
+                    .testTag("order_emblem_credit")
+            )
+            BlockGap(20.dp)
+        }
         item(key = "footer") {
             SequenceFooter(
                 language,
