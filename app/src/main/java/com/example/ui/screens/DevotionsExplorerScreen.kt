@@ -382,6 +382,12 @@ private fun DevotionPage(
             )
             BlockGap(20.dp)
         }
+        // The devotion's story, read aloud; the prayer below keeps its own button.
+        val storyText = listOfNotNull(title, history, meaning?.takeIf { it.isNotBlank() }).joinToString("\n\n")
+        item(key = "listen") {
+            ReaderActionRow(language, nav.voice, storyText, null, "devotion_listen_button", null, title = title)
+            BlockGap(20.dp)
+        }
         item(key = "facts") {
             FactsGroup(facts)
             BlockGap(28.dp)
@@ -448,11 +454,11 @@ private fun DevotionPage(
                     )
                 }
                 Spacer(Modifier.height(16.dp))
-                val playing = nav.voice.playing
+                val playing = nav.voice.isReading(prayer)
                 AppSecondaryCapsule(
                     label = if (playing) language.tr("Detener", "Stop", "Parar") else language.tr("Escuchar", "Listen", "Ouvir"),
                     icon = if (playing) Icons.Outlined.Stop else Icons.Outlined.VolumeUp,
-                    onClick = { if (playing) nav.voice.stop() else nav.voice.speak(prayer) },
+                    onClick = { if (playing) nav.voice.stop() else nav.voice.speak(prayer, title = prayerTitle) },
                     tag = "devotion_prayer_listen"
                 )
             }

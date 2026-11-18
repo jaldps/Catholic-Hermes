@@ -40,6 +40,7 @@ import androidx.compose.material.icons.outlined.TextFields
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -156,6 +157,8 @@ fun NightPrayersScreen(
     val examenSteps = repository.ignatianExamenSteps
     val prayers = repository.vaticanPrayers
     val isPlayingAudio by ttsManager.isPlaying.collectAsState()
+    // Changing office or leaving the screen ends the narration (and its notification).
+    DisposableEffect(openOffice) { onDispose { ttsManager.stop() } }
 
     // Progress through the guided offices survives a trip back to the overview.
     var examenDone by rememberSaveable { mutableStateOf(listOf<Int>()) }
@@ -499,7 +502,7 @@ private fun ComplineView(
                 AppSecondaryCapsule(
                     label = if (isNarrating) currentLanguage.pick("Detener", "Stop", "Parar")
                     else currentLanguage.pick("Escuchar la oración", "Listen to the prayer", "Ouvir a oração"),
-                    onClick = { if (isNarrating) ttsManager.stop() else ttsManager.speakSingle(officeText) },
+                    onClick = { if (isNarrating) ttsManager.stop() else ttsManager.speakSingle(officeText, title = title) },
                     icon = if (isNarrating) Icons.Filled.Stop else Icons.Outlined.Headphones,
                     tag = "compline_tts_button",
                     modifier = Modifier.semantics {
@@ -675,7 +678,10 @@ private fun ComplineView(
                             ),
                             onClick = {
                                 if (isNarrating) ttsManager.stop()
-                                else ttsManager.speakSingle(currentAntiphon.translatedText.get(currentLanguage))
+                                else ttsManager.speakSingle(
+                                    currentAntiphon.translatedText.get(currentLanguage),
+                                    title = currentAntiphon.titleTranslation.get(currentLanguage)
+                                )
                             },
                             icon = if (isNarrating) Icons.Filled.Stop else Icons.Outlined.Headphones,
                             tag = "marian_antiphon_tts"
@@ -1016,7 +1022,7 @@ private fun GuidedOfficeView(
                 Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                     AppTransportBar(
                         isPlaying = isNarrating,
-                        onPlayPause = { if (isNarrating) ttsManager.stop() else ttsManager.speakSingle(step.prayer) },
+                        onPlayPause = { if (isNarrating) ttsManager.stop() else ttsManager.speakSingle(step.prayer, title = "$title · ${step.title}") },
                         onPrevious = if (index > 0) ({ onSelect(index - 1) }) else null,
                         onNext = if (index < total - 1) ({ onSelect(index + 1) }) else null,
                         previousLabel = currentLanguage.pick("Anterior", "Previous", "Anterior"),

@@ -119,32 +119,40 @@ internal class DoctrineNav(
 // --------------------------------------------------------------------- voice
 
 /**
- * The area's one read-aloud engine. It is created the first time a reader
- * page is shown (so list pages never start a speech engine), survives
- * Previous/Next, and is released with the screen.
+ * The doctrine area's read-aloud handle. It narrates through the app's one
+ * [LiturgicalTtsManager] ([shared]), so readers get the same foreground
+ * notification, audio focus and sleep timer as every other screen. Only when
+ * no shared manager is given (previews, isolated tests) is one created, the
+ * first time a reader page is shown, and released with the screen.
  */
 @Stable
-internal class ReaderVoice(private val context: Context) {
-    private var manager: LiturgicalTtsManager? = null
+internal class ReaderVoice(private val context: Context, private val shared: LiturgicalTtsManager? = null) {
+    private var manager: LiturgicalTtsManager? = shared
     private var scope: CoroutineScope? = null
     var playing by mutableStateOf(false)
+        private set
+    /** Full text of the part being read, to tell which button started it. */
+    var speaking by mutableStateOf<String?>(null)
         private set
     var language: AppLanguage = AppLanguage.ES
 
     fun prepare() {
-        if (manager == null) {
-            val m = LiturgicalTtsManager(context)
-            manager = m
+        if (scope == null) {
+            val m = manager ?: LiturgicalTtsManager(context).also { manager = it }
             val s = CoroutineScope(SupervisorJob() + Dispatchers.Main.immediate)
             scope = s
             s.launch { m.isPlaying.collect { playing = it } }
+            s.launch { m.currentlySpeaking.collect { speaking = it } }
         }
         manager?.setLanguage(language)
     }
 
-    fun speak(text: String) {
+    /** True while [text] (as passed to [speak]) is the part being read. */
+    fun isReading(text: String) = playing && speaking == text
+
+    fun speak(text: String, title: String? = null) {
         prepare()
-        manager?.speakSingle(text)
+        manager?.speakSingle(text, title = title)
     }
 
     fun stop() {
@@ -154,9 +162,10 @@ internal class ReaderVoice(private val context: Context) {
     fun release() {
         scope?.cancel()
         scope = null
-        manager?.release()
-        manager = null
+        if (shared != null) shared.stop() else manager?.release()
+        manager = shared
         playing = false
+        speaking = null
     }
 }
 
@@ -641,7 +650,9 @@ internal fun ReaderActionRow(
     shareText: String?,
     listenTag: String,
     shareTag: String?,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    /** Names the reading in the notification and lock screen. */
+    title: String? = null
 ) {
     val context = LocalContext.current
     Row(
@@ -649,11 +660,11 @@ internal fun ReaderActionRow(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        val playing = voice.playing
+        val playing = voice.isReading(speakText)
         AppSecondaryCapsule(
             label = if (playing) language.tr("Detener", "Stop", "Parar") else language.tr("Escuchar", "Listen", "Ouvir"),
             icon = if (playing) Icons.Outlined.Stop else Icons.Outlined.VolumeUp,
-            onClick = { if (playing) voice.stop() else voice.speak(speakText) },
+            onClick = { if (playing) voice.stop() else voice.speak(speakText, title) },
             tag = listenTag
         )
         if (shareText != null && shareTag != null) {

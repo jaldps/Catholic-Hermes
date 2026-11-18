@@ -8,6 +8,7 @@ import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ServiceInfo
+import android.media.MediaMetadata
 import android.media.session.MediaSession
 import android.media.session.PlaybackState
 import android.os.Build
@@ -64,6 +65,15 @@ class NarrationService : Service() {
             if (Build.VERSION.SDK_INT >= 24) stopForeground(STOP_FOREGROUND_DETACH) else @Suppress("DEPRECATION") stopForeground(false)
             getSystemService(NotificationManager::class.java)?.notify(NOTIFICATION_ID, notification)
         }
+        // Lock screen and Bluetooth/car displays read the session, not the notification.
+        runCatching {
+            session?.setMetadata(
+                MediaMetadata.Builder()
+                    .putString(MediaMetadata.METADATA_KEY_TITLE, state.title.ifBlank { fallbackTitle(state.language) })
+                    .putString(MediaMetadata.METADATA_KEY_ARTIST, state.text)
+                    .build()
+            )
+        }
         session?.setPlaybackState(
             PlaybackState.Builder()
                 .setActions(PlaybackState.ACTION_PLAY or PlaybackState.ACTION_PAUSE or PlaybackState.ACTION_PLAY_PAUSE or PlaybackState.ACTION_STOP)
@@ -104,7 +114,7 @@ class NarrationService : Service() {
         }
         builder
             .setSmallIcon(android.R.drawable.ic_lock_silent_mode_off)
-            .setContentTitle(state.title.ifBlank { label("Narración", "Narration", "Narração") })
+            .setContentTitle(state.title.ifBlank { fallbackTitle(l) })
             .setContentText(state.text)
             .setContentIntent(open)
             .setOngoing(!state.paused)
@@ -116,6 +126,10 @@ class NarrationService : Service() {
         session?.sessionToken?.let { style.setMediaSession(it) }
         builder.setStyle(style)
         return builder.build()
+    }
+
+    private fun fallbackTitle(l: AppLanguage) = when (l) {
+        AppLanguage.ES -> "Narración"; AppLanguage.EN -> "Narration"; AppLanguage.PT -> "Narração"
     }
 
     private fun ensureChannel() {

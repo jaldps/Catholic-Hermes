@@ -132,7 +132,12 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     private val _stopCount = MutableStateFlow(0)
     val stopCount: StateFlow<Int> = _stopCount.asStateFlow()
 
-    /** Optional title for the notification (the prayer being recited). */
+    /**
+     * Title of the notification and lock screen (the prayer being recited).
+     * Set by every [speakSingle] / [speakDialogue] call from its `title`
+     * argument and cleared when narration stops, so a title never outlives
+     * the content it names.
+     */
     @Volatile var narrationTitle: String? = null
 
     /** Sleep timer minutes (0 = off), followed from the saved preference. */
@@ -225,6 +230,8 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
      * and arms the sleep timer. False when the system refuses focus.
      */
     private fun beginSession(withService: Boolean): Boolean {
+        // The notification buttons talk to whichever manager is narrating.
+        active = this
         sessionHandler.removeCallbacks(idleEnd)
         sleepHandler.removeCallbacks(sleepStale)
         if (!requestFocus()) { if (!sessionActive) abandonFocus(); return false }
@@ -440,6 +447,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         if (sample.isBlank() || !requestPlayback()) return
         halt()
         _interrupted.value = false
+        narrationTitle = null
         if (!beginSession(withService = false)) return
         lastRequest = { preview(response, voiceName, sample) }
         lastText = sample
@@ -466,12 +474,19 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         } catch (_: Exception) {}
     }
 
-    fun speakSingle(text: String, isFemaleVoice: Boolean = false) {
+    /**
+     * The one way every screen narrates: reads [text] in one voice with audio
+     * focus, the foreground notification (play/pause/stop, lock screen), the
+     * sleep timer and interruption handling. [title] names the content in the
+     * notification and lock screen (a prayer, a saint, a chapter).
+     */
+    fun speakSingle(text: String, isFemaleVoice: Boolean = false, title: String? = null) {
         if (text.isBlank() || !requestPlayback()) return
         halt()
         _interrupted.value = false
+        narrationTitle = title?.trim()?.takeIf { it.isNotEmpty() }
         if (!beginSession(withService = true)) return
-        lastRequest = { speakSingle(text, isFemaleVoice) }
+        lastRequest = { speakSingle(text, isFemaleVoice, title) }
         lastText = text
         val gen = generation
         tracker.begin(text)
@@ -485,13 +500,14 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
      * in another (a different system voice when the device has two); the other modes read only their half (a prayer with no
      * response is always read in full).
      */
-    fun speakDialogue(leaderText: String, responseText: String) {
+    fun speakDialogue(leaderText: String, responseText: String, title: String? = null) {
         if (leaderText.isBlank() && responseText.isBlank()) return
         if (!requestPlayback()) return
         halt()
         _interrupted.value = false
+        narrationTitle = title?.trim()?.takeIf { it.isNotEmpty() }
         if (!beginSession(withService = true)) return
-        lastRequest = { speakDialogue(leaderText, responseText) }
+        lastRequest = { speakDialogue(leaderText, responseText, title) }
         lastText = leaderText.ifBlank { responseText }
         val gen = generation
         val mode = _voiceMode.value
@@ -571,6 +587,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         _stopCount.value++
         halt()
         endSession()
+        narrationTitle = null
     }
 
     fun release() {

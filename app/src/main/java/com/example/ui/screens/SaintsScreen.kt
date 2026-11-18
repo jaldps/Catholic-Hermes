@@ -9,6 +9,12 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ArrowBack
+import androidx.compose.material.icons.outlined.Stop
+import androidx.compose.material.icons.outlined.VolumeUp
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.collectAsState
+import com.example.data.audio.LiturgicalTtsManager
+import com.example.ui.design.AppSecondaryCapsule
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import com.example.ui.design.AppBackHandler
@@ -93,6 +99,8 @@ internal fun saintCelebrations(): List<GeneralCelebration> =
 fun SaintsScreen(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier,
+    /** The app's narrator: the profile can be read aloud (notification, focus, sleep timer). */
+    ttsManager: LiturgicalTtsManager? = null,
     /** Opens this celebration's profile on arrival (the global search); an unknown key shows the list. */
     initialKey: String? = null,
     /** Back from the profile opened by [initialKey] leaves to the caller (the global search) instead of the list. */
@@ -106,7 +114,7 @@ fun SaintsScreen(
     if (selected != null) {
         val back = { if (onExitContext != null && selectedKey == initialKey) onExitContext() else selectedKey = null }
         AppBackHandler { back() }
-        SaintDetail(selected, profiles[selected.key], currentLanguage, { back() }, modifier)
+        SaintDetail(selected, profiles[selected.key], currentLanguage, { back() }, modifier, ttsManager)
     } else {
         SaintsList(profiles, currentLanguage, { selectedKey = it }, modifier)
     }
@@ -224,7 +232,8 @@ private fun SaintDetail(
     profile: SaintProfile?,
     language: AppLanguage,
     onBack: () -> Unit,
-    modifier: Modifier
+    modifier: Modifier,
+    ttsManager: LiturgicalTtsManager?
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -234,6 +243,13 @@ private fun SaintDetail(
     val patronages = profile?.patronages?.get(language).orEmpty()
     val quote = profile?.quote
     val quoteText = quote?.text?.get(language).orEmpty()
+
+    // Read aloud: the name, then the biography, through the shared narrator.
+    val saintTitle = celebration.title.get(language)
+    val speakText = if (bio.isBlank()) "" else "$saintTitle.\n\n$bio"
+    val narrating by (ttsManager?.currentlySpeaking ?: remember { kotlinx.coroutines.flow.MutableStateFlow<String?>(null) }).collectAsState()
+    val listening = speakText.isNotEmpty() && narrating == speakText
+    DisposableEffect(celebration.key, ttsManager) { onDispose { if (ttsManager != null && narrating == speakText) ttsManager.stop() } }
 
     val gutter = design.spacing.gutter
     val card = Modifier.fillMaxWidth().padding(horizontal = gutter).widthIn(max = design.spacing.readingMaxWidth + gutter * 2)
@@ -264,6 +280,19 @@ private fun SaintDetail(
             }
             Row(Modifier.padding(horizontal = gutter).padding(top = 4.dp)) {
                 AppSecondaryButton(tr("Todos los santos", "All saints", "Todos os santos"), onBack, leadingIcon = Icons.AutoMirrored.Outlined.ArrowBack, modifier = Modifier.testTag("saint_detail_back"))
+            }
+            if (ttsManager != null && speakText.isNotEmpty()) {
+                Row(Modifier.padding(horizontal = gutter).padding(top = 10.dp)) {
+                    AppSecondaryCapsule(
+                        label = if (listening) tr("Detener", "Stop", "Parar") else tr("Escuchar", "Listen", "Ouvir"),
+                        icon = if (listening) Icons.Outlined.Stop else Icons.Outlined.VolumeUp,
+                        onClick = {
+                            if (listening) ttsManager.stop()
+                            else { ttsManager.setLanguage(language); ttsManager.speakSingle(speakText, title = saintTitle) }
+                        },
+                        tag = "saint_listen_button"
+                    )
+                }
             }
         }
         if (bio.isNotBlank()) item {

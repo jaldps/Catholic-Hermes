@@ -1063,8 +1063,12 @@ fun RosaryScreen(
 
     fun narrate(s: GuideStep) {
         ttsManager.setLanguage(lang)
-        if (s.response.isBlank()) ttsManager.speakSingle(s.narration)
-        else ttsManager.speakDialogue(s.leader, s.response)
+        // «Santo Rosario · Misterios gozosos» / «Coronilla · Inicio», as the notification title.
+        val title = (if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
+            else lang.pick("Coronilla de la Divina Misericordia", "Chaplet of Divine Mercy", "Terço da Divina Misericórdia")) +
+            " · " + section.title
+        if (s.response.isBlank()) ttsManager.speakSingle(s.narration, title = title)
+        else ttsManager.speakDialogue(s.leader, s.response, title)
     }
 
     // Pray-aloud mode: an explicit state machine (see RosaryNarration.kt).
