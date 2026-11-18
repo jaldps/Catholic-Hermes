@@ -8,6 +8,7 @@
   "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
   "updates": "1.8.1-1.8.21 (same package and key)",
   "built_from": "git archive of CatholicGPT at the version commit (clean tree)",
+  "also_published_as": "GitHub Release v1.8.22 (built by .github/workflows/release-hermes-apk.yml at c164ed5; identical SHA-256)",
   "changes": [
     "Catechism: complete navigable index (Prologue, Parts, Sections, Chapters, Articles and thematic paragraphs) with ranges, a reader for any node and a breadcrumb that follows the scroll; the 'Catechism in a year' plan names what each day reads (T-036, T-038).",
     "Saint profiles: 214 of 215 show a credited picture (public domain, CC0, CC BY or CC BY-SA) in their header, with the credit linking to the Commons file page (T-034).",
