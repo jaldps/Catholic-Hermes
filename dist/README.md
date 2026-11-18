@@ -1,5 +1,19 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.22
+
+[Descargar Catholic Hermes 1.8.22](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.22.apk) · versión `1.8.22`, código 31. **Actualiza 1.8.1–1.8.21** y conserva el progreso. También está en **Releases → v1.8.22**, en la columna derecha del repositorio.
+
+Novedades:
+- **Índice completo del Catecismo.**
+  - Recorre el Prólogo, las Partes, las Secciones, los Capítulos, los Artículos y los párrafos temáticos, con sus rangos.
+  - Cualquier nivel se abre en el lector, que muestra arriba dónde estás.
+  - El plan «El Catecismo en un año» indica qué artículo lee cada día.
+- **Fotos de los santos.** 214 de las 215 fichas muestran una imagen en la cabecera, con su crédito visible enlazado a Wikimedia Commons.
+- **Imágenes optimizadas.** Se ven igual y ocupan menos, para que la app siga por debajo de 100 MB.
+
+[Metadatos](../docs/quality/release-1.8.22/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.21
 
 [Descargar Catholic Hermes 1.8.21](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.21.apk) · versión `1.8.21`, código 30. **Actualiza 1.8.1–1.8.20** y conserva el progreso.

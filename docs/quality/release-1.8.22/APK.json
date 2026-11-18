@@ -1,0 +1,26 @@
+{
+  "version_name": "1.8.22",
+  "version_code": 31,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.22",
+  "sha256": "872ef7ea83f92aae5ad91d7305c4fcab2961422039c4ff934952997175327916",
+  "bytes": 98472704,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.21 (same package and key)",
+  "built_from": "git archive of CatholicGPT at the version commit (clean tree)",
+  "also_published_as": "GitHub Release v1.8.22",
+  "changes": [
+    "Catechism: complete navigable index (Prologue, Parts, Sections, Chapters, Articles and thematic paragraphs) with ranges, a reader for any node and a breadcrumb that follows the scroll; the 'Catechism in a year' plan names what each day reads (T-036, T-038).",
+    "Saint profiles: 214 of 215 show a credited picture (public domain, CC0, CC BY or CC BY-SA) in their header, with the credit linking to the Commons file page (T-034).",
+    "Bundled pictures recompressed (saints, devotions, hero art) without visible change, to keep the APK under 100 MB."
+  ],
+  "tests": [
+    "Full unit suite at T-038: 794 tests, 1 known failure (ExampleRobolectricTest app_name under the preview init script)",
+    "CatechismStructureCatalogTest", "CatechismIndexTest", "Catechism*", "ReadingPlansUiTest", "SearchUiTest",
+    "SaintsScreenTest", "SaintImageScreenshotTest", "Devotion*", "AppNavigationTest", "DesignNavigationTest"
+  ],
+  "known_limitations": ["Not tested on a physical phone."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}
