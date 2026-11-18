@@ -898,6 +898,100 @@ class CatholicDataRepository(
         return BibleLine(counts, canonIds).also { bibleLines[key] = it }
     }
 
+    /** A verse of a cited passage with the places it is cross-referenced (the strongest few). */
+    data class PassageVerseReferences(
+        val source: VerseRef,
+        /** "Juan 3,16" in the numbering of the edition being read. */
+        val citation: String,
+        /** All the references the verse has; [references] holds the strongest ones. */
+        val total: Int,
+        val references: List<ResolvedCrossReference>
+    )
+
+    /**
+     * What a course or plan citation offers as cross-references: the verses it covers that have
+     * any, each with its strongest links, ready to be listed in a sheet.
+     */
+    data class PassageCrossReferences(
+        /** The citation as the course or plan writes it, with the edition's psalm number when it differs. */
+        val label: String,
+        /** Verses the citation covers, with or without references. */
+        val verseCount: Int,
+        /** Verses with references, in reading order, capped at the requested maximum. */
+        val verses: List<PassageVerseReferences>,
+        /** Verses with references there were before the cap. */
+        val versesWithReferences: Int,
+        val totalReferences: Int
+    ) {
+        val truncated: Boolean get() = versesWithReferences > verses.size
+    }
+
+    /**
+     * The verses a course or plan citation covers, in [editionId]'s own numbering. Citations are
+     * Hebrew-numbered, so a psalm is first converted to the edition's psalter (Ps 23 is chapter 22 in
+     * the Vulgate-numbered Bibles); the cross-reference tables are keyed to that numbering. A whole
+     * chapter yields all its verses; unreadable citations or books the edition lacks yield none.
+     */
+    fun citedVerses(
+        raw: String,
+        editionId: String = resolvedEditionId(),
+        language: AppLanguage = _currentLanguage.value,
+        maxVerses: Int = 400
+    ): List<VerseRef> {
+        val parsed = com.example.data.liturgy.ScriptureReference.parse(raw) ?: return emptyList()
+        val provider = bibleProvider ?: return emptyList()
+        val converted = studyResolver(editionId).convert(parsed, PsalmNumberingMap.numberingOf(editionId))
+        val out = LinkedHashSet<VerseRef>()
+        for (range in converted.ranges) {
+            if (range.chapter <= 0 || range.endChapter < range.chapter || range.endChapter - range.chapter > 150) continue
+            for (chapter in range.chapter..range.endChapter) {
+                val numbers = provider.getVerses(converted.bookId, chapter, language, editionId).map { it.number }
+                if (numbers.isEmpty()) continue
+                val first = if (chapter == range.chapter) range.verseStart ?: numbers.first() else numbers.first()
+                val last = if (chapter == range.endChapter) range.verseEnd ?: range.verseStart ?: numbers.last() else numbers.last()
+                for (n in numbers) if (n in first..last) {
+                    out += VerseRef(converted.bookId, chapter, n)
+                    if (out.size >= maxVerses) return out.toList()
+                }
+            }
+        }
+        return out.toList()
+    }
+
+    /**
+     * Cross-references of a course or plan citation ([raw], e.g. `joh 3:16` or `psa 23`), grouped by
+     * verse: the [perVerse] strongest links of each of the first [maxVerses] verses that have any.
+     */
+    fun passageCrossReferences(
+        raw: String,
+        language: AppLanguage = _currentLanguage.value,
+        editionId: String = resolvedEditionId(),
+        perVerse: Int = 3,
+        maxVerses: Int = 40
+    ): PassageCrossReferences {
+        val cited = citedVerses(raw, editionId, language)
+        val counts = HashMap<Pair<String, Int>, Map<Int, Int>>()
+        val withReferences = cited.filter { v ->
+            (counts.getOrPut(v.bookId to v.chapter) { crossReferenceCounts(v.bookId, v.chapter, language, editionId) }[v.verse] ?: 0) > 0
+        }
+        val total = withReferences.sumOf { v -> counts.getValue(v.bookId to v.chapter)[v.verse] ?: 0 }
+        val groups = withReferences.take(maxVerses).map { v ->
+            PassageVerseReferences(
+                source = v,
+                citation = referenceLabel(CrossReference(v, null, 0), language),
+                total = counts.getValue(v.bookId to v.chapter)[v.verse] ?: 0,
+                references = crossReferences(v.bookId, v.chapter, v.verse, language, perVerse, editionId)
+            )
+        }
+        return PassageCrossReferences(
+            label = studyScriptureLabel(raw, language, editionId),
+            verseCount = cited.size,
+            verses = groups,
+            versesWithReferences = withReferences.size,
+            totalReferences = total
+        )
+    }
+
     private fun referenceLabel(ref: CrossReference, language: AppLanguage): String {
         val book = BibleData.catholicCanonBooks.firstOrNull { it.id == ref.target.bookId }
             ?.name?.get(language) ?: ref.target.bookId

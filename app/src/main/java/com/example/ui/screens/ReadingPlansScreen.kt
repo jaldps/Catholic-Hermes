@@ -30,6 +30,7 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
+import com.example.data.xref.VerseRef
 import com.example.data.prefs.UserPreferencesStore
 import com.example.data.repository.CatechismLabels
 import com.example.data.repository.CatechismStructureCatalog
@@ -54,6 +55,7 @@ import com.example.ui.design.AppPrimaryButton
 import com.example.ui.design.AppProgressBar
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.AppSheet
 import com.example.ui.design.appScreenInsets
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -94,6 +96,8 @@ fun ReadingPlansRoute(
         onRestart = { id -> save { store.restartPlan(id) } },
         onOpenBibleReading = { raw -> ReadingPlanLinks.bibleTarget(raw, edition)?.let { onOpenBible(it.bookId, it.chapter, it.verse) } },
         onOpenCatechism = onOpenCatechism,
+        repository = repository,
+        onOpenCrossReference = { target -> onOpenBible(target.bookId, target.chapter, target.verse) },
         initialPlanId = initialPlanId,
         onExitContext = onExitContext
     )
@@ -112,7 +116,10 @@ fun ReadingPlansScreen(
     onOpenBibleReading: (raw: String) -> Unit,
     onOpenCatechism: (paragraph: Int) -> Unit,
     initialPlanId: String? = null,
-    onExitContext: (() -> Unit)? = null
+    onExitContext: (() -> Unit)? = null,
+    /** Where the cross-references of a day's Bible readings come from; without it the readings offer none. */
+    repository: CatholicDataRepository? = null,
+    onOpenCrossReference: (VerseRef) -> Unit = {}
 ) {
     AppEdgeToEdge()
     fun tr(es: String, en: String, pt: String) = when (language) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
@@ -183,7 +190,8 @@ fun ReadingPlansScreen(
                 onToggleDone = { day, done -> onToggleDone(selected.id, day, done) },
                 onRebase = { onRebase(selected.id, selected.totalDays) },
                 onRestart = { onRestart(selected.id) },
-                onOpenBibleReading = onOpenBibleReading, onOpenCatechism = onOpenCatechism
+                onOpenBibleReading = onOpenBibleReading, onOpenCatechism = onOpenCatechism,
+                repository = repository, onOpenCrossReference = onOpenCrossReference
             )
         }
     }
@@ -203,7 +211,9 @@ private fun PlanDetail(
     onRebase: () -> Unit,
     onRestart: () -> Unit,
     onOpenBibleReading: (String) -> Unit,
-    onOpenCatechism: (Int) -> Unit
+    onOpenCatechism: (Int) -> Unit,
+    repository: CatholicDataRepository?,
+    onOpenCrossReference: (VerseRef) -> Unit
 ) {
     fun tr(es: String, en: String, pt: String) = when (language) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
     val design = LocalAppDesign.current
@@ -224,6 +234,8 @@ private fun PlanDetail(
     LaunchedEffect(viewDay) { chips.animateScrollToItem((viewDay - 1).coerceAtLeast(0)) }
     val english = language == AppLanguage.EN
     val catechismStructure = remember { CatechismStructureCatalog.default.structure }
+    // The reading whose cross-references are open, by position in the day.
+    var xrefIndex by rememberSaveable(plan.id, viewDay) { mutableStateOf<Int?>(null) }
 
     LazyColumn(
         Modifier.fillMaxSize().testTag("plan_detail_screen"),
@@ -282,6 +294,18 @@ private fun PlanDetail(
                 else AppPrimaryButton(tr("Marcar como leído", "Mark as read", "Marcar como lido"), { onToggleDone(viewDay, true) },
                     modifier = gutter.fillMaxWidth().testTag("plan_mark_done"))
             }
+            // Each Bible reading, a chapter, opens the places its verses are cross-referenced; below the
+            // day's own action so that "mark as read" stays where it was.
+            if (repository != null && day != null && day.paragraphs == null) item("xrefs") {
+                Column(
+                    Modifier.padding(horizontal = design.spacing.gutter + 4.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
+                    day.readings.forEachIndexed { index, raw ->
+                        CrossReferenceAction(bibleLabel(raw), language, "plan_xref_$index", { xrefIndex = index })
+                    }
+                }
+            }
             item("other_days") { AppSectionHeader(tr("Otros días", "Other days", "Outros dias")) }
             item("day_nav") { Row(gutter, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 AppSecondaryButton(tr("Anterior", "Previous", "Anterior"), { picked = viewDay - 1 }, enabled = viewDay > 1,
@@ -302,6 +326,10 @@ private fun PlanDetail(
             item("restart") { AppSecondaryButton(tr("Reiniciar plan", "Restart plan", "Reiniciar plano"), { confirmRestart = true },
                 modifier = gutter.fillMaxWidth().testTag("plan_restart")) }
         }
+    }
+    val xrefRaw = xrefIndex?.let { day?.readings?.getOrNull(it) }
+    if (repository != null && xrefRaw != null) AppSheet(onDismiss = { xrefIndex = null }, tag = "plan_xref_sheet") {
+        PassageCrossReferences(repository, xrefRaw, language) { target -> xrefIndex = null; onOpenCrossReference(target) }
     }
     if (confirmRestart) AppConfirmDialog(
         tr("¿Reiniciar este plan?", "Restart this plan?", "Reiniciar este plano?"),

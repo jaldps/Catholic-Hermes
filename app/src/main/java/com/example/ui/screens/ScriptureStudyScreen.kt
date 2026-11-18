@@ -92,6 +92,7 @@ import com.example.ui.design.AppPrimaryCapsule
 import com.example.ui.design.AppProgressBar
 import com.example.ui.design.AppProgressRing
 import com.example.ui.design.AppSecondaryCapsule
+import com.example.ui.design.AppSheet
 import com.example.ui.design.GroupPosition
 import com.example.ui.design.appScreenInsets
 import com.example.ui.design.groupedItem
@@ -134,7 +135,12 @@ fun ScriptureStudyScreen(
     /** Opens this lesson on arrival (the global search); an unknown id shows the course list. */
     initialLessonId: String? = null,
     /** Back from the lesson opened by [initialLessonId] leaves to the caller instead of the course list. */
-    onExitContext: (() -> Unit)? = null
+    onExitContext: (() -> Unit)? = null,
+    /**
+     * Opens the Bible reader at a verse a lesson's cross-references lead to; [lessonId] is the lesson to come back
+     * to. Without it the lessons offer no cross-references.
+     */
+    onOpenBible: ((bookId: String, chapter: Int, verse: Int?, lessonId: String) -> Unit)? = null
 ) {
     val tracks = repository.scriptureStudyTracks
     val linked = initialLessonId?.let { id -> tracks.firstOrNull { t -> t.lessons.any { it.id == id } } }
@@ -194,6 +200,8 @@ fun ScriptureStudyScreen(
             }
             lessonState.SaveableStateProvider(lesson.id) {
             LessonDetailView(
+                repository = repository,
+                onOpenBible = onOpenBible?.let { open -> { bookId: String, chapter: Int, verse: Int? -> open(bookId, chapter, verse, lesson.id) } },
                 lesson = lesson,
                 passage = passage.data.orEmpty(),
                 passageLoading = passage.loading,
@@ -470,6 +478,8 @@ private fun LessonRow(
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun LessonDetailView(
+    repository: CatholicDataRepository,
+    onOpenBible: ((bookId: String, chapter: Int, verse: Int?) -> Unit)?,
     lesson: ScriptureLesson,
     passage: String,
     passageLoading: Boolean,
@@ -496,6 +506,10 @@ private fun LessonDetailView(
     var notesEdited by rememberSaveable(lesson.id) { mutableStateOf(false) }
     LaunchedEffect(existingNotes) { if (!notesEdited) notesText = existingNotes }
     var savedFlash by remember(lesson.id) { mutableIntStateOf(0) }
+    // The citation whose cross-references are open, by position in the lesson's list.
+    var xrefIndex by rememberSaveable(lesson.id) { mutableStateOf<Int?>(null) }
+    val activeEdition by repository.activeBibleEditionId.collectAsState()
+    val xrefEdition = repository.resolvedEditionId(activeEdition, currentLanguage)
     val speaking by ttsManager.currentlySpeaking.collectAsState()
     val playing by ttsManager.isPlaying.collectAsState()
     val readingPassage = playing && speaking == passage
@@ -603,6 +617,20 @@ private fun LessonDetailView(
                     icon = if (readingPassage) Icons.Filled.Stop else Icons.Filled.PlayArrow,
                     tag = "lesson_listen_button"
                 )
+                // Where each cited passage leads, in the Bible the reader has chosen. Never alters the text above.
+                if (onOpenBible != null && lesson.scriptureReferences.isNotEmpty()) {
+                    Spacer(Modifier.height(12.dp))
+                    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        lesson.scriptureReferences.forEachIndexed { index, raw ->
+                            CrossReferenceAction(
+                                label = repository.studyScriptureLabel(raw, currentLanguage, xrefEdition),
+                                currentLanguage = currentLanguage,
+                                tag = "lesson_xref_${lesson.id}_$index",
+                                onClick = { xrefIndex = index }
+                            )
+                        }
+                    }
+                }
             }
         }
 
@@ -756,6 +784,16 @@ private fun LessonDetailView(
                         onClick = { onSaveNotes(notesText); onNextLesson(next) }, tag = "study_next_lesson"
                     )
                 }
+            }
+        }
+    }
+
+    val xrefRaw = xrefIndex?.let { lesson.scriptureReferences.getOrNull(it) }
+    if (xrefRaw != null && onOpenBible != null) {
+        AppSheet(onDismiss = { xrefIndex = null }, tag = "lesson_xref_sheet") {
+            PassageCrossReferences(repository, xrefRaw, currentLanguage) { target ->
+                xrefIndex = null
+                onOpenBible(target.bookId, target.chapter, target.verse)
             }
         }
     }

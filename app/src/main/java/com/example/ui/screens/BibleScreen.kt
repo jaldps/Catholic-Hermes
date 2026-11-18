@@ -425,6 +425,12 @@ fun BibleScreen(
     var scrollVerse by rememberSaveable { mutableStateOf<Int?>(null) }
     // The trail of followed references, "book:chapter:verse;…", newest last.
     var trail by rememberSaveable { mutableStateOf("") }
+    // The study lesson a cross-reference was followed from: leaving the reader comes back to it.
+    var studyResumeLesson by rememberSaveable { mutableStateOf<String?>(null) }
+    LaunchedEffect(selectedMainTab, studyResumeLesson) {
+        // The study tab has picked it up on arrival; it must not reopen the lesson on a later visit.
+        if (selectedMainTab == 3 && studyResumeLesson != null) studyResumeLesson = null
+    }
     var searchQuery by rememberSaveable { mutableStateOf("") }
     var selectedFilter by rememberSaveable { mutableIntStateOf(0) }
     var settings by remember { mutableStateOf(BibleReaderStore.load(context)) }
@@ -454,6 +460,7 @@ fun BibleScreen(
     val selectedBook = selectedBookId?.let { id -> BibleData.catholicCanonBooks.firstOrNull { it.id == id } }
 
     val openBook: (BibleBook, Int, Int?, Int?) -> Unit = { book, chapter, focus, scroll ->
+        studyResumeLesson = null
         trail = ""
         selectedBookId = book.id
         selectedChapterNumber = chapter.coerceAtLeast(1)
@@ -571,6 +578,9 @@ fun BibleScreen(
                             focusVerse = previous[2].toIntOrNull()
                             studyVerse = focusVerse
                             scrollVerse = null
+                        } else if (studyResumeLesson != null) {
+                            selectedBookId = null
+                            selectedMainTab = 3
                         } else if (onExitContext != null) {
                             onExitContext()
                         } else {
@@ -604,8 +614,14 @@ fun BibleScreen(
                                 ttsManager = ttsManager,
                                 currentLanguage = currentLanguage,
                                 onOpenCatechism = onOpenCatechism,
-                                initialLessonId = initialLessonId,
-                                onExitContext = onExitContext
+                                initialLessonId = studyResumeLesson ?: initialLessonId,
+                                onExitContext = onExitContext,
+                                onOpenBible = { bookId, chapter, verse, lessonId ->
+                                    BibleData.catholicCanonBooks.firstOrNull { it.id == bookId }?.let { target ->
+                                        openBook(target, chapter, verse, null)
+                                        studyResumeLesson = lessonId
+                                    }
+                                }
                             )
                         } else {
                             LazyColumn(Modifier.fillMaxSize(), contentPadding = listBottom) {

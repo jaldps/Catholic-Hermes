@@ -69,8 +69,8 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | T-037 | Coordinador (Sonnet local) | CERRADO ([informe](T-037-REPORT.md)) | M12.6 · Bienvenida personalizada con los textos de T-033 (sugerencias por perfil y tiempo; cambiable en Ajustes) |
 | T-038 | Coordinador (Sonnet local) | CERRADO ([informe](T-038-REPORT.md)) | Conectar el índice completo del Catecismo (T-036) al lector y al plan anual |
 | [T-039](T-039.md) | Hermes | ABIERTO ([revisión 1](T-039-REVIEW.md): 19 integrados) | Emblemas de las 60 órdenes y congregaciones nuevas (rama `media/order-emblems` del fork) |
-| T-040 | Coordinador (Sonnet local) | EN CURSO | Referencias cruzadas en los cursos y el plan bíblico (la Misa se queda como está, por decisión del dueño) |
-| T-041 | Coordinador (Sonnet local) | EN COLA (tras T-040) | Sello de procedencia en la lista de novenas |
+| T-040 | Coordinador (Sonnet local) | CERRADO ([informe](T-040-REPORT.md)) | Referencias cruzadas en los cursos y el plan bíblico (la Misa se queda como está, por decisión del dueño) |
+| T-041 | Coordinador (Sonnet local) | EN CURSO | Sello de procedencia en la lista de novenas |
 | T-042 | Coordinador (Sonnet local) | EN COLA (tras T-041) | Narración por el servicio de audio en más pantallas |
 | T-043 | Coordinador (Sonnet local) | EN COLA (tras T-042) | Diseño para tableta (rail y dos paneles) |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
