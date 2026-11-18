@@ -25,4 +25,14 @@ class NovenaCatalogLoadingTest {
         catalog.preload(entries.last().id)
         assertEquals(prayer,selected.days.first().prayer)
     }
+
+    /** Every bundled novena body must parse with the app's model (270 and 272 once shipped `scripture` as an object). */
+    @Test fun everyNovenaBodyOpens() {
+        val catalog=NovenaCatalog { name -> NovenaCatalogLoadingTest::class.java.classLoader!!.getResourceAsStream(name)!! }
+        val failures=catalog.allNovenas.mapNotNull { n ->
+            runCatching { catalog.preload(n.id).days.also { d -> assertTrue(n.id, d.isNotEmpty() && d.all { it.prayer.es.isNotBlank() }) } }
+                .exceptionOrNull()?.let { "${n.id}: ${it::class.simpleName}" }
+        }
+        assertEquals(emptyList<String>(),failures)
+    }
 }
