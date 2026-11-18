@@ -1319,7 +1319,7 @@ private fun TemptationPage(
                         onClick = {
                             if (playing) ttsManager.stop() else {
                                 ttsManager.setLanguage(lang)
-                                ttsManager.speakSingle(hailMary(lang), isFemaleVoice = true)
+                                ttsManager.speakSingle(hailMary(lang), isFemaleVoice = true, title = lang.pick3("Ave María", "Hail Mary", "Ave Maria"))
                             }
                         },
                         contentDescription = lang.pick3("Escuchar oración", "Listen to the prayer", "Ouvir a oração"),
@@ -1669,7 +1669,7 @@ private fun RootSheet(
                     onClick = {
                         if (playing) ttsManager.stop() else {
                             ttsManager.setLanguage(lang)
-                            ttsManager.speakSingle(hailMary(lang), isFemaleVoice = true)
+                            ttsManager.speakSingle(hailMary(lang), isFemaleVoice = true, title = lang.pick3("Ave María", "Hail Mary", "Ave Maria"))
                         }
                     },
                     contentDescription = lang.pick3("Escuchar oración", "Listen to the prayer", "Ouvir a oração")

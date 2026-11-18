@@ -649,7 +649,10 @@ private fun QuestionPage(
         progressTag = "catholic_qa_progress"
     ) {
         item(key = "actions") {
-            ReaderActionRow(language, nav.voice, speak, share, "catholic_qa_listen_button", "catholic_qa_share")
+            ReaderActionRow(
+                language, nav.voice, speak, share, "catholic_qa_listen_button", "catholic_qa_share",
+                title = language.tr("Pregunta ${question.number}", "Question ${question.number}", "Pergunta ${question.number}")
+            )
             BlockGap(24.dp)
         }
         item(key = "answer") {

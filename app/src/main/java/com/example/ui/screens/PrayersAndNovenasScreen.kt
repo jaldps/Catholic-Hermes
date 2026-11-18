@@ -65,6 +65,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -371,6 +372,8 @@ fun PrayersAndNovenasScreen(
         }
         else -> PrayersRoute.Night
     }
+    // Opening another page or leaving the screen ends the narration (and its notification).
+    DisposableEffect(route) { onDispose { ttsManager.stop() } }
 
     // The tab root's title and view switcher, as the first rows of each list.
     val header: LazyListScope.() -> Unit = {
@@ -492,7 +495,8 @@ fun PrayersAndNovenasScreen(
                         if (currentlySpeaking != null) ttsManager.stop()
                         else ttsManager.speakDialogue(
                             p.leaderText.get(currentLanguage),
-                            p.responseText?.get(currentLanguage) ?: ""
+                            p.responseText?.get(currentLanguage) ?: "",
+                            p.title.get(currentLanguage)
                         )
                     },
                     onOpenPrayer = { openPrayerId = it.id },
@@ -547,7 +551,8 @@ fun PrayersAndNovenasScreen(
                         onPlayAudio = {
                             ttsManager.speakDialogue(
                                 prayer.leaderText.get(currentLanguage),
-                                prayer.responseText?.get(currentLanguage) ?: ""
+                                prayer.responseText?.get(currentLanguage) ?: "",
+                                prayer.title.get(currentLanguage)
                             )
                         },
                         onStopAudio = { ttsManager.stop() },
@@ -605,7 +610,7 @@ fun PrayersAndNovenasScreen(
                         onSelectDay = { novenaReaderDay = it },
                         daysPrayed = daysPrayed[novena.id].orEmpty(),
                         currentlySpeaking = currentlySpeaking,
-                        onListen = { ttsManager.speakSingle(it) },
+                        onListen = { text, title -> ttsManager.speakSingle(text, title = title) },
                         onStop = { ttsManager.stop() },
                         onToggleDay = { toggleNovenaDay(novena, it) }
                     )
@@ -1512,7 +1517,7 @@ private fun DivineMercyChapletView(
     fun ListenCapsule(text: String) {
         AppSecondaryCapsule(
             label = if (speaking) stopLabel else listenLabel,
-            onClick = { if (speaking) ttsManager.stop() else ttsManager.speakSingle(text) },
+            onClick = { if (speaking) ttsManager.stop() else ttsManager.speakSingle(text, title = title) },
             icon = if (speaking) Icons.Filled.Stop else Icons.Outlined.Headphones,
             tag = "chaplet_tts_button",
             modifier = Modifier.semantics {
@@ -1625,7 +1630,7 @@ private fun DivineMercyChapletView(
                     Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                         AppTransportBar(
                             isPlaying = speaking,
-                            onPlayPause = { if (speaking) ttsManager.stop() else ttsManager.speakSingle(beadPrayer) },
+                            onPlayPause = { if (speaking) ttsManager.stop() else ttsManager.speakSingle(beadPrayer, title = title) },
                             onPrevious = if (canGoBack) ({
                                 if (currentBead > 0) currentBead-- else {
                                     currentDecade--
@@ -2630,7 +2635,7 @@ private fun NovenaDayView(
     onSelectDay: (Int) -> Unit,
     daysPrayed: Set<Int>,
     currentlySpeaking: String?,
-    onListen: (String) -> Unit,
+    onListen: (text: String, title: String) -> Unit,
     onStop: () -> Unit,
     onToggleDay: (Int) -> Unit
 ) {
@@ -2652,7 +2657,8 @@ private fun NovenaDayView(
     val speaking = currentlySpeaking != null
     val total = novena.days.size
     val dayLabel = dayTitle(currentLanguage, dayData.dayNumber)
-    AppInlineTitle("$dayLabel · ${splitNovenaTitle(novena.title.get(currentLanguage), currentLanguage).subject}")
+    val listenTitle = "$dayLabel · ${splitNovenaTitle(novena.title.get(currentLanguage), currentLanguage).subject}"
+    AppInlineTitle(listenTitle)
     val paragraphs = remember(prayerText) { prayerText.split(Regex("\\n\\s*\\n")).map { it.trim() }.filter { it.isNotEmpty() } }
 
     LazyColumn(
@@ -2675,7 +2681,7 @@ private fun NovenaDayView(
                     icon = if (speaking) Icons.Filled.Stop else Icons.Outlined.Headphones,
                     contentDescription = if (speaking) currentLanguage.pick("Detener", "Stop", "Parar")
                     else currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
-                    onClick = { if (speaking) onStop() else onListen(prayerText) },
+                    onClick = { if (speaking) onStop() else onListen(prayerText, listenTitle) },
                     onImage = true,
                     tag = "novena_listen_button"
                 )

@@ -801,6 +801,7 @@ fun MainApp(
 
                     AppDestination.DOCTRINE -> DoctrineAndHistoryScreen(
                         repository = repository,
+                        ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
                         initialTopTab = 0,
                         initialEntry = doctrineInitialEntry,
@@ -812,6 +813,7 @@ fun MainApp(
 
                     AppDestination.STUDY_DOCTRINE -> DoctrineAndHistoryScreen(
                         repository = repository,
+                        ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
                         initialTopTab = 0,
                         showTabs = false,
@@ -822,6 +824,7 @@ fun MainApp(
 
                     AppDestination.STUDY_MARY_JESUS -> DoctrineAndHistoryScreen(
                         repository = repository,
+                        ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
                         initialTopTab = 1,
                         initialEntry = studyInitialEntry,
@@ -833,6 +836,7 @@ fun MainApp(
 
                     AppDestination.STUDY_HISTORY -> DoctrineAndHistoryScreen(
                         repository = repository,
+                        ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
                         initialTopTab = 2,
                         showTabs = false,
@@ -843,6 +847,7 @@ fun MainApp(
 
                     AppDestination.STUDY_ORDERS -> DoctrineAndHistoryScreen(
                         repository = repository,
+                        ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
                         initialTopTab = 4,
                         initialEntry = studyInitialEntry,
@@ -853,7 +858,7 @@ fun MainApp(
                     )
 
                     AppDestination.SAINTS -> com.example.ui.screens.SaintsScreen(
-                        currentLanguage, initialKey = saintsInitialKey,
+                        currentLanguage, ttsManager = ttsManager, initialKey = saintsInitialKey,
                         onExitContext = if (stack.lastOrNull() == AppDestination.SEARCH && saintsInitialKey != null) ({ pop() }) else null
                     )
 
@@ -864,6 +869,7 @@ fun MainApp(
 
                     AppDestination.CHURCHES_NEWS -> DoctrineAndHistoryScreen(
                         repository = repository,
+                        ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
                         initialTopTab = 5,
                         showTabs = false,
@@ -874,6 +880,7 @@ fun MainApp(
 
                     AppDestination.QUESTIONS -> DoctrineAndHistoryScreen(
                         repository = repository,
+                        ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
                         initialTopTab = 3,
                         showTabs = false,

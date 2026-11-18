@@ -120,13 +120,15 @@ fun DoctrineAndHistoryScreen(
     @Suppress("UNUSED_PARAMETER") initialChurchesSection: Int = 0,
     /** Opens straight on an entry such as "qa:12" (deep links, previews, tests). */
     initialEntry: String? = null,
-    newsLoader: suspend (AppLanguage) -> NewsResult = defaultNewsLoader
+    newsLoader: suspend (AppLanguage) -> NewsResult = defaultNewsLoader,
+    /** The app's narrator; readers speak through it (notification, focus, sleep timer). */
+    ttsManager: com.example.data.audio.LiturgicalTtsManager? = null
 ) {
     val insets = AppEdgeToEdge()
     val context = LocalContext.current
 
     // One speech engine for the whole area, created when a reader first needs it.
-    val voice = remember { ReaderVoice(context) }
+    val voice = remember(ttsManager) { ReaderVoice(context, ttsManager) }
     voice.language = currentLanguage
     DisposableEffect(voice) { onDispose { voice.release() } }
 

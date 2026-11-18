@@ -66,6 +66,7 @@ import androidx.compose.material.icons.outlined.VolunteerActivism
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -271,6 +272,8 @@ fun SpiritualLifeScreen(
     val isPlayingAudio by ttsManager.isPlaying.collectAsState()
     var playingSource by remember { mutableStateOf<String?>(null) }
     var selectedChantId by rememberSaveable { mutableStateOf(repository.gregorianChants.firstOrNull()?.id) }
+    // Another page or leaving the screen ends the narration (and its notification).
+    DisposableEffect(page) { onDispose { ttsManager.stop() } }
 
     val hubListState = rememberLazyListState()
 
@@ -322,7 +325,9 @@ fun SpiritualLifeScreen(
                             playingSource = "station"
                             ttsManager.speakDialogue(
                                 station.meditation.get(currentLanguage),
-                                station.prayer.get(currentLanguage)
+                                station.prayer.get(currentLanguage),
+                                currentLanguage.pick("Vía Crucis", "Stations of the Cross", "Via Sacra") +
+                                    " · " + station.title.get(currentLanguage)
                             )
                         }
                     }
@@ -344,7 +349,7 @@ fun SpiritualLifeScreen(
                         } else {
                             if (isPlayingAudio) ttsManager.stop()
                             playingSource = "chant:${chant.id}"
-                            ttsManager.speakSingle(chant.latinLyrics)
+                            ttsManager.speakSingle(chant.latinLyrics, title = chant.title)
                         }
                     }
                 )

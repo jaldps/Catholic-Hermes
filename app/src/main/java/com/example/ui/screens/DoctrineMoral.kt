@@ -527,7 +527,7 @@ private fun DidachePage(
         progressTag = "didache_progress"
     ) {
         item(key = "actions") {
-            ReaderActionRow(language, nav.voice, speak, share, "didache_listen_button", "didache_share")
+            ReaderActionRow(language, nav.voice, speak, share, "didache_listen_button", "didache_share", title = heading)
             BlockGap(24.dp)
         }
         if (index == 0 && intro.isNotBlank()) {

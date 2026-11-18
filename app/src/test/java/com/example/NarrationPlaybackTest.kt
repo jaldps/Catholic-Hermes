@@ -86,8 +86,7 @@ class NarrationPlaybackTest {
     }
 
     @Test fun serviceShowsMediaNotificationInForeground() {
-        manager.narrationTitle = "Rosary"
-        manager.speakSingle("The first joyful mystery")
+        manager.speakSingle("The first joyful mystery", title = "Rosary")
         val controller = Robolectric.buildService(NarrationService::class.java, Intent(app, NarrationService::class.java).setAction(NarrationService.ACTION_UPDATE)).create()
         controller.startCommand(0, 1)
         val service = controller.get()
@@ -96,6 +95,57 @@ class NarrationPlaybackTest {
         assertEquals(2, n.actions.size)
         assertEquals("Rosary", n.extras.getCharSequence(android.app.Notification.EXTRA_TITLE).toString())
         controller.destroy()
+    }
+
+    @Test fun titleNamesTheContentAndDoesNotOutliveIt() {
+        manager.speakSingle("Hail Mary", title = "Hail Mary")
+        assertEquals("Hail Mary", manager.narrationTitle)
+        // The next recitation without a title must not inherit the previous one.
+        manager.speakDialogue("Leader", "Response")
+        assertNull(manager.narrationTitle)
+        manager.speakDialogue("Our Father", "Amen", "Our Father")
+        assertEquals("Our Father", manager.narrationTitle)
+        manager.stop()
+        assertNull(manager.narrationTitle)
+    }
+
+    @Test fun focusLossKeepsTitleAndMarksInterruptedForTheNotification() {
+        manager.speakSingle("Glory Be", title = "Glory Be")
+        manager.handleFocusChange(AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK)
+        assertFalse(manager.isPlaying.value)
+        assertTrue(manager.interrupted.value)
+        // The notification stays, now offering «Continue», with the same title.
+        val state = manager.narrationState()
+        assertNotNull(state)
+        assertEquals("Glory Be", state!!.title)
+        assertTrue(state.paused)
+        manager.pauseNarration() // already paused: no-op, still interrupted
+        assertTrue(manager.interrupted.value)
+        manager.resume()
+        assertFalse(manager.interrupted.value)
+        assertEquals("Glory Be", manager.narrationTitle)
+    }
+
+    @Test fun pauseFromNotificationOrLockScreenIsAnInterruption() {
+        manager.speakSingle("Creed", title = "Creed")
+        manager.pauseNarration()
+        assertFalse(manager.isPlaying.value)
+        assertTrue(manager.interrupted.value)
+        // Stop from the lock screen ends everything and stops the service.
+        manager.stop()
+        assertFalse(manager.interrupted.value)
+        assertTrue(app.narrationServiceStopped())
+    }
+
+    @Test fun lastNarratingManagerOwnsTheNotificationControls() {
+        val other = LiturgicalTtsManager(app)
+        try {
+            other.onInit(TextToSpeech.SUCCESS)
+            manager.speakSingle("Hail Mary")
+            assertSame(manager, LiturgicalTtsManager.active)
+        } finally { other.release() }
+        // Releasing a manager that was not narrating must not detach the one that is.
+        assertSame(manager, LiturgicalTtsManager.active)
     }
 
     @Test fun sleepTimerPersistsAndStopsNarration() = runBlocking {

@@ -354,6 +354,8 @@ fun HomeScreen(
     val saintAsset = rememberFirstAsset("heroes/church_window_light.jpg", "heroes/cathedral_dome.jpg")
     val ttsPlaying by (ttsManager?.isPlaying ?: kotlinx.coroutines.flow.MutableStateFlow(false)).collectAsState()
     var listeningToGospel by remember { mutableStateOf(false) }
+    // Leaving Home ends the Gospel it started (and its notification).
+    androidx.compose.runtime.DisposableEffect(ttsManager) { onDispose { if (listeningToGospel) ttsManager?.stop() } }
     val dateEyebrow = remember(currentLanguage, now.toLocalDate()) {
         val locale = when (currentLanguage) {
             AppLanguage.ES -> Locale("es", "ES")
@@ -587,7 +589,10 @@ fun HomeScreen(
                                     if (listeningToGospel && ttsPlaying) {
                                         ttsManager.stop(); listeningToGospel = false
                                     } else {
-                                        ttsManager.speakSingle(cleanScripture(gospelExcerpt, currentLanguage)); listeningToGospel = true
+                                        ttsManager.speakSingle(
+                                            cleanScripture(gospelExcerpt, currentLanguage),
+                                            title = strings("Evangelio de hoy", "Today’s Gospel", "Evangelho de hoje")
+                                        ); listeningToGospel = true
                                     }
                                 },
                                 contentDescription = strings("Escuchar el Evangelio", "Listen to the Gospel", "Ouvir o Evangelho"),

@@ -313,11 +313,14 @@ internal class SpeechQueue(val tts: LiturgicalTtsManager?) {
     var active by mutableStateOf(false)
     /** Identifies what is queued (a chapter, today's Mass) so a page knows it is the one playing. */
     var owner by mutableStateOf<String?>(null)
+    /** Names what is queued in the notification and lock screen («Génesis 1»). */
+    var title by mutableStateOf<String?>(null)
     val available: Boolean get() = tts != null
 
-    fun play(owner: String, list: List<String>, from: Int = 0) {
+    fun play(owner: String, list: List<String>, from: Int = 0, title: String? = null) {
         if (tts == null || list.isEmpty() || !tts.requestPlayback()) return
         this.owner = owner
+        this.title = title
         segments = list
         index = from.coerceIn(0, list.lastIndex)
         active = true
@@ -332,6 +335,7 @@ internal class SpeechQueue(val tts: LiturgicalTtsManager?) {
         active = false
         index = null
         owner = null
+        title = null
         tts?.stop()
     }
 
@@ -350,7 +354,7 @@ internal fun rememberSpeechQueue(tts: LiturgicalTtsManager?): SpeechQueue {
             return@LaunchedEffect
         }
         val stopsBefore = engine.stopCount.value
-        engine.speakSingle(queue.segments[i])
+        engine.speakSingle(queue.segments[i], title = queue.title)
         // The engine was not ready (or the text was blank): stop rather than
         // racing through the queue in silence.
         if (!engine.isPlaying.value) {
@@ -448,7 +452,7 @@ fun BibleScreen(
         try {
             val verses = withContext(Dispatchers.IO) { repository.getChapter(target.id, requestedChapter, currentLanguage, activeEdition).verses }
             val from = requestedVerse?.let { verse -> verses.indexOfFirst { it.number == verse }.coerceAtLeast(0) } ?: 0
-            speech.play("${target.id}:$requestedChapter", verses.map { it.text.get(currentLanguage) }, from)
+            speech.play("${target.id}:$requestedChapter", verses.map { it.text.get(currentLanguage) }, from, "${target.name.get(currentLanguage)} $requestedChapter")
         } catch (cancelled: kotlinx.coroutines.CancellationException) { throw cancelled }
         catch (_: Exception) {
             android.widget.Toast.makeText(context, currentLanguage.pick("No se pudo cargar el capítulo para escucharlo. Inténtalo de nuevo.", "The chapter could not load for narration. Try again.", "Não foi possível carregar o capítulo para ouvir. Tente novamente."), android.widget.Toast.LENGTH_LONG).show()
@@ -1246,7 +1250,10 @@ private fun ReaderHost(
                 verse = verse,
                 currentLanguage = currentLanguage,
                 onListen = if (speech.available) ({
-                    speech.play("verse", listOf(verse.text.get(currentLanguage)))
+                    speech.play(
+                        "verse", listOf(verse.text.get(currentLanguage)),
+                        title = citationOf(book.name.get(currentLanguage), chapterNumber, verse.number, currentLanguage)
+                    )
                 }) else null,
                 onFollow = follow
             )
@@ -1449,7 +1456,10 @@ private fun ChapterReader(
                     else {
                         val firstVisible = (listState.firstVisibleItemIndex - leading).coerceAtLeast(0)
                         val from = if (speech.owner == owner) speech.index ?: firstVisible else firstVisible
-                        speech.play(owner, verses.map { it.text.get(currentLanguage) }, from.coerceAtMost(verses.lastIndex))
+                        speech.play(
+                            owner, verses.map { it.text.get(currentLanguage) }, from.coerceAtMost(verses.lastIndex),
+                            "${book.name.get(currentLanguage)} $chapterNumber"
+                        )
                     }
                 },
                 onChooseChapter = onChooseChapter,
@@ -2170,7 +2180,8 @@ internal fun DailyMissalView(
                                     else speech.play(
                                         owner,
                                         lessons.map { l -> listOf(l.label, l.reference, l.text).filter { it.isNotBlank() }.joinToString(". ") },
-                                        if (speech.owner == owner) speech.index ?: 0 else 0
+                                        if (speech.owner == owner) speech.index ?: 0 else 0,
+                                        currentLanguage.pick("Lecturas de la Misa", "Mass readings", "Leituras da Missa")
                                     )
                                 },
                                 icon = if (listening) Icons.Filled.Pause else Icons.Filled.PlayArrow,

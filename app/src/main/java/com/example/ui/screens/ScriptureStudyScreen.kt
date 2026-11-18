@@ -45,6 +45,7 @@ import androidx.compose.material.icons.outlined.VolunteerActivism
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -513,6 +514,8 @@ private fun LessonDetailView(
     val speaking by ttsManager.currentlySpeaking.collectAsState()
     val playing by ttsManager.isPlaying.collectAsState()
     val readingPassage = playing && speaking == passage
+    // Leaving the lesson ends its narration (and notification).
+    DisposableEffect(lesson.id) { onDispose { ttsManager.stop() } }
     val inset = design.spacing.gutter + 4.dp
     val listState = rememberSaveable(lesson.id, saver = LazyListState.Saver) { LazyListState() }
     val sectionScope = rememberCoroutineScope()
@@ -613,7 +616,7 @@ private fun LessonDetailView(
                 if (passage.isNotBlank()) AppSecondaryCapsule(
                     label = if (readingPassage) currentLanguage.pick("Detener", "Stop", "Parar")
                     else currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
-                    onClick = { if (readingPassage) ttsManager.stop() else ttsManager.speakSingle(passage) },
+                    onClick = { if (readingPassage) ttsManager.stop() else ttsManager.speakSingle(passage, title = lesson.title.get(currentLanguage)) },
                     icon = if (readingPassage) Icons.Filled.Stop else Icons.Filled.PlayArrow,
                     tag = "lesson_listen_button"
                 )

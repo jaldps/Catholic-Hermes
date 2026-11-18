@@ -185,7 +185,7 @@ private fun OrderPage(
     ) {
         item(key = "actions") {
             Spacer(Modifier.height(4.dp))
-            ReaderActionRow(language, nav.voice, speak, null, "order_listen_button", null)
+            ReaderActionRow(language, nav.voice, speak, null, "order_listen_button", null, title = name)
             BlockGap(24.dp)
         }
         item(key = "description") {
@@ -252,7 +252,7 @@ private fun OfficePage(
         progressTag = "office_progress"
     ) {
         item(key = "actions") {
-            ReaderActionRow(language, nav.voice, name + "\n\n" + description, null, "office_listen_button", null)
+            ReaderActionRow(language, nav.voice, name + "\n\n" + description, null, "office_listen_button", null, title = name)
             BlockGap(24.dp)
         }
         item(key = "description") {
