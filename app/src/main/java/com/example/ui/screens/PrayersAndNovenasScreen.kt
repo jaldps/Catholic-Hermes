@@ -54,6 +54,7 @@ import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.SearchOff
 import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material.icons.outlined.Spa
+import androidx.compose.material.icons.outlined.Verified
 import androidx.compose.material.icons.outlined.TextFields
 import androidx.compose.material.icons.outlined.VolunteerActivism
 import androidx.compose.material.icons.outlined.WbSunny
@@ -105,6 +106,7 @@ import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
 import com.example.data.models.Novena
 import com.example.data.models.NovenaProvenance
+import com.example.data.models.NovenaStatus
 import com.example.data.models.PromiseKind
 import com.example.data.models.PrayerCategory
 import com.example.data.models.VaticanPrayer
@@ -293,6 +295,7 @@ fun PrayersAndNovenasScreen(
     var novenaSearchOpen by rememberSaveable { mutableStateOf(false) }
     var novenaKind by rememberSaveable { mutableStateOf(NovenaKind.ALL.name) }
     var selectedNovenaTag by rememberSaveable { mutableStateOf<String?>(null) }
+    var novenaOrigin by rememberSaveable { mutableStateOf(NovenaOrigin.ALL.name) }
 
     // ---- Night segment: a deep link opens its office's reader directly.
     var nightOffice by rememberSaveable {
@@ -558,6 +561,8 @@ fun PrayersAndNovenasScreen(
                     onKind = { novenaKind = it.name },
                     selectedTag = selectedNovenaTag,
                     onSelectTag = { selectedNovenaTag = it },
+                    origin = NovenaOrigin.valueOf(novenaOrigin),
+                    onOrigin = { novenaOrigin = it.name },
                     daysPrayed = daysPrayed,
                     startedOn = startedOn,
                     onOpenNovena = {
@@ -1750,6 +1755,41 @@ private fun BeadRail(activeIndex: Int, onSelect: (Int) -> Unit, currentLanguage:
 /** Kinds the index filters by, derived from the stable id slug. */
 private enum class NovenaKind { ALL, POPULAR, MARY, JESUS, SAINTS }
 
+/**
+ * Where a novena text comes from, grouped for the list: the catalogue's four
+ * provenance statuses read as three origins (HISTORICAL and TRADITIONAL are
+ * both "Tradicional"). [ALL] is only a filter value, never a badge.
+ */
+internal enum class NovenaOrigin { ALL, TRADITIONAL, MODERN, PASTORAL_REVIEW;
+    fun matches(status: NovenaStatus?): Boolean = this == ALL || novenaOriginOf(status) == this
+}
+
+/** No provenance, no origin: such a novena shows no badge. */
+internal fun novenaOriginOf(status: NovenaStatus?): NovenaOrigin? = when (status) {
+    null -> null
+    NovenaStatus.HISTORICAL, NovenaStatus.TRADITIONAL -> NovenaOrigin.TRADITIONAL
+    NovenaStatus.MODERN -> NovenaOrigin.MODERN
+    NovenaStatus.PASTORAL_REVIEW -> NovenaOrigin.PASTORAL_REVIEW
+}
+
+/** Text of the quiet badge on a novena row; null when the novena has no provenance. */
+internal fun novenaOriginBadgeLabel(status: NovenaStatus?, language: AppLanguage): String? = when (novenaOriginOf(status)) {
+    null, NovenaOrigin.ALL -> null
+    NovenaOrigin.TRADITIONAL -> language.pick("Tradicional", "Traditional", "Tradicional")
+    NovenaOrigin.MODERN -> language.pick("Moderna", "Modern", "Moderna")
+    NovenaOrigin.PASTORAL_REVIEW -> language.pick("En revisión pastoral", "Under pastoral review", "Em revisão pastoral")
+}
+
+/** Item label of the «Origen» menu (plural: it names a set of novenas). */
+internal fun novenaOriginFilterLabel(origin: NovenaOrigin, language: AppLanguage): String = when (origin) {
+    NovenaOrigin.ALL -> language.pick("Todas", "All", "Todas")
+    NovenaOrigin.TRADITIONAL -> language.pick("Tradicionales", "Traditional", "Tradicionais")
+    NovenaOrigin.MODERN -> language.pick("Modernas", "Modern", "Modernas")
+    NovenaOrigin.PASTORAL_REVIEW -> language.pick("En revisión", "Under review", "Em revisão")
+}
+
+internal fun novenaOriginPrefix(language: AppLanguage): String = language.pick("Origen", "Origin", "Origem")
+
 /** The most-prayed novenas, in the order they lead the "Populares" filter. */
 private val PopularNovenaIds = listOf(
     "novena-a-la-divina-misericordia",
@@ -1837,6 +1877,8 @@ private fun NovenaIndexView(
     onKind: (NovenaKind) -> Unit,
     selectedTag: String?,
     onSelectTag: (String?) -> Unit,
+    origin: NovenaOrigin,
+    onOrigin: (NovenaOrigin) -> Unit,
     daysPrayed: Map<String, Set<Int>>,
     startedOn: Map<String, Long>,
     onOpenNovena: (Novena) -> Unit,
@@ -1872,7 +1914,7 @@ private fun NovenaIndexView(
     }
     val kinds = remember(novenas.size) { novenas.associate { it.id to novenaKindOf(it) } }
 
-    val searchResult by androidx.compose.runtime.key(novenas.size, searchQuery, selectedTag, kind, currentLanguage) {
+    val searchResult by androidx.compose.runtime.key(novenas.size, searchQuery, selectedTag, kind, origin, currentLanguage) {
         produceState<List<Novena>?>(null) {
             if (searchQuery.isNotBlank()) kotlinx.coroutines.delay(180)
             value = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
@@ -1893,7 +1935,7 @@ private fun NovenaIndexView(
                 NovenaKind.POPULAR -> "pastoral_review" !in novena.tags && novena.id in PopularNovenaIds
                 else -> kinds[novena.id] == kind
             }
-            matchesSearch && matchesTag && matchesKind
+            matchesSearch && matchesTag && matchesKind && origin.matches(novena.provenance?.status)
         }
         if (kind == NovenaKind.POPULAR) base.sortedBy { PopularNovenaIds.indexOf(it.id) } else base
             }
@@ -1901,7 +1943,7 @@ private fun NovenaIndexView(
     }
     val filtered = searchResult.orEmpty()
 
-    val filtering = searchQuery.isNotBlank() || selectedTag != null || kind != NovenaKind.ALL
+    val filtering = searchQuery.isNotBlank() || selectedTag != null || kind != NovenaKind.ALL || origin != NovenaOrigin.ALL
 
     LazyColumn(Modifier.fillMaxSize().testTag("novena_index"), contentPadding = PaddingValues(bottom = bottomPadding)) {
         header()
@@ -1967,6 +2009,19 @@ private fun NovenaIndexView(
                             selected = selectedTag == t,
                             tag = "novena_intention_$t"
                         ) { onSelectTag(t) }
+                    }
+                )
+                AppMenuChip(
+                    label = "${novenaOriginPrefix(currentLanguage)}: ${novenaOriginFilterLabel(origin, currentLanguage)}",
+                    icon = if (origin != NovenaOrigin.ALL) Icons.Outlined.Verified else null,
+                    tag = "novena_origin_picker",
+                    items = NovenaOrigin.entries.map { o ->
+                        AppMenuItem(
+                            label = novenaOriginFilterLabel(o, currentLanguage),
+                            icon = if (origin == o) Icons.Filled.Check else null,
+                            selected = origin == o,
+                            tag = "novena_origin_${o.name.lowercase()}"
+                        ) { onOrigin(o) }
                     }
                 )
             }
@@ -2039,6 +2094,7 @@ private fun NovenaIndexView(
                         onSearchQueryChange("")
                         onSelectTag(null)
                         onKind(NovenaKind.ALL)
+                        onOrigin(NovenaOrigin.ALL)
                     }
                 )
             }
@@ -2136,6 +2192,7 @@ private fun NovenaCard(
     val split = splitNovenaTitle(novena.title.get(currentLanguage), currentLanguage)
     val finished = isNovenaFinished(novena, prayed)
     val label = novenaProgressLabel(novena, prayed, currentLanguage)
+    val origin = novenaOriginBadgeLabel(novena.provenance?.status, currentLanguage)
     RemoteArtCard(
         title = split.subject,
         eyebrow = split.eyebrow,
@@ -2147,7 +2204,9 @@ private fun NovenaCard(
         aspectRatio = 0.8f,
         onClick = onOpen,
         tag = "novena_card_${novena.id}",
-        description = "${novena.title.get(currentLanguage)}, $label",
+        description = listOfNotNull(novena.title.get(currentLanguage), label, origin).joinToString(", "),
+        badge = origin,
+        badgeTag = "novena_badge_${novena.id}",
         modifier = modifier
     )
 }
@@ -2169,15 +2228,19 @@ private fun RemoteArtCard(
     modifier: Modifier = Modifier,
     progress: Float? = null,
     done: Boolean = false,
-    description: String? = null
+    description: String? = null,
+    badge: String? = null,
+    badgeTag: String? = null
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
+    // Large text needs a taller card, not a squeezed title: the ratio relaxes with the font scale.
+    val fontScale = if (badge != null) LocalDensity.current.fontScale.coerceAtLeast(1f) else 1f
     Box(
         modifier
             .fillMaxWidth()
-            .aspectRatio(aspectRatio)
+            .aspectRatio(aspectRatio / fontScale)
             .lumenPress(onClick, 0.97f)
             .clip(ImageCardShape)
             .background(p.raised)
@@ -2215,17 +2278,25 @@ private fun RemoteArtCard(
                 maxLines = 3,
                 overflow = TextOverflow.Ellipsis
             )
-            if (meta != null) {
+            if (meta != null || badge != null) {
                 Spacer(Modifier.height(5.dp))
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    if (done) {
-                        Box(
-                            Modifier.size(15.dp).background(p.success, CircleShape),
-                            contentAlignment = Alignment.Center
-                        ) { Icon(Icons.Filled.Check, null, tint = Color.White, modifier = Modifier.size(11.dp)) }
-                        Spacer(Modifier.width(6.dp))
+                // The badge sits beside the subtitle and wraps under it when the width runs out.
+                @OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
+                androidx.compose.foundation.layout.FlowRow(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    if (meta != null) Row(verticalAlignment = Alignment.CenterVertically) {
+                        if (done) {
+                            Box(
+                                Modifier.size(15.dp).background(p.success, CircleShape),
+                                contentAlignment = Alignment.Center
+                            ) { Icon(Icons.Filled.Check, null, tint = Color.White, modifier = Modifier.size(11.dp)) }
+                            Spacer(Modifier.width(6.dp))
+                        }
+                        Text(meta, style = styles.caption, color = Color.White.copy(alpha = 0.9f), maxLines = 1)
                     }
-                    Text(meta, style = styles.caption, color = Color.White.copy(alpha = 0.9f), maxLines = 1)
+                    if (badge != null) NovenaOriginBadge(badge, badgeTag)
                 }
             }
             if (progress != null) {
@@ -2234,6 +2305,28 @@ private fun RemoteArtCard(
             }
         }
     }
+}
+
+/**
+ * The quiet provenance tag: readable text in a hairline capsule, drawn in the
+ * card's own white-on-scrim idiom so it holds in every identity and appearance.
+ */
+@Composable
+private fun NovenaOriginBadge(label: String, tag: String?) {
+    val styles = LocalAppTextStyles.current
+    val shape = RoundedCornerShape(percent = 50)
+    Text(
+        label,
+        style = styles.caption.copy(fontWeight = FontWeight.Medium),
+        color = Color.White,
+        maxLines = 2,
+        modifier = Modifier
+            .then(if (tag != null) Modifier.testTag(tag) else Modifier)
+            .clip(shape)
+            .background(Color.White.copy(alpha = 0.16f))
+            .border(0.5.dp, Color.White.copy(alpha = 0.38f), shape)
+            .padding(horizontal = 8.dp, vertical = 2.dp)
+    )
 }
 
 // ========================================================== novena overview
