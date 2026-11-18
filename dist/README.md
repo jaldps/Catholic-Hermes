@@ -2,6 +2,14 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.8.23
+
+[Descargar Catholic Hermes 1.8.23](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.23.apk) · versión `1.8.23`, código 32. **Actualiza 1.8.1–1.8.22** y conserva el progreso. También en [Releases → v1.8.23](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.23).
+
+- **Emblemas de las órdenes.** 19 de las 60 órdenes y congregaciones añadidas en la 1.8.11 ya muestran su emblema, con el crédito visible en la ficha. Las demás siguen con el monograma mientras se buscan emblemas de licencia libre.
+
+[Metadatos](../docs/quality/release-1.8.23/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.22
 
 [Descargar Catholic Hermes 1.8.22](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.22.apk) · versión `1.8.22`, código 31. **Actualiza 1.8.1–1.8.21** y conserva el progreso. También en [Releases → v1.8.22](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.22): misma APK, compilada y firmada por GitHub Actions (SHA-256 idéntico).
