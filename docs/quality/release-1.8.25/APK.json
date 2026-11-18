@@ -1,0 +1,21 @@
+{
+  "version_name": "1.8.25",
+  "version_code": 34,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.25",
+  "sha256": "48f2c529e0c0397951ac1af8640300475875d9844b0d030a711f4b0b6f5850d1",
+  "bytes": 99768392,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.24 (same package and key)",
+  "built_from": "git archive of CatholicGPT at the version commit 5742aee (clean tree)",
+  "also_published_as": "GitHub Release v1.8.25 (identical SHA-256)",
+  "changes": [
+    "Novenas: each card shows its origin (Traditional, Modern, Under pastoral review) and the list has an 'Origin' filter (T-041).",
+    "Fix: the novenas of Our Lady of Suyapa and the Divine Child Jesus of 20 July could not open (data format); their Bible passage now opens each day's meditation, text unchanged."
+  ],
+  "tests": ["NovenaCatalogLoadingTest (all 262 bodies open)", "NovenaAssetIntegrityTest", "Novena*", "EditorialReliabilityTest", "NovenaOriginBadgeTest", "NovenaOriginBadgeUiTest", "NovenaBadgesScreenshotTest"],
+  "known_limitations": ["Not tested on a physical phone."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

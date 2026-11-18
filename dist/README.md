@@ -2,6 +2,15 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.8.25
+
+[Descargar Catholic Hermes 1.8.25](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.25.apk) · versión `1.8.25`, código 34. **Actualiza 1.8.1–1.8.24** y conserva el progreso. También en [Releases → v1.8.25](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.25).
+
+- **Origen de cada novena** en la lista («Tradicional», «Moderna», «En revisión pastoral») y nuevo filtro «Origen».
+- **Corrección:** las novenas de Nuestra Señora de Suyapa y del Divino Niño Jesús del 20 de julio no se podían abrir. Ahora se abren con el pasaje bíblico al inicio de la meditación de cada día, sin cambios en el texto.
+
+[Metadatos](../docs/quality/release-1.8.25/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.24
 
 [Descargar Catholic Hermes 1.8.24](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.24.apk) · versión `1.8.24`, código 33. **Actualiza 1.8.1–1.8.23** y conserva el progreso. También en [Releases → v1.8.24](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.24).
