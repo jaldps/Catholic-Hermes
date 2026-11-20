@@ -68,7 +68,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-032](T-032.md) | Coordinador (Opus local) | CERRADO ([informe](T-032-REPORT.md)) | M12.4 · Widgets y avisos litúrgicos |
 | T-037 | Coordinador (Sonnet local) | CERRADO ([informe](T-037-REPORT.md)) | M12.6 · Bienvenida personalizada con los textos de T-033 (sugerencias por perfil y tiempo; cambiable en Ajustes) |
 | T-038 | Coordinador (Sonnet local) | CERRADO ([informe](T-038-REPORT.md)) | Conectar el índice completo del Catecismo (T-036) al lector y al plan anual |
-| [T-039](T-039.md) | Hermes | ABIERTO ([revisión 1](T-039-REVIEW.md): 19 integrados) | Emblemas de las 60 órdenes y congregaciones nuevas (rama `media/order-emblems` del fork) |
+| [T-039](T-039.md) | Hermes | CERRADO ([revisión](T-039-REVIEW.md): 34/60 integrados) | Emblemas de las 60 órdenes y congregaciones nuevas (rama `media/order-emblems` del fork) |
 | T-040 | Coordinador (Sonnet local) | CERRADO ([informe](T-040-REPORT.md)) | Referencias cruzadas en los cursos y el plan bíblico (la Misa se queda como está, por decisión del dueño) |
 | T-041 | Coordinador (Sonnet local) | CERRADO ([informe](T-041-REPORT.md)) | Sello de procedencia en la lista de novenas |
 | T-042 | Coordinador (Sonnet local) | CERRADO ([informe](T-042-REPORT.md)) | Narración por el servicio de audio en más pantallas |
@@ -76,4 +76,4 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |
-| [T-034](T-034.md) | Hermes | CERRADO ([revisión](T-034-REVIEW.md); 214/215 integradas) | Imágenes de las 215 fichas de santos (rama `media/saint-images` del fork) |
+| [T-034](T-034.md) | Hermes | CERRADO ([revisión](T-034-REVIEW.md); 215/215 integradas) | Imágenes de las 215 fichas de santos (rama `media/saint-images` del fork) |

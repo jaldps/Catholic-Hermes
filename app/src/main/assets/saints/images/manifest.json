@@ -1068,5 +1068,10 @@
   "focusX": 0.5,
   "focusY": 0.15,
   "tone": "dark"
+ },
+ "bede_the_venerable_priest.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.15,
+  "tone": "light"
  }
 }

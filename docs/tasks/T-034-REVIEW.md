@@ -27,3 +27,7 @@
 - **Código:** `DevotionImageCredits.saints` reutiliza el catálogo de créditos de las devociones.
 - **Ficha del santo:** usa la imagen en el cabezal único y muestra debajo la línea de crédito (`saint_image_credit`), que enlaza a la página del archivo en Commons. Si no hay imagen, mantiene el arte de sección.
 - **Pruebas:** `SaintsScreenTest` comprueba el crédito, y `SaintImageScreenshotTest` genera las capturas de las 4 identidades y a 320 dp / 130 %, guardadas en `docs/tasks/T-034-shots/`.
+
+## Actualización (20-nov)
+
+San Beda queda resuelto: es el grabado *Beda venerabilis* de la *Crónica de Núremberg* (dominio público), entregado en `6142859`. Integradas: **215 de 215**.

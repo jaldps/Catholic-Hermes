@@ -189,6 +189,156 @@
    "url": "https://commons.wikimedia.org/wiki/File%3AEscudo-agustinos-recoletos.gif",
    "referential": false,
    "note": "Emblema de la Orden de Agustinos Recoletos."
+  },
+  {
+   "id": "barnabitas-crsp",
+   "title": "Logo-CSS_2.png",
+   "author": "",
+   "license": "Derechos: Clérigos Regulares de San Pablo: Barnabitas",
+   "source": "barnabiti.net",
+   "url": "https://www.barnabiti.net/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "basilianos-san-josafat-osbm",
+   "title": "cropped-favicon-192x192.png",
+   "author": "",
+   "license": "Derechos: Orden Basiliana de San Josafat",
+   "source": "osbm.org.br",
+   "url": "http://www.osbm.org.br/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "carmelitas-caridad-vedruna-ccv",
+   "title": "cropped-LOGO_VEDRUNA_WEB-192x192.png",
+   "author": "",
+   "license": "Derechos: Carmelitas de la Caridad Vedruna",
+   "source": "vedruna.org",
+   "url": "http://www.vedruna.org/fr/index.htm",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "combonianos-mccj",
+   "title": "logo.png",
+   "author": "",
+   "license": "Derechos: Misioneros Combonianos del Corazón de Jesús",
+   "source": "comboni.org",
+   "url": "https://www.comboni.org/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "dominicas-contemplativas-op",
+   "title": "Coat of Arms of the Dominican Order.png",
+   "author": "",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_the_Dominican_Order.png",
+   "referential": false,
+   "note": "Las monjas de la Orden de Predicadores usan el mismo escudo de la Orden; por eso se comparte."
+  },
+  {
+   "id": "hermanas-hospitalarias-hsc",
+   "title": "logo-es-1.svg",
+   "author": "",
+   "license": "Derechos: Hermanas Hospitalarias del Sagrado Corazón de Jesús",
+   "source": "hospitalarias.org",
+   "url": "http://www.hospitalarias.org",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "hermanos-cristianos-cfc",
+   "title": "apple-touch-icon.png",
+   "author": "",
+   "license": "Derechos: Congregación de los Hermanos Cristianos",
+   "source": "ercbna.org",
+   "url": "https://ercbna.org/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "legionarios-cristo-lc",
+   "title": "cropped-favicon-300x300.png",
+   "author": "",
+   "license": "Derechos: Legionarios de Cristo",
+   "source": "legionariosdecristo.org",
+   "url": "https://www.legionariosdecristo.org",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "mercedarias-caridad-mc",
+   "title": "logo_ESCUDO_NUEVO_2.png",
+   "author": "",
+   "license": "Derechos: Hermanas Mercedarias de la Caridad",
+   "source": "mercedariasdelacaridad.org",
+   "url": "https://www.mercedariasdelacaridad.org/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "misioneros-africa-mafr",
+   "title": "MAfr-logo-oficial.jpg",
+   "author": "",
+   "license": "Derechos: Misioneros de África",
+   "source": "misionerosafrica.com",
+   "url": "https://www.misionerosafrica.com/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "misiones-extranjeras-pime",
+   "title": "pime_logo_003.png",
+   "author": "",
+   "license": "Derechos: Pontificio Instituto de Misiones Extranjeras",
+   "source": "pime.org",
+   "url": "https://www.pime.org/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "notre-dame-namur-sndden",
+   "title": "logo-5.svg",
+   "author": "",
+   "license": "Derechos: Hermanas de Nuestra Señora de Namur",
+   "source": "sndden.org",
+   "url": "https://www.sndden.org/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "religiosas-sagrado-corazon-rscj",
+   "title": "logo.png",
+   "author": "",
+   "license": "Derechos: Religiosas del Sagrado Corazón de Jesús",
+   "source": "rscjinternational.org",
+   "url": "https://rscjinternational.org",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "siervas-espiritu-santo-ssps",
+   "title": "logo2.png",
+   "author": "",
+   "license": "Derechos: Misioneras Siervas del Espíritu Santo",
+   "source": "worldssps.org",
+   "url": "https://www.worldssps.org/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+  },
+  {
+   "id": "somascos-crs",
+   "title": "cropped-cropped-Propuesta-verde-vertical-verde-intermedio-e1697659749101-192x192.png",
+   "author": "",
+   "license": "Derechos: Orden de los Clérigos Regulares de Somasca",
+   "source": "somascos.org",
+   "url": "https://somascos.org/",
+   "referential": false,
+   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
   }
  ]
 }
