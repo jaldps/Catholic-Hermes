@@ -142,7 +142,7 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         // then to Explore.
         clickMoreRow("nav_my_path")
         compose.onNodeWithTag("my_path_screen").assertIsDisplayed()
-        compose.onNodeWithTag("my_path_section_habits").performScrollTo().performClick()
+        compose.onNodeWithTag("my_path_today_habits").performScrollTo().performClick()
         compose.onNodeWithTag("habits_and_virtues_screen").assertIsDisplayed()
         compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
         compose.onNodeWithTag("my_path_screen").assertIsDisplayed()

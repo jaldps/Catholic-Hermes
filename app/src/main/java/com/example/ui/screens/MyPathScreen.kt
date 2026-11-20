@@ -120,29 +120,30 @@ fun MyPathHub(
         }
         item(key = "today") {
             AppListGroup(Modifier.testTag("my_path_today")) {
-                if (habits != null) AppListRow(
-                    title = tr("Hábitos de hoy", "Today's habits", "Hábitos de hoje"),
-                    subtitle = if (habits.pending == 0)
-                        tr("Todo hecho. Gracias a Dios.", "All done. Thanks be to God.", "Tudo feito. Graças a Deus.")
-                    else tr(
-                        "${habits.done} ${if (habits.done == 1) "hecho" else "hechos"} · ${habits.pending} ${if (habits.pending == 1) "pendiente" else "pendientes"}",
-                        "${habits.done} done · ${habits.pending} to go",
-                        "${habits.done} ${if (habits.done == 1) "feito" else "feitos"} · ${habits.pending} ${if (habits.pending == 1) "pendente" else "pendentes"}"
-                    ),
+                // One row to habits: the two old rows ("Hábitos de hoy" and
+                // "Fidelidad") led to the same place. Reuse their exact copy;
+                // only the separator is new.
+                AppListRow(
+                    title = tr("Hábitos", "Habits", "Hábitos"),
+                    subtitle = buildList {
+                        if (habits != null) {
+                            add(if (habits.pending == 0)
+                                tr("Todo hecho. Gracias a Dios.", "All done. Thanks be to God.", "Tudo feito. Graças a Deus.")
+                            else tr(
+                                "${habits.done} ${if (habits.done == 1) "hecho" else "hechos"} · ${habits.pending} ${if (habits.pending == 1) "pendiente" else "pendientes"}",
+                                "${habits.done} done · ${habits.pending} to go",
+                                "${habits.done} ${if (habits.done == 1) "feito" else "feitos"} · ${habits.pending} ${if (habits.pending == 1) "pendente" else "pendentes"}"
+                            ))
+                        }
+                        add(if (streak > 0) tr(
+                            if (streak == 1) "1 día seguido" else "$streak días seguidos",
+                            if (streak == 1) "1 day in a row" else "$streak days in a row",
+                            if (streak == 1) "1 dia seguido" else "$streak dias seguidos"
+                        ) else tr("Empieza hoy, a tu ritmo.", "Begin today, at your own pace.", "Comece hoje, no seu ritmo."))
+                    }.joinToString(" · "),
                     leadingIcon = AppIcons.pair(AppIconSlot.HABITS).first,
                     onClick = { onOpenSection(MyPathSection.HABITS) },
                     modifier = Modifier.testTag("my_path_today_habits")
-                )
-                AppListRow(
-                    title = tr("Fidelidad", "Fidelity", "Fidelidade"),
-                    subtitle = if (streak > 0) tr(
-                        if (streak == 1) "1 día seguido" else "$streak días seguidos",
-                        if (streak == 1) "1 day in a row" else "$streak days in a row",
-                        if (streak == 1) "1 dia seguido" else "$streak dias seguidos"
-                    ) else tr("Empieza hoy, a tu ritmo.", "Begin today, at your own pace.", "Comece hoje, no seu ritmo."),
-                    leadingIcon = Icons.Outlined.CalendarMonth,
-                    onClick = { onOpenSection(MyPathSection.HABITS) },
-                    modifier = Modifier.testTag("my_path_today_fidelity")
                 )
                 plansNow.forEach { now ->
                     AppListRow(
@@ -170,13 +171,6 @@ fun MyPathHub(
         }
         item(key = "sections") {
             AppListGroup(Modifier.testTag("my_path_sections")) {
-                AppListRow(
-                    title = tr("Hábitos", "Habits", "Hábitos"),
-                    subtitle = tr("Tu regla de vida, día a día", "Your rule of life, day by day", "Sua regra de vida, dia a dia"),
-                    leadingIcon = AppIcons.pair(AppIconSlot.HABITS).first,
-                    onClick = { onOpenSection(MyPathSection.HABITS) },
-                    modifier = Modifier.testTag("my_path_section_habits")
-                )
                 AppListRow(
                     title = tr("Diario", "Journal", "Diário"),
                     subtitle = tr("Intenciones, gratitud y gracias recibidas", "Intentions, gratitude and graces received", "Intenções, gratidão e graças recebidas"),

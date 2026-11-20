@@ -142,7 +142,7 @@ class MyPathUiTest {
         openHubFromExplore()
         compose.onNodeWithTag("my_path_title", useUnmergedTree = true).assertExists()
         listOf(
-            "my_path_section_habits" to "tab_habits_rule",
+            "my_path_today_habits" to "tab_habits_rule",
             "my_path_section_diary" to "spiritual_confession_entry",
             "my_path_section_temptations" to "tab_sin_avoider",
             "my_path_section_practices" to "spiritual_life_learn_picker"
@@ -265,8 +265,10 @@ class MyPathUiTest {
         openHubFromExplore()
         waitFor("my_path_today_habits")
         assertRowText("my_path_today_habits", "1 hecho · 11 pendientes")
-                // Today and yesterday kept: two days in a row, said without blame.
-        assertRowText("my_path_today_fidelity", "2 días seguidos")
+        // Today and yesterday kept: two days in a row, now in the single row's subtitle.
+        assertRowText("my_path_today_habits", "2 días seguidos")
+        assert(!exists("my_path_today_fidelity")) { "the duplicate fidelity row is gone" }
+        assert(!exists("my_path_section_habits")) { "the duplicate section row is gone" }
         waitFor("my_path_today_plan_bible_year")
         assertRowText("my_path_today_plan_bible_year", "Día 4 de 365")
         assert(!exists("my_path_today_plan_catechism_year")) { "a plan that was never started is not 'in progress'" }
@@ -274,7 +276,7 @@ class MyPathUiTest {
         assertRowText("my_path_today_novena_novena-a-la-divina-misericordia", "día 2 de 9")
 
         openRow("my_path_today_habits"); waitFor("tab_habits_rule"); back(); waitFor("my_path_screen")
-        openRow("my_path_today_fidelity"); waitFor("tab_habits_rule"); back(); waitFor("my_path_screen")
+        assert(!exists("my_path_today_fidelity")) { "one habits row only" }
         openRow("my_path_today_plan_bible_year"); waitFor("plan_detail_screen"); back(); waitFor("my_path_screen")
         openRow("my_path_today_novena_novena-a-la-divina-misericordia")
         waitFor("novena_detail_novena-a-la-divina-misericordia")
@@ -286,7 +288,7 @@ class MyPathUiTest {
         openHubFromExplore()
         waitFor("my_path_today_habits")
         assertRowText("my_path_today_habits", "0 hechos · 12 pendientes")
-        assertRowText("my_path_today_fidelity", "Empieza hoy, a tu ritmo.")
+        assertRowText("my_path_today_habits", "Empieza hoy, a tu ritmo.")
         assert(!exists("my_path_today_plan_bible_year"))
         assert(!hasAnyTagWithPrefix("my_path_today_novena_"))
     }
@@ -298,10 +300,10 @@ class MyPathUiTest {
         listOf(AppLanguage.EN to Triple("My path", "Today on my path", "Begin today, at your own pace."),
             AppLanguage.PT to Triple("Meu caminho", "Hoje no meu caminho", "Comece hoje, no seu ritmo.")).forEach { (language, texts) ->
             launch(initial = AppDestination.MY_PATH, language = language)
-            waitFor("my_path_today_fidelity")
+            waitFor("my_path_today_habits")
             tag("my_path_title").assertTextContains(texts.first, substring = true)
             assertRowText("my_path_today_header", texts.second)
-            assertRowText("my_path_today_fidelity", texts.third)
+            assertRowText("my_path_today_habits", texts.third)
             dispose()
         }
     }
