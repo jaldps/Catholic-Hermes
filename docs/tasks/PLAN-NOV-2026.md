@@ -104,6 +104,6 @@ Para cada área:
 - **T-044 (Hermes):** imágenes de las 25 devociones marianas sin imagen. Integrar por lotes cuando lleguen.
 - **T-039:** 26 órdenes siguen con monograma. Reintentar solo si aparecen emblemas válidos.
 - **T-021 (Polish):** sin entregar desde hace días; queda absorbido por el bloque horizontal y por T-045.
-- **Codex** volvió el 21-nov: proponerle tareas acotadas que no choquen con el bloque horizontal, por ejemplo tests o contenido.
+- **Codex** vuelve el 21-nov: proponerle tareas acotadas que no choquen con el bloque horizontal, por ejemplo tests o contenido.
 - **Tableta horizontal (T-043):** Hoy y Orar quedan en una columna centrada. Se resolverá con L3 y L4.
 - **Idea abierta:** curso bíblico nuevo para Hermes (Marcos o María en la Escritura), si el dueño lo confirma.
