@@ -4,6 +4,7 @@ package com.example.ui.design
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
+import androidx.compose.material.icons.filled.Route
 import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.HistoryEdu
@@ -14,6 +15,7 @@ import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.AutoStories
+import androidx.compose.material.icons.outlined.Route
 import androidx.compose.material.icons.outlined.Church
 import androidx.compose.material.icons.outlined.GridView
 import androidx.compose.material.icons.outlined.HistoryEdu
@@ -24,6 +26,7 @@ import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material.icons.rounded.AutoStories
+import androidx.compose.material.icons.rounded.Route
 import androidx.compose.material.icons.rounded.Church
 import androidx.compose.material.icons.rounded.GridView
 import androidx.compose.material.icons.rounded.HistoryEdu
@@ -34,6 +37,7 @@ import androidx.compose.material.icons.rounded.Place
 import androidx.compose.material.icons.rounded.Shield
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material.icons.sharp.AutoStories
+import androidx.compose.material.icons.sharp.Route
 import androidx.compose.material.icons.sharp.Church
 import androidx.compose.material.icons.sharp.GridView
 import androidx.compose.material.icons.sharp.HistoryEdu
@@ -51,7 +55,7 @@ import com.example.ui.theme.LocalAppDesign
 
 /** The navigation glyphs the app needs, independent of any one icon style. */
 enum class AppIconSlot {
-    HOME, HABITS, BIBLE, CATECHISM, ROSARY, PRAYERS, PILGRIMAGE, PARISH, DOCTRINE, NEWS, JOURNAL, MORE
+    HOME, HABITS, BIBLE, CATECHISM, ROSARY, PRAYERS, PILGRIMAGE, PARISH, DOCTRINE, NEWS, JOURNAL, MORE, PATH
 }
 
 /**
@@ -94,6 +98,7 @@ object AppIcons {
         AppIconSlot.NEWS -> Icons.Outlined.Newspaper
         AppIconSlot.JOURNAL -> Icons.Outlined.Star
         AppIconSlot.MORE -> Icons.Outlined.GridView
+        AppIconSlot.PATH -> Icons.Outlined.Route
     }
 
     private fun rounded(slot: AppIconSlot): ImageVector = when (slot) {
@@ -109,6 +114,7 @@ object AppIcons {
         AppIconSlot.NEWS -> Icons.Rounded.Newspaper
         AppIconSlot.JOURNAL -> Icons.Rounded.Star
         AppIconSlot.MORE -> Icons.Rounded.GridView
+        AppIconSlot.PATH -> Icons.Rounded.Route
     }
 
     private fun sharp(slot: AppIconSlot): ImageVector = when (slot) {
@@ -124,6 +130,7 @@ object AppIcons {
         AppIconSlot.NEWS -> Icons.Sharp.Newspaper
         AppIconSlot.JOURNAL -> Icons.Sharp.Star
         AppIconSlot.MORE -> Icons.Sharp.GridView
+        AppIconSlot.PATH -> Icons.Sharp.Route
     }
 
     private fun filled(slot: AppIconSlot): ImageVector = when (slot) {
@@ -139,5 +146,6 @@ object AppIcons {
         AppIconSlot.NEWS -> Icons.Filled.Newspaper
         AppIconSlot.JOURNAL -> Icons.Filled.Star
         AppIconSlot.MORE -> Icons.Filled.GridView
+        AppIconSlot.PATH -> Icons.Filled.Route
     }
 }

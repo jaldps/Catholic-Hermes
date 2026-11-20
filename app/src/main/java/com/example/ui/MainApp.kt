@@ -99,7 +99,7 @@ enum class AppDestination(
 ) {
     HOME("Hoy", "Today", "Hoje", AppIconSlot.HOME, "nav_home"),
     HABITS_VIRTUES("Hábitos y Virtudes", "Habits & Virtues", "Hábitos e Virtudes", AppIconSlot.HABITS, "nav_habits"),
-    MY_PATH("Mi camino", "My path", "Meu caminho", AppIconSlot.HABITS, "nav_my_path"),
+    MY_PATH("Mi camino", "My path", "Meu caminho", AppIconSlot.PATH, "nav_my_path"),
     BIBLE("Leer", "Read", "Ler", AppIconSlot.BIBLE, "nav_bible"),
     CATECHISM("Catecismo", "Catechism", "Catecismo", AppIconSlot.CATECHISM, "nav_catechism"),
     ROSARY("Rosario", "Rosary", "Terço", AppIconSlot.ROSARY, "nav_rosary"),
@@ -135,11 +135,10 @@ enum class AppDestination(
         }
 
         /**
-         * What the tab bar carries. Habits sits next to Prayers as a
-         * first-class tab, and [MORE] (with Settings) is the sixth tab;
-         * everything else is reached by pushing from a tab.
+         * What the tab bar carries: five destinations, with [MY_PATH] between
+         * [BIBLE] and [MORE]. Everything else is reached by pushing from a tab.
          */
-        val tabs = listOf(HOME, PRAYERS, BIBLE, MORE)
+        val tabs = listOf(HOME, PRAYERS, BIBLE, MY_PATH, MORE)
     }
 
     fun title(language: AppLanguage): String = when (language) {
@@ -220,7 +219,9 @@ fun MainApp(
         mutableStateOf((AppDestination.myPathSectionFor(initialDestination) ?: MyPathSection.HUB).name)
     }
     var stackNames by rememberSaveable {
-        mutableStateOf(if (initialDestination in AppDestination.tabs) "" else AppDestination.MORE.name)
+        mutableStateOf(if (initialDestination in AppDestination.tabs) ""
+            else if (AppDestination.myPathSectionFor(initialDestination) != null) AppDestination.MY_PATH.name
+            else AppDestination.MORE.name)
     }
     // A stored name of an absorbed destination is the hub: «Mi camino» is the only screen they have.
     fun screenOf(name: String) = AppDestination.valueOf(name).let { if (AppDestination.myPathSectionFor(it) != null) AppDestination.MY_PATH else it }
@@ -447,8 +448,14 @@ fun MainApp(
     val navItems = tabs.map { destination ->
         val (resting, active) = AppIcons.pair(destination.iconSlot)
         AppNavItem(
-            label = if (destination == AppDestination.MORE && (largeNavigationText || compactNavigation)) when (currentLanguage) {
-                AppLanguage.ES -> "Más"; AppLanguage.EN -> "More"; AppLanguage.PT -> "Mais"
+            label = if ((largeNavigationText || compactNavigation) &&
+                (destination == AppDestination.MORE || destination == AppDestination.MY_PATH)) when (destination) {
+                AppDestination.MORE -> when (currentLanguage) {
+                    AppLanguage.ES -> "Más"; AppLanguage.EN -> "More"; AppLanguage.PT -> "Mais"
+                }
+                else -> when (currentLanguage) {  // MY_PATH
+                    AppLanguage.ES -> "Camino"; AppLanguage.EN -> "Path"; AppLanguage.PT -> "Caminho"
+                }
             } else destination.tabLabel(currentLanguage),
             icon = resting,
             selectedIcon = active,
@@ -485,6 +492,10 @@ fun MainApp(
             }
             if (dest == AppDestination.PRAYERS) {
                 prayersInitialPrayerId = null; prayersInitialTab = 0; prayersInitialNightTab = 0; prayersInitialOpenChaplet = false
+            }
+            if (dest == AppDestination.MY_PATH) {
+                // Tapping the tab again from inside a section returns to the hub.
+                enterMyPath(MyPathSection.HUB)
             }
             clearSearchLinks()
             stackNames = ""
@@ -1146,10 +1157,7 @@ private fun moreSections(
         ),
         MoreSection(
             pick("Vida interior", "Inner life", "Vida interior"),
-            listOf(
-                entry(AppDestination.MY_PATH),
-                entry(AppDestination.CONFESSION)
-            )
+            listOf(entry(AppDestination.CONFESSION))
         ),
         MoreSection(
             pick("Lugares", "Places", "Lugares"),

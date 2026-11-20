@@ -8,7 +8,9 @@ import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.semantics.getOrNull
+import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.assertTextContains
 import androidx.compose.ui.test.hasAnyAncestor
 import androidx.compose.ui.test.hasTestTag
@@ -306,5 +308,35 @@ class MyPathUiTest {
             assertRowText("my_path_today_habits", texts.third)
             dispose()
         }
+    }
+
+    @Test fun myPathIsAFifthTabAndTappingItAgainReturnsToTheHub() {
+        launch()
+        compose.onNodeWithTag("nav_my_path").assertHasClickAction().performClick()
+        waitFor("my_path_screen")
+        waitFor("my_path_today_habits")
+        // Go into a section, then tap the same tab: back to the hub, not a no-op.
+        openRow("my_path_today_habits")
+        waitFor("tab_habits_rule")
+        compose.onNodeWithTag("nav_my_path").performClick()
+        waitFor("my_path_screen")
+        waitFor("my_path_today_habits")
+        gone("tab_habits_rule")
+    }
+
+    @Test fun theHubHasExactlyOneRowToHabits() {
+        launch(initial = AppDestination.MY_PATH)
+        waitFor("my_path_today_habits")
+        assert(compose.onAllNodesWithTag("my_path_today_habits", useUnmergedTree = true)
+            .fetchSemanticsNodes().size == 1) { "a single habits row" }
+        assert(!exists("my_path_today_fidelity")) { "no separate fidelity row" }
+        assert(!exists("my_path_section_habits")) { "no duplicate habits section row" }
+    }
+
+    @Test fun aHabitsDeepLinkSelectsTheMyPathTab() {
+        launch(initial = AppDestination.HABITS_VIRTUES)
+        waitFor("tab_habits_rule")
+        runCatching { compose.onNodeWithTag("nav_my_path", useUnmergedTree = true).assertIsSelected() }
+            .getOrElse { throw AssertionError("nav_my_path must be the selected tab for a habits deep link: ${it.message}") }
     }
 }

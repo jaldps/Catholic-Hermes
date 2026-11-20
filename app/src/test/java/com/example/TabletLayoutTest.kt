@@ -106,10 +106,10 @@ class TabletLayoutTest(private val identity: DesignLanguage) {
             compose.onNodeWithTag(tab).assertIsSelected()
         }
         // Four destinations, stacked top to bottom, all inside the rail.
-        val tops = listOf("nav_home", "nav_prayers", "nav_bible", "nav_more").map { bounds(it).top }
+        val tops = listOf("nav_home", "nav_prayers", "nav_bible", "nav_my_path", "nav_more").map { bounds(it).top }
         assertEquals(tops.sorted(), tops)
         val rail = bounds("navigation_rail")
-        listOf("nav_home", "nav_prayers", "nav_bible", "nav_more").forEach {
+        listOf("nav_home", "nav_prayers", "nav_bible", "nav_my_path", "nav_more").forEach {
             val b = bounds(it)
             assertTrue("$it inside the rail", b.left >= rail.left && b.right <= rail.right + 1f && b.top >= rail.top - 1f && b.bottom <= rail.bottom + 1f)
         }
