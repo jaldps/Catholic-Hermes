@@ -107,3 +107,39 @@ Para cada área:
 - **Codex** vuelve el 21-nov: proponerle tareas acotadas que no choquen con el bloque horizontal, por ejemplo tests o contenido.
 - **Tableta horizontal (T-043):** Hoy y Orar quedan en una columna centrada. Se resolverá con L3 y L4.
 - **Idea abierta:** curso bíblico nuevo para Hermes (Marcos o María en la Escritura), si el dueño lo confirma.
+
+---
+
+## Actualización (20-nov, tarde): método horizontal reforzado
+
+Esta sección **sustituye** al método anterior de la §2. El dueño pidió garantizar el nivel AAA y permite dar código a Hermes con indicaciones muy detalladas.
+
+### Lo que faltaba y se añade
+
+- **Diseño antes de código (fase D).**
+  - Un agente diseñador escribe `docs/design/LANDSCAPE.md`. Para cada área L1–L7 incluye un boceto, la jerarquía, qué queda fijo y qué se desplaza, dónde va cada control, el comportamiento al girar, los insets y la adaptación a cada identidad.
+  - El crítico lo aprueba con la rúbrica.
+  - **El dueño ve el resumen** (Rosario, lectores, Hoy) antes de que se construya nada.
+- **Rúbrica del crítico.** Opus independiente y duro, que exige **≥ 9/10 en cada criterio**:
+  1. uso del espacio;
+  2. jerarquía y ritmo;
+  3. legibilidad (medida de 60–75 caracteres y contraste);
+  4. ergonomía (alcance del pulgar y objetivos ≥ 44 dp);
+  5. coherencia con la vista vertical y entre las 4 identidades, en claro y oscuro;
+  6. estados (vacío, cargando, error y 130 %);
+  7. insets, recortes de cámara y teclado;
+  8. continuidad al girar;
+  9. accesibilidad (TalkBack).
+
+  El crítico compara cada captura horizontal con su versión vertical.
+- **Casos propios del horizontal:**
+  - el recorte de cámara en un lateral (insets `displayCutout` y `systemBars` a ambos lados);
+  - la barra de gestos lateral;
+  - el teclado, que tapa casi todo: campos visibles con `imePadding` y la acción principal alcanzable;
+  - la continuidad al girar: posición de lectura, cuenta del Rosario, día de novena, texto escrito y selección.
+- **Bucle por área:** se implementa, se capturan 2 tamaños × 4 identidades × claro/oscuro, más el 130 % y el teclado abierto, y se pasan el detector y los tests. Después actúa el crítico. Como máximo 5 rondas; si no se alcanza el ≥ 9, se escala al dueño con capturas.
+- **Reparto:**
+  - **L0** (fundamentos en `ui/design`): un agente local.
+  - **L1, L2, L3, L4 y L7:** agentes locales, en secuencia.
+  - **L5 y L6:** **Hermes**, en `ext/T-05x`. El encargo es muy detallado: el diseño aprobado, los archivos permitidos y prohibidos, los wrappers obligatorios, los tests y comandos de captura, y los criterios de la rúbrica. Hace un push por pantalla. Yo reviso el código y el crítico, las capturas.
+- **Validación en el teléfono real.** Se publica una versión por cada tramo: L1+L2, L3+L4 y L5–L7. Cada una lleva una **lista de comprobación** breve para el dueño: girar, recortes, teclado, Rosario completo y lectura larga. Lo que reporte abre una ronda de corrección antes de seguir.
