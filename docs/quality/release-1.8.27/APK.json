@@ -1,0 +1,22 @@
+{
+  "version_name": "1.8.27",
+  "version_code": 36,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.27",
+  "sha256": "0052c3830b89c9c966febf6659f828acea03e01aaa2cf6008112982908453dce",
+  "bytes": 100325147,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.26 (same package and key)",
+  "built_from": "git archive of CatholicGPT at the version commit a8b65ba (clean tree)",
+  "also_published_as": "GitHub Release v1.8.27 (identical SHA-256)",
+  "changes": [
+    "Tablets and large screens: navigation rail from 600 dp, centred reading column, and two panes (list + detail) for Saints, Orders and Devotions from 840 dp; phones unchanged (T-043).",
+    "15 more religious-order emblems (34 of the 60 new orders), with credits; official emblems credited 'Derechos: <order>' (T-039).",
+    "St Bede now shows the Nuremberg Chronicle woodcut: all 215 saint profiles have a picture (T-034)."
+  ],
+  "tests": ["Full unit suite: 921 tests, 1 known failure (ExampleRobolectricTest app_name under the preview init script)", "TabletLayoutTest", "TabletScreenshotTest", "OrdersScreenTest"],
+  "known_limitations": ["Not tested on a physical phone or tablet."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

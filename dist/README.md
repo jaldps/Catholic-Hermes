@@ -2,6 +2,21 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.8.27
+
+[Descargar Catholic Hermes 1.8.27](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.27.apk) · versión `1.8.27`, código 36. **Actualiza 1.8.1–1.8.26** y conserva el progreso. También en [Releases → v1.8.27](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.27).
+
+- **Tabletas y pantallas grandes:**
+  - navegación lateral;
+  - lectura en una columna centrada;
+  - lista y ficha lado a lado en Santos, Órdenes y Devociones.
+  
+  En el teléfono no cambia nada.
+- **15 emblemas más de órdenes:** 34 de las 60 nuevas ya lo tienen, cada uno con su crédito.
+- **Las 215 fichas de santos ya tienen imagen.** San Beda muestra un grabado de la *Crónica de Núremberg*.
+
+[Metadatos](../docs/quality/release-1.8.27/APK.json). No se ha probado en un teléfono ni en una tableta física.
+
 ## Catholic Hermes 1.8.26
 
 [Descargar Catholic Hermes 1.8.26](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.26.apk) · versión `1.8.26`, código 35. **Actualiza 1.8.1–1.8.25** y conserva el progreso. También en [Releases → v1.8.26](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.26).
