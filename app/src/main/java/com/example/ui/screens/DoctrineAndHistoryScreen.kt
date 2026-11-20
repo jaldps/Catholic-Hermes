@@ -30,9 +30,14 @@ import com.example.ui.design.AppBackHandler
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppInlineTitle
+import com.example.ui.design.AppTwoPane
+import com.example.ui.design.appIsTwoPane
 
 private val defaultNewsLoader: suspend (AppLanguage) -> NewsResult =
     { VaticanNewsFetcher().latest(it, limit = 25) }
+
+/** The list tabs that show their list and the chosen entry side by side on a wide window: Mary & Jesus (devotions) and Orders. */
+private val TWO_PANE_TABS = setOf(1, 4)
 
 /** What a destination's list page is called and pictured as. */
 internal data class RootSpec(val asset: String, val title: String, val eyebrow: String)
@@ -146,7 +151,10 @@ fun DoctrineAndHistoryScreen(
     val top = entries.lastOrNull()
     // A contextual entry (for example Habits → Sin and Confession) returns
     // to its caller. Entries opened from inside that reader still pop first.
-    AppBackHandler(enabled = entries.isNotEmpty() && (initialEntry == null || entries.size > 1)) {
+    // On a two-pane window the first entry is the selection beside the list, not a page
+    // over it: back only unwinds what was opened from inside that page.
+    val twoPane = appIsTwoPane() && initialTopTab in TWO_PANE_TABS
+    AppBackHandler(enabled = if (twoPane) entries.size > 1 else entries.isNotEmpty() && (initialEntry == null || entries.size > 1)) {
         stack = stack.split('|').filter { it.isNotEmpty() }.dropLast(1).joinToString("|")
     }
     LaunchedEffect(top) { voice.stop() }
@@ -162,13 +170,51 @@ fun DoctrineAndHistoryScreen(
 
     val saveable = rememberSaveableStateHolder()
     val spec = rootSpec(initialTopTab, currentLanguage, repository)
+    // Choosing a row of the list replaces the page beside it instead of stacking another.
+    val listNav = DoctrineNav(
+        open = { stack = it }, replace = { stack = it },
+        openBible = onOpenBible, openCatechism = onOpenCatechism, openPrayer = onOpenPrayer, voice = voice
+    )
+    // Until something is chosen, the detail pane shows the first entry of the list.
+    val defaultEntry = if (!twoPane) null else when (initialTopTab) {
+        1 -> repository.marianApparitions.firstOrNull()?.let { "devotion:${it.id}" }
+        else -> if (repository.religiousOrders.isNotEmpty()) "order:0" else null
+    }
 
     CompositionLocalProvider(
         LocalBottomPad provides insets.calculateBottomPadding() + 24.dp,
         LocalReaderArt provides spec.asset
     ) {
         Box(modifier.fillMaxSize().testTag("doctrine_and_history_screen")) {
-            AnimatedContent(
+            if (twoPane) {
+                val shown = top ?: defaultEntry
+                CompositionLocalProvider(LocalOpenEntry provides shown) {
+                    AppTwoPane(
+                        list = {
+                            saveable.SaveableStateProvider(key = "two_pane_list") {
+                                if (initialTopTab == 1) DevotionsExplorerScreen(repository, currentLanguage, listNav, spec)
+                                else OrdersRoot(repository, currentLanguage, listNav, spec)
+                            }
+                        },
+                        detail = {
+                            AnimatedContent(
+                                targetState = stack,
+                                transitionSpec = { fadeIn(tween(200)) togetherWith fadeOut(tween(120)) },
+                                label = "doctrineDetailPane"
+                            ) { s ->
+                                saveable.SaveableStateProvider(key = "two_pane_detail:$s") {
+                                    val entry = s.substringAfterLast('|').takeIf { it.isNotEmpty() } ?: defaultEntry
+                                    if (entry != null) {
+                                        EntryPage(entry, repository, currentLanguage, nav) {
+                                            stack = stack.split('|').filter { e -> e.isNotEmpty() }.dropLast(1).joinToString("|")
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    )
+                }
+            } else AnimatedContent(
                 targetState = stack,
                 transitionSpec = {
                     val deeper = targetState.count { it == '|' } + (if (targetState.isEmpty()) 0 else 1) >=

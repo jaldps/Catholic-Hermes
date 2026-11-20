@@ -328,6 +328,12 @@ fun AppHeroImage(
  */
 val AppHeaderArtHeight: Dp = 236.dp
 
+/**
+ * Whether header art softens its side edges. Null: whenever the window is wide
+ * (the page is a centred column). A two-pane screen sets it per pane.
+ */
+internal val LocalHeroSideFade = androidx.compose.runtime.compositionLocalOf<Boolean?> { null }
+
 /** Bottom inset of the header's text block; with [AppHeaderArtHeight] it fixes the title line. */
 private val HeaderTextBottom: Dp = 14.dp
 
@@ -428,7 +434,9 @@ private fun AppHeaderFrame(
             )
             .heightIn(min = statusTop + AppHeaderArtHeight - contentTop)
     ) {
-        Box(Modifier.matchParentSize()) {
+        // On a wide window the page is a centred column: its art melts into the canvas at the sides instead of ending in hard edges.
+        val fadeSides = LocalHeroSideFade.current ?: appUsesNavigationRail()
+        Box(Modifier.matchParentSize().then(if (fadeSides) Modifier.fadeSides() else Modifier)) {
             if (imageUrl.isNullOrBlank() && assetPath != null) {
                 AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeStart = 0.30f)
             } else {

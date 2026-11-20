@@ -88,7 +88,8 @@ internal fun OrdersRoot(
                         leadingWidth = 44.dp,
                         position = groupPosition(i, orders.size),
                         onClick = { nav.open("order:$i") },
-                        tag = "order_${order.id}"
+                        tag = "order_${order.id}",
+                        selected = LocalOpenEntry.current == "order:$i"
                     )
                 }
             }
@@ -113,7 +114,8 @@ internal fun OrdersRoot(
                                 title = office.name.get(language),
                                 position = groupPosition(i, members.size),
                                 onClick = { nav.open("office:$m") },
-                                tag = "office_${office.id}"
+                                tag = "office_${office.id}",
+                                selected = LocalOpenEntry.current == "office:$m"
                             )
                         }
                         item(key = "og_gap_${group.name}", contentType = "gap") { Spacer(Modifier.height(16.dp)) }

@@ -96,6 +96,12 @@ import kotlinx.coroutines.withContext
 // Shared building blocks of the Doctrine & Study area (all destinations).
 // -----------------------------------------------------------------------------
 
+/**
+ * The entry ("order:3", "devotion:coromoto") whose page is open beside the list
+ * on a two-pane window; null on a phone, where the page replaces the list.
+ */
+internal val LocalOpenEntry = compositionLocalOf<String?> { null }
+
 /** Bottom padding that clears the floating dock, provided once by the screen. */
 internal val LocalBottomPad = compositionLocalOf { 24.dp }
 
@@ -448,17 +454,23 @@ internal fun LeadRow(
     onClick: (() -> Unit)? = null,
     position: GroupPosition? = null,
     tag: String? = null,
-    maxTitleLines: Int = 3
+    maxTitleLines: Int = 3,
+    /** The row whose page is open in the detail pane of a two-pane layout. */
+    selected: Boolean = false
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
     val base = if (position != null) Modifier.groupedItem(position) else Modifier.fillMaxWidth()
-    Column(modifier.then(base).then(if (tag != null) Modifier.testTag(tag) else Modifier)) {
+    Column(
+        modifier.then(base).then(if (tag != null) Modifier.testTag(tag) else Modifier)
+            .then(if (selected) Modifier.semantics { this.selected = true } else Modifier)
+    ) {
         Row(
             Modifier
                 .fillMaxWidth()
                 .lumenPress(onClick, 0.99f)
+                .then(if (selected) Modifier.background(p.accent.copy(alpha = if (design.isDark) 0.16f else 0.10f)) else Modifier)
                 .heightIn(min = design.spacing.rowMinHeight)
                 .padding(horizontal = 18.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -468,7 +480,7 @@ internal fun LeadRow(
                 Spacer(Modifier.width(14.dp))
             }
             Column(Modifier.weight(1f)) {
-                Text(title, style = styles.body, color = p.textPrimary, maxLines = maxTitleLines, overflow = TextOverflow.Ellipsis)
+                Text(title, style = styles.body, color = if (selected) p.accent else p.textPrimary, maxLines = maxTitleLines, overflow = TextOverflow.Ellipsis)
                 if (subtitle != null) {
                     Spacer(Modifier.height(2.dp))
                     Text(subtitle, style = styles.footnote, color = p.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)

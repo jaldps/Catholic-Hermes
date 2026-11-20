@@ -46,6 +46,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.example.data.liturgy.GeneralCelebration
@@ -54,6 +55,8 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.SaintProfile
 import com.example.data.repository.SaintsCatalog
 import com.example.ui.design.AppCard
+import com.example.ui.design.AppTwoPane
+import com.example.ui.design.appIsTwoPane
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppEmptyState
@@ -111,7 +114,25 @@ fun SaintsScreen(
     var selectedKey by rememberSaveable { mutableStateOf<String?>(initialKey?.takeIf { it in profiles }) }
     val selected = selectedKey?.let { k -> saintCelebrations().firstOrNull { it.key == k } }
 
-    if (selected != null) {
+    if (appIsTwoPane()) {
+        // Wide windows: the list stays on the left and the profile is on the right, so
+        // choosing another saint changes the right pane instead of pushing a page.
+        val all = remember { saintCelebrations() }
+        val shown = selected ?: all.firstOrNull { it.key in profiles }
+        // Only a profile opened from outside (the global search) has somewhere to go back to.
+        if (onExitContext != null && selectedKey == initialKey) AppBackHandler { onExitContext() }
+        AppTwoPane(
+            modifier = modifier,
+            list = { SaintsList(profiles, currentLanguage, { selectedKey = it }, Modifier, selectedRowKey = shown?.key) },
+            detail = {
+                if (shown != null) {
+                    androidx.compose.runtime.key(shown.key) {
+                        SaintDetail(shown, profiles[shown.key], currentLanguage, {}, Modifier, ttsManager, showBack = false)
+                    }
+                }
+            }
+        )
+    } else if (selected != null) {
         val back = { if (onExitContext != null && selectedKey == initialKey) onExitContext() else selectedKey = null }
         AppBackHandler { back() }
         SaintDetail(selected, profiles[selected.key], currentLanguage, { back() }, modifier, ttsManager)
@@ -125,7 +146,9 @@ private fun SaintsList(
     profiles: Map<String, SaintProfile>,
     language: AppLanguage,
     onOpen: (String) -> Unit,
-    modifier: Modifier
+    modifier: Modifier,
+    /** The saint shown in the detail pane of a two-pane layout; its row is marked selected. */
+    selectedRowKey: String? = null
 ) {
     AppEdgeToEdge()
     val design = LocalAppDesign.current
@@ -214,8 +237,10 @@ private fun SaintsList(
                                 title = c.title.get(language),
                                 subtitle = saintDateLabel(c.month, c.day, language) + " · " + c.rank.displayName.get(language),
                                 showsNavigationAffordance = has,
+                                selected = c.key == selectedRowKey,
                                 onClick = if (has) ({ onOpen(c.key) }) else null,
                                 modifier = Modifier.testTag("saint_row_${c.key}")
+                                    .then(if (selectedRowKey != null) Modifier.semantics { selected = c.key == selectedRowKey } else Modifier)
                             )
                         }
                     }
@@ -233,7 +258,9 @@ private fun SaintDetail(
     language: AppLanguage,
     onBack: () -> Unit,
     modifier: Modifier,
-    ttsManager: LiturgicalTtsManager?
+    ttsManager: LiturgicalTtsManager?,
+    /** False in the two-pane layout, where the list is always on screen and there is nothing to go back to. */
+    showBack: Boolean = true
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -278,7 +305,7 @@ private fun SaintDetail(
                         .testTag("saint_image_credit")
                 )
             }
-            Row(Modifier.padding(horizontal = gutter).padding(top = 4.dp)) {
+            if (showBack) Row(Modifier.padding(horizontal = gutter).padding(top = 4.dp)) {
                 AppSecondaryButton(tr("Todos los santos", "All saints", "Todos os santos"), onBack, leadingIcon = Icons.AutoMirrored.Outlined.ArrowBack, modifier = Modifier.testTag("saint_detail_back"))
             }
             if (ttsManager != null && speakText.isNotEmpty()) {

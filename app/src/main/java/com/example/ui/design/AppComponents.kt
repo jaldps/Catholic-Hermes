@@ -12,6 +12,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.unit.Dp
 import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 
@@ -191,5 +203,73 @@ fun AppNotesField(value: String, onValueChange: (String) -> Unit, label: String,
                 keyboardType = androidx.compose.ui.text.input.KeyboardType.Password, autoCorrectEnabled = false),
             modifier = modifier.fillMaxWidth().semantics { contentDescription = label }
         )
+    }
+}
+
+// ------------------------------------------------------------ window sizes
+
+/**
+ * Window-width breakpoints, following the Material window size classes. Below
+ * [RailMinWidth] the app is the phone layout, untouched.
+ */
+object AppWindow {
+    /** From this width the bottom tab bar becomes a navigation rail on the leading edge. */
+    val RailMinWidth: Dp = 600.dp
+    /** From this width a list/detail screen shows both panes side by side. */
+    val TwoPaneMinWidth: Dp = 840.dp
+    /** Width of the list pane of a two-pane screen. */
+    val ListPaneWidth: Dp = 360.dp
+}
+
+/** The width of the window this composition lives in (it follows split-screen and foldable postures). */
+@Composable
+@ReadOnlyComposable
+fun appWindowWidth(): Dp = LocalConfiguration.current.screenWidthDp.dp
+
+/** True when the tab bar is a leading-edge rail (window width >= [AppWindow.RailMinWidth]). */
+@Composable
+@ReadOnlyComposable
+fun appUsesNavigationRail(): Boolean = appWindowWidth() >= AppWindow.RailMinWidth
+
+/** True when list/detail screens show both panes (window width >= [AppWindow.TwoPaneMinWidth]). */
+@Composable
+@ReadOnlyComposable
+fun appIsTwoPane(): Boolean = appWindowWidth() >= AppWindow.TwoPaneMinWidth
+
+/**
+ * The widest a page of content is allowed to be on a wide window: the reading
+ * column plus its gutters. Wider windows centre it instead of stretching it.
+ */
+@Composable
+@ReadOnlyComposable
+fun appContentMaxWidth(): Dp = with(LocalAppDesign.current.spacing) { readingMaxWidth + gutter * 2 }
+
+/**
+ * List on the leading side, detail on the other ([AppWindow.ListPaneWidth] wide
+ * list, a hairline between). Declares the screen full width, so the scaffold
+ * does not centre it in a reading column; the detail pane centres itself in a
+ * reading column instead. Call it only when [appIsTwoPane].
+ */
+@Composable
+fun AppTwoPane(
+    modifier: Modifier = Modifier,
+    list: @Composable () -> Unit,
+    detail: @Composable () -> Unit
+) {
+    AppFullWidth()
+    val design = LocalAppDesign.current
+    Row(modifier.fillMaxSize().testTag("two_pane")) {
+        // The list's art fills its pane; the detail's art is only softened where a wide pane leaves it a centred column.
+        Box(Modifier.width(AppWindow.ListPaneWidth).fillMaxHeight().testTag("two_pane_list")) {
+            androidx.compose.runtime.CompositionLocalProvider(LocalHeroSideFade provides false) { list() }
+        }
+        Box(Modifier.width(0.5.dp).fillMaxHeight().background(design.palette.separator))
+        BoxWithConstraints(Modifier.weight(1f).fillMaxHeight().testTag("two_pane_detail"), contentAlignment = Alignment.TopCenter) {
+            val column = appContentMaxWidth()
+            val constrained = maxWidth > column
+            androidx.compose.runtime.CompositionLocalProvider(LocalHeroSideFade provides constrained) {
+                Box(Modifier.widthIn(max = column).fillMaxHeight()) { detail() }
+            }
+        }
     }
 }
