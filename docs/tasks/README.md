@@ -74,6 +74,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | T-042 | Coordinador (Sonnet local) | CERRADO ([informe](T-042-REPORT.md)) | Narración por el servicio de audio en más pantallas |
 | T-043 | Coordinador (Sonnet local) | CERRADO ([informe](T-043-REPORT.md)) | Diseño para tableta (rail y dos paneles) |
 | [T-044](T-044.md) | Hermes | ABIERTO | Imágenes de las 25 devociones marianas sin imagen (rama `media/devotion-images-2` del fork) |
+| T-045 | Coordinador (Sonnet local) | EN CURSO | Auditoría a 320 dp con letra al 130 %: textos cortados y botones ocultos en toda la app |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |
