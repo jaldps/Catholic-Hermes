@@ -829,6 +829,56 @@
    "url": "https://commons.wikimedia.org/wiki/File:Catedral_de_la_Asunci%C3%B3n_de_Mar%C3%ADa_Sant%C3%ADsima_(Guadalajara,_Jalisco)_-_statue_from_the_altar_of_Our_Lady_of_Zapopan.jpg",
    "referential": true,
    "note": "Estatua del altar de Ntra. Sra. de Zapopan en la catedral de Guadalajara; la imagen original está en la basílica de Zapopan."
+  },
+  {
+   "id": "maria_auxiliadora",
+   "title": "María Auxiliadora Entera.jpg",
+   "author": "Tommaso Andrea Lorenzone (1824-1902), at the request of Don Bosco.",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Auxiliadora_Entera.jpg",
+   "referential": false,
+   "note": "Cuadro de María Auxiliadora en la Basílica de Ntra. Sra. de la Ayuda de los Cristianos, Turín."
+  },
+  {
+   "id": "virgen_banneux",
+   "title": "Ryckevelde Madonna Banneux.jpg",
+   "author": "Zeisterre",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Ryckevelde_Madonna_Banneux.jpg",
+   "referential": true,
+   "note": "Estatua de Ntra. Sra. de Banneux en Ryckevelde (Bélgica); no la del santuario, que quedó lejana tras la fuente."
+  },
+  {
+   "id": "virgen_beauraing",
+   "title": "Notre Dame de Beauraing-006.jpg",
+   "author": "FredSeiller",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Notre_Dame_de_Beauraing-006.jpg",
+   "referential": false,
+   "note": "Estatua de Ntra. Sra. de Beauraing en la capilla votiva del santuario: representa la aparición."
+  },
+  {
+   "id": "virgen_montserrat",
+   "title": "Santa maria di Montserrat, interno, cappella della madre di dio, madonna nera col bambino del xii secolo, 01.jpg",
+   "author": "Francesco Bini",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Santa_maria_di_Montserrat,_interno,_cappella_della_madre_di_dio,_madonna_nera_col_bambino_del_xii_secolo,_01.jpg",
+   "referential": false,
+   "note": "La Moreneta, Virgen del s. XII, en la capilla de la basílica de Montserrat."
+  },
+  {
+   "id": "virgen_walsingham",
+   "title": "Walsingham Statues of Virgin Mary.jpg",
+   "author": "(1)  Saracen78 (2) Thorvaldsson (combined by Rabanus Flavus)",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Walsingham_Statues_of_Virgin_Mary.jpg",
+   "referential": false,
+   "note": "Estatuas de Ntra. Sra. de Walsingham en el santuario anglicano y en la Slipper Chapel. Recorte del coordinador: mitad derecha (la estatua de la Slipper Chapel), misma licencia CC BY-SA."
   }
  ]
 }

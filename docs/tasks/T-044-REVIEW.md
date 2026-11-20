@@ -25,3 +25,28 @@ Están recodificadas a un máximo de 900×1100 px, calidad 72, en `app/src/main/
 1. **Banneux y Suyapa:** un primer plano de la imagen venerada.
 2. **Las 6 pendientes de tu REPORT:** Quinche (la copia de Quisapincha se acepta como referencial), Montserrat, Loreto, Walsingham, Beauraing y Nazaré (Portugal).
 3. **Sigue el mismo método:** revisar la descripción y las categorías del archivo, y un push cada 5 imágenes.
+
+---
+
+# T-044 · Revisión del coordinador (2)
+
+- **Entrega:** `media/devotion-images-2` @ `ec3d220`, con 24 de 25.
+- **Estado:** se integran 5 más, así que hay **20 de 25** con imagen. T-044 queda **CERRADO** y las 5 restantes conservan el arte de sección.
+
+## Integradas en esta ronda (5)
+
+- **María Auxiliadora:** el cuadro de la basílica de Valdocco.
+- **Beauraing:** la estatua de la capilla votiva.
+- **Montserrat:** la Moreneta en su camarín.
+- **Banneux:** la estatua de Ryckevelde, marcada como referencial.
+- **Walsingham:** el coordinador recortó la mitad derecha, que es la estatua de la Slipper Chapel, porque la original era un díptico. Se mantiene la licencia CC BY-SA y queda anotado en `note`.
+
+## No integradas (5)
+
+| id | Motivo |
+|---|---|
+| `nossa_senhora_nazare_portugal` | Es la fachada y los campanarios del santuario, no la imagen. |
+| `virgen_del_quinche` | La copia queda al fondo, detrás de arreglos florales y un letrero; no se distingue. |
+| `virgen_loreto` | Es un fresco muy desvaído, ilegible en la cabecera. |
+| `virgen_suyapa` | Es el primer plano de una copia, pero tiene una estampa de papel pegada delante que tapa la imagen. |
+| `virgen_paz_el_salvador` | No se encontró ninguna. |

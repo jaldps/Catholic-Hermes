@@ -4,6 +4,8 @@
 **Origen:** `docs/tasks/T-044-data/devotions.tsv` (25 devociones, id + nombre + lugar)
 **Estado:** EN CURSO — **no dar por terminado**
 
+Revisión (1) del coordinador: **APROBADO PARCIAL**. Se integran 15 de las 17 del primer lote. Excluidas `virgen_banneux` y `virgen_suyapa` (la imagen venerada no se distinguía); el Rocío pasa a **referencial** por ser réplica de porcelana. Pendiente: las 2 exclusiones y las 6 del lote 2.
+
 ## Reglas aplicadas
 
 1. **La imagen tiene que ser de esa advocación concreta.** No valen fachadas, procesiones lejanas,
@@ -23,8 +25,9 @@
 | | |
 |---|---|
 | Devociones en el TSV | 25 |
-| Con imagen descargada | **17** |
-| Sin imagen (a día de hoy) | 8 |
+| Con imagen descargada | **24** |
+| Integradas por el coordinador (lote 1) | 15 |
+| Sin imagen | **1** (`virgen_paz_el_salvador`) |
 
 ### Con imagen (17)
 
@@ -48,18 +51,13 @@
 | `nossa_senhora_nazare_belem` | `Imagem de Nossa Senhora de Nazaré em Paragominas-Pará.jpg` | CC BY 4.0 | **REFERENCIAL**: estatua del Cirio en Paragominas, no la de la basílica de Belém |
 | `maria_desatadora_nudos` | `03178ajfStatues of Mary Untier of Knots in the Philippinesfvf.jpg` | CC0 | **REFERENCIAL**: estatua en Filipinas; el original es el cuadro de Augsburgo |
 
-### Sin imagen (8)
+### Sin imagen (1)
 
 | id | Motivo |
 |---|---|
-| `virgen_del_quinche` | El candidato era una copia en Quisapincha (Ambato); elegible como **referencial**, pendiente de decisión. No descargada. |
-| `virgen_montserrat` | Los candidatos eran la Moreneta (baja resolución o con velos) o retablos; la descarga falló con 429. |
-| `virgen_loreto` | `Our Lady of Loreto.jpg` no descargada (429). |
-| `virgen_walsingham` | Icono contemporáneo de Olga Shalamova; no descargada (404 en la vía alternativa). |
-| `virgen_beauraing` | La búsqueda devuelve multitudes y peregrinos (Agence Rol); la estatua del «Corazón de Oro» no localizada. |
-| `nossa_senhora_nazare_portugal` | La búsqueda devuelve el núcleo de Nazaré y el «veado surfista»; la imagen venerada no localizada. |
-| `maria_auxiliadora` | Solo fachadas, capillas y personas; no una imagen de la Virgen. |
-| `virgen_paz_el_salvador` | Solo iglesias tituladas «Our Lady Queen of Peace» en otros países; la de San Miguel no localizada. |
+
+
+| `virgen_paz_el_salvador` | Commons solo tiene la **catedral** de San Miguel y parroquias de otros países con el mismo título. No hay imagen de la Virgen. Se deja sin imagen, sin relleno. |
 
 ## Bloqueos declarados
 
@@ -79,3 +77,14 @@
 2. Verificar las 13 descargadas y las que se añadan, con las hojas de contacto.
 3. Decidir las 12 sin imagen: dejarlas vacías o admitir las referenciales.
 4. Revisar la paridad ficheros ↔ `credits.json`.
+
+
+## Cierre del lote 2 (24/25)
+
+Última incorporación: **`maria_auxiliadora`** — `María Auxiliadora Entera.jpg`, dominio público,
+el cuadro de la basílica de María Auxiliadora de Turín. Verificado de visu: Virgen coronada con el
+Niño sobre nubes, Espíritu Santo en paloma y los evangelistas; es la imagen original de la
+devoción. Descargada por `Special:FilePath?width=1280`, la única ruta que no devuelve 429.
+
+**24 de 25.** La única sin imagen es `virgen_paz_el_salvador`; Commons no tiene la imagen
+venerada, solo el edificio. Se deja vacía con el motivo, como exige la regla.

@@ -413,5 +413,30 @@
   "focusX": 0.5,
   "focusY": 0.12,
   "tone": "dark"
+ },
+ "maria_auxiliadora.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.12,
+  "tone": "dark"
+ },
+ "virgen_banneux.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.12,
+  "tone": "dark"
+ },
+ "virgen_beauraing.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.12,
+  "tone": "dark"
+ },
+ "virgen_montserrat.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.12,
+  "tone": "dark"
+ },
+ "virgen_walsingham.jpg": {
+  "focusX": 0.5,
+  "focusY": 0.12,
+  "tone": "dark"
  }
 }
