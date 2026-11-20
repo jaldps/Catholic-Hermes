@@ -679,6 +679,156 @@
    "url": "https://hermandaddelasentencia.org/ntro-padre-jesus-de-la-sentencia/",
    "referential": true,
    "note": ""
+  },
+  {
+   "id": "madre_buen_consejo_genazzano",
+   "title": "File:Horb Stiftskirche Gemälde Maria vom Guten Rat von Genazzano.jpg",
+   "author": "Photo: Andreas Praefcke",
+   "license": "CC BY 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Horb_Stiftskirche_Gem%C3%A4lde_Maria_vom_Guten_Rat_von_Genazzano.jpg",
+   "referential": true,
+   "note": "Copia del Gnadenbild de Genazzano (c. 1750) en la Stiftskirche de Horb; no el original de Genazzano."
+  },
+  {
+   "id": "maria_desatadora_nudos",
+   "title": "File:03178ajfStatues of Mary Untier of Knots in the Philippinesfvf.jpg",
+   "author": "Judgefloro",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:03178ajfStatues_of_Mary_Untier_of_Knots_in_the_Philippinesfvf.jpg",
+   "referential": true,
+   "note": "Estatua de María Desatadora de los Nudos en Filipinas; el original es el cuadro de San Pedro am Perlach, Augsburgo."
+  },
+  {
+   "id": "nossa_senhora_nazare_belem",
+   "title": "File:Imagem de Nossa Senhora de Nazaré em Paragominas-Pará.jpg",
+   "author": "Robertokhalilcosta",
+   "license": "CC BY 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Imagem_de_Nossa_Senhora_de_Nazar%C3%A9_em_Paragominas-Par%C3%A1.jpg",
+   "referential": true,
+   "note": "Estatua del Cirio de Nazaré en Paragominas (Pará), no la imagen de la basílica de Belém."
+  },
+  {
+   "id": "nuestra_senora_knock",
+   "title": "File:Basilica of Our Lady, Queen of Ireland (Interior)02.jpg",
+   "author": "FredSeiller",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Basilica_of_Our_Lady,_Queen_of_Ireland_(Interior)02.jpg",
+   "referential": false,
+   "note": "Mosaico de la aparición de Knock (1879) en la basílica del santuario."
+  },
+  {
+   "id": "nuestra_senora_pontmain",
+   "title": "File:Pontmain (53) Basilique Vitrail 01.jpg",
+   "author": "GO69",
+   "license": "CC0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Pontmain_(53)_Basilique_Vitrail_01.jpg",
+   "referential": false,
+   "note": "Vitral de ábside de la basílica Ntra. Sra. de la Esperanza de Pontmain."
+  },
+  {
+   "id": "nuestra_senora_vailankanni",
+   "title": "File:Mother Mary Vailankanni.jpg",
+   "author": "Vworlikar",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Mother_Mary_Vailankanni.jpg",
+   "referential": false,
+   "note": "Estatua de Ntra. Sra. de la Salud de Vailankanni."
+  },
+  {
+   "id": "virgen_covadonga",
+   "title": "File:Virgen de Covadonga2.jpg",
+   "author": "Frobles",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_de_Covadonga2.jpg",
+   "referential": false,
+   "note": "La Virgen en la gruta, Asturias."
+  },
+  {
+   "id": "virgen_czestochowa",
+   "title": "File:Czestochowa MB Czestochowska.jpg",
+   "author": "Andrzej Otrębski",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Czestochowa_MB_Czestochowska.jpg",
+   "referential": false,
+   "note": "El icono de la Madonna de Częstochowa."
+  },
+  {
+   "id": "virgen_desamparados_valencia",
+   "title": "File:Nuestra Señora de los Desamparados (gravat).jpg",
+   "author": "MrPotato1010",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Nuestra_Se%C3%B1ora_de_los_Desamparados_(gravat).jpg",
+   "referential": false,
+   "note": "Grabado xilográfico del s. XVIII de la Mare de Déu dels Desemparats."
+  },
+  {
+   "id": "virgen_itati",
+   "title": "File:Virgen itati 1912.jpg",
+   "author": "Unknown authorUnknown author",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_itati_1912.jpg",
+   "referential": false,
+   "note": "Escultura de la Virgen de Itatí, Corrientes (1912)."
+  },
+  {
+   "id": "virgen_la_salette",
+   "title": "File:Eglise de Corps-statue-82.JPG",
+   "author": "Fr.Latreille",
+   "license": "CC BY-SA 3.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Eglise_de_Corps-statue-82.JPG",
+   "referential": false,
+   "note": "Estatua de la Virgen de La Salette en la iglesia de Corps (Isère), en la comarca de la aparición."
+  },
+  {
+   "id": "virgen_rocio",
+   "title": "File:Virgen del Rocío de porcelana.JPG",
+   "author": "CarlosVdeHabsburgo",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_del_Roc%C3%ADo_de_porcelana.JPG",
+   "referential": true,
+   "note": "Porcelana de Lladró (1942) del tesoro de la hermandad matriz de Almonte. Réplica en porcelana (1942) del tesoro de la hermandad matriz; no la imagen original."
+  },
+  {
+   "id": "virgen_socavon",
+   "title": "File:Virgen socavon candelaria.jpg",
+   "author": "Erios30",
+   "license": "Public domain",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_socavon_candelaria.jpg",
+   "referential": false,
+   "note": "Pintura del s. XVIII; la advocacion del Socavon es la Virgen de la Candelaria."
+  },
+  {
+   "id": "virgen_urkupina",
+   "title": "File:Virgen de Urkupiña.jpg",
+   "author": "Noelia Yulisa Perez Cayo",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Virgen_de_Urkupi%C3%B1a.jpg",
+   "referential": false,
+   "note": "Iglesia de San Ildefonso, Quillacollo: el santuario de Urkupiña."
+  },
+  {
+   "id": "virgen_zapopan",
+   "title": "File:Catedral de la Asunción de María Santísima (Guadalajara, Jalisco) - statue from the altar of Our Lady of Zapopan.jpg",
+   "author": "Nheyob",
+   "license": "CC BY-SA 4.0",
+   "source": "Wikimedia Commons",
+   "url": "https://commons.wikimedia.org/wiki/File:Catedral_de_la_Asunci%C3%B3n_de_Mar%C3%ADa_Sant%C3%ADsima_(Guadalajara,_Jalisco)_-_statue_from_the_altar_of_Our_Lady_of_Zapopan.jpg",
+   "referential": true,
+   "note": "Estatua del altar de Ntra. Sra. de Zapopan en la catedral de Guadalajara; la imagen original está en la basílica de Zapopan."
   }
  ]
 }
