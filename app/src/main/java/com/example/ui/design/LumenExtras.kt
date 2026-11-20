@@ -287,16 +287,19 @@ fun AppGroupedRow(
                 else AppIconWell(leadingIcon)
                 Spacer(Modifier.width(if (design.isSanctuary) 16.dp else 14.dp))
             }
+            // Large text: a trailing value would leave the title a sliver of width, so it joins the second line.
+            val stacked = appLargeText() && !trailingText.isNullOrBlank()
             Column(Modifier.weight(1f)) {
                 Text(title, style = styles.body, color = if (selected) p.accent else p.textPrimary)
-                if (subtitle != null) {
+                val second = if (stacked) listOfNotNull(subtitle, trailingText).joinToString(" · ") else subtitle
+                if (second != null) {
                     Spacer(Modifier.height(2.dp))
-                    Text(subtitle, style = styles.footnote, color = p.textSecondary)
+                    Text(second, style = styles.footnote, color = p.textSecondary)
                 }
             }
-            if (trailingText != null) {
+            if (trailingText != null && !stacked) {
                 Spacer(Modifier.width(10.dp))
-                Text(trailingText, style = styles.subhead, color = p.textSecondary, maxLines = 1,
+                Text(trailingText, style = styles.subhead, color = p.textSecondary, maxLines = appMaxLines(1),
                     overflow = TextOverflow.Ellipsis, modifier = Modifier.widthIn(max = 140.dp))
             }
             if (trailing != null) {
@@ -601,7 +604,7 @@ fun AppMenuChip(label: String, items: List<AppMenuItem>, modifier: Modifier = Mo
                 Icon(icon, null, tint = p.textPrimary, modifier = Modifier.size(18.dp))
                 Spacer(Modifier.width(8.dp))
             }
-            Text(label, style = styles.subhead.copy(fontWeight = FontWeight.Medium), color = p.textPrimary, maxLines = 1)
+            Text(label, style = styles.subhead.copy(fontWeight = FontWeight.Medium), color = p.textPrimary, maxLines = appMaxLines(1))
             Spacer(Modifier.width(6.dp))
             Icon(Icons.Outlined.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
         }

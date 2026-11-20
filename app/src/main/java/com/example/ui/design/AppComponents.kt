@@ -37,6 +37,24 @@ fun appKit(): AppKit = when (LocalAppDesign.current.language) {
     DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> LumenKit
 }
 
+/**
+ * The text size the reader actually sees: the app's own preference times the system font scale.
+ * At 130 % and above ([appLargeText]) rows stop capping their lines, stack trailing values under the
+ * text and give grids a single column, so nothing is cut at a phone's narrowest width.
+ */
+@Composable
+@ReadOnlyComposable
+fun appTextScale(): Float = com.example.ui.theme.LocalAppFontScale.current * androidx.compose.ui.platform.LocalDensity.current.fontScale
+
+@Composable
+@ReadOnlyComposable
+fun appLargeText(): Boolean = appTextScale() >= 1.25f
+
+/** A line cap for a list row: [normal] at ordinary sizes, no cap when the text is large (the row grows instead). */
+@Composable
+@ReadOnlyComposable
+fun appMaxLines(normal: Int): Int = if (appLargeText()) Int.MAX_VALUE else normal
+
 // Screens call these. They carry the default arguments an interface cannot, and
 // keep every call site free of any one identity's component names.
 

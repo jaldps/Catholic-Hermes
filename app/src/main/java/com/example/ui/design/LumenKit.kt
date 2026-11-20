@@ -262,6 +262,7 @@ object LumenKit : AppKit {
                                         overflow = TextOverflow.Ellipsis,
                                         textAlign = TextAlign.Center,
                                         modifier = Modifier
+                                            .testTag("app_bar_title")
                                             .align(Alignment.BottomCenter)
                                             .padding(horizontal = 72.dp)
                                             .height(BarRow)
@@ -299,6 +300,7 @@ object LumenKit : AppKit {
                                     overflow = TextOverflow.Ellipsis,
                                     textAlign = TextAlign.Center,
                                     modifier = Modifier
+                                        .testTag("app_bar_title")
                                         .fillMaxWidth()
                                         .padding(top = statusTop)
                                         .padding(horizontal = 72.dp)
@@ -566,7 +568,7 @@ object LumenKit : AppKit {
                             Spacer(Modifier.height(3.dp))
                             Text(item.label, style = styles.navLabel.copy(
                                 fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
-                                color = tint, textAlign = TextAlign.Center, maxLines = 2)
+                                color = tint, textAlign = TextAlign.Center, maxLines = appMaxLines(2))
                         }
                     }
                 }
@@ -613,7 +615,7 @@ object LumenKit : AppKit {
                         Spacer(Modifier.height(4.dp))
                         Text(item.label, style = styles.navLabel.copy(
                             fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
-                            color = tint, textAlign = TextAlign.Center, maxLines = 2)
+                            color = tint, textAlign = TextAlign.Center, maxLines = appMaxLines(2))
                         Spacer(Modifier.height(5.dp))
                         Box(Modifier.width(20.dp).height(2.dp).background(if (active) p.accent else Color.Transparent))
                     }
@@ -665,8 +667,8 @@ object LumenKit : AppKit {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(title, style = styles.headline, color = p.textPrimary, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                if (subtitle != null) Text(subtitle, style = styles.footnote, color = p.textSecondary, maxLines = 1)
+                Text(title, style = styles.headline, color = p.textPrimary, maxLines = appMaxLines(1), overflow = TextOverflow.Ellipsis)
+                if (subtitle != null) Text(subtitle, style = styles.footnote, color = p.textSecondary, maxLines = appMaxLines(1))
             }
             Row(verticalAlignment = Alignment.CenterVertically, content = actions)
         }
@@ -690,7 +692,7 @@ object LumenKit : AppKit {
         ) {
             Column(Modifier.weight(1f)) {
                 if (eyebrow != null) {
-                    Text(eyebrow, style = styles.eyebrow, color = p.textSecondary, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text(eyebrow, style = styles.eyebrow, color = p.textSecondary, maxLines = appMaxLines(1), overflow = TextOverflow.Ellipsis)
                     Spacer(Modifier.height(2.dp))
                 }
                 Text(
@@ -824,20 +826,23 @@ object LumenKit : AppKit {
                     else AppIconWell(leadingIcon)
                     Spacer(Modifier.width(14.dp))
                 }
+                // Large text: a trailing value would leave the title a sliver of width, so it joins the second line.
+                val stacked = appLargeText() && !trailingText.isNullOrBlank()
                 Column(Modifier.weight(1f)) {
                     Text(title, style = styles.body, color = if (selected) scheme.primary else p.textPrimary)
-                    if (subtitle != null) {
+                    val second = if (stacked) listOfNotNull(subtitle, trailingText).joinToString(" · ") else subtitle
+                    if (second != null) {
                         Spacer(Modifier.height(2.dp))
-                        Text(subtitle, style = styles.footnote, color = p.textSecondary)
+                        Text(second, style = styles.footnote, color = p.textSecondary)
                     }
                 }
-                if (trailingText != null) {
+                if (trailingText != null && !stacked) {
                     Spacer(Modifier.width(10.dp))
                     Text(
                         trailingText,
                         style = styles.subhead,
                         color = p.textSecondary,
-                        maxLines = 1,
+                        maxLines = appMaxLines(1),
                         overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.widthIn(max = 130.dp)
                     )
@@ -1066,9 +1071,9 @@ object LumenKit : AppKit {
                 Icon(icon, null, tint = p.textSecondary, modifier = Modifier.size(20.dp))
                 Spacer(Modifier.height(10.dp))
             }
-            Text(value, style = styles.metric, color = p.textPrimary, maxLines = 1)
+            Text(value, style = styles.metric, color = p.textPrimary, maxLines = appMaxLines(1))
             Spacer(Modifier.height(2.dp))
-            Text(caption, style = styles.footnote, color = p.textSecondary, maxLines = 2)
+            Text(caption, style = styles.footnote, color = p.textSecondary, maxLines = appMaxLines(2))
         }
     }
 

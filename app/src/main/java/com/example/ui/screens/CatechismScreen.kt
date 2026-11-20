@@ -789,6 +789,8 @@ private fun CatRowShell(
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
+    // Large text: a number range in a fixed-width lead would wrap digit by digit, so it sits above the title instead.
+    val stackLeading = com.example.ui.design.appLargeText() && leading != null && leadingIcon == null
     Column(modifier.fillMaxWidth()) {
         Row(
             Modifier
@@ -801,10 +803,16 @@ private fun CatRowShell(
             if (leadingIcon != null) {
                 Icon(leadingIcon, null, tint = p.textPrimary, modifier = Modifier.size(22.dp))
                 Spacer(Modifier.width(16.dp))
-            } else if (leading != null) {
+            } else if (leading != null && !stackLeading) {
                 Box(Modifier.width(leadingWidth), contentAlignment = Alignment.CenterStart) { leading() }
             }
-            Column(Modifier.weight(1f), content = content)
+            Column(Modifier.weight(1f)) {
+                if (stackLeading) {
+                    leading!!()
+                    Spacer(Modifier.height(2.dp))
+                }
+                content()
+            }
             if (trailing != null) {
                 Spacer(Modifier.width(10.dp))
                 trailing()
@@ -817,7 +825,7 @@ private fun CatRowShell(
         if (divider) {
             val inset = 18.dp + indent + when {
                 leadingIcon != null -> 38.dp
-                leading != null -> leadingWidth
+                leading != null && !stackLeading -> leadingWidth
                 else -> 0.dp
             }
             Box(Modifier.fillMaxWidth().padding(start = inset).height(0.5.dp).background(p.separator))
@@ -844,6 +852,8 @@ private fun CatRow(
 ) {
     val styles = LocalAppTextStyles.current
     val p = LocalAppDesign.current.palette
+    // Large text: a trailing value joins the second line rather than leaving the title a sliver of width.
+    val stackTrailing = com.example.ui.design.appLargeText() && trailing == null && !trailingText.isNullOrBlank()
     CatRowShell(
         modifier = modifier,
         onClick = onClick,
@@ -852,8 +862,8 @@ private fun CatRow(
         leadingWidth = leadingWidth,
         trailing = when {
             trailing != null -> trailing
-            trailingText != null -> ({
-                Text(trailingText, style = styles.subhead, color = p.textSecondary, maxLines = 1)
+            trailingText != null && !stackTrailing -> ({
+                Text(trailingText, style = styles.subhead, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(1))
             })
             else -> null
         },
@@ -863,9 +873,10 @@ private fun CatRow(
         indent = indent
     ) {
         Text(title, style = styles.body, color = p.textPrimary)
-        if (subtitle != null) {
+        val second = if (stackTrailing) listOfNotNull(subtitle, trailingText).joinToString(" · ") else subtitle
+        if (second != null) {
             Spacer(Modifier.height(2.dp))
-            Text(subtitle, style = styles.footnote, color = p.textSecondary)
+            Text(second, style = styles.footnote, color = p.textSecondary)
         }
     }
 }
@@ -911,7 +922,7 @@ private fun CatSearchField(
                     placeholder,
                     style = styles.body,
                     color = p.textSecondary,
-                    maxLines = 1,
+                    maxLines = com.example.ui.design.appMaxLines(1),
                     overflow = TextOverflow.Ellipsis
                 )
             }
@@ -1328,7 +1339,7 @@ private fun NumberHitCard(
                 )
                 if (snippet != null) {
                     Spacer(Modifier.height(10.dp))
-                    Text(snippet, style = styles.callout, color = p.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                    Text(snippet, style = styles.callout, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(2), overflow = TextOverflow.Ellipsis)
                 }
             }
             Spacer(Modifier.width(12.dp))
@@ -1374,12 +1385,12 @@ private fun SearchResultRow(
             },
             style = styles.caption,
             color = p.textSecondary,
-            maxLines = 1,
+            maxLines = com.example.ui.design.appMaxLines(1),
             overflow = TextOverflow.Ellipsis
         )
         if (text != null) {
             Spacer(Modifier.height(4.dp))
-            Text(text, style = styles.callout, color = p.textSecondary, maxLines = 4, overflow = TextOverflow.Ellipsis)
+            Text(text, style = styles.callout, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(4), overflow = TextOverflow.Ellipsis)
         }
     }
 }
@@ -1951,9 +1962,9 @@ private fun CccBreadcrumb(
                 )
                 .padding(horizontal = design.spacing.gutter, vertical = 6.dp)
         ) {
-            Text(trail, style = styles.caption, color = p.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
+            Text(trail, style = styles.caption, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(2), overflow = TextOverflow.Ellipsis)
             if (title != null) {
-                Text(title, style = styles.footnote, color = p.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                Text(title, style = styles.footnote, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(2), overflow = TextOverflow.Ellipsis)
             }
         }
     }
@@ -2498,7 +2509,7 @@ private fun CccCompendiumPage(
                                         fontFeatureSettings = "tnum"
                                     ),
                                     color = p.textSecondary,
-                                    maxLines = 1
+                                    maxLines = com.example.ui.design.appMaxLines(1)
                                 )
                             },
                             leadingWidth = 64.dp,

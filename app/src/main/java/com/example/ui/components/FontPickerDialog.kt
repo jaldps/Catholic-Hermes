@@ -235,6 +235,33 @@ internal fun LumenSheetHeader(
     val actionWidth = maxOf(48.dp, with(density) {
         measurer.measure(AnnotatedString(doneLabel), actionStyle, softWrap = false).size.width.toDp()
     } + 24.dp)
+    val done: @Composable (Modifier) -> Unit = { modifier ->
+        Box(
+            modifier.heightIn(min = 48.dp).widthIn(min = 48.dp)
+                .clip(androidx.compose.foundation.shape.RoundedCornerShape(percent = 50))
+                .clickable(role = Role.Button, onClick = onDone)
+                .then(if (doneTag != null) Modifier.testTag(doneTag) else Modifier)
+                .padding(horizontal = 12.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            Text(doneLabel, style = actionStyle, color = palette.textPrimary, maxLines = com.example.ui.design.appMaxLines(1))
+        }
+    }
+    if (com.example.ui.design.appLargeText()) {
+        // Large text: two reserved gutters would leave the title a sliver of width, so the action takes its own row
+        // (end-aligned) and the title below it uses the full width.
+        Column(
+            Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter - 8.dp).padding(top = 6.dp, bottom = 10.dp)
+        ) {
+            done(Modifier.align(Alignment.End))
+            Text(
+                title, style = styles.headline, color = palette.textPrimary,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 8.dp).semantics { heading() }
+            )
+        }
+        return
+    }
     // The title is centred between two reserved gutters (the action's width
     // on each side, so it stays optically centred) and wraps instead of being
     // cut when it does not fit; it is never measured ahead of layout.
@@ -250,16 +277,7 @@ internal fun LumenSheetHeader(
             modifier = Modifier.align(Alignment.Center).fillMaxWidth().padding(horizontal = actionWidth + 8.dp)
                 .semantics { heading() }
         )
-        Box(
-            Modifier.align(Alignment.CenterEnd).heightIn(min = 48.dp).widthIn(min = 48.dp)
-                .clip(androidx.compose.foundation.shape.RoundedCornerShape(percent = 50))
-                .clickable(role = Role.Button, onClick = onDone)
-                .then(if (doneTag != null) Modifier.testTag(doneTag) else Modifier)
-                .padding(horizontal = 12.dp),
-            contentAlignment = Alignment.Center
-        ) {
-            Text(doneLabel, style = actionStyle, color = palette.textPrimary, maxLines = 1)
-        }
+        done(Modifier.align(Alignment.CenterEnd))
     }
 }
 

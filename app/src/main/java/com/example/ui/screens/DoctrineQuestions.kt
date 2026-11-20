@@ -231,7 +231,7 @@ internal fun QuestionsRoot(
                     language.tr("Pregunta del día", "Question of the day", "Pergunta do dia") + " · " + q.section.get(language),
                     style = styles.eyebrow,
                     color = p.textSecondary,
-                    maxLines = 1,
+                    maxLines = com.example.ui.design.appMaxLines(1),
                     overflow = TextOverflow.Ellipsis
                 )
                 Spacer(Modifier.height(8.dp))
@@ -241,7 +241,7 @@ internal fun QuestionsRoot(
                     firstSentence(splitParagraphs(q.answer.get(language)).firstOrNull().orEmpty()),
                     style = styles.callout,
                     color = p.textSecondary,
-                    maxLines = 2,
+                    maxLines = com.example.ui.design.appMaxLines(2),
                     overflow = TextOverflow.Ellipsis
                 )
                 Spacer(Modifier.height(16.dp))
@@ -273,7 +273,7 @@ internal fun QuestionsRoot(
                     language.tr("Pregunta ${q.number}", "Question ${q.number}", "Pergunta ${q.number}") + " · " + q.question.get(language),
                     style = styles.callout,
                     color = p.textSecondary,
-                    maxLines = 2,
+                    maxLines = com.example.ui.design.appMaxLines(2),
                     overflow = TextOverflow.Ellipsis
                 )
                 Spacer(Modifier.height(12.dp))
@@ -313,7 +313,7 @@ internal fun QuestionsRoot(
                                     "${(fraction * 100).toInt()}%",
                                     style = styles.caption.copy(fontSize = styles.caption.fontSize * 0.85f, fontFeatureSettings = "tnum"),
                                     color = p.textPrimary,
-                                    maxLines = 1
+                                    maxLines = com.example.ui.design.appMaxLines(1)
                                 )
                             }
                         },

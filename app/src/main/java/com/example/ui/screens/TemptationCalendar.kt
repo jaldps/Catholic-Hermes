@@ -176,7 +176,7 @@ internal fun TwoSegments(
                         style = styles.subhead.copy(fontWeight = if (isSel) FontWeight.SemiBold else FontWeight.Medium),
                         color = p.textPrimary,
                         textAlign = TextAlign.Center,
-                        maxLines = 1
+                        maxLines = com.example.ui.design.appMaxLines(1)
                     )
                 }
             }

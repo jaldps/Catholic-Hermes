@@ -155,7 +155,7 @@ internal fun MoralDoctrineRoot(
                             firstSentence(splitParagraphs(intro).firstOrNull().orEmpty()),
                             style = styles.callout,
                             color = design.palette.textSecondary,
-                            maxLines = 2,
+                            maxLines = com.example.ui.design.appMaxLines(2),
                             overflow = TextOverflow.Ellipsis
                         )
                     }

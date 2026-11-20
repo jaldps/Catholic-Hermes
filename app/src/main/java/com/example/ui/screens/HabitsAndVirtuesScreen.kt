@@ -848,7 +848,7 @@ private fun TodayRing(done: Int, total: Int, loaded: Boolean, lang: AppLanguage)
                 style = styles.subhead,
                 color = p.textSecondary,
                 textAlign = TextAlign.Center,
-                maxLines = 2,
+                maxLines = com.example.ui.design.appMaxLines(2),
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 40.dp)
             )
         }
@@ -964,9 +964,9 @@ private fun RuleRow(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(Modifier.weight(1f)) {
-                    Text(habit.title(lang), style = styles.body, color = p.textPrimary, maxLines = 2)
+                    Text(habit.title(lang), style = styles.body, color = p.textPrimary, maxLines = com.example.ui.design.appMaxLines(2))
                     Spacer(Modifier.height(1.dp))
-                    Text(habit.subtitle(lang), style = styles.footnote, color = p.textSecondary, maxLines = 2)
+                    Text(habit.subtitle(lang), style = styles.footnote, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(2))
                 }
                 if (onOpen != null) {
                     Spacer(Modifier.width(10.dp))
@@ -1168,9 +1168,9 @@ private fun StatTile(value: String, label: String, modifier: Modifier = Modifier
             .lumenGlass(design.shapes.listGroup)
             .padding(horizontal = 14.dp, vertical = 14.dp)
     ) {
-        Text(value, style = styles.title2.copy(fontFeatureSettings = "tnum"), color = p.textPrimary, maxLines = 1)
+        Text(value, style = styles.title2.copy(fontFeatureSettings = "tnum"), color = p.textPrimary, maxLines = com.example.ui.design.appMaxLines(1))
         Spacer(Modifier.height(2.dp))
-        Text(label, style = styles.caption, color = p.textSecondary, maxLines = 1)
+        Text(label, style = styles.caption, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(1))
     }
 }
 
@@ -1188,7 +1188,7 @@ private fun PracticeMonthRow(title: String, days: Int, elapsed: Int, lang: AppLa
                 .semantics(mergeDescendants = true) { }
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(title, style = styles.body, color = p.textPrimary, modifier = Modifier.weight(1f), maxLines = 2)
+                Text(title, style = styles.body, color = p.textPrimary, modifier = Modifier.weight(1f), maxLines = com.example.ui.design.appMaxLines(2))
                 Spacer(Modifier.width(10.dp))
                 Text(
                     lang.pick3("$days de $elapsed días", "$days of $elapsed days", "$days de $elapsed dias"),

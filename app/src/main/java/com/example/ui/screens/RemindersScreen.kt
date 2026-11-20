@@ -641,7 +641,7 @@ private fun ReminderRow(
                         text = reminder.title(languageCode),
                         style = styles.subhead,
                         color = p.textSecondary,
-                        maxLines = 2,
+                        maxLines = com.example.ui.design.appMaxLines(2),
                         modifier = Modifier.weight(1f, fill = false)
                     )
                     if (inCalendar) {
@@ -687,20 +687,9 @@ private fun PermissionRow(
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
-    Row(
-        Modifier.fillMaxWidth().padding(start = 18.dp, end = 14.dp, top = 14.dp, bottom = 14.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Icon(icon, null, tint = p.textPrimary, modifier = Modifier.size(22.dp))
-        Spacer(Modifier.width(16.dp))
-        Column(Modifier.weight(1f)) {
-            Text(title, style = styles.headline, color = p.textPrimary)
-            Spacer(Modifier.height(2.dp))
-            Text(body, style = styles.footnote, color = p.textSecondary)
-        }
-        Spacer(Modifier.width(10.dp))
+    val actionButton: @Composable (Modifier) -> Unit = { modifier ->
         Box(
-            Modifier
+            modifier
                 .heightIn(min = 44.dp)
                 .lumenPress(onAction, 0.95f)
                 .semantics { contentDescription = actionDescription }
@@ -715,6 +704,25 @@ private fun PermissionRow(
                     .background(p.action, RoundedCornerShape(percent = 50))
                     .padding(horizontal = 14.dp, vertical = 7.dp)
             )
+        }
+    }
+    val stacked = com.example.ui.design.appLargeText()
+    Row(
+        Modifier.fillMaxWidth().padding(start = 18.dp, end = 14.dp, top = 14.dp, bottom = 14.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(icon, null, tint = p.textPrimary, modifier = Modifier.size(22.dp))
+        Spacer(Modifier.width(16.dp))
+        Column(Modifier.weight(1f)) {
+            Text(title, style = styles.headline, color = p.textPrimary)
+            Spacer(Modifier.height(2.dp))
+            Text(body, style = styles.footnote, color = p.textSecondary)
+            // Large text: the action drops under the words instead of squeezing them into a narrow column.
+            if (stacked) actionButton(Modifier.padding(top = 6.dp))
+        }
+        if (!stacked) {
+            Spacer(Modifier.width(10.dp))
+            actionButton(Modifier)
         }
     }
 }
@@ -802,7 +810,7 @@ internal fun NotificationPreview(title: String, body: String, time: String) {
         Spacer(Modifier.width(12.dp))
         Column(Modifier.weight(1f)) {
             Row {
-                Text(title, style = styles.subhead.copy(fontWeight = FontWeight.SemiBold), color = p.textPrimary, modifier = Modifier.weight(1f), maxLines = 1)
+                Text(title, style = styles.subhead.copy(fontWeight = FontWeight.SemiBold), color = p.textPrimary, modifier = Modifier.weight(1f), maxLines = com.example.ui.design.appMaxLines(1))
                 Text(time, style = styles.caption, color = p.textSecondary)
             }
             Spacer(Modifier.height(2.dp))

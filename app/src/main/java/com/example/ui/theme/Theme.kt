@@ -14,6 +14,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.unit.dp
 
+/**
+ * The user's own text size (Settings → Apariencia), 1 = 100 %. The text styles already carry it; layouts read it
+ * through [com.example.ui.design.appLargeText] to give long labels room instead of clipping them.
+ */
+val LocalAppFontScale = staticCompositionLocalOf { 1f }
+
 val LocalAppTextStyles = staticCompositionLocalOf {
     AppTypographyFactory.build(DesignLanguage.APPLE, serifPreferred = true, scale = 1f).second
 }
@@ -104,7 +110,8 @@ fun SanctaFidesTheme(
 
     CompositionLocalProvider(
         LocalAppDesign provides design,
-        LocalAppTextStyles provides textStyles
+        LocalAppTextStyles provides textStyles,
+        LocalAppFontScale provides fontScale
     ) {
         MaterialTheme(
             colorScheme = colorScheme,

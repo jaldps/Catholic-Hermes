@@ -799,16 +799,8 @@ private fun BookDirectory(
                 currentLanguage.pick("Deuterocanónicos", "Deuterocanon", "Deuterocanônicos")
             )
             val selectedCanon = canonOptions.getOrElse(selectedFilter) { canonOptions.first() }
-            Row(
-                Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).padding(top = 28.dp, bottom = 10.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    currentLanguage.pick("Libros", "Books", "Livros"),
-                    style = styles.title3,
-                    color = p.textPrimary,
-                    modifier = Modifier.weight(1f).semantics { heading() }
-                )
+            val booksTitle = currentLanguage.pick("Libros", "Books", "Livros")
+            val canonChip: @Composable () -> Unit = {
                 AppMenuChip(
                     label = selectedCanon,
                     items = canonOptions.mapIndexed { index, label ->
@@ -825,6 +817,25 @@ private fun BookDirectory(
                     },
                     tag = "bible_canon_filter"
                 )
+            }
+            if (com.example.ui.design.appLargeText()) {
+                // Large text: the filter drops under the heading instead of squeezing «Libros» into a sliver.
+                Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).padding(top = 28.dp, bottom = 10.dp)) {
+                    Text(booksTitle, style = styles.title3, color = p.textPrimary, modifier = Modifier.semantics { heading() })
+                    Spacer(Modifier.height(8.dp))
+                    canonChip()
+                }
+            } else Row(
+                Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).padding(top = 28.dp, bottom = 10.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    booksTitle,
+                    style = styles.title3,
+                    color = p.textPrimary,
+                    modifier = Modifier.weight(1f).semantics { heading() }
+                )
+                canonChip()
             }
         }
 
@@ -986,7 +997,7 @@ private fun VerseResultRow(
             Column(Modifier.weight(1f)) {
                 Text(citation, style = styles.body, color = p.textPrimary)
                 Spacer(Modifier.height(3.dp))
-                Text(emphasised, style = styles.subhead, color = p.textSecondary, maxLines = 3, overflow = TextOverflow.Ellipsis)
+                Text(emphasised, style = styles.subhead, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(3), overflow = TextOverflow.Ellipsis)
             }
             Spacer(Modifier.width(10.dp))
             AppChevron()
@@ -1379,9 +1390,11 @@ private fun ChapterReader(
                 Row(Modifier.padding(horizontal = ReadingInset), verticalAlignment = Alignment.CenterVertically) {
                     Text(
                         edition, style = styles.footnote, color = p.textSecondary,
-                        modifier = Modifier.heightIn(min = 48.dp).wrapContentHeight(Alignment.CenterVertically)
+                        // The touch target is the whole 48 dp band: click and tag come before the sizing that centres the text.
+                        modifier = Modifier
                             .clickable(role = Role.Button, onClickLabel = currentLanguage.pick("Elegir Biblia", "Choose a Bible", "Escolher Bíblia"), onClick = openChooser)
                             .testTag("bible_active_edition")
+                            .heightIn(min = 48.dp).wrapContentHeight(Alignment.CenterVertically)
                     )
                     Icon(Icons.Outlined.KeyboardArrowDown, contentDescription = null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
                 }

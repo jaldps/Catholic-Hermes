@@ -156,7 +156,7 @@ fun InAppBrowserDialog(
                             },
                             style = styles.subhead.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold),
                             color = p.textPrimary,
-                            maxLines = 1,
+                            maxLines = com.example.ui.design.appMaxLines(1),
                             overflow = TextOverflow.Ellipsis,
                             textAlign = TextAlign.Center,
                             modifier = Modifier.semantics { heading() }
@@ -176,7 +176,7 @@ fun InAppBrowserDialog(
                                     host,
                                     style = styles.footnote,
                                     color = p.textSecondary,
-                                    maxLines = 1,
+                                    maxLines = com.example.ui.design.appMaxLines(1),
                                     overflow = TextOverflow.Ellipsis
                                 )
                             }

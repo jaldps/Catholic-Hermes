@@ -901,7 +901,7 @@ private fun SeasonPrayerCard(
                         listOfNotNull(season, week).joinToString(" · "),
                         style = styles.footnote,
                         color = p.textSecondary,
-                        maxLines = 1,
+                        maxLines = com.example.ui.design.appMaxLines(1),
                         overflow = TextOverflow.Ellipsis
                     )
                 }
@@ -912,7 +912,7 @@ private fun SeasonPrayerCard(
                     plainPrayerText(prayer.leaderText.get(currentLanguage)),
                     style = styles.callout,
                     color = p.textSecondary,
-                    maxLines = 2,
+                    maxLines = com.example.ui.design.appMaxLines(2),
                     overflow = TextOverflow.Ellipsis
                 )
             }
@@ -953,16 +953,18 @@ private fun DotRow(
         ) {
             Box(Modifier.width(22.dp), contentAlignment = Alignment.Center) { AppSeasonDot(dot, size = 10.dp) }
             Spacer(Modifier.width(16.dp))
+            val stacked = com.example.ui.design.appLargeText() && !trailingText.isNullOrBlank()
             Column(Modifier.weight(1f)) {
                 Text(title, style = styles.body, color = p.textPrimary)
-                if (subtitle != null) {
+                val second = if (stacked) listOfNotNull(subtitle, trailingText).joinToString(" · ") else subtitle
+                if (second != null) {
                     Spacer(Modifier.height(2.dp))
-                    Text(subtitle, style = styles.footnote, color = p.textSecondary)
+                    Text(second, style = styles.footnote, color = p.textSecondary)
                 }
             }
-            if (trailingText != null) {
+            if (trailingText != null && !stacked) {
                 Spacer(Modifier.width(10.dp))
-                Text(trailingText, style = styles.subhead, color = p.textSecondary, maxLines = 1)
+                Text(trailingText, style = styles.subhead, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(1))
             }
             Spacer(Modifier.width(10.dp))
             com.example.ui.design.AppChevron()
@@ -1957,6 +1959,7 @@ private fun NovenaIndexView(
     val filtered = searchResult.orEmpty()
 
     val filtering = searchQuery.isNotBlank() || selectedTag != null || kind != NovenaKind.ALL || origin != NovenaOrigin.ALL
+    val perRow = novenaCardsPerRow()
 
     LazyColumn(Modifier.fillMaxSize().testTag("novena_index"), contentPadding = PaddingValues(bottom = bottomPadding)) {
         header()
@@ -2112,13 +2115,15 @@ private fun NovenaIndexView(
                 )
             }
         } else {
-            // Equal-size cards, two per row; each row is one lazy item.
+            // Equal-size cards, two per row (one with large text or on a very narrow phone, where a half-width card
+            // would break its title mid-word); each row is one lazy item.
             items(
-                items = filtered.chunked(2),
-                key = { pair -> "row_" + pair.first().id + "_" + pair.last().id }
+                items = filtered.chunked(perRow),
+                key = { group -> "row_" + group.first().id + "_" + group.last().id }
             ) { pair ->
                 NovenaCardRow(
                     novenas = pair,
+                    perRow = perRow,
                     currentLanguage = currentLanguage,
                     daysPrayed = daysPrayed,
                     onOpen = onOpenNovena,
@@ -2141,9 +2146,15 @@ private fun NovenaGrid(
         modifier.fillMaxWidth().padding(horizontal = LocalAppDesign.current.spacing.gutter),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        novenas.chunked(2).forEach { NovenaCardRow(it, currentLanguage, daysPrayed, onOpen) }
+        val perRow = novenaCardsPerRow()
+        novenas.chunked(perRow).forEach { NovenaCardRow(it, currentLanguage, daysPrayed, onOpen, perRow = perRow) }
     }
 }
+
+/** Two cards per row, but one when large text or a very narrow phone would leave each title a sliver of width. */
+@Composable
+private fun novenaCardsPerRow(): Int =
+    if (com.example.ui.design.appLargeText() || LocalConfiguration.current.screenWidthDp < 340) 1 else 2
 
 /** Two equal-height cards per row; with large text both grow to the taller one. */
 @Composable
@@ -2152,7 +2163,8 @@ private fun NovenaCardRow(
     currentLanguage: AppLanguage,
     daysPrayed: Map<String, Set<Int>>,
     onOpen: (Novena) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    perRow: Int = 2
 ) {
     Row(
         modifier.fillMaxWidth().height(IntrinsicSize.Max),
@@ -2164,10 +2176,11 @@ private fun NovenaCardRow(
                 currentLanguage = currentLanguage,
                 prayed = daysPrayed[novena.id].orEmpty(),
                 onOpen = { onOpen(novena) },
+                aspectRatio = if (perRow == 1) 1.5f else 0.8f,
                 modifier = Modifier.weight(1f).fillMaxHeight()
             )
         }
-        if (novenas.size == 1) Spacer(Modifier.weight(1f))
+        if (perRow > 1 && novenas.size == 1) Spacer(Modifier.weight(1f))
     }
 }
 
@@ -2212,7 +2225,8 @@ private fun NovenaCard(
     currentLanguage: AppLanguage,
     prayed: Set<Int>,
     onOpen: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    aspectRatio: Float = 0.8f
 ) {
     val split = splitNovenaTitle(novena.title.get(currentLanguage), currentLanguage)
     val finished = isNovenaFinished(novena, prayed)
@@ -2226,7 +2240,7 @@ private fun NovenaCard(
         fallbackAsset = rememberFirstAsset(novenaFallbackArt(novena), ArtLily),
         progress = if (prayed.isNotEmpty() && !finished) prayed.size.toFloat() / novena.days.size.coerceAtLeast(1) else null,
         done = finished,
-        aspectRatio = 0.8f,
+        aspectRatio = aspectRatio,
         onClick = onOpen,
         tag = "novena_card_${novena.id}",
         description = listOfNotNull(novena.title.get(currentLanguage), label, origin).joinToString(", "),
@@ -2297,14 +2311,14 @@ private fun RemoteArtCard(
         Box(Modifier.matchParentSize().border(1.dp, Color.White.copy(alpha = if (design.isDark) 0.08f else 0.3f), ImageCardShape))
         Column(Modifier.align(Alignment.BottomStart).padding(14.dp)) {
             if (eyebrow != null) {
-                Text(eyebrow, style = styles.caption, color = Color.White.copy(alpha = 0.86f), maxLines = 1, overflow = TextOverflow.Ellipsis)
+                Text(eyebrow, style = styles.caption, color = Color.White.copy(alpha = 0.86f), maxLines = com.example.ui.design.appMaxLines(1), overflow = TextOverflow.Ellipsis)
                 Spacer(Modifier.height(1.dp))
             }
             Text(
                 title,
                 style = styles.headline.copy(fontWeight = FontWeight.Medium),
                 color = Color.White,
-                maxLines = 3,
+                maxLines = com.example.ui.design.appMaxLines(3),
                 overflow = TextOverflow.Ellipsis
             )
             if (meta != null || badge != null) {
@@ -2323,7 +2337,7 @@ private fun RemoteArtCard(
                             ) { Icon(Icons.Filled.Check, null, tint = Color.White, modifier = Modifier.size(11.dp)) }
                             Spacer(Modifier.width(6.dp))
                         }
-                        Text(meta, style = styles.caption, color = Color.White.copy(alpha = 0.9f), maxLines = 1)
+                        Text(meta, style = styles.caption, color = Color.White.copy(alpha = 0.9f), maxLines = com.example.ui.design.appMaxLines(1))
                     }
                     if (badge != null) NovenaOriginBadge(badge, badgeTag)
                 }
@@ -2348,7 +2362,7 @@ private fun NovenaOriginBadge(label: String, tag: String?) {
         label,
         style = styles.caption.copy(fontWeight = FontWeight.Medium),
         color = Color.White,
-        maxLines = 2,
+        maxLines = com.example.ui.design.appMaxLines(2),
         modifier = Modifier
             .then(if (tag != null) Modifier.testTag(tag) else Modifier)
             .clip(shape)

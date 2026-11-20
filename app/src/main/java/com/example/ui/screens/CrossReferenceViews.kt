@@ -478,7 +478,7 @@ private fun SheetAction(icon: androidx.compose.ui.graphics.vector.ImageVector, l
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.width(76.dp)) {
         AppGlassIconButton(icon = icon, contentDescription = label, onClick = onClick, tag = tag)
         Spacer(Modifier.height(4.dp))
-        Text(label, style = LocalAppTextStyles.current.caption, color = p.textSecondary, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        Text(label, style = LocalAppTextStyles.current.caption, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(1), overflow = TextOverflow.Ellipsis)
     }
 }
 

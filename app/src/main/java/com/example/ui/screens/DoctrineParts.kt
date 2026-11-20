@@ -279,9 +279,20 @@ internal fun EmblemPlate(
         } else {
             val mono = abbreviation?.trim()?.takeIf { it.isNotEmpty() && it != "—" && it != "-" }
             if (mono != null) {
+                // The monogram is part of the plate's picture (the order's name is written in full beside it): it steps
+                // down until it fits the plate, so a long abbreviation such as «O.F.M.Conv.» is neither cut nor wrapped.
+                val density = androidx.compose.ui.platform.LocalDensity.current
+                val measurer = androidx.compose.ui.text.rememberTextMeasurer()
+                val base = LocalAppTextStyles.current.headline
+                val fontSize = remember(mono, size, base) {
+                    val available = with(density) { (size * 0.72f).toPx() }
+                    var sp = size.value * if (mono.length > 4) 0.2f else 0.28f
+                    while (sp > 5f && measurer.measure(mono, base.copy(fontSize = sp.sp), softWrap = false, maxLines = 1).size.width > available) sp *= 0.92f
+                    sp
+                }
                 Text(
                     mono,
-                    style = LocalAppTextStyles.current.headline.copy(fontSize = (size.value * if (mono.length > 4) 0.2f else 0.28f).sp),
+                    style = base.copy(fontSize = fontSize.sp),
                     color = p.textPrimary,
                     maxLines = 1,
                     softWrap = false,
@@ -434,7 +445,7 @@ internal fun NumeralCircle(text: String, modifier: Modifier = Modifier, size: Dp
             text,
             style = styles.footnote.copy(fontFeatureSettings = "tnum"),
             color = design.palette.textPrimary,
-            maxLines = 1
+            maxLines = com.example.ui.design.appMaxLines(1)
         )
     }
 }
@@ -479,20 +490,25 @@ internal fun LeadRow(
                 Box(Modifier.width(leadingWidth), contentAlignment = Alignment.Center) { leading() }
                 Spacer(Modifier.width(14.dp))
             }
+            // Large text: a trailing value would leave the title a sliver of width, so it joins the second line, and nothing is capped.
+            val large = com.example.ui.design.appLargeText()
+            val stacked = large && !trailingText.isNullOrBlank()
             Column(Modifier.weight(1f)) {
-                Text(title, style = styles.body, color = if (selected) p.accent else p.textPrimary, maxLines = maxTitleLines, overflow = TextOverflow.Ellipsis)
-                if (subtitle != null) {
+                Text(title, style = styles.body, color = if (selected) p.accent else p.textPrimary,
+                    maxLines = if (large) Int.MAX_VALUE else maxTitleLines, overflow = TextOverflow.Ellipsis)
+                val second = if (stacked) listOfNotNull(subtitle, trailingText).joinToString(" · ") else subtitle
+                if (second != null) {
                     Spacer(Modifier.height(2.dp))
-                    Text(subtitle, style = styles.footnote, color = p.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                    Text(second, style = styles.footnote, color = p.textSecondary, maxLines = if (large) Int.MAX_VALUE else 2, overflow = TextOverflow.Ellipsis)
                 }
             }
-            if (trailingText != null) {
+            if (trailingText != null && !stacked) {
                 Spacer(Modifier.width(10.dp))
                 Text(
                     trailingText,
                     style = styles.footnote.copy(fontFeatureSettings = "tnum"),
                     color = p.textSecondary,
-                    maxLines = 1
+                    maxLines = com.example.ui.design.appMaxLines(1)
                 )
             }
             if (onClick != null) {
@@ -596,7 +612,7 @@ internal fun RefChip(
             label,
             style = styles.subhead.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Medium),
             color = if (selected) p.onAction else p.textPrimary,
-            maxLines = 1
+            maxLines = com.example.ui.design.appMaxLines(1)
         )
     }
 }
@@ -723,7 +739,7 @@ internal fun SequenceFooter(
                     Column(Modifier.weight(1f)) {
                         Text(language.tr("Siguiente", "Next", "Seguinte"), style = styles.caption, color = p.textSecondary)
                         Spacer(Modifier.height(2.dp))
-                        Text(nextTitle, style = styles.headline, color = p.textPrimary, maxLines = 3, overflow = TextOverflow.Ellipsis)
+                        Text(nextTitle, style = styles.headline, color = p.textPrimary, maxLines = com.example.ui.design.appMaxLines(3), overflow = TextOverflow.Ellipsis)
                     }
                     Spacer(Modifier.width(12.dp))
                     AppChevron()
@@ -747,7 +763,7 @@ internal fun SequenceFooter(
                     language.tr("Anterior", "Previous", "Anterior") + " · " + prevTitle,
                     style = styles.callout,
                     color = p.textSecondary,
-                    maxLines = 1,
+                    maxLines = com.example.ui.design.appMaxLines(1),
                     overflow = TextOverflow.Ellipsis
                 )
             }
