@@ -480,7 +480,7 @@ fun HomeScreen(
                             text = gospelPreview,
                             style = styles.reading,
                             color = palette.textPrimary,
-                            maxLines = 3,
+                            maxLines = com.example.ui.design.appMaxLines(3),
                             modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                         )
                     } else if (!homilyFirstLine.isNullOrBlank()) {
@@ -510,7 +510,7 @@ fun HomeScreen(
                                     .joinToString(" · "),
                                 style = styles.callout,
                                 color = palette.textPrimary,
-                                maxLines = 1,
+                                maxLines = com.example.ui.design.appMaxLines(1),
                                 overflow = TextOverflow.Ellipsis,
                                 modifier = Modifier.weight(1f)
                             )
@@ -640,7 +640,7 @@ fun HomeScreen(
                         text = verseText,
                         style = styles.reading,
                         color = palette.textPrimary,
-                        maxLines = 4,
+                        maxLines = com.example.ui.design.appMaxLines(4),
                         modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                     )
                     val challenge = verseOfTheDay.spiritualChallenge.get(currentLanguage)
@@ -650,7 +650,7 @@ fun HomeScreen(
                             text = hintClause(challenge),
                             style = styles.footnote,
                             color = palette.textSecondary,
-                            maxLines = 1,
+                            maxLines = com.example.ui.design.appMaxLines(1),
                             overflow = TextOverflow.Clip
                         )
                     }
@@ -731,25 +731,25 @@ fun HomeScreen(
                                 heading.title,
                                 style = styles.title2,
                                 color = palette.textPrimary,
-                                maxLines = 2,
+                                maxLines = com.example.ui.design.appMaxLines(2),
                                 overflow = TextOverflow.Ellipsis
                             )
                             if (saintMeta != null) {
                                 Spacer(Modifier.height(2.dp))
-                                Text(saintMeta, style = styles.footnote, color = palette.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                                Text(saintMeta, style = styles.footnote, color = palette.textSecondary, maxLines = com.example.ui.design.appMaxLines(2), overflow = TextOverflow.Ellipsis)
                             }
                         }
                     }
                     Column(Modifier.padding(start = 20.dp, end = 20.dp, top = 6.dp, bottom = 20.dp)) {
                         if (showTitle) {
-                            Text(saintTitle, style = styles.subhead, color = palette.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                            Text(saintTitle, style = styles.subhead, color = palette.textSecondary, maxLines = com.example.ui.design.appMaxLines(2), overflow = TextOverflow.Ellipsis)
                             Spacer(Modifier.height(10.dp))
                         }
                         ExcerptText(
                             text = saintBiography,
                             style = styles.callout,
                             color = palette.textPrimary,
-                            maxLines = 5,
+                            maxLines = com.example.ui.design.appMaxLines(5),
                             modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                         )
                         if (showQuote) {
@@ -773,18 +773,23 @@ fun HomeScreen(
                     text = dailyAnswerFirstLine,
                     style = styles.callout,
                     color = palette.textSecondary,
-                    maxLines = 3,
+                    maxLines = com.example.ui.design.appMaxLines(3),
                     modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                 )
                 Spacer(Modifier.height(18.dp))
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                // FlowRow: with large text the share button wraps under the capsule instead of being squeezed below 44 dp.
+                @OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
+                androidx.compose.foundation.layout.FlowRow(
+                    Modifier.fillMaxWidth(),
+                    horizontalArrangement = androidx.compose.foundation.layout.Arrangement.SpaceBetween,
+                    verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(4.dp)
+                ) {
                     AppPrimaryCapsule(
                         label = strings("Leer respuesta", "Read answer", "Ler resposta"),
                         onClick = { onOpenQuestions(dailyQuestionIndex) },
                         fillWidth = false,
                         tag = "home_daily_question_read"
                     )
-                    Spacer(Modifier.weight(1f))
                     AppGlassIconButton(
                         icon = Icons.Outlined.IosShare,
                         contentDescription = strings("Compartir", "Share", "Partilhar"),
@@ -826,6 +831,14 @@ fun HomeScreen(
 private fun CardHeader(title: String, reference: String) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
+    if (com.example.ui.design.appLargeText() && reference.isNotBlank()) {
+        // Large text: title and reference would share a line with a sliver each, so the reference goes under the title.
+        Column(Modifier.fillMaxWidth()) {
+            Text(title, style = styles.headline, color = design.palette.textPrimary, modifier = Modifier.semantics { heading() })
+            Text(reference, style = styles.footnote, color = design.palette.textSecondary)
+        }
+        return
+    }
     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
         Text(
             title,
@@ -839,7 +852,7 @@ private fun CardHeader(title: String, reference: String) {
                 reference,
                 style = styles.footnote,
                 color = design.palette.textSecondary,
-                maxLines = 1,
+                maxLines = com.example.ui.design.appMaxLines(1),
                 overflow = TextOverflow.Ellipsis,
                 textAlign = TextAlign.End,
                 modifier = Modifier.weight(1f).padding(bottom = 1.dp)

@@ -89,7 +89,7 @@ fun InlineBackLink(
                     text = label,
                     style = styles.subhead,
                     color = p.textPrimary,
-                    maxLines = 1
+                    maxLines = com.example.ui.design.appMaxLines(1)
                 )
             }
         }

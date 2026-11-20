@@ -361,7 +361,20 @@ private fun AppHeaderFrame(
     val contentTop = if (edgeToEdge) 0.dp else (LocalScreenFrame.current?.insets?.calculateTopPadding() ?: 0.dp)
     val hasArt = assetPath != null || imageUrl != null
     val largeText = styles.eyebrow.fontSize.value * androidx.compose.ui.platform.LocalDensity.current.fontScale >= 20f
-    val titleStyle = if (root) styles.largeTitle else styles.title1
+    // A section root takes `largeTitle`; when one word of it is wider than the page at this text size («Recordatorios» at 130 %),
+    // it takes the next rank down (`title1`, still scaled) rather than being broken letter by letter.
+    val measurer = androidx.compose.ui.text.rememberTextMeasurer()
+    val titleDensity = androidx.compose.ui.platform.LocalDensity.current
+    val pageWidthDp = androidx.compose.ui.platform.LocalConfiguration.current.screenWidthDp
+    val titleStyle = if (!root) styles.title1 else {
+        val gutter = design.spacing.gutter
+        val widestWord = title.split(' ', '\n', '\u00A0').maxByOrNull { it.length }.orEmpty()
+        val fits = remember(widestWord, styles.largeTitle, pageWidthDp) {
+            widestWord.isEmpty() || measurer.measure(widestWord, styles.largeTitle, softWrap = false, maxLines = 1).size.width <=
+                with(titleDensity) { (pageWidthDp.dp - gutter * 2 - 4.dp).toPx() }
+        }
+        if (fits) styles.largeTitle else styles.title1
+    }
 
     val metaLine: @Composable (Modifier) -> Unit = { m ->
         if (meta != null) Row(m, verticalAlignment = Alignment.CenterVertically) {
@@ -384,7 +397,7 @@ private fun AppHeaderFrame(
                 Text(
                     eyebrow, style = styles.eyebrow,
                     color = if (design.isDark && hasArt && !design.isSanctuary) p.textPrimary.copy(alpha = 0.84f) else p.textSecondary,
-                    maxLines = 2, overflow = TextOverflow.Ellipsis
+                    maxLines = appMaxLines(2), overflow = TextOverflow.Ellipsis
                 )
                 Spacer(Modifier.height(4.dp))
             }
@@ -595,7 +608,7 @@ fun AppSeasonCard(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     AppSeasonDot(seasonColor)
                     Spacer(Modifier.width(10.dp))
-                    Text(season, style = styles.headline, color = p.textPrimary, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text(season, style = styles.headline, color = p.textPrimary, maxLines = appMaxLines(1), overflow = TextOverflow.Ellipsis)
                 }
                 if (detail != null) {
                     Spacer(Modifier.height(2.dp))
@@ -603,7 +616,7 @@ fun AppSeasonCard(
                         detail,
                         style = styles.footnote,
                         color = p.textSecondary,
-                        maxLines = 1,
+                        maxLines = appMaxLines(1),
                         overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.padding(start = 18.dp)
                     )
@@ -720,7 +733,7 @@ fun AppCategoryTile(
                 label,
                 style = styles.caption,
                 color = if (selected) p.onAction else p.textPrimary,
-                maxLines = 2,
+                maxLines = appMaxLines(2),
                 overflow = TextOverflow.Ellipsis,
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center
             )
@@ -741,11 +754,13 @@ fun <T> AppGrid(
     cell: @Composable (item: T, modifier: Modifier) -> Unit
 ) {
     val gutter = LocalAppDesign.current.spacing.gutter
+    // Large text: three narrow tiles would break their captions letter by letter, so the grid keeps two across.
+    val cols = if (appLargeText() && columns > 2) 2 else columns
     Column(modifier.fillMaxWidth().padding(horizontal = gutter), verticalArrangement = Arrangement.spacedBy(spacing)) {
-        items.chunked(columns).forEach { rowItems ->
+        items.chunked(cols).forEach { rowItems ->
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(spacing)) {
                 rowItems.forEach { item -> cell(item, Modifier.weight(1f)) }
-                repeat(columns - rowItems.size) { Spacer(Modifier.weight(1f)) }
+                repeat(cols - rowItems.size) { Spacer(Modifier.weight(1f)) }
             }
         }
     }
@@ -777,7 +792,12 @@ fun AppImageCard(
     val meta2 = rememberHeroMeta(assetPath)
     Box(
         modifier
-            .aspectRatio(aspectRatio)
+            // The art ratio is a minimum: with large text the card grows instead of cutting its title.
+            .layout { measurable, c ->
+                val minHeight = if (c.hasBoundedWidth) Math.round(c.maxWidth / aspectRatio).coerceAtMost(c.maxHeight) else 0
+                val placeable = measurable.measure(c.copy(minHeight = maxOf(c.minHeight, minHeight)))
+                layout(placeable.width, maxOf(placeable.height, minHeight)) { placeable.place(0, 0) }
+            }
             .lumenPress(onClick, 0.97f)
             .softShadow(shape, p.shadow.copy(alpha = if (design.isDark) 0.45f else 0.16f), 26.dp, 10.dp)
             .clip(shape)
@@ -793,18 +813,18 @@ fun AppImageCard(
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 alignment = Alignment.TopCenter,
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.matchParentSize()
             )
             fallback != null -> Image(
                 bitmap = fallback,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 alignment = meta2.alignment,
-                modifier = Modifier.fillMaxSize()
+                modifier = Modifier.matchParentSize()
             )
         }
         Box(
-            Modifier.fillMaxSize().background(
+            Modifier.matchParentSize().background(
                 Brush.verticalGradient(
                     0f to Color.Transparent,
                     0.42f to Color.Transparent,
@@ -812,25 +832,25 @@ fun AppImageCard(
                 )
             )
         )
-        Box(Modifier.fillMaxSize().border(1.dp, Brush.linearGradient(listOf(
+        Box(Modifier.matchParentSize().border(1.dp, Brush.linearGradient(listOf(
             Color.White.copy(alpha = if (design.isDark) 0.30f else 0.70f),
             Color.White.copy(alpha = if (design.isDark) 0.04f else 0.12f),
             Color.White.copy(alpha = if (design.isDark) 0.12f else 0.32f))), shape))
         Column(Modifier.align(Alignment.BottomStart).padding(14.dp)) {
             if (eyebrow != null) {
-                Text(eyebrow, style = styles.caption, color = Color.White.copy(alpha = 0.85f), maxLines = 1)
+                Text(eyebrow, style = styles.caption, color = Color.White.copy(alpha = 0.85f), maxLines = appMaxLines(1))
                 Spacer(Modifier.height(2.dp))
             }
             Text(
                 title,
                 style = styles.headline.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Medium),
                 color = Color.White,
-                maxLines = 3,
+                maxLines = appMaxLines(3),
                 overflow = TextOverflow.Ellipsis
             )
             if (meta != null) {
                 Spacer(Modifier.height(4.dp))
-                Text(meta, style = styles.caption, color = Color.White.copy(alpha = 0.85f), maxLines = 1)
+                Text(meta, style = styles.caption, color = Color.White.copy(alpha = 0.85f), maxLines = appMaxLines(1))
             }
             if (progress != null) {
                 Spacer(Modifier.height(8.dp))
@@ -890,7 +910,7 @@ fun AppKitChip(label: String, selected: Boolean, onClick: () -> Unit, modifier: 
             label,
             style = styles.subhead.copy(fontWeight = if (selected) androidx.compose.ui.text.font.FontWeight.SemiBold else androidx.compose.ui.text.font.FontWeight.Medium),
             color = ink,
-            maxLines = 1
+            maxLines = appMaxLines(1)
         )
     }
 }
@@ -1167,7 +1187,7 @@ fun AppCheckRow(
                 }
                 if (trailingText != null) {
                     Spacer(Modifier.width(8.dp))
-                    Text(trailingText, style = styles.footnote, color = p.textSecondary, maxLines = 1)
+                    Text(trailingText, style = styles.footnote, color = p.textSecondary, maxLines = appMaxLines(1))
                 }
                 if (onOpen != null) {
                     Spacer(Modifier.width(8.dp))

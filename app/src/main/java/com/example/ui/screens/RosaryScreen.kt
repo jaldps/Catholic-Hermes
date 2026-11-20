@@ -1615,17 +1615,22 @@ private fun StageLabel(
     Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
         if (isRosary) {
             val shape = if (design.isSanctuary) RoundedCornerShape(8.dp) else RoundedCornerShape(percent = 50)
-            Row(
+            // The touch target is the full 48 dp band (press and tag on the outer box); the pill inside keeps its 40 dp look.
+            Box(
                 Modifier
                     .heightIn(min = 48.dp)
-                    .padding(vertical = 4.dp)
                     .lumenPress(onPickMysteries, 0.96f)
+                    .testTag("rosary_mystery_picker")
+                    .semantics { contentDescription = lang.pick("Misterios: $setName", "Mysteries: $setName", "Mistérios: $setName") },
+                contentAlignment = Alignment.CenterStart
+            ) {
+            Row(
+                Modifier
+                    .padding(vertical = 4.dp)
                     .then(if (design.isSanctuary) Modifier.drawBehind {
                         drawLine(p.separator, androidx.compose.ui.geometry.Offset(0f, size.height),
                             androidx.compose.ui.geometry.Offset(size.width, size.height), 1.dp.toPx())
                     } else Modifier.lumenGlass(shape, strong = true))
-                    .testTag("rosary_mystery_picker")
-                    .semantics { contentDescription = lang.pick("Misterios: $setName", "Mysteries: $setName", "Mistérios: $setName") }
                     .padding(start = 14.dp, end = 10.dp, top = 6.dp, bottom = 6.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -1633,6 +1638,7 @@ private fun StageLabel(
                 Text(displayedSet, style = (if (compactMetadata) styles.caption else styles.subhead).copy(fontWeight = FontWeight.Medium), color = p.textPrimary, modifier = Modifier.weight(1f, fill = false))
                 Spacer(Modifier.width(4.dp))
                 Icon(Icons.Rounded.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
+            }
             }
         }
         Column(Modifier.then(if (inDecade) Modifier.lumenPress(onOpenMystery, 0.98f) else Modifier)) {

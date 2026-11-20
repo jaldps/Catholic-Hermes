@@ -355,48 +355,76 @@ private fun StudyCard(
             .semantics { contentDescription = listOfNotNull(spokenTitle, meta).joinToString(". ") }
             .testTag(tag)
     ) {
-        Box(Modifier.matchParentSize()) {
-            if (bitmap != null) {
-                Image(
-                    bitmap = bitmap,
-                    contentDescription = null,
-                    contentScale = ContentScale.Crop,
-                    alignment = focus.alignment,
-                    colorFilter = ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0.86f) }),
-                    modifier = Modifier
-                        .fillMaxHeight()
-                        .fillMaxWidth(0.70f)
-                        .align(Alignment.CenterEnd)
-                )
-                // Night: settle the painting so it never glows on the dark canvas.
-                if (design.isDark) {
-                    Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.16f)))
-                } else {
-                    Box(Modifier.fillMaxSize().background(p.canvasTop.copy(alpha = 0.08f)))
+        if (com.example.ui.design.appLargeText()) {
+            // Large text: the words take the whole card width and the painting becomes a strip beneath them,
+            // instead of a 58 % column that would break a title like «Catecismo» letter by letter.
+            Column(Modifier.fillMaxWidth()) {
+                Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.cardPadding, vertical = 18.dp)) {
+                    Text(title, style = styles.title2, color = p.textPrimary)
+                    if (meta != null) {
+                        Spacer(Modifier.height(4.dp))
+                        Text(meta, style = styles.subhead, color = p.textSecondary)
+                    }
+                }
+                if (bitmap != null) {
+                    Box(Modifier.fillMaxWidth().height(72.dp)) {
+                        Image(
+                            bitmap = bitmap,
+                            contentDescription = null,
+                            contentScale = ContentScale.Crop,
+                            alignment = focus.alignment,
+                            colorFilter = ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0.86f) }),
+                            modifier = Modifier.matchParentSize()
+                        )
+                        Box(Modifier.matchParentSize().background(Brush.verticalGradient(0f to mist, 0.5f to mist.copy(alpha = 0.3f), 1f to Color.Transparent)))
+                        if (design.isDark) Box(Modifier.matchParentSize().background(Color.Black.copy(alpha = 0.16f)))
+                    }
                 }
             }
-            Box(
-                Modifier.fillMaxSize().background(
-                    Brush.horizontalGradient(
-                        0f to mist,
-                        0.42f to mist,
-                        0.56f to mist.copy(alpha = 0.82f),
-                        0.70f to mist.copy(alpha = 0.32f),
-                        0.86f to mist.copy(alpha = 0f)
+        } else {
+            Box(Modifier.matchParentSize()) {
+                if (bitmap != null) {
+                    Image(
+                        bitmap = bitmap,
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        alignment = focus.alignment,
+                        colorFilter = ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0.86f) }),
+                        modifier = Modifier
+                            .fillMaxHeight()
+                            .fillMaxWidth(0.70f)
+                            .align(Alignment.CenterEnd)
+                    )
+                    // Night: settle the painting so it never glows on the dark canvas.
+                    if (design.isDark) {
+                        Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.16f)))
+                    } else {
+                        Box(Modifier.fillMaxSize().background(p.canvasTop.copy(alpha = 0.08f)))
+                    }
+                }
+                Box(
+                    Modifier.fillMaxSize().background(
+                        Brush.horizontalGradient(
+                            0f to mist,
+                            0.42f to mist,
+                            0.56f to mist.copy(alpha = 0.82f),
+                            0.70f to mist.copy(alpha = 0.32f),
+                            0.86f to mist.copy(alpha = 0f)
+                        )
                     )
                 )
-            )
-        }
-        Column(
-            Modifier
-                .fillMaxWidth(0.58f)
-                .align(Alignment.CenterStart)
-                .padding(start = design.spacing.cardPadding, end = 4.dp, top = 18.dp, bottom = 18.dp)
-        ) {
-            Text(title, style = styles.title2, color = p.textPrimary, maxLines = 2)
-            if (meta != null) {
-                Spacer(Modifier.height(4.dp))
-                Text(meta, style = styles.subhead, color = p.textSecondary, maxLines = 3)
+            }
+            Column(
+                Modifier
+                    .fillMaxWidth(0.58f)
+                    .align(Alignment.CenterStart)
+                    .padding(start = design.spacing.cardPadding, end = 4.dp, top = 18.dp, bottom = 18.dp)
+            ) {
+                Text(title, style = styles.title2, color = p.textPrimary, maxLines = com.example.ui.design.appMaxLines(2))
+                if (meta != null) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(meta, style = styles.subhead, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(3))
+                }
             }
         }
         // The lit glass edge, drawn over the art.
@@ -526,7 +554,7 @@ private fun EntryRow(
             }
             if (!value.isNullOrBlank() && !stacked) {
                 Spacer(Modifier.width(12.dp))
-                Text(value, style = styles.body, color = p.textSecondary, maxLines = 1)
+                Text(value, style = styles.body, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(1))
             }
             Spacer(Modifier.width(10.dp))
             AppChevron()

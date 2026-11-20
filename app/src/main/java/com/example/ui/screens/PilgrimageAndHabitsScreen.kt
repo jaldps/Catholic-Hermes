@@ -394,13 +394,13 @@ private fun CalendarDayRow(day: LiturgicalCalendarDay, date: CalendarDate?, lang
         ) {
             Column(Modifier.width(44.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 if (date != null) {
-                    Text(shortWeekday(date, language), style = styles.caption, color = p.textSecondary, maxLines = 1)
+                    Text(shortWeekday(date, language), style = styles.caption, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(1))
                 }
-                Text(day.dayOfMonth.toString(), style = styles.title2, color = p.textPrimary, maxLines = 1)
+                Text(day.dayOfMonth.toString(), style = styles.title2, color = p.textPrimary, maxLines = com.example.ui.design.appMaxLines(1))
             }
             Spacer(Modifier.width(16.dp))
             Column(Modifier.weight(1f)) {
-                Text(day.celebrationTitle.get(language), style = styles.body, color = p.textPrimary, maxLines = 3)
+                Text(day.celebrationTitle.get(language), style = styles.body, color = p.textPrimary, maxLines = com.example.ui.design.appMaxLines(3))
                 if (detail.isNotBlank()) {
                     Spacer(Modifier.height(2.dp))
                     Text(detail, style = styles.footnote, color = p.textSecondary)

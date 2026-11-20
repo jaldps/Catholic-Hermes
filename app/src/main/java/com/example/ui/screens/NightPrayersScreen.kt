@@ -371,7 +371,7 @@ private fun NightOverview(
                             antiphon.translatedText.get(currentLanguage),
                             style = styles.reading.copy(fontStyle = FontStyle.Italic),
                             color = p.textSecondary,
-                            maxLines = 3,
+                            maxLines = com.example.ui.design.appMaxLines(3),
                             overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
                         )
                     }

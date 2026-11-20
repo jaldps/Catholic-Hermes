@@ -239,7 +239,7 @@ private fun NewsFeature(article: VaticanNewsItem, language: AppLanguage, onClick
                     article.summary,
                     style = styles.callout,
                     color = p.textSecondary,
-                    maxLines = 3,
+                    maxLines = com.example.ui.design.appMaxLines(3),
                     overflow = TextOverflow.Ellipsis
                 )
             }
@@ -263,7 +263,45 @@ private fun NewsRow(
             .groupedItem(position)
             .semantics { contentDescription = article.title }
     ) {
-        Row(
+        val large = com.example.ui.design.appLargeText()
+        val picture: @Composable (Modifier) -> Unit = { m ->
+            Box(m.clip(thumb).background(p.glassStrong)) {
+                AsyncImage(
+                    model = article.imageUrl,
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize()
+                )
+                if (design.isDark) Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.06f)))
+            }
+        }
+        val headline: @Composable (Modifier) -> Unit = { m ->
+            Column(m) {
+                Text(
+                    article.title,
+                    style = styles.headline,
+                    color = p.textPrimary,
+                    maxLines = com.example.ui.design.appMaxLines(3),
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.semantics { heading() }
+                )
+                Spacer(Modifier.height(4.dp))
+                Text(metaLine(article, language), style = styles.footnote, color = p.textSecondary, maxLines = com.example.ui.design.appMaxLines(1))
+            }
+        }
+        if (large) {
+            // Large text: the headline takes the whole row width and the picture becomes a strip beneath it,
+            // so a long word of a headline is not broken in a narrow column beside a thumbnail.
+            Column(
+                Modifier.fillMaxWidth().lumenPress(onClick, 0.99f).heightIn(min = 88.dp).padding(horizontal = 18.dp, vertical = 12.dp)
+            ) {
+                headline(Modifier.fillMaxWidth())
+                if (article.imageUrl != null) {
+                    Spacer(Modifier.height(10.dp))
+                    picture(Modifier.fillMaxWidth().height(96.dp))
+                }
+            }
+        } else Row(
             Modifier
                 .fillMaxWidth()
                 .lumenPress(onClick, 0.99f)
@@ -271,29 +309,10 @@ private fun NewsRow(
                 .padding(horizontal = 18.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Column(Modifier.weight(1f)) {
-                Text(
-                    article.title,
-                    style = styles.headline,
-                    color = p.textPrimary,
-                    maxLines = 3,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.semantics { heading() }
-                )
-                Spacer(Modifier.height(4.dp))
-                Text(metaLine(article, language), style = styles.footnote, color = p.textSecondary, maxLines = 1)
-            }
+            headline(Modifier.weight(1f))
             if (article.imageUrl != null) {
                 Spacer(Modifier.width(14.dp))
-                Box(Modifier.size(72.dp).clip(thumb).background(p.glassStrong)) {
-                    AsyncImage(
-                        model = article.imageUrl,
-                        contentDescription = null,
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier.fillMaxSize()
-                    )
-                    if (design.isDark) Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.06f)))
-                }
+                picture(Modifier.size(72.dp))
             }
         }
         if (position == com.example.ui.design.GroupPosition.First || position == com.example.ui.design.GroupPosition.Middle) {

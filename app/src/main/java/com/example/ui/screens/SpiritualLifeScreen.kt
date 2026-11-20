@@ -935,7 +935,7 @@ private fun JournalComposerHeader(language: AppLanguage, canSave: Boolean, onSav
                     headingLabel,
                     style = styles.headline,
                     color = p.textPrimary,
-                    maxLines = 1,
+                    maxLines = com.example.ui.design.appMaxLines(1),
                     overflow = TextOverflow.Ellipsis,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                     modifier = Modifier.weight(1f).semantics { heading() }.testTag("journal_composer_heading")

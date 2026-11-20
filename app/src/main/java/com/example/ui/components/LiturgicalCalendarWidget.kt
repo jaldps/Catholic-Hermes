@@ -371,7 +371,7 @@ fun LiturgicalCalendarWidget(
                             Text(
                                 text = rule.get(currentLanguage),
                                 style = type.labelSmall.copy(fontWeight = FontWeight.SemiBold),
-                                maxLines = 1,
+                                maxLines = com.example.ui.design.appMaxLines(1),
                                 overflow = TextOverflow.Ellipsis,
                                 color = fastContent
                             )
@@ -427,7 +427,7 @@ fun LiturgicalCalendarWidget(
                         text = liturgicalDay.gospelVerseRef,
                         style = type.titleSmall,
                         color = scheme.onSurface,
-                        maxLines = 1,
+                        maxLines = com.example.ui.design.appMaxLines(1),
                         overflow = TextOverflow.Ellipsis
                     )
                 }

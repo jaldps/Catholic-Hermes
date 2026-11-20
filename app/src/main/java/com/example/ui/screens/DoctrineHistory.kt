@@ -207,7 +207,7 @@ private fun EpochCard(epoch: ChurchHistoryEpoch, language: AppLanguage, onClick:
                     firstSentence(epoch.narrative.get(language), 160),
                     style = styles.callout,
                     color = p.textSecondary,
-                    maxLines = 2,
+                    maxLines = com.example.ui.design.appMaxLines(2),
                     overflow = TextOverflow.Ellipsis
                 )
             }

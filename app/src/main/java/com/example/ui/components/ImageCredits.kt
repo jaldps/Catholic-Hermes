@@ -222,7 +222,7 @@ private fun CreditRow(
                 }
             }
             Column(Modifier.weight(1f)) {
-                Text(credit.title, style = styles.subhead, color = p.textPrimary, maxLines = 3)
+                Text(credit.title, style = styles.subhead, color = p.textPrimary, maxLines = com.example.ui.design.appMaxLines(3))
                 Spacer(Modifier.height(2.dp))
                 Text(meta, style = styles.footnote, color = p.textSecondary)
             }
