@@ -208,7 +208,8 @@ internal fun DevotionsExplorerScreen(
                         trailingText = m.year,
                         position = groupPosition(i, members.size),
                         onClick = { nav.open("devotion:${m.id}") },
-                        tag = "devotion_card_${m.id}"
+                        tag = "devotion_card_${m.id}",
+                        selected = LocalOpenEntry.current == "devotion:${m.id}"
                     )
                 }
             }

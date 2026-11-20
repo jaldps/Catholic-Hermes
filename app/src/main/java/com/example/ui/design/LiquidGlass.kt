@@ -423,6 +423,19 @@ fun Modifier.fadeOutBottom(start: Float = 0.5f): Modifier = alphaMask {
     )
 }
 
+/** Softens the left and right edges of a picture that does not reach the window edges (a centred column on a wide window). */
+fun Modifier.fadeSides(edge: androidx.compose.ui.unit.Dp = 32.dp): Modifier = alphaMask {
+    val f = (edge.toPx() / size.width).coerceIn(0f, 0.5f)
+    Brush.horizontalGradient(
+        0f to Color.Transparent,
+        f * 0.5f to Color.Black.copy(alpha = 0.35f),
+        f to Color.Black,
+        1f - f to Color.Black,
+        1f - f * 0.5f to Color.Black.copy(alpha = 0.35f),
+        1f to Color.Transparent
+    )
+}
+
 /**
  * Multiplies this node's content by the alpha of [mask]. Uses an explicit
  * layer so it holds on every canvas, hardware or software.

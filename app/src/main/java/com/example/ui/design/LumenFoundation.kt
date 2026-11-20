@@ -21,6 +21,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.Stable
 import androidx.compose.runtime.key
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
@@ -183,6 +184,18 @@ class ScreenFrame {
     var edgeToEdge by mutableStateOf(false)
     /** Insets an edge-to-edge screen must respect: status bar (+ back row) and the floating dock. */
     var insets by mutableStateOf(PaddingValues(0.dp))
+    /** How many parts of the screen currently claim the full width (see [AppFullWidth]). */
+    internal var fullWidthClaims by mutableIntStateOf(0)
+    /** True while the screen lays out its own panes: on wide windows it is not centred in a reading column. */
+    val fullWidth: Boolean get() = fullWidthClaims > 0
+}
+
+/** Holds one full-width claim for as long as it is remembered. */
+private class FullWidthClaim(private val frame: ScreenFrame) : androidx.compose.runtime.RememberObserver {
+    init { frame.fullWidthClaims++ }
+    override fun onRemembered() {}
+    override fun onForgotten() { frame.fullWidthClaims-- }
+    override fun onAbandoned() { frame.fullWidthClaims-- }
 }
 
 val LocalScreenFrame = staticCompositionLocalOf<ScreenFrame?> { null }
@@ -201,6 +214,19 @@ fun AppEdgeToEdge(): PaddingValues {
     // the layout phase of the same frame, so the first frame is already right.
     if (!frame.edgeToEdge) frame.edgeToEdge = true
     return frame.insets
+}
+
+/**
+ * Declares that the current screen uses the whole width of a wide window
+ * (a two-pane list/detail, a study split). Every other screen is centred in a
+ * reading column there. Read in the layout phase; the claim ends when the
+ * caller leaves the composition.
+ */
+@Composable
+fun AppFullWidth() {
+    val frame = LocalScreenFrame.current ?: return
+    // Claimed while composed, so the first frame is already right and leaving the pane gives the width back.
+    remember(frame) { FullWidthClaim(frame) }
 }
 
 /**

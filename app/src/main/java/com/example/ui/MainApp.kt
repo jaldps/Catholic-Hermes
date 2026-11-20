@@ -437,6 +437,8 @@ fun MainApp(
         ).map { SearchSection(it.name, it.title(currentLanguage)) }
     }
     val design = LocalAppDesign.current
+    val wide = com.example.ui.design.appUsesNavigationRail()
+    val columnMax = with(androidx.compose.ui.platform.LocalDensity.current) { com.example.ui.design.appContentMaxWidth().roundToPx() }
     val tabs = AppDestination.tabs
     val isPushed = stack.isNotEmpty() || current !in tabs
 
@@ -584,12 +586,17 @@ fun MainApp(
                           // first frame.
                           val top = if (frame.edgeToEdge) 0 else innerPadding.calculateTopPadding().roundToPx()
                           val bottom = if (frame.edgeToEdge) 0 else innerPadding.calculateBottomPadding().roundToPx()
+                          // On a wide window a page is a centred reading column,
+                          // never stretched edge to edge; a screen that lays out
+                          // its own panes opts out with AppFullWidth().
+                          val width = if (wide && !frame.fullWidth) minOf(constraints.maxWidth, columnMax) else constraints.maxWidth
                           val inner = constraints.copy(
+                              minWidth = width, maxWidth = width,
                               minHeight = (constraints.minHeight - top - bottom).coerceAtLeast(0),
                               maxHeight = (constraints.maxHeight - top - bottom).coerceAtLeast(0)
                           )
                           val placeable = measurable.measure(inner)
-                          layout(constraints.maxWidth, constraints.maxHeight) { placeable.place(0, top) }
+                          layout(constraints.maxWidth, constraints.maxHeight) { placeable.place((constraints.maxWidth - width) / 2, top) }
                       }
               ) {
                 when (target) {

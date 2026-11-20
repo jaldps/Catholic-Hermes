@@ -1224,7 +1224,9 @@ private fun ReaderHost(
 
     if (landscape) {
         // Turned on its side, the reader becomes a study: the text on the
-        // left, the whole Bible's web of references on the right.
+        // left, the whole Bible's web of references on the right. On a wide
+        // window it uses the whole width instead of the reading column.
+        com.example.ui.design.AppFullWidth()
         Row(Modifier.fillMaxSize()) {
             reader(Modifier.weight(0.46f))
             CrossReferenceStudy(
