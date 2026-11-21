@@ -130,8 +130,9 @@ class MyPathUiTest {
     @Test fun exploreHasOneEntryThatReplacesHabitsAndSpiritualLife() {
         launch()
         compose.onNodeWithTag("nav_more").performClick()
-        compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag("nav_my_path"))
-        tag("nav_my_path").assertIsDisplayed()
+        waitFor("more_screen")
+        // Mi camino is now a tab, so it must not be duplicated in Explore.
+        assert(!exists("nav_my_path")) { "nav_my_path must no longer be listed in Explore" }
         // The old rows are gone; Confession keeps its own row.
         assert(!exists("nav_habits")) { "nav_habits must no longer be listed in Explore" }
         assert(!exists("nav_spiritual")) { "nav_spiritual must no longer be listed in Explore" }
@@ -223,10 +224,11 @@ class MyPathUiTest {
             launch(initial = destination)
             waitFor(landing)
             assert(!exists(absent)) { "$destination must not also show $absent" }
-            // A link's back leaves to the caller, not to the hub.
+            // A link's back now returns to the hub on the Mi camino tab.
             if (destination != AppDestination.MY_PATH) {
                 back()
-                waitFor("more_screen")
+                waitFor("my_path_screen")
+                gone("tab_habits_rule")
             }
             dispose()
         }
@@ -244,6 +246,10 @@ class MyPathUiTest {
         compose.onNodeWithTag("search_result_section_spiritual_life").performScrollTo().performClick()
         waitFor("spiritual_confession_entry")
         back()
+        waitFor("my_path_screen")
+        gone("spiritual_confession_entry")
+        // From the hub, search again: Mi camino is a tab now, and back goes to its hub.
+        compose.onNodeWithTag("global_search_button").performClick()
         waitFor("search_field")
         tag("search_field").performTextReplacement("Hábitos")
         compose.waitUntil(40_000) {

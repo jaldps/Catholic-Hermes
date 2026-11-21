@@ -454,7 +454,7 @@ fun MainApp(
                     AppLanguage.ES -> "Más"; AppLanguage.EN -> "More"; AppLanguage.PT -> "Mais"
                 }
                 else -> when (currentLanguage) {  // MY_PATH
-                    AppLanguage.ES -> "Camino"; AppLanguage.EN -> "Path"; AppLanguage.PT -> "Caminho"
+                    AppLanguage.ES -> "Ruta"; AppLanguage.EN -> "Path"; AppLanguage.PT -> "Rota"
                 }
             } else destination.tabLabel(currentLanguage),
             icon = resting,
@@ -471,6 +471,12 @@ fun MainApp(
         if (previous != null) {
             stackNames = stack.dropLast(1).joinToString(",") { it.name }
             currentName = previous.name
+            // A section opened by a link now sits on the Mi camino tab: back
+            // lands on its hub, not on the section again and not on Explore.
+            if (previous == AppDestination.MY_PATH) {
+                myPathSection = MyPathSection.HUB.name
+                myPathSectionId++
+            }
         } else if (current != AppDestination.HOME) {
             go(AppDestination.HOME)
         }
