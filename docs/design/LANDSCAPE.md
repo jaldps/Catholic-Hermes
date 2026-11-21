@@ -2,17 +2,44 @@
 
 Fase D del bloque T-047…T-05x («método horizontal reforzado», `docs/tasks/PLAN-NOV-2026.md`). Este documento es **diseño, no código**: describe qué debe construirse, dónde, con qué medidas y cómo se comprueba. Ningún archivo de `app/` cambia en esta fase.
 
+**Revisión 2** (21-nov-2026): responde a `CRITICA-1.md`. El mapa de los 24 defectos y de los 9 problemas del resumen está en **§17 · Respuesta a la crítica 1**.
+
 - Base: versión 1.8.28 (HEAD `83b3766`), con la auditoría T-045 (`appLargeText`, `appMaxLines`, `NarrowLargeTextAuditTest`).
 - Lo que ya existe para ventanas anchas (T-043) sigue valiendo para tabletas: riel desde 600 dp, columna centrada de 680 dp, dos paneles desde 840 dp.
 - Objetivo del dueño: «Quiero una interfaz horizontal práctica, profesional, no simplemente que se vea la misma interfaz de vertical pero estirada. El espacio es diferente; ergo, la configuración visual debe ser diferente.»
 
-Índice: [§1 Evidencia](#1-evidencia-lo-que-se-ve-hoy-en-horizontal) · [§2 Principios](#2-principios) · [§3 L0 Fundamentos](#3-l0--fundamentos-en-uidesign) · [§4 L1 Rosario](#4-l1--rosario-y-coronilla) · [§5 L2 Lectores](#5-l2--lectores) · [§6 L3 Hoy](#6-l3--hoy) · [§7 L4 Orar y Leer](#7-l4--centros-orar-y-leer) · [§8 L5 Listas con ficha](#8-l5--listas-con-ficha) · [§9 L6 Mi camino, Confesión, Recordatorios, Explorar](#9-l6--mi-camino-confesión-recordatorios-y-explorar) · [§10 L7 Hojas, diálogos, bienvenida y ajustes](#10-l7--hojas-diálogos-bienvenida-y-ajustes) · [§11 Rúbrica](#11-rúbrica-del-crítico) · [§12 Matriz de capturas](#12-matriz-de-capturas) · [§13 Teléfono real](#13-lista-de-comprobación-en-el-teléfono-real) · [§14 Riesgos y decisiones abiertas](#14-riesgos-y-decisiones-abiertas)
+**Calibración del dueño.** Todo se optimiza para la letra al **100 %**, que es la predeterminada. El 130 % es una opción del usuario: a ese tamaño solo rige el **listón duro** (nada recortado, oculto ni inalcanzable). Se acepta simplificar: menos columnas, más desplazamiento, paneles que desplazan.
 
-Convenciones:
-- Todas las medidas en dp. `W` y `H` = ancho y alto de la ventana. `S` = barra de estado (24–28 dp en un teléfono real; 0 en Robolectric). `B` = inset inferior (barra de gestos, ≈ 16 dp; 0 con tres botones laterales).
-- Los bocetos ASCII están a **891 × 411 dp**, con 1 columna ≈ 10 dp y 1 fila ≈ 20 dp.
-- «Fijo» = no se desplaza. «Desplaza» = tiene su propio desplazamiento vertical.
-- Las etiquetas de test entre comillas invertidas existen hoy y **se conservan**. Las marcadas «(nueva)» son añadidos.
+**Índice:**
+- [§1 Evidencia](#1-evidencia-lo-que-se-ve-hoy-en-horizontal)
+- [§2 Principios](#2-principios)
+- [§3 L0 Fundamentos](#3-l0--fundamentos-en-uidesign)
+- [§4 L1 Rosario](#4-l1--rosario-y-coronilla)
+- [§5 L2 Lectores](#5-l2--lectores)
+- [§6 L3 Hoy](#6-l3--hoy)
+- [§7 L4 Orar y Leer](#7-l4--centros-orar-y-leer)
+- [§8 L5 Listas con ficha](#8-l5--listas-con-ficha)
+- [§9 L6](#9-l6--mi-camino-confesión-recordatorios-y-explorar)
+- [§10 L7](#10-l7--hojas-diálogos-bienvenida-y-ajustes)
+- [§11 Rúbrica](#11-rúbrica-del-crítico)
+- [§12 Capturas](#12-matriz-de-capturas)
+- [§13 Teléfono real](#13-lista-de-comprobación-en-el-teléfono-real)
+- [§14 Riesgos](#14-riesgos-y-decisiones-abiertas)
+- [§15 Pantallas restantes](#15-cobertura-completa-las-pantallas-restantes)
+- [§16 Estados](#16-estados-por-área)
+- [§17 Respuesta a la crítica 1](#17-respuesta-a-la-crítica-1)
+
+**Convenciones:**
+- **Unidades y bocetos.** Todas las medidas en dp. Los bocetos ASCII están a **891 × 411 dp**, con 1 columna ≈ 10 dp y 1 fila ≈ 20 dp. Las etiquetas de test entre comillas invertidas existen hoy y **se conservan**; las marcadas «(nueva)» son añadidos.
+- **Ventana e insets.** `W` y `H` = ancho y alto de la ventana. Todas las cuentas usan los insets de un teléfono real con navegación por gestos:
+  - **`S` = 24** (barra de estado) y **`B` = 16** (barra de gestos);
+  - zonas de gesto lateral de 32;
+  - y, como variante, un recorte de cámara de 32 en un lateral.
+  - El alto útil es `H − S − B`: **371** a 891 × 411 y **320** a 800 × 360.
+- **Teclado.** El teclado de referencia mide **0,56 H**: 230 a 411 y 202 a 360. Sobre él quedan `H − 0,56 H − S` = **157** (411) y **134** (360) dp útiles.
+- **Medición del texto.** Las alturas de texto de §4.3 y §3.10 se midieron con las fuentes de la app (`res/font/ebgaramond_regular.ttf`, `inter_regular.ttf`) y sus métricas, con ajuste de línea por palabras. Un test con `TextLayoutResult` las confirma en L0/L1 (§3.13).
+
+Las capturas del «antes» citadas en el resumen están en `docs/design/antes/`.
 
 ---
 
@@ -41,137 +68,147 @@ En total, 461 PNG. Se usó una copia del test de auditoría fuera del repo, con 
 
 Las identidades se comportan igual. Sanctuary pone el título sobre el papel y el arte en marco debajo (≈ 170 dp de alto), así que el problema de altura es el mismo.
 
+
+**Nota sobre estas capturas.** Robolectric dibuja sin barra de estado ni de gestos (`S` = `B` = 0). En un teléfono real el problema es mayor: hay 40 dp menos de alto. Una selección está en `docs/design/antes/`.
+
 ---
 
 ## 2. Principios
 
-**P1 · La restricción es la altura.** En horizontal, un teléfono mide 800–932 × 360–430 dp. Sobra anchura y falta altura. Todo lo que en vertical se apila (arte → título → controles → contenido) pasa a **ponerse en paralelo**: lo que orienta va a un lado y lo que se lee o se usa, al otro.
+**P1 · La restricción es la altura.** Un teléfono en horizontal mide 800–932 × 360–430 dp: sobra anchura y falta altura. Todo lo que en vertical se apila (arte → título → controles → contenido) pasa a **ponerse en paralelo**: lo que orienta va a un lado; lo que se lee o se usa, al otro.
 
 **P2 · Patrones adaptativos establecidos, en nuestro idioma visual.** Se usan los layouts canónicos de Material 3, dibujados con los materiales de cada identidad:
 - **riel de navegación** en lugar de la barra inferior;
-- **panel de apoyo** (supporting pane) para lectores y Rosario;
-- **lista-detalle** para catálogos;
-- **feed en carriles** para Hoy y los centros;
+- **panel de apoyo** (supporting pane) en lectores, Rosario y Biblia;
+- **lista-detalle** en los catálogos;
+- **feed en carriles** en Hoy, Mi camino y los centros;
 - **hojas laterales** en lugar de las inferiores.
 
-**P3 · Nada se oculta ni se encoge.** Todo el contenido, las etiquetas, los valores y las etiquetas de test del vertical siguen presentes. El texto nunca baja del tamaño que eligió el usuario. Si algo no cabe, se desplaza; no se trunca. El arte solo puede reducirse, recortarse a su marco o pasar a miniatura; nunca tapa texto ni controles.
+**P3 · Nada se oculta ni se encoge.**
+- El contenido, las etiquetas, los valores y las etiquetas de test del vertical siguen presentes.
+- El texto nunca baja del tamaño que eligió el usuario. Si algo no cabe, se desplaza; no se trunca.
+- El arte puede reducirse, recortarse a su marco o pasar a miniatura, pero nunca tapa texto ni controles.
 
 **P4 · Una sola fuente de verdad.**
 - La clase de ventana se calcula una vez, en `ui/design` (`appWindowClass()`).
-- Ninguna pantalla mide `screenWidthDp` ni `orientation` por su cuenta. Hoy lo hacen `BibleScreen` (orientación) y `RosaryScreen` (`maxWidth >= 600`); deben migrar.
-- Las pantallas cambian de disposición a través de los wrappers de `AppComponents.kt`.
+- Ninguna pantalla mide `screenWidthDp`, `orientation` ni `maxWidth` por su cuenta. Hoy lo hacen `BibleScreen` (orientación) y `RosaryScreen` (`maxWidth >= 600`); ambos migran a wrappers declarados (§3.4).
 
-**P5 · Pulgares en los bordes.** El teléfono en horizontal se sujeta con las dos manos. Las zonas cómodas son los dos **tercios inferiores de los bordes laterales**:
-- izquierda: navegación y herramientas secundarias;
-- derecha: la acción que hace avanzar (Siguiente, Guardar, Abrir).
+**P5 · Pulgares en los bordes.** Ver §2.3.
+- **Pulgar izquierdo:** navegación, retroceder y herramientas.
+- **Pulgar derecho:** la acción que hace avanzar.
 
-Ver §2.3.
+**P6 · El giro no cambia el estado.** Ver §2.4.
 
-**P6 · El giro no cambia el estado.** Girar el teléfono conserva todo lo que el usuario estaba haciendo; ver §2.4.
+**P7 · Cada identidad sigue siendo ella misma.** Ver §2.5.
 
-**P7 · Cada identidad sigue siendo ella misma.** El panel lateral es el mismo cabezal con otra disposición, no un componente nuevo con estética propia; ver §2.5.
-
-**P8 · Coherencia con el vertical.** Mismo orden de lectura, mismos textos, mismos iconos y mismas acciones. Quien conoce la app en vertical la reconoce en horizontal al primer vistazo: el título está donde estaba el arte y el contenido, donde seguía después.
+**P8 · Coherencia con el vertical.** Mismo orden de lectura, mismos textos, iconos y acciones.
 
 ### 2.1 Clases de ventana
 
-Se calculan con el **tamaño de la ventana** (sigue la pantalla dividida y los plegables), en dp:
-- `W = LocalConfiguration.screenWidthDp`;
-- `H = LocalConfiguration.screenHeightDp`.
-
-Ambos incluyen las barras del sistema en las API con edge-to-edge obligatorio. Si una versión de Android los diera sin barras, se usa `LocalWindowInfo.containerSize`. El implementador de L0 lo verifica y deja un test.
+**Fuente de las medidas.** `W` y `H` son el tamaño de la **ventana completa**, barras incluidas.
+- Se leen de `LocalWindowInfo.current.containerSize` (Compose UI 1.7, BOM 2024.09 del proyecto), convertido a dp.
+- Si esa API resultara experimental o inexacta en algún nivel de API, se usa `WindowMetricsCalculator.getOrCreate().computeCurrentWindowMetrics(activity)` de `androidx.window` (dependencia nueva, de L0).
+- **No** se usa `Configuration.screenWidthDp/screenHeightDp`: hasta la API 34 excluyen las barras del sistema.
+  - Ejemplo: 891 × 411 se leería como 891 × 363. La clase sería correcta, pero todas las proporciones de este documento se calcularían mal.
+- Un test fija el cálculo: ventana conocida → `W`, `H` y clase esperados (§3.13).
 
 | Clase (`AppWindowClass`) | Condición | Navegación | Disposición |
 |---|---|---|---|
-| `Phone` | `W < 600` | barra inferior | la de siempre, sin cambios |
-| `LandscapePhone` («compacta en altura») | `H < 480` y `W ≥ 600` | riel compacto (§3.5) | **este documento** |
-| `TabletPortrait` | `600 ≤ W < 840` y `H ≥ 480` | riel (T-043) | columna centrada de 680 dp (T-043) |
-| `TabletLandscape` | `W ≥ 840` y `H ≥ 480` | riel (T-043) | <ul><li>dos paneles (T-043);</li><li>con L3/L4, Hoy, Orar, Leer, Mi camino y Explorar usan el panel lateral y 3 carriles desde `W ≥ 1200`.</li></ul> |
+| `Phone` | `W < 600` y `H ≥ 480` | barra inferior | la de siempre, sin cambios |
+| `CompactPhone` (pantalla dividida pequeña) | `W < 600` y `H < 480` | barra inferior | <ul><li>como `Phone`, pero con `CompactBand` (§3.3), hojas laterales (§3.6) y diálogos con alto máximo (§3.7)</li></ul> |
+| `LandscapePhone` («compacta en altura») | `W ≥ 600` y `H < 480` | riel compacto (§3.5) | **este documento** |
+| `TabletPortrait` | `600 ≤ W < 840` y `H ≥ 480` | riel (T-043) | columna centrada de 680 (T-043) |
+| `TabletLandscape` | `W ≥ 840` y `H ≥ 480` | riel (T-043) | <ul><li>dos paneles (T-043)</li><li>con L3/L4, Hoy, Orar, Leer, Mi camino y Explorar usan el panel lateral, con 3 carriles desde `W ≥ 1200`</li></ul> |
 
-- Una ventana de `W < 600` y `H < 480` (pantalla dividida pequeña) sigue siendo `Phone`.
-- Una tableta dividida en horizontal (p. ej. 1280 × 400) es `LandscapePhone`, a propósito: tiene el mismo problema de altura.
-- **Prioridad:** `H < 480` manda sobre la anchura. A 891 × 411, hoy `appIsTwoPane()` devuelve verdadero; con L0 depende de la clase (§3.9).
-- No hace falta histéresis: la clase solo cambia con la configuración.
+- **`H < 480` manda sobre la anchura.** Una tableta dividida en horizontal (1280 × 400) es `LandscapePhone` a propósito.
+- **Sin histéresis.** La clase solo cambia con la configuración.
 
 ### 2.2 Insets: recorte de cámara, barra de gestos lateral y teclado
 
-`targetSdk = 36` con `enableEdgeToEdge()`. La app dibuja bajo todas las barras y bajo el recorte, así que el andamiaje debe apartar el contenido de ellos.
+La app usa `targetSdk = 36` con `enableEdgeToEdge()`, así que dibuja bajo las barras y bajo el recorte.
 
-| Inset | Valor típico en horizontal | Lado | Regla |
+| Inset | Valor de validación | Lado | Regla |
 |---|---|---|---|
-| `statusBars` | 24–28 | arriba | <ul><li>El arte del panel lateral dibuja debajo (igual que el cabezal vertical).</li><li>El texto y los controles empiezan en `S + 8`.</li></ul> |
-| `displayCutout` | 0–40 | izquierda **o** derecha, según el giro (90° o 270°) | <ul><li>Ningún texto ni control entra en él.</li><li>El arte y los fondos sí: quedan a sangre.</li></ul> |
-| `navigationBars`, tres botones | 42–48 | lateral (el lado del borde inferior del teléfono) | Igual que el recorte: se suma al margen de ese lado. |
-| `navigationBars`, gestos | 12–20 | abajo | <ul><li>El último elemento de cada columna termina en `H − B − 8`.</li><li>Las barras de acciones fijas se apoyan en `H − B`.</li></ul> |
-| `systemGestures` laterales | 24–32 | izquierda y derecha | <ul><li>Ningún control **arrastrable** (hilo de cuentas, deslizadores) empieza a menos de esa distancia del borde.</li><li>Si no hay alternativa, se usa `Modifier.systemGestureExclusion()` sobre ≤ 200 dp de alto (límite de Android).</li></ul> |
-| `ime` (teclado) | 170–230 en horizontal (≈ 50 % de `H`) | abajo | Ver «Teclado» abajo. |
+| `statusBars` | **24** | arriba | <ul><li>El arte del panel lateral dibuja debajo.</li><li>El texto y los controles empiezan en `S + 4` o más.</li></ul> |
+| `displayCutout` | 0 o **32** (variantes) | izquierda **o** derecha, según el giro | <ul><li>Ningún texto ni control entra en él.</li><li>El arte y los fondos llegan al borde.</li></ul> |
+| `navigationBars`, tres botones | 48 (variante) | lateral | igual que el recorte |
+| `navigationBars`, gestos | **16** | abajo | <ul><li>Lo último de cada columna termina en `H − B` o más arriba.</li><li>Las barras fijas se apoyan en `H − B`.</li></ul> |
+| `systemGestures` laterales | **32** | izquierda y derecha | Ningún control **arrastrable** empieza a menos de `gestos + 8`. |
+| `ime` (teclado) | **0,56 H**: 230 (411) y 202 (360) | abajo | ver abajo |
 
-**`appSafeInsets()`** es un helper nuevo en `LumenFoundation.kt`. Devuelve, por lado, `max(statusBars, navigationBars, displayCutout)`. El andamiaje lo aplica así:
-- **Inicio:** el riel se coloca después de `safeStart`. Sin riel (pantallas inmersivas), el primer panel añade `safeStart` a su margen interior. El arte sigue a sangre.
-- **Fin:** la última columna añade `safeEnd` a su margen (`max(gutter, safeEnd + 12)`).
-- **Arriba y abajo:** como hoy (`S`, `B`).
+**`appSafeInsets()`** (nuevo, en `LumenFoundation.kt`) devuelve, por lado, `max(statusBars, navigationBars, displayCutout)`.
+- **Inicio:** el riel se coloca después de `safeStart`. Sin riel, el primer panel suma `safeStart` a su margen interior.
+- **Fin:** la última columna usa `max(gutter, safeEnd + 12)`; los grupos de acciones del borde derecho, `max(12, safeEnd + 8)`.
+- `ScreenFrame.insets` pasa a llevar `start` y `end`.
 
-`ScreenFrame.insets` pasa a llevar `start` y `end`. Hoy solo lleva `top` y `bottom`.
-
-**Teclado** (P3 + rúbrica 7). Con el teclado abierto quedan ≈ 180–200 dp de alto.
-- **El campo con foco y la acción principal se ven siempre.**
-  - La columna que contiene el campo lleva `imePadding()` y hace `bringIntoView` del campo.
-  - La acción principal (Guardar, Buscar, Enviar) vive en una barra fija de esa columna, por encima del teclado. No va al final del contenido desplazable.
-- **Lo que no contiene el campo no se mueve.** En una disposición de dos columnas, solo la columna del campo se encoge; el panel lateral sigue igual. Así, al buscar se siguen viendo resultados.
-- **Teclado a pantalla completa.** Android puede mostrar el modo «extract» (teclado a pantalla completa) en horizontal. Compose pide `IME_FLAG_NO_FULLSCREEN` en sus campos; se comprueba en el teléfono real (§13). Los campos que no sean de Compose, si los hubiera, lo piden explícitamente.
+**Teclado.** Sobre el teclado quedan 157 dp (891 × 411) o 134 dp (800 × 360).
+- **El campo con foco se ve siempre, con ≥ 2 líneas y el cursor.** La columna que contiene el campo lleva `imePadding()` y hace `bringIntoView` del campo.
+- **La acción del campo** (Buscar, Listo, Guardar) **se ve sobre el teclado:**
+  - en un campo de una línea, es la tecla de acción del IME (`ImeAction`);
+  - en editores y hojas, la acción principal se **mueve a la cabecera** mientras el teclado está abierto (§3.6, §10.3).
+  - Las acciones destructivas («Terminar y borrar») **no** suben junto al teclado: quedan en su sitio, bajo él, a propósito.
+- **Lo que no contiene el campo no se mueve.** El panel lateral sigue igual.
+- **Teclado a pantalla completa.** Compose pide `IME_FLAG_NO_FULLSCREEN`; se comprueba en el teléfono real (§13).
+- **Presupuestos con teclado** (§8.4, §8.6, §9.2, §10):
+  - Búsqueda: barra de 56 + ≥ 1 fila de resultado completa (64).
+  - Notas de Confesión: rótulo 18 + 2 líneas (48) + margen 24 = 90.
+  - Hojas con campo: cabecera 56 + campo ≥ 56.
+  - Editor de diario: barra 56 + 3 líneas (72).
+  - Todos caben en 134.
 
 ### 2.3 Ergonomía de los pulgares
 
 ```
  891 × 411, teléfono sujeto con las dos manos
 ┌───────────────────────────────────────────────────────────────────────────────────────┐
-│ difícil ··························· difícil ························· difícil         │  y < 0,25H: solo «atrás»,
-│                                                                                       │  título y acciones raras
-│ ┌───────────────┐                                              ┌───────────────┐     │
-│ │ PULGAR        │            centro: lectura y desplazamiento  │ PULGAR        │     │  0,35H–1,0H
-│ │ IZQUIERDO     │            (se desliza, no se apunta)        │ DERECHO       │     │
-│ │ riel, cuentas,│                                              │ Siguiente,    │     │
-│ │ herramientas  │                                              │ Guardar,      │     │
-│ │ ≈ 200 dp      │                                              │ Abrir ≈ 200 dp│     │
-│ └───────────────┘                                              └───────────────┘     │
+│ difícil ··························· difícil ························· difícil         │  y < 0,25 H: atrás, título
+│ ┌────────────────┐                                            ┌────────────────┐     │  y acciones poco frecuentes
+│ │ PULGAR         │      centro: leer y desplazar              │ PULGAR         │     │
+│ │ IZQUIERDO      │      (se desliza, no se apunta)            │ DERECHO        │     │
+│ │ riel, cuentas, │                                            │ SIGUIENTE      │     │  ← y ≥ 0,6 H
+│ │ Anterior,      │                                            │ (≤ 120 dp del  │     │
+│ │ Escuchar, Aa   │                                            │  borde seguro) │     │
+│ └────────────────┘                                            └────────────────┘     │
 └───────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-Reglas:
-- **Objetivos.** Todo objetivo táctil mide **≥ 44 × 44 dp** (norma de la app y del detector). Las acciones primarias, **≥ 48 × 48**; el «Siguiente» del Rosario, ≥ 64 × 64.
-- **Acción que avanza.** Cada pantalla secuencial (Rosario, día de novena, lección, día de plan, capítulo) coloca su acción de avance a menos de 200 dp del borde derecho seguro y por debajo de `0,4 H`.
-- **Navegación entre secciones.** El riel, los segmentos de los centros y el índice de los lectores van en el tercio izquierdo.
-- **Franja superior.** En los 56 dp de arriba solo van «atrás» (poco frecuente y en la misma posición que en vertical) y las acciones del cabezal (buscar, avisos), que también están ahí en vertical.
+**Umbral único** (rúbrica 4):
+- **Acción que avanza.** En toda pantalla secuencial (Rosario, lectores secuenciales, lección, plan, día de novena, capítulo, primeros pasos), la acción de avanzar tiene su **centro a ≤ 120 dp del borde derecho seguro** y **y ≥ 0,6 H**. Mide ≥ 48 × 48; la del Rosario, ≥ 64 × 64.
+- **Objetivos táctiles:** ≥ 44 × 44 dp.
+- **Navegación y retroceso:** en el tercio izquierdo, o al inicio del pie de la columna de texto.
+- **Franja superior (`y < 0,25 H`):** solo atrás, títulos y acciones poco frecuentes, en la misma posición que en vertical.
 
 ### 2.4 Continuidad al girar
 
-La actividad **se recrea** al girar: no hay `configChanges` en el manifiesto. Debe sobrevivir:
+La actividad **se recrea** al girar: no hay `configChanges`.
 
 | Estado | Mecanismo actual | Acción requerida |
 |---|---|---|
 | Destino, pila y pestaña | `rememberSaveable` en `MainApp` | ninguna |
-| Segmento de los centros (Oraciones/Novenas/Noche; Biblia/Misa/Estudio; Confesión) | `rememberSaveable` | <ul><li>comprobar que la clave no cambia de disposición (ver «Estabilidad del árbol» abajo)</li></ul> |
-| Rosario: devoción, misterio, paso, guía | `RosarySession` + `RosarySessionStore` | ninguna |
-| Rosario: hoja abierta | `remember` | <ul><li>**`rememberSaveable`**</li></ul> |
-| Rosario: «rezar en voz alta» activo | `remember` + `ScreenLeft` en `onDispose` | <ul><li>**No enviar `ScreenLeft` si la actividad está cambiando de configuración** (`activity.isChangingConfigurations`).</li><li>Conservar `NarrationController` (holder de ámbito de actividad, `ViewModel`).</li></ul> |
-| Posición de lectura (capítulo, oración, día de novena, artículo, lección, santo) | `LazyListState` o `ScrollState` | <ul><li>**Guardar un ancla, no píxeles:** índice del primer párrafo o versículo visible + fracción.</li><li>Al girar cambia el ancho, así que un desplazamiento en píxeles cae en otro sitio.</li><li>Helper nuevo `rememberReadingAnchor()` (§3.10).</li></ul> |
-| Biblia: libro, capítulo, versículo de estudio | `rememberSaveable` | ninguna; el versículo de estudio pasa a ser la selección del panel o de la hoja de estudio |
-| Día de novena seleccionado | `rememberSaveable` | ninguna |
-| Texto escrito: búsqueda, diario | `rememberSaveable` | ninguna |
-| Texto escrito: Confesión (lista y notas) | **se borra a propósito** | <ul><li>**Conservar durante el giro sin tocar el Bundle:** mover `ConfessionDraft` a un holder de ámbito de actividad (`ViewModel`) que no se guarda en el estado.</li><li>Sigue borrándose al salir de la pantalla, al pasar a inactiva y al morir el proceso, como hoy.</li></ul> |
-| Texto escrito: copia de seguridad (frase o fichero), informe de error | sin `rememberSaveable` | <ul><li>**`rememberSaveable`** en los campos no secretos.</li><li>La contraseña de la copia, si la hay, **no** se guarda; se pide de nuevo.</li></ul> |
-| Selección de lista-detalle | `rememberSaveable` (Santos) o pila (Órdenes, Devociones) | <ul><li>distinguir selección **explícita** de selección **por defecto** (§3.9)</li></ul> |
-| Hojas y diálogos abiertos, con su desplazamiento | variable | <ul><li>**`rememberSaveable`** para «qué hoja está abierta» en todas las pantallas</li></ul> |
-| Filas expandidas («Más para hoy», secciones del examen) | `rememberSaveable` | ninguna |
+| Segmento de los centros (Oraciones, Novenas, Noche; Biblia, Misa, Estudio; Confesión) | `rememberSaveable` **dentro** del cabezal o del cuerpo | <ul><li>**Elevar el estado por encima de `AppPageLayout`** (ver «Estabilidad del árbol»).</li></ul> |
+| Texto de búsqueda (centros, Santos, Preguntas, Compendio) | `rememberSaveable` dentro de la ranura | <ul><li>**Elevar.**</li><li>Test de giro con texto escrito.</li></ul> |
+| Rosario: devoción, misterio y paso | `RosarySession` + `RosarySessionStore` | ninguna |
+| Rosario: hoja abierta | `remember` | <ul><li>`rememberSaveable`</li></ul> |
+| Rosario: «rezar en voz alta» | `remember` + `ScreenLeft` en `onDispose` | <ul><li>no enviar `ScreenLeft` si `activity.isChangingConfigurations`</li><li>el controlador va en un holder de ámbito de actividad (`ViewModel`)</li></ul> |
+| Posición de lectura | `LazyListState` o `ScrollState` | <ul><li>**ancla**: primer bloque visible y su fracción (`rememberReadingAnchor`, §3.10)</li></ul> |
+| Biblia: libro, capítulo y versículo de estudio | `rememberSaveable` | ninguna |
+| Día de novena | `rememberSaveable` | ninguna |
+| Confesión: lista y notas | se borran a propósito | <ul><li>holder de ámbito de actividad (`ViewModel`), nunca en el Bundle</li><li>se borra al salir, al pasar a inactiva y al morir el proceso, como hoy</li></ul> |
+| Copia de seguridad e informe de error | sin `rememberSaveable` | <ul><li>`rememberSaveable` en los campos no secretos</li><li>la contraseña no se guarda</li></ul> |
+| Lista-detalle | `rememberSaveable` (Santos) o pila | <ul><li>selección explícita o por defecto (§3.9)</li></ul> |
+| Hojas y diálogos abiertos | variable | <ul><li>`rememberSaveable` para saber qué hoja está abierta</li></ul> |
+| Filas expandidas | `rememberSaveable` | ninguna |
 
-**Estabilidad del árbol** (riesgo técnico principal). `rememberSaveable` restaura por la posición en el árbol de composición. Si un wrapper hace `if (horizontal) Row { content() } else Column { content() }`, el contenido cambia de grupo y su estado **no se restaura** al girar.
+**Estabilidad del árbol.** `rememberSaveable` restaura por la posición en el árbol de composición. Reglas obligatorias para L0 y todas las áreas:
+1. **Los wrappers llaman a cada ranura desde un único punto.** Cambian la disposición dentro de una política de `Layout`, nunca con ramas `if` que cambien de padre el contenido.
+2. **Ningún `rememberSaveable` dentro de `header` ni de `supporting`** de `AppPageLayout`. Esas ranuras se componen en un sitio en vertical (dentro de la lista) y en otro en horizontal (en el panel), así que cambian de padre al girar.
+   - El estado que muestran (segmento, consulta, filtros, día) se **eleva** a la pantalla, por encima de `AppPageLayout`, y se pasa como parámetro.
+   - Un test de lint de L0 busca `rememberSaveable` dentro de esas lambdas.
+3. **Estado crítico con claves explícitas:** `rememberSaveable(key = "…")` para la sesión del Rosario, el ancla de lectura, el segmento y la selección.
 
-Reglas para todos los wrappers de L0:
-1. Llamar a `content` desde **un único punto**.
-2. Cambiar la disposición dentro de una política de `Layout` (medir y colocar), nunca con ramas `if` que reparenten el contenido.
-3. El estado crítico (sesión del Rosario, ancla de lectura, segmento, selección) usa claves explícitas: `rememberSaveable(key = "…")`.
-
-El test de giro (§3.13) lo comprueba.
+**Ficha apilada en vertical → horizontal.**
+- **Lista-detalle.** Una ficha abierta como página en vertical (p. ej. un santo) pasa a ser la **selección explícita** de los dos paneles, y la pila se vacía de esa página. «Atrás» sale de la pantalla (regla de T-043). Al volver a vertical, esa selección explícita vuelve a ser página apilada (§3.9).
+- **Lectores.** Un lector apilado (oración, capítulo) sigue apilado: el lector horizontal es una página, no un panel.
 
 ### 2.5 Cómo conserva cada identidad su carácter
 
@@ -186,11 +223,12 @@ El test de giro (§3.13) lo comprueba.
 
 El tinte «Dinámico Litúrgico» sigue gobernando el acento y la luz ambiental, sin excepciones en horizontal.
 
+
 ---
 
 ## 3. L0 · Fundamentos en `ui/design`
 
-Lo hace un agente local antes que ninguna área. Ninguna pantalla debe medir ventanas, insets ni anchos de panel por su cuenta.
+Lo hace un agente local antes que ninguna área. Ninguna pantalla mide ventanas, insets ni anchos de panel por su cuenta.
 
 ### 3.1 Andamiaje base
 
@@ -199,1074 +237,1074 @@ Lo hace un agente local antes que ninguna área. Ninguna pantalla debe medir ven
 ┌───────┬─────────────────────────────┬──────────────────────────────────────────────────────┐ 0
 │ (S)   │ (S) ‹                  ⌕  ◔ │ (S)                                                  │
 │ ╭───╮ │ ╔═════════════════════════╗ │  ÁREA DE CONTENIDO · desplaza                        │
-│ │ ⌂ │ │ ║ ARTE recortado al panel ║ │  ┌────────────────────────────────────────────────┐ │
-│ │Hoy│ │ ║ foco HeroMeta, bruma    ║ │  │ carriles, rejilla, lista o texto               │ │
-│ │ † │ │ ║                         ║ │  │ (según el área)                                │ │
-│ │Ora│ │ ║ Antetítulo              ║ │  └────────────────────────────────────────────────┘ │
-│ │ ▯ │ │ ║ Título (largeTitle)     ║ │  ┌────────────────────────────────────────────────┐ │
-│ │Lee│ │ ╚═════════════════════════╝ │  │                                                │ │
-│ │ ◇ │ │  meta                       │  │                                                │ │
-│ │Cam│ │  ┌───────────────────────┐  │  └────────────────────────────────────────────────┘ │
-│ │ ▦ │ │  │ RANURA DE APOYO       │  │                                                      │
-│ │Exp│ │  │ segmentos, búsqueda,  │  │                                                      │
-│ ╰───╯ │  │ índice, herramientas  │  │                                                      │
+│ │Hoy│ │ ║ ARTE recortado al panel ║ │  ┌────────────────────────────────────────────────┐ │
+│ │Ora│ │ ║ foco HeroMeta, bruma    ║ │  │ carriles, rejilla, lista o texto               │ │
+│ │Lee│ │ ║ Antetítulo              ║ │  └────────────────────────────────────────────────┘ │
+│ │Exp│ │ ║ Título (largeTitle)     ║ │  ┌────────────────────────────────────────────────┐ │
+│ ╰───╯ │ ╚═════════════════════════╝ │  │                                                │ │
+│       │  meta                       │  └────────────────────────────────────────────────┘ │
+│       │  ┌───────────────────────┐  │                                                      │
+│       │  │ RANURA DE APOYO       │  │                                                      │
+│       │  │ segmentos, búsqueda,  │  │                                                      │
+│       │  │ herramientas          │  │                                                      │
 │       │  └───────────────────────┘  │                                                      │
-│       │  (el panel desplaza solo si │                                                      │
-│       │   no cabe: 130 %, títulos)  │                                                      │
 └───────┴─────────────────────────────┴──────────────────────────────────────────────────────┘ 411
   riel     PANEL DE PORTADA 292 · fijo    contenido 519 · margen interior 20 · desplaza
   80       (0,36 · Wc)
 ```
 
-Ancho útil `Wc = W − riel − safeStart − safeEnd`. El riel desaparece en las pantallas inmersivas (§3.5). Tres familias de pantalla comparten este andamiaje:
-- **centro / raíz:** panel de portada + contenido;
-- **lector:** panel de lector + columna de lectura (§5);
-- **lista-detalle:** lista + ficha (§3.9).
+- El riel muestra 4 destinos mientras T-046 no esté integrado, y 5 después (§3.5).
+- Ancho útil: `Wc = W − riel − safeStart − safeEnd`.
+- Familias de pantalla:
+  - centro o raíz: panel de portada + contenido;
+  - Hoy y Mi camino: panel estrecho + 2 carriles;
+  - lector: panel de lector + columna de texto (§5);
+  - pantalla inmersiva con panel de apoyo: Rosario, Biblia y Confesión;
+  - lista-detalle (§3.9).
 
 ### 3.2 Panel de portada: el mismo cabezal, en vertical
 
-`AppHeroHeader`, `AppDetailHeader` y `AppLargeTitleHeader` **no cambian de firma**. Cambia dónde se dibujan, a través de un `CompositionLocal` nuevo:
+`AppHeroHeader`, `AppDetailHeader` y `AppLargeTitleHeader` **no cambian de firma**. Cambia dónde se dibujan, a través de `LocalHeaderPlacement` (`InList | SidePanel | DetailPane | CompactBand`), que leen los marcos de `AppHeaderFrame`. Las etiquetas de test del cabezal (`titleTag`, `screen_header_illustration`, `more_hero_photo`…) lo acompañan adonde vaya.
 
-```kotlin
-enum class AppHeaderPlacement { InList, SidePanel, DetailPane, CompactBand }
-internal val LocalHeaderPlacement = staticCompositionLocalOf { AppHeaderPlacement.InList }
-```
-
-`AppHeaderFrame` (en `LumenComponents.kt`) dibuja cada colocación con los mismos datos: arte, antetítulo, título, meta, acciones y etiquetas de test (`titleTag`, el `modifier` con `screen_header_illustration`, `more_hero_photo`…). Las etiquetas acompañan al cabezal adonde vaya.
-
-**Geometría del panel de portada (`SidePanel`):**
+**Geometría:**
 
 | | Valor | 891 × 411 | 800 × 360 |
 |---|---|---|---|
-| Ancho, centros y raíces | `clamp(0,36 · Wc, 248, 320)` | 292 | 259 |
-| Ancho, Hoy, Mi camino y Confesión (`kind = Today`) | `clamp(0,30 · Wc, 224, 280)` (deja dos carriles ≥ 220) | 243 | 224 |
-| Ancho, lectores (sin riel) | `clamp(0,30 · W, 224, 280)` | 267 | 240 |
+| Ancho, centros y raíces (`kind = Hub`) | `clamp(0,36 · Wc, 248, 320)` | 292 | 259 |
+| Ancho, Hoy y Mi camino (`kind = Today`) | `clamp(0,28 · Wc, 208, 280)` | 227 | 208 |
+| Ancho, lectores (`kind = Reader`, sin riel) | `clamp(0,30 · W, 224, 280)` | 267 | 240 |
+| Ancho, Confesión (`kind = Immersive`, sin riel) | `clamp(0,28 · W, 224, 280)` | 249 | 224 |
 | Alto | toda la ventana; dibuja bajo la barra de estado y la de gestos | 411 | 360 |
-| **Zona de arte** (`AppSidePanelArtHeight`) | `clamp(0,46 · H, 160, 196)`, incluida `S` | 189 | 166 |
-| Línea del título | borde inferior de la zona de arte − 14 dp (`HeaderTextBottom`, igual que en vertical) | y = 175 | y = 152 |
-| Margen interior | `gutter` de la identidad (20) + `safeStart` si no hay riel | 20 | 20 |
+| **Zona de arte** (`AppSidePanelArtHeight`) | `clamp(0,46 · H, 160, 196)`, con `S` incluida | 189 | 166 |
+| **Línea del título** | borde inferior de la zona de arte − 14 dp | y = 175 | y = 152 |
 
-**Una sola línea de título en todas las pantallas horizontales.** Es la traducción directa de la regla «236 dp de arte, título en la misma línea base»: todos los títulos de panel se apoyan en la misma línea (`0,46 H − 14`). El crítico lo comprueba superponiendo capturas.
+**Una sola línea de título.** Todos los títulos de panel se apoyan en la línea `0,46 H − 14`, **sin excepciones**. Es la regla «título en la misma línea base» de AGENTS.md trasladada al panel.
+
+**Títulos largos.** Ninguna pantalla mueve la línea:
+1. `largeTitle` en raíces y `title1` en el resto.
+2. Si la palabra más larga no cabe en el ancho del panel (medido con `constraints`, no con `screenWidthDp`), o el título pasa de 2 líneas en `largeTitle`, pasa a `title1`.
+3. El título crece **hacia arriba**, sobre el arte, hasta `S + 52` (bajo la fila de atrás).
+4. Si aun así no cabe (130 %, títulos PT larguísimos), **el panel entero desplaza**. La línea del título sigue en `0,46 H − 14` en reposo, y la parte superior del título queda arriba, alcanzable desplazando el panel.
+5. Al 100 %, ningún título de la app llega al paso 4. Lo comprueba el test de paridad con los títulos ES y PT (§3.13).
 
 **Recorte del arte:**
-- `ContentScale.Crop` centrado en el foco de `HeroMeta` (`focusX`, `focusY`; ya existe para el Rosario y los cabezales).
-- Recortado al rectángulo del panel (`clip`): nunca invade el contenido.
-- **Lumen:**
-  - fundido inferior desde el 30 % (`fadeStart = 0.30`, como hoy);
-  - fundido lateral solo en el **borde final**: 24 dp hacia la luz ambiental (`fadeEnd`, variante de `fadeSides`).
-- **Cristal:** sin fundido lateral; el arte llega al borde y el cristal del contenido lo refracta.
+- `ContentScale.Crop` centrado en el foco de `HeroMeta` (`focusX`, `focusY`) y recortado al rectángulo del panel.
+- **Lumen:** fundido inferior desde el 30 %; fundido de 24 dp en el borde final hacia la luz ambiental (`Modifier.fadeEnd`, nuevo).
+- **Cristal:** sin fundido lateral; el contenido de cristal refracta el borde del arte.
 - **Tradicional:** fundido inferior y filete de 0,5 dp en el borde final.
-- **Sanctuary:**
-  - título arriba (`S + 16`), sobre el papel;
-  - arte en marco debajo, a `panel − 2·gutter` de ancho y `0,46 H − 72` de alto (≈ 117 dp a 411; mínimo 96);
-  - la línea del título es la del papel, igual en todas las pantallas Sanctuary.
-- **Texto grande** (`appLargeText()`, ≥ 1,25): igual que en vertical, el título va sobre el lienzo y el arte enmarcado debajo, con 96 dp de alto. El panel desplaza.
+- **Sanctuary:** título sobre el papel en la misma línea; el arte, en marco filetado bajo la meta, a `panel − 2·gutter` × `0,46 H − 72` (mínimo 96), como en el vertical de Sanctuary.
 
-**Título:**
-- Rango `largeTitle` en raíces y `title1` en el resto (regla vigente).
-- La prueba «¿cabe la palabra más larga?» mide contra el **ancho del panel** (`constraints.maxWidth`), no contra `screenWidthDp`. Con eso «Recordatorios» o «Constantinopolitano» bajan a `title1` en el panel igual que a 320 dp.
-- Un título de más de 2 líneas en `largeTitle` también baja a `title1`.
-- Si aun así pasa de 3 líneas, la zona de arte crece hacia abajo **solo en esa pantalla**. El título nunca se trunca.
+**Variante póster** (cuando la ranura de apoyo está vacía):
+- **Cuándo:** Mi camino, Recordatorios vacío, Planes, Doctrina e Historia, Doctrina, Historia y Primeros pasos (§15).
+- **Arte:** se prolonga desde la zona de arte **hasta el pie del panel**, con fundido continuo. A partir de `0,46 H` va bajo un velo del lienzo del 70 % (Lumen y Cristal) o del 85 % (Tradicional).
+- **Texto:** el título sigue en su línea y la meta va debajo, sobre el velo, con contraste ≥ 4,5:1 (rúbrica 3).
+- **Sanctuary:** el marco crece hasta `H − B − 16`.
+- Así el panel no queda como un rectángulo de fondo vacío.
 
-**Acciones del cabezal** (buscar, avisos, traducir, marcador):
-- Círculos de 44 dp en la esquina superior final del panel (`S + 2`), sobre el arte, como en vertical.
-- Sanctuary las pone en línea con el título, también como en vertical.
+**Acciones del cabezal** (buscar, avisos): círculos de 44 dp en la esquina superior final del panel, a `S + 4`.
 
-**Atrás:** el botón único del andamiaje (`nav_back`) se dibuja en la esquina superior inicial del **panel**, no del área total. Su posición respecto al arte es la de vertical.
+**Atrás:** el botón único del andamiaje (`nav_back`) se dibuja en la esquina superior inicial del panel.
 
-**Ranura de apoyo** (`supporting`), bajo la meta: segmentos verticales (§3.12), campo de búsqueda, índice, herramientas del lector y tarjeta del día. Reglas:
-- Cabe sin desplazar a 891 × 411 al 100 % en todos los centros: lo comprueba el detector.
-- Si no cabe (130 %, PT), **todo el panel** desplaza como una columna. El arte no queda fijo.
+**Ranura de apoyo:**
+- Va bajo la meta.
+- Cabe sin desplazar a 891 × 411 y a 800 × 360 al 100 % en todos los centros; ver los presupuestos de cada área.
+- Si no cabe (130 %), **todo el panel** desplaza.
 
 **Lado del contenido:**
-- Desplaza por su cuenta.
-- Margen superior `S + 12`. No hay fila de 52 dp para «atrás», que vive en el panel.
-- **No se dibuja la barra de título que aparece al desplazar** (`app_bar_title`): el título siempre está a la vista en el panel. El nodo sigue existiendo en vertical; en horizontal no se compone.
-- Bajo la barra de estado, el contenido se funde (Lumen y Cristal: máscara de 24 dp) o pasa bajo una franja opaca del lienzo (Tradicional y Sanctuary: `canvasTop` al 95 % y filete).
+- Desplaza por su cuenta, desde `S + 12`.
+- Sin barra de título al desplazar (`app_bar_title` solo se compone en vertical): el título siempre está a la vista en el panel.
+- Bajo la barra de estado:
+  - Lumen y Cristal: el contenido se funde con una máscara de 24 dp;
+  - Tradicional y Sanctuary: pasa bajo una franja `canvasTop` al 95 % con filete.
 
-### 3.3 Las otras tres colocaciones
+### 3.3 Las otras colocaciones
 
-| Colocación | Cuándo | Aspecto |
-|---|---|---|
-| `SidePanel` **sin arte** («panel de título») | `AppLargeTitleHeader`, o un detalle sin arte (artículo del Catecismo) | <ul><li>Mismo panel y ancho.</li><li>Título en la misma línea `0,46 H − 14`.</li><li>Sobre el lienzo, sin arte.</li></ul> |
-| `CompactBand` («banda compacta») | <ul><li>Pantallas que necesitan todo el ancho para su contenido: resultados de búsqueda (§8.6) y lector bíblico (§5.2).</li><li>**Respaldo automático** de cualquier pantalla que todavía no use `AppPageLayout`.</li></ul> | <ul><li>Dentro del contenido, al principio, y **desplaza con él**.</li><li>Arte en tira de `S + 96` dp de alto, recortada al foco, con el título en su borde inferior − 14.</li><li>Rango de título sin cambios.</li><li>Sin arte: `S + 8` + bloque de título.</li><li>Ocupa como máximo el 30 % de `H`. Hoy ocupa el 56 %.</li></ul> |
-| `DetailPane` («cabecera de ficha») | El detalle de un lista-detalle en `LandscapePhone` (§3.9) | <ul><li>Fila: miniatura de arte de 112 × 112 (retratos de santos y devociones: 104 × 130, proporción 4:5), recortada al foco y con radio `thumbnail` (Sanctuary: marco filetado).</li><li>A su lado: antetítulo, título `title1` (crece) y meta.</li><li>Debajo, las acciones (Escuchar…).</li></ul> |
+| Colocación | Cuándo | Aspecto | Alto a 411 / 360 |
+|---|---|---|---|
+| `SidePanel` sin arte («panel de título») | `AppLargeTitleHeader`, o un detalle sin arte (artículo del Catecismo, Compendio) | <ul><li>mismo panel</li><li>título en la misma línea, sobre el lienzo</li></ul> | — |
+| `CompactBand` («banda compacta») | <ul><li>**respaldo automático** de cualquier pantalla aún no migrada a `AppPageLayout`</li><li>`CompactPhone`</li></ul> | <ul><li>al principio del contenido, **desplaza con él**</li><li>tira de arte de `S + 84` con el título en su borde inferior − 14 (`largeTitle`: 18 + 40 + 14 = 72 ≤ 84)</li><li>sin arte: `S + 8` + bloque de título</li></ul> | **108 (26 %)** / **108 (30 %)** |
+| `DetailPane` («cabecera de ficha») | detalle de una lista-detalle en `LandscapePhone` | <ul><li>fila: miniatura 112 × 112 (retratos: 104 × 130), recortada al foco, radio `thumbnail` (Sanctuary: marco)</li><li>a su lado: antetítulo, título `title1` y meta</li><li>debajo, las acciones</li></ul> | 130–150 |
 
-**El respaldo `CompactBand` es la primera entrega de L0.** En cuanto L0 se fusiona, todas las pantallas ganan ≈ 130 dp de alto aunque su área no se haya rediseñado todavía. `AppHeaderFrame` elige `CompactBand` cuando `appIsLandscapePhone()` y no hay un `AppPageLayout` que pida `SidePanel`.
+**El respaldo `CompactBand` es la primera entrega de L0.** En cuanto L0 se fusiona, toda raíz baja de 236 + `S` a 108 dp de cabezal aunque su área no se haya rediseñado. El test de L0 lo mide con `S` = 24.
 
-### 3.4 Wrapper `AppPageLayout`
+### 3.4 Wrappers de página: `AppPageLayout` y `AppSupportingPaneLayout`
 
-Es el wrapper nuevo en `AppComponents.kt`. Es la única forma de tener panel lateral:
+Los dos están en `AppComponents.kt`. **Son la única forma de tener panel en horizontal.** Ni el Rosario ni la Biblia ni ninguna otra pantalla maquetan paneles a mano.
 
 ```kotlin
+enum class AppPageKind { Hub, Today, Reader, Immersive }
+
 @Composable
 fun AppPageLayout(
-    header: @Composable () -> Unit,                          // la llamada a AppHeroHeader/AppDetailHeader de hoy, intacta
+    header: @Composable () -> Unit,                           // la llamada de hoy a AppHeroHeader/AppDetailHeader, intacta
     modifier: Modifier = Modifier,
-    kind: AppPageKind = AppPageKind.Hub,                     // Hub | Today | Reader | Immersive
-    supporting: (@Composable ColumnScope.() -> Unit)? = null, // solo se compone en el panel (horizontal)
-    supportingInPortrait: Boolean = true,                     // si la ranura también se dibuja en vertical, tras el cabezal
+    kind: AppPageKind = AppPageKind.Hub,
+    supporting: (@Composable ColumnScope.() -> Unit)? = null, // panel en horizontal; tras el cabezal en vertical
+    supportingInPortrait: Boolean = true,
+    panelFooter: (@Composable RowScope.() -> Unit)? = null,   // pie fijo del panel (lectores: Escuchar · Aa)
+    contentFooter: (@Composable RowScope.() -> Unit)? = null, // pie fijo del contenido (lectores: ‹ Anterior … Siguiente ›)
     content: @Composable (headerItem: @Composable () -> Unit) -> Unit
+)
+
+@Composable
+fun AppSupportingPaneLayout(
+    supporting: @Composable () -> Unit,          // panel de apoyo (cuentas del Rosario, estudio de la Biblia)
+    modifier: Modifier = Modifier,
+    supportingSide: AppPaneSide = AppPaneSide.Start,
+    supportingWidth: AppPaneWidth,               // regla clamp(fracción · W, mín, máx) declarada, no un Dp suelto
+    showSupportingPane: Boolean = true,          // false: el apoyo se abre como hoja lateral (Biblia < 860)
+    endActions: (@Composable ColumnScope.() -> Unit)? = null,  // grupo vertical en el borde derecho (Rosario)
+    supportingFooter: (@Composable RowScope.() -> Unit)? = null,
+    mainFooter: (@Composable RowScope.() -> Unit)? = null,
+    main: @Composable () -> Unit
 )
 ```
 
-- **`Phone`, `TabletPortrait` y las tabletas que no adoptan el panel** (§2.1): `content { header(); if (supportingInPortrait) supporting?.invoke() }`. Es exactamente lo de hoy: el cabezal es el primer elemento de la lista.
-- **`LandscapePhone`:**
-  - el panel (ancho según `kind`) compone `header()` con `LocalHeaderPlacement = SidePanel` y luego `supporting`;
-  - el área de contenido llama a `content { }` con un `headerItem` vacío.
-  - Las dos llamadas a `content` son **la misma**, colocada por una política de `Layout`; ver «Estabilidad del árbol» (§2.4).
-- Declara `AppFullWidth()` en horizontal: la columna centrada de 680 dp no aplica.
-- `kind = Reader | Immersive` llama a `AppHideTabBar(true)` en horizontal (§3.5).
-- Semántica:
-  - panel y contenido son grupos de recorrido (`isTraversalGroup`), panel primero;
-  - el orden de TalkBack es el de vertical: cabezal, ranura, contenido.
+Las dos se comportan así:
+- **Fuera de `LandscapePhone`:** se componen como hoy. `AppPageLayout` pone el cabezal y la ranura como primeros elementos de la lista. `AppSupportingPaneLayout` dibuja `main` y deja a la pantalla su disposición vertical actual.
+- **En `LandscapePhone`:**
+  - cada ranura se compone **una sola vez** y una política de `Layout` la coloca (§2.4);
+  - `kind = Reader | Immersive` y `AppSupportingPaneLayout` ocultan el riel (`AppHideTabBar`, §3.5);
+  - declaran `AppFullWidth()`;
+  - el panel y el contenido son grupos de recorrido (`isTraversalGroup`), panel primero.
+- **Estado:** ninguna ranura guarda estado propio; ver §2.4 regla 2.
 
-Cada pantalla migra cambiando `item { AppHeroHeader(…) }` por `item { headerItem() }` y envolviendo su cuerpo. Son 34 llamadas en 19 archivos (§3.13). Los segmentos y buscadores que hoy van tras el cabezal se mueven a `supporting`, con `supportingInPortrait = true` para que el vertical no cambie.
+Para migrar, cada pantalla:
+- cambia `item { AppHeroHeader(…) }` por `item { headerItem() }`;
+- envuelve su cuerpo en el wrapper;
+- mueve a `supporting` lo que hoy va tras el cabezal (segmentos, buscadores), con su estado elevado.
 
-### 3.5 Riel compacto con 5 pestañas
+Son 34 cabezales en 19 archivos.
 
-`LandscapePhone` usa una variante compacta del riel de T-043, en `LumenKit.Rail`, `GlassRail` y `FolioRail`:
+### 3.5 Riel compacto
+
+`LumenKit.Rail`, `GlassRail` y `FolioRail` tienen una variante compacta para `LandscapePhone`:
 
 | | T-043 (tabletas) | Compacto (`LandscapePhone`) |
 |---|---|---|
 | Reserva de ancho | 92 (Sanctuary 88) | **80** (Sanctuary 76) + `safeStart` |
-| Cápsula | 72 de ancho | **64**; con texto grande, 72 |
-| Alto de destino | `68 + 44·(escala − 1)` | **`max(56, 4 + 24 icono + 3 + líneas × navLabel.lineHeight + 8)`**: 56 al 100 %; ≈ 60 al 130 % con 1 línea |
-| 5 destinos al 100 % | 340 + 8 | **288** (cabe en 411 − 24 − 16 = 371 y en 360 − 24 − 16 = 320) |
-| 5 destinos al 130 % | 405 (no cabe) | **≈ 308** (cabe en 320) |
-| Etiquetas | completas, hasta 2 líneas | <ul><li>completas en 1 línea;</li><li>con texto grande, las cortas oficiales: «Hoy · Orar · Leer · Camino · Más» (ES), «Today · Pray · Read · Path · More» (EN), «Hoje · Orar · Ler · Caminho · Mais» (PT), con el mismo mecanismo que hoy usa «Más»</li></ul> |
-| Si aun así no cabe (200 % del sistema) | crece | <ul><li>el riel **desplaza** verticalmente dentro de su cápsula, con el destino activo siempre visible;</li><li>nunca se trunca</li></ul> |
-| Posición | centrado vertical | centrado vertical entre `S` y `H − B` (zona del pulgar izquierdo) |
+| Cápsula | 72 | 64 |
+| Alto por destino, etiqueta de 1 línea | 68 | **56** (4 + icono 24 + 3 + 16 + 8 + margen) |
+| Alto por destino, etiqueta de 2 líneas | 68 + | **72** |
+| **4 destinos** (hasta T-046): Hoy · Orar · Leer · Explorar | 280 | 4 × 56 + 8 = **232** |
+| **5 destinos** (con T-046): Hoy · Orar · Leer · Mi camino · Explorar | 348 | <ul><li>1 línea: 5 × 56 + 8 = 288</li><li>con «Mi camino» o «Meu caminho» en 2 líneas: 4 × 56 + 72 + 8 = **304**</li></ul> |
+| Alto útil del riel (`H − S − B`) | — | 371 (411) / **320** (360): **cabe** con 16 dp de margen en el peor caso |
+| Etiquetas al 100 % | completas | <ul><li>**completas**, hasta 2 líneas, nunca truncadas</li><li>el presupuesto de arriba ya cuenta la 2.ª línea del destino más largo</li></ul> |
+| Etiquetas al 130 % (listón duro) | — | <ul><li>cortas oficiales: «Hoy · Orar · Leer · Camino · Más», «Today · Pray · Read · Path · More», «Hoje · Orar · Ler · Caminho · Mais», con el mismo mecanismo que hoy «Más»</li><li>si aun así no cabe, el riel desplaza dentro de su cápsula, con el destino activo visible</li></ul> |
+| Posición | centrado | centrado vertical entre `S` y `H − B` |
 
-- Los 5 destinos son Hoy · Orar · Leer · **Mi camino** (`nav_my_path`, de T-046) · Explorar.
-- Etiquetas de test sin cambios: `navigation_rail`, `nav_*`.
-- `selected` y la reselección (volver al inicio del centro) no cambian.
-
-**Pantallas inmersivas:** en `LandscapePhone`, el riel **respeta `AppHideTabBar`**, como la barra inferior en vertical:
-- se desliza hacia el borde inicial (`mediumMillis`; nada con «reducir movimiento»);
-- devuelve sus 80 dp a la lectura;
-- se vuelve con «atrás».
-
-Afecta a Rosario, capítulo bíblico, oración, día de novena, Noche, artículo del Catecismo y lección. En tabletas se mantiene la decisión de T-043 (el riel no se oculta). *Decisión vetable (§14).*
+- Las etiquetas de test no cambian: `navigation_rail`, `nav_*`, `nav_my_path` (T-046).
+- **Pantallas inmersivas.** En `LandscapePhone`, el riel **respeta `AppHideTabBar`**, como la barra inferior en vertical:
+  - se oculta en el Rosario, los lectores (§5), la Biblia y Confesión;
+  - en las tabletas no cambia la decisión de T-043.
+  - *Decisión vetable (§14).*
 
 ### 3.6 Hojas laterales
 
-En `LandscapePhone`, `AppSheet` (en `LumenExtras.kt`) se dibuja como **hoja lateral modal** anclada al borde final. Ninguna llamada cambia: las 31 llamadas a `AppSheet` de la app pasan a laterales con un solo cambio.
+En `LandscapePhone` y `CompactPhone`, `AppSheet` (en `LumenExtras.kt`) se dibuja como **hoja lateral modal** anclada al borde final. Las 31 llamadas cambian con un solo cambio en el wrapper.
 
 | | Valor | 891 | 800 |
 |---|---|---|---|
 | Ancho normal | `clamp(0,50 · W, 360, 480)` | 446 | 400 |
-| Ancho amplio (`wide = true`, parámetro nuevo) | `clamp(0,66 · W, 480, 640)`, para hojas de dos columnas (§10) | 588 | 528 |
-| Alto | <ul><li>de `S + 8` a `H − B − 8`;</li><li>Sanctuary: a todo el alto, pegada al borde</li></ul> | 371 | 320 |
-| Separación de los bordes | 8 arriba y abajo; `safeEnd + 8` al final (Sanctuary: 0) | | |
-| Forma | <ul><li>`dialog` de la identidad en las cuatro esquinas (Lumen 28; Tradicional y Cristal según tokens);</li><li>Sanctuary: esquinas iniciales 0 y filete de lomo</li></ul> | | |
-| Entrada | desde el borde final (`slideInHorizontally`, `mediumMillis`); nada con «reducir movimiento» | | |
-| Cierre | <ul><li>toque en el velo;</li><li>«atrás» (con atrás predictivo);</li><li>deslizar hacia el borde final;</li><li>**botón «Cerrar» de 44 dp** en la cabecera (`sheet_close`, nueva)</li></ul> | | |
-| Cabecera | <ul><li>fila fija de 56 dp: título (`headline`, alineado al inicio; Sanctuary en EB Garamond) + «Cerrar» al final;</li><li>sustituye al asa de arrastre, que es una metáfora vertical</li></ul> | | |
-| Contenido | desplaza dentro de la hoja | | |
-| `footer` (parámetro nuevo, opcional) | <ul><li>barra fija al pie de la hoja para la acción principal (Guardar, Restaurar, Enviar);</li><li>lleva `imePadding()`: queda sobre el teclado</li></ul> | | |
+| Ancho amplio (`wide = true`, nuevo) | `clamp(0,66 · W, 480, 640)` | 588 | 528 |
+| Alto | <ul><li>de `S + 8` a `H − B − 8`</li><li>Sanctuary: a todo el alto, pegada al borde</li></ul> | 355 | 304 |
+| Cabecera fija | <ul><li>56: título (`headline`) + **«Cerrar»** de 44 (`sheet_close`, nueva)</li><li>las hojas que hoy tienen «Listo» (Fuente) lo conservan **en lugar** de «Cerrar»</li></ul> | | |
+| `footer` (nuevo, opcional) | barra fija de 56 con la acción principal | | |
+| **Con el teclado abierto** | <ul><li>el `footer` se oculta y **su acción pasa a la cabecera**, en lugar de «Cerrar» (que sigue disponible con atrás y con el velo)</li><li>espacio del campo: 157 − 8 − 56 = 93 (891) y 134 − 8 − 56 = 70 (800), ≥ 56 en ambos</li></ul> | | |
+| Entrada y cierre | <ul><li>entra desde el borde final</li><li>se cierra con el velo, atrás (predictivo), deslizando hacia el borde o con «Cerrar»</li></ul> | | |
 
-- La etiqueta de cada hoja (`rosary_options_sheet`, `gui_customizer_sheet`…) sigue en el contenedor de la hoja.
-- Semántica: `paneTitle` = título de la hoja; el foco de TalkBack entra en la hoja al abrirse y vuelve al control que la abrió al cerrarse.
-- En vertical y en tabletas, `AppSheet` no cambia.
+- La etiqueta de cada hoja sigue en su contenedor.
+- `paneTitle` = título de la hoja. El foco de TalkBack entra en la hoja al abrirla y vuelve al control que la abrió al cerrarla.
 
 ### 3.7 Diálogos de dos columnas
 
-`AppDialog` (en `LumenExtras.kt`):
-- Ancho: `min(W − 2·(safe + 24), 720)`; 720 a 891 y a 800 sin recorte (688 a 800 con un recorte de 32 dp).
-- Alto máximo: `H − S − B − 32`.
-- Se centra en la ventana. Hoy se ancla arriba a la izquierda en horizontal (E7).
+`AppDialog` en `LandscapePhone` y `CompactPhone`:
+- ancho `min(W − 2·(safe + 24), 720)`;
+- alto máximo `H − S − B − 32` (339 / 288);
+- centrado.
 
-**Parámetro nuevo `aside: (@Composable ColumnScope.() -> Unit)?`.** En `LandscapePhone` se compone así:
+El parámetro nuevo `aside` define dos columnas: contexto a la izquierda (0,42) y elección a la derecha, que desplaza. Las acciones van fijas al pie de la columna derecha.
 
 ```
 ┌──────────────────────────────── 720 ─────────────────────────────────┐
-│ COLUMNA DE CONTEXTO · 0,42 · fija      │ COLUMNA DE ELECCIÓN · desplaza │
-│ Título (title2)                        │ opciones, campos               │
-│ texto explicativo                      │ …                              │
-│ (ilustración o vista previa)           │                                │
-│                                        │ ────────────────────────────── │
-│                                        │      [Secundaria] [PRINCIPAL] ▸│ ← acciones fijas, abajo a la derecha
-└────────────────────────────────────────┴────────────────────────────────┘
+│ CONTEXTO · fijo                        │ ELECCIÓN · desplaza           │
+│ Título (title2)                        │ opciones y campos             │
+│ texto explicativo, ilustración         │ ───────────────────────────── │
+│                                        │      [Secundaria] [PRINCIPAL] │
+└────────────────────────────────────────┴───────────────────────────────┘
 ```
 
-- `aside` es la columna izquierda; `content` es la derecha. Las acciones van al pie de la columna derecha y nunca salen de la pantalla.
-- En vertical, `aside` se compone antes de `content`, en una columna: lo mismo que hoy.
-
-`AppConfirmDialog` (mensaje corto + dos botones):
-- sigue en una columna, de 420 dp de ancho, centrado;
-- si el mensaje no cabe en el alto, desplaza; la fila de botones queda fija.
-
-Los diálogos propios fuera del sistema, como el editor de diario (`SpiritualLifeScreen.kt`, un `Dialog` crudo), se tratan en §10.
+`AppConfirmDialog`: una columna de 420; el mensaje desplaza si no cabe y la fila de botones queda fija.
 
 ### 3.8 Rejillas y carriles
 
 Helpers nuevos:
-- **`appGridColumns(minCell: Dp, max: Int)`:** `floor((ancho interior + gap) / (minCell · k + gap))`, entre 1 y `max`, con `k = 1` al 100 % y `k = 1,25` con `appLargeText()`.
-- **`AppGrid`:** su `columns` por defecto pasa a usar esta fórmula. Hoy fija 3, o 2 con texto grande.
-- **`AppFeedColumns(lanes)`:** carriles con **asignación explícita** de elementos (`lane(0) { … }`, `lane(1) { … }`), no ajuste automático. Así el orden de lectura queda decidido: carril A completo y luego carril B. Es no perezoso, para pantallas de ≤ 20 bloques (Hoy, Mi camino, Explorar).
+- **`appGridColumns(minCell, max)`:** `floor((interior + 12) / (minCell · k + 12))`, con `k = 1`, o `k = 1,25` si `appLargeText()`.
+- **`AppFeedColumns(lanes)`:** carriles con **asignación explícita** de elementos; el orden de lectura es carril A completo y luego carril B.
 
-| Tipo de celda | `minCell` | Hub 891 (interior 479) | Hub 800 (interior 421) | Al 130 % (891 / 800) | Máximo |
-|---|---|---|---|---|---|
-| Tarjeta de imagen (novenas, guías, cursos) | 128 | 3 | 3 | 2 / 2 | 4 |
-| Losa de categoría (icono + rótulo) | 112 | 3 | 3 | 3 / 2 | 4 |
-| Fila compacta en rejilla (Explorar, secciones) | 220 | 2 | 1 | 1 / 1 | 3 |
-| Fila de resultado (búsqueda, a lo ancho; §8.6) | 300 | 2 (interior 771) | 2 (interior 680) | 2 / 1 | 3 |
-| Carril de feed (Hoy, Mi camino) | 220 | 2 (interior 528) | 2 (interior 456) | 1 / 1 | 3 (tableta) |
+| Celda | `minCell` | Centro 891 (interior 479) | Centro 800 (interior 421) | Máximo |
+|---|---|---|---|---|
+| Tarjeta de imagen | 128 | 3 | 3 | 4 |
+| Losa de categoría | 112 | 3 | 3 | 4 |
+| Fila compacta en rejilla | 220 | 2 | 1 | 3 |
+| Fila de resultado (Búsqueda, a todo el ancho; interior 771 / 680) | 300 | 2 | 2 | 3 |
+| Carril (Hoy y Mi camino; interior 544 / 472) | 228 | 2 (264 c/u) | 2 (228 c/u) | 3 (tableta) |
 
-Separación entre celdas: 12 dp; entre carriles, 16 dp. En tableta (`TabletLandscape`, `W ≥ 1200`) los carriles suben a 3.
+Al 130 % se pierde una columna donde la fórmula lo dé (listón duro: nada se corta).
 
 ### 3.9 `AppTwoPane` con altura compacta
 
-En `LandscapePhone`, `appIsTwoPane()` es verdadero para las pantallas de L5, con estas medidas:
-
 | | `TabletLandscape` (T-043) | `LandscapePhone` |
 |---|---|---|
-| Panel de lista | 360 fijo | `clamp(0,36 · Wc, 272, 320)`: 292 (891) / 272 (800) |
-| Panel de detalle | resto, centrado a 680 | resto: 519 / 448; sin centrar |
-| Cabezal de la lista | `AppHeroHeader` en lista, con arte | <ul><li>**«Cabecera de lista» sin arte:** antetítulo + título (`largeTitle`), que desplaza con la lista.</li><li>La búsqueda y los filtros son **adhesivos** arriba (`stickyHeader`, 48 + 44).</li><li>El arte de la sección pasa a la ficha vacía (abajo).</li></ul> |
+| Panel de lista | 360 | `clamp(0,36 · Wc, 272, 320)`: **292 / 272** |
+| Panel de detalle | resto, centrado a 680 | resto: 519 / 448 |
+| Cabezal de la lista | `AppHeroHeader` con arte | <ul><li>**tira de arte de 96 dp** con antetítulo y título (`largeTitle` o `title1`, misma regla de §3.2) en su borde inferior;</li><li>**desaparece al desplazar** la lista</li></ul> |
+| Barra adhesiva de la lista | — | <ul><li>**≤ 56 dp:** búsqueda (campo de 44) + **botón de filtro** de 44 (`list_filter_button`, nueva), que abre una hoja lateral con los filtros de hoy (mes, «solo con ficha», segmento…)</li><li>si hay filtros activos, aparece debajo una fila de 44 dp con chips para quitarlos</li></ul> |
 | Cabezal del detalle | `AppDetailHeader` con arte de 236 | `DetailPane` (§3.3) |
-| Separador | 0,5 dp | <ul><li>0,5 dp (Tradicional, Cristal y Lumen);</li><li>lomo doble (Sanctuary)</li></ul> |
+| Separador | 0,5 | 0,5 (Sanctuary: lomo doble) |
 
-- **Selección:** sin selección explícita se abre la primera entrada (regla de T-043). La selección se guarda con una marca `explicit`.
-- **Al girar a vertical:**
-  - con selección explícita, la entrada se abre como página apilada (T-043);
-  - con selección por defecto, se vuelve a la **lista**, no a una página que el usuario nunca abrió.
-- **Lectura larga dentro de la ficha:** el texto del detalle respeta la medida (§3.10). Si la ficha es un lector largo (artículo del Catecismo, respuesta extensa), la ficha ofrece «Leer a pantalla completa» (`detail_open_reader`, nueva), que abre el lector L2.
-- **Fila activa:** `LeadRow(selected)` / `AppListRow(selected = true)`, con `selected` en semántica (ya existe).
+- **Selección explícita o por defecto.** Sin selección, se abre la primera entrada (T-043). Al girar a vertical:
+  - con selección explícita, la entrada pasa a ser una página apilada;
+  - con selección por defecto, se vuelve a la **lista**.
+  - Para el paso contrario (de vertical a horizontal), ver §2.4.
+- **Medida:** el texto del detalle usa `appReadingMeasure()`. Las fichas de lectura larga (artículo del Catecismo, respuestas extensas) ofrecen «Leer a pantalla completa» (`detail_open_reader`, nueva), que abre el lector L2.
+
+**Filas visibles en reposo**, con la tira y la barra, en el orden por defecto de cada lista y con los nombres ES y PT:
+- a 891: 371 − 96 − 56 = 219 dp. Ejemplo de enero en Santos: 108 + 64 + 86 = 258, así que en reposo se ven **2 completas y el inicio de la 3.ª**.
+- **Tras desplazar la tira** (el uso real): 315 dp → **≥ 3 filas completas**.
+- a 800: 320 − 152 = 168 en reposo y 264 sin la tira → **≥ 2 filas completas** sin la tira.
+
+Este es el criterio de L5 (§8.3).
 
 ### 3.10 Medida de lectura
 
-Helper nuevo **`appReadingMeasure()`**:
-- Calcula el ancho de la columna de texto para unos **66 caracteres**: `33 × tamaño de reading` en dp (glifo medio ≈ 0,5 em).
-- Lo acota a `[30 em, 37 em]` (≈ 60–75 caracteres).
-- Usa el estilo `reading` **efectivo**: tamaño de la identidad × escala de la app × `fontScale` del sistema.
+**`appReadingMeasure()`** mide con `TextMeasurer` el ancho de **66 caracteres** de una frase de referencia del idioma activo, en el **estilo `reading` efectivo** del usuario (fuente elegida × escala de la app × `fontScale` del sistema). El rango aceptado es de 60 a 75 caracteres. No se usa un 0,5 em fijo. La columna de texto mide `min(ancho disponible, medida)` y va centrada en su panel.
 
-El texto se coloca en `min(ancho del panel − 2·gutter, appReadingMeasure())`, centrado en su panel.
+Medida con las fuentes de la app (texto de Juan 1, ES y PT):
 
-| Lector | Ancho del panel de texto (891 / 800) | Columna (891 / 800) | Caracteres por línea: serif 19 (predeterminada) | Sans 18 |
+| Estilo | dp por carácter | 60 car. | **66 car.** | 75 car. |
 |---|---|---|---|---|
-| Lector L2 (panel 267 / 240, sin riel) | 624 / 560 | 576 / 512 | ≈ 70 / 62 | ≈ 64 / 57 |
-| Biblia con estudio (§5.2) | 552 / — | 504 / — | ≈ 61 | ≈ 56 |
-| Biblia sin estudio | 891 / 800 | medida (≈ 627) | 66 | 66 |
-| Ficha de lista-detalle | 519 / 448 | 479 / 408 | ≈ 58 / 50 | ≈ 53 / 45 |
+| EB Garamond 19/30 (predeterminada, serif) | 6,7–7,1 | 401–426 | **441–468** | 501–532 |
+| Inter 18/28 (sans) | 8,0–8,5 | 481–513 | **529–564** | 601–641 |
 
-**Umbrales** (rúbrica 3):
-- Lectores L2 a 891 × 411 al 100 %: 60–75 caracteres con la fuente predeterminada.
-- A 800 × 360, y con la fuente sans: ≥ 56.
-- Fichas de lista-detalle: ≥ 45, más el botón «Leer a pantalla completa».
-- Al 130 %: ≥ 45 en lectores. Si una columna bajara de 45, el panel del lector pasa a `CompactBand` y la lectura recupera el ancho.
+| Lector | Ancho disponible (891 / 800) | Columna serif | Columna sans |
+|---|---|---|---|
+| Lector L2 (panel 267 / 240, sin riel) | 576 / 512 | 455 / 455 → **66 car.** | 545 → 66 / 512 → 62 |
+| Biblia con estudio (≥ 860) | 504 / — | 455 → 66 | 504 → 61 |
+| Biblia sin estudio (< 860) | — / 752 | 455 → 66 | 545 → 66 |
+| Ficha de lista-detalle | 479 / 408 | 455 → 66 / 408 → 59 | 479 → 58 / 408 → 49 |
+| Rosario, texto de la oración (§4) | 462–490 / 400–428 | 65–73 / 57–62 | — |
 
-Lo mide el detector: media de caracteres por línea en el `TextLayoutResult` del primer párrafo largo.
+**Umbrales** (rúbrica 3, al 100 %):
+- lectores y Biblia: 60–75 caracteres con cualquier fuente;
+- fichas de lista-detalle: ≥ 56 con serif y ≥ 45 con sans, más «Leer a pantalla completa»;
+- Rosario: ≥ 56.
 
-**`rememberReadingAnchor(listState | scrollState, key)`** (para el giro):
-- Guarda en `rememberSaveable` el índice del primer bloque visible y su fracción.
-- Al restaurar, desplaza a ese bloque. Sirve para lectores con `LazyColumn` o con `Column` + `verticalScroll`, en este caso con `onGloballyPositioned` de los párrafos.
+Al 130 % rige solo el listón duro.
+
+**`rememberReadingAnchor()`** guarda el índice del primer bloque visible y su fracción, y restaura por ancla al girar.
 
 ### 3.11 Espaciado y márgenes
 
-| Token | Valor en horizontal | Nota |
-|---|---|---|
-| Margen exterior (al borde seguro) | `gutter` de la identidad (20) | más `safeStart` o `safeEnd` |
-| Margen interior de cada panel | 20 | idéntico al vertical |
-| Separación entre panel y contenido | 0 + separador de la identidad (§2.5) | el ritmo lo dan los márgenes interiores (20 + 20) |
-| Separación entre carriles | 16 | |
-| Separación entre celdas de rejilla | 12 | como `AppGrid` hoy |
-| Separación entre secciones | `sectionGap` (28) | sin cambios |
-| Inicio del contenido | `S + 12` | sin la fila de 52 de «atrás» |
-| Fin del contenido | `B + 24` | |
-| Barras fijas inferiores | 56–64 de alto + `B` | Rosario, lectores y hojas con `footer` |
+| Token | Valor |
+|---|---|
+| Margen exterior | `gutter` de la identidad (20) + `safeStart` o `safeEnd` |
+| Margen interior de panel | 20 |
+| Separación entre carriles | 16 |
+| Separación entre celdas | 12 |
+| Separación entre secciones | `sectionGap` (28) |
+| Inicio del contenido | `S + 12` (Rosario: `S + 4`, §4) |
+| Fin del contenido | `B + 24`, o sobre el pie fijo |
+| Pies fijos (lectores, hojas) | 56 + `B` |
 
-Todos los valores son múltiplos de 4. La rúbrica 2 exige que los inicios de texto coincidan con los márgenes (±1 dp).
+Todo va en múltiplos de 4. Los inicios de texto se alinean con los márgenes (±1 dp).
 
-### 3.12 Segmentos en el panel: `AppSegmentedTabs` vertical
+### 3.12 Segmentos en el panel
 
-En un panel de 252 dp útiles, tres segmentos horizontales («Oraciones · Novenas · Noche») caben al 100 % pero no al 130 % en PT. Por eso, en `SidePanel`, `AppSegmentedTabs` se dibuja como **lista de secciones**:
-- **Filas de 48 dp** (crecen con el texto, nunca truncan).
-- **Selección:** la fila activa lleva el material «seleccionado» de la identidad:
-  - Lumen y Cristal: lente de cristal;
-  - Tradicional: fondo `action` y texto `onAction`;
-  - Sanctuary: filete de acento de 2 dp al inicio y texto en acento.
-- **Semántica y etiquetas:** `Role.Tab` y `selected`. Se conservan la etiqueta del contenedor (`prayers_segments`, `confession_tabs`…) y los textos.
-- **Fuera del panel:** el control sigue horizontal, en vertical y en las bandas compactas.
+En `SidePanel`, `AppSegmentedTabs` se dibuja como **lista de secciones**:
+- filas de 48, con el material seleccionado de cada identidad;
+- `Role.Tab` y `selected`;
+- se conservan la etiqueta del contenedor (`prayers_segments`, `confession_tabs`…) y los textos.
 
-### 3.13 Cambios de L0 por archivo y tests
+Fuera del panel sigue horizontal.
+
+### 3.13 Archivos y tests de L0
 
 | Archivo | Cambio |
 |---|---|
-| `ui/design/AppComponents.kt` | <ul><li>`AppWindowClass`, `appWindowClass()`, `appWindowHeight()`, `appIsLandscapePhone()`.</li><li>`appIsTwoPane()` según la clase.</li><li>`AppPageLayout`, `AppPageKind`.</li><li>`appGridColumns`, `AppFeedColumns`, `appReadingMeasure`, `rememberReadingAnchor`.</li><li>`AppTwoPane` con las medidas de §3.9.</li></ul> |
-| `ui/design/LumenComponents.kt` | <ul><li>`LocalHeaderPlacement`.</li><li>`AppHeaderFrame` dibuja `SidePanel`, `CompactBand` y `DetailPane`.</li><li>La prueba de ancho del título usa `constraints`.</li><li>`AppSidePanelArtHeight`.</li><li>`AppGrid` con `appGridColumns`.</li></ul> |
-| `ui/design/LumenKit.kt` | <ul><li>Riel compacto (`railReserve`, `railSlot` y etiquetas cortas por clase).</li><li>El riel respeta `AppHideTabBar` en `LandscapePhone`.</li><li>Insets laterales.</li><li>«Atrás» dentro del panel.</li><li>Sin barra de título al desplazar en pantallas con panel.</li><li>`SegmentedTabs` vertical en el panel.</li></ul> |
-| `ui/design/LumenExtras.kt` | <ul><li>`AppSheet` lateral (con `wide` y `footer`).</li><li>`AppDialog` con `aside`, centrado y con alto máximo.</li><li>`AppConfirmDialog` desplazable.</li></ul> |
-| `ui/design/LumenFoundation.kt` | <ul><li>`appSafeInsets()`.</li><li>`ScreenFrame.insets` con `start` y `end`.</li></ul> |
-| `ui/design/LiquidGlass.kt` | `Modifier.fadeEnd` (variante de `fadeSides`) |
-| `ui/MainApp.kt` | <ul><li>La columna centrada de 680 se mantiene en todas las clases con riel para las pantallas que no reclaman el ancho completo: en `LandscapePhone` solo la usan las pantallas todavía no migradas a `AppPageLayout` (que llama a `AppFullWidth()`), con `CompactBand` dentro. Así una pantalla no migrada nunca se estira a 811 dp.</li><li>Etiquetas cortas del riel con texto grande (con «Camino»).</li></ul> |
-| `app/src/test/.../screenshots/FullAppScreenshotTest.kt` | <ul><li>Alto mínimo de 320 (hoy 640).</li><li>Calificador `land` cuando `W > H`.</li><li>`-Pshots.landscape=true` = 891×411 y 800×360.</li><li>`-Pshots.ime=<dp>`, `-Pshots.cutout=left` o `=right`, `-Pshots.navbar=left` o `=right` (insets simulados).</li></ul> |
-| Tests nuevos | Ver la lista que sigue. |
+| `ui/design/AppComponents.kt` | <ul><li>`AppWindowClass` (con `CompactPhone`) y `appWindowClass()` desde `LocalWindowInfo.containerSize` o `androidx.window`.</li><li>`appIsLandscapePhone()`.</li><li>`AppPageLayout` y `AppSupportingPaneLayout`.</li><li>`appGridColumns`, `AppFeedColumns`, `appReadingMeasure`, `rememberReadingAnchor`.</li><li>`AppTwoPane` con barra adhesiva y tira.</li></ul> |
+| `ui/design/LumenComponents.kt` | <ul><li>`LocalHeaderPlacement` y las colocaciones.</li><li>Variante póster.</li><li>Prueba del título contra `constraints`.</li><li>`AppGrid` con `appGridColumns`.</li></ul> |
+| `ui/design/LumenKit.kt` | <ul><li>Riel compacto.</li><li>`AppHideTabBar` en `LandscapePhone`.</li><li>Insets laterales.</li><li>Atrás en el panel.</li><li>Sin barra de título en las pantallas con panel.</li><li>Segmentos verticales.</li></ul> |
+| `ui/design/LumenExtras.kt` | <ul><li>`AppSheet` lateral (`wide`, `footer`, acción en la cabecera con teclado).</li><li>`AppDialog` con `aside`.</li><li>`AppConfirmDialog` desplazable.</li><li>`AppNotice` (§3.14).</li></ul> |
+| `ui/design/LumenFoundation.kt` | `appSafeInsets()`, `ScreenFrame.insets` con `start` y `end` |
+| `ui/design/LiquidGlass.kt` | `Modifier.fadeEnd` |
+| `ui/MainApp.kt` | <ul><li>Columna centrada de 680 solo para las pantallas no migradas, que llevan `CompactBand` dentro: nunca se estiran a 811.</li><li>Etiquetas cortas del riel al 130 %.</li></ul> |
+| `app/build.gradle.kts` | `androidx.window:window` si se usa `WindowMetricsCalculator` |
+| `FullAppScreenshotTest.kt` | <ul><li>Alto mínimo de 320.</li><li>Calificador `land`.</li><li>`-Pshots.landscape=true` (891×411 y 800×360).</li><li>**Insets de un teléfono real por defecto en horizontal: `S = 24`, `B = 16`, gestos laterales de 32.</li><li>`-Pshots.ime`: 0,56 H por defecto si se pide.</li><li>`-Pshots.cutout=left` o `=right` (32).</li><li>`-Pshots.navbar=left` o `=right` (48).</li></ul> |
 
 Tests nuevos:
-- **`LandscapeLayoutTest`**, a 891×411 y 800×360, en las 4 identidades:
-  - la clase de ventana;
-  - el riel compacto con 5 destinos que caben al 100 % y al 130 %;
-  - el panel de portada a la anchura y la línea de título de la tabla;
-  - la hoja lateral anclada al final con su anchura;
-  - el diálogo centrado;
+- **Arnés de insets** (helper de test): despacha `WindowInsetsCompat` con `statusBars` 24, `navigationBars` 16 abajo (o 48 en un lateral), `systemGestures` de 32 en los laterales, `displayCutout` y `ime` al `ComposeView`. **Todos los tests de horizontal lo usan.** Ninguna validación se hace con `S = 0`.
+- **`LandscapeLayoutTest`:**
+  - la clase de ventana a partir de `containerSize`;
+  - el riel de 4 y de 5 destinos (≤ 320 a 360);
+  - el ancho de los paneles y la línea del título;
   - `CompactBand` ≤ 30 % de `H`;
-  - nada bajo los insets simulados.
-- **`LandscapeAuditTest`:** `NarrowLargeTextAuditTest` parametrizado por ventana (891×411, 800×360) y escala (1,0 y 1,3), en ES y PT. Añade estos detectores:
-  - `HEADER_TOO_TALL`: arte de cabezal > 40 % del área de la ventana o `CompactBand` > 30 % de `H`;
-  - `ESSENTIAL_BELOW_FOLD`: un nodo marcado como esencial por el área (lista por pantalla en §4–§10) fuera de la ventana sin desplazar;
-  - `MEASURE`: caracteres por línea fuera del umbral de §3.10;
-  - `UNDER_INSET`: texto o control dentro de un inset simulado;
-  - `IME_HIDDEN`: campo con foco o acción principal bajo el teclado simulado;
-  - `SHEET_GEOMETRY`: hoja que no es lateral en `LandscapePhone`.
-- **`LandscapeRotationTest`** (Robolectric: `RuntimeEnvironment.setQualifiers("+land")` + `ActivityScenario.recreate()`). Gira de vertical a horizontal y de vuelta, y comprueba cada fila de §2.4: el paso del Rosario y la voz activa, el ancla de lectura, el segmento, la hoja abierta, el texto de búsqueda, la lista de Confesión, la selección de lista-detalle y el día de novena.
-- **Insets simulados para Robolectric:** helper de test que despacha `WindowInsetsCompat` con `displayCutout`, `navigationBars` laterales e `ime` al `ComposeView`.
+  - la hoja lateral y su cambio con el teclado;
+  - los diálogos centrados.
+- **`LandscapeAuditTest`:** `NarrowLargeTextAuditTest` a 891×411 y 800×360, al 100 % y al 130 %, en ES y PT, con estos detectores:
+  - `HEADER_TOO_TALL`;
+  - `ESSENTIAL_BELOW_FOLD`, con la lista por área de §4–§10 y §15;
+  - `MEASURE`;
+  - `UNDER_INSET`;
+  - `IME_HIDDEN`;
+  - `SHEET_GEOMETRY`;
+  - `OBSCURED`: un control que tapa texto.
+- **`RosaryFitTest`:** `TextLayoutResult` de Padrenuestro, Avemaría, Gloria y «Oh Jesús mío» en ES, EN y PT, a 891×411 y 800×360, con y sin guía. Comprueba el desplazamiento esperado de la tabla de §4.3: 0 salvo las excepciones listadas.
+- **`LandscapeRotationTest`:** cada fila de §2.4, con texto escrito en la búsqueda, un segmento cambiado y una ficha apilada que pasa a selección.
+- **Lint de estado:** ningún `rememberSaveable` dentro de las lambdas `header` y `supporting`.
+- **Paridad de nodos:** el mismo conjunto de textos y etiquetas en vertical y en horizontal por pantalla.
 
-**Criterios de aceptación de L0:**
-1. `appWindowClass()` es la única fuente. Ningún `screenWidthDp` ni `orientation` nuevo en `ui/screens`. `BibleScreen` y `RosaryScreen` migran en L1 y L2.
-2. **Sin migrar ninguna pantalla:**
-   - todas las raíces muestran `CompactBand` (≤ 30 % de `H`);
-   - todas las hojas son laterales;
-   - todos los diálogos están centrados con acciones visibles.
-   - Lo comprueba una captura de todos los destinos a 891×411.
-3. El riel compacto con 5 destinos cabe a 800×360 al 100 % y al 130 % en ES, EN y PT, en las 4 identidades.
-4. Con un recorte simulado de 32 dp a la izquierda y a la derecha, y con la barra de tres botones (48 dp) a cada lado, ningún texto ni control queda debajo.
-5. Los tests de interfaz que cita AGENTS.md pasan sin modificar sus etiquetas: `AppNavigationTest`, `DesignNavigationTest`, `RosaryInteractionTest`, `DesignContrastTest`, `VaticanNavigationLayoutTest`, `TabletLayoutTest`, fuente y `NarrowLargeTextAuditTest`.
-6. El vertical y las tabletas no cambian, salvo lo declarado: lo comprueban las capturas de regresión a 411×891 y 1280×800.
+### 3.14 Avisos breves
+
+Los avisos transitorios (confirmaciones, «guardado», errores de red; hoy son textos o banners de cada pantalla) se dibujan con un wrapper **`AppNotice`**, en `LumenExtras.kt`:
+- **Posición:** anclado **sobre el pie fijo de la columna activa** (la que el usuario está usando), o sobre `B + 8` si no hay pie.
+- **Tamaño:** alineado al final de esa columna, con 480 dp de ancho como máximo.
+- **Accesibilidad:** `liveRegion = Polite`.
+- **Restricciones:** nunca tapa la acción que avanza, la cabecera de una hoja ni el campo con foco. Con el teclado abierto, se ancla sobre el teclado.
+
+### 3.15 Criterios de aceptación de L0
+
+1. `appWindowClass()` es la única fuente y se calcula desde la ventana completa (test con `containerSize`).
+2. **Sin migrar ninguna pantalla**, todas las raíces muestran `CompactBand` de 108 dp (`S = 24`), todas las hojas son laterales y todos los diálogos están centrados con sus acciones visibles.
+3. El riel de 4 destinos, y el de 5 una vez integrado T-046, caben a 800 × 360 al 100 %. Al 130 % rige el listón duro.
+4. Cero `UNDER_INSET` con recorte de 32 a cada lado y barra de tres botones de 48 a cada lado.
+5. Los tests de interfaz que cita AGENTS.md pasan sin cambiar ninguna etiqueta.
+6. El vertical y las tabletas no cambian, salvo lo declarado (capturas de regresión).
 
 ---
 
 ## 4. L1 · Rosario y Coronilla
 
-**Patrón:** panel de apoyo inmersivo. **Pantalla:** `RosaryScreen` (destino `ROSARY`), también para la Coronilla (`initialTab = 1`).
+**Patrón:** panel de apoyo inmersivo, con `AppSupportingPaneLayout(supportingSide = Start, endActions = …)` (§3.4). No se maqueta a mano. **Pantalla:** `RosaryScreen` (destino `ROSARY`), también para la Coronilla.
 
-### 4.1 Boceto a 891 × 411 (sin riel)
+**Idea:** un folio de dos caras sostenido con las dos manos.
+- La cara izquierda dice **dónde estás**: las cuentas, el misterio, el progreso y «Anterior», bajo el pulgar izquierdo.
+- La cara derecha dice **qué rezas**: la oración entera, con «Siguiente» bajo el pulgar derecho.
+
+### 4.1 Boceto a 891 × 411 (sin riel; `S` = 24, `B` = 16)
 
 ```
- 0                                      356                                                  891
-┌────────────────────────────────────────┬─────────────────────────────────────────────────────┐ 0
-│ (S)                                    │ (S)                                                 │
-│ ‹      ╭───────────────────────────╮  │  Avemaría                                3 de 10    │ ← título y cuenta (fijo)
-│  ┊     │ [ Rosario | Coronilla ]   │  │ ┌─────────────────────────────────────────────────┐ │
-│  ●     │   PINTURA del misterio    │  │ │ (instrucción, si está activa)                   │ │ ← fijo
-│  ┊     │   recortada al foco,      │  │ └─────────────────────────────────────────────────┘ │
-│  ●     │   se disuelve en bruma    │  │  Dios te salve, María, llena eres de gracia;        │
-│  ┊     ╰───────────────────────────╯  │  el Señor es contigo; bendita tú eres entre         │
-│ (◉)◦  Misterios Gozosos ▾             │  todas las mujeres, y bendito es el fruto de tu     │ ← ORACIÓN COMPLETA
-│  ┊    1.º La Anunciación              │  vientre, Jesús.                                    │   sin desplazar
-│  ○    Fruto: la humildad  · Ver ›     │  Santa María, Madre de Dios, ruega por nosotros,    │   (ver §4.3)
-│  ┊                                     │  pecadores, ahora y en la hora de nuestra muerte.   │
-│  ○    ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬     │  Amén.                                              │
-│  ┊    Paso 12 de 85 · 1.er misterio    │  Después · Gloria                                   │
-│  ○                                     │ ─────────────────────────────────────────────────── │
-│ hilo   contexto (desplaza a 130 %)     │ [Guía] [···]        [⏮ Anterior] [▶ Escuchar] [⏭ SIGUIENTE] │ ← transporte (fijo)
-└────────────────────────────────────────┴─────────────────────────────────────────────────────┘ 411
-  PANEL DE LAS CUENTAS · 0,40 W (356)       PANEL DE LA ORACIÓN · 535 · margen 20
-  hilo vertical 56 + contexto 260
+ 0                             285                                                        891
+┌────────────────────────────────┬─────────────────────────────────────────────────────────┐ 0
+│ (S)                            │ (S)                                                     │ 24
+│ ‹  [ Rosario | Coronilla ]     │  Avemaría                       3 de 10        [Guía]   │ 28–60  título (fijo)
+│ ┊  Primer misterio gozoso      │ ┌─────────────────────────────────────────────┐ [···]   │        guía (si activa)
+│ ●  La Anunciación              │ │ Un Ave María en cada una de las diez cuentas│         │
+│ ┊  ┌──────────────────────┐    │ │ pequeñas… · V. dice quien guía · R. …       │         │
+│ ●  │ pintura (16:9,       │    │ └─────────────────────────────────────────────┘         │
+│ ┊  │ recortada al foco)   │    │ V. Dios te salve, María, llena eres de gracia; (Escuchar)│ y≈0,45H
+│(◉) └──────────────────────┘    │    el Señor es contigo. Bendita tú eres entre           │
+│ ┊  Fruto: la humildad ···      │    todas las mujeres, y bendito es el fruto de          │
+│ ○  (desplaza: chip, Ver el     │    tu vientre, Jesús.                     ┌──────────┐  │
+│ ┊   misterio)                  │ R. Santa María, Madre de Dios, ruega por  │SIGUIENTE │  │ y≈0,70H
+│ ○  Después · Gloria            │    nosotros, pecadores, ahora y en la     │  64×64   │  │
+│    ▬▬▬▬▬▬▬▬ Paso 12 de 85      │    hora de nuestra muerte. Amén.          └──────────┘  │
+│ [⏮ Anterior]                   │                                                         │ 395 = H − B
+└────────────────────────────────┴─────────────────────────────────────────────────────────┘ 411
+  PANEL DE LAS CUENTAS 285          ORACIÓN · texto 490 (462 con recorte a la derecha)  GRUPO 72
+  hilo 44 · contexto 181            (desplaza solo en los casos de §4.3)                 fijo
 ```
 
-### 4.2 Qué va dónde
+### 4.2 Geometría cerrada
 
-**Panel de las cuentas**, a la izquierda:
-- **Ancho:** `clamp(0,40 W, 320, 380)`: 356 a 891 y 320 a 800.
-- **Fijo**, salvo la columna de contexto, que desplaza solo si no cabe (130 %).
-- **Hilo vertical**: el que pidió el dueño.
-  - Ocupa una columna de 56 dp desde `x = max(safeStart, gestos laterales) + 8` y desde `y = S + 52` (bajo «atrás») hasta `H − B − 8`.
-  - Es el `BeadReel` actual con `orientation = Vertical` (parámetro nuevo en `components/PrayerBeadCounter.kt`) y la misma lógica:
-    - la cuenta en mano va en el centro vertical, mayor y con el anillo del acento litúrgico;
-    - las rezadas, arriba y «contadas» (llenas); las que faltan, abajo y pálidas;
-    - los puntos de subpaso van a la derecha de la cuenta;
-    - se toca una cuenta para ir a ella o se arrastra en vertical para pasar de una en una, con el mismo háptico de tic y el más firme al cerrar una decena.
-  - Lo usa el pulgar izquierdo.
-  - Etiquetas y semántica intactas: `prayer_bead_counter` / `mercy_step_counter`, `contentDescription`, `stateDescription` y acciones personalizadas «Anterior» y «Siguiente».
-- **Columna de contexto** (≈ 260):
-  - **Arriba**, la pintura del misterio (`rosary_hero_photo`, `mystery_hero_photo`):
-    - ocupa el ancho de la columna y `clamp(0,40 H, 140, 170)` de alto;
-    - va recortada al foco y se disuelve en bruma, como el escenario vertical;
-    - Sanctuary la pone en marco filetado.
-  - Sobre la pintura, el selector `Rosario | Coronilla`: el mismo `DevotionSwitch`, en cristal sobre el arte.
-  - **Debajo, sobre la bruma**, la etiqueta del escenario (`StageLabel`):
-    - selector de misterios (`rosary_mystery_picker`);
-    - título del misterio (`rosary_hero_title` / `mercy_hero_title`);
-    - fruto;
-    - «Ver el misterio».
-  - **Al pie**, `SectionProgress` (`page_dots`, `rosary_hero_step_counter` / `mercy_hero_step_counter`). Al tocarlo se abre «Opciones».
+**Panel de las cuentas:**
+- Ancho: `clamp(0,32 W, 256, 340)`: **285** a 891 y **256** a 800.
+- **Fila 1** (y = `S` … `S + 44`):
+  - atrás (`nav_back`, 44) en `x = max(16, safeStart + 8)`;
+  - a su derecha, el selector `Rosario | Coronilla` (`DevotionSwitch`), de 205 / 176 de ancho: 2 segmentos de 102 / 88, en los que caben «Coronilla», «Coroinha» y «Chaplet».
+  - *Es el único lugar del selector, en el boceto y en la especificación.*
+- **Bloque inferior fijo**, desde `H − B` hacia arriba, con huecos de 6:
+  - **«Anterior»** (`prev_bead_button` / `prev_mercy_step_button`): cápsula de 48 de alto y ≥ 120 de ancho, con icono y rótulo, en `x = 40`. Está bajo el pulgar izquierdo.
+  - **Progreso** (`page_dots`, `rosary_hero_step_counter` / `mercy_hero_step_counter`): 32 de alto. Al tocarlo se abren las Opciones.
+  - **«Después · …»**: 18 de alto.
+  - Total: 48 + 6 + 32 + 6 + 18 + 6 = **116**.
+- **Región central:** de `S + 52 = 76` a `H − B − 116`: **203** (891) / **152** (800). La ocupan, uno junto al otro:
+  - **Hilo de cuentas:**
+    - `x = max(safeStart, gestos laterales) + 8` = **40**, ancho **44**;
+    - con gestos de 32 empieza fuera de la zona de gesto: no hace falta exclusión;
+    - con gestos mayores, la fórmula lo desplaza.
+  - **Columna de contexto:**
+    - de `x = 92` a `W_L − 12`: **181** (891) / **152** (800);
+    - desplaza sola, con fundido de 16 dp e indicador de desplazamiento.
 
-**Panel de la oración**, a la derecha:
-- **Ancho:** el resto (535 / 480). Margen final `max(20, safeEnd + 12)`.
-- **Fijos:**
-  - la fila del título de la oración (`current_prayer_title`, cuenta «3 de 10», `skip_optional_button`);
-  - la instrucción (`prayer_instructions_text`), si está activa;
-  - la línea «Después · …»;
-  - el **transporte** (`prayer_transport`).
-- **El texto de la oración** (`prayer_content_scroll`, `prayer_leader_text`…):
-  - ocupa el espacio entre medias;
-  - desplaza **solo si no cabe**, con un fundido inferior de 24 dp y el indicador de desplazamiento como pista (§4.3).
-- **Transporte** (barra de 64 dp, sobre `B`):
-  - al inicio, «Guía» (`prayer_instructions_toggle`) y «···» (`rosary_options_button`): poco frecuentes;
-  - al final, el racimo `Anterior · Escuchar · Siguiente oración`, con **Siguiente** (`next_bead_button` / `next_mercy_step_button`) en el extremo derecho, ≥ 64 × 64, en la zona del pulgar derecho;
-  - Anterior (`prev_bead_button`) y Escuchar (`toggle_prayer_audio_button` / `toggle_mercy_audio_button`) conservan sus etiquetas y su semántica.
+**Columna de contexto**, de arriba abajo:
+1. **Antetítulo** («Primer misterio gozoso»; en el inicio, «Inicio»): 18.
+2. **Título** (`rosary_hero_title` / `mercy_hero_title`, `headline`): el misterio. En las tres Avemarías iniciales es la **intención** («Por el aumento de la fe»), que sale del panel de la oración. Medido con los títulos reales: ≤ 4 líneas = 88 (3 líneas en la mayoría: 66).
+3. **Pintura** (`rosary_hero_photo`, `mystery_hero_photo`):
+   - con `H ≥ 400`: 181 × 102 (16:9);
+   - con `H < 400`: **miniatura** en banda de 152 × 56.
+   - Va recortada al foco, con radio `thumbnail` (Sanctuary: marco). La pintura completa está en «Ver el misterio».
+4. **Fruto.** En el paso «Anuncio del misterio», aquí van **la meditación y la cita** (`detail`), que salen del panel de la oración.
+5. **Selector de misterios** (`rosary_mystery_picker`) y **«Ver el misterio»** (44).
 
-### 4.3 Presupuesto de alto: por qué la oración cabe
+Sin desplazar se ven:
+- a 891: antetítulo, título y pintura (18 + 66 + 8 + 102 = 194 ≤ 203). Con títulos de 4 líneas, la pintura asoma 89 de 102.
+- a 800: antetítulo, título y banda (18 + 66 + 8 + 56 = 148 ≤ 152). Con títulos de 4 líneas, la banda asoma 38 de 56.
 
-Alto útil del panel de la oración: `H − S − B` = 371 (891×411) o 320 (800×360). El texto usa el estilo `reading`: serif 19/30 por defecto, columna de 495 / 440 ≈ 60 / 53 caracteres.
+**Antetítulo y título (lo esencial) se ven siempre:** 106 ≤ 152.
 
-| Bloque | Alto |
-|---|---|
-| Título de la oración | 40 |
-| Instrucción, 2 líneas de `subhead` (si está activa) | 64 |
-| «Después · …» | 24 |
-| Transporte | 64 |
-| Respiros (4 × 8) | 32 |
-| **Queda para el texto**, sin instrucción / con instrucción | 211 / 147 a 891 · 160 / 96 a 800 |
+**Hilo de cuentas** (`BeadReel(orientation = Vertical)`, en `components/PrayerBeadCounter.kt`):
+- **Posición y aspecto:**
+  - la cuenta en mano va en el centro vertical de la región, mayor y con el anillo del acento litúrgico;
+  - las rezadas, **arriba** (llenas); las que faltan, **abajo** (pálidas);
+  - los puntos de subpaso van a su derecha (dentro de los 44 dp).
+  - Paso entre cuentas: **24 dp**. Se ven ≈ 8 cuentas a 891 y ≈ 6 a 800.
+- **Arrastre:**
+  - **arrastrar hacia arriba avanza** (se tira de las cuentas hacia la mano, como entre los dedos) y **hacia abajo retrocede**;
+  - **24 dp por cuenta**, con un tic háptico (`CLOCK_TICK`) en cada una y el háptico firme al cerrar una decena;
+  - al soltar, encaja en la cuenta más cercana; no hay inercia.
+- **Toque:** tocar una cuenta va a su primer paso. El hilo entero es un solo control de 44 de ancho por toda la región.
+- **Semántica y etiquetas:** `prayer_bead_counter` / `mercy_step_counter`, con `contentDescription`, `stateDescription` y las acciones «Anterior» y «Siguiente».
 
-| Oración (ES) | Caracteres | Líneas a 891 | Líneas a 800 | ¿Cabe sin desplazar? |
-|---|---|---|---|---|
-| Avemaría | ≈ 245 (2 párrafos) | 5 (150 dp) | 6 (180) | 891: sí, con y sin instrucción · 800: solo sin instrucción |
-| Padrenuestro | ≈ 330 | 6 (180) | 7 (210) | 891: sin instrucción · 800: desplaza |
-| Gloria | ≈ 120 | 2–3 | 3 | siempre |
-| «Oh Jesús mío» | ≈ 190 | 4 | 4 | 891 siempre · 800 sin instrucción |
-| Señal de la cruz | ≈ 60 | 1–2 | 2 | siempre |
-| Credo, Salve, letanías y oración final | 420–1500 | 8–50 | — | desplazan, con pista |
+**Panel de la oración:**
+- Desde `W_L` hasta el grupo de acciones.
+- **Texto:** de `W_L + 20` a `W − 72 − 12 − max(12, safeEnd + 8)`:
+  - 891: **490**, o **462** con recorte de 32 a la derecha;
+  - 800: **428** / **400**.
+- **Arriba (`S + 4`):** fila del título (`current_prayer_title`, `title2`, con la cuenta «3 de 10» y `skip_optional_button`): 32. Debajo, un hueco de 8.
+- **Guía** (`prayer_instructions_text`, `GuideHint`), si está activa, + 6.
+- **Texto de la oración** (`prayer_content_scroll`, `prayer_leader_text`, V./R. con 10 de separación, el ×1,12 de las oraciones cortas):
+  - llega hasta `H − B`;
+  - desplaza **solo** en los casos de §4.3, con fundido de 24 dp e indicador.
+- **«Oración opcional»** (letanías) va sobre el texto. Esas oraciones son largas y desplazan.
 
-**Criterio:** a 891 × 411 al 100 %, **toda oración de decena** (Padrenuestro, Avemaría, Gloria y «Oh Jesús mío») se lee **sin desplazar** con la guía desactivada, y Avemaría y Gloria también con la guía activa. Hoy no cabe ninguna (E3). Las largas desplazan dentro de su panel, sin mover el transporte.
+**Grupo de acciones del borde derecho** (`endActions`), de 72 de ancho, en `x = W − max(12, safeEnd + 8) − 72`:
+- **Arriba:** «Guía» (`prayer_instructions_toggle`) y «···» (`rosary_options_button`), de 44 cada uno, en `S + 4`.
+- **Escuchar** (`toggle_prayer_audio_button` / `toggle_mercy_audio_button`): círculo de 48 + rótulo, centrado en **y = 0,45 H** (185 / 162).
+- **Siguiente** (`next_bead_button` / `next_mercy_step_button`): tecla de **64 × 64** + rótulo «Siguiente», centrada en **y = 0,70 H** (288 / 252):
+  - su centro queda a **48 dp** del borde derecho seguro;
+  - acaba en 336 ≤ 395 (891) y en 300 ≤ 344 (800).
 
-### 4.4 Hojas del Rosario
+### 4.3 Presupuesto de la oración (al 100 %, `S` = 24, `B` = 16)
 
-Son laterales (§3.6):
-- **Misterios** (`rosary_mysteries_sheet`): normal, 446. Lista con miniaturas, como hoy.
-- **Opciones** (`rosary_options_sheet`): **amplia**, 588, en dos columnas:
-  - a la izquierda, «Voces» (`rosary_voice_mode_picker`) y su explicación;
-  - a la derecha, `rosary_loop_map` y la lista de partes. En la Coronilla, la cita de Santa Faustina va al pie de la izquierda.
-- **Ver el misterio** (`rosary_mystery_sheet`): amplia, en dos columnas:
-  - a la izquierda, la pintura enmarcada (recortada a su marco) y el crédito;
-  - a la derecha, la cita bíblica, la meditación en `reading` y el fruto.
+Alto disponible para guía + texto = `H − B − (S + 4) − 32 − 8`:
+- **327** a 891 × 411;
+- **276** a 800 × 360.
 
-### 4.5 Giro, recorte, texto grande e identidades
+Ya no van en el panel de la oración «Después», el progreso, la intención inicial ni la meditación del anuncio.
 
-- **Giro.** Se conservan la sesión, el paso, la devoción y el misterio (ya existe). Además:
-  - la **hoja abierta** (`rememberSaveable`);
-  - la **voz** sigue rezando: no se envía `ScreenLeft` en un cambio de configuración (§2.4).
-  - El desplazamiento del texto vuelve arriba al cambiar de paso, como hoy, y al girar conserva el ancla.
-- **Recorte de cámara.**
-  - A la izquierda: el hilo se aparta (`safeStart`) y la pintura sigue a sangre.
-  - A la derecha: «Siguiente» se aparta (`safeEnd + 12`).
-- **130 %.** La columna de contexto desplaza; el hilo, el título de la oración y el transporte quedan fijos. El transporte sigue en una fila: a 535 dp caben las tres teclas con rótulo. La variante de dos filas (`largeControls`) queda solo para anchos < 330.
+**Medición** con EB Garamond 19/30 (estilo `reading` predeterminado) y la guía en Inter 15/13.
+- Cada celda: líneas, alto del texto (con el hueco V./R. de 10 y el ×1,12 si es corta) y, tras «→», el alto con la guía (+ tarjeta + 6).
+- ✔ cabe sin desplazar; ✘ desplaza.
+
+| 891 × 411 (texto 462–490) | ES | EN | PT |
+|---|---|---|---|
+| Padrenuestro | 6 L · 190 → 298 ✔ | 5 L · 160 → 268 ✔ | 6 L · 190 → 298 ✔ |
+| Avemaría | 5 L · 160 → 268 ✔ | 4 L · 130 → 238 ✔ | 4 L · 130 → 238 ✔ |
+| Gloria | 3 L · 111 → 219 ✔ | 4 L · 144 → 252 ✔ | 3 L · 111 → 219 ✔ |
+| Oh Jesús mío | 3 L · 90 → 198 ✔ | 3 L · 101 → 209 ✔ | 3 L · 101 → 209 ✔ |
+
+| 800 × 360 (texto 400–428) | ES | EN | PT |
+|---|---|---|---|
+| Padrenuestro | 7 L · 220 ✔ / con guía 328 ✘ | 6–7 L · 190–220 ✔ / con guía 298–328 ✘ | 7 L · 220 ✔ / con guía 328 ✘ |
+| Avemaría | 5 L · 160 → 268 ✔ | 5 L · 160 → 268 ✔ | 5 L · 160 → 268 ✔ |
+| Gloria | 3 L · 111 → 219 ✔ | 4 L · 144 → 252 ✔ | 3 L · 111 → 219 ✔ |
+| Oh Jesús mío | 3 L · 90 → 198 ✔ | 3 L · 101 → 209 ✔ | 3 L · 101 → 209 ✔ |
+
+**Resultado:**
+- **891 × 411:** las 24 combinaciones (4 oraciones × 3 idiomas × guía sí/no) **sin desplazar**. Margen mínimo: 29 dp.
+- **800 × 360 sin guía:** las 12 **sin desplazar**. Margen mínimo: 56 dp.
+- **800 × 360 con guía:** Avemaría, Gloria y «Oh Jesús mío» sin desplazar (margen mínimo 8 dp).
+  - **Excepción única:** el **Padrenuestro con la guía activa** (6 pasos de 85) desplaza 22–52 dp (1–2 líneas), con fundido e indicador. «Siguiente» no se mueve.
+  - Alternativas medidas y descartadas en §17.1.
+- **Coronilla:** «Eterno Padre» (≈ 180 caracteres) y «Por su dolorosa Pasión» (corta) se miden en el mismo test y tienen que caber sin desplazar en las 12 combinaciones de 891 × 411 y 800 × 360 sin guía.
+- **Siempre desplazan** (largas por naturaleza, con pista): el Credo, la Salve, las letanías, la oración final y el «Anuncio del misterio» de la Coronilla, si lo hubiera.
+- **130 % (listón duro):** todo puede desplazar con pista; el hilo, el título, «Anterior», «Escuchar» y «Siguiente» quedan fijos.
+
+`RosaryFitTest` (§3.13) convierte esta tabla en un test con `TextLayoutResult`. Si una celda ✔ falla en Android por métricas distintas, se corrige el diseño, no el test.
+
+### 4.4 Hojas
+
+- **Misterios** (`rosary_mysteries_sheet`): lateral normal (446).
+- **Opciones** (`rosary_options_sheet`): lateral **amplia** (588), con dos columnas:
+  - izquierda: «Voces» como **lista vertical** de 3 filas de 48 («Ambas voces», «Guía», «Respuesta»), que es la misma `rosary_voice_mode_picker` en forma de lista (§3.12), y su explicación debajo;
+  - derecha: `rosary_loop_map` y la lista de partes.
+- **Ver el misterio** (`rosary_mystery_sheet`): amplia, con dos columnas:
+  - izquierda: la pintura enmarcada completa y el crédito;
+  - derecha: la cita, la meditación y el fruto.
+
+### 4.5 Giro, recorte, 130 % e identidades
+
+- **Giro:** se conservan la sesión, la hoja abierta (`rememberSaveable`), la voz activa (sin `ScreenLeft` al cambiar de configuración) y el ancla del texto.
+- **Recorte de cámara:**
+  - a la izquierda, el hilo y «Anterior» se apartan;
+  - a la derecha, el grupo se aparta y el texto queda en 462 / 400 (ya medido en §4.3).
+- **130 %:** listón duro (§4.3).
 - **Identidades:**
-  - **Lumen:** bruma y luz litúrgica tras ambos paneles; transporte en cápsula de cristal.
-  - **Tradicional:** transporte sobre `canvasBottom` opaco con filete (como hoy); pintura sin bruma lateral.
-  - **Cristal:** el panel de la oración refracta el borde de la pintura; botones de cristal claro.
-  - **Sanctuary:**
-    - pintura en marco y filete de lomo entre los paneles;
-    - cuentas en el acento granate y título de la oración en EB Garamond;
-    - transporte con filete superior (como hoy).
+  - **Lumen:** bruma tras ambos paneles y grupo de cristal.
+  - **Tradicional:** grupo opaco con filete; Siguiente sólido `action`.
+  - **Cristal:** el panel de la oración refracta la pintura.
+  - **Sanctuary:** pintura enmarcada, lomo doble entre paneles, cuentas en granate y título en EB Garamond.
 
 ### 4.6 Criterios de aceptación de L1
 
-1. A 891×411 y 800×360, en las 4 identidades, en claro y oscuro:
-   - el hilo está a la izquierda;
-   - el texto de la oración, a la derecha;
-   - el transporte, fijo abajo a la derecha;
-   - el riel, oculto.
-2. Se cumple la tabla de §4.3. `ESSENTIAL_BELOW_FOLD` = `current_prayer_title`, el texto completo de la oración de decena, `next_bead_button` y `prayer_bead_counter`.
-3. `next_bead_button` tiene su centro a ≤ 120 dp del borde derecho seguro y por debajo de `0,6 H`, y mide ≥ 64 × 64.
-4. Tocar y arrastrar el hilo vertical lleva al paso correcto. El háptico de fin de decena se mantiene (`RosaryInteractionTest` ampliado a horizontal).
-5. Al girar a mitad de la tercera decena con la voz activa y la hoja «Opciones» abierta, siguen el mismo paso, la voz y la hoja (`LandscapeRotationTest`; `RosaryNarrationTest` y `RosaryPersistenceTest` en verde).
-6. Las 3 hojas son laterales y no recortan contenido.
-7. TalkBack recorre: atrás → selector de devoción → misterio → progreso → hilo (con sus acciones) → título de la oración → instrucción → texto → transporte.
+1. Geometría de §4.2 a 891×411 y a 800×360, en las 4 identidades, en claro y oscuro, con el arnés de insets (S = 24, B = 16, gestos de 32), y con un recorte de 32 a cada lado.
+2. `RosaryFitTest` verde según la tabla de §4.3.
+3. `next_bead_button`: centro a ≤ 120 del borde derecho seguro, `y ≥ 0,6 H`, ≥ 64 × 64.
+4. El hilo cumple §4.2: arrastre de 24 dp por cuenta y dirección correcta (`RosaryInteractionTest` ampliado).
+5. Al girar a mitad de la 3.ª decena con la voz activa y «Opciones» abierta, todo sigue igual (`LandscapeRotationTest`, `RosaryNarrationTest`, `RosaryPersistenceTest`).
+6. TalkBack recorre: atrás → selector → antetítulo y título → pintura → fruto → selector de misterios → hilo → «Después» → progreso → «Anterior» → título de la oración → guía → texto → «Guía», «···» → Escuchar → Siguiente.
 
 **Archivos:**
-- `ui/screens/RosaryScreen.kt`: la rama `wide` se sustituye por la disposición de §4.1, con `appWindowClass()`; también `StageLabel`, `SectionProgress`, `TransportRow` y las tres hojas.
+- `ui/screens/RosaryScreen.kt`: la rama `wide` se sustituye por `AppSupportingPaneLayout`.
 - `ui/components/PrayerBeadCounter.kt`: `BeadReel` vertical.
-- `ui/screens/RosaryNarration.kt`: cambio de configuración.
-- `ui/screens/RosarySession.kt` / `RosarySessionStore.kt`: sin cambios previstos.
+- `ui/screens/RosaryNarration.kt`.
+- `ui/design/AppComponents.kt`: el wrapper, de L0.
 
 ---
 
 ## 5. L2 · Lectores
 
-**Patrón:** panel de apoyo («lector apaisado»), con `AppPageLayout(kind = Reader)`. Sin riel.
+**Patrón:** panel de apoyo, con `AppPageLayout(kind = Reader)`. Sin riel.
 
 ### 5.1 Plantilla común, a 891 × 411
 
 ```
  0                           267                                                                 891
 ┌──────────────────────────────┬──────────────────────────────────────────────────────────────────┐ 0
-│ (S) ‹                    ☆ ⋯ │ (S)  · · · · · · · · fundido bajo la barra de estado · · · · · · │
+│ (S) ‹                    ☆ ⋯ │ (S) · · · · · fundido bajo la barra de estado · · · · · · · · · · │
 │ ╔══════════════════════════╗ │                                                                  │
-│ ║ ARTE (si lo hay)         ║ │        ┌──────────── columna de lectura 576 (≈ 70 car.) ──────┐  │
-│ ║ bruma                    ║ │        │ Dios te salve, María, llena eres de gracia; el Señor │  │
-│ ║ Antetítulo               ║ │        │ es contigo; bendita tú eres entre todas las mujeres, │  │
-│ ║ Título (title1)          ║ │        │ y bendito es el fruto de tu vientre, Jesús.          │  │
-│ ╚══════════════════════════╝ │        │                                                      │  │
-│  meta                        │        │ Santa María, Madre de Dios, ruega por nosotros,      │  │
-│  ÍNDICE  (sincronizado)      │        │ pecadores, ahora y en la hora de nuestra muerte.     │  │
-│  ▸ Primera lectura           │        │ Amén.                                                │  │
-│    Salmo                     │        │                                                      │  │
-│    Evangelio                 │        │ ‹ Anterior                         Siguiente ›       │  │ ← al final del texto
-│ ──────────────────────────── │        └──────────────────────────────────────────────────────┘  │
-│ [▶ Escuchar] [Aa]   [‹] [›]  │                                                                  │ ← pie de herramientas (fijo)
+│ ║ ARTE (si lo hay), bruma  ║ │         ┌────── columna de lectura 455 (66 car.) ──────┐         │
+│ ║ Antetítulo               ║ │         │ Dios te salve, María, llena eres de gracia;  │         │
+│ ║ Título (title1)          ║ │         │ el Señor es contigo. Bendita tú eres entre   │         │
+│ ╚══════════════════════════╝ │         │ todas las mujeres, y bendito es el fruto de  │         │
+│  meta                        │         │ tu vientre, Jesús. …                         │         │
+│  [ Evangelio ▾ ]  ← índice   │         └──────────────────────────────────────────────┘         │
+│  (selector propio: novena…)  │ ───────────────────────────────────────────────────────────────── │
+│ [▶ Escuchar]  [Aa]           │  [‹ Anterior]                                    [ Siguiente › ] │ ← pie de texto
 └──────────────────────────────┴──────────────────────────────────────────────────────────────────┘ 411
-  PANEL DEL LECTOR · 267 · fijo         PANEL DE TEXTO · 624 · desplaza; columna centrada a la medida
+  PANEL DEL LECTOR 267 · fijo           PANEL DE TEXTO 624 · desplaza, con pie fijo (solo lectores secuenciales)
+  pie: Escuchar · Aa
 ```
 
-**Panel del lector** (`clamp(0,30 W, 224, 280)`), de arriba abajo:
-1. «Atrás» y las acciones del lector (marcador, más).
-2. Zona de arte (§3.2), si el lector tiene arte, o panel de título.
+**Panel del lector** (`clamp(0,30 W, 224, 280)`: 267 / 240), de arriba abajo:
+1. Atrás y acciones (marcador, más).
+2. Zona de arte (§3.2) o panel de título.
 3. Antetítulo, título (`title1`) y meta.
-4. **Índice**, solo si el texto tiene partes. Está sincronizado:
-   - la parte que ocupa el tercio superior del panel de texto se marca `selected`;
-   - al tocar una parte, el texto se desplaza hasta ella, con animación salvo con «reducir movimiento».
-   - Es el componente nuevo `AppReaderOutline`, en `AppComponents.kt`.
-5. **Pie de herramientas, fijo** (56 dp + `B`), en la zona del pulgar izquierdo:
-   - `Escuchar`, con las etiquetas de cada lector (`bible_reader_listen`…);
-   - `Aa`, que abre la hoja de lectura (`reading_settings_sheet`) lateral;
-   - y, en los lectores secuenciales, `‹` y `›`, que repiten la navegación del final del texto.
+4. **Índice en una fila de 44 dp** (`reader_outline_row`, nueva):
+   - muestra la parte actual («Evangelio ▾») y se actualiza con el desplazamiento;
+   - al tocarla, abre la lista de partes en una hoja lateral (`reader_outline_sheet`, nueva);
+   - la parte actual va marcada `selected` y al elegir otra el texto se desplaza a ella;
+   - es `AppReaderOutline`.
+   - En `LandscapePhone` el índice **siempre** va plegado: el espacio libre del panel es 395 − 189 − 28 − 56 = **122** (891) y 344 − 166 − 28 − 56 = **94** (800), y con < 3 filas una lista desplazable sería menos útil que el selector.
+   - En tableta horizontal se despliega como lista.
+5. Selector propio del lector, si lo tiene (novena: §5.3).
+6. **Pie del panel, fijo** (56 + `B`): solo **Escuchar** y **Aa** (pulgar izquierdo).
+
+Presupuesto del panel a 800: 166 + 28 + 44 (índice) + 44 (selector de novena) = 282 ≤ 344 − 56 = 288. Cabe con 6 dp de margen.
 
 **Panel de texto:**
 - Desplaza.
-- Columna de lectura a la medida (§3.10), centrada.
-- Al final, la fila «Anterior / Siguiente» de hoy, con «Siguiente» alineado a la derecha.
-- Los controles flotantes que hoy tapan el texto (E4, E8) pasan al pie del panel y **no se superponen** al texto.
+- Columna a la medida (§3.10), centrada.
+- **Pie fijo** (56 + `B`) solo en los **lectores secuenciales**:
+  - «‹ Anterior» al inicio;
+  - **la acción que avanza al final**: «Siguiente ›», «Día siguiente ›», «Continuar ›», «Marcar leído ›», con su centro a **≤ 120 dp del borde derecho seguro** e `y = H − B − 28` (367 / 316 ≥ 0,6 H).
+- Los lectores no secuenciales (oración suelta, santo, devoción, mandamiento) no tienen pie: no hay nada que «avance».
+- **Nada flota sobre el texto:** los controles flotantes de hoy (barra de la Biblia, índice y Tt del Catecismo) pasan al pie del panel o al pie del texto.
 
-### 5.2 Capítulo bíblico: texto más estudio
+### 5.2 Capítulo bíblico
 
-Se integra la vista de estudio que T-043 ya hacía en horizontal (texto + arcos), dentro del mismo sistema. Ya no se usa `LocalConfiguration.orientation`.
+Usa `AppSupportingPaneLayout(supportingSide = End, supportingWidth = clamp(0,38 W, 300, 360), showSupportingPane = W ≥ 860)`. Ya no se usa `LocalConfiguration.orientation`.
 
 ```
- W ≥ 860: dos paneles                                                                             891
+ W ≥ 860 (891)                                                                                   891
 ┌──────────────────────────────────────────────────────────┬──────────────────────────────────────┐
-│ (S) ‹   Biblia Platense · Español ▾                      │ (S)                                  │
-│         San Juan                                         │ ┌──────────────────────────────────┐ │
-│         Capítulo 1                                       │ │ ARCOS (CrossReferenceStudy)      │ │
-│         El Evangelio teológico: el Verbo hecho carne…    │ │ San Juan 1 · toca un versículo   │ │
-│                                                          │ └──────────────────────────────────┘ │
-│  ¹ En el principio era el Verbo, y el Verbo estaba junto │  Cada arco une dos pasajes…           │
-│  a Dios, y el Verbo era Dios. ² Él estaba en el          │  (referencias del versículo elegido)  │
-│  principio junto a Dios. …                    (desplaza) │                            (desplaza) │
+│ (S) ‹   Biblia Platense · Español ▾                      │ (S) ARCOS (CrossReferenceStudy)      │
+│         San Juan · Capítulo 1                            │     San Juan 1 · toca un versículo   │
+│  ¹ En el principio era el Verbo, y el Verbo estaba junto │                                      │
+│  a Dios, y el Verbo era Dios. ² Él estaba en el          │  referencias del versículo elegido   │
+│  principio junto a Dios. …         (columna 455, 66 car.)│                           (desplaza) │
 │                                                          │ ──────────────────────────────────── │
-│                                                          │ [‹]  San Juan 1 ▾  [▶] [Aa]      [›] │ ← barra del lector (fija)
+│                                                          │ [‹] Juan 1 ▾ [▶] [Aa]   [Siguiente ›]│ ← pie del estudio
 └──────────────────────────────────────────────────────────┴──────────────────────────────────────┘
-  TEXTO · 552 · columna 504 (≈ 61 car.)                        ESTUDIO · clamp(0,38 W, 300, 360) = 339
+  TEXTO 552                                                   ESTUDIO 339
 ```
 
-- **`W ≥ 860` (891):**
-  - texto a la izquierda;
-  - panel de estudio a la derecha (`clamp(0,38 W, 300, 360)`), con los arcos y las referencias del versículo elegido;
-  - la **barra del lector** (`‹ capítulo ▾ ▶ Aa ›`, con sus etiquetas `bible_reader_*`) fija al pie del panel de estudio, con `›` (capítulo siguiente) en el borde derecho.
+- **`W ≥ 860`:**
+  - el texto va a la izquierda y el estudio a la derecha;
+  - el pie del estudio (`bible_reader_*`) lleva «‹» (capítulo anterior), el selector de capítulo, Escuchar, Aa y **«Siguiente ›»** al final, a ≤ 120 del borde derecho seguro.
 - **`W < 860` (800):**
-  - el texto ocupa la ventana a la medida (≈ 66 caracteres);
-  - la barra del lector va fija al pie del texto, **sin superponerse**;
-  - al tocar un versículo se abre el estudio como **hoja lateral amplia** (528) con `CrossReferenceStudy`. Hoy, en vertical, se abre `VerseSheet`; en horizontal, el estudio.
-- **Cabecera:** antetítulo del libro, «Capítulo N» e introducción desplazan con el texto, como en vertical. El selector de edición (`bible_active_edition`) va arriba.
-- **Hojas** `bible_chapter_sheet` y Texto (`bible_reader_font_*`, `bible_reader_spacing`): laterales.
-- **Objetivos:** la fila de versículo (`verse_N`) pasa a medir ≥ 44 dp de alto (E9). Se hace con área táctil (`minimumInteractiveComponentSize`) sin cambiar el interlineado.
+  - el texto ocupa la ventana (columna de 455 centrada);
+  - el **pie del texto** es el de §5.1, con Escuchar, Aa y el selector de capítulo entre «‹ Anterior» y «Siguiente ›»;
+  - al tocar un versículo se abre el estudio como hoja lateral amplia (528).
+- **Cabecera:** la edición (`bible_active_edition`), el libro, el capítulo y la introducción desplazan con el texto.
+- **Filas de versículo** (`verse_N`): área táctil ≥ 44 (E9) sin cambiar el interlineado.
 
 ### 5.3 Ajustes de cada lector
 
-| Lector | Arte en el panel | Índice | Extra en el panel | Pie | Archivo |
-|---|---|---|---|---|---|
-| Lecturas de la Misa | sí (arte de Misa) | <ul><li>Primera lectura · Salmo · Segunda lectura · Aclamación · Evangelio · Reflexión</li></ul> | <ul><li>fecha, celebración y punto del color litúrgico</li></ul> | <ul><li>Escuchar · Aa</li></ul> | `BibleScreen.kt` (segmento Misa) |
-| Oración | sí | — (o estrofas, si las tiene) | <ul><li>categoría · origen</li></ul> | <ul><li>Escuchar · Aa</li></ul> | `PrayersAndNovenasScreen.kt` (detalle, `AppHideTabBar` en la línea 1477) |
-| Día de novena | sí | <ul><li>partes del día</li></ul> | <ul><li>**rejilla 3 × 3 de días** (`novena_day_strip`, `novena_day_pill_N`, de 48 dp), en sustitución de la tira horizontal</li></ul> | <ul><li>Escuchar · Aa · ‹ día · día ›</li></ul> | `PrayersAndNovenasScreen.kt` (`novena_day_reader`) |
-| Oraciones de la noche | sí | <ul><li>partes del oficio (examen, himno, salmodia, lectura, responsorio, cántico, oración, antífona mariana)</li></ul> | <ul><li>selector de oficio vertical (§3.12)</li></ul> | <ul><li>Escuchar · Aa</li></ul> | `NightPrayersScreen.kt` |
-| Artículo del Catecismo | no (panel de título) | <ul><li>grupos de §</li></ul> | <ul><li>migas (Parte › Sección › Capítulo › Artículo)</li><li>§§ y «Escritura clave»</li></ul> | <ul><li>Índice (`catechism` TOC lateral) · Aa</li><li>los controles flotantes desaparecen</li></ul> | `CatechismScreen.kt` (línea 1742) |
-| Lectores de doctrina (mandamiento, sacramento, credo…) | sí, si el apartado lo tiene | <ul><li>subapartados</li></ul> | <ul><li>fuente</li></ul> | <ul><li>Aa · ‹ ›</li></ul> | `DoctrineParts.kt`, `DoctrineMoral.kt`, `DoctrineFormat.kt`, `DoctrineHistory.kt` |
-| Lección de estudio | sí | <ul><li>pasos de la lección</li></ul> | <ul><li>progreso del curso</li></ul> | <ul><li>Escuchar · Aa · **Continuar** (`study_continue_button`, a la derecha del pie)</li></ul> | `ScriptureStudyScreen.kt` |
-| Santo (fuera de lista-detalle, p. ej. desde Hoy) | sí | — | <ul><li>fecha y rango</li><li>crédito (`saint_image_credit`, área ≥ 44)</li></ul> | <ul><li>Escuchar</li></ul> | `SaintsScreen.kt` |
-| Devoción (fuera de lista-detalle) | sí | <ul><li>historia · oración · promesas</li></ul> | <ul><li>crédito (`devotion_image_credit`, área ≥ 44)</li></ul> | <ul><li>Escuchar · Aa</li></ul> | `DevotionsExplorerScreen.kt` |
-| Día de plan | sí (arte del plan) | <ul><li>pasajes del día</li></ul> | <ul><li>«Día 12 de 365»</li></ul> | <ul><li>Aa · **Marcar leído** a la derecha</li></ul> | `ReadingPlansScreen.kt` |
+| Lector | `kind` | Arte | Índice (fila) | Selector propio | Pie de texto (avanza) | Archivo |
+|---|---|---|---|---|---|---|
+| Lecturas de la Misa | `Reader` (página propia, también desde el centro Leer: §7.2) | sí | 1.ª lectura · Salmo · 2.ª · Aclamación · Evangelio · Reflexión | fecha y color litúrgico en la meta | — (no secuencial) | `BibleScreen.kt` |
+| Oración | `Reader` | sí | estrofas, si las hay | — | — | `PrayersAndNovenasScreen.kt` |
+| **Día de novena** | `Reader` | sí | partes del día | **«Día 3 de 9 ▾»** (44; `novena_day_strip`), que abre «Todos los días» en hoja lateral | ‹ Día anterior · **Día siguiente ›** | `PrayersAndNovenasScreen.kt` |
+| Oraciones de la noche (oficio) | `Reader` | sí | partes del oficio | selector de oficio (fila de 44 → hoja) | — | `NightPrayersScreen.kt` |
+| Artículo del Catecismo | `Reader` | no (panel de título) | grupos de § | migas, §§, «Escritura clave» | ‹ Artículo anterior · **Siguiente ›** | `CatechismScreen.kt` |
+| Doctrina (mandamiento, sacramento…) | `Reader` | sí | subapartados | fuente | ‹ · **Siguiente ›** (orden de la lista) | `DoctrineParts.kt`, `DoctrineMoral.kt`, `DoctrineFormat.kt`, `DoctrineHistory.kt` |
+| Lección | `Reader` | sí | pasos | progreso del curso | ‹ · **Continuar ›** (`study_continue_button`) | `ScriptureStudyScreen.kt` |
+| Santo (fuera de lista-detalle) | `Reader` | sí | — | crédito (`saint_image_credit`, ≥ 44) | — | `SaintsScreen.kt` |
+| Devoción (fuera de lista-detalle) | `Reader` | sí | historia · oración · promesas | crédito (`devotion_image_credit`, ≥ 44) | — | `DevotionsExplorerScreen.kt` |
+| Día de plan | `Reader` | sí | pasajes | «Día 12 de 365» | ‹ · **Marcar leído ›** | `ReadingPlansScreen.kt` |
+| El sacramento (Confesión) | `Reader`, dentro de Confesión inmersiva (§9.2) | — | partes | — | — | `ConfessionScreen.kt` |
+
+**Hoja «Todos los días»** de la novena:
+- Rejilla de **7 columnas** de celdas de 44 (`novena_day_pill_N`, conserva el tag) que desplaza.
+- El día actual va centrado al abrirla, con «Hoy», «Hecho» o «Pendiente» en semántica.
+- Sirve para las novenas de 9, 10, 26, 30, 46, 54, 144 y 275 días.
 
 ### 5.4 Giro, teclado, recorte e identidades
 
-- **Giro.**
-  - Ancla de lectura (§3.10). En la Biblia, el versículo de estudio pasa del panel a la hoja según la anchura, con el mismo valor.
-  - En vertical, al volver, el ancla apunta al mismo párrafo.
-- **Teclado.** Solo lo usan el Compendio (`compendium_search_input`) y la búsqueda de preguntas:
-  - el campo vive en el panel (arriba);
-  - los resultados, en el panel de texto con `imePadding`.
-- **Recorte de cámara.**
-  - A la izquierda: lo absorbe el margen del panel.
-  - A la derecha: margen final del texto `max(24, safeEnd + 12)`.
+- **Giro:** ancla de lectura (§3.10). El versículo de estudio de la Biblia pasa del panel a la hoja según la anchura.
+- **Teclado:** búsquedas del Compendio y de Preguntas (§15). El campo va en el panel; los resultados, en el texto con `imePadding`. Con 134 dp libres se ve ≥ 1 resultado.
+- **Recorte de cámara:** lo absorben los márgenes. El pie de texto aparta «Siguiente» (`safeEnd + 12`).
 - **Identidades:**
-  - **Sanctuary:**
-    - el panel es el folio izquierdo, con el título arriba, el arte enmarcado y el índice en versalitas pequeñas, como el «sumario» de un misal (`usesAllCapsLabels` donde la identidad ya lo usa);
-    - el texto conserva sus capitulares (`usesDropCaps`).
-  - **Tradicional:** filete y superficies opacas.
-  - **Lumen y Cristal:** bruma y cristal.
-  - **Todas:** la columna de texto se lee sobre una superficie **opaca** (regla de AGENTS: «superficies de lectura opacas»).
+  - **Sanctuary:** el panel es el folio izquierdo y la fila del índice va en versalitas pequeñas.
+  - **Todas:** la lectura va sobre superficie opaca.
 
 ### 5.5 Criterios de aceptación de L2
 
-1. Medida (§3.10): 60–75 caracteres en lectores a 891 al 100 % con la fuente predeterminada; ≥ 56 a 800. En la Biblia con estudio, ≥ 60 a 891.
-2. Ningún control flota sobre el texto: el detector añade un solapamiento de texto con controles como `CLIPPED` / `OBSCURED` (nuevo).
-3. El primer párrafo del texto se ve sin desplazar. El arte del panel nunca supera el 40 % del área de la ventana.
-4. El índice marca la parte visible y lleva a ella. TalkBack anuncia «seleccionado».
-5. Al girar a mitad de un capítulo, se ve el mismo versículo (±1).
-6. Las etiquetas `bible_reader*`, `novena_day_*`, `catechism_article_*`, `study_*` y `prayer_*` siguen existiendo. `CrossReferencesUiTest`, `BibleReadingJourneyTest`, `CatechismInteractionTest`, `PrayerDetailsUiTest` y `NovenaIndexJourneyTest`, en verde.
+1. Medida de §3.10: 60–75 caracteres con serif y con sans, a 891 y a 800, al 100 %.
+2. Cero `OBSCURED`: nada flota sobre el texto.
+3. Primer párrafo visible sin desplazar. Arte ≤ 40 % del área.
+4. En los lectores secuenciales, la acción que avanza cumple §2.3.
+5. Al girar, se ve el mismo versículo o párrafo (±1).
+6. Los tags `bible_reader*`, `novena_day_*`, `catechism_article_*`, `study_*` y `prayer_*` se mantienen. `CrossReferencesUiTest`, `BibleReadingJourneyTest`, `CatechismInteractionTest`, `PrayerDetailsUiTest` y `NovenaIndexJourneyTest` en verde.
 
 ---
 
 ## 6. L3 · Hoy
 
-**Patrón:** feed en carriles + panel de portada (`AppPageLayout(kind = Today)`). **Pantalla:** `HomeScreen.kt` (+ `ForYouToday.kt`).
+**Patrón:** feed en carriles + panel de portada, con `AppPageLayout(kind = Today)`. **Archivos:** `HomeScreen.kt` y `ForYouToday.kt`.
 
 ### 6.1 Boceto a 891 × 411
 
 ```
- 0      80                         323                                                         891
-┌───────┬────────────────────────────┬───────────────────────────────────────────────────────────┐ 0
-│ (S)   │ (S)                    ⌕ ◔ │ (S)                                                       │
-│ ╭───╮ │ ╔════════════════════════╗ │  CARRIL A · 256                 CARRIL B · 256            │
-│ │Hoy│ │ ║ Friedrich: la cruz en  ║ │  Oración del momento            Liturgia de hoy  Jn 1,1-18│
-│ │Ora│ │ ║ la montaña (bruma)     ║ │ ┌──────────────────────────┐ ┌──────────────────────────┐ │
-│ │Lee│ │ ║ Sábado, 21 de noviembre║ │ │ (☾) Oraciones de la noche│ │ «En el principio era el  │ │
-│ │Cam│ │ ║ Hoy                    ║ │ │     Ahora · 20:00      › │ │  Verbo, y el Verbo…»     │ │
-│ │Exp│ │ ╚════════════════════════╝ │ │ (✝) Ángelus              │ │ Primera lectura · Ap 11  │ │
-│ ╰───╯ │ ┌────────────────────────┐ │ │     Mañana · 6:00      › │ │ Reflexión              › │ │
-│       │ │● Tiempo Ordinario    › │ │ └──────────────────────────┘ │ [ Leer las lecturas  ▸ ] │ │
-│       │ │ Presentación de la     │ │  Mis prácticas               └──────────────────────────┘ │
-│       │ │ Santísima Virgen María │ │ ┌──────────────────────────┐  Para ti hoy                │
-│       │ └────────────────────────┘ │ │ (0) de 12 hoy            │ ┌──────────────────────────┐ │
-│       │                            │ │ [ Ver mis prácticas  ▸ ] │ │ …                        │ │
-│       │                            │ └──────────────────────────┘ └──────────────────────────┘ │
-│       │                            │  ─────────── Más para hoy (a todo el ancho) ─────────── › │
-└───────┴────────────────────────────┴───────────────────────────────────────────────────────────┘ 411
-  riel   PANEL 243 · fijo              CONTENIDO 568 · dos carriles · desplaza
+ 0      80                      307                                                            891
+┌───────┬─────────────────────────┬──────────────────────────────────────────────────────────────┐ 0
+│ (S)   │ (S)                 ⌕ ◔ │ (S)                                                          │ 24
+│ ╭───╮ │ ╔═════════════════════╗ │  CARRIL A · 264                  CARRIL B · 264              │ 36
+│ │Hoy│ │ ║ la cruz en la       ║ │  Oración del momento             Liturgia de hoy   Jn 1,1-18 │
+│ │Ora│ │ ║ montaña (bruma)     ║ │ ┌────────────────────────────┐ ┌────────────────────────────┐│
+│ │Lee│ │ ║ Sábado, 21 de nov.  ║ │ │ ☾ Oraciones de la noche  › │ │ «En el principio era el    ││
+│ │Exp│ │ ║ Hoy                 ║ │ │   Ahora · 20:00            │ │  Verbo, y el Verbo estaba  ││
+│ ╰───╯ │ ╚═════════════════════╝ │ │ ✝ Ángelus                › │ │  junto a Dios…»            ││
+│       │ ┌─────────────────────┐ │ │   Mañana · 6:00            │ │ Primera lectura · Ap 11  › ││
+│       │ │● Tiempo Ordinario  ›│ │ └────────────────────────────┘ │ Reflexión                › ││
+│       │ │ Presentación de la  │ │  Mis prácticas                 │ [■ Leer las lecturas ▸]    ││ ← único primario
+│       │ │ Virgen María        │ │ ┌────────────────────────────┐ └────────────────────────────┘│
+│       │ └─────────────────────┘ │ │ (0) de 12 hoy              │  Para ti hoy …               │
+│       │                         │ │ [ Ver mis prácticas ]      │                              │ ← secundario
+└───────┴─────────────────────────┴──────────────────────────────────────────────────────────────┘ 411
+  riel   PANEL 227 · fijo          CONTENIDO 584 · 2 carriles · desplaza
 ```
+
+El riel muestra 4 destinos hasta T-046 y «Mi camino» después.
 
 ### 6.2 Qué va dónde
 
-Orden de vertical (`HomeScreen`): cabezal → tiempo litúrgico → oración del momento → mis prácticas → liturgia → «Para ti hoy» → «Más para hoy» → [versículo, invitación, continuar el Rosario, santo, pregunta, explorar].
+**Panel:** `clamp(0,28 · Wc, 208, 280)`, de 227 a 891 y 208 a 800. Lleva:
+- el cabezal: fecha, «Hoy» y acciones (`global_search_button`, `home_reminders_button`);
+- el tiempo litúrgico (`liturgical_calendar_widget`) en la ranura.
 
-**Panel** (243, fijo):
-- cabezal con fecha, «Hoy» y las acciones `global_search_button` y `home_reminders_button`;
-- en la ranura de apoyo, la tarjeta del **tiempo litúrgico** (`liturgical_calendar_widget`), que es la identidad del día.
-- El panel no desplaza al 100 %.
-
-**Carril A:**
-- «Oración del momento» (`home_prayer_moment_heading`, ambas filas);
-- «Mis prácticas» (`home_practices_heading`, `home_fidelity_card`, `home_habit_tracker_card`, `home_fidelity_count`, `home_open_temptations`).
-
-**Carril B:**
-- «Liturgia de hoy» (`daily_mass_card`, `home_first_reading_row`, `home_continue_row`, `home_continue_reading`);
-- «Para ti hoy» (`home_for_you`).
-
-**A todo el ancho, bajo los carriles:**
-- «Más para hoy» (`today_more_toggle`);
-- al expandirse, vuelve a dos carriles:
-  - A: versículo, invitación (`today_invitation`) y continuar el Rosario (`today_continue_rosary` / `today_continue_prayer`);
+**Carriles:** 264 + 264 a 891 y 228 + 228 a 800.
+- **A:** «Oración del momento» (`home_prayer_moment_heading`) y «Mis prácticas» (`home_practices_heading`, `home_fidelity_card`, `home_habit_tracker_card`, `home_fidelity_count`, `home_open_temptations`).
+- **B:** «Liturgia de hoy» (`daily_mass_card`, `home_first_reading_row`, `home_continue_row`, `home_continue_reading`) y «Para ti hoy» (`home_for_you`).
+- **A todo el ancho:** «Más para hoy» (`today_more_toggle`). Al expandirse vuelve a dos carriles:
+  - A: versículo, invitación (`today_invitation`) y Rosario (`today_continue_rosary`, `today_continue_prayer`);
   - B: santo, pregunta (`home_daily_question`) y explorar.
-- `today_next_action` queda en el carril A, en su posición relativa de vertical.
+- `today_next_action` va en el carril A.
+- El orden de TalkBack coincide con el de vertical.
 
-El orden de TalkBack es carril A completo y luego carril B. Coincide con el de vertical, salvo que el tiempo litúrgico va con el cabezal, igual que hoy.
+**Jerarquía:** **un solo botón primario relleno** en la pantalla: **«Leer las lecturas»**, en el carril B. «Ver mis prácticas» pasa a **secundario** (`AppSecondaryButton` o `AppSecondaryCapsule`), también en vertical para no crear dos versiones. *Esto cambia el vertical; vetable (§14).*
 
-### 6.3 Lo esencial sin desplazar
+### 6.3 Presupuesto y lo esencial sin desplazar (al 100 %, `S` = 24, `B` = 16)
 
-| Medida | Debe verse entero |
+Alto visible de los carriles: `H − B − (S + 12)`, es decir 359 (891) y 308 (800).
+
+| Bloque | Alto |
 |---|---|
-| 891 × 411 al 100 % | <ul><li>fecha, «Hoy» y tiempo litúrgico;</li><li>las 2 filas de oración del momento;</li><li>el recuento de prácticas y su botón;</li><li>la cabecera de la liturgia con la referencia, el inicio del Evangelio (3 líneas de vista previa, como hoy) y la acción principal</li></ul> |
-| 800 × 360 al 100 % | <ul><li>fecha, «Hoy» y tiempo litúrgico;</li><li>las 2 filas de oración del momento;</li><li>la cabecera de la liturgia con la referencia</li></ul> |
-| 130 % (un carril) | fecha, «Hoy», tiempo litúrgico y la 1.ª fila de oración del momento |
+| Cabecera de sección | 44 |
+| Fila de oración (2 líneas) | 64 |
+| Tarjeta de prácticas, fila del anillo | 88 |
+| Botón secundario | 44 |
+| Tarjeta de liturgia: cabecera | 44 |
+| Tarjeta de liturgia: vista previa del Evangelio (3 líneas de `reading`) | 90 |
+| Tarjeta de liturgia: fuente | 18 |
+| Tarjeta de liturgia: filas de 1.ª lectura y de reflexión | 2 × 52 |
+| Tarjeta de liturgia: acción primaria | 48 |
+| Tarjeta de liturgia: márgenes | 40 |
 
-Hoy, a 891 × 411, solo se ven el tiempo litúrgico y una fila (E2).
+| Medida | Debe verse entero sin desplazar | Suma |
+|---|---|---|
+| 891 × 411 | <ul><li>panel completo;</li><li>A: cabecera + 2 filas + cabecera de prácticas + anillo (44 + 128 + 16 + 44 + 88);</li><li>B: tarjeta de liturgia hasta «Leer las lecturas» (44 + 90 + 18 + 104 + 48 + 40)</li></ul> | <ul><li>A: 320 ≤ 359</li><li>B: 344 ≤ 359</li></ul> |
+| 800 × 360 | <ul><li>panel completo;</li><li>A: cabecera + 2 filas + cabecera de prácticas;</li><li>B: cabecera + referencia + vista previa del Evangelio</li></ul> | <ul><li>A: 232 ≤ 308</li><li>B: 142 ≤ 308</li></ul> |
+| 130 % (listón duro) | un carril; el panel se mantiene; nada recortado | — |
 
-### 6.4 Carriles, texto grande, giro, tableta e identidades
+### 6.4 Tableta, giro e identidades
 
-- **Carriles:** 2 a 891 y a 800 al 100 %; 1 al 130 %. El panel se mantiene (§3.8).
-- **Giro:** se conservan el desplazamiento (por ancla del bloque) y «Más para hoy» expandido (ya es `rememberSaveable`).
-- **Tableta horizontal:** la misma disposición, con 3 carriles desde 1200 dp:
-  - A: oración y prácticas;
-  - B: liturgia;
-  - C: «Para ti hoy» y extras.
-  - Esto resuelve la limitación de T-043.
-- **Identidades:**
-  - **Lumen:** la tarjeta del tiempo litúrgico flota sobre la bruma del panel, igual que hoy flota sobre el cabezal (`overlap`).
-  - **Tradicional:** tarjetas opacas y punto de color litúrgico como único acento.
-  - **Cristal:** las tarjetas refractan la luz ambiental.
-  - **Sanctuary:**
-    - el panel es el folio con «Hoy» en EB Garamond y el grabado enmarcado;
-    - los carriles son columnas de misal con filetes de sección.
+- **Tableta horizontal:** 3 carriles desde 1200 dp (A oración y prácticas; B liturgia; C «Para ti hoy» y extras).
+- **Giro:** ancla del bloque y «Más para hoy» abierto o cerrado (`rememberSaveable`, fuera de las ranuras).
+- **Identidades:** tarjeta del tiempo litúrgico flotando sobre la bruma (Lumen), opaca (Tradicional), refractando (Cristal) o en folio filetado (Sanctuary).
+- **Captura en PT:** cada título de sección ocupa ≤ 3 líneas en su carril.
 
 ### 6.5 Criterios de aceptación de L3
 
-1. Se cumple la tabla de §6.3 (`ESSENTIAL_BELOW_FOLD` = las etiquetas citadas).
-2. Los carriles tienen el mismo ancho (±1 dp) y alinean sus cabeceras de sección en la misma línea cuando empiezan juntos.
-3. Ningún bloque de Hoy desaparece: el recuento de nodos con texto es igual en vertical y en horizontal (test de paridad).
-4. `HomeTextTest`, `HomePrayerPrioritiesTest` y `AppNavigationTest` en verde. Etiquetas intactas.
+1. Tabla de §6.3 (`ESSENTIAL_BELOW_FOLD`).
+2. Carriles de igual ancho (±1) y cabeceras alineadas.
+3. Un solo botón primario relleno.
+4. Paridad de nodos con el vertical.
+5. `HomeTextTest`, `HomePrayerPrioritiesTest` y `AppNavigationTest` en verde.
 
 ---
 
 ## 7. L4 · Centros Orar y Leer
 
-**Patrón:** panel de portada con selector de segmentos + rejilla (feed). **Pantallas:** `PrayersAndNovenasScreen.kt` (Oraciones, Novenas y Noche) y `BibleScreen.kt` (Biblia, Misa y Estudio; raíz `bible_screen`).
+**Patrón:** panel de portada con segmentos + rejilla. **Archivos:** `PrayersAndNovenasScreen.kt` y `BibleScreen.kt`.
 
-### 7.1 Orar a 891 × 411
+### 7.1 Orar
 
 ```
- 0      80                          372                                                        891
-┌───────┬─────────────────────────────┬──────────────────────────────────────────────────────────┐ 0
-│ (S)   │ (S)                       ⌕ │ (S)  ┌─ filtros (solo Novenas) ─ adhesivos ──────────┐   │
-│ ╭───╮ │ ╔═════════════════════════╗ │      │ [A quién: Todas ▾] [Intención ▾] [Origen ▾]  │   │
-│ │Hoy│ │ ║ lirios (bruma)          ║ │      └───────────────────────────────────────────────┘   │
-│ │Ora│ │ ║ Ora sin cesar           ║ │  ┌──────────┐ ┌──────────┐ ┌──────────┐                  │
-│ │Lee│ │ ║ Oraciones               ║ │  │ Rosario  │ │ Coronilla│ │ Ángelus  │  ← guías, 3 col. │
-│ │Cam│ │ ╚═════════════════════════╝ │  │ (imagen) │ │ (imagen) │ │ (imagen) │                  │
-│ │Exp│ │ ▌Oraciones                  │  └──────────┘ └──────────┘ └──────────┘                  │
-│ ╰───╯ │  Novenas                    │  Categorías                                               │
-│       │  Noche                      │  [Fundamentales] [Marianas] [Santos]   ← losas, 3 col.    │
-│       │ ┌─────────────────────────┐ │  [Por los difuntos] [Eucaristía] [Todas]                  │
-│       │ │ ⌕ Buscar oraciones      │ │  …                                                        │
-│       │ └─────────────────────────┘ │                                                (desplaza) │
-└───────┴─────────────────────────────┴──────────────────────────────────────────────────────────┘ 411
-         PANEL 292 · segmentos verticales     CONTENIDO 519 · rejilla
-         y búsqueda siempre visibles
+┌───────┬─────────────────────────────┬──────────────────────────────────────────────────────────┐
+│ riel  │ (S)                       ⌕ │ (S) ┌─ adhesivo: búsqueda (a 800) y filtros (Novenas) ─┐ │
+│       │ ╔═════════════════════════╗ │     └─────────────────────────────────────────────────┘ │
+│       │ ║ lirios · Ora sin cesar  ║ │  ┌──────────┐ ┌──────────┐ ┌──────────┐                  │
+│       │ ║ Oraciones               ║ │  │ Rosario  │ │ Coronilla│ │ Ángelus  │  guías, 3 col.   │
+│       │ ╚═════════════════════════╝ │  └──────────┘ └──────────┘ └──────────┘                  │
+│       │ ▌Oraciones                  │  [Fundamentales] [Marianas] [Santos]   losas, 3 col.      │
+│       │  Novenas                    │  …                                            (desplaza)  │
+│       │  Noche                      │                                                          │
+│       │ [⌕ Buscar oraciones]  (891) │                                                          │
+└───────┴─────────────────────────────┴──────────────────────────────────────────────────────────┘
 ```
 
-- **Panel:**
-  - cabezal (arte de los lirios, «Ora sin cesar», «Oraciones»);
-  - **segmentos verticales** (`prayers_segments`, §3.12);
-  - **búsqueda** (`AppSearchBar` del segmento activo).
-  - Cabe a 891 × 411 al 100 %: 189 de arte + 144 de segmentos + 56 de búsqueda = 389 ≤ 395 (411 − `B`).
-  - A 800 × 360 no cabe: 166 + 144 + 56 = 366 > 344. Regla: **los segmentos nunca salen del panel**; si la ranura no cabe, la búsqueda pasa a ser la primera fila adhesiva del contenido (junto a los filtros de Novenas). Así el panel no desplaza al 100 % en ningún tamaño.
-- **Contenido, según el segmento:**
-  - **Oraciones** (`prayers_landing`): guías (`pray_primary_guides`) en 3 columnas, categorías (`prayer_category_tile_*`) en 3 columnas y filas de oraciones (`prayer_row_*`) en 2 columnas desde 600 dp de interior. Aquí, en 1.
-  - **Novenas** (`novena_index`):
-    - filtros (`novena_filter_chips`) **adhesivos** arriba del contenido, siempre visibles;
-    - «En curso» (`novenas_in_progress`) como fila de tarjetas;
-    - todas las novenas (`novena_card_*`) en rejilla de 3 columnas;
-    - «Completadas» (`novenas_completed`).
-  - **Noche:** oficios en filas (2 columnas si el interior ≥ 600). El oficio abierto es un lector L2.
-- **Ficha de novena** (`novena_detail_*`): página con panel de portada:
-  - el panel lleva «Empezar / Continuar» (`novena_start_button`) y el progreso;
-  - el contenido, la historia (`novena_history`), la promesa (`novena_promise`) y las notas.
+**Panel:**
+- Cabezal, **segmentos verticales** (`prayers_segments`) y la búsqueda del segmento.
+- Presupuestos (alto útil del panel = `H − B`):
+  - 891: 189 + 144 + 56 = **389 ≤ 395**;
+  - 800: 166 + 144 = 310 ≤ 344. La búsqueda no cabe (366): pasa a ser la **primera fila adhesiva del contenido**.
+- Los segmentos nunca salen del panel.
 
-### 7.2 Leer a 891 × 411
+**Contenido:**
+- **Oraciones:**
+  - guías (`pray_primary_guides`) y categorías (`prayer_category_tile_*`), en 3 columnas;
+  - filas (`prayer_row_*`) en 1 columna.
+- **Novenas:**
+  - filtros (`novena_filter_chips`) adhesivos;
+  - en curso (`novenas_in_progress`);
+  - rejilla de 3 columnas (`novena_card_*`);
+  - completadas (`novenas_completed`).
+- **Noche:** oficios en filas. El oficio abierto es un lector L2.
 
-- **Panel:**
-  - cabezal (anciana leyendo, «Sagrada Biblia»; acción de traducción);
-  - segmentos verticales Biblia · Misa · Estudio;
-  - selector de edición.
-- **Contenido, según el segmento:**
-  - **Biblia:**
-    - «Continuar leyendo» (`bible_continue_reading`): tarjeta de imagen a todo el ancho del contenido, de 160 de alto (hoy son 236 de arte);
-    - el directorio (`bible_book_directory`): AT y NT como cabeceras, con los libros en filas compactas en rejilla de 2 columnas (`minCell 220`; 3 en tableta).
-  - **Misa:** el lector L2 de las lecturas va **dentro del contenido**, y su índice (lecturas) en la ranura del panel, bajo los segmentos.
-  - **Estudio:** cursos en rejilla de tarjetas de imagen, de 3 columnas; la ficha del curso (`study_overview_page`) es una página con panel.
+**Páginas que se abren:**
+- **Ficha de novena** (`novena_detail_*`): página con panel. «Empezar» o «Continuar» (`novena_start_button`) va en el **pie del contenido, al final** (acción que avanza).
+- **Lista de una categoría:** ver §15.
 
-### 7.3 Giro, texto grande, tableta e identidades
+### 7.2 Leer
 
-- **Giro:** se conservan el segmento, los filtros, la búsqueda y el ancla del contenido.
-- **130 %:** el panel desplaza, y los segmentos siguen visibles porque son lo primero tras el cabezal. Las rejillas bajan una columna (§3.8).
-- **Tableta horizontal:** la misma disposición, con 4 columnas de tarjetas de imagen.
+**Panel:** cabezal, segmentos Biblia · Misa · Estudio y selector de edición.
+
+**Contenido:**
+- **Biblia:**
+  - «Continuar leyendo» (`bible_continue_reading`): tarjeta de imagen de 160 de alto;
+  - directorio (`bible_book_directory`) en filas compactas, 2 columnas a 891 y 1 a 800.
+- **Misa:** resumen de las lecturas del día.
+  - Muestra la fecha, la celebración, la lista de lecturas con su referencia (1 fila cada una) y **«Leer las lecturas ›»** al final del pie del contenido.
+  - Esa acción abre el **lector de la Misa como página `kind = Reader`** (§5.3): riel oculto y medida de 66 caracteres.
+  - Ya no se lee dentro del centro, donde la medida sería de 479 dp con el riel (corrección 12).
+- **Estudio:** cursos en rejilla de 3 columnas. La ficha del curso, en §15.
+
+### 7.3 Giro, 130 % e identidades
+
+- **Giro:** el segmento, los filtros y la búsqueda se **elevan** por encima de `AppPageLayout` (§2.4). El ancla del contenido se conserva.
+- **130 %:** el panel desplaza y se pierde una columna.
 - **Identidades:**
-  - **Sanctuary:** los segmentos son un «sumario» con filete de acento; las tarjetas de imagen, láminas enmarcadas.
-  - **Tradicional:** segmento activo sólido `action`.
-  - **Lumen y Cristal:** lente de cristal.
+  - Sanctuary: segmentos como sumario.
+  - Tradicional: segmento activo sólido.
+  - Lumen y Cristal: lente de cristal.
 
 ### 7.4 Criterios de aceptación de L4
 
-1. Sin desplazar, a 891 × 411, se ven el panel completo (segmentos y búsqueda) y la primera fila completa de la rejilla, sin recortes.
-2. A 800 × 360 se ven los segmentos (en el panel) y la búsqueda (adhesiva en el contenido). El panel solo desplaza al 130 %.
-3. Rejillas según §3.8. Ninguna tarjeta mide menos de 128 de ancho al 100 %.
-4. Los filtros de Novenas son visibles en cualquier punto del desplazamiento.
-5. `NovenaIndexJourneyTest`, `NovenaOriginBadgeUiTest`, `PrayerDetailsUiTest`, `BibleReadingJourneyTest` y `ReadingPlansUiTest` en verde.
+1. Sin desplazar se ven el panel completo y la primera fila completa de la rejilla, a 891 y a 800, con `S` = 24 y `B` = 16.
+2. Los filtros de Novenas, y la búsqueda a 800, son visibles en cualquier punto del desplazamiento.
+3. Rejillas según §3.8.
+4. `NovenaIndexJourneyTest`, `NovenaOriginBadgeUiTest`, `PrayerDetailsUiTest`, `BibleReadingJourneyTest` y `ReadingPlansUiTest` en verde.
 
 ---
 
 ## 8. L5 · Listas con ficha
 
-**Patrón:** lista-detalle (Material 3), con `AppTwoPane` según §3.9. Lo implementa Hermes (`ext/T-05x`), con este documento como encargo.
+**Patrón:** lista-detalle, con `AppTwoPane` según §3.9. Lo implementa Hermes (`ext/T-05x`).
 
-### 8.1 Boceto común, a 891 × 411 (Santos)
+### 8.1 Boceto común (Santos), a 891 × 411
 
 ```
  0      80                         372                                                         891
 ┌───────┬────────────────────────────┬───────────────────────────────────────────────────────────┐ 0
-│ (S) ‹ │ (S)                        │ (S)                                                       │
-│ ╭───╮ │ ┌────────────────────────┐ │ ┌──────────┐  2 de enero · Memoria                        │
-│ │Hoy│ │ │⌕ Buscar un santo       │ │ │ miniatura│  San Basilio Magno y San Gregorio            │ ← cabecera de ficha
-│ │Ora│ │ └────────────────────────┘ │ │ 104×130  │  Nacianceno, obispos y doctores              │
-│ │Lee│ │ [Todos los meses▾][Ficha]  │ └──────────┘  Imagen: Rijksmuseum · CC0  [▶ Escuchar]   │
-│ │Cam│ │ Calendario Romano General  │ ───────────────────────────────────────────────────────── │
-│ │Exp│ │ Santos                     │  La Iglesia celebra el 2 de enero a dos grandes Padres y  │
-│ ╰───╯ │ ENERO                      │  doctores de la Iglesia: Basilio Magno y Gregorio         │
-│       │▌San Basilio y San Gregorio │  Nacianceno…                                              │
-│       │ Santísimo Nombre de Jesús  │                                                           │
-│       │ San Raimundo de Peñafort   │                                                           │
-│       │ San Hilario de Poitiers    │                                                (desplaza) │
+│ (S)   │ (S) ‹                      │ (S)                                                       │
+│ riel  │ ╔══════════════════════════╗│ ┌──────────┐  2 de enero · Memoria                        │
+│       │ ║ retablo · Calendario     ║│ │ miniatura│  San Basilio Magno y San Gregorio            │ ← cabecera de ficha
+│       │ ║ Santos         (tira 96) ║│ │ 104×130  │  Nacianceno, obispos y doctores              │
+│       │ ╚══════════════════════════╝│ └──────────┘  Imagen: Rijksmuseum · CC0  [▶ Escuchar]   │
+│       │ [⌕ Buscar un santo    ][⫶] │ ─────────────────────────────────────────────────────────  │ ← barra adhesiva 56
+│       │ ENERO                      │  La Iglesia celebra el 2 de enero a dos grandes Padres…   │
+│       │▌San Basilio Magno y San    │  (columna a la medida)                                    │
+│       │ Gregorio Nacianceno…       │                                                           │
+│       │ Santísimo Nombre de Jesús  │                                                (desplaza) │
 └───────┴────────────────────────────┴───────────────────────────────────────────────────────────┘ 411
-         LISTA 292: búsqueda y filtros     FICHA 519 · texto a la medida (≈ 58 car.)
-         adhesivos; el título desplaza
+         LISTA 292 · la tira desaparece   FICHA 519
+         al desplazar
 ```
 
-**Ficha vacía** (antes de cargar, o sin resultados de filtro): el **arte de la sección** (Santos: el retablo) va recortado a un marco centrado de 280 × 180, con `AppEmptyState` («Elige un santo», o «Ningún santo coincide»).
+- La tira de 96 y el título de la lista desaparecen al desplazar. La barra (búsqueda + filtro) es adhesiva.
+- El botón de filtro (`list_filter_button`) abre una hoja lateral con los filtros de hoy. Con filtros activos, aparece una fila de 44 con chips para quitarlos.
+- **Ficha vacía:** arte de la sección en un marco de 280 × 180 + `AppEmptyState`.
 
 ### 8.2 Pantallas
 
-| Pantalla | Lista (adhesivo) | Ficha | Notas | Archivo |
+| Pantalla | Barra adhesiva | Filtros (hoja) | Ficha | Archivo |
 |---|---|---|---|---|
-| **Santos** | búsqueda + mes + «solo con ficha» | santo (`saint_row_*` → ficha) | <ul><li>T-043 ya lo hace; aquí se adapta al alto compacto</li><li>sin `saint_detail_back` en dos paneles</li></ul> | `SaintsScreen.kt` |
-| **Órdenes y oficios** | segmento Órdenes/Oficios + búsqueda | orden u oficio (`order_*`, `office_*`) | <ul><li>emblema como miniatura (o monograma)</li></ul> | `DoctrineAndHistoryScreen.kt`, `DoctrineOrders.kt`, `DoctrineParts.kt` |
-| **Devociones** (María y Jesús) | filtros | devoción (`devotion_card_*`) | <ul><li>la miniatura es la imagen de T-044, o el glifo si no hay</li></ul> | `DevotionsExplorerScreen.kt` |
-| **101 preguntas** | búsqueda + temas (cabeceras) | pregunta y respuesta (`qa_daily`, preguntas) | <ul><li>la «pregunta del día» abre por defecto</li><li>`catholic_qa_prev` / `next` como botones de ≥ 44 dp con el título **completo** en 2 líneas: hoy está elidido (E9)</li></ul> | `DoctrineQuestions.kt`, `DoctrineAndHistoryScreen.kt` |
-| **Catecismo (índice)** | partes y secciones (`catechism_part_N`, `ccc_node_*`), en árbol | hijos del nodo elegido (capítulos y artículos) | <ul><li>el artículo (`catechism_article_*`) **abre el lector L2**: no cabe a la medida en una ficha de 519</li><li>«Compendio» (`catechism_open_compendium`) como fila fija al pie de la lista</li></ul> | `CatechismScreen.kt` |
-| **Planes** | planes (`plan_card_*`) | detalle del plan (`plan_detail_screen`) con los días | <ul><li>el día abre el lector L2</li><li>«Empezar hoy» en la ficha, abajo a la derecha</li></ul> | `ReadingPlansScreen.kt` |
-| **Búsqueda** | — (ver §8.6) | — | <ul><li>no es lista-detalle: resultados a lo ancho</li></ul> | `SearchScreen.kt` |
+| Santos | búsqueda | mes, «solo con ficha» | santo | `SaintsScreen.kt` |
+| Órdenes y oficios | búsqueda | segmento Órdenes/Oficios | orden u oficio | `DoctrineAndHistoryScreen.kt`, `DoctrineOrders.kt`, `DoctrineParts.kt` |
+| Devociones | búsqueda | advocación, lugar | devoción | `DevotionsExplorerScreen.kt` |
+| 101 preguntas | búsqueda | tema | <ul><li>pregunta</li><li>`catholic_qa_prev` y `next` con el título completo en 2 líneas (≥ 44)</li></ul> | `DoctrineQuestions.kt` |
+| Catecismo (índice y parte) | búsqueda | — | <ul><li>hijos del nodo</li><li>el artículo abre L2</li><li>«Compendio» (`catechism_open_compendium`) al pie de la lista</li></ul> | `CatechismScreen.kt` |
+| Planes | — | — | <ul><li>detalle del plan</li><li>«Empezar hoy» en el pie de la ficha, al final</li></ul> | `ReadingPlansScreen.kt` |
+| Doctrina, Historia | ver §15 | | | |
 
-### 8.3 Lo esencial sin desplazar
+### 8.3 Lo esencial sin desplazar (100 %, `S` = 24, `B` = 16)
 
-A 891 × 411 deben verse:
-- la búsqueda y los filtros;
-- ≥ 4 filas de la lista;
-- la cabecera de ficha completa y las primeras 3 líneas del texto.
-
-A 800 × 360: la búsqueda, ≥ 3 filas y la cabecera de ficha.
+Medido en el orden por defecto de cada lista, con los nombres ES y PT:
+- **891:** barra adhesiva, ≥ 2 filas completas en reposo y **≥ 3 tras desplazar la tira**; cabecera de ficha completa + 3 líneas de texto.
+- **800:** barra adhesiva, ≥ 1 fila en reposo y **≥ 2 tras desplazar la tira**; cabecera de ficha completa.
 
 ### 8.4 Teclado
 
-- La búsqueda está en el panel de lista. Con el teclado abierto, la lista lleva `imePadding` y muestra los resultados que caben (≥ 2 filas a 891×411 con 190 dp de teclado). La ficha no se mueve.
-- La acción del IME es «Buscar»: cierra el teclado y deja el foco en el primer resultado.
+- La búsqueda está en la barra de la lista. Sobre el teclado (0,56 H) quedan 157 / 134: barra 56 + **≥ 1 fila completa** (64) a 891 y a 800.
+- La ficha no se mueve.
+- La tecla de acción del IME es «Buscar».
 
 ### 8.5 Giro
 
-Se conservan:
-- la selección (explícita o por defecto, §3.9);
-- el desplazamiento de la lista (por clave del elemento);
-- la consulta;
-- el ancla de la ficha.
+Se conservan la selección (explícita o por defecto, §3.9; de vertical a horizontal, §2.4), la lista por clave, la consulta **elevada** y el ancla de la ficha.
 
 ### 8.6 Búsqueda (`SearchScreen.kt`)
 
-- **Banda compacta** (`CompactBand`, sin panel): título «Buscar» + campo (`search_field`) a lo ancho.
-- **Bajo la banda, adhesiva**, una fila de secciones como chips: Todo · Oraciones · Biblia · Santos · …. Si caben, se ven todas; si no, la fila se desplaza en horizontal con fundido de borde. Son las mismas secciones de `searchSections`.
-- **Resultados por grupo** (`search_group_*`) en **rejilla de 2 columnas** de filas de resultado (§3.8). Cabecera de grupo a todo el ancho con su recuento.
-- **Teclado:**
-  - el campo está arriba, siempre visible;
-  - los resultados llevan `imePadding`; con 190 dp de teclado se ven ≥ 2 filas de 2 resultados;
-  - la acción del IME cierra el teclado.
+**Sin arte y sin panel:**
+- **Barra adhesiva de 56:** atrás + campo (`search_field`) + borrar.
+- **Fila de chips de secciones** (Todo · Oraciones · Biblia · Santos · …) bajo la barra. **Se oculta mientras el teclado está abierto.**
+- **Resultados** (`search_group_*`) en rejilla de 2 columnas (§3.8), con la cabecera de cada grupo y su recuento.
+- **Con teclado:** 157 / 134 − 56 = 101 / 78 → **≥ 1 fila completa** (64) a 891 y a 800.
 
 ### 8.7 Identidades y criterios de L5
 
-**Identidades:**
-- **Sanctuary:** lista filetada (`RULED_FOLIO`), lomo doble y miniatura en marco.
-- **Tradicional:** fila activa sólida y filete.
-- **Lumen y Cristal:** lente de cristal en la fila activa y separador de 0,5 dp.
+**Identidades:** como en §2.5. La lista de Sanctuary va filetada.
 
 **Criterios de aceptación:**
-1. Se cumple §8.3 en las 7 pantallas.
-2. Seleccionar una fila cambia la ficha sin apilar. «Atrás» sale de la pantalla (regla de T-043).
-3. Al girar a vertical con selección por defecto, se ve la lista. Con selección explícita, se ve la página.
-4. Los enlaces de crédito y los botones anterior/siguiente miden ≥ 44 dp (cero `SMALL_TARGET`) y no elíden el título de la pregunta.
-5. `SaintsScreenTest`, `OrdersScreenTest`, `Devotion*`, `QuestionDeeperUiTest`, `CatechismInteractionTest`, `ReadingPlansUiTest`, `SearchUiTest` y `TabletLayoutTest` en verde.
+1. §8.3 y §8.4 medidos con el arnés de insets y de teclado.
+2. Seleccionar no apila. «Atrás» sale.
+3. Giro según §3.9 y §2.4.
+4. Cero `SMALL_TARGET`.
+5. La fila de la lista no elide texto: la de Historia lleva el título y las fechas; el resumen está en la ficha (§15).
+6. `SaintsScreenTest`, `OrdersScreenTest`, `Devotion*`, `QuestionDeeperUiTest`, `CatechismInteractionTest`, `ReadingPlansUiTest`, `SearchUiTest` y `TabletLayoutTest` en verde.
 
 ---
 
 ## 9. L6 · Mi camino, Confesión, Recordatorios y Explorar
 
-Lo implementa Hermes en `ext/T-05x`, después de T-046 («Mi camino» como 5.ª pestaña y fila única de hábitos).
+Lo implementa Hermes en `ext/T-05x`, después de T-046.
 
-### 9.1 Mi camino (`MyPathScreen.kt`) a 891 × 411
+### 9.1 Mi camino (`MyPathScreen.kt`)
 
 ```
-┌───────┬────────────────────────────┬───────────────────────────────────────────────────────────┐
-│ riel  │ PANEL 243                  │  CARRIL A · Hoy en mi camino     CARRIL B · Secciones      │
-│ ▌Cam  │ ╔════════════════════════╗ │ ┌──────────────────────────┐ ┌──────────────────────────┐ │
-│       │ ║ bosque en la niebla    ║ │ │ Hábitos                  │ │ Diario                 › │ │
-│       │ ║ Mi camino              ║ │ │ 0 hechos · 12 pendientes │ │ Tentaciones y victorias› │ │
-│       │ ╚════════════════════════╝ │ │ · Empieza hoy…         › │ │ Prácticas              › │ │
-│       │                            │ │ Plan: Biblia en un año › │ └──────────────────────────┘ │
-│       │                            │ │ Novena: día 3 de 9     › │ ┌──────────────────────────┐ │
-│       │                            │ └──────────────────────────┘ │ Confesión              › │ │
-│       │                            │                              └──────────────────────────┘ │
-└───────┴────────────────────────────┴───────────────────────────────────────────────────────────┘
+┌───────┬─────────────────────────┬──────────────────────────────────────────────────────────────┐
+│ riel  │ ╔═════════════════════╗ │  Hoy en mi camino (carril A)     Secciones (carril B)        │
+│       │ ║ bosque en la niebla ║ │ ┌────────────────────────────┐ ┌────────────────────────────┐│
+│       │ ║                     ║ │ │ Hábitos                    │ │ Diario                   › ││
+│       │ ║ Mi camino           ║ │ │ 0 hechos · 12 pendientes › │ │ Tentaciones y victorias  › ││
+│       │ ║   (póster: el arte  ║ │ │ Plan: Biblia en un año   › │ │ Prácticas                › ││
+│       │ ║    llega al pie)    ║ │ │ Novena: día 3 de 9       › │ └────────────────────────────┘│
+│       │ ╚═════════════════════╝ │ └────────────────────────────┘ ┌────────────────────────────┐│
+│       │                         │                                │ Confesión                › ││
+└───────┴─────────────────────────┴──────────────────────────────────────────────────────────────┘
 ```
 
-- **Carril A:** «Hoy en mi camino» (`my_path_today_header`, `my_path_today`, `my_path_today_habits`, plan y novena).
-- **Carril B:** «Secciones» (`my_path_sections`, diario, tentaciones y prácticas) y Confesión (`my_path_confession_entry`).
-- Las etiquetas que T-046 conserve o convierta en alias se respetan tal como queden.
+- **Panel:** `kind = Today` (227 / 208), en **variante póster** (§3.2).
+- **Carriles:**
+  - A: «Hoy en mi camino» (`my_path_today_header`, `my_path_today`, `my_path_today_habits`, plan y novena);
+  - B: `my_path_sections` + `my_path_confession_entry`.
+- **Presupuesto a 891:** A = 44 + 72 + 64 + 64 = 244; B = 168 + 16 + 64 = 248. Ambos ≤ 359.
+- **A 800:** A completo (244 ≤ 308) y las 3 secciones de B.
 
-**Subsecciones:**
-- **Hábitos** (`HabitsAndVirtuesScreen.kt`):
-  - el panel lleva el cabezal, el anillo del día y el **calendario de fidelidad** del mes (`fidelity_day_*`, 7 columnas a 252 dp ≈ 36 dp por columna; mismo permiso que en vertical);
-  - el contenido, la lista de hábitos con casillas, en 2 columnas.
-- **Diario** (`SpiritualLifeScreen.kt`):
-  - lista de entradas y entrada (lista-detalle, §3.9);
-  - el editor, en §10.3.
-- **Tentaciones y victorias** (`TemptationCalendar.kt`, `TemptationGuidePage.kt`):
-  - calendario en el panel, registro en el contenido;
-  - las hojas `victory_sheet`, `fall_sheet` y `root_sheet` son laterales.
-- **Prácticas:** lista en 2 columnas.
+**Hábitos** (`HabitsAndVirtuesScreen.kt`):
+- **Panel:** cabezal + anillo del día. Cabe: 189 + 28 + 120 ≤ 395.
+- **Carril A:** el **calendario de fidelidad** del mes (`fidelity_day_*`; 7 columnas en 264, con celdas de 36 × 46, con el permiso que ya existe).
+- **Carril B:** los hábitos con casilla.
+
+**Diario:**
+- lista-detalle (§3.9);
+- editor: §10.3.
+
+**Tentaciones y victorias:**
+- calendario en el carril A y registro en el B;
+- hojas laterales.
+
+**Prácticas:** 2 carriles.
 
 ### 9.2 Confesión (`confession/ConfessionScreen.kt`)
 
+**`kind = Immersive`**: sin riel. Panel `clamp(0,28 W, 224, 280)`: 249 / 224. Carriles iguales de **293** (891) y **260** (800).
+
 ```
-┌──────────────────────────────┬────────────────────────────────────┬──────────────────────────────┐
-│ PANEL 243 (kind = Today)     │  EXAMEN · carril A                 │  MI LISTA · carril B         │
-│ ╔══════════════════════════╗ │  [Elegir perfil]                   │ ● Una lista temporal: se     │
-│ ║ Jesús y los apóstoles    ║ │  Soltero/a                         │   borra al salir… (aviso)    │
-│ ║ Un encuentro con la      ║ │  ▸ Amor a Dios               (2)   │  Para conversar con el sac.  │
-│ ║ misericordia · Confesión ║ │    ☐ ¿He faltado a Misa…?          │  ☑ ¿He faltado a Misa…?      │
-│ ╚══════════════════════════╝ │    ☑ …                             │  ┌─────────────────────────┐ │
-│ ▌Prepararme                  │  ▸ Amor al prójimo                 │  │ Notas personales        │ │
-│  Mi lista                    │  ▸ Deberes de estado               │  │ (opcionales)            │ │
-│  El sacramento               │                       (desplaza)   │  └─────────────────────────┘ │
-│                              │                                    │  [ Terminar y borrar ]     ▸ │
-└──────────────────────────────┴────────────────────────────────────┴──────────────────────────────┘
+ 0                          249                                                                     891
+┌─────────────────────────────┬─────────────────────────────────────┬──────────────────────────────────┐
+│ (S) ‹                       │ (S) EXAMEN · carril A · 293         │ (S) MI LISTA · carril B · 293    │
+│ ╔═════════════════════════╗ │  [Elegir perfil]   Soltero/a        │ ● Una lista temporal: se borra   │
+│ ║ Jesús y los apóstoles   ║ │  ▸ Amor a Dios               (2)    │   al salir… (aviso de privacidad)│
+│ ║ Un encuentro con la     ║ │    ☐ ¿He faltado a Misa…?           │  Para conversar con el sacerdote │
+│ ║ misericordia · Confesión║ │    ☑ ¿He mentido…?                  │  ☑ ¿He mentido…?                 │
+│ ╚═════════════════════════╝ │  ▸ Amor al prójimo                  │  ┌────────────────────────────┐  │
+│ ▌Prepararme                 │  ▸ Deberes de estado                │  │ Notas personales (opc.)    │  │
+│  Mi lista                   │                          (desplaza) │  └────────────────────────────┘  │
+│  El sacramento              │                                     │  [ Terminar y borrar ]           │
+└─────────────────────────────┴─────────────────────────────────────┴──────────────────────────────────┘
 ```
 
-- **Panel:**
-  - cabezal;
-  - segmentos verticales (`confession_tabs`: Prepararme · Mi lista · El sacramento).
-  - El **aviso de privacidad** (`confession_privacy_notice`, ≈ 5 líneas a 252 dp) no cabe en el panel junto a los segmentos. Va **al principio del carril B** en los tabs 0 y 1 (donde aplica: a la lista) y al principio del contenido en el tab 2.
-- **«Prepararme» (tab 0): examen y lista en paralelo** (petición del plan).
-  - Dos carriles iguales (`AppFeedColumns(2)`, como Hoy): 256 + 256 a 891 y 220 + 220 a 800; el panel usa el ancho de Hoy (`kind = Today`). Al 130 %, un carril: el examen y, debajo, la lista.
-  - Carril A: examen (`confession_examen`, `confession_profile_button`, `confession_profile_title`, `confession_section_*`).
-  - Carril B: mi lista en vivo:
-    - `confession_private_list` y `confession_empty_list` («Marca las preguntas…»);
-    - `confession_review_list`;
-    - notas (`confession_notes`);
-    - «Terminar y borrar» (`confession_finish_erase`), fijo al pie del carril B y a la derecha.
-  - Marcar una pregunta en A la añade al instante en B.
-- **«Mi lista» (tab 1):** la lista a todo el ancho del contenido, con el campo de notas grande. Es la opción cómoda para escribir.
-- **«El sacramento» (tab 2):** lector L2 dentro del contenido (`confession_guide`, `confession_prayer_*`, `confession_prayer_source_*`).
-- **Teclado** (notas):
-  - solo el carril B se encoge (`imePadding`) y lleva el campo a la vista;
-  - «Terminar y borrar» queda sobre el teclado;
-  - el examen no se mueve.
-- **Privacidad y giro:** la lista y las notas **sobreviven al giro** (holder de ámbito de actividad, §2.4) y **siguen sin guardarse** en el Bundle, el disco ni las copias. Se borran al salir, al pasar a inactiva o al morir el proceso. El texto del aviso no cambia.
-- **Diálogo inicial** (intro): `AppDialog` con `aside`:
-  - a la izquierda, el título y la explicación;
-  - a la derecha, el aviso y «Entendido».
-- **Hoja «Elegir perfil»:** lateral (`confession_profile_*`).
+**Panel:**
+- Cabezal y segmentos verticales (`confession_tabs`).
+- Cabe: 189 + 28 + 144 = 361 ≤ 395 (891); 166 + 28 + 144 = 338 ≤ 344 (800).
+- El aviso de privacidad (`confession_privacy_notice`) **encabeza el carril B**.
+
+**Pestañas:**
+- **Tab 0 «Prepararme»:** examen (carril A: `confession_examen`, `confession_profile_button`, `confession_profile_title`, `confession_section_*`) y lista en vivo (carril B: `confession_private_list`, `confession_empty_list`, `confession_review_list`, `confession_notes`, `confession_finish_erase`).
+- **Tab 1 «Mi lista»:** la lista a todo el ancho del contenido, con un campo de notas grande.
+- **Tab 2 «El sacramento»:** lector a la medida (455 dentro de 602 / 536), con `confession_guide` y `confession_prayer_*`.
+
+**Teclado** (notas): solo se encoge el carril B. Sobre el teclado quedan 157 / 134: rótulo 18 + 2 líneas (48) + margen 24 = 90.
+- La tecla de acción del IME es «Listo».
+- **«Terminar y borrar» es destructiva y no sube junto al teclado:** queda bajo él, a propósito.
+
+**Privacidad:** la lista y las notas sobreviven al giro (holder de actividad) y nunca se guardan (§2.4).
+
+**Diálogo inicial:** `AppDialog` con `aside`.
 
 ### 9.3 Recordatorios (`RemindersScreen.kt`, `NoticeSettings.kt`)
 
-- **Panel:**
-  - cabezal («Recordatorios», «2 activos · Próximo: el Ángelus, 12:00»);
-  - **avisos de estado** (notificaciones o alarmas exactas desactivadas, con «Activar» / «Permitir»): es lo primero que hay que resolver y queda a la vista.
-- **Contenido:** recordatorios (`notice_row_*`) en filas de 2 columnas (`minCell 300`; 1 a 800 al 100 %).
-  - Cada fila tiene interruptor y hora.
-  - **Las horas (`reminder_time_*`) miden ≥ 44 dp de alto** (hoy 34: E9). El chip conserva su aspecto y crece su área táctil.
-- **Hojas** `reminder_sheet`, `notice_sheet` y `obligation_sheet`: laterales. Su estado abierto pasa a `rememberSaveable`.
-- **Selector de hora** del sistema: el diálogo nativo ya es horizontal; se comprueba que no se corte (§13).
+- **Panel:** cabezal + avisos de estado (notificaciones o alarmas desactivadas, con «Activar» / «Permitir»). Sin avisos y sin recordatorios: variante póster.
+- **Contenido:** recordatorios (`notice_row_*`) en 2 columnas a 891 y 1 a 800. Horas (`reminder_time_*`) de **≥ 44** de alto (hoy 34, E9).
+- **Hojas laterales**, con su estado guardado.
 
 ### 9.4 Explorar (`MoreScreen.kt`)
 
-- **Panel:**
-  - cabezal (`more_hero_photo`);
-  - fila «Buscar»;
-  - tarjeta «Empieza aquí» (`explore_start_here`).
-- **Contenido:**
-  - cada sección (`more_section_N`) con su cabecera a todo el ancho y sus filas en **rejilla de filas compactas**: 2 columnas a 891 y 1 a 800 (§3.8);
-  - las tarjetas de sección con imagen (`more_section_hero_0`) en 2 columnas;
-  - la versión (`more_version`) al pie.
-- «Mi camino» ya no aparece en Explorar (T-046).
+- **Panel:** cabezal (`more_hero_photo`), fila «Buscar» y «Empieza aquí» (`explore_start_here`).
+- **Contenido:** secciones (`more_section_N`) en filas compactas en rejilla (2 columnas a 891, 1 a 800); tarjetas de sección (`more_section_hero_0`); versión (`more_version`).
 
 ### 9.5 Criterios de aceptación de L6
 
-1. **Mi camino:**
-   - los dos carriles se ven completos sin desplazar a 891 × 411;
-   - a 800 × 360 se ven «Hábitos» y las 3 primeras secciones.
+Con el arnés de insets y de teclado:
+1. **Mi camino:** carriles completos a 891; carril A y 3 secciones a 800.
 2. **Confesión:**
-   - con el teclado simulado (190 dp) y el foco en las notas, se ven el campo y «Terminar y borrar» (`IME_HIDDEN` = 0);
-   - al girar, la lista y las notas siguen ahí;
-   - al salir y volver, están vacías (`ConfessionInteractionTest` ampliado).
-3. **Recordatorios:** 0 `SMALL_TARGET`; los avisos de estado se ven sin desplazar.
-4. **Explorar:** todas las filas de vertical existen; el número de nodos con texto es el mismo.
+   - carriles ≥ 260;
+   - con el teclado, el campo de notas tiene ≥ 2 líneas visibles a 891 y a 800 (`IME_HIDDEN` = 0);
+   - la lista sobrevive al giro y se vacía al salir.
+3. **Recordatorios:** cero `SMALL_TARGET`.
+4. **Explorar:** paridad de nodos.
 5. `MyPathUiTest`, `ConfessionInteractionTest`, `RemindersTest`, `NoticeUiTest`, `JournalTemptationInteractionTest` y `BackupUiTest` en verde.
 
 ---
 
 ## 10. L7 · Hojas, diálogos, bienvenida y ajustes
 
-Con L0, todas las hojas son laterales. L7 ajusta las que tienen dos columnas naturales, los diálogos y las que tienen teclado.
-
 ### 10.1 Inventario
 
-| Hoja o diálogo | Archivo | Forma en horizontal | Detalle |
+| Hoja o diálogo | Archivo | Forma | Detalle |
 |---|---|---|---|
-| Apariencia (`gui_customizer_sheet`) | `components/GuiCustomizerModal.kt` | **lateral amplia (588), 2 columnas** | <ul><li>Izquierda: Estilo (las 4 identidades), Modo, Reducir transparencia y Alto contraste.</li><li>Derecha: Color de acento (paleta y rueda) y una **vista previa en vivo**: miniatura de una fila y un botón con el acento.</li><li>Los segmentos dejan de estirarse a 860 dp (E6).</li></ul> |
-| Fuente (`font_picker`) | `components/FontPickerDialog.kt` | lateral amplia, 2 columnas | <ul><li>Izquierda, **fija**: muestra con Juan 1,1, tamaño y espaciado.</li><li>Derecha: lista de tipografías.</li><li>«Listo» en la cabecera, como hoy.</li><li>La fuente elegida se aplica en vivo a la muestra y a la app (AGENTS: visible, persistente, efectiva).</li></ul> |
-| Texto del lector (`reading_settings_sheet`) | `design/LumenExtras.kt` | lateral normal | <ul><li>tamaños en fila de 4</li><li>tipografías en lista</li></ul> |
-| Tu camino (`welcome_profile_sheet`) | `screens/BeginnerJourneyScreen.kt` | lateral normal | <ul><li>perfiles y minutos</li><li>«Guardar» en `footer`</li></ul> |
-| Copia de seguridad (`backup_*`) | `backup/BackupSheet.kt` | lateral normal con `footer` | <ul><li>Campos con `imePadding` (ya existe) y `rememberSaveable`.</li><li>La acción principal (Crear o Restaurar) va en el `footer`, sobre el teclado.</li><li>`AppConfirmDialog` «¿Reemplazar tus datos?»: una columna.</li></ul> |
-| Informe de errores (`error_report_sheet`) | `diagnostics/ErrorReportSheet.kt` | lateral normal con `footer` | <ul><li>texto con `rememberSaveable`</li><li>«Enviar» en el `footer`</li></ul> |
-| Idioma (`language_sheet`) | `components/LanguageSelectorDialog.kt` | lateral normal | 3 filas |
-| Reglas del calendario (`calendar_rules_sheet`) | `components/CalendarRulesSheet.kt` | lateral normal | — |
-| Calendario (`calendar_picker_sheet`) | `components/CalendarPickerSheet.kt` | **lateral amplia, 2 columnas** | <ul><li>izquierda: mes en rejilla 7 × 6 (celdas ≥ 44)</li><li>derecha: el día elegido (tiempo, celebración, color) y «Ir a este día»</li></ul> |
-| Rueda de color | `components/AccentColorWheelDialog.kt` | `AppDialog` con `aside` | <ul><li>izquierda: la rueda (≤ `H − 120`)</li><li>derecha: muestras, valor y acciones</li></ul> |
-| Créditos de imagen (`image_credits_sheet`) | `components/ImageCredits.kt` | lateral normal | — |
-| Recuperar preferencias o narración | `PreferencesRecoverySheet.kt`, `NarrationRecoverySheet.kt` | lateral normal | <ul><li>acción en `footer`</li></ul> |
-| «Para ti hoy» (`for_you_sheet`) | `screens/ForYouToday.kt` | lateral normal | — |
-| Hojas de Biblia, lección, plan y Catecismo | ver L2 y L5 | lateral | <ul><li>`lesson_xref_sheet` y `plan_xref_sheet`: amplias, con arcos</li></ul> |
-| Navegador interno | `components/InAppBrowser.kt` | pantalla completa (sin cambio) | <ul><li>la barra respeta los insets laterales</li></ul> |
-| Confirmaciones (`AppConfirmDialog`) | varios | una columna, 420, centrado | — |
+| Apariencia (`gui_customizer_sheet`) | `components/GuiCustomizerModal.kt` | lateral amplia, 2 columnas | <ul><li>izquierda: Estilo, Modo, Reducir transparencia y Alto contraste</li><li>derecha: acento y vista previa en vivo</li></ul> |
+| Fuente (`font_picker`) | `components/FontPickerDialog.kt` | lateral amplia, 2 columnas | <ul><li>izquierda, fija: muestra (Juan 1,1), tamaño y espaciado</li><li>derecha: tipografías</li><li>**«Listo» ocupa el lugar de «Cerrar»** en la cabecera (una sola acción de cierre)</li></ul> |
+| Texto del lector (`reading_settings_sheet`) | `design/LumenExtras.kt` | lateral normal | — |
+| Tu camino (`welcome_profile_sheet`) | `screens/BeginnerJourneyScreen.kt` | lateral normal, `footer` «Guardar» | — |
+| Copia de seguridad (`backup_*`) | `backup/BackupSheet.kt` | lateral normal, `footer` | <ul><li>con el teclado, la acción pasa a la cabecera (§3.6)</li><li>`rememberSaveable` en los campos no secretos</li></ul> |
+| Informe de errores (`error_report_sheet`) | `diagnostics/ErrorReportSheet.kt` | lateral normal, `footer` «Enviar» | igual que la copia de seguridad |
+| Idioma, reglas del calendario, créditos, recuperación, «Para ti hoy» | varios | lateral normal | — |
+| Calendario (`calendar_picker_sheet`) | `components/CalendarPickerSheet.kt` | lateral amplia, 2 columnas | <ul><li>**izquierda:** navegación del mes (‹ noviembre 2026 ›), el día elegido (tiempo, celebración, color) e «Ir a este día»</li><li>**derecha:** rejilla 7 × 6 de celdas de 44</li><li>en esta hoja, el título y «Cerrar» van al principio de la columna izquierda, y la rejilla usa todo el alto de la hoja</li><li>presupuesto a 360 (hoja de 304): días de la semana 20 + 6 × 44 = 284 ≤ 304</li></ul> |
+| Rueda de color | `components/AccentColorWheelDialog.kt` | `AppDialog` con `aside` | <ul><li>rueda ≤ `H − 120`</li><li>muestras y acciones a la derecha</li></ul> |
+| Navegador interno | `components/InAppBrowser.kt` | pantalla completa | insets laterales |
+| Confirmaciones | varios | una columna, 420 | — |
 
-### 10.2 Bienvenida (`BeginnerJourneyScreen.kt`, `welcome_dialog`)
+### 10.2 Bienvenida (`welcome_dialog`)
 
 ```
-┌─────────────────────────────────────── AppDialog 720 × ≤ 339, centrado ────────────────────────┐
-│ Un lugar para comenzar                          │  Estoy explorando                          ✓  │
-│ Ven como eres. Puedes cambiar de camino         │  Estoy regresando                             │
-│ en cualquier momento.                           │  Estoy practicando                            │
-│                                                 │  Tiempo para hoy                              │
-│ (ilustración pequeña, recortada a su marco,     │  [ 2 min ]  [ 5 min ]  [ 10 min ]             │
-│  solo si cabe: se omite antes que recortar      │ ───────────────────────────────────────────── │
-│  texto)                                         │                     [Ahora no]  [ EMPEZAR ▸ ] │
-└─────────────────────────────────────────────────┴───────────────────────────────────────────────┘
+┌───────────────────────────── AppDialog 720 × ≤ 339 (288 a 360) ───────────────────────────┐
+│ Un lugar para comenzar                      │  Estoy explorando                       ✓   │
+│ Ven como eres. Puedes cambiar de camino     │  Estoy regresando                           │
+│ en cualquier momento.                       │  Estoy practicando                          │
+│ Tiempo para hoy                             │                                             │
+│ [ 2 min ] [ 5 min ] [ 10 min ]              │ ─────────────────────────────────────────── │
+│                                             │                    [Ahora no]  [EMPEZAR ▸]  │
+└─────────────────────────────────────────────┴─────────────────────────────────────────────┘
 ```
 
-- Las etiquetas `welcome_dialog`, `welcome_profile_N` y `welcome_personalize` se mantienen.
-- La acción principal se ve **sin desplazar**. Hoy no se ve (E7).
+«Tiempo para hoy» va en la **columna izquierda** en todos los tamaños.
 
-### 10.3 Editor de diario (`SpiritualLifeScreen.kt`, `Dialog` crudo)
+| Columna | Contenido | 360 (alto máximo 288) |
+|---|---|---|
+| Izquierda | título 28 + texto 40 + rótulo 18 + chips 44 + márgenes 48 | 178 ≤ 288 |
+| Derecha | 3 filas × 48 + acciones 52 + márgenes 48 | 244 ≤ 288 |
 
-En `LandscapePhone` pasa a **editor a pantalla completa** (sin velo ni hoja del 94 %):
-- **Barra superior de 56 dp:** «Cancelar» al inicio; título de la entrada en línea; «Guardar» al final, a la derecha, siempre visible.
-- **Cuerpo:** de borde a borde, a la medida, con `imePadding`.
-- **Con teclado** (≈ 190 dp) quedan ≈ 165 dp: la barra (56) y ≥ 3 líneas del cuerpo con el cursor a la vista.
+Etiquetas: `welcome_dialog`, `welcome_profile_N` y `welcome_personalize`.
 
-El borrador ya se guarda con `rememberSaveable` (`draftTitle`); el cuerpo también debe guardarse.
+### 10.3 Editor de diario (`SpiritualLifeScreen.kt`)
+
+En `LandscapePhone` es un **editor a pantalla completa**:
+- **Barra de 56:** «Cancelar» · el título de la entrada como campo · **«Guardar»** al final.
+- **Cuerpo:** a la medida, con `imePadding`.
+- **Con el teclado** (157 / 134 libres): barra 56 + **≥ 3 líneas** (72) = 128. Cabe en ambos tamaños.
+- El cuerpo pasa a `rememberSaveable`; el título ya lo usa (`draftTitle`).
 
 ### 10.4 Criterios de aceptación de L7
 
-1. En `LandscapePhone`, cero hojas inferiores (`SHEET_GEOMETRY`).
-2. Ninguna hoja ni diálogo tiene contenido o botones fuera de la pantalla, en ninguna de las 4 identidades, al 100 % y al 130 %.
-3. Cada hoja con campo de texto cumple `IME_HIDDEN` = 0 con el teclado simulado.
+1. Cero hojas inferiores en `LandscapePhone` y en `CompactPhone`.
+2. Nada recortado en ninguna hoja ni diálogo (4 identidades, 100 % y listón duro al 130 %).
+3. `IME_HIDDEN` = 0 en todas las hojas con campo, con el teclado de 0,56 H.
 4. La bienvenida y la intro de Confesión muestran su acción principal sin desplazar a 891 y a 800.
-5. La fuente elegida en la hoja se ve aplicada en la muestra y en la pantalla de debajo al cerrar (`FontPickerInteractionTest` y `FontPreferencesTest` ampliados).
+5. La fuente elegida se aplica en la muestra y bajo la hoja (`FontPickerInteractionTest`, `FontPreferencesTest`).
 6. Al girar, cada hoja abierta sigue abierta y con sus valores.
 
 ---
 
 ## 11. Rúbrica del crítico
 
-Es la rúbrica del plan, con umbrales comprobables:
-- Cada criterio se puntúa de 0 a 10. **Se aprueba con ≥ 9 en los 9 criterios.**
-- **Un 9 exige que se cumplan todas las comprobaciones duras** del criterio y que no quede más de un defecto menor documentado.
-- El crítico compara **cada captura horizontal con su vertical** (mismo destino, identidad y modo).
+**Cómo se puntúa:**
+- **Escala:** cada criterio va de 0 a 10. **Se aprueba con ≥ 9 en los 9 criterios.** Un 9 exige todas las comprobaciones duras y, como mucho, un defecto menor documentado.
+- **Tamaño de referencia:** se puntúa **al 100 %**. Al 130 % solo se exige el listón duro: nada recortado, oculto ni inalcanzable. Menos columnas y más desplazamiento no restan.
+- **Insets:** todas las comprobaciones se hacen con el arnés de insets de §3.13 (`S` = 24, `B` = 16, gestos de 32).
+- **Comparación:** cada captura horizontal se compara con su vertical.
 
-| # | Criterio | Comprobaciones duras (todas, para ≥ 9) | Defectos que bajan de 9 |
-|---|---|---|---|
-| 1 | **Uso del espacio** | <ul><li>Arte de cabezal ≤ 40 % del área de la ventana, `CompactBand` ≤ 30 % de `H` y panel lateral ≤ 0,40 W.</li><li>Lo esencial de cada área (§4.3, §6.3, §7.4, §8.3, §9.5) se ve sin desplazar.</li><li>Ninguna franja vacía (solo fondo) > 15 % del área de la ventana, salvo los márgenes de la medida de lectura.</li><li>Ninguna columna de contenido < 220 dp (salvo los 56 del hilo).</li></ul> | <ul><li>vertical estirado;</li><li>espacios muertos;</li><li>arte decorativo que obliga a desplazar</li></ul> |
-| 2 | **Jerarquía y ritmo** | <ul><li>Un título por pantalla, con el rango de AGENTS.</li><li>Todos los títulos de panel en la línea `0,46 H − 14` (±1 dp).</li><li>Espaciado en múltiplos de 4.</li><li>Inicios de texto alineados a los márgenes (±1 dp).</li><li>Carriles de igual ancho (±1 dp).</li><li>Acciones primarias únicas por zona.</li></ul> | <ul><li>dos focos que compiten;</li><li>bloques desalineados;</li><li>separaciones irregulares</li></ul> |
-| 3 | **Legibilidad** | <ul><li>Medida (§3.10): 60–75 caracteres en lectores a 891 al 100 %; ≥ 56 a 800 y con sans; ≥ 45 en fichas y al 130 %.</li><li>Contraste ≥ 4,5:1 en texto y ≥ 3:1 en texto grande y controles: `DesignContrastTest` ampliado a texto sobre arte del panel, con el píxel más claro bajo el texto.</li><li>Ningún texto por debajo del tamaño del usuario.</li><li>La lectura, sobre superficie opaca.</li></ul> | <ul><li>líneas de 35 o de 90 caracteres;</li><li>texto sobre arte sin velo;</li><li>tamaños reducidos</li></ul> |
-| 4 | **Ergonomía** | <ul><li>Objetivos ≥ 44 dp (cero `SMALL_TARGET` fuera de la lista de permisos actual) y primarias ≥ 48.</li><li>La acción que avanza (§2.3), a ≤ 200 dp del borde derecho seguro y por debajo de `0,4 H`.</li><li>La navegación en el tercio izquierdo.</li><li>Ningún control arrastrable en las zonas de gesto lateral sin exclusión.</li></ul> | <ul><li>acción frecuente arriba en el centro;</li><li>controles pequeños;</li><li>alcance cruzado</li></ul> |
-| 5 | **Coherencia** | <ul><li>Mismos textos, iconos, acciones y etiquetas de test que en vertical: test de paridad de nodos por pantalla.</li><li>Las 4 identidades × claro/oscuro capturadas y fieles a §2.5.</li><li>Sin componentes paralelos fuera de `ui/design`.</li></ul> | <ul><li>un control que solo existe en horizontal sin justificación;</li><li>estética ajena a la identidad</li></ul> |
-| 6 | **Estados** | Vacío, cargando (`ContentLoadNotice`), error, 130 %, títulos PT largos y ausencia de arte: cada uno diseñado dentro de la disposición horizontal y capturado (§12). | <ul><li>estados que vuelven a la disposición vertical;</li><li>huecos sin mensaje</li></ul> |
-| 7 | **Insets y teclado** | <ul><li>Recorte de 32 dp a izquierda y derecha, barra de tres botones de 48 a cada lado y gestos de 16 abajo: cero `UNDER_INSET`.</li><li>Teclado simulado de 190 (411) o 170 (360): cero `IME_HIDDEN`.</li></ul> | <ul><li>texto bajo la cámara;</li><li>acción tapada por el teclado</li></ul> |
-| 8 | **Continuidad al girar** | `LandscapeRotationTest` verde en todas las filas de §2.4: vertical → horizontal → vertical, mismo estado. | <ul><li>cualquier pérdida de estado o de posición</li></ul> |
-| 9 | **Accesibilidad** | <ul><li>Orden de TalkBack = orden de vertical (por pantalla).</li><li>Títulos con `heading`.</li><li>Paneles y hojas con `paneTitle`.</li><li>`selected` en riel, segmentos, índice y filas activas.</li><li>Acciones personalizadas del hilo de cuentas.</li><li>Foco que entra y sale de las hojas.</li><li>Ningún control sin nombre.</li></ul> | <ul><li>trampas de foco;</li><li>orden de lectura distinto del visual sin motivo</li></ul> |
+| # | Criterio | Comprobaciones duras (todas, para ≥ 9) |
+|---|---|---|
+| 1 | **Uso del espacio** | <ul><li>Arte de cabezal ≤ 40 % del área; `CompactBand` ≤ 30 % de `H`; panel ≤ 0,40 W.</li><li>Lo esencial de cada área (§4.2–4.3, §6.3, §7.4, §8.3, §9.5, §15) se ve sin desplazar.</li><li>Sin franjas vacías > 15 % del área, salvo los márgenes de la medida; la variante póster cubre los paneles sin ranura.</li><li>Ninguna columna < 220 (salvo el hilo, de 44).</li></ul> |
+| 2 | **Jerarquía y ritmo** | <ul><li>Un título por pantalla, con el rango de AGENTS.md.</li><li>Todos los títulos de panel en `0,46 H − 14` (±1). **Excepción declarada:** el título de la tira de 96 de las listas de lista-detalle (§3.9), que desplaza con la lista.</li><li>Múltiplos de 4.</li><li>Inicios alineados (±1).</li><li>Carriles iguales (±1).</li><li>**Un solo botón primario relleno por pantalla.**</li></ul> |
+| 3 | **Legibilidad** | <ul><li>Medida medida con `TextMeasurer` (§3.10): 60–75 caracteres en lectores y Biblia; ≥ 56 en fichas con serif y en el Rosario.</li><li>Contraste ≥ 4,5:1 en texto (≥ 3:1 en texto grande y controles), también sobre el velo de la variante póster.</li><li>Lectura sobre superficie opaca.</li><li>Ningún texto por debajo del tamaño del usuario.</li></ul> |
+| 4 | **Ergonomía** | <ul><li>Objetivos ≥ 44 (cero `SMALL_TARGET`).</li><li>**Acción que avanza: centro a ≤ 120 dp del borde derecho seguro e `y ≥ 0,6 H`** (§2.3).</li><li>Retroceso y navegación en el tercio izquierdo o al inicio del pie.</li><li>Ningún control arrastrable a menos de `gestos + 8` del borde.</li></ul> |
+| 5 | **Coherencia** | <ul><li>Paridad de nodos con el vertical.</li><li>4 identidades × claro/oscuro, fieles a §2.5.</li><li>Paneles solo con `AppPageLayout`, `AppSupportingPaneLayout` y `AppTwoPane`.</li></ul> |
+| 6 | **Estados** | Cada estado de la tabla de §16 diseñado dentro de la disposición horizontal, con su etiqueta y su captura. |
+| 7 | **Insets y teclado** | <ul><li>Cero `UNDER_INSET` con recorte de 32 y barra de tres botones de 48 a cada lado.</li><li>Cero `IME_HIDDEN` con teclado de 0,56 H.</li></ul> |
+| 8 | **Giro** | `LandscapeRotationTest` verde en todas las filas de §2.4, también con texto escrito en la búsqueda y con una ficha apilada. |
+| 9 | **Accesibilidad** | <ul><li>Orden de TalkBack igual al del vertical.</li><li>`heading`, `paneTitle`, `selected`.</li><li>Acciones del hilo.</li><li>El foco entra y sale de las hojas.</li><li>`liveRegion` en los avisos breves.</li></ul> |
 
-Si en una ronda falla una comprobación dura, el criterio no pasa de 8, por bueno que sea el resto.
+Si falla una comprobación dura, ese criterio no pasa de 8.
 
 ---
 
 ## 12. Matriz de capturas
-
-Comando base, una vez hecho L0:
 
 ```sh
 flock /tmp/gradle.lock gradle --no-daemon --max-workers=4 --no-configuration-cache \
@@ -1274,69 +1312,173 @@ flock /tmp/gradle.lock gradle --no-daemon --max-workers=4 --no-configuration-cac
   -Pshots.landscape=true -Pshots.lang=es -Pshots.identity=all
 ```
 
-Y `LandscapeAuditTest` con `-Paudit.capture=all` para las subpantallas.
+`-Pshots.landscape=true` aplica por defecto `S` = 24, `B` = 16 y gestos de 32. Además se pasa `LandscapeAuditTest` con `-Paudit.capture=all`.
 
 | Eje | Valores | Obligatorio por área |
 |---|---|---|
-| Tamaño | **L-A 891 × 411** (teléfono grande) · **L-B 800 × 360** (teléfono pequeño) | ambos |
-| Identidad | Lumen · Tradicional · Cristal · Sanctuary | las 4 |
+| Tamaño | **891 × 411** · **800 × 360** | ambos |
+| Identidad | las 4 | las 4 |
 | Modo | claro · oscuro | ambos |
-| Material | «Reducir transparencia» activado | Lumen y Cristal, 1 captura por pantalla del área, en L-A claro |
-| Texto | 100 % · **130 %** | 130 % en L-B, en ES y PT, en las 4 identidades, modo claro |
-| Idioma | ES (base) · PT (las cadenas más largas) | PT en L-A Lumen claro y en las de 130 % |
-| Teclado (`-Pshots.ime`) | 190 dp en L-A · 170 en L-B | <ul><li>Búsqueda;</li><li>Confesión (notas);</li><li>Copia de seguridad;</li><li>Informe de errores;</li><li>editor de diario;</li><li>búsqueda de Santos, Preguntas y Compendio.</li><li>Lumen y Sanctuary, claro, ES.</li></ul> |
-| Insets (`-Pshots.cutout`, `-Pshots.navbar`) | recorte a la izquierda · recorte a la derecha · tres botones a la derecha | L0 en todas las raíces; cada área en su pantalla principal, en Lumen claro |
-| Estados | vacío · cargando · error · sin arte | una captura de cada uno por área donde exista, en Lumen claro, L-A |
-| Regresión | vertical 411 × 891 · tableta 1280 × 800 | <ul><li>L0, L3 y L4: todas las raíces;</li><li>el resto de áreas: su pantalla principal, en Lumen y Sanctuary claro</li></ul> |
+| Material | «Reducir transparencia» | Lumen y Cristal: 1 por pantalla del área, en 891, claro |
+| Texto | 100 % · 130 % | <ul><li>100 %: todo</li><li>130 %: 800, ES y PT, las 4 identidades, claro (listón duro)</li></ul> |
+| Idioma | ES · PT | PT en 891 Lumen claro y en las de 130 % |
+| Teclado (`-Pshots.ime`, 0,56 H) | 230 / 202 | <ul><li>Búsqueda</li><li>notas de Confesión</li><li>Copia de seguridad</li><li>Informe de errores</li><li>editor de diario</li><li>búsquedas de Santos, Preguntas, Compendio y Parroquias</li></ul> Lumen y Sanctuary, claro, ES. |
+| Insets | recorte a la izquierda · recorte a la derecha · tres botones a la derecha | <ul><li>L0: todas las raíces</li><li>cada área: su pantalla principal, en Lumen claro</li></ul> |
+| Estados | §16 | cada fila, en Lumen claro, 891 |
+| Regresión | 411 × 891 · 1280 × 800 | <ul><li>L0, L3 y L4: todas las raíces</li><li>el resto: su pantalla principal, en Lumen y Sanctuary claro</li></ul> |
 
-- **Mínimo por pantalla:** 2 tamaños × 4 identidades × 2 modos = **16**, más 8 de 130 % (ES y PT × 4 identidades en L-B), más las de teclado, insets y estados que le toquen.
-- **Nombre:** `{área}_{pantalla}_{identidad}_{claro|oscuro}_{w}x{h}[_s130][_pt][_ime][_cutL|_cutR|_navR][_vacío|_error]`.
-- **Destino:** `docs/tasks/T-0xx-shots/`, con una lámina de contacto por área (vertical | horizontal lado a lado), para que el crítico compare.
+- **Mínimo por pantalla:** 16 (2 tamaños × 4 identidades × 2 modos), más 8 al 130 %, más las de teclado, insets y estados que le correspondan.
+- **Nombre:** `{área}_{pantalla}_{identidad}_{claro|oscuro}_{w}x{h}[_s130][_pt][_ime][_cutL|_cutR|_navR][_estado]`.
+- **Destino:** `docs/tasks/T-0xx-shots/`, con una lámina de contacto por área (vertical | horizontal).
 
 ---
 
 ## 13. Lista de comprobación en el teléfono real
 
-Robolectric no es un teléfono: no simula el recorte real, el IME, la rotación física ni el rendimiento del cristal. Con cada versión de tramo (L1+L2, L3+L4, L5–L7), el dueño comprueba en su teléfono:
+Robolectric no simula el recorte real, el teclado, la rotación física ni el coste del cristal. Con cada versión de tramo (L1+L2, L3+L4, L5–L7), el dueño comprueba:
 
-1. **Girar en los dos sentidos** (cámara a la izquierda y a la derecha), en mitad de:
+1. **Giro en los dos sentidos** a mitad de:
    - un Rosario con la voz activa;
    - un capítulo largo;
-   - la lista de Confesión con notas escritas;
-   - la búsqueda con texto.
-   
-   Todo sigue igual.
-2. **Recorte de cámara.** Nada importante bajo la cámara en ningún giro.
-3. **Navegación de tres botones** (si la usa). El riel y «Siguiente» no quedan debajo.
-4. **Teclado.** Escribir en Búsqueda, en notas de Confesión y en el diario: se ven el campo y su botón, y el teclado **no** ocupa toda la pantalla.
-5. **Rosario completo en horizontal.** Las oraciones de la decena se leen sin desplazar; las cuentas se tocan y arrastran con el pulgar izquierdo; «Siguiente» se pulsa con el derecho.
-6. **Lectura larga** (un capítulo de los Hechos): líneas cómodas y nada flotando sobre el texto.
-7. **Letra grande** (130 % en Ajustes): nada cortado y el riel con sus 5 pestañas.
-8. **Fluidez.** Desplazar Hoy y Orar no da tirones en Lumen ni en Cristal (el cristal vivo cuesta más con dos paneles).
+   - la lista de Confesión con notas;
+   - una búsqueda con texto.
+2. **Cámara** a cada lado: nada importante debajo.
+3. **Tres botones** (si los usa): ni el riel ni «Siguiente» quedan debajo.
+4. **Teclado** en Búsqueda, en las notas de Confesión y en el diario: se ven el campo y su acción, y el teclado no ocupa toda la pantalla.
+5. **Rosario completo:**
+   - las oraciones de decena se leen sin desplazar;
+   - el pulgar izquierdo mueve las cuentas y «Anterior»;
+   - el derecho pulsa «Siguiente».
+6. **Lectura larga:** líneas cómodas y nada sobre el texto; «Siguiente» abajo a la derecha.
+7. **Letra al 130 %:** nada cortado y el riel completo.
+8. **Fluidez** de Hoy y Orar en Lumen y en Cristal.
 
-Cada fallo abre una ronda de corrección del área antes de seguir.
+Cada fallo abre una ronda de corrección del área.
 
 ---
 
 ## 14. Riesgos y decisiones abiertas
 
-**Decisiones que el dueño puede vetar.** Están resumidas también en `LANDSCAPE-RESUMEN.md`.
-1. El riel se oculta en las pantallas inmersivas: Rosario y lectores (§3.5).
-2. En la Biblia, el estudio con arcos es un panel fijo solo en teléfonos anchos (≥ 860 dp). En los más estrechos se abre al tocar un versículo (§5.2).
-3. Credo, Salve y las oraciones largas pueden necesitar desplazar en el Rosario (§4.3).
-4. Etiquetas cortas del riel con letra grande: «Camino», «Más» (§3.5).
-5. Todas las hojas inferiores pasan a laterales en horizontal (§3.6).
-6. Confesión conserva la lista al girar, sin guardarla nunca (§9.2).
-7. A 130 %, Hoy pasa a una columna (§6.4).
+**Decisiones que el dueño puede vetar** (también en `LANDSCAPE-RESUMEN.md`):
+1. El riel se oculta en el Rosario, los lectores, la Biblia y Confesión (§3.5).
+2. **Rosario:**
+   - «Anterior» a la izquierda y «Siguiente» a la derecha;
+   - en un teléfono pequeño y con la guía activa, el Padrenuestro desplaza 1–2 líneas (§4.3);
+   - el Credo, la Salve y las letanías desplazan siempre.
+3. En la Biblia, los arcos son un panel fijo solo desde 860 dp; por debajo se abren al tocar un versículo (§5.2).
+4. Las hojas inferiores pasan a laterales (§3.6).
+5. Nombres completos en el riel al 100 %; cortos («Camino», «Más») solo al 130 % (§3.5).
+6. Confesión ocupa toda la pantalla, sin riel, y conserva la lista al girar sin guardarla nunca (§9.2).
+7. En Hoy, «Ver mis prácticas» pasa a botón secundario **también en vertical** (§6.2).
+8. Las lecturas de la Misa se abren como página de lectura desde el centro Leer (§7.2).
 
 **Riesgos técnicos:**
-- **Estabilidad del árbol al girar** (§2.4). Es el defecto más probable: el estado que se pierde «a veces». Lo vigila `LandscapeRotationTest`, que debe crearse en L0, antes que las áreas.
-- **Cristal vivo con dos paneles.** El fondo líquido muestrea el lienzo completo; con un panel de arte fijo y contenido que desplaza puede costar más. Se mide en el teléfono (§13.8). Si hiciera falta, el panel usa la bruma estática y no el muestreo vivo.
-- **`screenHeightDp`** puede excluir barras en algunas versiones (§2.1). L0 deja un test que fija el cálculo de la clase.
-- **Carga de migración:** 34 cabezales en 19 archivos. El respaldo `CompactBand` (§3.3) da una mejora inmediata y evita un estado intermedio peor que el actual.
-- **Hermes (L5–L6)** debe recibir este documento, la lista de archivos permitidos de su área y la prohibición de tocar `ui/design` (que es de L0).
+- **Estabilidad del árbol al girar** (§2.4). Lo vigilan el lint de estado y `LandscapeRotationTest`, que se crean en L0.
+- **Métricas de texto en Android frente a la medición con las TTF.** Pueden variar unos dp. `RosaryFitTest` es la autoridad; los márgenes de §4.3 (≥ 8 dp) lo absorben salvo en la excepción declarada.
+- **Coste del cristal vivo con dos paneles:** se mide en el teléfono (§13.8). Si hace falta, el panel usa bruma estática.
+- **`LocalWindowInfo.containerSize`:** si falla en algún nivel de API, se usa `androidx.window` (§2.1).
+- **Carga de migración:** 34 cabezales en 19 archivos. `CompactBand` da el respaldo inmediato.
+- **Hermes (L5–L6):** recibe este documento, los archivos permitidos y la prohibición de tocar `ui/design`.
 
-**Fuera de alcance:**
-- tableta en postura de mesa (plegable a medio abrir);
-- ventanas flotantes (freeform);
-- teclados físicos (aunque el orden de foco de §11.9 los favorece).
+**Fuera de alcance:** postura de mesa en plegables, ventanas libres (freeform) y teclados físicos.
+
+---
+
+## 15. Cobertura completa: las pantallas restantes
+
+Todos los destinos de `AppDestination` y todas las subpantallas que recorre la auditoría tienen patrón. Estas faltaban en la revisión 1:
+
+| Pantalla (destino o subpantalla) | Archivo | Área | Patrón | Lo esencial sin desplazar (891 / 800) | Capturas |
+|---|---|---|---|---|---|
+| **Parroquias** (`PARISHES`) | `ParishFinderScreen.kt` | L6 | <ul><li>`AppPageLayout(Hub)`</li><li>ranura: aviso «no son horarios verificados» (meta), campo de búsqueda y **«Parroquias cerca de mí»** (primario)</li><li>contenido: resultados en 2 columnas o estado (§16)</li></ul> | <ul><li>campo + botón primario en el panel</li><li>1.ª fila de resultados</li></ul> | matriz completa + teclado + sin conexión |
+| **Noticias** (`CHURCHES_NEWS`) | `DoctrineNews.kt` | L6 | <ul><li>`AppPageLayout(Hub)`, póster</li><li>contenido: noticias en tarjetas de imagen, 2 columnas (`minCell` 220)</li><li>la noticia abre el navegador interno</li></ul> | 1.ª fila de 2 tarjetas | matriz + cargando + sin conexión |
+| **Calendario y Santuarios** (`PILGRIMAGE_HABITS`) | `PilgrimageAndHabitsScreen.kt` | L6 | <ul><li>`AppPageLayout(Hub)` con segmentos Calendario · Santuarios</li><li>**Calendario:** carril A con «Hoy» y el mes en rejilla; carril B con el día elegido</li><li>**Santuarios:** lista-detalle (§3.9)</li></ul> | <ul><li>tarjeta de hoy + mes completo (6 × 44 = 264 ≤ 359; a 800, 5 semanas y desplaza)</li><li>Santuarios: §8.3</li></ul> | matriz + vacío |
+| **Doctrina e Historia** (`DOCTRINE`), **Doctrina** (`STUDY_DOCTRINE`) | `DoctrineAndHistoryScreen.kt`, `DoctrineMoral.kt` | L5 | <ul><li>lista-detalle: lista de mandamientos, sacramentos, etc. (`commandment_row_*`)</li><li>ficha L2 en el detalle, con «Leer a pantalla completa»</li></ul> | §8.3 | matriz |
+| **Historia** (`STUDY_HISTORY`) | `DoctrineHistory.kt` | L5 | <ul><li>lista-detalle: línea del tiempo en la lista</li><li>las filas `epoch_row_*` llevan **título y fechas**, sin el resumen (que se elidía, E9)</li><li>el resumen completo va en la ficha</li></ul> | §8.3 | matriz |
+| **Primeros pasos** (`BEGINNER`) | `BeginnerJourneyScreen.kt` | L6 | <ul><li>`AppPageLayout(Hub)`, póster con la barra de 7 pasos en la meta</li><li>contenido: tarjeta del paso actual (lectura a la medida)</li><li>pie del contenido: «‹ Paso anterior» · **«Siguiente paso ›»**</li></ul> | <ul><li>paso actual: título + 3 líneas</li><li>pie</li></ul> | matriz |
+| **Lista de una categoría de oraciones** (`prayer_category`) | `PrayersAndNovenasScreen.kt` | L4 | <ul><li>`AppPageLayout(Hub)` con `AppDetailHeader`</li><li>ranura: recuento («93 oraciones»)</li><li>contenido: chips de intención adhesivos (fila con desplazamiento horizontal) y filas en 1 columna</li></ul> | <ul><li>chips</li><li>≥ 3 filas</li></ul> | matriz |
+| **Parte del Catecismo** (`catechism_part`) | `CatechismScreen.kt` | L5 | <ul><li>lista-detalle: contenido de la parte (secciones, `ccc_node_*`) en la lista</li><li>hijos en la ficha</li><li>el artículo abre L2</li></ul> | §8.3 | matriz |
+| **Compendio** (`compendium`) | `CatechismScreen.kt` | L5 | <ul><li>`AppPageLayout(Hub)` sin arte (panel de título)</li><li>ranura: aviso editorial (meta), búsqueda (`compendium_search_input`) y «Parte: Todas»</li><li>contenido: preguntas y respuestas en 1 columna a la medida</li></ul> | <ul><li>búsqueda</li><li>1.ª pregunta con su respuesta</li></ul> | matriz + teclado + sin resultados |
+| **Ficha del curso** (`study_overview_page`) | `ScriptureStudyScreen.kt` | L4 | <ul><li>`AppPageLayout(Hub)` con el arte del curso y el progreso en la ranura</li><li>contenido: lecciones</li><li>pie del contenido: **«Continuar ›»** (`study_continue_button`) al final</li></ul> | <ul><li>progreso</li><li>≥ 3 lecciones</li><li>pie</li></ul> | matriz |
+| **Hábitos y virtudes, Vida espiritual** (destinos absorbidos por Mi camino) | — | L6 | llevan a su sección de Mi camino (§9.1) | — | — |
+
+Los avisos breves (`AppNotice`, §3.14) siguen la misma regla en todas estas pantallas.
+
+---
+
+## 16. Estados por área
+
+Cada estado se diseña **dentro** de la disposición horizontal: el panel se mantiene y el estado ocupa la columna de contenido.
+
+| Área | Estado | Panel | Dónde y cómo | Etiqueta | Captura |
+|---|---|---|---|---|---|
+| L3 Hoy | Liturgia cargando | normal | carril B: la tarjeta de liturgia con su cabecera y un marcador de 3 líneas | `daily_missal_loading` | `l3_home_*_liturgia-cargando` |
+| L3 Hoy | Liturgia con error | normal | carril B: `ContentLoadNotice` con «Reintentar» dentro de la tarjeta | `daily_missal_error` (nueva) | `l3_home_*_liturgia-error` |
+| L2 Biblia | Capítulo cargando | normal | columna de texto: `bible_verses_loading` centrado | `bible_verses_loading` | `l2_bible_*_cargando` |
+| L2 Biblia | Libro no disponible en la edición | normal | columna de texto: título + texto + «Usar Biblia incluida» (`bible_use_bundled`) | `bible_use_bundled` | `l2_bible_*_sin-libro` |
+| L2 Lectores | Contenido sin abrir | normal | columna de texto: `ContentLoadNotice` | `content_load_notice` (nueva) | `l2_*_error` |
+| L4 Novenas | Filtros sin resultados | normal | contenido: filtros adhesivos visibles + `AppEmptyState` «Ninguna novena coincide» + «Quitar filtros» | `novena_filter_empty` (nueva) | `l4_novenas_*_vacío` |
+| L4 Oración | Oración cargando | normal | columna de texto: «Cargando oración…» | existente (`AppEmptyState`) | `l4_prayer_*_cargando` |
+| L5 Búsqueda | Sin resultados | — | bajo la barra: `AppEmptyState` (`search_empty`) con sugerencias | `search_empty` | `l5_search_*_vacío` |
+| L5 Búsqueda | Buscando | — | bajo la barra: `search_loading` | `search_loading` | `l5_search_*_cargando` |
+| L5 Listas | Filtro sin resultados | lista | lista: `AppEmptyState` + «Quitar filtros»; ficha: arte de la sección enmarcado | `list_empty` (nueva) | `l5_saints_*_vacío` |
+| L5 Compendio | Sin resultados | panel de título | contenido: `ccc_search_empty` | `ccc_search_empty` | `l5_compendium_*_vacío` |
+| L5 Planes | Ningún plan empezado | póster | ficha: el plan destacado con «Empezar hoy» en el pie | `plan_detail_screen` | `l5_plans_*_sin-plan` |
+| L6 Recordatorios | Sin recordatorios activos | póster | contenido: `AppEmptyState` + «Activar el Ángelus» | `reminders_empty` (nueva) | `l6_reminders_*_vacío` |
+| L6 Recordatorios | Notificaciones desactivadas | normal | panel: aviso con «Activar» | existente | `l6_reminders_*_sin-permiso` |
+| L6 Diario | Vacío | póster | lista: `AppEmptyState` + «Escribir la primera entrada» | `journal_empty` (nueva) | `l6_journal_*_vacío` |
+| L6 Confesión | Lista vacía | normal | carril B: `confession_empty_list` | `confession_empty_list` | `l6_confession_*_vacía` |
+| L6 Confesión | Contenido sin abrir | normal | contenido: `AppEmptyState` + reintentar | existente | `l6_confession_*_error` |
+| L6 Parroquias | Sin conexión o error de Maps | normal | contenido: `parish_maps_error` + «Reintentar»; campo y botón siguen en el panel | `parish_maps_error` | `l6_parishes_*_sin-conexión` |
+| L6 Noticias | Cargando / sin conexión | póster | contenido: `news_loading` / `AppEmptyState` + «Reintentar» | `news_loading`, `news_offline` (nueva) | `l6_news_*_cargando`, `_sin-conexión` |
+| L7 Copia de seguridad | Error | — | hoja: `backup_error` sobre el `footer` | `backup_error` | `l7_backup_*_error` |
+| L7 Informe de errores | Error de envío | — | hoja: `error_report_error` | `error_report_error` | `l7_error_report_*_error` |
+| Todas | 130 % | igual | listón duro | — | §12 |
+| Todas | Sin arte (el recurso no existe) | panel de título | mismo panel, sin arte | — | una por área |
+
+---
+
+## 17. Respuesta a la crítica 1
+
+### 17.1 Defectos
+
+| # | Defecto | Resolución | Dónde |
+|---|---|---|---|
+| 1 | Presupuesto del Rosario | <ul><li>**Adoptado y medido.** Panel `clamp(0,32 W, 256, 340)`; «Después» bajo el progreso; la intención y la meditación del anuncio pasan a la columna de contexto; miniatura con `H < 400`.</li><li>Presupuesto rehecho con S = 24 y B = 16, con el hueco V./R., «Oración opcional» y ×1,12, medido con las fuentes de la app. Resultado: 24/24 combinaciones a 891 y 12/12 a 800 sin guía, sin desplazar; `RosaryFitTest`.</li><li>**Discrepancia medida:** la guía **no** va a la columna de contexto. Allí mide 180–198 dp (891) y 218–236 (800), en una región de 203 / 152 que ya ocupan el antetítulo y el título (106): solo se verían 97 / 46 dp de guía, cortada a mitad en los dos tamaños.</li><li>En el panel de la oración la guía cabe en todas las combinaciones salvo una: **Padrenuestro con guía a 800 × 360**, que desplaza 22–52 dp.</li><li>Otras alternativas medidas y descartadas:<ul><li>título dentro de la tarjeta de guía: −46 dp;</li><li>transporte horizontal abajo: −68 dp en todos los casos;</li><li>panel de cuentas de 224: columna de contexto de 120 dp, con títulos de 6 líneas.</li></ul></li><li>Excepción declarada y vetable (§14.2).</li></ul> | §4.2, §4.3 |
+| 2 | Acción que avanza en los lectores | **Adoptado:** pie fijo del texto con «‹ Anterior» al inicio y la acción que avanza al final (≤ 120, `y ≥ 0,6 H`); el pie del panel solo con Escuchar y Aa; la Biblia por debajo de 860, igual. | §5.1, §5.2 |
+| 3 | Panel del lector a 800 | **Adoptado y simplificado:** en `LandscapePhone`, el índice va siempre plegado en una fila de 44 con la parte actual, que abre una hoja (medido: quedan 122 / 94 dp). | §5.1 |
+| 4 | Rejilla 3 × 3 de días | **Adoptado con un ajuste:** fila «Día N de M ▾» (44) + «Todos los días» en hoja con rejilla de 7 columnas de 44. Las flechas ‹ › van al pie del texto (§5.1) para no duplicar controles. Se conservan `novena_day_strip` y `novena_day_pill_N`. | §5.3 |
+| 5 | `S` = 0 y teclado optimista | **Adoptado:** arnés con S = 24, B = 16, gestos de 32 y teclado de 0,56 H; todos los presupuestos rehechos. | §2.2, §3.13, §4.3, §6.3, §7.1, §8.3–8.6, §9.2, §9.5, §10.3 |
+| 6 | Banda del 33 % | **Adoptado:** `S + 84` = 108 (26 % / 30 %). | §3.3 |
+| 7 | Estado que cambia de padre | **Adoptado:** sin `rememberSaveable` en `header` ni `supporting` (con lint); estado elevado; giro con texto escrito; ficha apilada → selección explícita. | §2.4, §3.13 |
+| 8 | Cobertura y avisos | **Adoptado:** 11 pantallas añadidas con patrón, esenciales y capturas; `AppNotice` sobre el pie de la columna activa, ≤ 480. | §15, §3.14 |
+| 9 | Estados | **Adoptado:** tabla de 23 estados con panel, etiqueta y captura. | §16 |
+| 10 | Panel muerto | **Adoptado:** variante póster. | §3.2 |
+| 11 | Filas imposibles y arte perdido | <ul><li>**Adoptado:** barra adhesiva de ≤ 56 con botón de filtro y hoja; fila de chips solo con filtros activos; tira de 96 con título que desaparece; excepción en la rúbrica 2.</li><li>**Criterio ajustado con medida:** con la tira visible, a 891 caben 2 filas reales completas (108 + 64 = 172 ≤ 219); 3 filas (258) piden quitar la tira. Por eso: ≥ 3 filas tras desplazar la tira a 891 y ≥ 2 a 800.</li></ul> | §3.9, §8.3, §11 |
+| 12 | Lectores embebidos | **Adoptado:** Misa, «El sacramento» y los oficios de Noche son `kind = Reader` o van dentro de una pantalla inmersiva, con medida de 66 caracteres. | §5.3, §7.2, §9.2 |
+| 13 | Confesión | **Adoptado:** `kind = Immersive`, carriles de 293 / 260 y boceto corregido. | §9.2 |
+| 14 | Hábitos desborda | **Adoptado:** el calendario pasa al carril A; el panel lleva cabezal y anillo (337 ≤ 395). | §9.1 |
+| 15 | Búsqueda | **Adoptado:** sin arte; barra adhesiva de 56 (atrás, campo, borrar); chips ocultos con el teclado; ≥ 1 fila con el teclado a 800 (78 ≥ 64). | §8.6 |
+| 16 | Hilo sin definir | **Adoptado:** hacia arriba avanza, 24 dp por cuenta, tic por cuenta, geometría cerrada, `x = max(safeStart, gestos) + 8`, aceptación con gestos de 32. | §4.2 |
+| 17 | Jerarquía de Hoy | **Adoptado:** un primario («Leer las lecturas»); panel `clamp(0,28 Wc, 208, 280)`; carriles de 264 / 228; captura en PT. | §6 |
+| 18 | Etiquetas del riel | **Adoptado (2.ª opción):** etiquetas completas con presupuesto de 2 líneas (304 ≤ 320) y riel de 4 destinos descrito. | §3.5 |
+| 19 | Medida | **Adoptado:** `TextMeasurer` en el estilo real; tabla rehecha con las fuentes medidas (Garamond 19: 66 caracteres ≈ 455 dp, no 576). | §3.10 |
+| 20 | Clase de ventana | **Adoptado:** `LocalWindowInfo.containerSize` o `androidx.window`; `CompactPhone` con banda y hojas laterales. | §2.1 |
+| 21 | Umbral unificado | **Adoptado** en §2.3 y en la rúbrica 4. | §2.3, §11 |
+| 22 | Desbordes de L7 | **Adoptado:** calendario con navegación a la izquierda y rejilla a la derecha (284 ≤ 304); «Tiempo para hoy» a la izquierda en la bienvenida; «Voces» como lista vertical; «Listo» sustituye a «Cerrar». | §10, §4.4 |
+| 23 | Arte que crece | **Adoptado:** la línea nunca se mueve; el título crece hacia arriba y, si no basta, desplaza el panel. | §3.2 |
+| 24 | Rosario y Biblia a mano | **Adoptado:** `AppSupportingPaneLayout`, declarado en `AppComponents.kt`. | §3.4, §4, §5.2 |
+
+### 17.2 Resumen para el dueño
+
+| # | Problema | Resolución |
+|---|---|---|
+| 1 | La decisión 2 prometía de más | Reescrita con la excepción exacta (Padrenuestro con guía en teléfono pequeño) y con Credo, Salve y letanías como «desplazan siempre». |
+| 2 | «Atrás» y «Oír» | Ahora dice «Anterior» y «Escuchar», como en la app. |
+| 3 | Pestañas recortadas y 5.ª inexistente | El boceto muestra 4 pestañas con su nombre completo y una nota sobre «Mi camino» (T-046). |
+| 4 | «Una sola columna» | Reescrito: Hoy pasa a una columna; los centros pierden una columna de tarjetas. |
+| 5 | «Las imágenes siempre se ven» | Reescrito: arte en paneles y fichas (miniatura); Búsqueda no lleva arte. |
+| 6 | Controles de la Biblia | Reescrito: abajo a la derecha en el panel de estudio (≥ 860), o al pie del texto con «Siguiente» a la derecha. |
+| 7 | Sin enlaces a las capturas | Enlaces a `docs/design/antes/`. |
+| 8 | «Un tercio» del Rosario | Ahora es cierto: el panel mide el 32 % del ancho (285 de 891). |
+| 9 | El selector Rosario/Coronilla, en sitios distintos | Un solo sitio en el boceto y en la especificación: la fila superior del panel de las cuentas, junto a «atrás». |

@@ -1,107 +1,143 @@
 # La app en horizontal · Resumen para decidir
 
-**La idea en una frase.** Con el teléfono en horizontal sobra ancho y falta alto. Por eso, lo que hoy se apila de arriba abajo (la imagen, el título y luego el contenido) se pone **lado a lado**: a la izquierda, lo que te sitúa; a la derecha, lo que lees o usas.
+**La idea.** Con el teléfono en horizontal sobra ancho y falta alto. Lo que hoy se apila (la imagen, el título y debajo el contenido) se pone **lado a lado**:
+- a la izquierda, lo que te sitúa;
+- a la derecha, lo que lees o rezas.
 
-**Tus pulgares mandan.**
-- Con el izquierdo: las pestañas y las cuentas del Rosario.
-- Con el derecho: «Siguiente».
-- Nada se esconde y la letra nunca se achica.
+**Tus pulgares mandan:**
+- con el **izquierdo**, las pestañas, las cuentas del Rosario y «Anterior»;
+- con el **derecho**, «Siguiente».
 
-Antes de diseñar, miré la app tal como se ve hoy en horizontal: las 4 apariencias y unas 115 pantallas cada una, en un teléfono de 891 × 411. Lo de «antes» viene de esas capturas. La especificación completa está en `LANDSCAPE.md`.
+Nada se esconde y la letra no se achica. Todo está pensado para la letra normal (100 %). Con la letra al 130 % solo garantizamos que nada se corte; puede haber menos columnas o más deslizamiento.
+
+Las cuentas tienen en cuenta la barra de estado y la de gestos de un teléfono real. Los detalles están en `LANDSCAPE.md`.
+
+**Antes:** capturas de cómo se ve hoy en horizontal en un teléfono de 891 × 411, en la carpeta `antes/`:
+- [Rosario](antes/lumen_es_dest_rosary_root_0.jpg) · [Rosario en Sanctuary](antes/sanctuary_es_dest_rosary_root_0.jpg)
+- [Capítulo de la Biblia](antes/lumen_es_bible_chapter_chapter_0.jpg) · [Día de novena](antes/lumen_es_novena_day_day_0.jpg)
+- [Hoy](antes/lumen_es_dest_home_root_0.jpg) · [Hoy en Sanctuary](antes/sanctuary_es_dest_home_root_0.jpg) · [Orar](antes/lumen_es_dest_prayers_root_0.jpg) · [Santos](antes/lumen_es_dest_saints_root_0.jpg)
+- [Ventana de bienvenida](antes/lumen_es_welcome_dialog_welcome_0.jpg) · [Opciones del Rosario](antes/sanctuary_es_rosary_options_options_sheet_0.jpg) · [Misterios](antes/sanctuary_es_rosary_mysteries_mysteries_sheet_0.jpg) · [Recordatorios](antes/lumen_es_reminders_sheet_notice_sheet_0.jpg)
 
 ---
 
 ## 1. Rosario
 
-**Antes.**
-- La pintura y el nombre del misterio ocupan la mitad izquierda.
-- A la derecha, el progreso y las cuentas en una tira horizontal.
+**Antes** ([captura](antes/lumen_es_dest_rosary_root_0.jpg)).
+- La pintura y el misterio ocupan la mitad izquierda.
 - **La oración no se ve: hay que deslizar para leerla.**
-- La barra de pestañas sigue a la vista, aunque estés rezando.
+- La barra de pestañas sigue a la vista mientras rezas.
 
-**Después.**
+**Después.** Un folio de dos caras.
+- A la izquierda, un tercio de la pantalla dice dónde estás.
+- A la derecha está la oración entera.
 
 ```
-┌──────────────────────────────┬──────────────────────────────────────────┐
-│ ‹   [ Rosario | Coronilla ]  │  Avemaría                       3 de 10  │
-│ ┊  ┌──────────────────────┐  │  Dios te salve, María, llena eres de     │
-│ ●  │  pintura del misterio│  │  gracia; el Señor es contigo; bendita    │
-│ ┊  └──────────────────────┘  │  tú eres entre todas las mujeres…        │
-│(◉) Misterios Gozosos ▾       │  Santa María, Madre de Dios, ruega por   │
-│ ┊  1.º La Anunciación        │  nosotros, pecadores… Amén.              │
-│ ○  Fruto: la humildad        │  Después · Gloria                        │
-│ ┊  ▬▬▬▬▬▬▬ Paso 12 de 85     │ [Guía] [···]   [Atrás] [Oír] [SIGUIENTE] │
-└──────────────────────────────┴──────────────────────────────────────────┘
-  cuentas en vertical (pulgar      oración completa, sin deslizar
-  izquierdo: tocar o arrastrar)    «Siguiente» bajo el pulgar derecho
+┌─────────────────────────────┬────────────────────────────────────────┬───────────┐
+│ ‹ [ Rosario | Coronilla ]   │  Avemaría                    3 de 10   │  [Guía]   │
+│ ┊  Primer misterio gozoso   │                                        │  [ ··· ]  │
+│ ●  La Anunciación           │  Dios te salve, María, llena eres de   │           │
+│ ┊  ┌───────────────────┐    │  gracia; el Señor es contigo. Bendita  │ (Escuchar)│
+│(◉) │ pintura           │    │  tú eres entre todas las mujeres, y    │           │
+│ ┊  └───────────────────┘    │  bendito es el fruto de tu vientre,    │           │
+│ ○  Fruto: la humildad       │  Jesús. Santa María, Madre de Dios,    │ ┌───────┐ │
+│    Después · Gloria         │  ruega por nosotros, pecadores, ahora  │ │SIGUIEN│ │
+│    ▬▬▬▬▬▬ Paso 12 de 85     │  y en la hora de nuestra muerte. Amén. │ │  TE   │ │
+│ [⏮ Anterior]                │                                        │ └───────┘ │
+└─────────────────────────────┴────────────────────────────────────────┴───────────┘
+  las cuentas, en vertical:       la oración completa                   bajo el pulgar
+  arrastra hacia arriba para                                            derecho
+  avanzar, una cuenta cada vez
 ```
+
+- **Sin deslizar se leen** el Padrenuestro, el Avemaría, el Gloria y «Oh Jesús mío», en los tres idiomas y en los dos tamaños de teléfono de referencia (medido con las letras de la app; un test lo confirmará).
+- **Excepción:** en un teléfono pequeño y **con la guía de principiante activada**, el Padrenuestro necesita deslizar una o dos líneas.
+- **Siempre se deslizan** (son largos): el Credo, la Salve y las letanías.
+- Los botones no se mueven nunca.
 
 ---
 
 ## 2. Un capítulo de la Biblia (y, del mismo modo, oraciones, novenas y Catecismo)
 
-**Antes.**
-- El texto va en una columna estrecha de unas 38 letras por línea, más estrecha que el panel de los arcos.
-- Una barra flotante (‹ San Juan 1 ▶ Aa ›) **tapa versículos**.
+**Antes** ([captura](antes/lumen_es_bible_chapter_chapter_0.jpg)).
+- El texto va en una columna estrecha, de unas 38 letras por línea.
+- Una barra flotante **tapa versículos**.
 
-**Después.**
+**Después, en un teléfono ancho:**
 
 ```
-┌──────────────────────────────────────────────┬──────────────────────────┐
-│ ‹  Biblia Platense ▾                         │  ARCOS de referencias    │
-│    San Juan · Capítulo 1                     │  (toca un versículo)     │
-│  ¹ En el principio era el Verbo, y el Verbo  │                          │
-│  estaba junto a Dios, y el Verbo era Dios.   │  Referencias del         │
-│  ² Él estaba en el principio junto a Dios…   │  versículo elegido       │
-│  (líneas de unas 60–70 letras, cómodas)      │ ───────────────────────  │
-│                                              │ [‹] Juan 1 ▾ [▶] [Aa] [›]│
-└──────────────────────────────────────────────┴──────────────────────────┘
+┌─────────────────────────────────────────────┬──────────────────────────────┐
+│ ‹  Biblia Platense ▾                        │  ARCOS de referencias        │
+│    San Juan · Capítulo 1                    │  (toca un versículo)         │
+│  ¹ En el principio era el Verbo, y el Verbo │                              │
+│  estaba junto a Dios, y el Verbo era Dios.  │  referencias del versículo   │
+│  ² Él estaba en el principio junto a Dios…  │  elegido                     │
+│  (unas 66 letras por línea)                 │ ──────────────────────────── │
+│                                             │ [‹] Juan 1 ▾ [▶] [Aa] [Sig. ›]│
+└─────────────────────────────────────────────┴──────────────────────────────┘
 ```
 
-- Nada flota sobre el texto. Los controles van abajo a la derecha, con «capítulo siguiente» en el borde.
-- En los demás lectores (oración, día de novena, Noche, Catecismo, lección), la izquierda lleva:
-  - la imagen y el título;
-  - el índice de partes, que señala por dónde vas;
-  - y abajo, «Escuchar» y «Aa».
+**En un teléfono más estrecho:**
+- el texto ocupa toda la pantalla;
+- los controles van en una barra fija al pie del texto, con «Siguiente ›» a la derecha;
+- los arcos se abren al tocar un versículo.
+
+**Siempre:** nada flota sobre el texto y «Siguiente» queda abajo a la derecha.
+
+**Los demás lectores** (oración, día de novena, Noche, Catecismo, lección) tienen a la izquierda:
+- la imagen y el título;
+- una fila con la parte en la que estás («Evangelio ▾»), que abre el índice;
+- en las novenas, «Día 3 de 9 ▾», que abre todos los días;
+- abajo, «Escuchar» y «Aa».
+
+A la derecha, el texto, con «‹ Anterior» y «Siguiente ›» en su pie.
 
 ---
 
 ## 3. Hoy
 
-**Antes.**
-- La imagen y el título «Hoy» ocupan más de la mitad del alto.
+**Antes** ([captura](antes/lumen_es_dest_home_root_0.jpg)).
+- La imagen y el título ocupan más de la mitad del alto.
 - Sin deslizar solo se ven el tiempo litúrgico y una oración.
-- La liturgia del día y tus prácticas quedan escondidas abajo.
 
-**Después.**
+**Después** (con las 4 pestañas de hoy; «Mi camino» se sumará al integrarse):
 
 ```
-┌────┬─────────────────────┬──────────────────────────┬──────────────────────────┐
-│Hoy │ (imagen, en bruma)  │ Oración del momento      │ Liturgia de hoy  Jn 1,1  │
-│Orar│ Sábado, 21 de nov.  │  Oraciones de la noche › │ «En el principio era el  │
-│Leer│ Hoy                 │  Ángelus, mañana       › │  Verbo, y el Verbo…»     │
-│Cami│ ┌─────────────────┐ │ Mis prácticas            │  Primera lectura       › │
-│Expl│ │ Tiempo Ordinario│ │  0 de 12 hoy             │ [ Leer las lecturas ▸ ]  │
-│    │ │ Presentación de │ │ [ Ver mis prácticas ▸ ]  │ Para ti hoy              │
-│    │ │ la Virgen María │ │                          │  …                       │
-│    │ └─────────────────┘ │ ─────── Más para hoy ──────────────────────────── › │
-└────┴─────────────────────┴──────────────────────────┴──────────────────────────┘
+┌────────┬────────────────────┬───────────────────────────┬───────────────────────────┐
+│  Hoy   │ (imagen, en bruma) │ Oración del momento       │ Liturgia de hoy   Jn 1,1  │
+│  Orar  │ Sábado, 21 de nov. │  Oraciones de la noche  › │ «En el principio era el   │
+│  Leer  │ Hoy                │  Ángelus, mañana        › │  Verbo, y el Verbo…»      │
+│Explorar│ ┌────────────────┐ │ Mis prácticas             │  Primera lectura        › │
+│        │ │Tiempo Ordinario│ │  0 de 12 hoy              │ [■ Leer las lecturas ▸]   │
+│        │ │ Presentación de│ │  [ Ver mis prácticas ]    │ Para ti hoy               │
+│        │ │ la Virgen María│ │                           │  …                        │
+│        │ └────────────────┘ │ ──────────── Más para hoy ─────────────────────────── › │
+└────────┴────────────────────┴───────────────────────────┴───────────────────────────┘
 ```
 
-Lo esencial del día se ve de un vistazo, sin deslizar.
+- **En un teléfono grande** se ven sin deslizar el día, las dos oraciones del momento, tus prácticas y las lecturas con su botón.
+- **En uno pequeño:** el día, las dos oraciones y el comienzo de las lecturas.
 
 ---
 
 ## Decisiones que quizá quieras vetar
 
-1. **Pestañas ocultas mientras rezas o lees.** En el Rosario, la Biblia, las oraciones, las novenas y el Catecismo, la barra lateral de pestañas se oculta, como ya se oculta la de abajo en vertical. Se vuelve con «atrás». Así gana anchura el texto.
-2. **Oraciones largas en el Rosario.** El Padrenuestro, el Avemaría, el Gloria y «Oh Jesús mío» se leen sin deslizar. El Credo, la Salve y las letanías, en un teléfono pequeño o con la guía activada, pueden necesitar deslizar un poco. Los botones no se mueven.
-3. **Los arcos de la Biblia** son un panel fijo solo en teléfonos anchos. En los más estrechos se abren al tocar un versículo, para que el texto tenga líneas cómodas.
-4. **Las ventanas que hoy suben desde abajo** (Apariencia, Fuente, Opciones del Rosario, Copia de seguridad…) entrarán por la derecha, con un botón «Cerrar».
-5. **Nombres cortos en las pestañas solo con letra grande.** «Mi camino» se leerá «Camino», igual que «Explorar» ya pasa a «Más». Con letra normal, el nombre completo.
-6. **Confesión** muestra el examen y «Mi lista» uno al lado del otro. Tu lista y tus notas **sobrevivirán al girar el teléfono**, aunque siguen sin guardarse nunca: se borran al salir, como ahora.
-7. **Con letra al 130 %**, «Hoy» y los centros pasan a una sola columna a la derecha, sin achicar nada.
-8. **Las imágenes** se recortan a un panel de un tercio de la pantalla. Siempre se ven, nunca tapan texto ni botones.
+1. **Pestañas ocultas mientras rezas o lees.** En el Rosario, la Biblia, los lectores y Confesión, la barra lateral de pestañas se oculta, como ya pasa con la de abajo en vertical. Se vuelve con «atrás».
+2. **Rosario:**
+   - «Anterior» a la izquierda y «Siguiente» a la derecha;
+   - con la guía de principiante en un teléfono pequeño, el Padrenuestro desliza una o dos líneas;
+   - el Credo, la Salve y las letanías siempre deslizan.
+3. **Los arcos de la Biblia** son un panel fijo solo en teléfonos anchos. En los más estrechos se abren al tocar un versículo.
+4. **Las ventanas que hoy suben desde abajo** (Apariencia, Fuente, Opciones del Rosario, Copia de seguridad…) entran por la derecha, con «Cerrar» (o «Listo» en Fuente).
+5. **Pestañas con su nombre completo.** Solo con la letra al 130 % se acortan: «Mi camino» pasa a «Camino», como «Explorar» ya pasa a «Más».
+6. **Confesión** ocupa toda la pantalla y muestra el examen y «Mi lista» uno al lado del otro. Tu lista sobrevive al girar el teléfono, pero sigue sin guardarse: se borra al salir, como ahora.
+7. **En Hoy, «Ver mis prácticas» pasa a botón secundario**, también en vertical, para que el único botón destacado sea «Leer las lecturas».
+8. **Las lecturas de la Misa** se abren como página de lectura desde «Leer», con líneas cómodas, en vez de leerse dentro de la pestaña.
+
+**Sobre las imágenes:**
+- Se ven en el panel izquierdo de cada sección y como miniatura en las fichas (santos, devociones).
+- Se recortan a su marco y nunca tapan texto ni botones.
+- La Búsqueda no lleva imagen.
+- Con la letra al 130 %, Hoy pasa a una columna y los demás centros pierden una columna de tarjetas.
 
 **Qué probarás en tu teléfono** en cada entrega:
 - girar a mitad del Rosario y de un capítulo;
