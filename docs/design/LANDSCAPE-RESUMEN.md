@@ -67,18 +67,20 @@ Las cuentas tienen en cuenta la barra de estado y la de gestos de un teléfono r
 ```
 ┌─────────────────────────────────────────────┬──────────────────────────────┐
 │ ‹  Biblia Platense ▾                        │  ARCOS de referencias        │
-│    San Juan · Capítulo 1                    │  (toca un versículo)         │
+│    [ San Juan · Capítulo 1 ▾ ]              │  (toca un versículo)         │
 │  ¹ En el principio era el Verbo, y el Verbo │                              │
 │  estaba junto a Dios, y el Verbo era Dios.  │  referencias del versículo   │
 │  ² Él estaba en el principio junto a Dios…  │  elegido                     │
 │  (unas 66 letras por línea)                 │ ──────────────────────────── │
-│                                             │ [‹] Juan 1 ▾ [▶] [Aa] [Sig. ›]│
+│                                             │ [‹]  [▶]  [Aa]  [Siguiente ›]│
 └─────────────────────────────────────────────┴──────────────────────────────┘
 ```
 
+El capítulo se cambia tocando «San Juan · Capítulo 1 ▾», arriba del texto.
+
 **En un teléfono más estrecho:**
 - el texto ocupa toda la pantalla;
-- los controles van en una barra fija al pie del texto, con «Siguiente ›» a la derecha;
+- los controles (‹ Anterior, Escuchar, Aa, Siguiente ›) van en una barra fija al pie del texto, con «Siguiente ›» a la derecha;
 - los arcos se abren al tocar un versículo.
 
 **Siempre:** nada flota sobre el texto y «Siguiente» queda abajo a la derecha.
@@ -86,10 +88,11 @@ Las cuentas tienen en cuenta la barra de estado y la de gestos de un teléfono r
 **Los demás lectores** (oración, día de novena, Noche, Catecismo, lección) tienen a la izquierda:
 - la imagen y el título;
 - una fila con la parte en la que estás («Evangelio ▾»), que abre el índice;
-- en las novenas, «Día 3 de 9 ▾», que abre todos los días;
 - abajo, «Escuchar» y «Aa».
 
-A la derecha, el texto, con «‹ Anterior» y «Siguiente ›» en su pie.
+A la derecha está el texto.
+- **Solo los lectores que se leen en orden** (día de novena, Catecismo, lección, plan) tienen al pie del texto «‹ Anterior» y «Siguiente ›». Una oración suelta o la vida de un santo no lo necesitan.
+- En las novenas, el pie dice «‹ Día anterior · Día 3 de 9 ▾ · Día siguiente ›». Al tocar «Día 3 de 9» se ven todos los días.
 
 ---
 
@@ -114,8 +117,8 @@ A la derecha, el texto, con «‹ Anterior» y «Siguiente ›» en su pie.
 └────────┴────────────────────┴───────────────────────────┴───────────────────────────┘
 ```
 
-- **En un teléfono grande** se ven sin deslizar el día, las dos oraciones del momento, tus prácticas y las lecturas con su botón.
-- **En uno pequeño:** el día, las dos oraciones y el comienzo de las lecturas.
+- **Sin deslizar, en los dos tamaños de teléfono:** el día, las dos oraciones del momento, el título de «Mis prácticas» y el comienzo del Evangelio del día con la primera lectura.
+- **Deslizando un poco:** los botones «Leer las lecturas» y «Ver mis prácticas», cuando los nombres de las oraciones ocupan dos líneas.
 
 ---
 
@@ -132,6 +135,10 @@ A la derecha, el texto, con «‹ Anterior» y «Siguiente ›» en su pie.
 6. **Confesión** ocupa toda la pantalla y muestra el examen y «Mi lista» uno al lado del otro. Tu lista sobrevive al girar el teléfono, pero sigue sin guardarse: se borra al salir, como ahora.
 7. **En Hoy, «Ver mis prácticas» pasa a botón secundario**, también en vertical, para que el único botón destacado sea «Leer las lecturas».
 8. **Las lecturas de la Misa** se abren como página de lectura desde «Leer», con líneas cómodas, en vez de leerse dentro de la pestaña.
+9. **Rosario en un teléfono pequeño:** la pintura del misterio se ve como una franja pequeña (miniatura). Entera, en «Ver el misterio».
+10. **Listas con ficha** (santos, órdenes, devociones…):
+    - los filtros (mes, «solo con ficha»…) se abren desde un botón junto a la búsqueda, en una ventana que entra por la derecha;
+    - la franja de imagen con el título de la lista desaparece al deslizar, para dejar sitio a la lista.
 
 **Sobre las imágenes:**
 - Se ven en el panel izquierdo de cada sección y como miniatura en las fichas (santos, devociones).
