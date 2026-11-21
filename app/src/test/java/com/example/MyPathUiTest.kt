@@ -105,8 +105,7 @@ class MyPathUiTest {
     }
 
     private fun openHubFromExplore() {
-        compose.onNodeWithTag("nav_more").performClick()
-        compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag("nav_my_path"))
+        // Mi camino is a tab now; the old Explore row no longer exists.
         compose.onNodeWithTag("nav_my_path").performClick()
         waitFor("my_path_screen")
     }
@@ -132,7 +131,8 @@ class MyPathUiTest {
         compose.onNodeWithTag("nav_more").performClick()
         waitFor("more_screen")
         // Mi camino is now a tab, so it must not be duplicated in Explore.
-        assert(!exists("nav_my_path")) { "nav_my_path must no longer be listed in Explore" }
+        assert(compose.onAllNodes(hasTestTag("nav_my_path") and hasAnyAncestor(hasTestTag("more_screen")), useUnmergedTree = true)
+            .fetchSemanticsNodes().isEmpty()) { "nav_my_path must no longer be listed in Explore" }
         // The old rows are gone; Confession keeps its own row.
         assert(!exists("nav_habits")) { "nav_habits must no longer be listed in Explore" }
         assert(!exists("nav_spiritual")) { "nav_spiritual must no longer be listed in Explore" }
@@ -165,9 +165,9 @@ class MyPathUiTest {
         waitFor("spiritual_life_learn_picker")
         assert(!exists("add_first_journal_entry"))
         back(); waitFor("my_path_screen")
-        // Hub back leaves to Explore.
+        // The hub is a tab now: back from it leaves to Today, not to Explore.
         back()
-        waitFor("more_screen")
+        waitFor("home_screen")
     }
 
     @Test fun temptationsSectionBacksStraightToTheHubAndConfessionIsOneTapFromIt() {
@@ -248,7 +248,9 @@ class MyPathUiTest {
         back()
         waitFor("my_path_screen")
         gone("spiritual_confession_entry")
-        // From the hub, search again: Mi camino is a tab now, and back goes to its hub.
+        // Fresh host for the second search (global search lives in Today's header).
+        dispose()
+        launch()
         compose.onNodeWithTag("global_search_button").performClick()
         waitFor("search_field")
         tag("search_field").performTextReplacement("Hábitos")

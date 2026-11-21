@@ -246,21 +246,23 @@ fun MainApp(
     // whether the reader came down from the hub (back returns to it) or arrived by a link (back leaves to the caller),
     // and ids that give every arrival (entryId) and every hub choice (sectionId) a fresh first page.
     var spiritualLifeInitialTab by rememberSaveable { mutableIntStateOf(0) }
-    var myPathFromHub by rememberSaveable { mutableStateOf(false) }
+    var myPathFromHub by rememberSaveable { mutableStateOf(AppDestination.myPathSectionFor(initialDestination) != null) }
     var myPathEntryId by rememberSaveable { mutableIntStateOf(0) }
     var myPathSectionId by rememberSaveable { mutableIntStateOf(0) }
-    fun enterMyPath(section: MyPathSection, practicesTab: Int = 0) {
+    fun enterMyPath(section: MyPathSection, practicesTab: Int = 0, backToHub: Boolean = false) {
         if (current != AppDestination.MY_PATH) screenStateHolder.removeState("${AppDestination.MY_PATH.name}:$myPathEntryId")
         myPathSection = section.name
         spiritualLifeInitialTab = practicesTab
-        myPathFromHub = false
+        // Deep links, search, notifications and onboarding land on the tab and
+        // go back to the hub; Home's own shortcuts keep their old back target.
+        myPathFromHub = backToHub
         myPathEntryId++
         myPathSectionId++
     }
     fun go(destination: AppDestination) {
         // Hábitos y Virtudes and Vida espiritual are sections of «Mi camino» now; opening either by name lands there.
         val absorbed = AppDestination.myPathSectionFor(destination)
-        if (absorbed != null && destination != AppDestination.MY_PATH) enterMyPath(absorbed)
+        if (absorbed != null && destination != AppDestination.MY_PATH) enterMyPath(absorbed, backToHub = true)
         val target = if (absorbed != null) AppDestination.MY_PATH else destination
         if (target == current) return
         clearSearchLinks()
@@ -336,14 +338,20 @@ fun MainApp(
     }
     fun pushOnSearch(destination: AppDestination) {
         clearSearchLinks()
+        AppDestination.myPathSectionFor(destination)?.let {
+            myPathSection = it.name
+            myPathFromHub = true
+            myPathSectionId++
+        }
         stackNames = (stack + current).joinToString(",") { it.name }
         currentName = destination.name
     }
     fun openSection(destination: AppDestination) {
         when (destination) {
             AppDestination.ROSARY -> openRosary(0)
-            AppDestination.HABITS_VIRTUES -> openHabits()
-            AppDestination.SPIRITUAL_LIFE -> openSpiritual(0)
+            // Search results arrive here: the section is on the tab and back returns to its hub.
+            AppDestination.HABITS_VIRTUES -> { enterMyPath(MyPathSection.HABITS, backToHub = true); go(AppDestination.MY_PATH) }
+            AppDestination.SPIRITUAL_LIFE -> { enterMyPath(MyPathSection.DIARY, backToHub = true); go(AppDestination.MY_PATH) }
             AppDestination.MY_PATH -> { enterMyPath(MyPathSection.HUB); go(AppDestination.MY_PATH) }
             AppDestination.BIBLE -> {
                 bibleInitialBook = null; bibleInitialChapter = null; bibleInitialVerse = null; bibleInitialTab = 0
@@ -471,12 +479,6 @@ fun MainApp(
         if (previous != null) {
             stackNames = stack.dropLast(1).joinToString(",") { it.name }
             currentName = previous.name
-            // A section opened by a link now sits on the Mi camino tab: back
-            // lands on its hub, not on the section again and not on Explore.
-            if (previous == AppDestination.MY_PATH) {
-                myPathSection = MyPathSection.HUB.name
-                myPathSectionId++
-            }
         } else if (current != AppDestination.HOME) {
             go(AppDestination.HOME)
         }
@@ -696,7 +698,8 @@ fun MainApp(
                     // Hábitos y Virtudes and Vida espiritual always had.
                     AppDestination.MY_PATH, AppDestination.HABITS_VIRTUES, AppDestination.SPIRITUAL_LIFE -> {
                         val section = MyPathSection.valueOf(myPathSection)
-                        // Down from the hub, back returns to it; arriving by a link, back leaves to the caller.
+                        // Down from the hub, or arriving by link/search/onboarding, back
+                        // returns to the hub; Home's shortcuts leave to Home.
                         AppBackHandler(enabled = myPathFromHub && section != MyPathSection.HUB) {
                             myPathSection = MyPathSection.HUB.name
                             myPathSectionId++
