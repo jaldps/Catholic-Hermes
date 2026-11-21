@@ -2,6 +2,18 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.8.28
+
+[Descargar Catholic Hermes 1.8.28](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.28.apk) · versión `1.8.28`, código 37. **Actualiza 1.8.1–1.8.27** y conserva el progreso. También en [Releases → v1.8.28](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.28).
+
+- **Letra grande en pantallas pequeñas.**
+  - Con la letra al 130 % en un teléfono de 320 dp ya no hay palabras partidas, textos cortados ni botones ocultos o demasiado pequeños.
+  - Afecta a todas las pantallas, hojas y diálogos, en las cuatro identidades.
+  - A tamaño normal la app se ve igual que antes.
+- **Imágenes de 20 devociones marianas más.** Cinco llevan la etiqueta «Imagen referencial».
+
+[Metadatos](../docs/quality/release-1.8.28/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.27
 
 [Descargar Catholic Hermes 1.8.27](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.27.apk) · versión `1.8.27`, código 36. **Actualiza 1.8.1–1.8.26** y conserva el progreso. También en [Releases → v1.8.27](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.27).
