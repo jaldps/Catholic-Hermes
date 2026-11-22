@@ -390,7 +390,7 @@ Son 34 cabezales en 19 archivos.
 | **5 destinos** (con T-046): Hoy · Orar · Leer · Mi camino · Explorar | 348 | <ul><li>1 línea: 5 × 56 + 8 = 288</li><li>con «Mi camino» o «Meu caminho» en 2 líneas: 4 × 56 + 72 + 8 = **304**</li></ul> |
 | Alto útil del riel (`H − S − B`) | — | 371 (411) / **320** (360): **cabe** con 16 dp de margen en el peor caso |
 | Etiquetas al 100 % | completas | <ul><li>**completas**, hasta 2 líneas, nunca truncadas</li><li>el presupuesto de arriba ya cuenta la 2.ª línea del destino más largo</li></ul> |
-| Etiquetas al 130 % (listón duro) | — | <ul><li>cortas oficiales: «Hoy · Orar · Leer · Camino · Más», «Today · Pray · Read · Path · More», «Hoje · Orar · Ler · Caminho · Mais», con el mismo mecanismo que hoy «Más»</li><li>si aun así no cabe, el riel desplaza dentro de su cápsula, con el destino activo visible</li></ul> |
+| Etiquetas al 130 % (listón duro) | — | <ul><li>cortas oficiales, las de la barra inferior de T-046: «Hoy · Orar · Leer · Ruta · Más», «Today · Pray · Read · Path · More», «Hoje · Orar · Ler · Rota · Mais», con el mismo mecanismo que hoy «Más»</li><li>si aun así no cabe, el riel desplaza dentro de su cápsula, con el destino activo visible</li></ul> |
 | Posición | centrado | centrado vertical entre `S` y `H − B` |
 
 - Las etiquetas de test no cambian: `navigation_rail`, `nav_*`, `nav_my_path` (T-046).
@@ -920,9 +920,9 @@ Usa `AppSupportingPaneLayout(supportingSide = End, supportingWidth = clamp(0,38 
 │ │Lee│ │ ║ Sábado, 21 de nov.  ║ │ │ ☾ Oraciones de la noche  › │ │ «En el principio era el    ││
 │ │Exp│ │ ║ Hoy                 ║ │ │   Ahora · 20:00            │ │  Verbo, y el Verbo estaba  ││
 │ ╰───╯ │ ╚═════════════════════╝ │ │ ✝ Ángelus                › │ │  junto a Dios…»            ││
-│       │ ┌─────────────────────┐ │ │   Mañana · 6:00            │ │ Primera lectura · Ap 11  › ││
-│       │ │● Tiempo Ordinario  ›│ │ └────────────────────────────┘ │ Reflexión                › ││
-│       │ │ Presentación de la  │ │  Mis prácticas                 │ [■ Leer las lecturas ▸]    ││ ← único primario
+│       │ ┌─────────────────────┐ │ │   Mañana · 6:00            │ │ [■ Leer las lecturas ▸]    ││ ← único primario
+│       │ │● Tiempo Ordinario  ›│ │ └────────────────────────────┘ │ Primera lectura · Ap 11  › ││
+│       │ │ Presentación de la  │ │  Mis prácticas                 │ Reflexión                › ││
 │       │ │ Virgen María        │ │ ┌────────────────────────────┐ └────────────────────────────┘│
 │       │ └─────────────────────┘ │ │ (0) de 12 hoy              │  Para ti hoy …               │
 │       │                         │ │ [ Ver mis prácticas ]      │                              │ ← secundario
@@ -947,7 +947,7 @@ El riel muestra 4 destinos hasta T-046 y «Mi camino» después.
 - `today_next_action` va en el carril A.
 - El orden de TalkBack coincide con el de vertical.
 
-**Jerarquía:** **un solo botón primario relleno** en la pantalla: **«Leer las lecturas»**, en el carril B. «Ver mis prácticas» pasa a **secundario** (`AppSecondaryButton` o `AppSecondaryCapsule`), también en vertical para no crear dos versiones. *Esto cambia el vertical; vetable (§14).*
+**Jerarquía:** **un solo botón primario relleno** en la pantalla: **«Leer las lecturas»** (`home_continue_reading`), en el carril B, **justo después de la vista previa del Evangelio y su fuente**. Las filas de primera lectura (`home_first_reading_row`) y de reflexión van debajo, como enlaces secundarios. El mismo orden rige en vertical (P8): primero se ve el Evangelio y luego «Leer las lecturas». *Vetable junto a la decisión 7 (§14).* «Ver mis prácticas» pasa a **secundario** (`AppSecondaryButton` o `AppSecondaryCapsule`), también en vertical para no crear dos versiones. *Esto cambia el vertical; vetable (§14).*
 
 ### 6.3 Presupuesto y lo esencial sin desplazar (al 100 %, `S` = 24, `B` = 16)
 
@@ -965,16 +965,16 @@ Alto visible de los carriles: `H − B − (S + 12)`, es decir **359** (891) y *
 | Fila del anillo de prácticas (texto de 3 líneas junto al anillo de 76) | 22 + 4 + 3 × 22 | **92** |
 | Tarjeta de prácticas hasta el botón | 20 + 92 + 12 + 52 | 176 |
 | Tarjeta de liturgia: margen + cabecera + 6 + vista previa (3 × 30) + 12 + fuente | 20 + 22 + 6 + 90 + 12 + 18 | **168** |
-| Tarjeta de liturgia: + 14 + fila de 1.ª lectura (2 líneas) | + 14 + 92 | 274 |
-| Tarjeta de liturgia: + reflexión + 14 + «Leer las lecturas» + 20 | + 68 + 14 + 52 + 20 | 428 |
+| Tarjeta de liturgia: + 14 + «Leer las lecturas» (52) | + 14 + 52 | **234** |
+| Tarjeta de liturgia: + 14 + fila de 1.ª lectura (2 líneas) + reflexión + 20 | + 14 + 92 + 68 + 20 | 428 |
 
 | Medida | Debe verse entero sin desplazar | Suma |
 |---|---|---|
-| 891 × 411 | <ul><li>panel completo;</li><li>**A:** cabecera + 2 filas + 12 + cabecera de «Mis prácticas»;</li><li>**B:** tarjeta de liturgia hasta la fila de 1.ª lectura</li></ul> | <ul><li>A: 47 + 92 + 92 + 12 + 47 = **290 ≤ 359** (el anillo asoma 69 de 112)</li><li>B: **274 ≤ 359**</li></ul> |
-| 800 × 360 | lo mismo | <ul><li>A: **290 ≤ 308**</li><li>B: **274 ≤ 308**</li></ul> |
+| 891 × 411 | <ul><li>panel completo;</li><li>**A:** cabecera + 2 filas + 12 + cabecera de «Mis prácticas»;</li><li>**B:** tarjeta de liturgia hasta **«Leer las lecturas»** (`home_continue_reading`), el único primario</li></ul> | <ul><li>A: 47 + 92 + 92 + 12 + 47 = **290 ≤ 359** (el anillo asoma 69 de 112)</li><li>B: 20 + 22 + 6 + 90 + 12 + 18 + 14 + 52 = **234 ≤ 359**</li></ul> |
+| 800 × 360 | lo mismo | <ul><li>A: **290 ≤ 308**</li><li>B: **234 ≤ 308**</li></ul> |
 | 130 % (listón duro) | un carril; el panel se mantiene; nada recortado | — |
 
-Los dos botones de la pantalla («Leer las lecturas» y «Ver mis prácticas») quedan **bajo el pliegue** en el caso peor, en los dos tamaños. Se alcanzan desplazando un poco.
+**El primario «Leer las lecturas» se ve sin desplazar en los dos tamaños**, también en el caso peor (crítica 3, defecto 1). El secundario «Ver mis prácticas» queda bajo el pliegue en el caso peor; asoman el título de «Mis prácticas» y el borde de su tarjeta, que avisan de que hay más.
 
 Corrige la revisión 2, que contaba filas de 64 y una cabecera de 44 sin huecos.
 
@@ -987,7 +987,7 @@ Corrige la revisión 2, que contaba filas de 64 y una cabecera de 44 sin huecos.
 
 ### 6.5 Criterios de aceptación de L3
 
-1. Tabla de §6.3 (`ESSENTIAL_BELOW_FOLD`).
+1. Tabla de §6.3 (`ESSENTIAL_BELOW_FOLD`), con `home_continue_reading` entre los esenciales en los dos tamaños.
 2. Carriles de igual ancho (±1) y cabeceras alineadas.
 3. Un solo botón primario relleno.
 4. Paridad de nodos con el vertical.
@@ -1139,6 +1139,7 @@ Se conservan la selección (explícita o por defecto, §3.9; de vertical a horiz
   - La sección de cada resultado va como **prefijo de su línea secundaria** («Devociones · Advocación mariana · Alemania»).
   - Fila = 12 + 24 + 2 + 18 + 12 = **68**; con la barra, 56 + 68 = **124 ≤ 134** (800) y ≤ 157 (891).
   - Los nodos `search_group_*` siguen existiendo: el grupo se expresa como `collectionInfo` en la semántica, para no perder la agrupación con TalkBack.
+  - **Resultado de 2 líneas** (≈ 92 dp: 56 + 92 = 148 > 134): rige la misma alternativa que en las listas (§8.4). Si la fila mide más de 78 dp, deben verse **su primera línea completa y la tecla «Buscar»**.
   - **Discrepancia medida con la crítica**, que pedía la sección como antetítulo: un antetítulo añade 18 dp (fila de 86 → 56 + 86 = 142 > 134 a 800). Como prefijo de la línea que ya existe cabe.
 - Al cerrar el teclado vuelve la rejilla agrupada, con el mismo ancla.
 
@@ -1407,9 +1408,11 @@ Cada fallo abre una ronda de corrección del área.
    - el Credo, la Salve y las letanías desplazan siempre.
 3. En la Biblia, los arcos son un panel fijo solo desde 860 dp; por debajo se abren al tocar un versículo (§5.2).
 4. Las hojas inferiores pasan a laterales (§3.6).
-5. Nombres completos en el riel al 100 %; cortos («Camino», «Más») solo al 130 % (§3.5).
+5. Nombres completos en el riel al 100 %; cortos («Ruta», «Más») solo al 130 % (§3.5), los mismos que la barra inferior de T-046.
 6. Confesión ocupa toda la pantalla, sin riel, y conserva la lista al girar sin guardarla nunca (§9.2).
-7. En Hoy, «Ver mis prácticas» pasa a botón secundario **también en vertical** (§6.2).
+7. **En Hoy, también en vertical** (§6.2):
+   - «Ver mis prácticas» pasa a botón secundario;
+   - «Leer las lecturas» sube justo después de la vista previa del Evangelio, antes de la fila de primera lectura y de la reflexión.
 8. Las lecturas de la Misa se abren como página de lectura desde el centro Leer (§7.2).
 9. **Rosario en teléfonos pequeños** (`H < 400`): la pintura del misterio pasa a una **miniatura en banda** de 152 × 56. La pintura completa está en «Ver el misterio» (§4.2).
 10. **Lista-ficha:**
@@ -1551,3 +1554,10 @@ Cada estado se diseña **dentro** de la disposición horizontal: el panel se man
 | 3 | Miniatura del Rosario | Añadida como decisión vetable 9. |
 | 4 | Filtros y tira de arte | Añadidos como decisión vetable 10. |
 
+### 17.4 Respuesta a la crítica 3 (aplicada por el coordinador)
+
+| # | Defecto | Respuesta | Dónde |
+|---|---|---|---|
+| 1 | El primario de Hoy queda bajo el pliegue | **Adoptado.** «Leer las lecturas» va justo tras la vista previa del Evangelio. Carril B = 20 + 22 + 6 + 90 + 12 + 18 + 14 + 52 = 234 ≤ 308 / 359. `home_continue_reading` entra en los esenciales. Mismo orden en vertical (decisión 7). Bocetos actualizados. | §6.1–§6.5, §14 |
+| 2 | Búsqueda con teclado y resultado de 2 líneas | **Adoptado:** la alternativa de §8.4 (primera línea completa + tecla «Buscar»). | §8.6 |
+| 3 | Texto de Hoy en el resumen | **Adoptado.** | `LANDSCAPE-RESUMEN.md` |

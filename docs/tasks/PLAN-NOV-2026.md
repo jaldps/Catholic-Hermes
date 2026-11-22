@@ -143,3 +143,25 @@ Esta sección **sustituye** al método anterior de la §2. El dueño pidió gara
   - **L1, L2, L3, L4 y L7:** agentes locales, en secuencia.
   - **L5 y L6:** **Hermes**, en `ext/T-05x`. El encargo es muy detallado: el diseño aprobado, los archivos permitidos y prohibidos, los wrappers obligatorios, los tests y comandos de captura, y los criterios de la rúbrica. Hace un push por pantalla. Yo reviso el código y el crítico, las capturas.
 - **Validación en el teléfono real.** Se publica una versión por cada tramo: L1+L2, L3+L4 y L5–L7. Cada una lleva una **lista de comprobación** breve para el dueño: girar, recortes, teclado, Rosario completo y lectura larga. Lo que reporte abre una ronda de corrección antes de seguir.
+
+---
+
+## Actualización (22-nov): Codex está de vuelta; reparto para ahorrar cuota de Claude
+
+Esta sección **sustituye al reparto** de la actualización anterior. El dueño pide que Codex haga la mayor parte del código, para gastar menos cuota de Claude.
+
+| Trabajo | Quién |
+|---|---|
+| Fase D (diseño) | diseñador y crítico Opus; terminada la ronda 3, a falta de la confirmación final y del visto bueno del dueño |
+| T-046 Mi camino | Hermes (entregado e integrado: 1.8.29) |
+| **T-047 L0**, **T-048 L1**, **T-049 L2**, **T-050 L3**, **T-051 L4**, **T-054 L7** | **Codex**, en secuencia, una rama `ext/T-0NN` por área |
+| **T-052 L5**, **T-053 L6** | **Hermes**, en paralelo con Codex tras L0 (archivos distintos) |
+| Agentes Sonnet locales | solo de reserva, si Codex o Hermes fallan dos veces en un área |
+
+**Reglas para no bajar la calidad:**
+1. Encargos autosuficientes, con el nivel de detalle de T-046 y T-047: secciones exactas de `LANDSCAPE.md`, archivos permitidos y prohibidos, tests, capturas y rúbrica.
+2. **Solo L0 (y L7) tocan los wrappers de `ui/design`.** Las áreas piden lo que les falte en su REPORT, y se añade en un commit aparte.
+3. **Autocrítica antes de entregar:** capturas completas y autoevaluación con los 9 criterios de la rúbrica en el REPORT.
+4. **Puerta Opus barata:** el crítico juzga una lámina de contacto por área (`_contact.png`) más el REPORT. Hace una ronda completa y, después, rondas limitadas a sus defectos. El coordinador revisa el diff y pasa los tests del área.
+5. Cada encargo nombra el siguiente, para que Codex encadene sin esperar.
+6. **Versiones por tramos:** L0+L1+L2, luego L3+L4, luego L5–L7, cada una con su lista de comprobación en el teléfono (§13 del diseño).

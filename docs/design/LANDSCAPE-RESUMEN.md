@@ -102,23 +102,23 @@ A la derecha está el texto.
 - La imagen y el título ocupan más de la mitad del alto.
 - Sin deslizar solo se ven el tiempo litúrgico y una oración.
 
-**Después** (con las 4 pestañas de hoy; «Mi camino» se sumará al integrarse):
+**Después** (con las 5 pestañas, «Mi camino» incluida):
 
 ```
 ┌────────┬────────────────────┬───────────────────────────┬───────────────────────────┐
 │  Hoy   │ (imagen, en bruma) │ Oración del momento       │ Liturgia de hoy   Jn 1,1  │
 │  Orar  │ Sábado, 21 de nov. │  Oraciones de la noche  › │ «En el principio era el   │
 │  Leer  │ Hoy                │  Ángelus, mañana        › │  Verbo, y el Verbo…»      │
-│Explorar│ ┌────────────────┐ │ Mis prácticas             │  Primera lectura        › │
-│        │ │Tiempo Ordinario│ │  0 de 12 hoy              │ [■ Leer las lecturas ▸]   │
-│        │ │ Presentación de│ │  [ Ver mis prácticas ]    │ Para ti hoy               │
+│  Mi    │ ┌────────────────┐ │ Mis prácticas             │ [■ Leer las lecturas ▸]   │
+│ camino │ │Tiempo Ordinario│ │  0 de 12 hoy              │  Primera lectura        › │
+│Explorar│ │ Presentación de│ │  [ Ver mis prácticas ]    │ Para ti hoy               │
 │        │ │ la Virgen María│ │                           │  …                        │
 │        │ └────────────────┘ │ ──────────── Más para hoy ─────────────────────────── › │
 └────────┴────────────────────┴───────────────────────────┴───────────────────────────┘
 ```
 
-- **Sin deslizar, en los dos tamaños de teléfono:** el día, las dos oraciones del momento, el título de «Mis prácticas» y el comienzo del Evangelio del día con la primera lectura.
-- **Deslizando un poco:** los botones «Leer las lecturas» y «Ver mis prácticas», cuando los nombres de las oraciones ocupan dos líneas.
+- **Sin deslizar, en los dos tamaños de teléfono:** el día, las dos oraciones del momento, el comienzo del Evangelio y el botón «Leer las lecturas».
+- **Deslizando un poco:** «Mis prácticas» con su botón y las demás lecturas.
 
 ---
 
@@ -131,9 +131,11 @@ A la derecha está el texto.
    - el Credo, la Salve y las letanías siempre deslizan.
 3. **Los arcos de la Biblia** son un panel fijo solo en teléfonos anchos. En los más estrechos se abren al tocar un versículo.
 4. **Las ventanas que hoy suben desde abajo** (Apariencia, Fuente, Opciones del Rosario, Copia de seguridad…) entran por la derecha, con «Cerrar» (o «Listo» en Fuente).
-5. **Pestañas con su nombre completo.** Solo con la letra al 130 % se acortan: «Mi camino» pasa a «Camino», como «Explorar» ya pasa a «Más».
+5. **Pestañas con su nombre completo.** Solo con la letra al 130 % se acortan: «Mi camino» pasa a «Ruta», como «Explorar» ya pasa a «Más». «Camino» se partía por la mitad en la barra de abajo; «Ruta» es la forma corta que ya usa la 1.8.29.
 6. **Confesión** ocupa toda la pantalla y muestra el examen y «Mi lista» uno al lado del otro. Tu lista sobrevive al girar el teléfono, pero sigue sin guardarse: se borra al salir, como ahora.
-7. **En Hoy, «Ver mis prácticas» pasa a botón secundario**, también en vertical, para que el único botón destacado sea «Leer las lecturas».
+7. **En Hoy**, también en vertical:
+   - «Ver mis prácticas» pasa a botón secundario, para que el único botón destacado sea «Leer las lecturas»;
+   - ese botón sube justo debajo del Evangelio, antes de «Primera lectura».
 8. **Las lecturas de la Misa** se abren como página de lectura desde «Leer», con líneas cómodas, en vez de leerse dentro de la pestaña.
 9. **Rosario en un teléfono pequeño:** la pintura del misterio se ve como una franja pequeña (miniatura). Entera, en «Ver el misterio».
 10. **Listas con ficha** (santos, órdenes, devociones…):
