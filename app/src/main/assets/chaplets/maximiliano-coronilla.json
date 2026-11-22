@@ -1,0 +1,83 @@
+{
+  "id": "maximiliano-coronilla",
+  "sourceId": "CD-26",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de San Maximiliano Kolbe",
+    "en": "Chaplet of Saint Maximilian Kolbe",
+    "pt": "Coronilha de São Maximiliano Kolbe"
+  },
+  "summary": {
+    "es": "Medalla, una cuenta con el Memorare, medalla de la Virgen y 14 cuentas con oración y jaculatoria.",
+    "en": "Medal, one bead for the Memorare, Marian medal and 14 beads with a prayer and invocation.",
+    "pt": "Medalha, uma conta para o Memorare, medalha de Maria e 14 contas com oração e jaculatória."
+  },
+  "instrument": {
+    "es": "Medalla de San Maximiliano + 1 cuenta + medalla de la Virgen + 14 cuentas.",
+    "en": "St Maximilian medal + 1 bead + Marian medal + 14 beads.",
+    "pt": "Medalha de São Maximiliano + 1 conta + medalha de Maria + 14 contas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small",
+      "count": 14
+    }
+  ],
+  "steps": [
+    {
+      "bead": 1,
+      "prayerRef": "memorare"
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "O Mary, conceived without sin, pray for us who have recourse to Thee, and for all those who do not have recourse to Thee, especially for the enemies of Holy Mother Church, and all those in most need of Thy mercy.",
+        "en": "Oh María, concebida sin pecado, ruega por nosotros que recurrimos a ti, y por todos los que no recurren a ti, especialmente por los enemigos de la Santa Madre Iglesia y por cuantos más necesitan de tu misericordia.",
+        "pt": "Ó Maria, concebida sem pecado, roga por nós que recorremos a ti, e por todos os que não recorrem a ti, especialmente pelos inimigos da Santa Mãe Igreja e por quantos mais precisam da tua misericórdia."
+      },
+      "repeat": 14
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "St. Maximillian, pray for us!",
+        "en": "San Maximiliano, ruega por nosotros.",
+        "pt": "São Maximiliano, roga por nós."
+      },
+      "repeat": 14
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors; se mantiene la grafía «Maximillian» de la fuente.",
+  "image": "maximiliano-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Saint Maximillian",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap42.htm"
+    }
+  ]
+}

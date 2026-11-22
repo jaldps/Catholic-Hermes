@@ -1,0 +1,92 @@
+{
+  "id": "santa-rita-coronilla",
+  "sourceId": "CD-32",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de Santa Rita",
+    "en": "Chaplet of Saint Rita",
+    "pt": "Coronilha de Santa Rita"
+  },
+  "summary": {
+    "es": "Medalla, tres grupos de tres cuentas azules y cruz, con un Padre Nuestro, tres Avemarías y tres Glorias.",
+    "en": "Medal, three sets of three blue beads and a cross, with an Our Father, three Hail Marys and three Glories.",
+    "pt": "Medalha, três grupos de três contas azuis e uma cruz, com um Pai-Nosso, três Ave Marias e três Glórias."
+  },
+  "instrument": {
+    "es": "Medalla + 3 + 3 + 3 cuentas azules + cruz.",
+    "en": "Medal + 3 + 3 + 3 blue beads + cross.",
+    "pt": "Medalha + 3 + 3 + 3 contas azuis + cruz."
+  },
+  "when": {
+    "es": "Uso libre; patrona de lo imposible.",
+    "en": "At any time; patroness of impossible causes.",
+    "pt": "Uso livre; padroeira das causas impossíveis."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#4169E1"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#4169E1"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#4169E1"
+    },
+    {
+      "kind": "cross"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "text": {
+        "es": "O Holy St. Rita, exemplary Augustinian Sister, we honour you for your devotion to the Passion of Christ. Although your early life was filled with disappointment, frustration, and unceasing tragedy, you never lost faith and trust in God. For this you are the patroness of the impossible, and our inspiration and advocate in desperate circumstances.",
+        "en": "Oh santa Rita, ejemplar hermana agustina, te honramos por tu devoción a la Pasión de Cristo. Aunque tu primera vida estuvo llena de decepciones, frustraciones y tragedias incesantes, nunca perdiste la fe y la confianza en Dios. Por eso eres la patrona de lo imposible y nuestro aliento y abogada en las circunstancias desesperadas.",
+        "pt": "Ó santa Rita, exemplar irmã agostiniana, honramo-te pela tua devoção à Paixão de Cristo. Embora a tua primeira vida tenha sido cheia de decepções, frustrações e tragédias incessantes, nunca perdeste a fé e a confiança em Deus. Por isso és a padroeira do impossível e o nosso incentivo e advogada nas circunstâncias desesperadas."
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "our_father",
+      "repeat": 3
+    },
+    {
+      "bead": 0,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 0,
+      "prayerRef": "glory_be",
+      "repeat": 3
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors.",
+  "image": "santa-rita-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Saint Rita",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap41.htm"
+    }
+  ]
+}
