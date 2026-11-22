@@ -1,0 +1,196 @@
+{
+  "id": "coronilla-liberacion",
+  "sourceId": "HZ-02",
+  "group": "god_christ",
+  "title": {
+    "es": "Coronilla de liberación",
+    "en": "Chaplet of Liberation",
+    "pt": "Coronilha de Libertação"
+  },
+  "summary": {
+    "es": "Rosario especial basado en Juan 8:36 para pedir liberación de miedos, adicciones y heridas.",
+    "en": "Special rosary based on John 8:36, asking deliverance from fears, addictions and wounds.",
+    "pt": "Terço especial baseado em Jo 8,36, pedindo libertação de medos, vícios e feridas."
+  },
+  "instrument": {
+    "es": "Rosario especial o coronilla, como el rosario tradicional de cinco decenas.",
+    "en": "Special chaplet or rosary, like the traditional five-decade rosary.",
+    "pt": "Coronilha ou terço especial, como o terço tradicional de cinco décadas."
+  },
+  "when": {
+    "es": "Uso libre; se recomienda confiar una intención precisa antes de empezar.",
+    "en": "At any time; it is recommended to entrust a specific intention before beginning.",
+    "pt": "Uso livre; recomenda-se confiar uma intenção precisa antes de começar."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "si el Hijo los libera, ustedes serán realmente libres. (Juan 8:36)",
+        "en": "If the Son sets you free, you will be free indeed (John 8:36).",
+        "pt": "Se o Filho vos libertar, sereis realmente livres (Jo 8,36)."
+      }
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "¡Jesús, ten piedad de mí! ¡Jesús, sáname! ¡Jesús, sálvame! ¡Jesús, libérame!",
+        "en": "Jesus, have mercy on me! Jesus, heal me! Jesus, save me! Jesus, set me free!",
+        "pt": "Jesus, tende piedade de mim! Jesus, curai-me! Jesus, salvai-me! Jesus, libertai-me!"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "si el Hijo los libera, ustedes serán realmente libres. (Juan 8:36)",
+        "en": "If the Son sets you free, you will be free indeed (John 8:36).",
+        "pt": "Se o Filho vos libertar, sereis realmente livres (Jo 8,36)."
+      }
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "¡Jesús, ten piedad de mí! ¡Jesús, sáname! ¡Jesús, sálvame! ¡Jesús, libérame!",
+        "en": "Jesus, have mercy on me! Jesus, heal me! Jesus, save me! Jesus, set me free!",
+        "pt": "Jesus, tende piedade de mim! Jesus, curai-me! Jesus, salvai-me! Jesus, libertai-me!"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "si el Hijo los libera, ustedes serán realmente libres. (Juan 8:36)",
+        "en": "If the Son sets you free, you will be free indeed (John 8:36).",
+        "pt": "Se o Filho vos libertar, sereis realmente livres (Jo 8,36)."
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "¡Jesús, ten piedad de mí! ¡Jesús, sáname! ¡Jesús, sálvame! ¡Jesús, libérame!",
+        "en": "Jesus, have mercy on me! Jesus, heal me! Jesus, save me! Jesus, set me free!",
+        "pt": "Jesus, tende piedade de mim! Jesus, curai-me! Jesus, salvai-me! Jesus, libertai-me!"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "si el Hijo los libera, ustedes serán realmente libres. (Juan 8:36)",
+        "en": "If the Son sets you free, you will be free indeed (John 8:36).",
+        "pt": "Se o Filho vos libertar, sereis realmente livres (Jo 8,36)."
+      }
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "¡Jesús, ten piedad de mí! ¡Jesús, sáname! ¡Jesús, sálvame! ¡Jesús, libérame!",
+        "en": "Jesus, have mercy on me! Jesus, heal me! Jesus, save me! Jesus, set me free!",
+        "pt": "Jesus, tende piedade de mim! Jesus, curai-me! Jesus, salvai-me! Jesus, libertai-me!"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "si el Hijo los libera, ustedes serán realmente libres. (Juan 8:36)",
+        "en": "If the Son sets you free, you will be free indeed (John 8:36).",
+        "pt": "Se o Filho vos libertar, sereis realmente livres (Jo 8,36)."
+      }
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "¡Jesús, ten piedad de mí! ¡Jesús, sáname! ¡Jesús, sálvame! ¡Jesús, libérame!",
+        "en": "Jesus, have mercy on me! Jesus, heal me! Jesus, save me! Jesus, set me free!",
+        "pt": "Jesus, tende piedade de mim! Jesus, curai-me! Jesus, salvai-me! Jesus, libertai-me!"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": null,
+      "prayerRef": "salve_regina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hozana · Coronilla de liberación",
+      "url": "https://hozana.org/es/oracion/santo-rosario/de-liberacion"
+    },
+    {
+      "title": "Hozana · The Rosary of Liberation (published English translation)",
+      "url": "https://hozana.org/en/prayer/rosary/liberation"
+    }
+  ],
+  "translation": {
+    "es": "original",
+    "en": "traducción publicada por Hozana",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "notes": "Estatus eclesial: la página se apoya únicamente en Juan 8:36 y no menciona visionario, revelación privada ni fenómeno sobrenatural; no hay elemento que excluir según las Normas DDF de 2024. Sin reserva expresa de derechos en la página. El texto EN es el publicado por Hozana.",
+  "image": "coronilla-liberacion",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null
+}

@@ -1,0 +1,173 @@
+# -*- coding: utf-8 -*-
+"""Lote 2a: IVE-06, IVE-13, IVE-14, IVE-17."""
+from lib import L, B, P, T, V, rosary59, DL, DS
+
+CHAPLETS=[]
+
+JAC06=L("Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
+ "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
+ "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro.")
+CHAPLETS.append({
+ "id":"almas-purgatorio-coronilla","sourceId":"IVE-06","group":"departed",
+ "title":L("Coronilla a las almas del Purgatorio","Chaplet for the Souls in Purgatory","Coronilha pelas almas do Purgatório"),
+ "summary":L("Rosario tradicional con jaculatorias por las almas purgantes y oración por los difuntos.",
+   "Traditional rosary with invocations for the souls in Purgatory and prayer for the departed.",
+   "Terço tradicional com jaculatórias pelas almas do Purgatório e oração pelos defuntos."),
+ "instrument":L("Cuentas de un rosario tradicional.","Beads of an ordinary rosary.","Contas de um terço tradicional."),
+ "when":L("Cada día.","Every day.","Todos os dias."),
+ "weekdays":[],
+ "beads":rosary59(),
+ "steps":[
+   T(None,L("Oh Sangre y Agua, que brotaron del Corazón de Jesús como una fuente de Misericordia para nosotros, en Ustedes confío.",
+     "O Blood and Water that flowed from the Heart of Jesus as a fountain of mercy for us, in you I trust.",
+     "Ó Sangue e Água que brotastes do Coração de Jesus como fonte de misericórdia para nós, em vós confio."),rep=3,med=L("Introducción, tres veces","Introduction, three times","Introdução, três vezes")),
+   P(0,"creed"),P(1,"our_father"),P(2,"hail_mary",3),P(3,"glory_be"),
+   *[s for i in range(5) for s in (
+      T(None,JAC06,med=L("Jaculatoria antes de las cuentas pequeñas","Invocation before the small beads","Jaculatória antes das contas pequenas")),
+      P(DL[i],"our_father"),
+      T(DS[i],L("Jesús, María os amo, salvad las almas.","Jesus, Mary, I love you; save the souls.","Jesus, Maria, amo-vos; salvai as almas."),rep=10))],
+   T(None,L("Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.",
+     "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.",
+     "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós e do mundo inteiro."),rep=3,med=L("Tres últimas cuentas antes de la Cruz","Last three beads before the Cross","Três últimas contas antes da Cruz")),
+   T(None,L("¡Oh Jesús!, que con tu gloriosa Resurrección nos has mostrado cómo serán eternamente los ‘hijos de Dios’, concede la santa resurrección a nuestros seres queridos, fallecidos en tu Gracia, y a nosotros, en nuestra hora. Por el sacrificio de tu Sangre, por las lágrimas de María, por los méritos de todos los Santos, abre tu Reino a sus espíritus.",
+     "O Jesus, who by your glorious Resurrection have shown us how the 'children of God' will be for ever, grant a holy resurrection to our loved ones who died in your Grace, and to us in our hour. By the sacrifice of your Blood, by the tears of Mary, by the merits of all the Saints, open your Kingdom to their spirits.",
+     "Ó Jesus, que pela vossa gloriosa Ressurreição nos mostrastes como serão eternamente os 'filhos de Deus', concedei a santa ressurreição aos nossos entes queridos, falecidos na vossa Graça, e a nós, na nossa hora. Pelo sacrifício do vosso Sangue, pelas lágrimas de Maria, pelos méritos de todos os Santos, abri o vosso Reino aos seus espíritos."),med=L("Oración por los difuntos, dictada a María Valtorta (24 de octubre de 1944)","Prayer for the dead, dictated to Maria Valtorta (24 October 1944)","Oração pelos defuntos, ditada a Maria Valtorta (24 de outubro de 1944)")),
+ ],
+ "historicalNote":{"text":L("La fuente atribuye la oración final a un escrito de María Valtorta del 24 de octubre de 1944 y refiere revelaciones a Santa Gertrudis, Santa Faustina y Sor María Consolata Betrone; se recoge como tradición documentada, no como doctrina.",
+   "The source attributes the final prayer to a writing of Maria Valtorta dated 24 October 1944 and refers to revelations to Saint Gertrude, Saint Faustina and Sister Maria Consolata Betrone; it is recorded as documented tradition, not doctrine.",
+   "A fonte atribui a oração final a um escrito de Maria Valtorta de 24 de outubro de 1944 e refere revelações a Santa Gertrudes, Santa Faustina e Irmã Maria Consolata Betrone; regista-se como tradição documentada, não como doutrina."),
+   "source":"https://iveinarabic.org/es/rosarios-y-coronas/"},
+ "notes":"Texto literal de IVE. La fuente dice «cuentas pequeñas (9 veces)» en IVE-17; aquí se modelan las diez cuentas de cada decena según el texto real.",
+})
+
+# ---------- IVE-13 ----------
+PADRE_VERDAD=L("Padre de la verdad, he aquí a tu Hijo, víctima agradable a ti. Acéptalo, Padre, ya que ha muerto por mí. He aquí su Sangre derramada en el Gólgota por mi salvación. Ella clama por mí. Por sus méritos acepta mi oblación. Siendo tantos mis pecados mucho más grandes es tu misericordia. Cuando es puesta en una balanza, tu misericordia sobrepasa el peso de los grandes montes, esos que solo tú conoces. Considera el pecado y considera la propiciación; el sacrificio de la Víctima excede a las deudas. Tu Amado Hijo sufrió los clavos y la lanza por mis pecados, por lo tanto con sus sufrimientos satisface mi deuda y me da vida. Gloria al Padre que envió a su Hijo por causa nuestra. Adoración al Hijo que a todos redimió por su crucifixión. Alabanza al Espíritu por quien fue consumado el misterio de nuestra salvación. Bendito sea quien nos vivificó, por su Amor. ¡A Él sea la gloria!",
+ "Father of truth, behold your Son, a pleasing victim to you. Accept him, Father, for he has died for me. Behold his Blood shed on Golgotha for my salvation. It cries out for me. By its merits accept my offering. However great my sins, your mercy is greater still. When placed on a balance, your mercy outweighs the great mountains that only you know. Consider the sin and consider the atonement; the sacrifice of the Victim exceeds the debts. Your beloved Son endured the nails and the lance for my sins, so by his sufferings he satisfies my debt and gives me life. Glory to the Father who sent his Son for our sake. Adoration to the Son who redeemed all by his crucifixion. Praise to the Spirit by whom the mystery of our salvation was accomplished. Blessed be he who gave us life, for his Love. To him be glory!",
+ "Pai da verdade, eis o teu Filho, vítima agradável a ti. Aceita-o, Pai, pois morreu por mim. Eis o seu Sangue derramado no Gólgota pela minha salvação. Ele clama por mim. Pelos seus méritos aceita a minha oblação. Sendo tantos os meus pecados, muito maior é a tua misericórdia. Quando posta numa balança, a tua misericórdia ultrapassa o peso das grandes montanhas, essas que só tu conheces. Considera o pecado e considera a propiciação; o sacrifício da Vítima excede as dívidas. O teu Amado Filho sofreu os cravos e a lança pelos meus pecados; portanto, com os seus sofrimentos satisfaz a minha dívida e me dá vida. Glória ao Pai que enviou o seu Filho por causa nossa. Adoração ao Filho que a todos resgatou pela sua crucificação. Louvor ao Espírito por quem foi consumado o mistério da nossa salvação. Bendito seja quem nos vivificou, pelo seu Amor. A ele seja a glória!")
+GRUPOS13=[
+ ("en honor a la fidelidad de S. Charbel a su voto de pobreza.","in honour of St Charbel's faithfulness to his vow of poverty.","em honra da fidelidade de S. Charbel ao seu voto de pobreza."),
+ ("en honor a la fidelidad de S. Charbel a su voto de castidad.","in honour of St Charbel's faithfulness to his vow of chastity.","em honra da fidelidade de S. Charbel ao seu voto de castidade."),
+ ("en honor a la fidelidad de S. Charbel a su voto de obediencia.","in honour of St Charbel's faithfulness to his vow of obedience.","em honra da fidelidade de S. Charbel ao seu voto de obediência."),
+ ("Las cuatro grupo de cuentas simbolizan la devoción de San Charbel a la Sagrada Eucaristía. Oramos pidiendo que por su intercesión, crezcamos en amor a Jesús Eucarístico.","The fourth group of beads symbolises St Charbel's devotion to the Holy Eucharist. We pray that through his intercession we may grow in love for the Eucharistic Jesus.","O quarto grupo de contas simboliza a devoção de S. Charbel à Sagrada Eucaristia. Oremos pedindo que, pela sua intercessão, cresçamos no amor a Jesus Eucarístico."),
+ ("El quinto grupo de cuentas simbolizan el amor y la devoción que San Charbel tenía a Nuestra Santísima. Madre. Que por su intercesión crezcamos en devoción a la Virgen.","The fifth group of beads symbolises the love and devotion St Charbel had for Our Most Holy Mother. May we grow in devotion to the Virgin through his intercession.","O quinto grupo de contas simboliza o amor e a devoção que S. Charbel tinha para com a Nossa Santíssima Mãe. Que pela sua intercessão cresçamos na devoção à Virgem."),
+]
+beads13=[B("large")]
+for i in range(5):
+    beads13.append(B("small",3))
+    if i<4: beads13.append(B("large"))
+steps13=[T(0,PADRE_VERDAD,med=L("Plegaria al Padre de la Verdad, poema de S. Jacobo de Sarug (siglo V)","Prayer to the Father of Truth, a poem by St Jacob of Sarug (5th c.)","Oração ao Pai da Verdade, poema de S. Jacobo de Sarug (séc. V)"))]
+for i,(es,en,pt) in enumerate(GRUPOS13):
+    steps13.append(P(1+2*i,"hail_mary",rep=3,med=L(es,en,pt)))
+    if i<4: steps13.append(P(2+2*i,"our_father"))
+steps13.append(T(None,L("Dios infinitamente santo y glorificado en tus santos, Tú inspiraste a San Charbel a llevar una vida de unión perfecta con tu Hijo Jesucristo, según el Evangelio, y a desprenderse del mundo viviendo con heroísmo las virtudes monásticas: pobreza, obediencia y castidad, concédenos, te rogamos, la gracia de amarte y servirte siguiendo su ejemplo. Señor Dios Todopoderoso, Tú que has manifestado el poder de la intercesión de San Charbel a través de sus numerosos milagros y favores, como la conversión concédenos hoy la gracia que imploramos (pedir el favor) por su poderosa intercesión. Amén.",
+ "Infinitely holy God, glorified in your saints, you inspired St Charbel to live a life of perfect union with your Son Jesus Christ according to the Gospel, and to detach himself from the world by heroically living the monastic virtues of poverty, obedience and chastity; grant us, we beg you, the grace to love and serve you following his example. Almighty Lord God, you who have shown the power of St Charbel's intercession through his many miracles and favours, such as conversions, grant us today the grace we implore (state the favour) through his powerful intercession. Amen.",
+ "Deus infinitamente santo e glorificado nos teus santos, Tu inspiraste S. Charbel a levar uma vida de união perfeita com o teu Filho Jesus Cristo, segundo o Evangelho, e a desprender-se do mundo vivendo com heroísmo as virtudes monásticas: pobreza, obediência e castidade; concede-nos, te rogamos, a graça de te amar e servir seguindo o seu exemplo. Senhor Deus Todo-Poderoso, Tu que manifestaste o poder da intercessão de S. Charbel através dos seus numerosos milagres e favores, como as conversões, concede-nos hoje a graça que imploramos (pedir o favor) pela sua poderosa intercessão. Amém."),med=L("En la medalla de S. Charbel","At St Charbel's medal","Na medalha de S. Charbel")))
+CHAPLETS.append({
+ "id":"san-charbel","sourceId":"IVE-13","group":"saints",
+ "title":L("Coronilla de San Charbel","Chaplet of Saint Charbel","Coronilha de São Charbel"),
+ "summary":L("Cinco grupos de tres Avemarías por los votos y devociones de San Charbel, con la plegaria maronita al Padre de la verdad.",
+   "Five groups of three Hail Marys for the vows and devotions of St Charbel, with the Maronite prayer to the Father of truth.",
+   "Cinco grupos de três Ave Marias pelos votos e devoções de S. Charbel, com a oração maronita ao Pai da verdade."),
+ "instrument":L("Cinco grupos de tres cuentas, separados por cuentas grandes; primera cuenta grande para la plegaria inicial.",
+   "Five groups of three beads separated by large beads; the first large bead is for the opening prayer.",
+   "Cinco grupos de três contas, separados por contas grandes; a primeira conta grande para a oração inicial."),
+ "when":L("Uso libre.","At any time.","Uso livre."),
+ "weekdays":[],
+ "beads":beads13,"steps":steps13,
+ "notes":"Texto literal de IVE. Se corrigen las erratas evidentes «cuesta»→«cuenta» y «Las cuatro grupo»→«El cuarto grupo»; la fuente escribe «Nuestra Santísima. Madre» se normaliza sin el punto.",
+})
+
+# ---------- IVE-14 ----------
+INV14=[
+ ("San Antonio de Padua, apóstol por la Fe, ruega por nosotros.","St Anthony of Padua, apostle of Faith, pray for us.","Santo António de Pádua, apóstolo da Fé, roga por nós."),
+ ("San Antonio de Padua, Patriarca por la Esperanza, ruega por nosotros.","St Anthony of Padua, patriarch of Hope, pray for us.","Santo António de Pádua, patriarca da Esperança, roga por nós."),
+ ("San Antonio de Padua, serafín por la Caridad, ruega por nosotros.","St Anthony of Padua, seraph of Charity, pray for us.","Santo António de Pádua, serafim da Caridade, roga por nós."),
+ ("San Antonio de Padua, que practicasteis la Mansedumbre y la Humildad de Jesús, ruega por nosotros.","St Anthony of Padua, who practised the meekness and humility of Jesus, pray for us.","Santo António de Pádua, que praticaste a mansidão e a humildade de Jesus, roga por nós."),
+ ("San Antonio de Padua, ángel por la Castidad, ruega por nosotros.","St Anthony of Padua, angel of Chastity, pray for us.","Santo António de Pádua, anjo da Castidade, roga por nós."),
+ ("San Antonio de Padua, prodigio de Penitencia, ruega por nosotros.","St Anthony of Padua, prodigy of Penitence, pray for us.","Santo António de Pádua, prodígio de Penitência, roga por nós."),
+ ("San Antonio de Padua Espejo de Obediencia, ruega por nosotros.","St Anthony of Padua, mirror of Obedience, pray for us.","Santo António de Pádua, espelho de Obediência, roga por nós."),
+ ("San Antonio de Padua, mártir por la Paciencia, ruega por nosotros.","St Anthony of Padua, martyr of Patience, pray for us.","Santo António de Pádua, mártir da Paciência, roga por nós."),
+ ("San Antonio de Padua, querubín por la Oración, ruega por nosotros.","St Anthony of Padua, cherub of Prayer, pray for us.","Santo António de Pádua, querubim da Oração, roga por nós."),
+ ("San Antonio de Padua, celador de la Justicia, ruega por nosotros.","St Anthony of Padua, guardian of Justice, pray for us.","Santo António de Pádua, zelador da Justiça, roga por nós."),
+ ("San Antonio de Padua, dechado de Templanza, ruega por nosotros.","St Anthony of Padua, model of Temperance, pray for us.","Santo António de Pádua, dechado de Temperança, roga por nós."),
+ ("San Antonio de Padua, perla de Pobreza, ruega por nosotros.","St Anthony of Padua, pearl of Poverty, pray for us.","Santo António de Pádua, pérola da Pobreza, roga por nós."),
+ ("San Antonio de Padua modelo de Constancia, ruega por nosotros.","St Anthony of Padua, model of Constancy, pray for us.","Santo António de Pádua, modelo de Constância, roga por nós."),
+]
+beads14=[]
+for _ in range(13): beads14 += [B("large"),B("small"),B("small")]
+steps14=[P(0,"sign_of_the_cross"),P(None,"act_of_contrition"),
+ T(None,L("Abrid, Señor mis labios para bendecir vuestro Santo nombre y el de vuestra Santísima Madre, la Bienaventurada Virgen María al rezar los Trece Padrenuestros, Avemarías y Glorias en honor de vuestro siervo Antonio, cuyas virtudes deseo, con vuestra gracia, copiar en la tierra, para después gozar de vuestra gloria en el cielo. Amen.",
+   "Open, Lord, my lips to bless your holy name and that of your Most Holy Mother, the blessed Virgin Mary, as I pray the thirteen Our Fathers, Hail Marys and Glories in honour of your servant Anthony, whose virtues I desire, by your grace, to copy on earth, so as afterwards to enjoy your glory in heaven. Amen.",
+   "Abri, Senhor, os meus lábios para bendizer o vosso santo nome e o da vossa Santíssima Mãe, a bem-aventurada Virgem Maria, ao rezar os treze Pai-Nossos, Ave Marias e Glórias em honra do vosso servo António, cujas virtudes desejo, pela vossa graça, copiar na terra, para depois gozar da vossa glória no céu. Amém."),med=L("Oración preparatoria","Preparatory prayer","Oração preparatória"))]
+for i,(es,en,pt) in enumerate(INV14):
+    steps14 += [P(3*i,"our_father",med=L(es,en,pt)),P(3*i+1,"hail_mary"),P(3*i+2,"glory_be")]
+steps14 += [
+ P(None,"hail_mary",med=L("1ª Virgen purísima antes del parto, ruega por nosotros.","1st Most pure Virgin before childbirth, pray for us.","1.ª Virgem puríssima antes do parto, roga por nós.")),
+ P(None,"hail_mary",med=L("2ª Virgen purísima en el parto, ruega por nosotros.","2nd Most pure Virgin in childbirth, pray for us.","2.ª Virgem puríssima no parto, roga por nós.")),
+ P(None,"hail_mary",med=L("3ª Virgen purísima después del parto, ruega por nosotros.","3rd Most pure Virgin after childbirth, pray for us.","3.ª Virgem puríssima depois do parto, roga por nós.")),
+ T(None,L("Si buscas milagros, mira:\nMuerte y error desterrados,\nMiseria y demonio huidos,\nLeprosos y enfermos sanos.\nEl mar sosiega su ira,\nRedímense encarcelados,\nMiembros y bienes perdidos\nRecobran mozos y ancianos.\nEl peligro se retira,\nLos pobres van remediados;\nCuéntenlo los socorridos,\nDíganlo los paduanos.\nEl mar sosiega su ira,\nRedímense encarcelados,\nMiembros y bienes perdidos\nRecobran mozos y ancianos.\nGloria al Padre, Gloria al Hijo, gloria al Espíritu Santo. Ruega a Cristo por nosotros, Antonio divino y santo, para que dignos así de sus promesas seamos.",
+   "If you seek miracles, look:\nDeath and error banished,\nMisery and devils fled,\nLepers and the sick made whole.\nThe sea calms its rage,\nPrisoners are redeemed,\nLost limbs and goods\nAre recovered by young and old.\nDanger withdraws,\nThe poor are helped;\nLet the rescued tell it,\nLet the people of Padua proclaim it.\nThe sea calms its rage,\nPrisoners are redeemed,\nLost limbs and goods\nAre recovered by young and old.\nGlory to the Father, Glory to the Son, glory to the Holy Spirit. Pray to Christ for us, Anthony, holy and divine, that we may be worthy of his promises.",
+   "Se buscas milagres, olha:\nMorte e erro desterrados,\nMiséria e demónios fugidos,\nLeprosos e doentes curados.\nO mar sossega a sua ira,\nRedimem-se os presos,\nMembros e bens perdidos\nRecobram jovens e velhos.\nO perigo afasta-se,\nOs pobres são socorridos;\nContem-no os socorridos,\nDigam-no os paduanos.\nO mar sossega a sua ira,\nRedimem-se os presos,\nMembros e bens perdidos\nRecobram jovens e velhos.\nGlória ao Pai, Glória ao Filho, glória ao Espírito Santo. Roga a Cristo por nós, António divino e santo, para que dignos assim das suas promessas sejamos."),med=L("Responsorio de San Antonio","Responsory of St Anthony","Responsório de Santo António")),
+ T(None,L("Haced, oh Señor, que la intercesión de vuestro Confesor San Antonio, llene de alegría a vuestra Iglesia, para que siempre sea protegida con los auxilios espirituales y merezca alcanzar los eternos gozos. Por Cristo, nuestro Señor. Amen.",
+   "Grant, O Lord, that the intercession of your confessor St Anthony may fill your Church with joy, so that she may always be protected with spiritual helps and deserve to attain eternal joys. Through Christ our Lord. Amen.",
+   "Fazei, ó Senhor, que a intercessão do vosso confessor Santo António encha de alegria a vossa Igreja, para que seja sempre protegida com os auxílios espirituais e mereça alcançar os gozos eternos. Por Cristo, nosso Senhor. Amém."),med=L("Oración final","Final prayer","Oração final")),
+]
+CHAPLETS.append({
+ "id":"san-antonio-padua-coronilla","sourceId":"IVE-14","group":"saints",
+ "title":L("Coronilla de San Antonio de Padua","Chaplet of Saint Anthony of Padua","Coronilha de Santo António de Pádua"),
+ "summary":L("Trece grupos de Padre Nuestro, Avemaría y Gloria con invocaciones a San Antonio, y responsorio final.",
+   "Thirteen groups of Our Father, Hail Mary and Glory with invocations to St Anthony, and a final responsory.",
+   "Treze grupos de Pai-Nosso, Ave Maria e Glória com invocações a Santo António e responsório final."),
+ "instrument":L("39 cuentas en 13 grupos de 3.","39 beads in 13 groups of 3.","39 contas em 13 grupos de 3."),
+ "when":L("Uso libre.","At any time.","Uso livre."),
+ "weekdays":[],
+ "beads":beads14,"steps":steps14,
+ "notes":"Texto literal de IVE. Se corrige la errata «Si quieres ver milagros» → «Si buscas milagros, mira».",
+})
+
+# ---------- IVE-17 ----------
+M17=[
+ "Él me librará de la red del cazador","Él me librará de la peste mortal","Él me cobijará bajo Sus alas y yo me refugiaré bajo sus plumas.",
+ "No temeré el terror de la noche, ni la flecha que vuela en el día, ni la peste que avanza en las tinieblas, ni el azote que asola el mediodía.",
+ "Aunque a mi lado caigan mil y diez mil a mi diestra, a mí no me alcanzarán.","No me alcanzará la desgracia, ni la plaga llegará a mi tienda.",
+ "Él ordenó a sus ángeles, que me guardaran en todos mis caminos.","Porque yo me he unido a mi Dios, Él me librará.",
+ "Me protegerá, porque conozco Su nombre.","Él me responderá y estará conmigo en la desgracia, me librará y me llenará de honores, me dará una larga vida y me hará gozar de Su salvación."
+]
+M17EN=[
+ "He will deliver me from the snare of the fowler","He will deliver me from the deadly pestilence","He will cover me with his wings and I will take refuge under his feathers.",
+ "I will not fear the terror of night, nor the arrow that flies by day, nor the pestilence that stalks in darkness, nor the plague that lays waste at noon.",
+ "Though a thousand fall at my side and ten thousand at my right hand, they will not reach me.","No evil shall befall me, nor shall any plague come near my tent.",
+ "He has given his angels charge over me, to guard me in all my ways.","Because I have joined myself to my God, he will deliver me.",
+ "He will protect me, because I know his name.","He will answer me and be with me in distress; he will deliver me and honour me, give me a long life and make me enjoy his salvation."
+]
+M17PT=[
+ "Ele me livrará da rede do caçador","Ele me livrará da peste mortal","Ele me cobrirá com as suas asas e eu me refugiarei sob as suas penas.",
+ "Não temerei o terror da noite, nem a flecha que voa de dia, nem a peste que avança nas trevas, nem o flagelo que devasta ao meio-dia.",
+ "Ainda que caiam mil ao meu lado e dez mil à minha direita, não me alcançarão.","Não me alcançará a desgraça, nem a praga chegará à minha tenda.",
+ "Ele ordenou aos seus anjos que me guardassem em todos os meus caminhos.","Porque me uni ao meu Deus, Ele me livrará.",
+ "Ele me protegerá, porque conheço o seu nome.","Ele me responderá e estará comigo na desgraça, me livrará e me encherá de honras, me dará longa vida e me fará gozar da sua salvação."
+]
+JAC17=L("Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "You are my strength and my refuge, my God in whom I trust",
+        "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio")
+beads17=[]
+for _ in range(10): beads17 += [B("large"),B("small",9)]
+steps17=[P(None,"creed")]
+for i in range(10):
+    steps17 += [P(2*i,"our_father",med=L(M17[i],M17EN[i],M17PT[i])),
+                T(2*i+1,JAC17,rep=9),
+                P(2*i,"glory_be")]
+steps17 += [P(None,"our_father"),T(None,JAC17),P(None,"glory_be"),
+            T(None,L("Amén, Amén, Amén.","Amen, Amen, Amen.","Amém, Amém, Amém."))]
+CHAPLETS.append({
+ "id":"confianza-tribulaciones","sourceId":"IVE-17","group":"intention",
+ "title":L("Corona de confianza en grandes tribulaciones","Chaplet of trust in great tribulations","Coroa de confiança nas grandes tribulações"),
+ "summary":L("Diez misterios del Salmo 91 con nueve repeticiones de la jaculatoria de confianza en cada uno.",
+   "Ten mysteries from Psalm 91 with nine repetitions of the prayer of trust in each.",
+   "Dez mistérios do Salmo 91 com nove repetições da jaculatória de confiança em cada um."),
+ "instrument":L("Diez grupos de nueve cuentas pequeñas.","Ten groups of nine small beads.","Dez grupos de nove contas pequenas."),
+ "when":L("En grandes tribulaciones o presagios de peligros por venir.","In great tribulations or forebodings of coming danger.","Nas grandes tribulações ou presságios de perigos vindouros."),
+ "weekdays":[],
+ "beads":beads17,"steps":steps17,
+ "notes":"Texto literal de IVE. La fuente afirma que se completan 91 repeticiones: 10×9 + la jaculatoria final.",
+})

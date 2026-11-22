@@ -45,6 +45,58 @@ WARN  partial delivery: 8 of 55
 
 El WARN es esperado en una entrega parcial.
 
+### Validador acumulado (tras el lote 2)
+```
+20 files · 0 errors · 1 warnings
+```
+
 ## Excluidas
+
+
+
+## Lote 2 — IVE-06, IVE-13, IVE-14, IVE-17, HZ-01, HZ-02, HZ-03, HZ-04, HZ-05, HZ-07, HZ-08, HZ-10
+
+| `id` | `sourceId` | URL abierta | Idioma fuente | Traducción | Derechos |
+|---|---|---|---|---|---|
+| `almas-purgatorio-coronilla` | IVE-06 | https://iveinarabic.org/es/rosarios-y-coronas/ | ES | EN/PT: traducción fiel de Hermes | Sin reserva expresa → `null` |
+| `san-charbel` | IVE-13 | índice IVE, panel «Coronillade San Charbel» | ES | ídem | ídem |
+| `san-antonio-padua-coronilla` | IVE-14 | índice IVE, panel «San Antonios de Padua» | ES | ídem | ídem |
+| `confianza-tribulaciones` | IVE-17 | índice IVE, panel «Corona de confianza…» | ES | ídem | ídem |
+| `lourdes-rosario` | HZ-01 | https://hozana.org/es/oracion/santo-rosario/lourdes | ES | PT: **traducción publicada** por Hozana (https://hozana.org/pt/oracao/terco/lourdes); EN: Hermes | Sin reserva expresa → `null` |
+| `coronilla-liberacion` | HZ-02 | https://hozana.org/es/oracion/santo-rosario/de-liberacion | ES | EN: **traducción publicada** por Hozana (https://hozana.org/en/prayer/rosary/liberation); PT: Hermes | ídem |
+| `llagas-cristo-coronilla` | HZ-03 | https://hozana.org/es/oracion/santo-rosario/de-las-llagas-de-cristo | ES | EN/PT: Hermes | ídem |
+| `santisimo-meditar-adorar` | HZ-04 | https://hozana.org/es/oracion/santo-rosario/santisimo-sacramento | ES | ídem | ídem |
+| `sagrada-eucaristia-33` | HZ-05 | misma página que HZ-04 | ES | ídem | ídem |
+| `coronilla-san-jose-hozana` | HZ-07 | https://hozana.org/es/oracion/santo-rosario/coronilla-san-jose | ES | ídem | ídem |
+| `teresita-24-glorias` | HZ-08 | https://hozana.org/es/oracion/santo-rosario/santa-teresita | ES | ídem | ídem |
+| `rosario-difuntos-hozana` | HZ-10 | https://hozana.org/es/oracion/santo-rosario/almas-purgatorio | ES | ídem | ídem |
+
+### Estatus eclesial de HZ-02 (marcada «verificar»)
+
+La página de Hozana fundamenta la coronilla únicamente en **Juan 8:36**; no menciona visionario, revelación privada, aparición ni fenómeno sobrenatural. Por tanto **no se excluye**: no hay elemento que encaje en las *Normas para proceder en el discernimiento de presuntos fenómenos sobrenaturales* (DDF, 17-05-2024). Se deja constancia en `notes`.
+
+### Incoherencias y decisiones del lote
+
+- **IVE-06:** la fuente dice «Jesús, María os amo, salvad las almas» en cada cuenta de cada decena y la jaculatoria larga entre decenas; se modelan ambas. La oración final se atribuye a María Valtorta (24-10-1944) como `historicalNote`, no como promesa.
+- **IVE-13:** erratas corregidas «cuesta»→«cuenta» y «Las cuatro grupo»→«El cuarto grupo»; se conserva el texto de la plegaria maronita (S. Jacobo de Sarug, s. V).
+- **IVE-14:** errata corregida «Si quieres ver milagros»→«Si buscas milagros, mira».
+- **IVE-17:** 10 misterios × 9 repeticiones + cierre = 91, según el texto de la fuente.
+- **HZ-08:** el título «24 Glorias» no coincide con el cuerpo, que da oraciones propias; se reproducen las oraciones literales.
+- **HZ-07:** la fuente da 60 cuentas pequeñas pero no el número de cuentas grandes separadoras; se modelan 20 tríadas y 19+1 grandes, anotándolo.
+- **HZ-01:** la versión portuguesa de Hozana añade una Salve final que falta en la española; no se añade para conservar el mismo contenido en los tres idiomas.
+
+### Partes que faltan en la fuente
+
+- IVE-06: la fuente no da Credo inicial (sí Padre Nuestro, Avemaría y Credo tras la introducción); se respeta el orden del texto.
+- HZ-03: las dos oraciones complementarias (consagración a la Faz y a la llaga del hombro) no pertenecen a la coronilla y no se modelan como pasos.
+- HZ-08: la fuente alude a una oración de François Lugan sin transcribirla; no se inventa.
+
+### Validador
+
+```
+$ python3 docs/tasks/tools/validate_chaplets.py --partial app/src/main/assets/chaplets/*.json
+WARN  partial delivery: 20 of 55
+20 files · 0 errors · 1 warnings
+```
 
 Ninguna todavía. Quedan por resolver en lotes posteriores: CD-47, CD-57 y HZ-02 (marcadas «verificar» en la especificación).
