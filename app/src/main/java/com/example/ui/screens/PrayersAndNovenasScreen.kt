@@ -2117,6 +2117,8 @@ private fun NovenaIndexView(
                         },
                         tag = "novena_clear_filters"
                     )
+                    // Keep the action clear of the bottom dock on every identity.
+                    Spacer(Modifier.height(64.dp))
                 }
             }
         } else {
