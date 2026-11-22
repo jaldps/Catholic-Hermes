@@ -2097,22 +2097,29 @@ private fun NovenaIndexView(
 
         if (filtered.isEmpty() && searchResult != null && !isLoading && !hasError) {
             item(key = "novena_empty") {
-                EmptyCard(
-                    title = currentLanguage.pick("Ninguna novena coincide", "No matching novenas", "Nenhuma novena corresponde"),
-                    body = currentLanguage.pick(
-                        "Prueba otra palabra o elige otra intención.",
-                        "Try another word or choose another intention.",
-                        "Tente outra palavra ou escolha outra intenção."
-                    ),
-                    actionLabel = currentLanguage.pick("Ver todas", "Show all novenas", "Ver todas"),
-                    actionTag = "novena_clear_filters",
-                    onAction = {
-                        onSearchQueryChange("")
-                        onSelectTag(null)
-                        onKind(NovenaKind.ALL)
-                        onOrigin(NovenaOrigin.ALL)
-                    }
-                )
+                Column(
+                    Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    AppEmptyState(
+                        title = currentLanguage.pick("Ninguna novena coincide", "No novena matches", "Nenhuma novena corresponde"),
+                        body = currentLanguage.pick("Prueba con otro filtro.", "Try another filter.", "Tente outro filtro."),
+                        modifier = Modifier.testTag("novena_filter_empty")
+                    )
+                    AppSecondaryCapsule(
+                        label = currentLanguage.pick("Quitar filtros", "Clear filters", "Limpar filtros"),
+                        onClick = {
+                            onSearchQueryChange("")
+                            onSelectTag(null)
+                            onKind(NovenaKind.ALL)
+                            onOrigin(NovenaOrigin.ALL)
+                        },
+                        tag = "novena_clear_filters"
+                    )
+                    // Keep the action clear of the bottom dock on every identity.
+                    Spacer(Modifier.height(64.dp))
+                }
             }
         } else {
             // Equal-size cards, two per row (one with large text or on a very narrow phone, where a half-width card
