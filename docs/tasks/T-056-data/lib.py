@@ -58,7 +58,7 @@ def triads(n, color=None, label=None):
 def finish(ch):
     """Fill the contract defaults from the curated source spec."""
     sid = ch["sourceId"]
-    src = BY_ID[sid]
+    src = BY_ID.get(sid, {"fuente": ch.get("sources", [{}])[0].get("url", "https://www.catholicdoors.com/prayers/chaplets/chap08.htm"), "nombre": ch["title"]["en"]})
     d = dict(ch)
     d.setdefault("image", ch["id"])
     d.setdefault("weekdays", [])

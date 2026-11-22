@@ -99,4 +99,35 @@ WARN  partial delivery: 20 of 55
 20 files · 0 errors · 1 warnings
 ```
 
+
+
+## Lote 3 — APP-ST-MICHAEL, CD-21, CD-31, CD-01, CD-05, CD-08, CD-09, CD-55
+
+| `id` | `sourceId` | URL abierta | Idioma fuente | Traducción | Derechos |
+|---|---|---|---|---|---|
+| `corona-san-miguel-raccolta` | APP-ST-MICHAEL | `app/src/main/assets/prayers/text-overrides.json` (Raccolta 1910, n.º 291) | EN original | ES/PT: traducciones fieles de T-007, ya publicadas en la app | Dominio público (Raccolta 1910) |
+| `san-gabriel-coronilla` | CD-21 | https://www.catholicdoors.com/prayers/chaplets/chap38.htm | EN | ES/PT: Hermes | `Derechos: Catholic Doors Ministry` |
+| `san-rafael-coronilla` | CD-31 | https://www.catholicdoors.com/prayers/chaplets/chap13.htm | EN | ídem | ídem |
+| `coronilla-difuntos-45` | CD-01 | https://www.catholicdoors.com/prayers/chaplets/chap22.htm | EN | ídem | ídem |
+| `conversion-coronilla` | CD-05 | https://www.catholicdoors.com/prayers/chaplets/chap16.htm | EN | ídem | ídem |
+| `fe-coronilla` | CD-08 | https://www.catholicdoors.com/prayers/chaplets/chap03.htm | EN | ídem | ídem |
+| `misericordia-perdon` | CD-09 | https://www.catholicdoors.com/prayers/chaplets/chap27.htm | EN | ídem | ídem |
+| `unidad-coronilla` | CD-55 | https://www.catholicdoors.com/prayers/chaplets/chap43.htm | EN | ídem | ídem |
+
+### Notas del lote
+
+- **APP-ST-MICHAEL:** los pasos se generan desde los campos `leaderText` y `responseText` de `text-overrides.json`, sin reescribir ninguna frase. Es el texto auténtico de T-007, no el de Catholic Doors ni el de Hozana.
+- **CD-01:** la fuente ofrece «De Profundis **o** Padre Nuestro y Avemaría»; se modela la segunda opción. Dice 5 cuentas introductorias pero solo menciona tres actos (Fe, Esperanza y Caridad): el WARN del validador está explicado en `notes`.
+- **CD-21 y CD-09:** se conservan las erratas del original («though among women», «they womb», «grat mercy»).
+- **CD-08:** la indulgencia de 5 años se registra solo como `historicalNote`.
+
+### Validador acumulado (tras el lote 3)
+
+```
+$ python3 docs/tasks/tools/validate_chaplets.py --partial app/src/main/assets/chaplets/*.json
+WARN  coronilla-difuntos-45.json.beads[1]: steps cover 3 prayers for a group of 5 (explained in notes)
+WARN  partial delivery: 28 of 55
+28 files · 0 errors · 2 warnings
+```
+
 Ninguna todavía. Quedan por resolver en lotes posteriores: CD-47, CD-57 y HZ-02 (marcadas «verificar» en la especificación).

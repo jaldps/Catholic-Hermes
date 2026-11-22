@@ -1,0 +1,251 @@
+{
+  "id": "misericordia-perdon",
+  "sourceId": "CD-09",
+  "group": "intention",
+  "title": {
+    "es": "Coronilla de Misericordia y Perdón",
+    "en": "Chaplet of Mercy and Forgiveness",
+    "pt": "Coronilha de Misericórdia e Perdão"
+  },
+  "summary": {
+    "es": "Rosario en el que todas las oraciones comunes se sustituyen por textos propios.",
+    "en": "Rosary in which all the usual prayers are replaced by proper texts.",
+    "pt": "Terço em que todas as orações comuns são substituídas por textos próprios."
+  },
+  "instrument": {
+    "es": "Rosario mariano de 59 cuentas.",
+    "en": "59-bead Marian rosary.",
+    "pt": "Terço mariano de 59 contas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "text": {
+        "es": "Lord Jesus, we believe in You as You are the Son of Mary and the Son of the Living God, Creator and Redeemer. You came from heaven to earth to save all mankind. You are the Savior of the World. You taught us to pray: 'Our Father, who art in heaven… Amen.'",
+        "en": "Señor Jesús, creemos en ti, porque eres el Hijo de María y el Hijo del Dios vivo, Creador y Redentor. Viniste del cielo a la tierra para salvar a toda la humanidad. Tú eres el Salvador del mundo. Nos enseñaste a rezar: «Padre nuestro que estás en los cielos… Amén».",
+        "pt": "Senhor Jesus, cremos em ti, porque és o Filho de Maria e o Filho do Deus vivo, Criador e Redentor. Vieste do céu à terra para salvar toda a humanidade. Tu és o Salvador do mundo. Ensinaste-nos a rezar: «Pai nosso que estás nos céus… Amém»."
+      }
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Merciful Jesus, our Redeemer, You said, 'ask and you shall receive.' We humbly ask You to hear our prayer, forgive us our sins and grant us Your peace and salvation. We praise You now and forever. Amen.",
+        "en": "Jesús misericordioso, nuestro Redentor, dijiste: «pedid y recibiréis». Te pedimos humildemente que escuches nuestra oración, perdones nuestros pecados y nos concedas tu paz y salvación. Te alabamos ahora y siempre. Amén.",
+        "pt": "Jesus misericordioso, nosso Redentor, disseste: «pedi e recebereis». Pedimos-te humildemente que ouças a nossa oração, perdoes os nossos pecados e nos concedas a tua paz e salvação. Louvamos-te agora e sempre. Amém."
+      }
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us.",
+        "en": "Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros.",
+        "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Most Blessed Virgin Mary, Mother of God, intercede for us.",
+        "en": "Santísima Virgen María, Madre de Dios, intercede por nosotros.",
+        "pt": "Santíssima Virgem Maria, Mãe de Deus, intercede por nós."
+      }
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Merciful Jesus, our Redeemer, You said, 'ask and you shall receive.' We humbly ask You to hear our prayer, forgive us our sins and grant us Your peace and salvation. We praise You now and forever. Amen.",
+        "en": "Jesús misericordioso, nuestro Redentor, dijiste: «pedid y recibiréis». Te pedimos humildemente que escuches nuestra oración, perdones nuestros pecados y nos concedas tu paz y salvación. Te alabamos ahora y siempre. Amén.",
+        "pt": "Jesus misericordioso, nosso Redentor, disseste: «pedi e recebereis». Pedimos-te humildemente que ouças a nossa oração, perdoes os nossos pecados e nos concedas a tua paz e salvação. Louvamos-te agora e sempre. Amém."
+      }
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us.",
+        "en": "Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros.",
+        "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Most Blessed Virgin Mary, Mother of God, intercede for us.",
+        "en": "Santísima Virgen María, Madre de Dios, intercede por nosotros.",
+        "pt": "Santíssima Virgem Maria, Mãe de Deus, intercede por nós."
+      }
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Merciful Jesus, our Redeemer, You said, 'ask and you shall receive.' We humbly ask You to hear our prayer, forgive us our sins and grant us Your peace and salvation. We praise You now and forever. Amen.",
+        "en": "Jesús misericordioso, nuestro Redentor, dijiste: «pedid y recibiréis». Te pedimos humildemente que escuches nuestra oración, perdones nuestros pecados y nos concedas tu paz y salvación. Te alabamos ahora y siempre. Amén.",
+        "pt": "Jesus misericordioso, nosso Redentor, disseste: «pedi e recebereis». Pedimos-te humildemente que ouças a nossa oração, perdoes os nossos pecados e nos concedas a tua paz e salvação. Louvamos-te agora e sempre. Amém."
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us.",
+        "en": "Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros.",
+        "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Most Blessed Virgin Mary, Mother of God, intercede for us.",
+        "en": "Santísima Virgen María, Madre de Dios, intercede por nosotros.",
+        "pt": "Santíssima Virgem Maria, Mãe de Deus, intercede por nós."
+      }
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Merciful Jesus, our Redeemer, You said, 'ask and you shall receive.' We humbly ask You to hear our prayer, forgive us our sins and grant us Your peace and salvation. We praise You now and forever. Amen.",
+        "en": "Jesús misericordioso, nuestro Redentor, dijiste: «pedid y recibiréis». Te pedimos humildemente que escuches nuestra oración, perdones nuestros pecados y nos concedas tu paz y salvación. Te alabamos ahora y siempre. Amén.",
+        "pt": "Jesus misericordioso, nosso Redentor, disseste: «pedi e recebereis». Pedimos-te humildemente que ouças a nossa oração, perdoes os nossos pecados e nos concedas a tua paz e salvação. Louvamos-te agora e sempre. Amém."
+      }
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us.",
+        "en": "Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros.",
+        "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Most Blessed Virgin Mary, Mother of God, intercede for us.",
+        "en": "Santísima Virgen María, Madre de Dios, intercede por nosotros.",
+        "pt": "Santíssima Virgem Maria, Mãe de Deus, intercede por nós."
+      }
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Merciful Jesus, our Redeemer, You said, 'ask and you shall receive.' We humbly ask You to hear our prayer, forgive us our sins and grant us Your peace and salvation. We praise You now and forever. Amen.",
+        "en": "Jesús misericordioso, nuestro Redentor, dijiste: «pedid y recibiréis». Te pedimos humildemente que escuches nuestra oración, perdones nuestros pecados y nos concedas tu paz y salvación. Te alabamos ahora y siempre. Amén.",
+        "pt": "Jesus misericordioso, nosso Redentor, disseste: «pedi e recebereis». Pedimos-te humildemente que ouças a nossa oração, perdoes os nossos pecados e nos concedas a tua paz e salvação. Louvamos-te agora e sempre. Amém."
+      }
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us.",
+        "en": "Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros.",
+        "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Most Blessed Virgin Mary, Mother of God, intercede for us.",
+        "en": "Santísima Virgen María, Madre de Dios, intercede por nosotros.",
+        "pt": "Santíssima Virgem Maria, Mãe de Deus, intercede por nós."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Most blessed Virgin Mary, Mother of God, intercede for us, for the forgiveness of our sins, peace and eternal salvation from your loving Son, our Lord Jesus Christ, the only Son of the Living God, and we praise you, we bless His name now and forever.",
+        "en": "Santísima Virgen María, Madre de Dios, intercede por nosotros para obtener de tu Hijo amado, nuestro Señor Jesucristo, Hijo único del Dios vivo, el perdón de nuestros pecados, la paz y la salvación eterna; te alabamos y bendecimos su nombre ahora y siempre.",
+        "pt": "Santíssima Virgem Maria, Mãe de Deus, intercede por nós para obter do teu Filho amado, nosso Senhor Jesus Cristo, Filho único do Deus vivo, o perdão dos nossos pecados, a paz e a salvação eterna; louvamos-te e bendizemos o seu nome agora e sempre."
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be"
+    }
+  ],
+  "historicalNote": {
+    "text": {
+      "es": "La fuente atribuye la coronilla a Chorbishop Joseph Saidi (Our Lady of Mercy, Worcester, 1947–1977); dato tomado de la propia página.",
+      "en": "The source attributes the chaplet to Chorbishop Joseph Saidi (Our Lady of Mercy, Worcester, 1947–1977), as stated on the page.",
+      "pt": "A fonte atribui a coronilha a Chorbishop Joseph Saidi (Our Lady of Mercy, Worcester, 1947–1977), conforme a página."
+    },
+    "source": "https://www.catholicdoors.com/prayers/chaplets/chap27.htm"
+  },
+  "notes": "Texto literal de Catholic Doors. El Padre Nuestro dentro de la oración inicial se deja como texto continuo, no duplicado como prayerRef.",
+  "image": "misericordia-perdon",
+  "variables": [],
+  "promise": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Mercy and Forgiveness",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap27.htm"
+    }
+  ]
+}

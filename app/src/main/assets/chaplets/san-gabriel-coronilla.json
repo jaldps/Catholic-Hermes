@@ -1,0 +1,145 @@
+{
+  "id": "san-gabriel-coronilla",
+  "sourceId": "CD-21",
+  "group": "angels",
+  "title": {
+    "es": "Coronilla de San Gabriel",
+    "en": "Chaplet of Saint Gabriel",
+    "pt": "Coronilha de São Gabriel"
+  },
+  "summary": {
+    "es": "Tres grupos de cuentas por los 33 años de la vida del Salvador, con saludos a María y a Gabriel.",
+    "en": "Three sets of beads for the 33 years of the Saviour's life, with greetings to Mary and Gabriel.",
+    "pt": "Três grupos de contas pelos 33 anos da vida do Salvador, com saudações a Maria e a Gabriel."
+  },
+  "instrument": {
+    "es": "Medalla grande, 3 cuentas pequeñas, medalla pequeña y 3 grupos de 11 cuentas separados por 2 cuentas (38 en total).",
+    "en": "Large medal, 3 small beads, small medal and 3 sets of 11 beads separated by 2 beads (38 in all).",
+    "pt": "Medalha grande, 3 contas pequenas, medalha pequena e 3 grupos de 11 contas separados por 2 contas (38 no total)."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 11
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 11
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 11
+    }
+  ],
+  "steps": [
+    {
+      "bead": 1,
+      "text": {
+        "es": "Heavenly Father, through the salutation of the Archangel Gabriel, may we honour the Incarnation of Your Divine son.",
+        "en": "Padre celestial, por la salutación del arcángel Gabriel, honremos la Encarnación de tu Hijo divino.",
+        "pt": "Pai celestial, pela saudação do arcanjo Gabriel, honremos a Encarnação do teu Filho divino."
+      }
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Mother of our Saviour, may we strive always to imitate your holy virtues and to respond to our Father. 'Be it done unto me according to Thy Word.'",
+        "en": "Madre de nuestro Salvador, esforcémonos siempre por imitar tus santas virtudes y responder a nuestro Padre: «Hágase en mí según tu palabra».",
+        "pt": "Mãe do nosso Salvador, esforcemo-nos sempre por imitar as tuas santas virtudes e responder ao nosso Pai: «Faça-se em mim segundo a tua palavra»."
+      }
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "Archangel Gabriel, please praise our Father for the gift of His Son praying, one day, by His grace, we may all be one.",
+        "en": "Arcángel Gabriel, alaba a nuestro Padre por el don de su Hijo, y ruega para que un día, por su gracia, todos seamos uno.",
+        "pt": "Arcanjo Gabriel, louva o nosso Pai pelo dom do seu Filho e roga para que um dia, pela sua graça, todos sejamos um."
+      }
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "Hail, full of grace, The Lord is with Thee: Blessed art though among women.",
+        "en": "Dios te salve, llena de gracia; el Señor está contigo; bendita eres entre las mujeres.",
+        "pt": "Salve, cheia de graça; o Senhor está contigo; bendita és entre as mulheres."
+      },
+      "repeat": 11
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Behold thou shalt conceive in they womb, and shalt bring forth a son: and thou shalt call his name Jesus.",
+        "en": "He aquí que concebirás en tu seno y darás a luz un hijo, y le pondrás por nombre Jesús.",
+        "pt": "Eis que conceberás no teu seio e darás à luz um filho, e lhe porás o nome Jesus."
+      }
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Hail, full of grace, The Lord is with Thee: Blessed art though among women.",
+        "en": "Dios te salve, llena de gracia; el Señor está contigo; bendita eres entre las mujeres.",
+        "pt": "Salve, cheia de graça; o Senhor está contigo; bendita és entre as mulheres."
+      },
+      "repeat": 11
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Behold thou shalt conceive in they womb, and shalt bring forth a son: and thou shalt call his name Jesus.",
+        "en": "He aquí que concebirás en tu seno y darás a luz un hijo, y le pondrás por nombre Jesús.",
+        "pt": "Eis que conceberás no teu seio e darás à luz um filho, e lhe porás o nome Jesus."
+      }
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Hail, full of grace, The Lord is with Thee: Blessed art though among women.",
+        "en": "Dios te salve, llena de gracia; el Señor está contigo; bendita eres entre las mujeres.",
+        "pt": "Salve, cheia de graça; o Senhor está contigo; bendita és entre as mulheres."
+      },
+      "repeat": 11
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors; se conservan las erratas «though» y «they womb». 3×11 = 33 años; 2 cuentas = divinidad y humanidad.",
+  "image": "san-gabriel-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Saint Gabriel",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap38.htm"
+    }
+  ]
+}
