@@ -8,7 +8,7 @@
   "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
   "updates": "1.8.1-1.8.28 (same package and key)",
   "built_from": "git archive of CatholicGPT at the version commit 270db52 (clean tree)",
-  "also_published_as": "GitHub Release v1.8.29 (SHA-256 to be confirmed against the CI build)",
+  "also_published_as": "GitHub Release v1.8.29 (identical SHA-256)",
   "changes": [
     "«Mi camino» is the fifth tab (Today · Pray · Read · My path · Explore); tapping it again returns to its hub; links, search, notices and onboarding open its sections with the tab selected (T-046, Hermes).",
     "One «Habits» row in «Mi camino» shows today's progress and the streak, replacing three rows that led to the same place; «Mi camino» left Explore.",
