@@ -103,6 +103,12 @@ Las identidades se comportan igual. Sanctuary pone el título sobre el papel y e
 
 **P8 · Coherencia con el vertical.** Mismo orden de lectura, mismos textos, iconos y acciones.
 
+**P9 · El espacio vertical vacío es el enemigo** (decisión del dueño, 22-nov, al ver el lector de prueba de L0). En horizontal el alto es lo más escaso:
+- ningún hueco de **más de 24 dp entre un título y su contenido**;
+- ninguna franja vacía de **más de 48 dp de alto** sin propósito;
+- el arte solo aparece donde aporta: portadas de centro y raíces, y fichas cuya imagen es contenido (santo, devoción, orden). En los lectores no se usa (§5.1);
+- **botones en `LandscapePhone`:** píldoras de **44 dp** de alto, la acción que avanza de **48**, y «Siguiente» del Rosario de **56**. El objetivo táctil mínimo sigue siendo 44.
+
 ### 2.1 Clases de ventana
 
 **Fuente de las medidas.** `W` y `H` son el tamaño de la **ventana completa**, barras incluidas.
@@ -173,7 +179,7 @@ La app usa `targetSdk = 36` con `enableEdgeToEdge()`, así que dibuja bajo las b
 ```
 
 **Umbral único** (rúbrica 4):
-- **Acción que avanza.** En toda pantalla secuencial (Rosario, lectores secuenciales, lección, plan, día de novena, capítulo, primeros pasos), la acción de avanzar tiene su **centro a ≤ 120 dp del borde derecho seguro** y **y ≥ 0,6 H**. Mide ≥ 48 × 48; la del Rosario, ≥ 64 × 64.
+- **Acción que avanza.** En toda pantalla secuencial (Rosario, lectores secuenciales, lección, plan, día de novena, capítulo, primeros pasos), la acción de avanzar tiene su **centro a ≤ 120 dp del borde derecho seguro** y **y ≥ 0,6 H**. Mide ≥ 48 × 48; la del Rosario, 56 × 56 (P9).
 - **Objetivos táctiles:** ≥ 44 × 44 dp.
 - **Navegación y retroceso:** en el tercio izquierdo, o al inicio del pie de la columna de texto.
 - **Franja superior (`y < 0,25 H`):** solo atrás, títulos y acciones poco frecuentes, en la misma posición que en vertical.
@@ -702,7 +708,7 @@ Sin desplazar se ven:
 **Grupo de acciones del borde derecho** (`endActions`), de 72 de ancho, en `x = W − max(12, safeEnd + 8) − 72`:
 - **Arriba:** «Guía» (`prayer_instructions_toggle`) y «···» (`rosary_options_button`), de 44 cada uno, en `S + 4`.
 - **Escuchar** (`toggle_prayer_audio_button` / `toggle_mercy_audio_button`): círculo de 48 + rótulo, centrado en **y = 0,45 H** (185 / 162).
-- **Siguiente** (`next_bead_button` / `next_mercy_step_button`): tecla de **64 × 64** + rótulo «Siguiente», centrada en **y = 0,70 H** (288 / 252):
+- **Siguiente** (`next_bead_button` / `next_mercy_step_button`): tecla de **56 × 56** (P9) + rótulo «Siguiente», centrada en **y = 0,70 H** (288 / 252):
   - su centro queda a **48 dp** del borde derecho seguro;
   - acaba en 336 ≤ 395 (891) y en 300 ≤ 344 (800).
 
@@ -771,7 +777,7 @@ Ya no van en el panel de la oración «Después», el progreso, la intención in
 
 1. Geometría de §4.2 a 891×411 y a 800×360, en las 4 identidades, en claro y oscuro, con el arnés de insets (S = 24, B = 16, gestos de 32), y con un recorte de 32 a cada lado.
 2. `RosaryFitTest` verde según la tabla de §4.3.
-3. `next_bead_button`: centro a ≤ 120 del borde derecho seguro, `y ≥ 0,6 H`, ≥ 64 × 64.
+3. `next_bead_button`: centro a ≤ 120 del borde derecho seguro, `y ≥ 0,6 H`, 56 × 56.
 4. El hilo cumple §4.2: arrastre de 24 dp por cuenta y dirección correcta (`RosaryInteractionTest` ampliado).
 5. Al girar a mitad de la 3.ª decena con la voz activa y «Opciones» abierta, todo sigue igual (`LandscapeRotationTest`, `RosaryNarrationTest`, `RosaryPersistenceTest`).
 6. TalkBack recorre: atrás → selector → antetítulo y título → pintura → fruto → selector de misterios → hilo → «Después» → progreso → «Anterior» → título de la oración → guía → texto → «Guía», «···» → Escuchar → Siguiente.
@@ -794,14 +800,13 @@ Ya no van en el panel de la oración «Después», el progreso, la intención in
  0                           267                                                                 891
 ┌──────────────────────────────┬──────────────────────────────────────────────────────────────────┐ 0
 │ (S) ‹                    ☆ ⋯ │ (S) · · · · · fundido bajo la barra de estado · · · · · · · · · · │
-│ ╔══════════════════════════╗ │                                                                  │
-│ ║ ARTE (si lo hay), bruma  ║ │         ┌────── columna de lectura 455 (66 car.) ──────┐         │
-│ ║ Antetítulo               ║ │         │ Dios te salve, María, llena eres de gracia;  │         │
-│ ║ Título (title1)          ║ │         │ el Señor es contigo. Bendita tú eres entre   │         │
-│ ╚══════════════════════════╝ │         │ todas las mujeres, y bendito es el fruto de  │         │
-│  meta                        │         │ tu vientre, Jesús. …                         │         │
-│  [ Evangelio ▾ ]  ← índice   │         └──────────────────────────────────────────────┘         │
-│  (datos propios en la meta)  │ ───────────────────────────────────────────────────────────────── │
+│  Antetítulo                  │         ┌────── columna de lectura 455 (66 car.) ──────┐         │
+│  Título (title1) · SIN ARTE  │         │ Dios te salve, María, llena eres de gracia;  │         │
+│  meta                        │         │ el Señor es contigo. Bendita tú eres entre   │         │
+│  [ Evangelio ▾ ]  ← índice   │         │ todas las mujeres, y bendito es el fruto de  │         │
+│  (datos propios en la meta)  │         │ tu vientre, Jesús. …                         │         │
+│                              │         └──────────────────────────────────────────────┘         │
+│  (hueco libre: junto al pie) │ ───────────────────────────────────────────────────────────────── │
 │ [▶ Escuchar]  [Aa]           │  [‹ Anterior]                                    [ Siguiente › ] │ ← pie de texto
 └──────────────────────────────┴──────────────────────────────────────────────────────────────────┘ 411
   PANEL DEL LECTOR 267 · fijo           PANEL DE TEXTO 624 · desplaza, con pie fijo (solo lectores secuenciales)
@@ -810,8 +815,11 @@ Ya no van en el panel de la oración «Después», el progreso, la intención in
 
 **Panel del lector** (`clamp(0,30 W, 224, 280)`: 267 / 240), de arriba abajo:
 1. Atrás y acciones (marcador, más).
-2. Zona de arte (§3.2) o panel de título.
-3. Antetítulo, título (`title1`) y meta.
+2. **Sin arte (P9).** El panel del lector es un panel de título y la decisión vale para todos los lectores (oración, día de novena, Catecismo, doctrina, lección, día de plan, capítulo, Misa):
+   - el título (`title1`) va **arriba**, en `S + 52` bajo la fila de atrás, alineado con la primera línea del texto (±4);
+   - es una **excepción declarada a la línea única del título** de §3.2 para `kind = Reader`;
+   - el santo y la devoción conservan su imagen, que es contenido, como miniatura de 112 junto al título (`DetailPane`, §3.3).
+3. Antetítulo, título (`title1`) y meta, sin hueco de más de 24 dp entre ellos.
 4. **Índice en una fila de 44 dp** (`reader_outline_row`, nueva):
    - muestra la parte actual («Evangelio ▾») y se actualiza con el desplazamiento;
    - al tocarla, abre la lista de partes en una hoja lateral (`reader_outline_sheet`, nueva);
@@ -822,7 +830,7 @@ Ya no van en el panel de la oración «Después», el progreso, la intención in
 5. Datos propios del lector, si los tiene (migas, «Día 12 de 365»), dentro de la meta.
 6. **Pie del panel, fijo** (56 + `B`): solo **Escuchar** y **Aa** (pulgar izquierdo).
 
-Presupuesto del panel a 800, con huecos: 166 (arte) + 28 (meta) + 8 + 44 (índice) = **246 ≤ 288** (344 − pie de 56). A 891: 189 + 28 + 8 + 44 = 269 ≤ 339. El selector de días de la novena ya no va en el panel: va al pie del texto (§5.3).
+Presupuesto del panel a 800, con huecos y sin arte: 52 (atrás) + 64 (antetítulo y título en 2 líneas) + 28 (meta) + 8 + 44 (índice) = **196 ≤ 288** (344 − pie de 56). A 891: lo mismo, 196 ≤ 339. El hueco que queda está **bajo** el índice, junto al pie, no entre el título y el texto. El selector de días de la novena ya no va en el panel: va al pie del texto (§5.3).
 
 **Panel de texto:**
 - Desplaza.
@@ -1331,7 +1339,7 @@ En `LandscapePhone` es un **editor a pantalla completa**:
 
 | # | Criterio | Comprobaciones duras (todas, para ≥ 9) |
 |---|---|---|
-| 1 | **Uso del espacio** | <ul><li>Arte de cabezal ≤ 40 % del área; `CompactBand` ≤ 30 % de `H`; panel ≤ 0,40 W.</li><li>Lo esencial de cada área (§4.2–4.3, §6.3, §7.4, §8.3, §9.5, §15) se ve sin desplazar.</li><li>Sin franjas vacías > 15 % del área, salvo los márgenes de la medida; la variante póster cubre los paneles sin ranura.</li><li>**Ninguna columna de contenido principal < 220; los paneles y columnas de contexto, ≥ 150** (la columna de contexto del Rosario mide 181 / 152; el hilo, de 44, es un control).</li></ul> |
+| 1 | **Uso del espacio** | <ul><li>Arte de cabezal ≤ 40 % del área; `CompactBand` ≤ 30 % de `H`; panel ≤ 0,40 W.</li><li>Lo esencial de cada área (§4.2–4.3, §6.3, §7.4, §8.3, §9.5, §15) se ve sin desplazar.</li><li>Sin franjas vacías > 15 % del área, salvo los márgenes de la medida; la variante póster cubre los paneles sin ranura.</li><li>**Sin espacio negativo vertical (P9):** ningún hueco > 24 dp entre un título y su contenido, ninguna franja vacía > 48 dp de alto sin propósito, y botones de 44 (avance 48, Rosario 56).</li><li>**Ninguna columna de contenido principal < 220; los paneles y columnas de contexto, ≥ 150** (la columna de contexto del Rosario mide 181 / 152; el hilo, de 44, es un control).</li></ul> |
 | 2 | **Jerarquía y ritmo** | <ul><li>Un título por pantalla, con el rango de AGENTS.md.</li><li>Todos los títulos de panel en `0,46 H − 14` (±1). **Excepción declarada:** el título de la tira de 96 de las listas de lista-detalle (§3.9), que desplaza con la lista.</li><li>Múltiplos de 4.</li><li>Inicios alineados (±1).</li><li>Carriles iguales (±1).</li><li>**Un solo botón primario relleno por pantalla.**</li></ul> |
 | 3 | **Legibilidad** | <ul><li>Medida medida con `TextMeasurer` (§3.10): 60–75 caracteres en lectores y Biblia; ≥ 56 en fichas con serif y en el Rosario.</li><li>Contraste ≥ 4,5:1 en texto (≥ 3:1 en texto grande y controles), también sobre el velo de la variante póster.</li><li>Lectura sobre superficie opaca.</li><li>Ningún texto por debajo del tamaño del usuario.</li></ul> |
 | 4 | **Ergonomía** | <ul><li>Objetivos ≥ 44 (cero `SMALL_TARGET`).</li><li>**Acción que avanza: centro a ≤ 120 dp del borde derecho seguro e `y ≥ 0,6 H`** (§2.3).</li><li>Retroceso y navegación en el tercio izquierdo o al inicio del pie.</li><li>Ningún control arrastrable a menos de `gestos + 8` del borde.</li></ul> |

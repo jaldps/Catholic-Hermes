@@ -58,6 +58,8 @@ Las cuentas tienen en cuenta la barra de estado y la de gestos de un teléfono r
 
 ## 2. Un capítulo de la Biblia (y, del mismo modo, oraciones, novenas y Catecismo)
 
+> **Cambio del 22-nov (decisión tuya):** en los lectores (oración, novena, Catecismo, capítulo…) el panel izquierdo **no lleva imagen**. El título va arriba, a la altura de la primera línea del texto, para que no quede espacio vacío entre los dos. Los botones en horizontal miden 44 dp de alto (el que avanza, 48). Es la regla P9 del diseño: el espacio vertical vacío es el enemigo.
+
 **Antes** ([captura](antes/lumen_es_bible_chapter_chapter_0.jpg)).
 - El texto va en una columna estrecha, de unas 38 letras por línea.
 - Una barra flotante **tapa versículos**.
