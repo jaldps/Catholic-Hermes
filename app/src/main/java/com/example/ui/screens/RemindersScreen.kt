@@ -89,6 +89,7 @@ import com.example.ui.design.AppBackHandler
 import com.example.ui.design.AppConfirmDialog
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
+import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppInlineTitle
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
@@ -261,6 +262,7 @@ fun RemindersScreen(
         }
     }
     val enabledCount = prefs?.values?.count { it.enabled }
+    val noRemindersEnabled = prefs != null && !readFailure && prefs!!.values.none { it.enabled }
     val next = remember(prefs) { prefs?.let { nextReminder(it) } }
     val summary = when {
         readFailure -> lang.pick3("Recordatorios no disponibles", "Reminders unavailable", "Lembretes indisponíveis")
@@ -373,6 +375,30 @@ fun RemindersScreen(
 
             item(key = "reminders_list_header") {
                 SectionTitle(lang.pick3("Recordatorios diarios", "Daily reminders", "Lembretes diários"))
+            }
+            if (noRemindersEnabled) item(key = "reminders_empty") {
+                Column(
+                    Modifier.fillMaxWidth().padding(horizontal = 20.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    AppEmptyState(
+                        title = lang.pick3("Aún no tienes recordatorios", "No reminders yet", "Ainda não há lembretes"),
+                        body = lang.pick3(
+                            "Elige una hora para rezar y te avisaremos.",
+                            "Pick a time to pray and we'll remind you.",
+                            "Escolha uma hora para rezar e avisaremos você."
+                        ),
+                        modifier = Modifier.testTag("reminders_empty")
+                    )
+                    AppSecondaryCapsule(
+                        label = lang.pick3("Activar el Ángelus", "Turn on the Angelus", "Ativar o Ângelus"),
+                        onClick = {
+                            ReminderCatalog.DEFAULTS.first { it.id == "angelus_midday" }.let { onToggle(it, true) }
+                        },
+                        tag = "reminders_enable_angelus"
+                    )
+                }
             }
             item(key = "reminders_list") {
                 AppListGroup(Modifier.testTag("reminders_list")) {
