@@ -1,0 +1,1437 @@
+{
+  "commit": "2a00060 (same production UI as 2e92076; coordinator later repaired two test classes)",
+  "counts": {
+    "tests": 915,
+    "failures": 23,
+    "errors": 0,
+    "skipped": 7
+  },
+  "classes": [
+    {
+      "class": "com.example.AccentColorsTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.AccentPickerUiTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.AppLogTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "tests": 5,
+      "failures": 5,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[APPLE]",
+          "reason": "java.lang.AssertionError: No node found that matches TestTag = 'nav_my_path' in scrollable container"
+        },
+        {
+          "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[IVE]",
+          "reason": "java.lang.AssertionError: No node found that matches TestTag = 'nav_my_path' in scrollable container"
+        },
+        {
+          "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[CLASSIC]",
+          "reason": "java.lang.AssertionError: No node found that matches TestTag = 'nav_my_path' in scrollable container"
+        },
+        {
+          "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[GLASS]",
+          "reason": "java.lang.AssertionError: No node found that matches TestTag = 'nav_my_path' in scrollable container"
+        },
+        {
+          "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[SANCTUARY]",
+          "reason": "java.lang.AssertionError: No node found that matches TestTag = 'nav_my_path' in scrollable container"
+        }
+      ]
+    },
+    {
+      "class": "com.example.AppearanceInteractionTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.AssetImageReplacementTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.AtomicPersonalProgressTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.AuditScriptureLiturgyRegressionTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.BackupCoreTest",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.BackupUiTest",
+      "tests": 3,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "backupEntryAndExportImportButtonsAreReachableFromRealSettings",
+          "reason": "java.lang.AssertionError: Assert failed: The component is not displayed!"
+        }
+      ]
+    },
+    {
+      "class": "com.example.BibleEditionPickerTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.BibleEditionSelectionTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.BibleEditionsTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.BibleIntegrityTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.BiblePositionMappingTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.BibleReadingJourneyTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CalendarPickerInteractionTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CalendarRulesJourneyTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "transfersAreReachableAndSurviveClosingAndReopeningSettings",
+          "reason": "java.lang.AssertionError: Action performScrollTo() failed."
+        }
+      ]
+    },
+    {
+      "class": "com.example.CalendarSelectionSafetyTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CatechismCoverageTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CatechismIndexTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CatechismInteractionTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CatechismReaderLogicTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CatechismStructureCatalogTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CatholicQuestionsDataTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ConfessionCatalogTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ConfessionInteractionTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CrossReferenceEditionTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CrossReferenceTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.CrossReferencesUiTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DailyContextReliabilityTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DailySaintsFetcherTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DailyVerseEditionTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DatabaseMigrationPreservationTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DesignContrastTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DevotionImageCreditsTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DevotionalGlassShaderTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "classMethod",
+          "reason": "java.lang.AssertionError: Failed to fetch maven artifact org.robolectric:android-all-instrumented:9-robolectric-4913185-2-i7"
+        }
+      ]
+    },
+    {
+      "class": "com.example.DevotionsCatalogTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DevotionsScreenTest",
+      "tests": 6,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "newMarianDevotionWithoutPrayerOpens",
+          "reason": "java.lang.AssertionError: Assert failed: The component is not displayed!"
+        }
+      ]
+    },
+    {
+      "class": "com.example.DidacheDataTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DoctrineFormatTest",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.EditorialReliabilityTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ErrorReportProviderTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ErrorReportUiTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "settingsEntryExplainsTheReportAndOnlySharesAfterAnExplicitClick",
+          "reason": "java.lang.AssertionError: Failed: assertExists."
+        }
+      ]
+    },
+    {
+      "class": "com.example.ExampleRobolectricTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "classMethod",
+          "reason": "java.lang.AssertionError: Failed to fetch maven artifact org.robolectric:android-all-instrumented:16-robolectric-13921718-i7"
+        }
+      ]
+    },
+    {
+      "class": "com.example.ExampleUnitTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.FontTypographyTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.FoundationRefParserTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.GlobalSearchIndexTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.GroupedPickersTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.HabitsLogicTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.HomePrayerPrioritiesTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.HomeTextTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.JournalTemptationInteractionTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.LearningProgressReliabilityTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.LectionaryEditionTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.LiquidGlassTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "classMethod",
+          "reason": "java.lang.AssertionError: Failed to fetch maven artifact org.robolectric:android-all-instrumented:9-robolectric-4913185-2-i7"
+        }
+      ]
+    },
+    {
+      "class": "com.example.LitanyOfLoretoTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.LiturgicalCalendarTest",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.LiturgicalRegressionTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.MassVaticanSourceTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.MissalTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.MyPathSummaryTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "tests": 13,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "summaryWithNothingStartedHasOnlyHabitsAndAGentleFidelityLine",
+          "reason": "java.lang.AssertionError: Failed: assertExists."
+        }
+      ]
+    },
+    {
+      "class": "com.example.NarrationAvailabilityTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NarrationEntryPointsTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NarrationPlaybackTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NarrowLargeTextAuditTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NoticeBackupTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NoticeSchedulingTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NoticeSelectorTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NoticeUiTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NovenaAssetIntegrityTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NovenaCatalogLoadingTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NovenaIndexJourneyTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NovenaOriginBadgeTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NovenaOriginBadgeUiTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NovenaProgressTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "classMethod",
+          "reason": "java.lang.AssertionError: Failed to fetch maven artifact org.robolectric:android-all-instrumented:16-robolectric-13921718-i7"
+        }
+      ]
+    },
+    {
+      "class": "com.example.NovenaProvenanceTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NovenaProvenanceUiTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.OnboardingCatalogTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.OrdersCatalogTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.OrdersScreenTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ParishFinderTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ParishScheduleTextTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.PassageCrossReferencesTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.PrayerDetailsCatalogTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.PrayerDetailsContentTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.PrayerDetailsUiTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.PrayerExtrasIntegrationTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.PreferenceRecoveryJourneyTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.PreferenceStorageReliabilityTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.PsalmNumberingTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.QuestionDeeperCatalogTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.QuestionDeeperContentTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.QuestionDeeperUiTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ReaderFontChoiceTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ReadingPlansLogicTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ReadingPlansUiTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ReligiousOrdersDataTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ReminderIntentTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ReminderReliabilityRegressionTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ReminderSchedulingTest",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "classMethod",
+          "reason": "java.lang.AssertionError: Failed to fetch maven artifact org.robolectric:android-all-instrumented:16-robolectric-13921718-i7"
+        }
+      ]
+    },
+    {
+      "class": "com.example.RemindersTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.RetainedNavigationTest",
+      "tests": 2,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "questionReferenceReturnsToSameExpandedExplanation",
+          "reason": "java.lang.AssertionError: Assert failed: The component is not displayed!"
+        }
+      ]
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.RosaryNarrationTest",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.RosaryPersistenceTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.RosarySessionTest",
+      "tests": 25,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.RosaryTextTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.SacredHeartPromisesTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.SaintsCatalogTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.SaintsScreenTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ScriptureRangeTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.SearchUiTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.StudyCourseCatalogUiTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.StudyCourseIntegrityTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.StudyCoursesCatalogTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.StudyJourneyTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "tests": 44,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.TemptationGuideInteractionTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.TemptationGuidesDataTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.VaticanGospelTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.VaticanNewsTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.VaticanReadingsCacheTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ViaCrucisDataTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.VoiceSelectorTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.VoiceSettingsUiTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.WebNavigationPolicyTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.WelcomePersonalizationTest",
+      "tests": 16,
+      "failures": 3,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "settingsChangesTheProfileHomeUpdatesAndSeeAllOpensTheWholeList[APPLE-LIGHT]",
+          "reason": "androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 20000 ms"
+        },
+        {
+          "name": "settingsChangesTheProfileHomeUpdatesAndSeeAllOpensTheWholeList[GLASS-LIGHT]",
+          "reason": "androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 20000 ms"
+        },
+        {
+          "name": "settingsChangesTheProfileHomeUpdatesAndSeeAllOpensTheWholeList[CLASSIC-DARK]",
+          "reason": "androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 20000 ms"
+        }
+      ]
+    },
+    {
+      "class": "com.example.WidgetRemoteViewsTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.AppScreenshotTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.AppearanceScreenshotTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.BackupNarrowScreenshotTest",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.BackupScreenshotTest",
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.BibleAreaScreenshotTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.CatechismIndexScreenshotTest",
+      "tests": 16,
+      "failures": 4,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "narrowLargeText[APPLE, dark=false]",
+          "reason": "java.lang.AssertionError: No node found that matches TestTag = 'ccc_node_p2s2' in scrollable container"
+        },
+        {
+          "name": "narrowLargeText[SANCTUARY, dark=true]",
+          "reason": "java.lang.AssertionError: No node found that matches TestTag = 'ccc_node_p2s2' in scrollable container"
+        },
+        {
+          "name": "narrowLargeText[GLASS, dark=false]",
+          "reason": "java.lang.AssertionError: No node found that matches TestTag = 'ccc_node_p2s2' in scrollable container"
+        },
+        {
+          "name": "narrowLargeText[CLASSIC, dark=true]",
+          "reason": "java.lang.AssertionError: No node found that matches TestTag = 'ccc_node_p2s2' in scrollable container"
+        }
+      ]
+    },
+    {
+      "class": "com.example.screenshots.CatechismScreenshotTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.ConfessionScreenshotTest",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.CrossReferenceScreenshotTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.CrossRefsScreenshotTest",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.DevotionalPrioritiesScreenshotTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.DoctrineAreaScreenshotTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.ExploreScreenshotTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.GroupedPickersShotTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.MyPathScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.MyPathTabScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.NarrationScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 4,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.NoticesScreenshotTest",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 3,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.NovenaBadgesScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.PrayersScreenshotTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.ReadingPlansScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.RosaryStatesShotTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.SacredArtScreenshotTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.SaintImageScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.ScreenshotTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.SearchScreenshotTest",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.TabletScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.TemptationGuideScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.screenshots.WelcomePersonalizationScreenshotTest",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    }
+  ]
+}

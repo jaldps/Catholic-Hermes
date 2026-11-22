@@ -1,0 +1,124 @@
+{
+  "commit": "T-047 push A, first focused run",
+  "counts": {
+    "tests": 115,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 0
+  },
+  "classes": [
+    {
+      "class": "com.example.AppNavigationTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DesignContrastTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.FontTypographyTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.LandscapeFoundationsTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.NarrowLargeTextAuditTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.ReaderFontChoiceTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "tests": 44,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": [
+        {
+          "name": "ordersShowListAndDetailAndSelectionUpdatesTheDetail[APPLE]",
+          "reason": "java.lang.AssertionError: Failed to assert the following: (Selected = 'true')"
+        },
+        {
+          "name": "phonesKeepTheBottomBar[APPLE]",
+          "reason": "java.lang.IllegalArgumentException: performMeasureAndLayout called during measure layout"
+        }
+      ]
+    },
+    {
+      "class": "com.example.screenshots.FullAppScreenshotTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "failed_cases": []
+    }
+  ]
+}

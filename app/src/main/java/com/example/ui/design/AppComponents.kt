@@ -239,20 +239,60 @@ object AppWindow {
     val ListPaneWidth: Dp = 360.dp
 }
 
-/** The width of the window this composition lives in (it follows split-screen and foldable postures). */
-@Composable
-@ReadOnlyComposable
-fun appWindowWidth(): Dp = LocalConfiguration.current.screenWidthDp.dp
+/** Full-window classes. Height wins; system bars never change the class. */
+enum class AppWindowClass { Phone, CompactPhone, LandscapePhone, TabletPortrait, TabletLandscape }
 
-/** True when the tab bar is a leading-edge rail (window width >= [AppWindow.RailMinWidth]). */
-@Composable
-@ReadOnlyComposable
-fun appUsesNavigationRail(): Boolean = appWindowWidth() >= AppWindow.RailMinWidth
+data class AppWindowSize(val width: Dp, val height: Dp) {
+    val windowClass: AppWindowClass get() = when {
+        height < 480.dp -> if (width < 600.dp) AppWindowClass.CompactPhone else AppWindowClass.LandscapePhone
+        width < 600.dp -> AppWindowClass.Phone
+        width < 840.dp -> AppWindowClass.TabletPortrait
+        else -> AppWindowClass.TabletLandscape
+    }
+}
 
-/** True when list/detail screens show both panes (window width >= [AppWindow.TwoPaneMinWidth]). */
+/**
+ * Compose 1.7 has no WindowInfo.containerSize. WindowMetricsCalculator is the
+ * approved fallback: its bounds include bars and cutouts, unlike Configuration.
+ * Configuration is observed only to invalidate the measurement on recreation,
+ * resize and density changes; none of its dimensions are used.
+ */
 @Composable
-@ReadOnlyComposable
-fun appIsTwoPane(): Boolean = appWindowWidth() >= AppWindow.TwoPaneMinWidth
+fun appWindowSize(): AppWindowSize {
+    val configuration = LocalConfiguration.current
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val context = androidx.compose.ui.platform.LocalContext.current
+    return androidx.compose.runtime.remember(configuration, context, density) {
+        var base = context
+        while (base is android.content.ContextWrapper && base !is android.app.Activity) base = base.baseContext
+        val activity = requireNotNull(base as? android.app.Activity) { "AppWindow requires an Activity window" }
+        val bounds = androidx.window.layout.WindowMetricsCalculator.getOrCreate().computeCurrentWindowMetrics(activity).bounds
+        with(density) { AppWindowSize(bounds.width().toDp(), bounds.height().toDp()) }
+    }
+}
+
+@Composable
+fun appWindowClass(): AppWindowClass = appWindowSize().windowClass
+
+@Composable
+fun appIsLandscapePhone(): Boolean = appWindowClass() == AppWindowClass.LandscapePhone
+
+@Composable
+internal fun appHasCompactHeight(): Boolean = appWindowClass().let {
+    it == AppWindowClass.LandscapePhone || it == AppWindowClass.CompactPhone
+}
+
+/** The full width, including system bars; do not substitute a content constraint. */
+@Composable
+fun appWindowWidth(): Dp = appWindowSize().width
+
+@Composable
+fun appUsesNavigationRail(): Boolean = appWindowClass().let {
+    it == AppWindowClass.LandscapePhone || it == AppWindowClass.TabletPortrait || it == AppWindowClass.TabletLandscape
+}
+
+@Composable
+fun appIsTwoPane(): Boolean = appWindowClass() == AppWindowClass.TabletLandscape
 
 /**
  * The widest a page of content is allowed to be on a wide window: the reading

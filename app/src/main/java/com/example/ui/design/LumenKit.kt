@@ -4,6 +4,7 @@ import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.AnnotatedString
@@ -129,8 +130,10 @@ object LumenKit : AppKit {
         // Wide windows swap the bottom tab bar for a leading-edge rail with the
         // same destinations; the content then reserves the rail's width instead
         // of the bar's height.
-        val rail = appUsesNavigationRail()
-        val railInset = if (rail) railReserve(design.isSanctuary) else 0.dp
+        val compact = appIsLandscapePhone()
+        val safe = appSafeInsets()
+        val rail = appUsesNavigationRail() && (!compact || !chrome.dockHidden)
+        val railInset = if (rail) (if (compact) { if (design.isSanctuary) 76.dp else 80.dp } else railReserve(design.isSanctuary)) else 0.dp
 
         // Scroll-edge behaviour: at rest the bar is invisible and the large
         // title in the content is the title; once content scrolls under it,
@@ -175,7 +178,7 @@ object LumenKit : AppKit {
                     if (chrome.dockInset != bottom) chrome.dockInset = bottom
                     val inner = PaddingValues(
                         top = statusTop + if (effectiveBack != null) BarRow else 8.dp,
-                        bottom = bottom
+                        bottom = bottom, start = safe.start, end = safe.end
                     )
                     Box(Modifier.fillMaxSize()) {
                         // The ambient light and everything that scrolls are one
@@ -189,7 +192,7 @@ object LumenKit : AppKit {
                             // above the dock (and, without live blur, under the bar),
                             // so nothing ghosts through the glass or hides a band.
                             Box(
-                                Modifier.fillMaxSize().padding(start = railInset)
+                                Modifier.fillMaxSize().padding(start = railInset + safe.start, end = safe.end)
                                     .then(if (opaque) Modifier else Modifier.alphaMask {
                                         val h = size.height
                                         val fadeBottom = if (dockShown) (bottom + if (live) 0.dp else 26.dp).toPx() else 0f
@@ -246,8 +249,8 @@ object LumenKit : AppKit {
                         }
 
                         // The bar material, only once content has scrolled under it.
-                        if (design.opaqueMaterial()) {
-                            Column(Modifier.fillMaxWidth().padding(start = railInset).graphicsLayer { alpha = edge }) {
+                        if (!compact && design.opaqueMaterial()) {
+                            Column(Modifier.fillMaxWidth().padding(start = railInset + safe.start, end = safe.end).graphicsLayer { alpha = edge }) {
                                 Box(
                                     Modifier
                                         .fillMaxWidth()
@@ -271,12 +274,12 @@ object LumenKit : AppKit {
                                 }
                                 Box(Modifier.fillMaxWidth().height(0.5.dp).background(palette.separator))
                             }
-                        } else {
+                        } else if (!compact) {
                             // Progressive glass: with a live backdrop the content blurs
                             // under the status bar and clears below the title; without
                             // one it has already dissolved into the light (the mask above).
                             val veil = statusTop + BarRow + 28.dp
-                            Box(Modifier.fillMaxWidth().padding(start = railInset).height(veil).graphicsLayer { alpha = edge }) {
+                            Box(Modifier.fillMaxWidth().padding(start = railInset + safe.start, end = safe.end).height(veil).graphicsLayer { alpha = edge }) {
                                 if (live) {
                                     Box(
                                         Modifier.matchParentSize().alphaMask {
@@ -313,7 +316,7 @@ object LumenKit : AppKit {
                         Row(
                             Modifier
                                 .fillMaxWidth()
-                                .padding(start = railInset)
+                                .padding(start = railInset + safe.start, end = safe.end)
                                 .padding(top = statusTop)
                                 .height(BarRow)
                                 .padding(horizontal = design.spacing.gutter - 4.dp),
@@ -341,7 +344,10 @@ object LumenKit : AppKit {
                             )
                         }
 
-                        if (rail) Box(Modifier.align(Alignment.CenterStart)) { Rail(navItems, selectedNavIndex, onNavSelected, statusTop, navInset) }
+                        if (rail) Box(Modifier.align(Alignment.CenterStart).padding(start = safe.start)) {
+                            if (compact) CompactRail(navItems, selectedNavIndex, onNavSelected, statusTop, navInset)
+                            else Rail(navItems, selectedNavIndex, onNavSelected, statusTop, navInset)
+                        }
                     }
                 }
             }
@@ -622,6 +628,77 @@ object LumenKit : AppKit {
                 }
             }
             Box(Modifier.width(1.dp).fillMaxHeight().background(p.hairline))
+        }
+    }
+
+    /** Phone rail: 56 dp rows (72 only for a two-line caption), never tablet geometry. */
+    @Composable
+    private fun CompactRail(navItems: List<AppNavItem>, selectedNavIndex: Int, onNavSelected: (Int) -> Unit,
+                            topInset: Dp, bottomInset: Dp) {
+        val design = LocalAppDesign.current
+        val p = design.palette
+        val styles = LocalAppTextStyles.current
+        val density = LocalDensity.current
+        val measure = rememberTextMeasurer()
+        val sanctuary = design.isSanctuary
+        val reserve = if (sanctuary) 76.dp else 80.dp
+        val width = if (sanctuary) 72.dp else 64.dp
+        val inner = width - 12.dp
+        val heights = navItems.map { item ->
+            val text = measure.measure(item.label, styles.navLabel,
+                constraints = androidx.compose.ui.unit.Constraints(maxWidth = with(density) { inner.roundToPx() }))
+            maxOf(if (text.lineCount > 1) 72.dp else 56.dp, with(density) { text.size.height.toDp() } + 30.dp)
+        }
+        val available = (appWindowSize().height - topInset - bottomInset).coerceAtLeast(44.dp)
+        val scroll = rememberScrollState()
+        androidx.compose.runtime.LaunchedEffect(selectedNavIndex, available, heights) {
+            val start = with(density) { heights.take(selectedNavIndex).sumOf { it.toPx().toDouble() }.toInt() }
+            val end = start + with(density) { heights.getOrElse(selectedNavIndex) { 56.dp }.roundToPx() }
+            val viewport = with(density) { available.roundToPx() }
+            val target = when { start < scroll.value -> start; end > scroll.value + viewport -> end - viewport; else -> scroll.value }
+            scroll.scrollTo(target.coerceAtLeast(0))
+        }
+        val still = design.reduceMotion || androidx.compose.ui.platform.LocalInspectionMode.current
+        val lensTop by androidx.compose.animation.core.animateDpAsState(
+            heights.take(selectedNavIndex.coerceAtLeast(0)).fold(0.dp) { total, value -> total + value },
+            if (still) androidx.compose.animation.core.snap() else androidx.compose.animation.core.spring(dampingRatio = 0.74f, stiffness = 380f), label = "compactRailLens")
+        val lensHeight by androidx.compose.animation.core.animateDpAsState(heights.getOrElse(selectedNavIndex) { 56.dp },
+            if (still) androidx.compose.animation.core.snap() else androidx.compose.animation.core.spring(), label = "compactRailLensHeight")
+        val shape = RoundedCornerShape(32.dp)
+        Box(Modifier.width(reserve).fillMaxHeight()
+            .then(if (sanctuary) Modifier.background(p.glassStrong) else Modifier)
+            .padding(top = topInset, bottom = bottomInset), contentAlignment = Alignment.Center) {
+            Box(Modifier.width(width).heightIn(max = available).testTag("navigation_rail")
+                .clip(if (sanctuary) androidx.compose.ui.graphics.RectangleShape else shape)) {
+                if (!sanctuary) Box(Modifier.matchParentSize()) {
+                    val live = LocalLiquidBackdrop.current != null
+                    LiquidBackdropFill(shape, Modifier.matchParentSize(), blur = 22.dp, cornerRadius = 32.dp)
+                    Box(Modifier.matchParentSize().liquidPane(shape, design.chromeGlassSpec(live)))
+                }
+                Box(Modifier.fillMaxWidth().verticalScroll(scroll)) {
+                    if (!sanctuary && navItems.isNotEmpty()) Box(Modifier.fillMaxWidth().padding(horizontal = 4.dp)
+                        .height(lensHeight).offset(y = lensTop + 4.dp)
+                        .liquidPane(RoundedCornerShape(28.dp), design.glassSpec(GlassRole.Thumb)))
+                Column(Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
+                    navItems.forEachIndexed { index, item ->
+                        val active = index == selectedNavIndex
+                        val tint = if (active && design.opaqueMaterial() && !sanctuary) p.onAction else if (active) p.accent else p.textSecondary
+                        val rowShape = RoundedCornerShape(if (sanctuary) 4.dp else 28.dp)
+                        Column(Modifier.fillMaxWidth().height(heights[index]).padding(horizontal = 4.dp)
+                            .clip(rowShape).lumenPress({ onNavSelected(index) }, role = Role.Tab)
+                            .semantics { selected = active }.testTag(item.tag),
+                            horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+                            Icon(if (active) solidGlyph(item.selectedIcon) else item.icon, null, tint = tint, modifier = Modifier.size(22.dp))
+                            Spacer(Modifier.height(2.dp))
+                            Text(item.label, style = styles.navLabel.copy(fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
+                                color = tint, textAlign = TextAlign.Center)
+                            if (sanctuary) Box(Modifier.padding(top = 2.dp).width(20.dp).height(2.dp).background(if (active) p.accent else Color.Transparent))
+                        }
+                    }
+                }
+                }
+            }
+            if (sanctuary) Box(Modifier.align(Alignment.CenterEnd).width(0.5.dp).fillMaxHeight().background(p.hairline))
         }
     }
 

@@ -11,6 +11,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
@@ -352,6 +353,10 @@ private fun AppHeaderFrame(
     overlap: Dp = 0.dp,
     actions: @Composable RowScope.() -> Unit = {}
 ) {
+    if (appHasCompactHeight() && (assetPath != null || imageUrl != null)) {
+        AppCompactHeader(title, root, modifier, assetPath, imageUrl, eyebrow, meta, metaIcon, titleTag, actions)
+        return
+    }
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
@@ -1270,3 +1275,57 @@ fun AppActionBarItem(icon: ImageVector, contentDescription: String, onClick: () 
 
 /** Blend helper for screens: [a] toward [b] by [t]. */
 fun lumenMix(a: Color, b: Color, t: Float): Color = lerp(a, b, t)
+
+/** Automatic, scrolling fallback for screens not yet migrated to a side panel. */
+@Composable
+private fun AppCompactHeader(
+    title: String, root: Boolean, modifier: Modifier, assetPath: String?, imageUrl: String?,
+    eyebrow: String?, meta: String?, metaIcon: ImageVector?, titleTag: String?,
+    actions: @Composable RowScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val top = statusBarHeight()
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val measurer = androidx.compose.ui.text.rememberTextMeasurer()
+    BoxWithConstraints(modifier.fillMaxWidth().height(top + 84.dp)) {
+        val titleWidth = with(density) { (maxWidth - design.spacing.gutter * 2).roundToPx() }
+        val candidate = if (root) styles.largeTitle else styles.title1
+        val measured = measurer.measure(title, candidate, constraints = androidx.compose.ui.unit.Constraints(maxWidth = titleWidth))
+        val style = if (root && measured.lineCount > 1) styles.title1 else candidate
+        if (assetPath != null || imageUrl != null) {
+            Box(Modifier.matchParentSize().then(if (design.isSanctuary) Modifier.padding(horizontal = design.spacing.gutter, vertical = 4.dp)
+                .border(0.75.dp, p.hairline, design.shapes.thumbnail).padding(5.dp).clip(design.shapes.thumbnail) else Modifier)
+                .fadeOutBottom(0.45f).then(if (!design.opaqueMaterial()) Modifier.fadeSides(24.dp) else Modifier)) {
+                if (imageUrl.isNullOrBlank()) AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeStart = 0.15f)
+                else AppRemoteImage(imageUrl, assetPath, Modifier.fillMaxSize())
+                // Compact text must remain readable even over a bright painting.
+                Box(Modifier.matchParentSize().background(Brush.verticalGradient(0f to p.canvasTop.copy(alpha = 0.90f),
+                    0.5f to p.canvasTop.copy(alpha = 0.94f), 0.8f to p.canvasTop.copy(alpha = 0.40f), 1f to Color.Transparent)))
+            }
+        }
+        androidx.compose.ui.layout.Layout(content = {
+            Text(title, style = style, color = p.textPrimary, modifier = Modifier.semantics { heading() }.tagged(titleTag))
+            Column {
+                if (eyebrow != null) Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
+                if (meta != null) Row(verticalAlignment = Alignment.CenterVertically) {
+                    if (metaIcon != null) { Icon(metaIcon, null, tint = p.textSecondary, modifier = Modifier.size(16.dp)); Spacer(Modifier.width(6.dp)) }
+                    Text(meta, style = styles.subhead, color = p.textSecondary)
+                }
+            }
+            Row(horizontalArrangement = Arrangement.spacedBy(4.dp), content = actions)
+        }, modifier = Modifier.fillMaxSize().testTag("compact_header")) { nodes, constraints ->
+            val gutter = design.spacing.gutter.roundToPx()
+            val loose = constraints.copy(minWidth = 0, minHeight = 0)
+            val action = nodes[2].measure(loose.copy(maxWidth = (constraints.maxWidth - gutter * 2).coerceAtLeast(0)))
+            val heading = nodes[0].measure(loose.copy(maxWidth = titleWidth))
+            val caption = nodes[1].measure(loose.copy(maxWidth = (titleWidth - action.width - 8.dp.roundToPx()).coerceAtLeast(0)))
+            layout(constraints.maxWidth, constraints.maxHeight) {
+                heading.placeRelative(gutter, constraints.maxHeight - 14.dp.roundToPx() - heading[androidx.compose.ui.layout.LastBaseline])
+                caption.placeRelative(gutter, top.roundToPx() + 4.dp.roundToPx())
+                action.placeRelative(constraints.maxWidth - gutter - action.width, top.roundToPx() + 4.dp.roundToPx())
+            }
+        }
+    }
+}

@@ -16,6 +16,11 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.displayCutout
+import androidx.compose.foundation.layout.union
+import androidx.compose.foundation.layout.calculateStartPadding
+import androidx.compose.foundation.layout.calculateEndPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.Stable
@@ -182,7 +187,7 @@ fun Modifier.lumenCanvas(): Modifier {
 @Stable
 class ScreenFrame {
     var edgeToEdge by mutableStateOf(false)
-    /** Insets an edge-to-edge screen must respect: status bar (+ back row) and the floating dock. */
+    /** Insets an edge-to-edge screen must respect: status/back row, dock and safe start/end edges. */
     var insets by mutableStateOf(PaddingValues(0.dp))
     /** How many parts of the screen currently claim the full width (see [AppFullWidth]). */
     internal var fullWidthClaims by mutableIntStateOf(0)
@@ -242,6 +247,19 @@ fun appScreenInsets(): PaddingValues {
 /** Height of the status bar, for content that draws under it. */
 @Composable
 fun statusBarHeight(): Dp = WindowInsets.statusBars.asPaddingValues().calculateTopPadding()
+
+/** Safe drawing edges (physical bars/cutout, not the much wider gesture zones). */
+data class AppSafeInsets(val start: Dp, val top: Dp, val end: Dp, val bottom: Dp) {
+    fun asPaddingValues() = PaddingValues(start = start, top = top, end = end, bottom = bottom)
+}
+
+@Composable
+fun appSafeInsets(): AppSafeInsets {
+    val direction = androidx.compose.ui.platform.LocalLayoutDirection.current
+    val bars = WindowInsets.statusBars.union(WindowInsets.navigationBars).union(WindowInsets.displayCutout).asPaddingValues()
+    return AppSafeInsets(bars.calculateStartPadding(direction), bars.calculateTopPadding(),
+        bars.calculateEndPadding(direction), bars.calculateBottomPadding())
+}
 
 // ------------------------------------------------------------ back override
 

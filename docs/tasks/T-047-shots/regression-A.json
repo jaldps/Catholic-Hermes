@@ -1,0 +1,182 @@
+[
+  {
+    "screen": "bible",
+    "identity": "lumen",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "739774b74f803ebcc0c4727e01e669d69161e0fb8e6b9bbc71306e494dc00dec",
+    "actual_pixels_sha256": "739774b74f803ebcc0c4727e01e669d69161e0fb8e6b9bbc71306e494dc00dec"
+  },
+  {
+    "screen": "bible",
+    "identity": "sanctuary",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "f62aef77df71620b5a36de886387cb6d71823ccbcd21231023b9de7d53f57787",
+    "actual_pixels_sha256": "f62aef77df71620b5a36de886387cb6d71823ccbcd21231023b9de7d53f57787"
+  },
+  {
+    "screen": "home",
+    "identity": "lumen",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "167359acb5f8d60244df4b3254a45f752811a997a9a00716fec0408f848a33e1",
+    "actual_pixels_sha256": "167359acb5f8d60244df4b3254a45f752811a997a9a00716fec0408f848a33e1"
+  },
+  {
+    "screen": "home",
+    "identity": "sanctuary",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "d523b5b69706f229adab22a4dddf86d27d47a599ad18f45f7cb294d80414a933",
+    "actual_pixels_sha256": "d523b5b69706f229adab22a4dddf86d27d47a599ad18f45f7cb294d80414a933"
+  },
+  {
+    "screen": "more",
+    "identity": "lumen",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "0e6eb6767a6974cc8cb4a5886f8694b75a92c5868a4241bd370a0d0580e7ac46",
+    "actual_pixels_sha256": "0e6eb6767a6974cc8cb4a5886f8694b75a92c5868a4241bd370a0d0580e7ac46"
+  },
+  {
+    "screen": "more",
+    "identity": "sanctuary",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "7599bbdb648f72b586d157300fe9d623096e25b98e65627ad56658f8d951b92f",
+    "actual_pixels_sha256": "7599bbdb648f72b586d157300fe9d623096e25b98e65627ad56658f8d951b92f"
+  },
+  {
+    "screen": "my_path",
+    "identity": "lumen",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "2570434972d7cee8ca7667b69ea3603b8805553604e75f3a6affdfe8f672d696",
+    "actual_pixels_sha256": "2570434972d7cee8ca7667b69ea3603b8805553604e75f3a6affdfe8f672d696"
+  },
+  {
+    "screen": "my_path",
+    "identity": "sanctuary",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "cc77c746101a676bb19734875bbec763900d53487376b22ea62dffb7befadbdc",
+    "actual_pixels_sha256": "cc77c746101a676bb19734875bbec763900d53487376b22ea62dffb7befadbdc"
+  },
+  {
+    "screen": "prayers",
+    "identity": "lumen",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "c7a0c30a5a3ea7e0c7c3c23e31417a8e074a0cd52aa1e40a6813ca64cf33cdfc",
+    "actual_pixels_sha256": "c7a0c30a5a3ea7e0c7c3c23e31417a8e074a0cd52aa1e40a6813ca64cf33cdfc"
+  },
+  {
+    "screen": "prayers",
+    "identity": "sanctuary",
+    "size": "411x891",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "9597e2735b13cdc7c7b3c0e6bd5af2f7ad38a45a4379e7e11c5a05bec0133955",
+    "actual_pixels_sha256": "9597e2735b13cdc7c7b3c0e6bd5af2f7ad38a45a4379e7e11c5a05bec0133955"
+  },
+  {
+    "screen": "bible",
+    "identity": "lumen",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "1939acf38e90449af5c1b806179065dc9d0c41974972afb6c41c0328946e656e",
+    "actual_pixels_sha256": "1939acf38e90449af5c1b806179065dc9d0c41974972afb6c41c0328946e656e"
+  },
+  {
+    "screen": "bible",
+    "identity": "sanctuary",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "97da35a36c996f42476be0762f87671d6dbbd167585d0b267e189b31da6638bb",
+    "actual_pixels_sha256": "97da35a36c996f42476be0762f87671d6dbbd167585d0b267e189b31da6638bb"
+  },
+  {
+    "screen": "home",
+    "identity": "lumen",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "5a4950ca3d1326b64efd65a2f49bb7efd6ee6a04f71ee31ec5508dcd8d7d0667",
+    "actual_pixels_sha256": "5a4950ca3d1326b64efd65a2f49bb7efd6ee6a04f71ee31ec5508dcd8d7d0667"
+  },
+  {
+    "screen": "home",
+    "identity": "sanctuary",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "5b7899d5eaa0e7c0d489a4686f70accba201d0d72f274c22ca6a981e19d770fd",
+    "actual_pixels_sha256": "5b7899d5eaa0e7c0d489a4686f70accba201d0d72f274c22ca6a981e19d770fd"
+  },
+  {
+    "screen": "more",
+    "identity": "lumen",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "26bdec534e96e5f1dd47b41b3d58f2532a73dbac6fe477bbcc4c03c0b58dca6c",
+    "actual_pixels_sha256": "26bdec534e96e5f1dd47b41b3d58f2532a73dbac6fe477bbcc4c03c0b58dca6c"
+  },
+  {
+    "screen": "more",
+    "identity": "sanctuary",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "61f1380b3c948493b6a1bd99ff812f12f957002ba6180153b1c2927d6b0df73f",
+    "actual_pixels_sha256": "61f1380b3c948493b6a1bd99ff812f12f957002ba6180153b1c2927d6b0df73f"
+  },
+  {
+    "screen": "my_path",
+    "identity": "lumen",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "d0fad00cd8248c25e127f4b6a4ec5516b4c1f63e3cb2f83b3f553706ed8676a4",
+    "actual_pixels_sha256": "d0fad00cd8248c25e127f4b6a4ec5516b4c1f63e3cb2f83b3f553706ed8676a4"
+  },
+  {
+    "screen": "my_path",
+    "identity": "sanctuary",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "7eb37dbf819367de8f1a3154058ebf5d9a72ea413f7e4915e6eaf4baaac25802",
+    "actual_pixels_sha256": "7eb37dbf819367de8f1a3154058ebf5d9a72ea413f7e4915e6eaf4baaac25802"
+  },
+  {
+    "screen": "prayers",
+    "identity": "lumen",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "e16d65bc06e936a406d9ac40fc920ce38c89ea0d08747319c27f84020ea45b37",
+    "actual_pixels_sha256": "e16d65bc06e936a406d9ac40fc920ce38c89ea0d08747319c27f84020ea45b37"
+  },
+  {
+    "screen": "prayers",
+    "identity": "sanctuary",
+    "size": "1280x800",
+    "different_pixels": 0,
+    "bounds": null,
+    "base_pixels_sha256": "a21108e07801509df06ab97da4e809f9ff8151ca04c7a4d1f95b0cde44c157cb",
+    "actual_pixels_sha256": "a21108e07801509df06ab97da4e809f9ff8151ca04c7a4d1f95b0cde44c157cb"
+  }
+]

@@ -447,11 +447,14 @@ fun MainApp(
     }
     val design = LocalAppDesign.current
     val wide = com.example.ui.design.appUsesNavigationRail()
-    val columnMax = with(androidx.compose.ui.platform.LocalDensity.current) { com.example.ui.design.appContentMaxWidth().roundToPx() }
+    val columnMax = with(androidx.compose.ui.platform.LocalDensity.current) {
+        (if (com.example.ui.design.appIsLandscapePhone()) 680.dp else com.example.ui.design.appContentMaxWidth()).roundToPx()
+    }
     val tabs = AppDestination.tabs
     val isPushed = stack.isNotEmpty() || current !in tabs
 
-    val compactNavigation = androidx.compose.ui.platform.LocalConfiguration.current.screenWidthDp <= 360
+    val compactNavigation = androidx.compose.ui.platform.LocalConfiguration.current.screenWidthDp <= 360 ||
+        (com.example.ui.design.appIsLandscapePhone() && com.example.ui.design.appLargeText())
     val largeNavigationText = LocalAppTextStyles.current.navLabel.fontSize.value * androidx.compose.ui.platform.LocalDensity.current.fontScale > 18f
     val navItems = tabs.map { destination ->
         val (resting, active) = AppIcons.pair(destination.iconSlot)

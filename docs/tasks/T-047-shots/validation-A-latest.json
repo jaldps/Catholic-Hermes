@@ -1,0 +1,88 @@
+{
+  "classes": {
+    "com.example.ReaderFontChoiceTest": {
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.NarrowLargeTextAuditTest": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.LandscapeFoundationsTest": {
+      "tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.MyPathUiTest": {
+      "tests": 13,
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.RosaryInteractionTest": {
+      "tests": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.AppNavigationTest": {
+      "tests": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.FontPreferencesTest": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.screenshots.FullAppScreenshotTest": {
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.TabletLayoutTest": {
+      "tests": 44,
+      "passed": 44,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.FontTypographyTest": {
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.DesignNavigationTest": {
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.DesignContrastTest": {
+      "tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    "com.example.FontPickerInteractionTest": {
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "totals": {
+    "tests": 116,
+    "passed": 116,
+    "failed": 0,
+    "skipped": 0
+  }
+}

@@ -5,6 +5,8 @@ import android.graphics.Canvas
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
@@ -52,12 +54,19 @@ class FullAppScreenshotTest {
 
     private val previousTimeZone = TimeZone.getDefault()
 
-    private val widthDp = System.getProperty("shots.width")?.toIntOrNull()?.coerceIn(320, 1280) ?: 411
-    private val heightDp = System.getProperty("shots.height")?.toIntOrNull()?.coerceIn(640, 1600) ?: 891
+    private val landscape = System.getProperty("shots.landscape") == "true"
+    private var widthDp = System.getProperty("shots.width")?.toIntOrNull()?.coerceIn(320, 1280) ?: if (landscape) 891 else 411
+    private var heightDp = System.getProperty("shots.height")?.toIntOrNull()?.coerceIn(320, 1600) ?: if (landscape) 411 else 891
+    private val ime = System.getProperty("shots.ime")?.let { it != "false" } ?: false
+    private val cutout = System.getProperty("shots.cutout")
+    private val navbar = System.getProperty("shots.navbar")
+
+    private fun qualifiers() = "w${widthDp}dp-h${heightDp}dp-${if (landscape) "land-" else ""}xhdpi"
+
 
     @Before fun useReviewTimeZone() {
         if (widthDp != 411 || heightDp != 891) {
-            org.robolectric.RuntimeEnvironment.setQualifiers("w${widthDp}dp-h${heightDp}dp-xhdpi")
+            org.robolectric.RuntimeEnvironment.setQualifiers(qualifiers())
         }
         // Keep date-sensitive UI aligned with this review's client timezone,
         // rather than letting the UTC build host advance the liturgical day.
@@ -89,6 +98,18 @@ class FullAppScreenshotTest {
     private val modeFilter = System.getProperty("shots.mode")?.trim()?.lowercase()
 
     private fun render(identity: DesignLanguage, dark: Boolean) {
+        val viewports = if (landscape && System.getProperty("shots.width") == null) listOf(891 to 411, 800 to 360) else listOf(widthDp to heightDp)
+        for ((width, height) in viewports) {
+            widthDp = width; heightDp = height
+            if (landscape) {
+                org.robolectric.RuntimeEnvironment.setQualifiers(qualifiers())
+                compose.runOnUiThread { compose.activity.onConfigurationChanged(compose.activity.resources.configuration) }
+            }
+            renderViewport(identity, dark)
+        }
+    }
+
+    private fun renderViewport(identity: DesignLanguage, dark: Boolean) {
         if (identityFilter != "all" && identity.id.lowercase() != identityFilter &&
             !(identityFilter == "apple" && identity == DesignLanguage.APPLE)) return
         if (modeFilter != null && modeFilter != (if (dark) "dark" else "light")) return
@@ -113,20 +134,22 @@ class FullAppScreenshotTest {
             audioNarrationSpeed = 1f,
             activeBibleTranslationId = "",
             isFullCccDownloaded = false,
+            reduceTransparency = System.getProperty("shots.opaque") == "true",
             hasChosenLanguage = true
         )
 
         try {
             // One composition per test lets the Compose rule track recomposition,
             // effects, and header registration before the native Canvas capture.
-            compose.setContent {
+            val appContent: @Composable () -> Unit = {
                 if (renderApp) {
                     SanctaFidesTheme(
                         designLanguage = prefs.designLanguage,
                         themePreset = prefs.themePreset,
                         darkModeSetting = prefs.darkModeSetting,
                         fontFamilyChoice = prefs.fontFamilyChoice,
-                        fontScale = prefs.fontSizeScale
+                        fontScale = prefs.fontSizeScale,
+                        reduceTransparency = prefs.reduceTransparency
                     ) {
                         // Holds looping ornament still so Compose can become idle.
                         CompositionLocalProvider(LocalInspectionMode provides true) {
@@ -144,6 +167,10 @@ class FullAppScreenshotTest {
                     }
                 }
             }
+            // A landscape method captures two viewports. Activity.setContent
+            // supports remounting; the Compose rule allows setContent only once.
+            if (landscape) compose.runOnUiThread { compose.activity.setContent(content = appContent) }
+            else compose.setContent(appContent)
             val w = widthDp * 2
             val h = heightDp * 2
             for (destination in destinations) {
@@ -156,6 +183,10 @@ class FullAppScreenshotTest {
                     renderApp = true
                 }
                 compose.waitForIdle()
+                if (landscape) {
+                    compose.runOnUiThread { com.example.LandscapeInsetsHarness.dispatch(compose.activity, heightDp, ime, cutout, navbar) }
+                    compose.waitForIdle()
+                }
                 // Bundled art decodes on Dispatchers.IO: give it time to land so a
                 // cold cache never captures the canvas without its hero.
                 Thread.sleep(2500)
@@ -175,6 +206,10 @@ class FullAppScreenshotTest {
                     view.layout(0, 0, w, h)
                 }
                 compose.waitForIdle()
+                if (landscape) {
+                    compose.runOnUiThread { com.example.LandscapeInsetsHarness.dispatch(compose.activity, heightDp, ime, cutout, navbar) }
+                    compose.waitForIdle()
+                }
                 val bitmap = compose.runOnIdle {
                     val view = appComposeView()
                     check(view.width == w && view.height == h) {
@@ -189,7 +224,9 @@ class FullAppScreenshotTest {
                 val suffix = (if (language == AppLanguage.EN) "" else "_${language.code}") +
                     (if (prefs.fontFamilyChoice == UserPreferences.DEFAULT_FONT_FAMILY) "" else "_font_${prefs.fontFamilyChoice.lowercase()}") +
                     (if (prefs.fontSizeScale == 1f) "" else "_scale_${(prefs.fontSizeScale * 100).toInt()}") +
-                    (if (widthDp == 411 && heightDp == 891) "" else "_w${widthDp}_h${heightDp}")
+                    (if (widthDp == 411 && heightDp == 891) "" else "_w${widthDp}_h${heightDp}") +
+                    (if (ime) "_ime" else "") + (cutout?.let { "_cut${it.first().uppercase()}" } ?: "") +
+                    (navbar?.let { "_nav${it.first().uppercase()}" } ?: "") + (if (prefs.reduceTransparency) "_opaque" else "")
                 val file = File(outputDir, "${name}_${identity.id.lowercase()}_${if (dark) "dark" else "light"}$suffix.png")
                 file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
                 println("WROTE ${file.absolutePath}")
