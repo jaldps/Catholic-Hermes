@@ -543,7 +543,12 @@ fun AppSupportingPaneLayout(
             .testTag("app_supporting_panel").semantics { isTraversalGroup = true; traversalIndex = if (supportingSide == AppPaneSide.Start) 0f else 1f }) { supporting() }
         }
         Box(Modifier.fillMaxSize().onFocusChanged { mainFocused = it.hasFocus }.focusGroup()
-            .testTag("app_supporting_main").semantics { isTraversalGroup = true; traversalIndex = if (supportingSide == AppPaneSide.Start) 1f else 0f }) { main() }
+            .testTag("app_supporting_main").semantics { isTraversalGroup = true; traversalIndex = if (supportingSide == AppPaneSide.Start) 1f else 0f }
+            .then(if (landscape) Modifier.padding(top = safe.top).clipToBounds().layout { measurable, c ->
+                val top = safe.top.roundToPx()
+                val child = measurable.measure(c.copy(minHeight = c.minHeight + top, maxHeight = c.maxHeight + top))
+                layout(c.maxWidth, c.maxHeight) { child.placeRelative(0, -top) }
+            } else Modifier)) { main() }
         androidx.compose.foundation.layout.Column { endActions?.invoke(this) }
         Row(Modifier.padding(start = 20.dp, end = 20.dp, bottom = if (landscape) safe.bottom else 0.dp), horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End, verticalAlignment = Alignment.CenterVertically) { supportingFooter?.invoke(this) }
         Row(Modifier.padding(start = 20.dp, end = 20.dp, bottom = if (landscape) safe.bottom else 0.dp), horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End, verticalAlignment = Alignment.CenterVertically) { mainFooter?.invoke(this) }
@@ -563,13 +568,17 @@ fun AppSupportingPaneLayout(
         val panelWidth = if (split) supportingWidth.resolve(width.toDp()).roundToPx().coerceAtMost(width - 220.dp.roundToPx()) else 0
         val measurePanelWidth = if (split) panelWidth else supportingWidth.resolve(width.toDp()).roundToPx().coerceAtMost(width)
         val loose = constraints.copy(minWidth = 0, minHeight = 0)
-        val actions = children[2].measure(loose.copy(maxWidth = if (split && endActions != null) 56.dp.roundToPx() else 0))
+        val actionsTop = if (landscape) (safe.top + 4.dp).roundToPx() else 0
+        val actions = children[2].measure(loose.copy(maxWidth = if (split && endActions != null) 56.dp.roundToPx() else 0,
+            maxHeight = if (landscape) (height - actionsTop - (safe.bottom + 4.dp).roundToPx()).coerceAtLeast(0) else height))
         val mainWidth = width - panelWidth - actions.width
         val footHeight = if (landscape) (56.dp + safe.bottom).roundToPx() else 0
         val supportKeyboard = if (landscape && supportFocused) (keyboard - safe.bottom).coerceAtLeast(0.dp).roundToPx() else 0
         val mainKeyboard = if (landscape && mainFocused) (keyboard - safe.bottom).coerceAtLeast(0.dp).roundToPx() else 0
         val panelFooterHeight = if (split && supportingFooter != null) footHeight else 0
         val mainFooterHeight = if (landscape && mainFooter != null) footHeight else 0
+        val panelSafeBottom = if (landscape && supportingFooter == null) safe.bottom.roundToPx() else 0
+        val mainSafeBottom = if (landscape && mainFooter == null) safe.bottom.roundToPx() else 0
         val panelFoot = children[3].measure(loose.copy(minWidth = measurePanelWidth, maxWidth = measurePanelWidth,
             minHeight = if (supportingFooter != null) maxOf(56.dp.roundToPx(), footHeight) else 0,
             maxHeight = if (supportingFooter != null) maxOf(56.dp.roundToPx(), footHeight) else 0))
@@ -577,9 +586,9 @@ fun AppSupportingPaneLayout(
             minHeight = if (mainFooter != null) maxOf(56.dp.roundToPx(), footHeight) else 0,
             maxHeight = if (mainFooter != null) maxOf(56.dp.roundToPx(), footHeight) else 0))
         val panel = children[0].measure(androidx.compose.ui.unit.Constraints.fixed(measurePanelWidth,
-            (height - panelFooterHeight - supportKeyboard).coerceAtLeast(0)))
+            (height - panelFooterHeight - panelSafeBottom - supportKeyboard).coerceAtLeast(0)))
         val body = children[1].measure(androidx.compose.ui.unit.Constraints.fixed(mainWidth,
-            (height - mainFooterHeight - mainKeyboard).coerceAtLeast(0)))
+            (height - mainFooterHeight - mainSafeBottom - mainKeyboard).coerceAtLeast(0)))
         val spine = children[5].measure(loose.copy(maxWidth = 4.dp.roundToPx(), minHeight = height))
         layout(width, height) {
             val mainX = if (split && supportingSide == AppPaneSide.Start) panelWidth else 0
@@ -589,7 +598,7 @@ fun AppSupportingPaneLayout(
                 panel.placeRelative(panelX, 0)
                 spine.placeRelative(if (supportingSide == AppPaneSide.Start) panelWidth - spine.width else mainWidth, 0)
                 if (supportingFooter != null) panelFoot.placeRelative(panelX, height - panelFoot.height - supportKeyboard)
-                if (endActions != null) actions.placeRelative(width - actions.width, 0)
+                if (endActions != null) actions.placeRelative(width - actions.width, actionsTop)
             }
             if (landscape && mainFooter != null) mainFoot.placeRelative(mainX, height - mainFoot.height - mainKeyboard)
         }
@@ -784,11 +793,16 @@ fun AppTwoPane(
             Box(Modifier.weight(1f)) { list {} }
         }
         androidx.compose.runtime.CompositionLocalProvider(LocalHeaderPlacement provides if (landscape) AppHeaderPlacement.DetailPane else AppHeaderPlacement.InList) {
-            androidx.compose.foundation.layout.Column(Modifier.fillMaxSize().testTag("two_pane_detail")
-                .semantics { isTraversalGroup = true; traversalIndex = 1f }) {
-                Box(Modifier.weight(1f)) { detail(state.selectedKey) }
-                if (onOpenReader != null) AppSecondaryButton(readerLabel, onOpenReader,
-                    modifier = Modifier.fillMaxWidth().testTag("detail_open_reader"))
+            BoxWithConstraints(Modifier.fillMaxSize().testTag("two_pane_detail")
+                .semantics { isTraversalGroup = true; traversalIndex = 1f }, contentAlignment = Alignment.TopCenter) {
+                val column = appContentMaxWidth()
+                androidx.compose.runtime.CompositionLocalProvider(LocalHeroSideFade provides (maxWidth > column)) {
+                    androidx.compose.foundation.layout.Column(Modifier.widthIn(max = column).fillMaxSize()) {
+                        Box(Modifier.weight(1f)) { detail(state.selectedKey) }
+                        if (onOpenReader != null) AppSecondaryButton(readerLabel, onOpenReader,
+                            modifier = Modifier.fillMaxWidth().testTag("detail_open_reader"))
+                    }
+                }
             }
         }
         Row(Modifier.fillMaxHeight()) {

@@ -99,6 +99,8 @@ class CompactPrayerGuidesTest(private val identity: DesignLanguage, private val 
             val view = compose.activity.findViewById<ViewGroup>(android.R.id.content).getChildAt(0)
             val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
             view.draw(Canvas(bitmap))
+            androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
+            view.draw(Canvas(bitmap))
             File("build/screenshots/compact-guides").apply { mkdirs() }
                 .resolve("guides_${identity.id}_${language.code}_${(scale * 100).toInt()}.png")
                 .outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }

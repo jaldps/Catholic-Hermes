@@ -80,6 +80,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.graphics.rememberGraphicsLayer
+import androidx.compose.ui.graphics.layer.drawLayer
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Brush
@@ -91,6 +95,7 @@ import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.boundsInWindow
+import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
@@ -133,6 +138,7 @@ private fun Modifier.tag(tag: String?): Modifier = if (tag == null) this else te
 class ChromeState {
     internal var dockHiders by mutableIntStateOf(0)
     internal val titles = mutableStateListOf<String>()
+    internal val statusArtwork = mutableStateListOf<HeaderStatusArtwork>()
     /** Bottom inset that clears the floating dock (or the nav bar when hidden). */
     var dockInset by mutableStateOf(0.dp)
     val dockHidden: Boolean get() = dockHiders > 0
@@ -140,6 +146,46 @@ class ChromeState {
 }
 
 val LocalChrome = staticCompositionLocalOf<ChromeState?> { null }
+
+internal class HeaderStatusArtwork(val source: LiquidBackdrop) {
+    var ready by mutableStateOf(false)
+    val softwarePicture = android.graphics.Picture()
+    var softwareReady by mutableStateOf(false)
+}
+
+/** Records only decorative art, so the scaffold can paint its status-bar strip independently of safe scrolling controls. */
+@Composable
+internal fun Modifier.appStatusArtwork(): Modifier {
+    val chrome = LocalChrome.current ?: return this
+    if (!appIsLandscapePhone()) return this
+    val layer = rememberGraphicsLayer()
+    val art = remember(layer) { HeaderStatusArtwork(LiquidBackdrop(layer)) }
+    DisposableEffect(chrome, art) {
+        chrome.statusArtwork.add(art)
+        onDispose { chrome.statusArtwork.remove(art) }
+    }
+    return onGloballyPositioned { art.source.origin = it.positionInRoot() }.drawWithContent {
+        if (drawContext.canvas.nativeCanvas.isHardwareAccelerated) {
+            layer.record { this@drawWithContent.drawContent() }
+            if (!art.ready) art.ready = true
+            drawLayer(layer)
+        } else {
+            // Bitmap screenshots and software windows cannot draw a RenderNode.
+            // Record the same decorative commands, without changing their content.
+            val original = drawContext.canvas
+            val recorded = art.softwarePicture.beginRecording(size.width.toInt().coerceAtLeast(1), size.height.toInt().coerceAtLeast(1))
+            try {
+                drawContext.canvas = androidx.compose.ui.graphics.Canvas(recorded)
+                drawContent()
+            } finally {
+                drawContext.canvas = original
+                art.softwarePicture.endRecording()
+            }
+            original.nativeCanvas.drawPicture(art.softwarePicture)
+            if (!art.softwareReady) art.softwareReady = true
+        }
+    }
+}
 
 /** Hides the floating tab bar while composed (immersive readers). */
 @Composable
@@ -532,6 +578,7 @@ fun AppSheet(
                             Spacer(Modifier.height(if (compact || footer != null) 16.dp else navInset + 16.dp))
                         }
                         Row(Modifier.fillMaxWidth().then(if (compact) Modifier.padding(horizontal = 16.dp) else Modifier),
+                            horizontalArrangement = if (compact) Arrangement.End else Arrangement.Start,
                             verticalAlignment = Alignment.CenterVertically) { footer?.invoke(this) }
                     }, modifier = modifier.then(if (compact) Modifier.width(width).height(height).offset { androidx.compose.ui.unit.IntOffset(drag.toInt(), 0) }
                         else Modifier.fillMaxWidth().heightIn(max = (LocalConfiguration.current.screenHeightDp * 0.9f).dp))

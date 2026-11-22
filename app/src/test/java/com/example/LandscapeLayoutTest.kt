@@ -138,4 +138,36 @@ class LandscapeLayoutTest {
         compose.runOnIdle { scale = 1.3f }; compose.waitForIdle()
         assertEquals("The measure follows effective user size", sans * 1.3f, compose.runOnIdle { measure }, 2f)
     }
+    @Test fun supportingContextWithoutFooterCanScrollItsLastLineAboveTheNavigationBar() {
+        launch(LandscapeShowcase.Supporting, DesignLanguage.SANCTUARY)
+        val context = compose.onNodeWithText(showcasePrayers.first().whenToPray.get(AppLanguage.ES)).performScrollTo()
+        assertTrue(context.getUnclippedBoundsInRoot().bottom.value <= 411f - 16f + 1f)
+    }
+    @Test fun readerPanelFooterReturnsToItsParentRoute() {
+        launch(LandscapeShowcase.Reader)
+        compose.onNodeWithTag("showcase_next").performClick()
+        compose.onNodeWithTag("showcase_reader_home").performClick()
+        compose.onNodeWithTag("showcase_exited").assertIsDisplayed()
+    }
+    @Test @Config(qualifiers = "w1280dp-h800dp-xhdpi") fun statefulListDetailKeepsTheTabletReadingColumnAt680Dp() {
+        launch(LandscapeShowcase.ListDetail)
+        assertEquals(360f, dp(bounds("two_pane_list").width), 1f)
+        val header = compose.onNodeWithTag("showcase_detail_header").getUnclippedBoundsInRoot()
+        assertEquals(680f, (header.right - header.left).value, 1f)
+    }
+    @Test @Config(qualifiers = "w600dp-h360dp-land-xhdpi") fun tightestLandscapeBoundaryRecordsTheIncompatibleMinimumWidths() {
+        launch(LandscapeShowcase.Hub)
+        compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, 360, cutout = "left", navbar = "right") }; compose.waitForIdle()
+        assertEquals(248f, dp(bounds("app_page_panel").width), 1f)
+        // 600 - rail80 - cutout32 - navbar48 - panel248 = 192.
+        // The approved 248 panel and 220 main minima cannot both fit here.
+        assertEquals(192f, dp(bounds("app_page_content").width), 1f)
+    }
+    @Test fun coverArtworkDrawsUnderTheStatusBarAtRest() {
+        launch(LandscapeShowcase.Hub)
+        val strip = bounds("status_header_artwork")
+        assertEquals(0f, dp(strip.top), 1f)
+        assertEquals(24f, dp(strip.height), 1f)
+        assertTrue(dp(bounds("showcase_primary").bottom) <= 411f - 16f)
+    }
 }

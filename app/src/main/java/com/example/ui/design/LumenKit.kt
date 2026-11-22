@@ -64,6 +64,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.graphics.layer.drawLayer
+import androidx.compose.ui.graphics.drawscope.translate
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -191,6 +195,15 @@ object LumenKit : AppKit {
                         val dockShown = !rail && !chrome.dockHidden
                         Box(Modifier.fillMaxSize().liquidBackdropSource(backdrop)) {
                             Box(Modifier.fillMaxSize().lumenCanvas())
+                            if (compact) Box(Modifier.fillMaxWidth().height(safe.top).clipToBounds().testTag("status_header_artwork").drawBehind {
+                                chrome.statusArtwork.forEach { art ->
+                                    translate(art.source.origin.x, art.source.origin.y) {
+                                        if (drawContext.canvas.nativeCanvas.isHardwareAccelerated) {
+                                            if (art.ready && !art.source.layer.isReleased) drawLayer(art.source.layer)
+                                        } else if (art.softwareReady) drawContext.canvas.nativeCanvas.drawPicture(art.softwarePicture)
+                                    }
+                                }
+                            })
                             // Scroll edges: content dissolves into the ambient light
                             // above the dock (and, without live blur, under the bar),
                             // so nothing ghosts through the glass or hides a band.

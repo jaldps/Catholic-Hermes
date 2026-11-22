@@ -1312,7 +1312,7 @@ private fun AppCompactHeader(
         val measured = measurer.measure(title, candidate, constraints = androidx.compose.ui.unit.Constraints(maxWidth = titleWidth))
         val style = if (root && measured.lineCount > 1) styles.title1 else candidate
         if (assetPath != null || imageUrl != null) {
-            Box(Modifier.matchParentSize().then(if (design.isSanctuary) Modifier.padding(horizontal = design.spacing.gutter, vertical = 4.dp)
+            Box(Modifier.matchParentSize().then(if (!design.isSanctuary) Modifier.appStatusArtwork() else Modifier).then(if (design.isSanctuary) Modifier.padding(horizontal = design.spacing.gutter, vertical = 4.dp)
                 .border(0.75.dp, p.hairline, design.shapes.thumbnail).padding(5.dp).clip(design.shapes.thumbnail) else Modifier)
                 .fadeOutBottom(0.45f).then(if (!design.opaqueMaterial()) Modifier.fadeSides(24.dp) else Modifier)) {
                 if (imageUrl.isNullOrBlank()) AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeStart = 0.15f)
@@ -1371,6 +1371,7 @@ private fun AppPanelHeader(
     val baseline = window.height * 0.46f - 14.dp
     val density = androidx.compose.ui.platform.LocalDensity.current
     val measurer = androidx.compose.ui.text.rememberTextMeasurer()
+    val hasArt = assetPath != null || imageUrl != null
     BoxWithConstraints(modifier.fillMaxWidth()) {
         val textWidth = with(density) { (maxWidth - design.spacing.gutter * 2).roundToPx() }
         val candidate = if (root) styles.largeTitle else styles.title1
@@ -1383,22 +1384,24 @@ private fun AppPanelHeader(
         androidx.compose.runtime.SideEffect { reportOverflow(with(density) { overflow.roundToPx() }) }
         val captionHeight = if (meta == null) 0.dp else with(density) { measurer.measure(meta, styles.subhead,
             constraints = androidx.compose.ui.unit.Constraints(maxWidth = textWidth)).size.height.toDp() }
-        val hasArt = assetPath != null || imageUrl != null
-        val paperArt = if (design.isSanctuary && hasArt) maxOf(window.height * 0.46f - 72.dp, 96.dp) + 8.dp else 0.dp
         val panelHeight = LocalHeaderPanelHeight.current.takeIf { it.value.isFinite() } ?: (window.height - safe.bottom)
+        val paperFrameHeight = maxOf(window.height * 0.46f - 72.dp, 96.dp)
+        val paperGap = if (design.isSanctuary && poster && artHeight + captionHeight + paperFrameHeight + 8.dp > panelHeight) 4.dp else 8.dp
+        val paperArt = if (design.isSanctuary && hasArt) paperFrameHeight + paperGap else 0.dp
         val height = if (poster) maxOf(panelHeight - 16.dp, artHeight + captionHeight + paperArt) + overflow
             else artHeight + captionHeight + paperArt + overflow
         Box(Modifier.fillMaxWidth().height(height).testTag("side_panel_header")) {
             val imageModifier = if (design.isSanctuary) {
-                Modifier.padding(horizontal = design.spacing.gutter).padding(top = artHeight + captionHeight + overflow + 8.dp)
-                    .fillMaxWidth().height(if (poster) (height - artHeight - captionHeight - overflow - 8.dp).coerceAtLeast(96.dp)
-                        else maxOf(window.height * 0.46f - 72.dp, 96.dp))
+                Modifier.padding(horizontal = design.spacing.gutter).padding(top = artHeight + captionHeight + overflow + paperGap)
+                    .fillMaxWidth().height(if (poster) (height - artHeight - captionHeight - overflow - paperGap).coerceAtLeast(96.dp)
+                        else paperFrameHeight)
                     .border(0.75.dp, p.hairline, design.shapes.thumbnail).padding(5.dp).clip(design.shapes.thumbnail)
             } else Modifier.fillMaxWidth().height(if (poster) height else artHeight + overflow)
+                .appStatusArtwork()
                 .then(if (!design.opaqueMaterial() && !design.isGlass) Modifier.fadeEnd(24.dp) else Modifier)
+                .fadeOutBottom(if (poster) ((height - 24.dp) / height).coerceIn(0f, 0.99f) else 0.30f)
             if (assetPath != null || imageUrl != null) Box(imageModifier) {
-                if (imageUrl.isNullOrBlank()) AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = !design.isSanctuary && !poster,
-                    fadeStart = 0.30f, topVeil = false)
+                if (imageUrl.isNullOrBlank()) AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = false, topVeil = false)
                 else AppRemoteImage(imageUrl, assetPath, Modifier.fillMaxSize())
                 if (design.isDark) Box(Modifier.matchParentSize().background(Color.Black.copy(alpha = 0.18f)))
                 if (!design.isSanctuary) {

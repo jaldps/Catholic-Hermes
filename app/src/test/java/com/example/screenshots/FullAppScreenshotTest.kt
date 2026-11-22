@@ -218,6 +218,10 @@ class FullAppScreenshotTest {
                     Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888).also {
                         // PixelCopy's redraw callback is not driven by Robolectric.
                         view.draw(Canvas(it))
+                        if (landscape) {
+                            androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
+                            view.draw(Canvas(it)) // Warm recorded decorative layers before the final native frame.
+                        }
                     }
                 }
                 val name = destination.name.lowercase()

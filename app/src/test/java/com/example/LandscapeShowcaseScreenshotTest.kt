@@ -79,7 +79,9 @@ class LandscapeShowcaseScreenshotTest {
                 val bitmap = compose.runOnIdle {
                     val view = compose.activity.findViewById<ViewGroup>(android.R.id.content).getChildAt(0) as ComposeView
                     check(view.width == w * 2 && view.height == h * 2)
-                    Bitmap.createBitmap(w * 2, h * 2, Bitmap.Config.ARGB_8888).also { view.draw(Canvas(it)) }
+                    Bitmap.createBitmap(w * 2, h * 2, Bitmap.Config.ARGB_8888).also {
+                        view.draw(Canvas(it)); androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications(); view.draw(Canvas(it))
+                    }
                 }
                 val suffix = (if (scale == 1f) "" else "_s${(scale * 100).toInt()}") +
                     (if (language == AppLanguage.PT) "_pt" else "") + (if (opaque) "_opaque" else "")

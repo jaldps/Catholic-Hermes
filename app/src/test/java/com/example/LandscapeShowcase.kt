@@ -59,7 +59,7 @@ internal fun LandscapeShowcaseScreen(showcase: LandscapeShowcase, language: AppL
                     if (exited > 0) AppLargeTitleHeader(language.ui("Orar", "Pray", "Orar"), titleTag = "showcase_exited")
                     else when (showcase) {
                         LandscapeShowcase.Hub -> ShowcaseHub(language)
-                        LandscapeShowcase.Reader -> ShowcaseReader(language)
+                        LandscapeShowcase.Reader -> ShowcaseReader(language, onExit = { exited++ })
                         LandscapeShowcase.Supporting -> ShowcaseSupporting(language)
                         LandscapeShowcase.ListDetail -> ShowcaseListDetail(language)
                     }
@@ -115,7 +115,7 @@ private fun ShowcaseHub(language: AppLanguage) {
 }
 
 @Composable
-private fun ShowcaseReader(language: AppLanguage, initialId: String? = null) {
+private fun ShowcaseReader(language: AppLanguage, initialId: String? = null, onExit: () -> Unit) {
     var selected by rememberSaveable(key = "showcase_reader_selection") { mutableIntStateOf(showcasePrayers.indexOfFirst { it.id == initialId }.coerceAtLeast(0)) }
     val prayer = showcasePrayers[selected]
     val styles = LocalAppTextStyles.current
@@ -126,7 +126,7 @@ private fun ShowcaseReader(language: AppLanguage, initialId: String? = null) {
     AppPageLayout(header = {
         AppDetailHeader(prayer.title.get(language), assetPath = "heroes/lumen/prayers_lily.jpg", meta = prayer.latinTitle, titleTag = "showcase_title")
     }, kind = AppPageKind.Reader, panelFooter = {
-        AppSecondaryButton(language.ui("Volver a Orar", "Back to Pray", "Voltar a Orar"), { selected = 0 }, modifier = Modifier.fillMaxWidth().testTag("showcase_reader_home"))
+        AppSecondaryButton(language.ui("Volver a Orar", "Back to Pray", "Voltar a Orar"), onExit, modifier = Modifier.fillMaxWidth().testTag("showcase_reader_home"))
     }, contentFooter = {
         AppSecondaryButton(language.ui("Anterior", "Previous", "Anterior"), { selected = (selected - 1).coerceAtLeast(0) }, selected > 0,
             modifier = Modifier.width(120.dp).testTag("showcase_previous"))
@@ -210,7 +210,7 @@ private fun ShowcaseListDetail(language: AppLanguage) {
     val palette = LocalAppDesign.current.palette
     if (readerOpen) {
         AppBackHandler { readerOpen = false }
-        ShowcaseReader(language, state.selectedKey)
+        ShowcaseReader(language, state.selectedKey, onExit = { readerOpen = false })
         return
     }
     AppTwoPane(state, listHeader = {

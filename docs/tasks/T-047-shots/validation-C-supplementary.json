@@ -1,0 +1,95 @@
+[
+  {
+    "phase": "c-geometry",
+    "classes": [
+      {
+        "class": "com.example.LandscapeGeometryTest",
+        "tests": 16,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "com.example.LandscapeShowcaseScreenshotTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  {
+    "phase": "c-classic",
+    "classes": [
+      {
+        "class": "com.example.LandscapeShowcaseScreenshotTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  {
+    "phase": "c-large-es",
+    "classes": [
+      {
+        "class": "com.example.LandscapeShowcaseScreenshotTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  {
+    "phase": "c-large-pt",
+    "classes": [
+      {
+        "class": "com.example.LandscapeShowcaseScreenshotTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  {
+    "phase": "c-opaque",
+    "classes": [
+      {
+        "class": "com.example.LandscapeShowcaseScreenshotTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "com.example.screenshots.FullAppScreenshotTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  {
+    "phase": "c-portuguese",
+    "classes": [
+      {
+        "class": "com.example.LandscapeShowcaseScreenshotTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "com.example.screenshots.FullAppScreenshotTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  }
+]
