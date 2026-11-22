@@ -160,4 +160,39 @@ WARN  partial delivery: 38 of 55
 38 files · 0 errors · 2 warnings
 ```
 
+
+
+## Lote 5 — CD-37, CD-40, CD-44, CD-45, CD-54, CD-17, CD-19, CD-20, CD-22
+
+Todas de `catholicdoors.com` (índice y fichas). Idioma fuente **EN**; ES/PT: traducción fiel de Hermes; derechos `Derechos: Catholic Doors Ministry`.
+
+| `id` | `sourceId` | URL |
+|---|---|---|
+| `santa-faz-coronilla` | CD-37 | https://www.catholicdoors.com/prayers/chaplets/chap07.htm |
+| `santo-nombre-coronilla` | CD-40 | https://www.catholicdoors.com/prayers/english6/p03527.htm |
+| `jesus-praga-coronilla` | CD-44 | https://www.catholicdoors.com/prayers/chaplets/chap14.htm |
+| `santisima-trinidad-coronilla` | CD-45 | https://www.catholicdoors.com/prayers/chaplets/chap04.htm |
+| `via-crucis-coronilla` | CD-54 | https://www.catholicdoors.com/prayers/chaplets/chap06.htm |
+| `santa-ana-coronilla` | CD-17 | https://www.catholicdoors.com/prayers/chaplets/chap12.htm |
+| `santa-dimpna-coronilla` | CD-19 | https://www.catholicdoors.com/prayers/chaplets/chap48.htm |
+| `cabrini-coronilla` | CD-20 | https://www.catholicdoors.com/prayers/chaplets/chap34.htm |
+| `santa-gertrudis-coronilla` | CD-22 | https://www.catholicdoors.com/prayers/chaplets/chap40.htm |
+
+### Incoherencias y decisiones
+
+- **CD-54:** la fuente anuncia 15 grupos de 3 cuentas pero enumera 14 estaciones; se modelan las 14 reales y se anota. La retirada de indulgencias por el Santo Oficio (1912) queda como dato histórico, no como norma vigente.
+- **CD-17:** sin instrumento (`beads: []`), tal como pide la spec.
+- **CD-19:** colores de las cuentas (rojo/blanco/verde) con sus significados literales; no se afirma ninguna curación.
+- **CD-37:** 6 cuentas grandes y 33 pequeñas; la fuente dice «How to pray the Chaplet of the Five Wounds» por error de cabecera, pero el cuerpo es de la Santa Faz.
+- **CD-45:** las Alabanzas Divinas se conservan como texto continuo; se mantiene la errata «make hast».
+
+### Validador acumulado (tras el lote 5)
+
+```
+$ python3 docs/tasks/tools/validate_chaplets.py --partial app/src/main/assets/chaplets/*.json
+WARN  coronilla-difuntos-45.json.beads[1]: steps cover 3 prayers for a group of 5 (explained in notes)
+WARN  partial delivery: 47 of 55
+47 files · 0 errors · 2 warnings
+```
+
 Ninguna todavía: las tres marcadas «verificar» (CD-47, CD-57, HZ-02) se han comprobado y se conservan con nota.: CD-47, CD-57 y HZ-02 (marcadas «verificar» en la especificación).

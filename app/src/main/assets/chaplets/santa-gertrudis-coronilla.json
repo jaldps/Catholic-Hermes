@@ -1,0 +1,281 @@
+{
+  "id": "santa-gertrudis-coronilla",
+  "sourceId": "CD-22",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de Santa Gertrudis",
+    "en": "Chaplet of Saint Gertrude",
+    "pt": "Coronilha de Santa Gertrudes"
+  },
+  "summary": {
+    "es": "Rosario con ofrenda de la Preciosa Sangre y dos oraciones al final de cada decena.",
+    "en": "Rosary with an offering of the Precious Blood and two prayers at the end of each decade.",
+    "pt": "Terço com oferta do Precioso Sangue e duas orações no fim de cada década."
+  },
+  "instrument": {
+    "es": "Rosario de 59 cuentas.",
+    "en": "59-bead rosary.",
+    "pt": "Terço de 59 contas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Eternal Father, I offer Thee the Most Precious Blood of Thy Divine Son, Jesus, in union with the Masses said throughout the world today, for all the holy souls in Purgatory, for sinners everywhere, for sinners in the universal Church, those in my own home, and within my family. Amen.",
+        "en": "Padre Eterno, te ofrezco la Preciosísima Sangre de tu Hijo divino, Jesús, en unión con las Misas celebradas hoy en todo el mundo, por todas las almas santas del Purgatorio, por los pecadores de todas partes, por los pecadores de la Iglesia universal, por los de mi propia casa y por los de mi familia. Amén.",
+        "pt": "Pai Eterno, ofereço-vos o Preciosíssimo Sangue do vosso Filho divino, Jesus, em união com as Missas ditas hoje em todo o mundo, por todas as almas santas do Purgatório, pelos pecadores de toda parte, pelos pecadores da Igreja universal, pelos da minha casa e pelos da minha família. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Most Sacred Heart of Jesus, open the hearts and minds of sinners to the truth and light of God, the Father.",
+        "en": "Sagrado Corazón de Jesús, abre los corazones y las mentes de los pecadores a la verdad y a la luz de Dios Padre.",
+        "pt": "Sagrado Coração de Jesus, abre os corações e as mentes dos pecadores à verdade e à luz de Deus Pai."
+      }
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Immaculate Heart of Mary, pray for the conversion of sinners and the world.",
+        "en": "Corazón Inmaculado de María, ruega por la conversión de los pecadores y del mundo.",
+        "pt": "Coração Imaculado de Maria, roga pela conversão dos pecadores e do mundo."
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Eternal Father, I offer Thee the Most Precious Blood of Thy Divine Son, Jesus, in union with the Masses said throughout the world today, for all the holy souls in Purgatory, for sinners everywhere, for sinners in the universal Church, those in my own home, and within my family. Amen.",
+        "en": "Padre Eterno, te ofrezco la Preciosísima Sangre de tu Hijo divino, Jesús, en unión con las Misas celebradas hoy en todo el mundo, por todas las almas santas del Purgatorio, por los pecadores de todas partes, por los pecadores de la Iglesia universal, por los de mi propia casa y por los de mi familia. Amén.",
+        "pt": "Pai Eterno, ofereço-vos o Preciosíssimo Sangue do vosso Filho divino, Jesus, em união com as Missas ditas hoje em todo o mundo, por todas as almas santas do Purgatório, pelos pecadores de toda parte, pelos pecadores da Igreja universal, pelos da minha casa e pelos da minha família. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Most Sacred Heart of Jesus, open the hearts and minds of sinners to the truth and light of God, the Father.",
+        "en": "Sagrado Corazón de Jesús, abre los corazones y las mentes de los pecadores a la verdad y a la luz de Dios Padre.",
+        "pt": "Sagrado Coração de Jesus, abre os corações e as mentes dos pecadores à verdade e à luz de Deus Pai."
+      }
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Immaculate Heart of Mary, pray for the conversion of sinners and the world.",
+        "en": "Corazón Inmaculado de María, ruega por la conversión de los pecadores y del mundo.",
+        "pt": "Coração Imaculado de Maria, roga pela conversão dos pecadores e do mundo."
+      }
+    },
+    {
+      "bead": 7,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Eternal Father, I offer Thee the Most Precious Blood of Thy Divine Son, Jesus, in union with the Masses said throughout the world today, for all the holy souls in Purgatory, for sinners everywhere, for sinners in the universal Church, those in my own home, and within my family. Amen.",
+        "en": "Padre Eterno, te ofrezco la Preciosísima Sangre de tu Hijo divino, Jesús, en unión con las Misas celebradas hoy en todo el mundo, por todas las almas santas del Purgatorio, por los pecadores de todas partes, por los pecadores de la Iglesia universal, por los de mi propia casa y por los de mi familia. Amén.",
+        "pt": "Pai Eterno, ofereço-vos o Preciosíssimo Sangue do vosso Filho divino, Jesus, em união com as Missas ditas hoje em todo o mundo, por todas as almas santas do Purgatório, pelos pecadores de toda parte, pelos pecadores da Igreja universal, pelos da minha casa e pelos da minha família. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Most Sacred Heart of Jesus, open the hearts and minds of sinners to the truth and light of God, the Father.",
+        "en": "Sagrado Corazón de Jesús, abre los corazones y las mentes de los pecadores a la verdad y a la luz de Dios Padre.",
+        "pt": "Sagrado Coração de Jesus, abre os corações e as mentes dos pecadores à verdade e à luz de Deus Pai."
+      }
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Immaculate Heart of Mary, pray for the conversion of sinners and the world.",
+        "en": "Corazón Inmaculado de María, ruega por la conversión de los pecadores y del mundo.",
+        "pt": "Coração Imaculado de Maria, roga pela conversão dos pecadores e do mundo."
+      }
+    },
+    {
+      "bead": 9,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 11,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "Eternal Father, I offer Thee the Most Precious Blood of Thy Divine Son, Jesus, in union with the Masses said throughout the world today, for all the holy souls in Purgatory, for sinners everywhere, for sinners in the universal Church, those in my own home, and within my family. Amen.",
+        "en": "Padre Eterno, te ofrezco la Preciosísima Sangre de tu Hijo divino, Jesús, en unión con las Misas celebradas hoy en todo el mundo, por todas las almas santas del Purgatorio, por los pecadores de todas partes, por los pecadores de la Iglesia universal, por los de mi propia casa y por los de mi familia. Amén.",
+        "pt": "Pai Eterno, ofereço-vos o Preciosíssimo Sangue do vosso Filho divino, Jesus, em união com as Missas ditas hoje em todo o mundo, por todas as almas santas do Purgatório, pelos pecadores de toda parte, pelos pecadores da Igreja universal, pelos da minha casa e pelos da minha família. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Most Sacred Heart of Jesus, open the hearts and minds of sinners to the truth and light of God, the Father.",
+        "en": "Sagrado Corazón de Jesús, abre los corazones y las mentes de los pecadores a la verdad y a la luz de Dios Padre.",
+        "pt": "Sagrado Coração de Jesus, abre os corações e as mentes dos pecadores à verdade e à luz de Deus Pai."
+      }
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Immaculate Heart of Mary, pray for the conversion of sinners and the world.",
+        "en": "Corazón Inmaculado de María, ruega por la conversión de los pecadores y del mundo.",
+        "pt": "Coração Imaculado de Maria, roga pela conversão dos pecadores e do mundo."
+      }
+    },
+    {
+      "bead": 11,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 13,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "Eternal Father, I offer Thee the Most Precious Blood of Thy Divine Son, Jesus, in union with the Masses said throughout the world today, for all the holy souls in Purgatory, for sinners everywhere, for sinners in the universal Church, those in my own home, and within my family. Amen.",
+        "en": "Padre Eterno, te ofrezco la Preciosísima Sangre de tu Hijo divino, Jesús, en unión con las Misas celebradas hoy en todo el mundo, por todas las almas santas del Purgatorio, por los pecadores de todas partes, por los pecadores de la Iglesia universal, por los de mi propia casa y por los de mi familia. Amén.",
+        "pt": "Pai Eterno, ofereço-vos o Preciosíssimo Sangue do vosso Filho divino, Jesus, em união com as Missas ditas hoje em todo o mundo, por todas as almas santas do Purgatório, pelos pecadores de toda parte, pelos pecadores da Igreja universal, pelos da minha casa e pelos da minha família. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Most Sacred Heart of Jesus, open the hearts and minds of sinners to the truth and light of God, the Father.",
+        "en": "Sagrado Corazón de Jesús, abre los corazones y las mentes de los pecadores a la verdad y a la luz de Dios Padre.",
+        "pt": "Sagrado Coração de Jesus, abre os corações e as mentes dos pecadores à verdade e à luz de Deus Pai."
+      }
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Immaculate Heart of Mary, pray for the conversion of sinners and the world.",
+        "en": "Corazón Inmaculado de María, ruega por la conversión de los pecadores y del mundo.",
+        "pt": "Coração Imaculado de Maria, roga pela conversão dos pecadores e do mundo."
+      }
+    },
+    {
+      "bead": 13,
+      "prayerRef": "glory_be"
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. La oración de las cuentas pequeñas es larga: conviene mostrarla completa en pantalla.",
+  "image": "santa-gertrudis-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Saint Gertrude",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap40.htm"
+    }
+  ]
+}

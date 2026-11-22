@@ -1,0 +1,199 @@
+{
+  "id": "santisima-trinidad-coronilla",
+  "sourceId": "CD-45",
+  "group": "god_christ",
+  "title": {
+    "es": "Coronilla de la Santísima Trinidad",
+    "en": "Chaplet of the Most Holy Trinity",
+    "pt": "Coronilha da Santíssima Trindade"
+  },
+  "summary": {
+    "es": "Rosario ofrecido por las cinco llagas en reparación, con alabanzas trinitarias.",
+    "en": "Rosary offered through the five wounds in reparation, with Trinitarian praises.",
+    "pt": "Terço oferecido pelas cinco chagas em reparação, com louvores trinitários."
+  },
+  "instrument": {
+    "es": "Rosario normal.",
+    "en": "Ordinary rosary.",
+    "pt": "Terço comum."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "text": {
+        "es": "Incline unto mine aid, O God, O Lord make hast to help me.",
+        "en": "Inclínate a auxiliarme, oh Dios; Señor, date prisa en socorrerme.",
+        "pt": "Inclinai-vos a auxiliar-me, ó Deus; Senhor, apressai-vos em socorrer-me."
+      }
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Glory be to Thee, O most sweet, most noble, resplendent, peaceful, ineffable Trinity. Amen",
+        "en": "Gloria a ti, dulcísima, nobilísima, resplandeciente, pacífica e inefable Trinidad. Amén.",
+        "pt": "Glória a ti, docíssima, nobilíssima, resplandecente, pacífica e inefável Trindade. Amém."
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Glory, honor and praise be to the great Eternal God. Amen.",
+        "en": "Gloria, honor y alabanza al gran Dios Eterno. Amén.",
+        "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Glory, honor and praise be to the great Eternal God. Amen.",
+        "en": "Gloria, honor y alabanza al gran Dios Eterno. Amén.",
+        "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Glory, honor and praise be to the great Eternal God. Amen.",
+        "en": "Gloria, honor y alabanza al gran Dios Eterno. Amén.",
+        "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "Glory, honor and praise be to the great Eternal God. Amen.",
+        "en": "Gloria, honor y alabanza al gran Dios Eterno. Amén.",
+        "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "Glory, honor and praise be to the great Eternal God. Amen.",
+        "en": "Gloria, honor y alabanza al gran Dios Eterno. Amén.",
+        "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be",
+      "repeat": 3
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Blessed be God! Blessed be his Holy Name! Blessed be Jesus Christ, true God and true man! Blessed be the Name of Jesus! Blessed be his Most Sacred Heart! Blessed be his Most Precious Blood! Blessed be Jesus in the Most Holy Sacrament of the Altar! Blessed be the Holy Spirit, the Paraclete! Blessed be the great Mother of God, Mary most Holy! Blessed be her holy and Immaculate Conception! Blessed be her glorious Assumption! Blessed be the name of Mary, Virgin and Mother! Blessed be St. Joseph, her most chaste spouse! Blessed be God in his Angels and his Saints!",
+        "en": "Bendito sea Dios. Bendito sea su santo Nombre. Bendito sea Jesucristo, verdadero Dios y verdadero hombre. Bendito sea el Nombre de Jesús. Bendito sea su Sagrado Corazón. Bendita sea su Preciosa Sangre. Bendito sea Jesús en el Santísimo Sacramento del altar. Bendito sea el Espíritu Santo, el Paráclito. Bendita sea la gran Madre de Dios, María Santísima. Bendita sea su santa e Inmaculada Concepción. Bendita sea su gloriosa Asunción. Bendito sea el nombre de María, Virgen y Madre. Bendito sea san José, su esposo castísimo. Bendito sea Dios en sus ángeles y sus santos.",
+        "pt": "Bendito seja Deus! Bendito seja o seu santo Nome! Bendito seja Jesus Cristo, verdadeiro Deus e verdadeiro homem! Bendito seja o Nome de Jesus! Bendito seja o seu Sagrado Coração! Bendita seja o seu Precioso Sangue! Bendito seja Jesus no Santíssimo Sacramento do altar! Bendito seja o Espírito Santo, o Paráclito! Bendita seja a grande Mãe de Deus, Maria Santíssima! Bendita seja a sua santa e Imaculada Conceição! Bendita seja a sua gloriosa Assunção! Bendito seja o nome de Maria, Virgem e Mãe! Bendito seja São José, seu esposo castíssimo! Bendito seja Deus nos seus anjos e nos seus santos!"
+      },
+      "meditation": {
+        "es": "Alabanzas divinas",
+        "en": "Divine Praises",
+        "pt": "Louvores divinos"
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors; se conserva la errata «make hast». Las alabanzas divinas van como texto continuo.",
+  "image": "santisima-trinidad-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of the Most Holy Trinity",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap04.htm"
+    }
+  ]
+}
