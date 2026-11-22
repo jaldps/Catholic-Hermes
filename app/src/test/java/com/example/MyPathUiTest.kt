@@ -8,7 +8,9 @@ import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.semantics.SemanticsProperties
 import androidx.compose.ui.semantics.getOrNull
+import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.assertTextContains
 import androidx.compose.ui.test.hasAnyAncestor
 import androidx.compose.ui.test.hasTestTag
@@ -103,8 +105,7 @@ class MyPathUiTest {
     }
 
     private fun openHubFromExplore() {
-        compose.onNodeWithTag("nav_more").performClick()
-        compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag("nav_my_path"))
+        // Mi camino is a tab now; the old Explore row no longer exists.
         compose.onNodeWithTag("nav_my_path").performClick()
         waitFor("my_path_screen")
     }
@@ -128,8 +129,10 @@ class MyPathUiTest {
     @Test fun exploreHasOneEntryThatReplacesHabitsAndSpiritualLife() {
         launch()
         compose.onNodeWithTag("nav_more").performClick()
-        compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag("nav_my_path"))
-        tag("nav_my_path").assertIsDisplayed()
+        waitFor("more_screen")
+        // Mi camino is now a tab, so it must not be duplicated in Explore.
+        assert(compose.onAllNodes(hasTestTag("nav_my_path") and hasAnyAncestor(hasTestTag("more_screen")), useUnmergedTree = true)
+            .fetchSemanticsNodes().isEmpty()) { "nav_my_path must no longer be listed in Explore" }
         // The old rows are gone; Confession keeps its own row.
         assert(!exists("nav_habits")) { "nav_habits must no longer be listed in Explore" }
         assert(!exists("nav_spiritual")) { "nav_spiritual must no longer be listed in Explore" }
@@ -142,7 +145,7 @@ class MyPathUiTest {
         openHubFromExplore()
         compose.onNodeWithTag("my_path_title", useUnmergedTree = true).assertExists()
         listOf(
-            "my_path_section_habits" to "tab_habits_rule",
+            "my_path_today_habits" to "tab_habits_rule",
             "my_path_section_diary" to "spiritual_confession_entry",
             "my_path_section_temptations" to "tab_sin_avoider",
             "my_path_section_practices" to "spiritual_life_learn_picker"
@@ -162,9 +165,9 @@ class MyPathUiTest {
         waitFor("spiritual_life_learn_picker")
         assert(!exists("add_first_journal_entry"))
         back(); waitFor("my_path_screen")
-        // Hub back leaves to Explore.
+        // The hub is a tab now: back from it leaves to Today, not to Explore.
         back()
-        waitFor("more_screen")
+        waitFor("home_screen")
     }
 
     @Test fun temptationsSectionBacksStraightToTheHubAndConfessionIsOneTapFromIt() {
@@ -221,10 +224,11 @@ class MyPathUiTest {
             launch(initial = destination)
             waitFor(landing)
             assert(!exists(absent)) { "$destination must not also show $absent" }
-            // A link's back leaves to the caller, not to the hub.
+            // A link's back now returns to the hub on the Mi camino tab.
             if (destination != AppDestination.MY_PATH) {
                 back()
-                waitFor("more_screen")
+                waitFor("my_path_screen")
+                gone("tab_habits_rule")
             }
             dispose()
         }
@@ -242,6 +246,12 @@ class MyPathUiTest {
         compose.onNodeWithTag("search_result_section_spiritual_life").performScrollTo().performClick()
         waitFor("spiritual_confession_entry")
         back()
+        waitFor("my_path_screen")
+        gone("spiritual_confession_entry")
+        // Fresh host for the second search (global search lives in Today's header).
+        dispose()
+        launch()
+        compose.onNodeWithTag("global_search_button").performClick()
         waitFor("search_field")
         tag("search_field").performTextReplacement("Hábitos")
         compose.waitUntil(40_000) {
@@ -265,8 +275,10 @@ class MyPathUiTest {
         openHubFromExplore()
         waitFor("my_path_today_habits")
         assertRowText("my_path_today_habits", "1 hecho · 11 pendientes")
-                // Today and yesterday kept: two days in a row, said without blame.
-        assertRowText("my_path_today_fidelity", "2 días seguidos")
+        // Today and yesterday kept: two days in a row, now in the single row's subtitle.
+        assertRowText("my_path_today_habits", "2 días seguidos")
+        assert(!exists("my_path_today_fidelity")) { "the duplicate fidelity row is gone" }
+        assert(!exists("my_path_section_habits")) { "the duplicate section row is gone" }
         waitFor("my_path_today_plan_bible_year")
         assertRowText("my_path_today_plan_bible_year", "Día 4 de 365")
         assert(!exists("my_path_today_plan_catechism_year")) { "a plan that was never started is not 'in progress'" }
@@ -274,7 +286,7 @@ class MyPathUiTest {
         assertRowText("my_path_today_novena_novena-a-la-divina-misericordia", "día 2 de 9")
 
         openRow("my_path_today_habits"); waitFor("tab_habits_rule"); back(); waitFor("my_path_screen")
-        openRow("my_path_today_fidelity"); waitFor("tab_habits_rule"); back(); waitFor("my_path_screen")
+        assert(!exists("my_path_today_fidelity")) { "one habits row only" }
         openRow("my_path_today_plan_bible_year"); waitFor("plan_detail_screen"); back(); waitFor("my_path_screen")
         openRow("my_path_today_novena_novena-a-la-divina-misericordia")
         waitFor("novena_detail_novena-a-la-divina-misericordia")
@@ -286,7 +298,7 @@ class MyPathUiTest {
         openHubFromExplore()
         waitFor("my_path_today_habits")
         assertRowText("my_path_today_habits", "0 hechos · 12 pendientes")
-        assertRowText("my_path_today_fidelity", "Empieza hoy, a tu ritmo.")
+        assertRowText("my_path_today_habits", "Empieza hoy, a tu ritmo.")
         assert(!exists("my_path_today_plan_bible_year"))
         assert(!hasAnyTagWithPrefix("my_path_today_novena_"))
     }
@@ -298,11 +310,41 @@ class MyPathUiTest {
         listOf(AppLanguage.EN to Triple("My path", "Today on my path", "Begin today, at your own pace."),
             AppLanguage.PT to Triple("Meu caminho", "Hoje no meu caminho", "Comece hoje, no seu ritmo.")).forEach { (language, texts) ->
             launch(initial = AppDestination.MY_PATH, language = language)
-            waitFor("my_path_today_fidelity")
+            waitFor("my_path_today_habits")
             tag("my_path_title").assertTextContains(texts.first, substring = true)
             assertRowText("my_path_today_header", texts.second)
-            assertRowText("my_path_today_fidelity", texts.third)
+            assertRowText("my_path_today_habits", texts.third)
             dispose()
         }
+    }
+
+    @Test fun myPathIsAFifthTabAndTappingItAgainReturnsToTheHub() {
+        launch()
+        compose.onNodeWithTag("nav_my_path").assertHasClickAction().performClick()
+        waitFor("my_path_screen")
+        waitFor("my_path_today_habits")
+        // Go into a section, then tap the same tab: back to the hub, not a no-op.
+        openRow("my_path_today_habits")
+        waitFor("tab_habits_rule")
+        compose.onNodeWithTag("nav_my_path").performClick()
+        waitFor("my_path_screen")
+        waitFor("my_path_today_habits")
+        gone("tab_habits_rule")
+    }
+
+    @Test fun theHubHasExactlyOneRowToHabits() {
+        launch(initial = AppDestination.MY_PATH)
+        waitFor("my_path_today_habits")
+        assert(compose.onAllNodesWithTag("my_path_today_habits", useUnmergedTree = true)
+            .fetchSemanticsNodes().size == 1) { "a single habits row" }
+        assert(!exists("my_path_today_fidelity")) { "no separate fidelity row" }
+        assert(!exists("my_path_section_habits")) { "no duplicate habits section row" }
+    }
+
+    @Test fun aHabitsDeepLinkSelectsTheMyPathTab() {
+        launch(initial = AppDestination.HABITS_VIRTUES)
+        waitFor("tab_habits_rule")
+        runCatching { compose.onNodeWithTag("nav_my_path", useUnmergedTree = true).assertIsSelected() }
+            .getOrElse { throw AssertionError("nav_my_path must be the selected tab for a habits deep link: ${it.message}") }
     }
 }

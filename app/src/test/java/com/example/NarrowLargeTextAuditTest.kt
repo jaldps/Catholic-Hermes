@@ -397,7 +397,7 @@ class NarrowLargeTextAuditTest(private val identity: DesignLanguage, private val
         val d = dpf
         val texts = nodes(SemanticsMatcher("text layout") { it.config.contains(SemanticsActions.GetTextLayoutResult) })
         val clickables = nodes(SemanticsMatcher("clickable") { it.config.contains(SemanticsActions.OnClick) }, merged = true)
-        val dockTags = setOf("nav_home", "nav_prayers", "nav_bible", "nav_more")
+        val dockTags = setOf("nav_home", "nav_prayers", "nav_bible", "nav_my_path", "nav_more")
         val dockNodes = nodes(SemanticsMatcher("dock") { it.config.getOrNull(SemanticsProperties.TestTag) in dockTags })
             .filter { it.boundsInRoot.center.y > (it.root as? View)?.height?.times(0.65f) ?: Float.MAX_VALUE }
         val dockRoot = dockNodes.firstOrNull()?.root
