@@ -1,5 +1,12 @@
 package com.example.ui.design
 
+import androidx.compose.runtime.setValue
+
+import androidx.compose.ui.layout.onSizeChanged
+
+
+import androidx.compose.ui.draw.alpha
+
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -950,15 +957,16 @@ fun AppPrimaryCapsule(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
+    val compact = appIsLandscapePhone()
     val shape = design.shapes.button
     Row(
         modifier
             .then(if (fillWidth) Modifier.fillMaxWidth() else Modifier)
-            .heightIn(min = 52.dp)
+            .heightIn(min = if (compact) 44.dp else 52.dp)
             .lumenPress(onClick, 0.97f, enabled = enabled)
             .liquidPane(shape, design.tintedGlassSpec(p.action, enabled))
             .tagged(tag)
-            .padding(horizontal = 26.dp, vertical = 14.dp),
+            .padding(horizontal = 26.dp, vertical = if (compact) 10.dp else 14.dp),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -984,11 +992,12 @@ fun AppSecondaryCapsule(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
+    val compact = appIsLandscapePhone()
     val shape = design.shapes.button
     Row(
         modifier
             .then(if (fillWidth) Modifier.fillMaxWidth() else Modifier)
-            .heightIn(min = 50.dp)
+            .heightIn(min = if (compact) 44.dp else 50.dp)
             .lumenPress(onClick, 0.97f, enabled = enabled)
             .then(
                 if (design.opaqueMaterial()) Modifier
@@ -998,7 +1007,7 @@ fun AppSecondaryCapsule(
                 else Modifier.liquidPane(shape, design.glassSpec(GlassRole.Control).copy(shadowBlur = 14.dp, shadowY = 4.dp))
             )
             .tagged(tag)
-            .padding(horizontal = 20.dp, vertical = 10.dp),
+            .padding(horizontal = 20.dp, vertical = if (compact) 8.dp else 10.dp),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -1351,6 +1360,25 @@ private fun AppCompactHeader(
 enum class AppHeaderPlacement { InList, SidePanel, DetailPane, CompactBand }
 val LocalHeaderPlacement = androidx.compose.runtime.compositionLocalOf { AppHeaderPlacement.InList }
 
+/** Decorative cover fills the available left pane without participating in header/controls measurement. */
+@Composable
+internal fun AppReaderPanelArtwork(art: ReaderPanelArt, modifier: Modifier = Modifier) {
+    if (art.asset == null && art.url == null) return
+    val design = LocalAppDesign.current
+    val canvas = design.palette.canvasTop
+    BoxWithConstraints(modifier.then(if (!design.isSanctuary && !design.isGlass && !design.opaqueMaterial()) Modifier.fadeEnd(24.dp) else Modifier).then(if (design.isSanctuary) Modifier.padding(horizontal = 8.dp, vertical = 8.dp)
+        .border(0.75.dp, design.palette.hairline, design.shapes.thumbnail).padding(5.dp).clip(design.shapes.thumbnail) else Modifier).clipToBounds()) {
+        val protected = ((art.titleHeight + 8.dp) / maxHeight).coerceIn(0.3f, 0.85f)
+        val image = Modifier.fillMaxSize().offset(y = art.titleHeight * 0.65f)
+        if (art.url.isNullOrBlank()) AppHeroImage(art.asset, image, fadeToCanvas = false, topVeil = false)
+        else AppRemoteImage(art.url, art.asset, image)
+        if (design.isDark) Box(Modifier.matchParentSize().background(Color.Black.copy(alpha = 0.18f)))
+        Box(Modifier.matchParentSize().background(Brush.verticalGradient(
+            0f to canvas.copy(alpha = 0.98f), protected to canvas.copy(alpha = 0.94f),
+            (protected + 0.18f).coerceAtMost(0.98f) to canvas.copy(alpha = 0.12f), 1f to canvas.copy(alpha = 0.30f))))
+    }
+}
+
 @Composable
 private fun AppPanelHeader(
     title: String, root: Boolean, modifier: Modifier, assetPath: String?, imageUrl: String?,
@@ -1362,6 +1390,24 @@ private fun AppPanelHeader(
     val styles = LocalAppTextStyles.current
     val window = appWindowSize()
     val safe = appSafeInsets()
+    if (appIsLandscapePhone() && LocalAppPageKind.current == AppPageKind.Reader) {
+        val report = LocalReaderPanelArt.current
+        val density = androidx.compose.ui.platform.LocalDensity.current
+        var titleHeight by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(0.dp) }
+        androidx.compose.runtime.SideEffect { report(ReaderPanelArt(assetPath, imageUrl, titleHeight)) }
+        Box(modifier.fillMaxWidth().onSizeChanged { titleHeight = with(density) { it.height.toDp() } }.testTag("side_panel_header")) {
+            Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).padding(top = safe.top + 52.dp, bottom = 4.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(title, style = styles.title1, color = p.textPrimary, modifier = Modifier.semantics { heading() }.tagged(titleTag))
+                if (eyebrow != null) Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
+                if (meta != null) Text(meta, style = styles.subhead, color = p.textSecondary)
+            }
+            val back = rememberPanelBack()
+            if (back != null) AppGlassIconButton(androidx.compose.material.icons.Icons.AutoMirrored.Outlined.ArrowBackIos,
+                back.first, back.second, modifier = Modifier.padding(start = design.spacing.gutter - 4.dp, top = safe.top + 4.dp), tag = "nav_back")
+            Row(Modifier.align(Alignment.TopEnd).padding(end = design.spacing.gutter, top = safe.top + 4.dp), content = actions)
+        }
+        return
+    }
     val poster = LocalHeaderPoster.current
     val back = rememberPanelBack()
     val heroMeta = rememberHeroMeta(assetPath)

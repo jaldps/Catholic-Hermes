@@ -156,8 +156,10 @@ fun AppPrimaryButton(
     onClick: () -> Unit,
     enabled: Boolean = true,
     leadingIcon: ImageVector? = null,
-    modifier: Modifier = Modifier
-) = appKit().PrimaryButton(label, onClick, enabled, leadingIcon, modifier)
+    modifier: Modifier = Modifier,
+    advancing: Boolean = false
+) = appKit().PrimaryButton(label, onClick, enabled, leadingIcon, modifier.then(
+    if (advancing && appIsLandscapePhone()) Modifier.height(48.dp) else Modifier))
 
 @Composable
 fun AppSecondaryButton(
@@ -364,6 +366,8 @@ data class AppPaneWidth(val fraction: Float, val min: Dp, val max: Dp) {
     fun resolve(available: Dp): Dp = (available * fraction).coerceIn(min, max)
 }
 
+internal data class ReaderPanelArt(val asset: String?, val url: String?, val titleHeight: Dp = 0.dp)
+internal val LocalReaderPanelArt = androidx.compose.runtime.compositionLocalOf<(ReaderPanelArt) -> Unit> { {} }
 internal val LocalAppPageKind = androidx.compose.runtime.compositionLocalOf { AppPageKind.Hub }
 internal val LocalHeaderPoster = androidx.compose.runtime.compositionLocalOf { false }
 internal val LocalAppInteriorWidth = androidx.compose.runtime.compositionLocalOf { Dp.Unspecified }
@@ -405,9 +409,11 @@ fun AppPageLayout(
     }
     AppEdgeToEdge()
     val safe = appSafeInsets()
+    val fullWindowWidth = appWindowSize().width
     val design = LocalAppDesign.current
     val density = androidx.compose.ui.platform.LocalDensity.current
     val panelScroll = androidx.compose.foundation.rememberScrollState()
+    var readerArtwork by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(ReaderPanelArt(null, null)) }
     var titleOverflow by androidx.compose.runtime.remember { androidx.compose.runtime.mutableIntStateOf(0) }
     androidx.compose.runtime.LaunchedEffect(landscape, titleOverflow) {
         if (landscape) panelScroll.scrollTo(titleOverflow)
@@ -422,7 +428,7 @@ fun AppPageLayout(
         .onGloballyPositioned { origin = it.positionInRoot() }.semantics { isTraversalGroup = true }) { constraints ->
         val width = constraints.maxWidth
         val height = constraints.maxHeight
-        val panelWidth = if (landscape) appPanelWidth(kind, width.toDp()).roundToPx() else width
+        val panelWidth = if (landscape) appPanelWidth(kind, if (kind == AppPageKind.Reader || kind == AppPageKind.Immersive) fullWindowWidth else width.toDp()).roundToPx() else width
         val loose = constraints.copy(minWidth = 0, minHeight = 0)
         val panelBottom = if (landscape) maxOf(safe.bottom, if (panelFocused) keyboard else 0.dp).roundToPx() else 0
         val contentBottom = if (landscape) maxOf(safe.bottom, if (mainFocused) keyboard else 0.dp).roundToPx()
@@ -436,7 +442,7 @@ fun AppPageLayout(
             maxHeight = if (panelFooter != null) 56.dp.roundToPx() else 0))
         val contentWidth = if (landscape) width - panelWidth else width
         val contentFoot = subcompose(PageSlot.ContentFooter) {
-            Row(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)
+            Row(Modifier.fillMaxWidth().then(if (landscape && kind == AppPageKind.Reader) Modifier.background(design.palette.canvasTop) else Modifier).padding(horizontal = design.spacing.gutter)
                 .semantics { isTraversalGroup = true; traversalIndex = 1f }, horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End,
                 verticalAlignment = Alignment.CenterVertically) { contentFooter?.invoke(this) }
         }.single().measure(loose.copy(minWidth = contentWidth, maxWidth = contentWidth,
@@ -446,10 +452,13 @@ fun AppPageLayout(
             androidx.compose.runtime.CompositionLocalProvider(
                 LocalHeaderPlacement provides if (landscape) AppHeaderPlacement.SidePanel else AppHeaderPlacement.InList,
                 LocalHeaderPoster provides (supporting == null), LocalAppPageKind provides kind,
+                LocalReaderPanelArt provides { readerArtwork = it },
                 LocalPanelTitleOverflow provides { titleOverflow = it },
                 LocalHeaderPanelHeight provides with(density) { (height - panelBottom - panelFoot.height).toDp() }
             ) {
-                androidx.compose.foundation.layout.Column(Modifier.fillMaxWidth()
+                Box(Modifier.fillMaxWidth().then(if (landscape && kind == AppPageKind.Reader) Modifier.height(with(density) { (height - panelBottom - panelFoot.height).toDp() }) else Modifier)) {
+                if (landscape && kind == AppPageKind.Reader) AppReaderPanelArtwork(readerArtwork, Modifier.matchParentSize())
+                androidx.compose.foundation.layout.Column(Modifier.fillMaxWidth().then(if (landscape && kind == AppPageKind.Reader) Modifier.fillMaxHeight() else Modifier)
                     .onFocusChanged { panelFocused = it.hasFocus }.focusGroup().testTag("app_page_panel")
                     .then(if (landscape) Modifier.verticalScroll(panelScroll) else Modifier)
                     .semantics { isTraversalGroup = true; traversalIndex = 0f }) {
@@ -461,16 +470,18 @@ fun AppPageLayout(
                         layout(c.maxWidth, if (visible) child.height else 0) { if (visible) child.placeRelative(0, 0) }
                     }
                 }
+                }
             }
         }.single().measure(loose.copy(minWidth = panelWidth, maxWidth = panelWidth,
             maxHeight = if (landscape) (height - panelBottom - panelFoot.height).coerceAtLeast(0) else androidx.compose.ui.unit.Constraints.Infinity))
-        val top = if (landscape) (safe.top + 12.dp).roundToPx() else 0
+        val top = if (landscape) (safe.top + if (kind == AppPageKind.Reader) 52.dp else 12.dp).roundToPx() else 0
         val bodyHeight = (height - top - contentBottom - contentFoot.height).coerceAtLeast(0)
         val main = subcompose(PageSlot.Main) {
             androidx.compose.runtime.CompositionLocalProvider(LocalHeaderPlacement provides AppHeaderPlacement.InList,
                 LocalAppInteriorWidth provides with(density) { contentWidth.toDp() - design.spacing.gutter * 2 }) {
                 Box(Modifier.fillMaxSize().onFocusChanged { mainFocused = it.hasFocus }.focusGroup()
-                    .semantics { isTraversalGroup = true; traversalIndex = 1f }.testTag("app_page_content")) {
+                    .semantics { isTraversalGroup = true; traversalIndex = 1f }.testTag("app_page_content")
+                    .then(if (landscape && kind == AppPageKind.Reader) Modifier.background(design.palette.canvasTop) else Modifier)) {
                     content {
                         androidx.compose.runtime.DisposableEffect(landscape) { onDispose { marker = androidx.compose.ui.geometry.Offset.Unspecified } }
                         androidx.compose.foundation.layout.Spacer(Modifier.fillMaxWidth().height(if (landscape) 0.dp else with(density) { (panel.height + panelFoot.height).toDp() })

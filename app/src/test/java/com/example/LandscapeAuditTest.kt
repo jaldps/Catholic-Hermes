@@ -27,7 +27,7 @@ import org.robolectric.annotation.GraphicsMode
 import java.io.File
 import kotlin.math.abs
 
-internal enum class LandscapeIssue { HEADER_TOO_TALL, ESSENTIAL_BELOW_FOLD, MEASURE, UNDER_INSET, IME_HIDDEN, SHEET_GEOMETRY, OBSCURED }
+internal enum class LandscapeIssue { HEADER_TOO_TALL, ESSENTIAL_BELOW_FOLD, MEASURE, UNDER_INSET, IME_HIDDEN, SHEET_GEOMETRY, OBSCURED, VERTICAL_GAP }
 
 /** All geometry is in physical-window dp, independent of the content's constraints. */
 internal object LandscapeAuditRules {
@@ -37,6 +37,7 @@ internal object LandscapeAuditRules {
     fun outsideMeasure(characters: Float, minimum: Float = 60f) = characters < minimum - 1f || characters > 75f + 1f
     fun wrongSheet(rect: Rect, expected: Rect) = listOf(rect.left - expected.left, rect.right - expected.right, rect.top - expected.top, rect.bottom - expected.bottom).any { abs(it) > 1.1f }
     fun obscures(control: Rect, text: Rect) = control.overlaps(text) && control.intersect(text).let { it.width > 2f && it.height > 2f }
+    fun verticalGap(headingBottom: Float, textTop: Float) = textTop - headingBottom > 24f + 1f
     fun belowFold(essential: List<String>, visible: Set<String>) = essential.filterNot { it in visible }
 }
 
@@ -98,6 +99,15 @@ class LandscapeAuditTest(private val identity: DesignLanguage, private val langu
                     .filter { control -> generateSequence(control) { it.parent }.none { parent -> parent.id == text.id } }
                     .forEach { control -> if (LandscapeAuditRules.obscures(dp(control.boundsInRoot), dp(text.boundsInRoot)))
                         report(area, LandscapeIssue.OBSCURED, name(text), "overlap with ${name(control)}") }
+            }
+            fun panel(node: SemanticsNode): Int = generateSequence(node) { it.parent }.firstOrNull {
+                it.config.getOrNull(SemanticsProperties.IsTraversalGroup) == true
+            }?.id ?: -1
+            texts.filter { it.config.getOrNull(SemanticsProperties.Heading) != null }.forEach { heading ->
+                val next = texts.filter { it.id != heading.id && panel(it) == panel(heading) && it.boundsInRoot.top >= heading.boundsInRoot.bottom - 1f }
+                    .minByOrNull { it.boundsInRoot.top }
+                if (next != null && LandscapeAuditRules.verticalGap(heading.boundsInRoot.bottom / 2f, next.boundsInRoot.top / 2f))
+                    report(area, LandscapeIssue.VERTICAL_GAP, name(heading), "gap=${(next.boundsInRoot.top - heading.boundsInRoot.bottom) / 2f}")
             }
             val visible = nodes.mapNotNull { it.config.getOrNull(SemanticsProperties.TestTag) }.toSet()
             LandscapeAuditRules.belowFold(essentialByArea.getValue(destination), visible).forEach { report(area, LandscapeIssue.ESSENTIAL_BELOW_FOLD, it, "area target not visible") }

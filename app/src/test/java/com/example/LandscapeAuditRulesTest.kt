@@ -17,5 +17,6 @@ class LandscapeAuditRulesTest {
         assertFalse(LandscapeAuditRules.obscures(Rect(100f, 100f, 200f, 144f), Rect(220f, 120f, 300f, 160f)))
         assertEquals(listOf("next"), LandscapeAuditRules.belowFold(listOf("next", "back"), setOf("back")))
         assertTrue(LandscapeAuditRules.belowFold(emptyList(), emptySet()).isEmpty())
+        assertTrue(LandscapeAuditRules.verticalGap(100f, 140f)); assertFalse(LandscapeAuditRules.verticalGap(100f, 124f))
     }
 }

@@ -1,6 +1,10 @@
 # T-047 · L0 horizontal
 
-Entrega escalonada en `ext/T-047`. **A y B implementadas; C en curso. Este informe no declara cerrado T-047.**
+Entrega escalonada en `ext/T-047`. **A, B y C listas para revisión en esta rama, con P9 y la aclaración posterior del dueño incorporadas. El cierre e integración corresponden al coordinador.**
+
+La validación final aprobó **162/162 casos de matriz, 14/14 comprobaciones suplementarias y 17/17 de maquetación con insets laterales** (ejecuciones con casos solapados). `:app:assembleDebug` terminó con **BUILD SUCCESSFUL**. El crítico independiente aprobó las **24 variantes del lector** revisadas. Las bases compartidas están terminadas; las migraciones de pantallas siguen perteneciendo a L1–L7. No se ha publicado un APK nuevo.
+
+Evidencia final: [matriz y suplementos](T-047-shots/validation-P9-final.json), [maquetación con recorte/navegación lateral](T-047-shots/validation-P9-window-check.json), [compilación](T-047-shots/build-P9.json), [dictamen visual](T-047-shots/visual-review-reader.json). La suite general conserva nueve fallos de referencia; su desglose se explica abajo, sin presentarla como verde.
 
 Base inicial: `2a00060`. Se incorporó `origin/CatholicGPT` hasta `2e92076`: el coordinador corrigió dos clases de tests de T-046 y publicó 1.8.29. No hay diferencias de producción en `ui/` entre esas dos bases. Las capturas iniciales siguen siendo una referencia válida.
 
@@ -79,7 +83,7 @@ El filtro de capturas usado en la pasada conjunta no coincide con los nombres de
 
 **Cifra incompatible observada:** respetar en Sanctuary la línea del título y el marco debajo de la meta da un cabezal de apoyo más alto que en Lumen; tres segmentos de 44 más búsqueda no caben todos sin desplazar a 360/411. Se conserva la geometría aprobada y el panel entero desplaza. C registra los tamaños reales; no se ocultan segmentos ni se reduce su letra para simular cumplimiento.
 
-## C · Auditoría, giro, paridad y evidencia final
+## C · Auditoría y evidencia anterior a P9
 
 El merge `5008457` incorpora únicamente documentación del coordinador hasta `dc1e000`. T-048 sigue EN COLA. Entregas A `77dba52`, B `d28b7ea`; esta tercera entrega no migra las pantallas L1–L7.
 
@@ -149,7 +153,7 @@ Estas notas se limitan a L0, los ejemplos y el ajuste explícito de Orar. **No c
 
 | # | Criterio | Nota | Evidencia y límite |
 |---|---|---|---|
-| 1 | Uso del espacio | **8** | Banda/paneles y póster medidos; casos H320/W600 y apoyo100 incompatibles arriba. |
+| 1 | Uso del espacio | **8** | P9: título y lectura alineados en S+52, imagen decorativa izquierda sin ocupar altura del texto, botones44/48 y lector aprobado en24 variantes. Límites H320/W600/apoyo100 y hueco propio de Explorar27,5–31 dp, pendientes de sus migraciones. |
 | 2 | Jerarquía y ritmo | **9** | `LandscapeGeometryTest`16, línea base175/151,5 ±1, carriles, un primario en cada ejemplo. |
 | 3 | Legibilidad | **8** | Lectura opaca y fuente efectiva; límite PT/Inter800, fichas PT y cuerpo mínimo del diálogo documentados. |
 | 4 | Ergonomía | **9** | Pies y botones alcanzables, avance a la derecha con centro y≥0,6H, targets; tarjetas16 y layout/modal verdes. La acción de hoja sube con IME conforme al contrato. |
@@ -160,3 +164,50 @@ Estas notas se limitan a L0, los ejemplos y el ajuste explícito de Orar. **No c
 | 9 | Accesibilidad | **8** | `isTraversalGroup`, orden panel→contenido, `heading`/`paneTitle`/`selected`, diálogo modal y `Polite`; TalkBack, vuelta física del foco y atrás predictivo requieren §13 en dispositivo. |
 
 No se fuerzan notas≥9 para tapar límites que requieren cambiar el diseño aprobado o comprobar el teléfono. Las propuestas anteriores son para la revisión del coordinador; este encargo ordena conservar el diseño y registrar las cifras incompatibles.
+
+## Revisión P9 y aclaración posterior del dueño
+
+Se incorporó `T-047-REVIEW.md` y la actualización del diseño de `origin/CatholicGPT` (`1fc3b14`). A y B quedaron aceptadas como avance. **Esta sección sustituye las descripciones y mediciones anteriores del arte del lector:** su marco grande y su altura de póster ya no se usan en `kind = Reader` horizontal. Centros, pósteres de otras clases y miniaturas de fichas conservan su contrato.
+
+Jose aclaró después que no prohíbe toda imagen: la oración debe tener una superficie limpia, verse completa sin scroll cuando quepa con la letra elegida, y el título izquierdo puede tener una imagen difuminada de fondo. La revisión visual descartó el primer fondo limitado al título por dejar el panel casi vacío. El arte existente ocupa ahora **toda la altura útil del panel izquierdo**, como decoración independiente de la medición del cabezal: velo localizado detrás del título/meta, fundido lateral Lumen y marco de folio Sanctuary con margen propio. No añade altura al título ni reduce el ancho del texto derecho. La oración permanece sobre una superficie opaca continua con el pie, para que no parezca una tarjeta cortada. Este criterio se aplica de forma compartida a `AppPageKind.Reader`; orienta también las siguientes migraciones, sin borrar las diferencias de identidad ni trasladar ilustraciones al cuerpo de la oración. El título comienza en **S+52 =76**, y el texto del ejemplo empieza alineado. Se eliminó el padding vertical interior sobrante de ese ejemplo horizontal, manteniendo sus márgenes laterales y la disposición vertical anterior.
+
+`AppPrimaryCapsule` y `AppSecondaryCapsule` usan un mínimo de **44 dp** en `LandscapePhone`, con padding interior adaptado; `AppPrimaryButton(advancing = true)` reserva **48 dp** para avanzar. Las versiones verticales conservan sus valores anteriores. No se deduce la función del botón a partir de su texto traducido. El hilo y la tecla específica del Rosario siguen perteneciendo a T-048.
+
+El nuevo detector `VERTICAL_GAP` mide la distancia entre un `heading` y el siguiente texto de su grupo de recorrido. Tiene controles positivos/negativos y se incorpora al informe de raíces como hallazgo consultivo; las áreas todavía sin migrar conservan su contenido. El arte de una portada no es espacio vacío y requiere interpretación visual del hallazgo. La posición del título del lector es la excepción P9 a la línea de portada175/151,5.
+
+Primera validación P9: **107/107 aprobadas, sin omitidas** ([resultados](T-047-shots/validation-P9-check.json)): geometría, título alineado, oración completa antes del pie, botones44/48, hojas, paridad, giro, Mi camino y las dos clases de capturas repetidas por falta de disco. La comprobación de lectura completa se amplía a los dos tamaños y las cuatro identidades en `LandscapeGeometryTest`. No se promete que cualquier oración larga o cualquier aumento de letra quepa en una pantalla; el contenido nunca se elimina ni se reduce para simularlo.
+
+## Suite completa y comparación con la referencia
+
+Antes de la revisión P9 se ejecutó `:app:assembleDebug` correctamente y **toda la suite sin filtros de clase**: **1092 casos, 1056 aprobados, 29 fallidos, 7 omitidos**, en 1 h 3 min 20 s. [Resultado bruto](T-047-shots/validation-C-full-suite.json). No se presenta como suite verde.
+
+Se mantuvo `shots.only` con las cinco raíces y **todos** los prefijos de escenarios del auditor estrecho; no se filtraron identidad, modo ni idioma. `NarrowLargeTextAuditTest` pasó sus **8 casos**, y sus registros confirman **50 escenarios por caso, 400 en total, sin ausencias** ([cobertura comprobada](T-047-shots/narrow-coverage-C.json)). Esto corrige la falta de cobertura de A/B, ya declarada.
+
+Al final de la suite el disco del entorno se agotó:19 fallos corresponden a las capturas de tentaciones y bienvenida (incluida una inicialización incompleta). Se conservaron los resultados brutos, se liberaron únicamente archivos generados y se repitieron las clases completas. **Tentaciones8/8 y bienvenida16/16 pasaron**. También se repitió Mi camino: **13/13**, incluido el fallo asíncrono de resumen vacío que ya aparecía en la referencia.
+
+El último resultado por caso, combinando la suite y las validaciones enfocadas P9, suma **1079 aprobados, 9 fallidos y 7 omitidos**, incluidos los nuevos controles P9: [desglose con procedencia](T-047-shots/validation-C-latest.json). Esta combinación de ejecuciones no equivale a una sola suite completa verde ni a repetir toda la suite tras P9. Después de P9 se ejecutan los controles horizontales y renders afectados.
+
+Los nueve fallos restantes tienen el mismo nombre de caso y aserción que la referencia inicial: acceso de copia de seguridad desde Ajustes; transferencias de calendario; apertura de devoción mariana; acceso al informe de errores; regreso a la explicación de una pregunta; y cuatro capturas del índice del Catecismo que buscan `ccc_node_p2s2`. No se editaron esos encargos cerrados para obtener verde. Los siete omitidos se conservan en el resultado bruto.
+
+Controles pedidos: navegación5, navegación de diseño8, Rosario10, contraste1, fuentes4+2+8+2, tableta44, auditor estrecho8 y Mi camino13: **105 casos aprobados con la repetición de Mi camino**. `VaticanNavigationLayoutTest`, citado en el AGENTS histórico, ya no existe en este checkout; no se le atribuye una ejecución. Los tests presentes de Vaticano sí forman parte de la suite completa.
+
+### Incidencias de la revisión visual
+
+El revisor independiente rechazó la primera versión porque el arte tenue se perdía y sobraba espacio izquierdo. Tras ocupar el panel de apoyo, confirmó que la composición respondía al pedido de Jose, y señaló un filete de Sanctuary que tocaba el título. Se desplazó el marco hacia fuera conservando la posición del texto. Se añadió el fundido lateral Lumen de 24 dp. El revisor **aprobó visualmente las 24 variantes del lector**: dos tamaños×cuatro identidades×claro/oscuro al 100 %, más ES/PT al 130 % en 800. [Dictamen y alcance](T-047-shots/visual-review-reader.json). No encontró defectos visuales relevantes pendientes en esa matriz; al 130 % confirmó que el texto requiere desplazamiento, permitido por el contrato. No es una certificación de todas las secciones ni de TalkBack físico.
+
+Una primera matriz P9 dio144/145: al comparar Hoy, el feed de Vaticano llegó entre la captura vertical y la horizontal y sustituyó texto/referencias del pasaje incluido por otra traducción. [Resultado bruto](T-047-shots/validation-P9-first-matrix.json). El test de paridad usa ahora el `LocalReadingsLoader` que ya existe, fijado al contenido bíblico incluido, para comparar la disposición con la misma fuente. No se relajó la exigencia de paridad ni se cambió Home. Los renders generales y la app conservan su comportamiento de red.
+
+El criterio general pedido por Jose para las siguientes secciones es reservar la superficie principal a la tarea, y usar la ilustración en el apoyo izquierdo sin que participe en el cálculo de altura del contenido. El revisor recomendó un foco reconocible, velo localizado, controles legibles e identidad propia por material. En lectores esto se implementa en el wrapper compartido, no con excepciones por oración; en centros, fichas y otras áreas se aplica al migrarlas conforme a su contrato.
+
+La medición P9 final de las raíces conserva cero `HEADER_TOO_TALL`, `UNDER_INSET`, `SHEET_GEOMETRY`, `IME_HIDDEN` y `OBSCURED`. El nuevo detector produce 36 observaciones de `VERTICAL_GAP`, todas del mismo título de Explorar, repetido por tamaño, idioma, escala e insets: **27,5–31 dp entre cajas de texto**. Los 29 dp de los títulos de sección se corrigieron reduciendo su margen inferior compartido de 12 a 4 dp solo en horizontal. En la portada, la banda fija 108 y su línea base conviven con el espaciado y el relleno de la entrada propios de `MoreScreen`; se conserva esa pantalla para su migración L6. El detector mide texto a texto, por lo que parte del intervalo pertenece a la superficie del control siguiente. No se oculta el hallazgo ni se altera la banda aprobada para forzar cero.
+
+También se ajustó la base de anchura del panel Reader/Immersive: sus proporciones usan la ventana completa incluso con recorte y navegación lateral, mientras los centros usan el espacio útil. Una prueba específica comprueba 891×411 con recorte izquierdo 32 y navegación derecha 48, panel Reader≈267,3 y acción final fuera de ambos insets. No cambia los renders sin recortes.
+
+
+### Evidencia P9 final y alcance de entrega
+
+La [auditoría P9](T-047-shots/landscape-audit-P9.json) sustituye la auditoría anterior para el estado entregado. Se adjuntan las mediciones finales de [paneles](T-047-shots/panel-geometry-P9.json), [lectura](T-047-shots/reading-measure-P9.json), [modales](T-047-shots/modal-geometry-P9.json) y [paridad](T-047-shots/node-parity-P9.json). Las láminas `_B_*` se regeneraron con P9; la revisión final incluye todas las láminas de la tabla, los tres contactos de las 24 variantes del lector y los renders individuales pedidos por el crítico.
+
+El control `enlargedReaderCanReachTheEndWithoutMovingItsAdvanceButton` confirma que una oración que necesita scroll al ampliar la letra puede leerse hasta el final sin desplazar su acción fija. `readerUsesFullWindowProportionAndClearsBothLateralInsets` comprueba las proporciones de ventana completa y los dos bordes seguros simultáneamente. Se conservan el contenido íntegro y el tamaño de letra elegido; no se garantiza ausencia de scroll para textos arbitrariamente largos.
+
+La última orientación del dueño se aplica a **todas las oraciones y secciones**: imágenes al servicio de la tarea, área principal útil y sin huecos innecesarios. El wrapper Reader ya lo implementa; la adopción concreta en Rosario/Coronilla y el resto de áreas se hará en los encargos sucesivos. Esta entrega no presenta los ejemplos de test como pantallas reales ya migradas. T-048 permanece EN COLA hasta integrar T-047, conforme al protocolo. No se ha hecho verificación en un teléfono físico.

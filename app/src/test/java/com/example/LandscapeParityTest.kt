@@ -75,7 +75,9 @@ class LandscapeParityTest(private val identity: DesignLanguage) {
             compose.runOnUiThread { compose.activity.setContent {} }; compose.waitForIdle()
             landscapeViewport(compose, compose.activity, w, h)
             compose.runOnUiThread { compose.activity.setContent {
-                if (root != null) resources!!.Content(root, identity)
+                if (root != null) CompositionLocalProvider(com.example.data.news.LocalReadingsLoader provides { _, _ ->
+                    com.example.data.news.ReadingsResult.Failure("Deterministic layout parity uses included Scripture")
+                }) { resources!!.Content(root, identity) }
                 else SanctaFidesTheme(designLanguage = identity.id, darkModeSetting = "LIGHT", reduceMotion = true) {
                     CompositionLocalProvider(LocalInspectionMode provides true) { LandscapeShowcaseScreen(kind!!) }
                 }

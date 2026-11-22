@@ -828,7 +828,7 @@ object LumenKit : AppKit {
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = if (inCard) 0.dp else design.spacing.gutter)
-                .padding(top = if (inCard) 0.dp else 10.dp, bottom = 12.dp)
+                .padding(top = if (inCard) 0.dp else 10.dp, bottom = if (appIsLandscapePhone()) 4.dp else 12.dp)
         ) {
             Text(
                 title,

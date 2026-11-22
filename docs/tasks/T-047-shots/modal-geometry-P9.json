@@ -1,0 +1,250 @@
+[
+  {
+    "scene": "appearance",
+    "identity": "LUMEN",
+    "width": 800,
+    "height": 360,
+    "ime": false,
+    "surface_width": 400.0,
+    "surface_height": 304.0,
+    "scroll_viewport_heights": [
+      248.0
+    ]
+  },
+  {
+    "scene": "appearance",
+    "identity": "LUMEN",
+    "width": 800,
+    "height": 360,
+    "ime": true,
+    "surface_width": 400.0,
+    "surface_height": 118.5,
+    "scroll_viewport_heights": [
+      62.5
+    ]
+  },
+  {
+    "scene": "appearance",
+    "identity": "LUMEN",
+    "width": 891,
+    "height": 411,
+    "ime": false,
+    "surface_width": 445.5,
+    "surface_height": 355.0,
+    "scroll_viewport_heights": [
+      299.0
+    ]
+  },
+  {
+    "scene": "appearance",
+    "identity": "LUMEN",
+    "width": 891,
+    "height": 411,
+    "ime": true,
+    "surface_width": 445.5,
+    "surface_height": 141.0,
+    "scroll_viewport_heights": [
+      85.0
+    ]
+  },
+  {
+    "scene": "appearance",
+    "identity": "SANCTUARY",
+    "width": 800,
+    "height": 360,
+    "ime": false,
+    "surface_width": 400.0,
+    "surface_height": 360.0,
+    "scroll_viewport_heights": [
+      256.0
+    ]
+  },
+  {
+    "scene": "appearance",
+    "identity": "SANCTUARY",
+    "width": 800,
+    "height": 360,
+    "ime": true,
+    "surface_width": 400.0,
+    "surface_height": 150.5,
+    "scroll_viewport_heights": [
+      62.5
+    ]
+  },
+  {
+    "scene": "appearance",
+    "identity": "SANCTUARY",
+    "width": 891,
+    "height": 411,
+    "ime": false,
+    "surface_width": 445.5,
+    "surface_height": 411.0,
+    "scroll_viewport_heights": [
+      307.0
+    ]
+  },
+  {
+    "scene": "appearance",
+    "identity": "SANCTUARY",
+    "width": 891,
+    "height": 411,
+    "ime": true,
+    "surface_width": 445.5,
+    "surface_height": 173.0,
+    "scroll_viewport_heights": [
+      85.0
+    ]
+  },
+  {
+    "scene": "dialog",
+    "identity": "LUMEN",
+    "width": 800,
+    "height": 360,
+    "ime": false,
+    "surface_width": 720.0,
+    "surface_height": 288.0,
+    "scroll_viewport_heights": [
+      168.0,
+      220.0
+    ]
+  },
+  {
+    "scene": "dialog",
+    "identity": "LUMEN",
+    "width": 800,
+    "height": 360,
+    "ime": true,
+    "surface_width": 720.0,
+    "surface_height": 102.5,
+    "scroll_viewport_heights": [
+      78.5,
+      34.5
+    ]
+  },
+  {
+    "scene": "dialog",
+    "identity": "LUMEN",
+    "width": 891,
+    "height": 411,
+    "ime": false,
+    "surface_width": 720.0,
+    "surface_height": 339.0,
+    "scroll_viewport_heights": [
+      168.0,
+      271.0
+    ]
+  },
+  {
+    "scene": "dialog",
+    "identity": "LUMEN",
+    "width": 891,
+    "height": 411,
+    "ime": true,
+    "surface_width": 720.0,
+    "surface_height": 125.0,
+    "scroll_viewport_heights": [
+      101.0,
+      57.0
+    ]
+  },
+  {
+    "scene": "dialog",
+    "identity": "SANCTUARY",
+    "width": 800,
+    "height": 360,
+    "ime": false,
+    "surface_width": 720.0,
+    "surface_height": 288.0,
+    "scroll_viewport_heights": [
+      174.0,
+      220.0
+    ]
+  },
+  {
+    "scene": "dialog",
+    "identity": "SANCTUARY",
+    "width": 800,
+    "height": 360,
+    "ime": true,
+    "surface_width": 720.0,
+    "surface_height": 102.5,
+    "scroll_viewport_heights": [
+      78.5,
+      34.5
+    ]
+  },
+  {
+    "scene": "dialog",
+    "identity": "SANCTUARY",
+    "width": 891,
+    "height": 411,
+    "ime": false,
+    "surface_width": 720.0,
+    "surface_height": 339.0,
+    "scroll_viewport_heights": [
+      174.0,
+      271.0
+    ]
+  },
+  {
+    "scene": "dialog",
+    "identity": "SANCTUARY",
+    "width": 891,
+    "height": 411,
+    "ime": true,
+    "surface_width": 720.0,
+    "surface_height": 125.0,
+    "scroll_viewport_heights": [
+      101.0,
+      57.0
+    ]
+  },
+  {
+    "scene": "sheet_footer",
+    "identity": "LUMEN",
+    "width": 800,
+    "height": 360,
+    "ime": true,
+    "surface_width": 400.0,
+    "surface_height": 118.5,
+    "scroll_viewport_heights": [
+      62.5
+    ]
+  },
+  {
+    "scene": "sheet_footer",
+    "identity": "LUMEN",
+    "width": 891,
+    "height": 411,
+    "ime": true,
+    "surface_width": 445.5,
+    "surface_height": 141.0,
+    "scroll_viewport_heights": [
+      85.0
+    ]
+  },
+  {
+    "scene": "sheet_footer",
+    "identity": "SANCTUARY",
+    "width": 800,
+    "height": 360,
+    "ime": true,
+    "surface_width": 400.0,
+    "surface_height": 150.5,
+    "scroll_viewport_heights": [
+      62.5
+    ]
+  },
+  {
+    "scene": "sheet_footer",
+    "identity": "SANCTUARY",
+    "width": 891,
+    "height": 411,
+    "ime": true,
+    "surface_width": 445.5,
+    "surface_height": 173.0,
+    "scroll_viewport_heights": [
+      85.0
+    ]
+  }
+]

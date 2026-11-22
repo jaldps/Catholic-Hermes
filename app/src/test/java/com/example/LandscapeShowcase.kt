@@ -132,14 +132,14 @@ private fun ShowcaseReader(language: AppLanguage, initialId: String? = null, onE
             modifier = Modifier.width(120.dp).testTag("showcase_previous"))
         Spacer(Modifier.weight(1f))
         AppPrimaryButton(language.ui("Siguiente", "Next", "Seguinte"), { selected = (selected + 1).coerceAtMost(showcasePrayers.lastIndex) }, selected < showcasePrayers.lastIndex,
-            modifier = Modifier.width(180.dp).testTag("showcase_next"))
+            modifier = Modifier.width(180.dp).testTag("showcase_next"), advancing = true)
     }) { headerItem ->
         LazyColumn(Modifier.fillMaxSize().testTag("showcase_reader_list"), state = anchor.listState, contentPadding = PaddingValues(bottom = 24.dp)) {
             item(key = "header") { headerItem() }
             item(key = prayer.id) {
                 Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
                     Column(Modifier.widthIn(max = measure + 40.dp).fillMaxWidth()
-                        .background(palette.canvasTop, LocalAppDesign.current.shapes.card).padding(20.dp)) {
+                        .then(if (appIsLandscapePhone()) Modifier else Modifier.background(palette.canvasTop, LocalAppDesign.current.shapes.card)).padding(horizontal = 20.dp, vertical = if (appIsLandscapePhone()) 0.dp else 20.dp)) {
                         Text(prayer.body(language), style = styles.reading, color = palette.textPrimary, modifier = Modifier.testTag("showcase_reading"))
                         Spacer(Modifier.height(24.dp))
                         Text(prayer.whenToPray.get(language), style = styles.subhead, color = palette.textSecondary)
@@ -161,7 +161,7 @@ private fun ShowcaseSupporting(language: AppLanguage) {
     val safe = AppEdgeToEdge()
     val landscape = appIsLandscapePhone()
     val next: @Composable () -> Unit = {
-        AppPrimaryButton(language.ui("Siguiente", "Next", "Seguinte"), { selected = (selected + 1) % showcasePrayers.size }, modifier = Modifier.width(180.dp).testTag("showcase_primary"))
+        AppPrimaryButton(language.ui("Siguiente", "Next", "Seguinte"), { selected = (selected + 1) % showcasePrayers.size }, modifier = Modifier.width(180.dp).testTag("showcase_primary"), advancing = true)
     }
     val contextBlock: @Composable () -> Unit = {
         Column {

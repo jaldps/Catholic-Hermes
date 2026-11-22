@@ -62,7 +62,9 @@ class LandscapeShowcaseScreenshotTest {
                     }
                 }
             }
-            for (kind in LandscapeShowcase.entries) {
+            val requested = System.getProperty("shots.only")?.split(',')?.map { it.trim().lowercase() }
+                ?.takeIf { names -> names.isNotEmpty() && names.all { name -> LandscapeShowcase.entries.any { it.name.lowercase() == name } } }
+            for (kind in LandscapeShowcase.entries.filter { requested == null || it.name.lowercase() in requested }) {
                 compose.runOnUiThread { visible = false }; compose.waitForIdle()
                 compose.runOnUiThread { showcase = kind; visible = true }; compose.waitForIdle()
                 compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, h) }

@@ -39,9 +39,13 @@ class LandscapeGeometryTest(private val identity: DesignLanguage, private val wi
         compose.runOnIdle { title.config[SemanticsActions.GetTextLayoutResult].action!!.invoke(layouts) }
         val baseline = (title.positionInRoot.y + layouts.single().lastBaseline) / 2f
         val scroll = panel.config.getOrNull(SemanticsProperties.VerticalScrollAxisRange)?.maxValue()?.div(2f) ?: 0f
-        assertEquals(height * .46f - 14f, baseline, 1f)
+        if (kind == LandscapeShowcase.Reader) assertEquals(24f + 52f, title.positionInRoot.y / 2f, 4f)
+        else assertEquals(height * .46f - 14f, baseline, 1f)
         assertTrue(panel.size.width / 2f <= width * .4f)
-        if (kind == LandscapeShowcase.Reader) assertEquals("The decorative frame must not be cut by its fixed footer at 100%", 0f, scroll, 1f)
+        if (kind == LandscapeShowcase.Reader) {
+            assertEquals("The compact title must not force panel scrolling at 100%", 0f, scroll, 1f)
+            assertTrue("The complete prayer must fit before the fixed footer", compose.onNodeWithTag("showcase_reading").getUnclippedBoundsInRoot().bottom <= compose.onNodeWithTag("app_page_content").getUnclippedBoundsInRoot().bottom)
+        }
         File("build/audit/geometry_${kind.name}_${identity.id}_${width}.json").apply {
             parentFile!!.mkdirs()
             writeText("""{"kind":"${kind.name}","identity":"${identity.id}","width":$width,"height":$height,"panel_width":${panel.size.width / 2f},"header_height":${header.size.height / 2f},"title_baseline":$baseline,"panel_scroll_max":$scroll}""")

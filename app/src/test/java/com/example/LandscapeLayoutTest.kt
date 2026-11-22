@@ -55,6 +55,38 @@ class LandscapeLayoutTest {
         compose.onNodeWithTag("showcase_primary").assertIsDisplayed().assertHasClickAction()
     }
 
+    @Test fun readerAlignsTitleWithPrayerAndUsesCompactButtons() {
+        launch(LandscapeShowcase.Reader)
+        assertEquals(76f, dp(bounds("showcase_title").top), 4f)
+        assertEquals(dp(bounds("showcase_title").top), dp(bounds("showcase_reading").top), 4f)
+        assertEquals(44f, dp(bounds("showcase_reader_home").height), 1f)
+        assertEquals(44f, dp(bounds("showcase_previous").height), 1f)
+        assertEquals(48f, dp(bounds("showcase_next").height), 1f)
+        assertTrue("The whole prayer is visible", dp(compose.onNodeWithTag("showcase_reading").getUnclippedBoundsInRoot().bottom.value * compose.density.density) <= dp(bounds("showcase_next").top))
+    }
+
+    @Test fun enlargedReaderCanReachTheEndWithoutMovingItsAdvanceButton() {
+        landscapeViewport(compose, compose.activity, 800, 360)
+        compose.setContent { SanctaFidesTheme(designLanguage = DesignLanguage.APPLE.id, darkModeSetting = "LIGHT", fontScale = 1.3f, reduceMotion = true) {
+            CompositionLocalProvider(LocalInspectionMode provides true) { LandscapeShowcaseScreen(LandscapeShowcase.Reader) }
+        } }
+        compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, 360) }; compose.waitForIdle()
+        val before = bounds("showcase_next")
+        val end = compose.onNodeWithText(showcasePrayers.first().whenToPray.get(AppLanguage.ES), useUnmergedTree = true)
+        end.performScrollTo().assertIsDisplayed()
+        assertTrue(end.getUnclippedBoundsInRoot().bottom.value <= dp(bounds("showcase_next").top))
+        assertEquals(before, bounds("showcase_next"))
+        compose.onNodeWithTag("showcase_next").assertIsDisplayed().assertHasClickAction()
+    }
+
+    @Test fun readerUsesFullWindowProportionAndClearsBothLateralInsets() {
+        launch(LandscapeShowcase.Reader)
+        compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, 411, cutout = "left", navbar = "right") }; compose.waitForIdle()
+        assertEquals(891f * .30f, dp(bounds("app_page_panel").width), 1f)
+        assertTrue(dp(bounds("app_page_panel").left) >= 32f)
+        assertTrue(dp(bounds("showcase_next").right) <= 891f - 48f - 8f)
+    }
+
     @Test fun readerHidesRailAndKeepsNavigationAboveTheSafeBottom() {
         launch(LandscapeShowcase.Reader)
         compose.onNodeWithTag("navigation_rail").assertDoesNotExist()
