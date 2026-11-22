@@ -165,3 +165,25 @@ Esta sección **sustituye al reparto** de la actualización anterior. El dueño 
 4. **Puerta Opus barata:** el crítico juzga una lámina de contacto por área (`_contact.png`) más el REPORT. Hace una ronda completa y, después, rondas limitadas a sus defectos. El coordinador revisa el diff y pasa los tests del área.
 5. Cada encargo nombra el siguiente, para que Codex encadene sin esperar.
 6. **Versiones por tramos:** L0+L1+L2, luego L3+L4, luego L5–L7, cada una con su lista de comprobación en el teléfono (§13 del diseño).
+
+---
+
+## Actualización (22-nov, tarde): espacio negativo y «Otras coronillas»
+
+- **P9, decisión del dueño:** el espacio vertical vacío es el enemigo de la interfaz horizontal.
+  - Los lectores no llevan arte y el título va arriba, junto al texto.
+  - Botones de 44 dp de alto (los que avanzan, 48; «Siguiente» del Rosario, 56).
+  - Está en `LANDSCAPE.md` (§2, §5.1, §11), en `T-047-REVIEW.md` (para el push C de Codex) y en T-048.
+- **«Otras coronillas», después del bloque horizontal:**
+  - 55 coronillas curadas de Catholic Doors, IVE y Hozana, en ES/EN/PT, con el texto literal de la fuente y traducción fiel.
+  - Se eligen con un tercer segmento «Otras ▾» que abre un catálogo con búsqueda y grupos, y también desde Orar.
+  - Especificación: `docs/content/CORONILLAS-SPEC.md`. Validador: `docs/tasks/tools/validate_chaplets.py`. Materiales del dueño: `docs/content/coronillas/`.
+  - Encargos:
+
+    | Encargo | Quién | Tarea |
+    |---|---|---|
+    | T-056 | Codex | Contenido |
+    | T-058 | Hermes | Imágenes |
+    | T-057 | Codex | Motor e interfaz |
+
+    Los tres están EN COLA.
