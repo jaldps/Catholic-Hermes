@@ -1477,7 +1477,7 @@ Cada estado se diseña **dentro** de la disposición horizontal: el panel se man
 | L6 Confesión | Lista vacía | normal | carril B: `confession_empty_list` | `confession_empty_list` | `l6_confession_*_vacía` |
 | L6 Confesión | Contenido sin abrir | normal | contenido: `AppEmptyState` + reintentar | existente | `l6_confession_*_error` |
 | L6 Parroquias | Sin conexión o error de Maps | normal | contenido: `parish_maps_error` + «Reintentar»; campo y botón siguen en el panel | `parish_maps_error` | `l6_parishes_*_sin-conexión` |
-| L6 Noticias | Cargando / sin conexión | póster | contenido: `news_loading` / `AppEmptyState` + «Reintentar» | `news_loading`, `news_offline` (nueva) | `l6_news_*_cargando`, `_sin-conexión` |
+| L6 Noticias | Cargando / sin conexión | póster | contenido: `news_loading` / el aviso de fallo con «Reintentar» que ya existe | `news_loading`, `news_failed` (existente) | `l6_news_*_cargando`, `_sin-conexión` |
 | L7 Copia de seguridad | Error | — | hoja: `backup_error` sobre el `footer` | `backup_error` | `l7_backup_*_error` |
 | L7 Informe de errores | Error de envío | — | hoja: `error_report_error` | `error_report_error` | `l7_error_report_*_error` |
 | Todas | 130 % | igual | listón duro | — | §12 |

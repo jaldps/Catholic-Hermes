@@ -84,6 +84,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | T-052 | Hermes | EN COLA (tras T-047; en paralelo con Codex) | L5 · Listas con ficha en horizontal (§8) |
 | T-053 | Hermes | EN COLA (tras T-052) | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
 | T-054 | Codex | EN COLA (al final) | L7 · Hojas, diálogos, bienvenida y ajustes en horizontal (§10) |
+| [T-055](T-055.md) | Hermes | ABIERTO | Estados vacíos y de error que faltan, en vertical (preparación de §16 del diseño horizontal) |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |
