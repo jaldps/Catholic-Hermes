@@ -1,5 +1,7 @@
 package com.example.ui.design
 
+import androidx.compose.ui.composed
+
 import android.graphics.RenderEffect
 import android.graphics.RuntimeShader
 import android.graphics.Shader
@@ -606,3 +608,14 @@ fun rememberGlassFeedback(): GlassFeedback {
 
 /** Whether this runtime would attempt a live blurred backdrop. */
 internal fun liquidBlurSupportedForTests(): Boolean = liquidBlurAvailable
+
+/** Softens only the trailing edge of a cover panel into the shared ambient canvas. */
+fun Modifier.fadeEnd(edge: androidx.compose.ui.unit.Dp = 24.dp): Modifier = composed {
+    val direction = androidx.compose.ui.platform.LocalLayoutDirection.current
+    alphaMask {
+        val span = (edge.toPx() / size.width.coerceAtLeast(1f)).coerceIn(0f, 1f)
+        if (direction == androidx.compose.ui.unit.LayoutDirection.Ltr)
+            Brush.horizontalGradient(0f to Color.Black, (1f - span) to Color.Black, 1f to Color.Transparent)
+        else Brush.horizontalGradient(0f to Color.Transparent, span to Color.Black, 1f to Color.Black)
+    }
+}

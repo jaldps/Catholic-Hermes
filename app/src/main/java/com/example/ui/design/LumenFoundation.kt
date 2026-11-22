@@ -271,7 +271,26 @@ fun appSafeInsets(): AppSafeInsets {
 @Stable
 class BackOverrides {
     internal val stack = mutableStateListOf<() -> Unit>()
+    internal var baseCallback by mutableStateOf<(() -> Unit)?>(null)
+    internal var baseLabel by mutableStateOf<String?>(null)
+    internal var panelClaims by mutableIntStateOf(0)
+    val effective: (() -> Unit)? get() = current ?: baseCallback
     val current: (() -> Unit)? get() = stack.lastOrNull()
+}
+
+private class PanelBackClaim(private val owner: BackOverrides) : androidx.compose.runtime.RememberObserver {
+    init { owner.panelClaims++ }
+    override fun onRemembered() {}
+    override fun onForgotten() { owner.panelClaims-- }
+    override fun onAbandoned() { owner.panelClaims-- }
+}
+
+@Composable
+internal fun rememberPanelBack(): Pair<String, () -> Unit>? {
+    val owner = LocalBackOverrides.current ?: return null
+    val action = owner.effective ?: return null
+    remember(owner) { PanelBackClaim(owner) }
+    return (owner.baseLabel ?: "Back") to action
 }
 
 val LocalBackOverrides = staticCompositionLocalOf<BackOverrides?> { null }

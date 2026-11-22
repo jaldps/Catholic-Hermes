@@ -89,6 +89,8 @@ import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.boundsInWindow
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
@@ -947,10 +949,20 @@ fun AppNotice(text: String, modifier: Modifier = Modifier, footerHeight: Dp = 0.
     val safe = appSafeInsets()
     val density = androidx.compose.ui.platform.LocalDensity.current
     val ime = with(density) { WindowInsets.ime.getBottom(this).toDp() }
+    val window = appWindowSize()
+    var hostBottomGap by remember { mutableStateOf(0.dp) }
+    var hostEndGap by remember { mutableStateOf(0.dp) }
     val p = LocalAppDesign.current.palette
-    Box(modifier.fillMaxSize(), contentAlignment = Alignment.BottomEnd) {
+    Box(modifier.fillMaxSize().onGloballyPositioned {
+        val bounds = it.boundsInWindow()
+        with(density) {
+            hostBottomGap = (window.height - bounds.bottom.toDp()).coerceAtLeast(0.dp)
+            hostEndGap = (window.width - bounds.right.toDp()).coerceAtLeast(0.dp)
+        }
+    }, contentAlignment = Alignment.BottomEnd) {
         Text(text, style = com.example.ui.theme.LocalAppTextStyles.current.subhead, color = p.textPrimary,
-            modifier = Modifier.padding(end = maxOf(12.dp, safe.end + 8.dp), bottom = maxOf(ime, safe.bottom + footerHeight) + 8.dp)
+            modifier = Modifier.padding(end = maxOf(12.dp, safe.end - hostEndGap + 8.dp),
+                bottom = (maxOf(ime, safe.bottom + footerHeight) - hostBottomGap).coerceAtLeast(0.dp) + 8.dp)
                 .widthIn(max = 480.dp).appContentSurface(LocalAppDesign.current.shapes.buttonSmall)
                 .semantics { liveRegion = androidx.compose.ui.semantics.LiveRegionMode.Polite }.padding(16.dp))
     }

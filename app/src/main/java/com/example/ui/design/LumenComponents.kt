@@ -31,6 +31,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.ArrowBackIos
 import androidx.compose.material.icons.automirrored.outlined.ArrowForwardIos
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Pause
@@ -353,6 +354,17 @@ private fun AppHeaderFrame(
     overlap: Dp = 0.dp,
     actions: @Composable RowScope.() -> Unit = {}
 ) {
+    when (LocalHeaderPlacement.current) {
+        AppHeaderPlacement.SidePanel -> {
+            AppPanelHeader(title, root, modifier, assetPath, imageUrl, eyebrow, meta, metaIcon, titleTag, actions)
+            return
+        }
+        AppHeaderPlacement.DetailPane -> {
+            AppPaneDetailHeader(title, modifier, assetPath, imageUrl, eyebrow, meta, metaIcon, titleTag, actions)
+            return
+        }
+        else -> Unit
+    }
     if (appHasCompactHeight() && (assetPath != null || imageUrl != null)) {
         AppCompactHeader(title, root, modifier, assetPath, imageUrl, eyebrow, meta, metaIcon, titleTag, actions)
         return
@@ -756,18 +768,22 @@ fun <T> AppGrid(
     modifier: Modifier = Modifier,
     columns: Int = 3,
     spacing: Dp = 12.dp,
+    minCell: Dp = 128.dp,
     cell: @Composable (item: T, modifier: Modifier) -> Unit
 ) {
     val gutter = LocalAppDesign.current.spacing.gutter
     // Large text: three narrow tiles would break their captions letter by letter, so the grid keeps two across.
-    val cols = if (appLargeText() && columns > 2) 2 else columns
-    Column(modifier.fillMaxWidth().padding(horizontal = gutter), verticalArrangement = Arrangement.spacedBy(spacing)) {
+    BoxWithConstraints(modifier.fillMaxWidth()) {
+    val cols = if (appHasCompactHeight()) appGridColumns(minCell, columns, maxWidth - gutter * 2)
+        else if (appLargeText() && columns > 2) 2 else columns
+    Column(Modifier.fillMaxWidth().padding(horizontal = gutter), verticalArrangement = Arrangement.spacedBy(spacing)) {
         items.chunked(cols).forEach { rowItems ->
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(spacing)) {
                 rowItems.forEach { item -> cell(item, Modifier.weight(1f)) }
                 repeat(cols - rowItems.size) { Spacer(Modifier.weight(1f)) }
             }
         }
+    }
     }
 }
 
@@ -1286,10 +1302,11 @@ private fun AppCompactHeader(
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
-    val top = statusBarHeight()
+    val strip = LocalListArtStrip.current
+    val top = if (strip) 0.dp else statusBarHeight()
     val density = androidx.compose.ui.platform.LocalDensity.current
     val measurer = androidx.compose.ui.text.rememberTextMeasurer()
-    BoxWithConstraints(modifier.fillMaxWidth().height(top + 84.dp)) {
+    BoxWithConstraints(modifier.fillMaxWidth().height(if (strip) 96.dp else top + 84.dp)) {
         val titleWidth = with(density) { (maxWidth - design.spacing.gutter * 2).roundToPx() }
         val candidate = if (root) styles.largeTitle else styles.title1
         val measured = measurer.measure(title, candidate, constraints = androidx.compose.ui.unit.Constraints(maxWidth = titleWidth))
@@ -1325,6 +1342,171 @@ private fun AppCompactHeader(
                 heading.placeRelative(gutter, constraints.maxHeight - 14.dp.roundToPx() - heading[androidx.compose.ui.layout.LastBaseline])
                 caption.placeRelative(gutter, top.roundToPx() + 4.dp.roundToPx())
                 action.placeRelative(constraints.maxWidth - gutter - action.width, top.roundToPx() + 4.dp.roundToPx())
+            }
+        }
+    }
+}
+
+/** Placement is owned by the page wrapper, never by an individual screen. */
+enum class AppHeaderPlacement { InList, SidePanel, DetailPane, CompactBand }
+val LocalHeaderPlacement = androidx.compose.runtime.compositionLocalOf { AppHeaderPlacement.InList }
+
+@Composable
+private fun AppPanelHeader(
+    title: String, root: Boolean, modifier: Modifier, assetPath: String?, imageUrl: String?,
+    eyebrow: String?, meta: String?, metaIcon: ImageVector?, titleTag: String?,
+    actions: @Composable RowScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val window = appWindowSize()
+    val safe = appSafeInsets()
+    val poster = LocalHeaderPoster.current
+    val back = rememberPanelBack()
+    val heroMeta = rememberHeroMeta(assetPath)
+    AppStatusBarGlyphs(design.isDark || (!design.isSanctuary && heroMeta.tone != "light"))
+    val reportOverflow = LocalPanelTitleOverflow.current
+    val artHeight = (window.height * 0.46f).coerceIn(160.dp, 196.dp)
+    val baseline = window.height * 0.46f - 14.dp
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val measurer = androidx.compose.ui.text.rememberTextMeasurer()
+    BoxWithConstraints(modifier.fillMaxWidth()) {
+        val textWidth = with(density) { (maxWidth - design.spacing.gutter * 2).roundToPx() }
+        val candidate = if (root) styles.largeTitle else styles.title1
+        val measured = measurer.measure(title, candidate, constraints = androidx.compose.ui.unit.Constraints(maxWidth = textWidth))
+        val wordFits = title.split(' ', '\n', '\u00a0').all { measurer.measure(it, candidate, softWrap = false).size.width <= textWidth }
+        val style = if (root && (!wordFits || measured.lineCount > 2)) styles.title1 else candidate
+        val titleMeasure = measurer.measure(title, style, constraints = androidx.compose.ui.unit.Constraints(maxWidth = textWidth))
+        val lastBaseline = with(density) { titleMeasure.lastBaseline.toDp() }
+        val overflow = (safe.top + 52.dp - (baseline - lastBaseline)).coerceAtLeast(0.dp)
+        androidx.compose.runtime.SideEffect { reportOverflow(with(density) { overflow.roundToPx() }) }
+        val captionHeight = if (meta == null) 0.dp else with(density) { measurer.measure(meta, styles.subhead,
+            constraints = androidx.compose.ui.unit.Constraints(maxWidth = textWidth)).size.height.toDp() }
+        val hasArt = assetPath != null || imageUrl != null
+        val paperArt = if (design.isSanctuary && hasArt) maxOf(window.height * 0.46f - 72.dp, 96.dp) + 8.dp else 0.dp
+        val panelHeight = LocalHeaderPanelHeight.current.takeIf { it.value.isFinite() } ?: (window.height - safe.bottom)
+        val height = if (poster) maxOf(panelHeight - 16.dp, artHeight + captionHeight + paperArt) + overflow
+            else artHeight + captionHeight + paperArt + overflow
+        Box(Modifier.fillMaxWidth().height(height).testTag("side_panel_header")) {
+            val imageModifier = if (design.isSanctuary) {
+                Modifier.padding(horizontal = design.spacing.gutter).padding(top = artHeight + captionHeight + overflow + 8.dp)
+                    .fillMaxWidth().height(if (poster) (height - artHeight - captionHeight - overflow - 8.dp).coerceAtLeast(96.dp)
+                        else maxOf(window.height * 0.46f - 72.dp, 96.dp))
+                    .border(0.75.dp, p.hairline, design.shapes.thumbnail).padding(5.dp).clip(design.shapes.thumbnail)
+            } else Modifier.fillMaxWidth().height(if (poster) height else artHeight + overflow)
+                .then(if (!design.opaqueMaterial() && !design.isGlass) Modifier.fadeEnd(24.dp) else Modifier)
+            if (assetPath != null || imageUrl != null) Box(imageModifier) {
+                if (imageUrl.isNullOrBlank()) AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = !design.isSanctuary && !poster,
+                    fadeStart = 0.30f, topVeil = false)
+                else AppRemoteImage(imageUrl, assetPath, Modifier.fillMaxSize())
+                if (design.isDark) Box(Modifier.matchParentSize().background(Color.Black.copy(alpha = 0.18f)))
+                if (!design.isSanctuary) {
+                    val veil = if (design.opaqueMaterial()) 0.85f else 0.70f
+                    val artEnd = ((artHeight + overflow) / height).coerceIn(0.01f, 1f)
+                    Box(Modifier.matchParentSize().background(if (poster) Brush.verticalGradient(
+                        0f to p.canvasTop.copy(alpha = 0.1f), artEnd to p.canvasTop.copy(alpha = veil),
+                        1f to p.canvasTop.copy(alpha = veil)) else Brush.verticalGradient(
+                        0f to p.canvasTop.copy(alpha = 0.1f), 0.3f to p.canvasTop.copy(alpha = 0.1f),
+                        1f to p.canvasTop)))
+                }
+            }
+            androidx.compose.ui.layout.Layout(content = {
+                Text(title, style = style, color = p.textPrimary, modifier = Modifier.semantics { heading() }.tagged(titleTag))
+                if (eyebrow != null) Text(eyebrow, style = styles.eyebrow, color = p.textSecondary) else Spacer(Modifier.size(0.dp))
+                if (meta != null) Row(verticalAlignment = Alignment.CenterVertically) {
+                    if (metaIcon != null) { Icon(metaIcon, null, tint = p.textSecondary, modifier = Modifier.size(18.dp)); Spacer(Modifier.width(8.dp)) }
+                    Text(meta, style = styles.subhead, color = p.textSecondary)
+                } else Spacer(Modifier.size(0.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp), content = actions)
+                Box {
+                    if (back != null) AppGlassIconButton(androidx.compose.material.icons.Icons.AutoMirrored.Outlined.ArrowBackIos,
+                        back.first, back.second, tag = "nav_back")
+                }
+            }, modifier = Modifier.fillMaxSize()) { nodes, constraints ->
+                val gutter = design.spacing.gutter.roundToPx()
+                val loose = constraints.copy(minWidth = 0, minHeight = 0)
+                val titlePlace = nodes[0].measure(loose.copy(maxWidth = textWidth))
+                val caption = nodes[1].measure(loose.copy(maxWidth = textWidth))
+                val metaPlace = nodes[2].measure(loose.copy(maxWidth = textWidth))
+                val action = nodes[3].measure(loose.copy(maxWidth = textWidth))
+                val backButton = nodes[4].measure(loose)
+                layout(constraints.maxWidth, constraints.maxHeight) {
+                    val titleY = (baseline + overflow).roundToPx() - titlePlace[androidx.compose.ui.layout.LastBaseline]
+                    titlePlace.placeRelative(gutter, titleY)
+                    caption.placeRelative(gutter, titleY - caption.height - 4.dp.roundToPx())
+                    metaPlace.placeRelative(gutter, (artHeight + overflow).roundToPx())
+                    action.placeRelative(constraints.maxWidth - gutter - action.width, (safe.top + 4.dp).roundToPx())
+                    if (back != null) backButton.placeRelative(gutter - 4.dp.roundToPx(), (safe.top + 4.dp).roundToPx())
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun AppPaneDetailHeader(
+    title: String, modifier: Modifier, assetPath: String?, imageUrl: String?, eyebrow: String?,
+    meta: String?, metaIcon: ImageVector?, titleTag: String?, actions: @Composable RowScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val bitmap = rememberAssetBitmap(assetPath)
+    val portrait = bitmap != null && bitmap.height > bitmap.width * 1.1f
+    Row(modifier.fillMaxWidth().heightIn(min = 130.dp).padding(horizontal = design.spacing.gutter, vertical = 8.dp)
+        , horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+        if (assetPath != null || imageUrl != null) Box(Modifier.size(if (portrait) 104.dp else 112.dp, if (portrait) 130.dp else 112.dp)
+            .then(if (design.isSanctuary) Modifier.border(0.75.dp, p.hairline, design.shapes.thumbnail).padding(5.dp) else Modifier)
+            .clip(design.shapes.thumbnail)) {
+            if (imageUrl.isNullOrBlank()) AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = false, topVeil = false)
+            else AppRemoteImage(imageUrl, assetPath, Modifier.fillMaxSize())
+        }
+        Column(Modifier.weight(1f)) {
+            if (eyebrow != null) Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
+            Text(title, style = styles.title1, color = p.textPrimary, modifier = Modifier.semantics { heading() }.tagged(titleTag))
+            if (meta != null) Row(verticalAlignment = Alignment.CenterVertically) {
+                if (metaIcon != null) Icon(metaIcon, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
+                Text(meta, style = styles.subhead, color = p.textSecondary)
+            }
+            Row(horizontalArrangement = Arrangement.spacedBy(4.dp), content = actions)
+        }
+    }
+}
+
+/** One button, including the decorative play cue; text grows at the user's chosen size. */
+@Composable
+internal fun CompactGuidedPrayerCard(
+    title: String, onClick: (() -> Unit)?, modifier: Modifier, assetPath: String, meta: String?, tag: String?
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    BoxWithConstraints(modifier) {
+        val showPlay = maxWidth >= 260.dp
+        // Reserve two title lines for both entries so the pair stays aligned
+        // when a translated title wraps at the user's chosen font size.
+        val textHeight = with(androidx.compose.ui.platform.LocalDensity.current) {
+            styles.headline.lineHeight.toDp() * 2 + if (meta != null) 8.dp + styles.caption.lineHeight.toDp() else 4.dp
+        }
+        val minimum = maxOf(96.dp, textHeight + 24.dp)
+        Row(Modifier.fillMaxWidth().heightIn(min = minimum)
+            .appContentSurface(design.shapes.card).lumenPress(onClick).tagged(tag).padding(12.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp), verticalAlignment = Alignment.CenterVertically) {
+            Box(Modifier.size(56.dp, 72.dp)
+                .then(if (design.isSanctuary) Modifier.border(0.75.dp, p.hairline, design.shapes.thumbnail).padding(3.dp) else Modifier)
+                .clip(design.shapes.thumbnail)) {
+                AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = false, topVeil = false, maxWidthPx = 320)
+            }
+            Column(Modifier.weight(1f).heightIn(min = textHeight), verticalArrangement = Arrangement.Center) {
+                Text(title, style = styles.headline, color = p.textPrimary)
+                if (meta != null) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(meta, style = styles.caption, color = p.textSecondary)
+                }
+            }
+            if (showPlay) Box(Modifier.size(32.dp).lumenGlass(CircleShape, lifted = false), contentAlignment = Alignment.Center) {
+                Icon(Icons.Filled.PlayArrow, null, tint = p.accent, modifier = Modifier.size(18.dp))
             }
         }
     }

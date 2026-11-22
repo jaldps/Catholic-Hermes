@@ -1,0 +1,695 @@
+{
+  "tests": 137,
+  "passed": 137,
+  "failed": 0,
+  "skipped": 0,
+  "command_log": "/tmp/t047-b-final.log",
+  "note": "Single successful assembleDebug + focused suite. NarrowLargeTextAuditTest is not filtered into an empty scenario run here; its full result belongs to C.",
+  "cases": [
+    {
+      "class": "com.example.ReaderFontChoiceTest",
+      "test": "cycleReturnsToTheAppChoiceAndLabelsAreLocalized",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.ReaderFontChoiceTest",
+      "test": "readerFollowsEveryGlobalFamilyUntilAnExplicitLocalChoice",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFoundationsTest",
+      "test": "fullWindowMetricsAndDispatchedInsetsAreIndependent",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFoundationsTest",
+      "test": "sheetKeepsItsTagAndMovesTheFooterAboveTheKeyboard",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFoundationsTest",
+      "test": "fiveDestinationsFitTheCompactRail",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFoundationsTest",
+      "test": "aHeaderWithoutArtKeepsItsNaturalTitleBlock",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFoundationsTest",
+      "test": "legacyDialogActionsStayVisibleWhileItsBodyScrolls",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFoundationsTest",
+      "test": "heightWinsAndEveryBoundaryHasOneClass",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFoundationsTest",
+      "test": "compactBandRetainsTheCallersTagAndUses108Dp",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "todayShortcutsOpenTheJournalAndTheQuizAndBackLeavesToToday",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "summaryIsEnglishAndPortugueseToo",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "oldDestinationsAreLinksIntoTheMatchingSection",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "exploreHasOneEntryThatReplacesHabitsAndSpiritualLife",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "searchSectionsHabitsAndSpiritualLifeLandInTheirSection",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "aHabitsDeepLinkSelectsTheMyPathTab",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "myPathIsAFifthTabAndTappingItAgainReturnsToTheHub",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "todaySummaryShowsHabitsFidelityPlanAndNovenaAndEachRowOpensItsPlace",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "everySectionOpensTheScreenItAlwaysHadAndBackReturnsToTheHub",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "summaryWithNothingStartedHasOnlyHabitsAndAGentleFidelityLine",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "temptationsSectionBacksStraightToTheHubAndConfessionIsOneTapFromIt",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "practiceOpenedFromTheListReturnsToTheListThenTheHub",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.MyPathUiTest",
+      "test": "theHubHasExactlyOneRowToHabits",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "translatedControlsStayWholeAndReachableAtLargeType[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[IVE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "translatedControlsStayWholeAndReachableAtLargeType[IVE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "translatedControlsStayWholeAndReachableAtLargeType[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "translatedControlsStayWholeAndReachableAtLargeType[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "currentPrayerAndStepNavigationStayInSyncAcrossDevotions[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "test": "translatedControlsStayWholeAndReachableAtLargeType[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "test": "tabsSecondaryDestinationsAndSettingsRemainReachable[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "test": "tabsSecondaryDestinationsAndSettingsRemainReachable[IVE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "test": "tabsSecondaryDestinationsAndSettingsRemainReachable[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "test": "tabsSecondaryDestinationsAndSettingsRemainReachable[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "test": "tabsSecondaryDestinationsAndSettingsRemainReachable[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "test": "everyAccentPresetAndCustomColourPersists",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "test": "fontAndSizeSurviveReopeningAndAppearanceDoesNotOverwriteFont",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "test": "legacyStoredIdsRemainReadableAndNormalizeWhenSelected",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPreferencesTest",
+      "test": "legacyIdentitiesMigrateAndChangingStylePreservesReadingAndAccessibilityChoices",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "railReplacesTheBottomBarAndEveryDestinationOpens[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "ordersShowListAndDetailAndSelectionUpdatesTheDetail[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "saintsTwoPaneOnALandscapeTablet[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "phonesKeepTheBottomBar[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "devotionsShowListAndDetailAndSelectionUpdatesTheDetail[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "railOnALandscapeTablet[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "justBelowTheTwoPaneBreakpointPushesDetails[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "justBelowTheRailBreakpointIsStillAPhone[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "saintsShowListAndDetailSideBySideAndSelectionUpdatesTheDetail[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "theRailStartsAt600[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "readingPagesAreCentredInAReadingColumn[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "railReplacesTheBottomBarAndEveryDestinationOpens[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "ordersShowListAndDetailAndSelectionUpdatesTheDetail[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "saintsTwoPaneOnALandscapeTablet[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "phonesKeepTheBottomBar[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "devotionsShowListAndDetailAndSelectionUpdatesTheDetail[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "railOnALandscapeTablet[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "justBelowTheTwoPaneBreakpointPushesDetails[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "justBelowTheRailBreakpointIsStillAPhone[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "saintsShowListAndDetailSideBySideAndSelectionUpdatesTheDetail[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "theRailStartsAt600[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "readingPagesAreCentredInAReadingColumn[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "railReplacesTheBottomBarAndEveryDestinationOpens[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "ordersShowListAndDetailAndSelectionUpdatesTheDetail[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "saintsTwoPaneOnALandscapeTablet[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "phonesKeepTheBottomBar[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "devotionsShowListAndDetailAndSelectionUpdatesTheDetail[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "railOnALandscapeTablet[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "justBelowTheTwoPaneBreakpointPushesDetails[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "justBelowTheRailBreakpointIsStillAPhone[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "saintsShowListAndDetailSideBySideAndSelectionUpdatesTheDetail[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "theRailStartsAt600[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "readingPagesAreCentredInAReadingColumn[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "railReplacesTheBottomBarAndEveryDestinationOpens[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "ordersShowListAndDetailAndSelectionUpdatesTheDetail[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "saintsTwoPaneOnALandscapeTablet[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "phonesKeepTheBottomBar[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "devotionsShowListAndDetailAndSelectionUpdatesTheDetail[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "railOnALandscapeTablet[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "justBelowTheTwoPaneBreakpointPushesDetails[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "justBelowTheRailBreakpointIsStillAPhone[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "saintsShowListAndDetailSideBySideAndSelectionUpdatesTheDetail[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "theRailStartsAt600[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.TabletLayoutTest",
+      "test": "readingPagesAreCentredInAReadingColumn[SANCTUARY]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "test": "compactBandUsesExactlyThirtyPercentAtTheShortRequiredSize",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "test": "readingMeasureTracksTheUsersRealFontAndScale",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "test": "minimumSupportedHeightRecordsTheApprovedBandsNumericalException",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "test": "listDetailKeepsSearchStickyAndOpensSelectedPrayerInFullReader",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "test": "keyboardOnlyResizesTheFocusedSupportingLayoutsMainColumn",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "test": "hubPanelUsesApprovedWidthAndTitleBaseline",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "test": "portraitHeaderScrollsAwayInsteadOfRemainingAsAnOverlay",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "test": "readerHidesRailAndKeepsNavigationAboveTheSafeBottom",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "test": "compactPhoneClampsTheSheetToItsActualSafeWidth",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontTypographyTest",
+      "test": "identityDefaultsRetainDistinctEditorialHierarchyAndLegacyFontPreferencesWork",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontTypographyTest",
+      "test": "explicitFamiliesChangeReadingAndChromeInEveryIdentityWithoutChangingScale",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "test": "lumenLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "test": "glassLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "test": "sanctuaryLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "test": "classicDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "test": "classicLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "test": "sanctuaryDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "test": "lumenDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "test": "glassDark",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[APPLE-ES-1]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[APPLE-ES-1.3]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[APPLE-PT-1]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[APPLE-PT-1.3]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[CLASSIC-ES-1]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[CLASSIC-ES-1.3]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[CLASSIC-PT-1]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[CLASSIC-PT-1.3]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[GLASS-ES-1]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[GLASS-ES-1.3]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[GLASS-PT-1]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[GLASS-PT-1.3]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[SANCTUARY-ES-1]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[SANCTUARY-ES-1.3]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[SANCTUARY-PT-1]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.CompactPrayerGuidesTest",
+      "test": "bothCompactGuidesFitWithoutScrollingAndOpenTheCorrectDevotion[SANCTUARY-PT-1.3]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "test": "navigationAndPrimaryActionRemainUsableInEveryIdentity[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "test": "navigationAndPrimaryActionRemainUsableInEveryIdentity[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "test": "navigationAndPrimaryActionRemainUsableInEveryIdentity[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "test": "navigationAndPrimaryActionRemainUsableInEveryIdentity[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "test": "navigationAndPrimaryActionRemainUsableInEveryIdentity[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "test": "navigationAndPrimaryActionRemainUsableInEveryIdentity[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "test": "navigationAndPrimaryActionRemainUsableInEveryIdentity[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignNavigationTest",
+      "test": "navigationAndPrimaryActionRemainUsableInEveryIdentity[SANCTUARY, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.DesignContrastTest",
+      "test": "liturgicalCaptionsAndRubricsRemainReadableOnEveryPaperSurface",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "test": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[APPLE, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "test": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[APPLE, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "test": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[CLASSIC, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "test": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[CLASSIC, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "test": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[GLASS, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "test": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[GLASS, dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "test": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[SANCTUARY, dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.FontPickerInteractionTest",
+      "test": "namedChoicesAreSelectableAndPreviewUsesActualBundledFamily[SANCTUARY, dark=true]",
+      "status": "passed"
+    }
+  ]
+}

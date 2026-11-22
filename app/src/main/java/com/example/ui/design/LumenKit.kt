@@ -62,6 +62,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
@@ -124,6 +125,8 @@ object LumenKit : AppKit {
         val styles = LocalAppTextStyles.current
         val density = LocalDensity.current
         val overrides = remember { BackOverrides() }
+        if (overrides.baseCallback !== onBack) overrides.baseCallback = onBack
+        if (overrides.baseLabel != backLabel) overrides.baseLabel = backLabel
         val chrome = remember { ChromeState() }
         val navInset = androidx.compose.foundation.layout.WindowInsets.navigationBars
             .asPaddingValues().calculateBottomPadding()
@@ -193,12 +196,22 @@ object LumenKit : AppKit {
                             // so nothing ghosts through the glass or hides a band.
                             Box(
                                 Modifier.fillMaxSize().padding(start = railInset + safe.start, end = safe.end)
+                                    .then(if (compact) Modifier.padding(top = safe.top, bottom = safe.bottom).clipToBounds()
+                                        .layout { measurable, constraints ->
+                                            // Keep the full-window layout and header baseline,
+                                            // but clip the actual viewport (and its semantics)
+                                            // to safe bars, including while a list scrolls.
+                                            val top = safe.top.roundToPx()
+                                            val bars = top + safe.bottom.roundToPx()
+                                            val child = measurable.measure(constraints.copy(minHeight = constraints.minHeight + bars, maxHeight = constraints.maxHeight + bars))
+                                            layout(constraints.maxWidth, constraints.maxHeight) { child.placeRelative(0, -top) }
+                                        } else Modifier)
                                     .then(if (opaque) Modifier else Modifier.alphaMask {
                                         val h = size.height
                                         val fadeBottom = if (dockShown) (bottom + if (live) 0.dp else 26.dp).toPx() else 0f
                                         val floor = if (live) 0.72f else 0.02f
                                         val topSpan = (statusTop + BarRow + 28.dp).toPx()
-                                        val topAlpha = if (live) 1f else 1f - edge * 0.97f
+                                        val topAlpha = if (compact || live) 1f else 1f - edge * 0.97f
                                         val bottomStops = if (!dockShown) arrayOf(1f to Color.Black) else if (live) arrayOf(
                                             ((h - fadeBottom) / h).coerceIn(0.5f, 1f) to Color.Black,
                                             1f to Color.Black.copy(alpha = floor)
@@ -322,7 +335,7 @@ object LumenKit : AppKit {
                                 .padding(horizontal = design.spacing.gutter - 4.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            if (effectiveBack != null) {
+                            if (effectiveBack != null && overrides.panelClaims == 0) {
                                 AppGlassIconButton(
                                     icon = Icons.AutoMirrored.Outlined.ArrowBackIos,
                                     contentDescription = backLabel ?: "Back",
@@ -885,7 +898,7 @@ object LumenKit : AppKit {
         )
         val inCard = LocalInsideCard.current
         val inset = if (inCard) 0.dp else 18.dp
-        Column(modifier.fillMaxWidth()) {
+        Column(modifier.fillMaxWidth().then(if (selected) Modifier.semantics { this.selected = true } else Modifier)) {
             Row(
                 Modifier
                     .fillMaxWidth()
@@ -985,11 +998,12 @@ object LumenKit : AppKit {
         val p = design.palette
         val styles = LocalAppTextStyles.current
         val shape = design.shapes.field
+        val compactSearch = LocalCompactSearch.current || LocalHeaderPlacement.current == AppHeaderPlacement.SidePanel
         Row(
             modifier
                 .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-                .heightIn(min = 48.dp)
+                .padding(horizontal = if (LocalCompactSearch.current) 0.dp else design.spacing.gutter)
+                .heightIn(min = if (compactSearch) 44.dp else 48.dp)
                 .lumenGlass(shape, lifted = false)
                 .semantics { contentDescription = placeholder }
                 .padding(horizontal = 16.dp),
@@ -1015,6 +1029,24 @@ object LumenKit : AppKit {
 
     @Composable
     override fun SegmentedTabs(options: List<String>, selectedIndex: Int, onSelect: (Int) -> Unit, modifier: Modifier) {
+        if (LocalHeaderPlacement.current == AppHeaderPlacement.SidePanel) {
+            val design = LocalAppDesign.current
+            val p = design.palette
+            val styles = LocalAppTextStyles.current
+            Column(modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
+                options.forEachIndexed { index, label ->
+                    val active = index == selectedIndex
+                    Box(Modifier.fillMaxWidth().heightIn(min = 44.dp)
+                        .then(if (active) Modifier.liquidPane(design.shapes.buttonSmall, design.glassSpec(GlassRole.Thumb)) else Modifier)
+                        .lumenPress({ onSelect(index) }, role = Role.Tab).semantics { selected = active }
+                        .padding(horizontal = 12.dp, vertical = 8.dp), contentAlignment = Alignment.CenterStart) {
+                        Text(label, style = styles.subhead.copy(fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
+                            color = if (active && design.isSanctuary) p.accent else if (active && design.opaqueMaterial()) p.onAction else if (active) p.textPrimary else p.textSecondary)
+                    }
+                }
+            }
+            return
+        }
         val design = LocalAppDesign.current
         val p = design.palette
         val styles = LocalAppTextStyles.current

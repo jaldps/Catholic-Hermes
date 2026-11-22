@@ -67,8 +67,8 @@ class LandscapeFoundationsTest {
         } }
         inset()
         compose.onNodeWithTag("original_header").assertExists()
-        val bounds = compose.onNodeWithTag("compact_header").fetchSemanticsNode().boundsInRoot
-        assertEquals(108f, bounds.height / compose.density.density, 1f)
+        val bounds = compose.onNodeWithTag("compact_header").getUnclippedBoundsInRoot()
+        assertEquals(108f, (bounds.bottom - bounds.top).value, 1f)
     }
 
     @Test @Config(qualifiers = "w800dp-h360dp-land-xhdpi") fun fiveDestinationsFitTheCompactRail() {
