@@ -1,0 +1,233 @@
+{
+  "id": "inmaculado-corazon-maria",
+  "sourceId": "IVE-08",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla al Inmaculado Corazón de María",
+    "en": "Chaplet of the Immaculate Heart of Mary",
+    "pt": "Coronilha ao Imaculado Coração de Maria"
+  },
+  "summary": {
+    "es": "Ofrecimiento al Inmaculado Corazón y participación en la pasión de Cristo.",
+    "en": "Offering to the Immaculate Heart and sharing in the passion of Christ.",
+    "pt": "Oferecimento ao Imaculado Coração e participação na paixão de Cristo."
+  },
+  "instrument": {
+    "es": "Rosario común de cinco decenas.",
+    "en": "An ordinary five-decade rosary.",
+    "pt": "Terço comum de cinco décadas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 5,
+      "text": {
+        "es": "Corazón ardiente, Corazón herido en la cruz, Corazón que sangra en la Hostia. Me ofrezco voluntariamente para sufrir y para consolar al Corazón de Jesús en el sufrimiento de mis hermanos.",
+        "en": "Burning Heart, Heart wounded on the cross, Heart that bleeds in the Host. I freely offer myself to suffer and to console the Heart of Jesus in the suffering of my brothers and sisters.",
+        "pt": "Coração ardente, Coração ferido na cruz, Coração que sangra na Hóstia. Ofereço-me voluntariamente para sofrer e para consolar o Coração de Jesus no sofrimento dos meus irmãos."
+      }
+    },
+    {
+      "bead": 6,
+      "vr": {
+        "v": {
+          "es": "V/ Corazón Inmaculado de María, holocausto perfecto del Divino Amor.",
+          "en": "V/ Immaculate Heart of Mary, perfect holocaust of Divine Love.",
+          "pt": "V/ Coração Imaculado de Maria, holocausto perfeito do Amor Divino."
+        },
+        "r": {
+          "es": "R/ Haz que me hieran las heridas de tu Hijo, que me embriague de su Cruz y de su Sangre.",
+          "en": "R/ Make the wounds of your Son wound me, let me be inebriated by his Cross and his Blood.",
+          "pt": "R/ Faz que as feridas do teu Filho me firam, que me embriague da sua Cruz e do seu Sangue."
+        }
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Corazón ardiente, Corazón herido en la cruz, Corazón que sangra en la Hostia. Me ofrezco voluntariamente para sufrir y para consolar al Corazón de Jesús en el sufrimiento de mis hermanos.",
+        "en": "Burning Heart, Heart wounded on the cross, Heart that bleeds in the Host. I freely offer myself to suffer and to console the Heart of Jesus in the suffering of my brothers and sisters.",
+        "pt": "Coração ardente, Coração ferido na cruz, Coração que sangra na Hóstia. Ofereço-me voluntariamente para sofrer e para consolar o Coração de Jesus no sofrimento dos meus irmãos."
+      }
+    },
+    {
+      "bead": 8,
+      "vr": {
+        "v": {
+          "es": "V/ Corazón Inmaculado de María, holocausto perfecto del Divino Amor.",
+          "en": "V/ Immaculate Heart of Mary, perfect holocaust of Divine Love.",
+          "pt": "V/ Coração Imaculado de Maria, holocausto perfeito do Amor Divino."
+        },
+        "r": {
+          "es": "R/ Haz que me hieran las heridas de tu Hijo, que me embriague de su Cruz y de su Sangre.",
+          "en": "R/ Make the wounds of your Son wound me, let me be inebriated by his Cross and his Blood.",
+          "pt": "R/ Faz que as feridas do teu Filho me firam, que me embriague da sua Cruz e do seu Sangue."
+        }
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Corazón ardiente, Corazón herido en la cruz, Corazón que sangra en la Hostia. Me ofrezco voluntariamente para sufrir y para consolar al Corazón de Jesús en el sufrimiento de mis hermanos.",
+        "en": "Burning Heart, Heart wounded on the cross, Heart that bleeds in the Host. I freely offer myself to suffer and to console the Heart of Jesus in the suffering of my brothers and sisters.",
+        "pt": "Coração ardente, Coração ferido na cruz, Coração que sangra na Hóstia. Ofereço-me voluntariamente para sofrer e para consolar o Coração de Jesus no sofrimento dos meus irmãos."
+      }
+    },
+    {
+      "bead": 10,
+      "vr": {
+        "v": {
+          "es": "V/ Corazón Inmaculado de María, holocausto perfecto del Divino Amor.",
+          "en": "V/ Immaculate Heart of Mary, perfect holocaust of Divine Love.",
+          "pt": "V/ Coração Imaculado de Maria, holocausto perfeito do Amor Divino."
+        },
+        "r": {
+          "es": "R/ Haz que me hieran las heridas de tu Hijo, que me embriague de su Cruz y de su Sangre.",
+          "en": "R/ Make the wounds of your Son wound me, let me be inebriated by his Cross and his Blood.",
+          "pt": "R/ Faz que as feridas do teu Filho me firam, que me embriague da sua Cruz e do seu Sangue."
+        }
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Corazón ardiente, Corazón herido en la cruz, Corazón que sangra en la Hostia. Me ofrezco voluntariamente para sufrir y para consolar al Corazón de Jesús en el sufrimiento de mis hermanos.",
+        "en": "Burning Heart, Heart wounded on the cross, Heart that bleeds in the Host. I freely offer myself to suffer and to console the Heart of Jesus in the suffering of my brothers and sisters.",
+        "pt": "Coração ardente, Coração ferido na cruz, Coração que sangra na Hóstia. Ofereço-me voluntariamente para sofrer e para consolar o Coração de Jesus no sofrimento dos meus irmãos."
+      }
+    },
+    {
+      "bead": 12,
+      "vr": {
+        "v": {
+          "es": "V/ Corazón Inmaculado de María, holocausto perfecto del Divino Amor.",
+          "en": "V/ Immaculate Heart of Mary, perfect holocaust of Divine Love.",
+          "pt": "V/ Coração Imaculado de Maria, holocausto perfeito do Amor Divino."
+        },
+        "r": {
+          "es": "R/ Haz que me hieran las heridas de tu Hijo, que me embriague de su Cruz y de su Sangre.",
+          "en": "R/ Make the wounds of your Son wound me, let me be inebriated by his Cross and his Blood.",
+          "pt": "R/ Faz que as feridas do teu Filho me firam, que me embriague da sua Cruz e do seu Sangue."
+        }
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Corazón ardiente, Corazón herido en la cruz, Corazón que sangra en la Hostia. Me ofrezco voluntariamente para sufrir y para consolar al Corazón de Jesús en el sufrimiento de mis hermanos.",
+        "en": "Burning Heart, Heart wounded on the cross, Heart that bleeds in the Host. I freely offer myself to suffer and to console the Heart of Jesus in the suffering of my brothers and sisters.",
+        "pt": "Coração ardente, Coração ferido na cruz, Coração que sangra na Hóstia. Ofereço-me voluntariamente para sofrer e para consolar o Coração de Jesus no sofrimento dos meus irmãos."
+      }
+    },
+    {
+      "bead": 14,
+      "vr": {
+        "v": {
+          "es": "V/ Corazón Inmaculado de María, holocausto perfecto del Divino Amor.",
+          "en": "V/ Immaculate Heart of Mary, perfect holocaust of Divine Love.",
+          "pt": "V/ Coração Imaculado de Maria, holocausto perfeito do Amor Divino."
+        },
+        "r": {
+          "es": "R/ Haz que me hieran las heridas de tu Hijo, que me embriague de su Cruz y de su Sangre.",
+          "en": "R/ Make the wounds of your Son wound me, let me be inebriated by his Cross and his Blood.",
+          "pt": "R/ Faz que as feridas do teu Filho me firam, que me embriague da sua Cruz e do seu Sangue."
+        }
+      },
+      "repeat": 10
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Madre del Corazón doloroso, termina en mi cuerpo lo que falta a la pasión de tu Hijo. Amén.",
+        "en": "Mother of the sorrowful Heart, complete in my body what is lacking to the passion of your Son. Amen.",
+        "pt": "Mãe do Coração doloroso, completa no meu corpo o que falta à paixão do teu Filho. Amém."
+      },
+      "repeat": 3,
+      "meditation": {
+        "es": "Al final, tres veces",
+        "en": "At the end, three times",
+        "pt": "No final, três vezes"
+      }
+    }
+  ],
+  "notes": "Texto literal de IVE; la fuente no prescribe Credo inicial.",
+  "image": "inmaculado-corazon-maria",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "IVE · Rosarios y coronas",
+      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+    }
+  ]
+}

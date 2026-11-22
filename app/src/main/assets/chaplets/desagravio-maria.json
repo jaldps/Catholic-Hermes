@@ -1,0 +1,184 @@
+{
+  "id": "desagravio-maria",
+  "sourceId": "IVE-16",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla simple de desagravio a María Santísima",
+    "en": "Simple chaplet of reparation to Mary Most Holy",
+    "pt": "Coronilha simples de desagravo a Maria Santíssima"
+  },
+  "summary": {
+    "es": "Cinco misterios de tres Avemarías por las ofensas contra María.",
+    "en": "Five mysteries of three Hail Marys for the offenses against Mary.",
+    "pt": "Cinco mistérios de três Ave Marias pelas ofensas contra Maria."
+  },
+  "instrument": {
+    "es": "Cinco grupos de tres cuentas pequeñas.",
+    "en": "Five groups of three small beads.",
+    "pt": "Cinco grupos de três contas pequenas."
+  },
+  "when": {
+    "es": "Para todos los días; los misterios pueden rezarse juntos o por separado.",
+    "en": "For every day; the mysteries may be said together or separately.",
+    "pt": "Para todos os dias; os mistérios podem ser rezados juntos ou separadamente."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    }
+  ],
+  "steps": [
+    {
+      "bead": null,
+      "text": {
+        "es": "Ten compasión del corazón de tu Santísima Madre. Éste está cubierto con espinas, con las cuales hombres ingratos lo hieren en cada momento y no hay nadie que las remueva con un acto de reparación.",
+        "en": "Have compassion on the heart of your Most Holy Mother. It is covered with thorns, with which ungrateful men wound it at every moment and there is no one to remove them by an act of reparation.",
+        "pt": "Tende compaixão do coração da vossa Santíssima Mãe. Está coberto de espinhos, com os quais homens ingratos o ferem a cada momento, e não há ninguém que os retire com um ato de reparação."
+      },
+      "meditation": {
+        "es": "Cita de la fuente",
+        "en": "Quote from the source",
+        "pt": "Citação da fonte"
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "Primer Misterio: Por los ataques contra la Inmaculada Concepción de María.",
+        "en": "First Mystery: For the attacks against the Immaculate Conception of Mary.",
+        "pt": "Primeiro Mistério: Pelos ataques contra a Imaculada Conceição de Maria."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Ave María Purísima, sin pecado concebida.",
+        "en": "Hail Mary, most pure, conceived without sin.",
+        "pt": "Ave Maria Puríssima, sem pecado concebida."
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "Segundo Misterio: Por los ataques a su Perpetua Virginidad.",
+        "en": "Second Mystery: For the attacks against her perpetual virginity.",
+        "pt": "Segundo Mistério: Pelos ataques contra a sua Perpétua Virgindade."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Ave María Purísima, sin pecado concebida.",
+        "en": "Hail Mary, most pure, conceived without sin.",
+        "pt": "Ave Maria Puríssima, sem pecado concebida."
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "Tercer Misterio: Por los ataques a su Divina Maternidad y el rechazo de aceptarla como la Madre de toda la humanidad.",
+        "en": "Third Mystery: For the attacks against her divine motherhood and the refusal to accept her as the Mother of all humanity.",
+        "pt": "Terceiro Mistério: Pelos ataques contra a sua divina maternidade e a recusa em aceitá-la como Mãe de toda a humanidade."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Ave María Purísima, sin pecado concebida.",
+        "en": "Hail Mary, most pure, conceived without sin.",
+        "pt": "Ave Maria Puríssima, sem pecado concebida."
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "Cuarto Misterio: Por aquellos que procuran infundir en los niños el desprecio, la indiferencia y hasta el odio hacia María Inmaculada.",
+        "en": "Fourth Mystery: For those who seek to instil in children contempt, indifference and even hatred toward Mary Immaculate.",
+        "pt": "Quarto Mistério: Pelos que procuram infundir nas crianças o desprezo, a indiferença e até o ódio para com Maria Imaculada."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Ave María Purísima, sin pecado concebida.",
+        "en": "Hail Mary, most pure, conceived without sin.",
+        "pt": "Ave Maria Puríssima, sem pecado concebida."
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "Quinto Misterio: Por aquellos que la ultrajan directamente con palabras o imágenes blasfemas y la utilizan en medios de comunicación con burla en contra de la religión católica.",
+        "en": "Fifth Mystery: For those who directly insult her with blasphemous words or images and use her in the media to mock the Catholic religion.",
+        "pt": "Quinto Mistério: Pelos que a ultrajam diretamente com palavras ou imagens blasfêmias e a utilizam nos meios de comunicação para zombar da religião católica."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Ave María Purísima, sin pecado concebida.",
+        "en": "Hail Mary, most pure, conceived without sin.",
+        "pt": "Ave Maria Puríssima, sem pecado concebida."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Oh, Virgen mía, Oh, Madre mía,\nyo me ofrezco enteramente a tu Inmaculado Corazón\ny te consagro mi cuerpo y mi alma,\nmis pensamientos y mis acciones.\nQuiero ser como tú quieres que sea,\nhacer lo que tú quieres que haga.\nNo temo, pues siempre estás conmigo.\nAyúdame a amar a tu hijo Jesús,\ncon todo mi corazón y sobre todas las cosas.",
+        "en": "O my Virgin, O my Mother,\nI offer myself entirely to your Immaculate Heart\nand I consecrate to you my body and my soul,\nmy thoughts and my actions.\nI want to be what you want me to be,\nto do what you want me to do.\nI do not fear, for you are always with me.\nHelp me to love your son Jesus,\nwith all my heart and above all things.",
+        "pt": "Ó, Virgem minha, Ó, Mãe minha,\noferço-me inteiramente ao teu Imaculado Coração\ne consagro-te o meu corpo e a minha alma,\nos meus pensamentos e as minhas ações.\nQuero ser como tu queres que eu seja,\nfazer o que tu queres que eu faça.\nNão temo, pois estás sempre comigo.\nAjuda-me a amar o teu filho Jesus,\ncom todo o meu coração e sobre todas as coisas."
+      },
+      "meditation": {
+        "es": "Oración final",
+        "en": "Final prayer",
+        "pt": "Oração final"
+      }
+    }
+  ],
+  "notes": "Texto literal de IVE. Hozana no publica este texto; se traduce del original español.",
+  "image": "desagravio-maria",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "IVE · Rosarios y coronas",
+      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+    }
+  ]
+}
