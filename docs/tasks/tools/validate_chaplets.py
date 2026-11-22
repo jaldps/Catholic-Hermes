@@ -2,8 +2,10 @@
 """Validator for «Otras coronillas» (assets/chaplets/<id>.json), contract in docs/content/CORONILLAS-SPEC.md.
 
 Usage (repository root):
-  python3 docs/tasks/tools/validate_chaplets.py [--partial] app/src/main/assets/chaplets/*.json
+  python3 docs/tasks/tools/validate_chaplets.py [--partial] [--images] app/src/main/assets/chaplets/*.json
 Exit code 0 = valid. --partial accepts a subset of the curated list.
+--images also requires assets/chaplets/images/<image>.jpg and its entry in credits.json (the owner made an own,
+relevant image mandatory for every chaplet; there is no generic fallback).
 """
 import json
 import pathlib
@@ -72,7 +74,25 @@ def placeholders(obj):
     return found
 
 
-def check(path, prayer_ids, seen_ids, seen_sources):
+def image_credits():
+    f = ROOT / "app/src/main/assets/chaplets/images/credits.json"
+    if not f.exists():
+        return None
+    data = json.loads(f.read_text(encoding="utf-8"))
+    return set(data) if isinstance(data, dict) else {e.get("id") or e.get("key") for e in data}
+
+
+def check_image(where, key, credits):
+    img = ROOT / f"app/src/main/assets/chaplets/images/{key}.jpg"
+    if not img.exists():
+        errors.append(f"{where}.image: missing assets/chaplets/images/{key}.jpg (an own, relevant image is mandatory)")
+    if credits is None:
+        errors.append(f"{where}.image: assets/chaplets/images/credits.json does not exist")
+    elif key not in credits:
+        errors.append(f"{where}.image: no entry for {key!r} in credits.json")
+
+
+def check(path, prayer_ids, seen_ids, seen_sources, images=False, credits=None):
     where = path.name
     try:
         d = json.loads(path.read_text(encoding="utf-8"))
@@ -99,6 +119,8 @@ def check(path, prayer_ids, seen_ids, seen_sources):
         lt(d.get(key), f"{where}.{key}")
     if not isinstance(d.get("image"), str) or not d["image"].strip():
         errors.append(f"{where}.image: required key (T-058 supplies the file)")
+    elif images:
+        check_image(where, d["image"], credits)
     wd = d.get("weekdays", [])
     if not isinstance(wd, list) or any(not isinstance(x, int) or not 1 <= x <= 7 for x in wd):
         errors.append(f"{where}.weekdays: list of ISO days 1-7")
@@ -213,6 +235,8 @@ def check(path, prayer_ids, seen_ids, seen_sources):
 
 def main(argv):
     partial = "--partial" in argv
+    images = "--images" in argv
+    credits = image_credits() if images else None
     files = [pathlib.Path(a) for a in argv if not a.startswith("--")]
     if not files:
         print(__doc__)
@@ -220,7 +244,7 @@ def main(argv):
     prayer_ids = app_prayer_ids()
     seen_ids, seen_sources = set(), set()
     for f in files:
-        check(f, prayer_ids, seen_ids, seen_sources)
+        check(f, prayer_ids, seen_ids, seen_sources, images, credits)
     excluded = set()
     ex = ROOT / "docs/tasks/T-056-data/excluded.json"
     if ex.exists():

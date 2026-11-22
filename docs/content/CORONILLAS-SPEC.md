@@ -146,7 +146,16 @@ Un archivo por coronilla. El `id` es estable y en minúsculas con guiones (p. ej
 - **`variables`:** `["deceased_name", "deceased_gender", "intention"]`. El texto usa `{{nombre}}`, `{{intencion}}` y `{{el|ella}}` / `{{him|her}}` / `{{ele|ela}}`.
 - **`weekdays`:** días sugeridos (ISO 1–7). Además, `season` opcional: `lent` | `advent` | `easter`.
 - **`promise` / `historicalNote`:** solo con fuente (regla 5).
-- **`image`:** clave de imagen (T-058). La resuelve `assets/chaplets/images/<image>.jpg` con `credits.json`. Si no existe, se usa el arte de la sección.
+- **`image`:** clave de imagen (T-058). La resuelve `assets/chaplets/images/<image>.jpg` con `credits.json`.
+  - **Es obligatoria** (decisión del dueño): cada coronilla lleva **su propia imagen relevante**. No hay respaldo genérico al arte de la sección.
+  - **Orden de búsqueda:**
+    1. una imagen que la app ya tenga de esa devoción o ese santo (`assets/saints/images`, `assets/devotions/images`);
+    2. Wikimedia Commons con licencia libre (DP, CC0, CC BY, CC BY-SA), con crédito visible;
+    3. la imagen oficial del santuario, la orden o la web de la devoción, con «Derechos: <titular>», con la misma autorización del dueño que los emblemas de las órdenes.
+  - **Relevancia:**
+    - la advocación, el santo o el misterio propios de esa coronilla;
+    - si la imagen se parece pero no es exacta, lleva el rótulo «Imagen referencial», como en T-044;
+    - nunca se presenta como suya la imagen de otra devoción.
 
 **Coherencia comprobada por el validador.** La suma de cuentas que recorren los pasos (`repeat` sobre grupos con `count`) debe coincidir con el `count` declarado de cada grupo. Si no coincide, es un error, salvo que se declare en `notes` con el motivo (regla 6).
 
@@ -174,8 +183,8 @@ Con `--partial`, admite un subconjunto de la lista curada. Sin él, exige las 55
 
 | Encargo | Quién | Cuándo | Qué |
 |---|---|---|---|
-| T-056 | Codex | Tras T-054 (L7) | Contenido: las 55 coronillas en `assets/chaplets/`, por lotes de unos 10, con el validador. Informe de derechos y de estatus eclesial. |
-| T-058 | Hermes | Tras T-053 (L6) | Imágenes: una por coronilla. Primero se reutilizan las de santos y devociones de la app; si no hay, de Commons con licencia libre, como en T-034 y T-044; con `credits.json`. |
-| T-057 | Codex | Tras T-056 | Motor e interfaz:<ul><li>`ChapletCatalog`;</li><li>`StepMap` generado desde `steps`;</li><li>`RosarySession` con `Devotion.OTHER` + `chapletId` (`Saver` compatible);</li><li>segmento «Otras ▾» con catálogo en hoja;</li><li>entrada en Orar;</li><li>hilo según `beads`;</li><li>voces V y R;</li><li>variables sin guardar;</li><li>vertical y horizontal (L1);</li><li>tests, capturas y crítico.</li></ul> |
+| T-056 | **Hermes** | Tras T-055; T-052 tiene prioridad en cuanto se abra | Contenido: las 55 coronillas en `assets/chaplets/`, por lotes de unos 10, con el validador. Informe de derechos y de estatus eclesial. |
+| T-058 | Hermes | Tras T-056, o en los huecos | Imágenes: **una propia y relevante por coronilla, obligatoria**, en el orden de búsqueda del campo `image`; con `credits.json`. Se comprueba con `validate_chaplets.py --images`. |
+| T-057 | Codex | **Justo tras T-048 (L1)**, con la pantalla del Rosario ya en su forma nueva; no se cierra sin las 55 imágenes | Motor e interfaz:<ul><li>`ChapletCatalog`;</li><li>`StepMap` generado desde `steps`;</li><li>`RosarySession` con `Devotion.OTHER` + `chapletId` (`Saver` compatible);</li><li>segmento «Otras ▾» con catálogo en hoja;</li><li>entrada en Orar;</li><li>hilo según `beads`;</li><li>voces V y R;</li><li>variables sin guardar;</li><li>vertical y horizontal (L1);</li><li>tests, capturas y crítico.</li></ul> |
 
 El encargo detallado de cada uno se escribe cuando se abra. Esta especificación es su base.
