@@ -75,7 +75,15 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | T-043 | Coordinador (Sonnet local) | CERRADO ([informe](T-043-REPORT.md)) | Diseño para tableta (rail y dos paneles) |
 | [T-044](T-044.md) | Hermes | CERRADO ([revisión](T-044-REVIEW.md): 20/25 integradas) | Imágenes de las 25 devociones marianas sin imagen (rama `media/devotion-images-2` del fork) |
 | T-045 | Coordinador (Sonnet local) | CERRADO ([informe](T-045-REPORT.md)) | Auditoría a 320 dp con letra al 130 %: textos cortados y botones ocultos en toda la app |
-| [T-046](T-046.md) | Hermes | ABIERTO (empezar tras «Release 1.8.28») | «Mi camino» como 5.ª pestaña y una sola fila de hábitos |
+| [T-046](T-046.md) | Hermes | INTEGRADO ([informe](T-046-REPORT.md)); tests del coordinador en curso | «Mi camino» como 5.ª pestaña y una sola fila de hábitos |
+| [T-047](T-047.md) | Codex | ABIERTO (diseño aprobado por el dueño el 22-nov) | L0 · Fundamentos de la interfaz horizontal (`docs/design/LANDSCAPE.md` §2–§3) |
+| T-048 | Codex | EN COLA (tras T-047) | L1 · Rosario y Coronilla en horizontal (§4) |
+| T-049 | Codex | EN COLA (tras T-048) | L2 · Lectores en horizontal (§5) |
+| T-050 | Codex | EN COLA (tras T-049) | L3 · Hoy en horizontal (§6) |
+| T-051 | Codex | EN COLA (tras T-050) | L4 · Centros Orar y Leer en horizontal (§7) |
+| T-052 | Hermes | EN COLA (tras T-047; en paralelo con Codex) | L5 · Listas con ficha en horizontal (§8) |
+| T-053 | Hermes | EN COLA (tras T-052) | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
+| T-054 | Codex | EN COLA (al final) | L7 · Hojas, diálogos, bienvenida y ajustes en horizontal (§10) |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |
