@@ -1,7 +1,7 @@
 # T-046 · Revisión del coordinador
 
 - **Entrega:** fork `joselanzd-hash/Catholic-Hermes`, rama `ext/T-046` @ `99ca7df` (4 commits).
-- **Veredicto:** **APROBADO en código y capturas; integrado en `CatholicGPT`.** Se cierra cuando pasen los tests del coordinador; después se publica la 1.8.29.
+- **Veredicto:** **APROBADO · CERRADO.** Integrado en `CatholicGPT` y publicado en la 1.8.29.
 
 ## Alcance
 
@@ -38,7 +38,29 @@ Los commits son pequeños y en el orden pedido.
 
 Las fallas por `AppNotIdleException` del informe venían del entorno de Windows de Hermes; también fallaban en su commit base. Aquí se repitieron todos con el lock de Gradle:
 
-*En curso (22-nov): `MyPathUiTest`, `MyPathSummaryTest`, `AppNavigationTest`, `DesignNavigationTest`, `TabletLayoutTest`, `NarrowLargeTextAuditTest`, `SearchUiTest` y `WelcomePersonalizationTest`. Los resultados se anotarán aquí.*
+| Clase | Resultado |
+|---|---|
+| `MyPathUiTest` | 13/13 |
+| `MyPathSummaryTest` | 3/3 |
+| `DesignNavigationTest` | 8/8 |
+| `TabletLayoutTest` | 44/44 |
+| `NarrowLargeTextAuditTest` | 8/8 (a 320 dp y 130 %, sin hallazgos nuevos) |
+| `SearchUiTest` | 8/8 |
+| `AppNavigationTest` | 5/5 **tras un ajuste del coordinador** |
+| `WelcomePersonalizationTest` | 16/16 **tras un ajuste del coordinador** |
+
+**Dos tests que Hermes no pudo correr en su entorno:**
+- **`AppNavigationTest`** seguía buscando «Mi camino» en Explorar. Ahora:
+  - comprueba que ya **no** está ahí;
+  - lo abre desde la pestaña `nav_my_path`;
+  - entra en Hábitos, vuelve al hub y regresa a Explorar por su pestaña.
+
+  No se quitó ninguna aserción.
+- **`WelcomePersonalizationTest`** fallaba en 3 de 4 identidades, las del dock flotante:
+  - al quitar la fila «Mi camino», las filas de Explorar subieron;
+  - `performScrollTo` dejaba «Perfil» en el borde inferior (825–891 dp), debajo del dock (820–876), y el toque caía en el dock. Se midió con un diagnóstico.
+  - Ahora el test desplaza 160 dp más antes de tocar. Si la lista no pudiera moverse, el toque seguiría fallando, así que el test sigue vigilando un solapamiento real.
+  - En la app no hay defecto: Explorar se puede seguir desplazando.
 
 ## Capturas
 

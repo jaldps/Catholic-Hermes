@@ -138,15 +138,19 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("catechism_screen").assertIsDisplayed()
         pressBackToMore()
 
-        // «Mi camino» replaced the two Explore rows: a section is reached from its hub, and back returns to the hub,
-        // then to Explore.
-        clickMoreRow("nav_my_path")
+        // «Mi camino» is the fifth tab (T-046) and no longer an Explore row: a section is reached from its hub,
+        // back returns to the hub, and Explore stays reachable from its own tab.
+        org.junit.Assert.assertTrue(
+            "«Mi camino» must not be listed in Explore",
+            runCatching { compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag("nav_my_path")) }.isFailure
+        )
+        compose.onNodeWithTag("nav_my_path").performClick()
         compose.onNodeWithTag("my_path_screen").assertIsDisplayed()
         compose.onNodeWithTag("my_path_today_habits").performScrollTo().performClick()
         compose.onNodeWithTag("habits_and_virtues_screen").assertIsDisplayed()
         compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
         compose.onNodeWithTag("my_path_screen").assertIsDisplayed()
-        pressBackToMore()
+        goToMoreFromHome()
 
         goToMoreFromHome()
 

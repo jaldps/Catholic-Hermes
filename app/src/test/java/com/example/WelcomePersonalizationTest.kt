@@ -1,5 +1,8 @@
 package com.example
 
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.test.performSemanticsAction
+import androidx.compose.ui.semantics.SemanticsActions
 import android.app.Application
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -124,7 +127,13 @@ class WelcomePersonalizationTest(private val identity: DesignLanguage, private v
         compose.onNodeWithTag("nav_more").performClick()
         compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag("settings_welcome_profile"))
         compose.onNode(hasText("Regresando") and hasAnyAncestor(hasTestTag("settings_welcome_profile")), useUnmergedTree = true).assertExists()
-        compose.onNodeWithTag("settings_welcome_profile").performScrollTo().performClick()
+        compose.onNodeWithTag("settings_welcome_profile").performScrollTo()
+        // A minimal scroll can leave the row on the bottom edge, under the floating dock of the glass
+        // identities; nudge the list so the row clears it (if the list cannot move, the row is genuinely
+        // covered and the tap below fails, as it should).
+        val clearance = with(compose.density) { 160.dp.toPx() }
+        compose.onNodeWithTag("more_screen").performSemanticsAction(SemanticsActions.ScrollBy) { it(0f, clearance) }
+        compose.onNodeWithTag("settings_welcome_profile").performClick()
         waitForTag("welcome_profile_sheet")
         compose.onNodeWithTag("welcome_profile_1").assertIsSelected()
         compose.onNodeWithTag("welcome_minutes_10").assertExists()
