@@ -2,6 +2,18 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.8.29
+
+[Descargar Catholic Hermes 1.8.29](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.29.apk) · versión `1.8.29`, código 38. **Actualiza 1.8.1–1.8.28** y conserva el progreso. También en [Releases → v1.8.29](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.29).
+
+- **«Mi camino» es la quinta pestaña:** Hoy · Orar · Leer · Mi camino · Explorar.
+  - Volver a tocarla lleva al inicio de «Mi camino».
+  - Ya no aparece en Explorar.
+- **Una sola fila «Hábitos»** con el progreso de hoy y la racha, en lugar de tres filas que llevaban al mismo sitio.
+- Con letra grande en pantallas estrechas, la pestaña se llama «Ruta».
+
+[Metadatos](../docs/quality/release-1.8.29/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.28
 
 [Descargar Catholic Hermes 1.8.28](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.28.apk) · versión `1.8.28`, código 37. **Actualiza 1.8.1–1.8.27** y conserva el progreso. También en [Releases → v1.8.28](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.28).
