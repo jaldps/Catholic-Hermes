@@ -187,3 +187,8 @@ Esta sección **sustituye al reparto** de la actualización anterior. El dueño 
     | T-057 | Codex | Motor e interfaz |
 
     Los tres están EN COLA.
+
+**Ajuste (22-nov, noche), a pregunta del dueño.** Las coronillas avanzan sin frenar el horizontal.
+- **T-056 (contenido):** pasa a Hermes tras T-055. Son archivos nuevos y no chocan con nada; T-052 tiene prioridad cuando se abra.
+- **T-057 (motor):** va justo después de T-048, porque toca la misma pantalla del Rosario que L1.
+- **T-058:** cada coronilla con **su propia imagen relevante, obligatoria**. El validador lo comprueba con `--images`.
