@@ -1,0 +1,179 @@
+# -*- coding: utf-8 -*-
+"""Lote 4b: CD-34, CD-42, CD-53, CD-47, CD-57."""
+from lib import L, B, P, T, V, rosary59, DL, DS
+
+CHAPLETS=[]
+
+VR34V=L("O Jesus, hear our prayers","Jesús, escucha nuestras plegarias","Jesus, ouve as nossas preces")
+VR34R=L("For the sake of your most holly Mothers tears","Por las lágrimas de tu Santísima Madre","Pelos lágrimas da tua Santíssima Mãe")
+INTRO34=L("Crucified Jesus! Prostrated at your feet, we offer You the Tears of Her, who with intimate, sympathetic love accompanied You on Your Painful Way of the Cross. Grant, O good Master that we take to heart the lessons which the tears of Your Most Holy Mother afford us, so that we may fulfill Your Holy Will on earth that we may become worthy to laud and bless You in Heaven for all Eternity. Amen.",
+ "Jesús crucificado, postrados a tus pies te ofrecemos las lágrimas de Aquella que con amor íntimo y compasivo te acompañó en tu doloroso camino de la Cruz. Concédenos, buen Maestro, que grabemos en el corazón las lecciones que nos dan las lágrimas de tu Santísima Madre, para que cumplamos tu santa voluntad en la tierra y seamos dignos de alabarte y bendecirte en el cielo por toda la eternidad. Amén.",
+ "Jesus crucificado, prostrados aos teus pés, oferecemos-te as lágrimas daquela que, com amor íntimo e compassivo, te acompanhou no teu doloroso caminho da Cruz. Concede-nos, bom Mestre, que gravemos no coração as lições que nos dão as lágrimas da tua Santíssima Mãe, para que cumpramos a tua santa vontade na terra e nos tornemos dignos de louvar-te e bendizer-te no céu por toda a eternidade. Amém.")
+M34=[
+ "The tears shed by our Most Holy Mother at the birth of our Saviour in the stable of Bethlehem.",
+ "The tears shed by our Most Holy Mother during her Flight into Egypt.",
+ "The tears shed by our Most Holy Mother during her Search for Jesus.",
+ "The tears shed by our Most Holy Mother during Jesus' painful Way of the Cross.",
+ "The tears shed by our Most Holy Mother during the Agony of Jesus on the Cross.",
+ "The tears shed by our Most Holy Mother when the Sacred Body of Jesus was taken from the Cross and placed into Her arms.",
+ "The tears shed by our Most Holy Mother when Jesus was placed in the Sepulcher.",
+]
+M34ES=[
+ "Las lágrimas derramadas por nuestra Santísima Madre en el nacimiento del Salvador en el establo de Belén.",
+ "Las lágrimas derramadas por nuestra Santísima Madre durante la huida a Egipto.",
+ "Las lágrimas derramadas por nuestra Santísima Madre durante la búsqueda de Jesús.",
+ "Las lágrimas derramadas por nuestra Santísima Madre durante el doloroso camino de Jesús hacia la Cruz.",
+ "Las lágrimas derramadas por nuestra Santísima Madre durante la agonía de Jesús en la Cruz.",
+ "Las lágrimas derramadas por nuestra Santísima Madre cuando el Cuerpo sagrado de Jesús fue bajado de la Cruz y puesto en sus brazos.",
+ "Las lágrimas derramadas por nuestra Santísima Madre cuando Jesús fue colocado en el sepulcro.",
+]
+M34PT=[
+ "As lágrimas derramadas pela nossa Santíssima Mãe no nascimento do Salvador no estábulo de Belém.",
+ "As lágrimas derramadas pela nossa Santíssima Mãe durante a fuga para o Egito.",
+ "As lágrimas derramadas pela nossa Santíssima Mãe durante a procura de Jesus.",
+ "As lágrimas derramadas pela nossa Santíssima Mãe durante o doloroso caminho de Jesus para a Cruz.",
+ "As lágrimas derramadas pela nossa Santíssima Mãe durante a agonia de Jesus na Cruz.",
+ "As lágrimas derramadas pela nossa Santíssima Mãe quando o Corpo sagrado de Jesus foi descido da Cruz e colocado nos seus braços.",
+ "As lágrimas derramadas pela nossa Santíssima Mãe quando Jesus foi colocado no sepulcro.",
+]
+beads34=[B("medal"),B("small",3),B("small"),B("medal")]
+for k in range(7):
+    beads34 += [B("small",7)]
+    if k<6: beads34.append(B("small"))
+steps34=[
+ P(0,"sign_of_the_cross"),T(0,INTRO34),
+ T(1,L("O Jesus! Hear our petitions. For the sake of the tears of Your Most Holy Mother.","Jesús, escucha nuestras peticiones, por las lágrimas de tu Santísima Madre.","Jesus, ouve as nossas petições, pelas lágrimas da tua Santíssima Mãe."),rep=3),
+ T(2,L("O Jesus! Look upon the tears of Her, Who loved You most while on earth. And who loves You most intimately in Heaven.",
+   "Jesús, mira las lágrimas de Aquella que más te amó en la tierra y que más íntimamente te ama en el cielo.",
+   "Jesus, olha as lágrimas daquela que mais te amou na terra e que mais intimamente te ama no céu.")),
+]
+idx=4
+for k in range(7):
+    steps34.append(V(None,L("O Jesus, look upon the tears of her who loved you most upon earth","Jesús, mira las lágrimas de Aquella que más te amó en la tierra","Jesus, olha as lágrimas daquela que mais te amou na terra"),
+       L("and loves you most ardently in Heaven","y que más ardientemente te ama en el cielo","e que mais ardentemente te ama no céu"),
+       med=L(M34ES[k],M34[k],M34PT[k])))
+    steps34.append(V(idx,VR34V,VR34R,rep=7))
+    idx+=2
+steps34.append(V(None,L("O Jesus, look upon the tears of her who loved you most upon earth","Jesús, mira las lágrimas de Aquella que más te amó en la tierra","Jesus, olha as lágrimas daquela que mais te amou na terra"),
+       L("and loves you most ardently in Heaven","y que más ardientemente te ama en el cielo","e que mais ardentemente te ama no céu"),rep=3))
+CHAPLETS.append({
+ "id":"coronilla-lagrimas","sourceId":"CD-34","group":"mary",
+ "title":L("Coronilla de Lágrimas","Chaplet of Tears","Coronilha das Lágrimas"),
+ "summary":L("Siete grupos de siete cuentas con meditaciones sobre las lágrimas de María y texto responsorial.",
+   "Seven groups of seven beads with meditations on the tears of Mary and a responsorial text.",
+   "Sete grupos de sete contas com meditações sobre as lágrimas de Maria e texto responsorial."),
+ "instrument":L("59 cuentas: medalla grande, 3, 1, medalla de Lourdes y 7 grupos de 7 separados por 6 cuentas.",
+   "59 beads: large medal, 3, 1, Medal of Lourdes and 7 sets of 7 separated by 6 beads.",
+   "59 contas: medalha grande, 3, 1, medalha de Lourdes e 7 grupos de 7 separados por 6 contas."),
+ "when":L("Uso libre.","At any time.","Uso livre."),
+ "weekdays":[],
+ "beads":beads34,"steps":steps34,
+ "notes":"Texto literal de Catholic Doors; se conserva la errata «holly Mothers tears». La fuente no da la primera meditación completa en el fragmento extraído; se toma de la lista de los siete grupos.",
+})
+
+CHAPLETS.append({
+ "id":"inmaculada-concepcion-coronilla","sourceId":"CD-42","group":"mary",
+ "title":L("Coronilla de la Inmaculada Concepción","Chaplet of the Immaculate Conception","Coronilha da Imaculada Conceição"),
+ "summary":L("Tres grupos de cuatro cuentas con Padre Nuestro, cuatro Avemarías y Gloria, por la pureza.",
+   "Three sets of four beads with an Our Father, four Hail Marys and a Glory, for purity.",
+   "Três grupos de quatro contas com Pai-Nosso, quatro Ave Marias e Glória, pela pureza."),
+ "instrument":L("15 cuentas declaradas: 3 grupos de 4, 1 cuenta final y Medalla Milagrosa.",
+   "15 beads stated: 3 sets of 4, one concluding bead and the Miraculous Medal.",
+   "15 contas declaradas: 3 grupos de 4, uma conta final e a Medalha Milagrosa."),
+ "when":L("Se recomienda diariamente.","Recommended daily.","Recomenda-se diariamente."),
+ "weekdays":[],
+ "beads":[B("large"),B("small",4),B("large"),B("small",4),B("large"),B("small",4),B("small"),B("medal")],
+ "steps":[
+   P(0,"sign_of_the_cross"),
+   *[s for i in range(3) for s in (
+      T(2*i,L("Blessed be the Holy and Immaculate Conception of the Blessed Virgin Mary.",
+        "Bendita sea la santa e Inmaculada Concepción de la Virgen María.",
+        "Bendita seja a santa e Imaculada Conceição da Virgem Maria.")),
+      P(2*i,"our_father"),P(2*i+1,"hail_mary",4),P(2*i,"glory_be"))],
+ ],
+ "historicalNote":{"text":L("La fuente atribuye la coronilla a San Juan Berchmans S.J. y la destina a pedir la gracia de no pecar contra la pureza.",
+   "The source attributes the chaplet to St John Berchmans S.J. and recommends it to obtain the grace of never sinning against purity.",
+   "A fonte atribui a coronilha a S. João Berchmans S.J. e recomenda-a para pedir a graça de nunca pecar contra a pureza."),
+   "source":"https://www.catholicdoors.com/prayers/chaplets/chap36.htm"},
+ "notes":"Incoherencia resuelta con el texto real: la fuente dice 15 cuentas pero describe 3×4 + 1 = 13; el hilo sigue la descripción. WARN explicado en notes.",
+})
+
+CHAPLETS.append({
+ "id":"dos-corazones-coronilla","sourceId":"CD-53","group":"mary",
+ "title":L("Coronilla de los Dos Corazones","Chaplet of the Two Hearts","Coronilha dos Dois Corações"),
+ "summary":L("Cinco grupos de cuatro cuentas con meditaciones sobre los Corazones de Jesús y María.",
+   "Five sets of four beads with meditations on the Hearts of Jesus and Mary.",
+   "Cinco grupos de quatro contas com meditações sobre os Corações de Jesus e Maria."),
+ "instrument":L("Medalla de los Dos Corazones y 20 cuentas en 5 grupos de 4.",
+   "Two Hearts medal and 20 beads in 5 sets of 4.",
+   "Medalha dos Dois Corações e 20 contas em 5 grupos de 4."),
+ "when":L("Uso libre.","At any time.","Uso livre."),
+ "weekdays":[],"variables":["intention"],
+ "beads":[B("medal")]+[b for _ in range(5) for b in (B("large"),B("small",3))],
+ "steps":[P(0,"sign_of_the_cross")],
+})
+M53=[
+ ("In Honour of the Sacred Heart of Jesus.","En honor del Sagrado Corazón de Jesús.","Em honra do Sagrado Coração de Jesus."),
+ ("In Honour of the Immaculate Heart of Mary.","En honor del Inmaculado Corazón de María.","Em honra do Imaculado Coração de Maria."),
+ ("Meditating on the Passion of Our Lord.","Meditando la Pasión del Señor.","Meditando a Paixão do Senhor."),
+ ("Meditating on the Sorrows of Mary.","Meditando los Dolores de María.","Meditando as Dores de Maria."),
+ ("In Atonement to the Hearts of Jesus and Mary.","En reparación a los Corazones de Jesús y María.","Em reparação aos Corações de Jesus e Maria."),
+]
+CHAPLETS[-1]["steps"] += [s for i,(es,en,pt) in enumerate(M53) for s in (
+   P(1+2*i,"our_father",med=L(es,en,pt)),P(2+2*i,"hail_mary",3))]
+CHAPLETS[-1]["steps"].append(T(None,L("O United Hearts of Jesus and Mary, You are all grace, all mercy, all love. Let my heart be joined to Yours, so that my every need is present in Your United Hearts. Most especially, shed Your grace upon this particular need... (State your need here.) Help me to recognize and accept Your loving will in my life. Holy and Sacred Wounds of the United Hearts of Jesus and Mary, answer my prayer. Amen.",
+ "Corazones Unidos de Jesús y María, sois toda gracia, toda misericordia, todo amor. Unid mi corazón al vuestro, para que cada necesidad mía esté presente en vuestros Corazones Unidos. Muy especialmente, derramad vuestra gracia sobre esta necesidad concreta... (expón aquí tu petición). Ayudadme a reconocer y aceptar vuestra voluntad amorosa en mi vida. Llagas santas y sagradas de los Corazones Unidos de Jesús y María, responded a mi plegaria. Amén.",
+ "Corações Unidos de Jesus e Maria, sois toda graça, toda misericórdia, todo amor. Uni o meu coração ao vosso, para que cada necessidade minha esteja presente nos vossos Corações Unidos. Muito especialmente, derramai a vossa graça sobre esta necessidade concreta... (aqui a petição). Ajudai-me a reconhecer e aceitar a vossa vontade amorosa na minha vida. Chagas santas e sagradas dos Corações Unidos de Jesus e Maria, atendei a minha prece. Amém.")))
+
+CHAPLETS.append({
+ "id":"reina-luz-coronilla","sourceId":"CD-47","group":"mary",
+ "title":L("Coronilla de la Reina de la Luz","Chaplet of the Queen of Light","Coronilha da Rainha da Luz"),
+ "summary":L("Tres grupos de seis cuentas con un Padre Nuestro precedido de meditación y cinco Avemarías.",
+   "Three sets of six beads with an Our Father preceded by a meditation and five Hail Marys.",
+   "Três grupos de seis contas com um Pai-Nosso precedido de meditação e cinco Ave Marias."),
+ "instrument":L("Medalla del Sagrado Corazón y 18 cuentas en 3 grupos de 6.",
+   "Sacred Heart medal and 18 beads in 3 sets of 6.",
+   "Medalha do Sagrado Coração e 18 contas em 3 grupos de 6."),
+ "when":L("Uso libre.","At any time.","Uso livre."),
+ "weekdays":[],
+ "beads":[B("medal")]+[b for _ in range(3) for b in (B("large"),B("small",5))],
+ "steps":[
+   P(0,"sign_of_the_cross"),
+   P(1,"our_father",med=L("A thousand promises are not worth one small, meaningful prayer.","Mil promesas no valen una pequeña oración significativa.","Mil promessas não valem uma pequena oração significativa.")),
+   P(2,"hail_mary",5),
+   P(3,"our_father",med=L("My child, it is necessary to keep close to My Divine Son, especially in the Blessed Sacrament.","Hijo mío, es necesario permanecer cerca de mi Hijo divino, especialmente en el Santísimo Sacramento.","Filho meu, é necessário permanecer perto do meu Filho divino, especialmente no Santíssimo Sacramento.")),
+   P(4,"hail_mary",5),
+   P(5,"our_father",med=L("I am the Mother of the hopeless; Mother of Sorrows. It is important for those that are suffering to come to me for consolation and for comfort.","Soy la Madre de los sin esperanza, Madre de los Dolores. Es importante que quienes sufren vengan a mí en busca de consuelo y aliento.","Sou a Mãe dos sem esperança, Mãe das Dores. É importante que os que sofrem venham a mim em busca de consolo e conforto.")),
+   P(6,"hail_mary",5),
+ ],
+ "notes":"Texto literal de Catholic Doors. Estatus eclesial: la página no identifica visionario, aparición ni revelación privada; las tres meditaciones se presentan como dichos sin atribución. No hay elemento que excluir según las Normas DDF 2024; se registra esta comprobación.",
+})
+
+CHAPLETS.append({
+ "id":"madre-eucaristia-coronilla","sourceId":"CD-57","group":"mary",
+ "title":L("Coronilla a la Madre de la Santísima Eucaristía","Chaplet to the Mother of the Most Holy Eucharist","Coronilha à Mãe da Santíssima Eucaristia"),
+ "summary":L("Rosario con profesión de fe eucarística y oraciones a María en cada decena.",
+   "Rosary with a profession of Eucharistic faith and prayers to Mary in each decade.",
+   "Terço com profissão de fé eucarística e orações a Maria em cada década."),
+ "instrument":L("Rosario mariano de 59 cuentas.","59-bead Marian rosary.","Terço mariano de 59 contas."),
+ "when":L("Uso libre.","At any time.","Uso livre."),
+ "weekdays":[],
+ "beads":rosary59(),
+ "steps":[
+   P(0,"sign_of_the_cross"),P(1,"creed"),P(2,"hail_mary",3),
+   T(3,L("My God, I love you with my whole heart, I repent of ever having offended You, never permit me to offend You again, grant that I may love You always, and then do with me what You will. Amen",
+     "Dios mío, te amo con todo mi corazón, me arrepiento de haberte ofendido, no permitas que vuelva a ofenderte, concédeme que te ame siempre y haz luego de mí lo que quieras. Amén.",
+     "Meu Deus, amo-vos com todo o coração, arrependo-me de vos ter ofendido, não permitais que vos ofenda novamente, concedei-me que vos ame sempre e depois fazei de mim o que quiserdes. Amém.")),
+   *[s for i in range(5) for s in (
+      T(DL[i],L("Hail Mary, 0 Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
+        "Dios te salve, oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
+        "Salve, ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo.")),
+      T(DS[i],L("0 Mother help me!","Oh Madre, ayúdame.","Ó Mãe, ajuda-me."),rep=10),
+      P(None,"memorare"))],
+   T(None,L("Dearest Mother, I Believe, that Jesus Christ, your Son is truly present in the Sacrament of the Most Holy Eucharist, Body, Blood, Soul and Divinity. I Believe, that He is the, only begotten Son of God, Who became Man to save me, a sinner. By partaking of this Most Holy Sacrament, I profess: That I believe in the One, Holy, Catholic and Apostolic Church and that Her teachings and sacraments were instituted by Christ. That because this is truly His Precious Body and life giving Blood, to receive Him in the state of grace will bring healing to both my soul and body but knowingly receive Him in the state of mortal sin will bring me judgement and condemnation. Dearest Virgin of Virgins, I declare these truths before You as my Witness, that You who are the great Mother of God. May you remember me before my Lord and Master, now and at the hour of my death. Amen.",
+     "Madre queridísima, creo que Jesucristo, tu Hijo, está verdaderamente presente en el Sacramento de la Santísima Eucaristía, Cuerpo, Sangre, Alma y Divinidad. Creo que es el Hijo unigénito de Dios, que se hizo Hombre para salvarme a mí, pecador. Al participar de este Santísimo Sacramento, profeso: que creo en la Iglesia una, santa, católica y apostólica, y que sus enseñanzas y sacramentos fueron instituidos por Cristo; que, siendo verdaderamente su Cuerpo precioso y su Sangre que da vida, recibirlo en estado de gracia traerá curación a mi alma y a mi cuerpo, pero recibirlo conscientemente en estado de pecado mortal me traerá juicio y condenación. Virgen de vírgenes queridísima, declaro estas verdades ante ti como testigo, para que tú, que eres la gran Madre de Dios, te acuerdes de mí ante mi Señor y Maestro, ahora y en la hora de mi muerte. Amén.",
+     "Mãe queridíssima, creio que Jesus Cristo, teu Filho, está verdadeiramente presente no Sacramento da Santíssima Eucaristia, Corpo, Sangue, Alma e Divindade. Creio que é o Filho unigénito de Deus, que se fez Homem para me salvar a mim, pecador. Ao participar deste Santíssimo Sacramento, professo: que creio na Igreja una, santa, católica e apostólica, e que os seus ensinamentos e sacramentos foram instituídos por Cristo; que, sendo verdadeiramente o seu Corpo precioso e o seu Sangue que dá vida, recebê-lo em estado de graça trará cura à minha alma e ao meu corpo, mas recebê-lo conscientemente em estado de pecado mortal me trará juízo e condenação. Virgem das virgens queridíssima, declaro estas verdades diante de ti como testemunha, para que tu, que és a grande Mãe de Deus, te lembres de mim diante do meu Senhor e Mestre, agora e na hora da minha morte. Amém."),med=L("Profesión de fe final","Final profession of faith","Profissão de fé final")),
+   T(None,L("O Mother of the Most Holy Eucharist, Pray for us.","Oh Madre de la Santísima Eucaristía, ruega por nosotros.","Ó Mãe da Santíssima Eucaristia, roga por nós."),rep=3),
+ ],
+ "notes":"Texto literal de Catholic Doors; se conservan las erratas «0 Mother» (cero por O) y «I Believe, that He is the, only begotten». Estatus eclesial: la página no menciona visionario ni revelación privada; el encuadre polémico de otras webs no se reproduce. No hay elemento que excluir según las Normas DDF 2024.",
+})

@@ -1,0 +1,404 @@
+{
+  "id": "coronilla-lagrimas",
+  "sourceId": "CD-34",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla de Lágrimas",
+    "en": "Chaplet of Tears",
+    "pt": "Coronilha das Lágrimas"
+  },
+  "summary": {
+    "es": "Siete grupos de siete cuentas con meditaciones sobre las lágrimas de María y texto responsorial.",
+    "en": "Seven groups of seven beads with meditations on the tears of Mary and a responsorial text.",
+    "pt": "Sete grupos de sete contas com meditações sobre as lágrimas de Maria e texto responsorial."
+  },
+  "instrument": {
+    "es": "59 cuentas: medalla grande, 3, 1, medalla de Lourdes y 7 grupos de 7 separados por 6 cuentas.",
+    "en": "59 beads: large medal, 3, 1, Medal of Lourdes and 7 sets of 7 separated by 6 beads.",
+    "pt": "59 contas: medalha grande, 3, 1, medalha de Lourdes e 7 grupos de 7 separados por 6 contas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small",
+      "count": 7
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 7
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 7
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 7
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 7
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 7
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 7
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "sign_of_the_cross"
+    },
+    {
+      "bead": 0,
+      "text": {
+        "es": "Crucified Jesus! Prostrated at your feet, we offer You the Tears of Her, who with intimate, sympathetic love accompanied You on Your Painful Way of the Cross. Grant, O good Master that we take to heart the lessons which the tears of Your Most Holy Mother afford us, so that we may fulfill Your Holy Will on earth that we may become worthy to laud and bless You in Heaven for all Eternity. Amen.",
+        "en": "Jesús crucificado, postrados a tus pies te ofrecemos las lágrimas de Aquella que con amor íntimo y compasivo te acompañó en tu doloroso camino de la Cruz. Concédenos, buen Maestro, que grabemos en el corazón las lecciones que nos dan las lágrimas de tu Santísima Madre, para que cumplamos tu santa voluntad en la tierra y seamos dignos de alabarte y bendecirte en el cielo por toda la eternidad. Amén.",
+        "pt": "Jesus crucificado, prostrados aos teus pés, oferecemos-te as lágrimas daquela que, com amor íntimo e compassivo, te acompanhou no teu doloroso caminho da Cruz. Concede-nos, bom Mestre, que gravemos no coração as lições que nos dão as lágrimas da tua Santíssima Mãe, para que cumpramos a tua santa vontade na terra e nos tornemos dignos de louvar-te e bendizer-te no céu por toda a eternidade. Amém."
+      }
+    },
+    {
+      "bead": 1,
+      "text": {
+        "es": "O Jesus! Hear our petitions. For the sake of the tears of Your Most Holy Mother.",
+        "en": "Jesús, escucha nuestras peticiones, por las lágrimas de tu Santísima Madre.",
+        "pt": "Jesus, ouve as nossas petições, pelas lágrimas da tua Santíssima Mãe."
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "O Jesus! Look upon the tears of Her, Who loved You most while on earth. And who loves You most intimately in Heaven.",
+        "en": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra y que más íntimamente te ama en el cielo.",
+        "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra e que mais intimamente te ama no céu."
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "O Jesus, look upon the tears of her who loved you most upon earth",
+          "en": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
+          "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra"
+        },
+        "r": {
+          "es": "and loves you most ardently in Heaven",
+          "en": "y que más ardientemente te ama en el cielo",
+          "pt": "e que mais ardentemente te ama no céu"
+        }
+      },
+      "meditation": {
+        "es": "Las lágrimas derramadas por nuestra Santísima Madre en el nacimiento del Salvador en el establo de Belén.",
+        "en": "The tears shed by our Most Holy Mother at the birth of our Saviour in the stable of Bethlehem.",
+        "pt": "As lágrimas derramadas pela nossa Santíssima Mãe no nascimento do Salvador no estábulo de Belém."
+      }
+    },
+    {
+      "bead": 4,
+      "vr": {
+        "v": {
+          "es": "O Jesus, hear our prayers",
+          "en": "Jesús, escucha nuestras plegarias",
+          "pt": "Jesus, ouve as nossas preces"
+        },
+        "r": {
+          "es": "For the sake of your most holly Mothers tears",
+          "en": "Por las lágrimas de tu Santísima Madre",
+          "pt": "Pelos lágrimas da tua Santíssima Mãe"
+        }
+      },
+      "repeat": 7
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "O Jesus, look upon the tears of her who loved you most upon earth",
+          "en": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
+          "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra"
+        },
+        "r": {
+          "es": "and loves you most ardently in Heaven",
+          "en": "y que más ardientemente te ama en el cielo",
+          "pt": "e que mais ardentemente te ama no céu"
+        }
+      },
+      "meditation": {
+        "es": "Las lágrimas derramadas por nuestra Santísima Madre durante la huida a Egipto.",
+        "en": "The tears shed by our Most Holy Mother during her Flight into Egypt.",
+        "pt": "As lágrimas derramadas pela nossa Santíssima Mãe durante a fuga para o Egito."
+      }
+    },
+    {
+      "bead": 6,
+      "vr": {
+        "v": {
+          "es": "O Jesus, hear our prayers",
+          "en": "Jesús, escucha nuestras plegarias",
+          "pt": "Jesus, ouve as nossas preces"
+        },
+        "r": {
+          "es": "For the sake of your most holly Mothers tears",
+          "en": "Por las lágrimas de tu Santísima Madre",
+          "pt": "Pelos lágrimas da tua Santíssima Mãe"
+        }
+      },
+      "repeat": 7
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "O Jesus, look upon the tears of her who loved you most upon earth",
+          "en": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
+          "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra"
+        },
+        "r": {
+          "es": "and loves you most ardently in Heaven",
+          "en": "y que más ardientemente te ama en el cielo",
+          "pt": "e que mais ardentemente te ama no céu"
+        }
+      },
+      "meditation": {
+        "es": "Las lágrimas derramadas por nuestra Santísima Madre durante la búsqueda de Jesús.",
+        "en": "The tears shed by our Most Holy Mother during her Search for Jesus.",
+        "pt": "As lágrimas derramadas pela nossa Santíssima Mãe durante a procura de Jesus."
+      }
+    },
+    {
+      "bead": 8,
+      "vr": {
+        "v": {
+          "es": "O Jesus, hear our prayers",
+          "en": "Jesús, escucha nuestras plegarias",
+          "pt": "Jesus, ouve as nossas preces"
+        },
+        "r": {
+          "es": "For the sake of your most holly Mothers tears",
+          "en": "Por las lágrimas de tu Santísima Madre",
+          "pt": "Pelos lágrimas da tua Santíssima Mãe"
+        }
+      },
+      "repeat": 7
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "O Jesus, look upon the tears of her who loved you most upon earth",
+          "en": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
+          "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra"
+        },
+        "r": {
+          "es": "and loves you most ardently in Heaven",
+          "en": "y que más ardientemente te ama en el cielo",
+          "pt": "e que mais ardentemente te ama no céu"
+        }
+      },
+      "meditation": {
+        "es": "Las lágrimas derramadas por nuestra Santísima Madre durante el doloroso camino de Jesús hacia la Cruz.",
+        "en": "The tears shed by our Most Holy Mother during Jesus' painful Way of the Cross.",
+        "pt": "As lágrimas derramadas pela nossa Santíssima Mãe durante o doloroso caminho de Jesus para a Cruz."
+      }
+    },
+    {
+      "bead": 10,
+      "vr": {
+        "v": {
+          "es": "O Jesus, hear our prayers",
+          "en": "Jesús, escucha nuestras plegarias",
+          "pt": "Jesus, ouve as nossas preces"
+        },
+        "r": {
+          "es": "For the sake of your most holly Mothers tears",
+          "en": "Por las lágrimas de tu Santísima Madre",
+          "pt": "Pelos lágrimas da tua Santíssima Mãe"
+        }
+      },
+      "repeat": 7
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "O Jesus, look upon the tears of her who loved you most upon earth",
+          "en": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
+          "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra"
+        },
+        "r": {
+          "es": "and loves you most ardently in Heaven",
+          "en": "y que más ardientemente te ama en el cielo",
+          "pt": "e que mais ardentemente te ama no céu"
+        }
+      },
+      "meditation": {
+        "es": "Las lágrimas derramadas por nuestra Santísima Madre durante la agonía de Jesús en la Cruz.",
+        "en": "The tears shed by our Most Holy Mother during the Agony of Jesus on the Cross.",
+        "pt": "As lágrimas derramadas pela nossa Santíssima Mãe durante a agonia de Jesus na Cruz."
+      }
+    },
+    {
+      "bead": 12,
+      "vr": {
+        "v": {
+          "es": "O Jesus, hear our prayers",
+          "en": "Jesús, escucha nuestras plegarias",
+          "pt": "Jesus, ouve as nossas preces"
+        },
+        "r": {
+          "es": "For the sake of your most holly Mothers tears",
+          "en": "Por las lágrimas de tu Santísima Madre",
+          "pt": "Pelos lágrimas da tua Santíssima Mãe"
+        }
+      },
+      "repeat": 7
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "O Jesus, look upon the tears of her who loved you most upon earth",
+          "en": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
+          "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra"
+        },
+        "r": {
+          "es": "and loves you most ardently in Heaven",
+          "en": "y que más ardientemente te ama en el cielo",
+          "pt": "e que mais ardentemente te ama no céu"
+        }
+      },
+      "meditation": {
+        "es": "Las lágrimas derramadas por nuestra Santísima Madre cuando el Cuerpo sagrado de Jesús fue bajado de la Cruz y puesto en sus brazos.",
+        "en": "The tears shed by our Most Holy Mother when the Sacred Body of Jesus was taken from the Cross and placed into Her arms.",
+        "pt": "As lágrimas derramadas pela nossa Santíssima Mãe quando o Corpo sagrado de Jesus foi descido da Cruz e colocado nos seus braços."
+      }
+    },
+    {
+      "bead": 14,
+      "vr": {
+        "v": {
+          "es": "O Jesus, hear our prayers",
+          "en": "Jesús, escucha nuestras plegarias",
+          "pt": "Jesus, ouve as nossas preces"
+        },
+        "r": {
+          "es": "For the sake of your most holly Mothers tears",
+          "en": "Por las lágrimas de tu Santísima Madre",
+          "pt": "Pelos lágrimas da tua Santíssima Mãe"
+        }
+      },
+      "repeat": 7
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "O Jesus, look upon the tears of her who loved you most upon earth",
+          "en": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
+          "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra"
+        },
+        "r": {
+          "es": "and loves you most ardently in Heaven",
+          "en": "y que más ardientemente te ama en el cielo",
+          "pt": "e que mais ardentemente te ama no céu"
+        }
+      },
+      "meditation": {
+        "es": "Las lágrimas derramadas por nuestra Santísima Madre cuando Jesús fue colocado en el sepulcro.",
+        "en": "The tears shed by our Most Holy Mother when Jesus was placed in the Sepulcher.",
+        "pt": "As lágrimas derramadas pela nossa Santíssima Mãe quando Jesus foi colocado no sepulcro."
+      }
+    },
+    {
+      "bead": 16,
+      "vr": {
+        "v": {
+          "es": "O Jesus, hear our prayers",
+          "en": "Jesús, escucha nuestras plegarias",
+          "pt": "Jesus, ouve as nossas preces"
+        },
+        "r": {
+          "es": "For the sake of your most holly Mothers tears",
+          "en": "Por las lágrimas de tu Santísima Madre",
+          "pt": "Pelos lágrimas da tua Santíssima Mãe"
+        }
+      },
+      "repeat": 7
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "O Jesus, look upon the tears of her who loved you most upon earth",
+          "en": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
+          "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra"
+        },
+        "r": {
+          "es": "and loves you most ardently in Heaven",
+          "en": "y que más ardientemente te ama en el cielo",
+          "pt": "e que mais ardentemente te ama no céu"
+        }
+      },
+      "repeat": 3
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors; se conserva la errata «holly Mothers tears». La fuente no da la primera meditación completa en el fragmento extraído; se toma de la lista de los siete grupos.",
+  "image": "coronilla-lagrimas",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Tears",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap37.htm"
+    }
+  ]
+}

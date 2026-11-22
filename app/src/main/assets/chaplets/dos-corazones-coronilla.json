@@ -1,0 +1,170 @@
+{
+  "id": "dos-corazones-coronilla",
+  "sourceId": "CD-53",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla de los Dos Corazones",
+    "en": "Chaplet of the Two Hearts",
+    "pt": "Coronilha dos Dois Corações"
+  },
+  "summary": {
+    "es": "Cinco grupos de cuatro cuentas con meditaciones sobre los Corazones de Jesús y María.",
+    "en": "Five sets of four beads with meditations on the Hearts of Jesus and Mary.",
+    "pt": "Cinco grupos de quatro contas com meditações sobre os Corações de Jesus e Maria."
+  },
+  "instrument": {
+    "es": "Medalla de los Dos Corazones y 20 cuentas en 5 grupos de 4.",
+    "en": "Two Hearts medal and 20 beads in 5 sets of 4.",
+    "pt": "Medalha dos Dois Corações e 20 contas em 5 grupos de 4."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "variables": [
+    "intention"
+  ],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "sign_of_the_cross"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "In Honour of the Sacred Heart of Jesus.",
+        "en": "En honor del Sagrado Corazón de Jesús.",
+        "pt": "Em honra do Sagrado Coração de Jesus."
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 3,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "In Honour of the Immaculate Heart of Mary.",
+        "en": "En honor del Inmaculado Corazón de María.",
+        "pt": "Em honra do Imaculado Coração de Maria."
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Meditating on the Passion of Our Lord.",
+        "en": "Meditando la Pasión del Señor.",
+        "pt": "Meditando a Paixão do Senhor."
+      }
+    },
+    {
+      "bead": 6,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Meditating on the Sorrows of Mary.",
+        "en": "Meditando los Dolores de María.",
+        "pt": "Meditando as Dores de Maria."
+      }
+    },
+    {
+      "bead": 8,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "In Atonement to the Hearts of Jesus and Mary.",
+        "en": "En reparación a los Corazones de Jesús y María.",
+        "pt": "Em reparação aos Corações de Jesus e Maria."
+      }
+    },
+    {
+      "bead": 10,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "O United Hearts of Jesus and Mary, You are all grace, all mercy, all love. Let my heart be joined to Yours, so that my every need is present in Your United Hearts. Most especially, shed Your grace upon this particular need... (State your need here.) Help me to recognize and accept Your loving will in my life. Holy and Sacred Wounds of the United Hearts of Jesus and Mary, answer my prayer. Amen.",
+        "en": "Corazones Unidos de Jesús y María, sois toda gracia, toda misericordia, todo amor. Unid mi corazón al vuestro, para que cada necesidad mía esté presente en vuestros Corazones Unidos. Muy especialmente, derramad vuestra gracia sobre esta necesidad concreta... (expón aquí tu petición). Ayudadme a reconocer y aceptar vuestra voluntad amorosa en mi vida. Llagas santas y sagradas de los Corazones Unidos de Jesús y María, responded a mi plegaria. Amén.",
+        "pt": "Corações Unidos de Jesus e Maria, sois toda graça, toda misericórdia, todo amor. Uni o meu coração ao vosso, para que cada necessidade minha esteja presente nos vossos Corações Unidos. Muito especialmente, derramai a vossa graça sobre esta necessidade concreta... (aqui a petição). Ajudai-me a reconhecer e aceitar a vossa vontade amorosa na minha vida. Chagas santas e sagradas dos Corações Unidos de Jesus e Maria, atendei a minha prece. Amém."
+      }
+    }
+  ],
+  "image": "dos-corazones-coronilla",
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "notes": "",
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of the Two Hearts",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap20.htm"
+    }
+  ]
+}

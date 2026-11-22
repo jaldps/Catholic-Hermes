@@ -130,4 +130,34 @@ WARN  partial delivery: 28 of 55
 28 files · 0 errors · 2 warnings
 ```
 
-Ninguna todavía. Quedan por resolver en lotes posteriores: CD-47, CD-57 y HZ-02 (marcadas «verificar» en la especificación).
+
+
+## Lote 4 — CD-10, CD-11, CD-12, CD-13, CD-15, CD-34, CD-42, CD-53, CD-47, CD-57
+
+Todas las fichas de este lote proceden de `https://www.catholicdoors.com/prayers/chaplets/`:
+`chap45.htm` (CD-10), `chap28.htm` (CD-11), `chap44.htm` (CD-12), `chap10.htm` (CD-13), `chap47.htm` (CD-15), `chap37.htm` (CD-34), `chap36.htm` (CD-42), `chap20.htm` (CD-53), `chap19.htm` (CD-47) y `chap35.htm` (CD-57).
+Idioma fuente: **EN**. Traducción ES/PT: Hermes, fiel al original. Derechos: `Derechos: Catholic Doors Ministry` en todas (pie de página «Copyright © Catholic Doors Ministry»).
+
+### Estatus eclesial de las marcadas «verificar»
+
+- **CD-47, Reina de la Luz:** la página no identifica visionario, aparición ni revelación privada; las tres meditaciones se presentan como dichos sin atribución personal. No se ha encontrado pronunciamiento del DDF ni de la autoridad competente que las desaconseje. **Se conserva**, con esta comprobación en `notes`.
+- **CD-57, Madre de la Santísima Eucaristía:** la página tampoco menciona visionario ni revelación. Otras webs (p. ej. catholictradition.org) la encuadran en una polémica ajena a la coronilla; ese encuadre **no se reproduce**. Sin elemento que encaje en las *Normas DDF* de 2024. **Se conserva**, con la comprobación en `notes`.
+
+### Incoherencias y decisiones
+
+- **CD-11:** la fuente transcribe la acción de gracias de la primera aparición; para las otras tres solo da el título, el Padre Nuestro, tres Avemarías y el Gloria. No se inventa ninguna acción de gracias adicional.
+- **CD-34:** se conserva la errata «most holly Mothers tears». El texto responsorial se reparte con `vr`.
+- **CD-42:** 15 cuentas declaradas frente a 3×4+1=13 descritas; el hilo sigue el texto real y el desajuste queda en `notes`.
+- **CD-47:** 18 cuentas en 3×6; un Padre Nuestro con meditación y cinco Avemarías por grupo.
+- **CD-57:** se conservan «0 Mother» (cero por O) y «I Believe, that He is the, only begotten».
+
+### Validador acumulado (tras el lote 4)
+
+```
+$ python3 docs/tasks/tools/validate_chaplets.py --partial app/src/main/assets/chaplets/*.json
+WARN  coronilla-difuntos-45.json.beads[1]: steps cover 3 prayers for a group of 5 (explained in notes)
+WARN  partial delivery: 38 of 55
+38 files · 0 errors · 2 warnings
+```
+
+Ninguna todavía: las tres marcadas «verificar» (CD-47, CD-57, HZ-02) se han comprobado y se conservan con nota.: CD-47, CD-57 y HZ-02 (marcadas «verificar» en la especificación).

@@ -1,0 +1,103 @@
+{
+  "id": "estrella-mar-coronilla",
+  "sourceId": "CD-15",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla de Nuestra Señora, Estrella del Mar",
+    "en": "Chaplet of Our Lady, Star of the Sea",
+    "pt": "Coronilha de Nossa Senhora, Estrela do Mar"
+  },
+  "summary": {
+    "es": "Tres cuentas por los ministros de la Iglesia y doce Avemarías por las estrellas de la corona de María.",
+    "en": "Three beads for the ministers of the Church and twelve Hail Marys for the stars of Mary's crown.",
+    "pt": "Três contas pelos ministros da Igreja e doze Ave Marias pelas estrelas da coroa de Maria."
+  },
+  "instrument": {
+    "es": "Medalla + 3 cuentas + 12 cuentas.",
+    "en": "Medal + 3 beads + 12 beads.",
+    "pt": "Medalha + 3 contas + 12 contas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "variables": [
+    "intention"
+  ],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large",
+      "count": 12
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "text": {
+        "es": "Most beautiful Flower of Mount Carmel, Fruitful Vine, Splendor of Heaven, Blessed Mother of the Son of God, Immaculate Virgin, assist me in this my necessity. O Star of the Sea, help me and show me herein that you are my Mother.",
+        "en": "Flor más hermosa del Monte Carmelo, vid fecunda, esplendor del cielo, Madre bendita del Hijo de Dios, Virgen Inmaculada, asísteme en esta necesidad. Oh Estrella del Mar, ayúdame y muéstrame aquí que eres mi Madre.",
+        "pt": "Flor mais bela do Monte Carmelo, vide fecunda, esplendor do céu, Mãe bendita do Filho de Deus, Virgem Imaculada, assiste-me nesta necessidade. Ó Estrela do Mar, ajuda-me e mostra-me aqui que és minha Mãe."
+      }
+    },
+    {
+      "bead": 0,
+      "text": {
+        "es": "Holy Mary, Mother of God, Queen of Heaven and Earth, I humbly beseech you from the bottom of my heart, to succor me in this necessity; there are none that can withstand your power.",
+        "en": "Santa María, Madre de Dios, Reina del cielo y de la tierra, te ruego humildemente desde el fondo de mi corazón que me socorras en esta necesidad; no hay quien pueda resistir tu poder.",
+        "pt": "Santa Maria, Mãe de Deus, Rainha do céu e da terra, humildemente te suplico do fundo do coração que me socorras nesta necessidade; não há quem possa resistir ao teu poder."
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "For those who minister in the Church, the Pope, the local Bishop and the Parish priest.",
+        "en": "Por los que ministerian en la Iglesia, el Papa, el obispo local y el párroco.",
+        "pt": "Pelos que ministram na Igreja, o Papa, o bispo local e o pároco."
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 0,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 1,
+      "text": {
+        "es": "Our Lady, Star of the Sea, help and protect us! Sweet Mother, I place this cause in your hand.",
+        "en": "Nuestra Señora, Estrella del Mar, ¡ayúdanos y protégenos! Dulce Madre, pongo esta causa en tus manos.",
+        "pt": "Nossa Senhora, Estrela do Mar, ajuda-nos e protege-nos! Doce Mãe, coloco esta causa nas tuas mãos."
+      },
+      "repeat": 12
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. Las doce cuentas representan las doce estrellas de la corona de María.",
+  "image": "estrella-mar-coronilla",
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Our Lady, Star of the Sea",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap47.htm"
+    }
+  ]
+}
