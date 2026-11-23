@@ -8,7 +8,7 @@
   "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
   "updates": "1.8.1-1.8.29 (same package and key)",
   "built_from": "git archive of CatholicGPT at the version commit c709287 (clean tree)",
-  "published_as": "GitHub Release v1.8.30 only (APK above GitHub's 100 MiB file limit, not copied to dist/)",
+  "published_as": "GitHub Release v1.8.30 only (APK above GitHub's 100 MiB file limit, not copied to dist/); Release SHA-256 identical to this clean-tree build",
   "changes": [
     "Landscape foundations (T-047, Codex): compact header band instead of the 236 dp art header on phones in landscape, side navigation rail, side sheets, two-column dialogs; readers without art (owner decision, P9).",
     "Visible keyboard focus ring on every control, and the system 'Remove animations' setting is now honoured app-wide; focused items never hide under the floating dock.",
