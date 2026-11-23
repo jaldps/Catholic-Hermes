@@ -65,7 +65,7 @@ class DevotionsScreenTest {
 
     private fun open(id: String) {
         compose.onNodeWithTag("devotions_explorer_screen").performScrollToNode(hasTestTag("devotion_card_$id"))
-        compose.onNodeWithTag("devotion_card_$id").performClick()
+        compose.revealAboveDock("devotion_card_$id").performClick()
         compose.onNodeWithTag("devotion_detail_$id").assertIsDisplayed()
     }
 

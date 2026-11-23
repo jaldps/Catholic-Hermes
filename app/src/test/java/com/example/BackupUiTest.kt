@@ -54,7 +54,7 @@ class BackupUiTest {
             CompositionLocalProvider(LocalInspectionMode provides true) {MainApp(repo,database.dao(),tts,store,prefs)}
         }}
         compose.onNodeWithTag("nav_more").performClick()
-        compose.onNodeWithTag("backup_entry").performScrollTo().assertIsDisplayed().assertHasClickAction()
+        compose.revealAboveDock("backup_entry").assertIsDisplayed().assertHasClickAction()
         compose.mainClock.advanceTimeByFrame()
         compose.waitForIdle()
         compose.onNodeWithTag("backup_entry").performClick()
