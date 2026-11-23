@@ -1429,6 +1429,7 @@ private fun LandscapeRosaryContext(
             val beadSteps = guide.steps.indices.filter { guide.steps[it].bead == step.bead }
             BeadReel(beads = guide.beads.map { it.kind }, activeBead = step.bead, onSelectBead = onBead,
                 subStepCount = beadSteps.size, subStepIndex = beadSteps.indexOf(index).coerceAtLeast(0),
+                orientation = androidx.compose.foundation.gestures.Orientation.Vertical,
                 modifier = Modifier.width(44.dp).fillMaxHeight().testTag(if (isRosary) "prayer_bead_counter" else "mercy_step_counter")
                     .semantics {
                         contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
