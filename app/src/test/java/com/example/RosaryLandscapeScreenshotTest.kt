@@ -47,7 +47,7 @@ class RosaryLandscapeScreenshotTest(private val identity: DesignLanguage, privat
             landscapeViewport(compose, compose.activity, w, h)
             RosarySessionStore.save(context, RosarySession.opening(0).copy(rosaryStep = rIndex, mercyStep = mIndex,
                 instructionsOn = System.getProperty("shots.ime") == "guide", mysterySelection = MysterySelection.Picked(RosaryMysteryType.JOYFUL)), RosaryMysteryType.JOYFUL)
-            compose.runOnUiThread { compose.activity.setContent { resource.Content(AppDestination.ROSARY, identity, scale, dark) } }; compose.waitForIdle()
+            compose.runOnUiThread { compose.activity.setContent { resource.Content(AppDestination.ROSARY, identity, scale, dark, System.getProperty("shots.opaque") == "true") } }; compose.waitForIdle()
             compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, h, cutout = cut, navbar = nav) }; compose.waitForIdle()
             if (devotion == 1) compose.onNodeWithText(when(lang) { AppLanguage.ES -> "Coronilla"; AppLanguage.EN -> "Chaplet"; AppLanguage.PT -> "Coroinha" }).performClick()
             val state = System.getProperty("shots.ime")
@@ -60,7 +60,7 @@ class RosaryLandscapeScreenshotTest(private val identity: DesignLanguage, privat
             Thread.sleep(2500); compose.waitForIdle()
             val suffix = (if (scale == 1f) "" else "_s130") + (if (lang == AppLanguage.PT) "_pt" else "") +
                 (cut?.let { "_cut${it.first().uppercase()}" } ?: "") + (nav?.let { "_nav${it.first().uppercase()}" } ?: "") +
-                (state?.let { "_$it" } ?: "")
+                (if (System.getProperty("shots.opaque") == "true") "_opaque" else "") + (state?.let { "_$it" } ?: "")
             landscapeCapture(compose, compose.activity, w,h, File("build/screenshots/l1/l1_${if(devotion==0) "rosary" else "chaplet"}_${identity.id.lowercase()}_${if(dark) "oscuro" else "claro"}_${w}x$h$suffix.png"))
         }
         repo.close()

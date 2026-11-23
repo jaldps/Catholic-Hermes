@@ -1463,7 +1463,13 @@ private fun BindRosaryTextAnchor(anchor: RosaryTextAnchor, scroll: androidx.comp
             val desired = scroll.value + geometry.second.top - geometry.first.top + geometry.second.height * restoreFraction
             scroll.scrollTo(desired.roundToInt().coerceIn(0, scroll.maxValue))
         }
-        androidx.compose.runtime.snapshotFlow { Triple(scroll.value, anchor.viewport, anchor.blocks.toMap()) }.collect { (_, viewport, blocks) ->
+        // A shorter orientation can show the whole prayer and clamp scrolling.
+        // Keep its logical anchor until the person actually scrolls again.
+        var lastScroll = scroll.value
+        var scrolled = false
+        androidx.compose.runtime.snapshotFlow { Triple(scroll.value, anchor.viewport, anchor.blocks.toMap()) }.collect { (value, viewport, blocks) ->
+            if (value != lastScroll) { scrolled = true; lastScroll = value }
+            if (!scrolled) return@collect
             val first = blocks.entries.sortedBy { it.value.top }.firstOrNull { it.value.bottom > viewport.top + 1f }
             if (first != null && viewport.top >= first.value.top) {
                 anchor.block = first.key
@@ -1494,6 +1500,8 @@ private fun LandscapeRosaryContext(
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
+    val artContext = LocalContext.current
+    val credit = remember(art, artContext) { art?.let { ArtCredits.of(artContext, it) } }
     val contextScroll = rememberScrollState()
     LaunchedEffect(selectedTab, mysteryType, step.section) { contextScroll.scrollTo(0) }
     Column(Modifier.fillMaxSize().padding(top = safe.top).testTag("rosary_landscape_context")) {
@@ -1527,10 +1535,15 @@ private fun LandscapeRosaryContext(
                         style = styles.headline, color = p.textPrimary,
                         modifier = Modifier.testTag(if (isRosary) "rosary_hero_title" else "mercy_hero_title").semantics { heading() })
                     Spacer(Modifier.height(8.dp))
+                    if (guidance) { GuideHint(step, lang, compact = true); Spacer(Modifier.height(8.dp)) }
                     val thumbHeight = if (window.height < 400.dp) 56.dp else 102.dp
-                    ArtThumb(art.orEmpty(), Modifier.fillMaxWidth().height(thumbHeight)
+                    Box(Modifier.fillMaxWidth().height(thumbHeight)
                         .testTag(if (isRosary) "rosary_hero_photo" else "mercy_hero_photo")
-                        .then(if (design.isSanctuary) Modifier.border(0.75.dp, p.separator, RoundedCornerShape(8.dp)).padding(5.dp) else Modifier))
+                        .semantics { credit?.let { contentDescription = listOf(it.title, it.artist).filter { it.isNotBlank() }.joinToString(", ") } }) {
+                        ArtThumb(art.orEmpty(), Modifier.fillMaxSize()
+                            .then(if (inDecade) Modifier.testTag("mystery_hero_photo") else Modifier)
+                            .then(if (design.isSanctuary) Modifier.border(0.75.dp, p.separator, RoundedCornerShape(8.dp)).padding(5.dp) else Modifier))
+                    }
                     if (fruit != null) {
                         Spacer(Modifier.height(8.dp)); Text(fruit, style = styles.footnote, color = p.textSecondary)
                     }
@@ -1538,7 +1551,6 @@ private fun LandscapeRosaryContext(
                         Spacer(Modifier.height(8.dp)); Text(step.meditation, style = styles.reading, color = p.textPrimary)
                         step.detail?.let { Text(it, style = styles.footnote, color = p.textSecondary) }
                     }
-                    if (guidance) { Spacer(Modifier.height(8.dp)); GuideHint(step, lang) }
                     if (isRosary) {
                         LandscapePrayerPill(mysteryType.displayName.get(lang), "rosary_mystery_picker", onMysteries)
                         if (inDecade) LandscapePrayerPill(lang.pick("Ver el misterio", "About this mystery", "Ver o mistério"), "rosary_view_mystery", onMystery)
@@ -1635,7 +1647,7 @@ private fun LandscapeRosaryPrayer(step: GuideStep, key: String, lang: AppLanguag
     val p = LocalAppDesign.current.palette
     val responseView = remember(key) { BringIntoViewRequester() }
     LaunchedEffect(key, spoken) { if (spoken != null && spoken == step.response) responseView.bringIntoView() }
-    Column(Modifier.fillMaxSize().background(p.canvasTop).padding(start = 20.dp, end = 12.dp, top = safe.top + 4.dp)) {
+    Column(Modifier.fillMaxSize().testTag("prayer_text_art").background(p.canvasTop).padding(start = 20.dp, end = 12.dp, top = safe.top + 4.dp)) {
         PrayerTitleRow(step, count, lang, true, onSkip, padded = false)
         Spacer(Modifier.height(8.dp))
         Box(Modifier.weight(1f).fillMaxWidth().testTag("prayer_reading_viewport")
@@ -2263,10 +2275,25 @@ private fun HungVoice(mark: String, text: String, style: TextStyle, ink: Color, 
 
 /** What a beginner does here: the rubric, and the ℣/℟ legend. */
 @Composable
-private fun GuideHint(step: GuideStep, lang: AppLanguage) {
+private fun GuideHint(step: GuideStep, lang: AppLanguage, compact: Boolean = false) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
+    if (compact) {
+        Column(Modifier.fillMaxWidth().background(if (design.isSanctuary) p.canvasTop else p.glass, RoundedCornerShape(8.dp))
+            .padding(8.dp).testTag("prayer_instructions_text")) {
+            Text(step.rubric, style = styles.subhead, color = p.textPrimary)
+            if (step.response.isNotBlank()) {
+                Spacer(Modifier.height(6.dp))
+                Text(lang.pick(
+                    "V. dice quien guía · R. responden todos. Si rezas solo, di las dos partes.",
+                    "V. the leader says · R. everyone answers. Praying alone? Say both parts.",
+                    "V. diz quem conduz · R. todos respondem. Rezando sozinho? Diga as duas partes."
+                ), style = styles.footnote, color = p.textSecondary)
+            }
+        }
+        return
+    }
     Row(
         Modifier
             .fillMaxWidth()
@@ -2472,7 +2499,7 @@ private fun SheetLabel(text: String) {
         text,
         style = LocalAppTextStyles.current.footnote.copy(fontWeight = FontWeight.Medium),
         color = design.palette.textSecondary,
-        modifier = Modifier.padding(start = design.spacing.gutter + 16.dp, end = design.spacing.gutter, top = 8.dp, bottom = 8.dp)
+        modifier = Modifier.padding(start = if (appWindowClass() == AppWindowClass.LandscapePhone) 8.dp else design.spacing.gutter + 16.dp, end = design.spacing.gutter, top = 8.dp, bottom = 8.dp)
     )
 }
 

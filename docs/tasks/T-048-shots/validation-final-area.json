@@ -1,0 +1,54 @@
+{
+  "classes": [
+    {
+      "name": "com.example.RosaryFitTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:30:51.208Z"
+    },
+    {
+      "name": "com.example.RosaryNarrationHolderTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:33:05.657Z"
+    },
+    {
+      "name": "com.example.RosaryReelInteractionTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:33:11.403Z"
+    },
+    {
+      "name": "com.example.LandscapeAuditTest",
+      "tests": "32",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:31:59.255Z"
+    },
+    {
+      "name": "com.example.LandscapeRotationTest",
+      "tests": "18",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:30:26.292Z"
+    },
+    {
+      "name": "com.example.RosaryLandscapeGeometryTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:31:09.428Z"
+    }
+  ],
+  "total": 73,
+  "failed": 0
+}

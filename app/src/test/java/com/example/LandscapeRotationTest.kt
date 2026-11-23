@@ -243,6 +243,40 @@ class LandscapeRotationTest(private val identity: DesignLanguage) {
         audio.release(); repository.close()
     }
 
+    @Test fun readingPointReturnsWhenTheWholePrayerFitsInPortrait() {
+        val app = ApplicationProvider.getApplicationContext<Application>()
+        val repository = com.example.data.repository.CatholicDataRepository(app)
+        val audio = com.example.data.audio.LiturgicalTtsManager(app)
+        com.example.ui.screens.RosarySessionStore.save(app,
+            com.example.ui.screens.RosarySession.opening(0).copy(rosaryStep = 1, instructionsOn = false),
+            com.example.data.models.RosaryMysteryType.JOYFUL)
+        compose.runOnUiThread { LandscapeRotationActivity.testContent = {
+            SanctaFidesTheme(designLanguage = identity.id, reduceMotion = true) {
+                CompositionLocalProvider(LocalInspectionMode provides true) { com.example.ui.screens.RosaryScreen(repository, audio, AppLanguage.ES) }
+            }
+        } }; compose.waitForIdle(); insets(411)
+        val range = compose.onNodeWithTag("prayer_content_scroll").fetchSemanticsNode().config[androidx.compose.ui.semantics.SemanticsProperties.VerticalScrollAxisRange]
+        compose.onNodeWithTag("prayer_content_scroll").performSemanticsAction(androidx.compose.ui.semantics.SemanticsActions.ScrollBy) { it(0f, range.maxValue() * .25f) }
+        compose.waitForIdle()
+        fun fraction(): Float {
+            val viewport = compose.onNodeWithTag("prayer_reading_viewport").getUnclippedBoundsInRoot()
+            val text = compose.onNodeWithTag("prayer_leader_text").getUnclippedBoundsInRoot()
+            return (viewport.top - text.top).value / (text.bottom - text.top).value
+        }
+        val before = fraction()
+        assertTrue("The test must actually read inside the long prayer", before > .01f)
+        rotate(411,891)
+        val text = compose.onNodeWithTag("prayer_leader_text").getUnclippedBoundsInRoot()
+        val viewport = compose.onNodeWithTag("prayer_reading_viewport").getUnclippedBoundsInRoot()
+        assertTrue("Portrait either preserves the point or shows the complete prayer without added empty space",
+            kotlin.math.abs(before - fraction()) <= .02f ||
+                (text.top.value >= viewport.top.value - .5f && text.bottom.value <= viewport.bottom.value + .5f))
+        rotate(891,411)
+        assertEquals(before, fraction(), .02f)
+        compose.runOnUiThread { LandscapeRotationActivity.testContent = null }; compose.waitForIdle()
+        audio.release(); repository.close()
+    }
+
     companion object {
         @JvmStatic @ParameterizedRobolectricTestRunner.Parameters(name = "{0}")
         fun identities() = listOf(arrayOf(DesignLanguage.APPLE), arrayOf(DesignLanguage.SANCTUARY))

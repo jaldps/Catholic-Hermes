@@ -1,6 +1,6 @@
 # T-048 · Rosario y Coronilla en horizontal
 
-Entrega parcial 5/6. Base: `origin/CatholicGPT` @ `e4a5cdd`, con T-047 integrado y aprobado.
+Entrega del estado actual; cierre de pruebas por indicación del propietario. Base: `origin/CatholicGPT` @ `e4a5cdd`, con T-047 integrado y aprobado.
 
 ## Geometría
 
@@ -45,3 +45,20 @@ Perfil: **44/44**. Incluye `LandscapeRotationTest` **16/16** (giro real en Lumen
 Matriz de capturas, auditoría y autoevaluación final. Esta entrega parcial no declara esos puntos terminados ni una calificación visual final.
 
 La suite completa corresponde al coordinador (regla 10); no se ejecuta para este encargo. No se ha probado en un teléfono físico.
+
+
+## Entrega solicitada por el propietario
+
+El propietario declara que verificó la app y pide subir el estado actual, detener pruebas/revisiones para conservar cuota y esperar instrucciones. Esa verificación es del propietario; no se atribuye al agente una comprobación que no realizó.
+
+Antes de la pausa, el perfil final del área terminó **73/73**: presupuesto 12 (72 escenarios de texto), hilo 4, geometría 5, giro 18, holder 2 y auditoría L1 32. Las 32 auditorías no registraron hallazgos en sus muestras. [Resultado observado](T-048-shots/validation-final-area.json). Una ejecución previa falló por falta de espacio; se liberaron cachés regenerables y se repitió satisfactoriamente. La suite completa no se ejecutó.
+
+La matriz amplia de capturas se detuvo por la petición del propietario. No se declara completada ni se inventa la aprobación visual final o la rúbrica de nueve criterios.
+
+### Observaciones pendientes del revisor independiente
+
+- El índice de recorrido del hilo debe trasladarse de la rama original al hilo horizontal para asegurar contexto → hilo → pie en TalkBack.
+- Verificar las medidas con `MainApp` real para descartar que los insets laterales se apliquen dos veces.
+- Si falta el recurso de arte, omitir el bloque vacío y su espacio asociado.
+
+Estas observaciones quedan documentadas para la próxima indicación. No se continuaron los cambios tras la orden de entregar y esperar.
