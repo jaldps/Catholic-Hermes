@@ -1,0 +1,45 @@
+{
+  "totals": {
+    "tests": 5,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "classes": [
+    {
+      "name": "com.example.AppNavigationTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": 105.827
+    }
+  ],
+  "cases": [
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[APPLE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[IVE]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[CLASSIC]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[GLASS]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.AppNavigationTest",
+      "name": "tabsSecondaryDestinationsAndSettingsRemainReachable[SANCTUARY]",
+      "status": "passed"
+    }
+  ]
+}

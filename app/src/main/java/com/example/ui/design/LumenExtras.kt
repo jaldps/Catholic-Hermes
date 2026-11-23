@@ -18,6 +18,22 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.ime
+import androidx.compose.foundation.gestures.scrollable
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
+import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.focus.focusProperties
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.unit.constrainHeight
+import androidx.compose.ui.semantics.paneTitle
+import androidx.compose.ui.semantics.isTraversalGroup
+import androidx.compose.ui.semantics.traversalIndex
+import androidx.compose.ui.semantics.verticalScrollAxisRange
+import androidx.compose.ui.semantics.scrollBy
+import androidx.compose.ui.semantics.liveRegion
+import androidx.compose.material.icons.outlined.Close
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
@@ -65,6 +81,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.graphics.rememberGraphicsLayer
+import androidx.compose.ui.graphics.layer.drawLayer
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Brush
@@ -74,6 +94,9 @@ import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.boundsInWindow
+import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
@@ -82,6 +105,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -116,6 +140,7 @@ private fun Modifier.tag(tag: String?): Modifier = if (tag == null) this else te
 class ChromeState {
     internal var dockHiders by mutableIntStateOf(0)
     internal val titles = mutableStateListOf<String>()
+    internal val statusArtwork = mutableStateListOf<HeaderStatusArtwork>()
     /** Bottom inset that clears the floating dock (or the nav bar when hidden). */
     var dockInset by mutableStateOf(0.dp)
     val dockHidden: Boolean get() = dockHiders > 0
@@ -123,6 +148,46 @@ class ChromeState {
 }
 
 val LocalChrome = staticCompositionLocalOf<ChromeState?> { null }
+
+internal class HeaderStatusArtwork(val source: LiquidBackdrop) {
+    var ready by mutableStateOf(false)
+    val softwarePicture = android.graphics.Picture()
+    var softwareReady by mutableStateOf(false)
+}
+
+/** Records only decorative art, so the scaffold can paint its status-bar strip independently of safe scrolling controls. */
+@Composable
+internal fun Modifier.appStatusArtwork(): Modifier {
+    val chrome = LocalChrome.current ?: return this
+    if (!appIsLandscapePhone()) return this
+    val layer = rememberGraphicsLayer()
+    val art = remember(layer) { HeaderStatusArtwork(LiquidBackdrop(layer)) }
+    DisposableEffect(chrome, art) {
+        chrome.statusArtwork.add(art)
+        onDispose { chrome.statusArtwork.remove(art) }
+    }
+    return onGloballyPositioned { art.source.origin = it.positionInRoot() }.drawWithContent {
+        if (drawContext.canvas.nativeCanvas.isHardwareAccelerated) {
+            layer.record { this@drawWithContent.drawContent() }
+            if (!art.ready) art.ready = true
+            drawLayer(layer)
+        } else {
+            // Bitmap screenshots and software windows cannot draw a RenderNode.
+            // Record the same decorative commands, without changing their content.
+            val original = drawContext.canvas
+            val recorded = art.softwarePicture.beginRecording(size.width.toInt().coerceAtLeast(1), size.height.toInt().coerceAtLeast(1))
+            try {
+                drawContext.canvas = androidx.compose.ui.graphics.Canvas(recorded)
+                drawContent()
+            } finally {
+                drawContext.canvas = original
+                art.softwarePicture.endRecording()
+            }
+            original.nativeCanvas.drawPicture(art.softwarePicture)
+            if (!art.softwareReady) art.softwareReady = true
+        }
+    }
+}
 
 /** Hides the floating tab bar while composed (immersive readers). */
 @Composable
@@ -432,8 +497,9 @@ fun AppSearchBar(
             )
         }
         if (value.isNotEmpty()) {
+            val clearSource = remember { MutableInteractionSource() }
             Box(
-                Modifier.size(48.dp).clickable(remember { MutableInteractionSource() }, null, role = Role.Button) { onValueChange("") }
+                Modifier.size(48.dp).clickable(clearSource, appFocusRing(clearSource, androidx.compose.foundation.shape.CircleShape), role = Role.Button) { onValueChange("") }
                     .semantics { contentDescription = "Clear" },
                 contentAlignment = Alignment.Center
             ) { Icon(Icons.Filled.Cancel, null, tint = p.inkQuiet, modifier = Modifier.size(18.dp)) }
@@ -454,56 +520,111 @@ fun AppSheet(
     modifier: Modifier = Modifier,
     title: String? = null,
     tag: String? = null,
+    wide: Boolean = false,
+    footer: (@Composable RowScope.() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
+    val compact = appHasCompactHeight()
+    val window = appWindowSize()
+    val safe = appSafeInsets()
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val keyboard = with(density) { WindowInsets.ime.getBottom(this).toDp() }
+    val keyboardOpen = keyboard > 0.dp
+    val width = (window.width * if (wide) 0.66f else 0.5f).coerceIn(if (wide) 480.dp else 360.dp, if (wide) 640.dp else 480.dp)
+        .coerceAtMost(window.width - safe.start - safe.end - 16.dp)
+    val top = if (compact && !design.isSanctuary) safe.top + 8.dp else 0.dp
+    val bottom = if (compact && (keyboardOpen || !design.isSanctuary)) maxOf(safe.bottom, keyboard) + 8.dp else 0.dp
+    val height = (window.height - top - bottom).coerceAtLeast(56.dp)
+    val shape = if (!compact) design.shapes.sheet else RoundedCornerShape(if (design.isSanctuary) 0.dp else if (design.opaqueMaterial()) 16.dp else 28.dp)
+    val stored = LocalPreferencesStore.current?.preferences?.collectAsState(initial = null)
+    val language = stored?.value?.language ?: com.example.data.models.AppLanguage.fromCode(LocalConfiguration.current.locales[0].language)
+    val close = when (language) { com.example.data.models.AppLanguage.ES -> "Cerrar"; com.example.data.models.AppLanguage.PT -> "Fechar"; else -> "Close" }
     var shown by remember { mutableStateOf(false) }
+    var drag by remember { androidx.compose.runtime.mutableFloatStateOf(0f) }
     LaunchedEffect(Unit) { shown = true }
-    Dialog(
-        onDismissRequest = onDismiss,
-        properties = DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)
-    ) {
+    Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
+        if (compact) {
+            val host = androidx.compose.ui.platform.LocalView.current
+            androidx.compose.runtime.DisposableEffect(host) {
+                val dialogWindow = (host.parent as? androidx.compose.ui.window.DialogWindowProvider)?.window
+                val previousDim = dialogWindow?.attributes?.dimAmount
+                dialogWindow?.setDimAmount(0f)
+                onDispose { if (previousDim != null) dialogWindow?.setDimAmount(previousDim) }
+            }
+        }
         androidx.compose.runtime.CompositionLocalProvider(LocalLiquidBackdrop provides null) {
-        Box(Modifier.fillMaxSize()) {
-            Box(
-                Modifier.fillMaxSize().background(p.scrim)
-                    .clickable(remember { MutableInteractionSource() }, null) { onDismiss() }
-            )
-            AnimatedVisibility(
-                visible = shown,
-                enter = if (design.reduceMotion) androidx.compose.animation.EnterTransition.None else slideInVertically(tween(design.motion.mediumMillis)) { it / 3 } + fadeIn(tween(design.motion.fastMillis)),
-                exit = if (design.reduceMotion) androidx.compose.animation.ExitTransition.None else slideOutVertically(tween(design.motion.mediumMillis)) { it / 3 } + fadeOut(tween(design.motion.fastMillis)),
-                modifier = Modifier.align(Alignment.BottomCenter)
-            ) {
-                val shape = design.shapes.sheet
-                Column(
-                    modifier.fillMaxWidth().heightIn(max = (LocalConfiguration.current.screenHeightDp * 0.9f).dp)
-                        .appFloatingPanel(shape)
-                        .tag(tag)
-                ) {
-                    Box(Modifier.fillMaxWidth().padding(top = 10.dp), contentAlignment = Alignment.Center) {
-                        Box(Modifier.size(width = 40.dp, height = 5.dp).clip(RoundedCornerShape(percent = 50)).background(p.inkQuiet.copy(alpha = 0.55f)))
-                    }
-                    if (title != null) {
-                        Text(title, style = styles.headline, color = p.textPrimary, textAlign = TextAlign.Center,
-                            modifier = Modifier.fillMaxWidth().padding(top = 14.dp, bottom = 8.dp))
-                    }
-                    // Content scrolls when taller than the sheet; the trailing spacer keeps the last row
-                    // clear of the gesture / navigation bar (the Dialog window can report a 0 inset).
-                    val navInset = maxOf(
-                        WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding(),
-                        WindowInsets.systemGestures.asPaddingValues().calculateBottomPadding(),
-                        24.dp
-                    )
-                    Column(Modifier.fillMaxWidth().weight(1f, fill = false).verticalScroll(rememberScrollState()).padding(top = 8.dp)) {
-                        content()
-                        Spacer(Modifier.height(navInset + 16.dp))
+            Box(Modifier.fillMaxSize()) {
+                Box(Modifier.fillMaxSize().background(p.scrim).focusProperties { canFocus = false }
+                    .clearAndSetSemantics { this[androidx.compose.ui.semantics.SemanticsProperties.TestTag] = "sheet_scrim" }
+                    .clickable(remember { MutableInteractionSource() }, null) { onDismiss() })
+                AnimatedVisibility(shown,
+                    enter = if (design.reduceMotion) androidx.compose.animation.EnterTransition.None else if (compact)
+                        androidx.compose.animation.slideInHorizontally(tween(design.motion.mediumMillis)) { it }
+                        else slideInVertically(tween(design.motion.mediumMillis)) { it / 3 } + fadeIn(tween(design.motion.fastMillis)),
+                    exit = if (design.reduceMotion) androidx.compose.animation.ExitTransition.None else if (compact)
+                        androidx.compose.animation.slideOutHorizontally(tween(design.motion.mediumMillis)) { it }
+                        else slideOutVertically(tween(design.motion.mediumMillis)) { it / 3 } + fadeOut(tween(design.motion.fastMillis)),
+                    modifier = Modifier.align(if (compact) Alignment.TopEnd else Alignment.BottomCenter)
+                        .padding(top = top, end = if (!compact) 0.dp else if (design.isSanctuary) safe.end else maxOf(8.dp, safe.end + 8.dp))) {
+                    val navInset = maxOf(WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding(),
+                        WindowInsets.systemGestures.asPaddingValues().calculateBottomPadding(), 24.dp)
+                    // One content node and one footer node in both orientations.
+                    androidx.compose.ui.layout.Layout(content = {
+                        Box(Modifier.fillMaxWidth().padding(top = 10.dp), contentAlignment = Alignment.Center) {
+                            Box(Modifier.size(40.dp, 5.dp).clip(RoundedCornerShape(50)).background(p.inkQuiet.copy(alpha = 0.55f)))
+                        }
+                        Box(Modifier.then(if (compact) Modifier.fillMaxWidth().height(44.dp) else Modifier)
+                            .pointerInput(compact, onDismiss) {
+                                if (compact) detectHorizontalDragGestures(
+                                    onHorizontalDrag = { change, delta -> change.consume(); drag = (drag + delta).coerceAtLeast(0f) },
+                                    onDragEnd = { if (drag > 48.dp.toPx()) onDismiss(); drag = 0f }, onDragCancel = { drag = 0f })
+                            }, contentAlignment = if (compact) Alignment.BottomStart else Alignment.CenterStart) {
+                            Text(title.orEmpty(), style = styles.headline, color = p.textPrimary,
+                                textAlign = if (compact) TextAlign.Start else TextAlign.Center,
+                                modifier = (if (compact) Modifier else Modifier.fillMaxWidth().padding(top = 14.dp, bottom = 8.dp)).semantics { heading() })
+                        }
+                        AppGlassIconButton(Icons.Outlined.Close, close, onDismiss, tag = "sheet_close")
+                        Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(top = if (compact) 0.dp else 8.dp)) {
+                            content()
+                            Spacer(Modifier.height(if (compact || footer != null) 16.dp else navInset + 16.dp))
+                        }
+                        Row(Modifier.fillMaxWidth().then(if (compact) Modifier.padding(horizontal = 16.dp) else Modifier),
+                            horizontalArrangement = if (compact) Arrangement.End else Arrangement.Start,
+                            verticalAlignment = Alignment.CenterVertically) { footer?.invoke(this) }
+                    }, modifier = modifier.then(if (compact) Modifier.width(width).height(height).offset { androidx.compose.ui.unit.IntOffset(drag.toInt(), 0) }
+                        else Modifier.fillMaxWidth().heightIn(max = (LocalConfiguration.current.screenHeightDp * 0.9f).dp))
+                        .appFloatingPanel(shape).tag(tag ?: if (compact) "side_sheet" else null)
+                        .semantics { paneTitle = title ?: close; isTraversalGroup = true }
+                        .then(if (compact && design.isSanctuary) Modifier.padding(top = safe.top + 8.dp, bottom = if (keyboardOpen) 0.dp else safe.bottom) else Modifier)) { nodes, constraints ->
+                        val w = constraints.maxWidth
+                        val loose = constraints.copy(minWidth = 0, minHeight = 0)
+                        val header = if (compact) 56.dp.roundToPx().coerceAtMost(constraints.maxHeight) else 0
+                        val inHeader = compact && keyboardOpen && footer != null
+                        val foot = nodes[4].measure(loose.copy(maxWidth = if (inHeader) (w * 0.62f).toInt() else w,
+                            maxHeight = if (footer == null) 0 else if (compact) header else constraints.maxHeight))
+                        val closeButton = nodes[2].measure(loose.copy(maxWidth = 44.dp.roundToPx(), maxHeight = 44.dp.roundToPx()))
+                        val handle = nodes[0].measure(loose.copy(minWidth = w, maxHeight = if (compact) 0 else constraints.maxHeight))
+                        val trailing = if (inHeader) foot.width else closeButton.width
+                        val heading = nodes[1].measure(loose.copy(maxWidth = if (compact) (w - trailing - 40.dp.roundToPx()).coerceAtLeast(0) else w,
+                            maxHeight = if (compact) header else if (title == null) 0 else constraints.maxHeight))
+                        val headingHeight = if (compact) header else handle.height + heading.height
+                        val footerHeight = if (footer != null && !inHeader) if (compact) header else foot.height else 0
+                        val body = nodes[3].measure(loose.copy(minWidth = w, maxHeight = (constraints.maxHeight - headingHeight - footerHeight).coerceAtLeast(0)))
+                        val h = if (compact) constraints.maxHeight else constraints.constrainHeight(headingHeight + body.height + footerHeight)
+                        layout(w, h) {
+                            if (compact) {
+                                heading.placeRelative(20.dp.roundToPx(), header - 12.dp.roundToPx() - heading.height)
+                                if (!inHeader) closeButton.placeRelative(w - closeButton.width - 12.dp.roundToPx(), (header - closeButton.height) / 2)
+                            } else { handle.placeRelative(0, 0); if (title != null) heading.placeRelative(0, handle.height) }
+                            body.placeRelative(0, headingHeight)
+                            if (footer != null) foot.placeRelative(if (inHeader) w - foot.width else 0, if (inHeader) (header - foot.height) / 2 else h - footerHeight)
+                        }
                     }
                 }
             }
-        }
         }
     }
 }
@@ -530,24 +651,75 @@ fun AppDialog(
     modifier: Modifier = Modifier,
     title: String? = null,
     tag: String? = null,
+    aside: (@Composable () -> Unit)? = null,
+    footer: (@Composable RowScope.() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
-    Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false)) {
+    val compact = appHasCompactHeight()
+    val safe = appSafeInsets()
+    val window = appWindowSize()
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val ime = with(density) { WindowInsets.ime.getBottom(this).toDp() }
+    val width = minOf(720.dp, window.width - safe.start - safe.end - 48.dp)
+    val height = (window.height - safe.top - maxOf(safe.bottom, ime) - 32.dp).coerceAtLeast(56.dp)
+    Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = !compact)) {
+        if (compact) {
+            val host = androidx.compose.ui.platform.LocalView.current
+            androidx.compose.runtime.DisposableEffect(host) {
+                val dialogWindow = (host.parent as? androidx.compose.ui.window.DialogWindowProvider)?.window
+                val previousDim = dialogWindow?.attributes?.dimAmount
+                dialogWindow?.setDimAmount(0f)
+                onDispose { if (previousDim != null) dialogWindow?.setDimAmount(previousDim) }
+            }
+        }
         androidx.compose.runtime.CompositionLocalProvider(LocalLiquidBackdrop provides null) {
-            Column(
-                modifier.padding(horizontal = 20.dp, vertical = 24.dp).widthIn(max = 520.dp).fillMaxWidth()
-                    .appFloatingPanel(design.shapes.dialog).tag(tag)
-                    .verticalScroll(rememberScrollState()).padding(vertical = 24.dp)
-            ) {
-                if (title != null) {
-                    Text(title, style = styles.title2, color = p.textPrimary,
-                        modifier = Modifier.padding(horizontal = 24.dp).semantics { heading() })
-                    Spacer(Modifier.height(8.dp))
+            Box(Modifier.fillMaxSize()) {
+                if (compact) Box(Modifier.fillMaxSize().background(p.scrim).focusProperties { canFocus = false }
+                    .clearAndSetSemantics { this[androidx.compose.ui.semantics.SemanticsProperties.TestTag] = "dialog_scrim" }
+                    .clickable(remember { MutableInteractionSource() }, null) { onDismiss() })
+            Box(Modifier.fillMaxSize().then(if (compact) Modifier.padding(start = safe.start + 24.dp, end = safe.end + 24.dp,
+                top = safe.top + 16.dp, bottom = maxOf(safe.bottom, ime) + 16.dp) else Modifier), contentAlignment = Alignment.Center) {
+                androidx.compose.ui.layout.Layout(content = {
+                    Column(Modifier.then(if (compact) Modifier.verticalScroll(rememberScrollState()) else Modifier)
+                        .then(if (aside != null) Modifier.padding(20.dp) else Modifier)
+                        .semantics { isTraversalGroup = true; traversalIndex = 0f }) { aside?.invoke() }
+                    Column(Modifier.semantics { isTraversalGroup = true; traversalIndex = 1f }) {
+                        AppPinnedDialogContent(pinLast = compact && footer == null, scrollEnabled = compact || footer != null) {
+                            if (title != null) {
+                                Text(title, style = styles.title2, color = p.textPrimary,
+                                    modifier = Modifier.padding(horizontal = 24.dp).semantics { heading() })
+                                Spacer(Modifier.height(8.dp))
+                            }
+                            content()
+                        }
+                    }
+                    Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp), verticalAlignment = Alignment.CenterVertically) { footer?.invoke(this) }
+                }, modifier = modifier.then(if (compact) Modifier.width(width).heightIn(max = height)
+                    else Modifier.padding(horizontal = 20.dp, vertical = 24.dp).widthIn(max = 520.dp).fillMaxWidth())
+                    .appFloatingPanel(design.shapes.dialog).tag(tag ?: if (compact) "compact_dialog" else null)
+                    .semantics { paneTitle = title.orEmpty(); isTraversalGroup = true }
+                    .then(if (!compact && footer == null) Modifier.verticalScroll(rememberScrollState()) else Modifier)
+                    .padding(vertical = if (compact) 12.dp else 24.dp)) { nodes, constraints ->
+                    val w = constraints.maxWidth
+                    val asideWidth = if (compact && aside != null) (w * 0.42f).toInt() else if (aside != null) w else 0
+                    val bodyWidth = if (compact) w - asideWidth else w
+                    val loose = constraints.copy(minWidth = 0, minHeight = 0)
+                    val foot = nodes[2].measure(loose.copy(minWidth = bodyWidth, maxWidth = bodyWidth,
+                        maxHeight = if (footer == null) 0 else 56.dp.roundToPx()))
+                    val asidePlace = nodes[0].measure(loose.copy(minWidth = asideWidth, maxWidth = asideWidth))
+                    val body = nodes[1].measure(loose.copy(minWidth = bodyWidth, maxWidth = bodyWidth,
+                        maxHeight = if (compact) (constraints.maxHeight - foot.height).coerceAtLeast(0) else constraints.maxHeight))
+                    val h = constraints.constrainHeight(if (compact) maxOf(asidePlace.height, body.height + foot.height) else asidePlace.height + body.height + foot.height)
+                    layout(w, h) {
+                        if (aside != null) asidePlace.placeRelative(0, 0)
+                        body.placeRelative(if (compact) asideWidth else 0, if (compact) 0 else asidePlace.height)
+                        if (footer != null) foot.placeRelative(if (compact) asideWidth else 0, h - foot.height)
+                    }
                 }
-                content()
+            }
             }
         }
     }
@@ -648,6 +820,20 @@ fun AppConfirmDialog(
     destructive: Boolean = false,
     tag: String? = null
 ) {
+    if (appHasCompactHeight()) {
+        AppDialog(onDismiss = onDismiss, modifier = Modifier.widthIn(max = 420.dp), title = title, tag = tag, footer = {
+            AppSecondaryButton(dismissLabel, onDismiss, modifier = Modifier.weight(1f).tag(tag?.let { "${it}_dismiss" }))
+            Box(Modifier.weight(1f).heightIn(min = 48.dp).clickable(role = Role.Button, onClick = onConfirm)
+                .tag(tag?.let { "${it}_confirm" }), contentAlignment = Alignment.Center) {
+                Text(confirmLabel, style = LocalAppTextStyles.current.headline,
+                    color = if (destructive) Color(0xFFD93A2B) else LocalAppDesign.current.palette.textPrimary)
+            }
+        }) {
+            if (message != null) Text(message, style = LocalAppTextStyles.current.subhead,
+                color = LocalAppDesign.current.palette.textSecondary, modifier = Modifier.padding(horizontal = 24.dp))
+        }
+        return
+    }
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
@@ -783,3 +969,76 @@ private fun kotlinx.coroutines.CoroutineScope.launch2(block: suspend () -> Unit)
 
 /** Small delay helper for staged entrances. */
 suspend fun lumenSettle(ms: Long = 16) = delay(ms)
+
+/**
+ * Legacy AppDialog callers already end in an action Row/Column. In compact
+ * height that final direct child stays fixed; preceding choices scroll, without
+ * moving their composition or hiding their semantics under the action group.
+ */
+@Composable
+private fun AppPinnedDialogContent(modifier: Modifier = Modifier, pinLast: Boolean = true, scrollEnabled: Boolean = true, content: @Composable () -> Unit) {
+    var offset by remember { androidx.compose.runtime.mutableFloatStateOf(0f) }
+    var limit by remember { androidx.compose.runtime.mutableFloatStateOf(0f) }
+    val scroll = androidx.compose.foundation.gestures.rememberScrollableState { delta ->
+        val before = offset
+        offset = (offset - delta).coerceIn(0f, limit)
+        before - offset
+    }
+    androidx.compose.ui.layout.Layout(content = content, modifier = modifier.clipToBounds()
+        .then(if (scrollEnabled) Modifier.scrollable(scroll, androidx.compose.foundation.gestures.Orientation.Vertical)
+        .semantics {
+            verticalScrollAxisRange = androidx.compose.ui.semantics.ScrollAxisRange({ offset }, { limit })
+            scrollBy { _, y -> offset = (offset + y).coerceIn(0f, limit); true }
+        } else Modifier)) { nodes, constraints ->
+        val loose = constraints.copy(minHeight = 0, maxHeight = androidx.compose.ui.unit.Constraints.Infinity)
+        val places = nodes.map { it.measure(loose) }
+        val footer = if (pinLast) places.lastOrNull() else null
+        val body = if (pinLast) places.dropLast(1) else places
+        val natural = places.sumOf { it.height }
+        val h = constraints.constrainHeight(natural)
+        val bodyHeight = (h - (footer?.height ?: 0)).coerceAtLeast(0)
+        limit = (body.sumOf { it.height } - bodyHeight).coerceAtLeast(0).toFloat()
+        layout(constraints.maxWidth, h) {
+            var y = if (scrollEnabled) -offset.coerceIn(0f, limit).toInt() else 0
+            body.forEach { item ->
+                val position = y
+                item.placeRelativeWithLayer(0, position) {
+                    clip = true
+                    shape = object : androidx.compose.ui.graphics.Shape {
+                        override fun createOutline(size: androidx.compose.ui.geometry.Size, layoutDirection: androidx.compose.ui.unit.LayoutDirection,
+                            density: androidx.compose.ui.unit.Density): androidx.compose.ui.graphics.Outline =
+                            androidx.compose.ui.graphics.Outline.Rectangle(androidx.compose.ui.geometry.Rect(0f, (-position).coerceIn(0, item.height).toFloat(),
+                                size.width, (bodyHeight - position).coerceIn(0, item.height).toFloat().coerceAtLeast((-position).coerceIn(0, item.height).toFloat())))
+                    }
+                }
+                y += item.height
+            }
+            footer?.placeRelative(0, h - footer.height)
+        }
+    }
+}
+
+/** The caller places this in the active column's overlay, above its fixed footer. */
+@Composable
+fun AppNotice(text: String, modifier: Modifier = Modifier, footerHeight: Dp = 0.dp) {
+    val safe = appSafeInsets()
+    val density = androidx.compose.ui.platform.LocalDensity.current
+    val ime = with(density) { WindowInsets.ime.getBottom(this).toDp() }
+    val window = appWindowSize()
+    var hostBottomGap by remember { mutableStateOf(0.dp) }
+    var hostEndGap by remember { mutableStateOf(0.dp) }
+    val p = LocalAppDesign.current.palette
+    Box(modifier.fillMaxSize().onGloballyPositioned {
+        val bounds = it.boundsInWindow()
+        with(density) {
+            hostBottomGap = (window.height - bounds.bottom.toDp()).coerceAtLeast(0.dp)
+            hostEndGap = (window.width - bounds.right.toDp()).coerceAtLeast(0.dp)
+        }
+    }, contentAlignment = Alignment.BottomEnd) {
+        Text(text, style = com.example.ui.theme.LocalAppTextStyles.current.subhead, color = p.textPrimary,
+            modifier = Modifier.padding(end = maxOf(12.dp, safe.end - hostEndGap + 8.dp),
+                bottom = (maxOf(ime, safe.bottom + footerHeight) - hostBottomGap).coerceAtLeast(0.dp) + 8.dp)
+                .widthIn(max = 480.dp).appContentSurface(LocalAppDesign.current.shapes.buttonSmall)
+                .semantics { liveRegion = androidx.compose.ui.semantics.LiveRegionMode.Polite }.padding(16.dp))
+    }
+}

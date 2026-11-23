@@ -1,0 +1,106 @@
+[
+  {
+    "file": "folio_list_800_es_100.json",
+    "data": {
+      "width": 800,
+      "height": 360,
+      "language": "es",
+      "scale": 1.0,
+      "back_bottom": 74.0,
+      "title_top": 80.0,
+      "title_bottom": 130.0,
+      "strip_bottom": 134.0
+    }
+  },
+  {
+    "file": "folio_list_800_es_130.json",
+    "data": {
+      "width": 800,
+      "height": 360,
+      "language": "es",
+      "scale": 1.3,
+      "back_bottom": 74.0,
+      "title_top": 80.0,
+      "title_bottom": 144.0,
+      "strip_bottom": 148.0
+    }
+  },
+  {
+    "file": "folio_list_800_pt_100.json",
+    "data": {
+      "width": 800,
+      "height": 360,
+      "language": "pt",
+      "scale": 1.0,
+      "back_bottom": 74.0,
+      "title_top": 80.0,
+      "title_bottom": 130.0,
+      "strip_bottom": 134.0
+    }
+  },
+  {
+    "file": "folio_list_800_pt_130.json",
+    "data": {
+      "width": 800,
+      "height": 360,
+      "language": "pt",
+      "scale": 1.3,
+      "back_bottom": 74.0,
+      "title_top": 80.0,
+      "title_bottom": 144.0,
+      "strip_bottom": 148.0
+    }
+  },
+  {
+    "file": "folio_list_891_es_100.json",
+    "data": {
+      "width": 891,
+      "height": 411,
+      "language": "es",
+      "scale": 1.0,
+      "back_bottom": 74.0,
+      "title_top": 80.0,
+      "title_bottom": 130.0,
+      "strip_bottom": 134.0
+    }
+  },
+  {
+    "file": "folio_list_891_es_130.json",
+    "data": {
+      "width": 891,
+      "height": 411,
+      "language": "es",
+      "scale": 1.3,
+      "back_bottom": 74.0,
+      "title_top": 80.0,
+      "title_bottom": 144.0,
+      "strip_bottom": 148.0
+    }
+  },
+  {
+    "file": "folio_list_891_pt_100.json",
+    "data": {
+      "width": 891,
+      "height": 411,
+      "language": "pt",
+      "scale": 1.0,
+      "back_bottom": 74.0,
+      "title_top": 80.0,
+      "title_bottom": 130.0,
+      "strip_bottom": 134.0
+    }
+  },
+  {
+    "file": "folio_list_891_pt_130.json",
+    "data": {
+      "width": 891,
+      "height": 411,
+      "language": "pt",
+      "scale": 1.3,
+      "back_bottom": 74.0,
+      "title_top": 80.0,
+      "title_bottom": 144.0,
+      "strip_bottom": 148.0
+    }
+  }
+]

@@ -65,7 +65,7 @@ android {
       isIncludeAndroidResources = true
       all { test ->
         // Lets a screenshot run be narrowed: -Pshots.only=home,bible
-        listOf("shots.only", "shots.lang", "shots.font", "shots.scale", "shots.zone", "shots.width", "shots.height", "shots.identity", "shots.mode", "audit.capture").forEach { key ->
+        listOf("shots.only", "shots.lang", "shots.font", "shots.scale", "shots.zone", "shots.width", "shots.height", "shots.identity", "shots.mode", "shots.landscape", "shots.ime", "shots.cutout", "shots.navbar", "shots.opaque", "audit.capture").forEach { key ->
           project.findProperty(key)?.let { test.systemProperty(key, it) }
         }
         test.maxHeapSize = "3g"
@@ -108,6 +108,7 @@ dependencies {
   implementation(libs.androidx.compose.material.icons.core)
   implementation(libs.androidx.compose.material.icons.extended)
   implementation(libs.androidx.compose.material3)
+  implementation("androidx.window:window:1.3.0") // Full-window metrics; Compose 1.7 predates containerSize.
   implementation(libs.androidx.compose.ui)
   implementation(libs.androidx.compose.ui.graphics)
   implementation(libs.androidx.compose.ui.tooling.preview)

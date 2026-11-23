@@ -1,0 +1,29 @@
+{
+  "scope": "Solo los nueve puntos de T-047 Revisión 2 (23-nov), incluida la protección del foco frente al dock",
+  "reviewer": "r2_reviewer (agente independiente, lectura de código y capturas nativas)",
+  "verdict": "APROBADO VISUALMENTE: nueve puntos y cierre final de la oclusión en lista-ficha",
+  "reader_art": "Sin imagen. La aprobación ilustrada anterior queda sustituida.",
+  "final_message": "Bloqueo cerrado. Las nuevas capturas muestran el anillo visible en Créditos, completamente por encima del dock en las tres identidades. También confirman foco visible en versículos y borrado de búsqueda, en claro y oscuro. No encuentro defectos pendientes en el código y las capturas revisados.",
+  "evidence": [
+    "_contact_R2_focus.png",
+    "_contact_R2_dock.png",
+    "_contact_R2_contrast_light.png",
+    "_contact_R2_contrast_dark.png",
+    "_contact_reader_review_100.png",
+    "_contact_modals.png",
+    "_contact_fixtures_891x411_claro.png",
+    "_contact_fixtures_800x360_claro.png",
+    "_contact_R2_folio.png"
+  ],
+  "limits": [
+    "No implica accesibilidad universal ni validación física.",
+    "No puntúa todas las pantallas pendientes L1–L7."
+  ],
+  "final_folio_verdict": "Oclusión cerrada. En las ocho capturas la O está completa y separada de Volver; el título queda dentro de la tira y los filtros continúan inmediatamente debajo. Aprobado este delta y cerrado el dictamen visual de los nueve puntos.",
+  "folio_dimensions_dp": {
+    "100_percent": 110,
+    "130_percent": 124,
+    "back_bottom": 74,
+    "title_top": 80
+  }
+}

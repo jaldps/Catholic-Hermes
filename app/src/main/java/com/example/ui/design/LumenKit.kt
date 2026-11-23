@@ -4,6 +4,7 @@ import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.AnnotatedString
@@ -61,7 +62,12 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.graphics.layer.drawLayer
+import androidx.compose.ui.graphics.drawscope.translate
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -97,6 +103,7 @@ import com.example.ui.theme.LocalAppTextStyles
  * time, charcoal capsules for primary actions. The owner's floating six-tab
  * dock is kept as designed; only its material follows the glass tokens.
  */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 object LumenKit : AppKit {
 
     /** Height of the back/actions row under the status bar. */
@@ -123,14 +130,18 @@ object LumenKit : AppKit {
         val styles = LocalAppTextStyles.current
         val density = LocalDensity.current
         val overrides = remember { BackOverrides() }
+        if (overrides.baseCallback !== onBack) overrides.baseCallback = onBack
+        if (overrides.baseLabel != backLabel) overrides.baseLabel = backLabel
         val chrome = remember { ChromeState() }
         val navInset = androidx.compose.foundation.layout.WindowInsets.navigationBars
             .asPaddingValues().calculateBottomPadding()
         // Wide windows swap the bottom tab bar for a leading-edge rail with the
         // same destinations; the content then reserves the rail's width instead
         // of the bar's height.
-        val rail = appUsesNavigationRail()
-        val railInset = if (rail) railReserve(design.isSanctuary) else 0.dp
+        val compact = appIsLandscapePhone()
+        val safe = appSafeInsets()
+        val rail = appUsesNavigationRail() && (!compact || !chrome.dockHidden)
+        val railInset = if (rail) (if (compact) { if (design.isSanctuary) 76.dp else 80.dp } else railReserve(design.isSanctuary)) else 0.dp
 
         // Scroll-edge behaviour: at rest the bar is invisible and the large
         // title in the content is the title; once content scrolls under it,
@@ -175,7 +186,7 @@ object LumenKit : AppKit {
                     if (chrome.dockInset != bottom) chrome.dockInset = bottom
                     val inner = PaddingValues(
                         top = statusTop + if (effectiveBack != null) BarRow else 8.dp,
-                        bottom = bottom
+                        bottom = bottom, start = safe.start, end = safe.end
                     )
                     Box(Modifier.fillMaxSize()) {
                         // The ambient light and everything that scrolls are one
@@ -185,17 +196,36 @@ object LumenKit : AppKit {
                         val dockShown = !rail && !chrome.dockHidden
                         Box(Modifier.fillMaxSize().liquidBackdropSource(backdrop)) {
                             Box(Modifier.fillMaxSize().lumenCanvas())
+                            if (compact) Box(Modifier.fillMaxWidth().height(safe.top).clipToBounds().testTag("status_header_artwork").drawBehind {
+                                chrome.statusArtwork.forEach { art ->
+                                    translate(art.source.origin.x, art.source.origin.y) {
+                                        if (drawContext.canvas.nativeCanvas.isHardwareAccelerated) {
+                                            if (art.ready && !art.source.layer.isReleased) drawLayer(art.source.layer)
+                                        } else if (art.softwareReady) drawContext.canvas.nativeCanvas.drawPicture(art.softwarePicture)
+                                    }
+                                }
+                            })
                             // Scroll edges: content dissolves into the ambient light
                             // above the dock (and, without live blur, under the bar),
                             // so nothing ghosts through the glass or hides a band.
                             Box(
-                                Modifier.fillMaxSize().padding(start = railInset)
+                                Modifier.fillMaxSize().padding(start = railInset + safe.start, end = safe.end)
+                                    .then(if (compact) Modifier.padding(top = safe.top, bottom = safe.bottom).clipToBounds()
+                                        .layout { measurable, constraints ->
+                                            // Keep the full-window layout and header baseline,
+                                            // but clip the actual viewport (and its semantics)
+                                            // to safe bars, including while a list scrolls.
+                                            val top = safe.top.roundToPx()
+                                            val bars = top + safe.bottom.roundToPx()
+                                            val child = measurable.measure(constraints.copy(minHeight = constraints.minHeight + bars, maxHeight = constraints.maxHeight + bars))
+                                            layout(constraints.maxWidth, constraints.maxHeight) { child.placeRelative(0, -top) }
+                                        } else Modifier)
                                     .then(if (opaque) Modifier else Modifier.alphaMask {
                                         val h = size.height
                                         val fadeBottom = if (dockShown) (bottom + if (live) 0.dp else 26.dp).toPx() else 0f
                                         val floor = if (live) 0.72f else 0.02f
                                         val topSpan = (statusTop + BarRow + 28.dp).toPx()
-                                        val topAlpha = if (live) 1f else 1f - edge * 0.97f
+                                        val topAlpha = if (compact || live) 1f else 1f - edge * 0.97f
                                         val bottomStops = if (!dockShown) arrayOf(1f to Color.Black) else if (live) arrayOf(
                                             ((h - fadeBottom) / h).coerceIn(0.5f, 1f) to Color.Black,
                                             1f to Color.Black.copy(alpha = floor)
@@ -221,7 +251,16 @@ object LumenKit : AppKit {
                                     })
                                     .nestedScroll(watcher)
                             ) {
-                                CompositionLocalProvider(LocalLiquidBackdrop provides null) { content(inner) }
+                                val inheritedBringIntoView = androidx.compose.foundation.gestures.LocalBringIntoViewSpec.current
+                                val clearance = with(density) { if (dockShown) (bottom + 8.dp).toPx() else 0f }
+                                val bringIntoView = remember(inheritedBringIntoView, clearance) {
+                                    object : androidx.compose.foundation.gestures.BringIntoViewSpec {
+                                        override fun calculateScrollDistance(offset: Float, size: Float, containerSize: Float): Float =
+                                            inheritedBringIntoView.calculateScrollDistance(offset, size, (containerSize - clearance).coerceAtLeast(1f))
+                                    }
+                                }
+                                CompositionLocalProvider(LocalLiquidBackdrop provides null,
+                                    androidx.compose.foundation.gestures.LocalBringIntoViewSpec provides bringIntoView) { content(inner) }
                             }
                         }
 
@@ -246,8 +285,8 @@ object LumenKit : AppKit {
                         }
 
                         // The bar material, only once content has scrolled under it.
-                        if (design.opaqueMaterial()) {
-                            Column(Modifier.fillMaxWidth().padding(start = railInset).graphicsLayer { alpha = edge }) {
+                        if (!compact && design.opaqueMaterial()) {
+                            Column(Modifier.fillMaxWidth().padding(start = railInset + safe.start, end = safe.end).graphicsLayer { alpha = edge }) {
                                 Box(
                                     Modifier
                                         .fillMaxWidth()
@@ -271,12 +310,12 @@ object LumenKit : AppKit {
                                 }
                                 Box(Modifier.fillMaxWidth().height(0.5.dp).background(palette.separator))
                             }
-                        } else {
+                        } else if (!compact) {
                             // Progressive glass: with a live backdrop the content blurs
                             // under the status bar and clears below the title; without
                             // one it has already dissolved into the light (the mask above).
                             val veil = statusTop + BarRow + 28.dp
-                            Box(Modifier.fillMaxWidth().padding(start = railInset).height(veil).graphicsLayer { alpha = edge }) {
+                            Box(Modifier.fillMaxWidth().padding(start = railInset + safe.start, end = safe.end).height(veil).graphicsLayer { alpha = edge }) {
                                 if (live) {
                                     Box(
                                         Modifier.matchParentSize().alphaMask {
@@ -313,13 +352,13 @@ object LumenKit : AppKit {
                         Row(
                             Modifier
                                 .fillMaxWidth()
-                                .padding(start = railInset)
+                                .padding(start = railInset + safe.start, end = safe.end)
                                 .padding(top = statusTop)
                                 .height(BarRow)
                                 .padding(horizontal = design.spacing.gutter - 4.dp),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            if (effectiveBack != null) {
+                            if (effectiveBack != null && overrides.panelClaims == 0) {
                                 AppGlassIconButton(
                                     icon = Icons.AutoMirrored.Outlined.ArrowBackIos,
                                     contentDescription = backLabel ?: "Back",
@@ -341,7 +380,10 @@ object LumenKit : AppKit {
                             )
                         }
 
-                        if (rail) Box(Modifier.align(Alignment.CenterStart)) { Rail(navItems, selectedNavIndex, onNavSelected, statusTop, navInset) }
+                        if (rail) Box(Modifier.align(Alignment.CenterStart).padding(start = safe.start)) {
+                            if (compact) CompactRail(navItems, selectedNavIndex, onNavSelected, statusTop, navInset)
+                            else Rail(navItems, selectedNavIndex, onNavSelected, statusTop, navInset)
+                        }
                     }
                 }
             }
@@ -415,7 +457,7 @@ object LumenKit : AppKit {
                             Column(
                                 Modifier.weight(1f).heightIn(min = 56.dp)
                                     .clip(RoundedCornerShape(radius - inset))
-                                    .lumenPress({ onNavSelected(index) }, 0.94f, Role.Tab)
+                                    .lumenPress({ onNavSelected(index) }, 0.94f, Role.Tab, shape = RoundedCornerShape(radius - inset))
                                     .semantics { selected = active }
                                     .testTag(item.tag)
                                     .padding(horizontal = 4.dp, vertical = 6.dp),
@@ -459,7 +501,7 @@ object LumenKit : AppKit {
                         Column(
                             Modifier.weight(1f).heightIn(min = 64.dp)
                                 .clip(RoundedCornerShape(6.dp))
-                                .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab)
+                                .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab, shape = RoundedCornerShape(6.dp))
                                 .semantics { selected = active }
                                 .testTag(item.tag)
                                 .padding(horizontal = 4.dp, vertical = 6.dp),
@@ -556,7 +598,7 @@ object LumenKit : AppKit {
                         Column(
                             Modifier.fillMaxWidth().height(slot)
                                 .clip(RoundedCornerShape(radius - inset))
-                                .lumenPress({ onNavSelected(index) }, 0.94f, Role.Tab)
+                                .lumenPress({ onNavSelected(index) }, 0.94f, Role.Tab, shape = RoundedCornerShape(radius - inset))
                                 .semantics { selected = active }
                                 .testTag(item.tag)
                                 .padding(horizontal = 2.dp, vertical = 6.dp),
@@ -603,7 +645,7 @@ object LumenKit : AppKit {
                     Column(
                         Modifier.fillMaxWidth().height(slot).padding(horizontal = 6.dp)
                             .clip(RoundedCornerShape(6.dp))
-                            .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab)
+                            .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab, shape = RoundedCornerShape(6.dp))
                             .semantics { selected = active }
                             .testTag(item.tag)
                             .padding(horizontal = 2.dp, vertical = 6.dp),
@@ -622,6 +664,77 @@ object LumenKit : AppKit {
                 }
             }
             Box(Modifier.width(1.dp).fillMaxHeight().background(p.hairline))
+        }
+    }
+
+    /** Phone rail: 56 dp rows (72 only for a two-line caption), never tablet geometry. */
+    @Composable
+    private fun CompactRail(navItems: List<AppNavItem>, selectedNavIndex: Int, onNavSelected: (Int) -> Unit,
+                            topInset: Dp, bottomInset: Dp) {
+        val design = LocalAppDesign.current
+        val p = design.palette
+        val styles = LocalAppTextStyles.current
+        val density = LocalDensity.current
+        val measure = rememberTextMeasurer()
+        val sanctuary = design.isSanctuary
+        val reserve = if (sanctuary) 76.dp else 80.dp
+        val width = if (sanctuary) 72.dp else 64.dp
+        val inner = width - 12.dp
+        val heights = navItems.map { item ->
+            val text = measure.measure(item.label, styles.navLabel,
+                constraints = androidx.compose.ui.unit.Constraints(maxWidth = with(density) { inner.roundToPx() }))
+            maxOf(if (text.lineCount > 1) 72.dp else 56.dp, with(density) { text.size.height.toDp() } + 30.dp)
+        }
+        val available = (appWindowSize().height - topInset - bottomInset).coerceAtLeast(44.dp)
+        val scroll = rememberScrollState()
+        androidx.compose.runtime.LaunchedEffect(selectedNavIndex, available, heights) {
+            val start = with(density) { heights.take(selectedNavIndex).sumOf { it.toPx().toDouble() }.toInt() }
+            val end = start + with(density) { heights.getOrElse(selectedNavIndex) { 56.dp }.roundToPx() }
+            val viewport = with(density) { available.roundToPx() }
+            val target = when { start < scroll.value -> start; end > scroll.value + viewport -> end - viewport; else -> scroll.value }
+            scroll.scrollTo(target.coerceAtLeast(0))
+        }
+        val still = design.reduceMotion || androidx.compose.ui.platform.LocalInspectionMode.current
+        val lensTop by androidx.compose.animation.core.animateDpAsState(
+            heights.take(selectedNavIndex.coerceAtLeast(0)).fold(0.dp) { total, value -> total + value },
+            if (still) androidx.compose.animation.core.snap() else androidx.compose.animation.core.spring(dampingRatio = 0.74f, stiffness = 380f), label = "compactRailLens")
+        val lensHeight by androidx.compose.animation.core.animateDpAsState(heights.getOrElse(selectedNavIndex) { 56.dp },
+            if (still) androidx.compose.animation.core.snap() else androidx.compose.animation.core.spring(), label = "compactRailLensHeight")
+        val shape = RoundedCornerShape(32.dp)
+        Box(Modifier.width(reserve).fillMaxHeight()
+            .then(if (sanctuary) Modifier.background(p.glassStrong) else Modifier)
+            .padding(top = topInset, bottom = bottomInset), contentAlignment = Alignment.Center) {
+            Box(Modifier.width(width).heightIn(max = available).testTag("navigation_rail")
+                .clip(if (sanctuary) androidx.compose.ui.graphics.RectangleShape else shape)) {
+                if (!sanctuary) Box(Modifier.matchParentSize()) {
+                    val live = LocalLiquidBackdrop.current != null
+                    LiquidBackdropFill(shape, Modifier.matchParentSize(), blur = 22.dp, cornerRadius = 32.dp)
+                    Box(Modifier.matchParentSize().liquidPane(shape, design.chromeGlassSpec(live)))
+                }
+                Box(Modifier.fillMaxWidth().verticalScroll(scroll)) {
+                    if (!sanctuary && navItems.isNotEmpty()) Box(Modifier.fillMaxWidth().padding(horizontal = 4.dp)
+                        .height(lensHeight).offset(y = lensTop + 4.dp)
+                        .liquidPane(RoundedCornerShape(28.dp), design.glassSpec(GlassRole.Thumb)))
+                Column(Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
+                    navItems.forEachIndexed { index, item ->
+                        val active = index == selectedNavIndex
+                        val tint = if (active && design.opaqueMaterial() && !sanctuary) p.onAction else if (active) p.accent else p.textSecondary
+                        val rowShape = RoundedCornerShape(if (sanctuary) 4.dp else 28.dp)
+                        Column(Modifier.fillMaxWidth().height(heights[index]).padding(horizontal = 4.dp)
+                            .clip(rowShape).lumenPress({ onNavSelected(index) }, role = Role.Tab, shape = rowShape)
+                            .semantics { selected = active }.testTag(item.tag),
+                            horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+                            Icon(if (active) solidGlyph(item.selectedIcon) else item.icon, null, tint = tint, modifier = Modifier.size(22.dp))
+                            Spacer(Modifier.height(2.dp))
+                            Text(item.label, style = styles.navLabel.copy(fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
+                                color = tint, textAlign = TextAlign.Center)
+                            if (sanctuary) Box(Modifier.padding(top = 2.dp).width(20.dp).height(2.dp).background(if (active) p.accent else Color.Transparent))
+                        }
+                    }
+                }
+                }
+            }
+            if (sanctuary) Box(Modifier.align(Alignment.CenterEnd).width(0.5.dp).fillMaxHeight().background(p.hairline))
         }
     }
 
@@ -725,7 +838,7 @@ object LumenKit : AppKit {
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = if (inCard) 0.dp else design.spacing.gutter)
-                .padding(top = if (inCard) 0.dp else 10.dp, bottom = 12.dp)
+                .padding(top = if (inCard) 0.dp else 10.dp, bottom = if (appIsLandscapePhone()) 4.dp else 12.dp)
         ) {
             Text(
                 title,
@@ -747,7 +860,7 @@ object LumenKit : AppKit {
         Column(
             modifier
                 .fillMaxWidth()
-                .lumenPress(onClick, 0.98f)
+                .lumenPress(onClick, 0.98f, shape = shape)
                 .appContentSurface(shape)
                 .clip(shape)
                 .padding(design.spacing.cardPadding)
@@ -808,13 +921,13 @@ object LumenKit : AppKit {
         )
         val inCard = LocalInsideCard.current
         val inset = if (inCard) 0.dp else 18.dp
-        Column(modifier.fillMaxWidth()) {
+        Column(modifier.fillMaxWidth().then(if (selected) Modifier.semantics { this.selected = true } else Modifier)) {
             Row(
                 Modifier
                     .fillMaxWidth()
                     .background(fill)
                     .then(
-                        if (onClick != null) Modifier.clickable(source, indication = null, role = Role.Button, onClick = onClick)
+                        if (onClick != null) Modifier.clickable(source, indication = appFocusRing(source, androidx.compose.ui.graphics.RectangleShape), role = Role.Button, onClick = onClick)
                         else Modifier
                     )
                     .heightIn(min = design.spacing.rowMinHeight)
@@ -908,11 +1021,12 @@ object LumenKit : AppKit {
         val p = design.palette
         val styles = LocalAppTextStyles.current
         val shape = design.shapes.field
+        val compactSearch = LocalCompactSearch.current || LocalHeaderPlacement.current == AppHeaderPlacement.SidePanel
         Row(
             modifier
                 .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-                .heightIn(min = 48.dp)
+                .padding(horizontal = if (LocalCompactSearch.current) 0.dp else design.spacing.gutter)
+                .heightIn(min = if (compactSearch) 44.dp else 48.dp)
                 .lumenGlass(shape, lifted = false)
                 .semantics { contentDescription = placeholder }
                 .padding(horizontal = 16.dp),
@@ -938,6 +1052,24 @@ object LumenKit : AppKit {
 
     @Composable
     override fun SegmentedTabs(options: List<String>, selectedIndex: Int, onSelect: (Int) -> Unit, modifier: Modifier) {
+        if (LocalHeaderPlacement.current == AppHeaderPlacement.SidePanel) {
+            val design = LocalAppDesign.current
+            val p = design.palette
+            val styles = LocalAppTextStyles.current
+            Column(modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
+                options.forEachIndexed { index, label ->
+                    val active = index == selectedIndex
+                    Box(Modifier.fillMaxWidth().heightIn(min = 44.dp)
+                        .then(if (active) Modifier.liquidPane(design.shapes.buttonSmall, design.glassSpec(GlassRole.Thumb)) else Modifier)
+                        .lumenPress({ onSelect(index) }, role = Role.Tab, shape = design.shapes.buttonSmall).semantics { selected = active }
+                        .padding(horizontal = 12.dp, vertical = 8.dp), contentAlignment = Alignment.CenterStart) {
+                        Text(label, style = styles.subhead.copy(fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
+                            color = if (active && design.isSanctuary) p.accent else if (active && design.opaqueMaterial()) p.onAction else if (active) p.textPrimary else p.textSecondary)
+                    }
+                }
+            }
+            return
+        }
         val design = LocalAppDesign.current
         val p = design.palette
         val styles = LocalAppTextStyles.current
@@ -995,7 +1127,7 @@ object LumenKit : AppKit {
                                     else Modifier
                                 )
                                 .clip(shape)
-                                .lumenPress({ onSelect(index) }, role = Role.Tab)
+                                .lumenPress({ onSelect(index) }, role = Role.Tab, shape = shape)
                                 .semantics { selected = active }
                                 .padding(horizontal = 12.dp, vertical = 11.dp),
                             contentAlignment = Alignment.Center
@@ -1029,6 +1161,7 @@ object LumenKit : AppKit {
         val design = LocalAppDesign.current
         val p = design.palette
         val styles = LocalAppTextStyles.current
+        val source = remember { MutableInteractionSource() }
         val annotated = buildAnnotatedString {
             withStyle(
                 SpanStyle(
@@ -1043,7 +1176,7 @@ object LumenKit : AppKit {
         Row(
             modifier
                 .fillMaxWidth()
-                .then(if (onClick != null) Modifier.clickable(remember { MutableInteractionSource() }, null, onClick = onClick) else Modifier)
+                .then(if (onClick != null) Modifier.clickable(source, appFocusRing(source, androidx.compose.ui.graphics.RectangleShape), onClick = onClick) else Modifier)
                 .padding(horizontal = design.spacing.gutter, vertical = 4.dp)
         ) {
             // `scripture`, not `reading`: readers override this slot with the

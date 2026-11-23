@@ -1,0 +1,191 @@
+{
+  "totals": {
+    "tests": 31,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "classes": [
+    {
+      "name": "com.example.LandscapeFolioListHeaderTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": 34.465
+    },
+    {
+      "name": "com.example.LandscapeLayoutTest",
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": 11.947
+    },
+    {
+      "name": "com.example.LandscapeShowcaseScreenshotTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": 13.425
+    }
+  ],
+  "cases": [
+    {
+      "class": "com.example.LandscapeFolioListHeaderTest",
+      "name": "completeTitleClearsBackAndRemainsInsideTheScrollingHeader[891x411-1-ES]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFolioListHeaderTest",
+      "name": "completeTitleClearsBackAndRemainsInsideTheScrollingHeader[891x411-1-PT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFolioListHeaderTest",
+      "name": "completeTitleClearsBackAndRemainsInsideTheScrollingHeader[891x411-1.3-ES]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFolioListHeaderTest",
+      "name": "completeTitleClearsBackAndRemainsInsideTheScrollingHeader[891x411-1.3-PT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFolioListHeaderTest",
+      "name": "completeTitleClearsBackAndRemainsInsideTheScrollingHeader[800x360-1-ES]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFolioListHeaderTest",
+      "name": "completeTitleClearsBackAndRemainsInsideTheScrollingHeader[800x360-1-PT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFolioListHeaderTest",
+      "name": "completeTitleClearsBackAndRemainsInsideTheScrollingHeader[800x360-1.3-ES]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeFolioListHeaderTest",
+      "name": "completeTitleClearsBackAndRemainsInsideTheScrollingHeader[800x360-1.3-PT]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "compactBandUsesExactlyThirtyPercentAtTheShortRequiredSize",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readingMeasureTracksTheUsersRealFontAndScale",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "sanctuaryCompactHeaderUsesItsPaperTitleBranchWithoutAFrame",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "minimumSupportedHeightRecordsTheApprovedBandsNumericalException",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "statefulListDetailKeepsTheTabletReadingColumnAt680Dp",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "coverArtworkDrawsUnderTheStatusBarAtRest",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "listDetailKeepsSearchStickyAndOpensSelectedPrayerInFullReader",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "enlargedReaderCanReachTheEndWithoutMovingItsAdvanceButton",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "landscapeReaderDoesNotRenderItsSuppliedArtwork",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "keyboardOnlyResizesTheFocusedSupportingLayoutsMainColumn",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "supportingContextWithoutFooterCanScrollItsLastLineAboveTheNavigationBar",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readerPanelFooterReturnsToItsParentRoute",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readerUsesFullWindowProportionAndClearsBothLateralInsets",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "tightestLandscapeBoundaryRecordsTheIncompatibleMinimumWidths",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "hubPanelUsesApprovedWidthAndTitleBaseline",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "portraitHeaderScrollsAwayInsteadOfRemainingAsAnOverlay",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "scrollableSidePanelSignalsMoreContentUntilTheEnd",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readerHidesRailAndKeepsNavigationAboveTheSafeBottom",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readerAlignsTitleWithPrayerAndUsesCompactButtons",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "compactPhoneClampsTheSheetToItsActualSafeWidth",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "compactDialogOwnsItsScrimAndDismissesOnOutsideTouch",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "name": "sanctuaryLight",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeShowcaseScreenshotTest",
+      "name": "sanctuaryDark",
+      "status": "passed"
+    }
+  ]
+}

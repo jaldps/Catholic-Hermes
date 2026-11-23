@@ -1,0 +1,16 @@
+{
+  "parity_HOME_LUMEN.txt": "PORTRAIT=54\nLANDSCAPE=54\nMISSING\ntext:En aquel tiempo, Jesús dijo a sus discípulos: «Cuando venga el Hijo del hombre, rodeado de su gloria…»\nADDED\ntext:En aquel tiempo, Jesús dijo a sus discípulos: «Cuando venga el Hijo del hombre, rodeado de su gloria, acompañado de todos sus ángeles…»\nDECLARED GAP: Home.ExcerptText changes the excerpt length with width; defer to T-050.\n",
+  "parity_HOME_SANCTUARY.txt": "PORTRAIT=54\nLANDSCAPE=54\nMISSING\ntext:En aquel tiempo, Jesús dijo a sus discípulos: «Cuando venga el Hijo del hombre, rodeado de su gloria…»\nADDED\ntext:En aquel tiempo, Jesús dijo a sus discípulos: «Cuando venga el Hijo del hombre, rodeado de su gloria, acompañado de todos sus ángeles…»\nDECLARED GAP: Home.ExcerptText changes the excerpt length with width; defer to T-050.\n",
+  "parity_Hub_LUMEN.txt": "PORTRAIT=31\nLANDSCAPE=31\nMISSING\n\nADDED\n",
+  "parity_Hub_SANCTUARY.txt": "PORTRAIT=31\nLANDSCAPE=31\nMISSING\n\nADDED\n",
+  "parity_ListDetail_LUMEN.txt": "PORTRAIT=36\nLANDSCAPE=36\nMISSING\n\nADDED\n",
+  "parity_ListDetail_SANCTUARY.txt": "PORTRAIT=36\nLANDSCAPE=36\nMISSING\n\nADDED\n",
+  "parity_MORE_LUMEN.txt": "PORTRAIT=91\nLANDSCAPE=91\nMISSING\n\nADDED\n",
+  "parity_MORE_SANCTUARY.txt": "PORTRAIT=91\nLANDSCAPE=91\nMISSING\n\nADDED\n",
+  "parity_PRAYERS_LUMEN.txt": "PORTRAIT=101\nLANDSCAPE=101\nMISSING\n\nADDED\n",
+  "parity_PRAYERS_SANCTUARY.txt": "PORTRAIT=101\nLANDSCAPE=101\nMISSING\n\nADDED\n",
+  "parity_Reader_LUMEN.txt": "PORTRAIT=15\nLANDSCAPE=15\nMISSING\n\nADDED\n",
+  "parity_Reader_SANCTUARY.txt": "PORTRAIT=15\nLANDSCAPE=15\nMISSING\n\nADDED\n",
+  "parity_Supporting_LUMEN.txt": "PORTRAIT=12\nLANDSCAPE=12\nMISSING\n\nADDED\n",
+  "parity_Supporting_SANCTUARY.txt": "PORTRAIT=12\nLANDSCAPE=12\nMISSING\n\nADDED\n"
+}

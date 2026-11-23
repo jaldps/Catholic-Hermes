@@ -138,6 +138,7 @@ import com.example.ui.design.AppGrid
 import com.example.ui.design.AppGroupedRow
 import com.example.ui.design.AppHideTabBar
 import com.example.ui.design.AppImageCard
+import com.example.ui.design.AppGuidedPrayerCard
 import com.example.ui.design.AppInlineTitle
 import com.example.ui.design.AppKitChip
 import com.example.ui.design.AppLargeTitleHeader
@@ -452,7 +453,7 @@ fun PrayersAndNovenasScreen(
                 Guide(currentLanguage.pick("Coronilla", "Divine Mercy", "Coroa da Misericórdia"), ArtDivineMercy, onOpenGuidedChaplet ?: { showChaplet = true }, "open_chaplet_row")
             )
             AppGrid(guides, columns = if (twoColumns) 2 else 1, modifier = Modifier.testTag("pray_primary_guides")) { guide, cell ->
-                AppImageCard(
+                AppGuidedPrayerCard(
                     title = guide.title,
                     meta = currentLanguage.pick("Oración guiada", "Guided prayer", "Oração guiada"),
                     assetPath = guide.asset,

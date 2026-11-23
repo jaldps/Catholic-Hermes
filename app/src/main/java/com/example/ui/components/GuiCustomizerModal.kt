@@ -99,17 +99,17 @@ fun GuiCustomizerModal(
     }
 
     @Composable
-    fun Label(text: String) {
+    fun Label(text: String, firstInSheet: Boolean = false) {
         Text(
             text,
             style = styles.footnote,
             color = p.textSecondary,
-            modifier = Modifier.padding(start = design.spacing.gutter + 4.dp, end = design.spacing.gutter, top = 18.dp, bottom = 8.dp)
+            modifier = Modifier.padding(start = design.spacing.gutter + 4.dp, end = design.spacing.gutter, top = if (firstInSheet && com.example.ui.design.appHasCompactHeight()) 12.dp else 18.dp, bottom = 8.dp)
         )
     }
 
     AppSheet(onDismiss = onDismiss, title = t("Apariencia", "Appearance", "Aparência"), tag = "gui_customizer_sheet") {
-        Label(t("Estilo", "Style", "Estilo"))
+        Label(t("Estilo", "Style", "Estilo"), firstInSheet = true)
         val identities = DesignLanguage.selectable
         AppSegmentedTabs(
             options = identities.map { it.label.get(currentLanguage) },
@@ -265,7 +265,7 @@ private fun AccentSwatch(
     Box(
         Modifier
             .size(52.dp)
-            .lumenPress(onClick, 0.9f)
+            .lumenPress(onClick, 0.9f, shape = CircleShape)
             .semantics { this.selected = selected; contentDescription = description }
             .testTag(tag),
         contentAlignment = Alignment.Center

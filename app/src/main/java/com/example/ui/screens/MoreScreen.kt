@@ -498,7 +498,8 @@ private fun EntryGroup(entries: List<MoreEntry>, language: AppLanguage, modeFall
                 value = entry.value ?: if (entry.tag == "app_bar_theme_button") modeFallback else null,
                 onClick = entry.onOpen,
                 tag = entry.tag,
-                showDivider = i < entries.lastIndex
+                showDivider = i < entries.lastIndex,
+                focusShape = if (entries.size == 1) shape else androidx.compose.ui.graphics.RectangleShape
             )
         }
     }
@@ -516,7 +517,8 @@ private fun EntryRow(
     value: String?,
     onClick: () -> Unit,
     tag: String,
-    showDivider: Boolean
+    showDivider: Boolean,
+    focusShape: androidx.compose.ui.graphics.Shape = androidx.compose.ui.graphics.RectangleShape
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -534,7 +536,7 @@ private fun EntryRow(
                 .fillMaxWidth()
                 .heightIn(min = if (subtitle != null) 64.dp else design.spacing.rowMinHeight)
                 .background(fill)
-                .clickable(source, indication = null, role = Role.Button, onClick = onClick)
+                .clickable(source, indication = com.example.ui.design.appFocusRing(source, focusShape), role = Role.Button, onClick = onClick)
                 .testTag(tag)
                 .padding(horizontal = RowInset, vertical = 11.dp),
             verticalAlignment = Alignment.CenterVertically

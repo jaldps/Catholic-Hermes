@@ -1,0 +1,37 @@
+{
+  "expected_scenarios_per_case": 50,
+  "cases": {
+    "CLASSIC_es": {
+      "executed": 50,
+      "missing": []
+    },
+    "CLASSIC_pt": {
+      "executed": 50,
+      "missing": []
+    },
+    "GLASS_es": {
+      "executed": 50,
+      "missing": []
+    },
+    "GLASS_pt": {
+      "executed": 50,
+      "missing": []
+    },
+    "LUMEN_es": {
+      "executed": 50,
+      "missing": []
+    },
+    "LUMEN_pt": {
+      "executed": 50,
+      "missing": []
+    },
+    "SANCTUARY_es": {
+      "executed": 50,
+      "missing": []
+    },
+    "SANCTUARY_pt": {
+      "executed": 50,
+      "missing": []
+    }
+  }
+}

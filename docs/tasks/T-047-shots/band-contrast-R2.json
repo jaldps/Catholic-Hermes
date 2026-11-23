@@ -1,0 +1,26 @@
+[
+  {
+    "file": "compact_contrast_CLASSIC_false.tsv",
+    "tsv": "home\ttitle=11.0351305\tcaption=5.1723495\nprayers_lily\ttitle=13.346052\tcaption=5.1723495\nbible\ttitle=4.6840944\tcaption=5.1723495\nhabits\ttitle=7.565374\tcaption=5.1723495\nexplore\ttitle=10.773565\tcaption=5.1723495"
+  },
+  {
+    "file": "compact_contrast_CLASSIC_true.tsv",
+    "tsv": "home\ttitle=9.36115\tcaption=7.152703\nprayers_lily\ttitle=8.909256\tcaption=7.152703\nbible\ttitle=11.72726\tcaption=7.152703\nhabits\ttitle=11.336283\tcaption=7.152703\nexplore\ttitle=8.923817\tcaption=7.152703"
+  },
+  {
+    "file": "compact_contrast_GLASS_false.tsv",
+    "tsv": "home\ttitle=12.045454\tcaption=8.020761\nprayers_lily\ttitle=14.581403\tcaption=8.020761\nbible\ttitle=5.0975003\tcaption=8.020761\nhabits\ttitle=8.280758\tcaption=8.020761\nexplore\ttitle=11.783592\tcaption=8.020761"
+  },
+  {
+    "file": "compact_contrast_GLASS_true.tsv",
+    "tsv": "home\ttitle=10.297151\tcaption=11.845423\nprayers_lily\ttitle=9.677368\tcaption=11.845423\nbible\ttitle=13.022534\tcaption=11.845423\nhabits\ttitle=12.361499\tcaption=11.845423\nexplore\ttitle=9.655905\tcaption=11.845423"
+  },
+  {
+    "file": "compact_contrast_LUMEN_false.tsv",
+    "tsv": "home\ttitle=12.045454\tcaption=6.9669175\nprayers_lily\ttitle=14.581403\tcaption=6.9669175\nbible\ttitle=5.0975003\tcaption=6.9669175\nhabits\ttitle=8.280758\tcaption=6.9669175\nexplore\ttitle=11.783592\tcaption=6.9669175"
+  },
+  {
+    "file": "compact_contrast_LUMEN_true.tsv",
+    "tsv": "home\ttitle=10.112866\tcaption=8.989322\nprayers_lily\ttitle=9.504177\tcaption=8.989322\nbible\ttitle=12.789475\tcaption=8.989322\nhabits\ttitle=12.14027\tcaption=8.989322\nexplore\ttitle=9.483097\tcaption=8.989322"
+  }
+]

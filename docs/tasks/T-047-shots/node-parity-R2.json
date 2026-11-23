@@ -1,0 +1,58 @@
+[
+  {
+    "file": "parity_HOME_LUMEN.txt",
+    "raw": "PORTRAIT=47\nLANDSCAPE=47\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_HOME_SANCTUARY.txt",
+    "raw": "PORTRAIT=47\nLANDSCAPE=47\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_Hub_LUMEN.txt",
+    "raw": "PORTRAIT=31\nLANDSCAPE=31\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_Hub_SANCTUARY.txt",
+    "raw": "PORTRAIT=31\nLANDSCAPE=31\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_ListDetail_LUMEN.txt",
+    "raw": "PORTRAIT=36\nLANDSCAPE=36\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_ListDetail_SANCTUARY.txt",
+    "raw": "PORTRAIT=36\nLANDSCAPE=36\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_MORE_LUMEN.txt",
+    "raw": "PORTRAIT=91\nLANDSCAPE=91\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_MORE_SANCTUARY.txt",
+    "raw": "PORTRAIT=91\nLANDSCAPE=91\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_PRAYERS_LUMEN.txt",
+    "raw": "PORTRAIT=101\nLANDSCAPE=101\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_PRAYERS_SANCTUARY.txt",
+    "raw": "PORTRAIT=101\nLANDSCAPE=101\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_Reader_LUMEN.txt",
+    "raw": "PORTRAIT=15\nLANDSCAPE=15\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_Reader_SANCTUARY.txt",
+    "raw": "PORTRAIT=15\nLANDSCAPE=15\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_Supporting_LUMEN.txt",
+    "raw": "PORTRAIT=12\nLANDSCAPE=12\nMISSING\n\nADDED\n"
+  },
+  {
+    "file": "parity_Supporting_SANCTUARY.txt",
+    "raw": "PORTRAIT=12\nLANDSCAPE=12\nMISSING\n\nADDED\n"
+  }
+]
