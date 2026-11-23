@@ -86,12 +86,12 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-044](T-044.md) | Hermes | CERRADO ([revisión](T-044-REVIEW.md): 20/25 integradas) | Imágenes de las 25 devociones marianas sin imagen (rama `media/devotion-images-2` del fork) |
 | T-045 | Coordinador (Sonnet local) | CERRADO ([informe](T-045-REPORT.md)) | Auditoría a 320 dp con letra al 130 %: textos cortados y botones ocultos en toda la app |
 | [T-046](T-046.md) | Hermes | CERRADO ([informe](T-046-REPORT.md), [revisión](T-046-REVIEW.md)) | «Mi camino» como 5.ª pestaña y una sola fila de hábitos |
-| [T-047](T-047.md) | Codex | ABIERTO (diseño aprobado por el dueño el 22-nov) | L0 · Fundamentos de la interfaz horizontal (`docs/design/LANDSCAPE.md` §2–§3) |
-| [T-048](T-048.md) | Codex | EN COLA (se abre al integrar T-047) | L1 · Rosario y Coronilla en horizontal (§4) |
+| [T-047](T-047.md) | Codex | CERRADO ([informe](T-047-REPORT.md), [revisión](T-047-REVIEW.md)) | L0 · Fundamentos de la interfaz horizontal (`docs/design/LANDSCAPE.md` §2–§3) |
+| [T-048](T-048.md) | Codex | ABIERTO | L1 · Rosario y Coronilla en horizontal (§4) |
 | T-049 | Codex | EN COLA (tras T-048) | L2 · Lectores en horizontal (§5) |
 | T-050 | Codex | EN COLA (tras T-049) | L3 · Hoy en horizontal (§6) |
 | T-051 | Codex | EN COLA (tras T-050) | L4 · Centros Orar y Leer en horizontal (§7) |
-| [T-052](T-052.md) | Hermes | EN COLA (se abre al integrar T-047 y cerrar T-055; en paralelo con Codex) | L5 · Listas con ficha en horizontal (§8) |
+| [T-052](T-052.md) | Hermes | ABIERTO (en paralelo con Codex) | L5 · Listas con ficha en horizontal (§8) |
 | T-053 | Hermes | EN COLA (tras T-052) | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
 | T-054 | Codex | EN COLA (al final) | L7 · Hojas, diálogos, bienvenida y ajustes en horizontal (§10) |
 | [T-055](T-055.md) | Hermes | CERRADO ([informe](T-055-REPORT.md), [revisión](T-055-REVIEW.md)) | Estados vacíos y de error que faltan, en vertical (preparación de §16 del diseño horizontal) |

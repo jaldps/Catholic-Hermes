@@ -136,3 +136,20 @@ En la app, lo mismo le pasa al foco de teclado o de TalkBack: el elemento enfoca
 **Arreglo:** en el andamiaje (`LumenKit.kt`, contenido de las pestañas con dock), un `BringIntoViewSpec` propio, o un margen de desplazamiento igual al alto del dock, para que un elemento que se trae a la vista (por foco o por `bringIntoView`) quede **por encima** del dock.
 
 **Test:** enfocar la última fila de Explorar y comprobar que su borde inferior queda por encima del borde superior del dock. Así, el helper de test `revealAboveDock` (`app/src/test/java/com/example/TestDockClearance.kt`) deja de hacer falta en las pantallas que lo usan.
+
+## Revisión 3 (23-nov) · APROBADO · CERRADO
+
+`ext/T-047` @ `9feae24`, integrado en `CatholicGPT`, más un retoque del coordinador.
+
+**Crítico Opus (solo los puntos de la revisión 2):**
+- 11 de 12 puntos **resueltos**, con evidencia: anillo de foco (`KeyboardFocusTest` 32/32), «Quitar animaciones» del sistema (`SystemReduceMotionTest` 3/3), foco por encima del dock (`DockKeyboardFocusTest`), `CompactBand` con arte y contraste ≥ 4,68:1, banda de Sanctuary, lector sin arte, superficie opaca, hojas, velo del diálogo, pies y `MyPathUiTest`.
+- El punto 5 quedó parcial: el marco del folio de Sanctuary estaba a unos 2,5 dp de los segmentos, cuando §3.11 pide 8.
+- **Retoque del coordinador** en `AppFolioPanelHeader` (`LumenComponents.kt`): el presupuesto reserva el hueco bajo el marco y el layout lo deja. Comprobado en `l0_hub_sanctuary_claro_891x411.png`: 8 dp exactos, los tres segmentos y Buscar visibles sin desplazar, y `Landscape*` en verde.
+- **Notas:** 9 en los nueve criterios.
+
+**Suite completa del coordinador sobre la fusión:** 1.181 tests. Solo falla el de siempre, `ExampleRobolectricTest` (el nombre de la app en la preview), y hay 7 omitidos.
+
+**Notas no bloqueantes para las áreas:**
+- `_A_explorar.png` no se regeneró.
+- El helper `revealAboveDock` puede retirarse cuando cada pantalla quede cubierta por el `BringIntoViewSpec`.
+- En Cristal, el velo del borde inferior aclara la fila enfocada (9,3:1, cumple).
