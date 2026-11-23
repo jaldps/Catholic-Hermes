@@ -169,6 +169,80 @@ class LandscapeRotationTest(private val identity: DesignLanguage) {
         assertEquals(before.first, compose.runOnIdle { anchor!!.index })
         assertEquals(before.second, compose.runOnIdle { anchor!!.fraction }, 0.06f)
     }
+    @Test fun thirdDecadeWithVoiceAndOptionsSurvivesBothRotations() {
+        val app = ApplicationProvider.getApplicationContext<Application>()
+        val repository = com.example.data.repository.CatholicDataRepository(app).apply { setLanguage(AppLanguage.ES) }
+        com.example.ui.screens.RosarySessionStore.save(app,
+            com.example.ui.screens.RosarySession.opening(0).copy(rosaryStep = 40, instructionsOn = false,
+                mysterySelection = com.example.ui.screens.MysterySelection.Picked(com.example.data.models.RosaryMysteryType.JOYFUL)),
+            com.example.data.models.RosaryMysteryType.JOYFUL)
+        val engines = mutableListOf<com.example.data.audio.LiturgicalTtsManager>()
+        compose.runOnUiThread { LandscapeRotationActivity.testContent = {
+            val host = androidx.compose.ui.platform.LocalContext.current
+            val audio = remember(host) { readyNarrator(app, AppLanguage.ES).also { engines += it } }
+            DisposableEffect(audio) { onDispose { audio.release() } }
+            SanctaFidesTheme(designLanguage = identity.id, reduceMotion = true) {
+                CompositionLocalProvider(LocalInspectionMode provides true) { com.example.ui.screens.RosaryScreen(repository, audio, AppLanguage.ES) }
+            }
+        } }; compose.waitForIdle(); insets(411)
+        compose.onNodeWithTag("toggle_prayer_audio_button").performClick()
+        compose.onNodeWithTag("rosary_options_button").performClick()
+        val retained = androidx.lifecycle.ViewModelProvider(compose.activity)[com.example.ui.screens.RosaryNarrationHolder::class.java]
+        val first = engines.first()
+        val stopped = first.stopCount.value
+        assertTrue(first.isPlaying.value)
+        for ((w,h) in listOf(411 to 891, 891 to 411)) {
+            rotate(w,h)
+            assertSame(retained, androidx.lifecycle.ViewModelProvider(compose.activity)[com.example.ui.screens.RosaryNarrationHolder::class.java])
+            assertTrue(retained.controller.state is com.example.ui.screens.NarrationState.Speaking)
+            assertEquals(40, (retained.controller.state as com.example.ui.screens.NarrationState.Speaking).target.step)
+            assertSame(first, com.example.data.audio.LiturgicalTtsManager.active)
+            assertTrue(first.isPlaying.value); assertEquals(stopped, first.stopCount.value)
+            compose.onNodeWithTag("rosary_options_sheet").assertExists()
+        }
+        compose.onNodeWithTag("sheet_close").performClick()
+        compose.onNodeWithTag("next_bead_button").assertIsDisplayed()
+        compose.runOnUiThread { LandscapeRotationActivity.testContent = null }; compose.waitForIdle()
+        engines.forEach { it.release() }; repository.close()
+    }
+
+    @Test fun actualLongPrayerKeepsItsTextBlockFractionAcrossReflow() {
+        val app = ApplicationProvider.getApplicationContext<Application>()
+        val repository = com.example.data.repository.CatholicDataRepository(app)
+        val audio = com.example.data.audio.LiturgicalTtsManager(app)
+        val creed = repository.vaticanPrayers.first { it.id == "creed" }
+        val guide = com.example.ui.screens.buildRosaryGuide(repository.getRosaryMystery(com.example.data.models.RosaryMysteryType.JOYFUL),
+            com.example.ui.screens.Said(creed.leaderText.get(AppLanguage.ES), creed.responseText?.get(AppLanguage.ES).orEmpty()), AppLanguage.ES)
+        // Use an authentic prayer that actually overflows both viewports (the litany),
+        // so keeping the reading point does not require adding empty portrait space.
+        val longIndex = guide.steps.indices.maxBy { guide.steps[it].leader.length }
+        com.example.ui.screens.RosarySessionStore.save(app,
+            com.example.ui.screens.RosarySession.opening(0).copy(rosaryStep = longIndex, instructionsOn = false),
+            com.example.data.models.RosaryMysteryType.JOYFUL)
+        compose.runOnUiThread { LandscapeRotationActivity.testContent = {
+            SanctaFidesTheme(designLanguage = identity.id, reduceMotion = true) {
+                CompositionLocalProvider(LocalInspectionMode provides true) { com.example.ui.screens.RosaryScreen(repository, audio, AppLanguage.ES) }
+            }
+        } }; compose.waitForIdle(); insets(411)
+        val range = compose.onNodeWithTag("prayer_content_scroll").fetchSemanticsNode().config[androidx.compose.ui.semantics.SemanticsProperties.VerticalScrollAxisRange]
+        compose.onNodeWithTag("prayer_content_scroll").performSemanticsAction(androidx.compose.ui.semantics.SemanticsActions.ScrollBy) { it(0f, range.maxValue() * .25f) }
+        compose.waitForIdle()
+        fun fraction(): Float {
+            val viewport = compose.onNodeWithTag("prayer_reading_viewport").getUnclippedBoundsInRoot()
+            val text = compose.onNodeWithTag("prayer_leader_text").getUnclippedBoundsInRoot()
+            assertTrue("The anchor fixture must overflow this viewport", (text.bottom - text.top).value > (viewport.bottom - viewport.top).value)
+            return (viewport.top - text.top).value / (text.bottom - text.top).value
+        }
+        val before = fraction()
+        assertTrue("The test must actually read inside the long prayer", before > .01f)
+        rotate(411,891)
+        assertEquals(before, fraction(), .02f)
+        rotate(891,411)
+        assertEquals(before, fraction(), .02f)
+        compose.runOnUiThread { LandscapeRotationActivity.testContent = null }; compose.waitForIdle()
+        audio.release(); repository.close()
+    }
+
     companion object {
         @JvmStatic @ParameterizedRobolectricTestRunner.Parameters(name = "{0}")
         fun identities() = listOf(arrayOf(DesignLanguage.APPLE), arrayOf(DesignLanguage.SANCTUARY))

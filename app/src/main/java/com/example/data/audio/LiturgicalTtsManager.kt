@@ -56,7 +56,9 @@ enum class RecitationVoiceMode {
  */
 enum class VoiceAvailability { INITIALIZING, READY, MISSING_DATA, UNSUPPORTED, ENGINE_ERROR, PLAYBACK_ERROR }
 
-class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitListener {
+class LiturgicalTtsManager(context: Context) : TextToSpeech.OnInitListener {
+    // A retained Rosary holder must never keep the destroyed Activity alive.
+    private val context = context.applicationContext
 
     private var tts: TextToSpeech? = null
     private var isInitialized = false
@@ -316,7 +318,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     }
 
     init {
-        active = this
+        if (active?.sessionActive != true) active = this
         tts = TextToSpeech(context.applicationContext, this)
         try {
             toneGenerator = ToneGenerator(AudioManager.STREAM_MUSIC, 70)
@@ -590,7 +592,25 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         narrationTitle = null
     }
 
+    private var rosaryHolders = 0
+    private var releaseRequested = false
+
+    /** Ownership bridge for the activity-scoped Rosary narration holder. Main-thread only. */
+    internal fun retainForRosaryHolder(): AutoCloseable {
+        rosaryHolders++
+        var closed = false
+        return AutoCloseable {
+            if (!closed) {
+                closed = true
+                rosaryHolders--
+                if (rosaryHolders == 0 && releaseRequested) release()
+            }
+        }
+    }
+
     fun release() {
+        if (rosaryHolders > 0) { releaseRequested = true; return }
+        releaseRequested = false
         stop()
         if (active === this) active = null
         scope.cancel()

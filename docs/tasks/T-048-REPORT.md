@@ -1,6 +1,6 @@
 # T-048 · Rosario y Coronilla en horizontal
 
-Entrega parcial 4/6. Base: `origin/CatholicGPT` @ `e4a5cdd`, con T-047 integrado y aprobado.
+Entrega parcial 5/6. Base: `origin/CatholicGPT` @ `e4a5cdd`, con T-047 integrado y aprobado.
 
 ## Geometría
 
@@ -32,8 +32,16 @@ También se recortó el hilo a su región (corrección detectada en la captura a
 
 Perfil de esta entrega: **12/12** (2 hojas, 4 hilo —incluido teclado—, 5 geometría y 1 captura de Opciones en ambas devociones). [Resultado](T-048-shots/validation-sheets.json). Las capturas de Opciones a 800 × 360 se revisaron visualmente.
 
+## Giro y voz
+
+La sesión, la hoja abierta y el ancla tienen claves guardables explícitas, por encima del wrapper. La lectura se restaura mediante bloque de texto y fracción, con medición del área visible exterior al desplazamiento. La prueba usa una oración auténtica larga que desborda ambas orientaciones; no añade espacio vacío para forzar el anclaje.
+
+`RosaryNarrationHolder`, con ámbito de actividad, conserva el controlador y el motor. Al girar no envía `ScreenLeft` ni repite la oración; al salir sí detiene la voz. El motor retiene únicamente el contexto de aplicación. El puente de propiedad `retainForRosaryHolder` en `data/audio/LiturgicalTtsManager.kt` es necesario porque la actividad libera su motor en `onDestroy`: difiere ese cierre hasta que el holder lo suelte y evita que el motor nuevo e inactivo sustituya al de la notificación. Es el cambio de datos limitado al holder que permite el encargo; no se modificó `MainActivity`.
+
+Perfil: **44/44**. Incluye `LandscapeRotationTest` **16/16** (giro real en Lumen y Sanctuary, tercera decena, voz y Opciones abierta; y ancla de la oración larga), holder **2/2**, narración, persistencia, geometría y hojas. [Resultado](T-048-shots/validation-rotation.json). Son pruebas con motor de voz simulado, no escucha física en un teléfono.
+
 ## Pendiente
 
-Continuidad del giro y la voz, matriz de capturas, auditoría y autoevaluación final. Esta entrega parcial no declara esos puntos terminados ni una calificación visual final.
+Matriz de capturas, auditoría y autoevaluación final. Esta entrega parcial no declara esos puntos terminados ni una calificación visual final.
 
 La suite completa corresponde al coordinador (regla 10); no se ejecuta para este encargo. No se ha probado en un teléfono físico.

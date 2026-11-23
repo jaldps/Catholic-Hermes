@@ -1,0 +1,53 @@
+{
+  "classes": [
+    {
+      "name": "com.example.RosaryPersistenceTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:22:15.200Z"
+    },
+    {
+      "name": "com.example.RosaryNarrationHolderTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:22:09.780Z"
+    },
+    {
+      "name": "com.example.RosaryLandscapeSheetTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:21:58.788Z"
+    },
+    {
+      "name": "com.example.LandscapeRotationTest",
+      "tests": "16",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:21:21.863Z"
+    },
+    {
+      "name": "com.example.RosaryNarrationTest",
+      "tests": "17",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:22:14.443Z"
+    },
+    {
+      "name": "com.example.RosaryLandscapeGeometryTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:21:45.762Z"
+    }
+  ],
+  "total": 44
+}

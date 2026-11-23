@@ -139,6 +139,9 @@ import com.example.ui.design.DevotionalBackdrop
 import com.example.ui.design.LiquidGlassDevotionTrack
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.boundsInRoot
+import androidx.compose.ui.layout.positionInRoot
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.collect
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import com.example.ui.design.AppSheet
 import com.example.ui.design.AppStatusBarGlyphs
@@ -1028,10 +1031,30 @@ fun RosaryScreen(
     val lang = currentLanguage
     val view = LocalView.current
     val context = androidx.compose.ui.platform.LocalContext.current
+    val activity = remember(context) {
+        generateSequence(context) { (it as? android.content.ContextWrapper)?.baseContext }
+            .filterIsInstance<androidx.activity.ComponentActivity>().firstOrNull()
+    }
+    val voiceHolder = remember(activity) {
+        if (activity == null) RosaryNarrationHolder()
+        else androidx.lifecycle.ViewModelProvider(activity)[RosaryNarrationHolder::class.java]
+    }
+    val audio = voiceHolder.bind(ttsManager)
+    if (audio !== ttsManager) {
+        val issue by audio.playbackIssue.collectAsState()
+        issue?.let { com.example.ui.components.NarrationRecoverySheet(audio, it, lang) }
+    }
+    DisposableEffect(activity, audio) {
+        val observer = androidx.lifecycle.LifecycleEventObserver { _, event ->
+            if (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME) audio.refreshAvailability()
+        }
+        activity?.lifecycle?.addObserver(observer)
+        onDispose { activity?.lifecycle?.removeObserver(observer) }
+    }
     val todayMystery = remember { repository.getTodayRosaryMystery() }
     // Rotation uses Compose state; a fresh process restores the same devotion,
     // mystery, exact prayer step and guidance choice from durable storage.
-    var session by rememberSaveable(stateSaver = RosarySession.Saver) {
+    var session by rememberSaveable(key = "rosary_session", stateSaver = RosarySession.Saver) {
         val saved = RosarySessionStore.load(context)
         mutableStateOf((saved ?: RosarySession.opening(initialTab).copy(instructionsOn = true)).let {
             // Explicit entry cards choose a devotion, while both saved step
@@ -1051,11 +1074,11 @@ fun RosaryScreen(
     val selectedTab = session.devotion.tab
     // Beginner guidance stays on from step to step once turned on.
     val instructionsOn = session.instructionsOn
-    var sheet by remember { mutableStateOf<RosarySheet?>(null) }
+    var sheet by rememberSaveable(key = "rosary_sheet") { mutableStateOf<RosarySheet?>(null) }
 
-    val voiceMode by ttsManager.voiceMode.collectAsState()
-    val currentlySpeaking by ttsManager.currentlySpeaking.collectAsState()
-    val engineReady by ttsManager.isReady.collectAsState()
+    val voiceMode by audio.voiceMode.collectAsState()
+    val currentlySpeaking by audio.currentlySpeaking.collectAsState()
+    val engineReady by audio.isReady.collectAsState()
 
     val creedSource = remember { repository.vaticanPrayers.firstOrNull { it.id == "creed" } }
     val mercySource = remember { repository.divineMercySteps }
@@ -1076,23 +1099,24 @@ fun RosaryScreen(
     val section = guide.sections.lastOrNull { it.index == step.section } ?: guide.sections.first()
 
     fun narrate(s: GuideStep) {
-        ttsManager.setLanguage(lang)
+        audio.setLanguage(lang)
         // «Santo Rosario · Misterios gozosos» / «Coronilla · Inicio», as the notification title.
         val title = (if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
             else lang.pick("Coronilla de la Divina Misericordia", "Chaplet of Divine Mercy", "Terço da Divina Misericórdia")) +
             " · " + section.title
-        if (s.response.isBlank()) ttsManager.speakSingle(s.narration, title = title)
-        else ttsManager.speakDialogue(s.leader, s.response, title)
+        if (s.response.isBlank()) audio.speakSingle(s.narration, title = title)
+        else audio.speakDialogue(s.leader, s.response, title)
     }
 
     // Pray-aloud mode: an explicit state machine (see RosaryNarration.kt).
     // It stays on from the play press to the pause press, so every step change
     // speaks; leaving the screen ends it and stops the voice.
     val narrateCurrent by rememberUpdatedState({ narrate(step) })
-    val narration = remember {
-        NarrationController(object : NarrationSink {
+    val narration = voiceHolder.controller
+    androidx.compose.runtime.SideEffect {
+        voiceHolder.connect(object : NarrationSink {
             override fun speak(target: NarrationTarget) = narrateCurrent()
-            override fun stop() = ttsManager.stop()
+            override fun stop() = audio.stop()
         })
     }
     val narrationTarget = NarrationTarget(
@@ -1102,15 +1126,15 @@ fun RosaryScreen(
         lang = lang,
         voice = voiceMode
     )
-    LaunchedEffect(lang) { ttsManager.setLanguage(lang) }
+    LaunchedEffect(lang) { audio.setLanguage(lang) }
     LaunchedEffect(narrationTarget) { narration.dispatch(NarrationEvent.TargetChanged(narrationTarget)) }
-    LaunchedEffect(engineReady) { if (engineReady) narration.dispatch(NarrationEvent.EngineReady) }
-    DisposableEffect(Unit) {
-        onDispose { narration.dispatch(NarrationEvent.ScreenLeft) }
+    LaunchedEffect(engineReady) { voiceHolder.engineReady(engineReady) }
+    DisposableEffect(voiceHolder, activity) {
+        onDispose { voiceHolder.detach(activity?.isChangingConfigurations == true) }
     }
 
     fun toggleNarration() {
-        if (narration.isSpeaking || ttsManager.requestPlayback()) {
+        if (narration.isSpeaking || audio.requestPlayback()) {
             narration.dispatch(NarrationEvent.Toggle(narrationTarget))
         }
     }
@@ -1163,6 +1187,11 @@ fun RosaryScreen(
 
     val stepsOnBead = remember(guide, step.bead) { guide.steps.indices.filter { guide.steps[it].bead == step.bead } }
 
+    val prayerKey = "$selectedTab/$selectedMysteryType/$index"
+    val contentScroll = rememberScrollState()
+    val readingAnchor = rememberSaveable(prayerKey, key = "rosary_text_anchor", saver = RosaryTextAnchor.Saver) { RosaryTextAnchor() }
+    LaunchedEffect(prayerKey) { contentScroll.scrollTo(0) }
+    BindRosaryTextAnchor(readingAnchor, contentScroll)
     val landscape = appWindowClass() == AppWindowClass.LandscapePhone
     val panelBack = if (landscape) rememberPanelBack() else null
     val landscapeWidth = AppPaneWidth(0.32f, 256.dp, 340.dp)
@@ -1190,7 +1219,7 @@ fun RosaryScreen(
     ) {
         if (landscape) {
             LandscapeRosaryPrayer(step, "$selectedTab/$selectedMysteryType/$index", lang, count,
-                currentlySpeaking, { dispatch(RosaryEvent.SkipOptional) })
+                currentlySpeaking, { dispatch(RosaryEvent.SkipOptional) }, contentScroll, readingAnchor)
         } else BoxWithConstraints(
         Modifier.fillMaxSize()
     ) {
@@ -1280,7 +1309,8 @@ fun RosaryScreen(
                 upNext = upNext,
                 count = count,
                 showName = !nameRepeatsText(step),
-                onSkip = { dispatch(RosaryEvent.SkipOptional) }
+                onSkip = { dispatch(RosaryEvent.SkipOptional) },
+                readingAnchor = readingAnchor
             )
         }
         val transport: @Composable () -> Unit = {
@@ -1309,8 +1339,6 @@ fun RosaryScreen(
         // A single content scroll owns the painting, guidance and complete prayer.
         // The transport stays in the thumb zone, including at 320dp / large type.
         // No nested clipped prayer pane can hide the end of a short prayer.
-        val contentScroll = rememberScrollState()
-        LaunchedEffect(selectedTab, selectedMysteryType, index) { contentScroll.scrollTo(0) }
         Row(Modifier.fillMaxSize()) {
             if (wide) {
                 Column(Modifier.weight(1f).fillMaxHeight().verticalScroll(rememberScrollState())) {
@@ -1322,8 +1350,10 @@ fun RosaryScreen(
                 }
             }
             Column(Modifier.then(if (wide) Modifier.width(columnWidth) else Modifier.fillMaxWidth()).fillMaxHeight()) {
+                Box(Modifier.weight(1f).fillMaxWidth().testTag("prayer_reading_viewport")
+                    .onGloballyPositioned { readingAnchor.viewport = it.boundsInRoot() }) {
                 Column(
-                    Modifier.weight(1f).fillMaxWidth().verticalScroll(contentScroll)
+                    Modifier.fillMaxSize().verticalScroll(contentScroll)
                         .testTag("prayer_content_scroll")
                         .padding(top = if (wide) topInset + 12.dp else 0.dp, bottom = 16.dp)
                 ) {
@@ -1337,6 +1367,7 @@ fun RosaryScreen(
                     progress()
                     reel()
                     prayer()
+                }
                 }
                 Column(
                     Modifier.fillMaxWidth()
@@ -1371,7 +1402,7 @@ fun RosaryScreen(
             guide = guide,
             step = step,
             voiceMode = voiceMode,
-            onVoiceMode = { ttsManager.setVoiceMode(it) },
+            onVoiceMode = { audio.setVoiceMode(it) },
             onGo = { target -> go(target); sheet = null },
             onDismiss = { sheet = null }
         )
@@ -1394,6 +1425,53 @@ fun RosaryScreen(
             }
         }
         null -> Unit
+    }
+}
+
+/** Save a text block and a fraction of it, never the old orientation's pixel offset. */
+private class RosaryTextAnchor(block: String? = null, fraction: Float = 0f) {
+    var block: String? by mutableStateOf(block)
+    var fraction by androidx.compose.runtime.mutableFloatStateOf(fraction)
+    val blocks = androidx.compose.runtime.mutableStateMapOf<String, androidx.compose.ui.geometry.Rect>()
+    var viewport by mutableStateOf(androidx.compose.ui.geometry.Rect.Zero)
+    fun textModifier(key: String) = Modifier.onGloballyPositioned {
+        val position = it.positionInRoot()
+        blocks[key] = androidx.compose.ui.geometry.Rect(position.x, position.y, position.x + it.size.width, position.y + it.size.height)
+    }
+    companion object {
+        val Saver = androidx.compose.runtime.saveable.listSaver<RosaryTextAnchor, Any>(
+            save = { listOf(it.block.orEmpty(), it.fraction) },
+            restore = { RosaryTextAnchor((it[0] as String).ifEmpty { null }, it[1] as Float) })
+    }
+}
+
+@Composable
+private fun BindRosaryTextAnchor(anchor: RosaryTextAnchor, scroll: androidx.compose.foundation.ScrollState) {
+    val window = appWindowSize()
+    val scale = LocalDensity.current.fontScale
+    val style = LocalAppTextStyles.current.reading
+    LaunchedEffect(anchor, scroll, window, scale, style) {
+        val restoreKey = anchor.block
+        val restoreFraction = anchor.fraction
+        // Wait for the newly composed text to be measured in its new column.
+        val geometry = androidx.compose.runtime.snapshotFlow {
+            val viewport = anchor.viewport
+            val block = anchor.blocks[restoreKey ?: "leader"]
+            if (viewport.height > 0 && block != null && block.height > 0) viewport to block else null
+        }.first { it != null }!!
+        if (restoreKey != null) {
+            val desired = scroll.value + geometry.second.top - geometry.first.top + geometry.second.height * restoreFraction
+            scroll.scrollTo(desired.roundToInt().coerceIn(0, scroll.maxValue))
+        }
+        androidx.compose.runtime.snapshotFlow { Triple(scroll.value, anchor.viewport, anchor.blocks.toMap()) }.collect { (_, viewport, blocks) ->
+            val first = blocks.entries.sortedBy { it.value.top }.firstOrNull { it.value.bottom > viewport.top + 1f }
+            if (first != null && viewport.top >= first.value.top) {
+                anchor.block = first.key
+                anchor.fraction = ((viewport.top - first.value.top) / first.value.height.coerceAtLeast(1f)).coerceIn(0f, 1f)
+            } else {
+                anchor.block = null; anchor.fraction = 0f
+            }
+        }
     }
 }
 
@@ -1443,9 +1521,9 @@ private fun LandscapeRosaryContext(
                     })
             Box(Modifier.weight(1f).fillMaxHeight()) {
                 Column(Modifier.fillMaxSize().verticalScroll(contextScroll).testTag("rosary_context_scroll").semantics { isTraversalGroup = true; traversalIndex = 0f }) {
-                    Text(if (isRosary && inDecade) mysteryAnnouncement(lang, mysteryType, step.section - 1, "").substringBefore(":") else where, style = styles.caption, color = p.textSecondary)
+                    Text(if (isRosary && inDecade) mysteryAnnouncement(lang, mysteryType, step.section - 1, "").substringBefore(":") else if (!isRosary) lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia") else where, style = styles.caption, color = p.textSecondary)
                     Spacer(Modifier.height(4.dp))
-                    Text(if (inDecade) section.subtitle else step.intention ?: section.title,
+                    Text(if (inDecade) section.subtitle else step.intention ?: if (isRosary) step.name else where,
                         style = styles.headline, color = p.textPrimary,
                         modifier = Modifier.testTag(if (isRosary) "rosary_hero_title" else "mercy_hero_title").semantics { heading() })
                     Spacer(Modifier.height(8.dp))
@@ -1470,7 +1548,7 @@ private fun LandscapeRosaryContext(
                 RosaryScrollHint(contextScroll.canScrollForward, 16.dp, "rosary_context_hint")
             }
         }
-        Column(Modifier.fillMaxWidth().heightIn(min = 116.dp).padding(start = start, end = 12.dp),
+        Column(Modifier.fillMaxWidth().heightIn(min = 116.dp).padding(start = start, end = 12.dp).semantics { isTraversalGroup = true; traversalIndex = 2f },
             verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Text(upNext ?: lang.pick("Fin de la oración", "End of prayer", "Fim da oração"), style = styles.caption, color = p.textSecondary,
                 modifier = Modifier.testTag("rosary_up_next"))
@@ -1523,7 +1601,7 @@ private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidanc
     val p = LocalAppDesign.current.palette
     val styles = LocalAppTextStyles.current
     val edge = maxOf(12.dp, safe.end + 8.dp)
-    Box(Modifier.fillMaxHeight().padding(end = edge).width(72.dp).testTag("prayer_transport")) {
+    Box(Modifier.fillMaxHeight().padding(end = edge).width(72.dp).testTag("prayer_transport").semantics { isTraversalGroup = true; traversalIndex = 2f }) {
         Column(Modifier.align(Alignment.TopCenter), horizontalAlignment = Alignment.CenterHorizontally) {
             LandscapePrayerPill(lang.pick("Guía", "Guide", "Guia"), "prayer_instructions_toggle", onGuide,
                 modifier = Modifier.semantics { selected = guidance })
@@ -1552,19 +1630,18 @@ private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidanc
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun LandscapeRosaryPrayer(step: GuideStep, key: String, lang: AppLanguage, count: String?, spoken: String?, onSkip: () -> Unit) {
+private fun LandscapeRosaryPrayer(step: GuideStep, key: String, lang: AppLanguage, count: String?, spoken: String?, onSkip: () -> Unit, scroll: androidx.compose.foundation.ScrollState, readingAnchor: RosaryTextAnchor) {
     val safe = appSafeInsets()
     val p = LocalAppDesign.current.palette
-    val scroll = rememberScrollState()
-    LaunchedEffect(key) { scroll.scrollTo(0) }
     val responseView = remember(key) { BringIntoViewRequester() }
     LaunchedEffect(key, spoken) { if (spoken != null && spoken == step.response) responseView.bringIntoView() }
     Column(Modifier.fillMaxSize().background(p.canvasTop).padding(start = 20.dp, end = 12.dp, top = safe.top + 4.dp)) {
         PrayerTitleRow(step, count, lang, true, onSkip, padded = false)
         Spacer(Modifier.height(8.dp))
-        Box(Modifier.weight(1f).fillMaxWidth()) {
+        Box(Modifier.weight(1f).fillMaxWidth().testTag("prayer_reading_viewport")
+            .onGloballyPositioned { readingAnchor.viewport = it.boundsInRoot() }) {
             Column(Modifier.fillMaxSize().verticalScroll(scroll).testTag("prayer_content_scroll")) {
-                PrayerBody(step.copy(intention = null, meditation = null, detail = null), lang, spoken, instructionsOn = false, responseModifier = Modifier.bringIntoViewRequester(responseView))
+                PrayerBody(step.copy(intention = null, meditation = null, detail = null), lang, spoken, instructionsOn = false, responseModifier = Modifier.bringIntoViewRequester(responseView), readingAnchor = readingAnchor)
             }
             RosaryScrollHint(scroll.canScrollForward, 24.dp, "prayer_scroll_hint")
         }
@@ -2050,7 +2127,8 @@ private fun PrayerArea(
     upNext: String?,
     count: String?,
     showName: Boolean,
-    onSkip: () -> Unit
+    onSkip: () -> Unit,
+    readingAnchor: RosaryTextAnchor? = null
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -2075,7 +2153,7 @@ private fun PrayerArea(
                 PrayerTitleRow(frame.step, frame.count, lang, frame.showName, onSkip, padded = false)
                 Spacer(Modifier.height(PrayerTitleGap))
                 PrayerBody(frame.step, lang, spokenNow, instructionsOn,
-                    responseModifier = Modifier.bringIntoViewRequester(responseView))
+                    responseModifier = Modifier.bringIntoViewRequester(responseView), readingAnchor = readingAnchor)
             }
         }
         if (upNext != null) {
@@ -2091,7 +2169,8 @@ private fun PrayerBody(
     lang: AppLanguage,
     spokenNow: String?,
     instructionsOn: Boolean,
-    responseModifier: Modifier = Modifier
+    responseModifier: Modifier = Modifier,
+    readingAnchor: RosaryTextAnchor? = null
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -2122,20 +2201,20 @@ private fun PrayerBody(
         Column(Modifier.widthIn(max = design.spacing.readingMaxWidth)) {
             if (step.response.isBlank()) {
                 val ink by animateColorAsState(p.textPrimary, label = "leader")
-                Text(text = step.leader, style = reading, color = ink, modifier = Modifier.testTag("prayer_leader_text"))
+                Text(text = step.leader, style = reading, color = ink, modifier = Modifier.testTag("prayer_leader_text").then(readingAnchor?.textModifier("leader") ?: Modifier))
             } else {
                 val leaderInk by animateColorAsState(if (responseSpoken) p.textSecondary else p.textPrimary, tween(if (design.reduceMotion) 0 else 300), label = "leader")
                 val responseInk by animateColorAsState(if (leaderSpoken) p.textSecondary else p.textPrimary, tween(if (design.reduceMotion) 0 else 300), label = "response")
-                HungVoice("V.", step.leader, reading, leaderInk, p.textSecondary, Modifier.testTag("prayer_leader_text"))
+                HungVoice("V.", step.leader, reading, leaderInk, p.textSecondary, Modifier.testTag("prayer_leader_text").then(readingAnchor?.textModifier("leader") ?: Modifier))
                 Spacer(Modifier.height(10.dp))
                 HungVoice(
                     "R.", step.response, reading, responseInk, p.textSecondary,
-                    responseModifier
+                    responseModifier.then(readingAnchor?.textModifier("response") ?: Modifier)
                 )
             }
             step.meditation?.let {
                 Spacer(Modifier.height(14.dp))
-                Text(it, style = reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary)
+                Text(it, style = reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary, modifier = readingAnchor?.textModifier("meditation") ?: Modifier)
             }
             step.detail?.let {
                 Spacer(Modifier.height(10.dp))
