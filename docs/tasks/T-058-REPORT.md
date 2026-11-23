@@ -1,11 +1,23 @@
 # T-058 · Informe de entrega — una imagen propia por coronilla
 
 - **Rama:** `ext/T-058`, desde `origin/CatholicGPT` actualizado.
-- **Lotes:** entregas parciales previas de 18/18/19 imágenes; esta entrega ajusta el formato a la especificación vigente (créditos `{"images": [...]}` como en devociones, JPG de ≤900 px de alto y calidad 72, lámina de contacto) y añade la corrección de la nota `IVE-17` → `IVE-06`.
+- **Entregas:** seis lotes iniciales de ~10 imágenes, más esta revisión con seis sustituciones.
 - **Orden de búsqueda aplicado:** imagen ya presente en la app → Wikimedia Commons con licencia libre → imagen oficial con «Derechos: …». No hizo falta la tercera vía.
-- **Lámina:** `docs/tasks/T-058-shots/_contact.png` (55 miniaturas con su `id` debajo), revisada visualmente.
-- **Licencias:** dominio público, CC0, CC BY y CC BY-SA, todas libres.
-- **Sin imágenes de relleno:** cada ID tiene su propio JPG y su entrada en créditos.
+- **Lámina:** `docs/tasks/T-058-shots/_contact.png` (55 miniaturas con su `id` debajo), regenerada y revisada.
+- **Sin imágenes de relleno ni archivos repetidos:** cada ID tiene su propio JPG y su entrada en créditos.
+
+## Revisión del coordinador: seis sustituciones
+
+| id | motivo de la revisión | imagen nueva | licencia |
+|---|---|---|---|
+| `san-judas-coronilla` | La foto mostraba banderines, no al santo | El Greco, *San Judas Tadeo* (con hacha y medallón de la Santa Faz) | Public domain |
+| `coronilla-san-jose-hozana` | Capilla con la estatua tras una reja | Guido Reni, *San José con el Niño Jesús* | Public domain |
+| `san-gabriel-coronilla` | Estatua diminuta en un parque | *Arcángel Gabriel en una Anunciación*, primer plano | Public domain |
+| `corona-san-miguel-raccolta` | Monumento con figura pequeña | Guido Reni, *San Miguel derrotando a Satanás* | Public domain |
+| `rosario-difuntos-hozana` | Altares del Día de Difuntos, no el Purgatorio | Alonso Cano, *Ánimas del Purgatorio* | CC BY-SA 4.0 |
+| `desagravio-maria` | Archivo repetido con `inmaculado-corazon-maria` | *Inmaculado Corazón de María* en pintura, obra distinta | CC BY-SA 4.0 |
+
+Las seis se revisaron visualmente una a una: el santo o la devoción se ve con claridad y ocupa buena parte del encuadre. Los créditos y la lámina se han regenerado con ellas.
 
 | id | origen | licencia | `referential` y por qué | qué representa |
 |---|---|---|---|---|
@@ -15,13 +27,13 @@
 | `carmen-coronilla` | Reutilizada de la app | CC BY-SA 4.0 | No — imagen del sujeto concreto | Imagen reutilizada de devotions. |
 | `confianza-tribulaciones` | Reutilizada de la app | Public domain | Sí — Imagen referencial de Cristo en la tribulación; la coronilla no tiene imagen propia documentada. | Imagen referencial de Cristo en la tribulación; la coronilla no tiene imagen propia documentada. |
 | `conversion-coronilla` | Reutilizada de la app | Public domain | No — imagen del sujeto concreto | Imagen reutilizada de saints. |
-| `corona-san-miguel-raccolta` | Commons | CC BY-SA 2.0 | No — imagen del sujeto concreto | No usar la imagen de los tres arcángeles: la coronilla es solo San Miguel. |
+| `corona-san-miguel-raccolta` | Commons | Public domain | No — imagen del sujeto concreto | Guido Reni, San Miguel arcángel derrotando a Satanás. |
 | `coronilla-difuntos-45` | Commons | Public domain | No — imagen del sujeto concreto | Imagen del sujeto concreto. |
 | `coronilla-lagrimas` | Commons | Public domain | No — imagen del sujeto concreto | Nuestra Señora de las Lágrimas, advocación titular de la coronilla. |
 | `coronilla-liberacion` | Commons | Public domain | No — imagen del sujeto concreto | Alegoría del triunfo del cristianismo; la coronilla se apoya en Jn 8,36. |
-| `coronilla-san-jose-hozana` | Commons | CC BY-SA 3.0 | No — imagen del sujeto concreto | Elegir San José de Nazaret, no San José de Calasanz. |
+| `coronilla-san-jose-hozana` | Commons | Public domain | No — imagen del sujeto concreto | Guido Reni, San José con el Niño Jesús. |
 | `czestochowa-coronilla` | Reutilizada de la app | CC BY-SA 4.0 | No — imagen del sujeto concreto | Imagen reutilizada de devotions. El icono de la Madonna de Częstochowa. |
-| `desagravio-maria` | Commons | CC0 | No — imagen del sujeto concreto | Corazón Inmaculado de María, objeto del desagravio. |
+| `desagravio-maria` | Commons | CC BY-SA 4.0 | No — imagen del sujeto concreto | Inmaculado Corazón de María en pintura, obra distinta de la imagen de `inmaculado-corazon-maria`. |
 | `dos-corazones-coronilla` | Commons | Public domain | No — imagen del sujeto concreto | Imagen del sujeto concreto. |
 | `estrella-mar-coronilla` | Commons | CC BY-SA 4.0 | No — imagen del sujeto concreto | Virgen Estrella del Mar con el Niño. |
 | `familia-franciscana-coronilla` | Reutilizada de la app | CC BY-SA 4.0 | Sí — Imagen referencial: San Francisco de Asís, fundador, en lugar de las tres órdenes franciscanas juntas. | Imagen referencial: San Francisco de Asís, fundador, en lugar de las tres órdenes franciscanas juntas. |
@@ -40,14 +52,14 @@
 | `pasiones-cristo-rosario` | Reutilizada de la app | CC BY-SA 3.0 | No — imagen del sujeto concreto | Imagen reutilizada de devotions. |
 | `perpetuo-socorro-rosario` | Reutilizada de la app | CC BY 4.0 | No — imagen del sujeto concreto | Imagen reutilizada de devotions. |
 | `reina-luz-coronilla` | Reutilizada de la app | CC BY-SA 4.0 | Sí — Imagen referencial mariana (Asunción); la advocación Reina de la Luz no tiene imagen libre localizada y su origen no está documentado. | Imagen referencial mariana (Asunción); la advocación Reina de la Luz no tiene imagen libre localizada y su ori |
-| `rosario-difuntos-hozana` | Commons | CC BY-SA 4.0 | No — imagen del sujeto concreto | Imagen del sujeto concreto. |
+| `rosario-difuntos-hozana` | Commons | CC BY-SA 4.0 | No — imagen del sujeto concreto | Alonso Cano, Ánimas del Purgatorio; iconografía pedida para el rosario por los difuntos. |
 | `rosario-espiritu-santo` | Commons | Public domain | No — imagen del sujeto concreto | Pentecostés: descendimiento del Espíritu Santo sobre los apóstoles. |
 | `sagrada-eucaristia-33` | Commons | CC BY-SA 4.0 | No — imagen del sujeto concreto | Imagen del misterio concreto de la coronilla. |
 | `sagrado-corazon-jesus` | Reutilizada de la app | CC BY-SA 4.0 | No — imagen del sujeto concreto | Imagen reutilizada de devotions. |
 | `san-antonio-padua-coronilla` | Reutilizada de la app | CC BY-SA 4.0 | No — imagen del sujeto concreto | Imagen reutilizada de saints. |
 | `san-charbel` | Reutilizada de la app | Public domain | No — imagen del sujeto concreto | Imagen reutilizada de saints. |
-| `san-gabriel-coronilla` | Commons | CC BY-SA 4.0 | No — imagen del sujeto concreto | Imagen del sujeto concreto. |
-| `san-judas-coronilla` | Commons | CC0 | No — imagen del sujeto concreto | Imagen del sujeto concreto. |
+| `san-gabriel-coronilla` | Commons | Public domain | No — imagen del sujeto concreto | Arcángel Gabriel en una Anunciación, en primer plano y con su pergamino. |
+| `san-judas-coronilla` | Commons | Public domain | No — imagen del sujeto concreto | El Greco, San Judas Tadeo, con hacha y medallón de la Santa Faz. |
 | `san-patricio-coronilla` | Reutilizada de la app | CC0 | No — imagen del sujeto concreto | Imagen reutilizada de saints. |
 | `san-rafael-coronilla` | Commons | Public domain | No — imagen del sujeto concreto | Seleccionada tras revisión visual: primer plano del sujeto. |
 | `sangre-preciosa-corona` | Reutilizada de la app | CC BY-SA 4.0 | No — imagen del sujeto concreto | Imagen reutilizada de devotions. |
@@ -65,14 +77,10 @@
 | `unidad-coronilla` | Commons | Public domain | Sí — Imagen referencial: La Última Cena representa la unidad de los discípulos en Cristo. | Imagen referencial: La Última Cena representa la unidad de los discípulos en Cristo. |
 | `via-crucis-coronilla` | Reutilizada de la app | Public domain | No — imagen del sujeto concreto | Imagen reutilizada de devotions. |
 
-## Búsquedas sin resultado y sustituciones
+## Búsquedas sin resultado y sustituciones previas
 
-- No se encontró imagen libre de la **Reina de la Luz** (advocación de origen no documentado): se usa una imagen mariana referencial de la Asunción.
-- La **coronilla de la Unidad** no tiene iconografía propia: se usa *La Última Cena*, de Leonardo, como arte sacro referencial de la unidad de los discípulos.
-- La **familia franciscana** no tiene imagen de las tres órdenes juntas: se usa a San Francisco de Asís, fundador, como referencial.
-- **Confianza en la tribulación** usa una imagen referencial de Cristo, al no tener la coronilla imagen propia documentada.
-- Se sustituyeron tras la revisión visual siete imágenes que mostraban edificio, paisaje o al sujeto en segundo plano: Estrella del Mar, Lourdes, Espíritu Santo, San Rafael, Reina de la Luz, Unidad y difuntos.
-- Se descartó una imagen de 200×150 px para `sagrada-eucaristia-33` (sustituida por una adoración eucarística de 1350×900 px) y otra de 316×509 px para `rosario-espiritu-santo` (sustituida por un Pentecostés de 888×1808 px).
+- Reina de la Luz, Unidad, familia franciscana y confianza: imágenes referenciales documentadas en la tabla.
+- Se descartaron imágenes de baja resolución y de paisaje/edificio en la primera revisión visual.
 
 ## Validador
 
@@ -82,4 +90,4 @@ WARN  coronilla-difuntos-45.json.beads[1]: steps cover 3 prayers for a group of 
 55 files · 0 errors · 1 warnings
 ```
 
-El WARN es heredado de T-056 y está explicado en su ficha; no afecta a imágenes.
+El WARN es heredado de T-056 y no afecta a imágenes.
