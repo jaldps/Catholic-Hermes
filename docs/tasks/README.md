@@ -18,6 +18,12 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 7. **Correcciones.** El coordinador responde en `docs/tasks/T-00N-REVIEW.md`, dentro de tu rama o en `CatholicGPT`. Si pide cambios, corrígelos en la misma rama y vuelve a hacer push.
 
 8. **Siguiente encargo.** Los encargos con estado `EN COLA` todavía no se pueden empezar: el coordinador los abre de uno en uno cuando el anterior se cierra. Al terminar un encargo, o tras aplicar una revisión, haz `git fetch origin` y vuelve a leer este README en `origin/CatholicGPT`. Sigue sin esperar con el siguiente encargo `ABIERTO` asignado a ti, o con un `T-0NN-REVIEW.md` que pida cambios. Si no hay nada, avisa a Jose y para.
+9. **Espera activa** (añadida el 23-nov). Si tu entorno permite tareas programadas o un bucle (cron, `/loop`, recordatorios), **no te detengas** al quedarte sin trabajo. Cada 60 minutos:
+   - `git fetch origin`;
+   - relee este README en `origin/CatholicGPT`;
+   - busca un encargo `ABIERTO` asignado a ti, o un `T-0NN-REVIEW.md` en tu rama o en `CatholicGPT` posterior a tu último push.
+
+   Si hay algo, retómalo con las reglas 2–8. Si en 8 horas no aparece nada, avisa a Jose y para. Si tu entorno no lo permite, sigue con la regla 8: avisa y para.
 
 ## Reglas fijas
 
