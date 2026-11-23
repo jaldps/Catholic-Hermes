@@ -1410,11 +1410,12 @@ private fun AppFolioPanelHeader(
             val gap = 8.dp.roundToPx()
             val textBottom = titleTop + heading.height + (if (caption.height > 0) 4.dp.roundToPx() + caption.height else 0) + 4.dp.roundToPx()
             val available = if (panelHeight.value.isFinite()) (panelHeight - support).roundToPx() else (window.height - safe.bottom).roundToPx()
-            val budget = (available - textBottom - gap).coerceAtLeast(0)
+            // Reserve the gap above the frame and the one below it (§3.11: 8 dp between panel blocks).
+            val budget = (available - textBottom - gap * 2).coerceAtLeast(0)
             val artHeight = if ((asset != null || url != null) && budget >= 64.dp.roundToPx())
                 if (panelHeight.value.isFinite()) budget else minOf(budget, 112.dp.roundToPx()) else 0
             val art = nodes[4].measure(loose.copy(minWidth = c.maxWidth, maxWidth = c.maxWidth, minHeight = artHeight, maxHeight = artHeight))
-            layout(c.maxWidth, textBottom + if (artHeight > 0) gap + artHeight else 0) {
+            layout(c.maxWidth, textBottom + if (artHeight > 0) gap + artHeight + gap else 0) {
                 val gutter = design.spacing.gutter.roundToPx()
                 heading.placeRelative(gutter, titleTop)
                 caption.placeRelative(gutter, titleTop + heading.height + 4.dp.roundToPx())

@@ -24,6 +24,10 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
    - busca un encargo `ABIERTO` asignado a ti, o un `T-0NN-REVIEW.md` en tu rama o en `CatholicGPT` posterior a tu último push.
 
    Si hay algo, retómalo con las reglas 2–8. Si en 8 horas no aparece nada, avisa a Jose y para. Si tu entorno no lo permite, sigue con la regla 8: avisa y para.
+10. **Tests: solo los de tu área** (añadida el 23-nov).
+    - **Nunca ejecutes la suite completa** (`:app:testDebugUnitTest` sin `--tests`): lleva más de 900 casos y gasta mucha cuota.
+    - Ejecuta los tests que nombra tu encargo y los de las clases que tocas.
+    - **La suite completa la ejecuta el coordinador** antes de integrar.
 
 ## Reglas fijas
 
