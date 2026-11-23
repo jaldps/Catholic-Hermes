@@ -54,3 +54,10 @@ Los 4 fallos de `HomePrayerPrioritiesTest` son los mismos casos y la misma excep
 - Repetida la clase completa: **24/24 tests, 0 fallos** (`BUILD SUCCESSFUL in 6m 36s`, Java 21).
 - Regeneradas las 24 capturas y la lámina `_contact.png`. Cambiaron tres PNG (los de filtro de novenas en tres identidades) y la lámina; el resto quedó byte-idéntico.
 - Revisadas visualmente `lumen_light_novena_filter_empty.png` y `glass_light_daily_missal_error.png`: textos y títulos con buen contraste y legibles. No se ha detectado el defecto de legibilidad que se veía en la lámina anterior.
+
+## Revisión 2 · lienzo de la app en las capturas
+
+- `EmptyStatesScreenshotTest.theme()`: se envuelve `content()` en `Box(Modifier.fillMaxSize().lumenCanvas())`, con los imports `Box`, `fillMaxSize`, `Modifier` y `com.example.ui.design.lumenCanvas`. Es el arreglo de una línea pedido en `T-055-REVIEW.md`: el test dibujaba la pantalla sin el lienzo que `MainApp` aplica en la app real.
+- Repetida la clase completa con Java 21: **24/24 tests, 0 fallos, 0 errores** (`BUILD SUCCESSFUL in 3m 38s`).
+- Regeneradas las 24 capturas y la lámina `_contact.png`.
+- Verificación visual: `lumen_light_daily_missal_error.png` y `glass_light_reminders_empty.png` muestran fondo claro, textos oscuros y buen contraste («Hoy», «No se pudo cargar el contenido», «Reintentar», «Aún no tienes recordatorios»). Ya no aparece el fondo opaco `#191C1E` con texto de modo claro.
