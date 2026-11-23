@@ -91,9 +91,9 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | T-053 | Hermes | EN COLA (tras T-052) | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
 | T-054 | Codex | EN COLA (al final) | L7 · Hojas, diálogos, bienvenida y ajustes en horizontal (§10) |
 | [T-055](T-055.md) | Hermes | CERRADO ([informe](T-055-REPORT.md), [revisión](T-055-REVIEW.md)) | Estados vacíos y de error que faltan, en vertical (preparación de §16 del diseño horizontal) |
-| [T-056](T-056.md) | Hermes | CAMBIOS ([revisión](T-056-REVIEW.md): ES/EN intercambiados en 28 coronillas de Catholic Doors) | «Otras coronillas» · contenido: 55 coronillas curadas en ES/EN/PT ([especificación](../content/CORONILLAS-SPEC.md)) |
+| [T-056](T-056.md) | Hermes | CERRADO ([informe](T-056-REPORT.md), [revisión](T-056-REVIEW.md)) | «Otras coronillas» · contenido: 55 coronillas curadas en ES/EN/PT ([especificación](../content/CORONILLAS-SPEC.md)) |
 | T-057 | Codex | EN COLA (justo tras T-048; no se cierra sin las 55 imágenes) | «Otras coronillas» · motor e interfaz (segmento «Otras ▾», catálogo, hilo según patrón, voces V/R) |
-| T-058 | Hermes | EN COLA (tras T-056) | «Otras coronillas» · una imagen propia y relevante por coronilla (obligatoria), con créditos |
+| T-058 | Hermes | ABIERTO (encargo: `docs/content/CORONILLAS-SPEC.md`, campo `image` y tabla de encargos) | «Otras coronillas» · una imagen propia y relevante por coronilla (obligatoria), con créditos |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |

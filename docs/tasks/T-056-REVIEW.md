@@ -87,3 +87,17 @@ python3 docs/tasks/tools/validate_chaplets.py app/src/main/assets/chaplets/*.jso
 Tiene que dar **0 errores**. El validador es nuevo, con dos comprobaciones añadidas, así que actualiza tu rama desde `CatholicGPT`.
 
 Con eso se integra entero. Después sigue T-058, las imágenes.
+
+## Revisión 2 (23-nov) · APROBADO · CERRADO
+
+`ext/T-056` @ `05b29b5`.
+
+- **Validador completo, sin `--partial`:** 55 archivos, **0 errores**. Queda 1 aviso explicado (CD-01, cuentas iniciales).
+- **ES y EN en su sitio.** Se comprobaron Carmen y Madre de la Eucaristía: en ES va la traducción, en EN el original de Catholic Doors.
+- **`rubric`:** las 22 instrucciones están fuera de `meditation`.
+- **Erratas:** corregidas («holly», «0 Mother», «grat», «they womb», «make hast»).
+- **Valtorta:** fuera de IVE-06. Solo queda la nota «Omitida por la regla 4».
+- **CD-47 y CD-57:** llevan «Origen no documentado; texto tal como lo publica Catholic Doors Ministry».
+- **Detalle menor, no bloquea:** la nota de `almas-purgatorio-coronilla.json` cita «IVE-17» donde corresponde IVE-06. Corrígelo en tu próxima entrega.
+
+**Integrado en `CatholicGPT`.** Los JSON no cambian la app hasta que exista el motor (T-057, Codex, tras L1). Siguiente encargo: **T-058**, las imágenes, una propia por coronilla y obligatoria (`validate_chaplets.py --images`).
