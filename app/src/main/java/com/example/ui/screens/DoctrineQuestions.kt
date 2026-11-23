@@ -311,7 +311,7 @@ internal fun QuestionsRoot(
                             ) {
                                 Text(
                                     "${(fraction * 100).toInt()}%",
-                                    style = styles.caption.copy(fontSize = styles.caption.fontSize * 0.85f, fontFeatureSettings = "tnum"),
+                                    style = styles.caption.copy(fontFeatureSettings = "tnum"),
                                     color = p.textPrimary,
                                     maxLines = com.example.ui.design.appMaxLines(1)
                                 )
