@@ -23,3 +23,20 @@ Cada imagen tiene que **mostrar con claridad a su sujeto, ocupando buena parte d
 | `desagravio-maria` | **El mismo archivo** que `inmaculado-corazon-maria`. El dueño pidió una imagen propia por coronilla. | Otra imagen: el Inmaculado Corazón de María en otra obra, o la Virgen Dolorosa, que es el sentido del desagravio. |
 
 Créditos actualizados, la lámina `_contact.png` de nuevo y el REPORT con las seis sustituciones. Con eso se cierra.
+
+## Revisión 2 (23-nov) · APROBADO · CERRADO
+
+`ext/T-058` @ `3e6fec7`, integrado en `CatholicGPT`.
+
+**Las 6 sustitutas son excelentes:**
+- San Judas Tadeo, de El Greco;
+- San José con el Niño, de Guido Reni;
+- el Gabriel de una Anunciación gótica;
+- San Miguel venciendo a Satanás, de Guido Reni;
+- Las Ánimas del Purgatorio, de Alonso Cano;
+- un Inmaculado Corazón distinto.
+
+**Comprobaciones:**
+- `validate_chaplets.py --images`: 55 archivos, **0 errores**;
+- ningún duplicado por md5 entre las 55;
+- licencias libres.
