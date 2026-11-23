@@ -48,3 +48,19 @@
 - Modelo de cuentas parametrizable.
 - Generalizar `RosaryFitTest`.
 - Test del `active` de `LiturgicalTtsManager` tras girar con la voz activa.
+
+# Ronda 2 · CERRADO
+
+- **Correcciones:** agente local del coordinador, en `85fea4c`.
+- **Crítico:** **APROBADO**, con los 9 criterios en 9.
+- **Matriz §12:** completa, en `docs/tasks/T-048-shots/` (78 PNG y `_contact.png`).
+- **`RosarySessionTest`:** `finishesDecade` vuelve a su definición estricta.
+- **Tests del área:** 329; los 3 que fallaron en la última pasada eran de infraestructura y pasan al repetirlos.
+- **Publicado** en la versión 1.9.0.
+
+**Seguimiento, en T-057** (menores, no bloquean):
+1. La flecha del fundido tapa la última letra de la columna de contexto: reservar 18 dp al final mientras se pueda desplazar.
+2. Al 130 %, V./R. tocan el texto: `hang` de 18 dp cuando `fontScale > 1,15`.
+3. El colgante del mapa de Opciones invade la primera fila: `Spacer` de 20 dp.
+4. Con la guía activa hay tres rellenos `p.action`: «Guía» activa con `p.accent` al 14 %.
+5. Háptico firme al cruzar una cuenta grande durante el arrastre del hilo (`CONFIRM`, API 30+).

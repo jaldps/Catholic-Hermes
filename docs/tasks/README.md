@@ -87,11 +87,11 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | T-045 | Coordinador (Sonnet local) | CERRADO ([informe](T-045-REPORT.md)) | Auditoría a 320 dp con letra al 130 %: textos cortados y botones ocultos en toda la app |
 | [T-046](T-046.md) | Hermes | CERRADO ([informe](T-046-REPORT.md), [revisión](T-046-REVIEW.md)) | «Mi camino» como 5.ª pestaña y una sola fila de hábitos |
 | [T-047](T-047.md) | Codex | CERRADO ([informe](T-047-REPORT.md), [revisión](T-047-REVIEW.md)) | L0 · Fundamentos de la interfaz horizontal (`docs/design/LANDSCAPE.md` §2–§3) |
-| [T-048](T-048.md) | Codex | ABIERTO | L1 · Rosario y Coronilla en horizontal (§4) |
+| [T-048](T-048.md) | Codex + coordinador | CERRADO (1.9.0) | L1 · Rosario y Coronilla en horizontal (§4) |
 | T-049 | Codex | EN COLA (tras T-048) | L2 · Lectores en horizontal (§5) |
 | T-050 | Codex | EN COLA (tras T-049) | L3 · Hoy en horizontal (§6) |
 | T-051 | Codex | EN COLA (tras T-050) | L4 · Centros Orar y Leer en horizontal (§7) |
-| [T-052](T-052.md) | Hermes | EN PAUSA (va después de T-062) | L5 · Listas con ficha en horizontal (§8) |
+| [T-052](T-052.md) | Hermes | ABIERTO (sigue desde 1/7) | L5 · Listas con ficha en horizontal (§8) |
 | T-053 | Hermes | EN COLA (tras T-052) | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
 | T-054 | Codex | EN COLA (al final) | L7 · Hojas, diálogos, bienvenida y ajustes en horizontal (§10) |
 | [T-055](T-055.md) | Hermes | CERRADO ([informe](T-055-REPORT.md), [revisión](T-055-REVIEW.md)) | Estados vacíos y de error que faltan, en vertical (preparación de §16 del diseño horizontal) |
@@ -100,7 +100,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-058](T-058.md) | Hermes | CERRADO ([informe](T-058-REPORT.md), [revisión](T-058-REVIEW.md)) | «Otras coronillas» · una imagen propia y relevante por coronilla (obligatoria), con créditos |
 | [T-060](T-060.md) | Hermes | CERRADO ([informe](T-060-REPORT.md), [revisión](T-060-REVIEW.md)) | Biblia española incluida: quitar el espacio antes de la puntuación en 3.048 versículos, con script y test |
 | [T-061](T-061.md) | Hermes | CERRADO ([revisión](T-061-REVIEW.md); petición menor: 4 logotipos con texto) | Imágenes que faltan: 5 advocaciones marianas y 26 emblemas de órdenes con monograma |
-| [T-062](T-062.md) | Hermes | ABIERTO · PRIORIDAD | Pasada de interfaz de toda la app (vertical) con las skills de `.claude/skills/`: 13 pantallas y textos ES/EN/PT |
+| [T-062](T-062.md) | Hermes | INTEGRADO en 1.9.0 (revisión con capturas pendiente) | Pasada de interfaz de toda la app (vertical) con las skills de `.claude/skills/`: 13 pantallas y textos ES/EN/PT |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |
