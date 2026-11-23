@@ -56,6 +56,7 @@ import com.example.ui.design.AppProgressBar
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSheet
+import com.example.ui.design.appDockInset
 import com.example.ui.design.appScreenInsets
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -153,7 +154,7 @@ fun ReadingPlansScreen(
         return tr("Día $day de ${plan.totalDays} · $percent %", "Day $day of ${plan.totalDays} · $percent%", "Dia $day de ${plan.totalDays} · $percent %")
     }
 
-    Column(Modifier.fillMaxSize().padding(bottom = appScreenInsets().calculateBottomPadding())) {
+    Column(Modifier.fillMaxSize().padding(bottom = appDockInset())) {
         if (selected == null) {
             LazyColumn(
                 Modifier.weight(1f).fillMaxWidth().testTag("plans_screen"),
