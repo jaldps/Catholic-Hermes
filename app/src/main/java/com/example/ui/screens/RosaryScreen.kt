@@ -1256,6 +1256,7 @@ fun RosaryScreen(
                 modifier = Modifier
                     .testTag(if (isRosary) "prayer_bead_counter" else "mercy_step_counter")
                     .semantics {
+                        traversalIndex = 1f
                         contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
                         stateDescription = stepText
                         customActions = listOf(
@@ -1441,8 +1442,8 @@ private fun LandscapeRosaryContext(
                         )
                     })
             Box(Modifier.weight(1f).fillMaxHeight()) {
-                Column(Modifier.fillMaxSize().verticalScroll(contextScroll).testTag("rosary_context_scroll")) {
-                    Text(where, style = styles.caption, color = p.textSecondary)
+                Column(Modifier.fillMaxSize().verticalScroll(contextScroll).testTag("rosary_context_scroll").semantics { isTraversalGroup = true; traversalIndex = 0f }) {
+                    Text(if (isRosary && inDecade) mysteryAnnouncement(lang, mysteryType, step.section - 1, "").substringBefore(":") else where, style = styles.caption, color = p.textSecondary)
                     Spacer(Modifier.height(4.dp))
                     Text(if (inDecade) section.subtitle else step.intention ?: section.title,
                         style = styles.headline, color = p.textPrimary,
@@ -2481,13 +2482,24 @@ private fun OptionsSheet(
     val p = design.palette
     val styles = LocalAppTextStyles.current
     val modes = listOf(RecitationVoiceMode.DUAL_DIALOGUE, RecitationVoiceMode.MALE, RecitationVoiceMode.FEMALE)
-    AppSheet(
-        onDismiss = onDismiss,
-        title = if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
-        else lang.pick("Coronilla", "Chaplet", "Coroinha"),
-        tag = "rosary_options_sheet"
-    ) {
+    val landscape = appWindowClass() == AppWindowClass.LandscapePhone
+    val voices: @Composable () -> Unit = {
         SheetLabel(lang.pick("Voces", "Voices", "Vozes"))
+        if (landscape) {
+            Column(Modifier.testTag("rosary_voice_mode_picker")) {
+                listOf(lang.pick("Ambas voces", "Both voices", "Ambas as vozes"), lang.pick("Guía", "Leader", "Guia"),
+                    lang.pick("Respuesta", "Response", "Resposta")).forEachIndexed { i, label ->
+                    Box(Modifier.fillMaxWidth().heightIn(min = 44.dp)
+                        .lumenPress({ onVoiceMode(modes[i]) }, role = Role.RadioButton)
+                        .semantics { selected = voiceMode == modes[i] }.padding(horizontal = 8.dp, vertical = 8.dp)) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(label, style = styles.subhead, color = p.textPrimary, modifier = Modifier.weight(1f))
+                            if (voiceMode == modes[i]) Icon(Icons.Rounded.Check, null, tint = p.accent, modifier = Modifier.size(18.dp))
+                        }
+                    }
+                }
+            }
+        } else {
         AppSegmentedTabs(
             options = listOf(
                 lang.pick("Ambas voces", "Both voices", "Ambas as vozes"),
@@ -2498,6 +2510,7 @@ private fun OptionsSheet(
             onSelect = { onVoiceMode(modes[it]) },
             modifier = Modifier.testTag("rosary_voice_mode_picker")
         )
+        }
         Text(
             when (voiceMode) {
                 RecitationVoiceMode.DUAL_DIALOGUE -> lang.pick(
@@ -2518,9 +2531,10 @@ private fun OptionsSheet(
             },
             style = styles.footnote,
             color = p.textSecondary,
-            modifier = Modifier.padding(horizontal = design.spacing.gutter + 16.dp, vertical = 8.dp)
+            modifier = Modifier.padding(horizontal = if (landscape) 8.dp else design.spacing.gutter + 16.dp, vertical = 8.dp)
         )
-        Spacer(Modifier.height(16.dp))
+    }
+    val parts: @Composable () -> Unit = {
         SheetLabel(
             if (isRosary) lang.pick("Partes del Rosario", "Parts of the Rosary", "Partes do Rosário")
             else lang.pick("Pasos de la coronilla", "Steps of the chaplet", "Passos da coroinha")
@@ -2530,7 +2544,7 @@ private fun OptionsSheet(
             activeBead = step.bead,
             onSelectBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let(onGo) },
             modifier = Modifier
-                .padding(horizontal = 72.dp, vertical = 4.dp)
+                .padding(horizontal = if (landscape) 8.dp else 72.dp, vertical = 4.dp)
                 .testTag("rosary_loop_map")
         )
         Spacer(Modifier.height(12.dp))
@@ -2572,7 +2586,31 @@ private fun OptionsSheet(
                 )
             }
         }
-        Spacer(Modifier.height(16.dp))
+    }
+    AppSheet(
+        onDismiss = onDismiss,
+        title = if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
+        else lang.pick("Coronilla", "Chaplet", "Coroinha"),
+        tag = "rosary_options_sheet", wide = landscape
+    ) {
+        if (landscape) {
+            Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                RosarySheetColumn(Modifier.weight(1f)) { voices() }
+                RosarySheetColumn(Modifier.weight(1f)) { parts() }
+            }
+        } else {
+            voices(); Spacer(Modifier.height(16.dp)); parts(); Spacer(Modifier.height(16.dp))
+        }
+    }
+}
+
+/** Each sheet column has its own reachable text and a visible continuation hint. */
+@Composable
+private fun RosarySheetColumn(modifier: Modifier = Modifier, content: @Composable androidx.compose.foundation.layout.ColumnScope.() -> Unit) {
+    val scroll = rememberScrollState()
+    Box(modifier.height((appWindowSize().height - 116.dp).coerceAtLeast(132.dp))) {
+        Column(Modifier.fillMaxSize().verticalScroll(scroll), content = content)
+        RosaryScrollHint(scroll.canScrollForward, 16.dp, "rosary_sheet_scroll_hint")
     }
 }
 
@@ -2594,6 +2632,31 @@ private fun MysterySheet(
     val styles = LocalAppTextStyles.current
     val context = LocalContext.current
     val credit = remember(artPath) { artPath?.let { ArtCredits.of(context, it) } }
+    val landscape = appWindowClass() == AppWindowClass.LandscapePhone
+    if (landscape) {
+        AppSheet(onDismiss = onDismiss, title = title, tag = "rosary_mystery_sheet", wide = true) {
+            Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                RosarySheetColumn(Modifier.weight(1f)) {
+                    if (artPath != null) {
+                        val bitmap = rememberAssetBitmap(artPath, 1080)
+                        Box(Modifier.fillMaxWidth().height(192.dp).border(.75.dp, p.separator).padding(5.dp)) {
+                            if (bitmap != null) Image(bitmap, null, contentScale = ContentScale.Fit, modifier = Modifier.fillMaxSize())
+                        }
+                    }
+                    credit?.let {
+                        Spacer(Modifier.height(8.dp))
+                        Text(listOf(it.artist, it.title, it.year).filter { it.isNotBlank() }.joinToString(" · "), style = styles.footnote, color = p.textSecondary)
+                    }
+                }
+                RosarySheetColumn(Modifier.weight(1f)) {
+                    Text(mysteryAnnouncement(lang, type, position, "").substringBefore(":"), style = styles.eyebrow, color = p.textSecondary)
+                    Spacer(Modifier.height(8.dp)); Text(scriptureRef, style = styles.subhead, color = p.textSecondary)
+                    Spacer(Modifier.height(12.dp)); Text(meditation, style = styles.reading, color = p.textPrimary)
+                    Spacer(Modifier.height(12.dp)); Text(fruit, style = styles.callout, color = p.textPrimary)
+                }
+            }
+        }
+    } else {
     AppSheet(onDismiss = onDismiss, tag = "rosary_mystery_sheet") {
         Column(Modifier.padding(horizontal = design.spacing.gutter)) {
             if (artPath != null) {
@@ -2633,6 +2696,7 @@ private fun MysterySheet(
             }
             Spacer(Modifier.height(16.dp))
         }
+    }
     }
 }
 

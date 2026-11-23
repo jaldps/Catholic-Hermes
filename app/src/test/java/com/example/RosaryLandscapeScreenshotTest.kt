@@ -57,7 +57,7 @@ class RosaryLandscapeScreenshotTest(private val identity: DesignLanguage, privat
                 "mystery" -> compose.onNodeWithTag("rosary_view_mystery").performScrollTo().performClick()
             }
             compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, h, cutout = cut, navbar = nav) }; compose.waitForIdle()
-            Thread.sleep(1000); compose.waitForIdle()
+            Thread.sleep(2500); compose.waitForIdle()
             val suffix = (if (scale == 1f) "" else "_s130") + (if (lang == AppLanguage.PT) "_pt" else "") +
                 (cut?.let { "_cut${it.first().uppercase()}" } ?: "") + (nav?.let { "_nav${it.first().uppercase()}" } ?: "") +
                 (state?.let { "_$it" } ?: "")
@@ -67,7 +67,7 @@ class RosaryLandscapeScreenshotTest(private val identity: DesignLanguage, privat
     }
     companion object {
         @JvmStatic @ParameterizedRobolectricTestRunner.Parameters(name = "{0}-dark{1}")
-        fun cases() = DesignLanguage.entries.filter { System.getProperty("shots.identity") == null || System.getProperty("shots.identity") == "all" || it.id == System.getProperty("shots.identity") }
+        fun cases() = DesignLanguage.selectable.filter { System.getProperty("shots.identity") == null || System.getProperty("shots.identity") == "all" || it.id == System.getProperty("shots.identity") }
             .flatMap { id -> listOf(false,true).filter { System.getProperty("shots.mode") == null || System.getProperty("shots.mode") == if(it) "dark" else "light" }.map { arrayOf<Any>(id,it) } }
     }
 }

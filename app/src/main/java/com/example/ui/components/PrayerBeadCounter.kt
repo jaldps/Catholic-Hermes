@@ -6,6 +6,8 @@ import androidx.compose.animation.core.spring
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.indication
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
@@ -23,6 +25,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.input.key.*
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -638,12 +642,21 @@ private fun VerticalBeadReel(beads: List<BeadKind>, active: Int, onSelect: (Int)
     val current by rememberUpdatedState(target)
     var position by remember { mutableFloatStateOf(target.toFloat()) }
     LaunchedEffect(target) { position = target.toFloat() }
-    Canvas(modifier.fillMaxSize().semantics {
+    val focus = remember { MutableInteractionSource() }
+    Canvas(modifier.fillMaxSize().clipToBounds()
+        .indication(focus, com.example.ui.design.appFocusRing(focus, androidx.compose.foundation.shape.RoundedCornerShape(8.dp)))
+        .onKeyEvent { key ->
+            if (key.type != KeyEventType.KeyDown) false else when (key.key) {
+                Key.DirectionUp -> { select((current + 1).coerceAtMost(beads.lastIndex)); true }
+                Key.DirectionDown -> { select((current - 1).coerceAtLeast(0)); true }
+                else -> false
+            }
+        }.semantics {
         progressBarRangeInfo = ProgressBarRangeInfo(target.toFloat(), 0f..beads.lastIndex.toFloat(), (beads.size - 2).coerceAtLeast(0))
         setProgress { requested ->
             if (!requested.isFinite()) false else { select(requested.roundToInt().coerceIn(beads.indices)); true }
         }
-    }.focusable().pointerInput(beads) {
+    }.focusable(interactionSource = focus).pointerInput(beads) {
         val pitch = 24.dp.toPx()
         val halfTarget = 22.dp.toPx()
         awaitEachGesture {

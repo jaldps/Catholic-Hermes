@@ -1,3 +1,5 @@
+@file:OptIn(androidx.compose.ui.test.ExperimentalTestApi::class)
+
 package com.example
 
 import androidx.compose.foundation.gestures.Orientation
@@ -56,4 +58,13 @@ class RosaryReelInteractionTest {
         assertEquals(0f..29f, range.range)
         compose.onNodeWithTag("reel").performSemanticsAction(SemanticsActions.SetProgress) { assertFalse(it(Float.NaN)) }
     }
+    @Test fun keyboardFocusCanAdjustTheReelWithoutTouch() {
+        launch()
+        compose.onNodeWithTag("reel").performSemanticsAction(SemanticsActions.RequestFocus) { it() }
+        compose.onNodeWithTag("reel").performKeyInput { pressKey(androidx.compose.ui.input.key.Key.DirectionUp) }
+        compose.runOnIdle { assertEquals(11, bead) }
+        compose.onNodeWithTag("reel").performKeyInput { pressKey(androidx.compose.ui.input.key.Key.DirectionDown) }
+        compose.runOnIdle { assertEquals(10, bead) }
+    }
+
 }

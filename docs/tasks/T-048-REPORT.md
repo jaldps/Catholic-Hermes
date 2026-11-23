@@ -1,6 +1,6 @@
 # T-048 · Rosario y Coronilla en horizontal
 
-Entrega parcial 3/6. Base: `origin/CatholicGPT` @ `e4a5cdd`, con T-047 integrado y aprobado.
+Entrega parcial 4/6. Base: `origin/CatholicGPT` @ `e4a5cdd`, con T-047 integrado y aprobado.
 
 ## Geometría
 
@@ -24,8 +24,16 @@ La instrucción está en el contexto izquierdo, según §4.3; así también cabe
 
 Perfil conjunto: **21/21** (12 presupuesto + 3 hilo + 5 geometría + 1 captura con ambas devociones). [Resultado](T-048-shots/validation-budget.json). Se revisaron las dos primeras capturas de Lumen a 800 × 360. Se detectó que el trazo del hilo necesita recorte a su región; queda pendiente esa corrección visual antes de las capturas finales.
 
+## Hojas y accesibilidad del hilo
+
+Misterios conserva la hoja lateral normal. Opciones usa la hoja amplia y dos columnas con desplazamiento y pista propios: las tres voces son filas verticales de 44 dp; el mapa y las partes quedan a la derecha. Ver el misterio usa imagen completa enmarcada y crédito a la izquierda, cita, meditación y fruto a la derecha. La rama vertical conserva el orden y la disposición anteriores.
+
+También se recortó el hilo a su región (corrección detectada en la captura anterior), se añadió foco visible y ajuste con teclado, y el antetítulo del misterio identifica su número y conjunto.
+
+Perfil de esta entrega: **12/12** (2 hojas, 4 hilo —incluido teclado—, 5 geometría y 1 captura de Opciones en ambas devociones). [Resultado](T-048-shots/validation-sheets.json). Las capturas de Opciones a 800 × 360 se revisaron visualmente.
+
 ## Pendiente
 
-Hojas, continuidad del giro y la voz, matriz de capturas, auditoría y autoevaluación final. Esta entrega parcial no declara esos puntos terminados ni una calificación visual final.
+Continuidad del giro y la voz, matriz de capturas, auditoría y autoevaluación final. Esta entrega parcial no declara esos puntos terminados ni una calificación visual final.
 
 La suite completa corresponde al coordinador (regla 10); no se ejecuta para este encargo. No se ha probado en un teléfono físico.
