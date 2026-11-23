@@ -1,0 +1,89 @@
+{
+  "id": "san-rafael-coronilla",
+  "sourceId": "CD-31",
+  "group": "angels",
+  "title": {
+    "es": "Coronilla de San Rafael Arcángel",
+    "en": "Chaplet of Saint Raphael the Archangel",
+    "pt": "Coronilha de São Rafael Arcanjo"
+  },
+  "summary": {
+    "es": "Tres Avemarías a María y nueve cantos a los coros angélicos.",
+    "en": "Three Hail Marys to Mary and nine hymns to the angelic choirs.",
+    "pt": "Três Ave Marias a Maria e nove hinos aos coros angélicos."
+  },
+  "instrument": {
+    "es": "Medalla, 3 cuentas finales y 9 cuentas más (12 además de la medalla).",
+    "en": "Medal, 3 concluding beads and 9 further beads (12 besides the medal).",
+    "pt": "Medalha, 3 contas finais e mais 9 contas (12 além da medalha)."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 9
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "text": {
+        "es": "Tú eres Rafael, el Sanador; tú eres Rafael, el Guía; tú eres Rafael, el Compañero, siempre al auxilio del dolor humano.",
+        "en": "You are Raphael the Healer, You are Raphael the Guide, You are Raphael the Companion Ever at human sorrow's aide.",
+        "pt": "Tu és Rafael, o Curador; tu és Rafael, o Guia; tu és Rafael, o Companheiro, sempre em auxílio da dor humana."
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Santo, santo, santo Señor, Dios de los ejércitos. ¡El cielo y la tierra están llenos de tu gloria! Gloria al Padre, gloria al Hijo, gloria al Espíritu Santo.",
+        "en": "Holy, holy, holy Lord, God of Hosts. Heaven and earth are full of your Glory! Glory be to the Father: Glory be to the Son; Glory be to the Holy Spirit!",
+        "pt": "Santo, santo, santo Senhor, Deus dos Exércitos. O céu e a terra estão cheios da tua glória! Glória ao Pai, glória ao Filho, glória ao Espírito Santo."
+      },
+      "repeat": 9
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "San Rafael, ángel de la salud, del amor, de la alegría y de la luz, ruega por nosotros.",
+        "en": "Saint Raphael, angel of health, of love, of joy and light, pray for us.",
+        "pt": "São Rafael, anjo da saúde, do amor, da alegria e da luz, roga por nós."
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. Nueve cuentas por los nueve coros angélicos.",
+  "image": "san-rafael-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Saint Raphael (Archangel)",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap13.htm"
+    }
+  ]
+}

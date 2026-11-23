@@ -1,0 +1,216 @@
+{
+  "id": "coronilla-difuntos-45",
+  "sourceId": "CD-01",
+  "group": "departed",
+  "title": {
+    "es": "Coronilla por los difuntos",
+    "en": "Chaplet for the Dead",
+    "pt": "Coronilha pelos Defuntos"
+  },
+  "summary": {
+    "es": "45 cuentas sin medalla: cinco introductorias y cuatro grupos de diez, con sufragio por el difunto.",
+    "en": "45 beads with no medal: five introductory and four sets of ten, with prayers for the departed.",
+    "pt": "45 contas sem medalha: cinco introdutórias e quatro grupos de dez, com sufrágio pelo defunto."
+  },
+  "instrument": {
+    "es": "Cruz, 5 cuentas introductorias y 4 grupos de 10; sin medalla.",
+    "en": "Cross, 5 introductory beads and 4 sets of 10; no medal.",
+    "pt": "Cruz, 5 contas introdutórias e 4 grupos de 10; sem medalha."
+  },
+  "when": {
+    "es": "Uso libre; para los difuntos.",
+    "en": "At any time; for the departed.",
+    "pt": "Uso livre; pelos defuntos."
+  },
+  "weekdays": [],
+  "variables": [
+    "deceased_name",
+    "deceased_gender"
+  ],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large",
+      "count": 5
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 0,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "act_of_faith"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "act_of_hope"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "act_of_charity"
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Sweet Heart of Mary, be my salvation.",
+        "en": "Dulce Corazón de María, sé mi salvación.",
+        "pt": "Doce Coração de Maria, sê a minha salvação."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
+        "en": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
+      },
+      "rubric": {
+        "es": "Al final de cada grupo de diez",
+        "en": "At the end of each set of ten",
+        "pt": "No fim de cada grupo de dez"
+      }
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "Sweet Heart of Mary, be my salvation.",
+        "en": "Dulce Corazón de María, sé mi salvación.",
+        "pt": "Doce Coração de Maria, sê a minha salvação."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
+        "en": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
+      },
+      "rubric": {
+        "es": "Al final de cada grupo de diez",
+        "en": "At the end of each set of ten",
+        "pt": "No fim de cada grupo de dez"
+      }
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Sweet Heart of Mary, be my salvation.",
+        "en": "Dulce Corazón de María, sé mi salvación.",
+        "pt": "Doce Coração de Maria, sê a minha salvação."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
+        "en": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
+      },
+      "rubric": {
+        "es": "Al final de cada grupo de diez",
+        "en": "At the end of each set of ten",
+        "pt": "No fim de cada grupo de dez"
+      }
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Sweet Heart of Mary, be my salvation.",
+        "en": "Dulce Corazón de María, sé mi salvación.",
+        "pt": "Doce Coração de Maria, sê a minha salvação."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
+        "en": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
+      },
+      "rubric": {
+        "es": "Al final de cada grupo de diez",
+        "en": "At the end of each set of ten",
+        "pt": "No fim de cada grupo de dez"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "V. Eternal rest grant unto {{nombre}}, O Lord.",
+          "en": "V. Concede el descanso eterno a {{nombre}}, Señor.",
+          "pt": "V. Concede o descanso eterno a {{nombre}}, Senhor."
+        },
+        "r": {
+          "es": "R. And let perpetual light shine upon {{nombre}}.",
+          "en": "R. Y haz que brille sobre {{nombre}} la luz perpetua.",
+          "pt": "R. E faz brilhar sobre {{nombre}} a luz perpétua."
+        }
+      }
+    }
+  ],
+  "historicalNote": {
+    "text": {
+      "es": "La fuente dice que las 40 cuentas recuerdan las 40 horas que se cree que el Señor pasó en el Limbo.",
+      "en": "The source says the 40 beads recall the 40 hours Our Lord is thought to have spent in Limbo.",
+      "pt": "A fonte diz que as 40 contas recordam as 40 horas que se crê que o Senhor passou no Limbo."
+    },
+    "source": "https://www.catholicdoors.com/prayers/chaplets/chap22.htm"
+  },
+  "notes": "Texto literal de Catholic Doors. «De Profundis o Padre Nuestro y Avemaría»: se modela la segunda opción; el De Profundis queda como prayerRef alternativo no representado. La fuente dice 5 cuentas introductorias pero solo nombra tres actos (Fe, Esperanza y Caridad); se modelan esos tres. Marcadores de nombre y género según la spec.",
+  "image": "coronilla-difuntos-45",
+  "promise": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet for the Dead",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap22.htm"
+    }
+  ]
+}

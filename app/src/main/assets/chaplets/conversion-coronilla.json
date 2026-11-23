@@ -1,0 +1,218 @@
+{
+  "id": "conversion-coronilla",
+  "sourceId": "CD-05",
+  "group": "intention",
+  "title": {
+    "es": "Coronilla de conversión",
+    "en": "Chaplet of Conversion",
+    "pt": "Coronilha de Conversão"
+  },
+  "summary": {
+    "es": "Rosario completo con oraciones por la conversión del mundo en cada cuenta.",
+    "en": "Full rosary with prayers for the conversion of the world on every bead.",
+    "pt": "Terço completo com orações pela conversão do mundo em cada conta."
+  },
+  "instrument": {
+    "es": "Rosario mariano de 59 cuentas.",
+    "en": "59-bead Marian rosary.",
+    "pt": "Terço mariano de 59 contas."
+  },
+  "when": {
+    "es": "Uso libre; intención por la conversión del mundo.",
+    "en": "At any time; for the conversion of the world.",
+    "pt": "Uso livre; pela conversão do mundo."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 3,
+      "prayerRef": "salve_regina"
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "Oh Madre santa, me uno a ti al pie de la Cruz de tu Hijo para implorar misericordia y conversión para las almas del mundo. Contigo ofrezco al Padre las Llagas de tu Hijo Jesús, en reparación de los pecados del mundo, pasados, presentes y futuros.",
+        "en": "O Holy Mother, I join you at the foot of your Son's Cross to implore mercy and conversion for the souls of the world. With you, I offer the Wounds of your Son, Jesus, to the Father, in atonement for the sins of the world past, present and to come.",
+        "pt": "Ó Mãe santa, uno-me a ti ao pé da Cruz do teu Filho para implorar misericórdia e conversão para as almas do mundo. Contigo ofereço ao Pai as Chagas do teu Filho Jesus, em reparação dos pecados do mundo, passados, presentes e futuros."
+      }
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Por el Corazón doloroso, sangrante e inmaculado de María, y en unión con el sufrimiento de su Hijo Jesús en la Cruz, imploro del Padre la gracia de la conversión del mundo.",
+        "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
+        "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
+        "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
+        "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      }
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Por el Corazón doloroso, sangrante e inmaculado de María, y en unión con el sufrimiento de su Hijo Jesús en la Cruz, imploro del Padre la gracia de la conversión del mundo.",
+        "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
+        "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
+        "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
+        "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Por el Corazón doloroso, sangrante e inmaculado de María, y en unión con el sufrimiento de su Hijo Jesús en la Cruz, imploro del Padre la gracia de la conversión del mundo.",
+        "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
+        "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
+        "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
+        "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      }
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "Por el Corazón doloroso, sangrante e inmaculado de María, y en unión con el sufrimiento de su Hijo Jesús en la Cruz, imploro del Padre la gracia de la conversión del mundo.",
+        "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
+        "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
+        "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
+        "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      }
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "Por el Corazón doloroso, sangrante e inmaculado de María, y en unión con el sufrimiento de su Hijo Jesús en la Cruz, imploro del Padre la gracia de la conversión del mundo.",
+        "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
+        "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
+        "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
+        "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be",
+      "repeat": 3
+    },
+    {
+      "bead": null,
+      "prayerRef": "salve_regina"
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. La fuente pide Avemaría en las cuentas grandes y Salve al principio y al final.",
+  "image": "conversion-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Conversion",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap16.htm"
+    }
+  ]
+}

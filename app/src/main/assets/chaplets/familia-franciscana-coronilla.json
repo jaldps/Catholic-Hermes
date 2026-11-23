@@ -1,0 +1,170 @@
+{
+  "id": "familia-franciscana-coronilla",
+  "sourceId": "CD-58",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de la Familia Franciscana",
+    "en": "Franciscan Family Chaplet",
+    "pt": "Coronilha da Família Franciscana"
+  },
+  "summary": {
+    "es": "Tres decenas por las tres Órdenes franciscanas con la jaculatoria «Dios mío y todo mío».",
+    "en": "Three decades for the three Franciscan Orders with the invocation 'My God and my all'.",
+    "pt": "Três décadas pelas três Ordens franciscanas com a jaculatória 'Meu Deus e tudo meu'."
+  },
+  "instrument": {
+    "es": "Cruz de San Damián; no se especifica el número de cuentas.",
+    "en": "San Damiano cross; the number of beads is not specified.",
+    "pt": "Cruz de São Damião; não se especifica o número de contas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "sign_of_the_cross"
+    },
+    {
+      "bead": 0,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 0,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 1,
+      "text": {
+        "es": "San Francisco de Asís, por tu intercesión te pido que la Primera Orden aumente en vocaciones y que sus miembros sigan creciendo en santidad.",
+        "en": "St. Francis of Assisi, through your intercession, I pray that the First Order increases in vocations and that its members continue to grow in holiness.",
+        "pt": "São Francisco de Assis, pela tua intercessão peço que a Primeira Ordem cresça em vocações e que os seus membros continuem a crescer em santidade."
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "My God and my all!",
+        "en": "Dios mío y todo mío.",
+        "pt": "Meu Deus e tudo meu."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "San Francisco de Asís, por tu intercesión te pido que la Segunda Orden aumente en vocaciones y que sus miembros sigan creciendo en santidad.",
+        "en": "St. Francis of Assisi, through your intercession, I pray that the Second Order increases in vocations and that its members continue to grow in holiness.",
+        "pt": "São Francisco de Assis, pela tua intercessão peço que a Segunda Ordem cresça em vocações e que os seus membros continuem a crescer em santidade."
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "My God and my all!",
+        "en": "Dios mío y todo mío.",
+        "pt": "Meu Deus e tudo meu."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "San Francisco de Asís, por tu intercesión te pido que la Tercera Orden, tanto Regular como Seglar, aumente en vocaciones y que sus miembros sigan creciendo en santidad.",
+        "en": "St. Francis of Assisi, through your intercession, I pray that the Third Order, both Regular and Secular, increases in vocations and that its members continue to grow in holiness.",
+        "pt": "São Francisco de Assis, pela tua intercessão peço que a Terceira Ordem, tanto Regular como Segular, cresça em vocações e que os seus membros continuem a crescer em santidade."
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "My God and my all!",
+        "en": "Dios mío y todo mío.",
+        "pt": "Meu Deus e tudo meu."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, Señor Jesucristo, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Lord Jesus Christ, because by Your holy Cross, You have redeemed the world.",
+        "pt": "Adoramos-vos, Senhor Jesus Cristo, porque pela vossa santa Cruz resgatastes o mundo."
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be",
+      "repeat": 3,
+      "meditation": {
+        "es": "Por las intenciones del Papa y su santidad.",
+        "en": "For the intentions of the Pope and his continued holiness.",
+        "pt": "Pelas intenções do Papa e a sua santidade."
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "sign_of_the_cross"
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors (autor Nicholas H. Kovacs, OFS). La fuente no da número de cuentas; se modelan tres decenas según el texto.",
+  "image": "familia-franciscana-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Franciscan Family Chaplet",
+      "url": "https://www.catholicdoors.com/prayers/english6/p03528.htm"
+    }
+  ]
+}

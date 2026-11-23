@@ -1,0 +1,200 @@
+{
+  "id": "unidad-coronilla",
+  "sourceId": "CD-55",
+  "group": "intention",
+  "title": {
+    "es": "Coronilla de Unidad",
+    "en": "Chaplet of Unity",
+    "pt": "Coronilha da Unidade"
+  },
+  "summary": {
+    "es": "Rosario por la unidad de los cristianos y la paz, con cuatro invocaciones finales.",
+    "en": "Rosary for the unity of Christians and peace, with four closing invocations.",
+    "pt": "Terço pela unidade dos cristãos e pela paz, com quatro invocações finais."
+  },
+  "instrument": {
+    "es": "Rosario mariano de 59 cuentas.",
+    "en": "59-bead Marian rosary.",
+    "pt": "Terço mariano de 59 contas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 4,
+      "text": {
+        "es": "Dios, Padre nuestro celestial, por tu Hijo Jesús, Víctima, Sumo Sacerdote, Profeta verdadero y Rey soberano. Derrama sobre nosotros la potencia de tu Espíritu Santo y abre nuestros corazones. Por tu gran misericordia, por la mediación materna de la Santísima Virgen María, nuestra Reina, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones en la fe, la paz, el amor y la alegría de tu Reino, para que seamos uno en ti.",
+        "en": "God our Heavenly Father, through Your Son Jesus, our Victim High Priest, True Prophet, and Sovereign King. Pour forth the Power of Your Holy Spirit upon us and open our hearts. On Your great mercy, through the motherly mediation of the Blessed Virgin Mary, Our Queen, forgive our sinfulness, heal our brokenness, and renew our hearts in the faith, and peace, and love, and joy of Your Kingdom, that we may be one in You.",
+        "pt": "Deus, Pai nosso celestial, pelo teu Filho Jesus, Vítima, Sumo Sacerdote, Profeta verdadeiro e Rei soberano. Derrama sobre nós o poder do teu Espírito Santo e abre os nossos corações. Pela tua grande misericórdia, pela mediação materna da Santíssima Virgem Maria, nossa Rainha, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações na fé, na paz, no amor e na alegria do teu Reino, para que sejamos um em ti."
+      }
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      }
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      }
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      }
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      }
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "En tu gran misericordia, perdona nuestros pecados, sana nuestra fractura y renueva nuestros corazones para que seamos uno en ti.",
+        "en": "In Your great mercy, Forgive our sinfulness, heal our brokenness, and renew our hearts that we may be one in You.",
+        "pt": "Na tua grande misericórdia, perdoa os nossos pecados, cura a nossa ruptura e renova os nossos corações para que sejamos um em ti."
+      },
+      "repeat": 10
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Escucha, Israel: ¡El Señor nuestro Dios es un solo Dios! ¡Jesús, Rey de todas las naciones, sea reconocido tu reinado en la tierra! María, Madre nuestra y Medianera de todas las gracias, ruega e intercede por nosotros, tus hijos. San Miguel, gran Príncipe y Guardián de tu pueblo, ven con los santos ángeles y santos y protégenos.",
+        "en": "Hear, O Israel! The Lord our God is One God! O Jesus, King of All Nations, may Your reign be recognized on earth!! Mary, our Mother and Mediatrix of all graces, pray and intercede for us your children! St. Michael, great Prince and Guardian of your people, come with the Holy Angels and Saints And protect us!",
+        "pt": "Ouve, Israel! O Senhor nosso Deus é um só Deus! Ó Jesus, Rei de todas as nações, seja o teu reino reconhecido na terra! Maria, Mãe nossa e Mediadora de todas as graças, roga e intercede por nós, teus filhos. São Miguel, grande Príncipe e Guardião do teu povo, vem com os santos anjos e santos e protege-nos."
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors; errata corregida: «grat mercy»→«great mercy». La oración de la medalla se reza también en las cuatro cuentas grandes separadoras.",
+  "image": "unidad-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Unity",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap43.htm"
+    }
+  ]
+}

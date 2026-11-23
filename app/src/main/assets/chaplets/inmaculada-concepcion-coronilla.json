@@ -1,0 +1,149 @@
+{
+  "id": "inmaculada-concepcion-coronilla",
+  "sourceId": "CD-42",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla de la Inmaculada Concepción",
+    "en": "Chaplet of the Immaculate Conception",
+    "pt": "Coronilha da Imaculada Conceição"
+  },
+  "summary": {
+    "es": "Tres grupos de cuatro cuentas con Padre Nuestro, cuatro Avemarías y Gloria, por la pureza.",
+    "en": "Three sets of four beads with an Our Father, four Hail Marys and a Glory, for purity.",
+    "pt": "Três grupos de quatro contas com Pai-Nosso, quatro Ave Marias e Glória, pela pureza."
+  },
+  "instrument": {
+    "es": "15 cuentas declaradas: 3 grupos de 4, 1 cuenta final y Medalla Milagrosa.",
+    "en": "15 beads stated: 3 sets of 4, one concluding bead and the Miraculous Medal.",
+    "pt": "15 contas declaradas: 3 grupos de 4, uma conta final e a Medalha Milagrosa."
+  },
+  "when": {
+    "es": "Se recomienda diariamente.",
+    "en": "Recommended daily.",
+    "pt": "Recomenda-se diariamente."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 4
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 4
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 4
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "medal"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "sign_of_the_cross"
+    },
+    {
+      "bead": 0,
+      "text": {
+        "es": "Bendita sea la santa e Inmaculada Concepción de la Virgen María.",
+        "en": "Blessed be the Holy and Immaculate Conception of the Blessed Virgin Mary.",
+        "pt": "Bendita seja a santa e Imaculada Conceição da Virgem Maria."
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "hail_mary",
+      "repeat": 4
+    },
+    {
+      "bead": 0,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Bendita sea la santa e Inmaculada Concepción de la Virgen María.",
+        "en": "Blessed be the Holy and Immaculate Conception of the Blessed Virgin Mary.",
+        "pt": "Bendita seja a santa e Imaculada Conceição da Virgem Maria."
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 3,
+      "prayerRef": "hail_mary",
+      "repeat": 4
+    },
+    {
+      "bead": 2,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "Bendita sea la santa e Inmaculada Concepción de la Virgen María.",
+        "en": "Blessed be the Holy and Immaculate Conception of the Blessed Virgin Mary.",
+        "pt": "Bendita seja a santa e Imaculada Conceição da Virgem Maria."
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "hail_mary",
+      "repeat": 4
+    },
+    {
+      "bead": 4,
+      "prayerRef": "glory_be"
+    }
+  ],
+  "historicalNote": {
+    "text": {
+      "es": "La fuente atribuye la coronilla a San Juan Berchmans S.J. y la destina a pedir la gracia de no pecar contra la pureza.",
+      "en": "The source attributes the chaplet to St John Berchmans S.J. and recommends it to obtain the grace of never sinning against purity.",
+      "pt": "A fonte atribui a coronilha a S. João Berchmans S.J. e recomenda-a para pedir a graça de nunca pecar contra a pureza."
+    },
+    "source": "https://www.catholicdoors.com/prayers/chaplets/chap36.htm"
+  },
+  "notes": "Incoherencia resuelta con el texto real: la fuente dice 15 cuentas pero describe 3×4 + 1 = 13; el hilo sigue la descripción. WARN explicado en notes.",
+  "image": "inmaculada-concepcion-coronilla",
+  "variables": [],
+  "promise": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of the Immaculate Conception",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap36.htm"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "id": "guadalupe-coronilla",
+  "sourceId": "CD-11",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla de Nuestra Señora de Guadalupe",
+    "en": "Chaplet of Our Lady of Guadalupe",
+    "pt": "Coronilha de Nossa Senhora de Guadalupe"
+  },
+  "summary": {
+    "es": "21 cuentas: cuatro Avemarías por las apariciones y cuatro grupos de tres por cada una.",
+    "en": "21 beads: four Hail Marys for the apparitions and four sets of three, one for each apparition.",
+    "pt": "21 contas: quatro Ave Marias pelas aparições e quatro grupos de três, um por cada aparição."
+  },
+  "instrument": {
+    "es": "Cruz, 21 cuentas y medalla: 1+4+1 y cuatro grupos de 3 separados por 1 cuenta.",
+    "en": "Cross, 21 beads and medal: 1+4+1 and four sets of 3 separated by 1 bead.",
+    "pt": "Cruz, 21 contas e medalha: 1+4+1 e quatro grupos de 3 separados por 1 conta."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 4
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    }
+  ],
+  "steps": [
+    {
+      "bead": null,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe, Rosa Mística, intercede por nuestra Santa Iglesia, protege al Sumo Pontífice, ayuda a todos los que te invocan en sus necesidades y, puesto que eres la Virgen perpetua y Madre del verdadero Dios, obtén de tu Santísimo Hijo la gracia de conservar nuestra fe, la dulce esperanza en medio de la amargura de la vida, la caridad ardiente y el precioso don de la perseverancia final. Amén.",
+        "en": "Our Lady of Guadalupe, Mystical Rose, make intercession for our Holy Church, protect the sovereign Pontiff, help all those who invoke you in their necessities, and since you are the ever Virgin Mary and Mother of the true God, obtain for us from your most Holy Son the grace of keeping our faith, of sweet hope in the midst of the bitterness of life, of burning charity, and the precious gift of final perseverance. Amen.",
+        "pt": "Nossa Senhora de Guadalupe, Rosa Mística, intercedei pela vossa Santa Igreja, protegei o Sumo Pontífice, auxiliai todos os que vos invocam nas suas necessidades e, sendo vós a Virgem perpétua e Mãe do verdadeiro Deus, obtende do vosso Santíssimo Filho a graça de conservarmos a fé, a doce esperança no meio da amargura da vida, a caridade ardente e o precioso dom da perseverança final. Amém."
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 4
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe se aparece al beato Juan Diego. Nuestra Señora pide un templo en su honor.",
+        "en": "Our Lady of Guadalupe appears to Blessed Juan Diego. Our Lady requests a temple in her honour.",
+        "pt": "Nossa Senhora de Guadalupe aparece ao beato Juan Diego. Nossa Senhora pede um templo em sua honra."
+      },
+      "meditation": {
+        "es": "Apparition 1",
+        "en": "Aparición 1",
+        "pt": "Aparição 1"
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe, Reina mía y Madre mía, te doy gracias por tu primera aparición al beato Juan Diego, cuando revelaste que eres la Virgen Purísima, María, Madre del verdadero Dios y Madre de todo el género humano. Te doy gracias por pedir que se construyera un templo donde te apareciste, para dar testimonio de tu amor, tu compasión, tu ayuda y tu protección a todos los que te aman, confían en ti e invocan tu auxilio.",
+        "en": "Our Lady of Guadalupe, my Queen and my Mother, I thank you for your first apparition to Blessed Juan Diego when you revealed that you are the Most Pure Virgin, Mary, Mother of the True God and Mother of all mankind. I thank you for requesting a temple to be built where you stood, to bear witness to your love, your compassion, your aid and your protection for all who would love you, trust you, and invoke your help.",
+        "pt": "Nossa Senhora de Guadalupe, minha Rainha e minha Mãe, dou-vos graças pela vossa primeira aparição ao beato Juan Diego, quando revelastes que sois a Virgem Puríssima, Maria, Mãe do verdadeiro Deus e Mãe de todo o género humano. Dou-vos graças por terdes pedido um templo no lugar onde aparecestes, para testemunhar o vosso amor, a vossa compaixão, o vosso auxílio e a vossa proteção a todos os que vos amam, confiam em vós e invocam o vosso socorro."
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe da al beato Juan Diego la imagen milagrosa de sí misma impresa en su manto.",
+        "en": "Our Lady of Guadalupe gives Blessed Juan Diego the miraculous picture of herself imprinted on his mantle.",
+        "pt": "Nossa Senhora de Guadalupe dá ao beato Juan Diego a imagem milagrosa de si mesma impressa no seu manto."
+      },
+      "meditation": {
+        "es": "Apparition 2",
+        "en": "Aparición 2",
+        "pt": "Aparição 2"
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe se aparece al beato Juan Bernardino, tío de Juan Diego, y lo cura.",
+        "en": "Our Lady of Guadalupe appears to Blessed Juan Bernardino, uncle of Juan Diego, and cures him.",
+        "pt": "Nossa Senhora de Guadalupe aparece ao beato Juan Bernardino, tio de Juan Diego, e o cura."
+      },
+      "meditation": {
+        "es": "Apparition 3",
+        "en": "Aparición 3",
+        "pt": "Aparição 3"
+      }
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 7,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 7,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe se aparece al beato Juan Diego y se revela como la Virgen María, Madre del verdadero Dios.",
+        "en": "Our Lady of Guadalupe appears to Blessed Juan Diego and reveals herself as the Virgin Mary, Mother of the true God.",
+        "pt": "Nossa Senhora de Guadalupe aparece ao beato Juan Diego e revela-se como a Virgem Maria, Mãe do verdadeiro Deus."
+      },
+      "meditation": {
+        "es": "Apparition 4",
+        "en": "Aparición 4",
+        "pt": "Aparição 4"
+      }
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 9,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe, Madre mía, toma en tus manos unidas en oración mis plegarias, peticiones y esperanzas, y preséntalas a Jesús por mí. Recordando el amor y el cuidado que tus manos le prodigaron, no te negará lo que ahora sostienen, aunque venga de mí. Amén.",
+        "en": "Our Lady of Guadalupe, my mother, into your hands joined in prayer, take my prayers, petitions and hopes, and present them to Jesus for me. Remembering the love and care your hands rendered to Him, He will not refuse what they hold now, even though they are from me. Amen.",
+        "pt": "Nossa Senhora de Guadalupe, minha mãe, toma nas tuas mãos unidas em oração as minhas preces, petições e esperanças, e apresenta-as a Jesus por mim. Recordando o amor e o cuidado que as tuas mãos lhe dispensaram, não te recusará o que agora sustentam, embora venha de mim. Amém."
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. La fuente da texto propio completo solo para la primera aparición; en las tres restantes se mantiene la estructura y se usa una acción de gracias breve derivada del mismo texto, anotada aquí para que el coordinador decida.",
+  "image": "guadalupe-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Our Lady of Guadalupe",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap28.htm"
+    }
+  ]
+}

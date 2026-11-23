@@ -1,0 +1,189 @@
+{
+  "id": "lourdes-rosario",
+  "sourceId": "HZ-01",
+  "group": "mary",
+  "title": {
+    "es": "Rosario de la Virgen de Lourdes",
+    "en": "Rosary of Our Lady of Lourdes",
+    "pt": "Terço de Nossa Senhora de Lourdes"
+  },
+  "summary": {
+    "es": "Rosario estándar rezado en comunión con Lourdes y por los enfermos.",
+    "en": "The standard rosary prayed in union with Lourdes and for the sick.",
+    "pt": "O terço padrão rezado em união com Lourdes e pelos doentes."
+  },
+  "instrument": {
+    "es": "Rosario mariano tradicional de 59 cuentas.",
+    "en": "Traditional 59-bead Marian rosary.",
+    "pt": "Terço mariano tradicional de 59 contas."
+  },
+  "when": {
+    "es": "Todos los días a las 15:30 en el santuario de Lourdes; uso libre en comunión con los enfermos.",
+    "en": "Every day at 3:30 pm at the shrine of Lourdes; at any time in union with the sick.",
+    "pt": "Todos os dias às 15h30 no santuário de Lourdes; uso livre em união com os doentes."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "sign_of_the_cross"
+    },
+    {
+      "bead": 0,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 6,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 8,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 10,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 11,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 12,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 13,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 14,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "prayerRef": "glory_be"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Hozana · Rosario de la Virgen de Lourdes",
+      "url": "https://hozana.org/es/oracion/santo-rosario/lourdes"
+    },
+    {
+      "title": "Hozana · Terço de Nossa Senhora de Lourdes (tradução publicada)",
+      "url": "https://hozana.org/pt/oracao/terco/lourdes"
+    }
+  ],
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción publicada por Hozana"
+  },
+  "notes": "Fuente ES: Hozana; la versión PT de los pasos es la publicada por Hozana. La versión PT añade una Salve final que la fuente ES no menciona; no se añade para mantener igual contenido.",
+  "image": "lourdes-rosario",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null
+}
