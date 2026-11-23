@@ -1,5 +1,7 @@
 package com.example.screenshots
 
+import androidx.compose.ui.unit.dp
+import com.example.revealAboveDock
 import android.app.Application
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -70,7 +72,8 @@ class CatechismIndexScreenshotTest(private val identity: DesignLanguage, private
     }
 
     private fun tap(tag: String) {
-        compose.onNodeWithTag(tag, useUnmergedTree = true).performScrollTo().performClick()
+        // Scroll above the floating dock first: a minimal scroll leaves the row under it and the tap opens another tab.
+        compose.revealAboveDock(tag, clearance = 100.dp, useUnmergedTree = true).performClick()
         compose.waitForIdle()
     }
 
@@ -90,12 +93,12 @@ class CatechismIndexScreenshotTest(private val identity: DesignLanguage, private
 
     private fun catechismFlow(prefix: String) {
         waitFor("ccc_index")
-        compose.onNode(hasScrollToNodeAction()).performScrollToNode(hasTestTag("ccc_index"))
+        compose.onNode(hasScrollToNodeAction() and hasAnyAncestor(hasTestTag("catechism_screen"))).performScrollToNode(hasTestTag("ccc_index"))
         capture("${prefix}index_top")
         tap("catechism_part_2"); waitFor("ccc_tree")
         capture("${prefix}part")
         tap("ccc_node_p2s2"); tap("ccc_node_p2s2c1")
-        compose.onNode(hasScrollToNodeAction()).performScrollToNode(hasTestTag("ccc_node_p2s2"))
+        compose.onNode(hasScrollToNodeAction() and hasAnyAncestor(hasTestTag("catechism_screen"))).performScrollToNode(hasTestTag("ccc_node_p2s2"))
         capture("${prefix}index_articles")
         tap("ccc_node_p2s2c1a1"); waitFor("catechism_article_1213")
         waitFor("ccc_breadcrumb")

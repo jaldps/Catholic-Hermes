@@ -126,3 +126,13 @@ La «aclaración posterior» que citas en el REPORT (usar la ilustración en el 
 - **Tests del coordinador sobre la fusión** (`wip/t047-merge`): `Landscape*`, `CompactPrayerGuidesTest`, los de AGENTS.md, `TabletLayoutTest`, `NarrowLargeTextAuditTest`, `Font*`, `WelcomePersonalizationTest` y `MyPathUiTest`. Resultado: **273/274**.
   - Falla `MyPathUiTest.todaySummaryShowsHabitsFidelityPlanAndNovenaAndEachRowOpensItsPlace`, que pasaba 13/13 al integrar T-046.
   - Comprueba si es intermitente o un efecto de L0, y deja la clase en verde.
+
+### Añadido a la revisión 2 · el foco no debe quedar bajo el dock (WCAG 2.4.11)
+
+Al arreglar 9 tests rotos desde T-046 (`181f90c`), se vio que en las identidades con dock flotante (Lumen, Cristal y Tradicional) `bringIntoView` y `performScrollTo` dejan la fila en el borde inferior, **bajo el dock**. El toque cae en el dock.
+
+En la app, lo mismo le pasa al foco de teclado o de TalkBack: el elemento enfocado puede quedar tapado. Va con el punto 1 de la revisión (foco visible).
+
+**Arreglo:** en el andamiaje (`LumenKit.kt`, contenido de las pestañas con dock), un `BringIntoViewSpec` propio, o un margen de desplazamiento igual al alto del dock, para que un elemento que se trae a la vista (por foco o por `bringIntoView`) quede **por encima** del dock.
+
+**Test:** enfocar la última fila de Explorar y comprobar que su borde inferior queda por encima del borde superior del dock. Así, el helper de test `revealAboveDock` (`app/src/test/java/com/example/TestDockClearance.kt`) deja de hacer falta en las pantallas que lo usan.
