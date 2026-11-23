@@ -1,0 +1,694 @@
+[
+  {
+    "id": "alabanzas-maria",
+    "sourceId": "IVE-12",
+    "title": "Coronilla de Alabanzas a María",
+    "existing": null,
+    "queries": [
+      "Assumption of the Virgin Mary Titian painting",
+      "Our Lady Queen of Heaven statue"
+    ],
+    "aliases": [
+      "assumption",
+      "asuncion",
+      "queen of heaven"
+    ],
+    "note": "Si no hay imagen exacta, referencial mariana."
+  },
+  {
+    "id": "almas-purgatorio-coronilla",
+    "sourceId": "IVE-06",
+    "title": "Coronilla a las almas del Purgatorio",
+    "existing": null,
+    "queries": [
+      "Souls in Purgatory painting",
+      "Almas del Purgatorio"
+    ],
+    "aliases": [
+      "purgatory",
+      "purgatorio",
+      "souls",
+      "almas"
+    ],
+    "note": "Si no hay imagen exacta, referencial de los fieles difuntos."
+  },
+  {
+    "id": "cabrini-coronilla",
+    "sourceId": "CD-20",
+    "title": "Coronilla de Santa Francisca Javier Cabrini",
+    "existing": null,
+    "queries": [
+      "Frances Xavier Cabrini",
+      "Mother Cabrini statue"
+    ],
+    "aliases": [
+      "cabrini",
+      "frances xavier"
+    ],
+    "note": ""
+  },
+  {
+    "id": "carmen-coronilla",
+    "sourceId": "CD-12",
+    "title": "Coronilla de Nuestra Señora del Carmen",
+    "existing": "virgen_del_carmen",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "confianza-tribulaciones",
+    "sourceId": "IVE-17",
+    "title": "Corona de confianza en grandes tribulaciones",
+    "existing": "cristo_paciencia",
+    "queries": [],
+    "aliases": [
+      "psalm",
+      "salmo",
+      "trust",
+      "confianza"
+    ],
+    "note": "Imagen referencial de Cristo en la tribulación; la coronilla no tiene imagen propia documentada."
+  },
+  {
+    "id": "conversion-coronilla",
+    "sourceId": "CD-05",
+    "title": "Coronilla de conversión",
+    "existing": "conversion_of_saint_paul_the_apostle",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "corona-san-miguel-raccolta",
+    "sourceId": "APP-ST-MICHAEL",
+    "title": "Corona de San Miguel Arcángel",
+    "existing": null,
+    "queries": [
+      "Saint Michael the Archangel statue",
+      "San Miguel Arcangel estatua"
+    ],
+    "aliases": [
+      "michael",
+      "arcangel",
+      "archangel",
+      "miguel"
+    ],
+    "note": "No usar la imagen de los tres arcángeles: la coronilla es solo San Miguel."
+  },
+  {
+    "id": "coronilla-difuntos-45",
+    "sourceId": "CD-01",
+    "title": "Coronilla por los difuntos",
+    "existing": null,
+    "queries": [
+      "All Souls painting souls purgatory",
+      "Bouguereau Souls in Purgatory"
+    ],
+    "aliases": [
+      "departed",
+      "difuntos",
+      "souls",
+      "almas",
+      "requiem"
+    ],
+    "note": ""
+  },
+  {
+    "id": "coronilla-lagrimas",
+    "sourceId": "CD-34",
+    "title": "Coronilla de Lágrimas",
+    "existing": null,
+    "queries": [
+      "Our Lady of Tears",
+      "Virgen de las Lagrimas"
+    ],
+    "aliases": [
+      "tears",
+      "lagrimas",
+      "lacreme"
+    ],
+    "note": "Si no hay imagen exacta, referencial de la Virgen de los Dolores."
+  },
+  {
+    "id": "coronilla-liberacion",
+    "sourceId": "HZ-02",
+    "title": "Coronilla de liberación",
+    "existing": null,
+    "queries": [
+      "Jesus Christ triumphing over death painting",
+      "Christ the Redeemer statue"
+    ],
+    "aliases": [
+      "liberation",
+      "liberacion",
+      "captive",
+      "cautivos",
+      "christ",
+      "jesus"
+    ],
+    "note": "Si no hay imagen exacta, usar Cristo referencial con anotación."
+  },
+  {
+    "id": "coronilla-san-jose-hozana",
+    "sourceId": "HZ-07",
+    "title": "Coronilla a San José",
+    "existing": null,
+    "queries": [
+      "Saint Joseph with Child Jesus statue",
+      "San Jose con el Nino"
+    ],
+    "aliases": [
+      "joseph",
+      "jose"
+    ],
+    "note": "Elegir San José de Nazaret, no San José de Calasanz."
+  },
+  {
+    "id": "czestochowa-coronilla",
+    "sourceId": "CD-10",
+    "title": "Coronilla de Nuestra Señora de Czestochowa",
+    "existing": "virgen_czestochowa",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "desagravio-maria",
+    "sourceId": "IVE-16",
+    "title": "Coronilla simple de desagravio a María Santísima",
+    "existing": null,
+    "queries": [
+      "Immaculate Heart of Mary",
+      "Virgen de los Dolores"
+    ],
+    "aliases": [
+      "immaculate heart",
+      "inmaculado corazon",
+      "dolores"
+    ],
+    "note": "Si no hay imagen exacta, referencial mariana."
+  },
+  {
+    "id": "dos-corazones-coronilla",
+    "sourceId": "CD-53",
+    "title": "Coronilla de los Dos Corazones",
+    "existing": null,
+    "queries": [
+      "United Hearts of Jesus and Mary",
+      "Sacred Heart Immaculate Heart"
+    ],
+    "aliases": [
+      "hearts",
+      "corazones",
+      "sacred heart"
+    ],
+    "note": ""
+  },
+  {
+    "id": "estrella-mar-coronilla",
+    "sourceId": "CD-15",
+    "title": "Coronilla de Nuestra Señora, Estrella del Mar",
+    "existing": null,
+    "queries": [
+      "Our Lady Star of the Sea statue close up",
+      "Stella Maris Virgin Mary statue"
+    ],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "familia-franciscana-coronilla",
+    "sourceId": "CD-58",
+    "title": "Coronilla de la Familia Franciscana",
+    "existing": "francis_of_assisi",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "fe-coronilla",
+    "sourceId": "CD-08",
+    "title": "Coronilla de Fe",
+    "existing": null,
+    "queries": [
+      "Faith allegory painting",
+      "Virtue of Faith"
+    ],
+    "aliases": [
+      "faith",
+      "fe"
+    ],
+    "note": "Si no hay imagen exacta, alegoría referencial."
+  },
+  {
+    "id": "guadalupe-coronilla",
+    "sourceId": "CD-11",
+    "title": "Coronilla de Nuestra Señora de Guadalupe",
+    "existing": "guadalupe",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "inmaculada-concepcion-coronilla",
+    "sourceId": "CD-42",
+    "title": "Coronilla de la Inmaculada Concepción",
+    "existing": "inmaculada_concepcion",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "inmaculado-corazon-maria",
+    "sourceId": "IVE-08",
+    "title": "Coronilla al Inmaculado Corazón de María",
+    "existing": null,
+    "queries": [
+      "Immaculate Heart of Mary",
+      "Inmaculado Corazon de Maria"
+    ],
+    "aliases": [
+      "immaculate heart",
+      "inmaculado corazon"
+    ],
+    "note": ""
+  },
+  {
+    "id": "jesus-praga-coronilla",
+    "sourceId": "CD-44",
+    "title": "Coronilla del Niño Jesús de Praga",
+    "existing": "nino_jesus_de_praga",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "kateri-coronilla",
+    "sourceId": "CD-25",
+    "title": "Coronilla de Santa Kateri Tekakwitha",
+    "existing": null,
+    "queries": [
+      "Kateri Tekakwitha",
+      "Blessed Kateri Tekakwitha statue"
+    ],
+    "aliases": [
+      "kateri",
+      "tekakwitha"
+    ],
+    "note": ""
+  },
+  {
+    "id": "llagas-cristo-coronilla",
+    "sourceId": "HZ-03",
+    "title": "Coronilla de las llagas de Cristo",
+    "existing": "cinco_llagas",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "lourdes-rosario",
+    "sourceId": "HZ-01",
+    "title": "Rosario de la Virgen de Lourdes",
+    "existing": "lourdes",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "madre-eucaristia-coronilla",
+    "sourceId": "CD-57",
+    "title": "Coronilla a la Madre de la Santísima Eucaristía",
+    "existing": null,
+    "queries": [
+      "Blessed Sacrament adoration monstrance",
+      "Virgin Mary Eucharist painting"
+    ],
+    "aliases": [
+      "eucharist",
+      "eucaristia",
+      "mary",
+      "maria"
+    ],
+    "note": "Si no hay imagen exacta, referencial eucarística."
+  },
+  {
+    "id": "maximiliano-coronilla",
+    "sourceId": "CD-26",
+    "title": "Coronilla de San Maximiliano Kolbe",
+    "existing": "maximilian_mary_raymund_kolbe_priest",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "misericordia-perdon",
+    "sourceId": "CD-09",
+    "title": "Coronilla de Misericordia y Perdón",
+    "existing": "divina_misericordia",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "padre-pio-coronilla",
+    "sourceId": "CD-28",
+    "title": "Coronilla de San Pío de Pietrelcina",
+    "existing": "pius_francesco_forgione_priest",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "pasiones-cristo-rosario",
+    "sourceId": "IVE-15",
+    "title": "Rosario de la Pasión de Jesús",
+    "existing": "cristo_yacente",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "perpetuo-socorro-rosario",
+    "sourceId": "CD-13",
+    "title": "Coronilla de Nuestra Señora del Perpetuo Socorro",
+    "existing": "perpetuo_socorro",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "reina-luz-coronilla",
+    "sourceId": "CD-47",
+    "title": "Coronilla de la Reina de la Luz",
+    "existing": "asuncion",
+    "queries": [
+      "Madonna della Luce painting",
+      "Our Lady of Light statue"
+    ],
+    "aliases": [
+      "queen of light",
+      "regina lucis",
+      "reina de la luz"
+    ],
+    "note": "Imagen referencial mariana; origen de la coronilla no documentado."
+  },
+  {
+    "id": "rosario-difuntos-hozana",
+    "sourceId": "HZ-10",
+    "title": "Rosario por los difuntos",
+    "existing": null,
+    "queries": [
+      "Faithful departed souls painting",
+      "Fieles difuntos"
+    ],
+    "aliases": [
+      "departed",
+      "difuntos",
+      "souls",
+      "almas",
+      "requiem"
+    ],
+    "note": ""
+  },
+  {
+    "id": "rosario-espiritu-santo",
+    "sourceId": "IVE-10",
+    "title": "El Rosario del Espíritu Santo",
+    "existing": null,
+    "queries": [
+      "Descent of the Holy Spirit Pentecost painting",
+      "Holy Spirit dove icon"
+    ],
+    "aliases": [
+      "holy spirit",
+      "espiritu santo",
+      "dove",
+      "paloma",
+      "pentecost"
+    ],
+    "note": ""
+  },
+  {
+    "id": "sagrada-eucaristia-33",
+    "sourceId": "HZ-05",
+    "title": "Coronilla de la Sagrada Eucaristía",
+    "existing": null,
+    "queries": [
+      "Blessed Sacrament monstrance adoration",
+      "Eucharist monstrance"
+    ],
+    "aliases": [
+      "eucharist",
+      "sacrament",
+      "monstrance",
+      "ostensorio",
+      "santisimo"
+    ],
+    "note": ""
+  },
+  {
+    "id": "sagrado-corazon-jesus",
+    "sourceId": "IVE-07",
+    "title": "Coronilla al Sagrado Corazón de Jesús",
+    "existing": "sacred_heart_jesus",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "san-antonio-padua-coronilla",
+    "sourceId": "IVE-14",
+    "title": "Coronilla de San Antonio de Padua",
+    "existing": "anthony_of_padua_priest",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "san-charbel",
+    "sourceId": "IVE-13",
+    "title": "Coronilla de San Charbel",
+    "existing": "sharbel_makhluf_priest",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "san-gabriel-coronilla",
+    "sourceId": "CD-21",
+    "title": "Coronilla de San Gabriel",
+    "existing": null,
+    "queries": [
+      "Archangel Gabriel statue",
+      "San Gabriel arcangel estatua"
+    ],
+    "aliases": [
+      "gabriel",
+      "archangel",
+      "arcangel"
+    ],
+    "note": ""
+  },
+  {
+    "id": "san-judas-coronilla",
+    "sourceId": "CD-24",
+    "title": "Coronilla de San Judas",
+    "existing": null,
+    "queries": [
+      "Saint Jude Thaddeus statue",
+      "San Judas Tadeo estatua"
+    ],
+    "aliases": [
+      "jude",
+      "judas",
+      "thaddeus",
+      "tadeo"
+    ],
+    "note": ""
+  },
+  {
+    "id": "san-patricio-coronilla",
+    "sourceId": "CD-29",
+    "title": "Coronilla de San Patricio",
+    "existing": "patrick_of_ireland_bishop",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "san-rafael-coronilla",
+    "sourceId": "CD-31",
+    "title": "Coronilla de San Rafael Arcángel",
+    "existing": null,
+    "queries": [
+      "Archangel Raphael statue close up",
+      "San Raffaele Arcangelo statua"
+    ],
+    "aliases": [
+      "raphael",
+      "rafael",
+      "archangel",
+      "arcangel"
+    ],
+    "note": ""
+  },
+  {
+    "id": "sangre-preciosa-corona",
+    "sourceId": "IVE-09",
+    "title": "Corona a la Sangre Preciosa de Jesús",
+    "existing": "preciosa_sangre",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "santa-ana-coronilla",
+    "sourceId": "CD-17",
+    "title": "Coronilla de Santa Ana",
+    "existing": null,
+    "queries": [
+      "Saint Anne with Virgin Mary statue",
+      "Santa Ana con la Virgen"
+    ],
+    "aliases": [
+      "anne",
+      "anna",
+      "ana"
+    ],
+    "note": "Elegir Santa Ana, no San Joaquín."
+  },
+  {
+    "id": "santa-dimpna-coronilla",
+    "sourceId": "CD-19",
+    "title": "Coronilla de Santa Dimpna",
+    "existing": null,
+    "queries": [
+      "Saint Dymphna statue",
+      "Sint Dymphna"
+    ],
+    "aliases": [
+      "dymphna",
+      "dimpna"
+    ],
+    "note": ""
+  },
+  {
+    "id": "santa-faz-coronilla",
+    "sourceId": "CD-37",
+    "title": "Coronilla de la Santa Faz",
+    "existing": "santo_rostro",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "santa-filomena-coronilla",
+    "sourceId": "CD-30",
+    "title": "Coronilla de Santa Filomena",
+    "existing": null,
+    "queries": [
+      "Saint Philomena statue shrine",
+      "Santa Filomena statua"
+    ],
+    "aliases": [
+      "philomena",
+      "filomena"
+    ],
+    "note": ""
+  },
+  {
+    "id": "santa-gertrudis-coronilla",
+    "sourceId": "CD-22",
+    "title": "Coronilla de Santa Gertrudis",
+    "existing": "gertrude_the_great_virgin",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "santa-rita-coronilla",
+    "sourceId": "CD-32",
+    "title": "Coronilla de Santa Rita",
+    "existing": "rita_of_cascia_religious",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "santisima-trinidad-coronilla",
+    "sourceId": "CD-45",
+    "title": "Coronilla de la Santísima Trinidad",
+    "existing": null,
+    "queries": [
+      "Holy Trinity painting",
+      "Santisima Trinidad pintura"
+    ],
+    "aliases": [
+      "trinity",
+      "trinidad"
+    ],
+    "note": ""
+  },
+  {
+    "id": "santisimo-meditar-adorar",
+    "sourceId": "HZ-04",
+    "title": "Coronilla para meditar y adorar al Santísimo Sacramento",
+    "existing": "santisimo_sacramento",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "santo-nombre-coronilla",
+    "sourceId": "CD-40",
+    "title": "Coronilla del Santo Nombre",
+    "existing": "santisimo_nombre_de_jesus",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "siete-dolores-corona",
+    "sourceId": "IVE-11",
+    "title": "Corona de los Siete Dolores",
+    "existing": "virgen_dolores",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "teresita-24-glorias",
+    "sourceId": "HZ-08",
+    "title": "24 Glorias a Santa Teresita",
+    "existing": "therese_of_the_child_jesus_and_the_holy_face_of_lisieux_virgin",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  },
+  {
+    "id": "unidad-coronilla",
+    "sourceId": "CD-55",
+    "title": "Coronilla de Unidad",
+    "existing": "cristo_rey",
+    "queries": [
+      "The Last Supper painting",
+      "Jesus Christ painting"
+    ],
+    "aliases": [
+      "unity",
+      "unidad"
+    ],
+    "note": "Imagen referencial de Cristo Rey para la intención de unidad; la coronilla no tiene imagen propia documentada."
+  },
+  {
+    "id": "via-crucis-coronilla",
+    "sourceId": "CD-54",
+    "title": "Coronilla del Vía Crucis",
+    "existing": "via_crucis",
+    "queries": [],
+    "aliases": [],
+    "note": ""
+  }
+]
