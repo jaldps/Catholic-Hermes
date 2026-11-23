@@ -800,7 +800,7 @@ fun HomeScreen(
                     horizontalArrangement = androidx.compose.foundation.layout.Arrangement.SpaceBetween,
                     verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(4.dp)
                 ) {
-                    AppPrimaryCapsule(
+                    AppSecondaryCapsule(
                         label = strings("Leer respuesta", "Read answer", "Ler resposta"),
                         onClick = { onOpenQuestions(dailyQuestionIndex) },
                         fillWidth = false,
@@ -1036,7 +1036,7 @@ private fun FidelityCard(
             }
         }
         Spacer(Modifier.height(12.dp))
-        AppPrimaryCapsule(strings("Ver mis prácticas", "View my practices", "Ver minhas práticas"), onClick = onOpenHabits, tag = "home_fidelity_open_habits")
+        AppSecondaryCapsule(strings("Ver mis prácticas", "View my practices", "Ver minhas práticas"), onClick = onOpenHabits, tag = "home_fidelity_open_habits")
         Spacer(Modifier.height(4.dp))
         AppListRow(
             title = if (largeLabels) strings("Caídas y victorias", "Falls and victories", "Quedas e vitórias") else strings("Tentaciones y victorias", "Temptations and victories", "Tentações e vitórias"),

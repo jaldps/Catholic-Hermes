@@ -157,6 +157,7 @@ import com.example.ui.design.AppTransportBar
 import com.example.ui.design.GroupPosition
 import com.example.ui.design.LocalPreferencesStore
 import com.example.ui.design.ReadingSheetLabels
+import com.example.ui.design.appDockInset
 import com.example.ui.design.appScreenInsets
 import com.example.ui.design.groupedItem
 import com.example.ui.design.lumenGlass
@@ -2687,7 +2688,7 @@ private fun NovenaDayView(
         Modifier
             .fillMaxSize()
             .testTag("novena_day_reader"),
-        contentPadding = PaddingValues(bottom = appScreenInsets().calculateBottomPadding() + 40.dp)
+        contentPadding = PaddingValues(bottom = appDockInset() + 40.dp)
     ) {
         item(key = "hero") {
             RemoteArtHeader(

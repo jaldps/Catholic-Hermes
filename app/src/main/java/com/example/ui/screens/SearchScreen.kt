@@ -39,6 +39,7 @@ import com.example.ui.design.AppListRow
 import com.example.ui.design.AppSearchBar
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.appDockInset
 import com.example.ui.design.appScreenInsets
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -114,7 +115,7 @@ fun SearchScreen(
     val gutter = Modifier.padding(horizontal = design.spacing.gutter)
 
     LazyColumn(
-        Modifier.fillMaxSize().padding(bottom = appScreenInsets().calculateBottomPadding()).testTag("search_screen"),
+        Modifier.fillMaxSize().padding(bottom = appDockInset()).testTag("search_screen"),
         contentPadding = PaddingValues(bottom = 32.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {

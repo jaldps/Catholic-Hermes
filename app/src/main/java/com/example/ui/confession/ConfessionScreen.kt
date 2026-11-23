@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
 import com.example.data.prefs.UserPreferencesStore
 import com.example.data.repository.*
+import com.example.ui.design.appDockInset
 import com.example.ui.design.*
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -75,7 +76,7 @@ fun ConfessionScreen(
     val focus = LocalFocusManager.current
     fun basis(text: String) = if (language == AppLanguage.EN) text.replaceFirst("CIC", "CCC") else text
 
-    Column(Modifier.fillMaxSize().padding(bottom = appScreenInsets().calculateBottomPadding()).imePadding()) {
+    Column(Modifier.fillMaxSize().padding(bottom = appDockInset()).imePadding()) {
     LazyColumn(
         Modifier.weight(1f).fillMaxWidth().testTag("confession_screen"),
         contentPadding = PaddingValues(bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(14.dp)

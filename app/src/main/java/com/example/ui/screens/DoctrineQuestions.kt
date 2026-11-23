@@ -722,7 +722,7 @@ private fun QuestionPage(
         }
 
         item(key = "pray") {
-            Spacer(Modifier.height(36.dp))
+            Spacer(Modifier.height(24.dp))
             PrayNow(language, prayerName) { nav.openPrayer(prayerId) }
             BlockGap(28.dp)
         }
