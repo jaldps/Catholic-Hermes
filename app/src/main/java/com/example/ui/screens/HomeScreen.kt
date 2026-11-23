@@ -94,6 +94,7 @@ import com.example.data.repository.BibleData
 import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.data.temptation.TemptationStore
 import com.example.data.verse.DailyVerseRotation
+import com.example.ui.components.ContentLoadNotice
 import com.example.ui.components.TextFormat
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppCategoryTile
@@ -237,7 +238,8 @@ fun HomeScreen(
     val bundledFirst = dailyReading.firstReadingRef.takeIf { it.isNotBlank() }
     val isoToday = now.toLocalDate().toString()
     val injectedLoader = com.example.data.news.LocalReadingsLoader.current
-    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday) {
+    var missalRetry by rememberSaveable { mutableIntStateOf(0) }
+    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday, missalRetry) {
         produceState<ReadingsResult?>(null) {
             value = injectedLoader?.invoke(currentLanguage, isoToday)
                 ?: VaticanGospelFetcher(cache = com.example.data.news.VaticanReadingsCache.forContext(context))
@@ -245,6 +247,10 @@ fun HomeScreen(
         }
     }
     val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
+    // Vatican failed (no network and no cached copy for the day) and the bundled
+    // lectionary has neither a Gospel nor a first reading: the card has nothing to show.
+    val missalFailed = vaticanResult is ReadingsResult.Failure &&
+        bundledGospel == null && bundledFirst.isNullOrBlank()
     val feedGospel = vatican?.sections?.lastOrNull()
     val feedFirst = vatican?.sections?.firstOrNull()
 
@@ -465,140 +471,150 @@ fun HomeScreen(
                             .ifBlank { if (!homilyFirstLine.isNullOrBlank()) strings("Reflexión", "Reflection", "Reflexão") else "" }
                     }
                     CardHeader(strings("Liturgia de hoy", "Today's liturgy", "Liturgia de hoje"), headerRef)
-                    val sourceLabel = when {
-                        bundledGospel != null -> strings("Escritura para la reflexión", "Scripture for reflection", "Escritura para reflexão")
-                        feedGospel?.text?.isNotBlank() == true -> "Vatican News"
-                        else -> ""
-                    }
-                    if (sourceLabel.isNotBlank()) {
-                        Spacer(Modifier.height(6.dp))
-                        Text(sourceLabel, style = styles.footnote, color = palette.textSecondary)
-                    }
-                    Spacer(Modifier.height(12.dp))
-                    if (gospelPreview != null) {
-                        ExcerptText(
-                            text = gospelPreview,
-                            style = styles.reading,
-                            color = palette.textPrimary,
-                            maxLines = com.example.ui.design.appMaxLines(3),
-                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                    if (missalFailed) {
+                        Spacer(Modifier.height(8.dp))
+                        ContentLoadNotice(
+                            language = currentLanguage,
+                            failed = true,
+                            retry = { missalRetry++ },
+                            modifier = Modifier.testTag("daily_missal_error")
                         )
-                    } else if (!homilyFirstLine.isNullOrBlank()) {
-                        ExcerptText(homilyFirstLine, styles.reading, palette.textPrimary, 3)
-                    }
-
-                    // Quiet rows: first reading (information), reflection (disclosure), resume.
-                    val showFirstRow = gospelPreview != null && firstReadingReference.isNotBlank()
-                    if (showFirstRow || meditation != null || resumeReading != null) Spacer(Modifier.height(14.dp))
-                    if (showFirstRow) {
-                        CardHairline()
-                        Row(
-                            Modifier
-                                .fillMaxWidth()
-                                .heightIn(min = 48.dp)
-                                .clickable(
-                                    interactionSource = remember { MutableInteractionSource() },
-                                    indication = null,
-                                    role = Role.Button,
-                                    onClick = onNavigateToMissal
-                                )
-                                .testTag("home_first_reading_row"),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Text(
-                                text = listOf(strings("Primera lectura", "First reading", "Primeira leitura"), TextFormat.ranges(firstReadingReference))
-                                    .joinToString(" · "),
-                                style = styles.callout,
-                                color = palette.textPrimary,
-                                maxLines = com.example.ui.design.appMaxLines(1),
-                                overflow = TextOverflow.Ellipsis,
-                                modifier = Modifier.weight(1f)
-                            )
-                            AppChevron(tint = palette.inkQuiet)
+                    } else {
+                        val sourceLabel = when {
+                            bundledGospel != null -> strings("Escritura para la reflexión", "Scripture for reflection", "Escritura para reflexão")
+                            feedGospel?.text?.isNotBlank() == true -> "Vatican News"
+                            else -> ""
                         }
-                    }
-                    if (meditation != null) {
-                        CardHairline()
-                        DisclosureRow(
-                            label = strings("Meditación del día", "Today's reflection", "Meditação do dia"),
-                            expanded = meditationExpanded,
-                            onClick = { meditationExpanded = !meditationExpanded },
-                            modifier = Modifier.testTag("home_continue_row").semantics {
-                                stateDescription = if (meditationExpanded) strings("Expandida", "Expanded", "Expandida")
-                                else strings("Contraída", "Collapsed", "Recolhida")
-                            }
-                        )
-                        AnimatedVisibility(
-                            visible = meditationExpanded,
-                            enter = expandVertically(tween(design.motion.mediumMillis, easing = design.motion.standardEasing)) +
-                                fadeIn(tween(design.motion.fastMillis)),
-                            exit = shrinkVertically(tween(design.motion.fastMillis, easing = design.motion.standardEasing)) +
-                                fadeOut(tween(design.motion.fastMillis))
-                        ) {
-                            Text(
-                                text = meditation,
+                        if (sourceLabel.isNotBlank()) {
+                            Spacer(Modifier.height(6.dp))
+                            Text(sourceLabel, style = styles.footnote, color = palette.textSecondary)
+                        }
+                        Spacer(Modifier.height(12.dp))
+                        if (gospelPreview != null) {
+                            ExcerptText(
+                                text = gospelPreview,
                                 style = styles.reading,
                                 color = palette.textPrimary,
-                                modifier = Modifier.padding(top = 4.dp, bottom = 12.dp).widthIn(max = design.spacing.readingMaxWidth)
+                                maxLines = com.example.ui.design.appMaxLines(3),
+                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                             )
+                        } else if (!homilyFirstLine.isNullOrBlank()) {
+                            ExcerptText(homilyFirstLine, styles.reading, palette.textPrimary, 3)
                         }
-                    }
-                    if (resumeReading != null) {
-                        CardHairline()
-                        Row(
-                            Modifier
-                                .fillMaxWidth()
-                                .heightIn(min = 52.dp)
-                                .clickable(
-                                    interactionSource = remember { MutableInteractionSource() },
-                                    indication = null,
-                                    role = Role.Button,
-                                    onClick = onNavigateToBible
-                                )
-                                .testTag("home_continue_reading"),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Icon(Icons.Outlined.Bookmark, null, tint = palette.textPrimary, modifier = Modifier.size(20.dp))
-                            Spacer(Modifier.width(12.dp))
-                            Column(Modifier.weight(1f)) {
-                                Text(
-                                    strings("Seguir leyendo", "Continue reading", "Continuar a ler"),
-                                    style = styles.callout,
-                                    color = palette.textPrimary
-                                )
-                                Text(resumeReading, style = styles.footnote, color = palette.textSecondary)
-                            }
-                            AppChevron(tint = palette.inkQuiet)
-                        }
-                    }
 
-                    // One primary action, with a glass play circle beside it.
-                    Spacer(Modifier.height(16.dp))
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        AppPrimaryCapsule(
-                            label = strings("Ver la liturgia de hoy", "Open today’s liturgy", "Ver a liturgia de hoje"),
-                            onClick = onNavigateToMissal,
-                            fillWidth = false,
-                            tag = "read_mass_full_button"
-                        )
-                        if (ttsManager != null && gospelExcerpt != null) {
-                            Spacer(Modifier.width(12.dp))
-                            AppRoundPlayButton(
-                                playing = listeningToGospel && ttsPlaying,
-                                onClick = {
-                                    if (listeningToGospel && ttsPlaying) {
-                                        ttsManager.stop(); listeningToGospel = false
-                                    } else {
-                                        ttsManager.speakSingle(
-                                            cleanScripture(gospelExcerpt, currentLanguage),
-                                            title = strings("Evangelio de hoy", "Today’s Gospel", "Evangelho de hoje")
-                                        ); listeningToGospel = true
-                                    }
-                                },
-                                contentDescription = strings("Escuchar el Evangelio", "Listen to the Gospel", "Ouvir o Evangelho"),
-                                tag = "home_gospel_listen"
-                            )
+                        // Quiet rows: first reading (information), reflection (disclosure), resume.
+                        val showFirstRow = gospelPreview != null && firstReadingReference.isNotBlank()
+                        if (showFirstRow || meditation != null || resumeReading != null) Spacer(Modifier.height(14.dp))
+                        if (showFirstRow) {
+                            CardHairline()
+                            Row(
+                                Modifier
+                                    .fillMaxWidth()
+                                    .heightIn(min = 48.dp)
+                                    .clickable(
+                                        interactionSource = remember { MutableInteractionSource() },
+                                        indication = null,
+                                        role = Role.Button,
+                                        onClick = onNavigateToMissal
+                                    )
+                                    .testTag("home_first_reading_row"),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Text(
+                                    text = listOf(strings("Primera lectura", "First reading", "Primeira leitura"), TextFormat.ranges(firstReadingReference))
+                                        .joinToString(" · "),
+                                    style = styles.callout,
+                                    color = palette.textPrimary,
+                                    maxLines = com.example.ui.design.appMaxLines(1),
+                                    overflow = TextOverflow.Ellipsis,
+                                    modifier = Modifier.weight(1f)
+                                )
+                                AppChevron(tint = palette.inkQuiet)
+                            }
                         }
+                        if (meditation != null) {
+                            CardHairline()
+                            DisclosureRow(
+                                label = strings("Meditación del día", "Today's reflection", "Meditação do dia"),
+                                expanded = meditationExpanded,
+                                onClick = { meditationExpanded = !meditationExpanded },
+                                modifier = Modifier.testTag("home_continue_row").semantics {
+                                    stateDescription = if (meditationExpanded) strings("Expandida", "Expanded", "Expandida")
+                                    else strings("Contraída", "Collapsed", "Recolhida")
+                                }
+                            )
+                            AnimatedVisibility(
+                                visible = meditationExpanded,
+                                enter = expandVertically(tween(design.motion.mediumMillis, easing = design.motion.standardEasing)) +
+                                    fadeIn(tween(design.motion.fastMillis)),
+                                exit = shrinkVertically(tween(design.motion.fastMillis, easing = design.motion.standardEasing)) +
+                                    fadeOut(tween(design.motion.fastMillis))
+                            ) {
+                                Text(
+                                    text = meditation,
+                                    style = styles.reading,
+                                    color = palette.textPrimary,
+                                    modifier = Modifier.padding(top = 4.dp, bottom = 12.dp).widthIn(max = design.spacing.readingMaxWidth)
+                                )
+                            }
+                        }
+                        if (resumeReading != null) {
+                            CardHairline()
+                            Row(
+                                Modifier
+                                    .fillMaxWidth()
+                                    .heightIn(min = 52.dp)
+                                    .clickable(
+                                        interactionSource = remember { MutableInteractionSource() },
+                                        indication = null,
+                                        role = Role.Button,
+                                        onClick = onNavigateToBible
+                                    )
+                                    .testTag("home_continue_reading"),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(Icons.Outlined.Bookmark, null, tint = palette.textPrimary, modifier = Modifier.size(20.dp))
+                                Spacer(Modifier.width(12.dp))
+                                Column(Modifier.weight(1f)) {
+                                    Text(
+                                        strings("Seguir leyendo", "Continue reading", "Continuar a ler"),
+                                        style = styles.callout,
+                                        color = palette.textPrimary
+                                    )
+                                    Text(resumeReading, style = styles.footnote, color = palette.textSecondary)
+                                }
+                                AppChevron(tint = palette.inkQuiet)
+                            }
+                        }
+
+                        // One primary action, with a glass play circle beside it.
+                        Spacer(Modifier.height(16.dp))
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            AppPrimaryCapsule(
+                                label = strings("Ver la liturgia de hoy", "Open today’s liturgy", "Ver a liturgia de hoje"),
+                                onClick = onNavigateToMissal,
+                                fillWidth = false,
+                                tag = "read_mass_full_button"
+                            )
+                            if (ttsManager != null && gospelExcerpt != null) {
+                                Spacer(Modifier.width(12.dp))
+                                AppRoundPlayButton(
+                                    playing = listeningToGospel && ttsPlaying,
+                                    onClick = {
+                                        if (listeningToGospel && ttsPlaying) {
+                                            ttsManager.stop(); listeningToGospel = false
+                                        } else {
+                                            ttsManager.speakSingle(
+                                                cleanScripture(gospelExcerpt, currentLanguage),
+                                                title = strings("Evangelio de hoy", "Today’s Gospel", "Evangelho de hoje")
+                                            ); listeningToGospel = true
+                                        }
+                                    },
+                                    contentDescription = strings("Escuchar el Evangelio", "Listen to the Gospel", "Ouvir o Evangelho"),
+                                    tag = "home_gospel_listen"
+                                )
+                            }
+                    }
                     }
                 }
             }
