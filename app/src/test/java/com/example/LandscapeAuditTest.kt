@@ -49,7 +49,10 @@ class LandscapeAuditTest(private val identity: DesignLanguage, private val langu
     @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
     private var fixture: LandscapeRealAppFixture? = null
     private val findings = linkedSetOf<String>()
-    private val essentialByArea = landscapeRoots.associateWith { emptyList<String>() }
+    private val essentialByArea = landscapeRoots.associateWith { emptyList<String>() } +
+        (AppDestination.ROSARY to listOf("prayer_bead_counter", "rosary_hero_title", "current_prayer_title",
+            "prev_bead_button", "toggle_prayer_audio_button", "next_bead_button", "rosary_options_button",
+            "prayer_instructions_toggle", "page_dots"))
     private fun all() = compose.onAllNodes(SemanticsMatcher("any node") { true }, useUnmergedTree = true).fetchSemanticsNodes(false)
     private fun name(node: SemanticsNode) = generateSequence(node) { it.parent }.firstNotNullOfOrNull { it.config.getOrNull(SemanticsProperties.TestTag) }
         ?: node.config.getOrNull(SemanticsProperties.Text)?.joinToString { it.text }?.take(70).orEmpty()
@@ -106,11 +109,31 @@ class LandscapeAuditTest(private val identity: DesignLanguage, private val langu
             texts.filter { it.config.getOrNull(SemanticsProperties.Heading) != null }.forEach { heading ->
                 val next = texts.filter { it.id != heading.id && panel(it) == panel(heading) && it.boundsInRoot.top >= heading.boundsInRoot.bottom - 1f }
                     .minByOrNull { it.boundsInRoot.top }
-                if (next != null && LandscapeAuditRules.verticalGap(heading.boundsInRoot.bottom / 2f, next.boundsInRoot.top / 2f))
+                // A sacred painting is content between the context title and its fruit, not empty space.
+                val paintingBetween = destination == AppDestination.ROSARY && next != null && nodes.any {
+                    it.config.getOrNull(SemanticsProperties.TestTag) in listOf("rosary_hero_photo", "mercy_hero_photo") &&
+                        it.boundsInRoot.top >= heading.boundsInRoot.bottom - 1f && it.boundsInRoot.bottom <= next.boundsInRoot.top + 1f
+                }
+                if (next != null && !paintingBetween && LandscapeAuditRules.verticalGap(heading.boundsInRoot.bottom / 2f, next.boundsInRoot.top / 2f))
                     report(area, LandscapeIssue.VERTICAL_GAP, name(heading), "gap=${(next.boundsInRoot.top - heading.boundsInRoot.bottom) / 2f}")
             }
             val visible = nodes.mapNotNull { it.config.getOrNull(SemanticsProperties.TestTag) }.toSet()
-            LandscapeAuditRules.belowFold(essentialByArea.getValue(destination), visible).forEach { report(area, LandscapeIssue.ESSENTIAL_BELOW_FOLD, it, "area target not visible") }
+            val mercy = "next_mercy_step_button" in visible
+            val required = essentialByArea.getValue(destination).map { tag -> if (!mercy) tag else when (tag) {
+                "prayer_bead_counter" -> "mercy_step_counter"
+                "rosary_hero_title" -> "mercy_hero_title"
+                "prev_bead_button" -> "prev_mercy_step_button"
+                "next_bead_button" -> "next_mercy_step_button"
+                "toggle_prayer_audio_button" -> "toggle_mercy_audio_button"
+                else -> tag
+            } }
+            val fullyVisible = if (destination != AppDestination.ROSARY) visible else nodes.filter { node ->
+                val b = dp(node.boundsInRoot)
+                val full = dp(Rect(node.positionInRoot, Size(node.size.width.toFloat(), node.size.height.toFloat())))
+                b.top >= safe.top - .5f && b.bottom <= safe.bottom + .5f && b.left >= safe.left - .5f && b.right <= safe.right + .5f &&
+                    abs(b.width - full.width) < 1f && abs(b.height - full.height) < 1f
+            }.mapNotNull { it.config.getOrNull(SemanticsProperties.TestTag) }.toSet()
+            LandscapeAuditRules.belowFold(required, fullyVisible).forEach { report(area, LandscapeIssue.ESSENTIAL_BELOW_FOLD, it, "area target not visible") }
         }
     }
 
@@ -149,6 +172,25 @@ class LandscapeAuditTest(private val identity: DesignLanguage, private val langu
         assertEquals("L0 hard findings:\n${hard.joinToString("\n")}", emptyList<String>(), hard)
         println("LANDSCAPE AUDIT ${identity.id} ${language.code} ${width}x$height $scale: ${findings.size} advisory, ${hard.size} hard findings")
     }
+    @Test fun rosaryEssentialsRespectInsetsAndStayVisible() {
+        landscapeViewport(compose, compose.activity, width, height)
+        val resources = LandscapeRealAppFixture(ApplicationProvider.getApplicationContext<Application>(), language).also { fixture = it }
+        compose.setContent { resources.Content(AppDestination.ROSARY, identity, scale) }
+        val variants = mutableListOf<Pair<String?, String?>>(null to null)
+        if (identity == DesignLanguage.APPLE && language == AppLanguage.ES && scale == 1f)
+            variants += listOf("left" to null, "right" to null, null to "right", null to "left")
+        for ((cutout, navbar) in variants) {
+            compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, height, cutout = cutout, navbar = navbar) }; compose.waitForIdle()
+            sample(AppDestination.ROSARY, cutout, navbar, "rosary")
+            compose.onNodeWithText(if (language == AppLanguage.ES) "Coronilla" else "Coroinha").performClick()
+            sample(AppDestination.ROSARY, cutout, navbar, "chaplet")
+            compose.onNodeWithText(if (language == AppLanguage.ES) "Rosario" else "Terço").performClick()
+        }
+        val output = File("build/audit/l1_${identity.id.lowercase()}_${language.code}_${width}x${height}_${(scale * 100).toInt()}.tsv")
+        output.parentFile!!.mkdirs(); output.writeText(findings.joinToString("\n"))
+        assertEquals("L1 findings:\n${findings.joinToString("\n")}", emptyList<String>(), findings.toList())
+    }
+
     companion object {
         @JvmStatic @ParameterizedRobolectricTestRunner.Parameters(name = "{0}-{1}-{2}x{3}-{4}")
         fun matrix(): List<Array<Any>> = listOf(DesignLanguage.APPLE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY).flatMap { identity ->

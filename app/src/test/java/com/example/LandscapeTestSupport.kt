@@ -37,12 +37,12 @@ internal class LandscapeRealAppFixture(context: Application, private val languag
     private val store = UserPreferencesStore(context)
     init { runBlocking { store.setLanguage(language) } }
 
-    @Composable fun Content(destination: AppDestination, identity: DesignLanguage, scale: Float = 1f) {
+    @Composable fun Content(destination: AppDestination, identity: DesignLanguage, scale: Float = 1f, dark: Boolean = false, opaque: Boolean = false) {
         val prefs = UserPreferences(language = language, designLanguage = identity.id,
-            themePreset = UserPreferences.DEFAULT_THEME_PRESET, darkModeSetting = "LIGHT", fontFamilyChoice = UserPreferences.DEFAULT_FONT_FAMILY,
+            themePreset = UserPreferences.DEFAULT_THEME_PRESET, darkModeSetting = if (dark) "DARK" else "LIGHT", fontFamilyChoice = UserPreferences.DEFAULT_FONT_FAMILY,
             fontSizeScale = scale, audioNarrationSpeed = 1f, activeBibleTranslationId = "bundled", isFullCccDownloaded = false,
-            hasChosenLanguage = true, reduceMotion = true)
-        SanctaFidesTheme(designLanguage = identity.id, darkModeSetting = "LIGHT", fontScale = scale, reduceMotion = true) {
+            hasChosenLanguage = true, reduceMotion = true, reduceTransparency = opaque)
+        SanctaFidesTheme(designLanguage = identity.id, darkModeSetting = if (dark) "DARK" else "LIGHT", fontScale = scale, reduceMotion = true, reduceTransparency = opaque) {
             CompositionLocalProvider(LocalInspectionMode provides true) { MainApp(repository, database.dao(), narrator, store, prefs, initialDestination = destination) }
         }
     }

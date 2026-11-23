@@ -3,19 +3,30 @@ package com.example.ui.components
 import android.view.HapticFeedbackConstants
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.indication
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.focusable
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.input.key.*
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -31,6 +42,10 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.semantics.ProgressBarRangeInfo
+import androidx.compose.ui.semantics.progressBarRangeInfo
+import androidx.compose.ui.semantics.setProgress
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.platform.LocalView
@@ -249,8 +264,13 @@ fun BeadReel(
     modifier: Modifier = Modifier,
     subStepCount: Int = 1,
     subStepIndex: Int = 0,
-    height: Dp = 70.dp
+    height: Dp = 70.dp,
+    orientation: Orientation = Orientation.Horizontal
 ) {
+    if (orientation == Orientation.Vertical) {
+        VerticalBeadReel(beads, activeBead, onSelectBead, modifier, subStepCount, subStepIndex)
+        return
+    }
     if (beads.isEmpty()) return
     val inks = pearlInks()
     val density = LocalDensity.current
@@ -606,6 +626,109 @@ fun RosaryLoopMap(
                     drawCircle(inks.ring, rr, c, style = Stroke(2.dp.toPx()))
                 }
             }
+        }
+    }
+}
+
+/** A single adjustable control; the drawn 24 dp beads are not separate tap targets. */
+@Composable
+private fun VerticalBeadReel(beads: List<BeadKind>, active: Int, onSelect: (Int) -> Unit,
+    modifier: Modifier, subSteps: Int, subIndex: Int) {
+    if (beads.isEmpty()) return
+    val inks = pearlInks()
+    val view = LocalView.current
+    val select by rememberUpdatedState(onSelect)
+    val target = active.coerceIn(beads.indices)
+    val current by rememberUpdatedState(target)
+    var position by remember { mutableFloatStateOf(target.toFloat()) }
+    LaunchedEffect(target) { position = target.toFloat() }
+    val focus = remember { MutableInteractionSource() }
+    Canvas(modifier.fillMaxSize().clipToBounds()
+        .indication(focus, com.example.ui.design.appFocusRing(focus, androidx.compose.foundation.shape.RoundedCornerShape(8.dp)))
+        .onKeyEvent { key ->
+            if (key.type != KeyEventType.KeyDown) false else when (key.key) {
+                Key.DirectionUp -> { select((current + 1).coerceAtMost(beads.lastIndex)); true }
+                Key.DirectionDown -> { select((current - 1).coerceAtLeast(0)); true }
+                else -> false
+            }
+        }.semantics {
+        progressBarRangeInfo = ProgressBarRangeInfo(target.toFloat(), 0f..beads.lastIndex.toFloat(), (beads.size - 2).coerceAtLeast(0))
+        setProgress { requested ->
+            if (!requested.isFinite()) false else { select(requested.roundToInt().coerceIn(beads.indices)); true }
+        }
+    }.focusable(interactionSource = focus).pointerInput(beads) {
+        val pitch = 24.dp.toPx()
+        val halfTarget = 22.dp.toPx()
+        awaitEachGesture {
+            val down = awaitFirstDown(requireUnconsumed = false)
+            val origin = current.toFloat()
+            var dragging = false
+            var cancelled = false
+            var tick = current
+            var pressed = true
+            while (pressed) {
+                val event = awaitPointerEvent()
+                val change = event.changes.firstOrNull { it.id == down.id }
+                if (change == null || (change.isConsumed && !dragging)) { cancelled = true; break }
+                val distance = change.position.y - down.position.y
+                if (kotlin.math.abs(distance) > viewConfiguration.touchSlop) dragging = true
+                if (dragging) {
+                    change.consume()
+                    position = (origin - distance / pitch).coerceIn(0f, beads.lastIndex.toFloat())
+                    val nextTick = position.roundToInt()
+                    if (nextTick != tick) {
+                        // One tick for every crossed bead, even in a fast drag.
+                        repeat(kotlin.math.abs(nextTick - tick)) { view.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK) }
+                        tick = nextTick
+                    }
+                }
+                pressed = change.pressed
+            }
+            if (!cancelled) {
+                val destination = if (dragging) position.roundToInt() else when {
+                    down.position.y < size.height / 2f - halfTarget -> current - 1
+                    down.position.y > size.height / 2f + halfTarget -> current + 1
+                    else -> current
+                }.coerceIn(beads.indices)
+                position = destination.toFloat()
+                if (destination != current) {
+                    if (!dragging) view.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK)
+                    select(destination)
+                }
+            } else position = current.toFloat()
+        }
+    }) {
+        val pitch = 24.dp.toPx()
+        val x = size.width / 2f - 3.dp.toPx()
+        val centre = size.height / 2f
+        fun y(i: Int) = centre + (i - position) * pitch
+        fun opacity(y: Float) = (minOf(y, size.height - y) / 20.dp.toPx()).coerceIn(0f, 1f)
+        for (i in 0 until beads.lastIndex) {
+            val a = y(i); val b = y(i + 1)
+            if (b < 0 || a > size.height) continue
+            drawLine(if (i < position) inks.toldThread else inks.thread,
+                Offset(x, a), Offset(x, b), 1.dp.toPx(), StrokeCap.Round)
+        }
+        beads.indices.forEach { i ->
+            val y = y(i)
+            if (y < -20.dp.toPx() || y > size.height + 20.dp.toPx()) return@forEach
+            val emphasis = (1f - abs(i - position)).coerceIn(0f, 1f)
+            val todo = i > position
+            val fill = if (emphasis > .5f) inks.currentFill else if (todo) inks.todoFill else inks.toldFill
+            val radius = (if (beads[i] == BeadKind.SMALL) 5f else 7f).dp.toPx() * (1f + .35f * emphasis)
+            val c = Offset(x, y)
+            val a = opacity(y)
+            when (beads[i]) {
+                BeadKind.CRUCIFIX -> drawCrucifix(c, radius * 2f, fill, a)
+                BeadKind.MEDAL -> drawMedal(c, radius, fill, inks, todo, a)
+                else -> drawPearl(c, radius, fill, inks, todo, a)
+            }
+            if (emphasis > 0f) drawCircle(inks.ring, radius + 3.dp.toPx(), c,
+                style = Stroke(2.dp.toPx()), alpha = emphasis * a)
+        }
+        if (subSteps > 1) repeat(subSteps) { i ->
+            drawCircle(if (i <= subIndex) inks.pipOn else inks.pip, 1.5.dp.toPx(),
+                Offset(size.width - 3.dp.toPx(), centre + (i - (subSteps - 1) / 2f) * 6.dp.toPx()))
         }
     }
 }

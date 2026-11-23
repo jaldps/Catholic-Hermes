@@ -23,6 +23,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.systemGestures
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -31,6 +33,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -43,6 +46,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.outlined.MoreHoriz
+import androidx.compose.material.icons.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.ChevronRight
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
@@ -88,6 +92,8 @@ import androidx.compose.ui.semantics.ProgressBarRangeInfo
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.customActions
+import androidx.compose.ui.semantics.isTraversalGroup
+import androidx.compose.ui.semantics.traversalIndex
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.progressBarRangeInfo
@@ -115,6 +121,14 @@ import com.example.data.repository.LitanyOfLoreto
 import com.example.ui.components.BeadKind
 import com.example.ui.components.BeadReel
 import com.example.ui.components.RosaryLoopMap
+import com.example.ui.design.AppSupportingPaneLayout
+import com.example.ui.design.AppPaneSide
+import com.example.ui.design.AppPaneWidth
+import com.example.ui.design.appWindowSize
+import com.example.ui.design.appWindowClass
+import com.example.ui.design.AppWindowClass
+import com.example.ui.design.appSafeInsets
+import com.example.ui.design.rememberPanelBack
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppHideTabBar
 import com.example.ui.design.AppGlassIconButton
@@ -125,6 +139,9 @@ import com.example.ui.design.DevotionalBackdrop
 import com.example.ui.design.LiquidGlassDevotionTrack
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.boundsInRoot
+import androidx.compose.ui.layout.positionInRoot
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.collect
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import com.example.ui.design.AppSheet
 import com.example.ui.design.AppStatusBarGlyphs
@@ -208,9 +225,9 @@ internal class PrayerGuide(
 
     fun firstStepOn(bead: Int): Int = steps.indexOfFirst { it.bead == bead }
 
-    /** Moving one step forward from [from] to [to] completes a decade (a firmer haptic tick). */
+    /** Moving forward across a completed decade, including a bead-reel jump. */
     fun finishesDecade(from: Int, to: Int): Boolean =
-        to == from + 1 && steps[to].section != steps[from].section && steps[from].section in 1..decadeCount
+        to > from && steps[to].section > steps[from].section && steps[from].section in 1..decadeCount
 }
 
 private class GuideBuilder {
@@ -1014,10 +1031,30 @@ fun RosaryScreen(
     val lang = currentLanguage
     val view = LocalView.current
     val context = androidx.compose.ui.platform.LocalContext.current
+    val activity = remember(context) {
+        generateSequence(context) { (it as? android.content.ContextWrapper)?.baseContext }
+            .filterIsInstance<androidx.activity.ComponentActivity>().firstOrNull()
+    }
+    val voiceHolder = remember(activity) {
+        if (activity == null) RosaryNarrationHolder()
+        else androidx.lifecycle.ViewModelProvider(activity)[RosaryNarrationHolder::class.java]
+    }
+    val audio = voiceHolder.bind(ttsManager)
+    if (audio !== ttsManager) {
+        val issue by audio.playbackIssue.collectAsState()
+        issue?.let { com.example.ui.components.NarrationRecoverySheet(audio, it, lang) }
+    }
+    DisposableEffect(activity, audio) {
+        val observer = androidx.lifecycle.LifecycleEventObserver { _, event ->
+            if (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME) audio.refreshAvailability()
+        }
+        activity?.lifecycle?.addObserver(observer)
+        onDispose { activity?.lifecycle?.removeObserver(observer) }
+    }
     val todayMystery = remember { repository.getTodayRosaryMystery() }
     // Rotation uses Compose state; a fresh process restores the same devotion,
     // mystery, exact prayer step and guidance choice from durable storage.
-    var session by rememberSaveable(stateSaver = RosarySession.Saver) {
+    var session by rememberSaveable(key = "rosary_session", stateSaver = RosarySession.Saver) {
         val saved = RosarySessionStore.load(context)
         mutableStateOf((saved ?: RosarySession.opening(initialTab).copy(instructionsOn = true)).let {
             // Explicit entry cards choose a devotion, while both saved step
@@ -1037,11 +1074,11 @@ fun RosaryScreen(
     val selectedTab = session.devotion.tab
     // Beginner guidance stays on from step to step once turned on.
     val instructionsOn = session.instructionsOn
-    var sheet by remember { mutableStateOf<RosarySheet?>(null) }
+    var sheet by rememberSaveable(key = "rosary_sheet") { mutableStateOf<RosarySheet?>(null) }
 
-    val voiceMode by ttsManager.voiceMode.collectAsState()
-    val currentlySpeaking by ttsManager.currentlySpeaking.collectAsState()
-    val engineReady by ttsManager.isReady.collectAsState()
+    val voiceMode by audio.voiceMode.collectAsState()
+    val currentlySpeaking by audio.currentlySpeaking.collectAsState()
+    val engineReady by audio.isReady.collectAsState()
 
     val creedSource = remember { repository.vaticanPrayers.firstOrNull { it.id == "creed" } }
     val mercySource = remember { repository.divineMercySteps }
@@ -1062,23 +1099,24 @@ fun RosaryScreen(
     val section = guide.sections.lastOrNull { it.index == step.section } ?: guide.sections.first()
 
     fun narrate(s: GuideStep) {
-        ttsManager.setLanguage(lang)
+        audio.setLanguage(lang)
         // «Santo Rosario · Misterios gozosos» / «Coronilla · Inicio», as the notification title.
         val title = (if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
             else lang.pick("Coronilla de la Divina Misericordia", "Chaplet of Divine Mercy", "Terço da Divina Misericórdia")) +
             " · " + section.title
-        if (s.response.isBlank()) ttsManager.speakSingle(s.narration, title = title)
-        else ttsManager.speakDialogue(s.leader, s.response, title)
+        if (s.response.isBlank()) audio.speakSingle(s.narration, title = title)
+        else audio.speakDialogue(s.leader, s.response, title)
     }
 
     // Pray-aloud mode: an explicit state machine (see RosaryNarration.kt).
     // It stays on from the play press to the pause press, so every step change
     // speaks; leaving the screen ends it and stops the voice.
     val narrateCurrent by rememberUpdatedState({ narrate(step) })
-    val narration = remember {
-        NarrationController(object : NarrationSink {
+    val narration = voiceHolder.controller
+    androidx.compose.runtime.SideEffect {
+        voiceHolder.connect(object : NarrationSink {
             override fun speak(target: NarrationTarget) = narrateCurrent()
-            override fun stop() = ttsManager.stop()
+            override fun stop() = audio.stop()
         })
     }
     val narrationTarget = NarrationTarget(
@@ -1088,15 +1126,15 @@ fun RosaryScreen(
         lang = lang,
         voice = voiceMode
     )
-    LaunchedEffect(lang) { ttsManager.setLanguage(lang) }
+    LaunchedEffect(lang) { audio.setLanguage(lang) }
     LaunchedEffect(narrationTarget) { narration.dispatch(NarrationEvent.TargetChanged(narrationTarget)) }
-    LaunchedEffect(engineReady) { if (engineReady) narration.dispatch(NarrationEvent.EngineReady) }
-    DisposableEffect(Unit) {
-        onDispose { narration.dispatch(NarrationEvent.ScreenLeft) }
+    LaunchedEffect(engineReady) { voiceHolder.engineReady(engineReady) }
+    DisposableEffect(voiceHolder, activity) {
+        onDispose { voiceHolder.detach(activity?.isChangingConfigurations == true) }
     }
 
     fun toggleNarration() {
-        if (narration.isSpeaking || ttsManager.requestPlayback()) {
+        if (narration.isSpeaking || audio.requestPlayback()) {
             narration.dispatch(NarrationEvent.Toggle(narrationTarget))
         }
     }
@@ -1149,10 +1187,41 @@ fun RosaryScreen(
 
     val stepsOnBead = remember(guide, step.bead) { guide.steps.indices.filter { guide.steps[it].bead == step.bead } }
 
-    BoxWithConstraints(
-        modifier
-            .fillMaxSize()
-            .testTag("rosary_screen")
+    val prayerKey = "$selectedTab/$selectedMysteryType/$index"
+    val contentScroll = rememberScrollState()
+    val readingAnchor = rememberSaveable(prayerKey, key = "rosary_text_anchor", saver = RosaryTextAnchor.Saver) { RosaryTextAnchor() }
+    LaunchedEffect(prayerKey) { contentScroll.scrollTo(0) }
+    BindRosaryTextAnchor(readingAnchor, contentScroll)
+    val landscape = appWindowClass() == AppWindowClass.LandscapePhone
+    val panelBack = if (landscape) rememberPanelBack() else null
+    val landscapeWidth = AppPaneWidth(0.32f, 256.dp, 340.dp)
+    AppSupportingPaneLayout(
+        modifier = modifier.testTag("rosary_screen"),
+        supportingSide = AppPaneSide.Start,
+        supportingWidth = landscapeWidth,
+        supporting = {
+            if (landscape) LandscapeRosaryContext(
+                lang, isRosary, guide, index, step, section, where, count, stepText, upNext,
+                selectedMysteryType, selectedTab, labelInDecade, decadeFruit, artPath, glassBackdrop,
+                panelBack, instructionsOn,
+                onSelect = { dispatch(RosaryEvent.SelectDevotion(Devotion.fromTab(it))) },
+                onPrevious = { go(index - 1) }, onBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let { go(it) } },
+                onOptions = { sheet = RosarySheet.OPTIONS }, onMysteries = { sheet = RosarySheet.MYSTERIES },
+                onMystery = { sheet = RosarySheet.MYSTERY }
+            )
+        },
+        endActions = if (!landscape) null else ({
+            LandscapeRosaryActions(lang, isRosary, instructionsOn, narration.isSpeaking,
+                index < guide.steps.lastIndex,
+                { dispatch(RosaryEvent.ToggleInstructions) }, { sheet = RosarySheet.OPTIONS },
+                { toggleNarration() }, { go(index + 1) })
+        })
+    ) {
+        if (landscape) {
+            LandscapeRosaryPrayer(step, "$selectedTab/$selectedMysteryType/$index", lang, count,
+                currentlySpeaking, { dispatch(RosaryEvent.SkipOptional) }, contentScroll, readingAnchor)
+        } else BoxWithConstraints(
+        Modifier.fillMaxSize()
     ) {
         val wide = maxWidth >= 600.dp
         val compactReading = maxWidth < 360.dp || styles.caption.fontSize.value * LocalDensity.current.fontScale >= 18f
@@ -1216,6 +1285,7 @@ fun RosaryScreen(
                 modifier = Modifier
                     .testTag(if (isRosary) "prayer_bead_counter" else "mercy_step_counter")
                     .semantics {
+                        traversalIndex = 1f
                         contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
                         stateDescription = stepText
                         customActions = listOf(
@@ -1239,7 +1309,8 @@ fun RosaryScreen(
                 upNext = upNext,
                 count = count,
                 showName = !nameRepeatsText(step),
-                onSkip = { dispatch(RosaryEvent.SkipOptional) }
+                onSkip = { dispatch(RosaryEvent.SkipOptional) },
+                readingAnchor = readingAnchor
             )
         }
         val transport: @Composable () -> Unit = {
@@ -1268,8 +1339,6 @@ fun RosaryScreen(
         // A single content scroll owns the painting, guidance and complete prayer.
         // The transport stays in the thumb zone, including at 320dp / large type.
         // No nested clipped prayer pane can hide the end of a short prayer.
-        val contentScroll = rememberScrollState()
-        LaunchedEffect(selectedTab, selectedMysteryType, index) { contentScroll.scrollTo(0) }
         Row(Modifier.fillMaxSize()) {
             if (wide) {
                 Column(Modifier.weight(1f).fillMaxHeight().verticalScroll(rememberScrollState())) {
@@ -1281,8 +1350,10 @@ fun RosaryScreen(
                 }
             }
             Column(Modifier.then(if (wide) Modifier.width(columnWidth) else Modifier.fillMaxWidth()).fillMaxHeight()) {
+                Box(Modifier.weight(1f).fillMaxWidth().testTag("prayer_reading_viewport")
+                    .onGloballyPositioned { readingAnchor.viewport = it.boundsInRoot() }) {
                 Column(
-                    Modifier.weight(1f).fillMaxWidth().verticalScroll(contentScroll)
+                    Modifier.fillMaxSize().verticalScroll(contentScroll)
                         .testTag("prayer_content_scroll")
                         .padding(top = if (wide) topInset + 12.dp else 0.dp, bottom = 16.dp)
                 ) {
@@ -1297,6 +1368,7 @@ fun RosaryScreen(
                     reel()
                     prayer()
                 }
+                }
                 Column(
                     Modifier.fillMaxWidth()
                         .then(if (design.isSanctuary || design.isClassic || design.reduceTransparency || design.highContrast) Modifier.background(p.canvasBottom) else Modifier)
@@ -1309,6 +1381,8 @@ fun RosaryScreen(
                 ) { transport() }
             }
         }
+    }
+
     }
 
     when (sheet) {
@@ -1328,7 +1402,7 @@ fun RosaryScreen(
             guide = guide,
             step = step,
             voiceMode = voiceMode,
-            onVoiceMode = { ttsManager.setVoiceMode(it) },
+            onVoiceMode = { audio.setVoiceMode(it) },
             onGo = { target -> go(target); sheet = null },
             onDismiss = { sheet = null }
         )
@@ -1351,6 +1425,238 @@ fun RosaryScreen(
             }
         }
         null -> Unit
+    }
+}
+
+/** Save a text block and a fraction of it, never the old orientation's pixel offset. */
+private class RosaryTextAnchor(block: String? = null, fraction: Float = 0f) {
+    var block: String? by mutableStateOf(block)
+    var fraction by androidx.compose.runtime.mutableFloatStateOf(fraction)
+    val blocks = androidx.compose.runtime.mutableStateMapOf<String, androidx.compose.ui.geometry.Rect>()
+    var viewport by mutableStateOf(androidx.compose.ui.geometry.Rect.Zero)
+    fun textModifier(key: String) = Modifier.onGloballyPositioned {
+        val position = it.positionInRoot()
+        blocks[key] = androidx.compose.ui.geometry.Rect(position.x, position.y, position.x + it.size.width, position.y + it.size.height)
+    }
+    companion object {
+        val Saver = androidx.compose.runtime.saveable.listSaver<RosaryTextAnchor, Any>(
+            save = { listOf(it.block.orEmpty(), it.fraction) },
+            restore = { RosaryTextAnchor((it[0] as String).ifEmpty { null }, it[1] as Float) })
+    }
+}
+
+@Composable
+private fun BindRosaryTextAnchor(anchor: RosaryTextAnchor, scroll: androidx.compose.foundation.ScrollState) {
+    val window = appWindowSize()
+    val scale = LocalDensity.current.fontScale
+    val style = LocalAppTextStyles.current.reading
+    LaunchedEffect(anchor, scroll, window, scale, style) {
+        val restoreKey = anchor.block
+        val restoreFraction = anchor.fraction
+        // Wait for the newly composed text to be measured in its new column.
+        val geometry = androidx.compose.runtime.snapshotFlow {
+            val viewport = anchor.viewport
+            val block = anchor.blocks[restoreKey ?: "leader"]
+            if (viewport.height > 0 && block != null && block.height > 0) viewport to block else null
+        }.first { it != null }!!
+        if (restoreKey != null) {
+            val desired = scroll.value + geometry.second.top - geometry.first.top + geometry.second.height * restoreFraction
+            scroll.scrollTo(desired.roundToInt().coerceIn(0, scroll.maxValue))
+        }
+        // A shorter orientation can show the whole prayer and clamp scrolling.
+        // Keep its logical anchor until the person actually scrolls again.
+        var lastScroll = scroll.value
+        var scrolled = false
+        androidx.compose.runtime.snapshotFlow { Triple(scroll.value, anchor.viewport, anchor.blocks.toMap()) }.collect { (value, viewport, blocks) ->
+            if (value != lastScroll) { scrolled = true; lastScroll = value }
+            if (!scrolled) return@collect
+            val first = blocks.entries.sortedBy { it.value.top }.firstOrNull { it.value.bottom > viewport.top + 1f }
+            if (first != null && viewport.top >= first.value.top) {
+                anchor.block = first.key
+                anchor.fraction = ((viewport.top - first.value.top) / first.value.height.coerceAtLeast(1f)).coerceIn(0f, 1f)
+            } else {
+                anchor.block = null; anchor.fraction = 0f
+            }
+        }
+    }
+}
+
+// L1: one supporting-pane wrapper owns the split; these are its slot contents.
+@Composable
+private fun LandscapeRosaryContext(
+    lang: AppLanguage, isRosary: Boolean, guide: PrayerGuide, index: Int, step: GuideStep,
+    section: GuideSection, where: String, count: String?, stepText: String, upNext: String?,
+    mysteryType: RosaryMysteryType, selectedTab: Int, inDecade: Boolean, fruit: String?,
+    art: String?, backdrop: DevotionalBackdrop, back: Pair<String, () -> Unit>?, guidance: Boolean,
+    onSelect: (Int) -> Unit, onPrevious: () -> Unit, onBead: (Int) -> Unit,
+    onOptions: () -> Unit, onMysteries: () -> Unit, onMystery: () -> Unit
+) {
+    val window = appWindowSize()
+    val safe = appSafeInsets()
+    val density = LocalDensity.current
+    val direction = androidx.compose.ui.platform.LocalLayoutDirection.current
+    val gestures = with(density) { WindowInsets.systemGestures.getLeft(this, direction).toDp() }
+    val start = maxOf(safe.start, gestures) + 8.dp
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val artContext = LocalContext.current
+    val credit = remember(art, artContext) { art?.let { ArtCredits.of(artContext, it) } }
+    val contextScroll = rememberScrollState()
+    LaunchedEffect(selectedTab, mysteryType, step.section) { contextScroll.scrollTo(0) }
+    Column(Modifier.fillMaxSize().padding(top = safe.top).testTag("rosary_landscape_context")) {
+        Row(Modifier.fillMaxWidth().height(44.dp).padding(start = maxOf(16.dp, safe.start + 8.dp), end = 12.dp),
+            verticalAlignment = Alignment.CenterVertically) {
+            if (back != null) AppGlassIconButton(Icons.Rounded.ArrowBack, back.first, back.second,
+                modifier = Modifier.size(44.dp), tag = "nav_back") else Spacer(Modifier.width(44.dp))
+            Spacer(Modifier.width(8.dp))
+            DevotionSwitch(lang, selectedTab, backdrop, design.isDark, onSelect, compact = true)
+        }
+        Spacer(Modifier.height(8.dp))
+        Row(Modifier.weight(1f).fillMaxWidth().padding(start = start, end = 12.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            val beadSteps = guide.steps.indices.filter { guide.steps[it].bead == step.bead }
+            BeadReel(beads = guide.beads.map { it.kind }, activeBead = step.bead, onSelectBead = onBead,
+                subStepCount = beadSteps.size, subStepIndex = beadSteps.indexOf(index).coerceAtLeast(0),
+                orientation = androidx.compose.foundation.gestures.Orientation.Vertical,
+                modifier = Modifier.width(44.dp).fillMaxHeight().testTag(if (isRosary) "prayer_bead_counter" else "mercy_step_counter")
+                    .semantics {
+                        contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
+                        stateDescription = stepText
+                        customActions = listOf(
+                            CustomAccessibilityAction(lang.pick("Anterior", "Back", "Anterior")) { if (index > 0) { onBead((step.bead - 1).coerceAtLeast(0)); true } else false },
+                            CustomAccessibilityAction(lang.pick("Siguiente", "Next", "Seguinte")) { if (step.bead < guide.beads.lastIndex) { onBead(step.bead + 1); true } else false }
+                        )
+                    })
+            Box(Modifier.weight(1f).fillMaxHeight()) {
+                Column(Modifier.fillMaxSize().verticalScroll(contextScroll).testTag("rosary_context_scroll").semantics { isTraversalGroup = true; traversalIndex = 0f }) {
+                    Text(if (isRosary && inDecade) mysteryAnnouncement(lang, mysteryType, step.section - 1, "").substringBefore(":") else if (!isRosary) lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia") else where, style = styles.caption, color = p.textSecondary)
+                    Spacer(Modifier.height(4.dp))
+                    Text(if (inDecade) section.subtitle else step.intention ?: if (isRosary) step.name else where,
+                        style = styles.headline, color = p.textPrimary,
+                        modifier = Modifier.testTag(if (isRosary) "rosary_hero_title" else "mercy_hero_title").semantics { heading() })
+                    Spacer(Modifier.height(8.dp))
+                    if (guidance) { GuideHint(step, lang, compact = true); Spacer(Modifier.height(8.dp)) }
+                    val thumbHeight = if (window.height < 400.dp) 56.dp else 102.dp
+                    Box(Modifier.fillMaxWidth().height(thumbHeight)
+                        .testTag(if (isRosary) "rosary_hero_photo" else "mercy_hero_photo")
+                        .semantics { credit?.let { contentDescription = listOf(it.title, it.artist).filter { it.isNotBlank() }.joinToString(", ") } }) {
+                        ArtThumb(art.orEmpty(), Modifier.fillMaxSize()
+                            .then(if (inDecade) Modifier.testTag("mystery_hero_photo") else Modifier)
+                            .then(if (design.isSanctuary) Modifier.border(0.75.dp, p.separator, RoundedCornerShape(8.dp)).padding(5.dp) else Modifier))
+                    }
+                    if (fruit != null) {
+                        Spacer(Modifier.height(8.dp)); Text(fruit, style = styles.footnote, color = p.textSecondary)
+                    }
+                    if (step.meditation != null) {
+                        Spacer(Modifier.height(8.dp)); Text(step.meditation, style = styles.reading, color = p.textPrimary)
+                        step.detail?.let { Text(it, style = styles.footnote, color = p.textSecondary) }
+                    }
+                    if (isRosary) {
+                        LandscapePrayerPill(mysteryType.displayName.get(lang), "rosary_mystery_picker", onMysteries)
+                        if (inDecade) LandscapePrayerPill(lang.pick("Ver el misterio", "About this mystery", "Ver o mistério"), "rosary_view_mystery", onMystery)
+                    }
+                    Spacer(Modifier.height(4.dp))
+                }
+                RosaryScrollHint(contextScroll.canScrollForward, 16.dp, "rosary_context_hint")
+            }
+        }
+        Column(Modifier.fillMaxWidth().heightIn(min = 116.dp).padding(start = start, end = 12.dp).semantics { isTraversalGroup = true; traversalIndex = 2f },
+            verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text(upNext ?: lang.pick("Fin de la oración", "End of prayer", "Fim da oração"), style = styles.caption, color = p.textSecondary,
+                modifier = Modifier.testTag("rosary_up_next"))
+            Box(Modifier.fillMaxWidth().height(32.dp), contentAlignment = Alignment.Center) {
+            Column(Modifier.fillMaxWidth().requiredHeight(44.dp).lumenPress(onOptions).testTag("page_dots").padding(vertical = 6.dp)
+                .semantics { progressBarRangeInfo = ProgressBarRangeInfo((index + 1).toFloat(), 1f..guide.steps.size.toFloat()) }) {
+                Box(Modifier.fillMaxWidth().height(3.dp).background(p.separator)) {
+                    Box(Modifier.fillMaxWidth((index + 1f) / guide.steps.size).fillMaxHeight().background(p.accent))
+                }
+                Text(stepText, style = styles.caption, color = p.textSecondary,
+                    modifier = Modifier.testTag(if (isRosary) "rosary_hero_step_counter" else "mercy_hero_step_counter"))
+            }
+            }
+            LandscapePrayerPill(lang.pick("Anterior", "Back", "Anterior"),
+                if (isRosary) "prev_bead_button" else "prev_mercy_step_button", onPrevious, enabled = index > 0,
+                modifier = Modifier.widthIn(min = 120.dp))
+            Spacer(Modifier.height(0.dp))
+        }
+    }
+}
+
+@Composable
+private fun LandscapePrayerPill(text: String, tag: String, action: () -> Unit, enabled: Boolean = true, modifier: Modifier = Modifier) {
+    val design = LocalAppDesign.current
+    val shape = if (design.isSanctuary) RoundedCornerShape(8.dp) else CircleShape
+    Box(modifier.heightIn(min = 44.dp).lumenPress(action, enabled = enabled, shape = shape)
+        .semantics { contentDescription = text }.testTag(tag)
+        .lumenGlass(shape).padding(horizontal = 12.dp), contentAlignment = Alignment.Center) {
+        Text(text, style = LocalAppTextStyles.current.caption, color = if (enabled) design.palette.textPrimary else design.palette.inkQuiet)
+    }
+}
+
+@Composable
+private fun RosaryScrollHint(visible: Boolean, height: Dp, tag: String) {
+    if (visible) {
+        val p = LocalAppDesign.current.palette
+        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.BottomCenter) {
+            Box(Modifier.fillMaxWidth().height(height).background(Brush.verticalGradient(listOf(Color.Transparent, p.canvasTop)))
+                .testTag(tag).clearAndSetSemantics {})
+            Icon(Icons.Rounded.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.size(16.dp).clearAndSetSemantics {})
+        }
+    }
+}
+
+@Composable
+private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidance: Boolean, playing: Boolean,
+    canNext: Boolean, onGuide: () -> Unit, onOptions: () -> Unit, onAudio: () -> Unit, onNext: () -> Unit) {
+    val window = appWindowSize()
+    val safe = appSafeInsets()
+    val p = LocalAppDesign.current.palette
+    val styles = LocalAppTextStyles.current
+    val edge = maxOf(12.dp, safe.end + 8.dp)
+    Box(Modifier.fillMaxHeight().padding(end = edge).width(72.dp).testTag("prayer_transport").semantics { isTraversalGroup = true; traversalIndex = 2f }) {
+        Column(Modifier.align(Alignment.TopCenter), horizontalAlignment = Alignment.CenterHorizontally) {
+            LandscapePrayerPill(lang.pick("Guía", "Guide", "Guia"), "prayer_instructions_toggle", onGuide,
+                modifier = Modifier.semantics { selected = guidance })
+            AppGlassIconButton(Icons.Outlined.MoreHoriz, lang.pick("Opciones", "Options", "Opções"), onOptions,
+                modifier = Modifier.size(44.dp), tag = "rosary_options_button")
+        }
+        Column(Modifier.align(Alignment.TopCenter).padding(top = window.height * 0.45f - safe.top - 28.dp),
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            AppGlassIconButton(if (playing) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
+                if (playing) lang.pick("Pausar", "Pause", "Pausar") else lang.pick("Escuchar", "Listen", "Ouvir"), onAudio,
+                tag = if (isRosary) "toggle_prayer_audio_button" else "toggle_mercy_audio_button")
+            Text(lang.pick("Escuchar", "Listen", "Ouvir"), style = styles.caption, color = p.textSecondary, modifier = Modifier.clearAndSetSemantics {})
+        }
+        Column(Modifier.align(Alignment.TopCenter).padding(top = window.height * 0.70f - safe.top - 32.dp),
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            val shape = if (LocalAppDesign.current.isSanctuary) RoundedCornerShape(12.dp) else CircleShape
+            Box(Modifier.size(56.dp).background(p.action, shape).lumenPress(onNext, enabled = canNext, shape = shape)
+                .testTag(if (isRosary) "next_bead_button" else "next_mercy_step_button")
+                .semantics { contentDescription = lang.pick("Siguiente", "Next", "Seguinte") }, contentAlignment = Alignment.Center) {
+                Icon(Icons.Rounded.ChevronRight, null, tint = p.onAction, modifier = Modifier.size(28.dp))
+            }
+            Text(lang.pick("Siguiente", "Next", "Seguinte"), style = styles.caption, color = p.textSecondary, modifier = Modifier.clearAndSetSemantics {})
+        }
+    }
+}
+
+@OptIn(ExperimentalFoundationApi::class)
+@Composable
+private fun LandscapeRosaryPrayer(step: GuideStep, key: String, lang: AppLanguage, count: String?, spoken: String?, onSkip: () -> Unit, scroll: androidx.compose.foundation.ScrollState, readingAnchor: RosaryTextAnchor) {
+    val safe = appSafeInsets()
+    val p = LocalAppDesign.current.palette
+    val responseView = remember(key) { BringIntoViewRequester() }
+    LaunchedEffect(key, spoken) { if (spoken != null && spoken == step.response) responseView.bringIntoView() }
+    Column(Modifier.fillMaxSize().testTag("prayer_text_art").background(p.canvasTop).padding(start = 20.dp, end = 12.dp, top = safe.top + 4.dp)) {
+        PrayerTitleRow(step, count, lang, true, onSkip, padded = false)
+        Spacer(Modifier.height(8.dp))
+        Box(Modifier.weight(1f).fillMaxWidth().testTag("prayer_reading_viewport")
+            .onGloballyPositioned { readingAnchor.viewport = it.boundsInRoot() }) {
+            Column(Modifier.fillMaxSize().verticalScroll(scroll).testTag("prayer_content_scroll")) {
+                PrayerBody(step.copy(intention = null, meditation = null, detail = null), lang, spoken, instructionsOn = false, responseModifier = Modifier.bringIntoViewRequester(responseView), readingAnchor = readingAnchor)
+            }
+            RosaryScrollHint(scroll.canScrollForward, 24.dp, "prayer_scroll_hint")
+        }
     }
 }
 
@@ -1533,7 +1839,7 @@ private fun DrawScope.drawCropped(
 
 /** Rosary / Divine Mercy: a compact glass segmented control over the art. */
 @Composable
-private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: DevotionalBackdrop, darkArt: Boolean, onSelect: (Int) -> Unit) {
+private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: DevotionalBackdrop, darkArt: Boolean, onSelect: (Int) -> Unit, compact: Boolean = false) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
@@ -1546,9 +1852,27 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
         lang.pick("Rosario", "Rosary", "Terço"),
         lang.pick("Coronilla", "Chaplet", "Coroinha")
     )
+    if (compact) {
+        val sources = remember { List(2) { MutableInteractionSource() } }
+        Box(Modifier.fillMaxWidth().height(44.dp)) {
+            LiquidGlassDevotionTrack(selected, false, darkArt, backdrop, Modifier.matchParentSize()) { }
+            Row(Modifier.fillMaxSize()) {
+                short.forEachIndexed { i, text ->
+                    Box(Modifier.weight(1f).fillMaxHeight()
+                        .clickable(sources[i], indication = com.example.ui.design.appFocusRing(sources[i], CircleShape), role = Role.Tab) { onSelect(i) }
+                        .semantics { this.selected = i == selected }, contentAlignment = Alignment.Center) {
+                        Text(text, style = styles.caption.copy(fontWeight = FontWeight.SemiBold),
+                            color = if ((design.isClassic || design.reduceTransparency || design.highContrast) && i == selected) p.onAction else p.textPrimary,
+                            textAlign = TextAlign.Center)
+                    }
+                }
+            }
+        }
+        return
+    }
     val measurer = rememberTextMeasurer()
     val density = LocalDensity.current
-    BoxWithConstraints(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter), contentAlignment = Alignment.Center) {
+    BoxWithConstraints(Modifier.fillMaxWidth().then(if (compact) Modifier else Modifier.padding(horizontal = design.spacing.gutter)), contentAlignment = Alignment.Center) {
         val room = with(density) { maxWidth.toPx() }
         val needed = remember(full, style, density) {
             full.sumOf { measurer.measure(it, style).size.width } + with(density) { (16.dp * 4 + 8.dp + 8.dp).toPx() }.toInt()
@@ -1815,7 +2139,8 @@ private fun PrayerArea(
     upNext: String?,
     count: String?,
     showName: Boolean,
-    onSkip: () -> Unit
+    onSkip: () -> Unit,
+    readingAnchor: RosaryTextAnchor? = null
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -1840,7 +2165,7 @@ private fun PrayerArea(
                 PrayerTitleRow(frame.step, frame.count, lang, frame.showName, onSkip, padded = false)
                 Spacer(Modifier.height(PrayerTitleGap))
                 PrayerBody(frame.step, lang, spokenNow, instructionsOn,
-                    responseModifier = Modifier.bringIntoViewRequester(responseView))
+                    responseModifier = Modifier.bringIntoViewRequester(responseView), readingAnchor = readingAnchor)
             }
         }
         if (upNext != null) {
@@ -1856,7 +2181,8 @@ private fun PrayerBody(
     lang: AppLanguage,
     spokenNow: String?,
     instructionsOn: Boolean,
-    responseModifier: Modifier = Modifier
+    responseModifier: Modifier = Modifier,
+    readingAnchor: RosaryTextAnchor? = null
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -1887,20 +2213,20 @@ private fun PrayerBody(
         Column(Modifier.widthIn(max = design.spacing.readingMaxWidth)) {
             if (step.response.isBlank()) {
                 val ink by animateColorAsState(p.textPrimary, label = "leader")
-                Text(text = step.leader, style = reading, color = ink, modifier = Modifier.testTag("prayer_leader_text"))
+                Text(text = step.leader, style = reading, color = ink, modifier = Modifier.testTag("prayer_leader_text").then(readingAnchor?.textModifier("leader") ?: Modifier))
             } else {
                 val leaderInk by animateColorAsState(if (responseSpoken) p.textSecondary else p.textPrimary, tween(if (design.reduceMotion) 0 else 300), label = "leader")
                 val responseInk by animateColorAsState(if (leaderSpoken) p.textSecondary else p.textPrimary, tween(if (design.reduceMotion) 0 else 300), label = "response")
-                HungVoice("V.", step.leader, reading, leaderInk, p.textSecondary, Modifier.testTag("prayer_leader_text"))
+                HungVoice("V.", step.leader, reading, leaderInk, p.textSecondary, Modifier.testTag("prayer_leader_text").then(readingAnchor?.textModifier("leader") ?: Modifier))
                 Spacer(Modifier.height(10.dp))
                 HungVoice(
                     "R.", step.response, reading, responseInk, p.textSecondary,
-                    responseModifier
+                    responseModifier.then(readingAnchor?.textModifier("response") ?: Modifier)
                 )
             }
             step.meditation?.let {
                 Spacer(Modifier.height(14.dp))
-                Text(it, style = reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary)
+                Text(it, style = reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary, modifier = readingAnchor?.textModifier("meditation") ?: Modifier)
             }
             step.detail?.let {
                 Spacer(Modifier.height(10.dp))
@@ -1949,10 +2275,25 @@ private fun HungVoice(mark: String, text: String, style: TextStyle, ink: Color, 
 
 /** What a beginner does here: the rubric, and the ℣/℟ legend. */
 @Composable
-private fun GuideHint(step: GuideStep, lang: AppLanguage) {
+private fun GuideHint(step: GuideStep, lang: AppLanguage, compact: Boolean = false) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
+    if (compact) {
+        Column(Modifier.fillMaxWidth().background(if (design.isSanctuary) p.canvasTop else p.glass, RoundedCornerShape(8.dp))
+            .padding(8.dp).testTag("prayer_instructions_text")) {
+            Text(step.rubric, style = styles.subhead, color = p.textPrimary)
+            if (step.response.isNotBlank()) {
+                Spacer(Modifier.height(6.dp))
+                Text(lang.pick(
+                    "V. dice quien guía · R. responden todos. Si rezas solo, di las dos partes.",
+                    "V. the leader says · R. everyone answers. Praying alone? Say both parts.",
+                    "V. diz quem conduz · R. todos respondem. Rezando sozinho? Diga as duas partes."
+                ), style = styles.footnote, color = p.textSecondary)
+            }
+        }
+        return
+    }
     Row(
         Modifier
             .fillMaxWidth()
@@ -2158,7 +2499,7 @@ private fun SheetLabel(text: String) {
         text,
         style = LocalAppTextStyles.current.footnote.copy(fontWeight = FontWeight.Medium),
         color = design.palette.textSecondary,
-        modifier = Modifier.padding(start = design.spacing.gutter + 16.dp, end = design.spacing.gutter, top = 8.dp, bottom = 8.dp)
+        modifier = Modifier.padding(start = if (appWindowClass() == AppWindowClass.LandscapePhone) 8.dp else design.spacing.gutter + 16.dp, end = design.spacing.gutter, top = 8.dp, bottom = 8.dp)
     )
 }
 
@@ -2247,13 +2588,24 @@ private fun OptionsSheet(
     val p = design.palette
     val styles = LocalAppTextStyles.current
     val modes = listOf(RecitationVoiceMode.DUAL_DIALOGUE, RecitationVoiceMode.MALE, RecitationVoiceMode.FEMALE)
-    AppSheet(
-        onDismiss = onDismiss,
-        title = if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
-        else lang.pick("Coronilla", "Chaplet", "Coroinha"),
-        tag = "rosary_options_sheet"
-    ) {
+    val landscape = appWindowClass() == AppWindowClass.LandscapePhone
+    val voices: @Composable () -> Unit = {
         SheetLabel(lang.pick("Voces", "Voices", "Vozes"))
+        if (landscape) {
+            Column(Modifier.testTag("rosary_voice_mode_picker")) {
+                listOf(lang.pick("Ambas voces", "Both voices", "Ambas as vozes"), lang.pick("Guía", "Leader", "Guia"),
+                    lang.pick("Respuesta", "Response", "Resposta")).forEachIndexed { i, label ->
+                    Box(Modifier.fillMaxWidth().heightIn(min = 44.dp)
+                        .lumenPress({ onVoiceMode(modes[i]) }, role = Role.RadioButton)
+                        .semantics { selected = voiceMode == modes[i] }.padding(horizontal = 8.dp, vertical = 8.dp)) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(label, style = styles.subhead, color = p.textPrimary, modifier = Modifier.weight(1f))
+                            if (voiceMode == modes[i]) Icon(Icons.Rounded.Check, null, tint = p.accent, modifier = Modifier.size(18.dp))
+                        }
+                    }
+                }
+            }
+        } else {
         AppSegmentedTabs(
             options = listOf(
                 lang.pick("Ambas voces", "Both voices", "Ambas as vozes"),
@@ -2264,6 +2616,7 @@ private fun OptionsSheet(
             onSelect = { onVoiceMode(modes[it]) },
             modifier = Modifier.testTag("rosary_voice_mode_picker")
         )
+        }
         Text(
             when (voiceMode) {
                 RecitationVoiceMode.DUAL_DIALOGUE -> lang.pick(
@@ -2284,9 +2637,10 @@ private fun OptionsSheet(
             },
             style = styles.footnote,
             color = p.textSecondary,
-            modifier = Modifier.padding(horizontal = design.spacing.gutter + 16.dp, vertical = 8.dp)
+            modifier = Modifier.padding(horizontal = if (landscape) 8.dp else design.spacing.gutter + 16.dp, vertical = 8.dp)
         )
-        Spacer(Modifier.height(16.dp))
+    }
+    val parts: @Composable () -> Unit = {
         SheetLabel(
             if (isRosary) lang.pick("Partes del Rosario", "Parts of the Rosary", "Partes do Rosário")
             else lang.pick("Pasos de la coronilla", "Steps of the chaplet", "Passos da coroinha")
@@ -2296,7 +2650,7 @@ private fun OptionsSheet(
             activeBead = step.bead,
             onSelectBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let(onGo) },
             modifier = Modifier
-                .padding(horizontal = 72.dp, vertical = 4.dp)
+                .padding(horizontal = if (landscape) 8.dp else 72.dp, vertical = 4.dp)
                 .testTag("rosary_loop_map")
         )
         Spacer(Modifier.height(12.dp))
@@ -2338,7 +2692,31 @@ private fun OptionsSheet(
                 )
             }
         }
-        Spacer(Modifier.height(16.dp))
+    }
+    AppSheet(
+        onDismiss = onDismiss,
+        title = if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
+        else lang.pick("Coronilla", "Chaplet", "Coroinha"),
+        tag = "rosary_options_sheet", wide = landscape
+    ) {
+        if (landscape) {
+            Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                RosarySheetColumn(Modifier.weight(1f)) { voices() }
+                RosarySheetColumn(Modifier.weight(1f)) { parts() }
+            }
+        } else {
+            voices(); Spacer(Modifier.height(16.dp)); parts(); Spacer(Modifier.height(16.dp))
+        }
+    }
+}
+
+/** Each sheet column has its own reachable text and a visible continuation hint. */
+@Composable
+private fun RosarySheetColumn(modifier: Modifier = Modifier, content: @Composable androidx.compose.foundation.layout.ColumnScope.() -> Unit) {
+    val scroll = rememberScrollState()
+    Box(modifier.height((appWindowSize().height - 116.dp).coerceAtLeast(132.dp))) {
+        Column(Modifier.fillMaxSize().verticalScroll(scroll), content = content)
+        RosaryScrollHint(scroll.canScrollForward, 16.dp, "rosary_sheet_scroll_hint")
     }
 }
 
@@ -2360,6 +2738,31 @@ private fun MysterySheet(
     val styles = LocalAppTextStyles.current
     val context = LocalContext.current
     val credit = remember(artPath) { artPath?.let { ArtCredits.of(context, it) } }
+    val landscape = appWindowClass() == AppWindowClass.LandscapePhone
+    if (landscape) {
+        AppSheet(onDismiss = onDismiss, title = title, tag = "rosary_mystery_sheet", wide = true) {
+            Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                RosarySheetColumn(Modifier.weight(1f)) {
+                    if (artPath != null) {
+                        val bitmap = rememberAssetBitmap(artPath, 1080)
+                        Box(Modifier.fillMaxWidth().height(192.dp).border(.75.dp, p.separator).padding(5.dp)) {
+                            if (bitmap != null) Image(bitmap, null, contentScale = ContentScale.Fit, modifier = Modifier.fillMaxSize())
+                        }
+                    }
+                    credit?.let {
+                        Spacer(Modifier.height(8.dp))
+                        Text(listOf(it.artist, it.title, it.year).filter { it.isNotBlank() }.joinToString(" · "), style = styles.footnote, color = p.textSecondary)
+                    }
+                }
+                RosarySheetColumn(Modifier.weight(1f)) {
+                    Text(mysteryAnnouncement(lang, type, position, "").substringBefore(":"), style = styles.eyebrow, color = p.textSecondary)
+                    Spacer(Modifier.height(8.dp)); Text(scriptureRef, style = styles.subhead, color = p.textSecondary)
+                    Spacer(Modifier.height(12.dp)); Text(meditation, style = styles.reading, color = p.textPrimary)
+                    Spacer(Modifier.height(12.dp)); Text(fruit, style = styles.callout, color = p.textPrimary)
+                }
+            }
+        }
+    } else {
     AppSheet(onDismiss = onDismiss, tag = "rosary_mystery_sheet") {
         Column(Modifier.padding(horizontal = design.spacing.gutter)) {
             if (artPath != null) {
@@ -2399,6 +2802,7 @@ private fun MysterySheet(
             }
             Spacer(Modifier.height(16.dp))
         }
+    }
     }
 }
 
