@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Helpers for T-056 chaplet content (data only; no app code)."""
-import json, pathlib
+import json, pathlib, re
 
 REPO = pathlib.Path(__file__).resolve().parents[3]
 SPEC = json.loads((REPO / "docs/content/coronillas/coronillas_spec.json").read_text(encoding="utf-8"))
@@ -60,6 +60,11 @@ def finish(ch):
     sid = ch["sourceId"]
     src = BY_ID.get(sid, {"fuente": ch.get("sources", [{}])[0].get("url", "https://www.catholicdoors.com/prayers/chaplets/chap08.htm"), "nombre": ch["title"]["en"]})
     d = dict(ch)
+    rubric_re = re.compile(r"^\s*(en (la|las|el|los|cada) |al (final|principio|inicio|comienzo)|cuenta (grande|peque)|se reza|rezar |repetir |tres veces|despu[eé]s de )", re.I)
+    for st in d.get("steps", []):
+        med = st.get("meditation")
+        if isinstance(med, dict) and rubric_re.match(med.get("es", "")):
+            st["rubric"] = st.pop("meditation")
     d.setdefault("image", ch["id"])
     d.setdefault("weekdays", [])
     d.setdefault("variables", [])

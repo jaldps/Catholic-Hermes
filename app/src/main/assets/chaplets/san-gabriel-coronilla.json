@@ -59,32 +59,32 @@
     {
       "bead": 1,
       "text": {
-        "es": "Heavenly Father, through the salutation of the Archangel Gabriel, may we honour the Incarnation of Your Divine son.",
-        "en": "Padre celestial, por la salutación del arcángel Gabriel, honremos la Encarnación de tu Hijo divino.",
+        "es": "Padre celestial, por la salutación del arcángel Gabriel, honremos la Encarnación de tu Hijo divino.",
+        "en": "Heavenly Father, through the salutation of the Archangel Gabriel, may we honour the Incarnation of Your Divine son.",
         "pt": "Pai celestial, pela saudação do arcanjo Gabriel, honremos a Encarnação do teu Filho divino."
       }
     },
     {
       "bead": 2,
       "text": {
-        "es": "Mother of our Saviour, may we strive always to imitate your holy virtues and to respond to our Father. 'Be it done unto me according to Thy Word.'",
-        "en": "Madre de nuestro Salvador, esforcémonos siempre por imitar tus santas virtudes y responder a nuestro Padre: «Hágase en mí según tu palabra».",
+        "es": "Madre de nuestro Salvador, esforcémonos siempre por imitar tus santas virtudes y responder a nuestro Padre: «Hágase en mí según tu palabra».",
+        "en": "Mother of our Saviour, may we strive always to imitate your holy virtues and to respond to our Father. 'Be it done unto me according to Thy Word.'",
         "pt": "Mãe do nosso Salvador, esforcemo-nos sempre por imitar as tuas santas virtudes e responder ao nosso Pai: «Faça-se em mim segundo a tua palavra»."
       }
     },
     {
       "bead": 3,
       "text": {
-        "es": "Archangel Gabriel, please praise our Father for the gift of His Son praying, one day, by His grace, we may all be one.",
-        "en": "Arcángel Gabriel, alaba a nuestro Padre por el don de su Hijo, y ruega para que un día, por su gracia, todos seamos uno.",
+        "es": "Arcángel Gabriel, alaba a nuestro Padre por el don de su Hijo, y ruega para que un día, por su gracia, todos seamos uno.",
+        "en": "Archangel Gabriel, please praise our Father for the gift of His Son praying, one day, by His grace, we may all be one.",
         "pt": "Arcanjo Gabriel, louva o nosso Pai pelo dom do seu Filho e roga para que um dia, pela sua graça, todos sejamos um."
       }
     },
     {
       "bead": 4,
       "text": {
-        "es": "Hail, full of grace, The Lord is with Thee: Blessed art though among women.",
-        "en": "Dios te salve, llena de gracia; el Señor está contigo; bendita eres entre las mujeres.",
+        "es": "Dios te salve, llena de gracia; el Señor está contigo; bendita eres entre las mujeres.",
+        "en": "Hail, full of grace, The Lord is with Thee: Blessed art thou among women.",
         "pt": "Salve, cheia de graça; o Senhor está contigo; bendita és entre as mulheres."
       },
       "repeat": 11
@@ -92,16 +92,16 @@
     {
       "bead": 5,
       "text": {
-        "es": "Behold thou shalt conceive in they womb, and shalt bring forth a son: and thou shalt call his name Jesus.",
-        "en": "He aquí que concebirás en tu seno y darás a luz un hijo, y le pondrás por nombre Jesús.",
+        "es": "He aquí que concebirás en tu seno y darás a luz un hijo, y le pondrás por nombre Jesús.",
+        "en": "Behold, thou shalt conceive in thy womb and bring forth a son, and shalt call his name Jesus.",
         "pt": "Eis que conceberás no teu seio e darás à luz um filho, e lhe porás o nome Jesus."
       }
     },
     {
       "bead": 6,
       "text": {
-        "es": "Hail, full of grace, The Lord is with Thee: Blessed art though among women.",
-        "en": "Dios te salve, llena de gracia; el Señor está contigo; bendita eres entre las mujeres.",
+        "es": "Dios te salve, llena de gracia; el Señor está contigo; bendita eres entre las mujeres.",
+        "en": "Hail, full of grace, The Lord is with Thee: Blessed art thou among women.",
         "pt": "Salve, cheia de graça; o Senhor está contigo; bendita és entre as mulheres."
       },
       "repeat": 11
@@ -109,22 +109,22 @@
     {
       "bead": 7,
       "text": {
-        "es": "Behold thou shalt conceive in they womb, and shalt bring forth a son: and thou shalt call his name Jesus.",
-        "en": "He aquí que concebirás en tu seno y darás a luz un hijo, y le pondrás por nombre Jesús.",
+        "es": "He aquí que concebirás en tu seno y darás a luz un hijo, y le pondrás por nombre Jesús.",
+        "en": "Behold, thou shalt conceive in thy womb and bring forth a son, and shalt call his name Jesus.",
         "pt": "Eis que conceberás no teu seio e darás à luz um filho, e lhe porás o nome Jesus."
       }
     },
     {
       "bead": 8,
       "text": {
-        "es": "Hail, full of grace, The Lord is with Thee: Blessed art though among women.",
-        "en": "Dios te salve, llena de gracia; el Señor está contigo; bendita eres entre las mujeres.",
+        "es": "Dios te salve, llena de gracia; el Señor está contigo; bendita eres entre las mujeres.",
+        "en": "Hail, full of grace, The Lord is with Thee: Blessed art thou among women.",
         "pt": "Salve, cheia de graça; o Senhor está contigo; bendita és entre as mulheres."
       },
       "repeat": 11
     }
   ],
-  "notes": "Texto literal de Catholic Doors; se conservan las erratas «though» y «they womb». 3×11 = 33 años; 2 cuentas = divinidad y humanidad.",
+  "notes": "Texto literal de Catholic Doors; erratas corregidas: «though»→«thou» y «they womb»→«thy womb». 3×11 = 33 años; 2 cuentas = divinidad y humanidad.",
   "image": "san-gabriel-coronilla",
   "variables": [],
   "promise": null,

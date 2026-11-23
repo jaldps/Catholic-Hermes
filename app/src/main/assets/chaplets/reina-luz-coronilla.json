@@ -8,9 +8,9 @@
     "pt": "Coronilha da Rainha da Luz"
   },
   "summary": {
-    "es": "Tres grupos de seis cuentas con un Padre Nuestro precedido de meditación y cinco Avemarías.",
-    "en": "Three sets of six beads with an Our Father preceded by a meditation and five Hail Marys.",
-    "pt": "Três grupos de seis contas com um Pai-Nosso precedido de meditação e cinco Ave Marias."
+    "es": "Tres grupos de seis cuentas con un Padre Nuestro precedido de meditación y cinco Avemarías. Origen no documentado; texto tal como lo publica Catholic Doors Ministry.",
+    "en": "Three sets of six beads with an Our Father preceded by a meditation and five Hail Marys. Origin undocumented; text as published by Catholic Doors Ministry.",
+    "pt": "Três grupos de seis contas com um Pai-Nosso precedido de meditação e cinco Ave Marias. Origem não documentada; texto tal como publicado pela Catholic Doors Ministry."
   },
   "instrument": {
     "es": "Medalla del Sagrado Corazón y 18 cuentas en 3 grupos de 6.",
@@ -86,8 +86,8 @@
       "bead": 5,
       "prayerRef": "our_father",
       "meditation": {
-        "es": "I am the Mother of the hopeless; Mother of Sorrows. It is important for those that are suffering to come to me for consolation and for comfort.",
-        "en": "Soy la Madre de los sin esperanza, Madre de los Dolores. Es importante que quienes sufren vengan a mí en busca de consuelo y aliento.",
+        "es": "Soy la Madre de los sin esperanza, Madre de los Dolores. Es importante que quienes sufren vengan a mí en busca de consuelo y aliento.",
+        "en": "I am the Mother of the hopeless; Mother of Sorrows. It is important for those that are suffering to come to me for consolation and for comfort.",
         "pt": "Sou a Mãe dos sem esperança, Mãe das Dores. É importante que os que sofrem venham a mim em busca de consolo e conforto."
       }
     },
@@ -97,7 +97,7 @@
       "repeat": 5
     }
   ],
-  "notes": "Texto literal de Catholic Doors. Estatus eclesial: la página no identifica visionario, aparición ni revelación privada; las tres meditaciones se presentan como dichos sin atribución. No hay elemento que excluir según las Normas DDF 2024; se registra esta comprobación.",
+  "notes": "Texto literal de Catholic Doors. Estatus eclesial: la página no identifica visionario, aparición ni revelación privada; las tres meditaciones se presentan como dichos sin atribución. No hay elemento que excluir según las Normas DDF 2024; se registra esta comprobación. Origen no documentado en la fuente: se conserva el texto tal como lo publica Catholic Doors Ministry; no se afirma revelación privada ni autoría.",
   "image": "reina-luz-coronilla",
   "variables": [],
   "promise": null,

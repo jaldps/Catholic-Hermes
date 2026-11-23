@@ -196,3 +196,23 @@ WARN  partial delivery: 47 of 55
 ```
 
 Ninguna todavía: las tres marcadas «verificar» (CD-47, CD-57, HZ-02) se han comprobado y se conservan con nota.: CD-47, CD-57 y HZ-02 (marcadas «verificar» en la especificación).
+
+
+## Revisión del coordinador (`T-056-REVIEW.md`) · aplicada
+
+Rama actualizada desde `origin/CatholicGPT` (validador nuevo): `git merge origin/CatholicGPT`.
+
+1. **ES/EN intercambiados (GRAVE).** Se aplicó `fix_langs.py` sobre los módulos de datos: usa la misma huella de stopwords del validador nuevo para detectar los `L(es, en, pt)` invertidos y coloca el español primero. 44 + 24 llamadas corregidas en los lotes 3–6; además se arreglaron las tuplas no constantes (`NAMES`, `G11P`, `G11[k]`) que el escaneo automático no alcanzaba. Las IVE/Hozana no tenían este error.
+2. **`rubric`.** `lib.finish()` normaliza los pasos: si `meditation.es` empieza con una instrucción («Cuenta grande», «Al final…», «En la medalla», «Al final de cada misterio», «Al principio de cada decena…»), la mueve a `rubric` con los tres idiomas. `meditation` queda solo para meditaciones, títulos y citas.
+3. **Erratas corregidas y anotadas:** «holly Mothers tears»→«holy Mother's tears» (CD-34); «0 Mother»→«O Mother» y puntuación de «I believe that He is the only begotten Son» (CD-57); «though»→«thou» y «they womb»→«thy womb» (CD-21); «grat mercy»→«great mercy» (CD-55); «make hast»→«make haste» (CD-45). Todas se anotan en `notes` y se traducen desde el texto corregido.
+4. **IVE-06:** eliminada la oración final atribuida a María Valtorta y su `historicalNote`; queda registrado en `notes` y aquí que se omitió **por la regla 4**. El resto de la coronilla se mantiene.
+5. **CD-47 y CD-57:** añadida en `summary` (ES/EN/PT) y `notes` la frase «Origen no documentado; texto tal como lo publica Catholic Doors Ministry» y sus equivalentes. Se conservan.
+6. Se revisó también el portugués de los lotes 1–2 con el nuevo validador; no quedan campos PT en inglés.
+
+### Validador tras la revisión (sin `--partial`)
+
+```
+$ python3 docs/tasks/tools/validate_chaplets.py app/src/main/assets/chaplets/*.json
+WARN  coronilla-difuntos-45.json.beads[1]: steps cover 3 prayers for a group of 5 (explained in notes)
+55 files · 0 errors · 1 warnings
+```
