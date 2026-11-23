@@ -5,8 +5,11 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -33,6 +36,7 @@ import com.example.ui.components.ContentLoadNotice
 import com.example.ui.screens.HomeScreen
 import com.example.ui.screens.RemindersScreen
 import com.example.ui.screens.SaintsScreen
+import com.example.ui.design.lumenCanvas
 import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.SanctaFidesTheme
 import kotlinx.coroutines.flow.first
@@ -68,7 +72,9 @@ class EmptyStatesScreenshotTest(private val identity: DesignLanguage, private va
                 designLanguage = identity.id, darkModeSetting = if (dark) "DARK" else "LIGHT",
                 fontScale = scale, reduceMotion = true
             ) {
-                CompositionLocalProvider(LocalInspectionMode provides true) { content() }
+                Box(Modifier.fillMaxSize().lumenCanvas()) {
+                    CompositionLocalProvider(LocalInspectionMode provides true) { content() }
+                }
             }
         }
     }
