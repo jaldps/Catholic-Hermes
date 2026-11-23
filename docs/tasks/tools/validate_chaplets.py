@@ -105,7 +105,12 @@ def image_credits():
     if not f.exists():
         return None
     data = json.loads(f.read_text(encoding="utf-8"))
-    return set(data) if isinstance(data, dict) else {e.get("id") or e.get("key") for e in data}
+    # Same format as assets/devotions/images/credits.json: {"images": [{"id": ..., ...}]}.
+    if isinstance(data, dict) and isinstance(data.get("images"), list):
+        data = data["images"]
+    if isinstance(data, dict):
+        return set(data)
+    return {e.get("id") or e.get("key") for e in data}
 
 
 def check_image(where, key, credits):
