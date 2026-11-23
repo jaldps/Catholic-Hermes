@@ -11,7 +11,7 @@
 |---|---|---|
 | 1 | Santos (lista y ficha) | Entregado (`227e5c8`) |
 | 2 | Órdenes y oficios | Entregado (este lote) |
-| 3 | Devociones | Pendiente |
+| 3 | Devociones | Entregado (este lote) |
 | 4 | 101 preguntas | Pendiente |
 | 5 | Catecismo | Pendiente |
 | 6 | Planes | Pendiente |
@@ -57,6 +57,34 @@
 
 **Tests:** `com.example.Saints*` → `SaintsScreenTest` 2/2 y `SaintsCatalogTest` 4/4, 0 fallos (26m01s). `SaintImageScreenshotTest` 8/8 antes y después.
 
+## 3. Devociones
+
+- **Antes/después:** `docs/tasks/T-062-shots/3-devociones/{antes,despues}/` (`mary`, `devotion_marian`, `devotion_christ`, claro y oscuro). El test `DevotionalPrioritiesScreenshotTest` que nombra el encargo captura Hoy/Orar/Diario, no la lista de Devociones; se usa `DoctrineAreaScreenshotTest` y se anota la discrepancia.
+- **Sin cambios de código:** no hay ningún fallo de esta pantalla que se vea en la captura y se pueda arreglar con un token o wrapper existente sin tocar la capa compartida. PNG de después idénticos.
+
+| # | Comprobación | Resultado |
+|---|---|---|
+| 1 | Iconos con contenido | Pasa: búsqueda y selector de región llevan etiqueta visible; el crédito de imagen es texto con `Role.Button`. |
+| 2 | Objetivos ≥44 dp | Pasa: segmentos, búsqueda, filtro y cápsulas usan wrappers con mínimo de 48 dp. |
+| 3 | `heading()` | Pasa en la pantalla: `SectionHeader` y «Promesas» lo llevan. Los rótulos de `FactsGroup` no lo llevan; son de `DoctrineParts.kt` (capa compartida). |
+| 4 | Estado por color | Pasa: segmentos y filas con `selected` en semántica. La pestaña activa del riel es compartida. |
+| 5 | Agrupar con espacio | Pasa: `Spacer(4/12/14 dp)` y `topGap = 24.dp` en los encabezados de región. |
+| 6 | Un solo primario | Pasa: «Quitar filtros» es `AppSecondaryCapsule`; no hay primarios. |
+| 7 | Bordes compartidos | Pasa: `spacing.gutter` en tarjetas, búsqueda y filtro. |
+| 8 | Espacio negativo | Pasa: los huecos entre controles son de 4–24 dp. El espacio hero→controles viene de `AppDetailHeader` (compartido). |
+| 9 | Contenido oculto | Pasa: última fila asomando y chevrons en las tarjetas. |
+| 10 | Botones verbos | Pasa: «Quitar filtros», «Escuchar», «Ver más». |
+| 11 | Errores/vacíos | Pasa: «Nada coincide… Prueba con otra búsqueda o quita los filtros» + «Quitar filtros». |
+| 12 | Un término | Pasa: «Advocaciones marianas», «Devociones a Cristo», «Región» coherentes en ES/EN/PT. |
+| 13 | Medida 60–75 | No verificado en tableta; el texto usa `styles.reading`. |
+| 14 | Puntuación | Pasa: «·» en `55 advocaciones · 38 devociones` y `Advocación mariana · 1917`. Los datos de `facts` son contenido, no se tocan. |
+| 15 | Contadores | Pasa: `${members.size}` es estático por grupo; no hay cifras que cambien en vivo. |
+| 16 | Contraste | No verificado numéricamente. Se observa muy claro el año de las filas; sin medición no se cambia. |
+| 17 | Radios anidados | Pasa: radios de tema en tarjetas, segmentos y píldoras; no hay inset parejo duplicado. |
+| 18 | Movimiento | Pasa: sin animaciones propias; `reduceMotion = true` en el arnés. |
+
+**Tests:** `DoctrineAreaScreenshotTest` 2/2 para los tres estados pedidos, 0 fallos. `com.example.Devotions*` se abortó tras 10 min sin llegar a escribir XML; queda **pendiente para la pasada final** de tests lentos.
+
 ## Para la capa compartida
 
 _Pendiente._
@@ -95,4 +123,5 @@ _Pendiente._
 | Santos, Órdenes | `AppDetailHeader` (`ui/design`) | El antetítulo y el crédito sobre arte claro se leen débiles al 130 %. No medido, solo observado; no se cambia el color del wrapper sin medir. | better-colors: medir el par real; better-accessibility 1.4.3 |
 | Órdenes | `EmblemPlate` (`DoctrineParts.kt:266`) | Fondos `Color(0xFFECE9E5)` / `Color(0xFFF6F4F1)` en vez de `palette.raised` o `groupedSurface`. | better-colors: solo tokens de rol |
 | Órdenes | `AppSegmentedTabs` / barra inferior | Selección de pestaña reforzada solo por fondo; la barra inferior muestra 6 destinos con textos ajustados. | better-accessibility 1.4.11 / 2.5.8 |
+| Devociones | `FactsGroup` (`DoctrineParts.kt:422`) | Los rótulos «Fiesta», «País», «Lugar»… son `styles.footnote` sin `heading()`; otros encabezados de la misma área sí lo llevan. | better-accessibility: estructura de headings |
 
