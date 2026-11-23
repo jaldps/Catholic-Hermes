@@ -62,13 +62,13 @@
     },
     {
       "id": "corona-san-miguel-raccolta",
-      "title": "San Miguel Arcangel statue.jpg",
-      "author": "Bruno Girin",
-      "license": "CC BY-SA 2.0",
+      "title": "GuidoReni MichaelDefeatsSatan.jpg",
+      "author": "Guido Reni",
+      "license": "Public domain",
       "source": "Wikimedia Commons",
-      "url": "https://commons.wikimedia.org/wiki/File%3ASan_Miguel_Arcangel_statue.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File%3AGuidoReni_MichaelDefeatsSatan.jpg",
       "referential": false,
-      "note": "No usar la imagen de los tres arcángeles: la coronilla es solo San Miguel."
+      "note": "Guido Reni, San Miguel arcángel derrotando a Satanás."
     },
     {
       "id": "coronilla-difuntos-45",
@@ -102,13 +102,13 @@
     },
     {
       "id": "coronilla-san-jose-hozana",
-      "title": "Chapel, Saint Joseph and Jesus Christ as a child statue, 2020 Zebegény.jpg",
-      "author": "Globetrotter19",
-      "license": "CC BY-SA 3.0",
+      "title": "Guido Reni - Saint Joseph and the Christ Child - Google Art Project.jpg",
+      "author": "Guido Reni",
+      "license": "Public domain",
       "source": "Wikimedia Commons",
-      "url": "https://commons.wikimedia.org/wiki/File%3AChapel%2C_Saint_Joseph_and_Jesus_Christ_as_a_child_statue%2C_2020_Zebeg%C3%A9ny.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File%3AGuido_Reni_-_Saint_Joseph_and_the_Christ_Child_-_Google_Art_Project.jpg",
       "referential": false,
-      "note": "Elegir San José de Nazaret, no San José de Calasanz."
+      "note": "Guido Reni, San José con el Niño Jesús."
     },
     {
       "id": "czestochowa-coronilla",
@@ -122,13 +122,13 @@
     },
     {
       "id": "desagravio-maria",
-      "title": "Sculpture of Immaculate Heart of Mary, Sint-Barbarakapel, Wetteren, 2026.jpg",
-      "author": "DimiTalen",
-      "license": "CC0",
+      "title": "Immaculate Heart of Mary.jpg",
+      "author": "Diana Ringo",
+      "license": "CC BY-SA 4.0",
       "source": "Wikimedia Commons",
-      "url": "https://commons.wikimedia.org/wiki/File%3ASculpture_of_Immaculate_Heart_of_Mary%2C_Sint-Barbarakapel%2C_Wetteren%2C_2026.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File%3AImmaculate_Heart_of_Mary.jpg",
       "referential": false,
-      "note": "Corazón Inmaculado de María, objeto del desagravio."
+      "note": "Inmaculado Corazón de María en pintura, obra distinta de la imagen de `inmaculado-corazon-maria`."
     },
     {
       "id": "dos-corazones-coronilla",
@@ -312,13 +312,13 @@
     },
     {
       "id": "rosario-difuntos-hozana",
-      "title": "Día de Fieles Difuntos. Altares.JPG",
-      "author": "Hialmar.castillo",
+      "title": "Las Ánimas del Purgatorio, Alonso Cano.jpg",
+      "author": "Jl FilpoC",
       "license": "CC BY-SA 4.0",
       "source": "Wikimedia Commons",
-      "url": "https://commons.wikimedia.org/wiki/File%3AD%C3%ADa_de_Fieles_Difuntos._Altares.JPG",
+      "url": "https://commons.wikimedia.org/wiki/File%3ALas_%C3%81nimas_del_Purgatorio%2C_Alonso_Cano.jpg",
       "referential": false,
-      "note": "Imagen del sujeto concreto."
+      "note": "Alonso Cano, Ánimas del Purgatorio; iconografía pedida para el rosario por los difuntos."
     },
     {
       "id": "rosario-espiritu-santo",
@@ -372,23 +372,23 @@
     },
     {
       "id": "san-gabriel-coronilla",
-      "title": "Archangel Gabriel statue in Liběšice 01.jpg",
-      "author": "Jirka Dl",
-      "license": "CC BY-SA 4.0",
+      "title": "Archangel Gabriel from an Annunciation - Google Art Project.jpg",
+      "author": "Anónimo",
+      "license": "Public domain",
       "source": "Wikimedia Commons",
-      "url": "https://commons.wikimedia.org/wiki/File%3AArchangel_Gabriel_statue_in_Lib%C4%9B%C5%A1ice_01.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File%3AArchangel_Gabriel_from_an_Annunciation_-_Google_Art_Project.jpg",
       "referential": false,
-      "note": "Imagen del sujeto concreto."
+      "note": "Arcángel Gabriel en una Anunciación, en primer plano y con su pergamino."
     },
     {
       "id": "san-judas-coronilla",
-      "title": "Estatua de San Judas Tadeo en la Parroquia Nuestra Señora de la Candelaria, Agua Caliente de Gárate, 29 de diciembre de 2022.jpg",
-      "author": "El Nuevo Doge",
-      "license": "CC0",
+      "title": "El Greco - St. Jude Thaddeus - Google Art Project.jpg",
+      "author": "El Greco",
+      "license": "Public domain",
       "source": "Wikimedia Commons",
-      "url": "https://commons.wikimedia.org/wiki/File%3AEstatua_de_San_Judas_Tadeo_en_la_Parroquia_Nuestra_Se%C3%B1ora_de_la_Candelaria%2C_Agua_Caliente_de_G%C3%A1rate%2C_29_de_diciembre_de_2022.jpg",
+      "url": "https://commons.wikimedia.org/wiki/File%3AEl_Greco_-_St._Jude_Thaddeus_-_Google_Art_Project.jpg",
       "referential": false,
-      "note": "Imagen del sujeto concreto."
+      "note": "El Greco, San Judas Tadeo, con hacha y medallón de la Santa Faz."
     },
     {
       "id": "san-patricio-coronilla",
