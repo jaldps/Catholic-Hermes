@@ -63,13 +63,12 @@ class CalendarRulesJourneyTest {
             }
         }
         compose.onNodeWithTag("nav_more").performClick()
-        compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag("calendar_rules_settings"))
-        compose.onNodeWithTag("calendar_rules_settings").performClick()
+        compose.revealAboveDock("calendar_rules_settings").performClick()
         compose.onNodeWithTag("transfer_epiphany").performScrollTo().performClick()
         compose.onNodeWithTag("transfer_ascension").performScrollTo().performClick()
         runBlocking { PersonalDataCommands.awaitIdle(); withTimeout(5_000) {repository.calendarRules.first {it.epiphanyOnSunday && it.ascensionOnSunday}} }
         compose.onNodeWithTag("close_calendar_rules").performClick()
-        compose.onNodeWithTag("calendar_rules_settings").performClick()
+        compose.revealAboveDock("calendar_rules_settings").performClick()
         compose.onNodeWithTag("transfer_epiphany").performScrollTo().assertIsOn()
         compose.onNodeWithTag("transfer_ascension").performScrollTo().assertIsOn()
         val saved=runBlocking {store.preferences.first()}.calendarRules

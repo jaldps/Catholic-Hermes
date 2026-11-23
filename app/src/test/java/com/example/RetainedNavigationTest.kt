@@ -79,14 +79,14 @@ class RetainedNavigationTest {
         val key = "bible_${ref.bookId}_${ref.chapter}_${ref.verseStart ?: "all"}_${ref.verseEnd ?: ""}"
         compose.onNodeWithTag("nav_more").performClick()
         compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag("nav_questions"))
-        compose.onNodeWithTag("nav_questions").performClick()
+        compose.revealAboveDock("nav_questions").performClick()
         compose.onNodeWithTag("qa_search_input").performScrollTo().performTextInput(question.question.get(AppLanguage.EN))
         compose.onNodeWithTag("catholic_question_${question.number}").performScrollTo().performClick()
         compose.onNodeWithTag("doctrine_entry_page").performScrollToNode(hasTestTag("foundation_ref_picker"))
         compose.onNodeWithTag("foundation_ref_picker").performClick()
         compose.onNodeWithTag("foundation_ref_$key", useUnmergedTree = true).performClick()
         compose.onNodeWithTag("doctrine_entry_page").performScrollToNode(hasTestTag("foundation_ref_open_$key"))
-        compose.onNodeWithTag("foundation_ref_open_$key").performClick()
+        compose.revealAboveDock("foundation_ref_open_$key").performClick()
         compose.onNodeWithTag("bible_screen").assertIsDisplayed()
         compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
         compose.onNodeWithTag("doctrine_entry_page").assertIsDisplayed()
