@@ -1,344 +1,604 @@
 {
- "images": [
-  {
-   "id": "mercedarios-odem",
-   "title": "Emblem mercedarians.png",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AEmblem%20mercedarians.png",
-   "referential": false,
-   "note": "PNG con fondo transparente. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "trinitarios-osst",
-   "title": "Emblem Trinitarian Order Rome.jpg",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AEmblem%20Trinitarian%20Order%20Rome.jpg",
-   "referential": false,
-   "note": "Foto del emblema de piedra de la fachada de la casa general de Roma; fondo blanco. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "carmelitas-descalzos-ocd",
-   "title": "Fnv0251.jpg",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AFnv0251.jpg",
-   "referential": false,
-   "note": "Escudo de la Orden de los Carmelitas Descalzos. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "tercera-orden-regular-tor",
-   "title": "ESCUDO TOR.png",
-   "author": "",
-   "license": "CC0",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AESCUDO%20TOR.png",
-   "referential": false,
-   "note": "PNG con fondo transparente."
-  },
-  {
-   "id": "hermanos-lasalle-fsc",
-   "title": "Signum Fidei.PNG",
-   "author": "",
-   "license": "CC BY-SA 3.0",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3ASignum%20Fidei.PNG",
-   "referential": false,
-   "note": "Emblema del Instituto de los Hermanos de las Escuelas Cristianas. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "hospitalarios-san-juan-dios-oh",
-   "title": "Blason de l'ordre hospitalier de Saint Jean de Dieu.svg",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3ABlason%20de%20l%27ordre%20hospitalier%20de%20Saint%20Jean%20de%20Dieu.svg",
-   "referential": false,
-   "note": "SVG rasterizado a PNG por Wikimedia."
-  },
-  {
-   "id": "oratorianos-co",
-   "title": "S. F. Nerist.JPG",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AS.%20F.%20Nerist.JPG",
-   "referential": false,
-   "note": "Emblema de la Congregación del Oratorio de San Felipe Neri. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "vicentinos-cm",
-   "title": "CMPaul.png",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3ACMPaul.png",
-   "referential": false,
-   "note": "Sello de la Sociedad Vicentina (Congregación de la Misión)."
-  },
-  {
-   "id": "sacramentinos-sss",
-   "title": "SSS logo.jpg",
-   "author": "",
-   "license": "CC BY-SA 4.0",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3ASSS%20logo.jpg",
-   "referential": false,
-   "note": "Logotipo de la Congregación del Santísimo Sacramento. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "maryknoll-mm",
-   "title": "Maryknoll Order Logo.gif",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AMaryknoll%20Order%20Logo.gif",
-   "referential": false,
-   "note": "Logotipo de Maryknoll; GIF convertido a PNG con fondo blanco."
-  },
-  {
-   "id": "brigidinas-monasticas-osss",
-   "title": "Brigidine.gif",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3ABrigidine.gif",
-   "referential": false,
-   "note": "Composición heráldica con el escudo brigidino."
-  },
-  {
-   "id": "compania-santa-teresa-stj",
-   "title": "EscudoTeresianas.png",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AEscudoTeresianas.png",
-   "referential": false,
-   "note": "Emblema de la Compañía de Santa Teresa. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "religiosas-maria-inmaculada-rmi",
-   "title": "RMI-escut.jpg",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3ARMI-escut.jpg",
-   "referential": false,
-   "note": "Escudo de las Religiosas de María Inmaculada. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "hermanitas-ancianos-desamparados-had",
-   "title": "HAD-escut.jpg",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AHAD-escut.jpg",
-   "referential": false,
-   "note": "Escudo de la Congregación de las Hermanitas de los Ancianos Desamparados. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "servitas-osm",
-   "title": "OSMariaEscut.gif",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AOSMariaEscut.gif",
-   "referential": false,
-   "note": "Emblema del siglo XV; GIF convertido a PNG con fondo blanco. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "premonstratenses-opraem",
-   "title": "COA Premonstratensians.svg",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3ACOA%20Premonstratensians.svg",
-   "referential": false,
-   "note": "SVG rasterizado a PNG por Wikimedia."
-  },
-  {
-   "id": "misioneros-sagrado-corazon-msc",
-   "title": "Brasão MSC.png",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3ABras%C3%A3o%20MSC.png",
-   "referential": false,
-   "note": "Brasão (escudo) de los Misioneros del Sagrado Corazón. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "siervas-maria-enfermos-sdem",
-   "title": "Escudo color SM.jpg",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AEscudo%20color%20SM.jpg",
-   "referential": false,
-   "note": "Emblema de las Siervas de María, ministras de los enfermos. (sin transparencia: fondo blanco)."
-  },
-  {
-   "id": "agustinos-recoletos-oar",
-   "title": "Escudo-agustinos-recoletos.gif",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File%3AEscudo-agustinos-recoletos.gif",
-   "referential": false,
-   "note": "Emblema de la Orden de Agustinos Recoletos."
-  },
-  {
-   "id": "barnabitas-crsp",
-   "title": "Logo-CSS_2.png",
-   "author": "",
-   "license": "Derechos: Clérigos Regulares de San Pablo: Barnabitas",
-   "source": "barnabiti.net",
-   "url": "https://www.barnabiti.net/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "basilianos-san-josafat-osbm",
-   "title": "cropped-favicon-192x192.png",
-   "author": "",
-   "license": "Derechos: Orden Basiliana de San Josafat",
-   "source": "osbm.org.br",
-   "url": "http://www.osbm.org.br/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "carmelitas-caridad-vedruna-ccv",
-   "title": "cropped-LOGO_VEDRUNA_WEB-192x192.png",
-   "author": "",
-   "license": "Derechos: Carmelitas de la Caridad Vedruna",
-   "source": "vedruna.org",
-   "url": "http://www.vedruna.org/fr/index.htm",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "combonianos-mccj",
-   "title": "logo.png",
-   "author": "",
-   "license": "Derechos: Misioneros Combonianos del Corazón de Jesús",
-   "source": "comboni.org",
-   "url": "https://www.comboni.org/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "dominicas-contemplativas-op",
-   "title": "Coat of Arms of the Dominican Order.png",
-   "author": "",
-   "license": "Public domain",
-   "source": "Wikimedia Commons",
-   "url": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_the_Dominican_Order.png",
-   "referential": false,
-   "note": "Las monjas de la Orden de Predicadores usan el mismo escudo de la Orden; por eso se comparte."
-  },
-  {
-   "id": "hermanas-hospitalarias-hsc",
-   "title": "logo-es-1.svg",
-   "author": "",
-   "license": "Derechos: Hermanas Hospitalarias del Sagrado Corazón de Jesús",
-   "source": "hospitalarias.org",
-   "url": "http://www.hospitalarias.org",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "hermanos-cristianos-cfc",
-   "title": "apple-touch-icon.png",
-   "author": "",
-   "license": "Derechos: Congregación de los Hermanos Cristianos",
-   "source": "ercbna.org",
-   "url": "https://ercbna.org/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "legionarios-cristo-lc",
-   "title": "cropped-favicon-300x300.png",
-   "author": "",
-   "license": "Derechos: Legionarios de Cristo",
-   "source": "legionariosdecristo.org",
-   "url": "https://www.legionariosdecristo.org",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "mercedarias-caridad-mc",
-   "title": "logo_ESCUDO_NUEVO_2.png",
-   "author": "",
-   "license": "Derechos: Hermanas Mercedarias de la Caridad",
-   "source": "mercedariasdelacaridad.org",
-   "url": "https://www.mercedariasdelacaridad.org/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "misioneros-africa-mafr",
-   "title": "MAfr-logo-oficial.jpg",
-   "author": "",
-   "license": "Derechos: Misioneros de África",
-   "source": "misionerosafrica.com",
-   "url": "https://www.misionerosafrica.com/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "misiones-extranjeras-pime",
-   "title": "pime_logo_003.png",
-   "author": "",
-   "license": "Derechos: Pontificio Instituto de Misiones Extranjeras",
-   "source": "pime.org",
-   "url": "https://www.pime.org/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "notre-dame-namur-sndden",
-   "title": "logo-5.svg",
-   "author": "",
-   "license": "Derechos: Hermanas de Nuestra Señora de Namur",
-   "source": "sndden.org",
-   "url": "https://www.sndden.org/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "religiosas-sagrado-corazon-rscj",
-   "title": "logo.png",
-   "author": "",
-   "license": "Derechos: Religiosas del Sagrado Corazón de Jesús",
-   "source": "rscjinternational.org",
-   "url": "https://rscjinternational.org",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "siervas-espiritu-santo-ssps",
-   "title": "logo2.png",
-   "author": "",
-   "license": "Derechos: Misioneras Siervas del Espíritu Santo",
-   "source": "worldssps.org",
-   "url": "https://www.worldssps.org/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  },
-  {
-   "id": "somascos-crs",
-   "title": "cropped-cropped-Propuesta-verde-vertical-verde-intermedio-e1697659749101-192x192.png",
-   "author": "",
-   "license": "Derechos: Orden de los Clérigos Regulares de Somasca",
-   "source": "somascos.org",
-   "url": "https://somascos.org/",
-   "referential": false,
-   "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
-  }
- ]
+  "images": [
+    {
+      "id": "agustinos-recoletos-oar",
+      "title": "Escudo-agustinos-recoletos.gif",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AEscudo-agustinos-recoletos.gif",
+      "referential": false,
+      "note": "Emblema de la Orden de Agustinos Recoletos."
+    },
+    {
+      "id": "asuncionistas-aa",
+      "title": "asuncionistas-aa",
+      "author": "Agustinos de la Asunción",
+      "license": "Derechos: Agustinos de la Asunción",
+      "source": "Sitio oficial (assomption.org)",
+      "url": "https://www.assomption.org/",
+      "referential": false,
+      "note": "Cruz azul con crismón del sitio oficial de los Agustinos de la Asunción; no es el logo de una provincia."
+    },
+    {
+      "id": "barnabitas-crsp",
+      "title": "Logo-CSS_2.png",
+      "author": "",
+      "license": "Derechos: Clérigos Regulares de San Pablo: Barnabitas",
+      "source": "barnabiti.net",
+      "url": "https://www.barnabiti.net/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "basilianos-san-josafat-osbm",
+      "title": "cropped-favicon-192x192.png",
+      "author": "",
+      "license": "Derechos: Orden Basiliana de San Josafat",
+      "source": "osbm.org.br",
+      "url": "http://www.osbm.org.br/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "benedictinas-adoracion-perpetua-osb",
+      "title": "benedictinas-adoracion-perpetua-osb",
+      "author": "Benedictinas de Adoración Perpetua",
+      "license": "Derechos: Benedictinas de Adoración Perpetua",
+      "source": "Sitio oficial (benedictinesisters.org)",
+      "url": "https://benedictinesisters.org/",
+      "referential": false,
+      "note": "Emblema propio de las Benedictinas de Adoración Perpetua, del sitio oficial de la congregación."
+    },
+    {
+      "id": "brigidinas-monasticas-osss",
+      "title": "Brigidine.gif",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3ABrigidine.gif",
+      "referential": false,
+      "note": "Composición heráldica con el escudo brigidino."
+    },
+    {
+      "id": "buen-pastor-rgs",
+      "title": "buen-pastor-rgs",
+      "author": "Anónimo",
+      "license": "CC BY-SA 3.0",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Coat_of_Arms_of_the_Congregation_of_Our_Lady_of_Charity_of_the_Good_Shepherd.jpg",
+      "referential": false,
+      "note": "Escudo de la Congregación de Nuestra Señora de la Caridad del Buen Pastor."
+    },
+    {
+      "id": "carmelitas-caridad-vedruna-ccv",
+      "title": "cropped-LOGO_VEDRUNA_WEB-192x192.png",
+      "author": "",
+      "license": "Derechos: Carmelitas de la Caridad Vedruna",
+      "source": "vedruna.org",
+      "url": "http://www.vedruna.org/fr/index.htm",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "carmelitas-descalzos-ocd",
+      "title": "Fnv0251.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AFnv0251.jpg",
+      "referential": false,
+      "note": "Escudo de la Orden de los Carmelitas Descalzos. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "carmelitas-misioneras-teresianas-cmt",
+      "title": "carmelitas-misioneras-teresianas-cmt",
+      "author": "Anónimo",
+      "license": "CC BY-SA 4.0",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Escudo_de_las_Carmelitas_Misioneras.png",
+      "referential": false,
+      "note": "Escudo de las Carmelitas Misioneras Teresianas, acreditado por la congregación."
+    },
+    {
+      "id": "combonianos-mccj",
+      "title": "logo.png",
+      "author": "",
+      "license": "Derechos: Misioneros Combonianos del Corazón de Jesús",
+      "source": "comboni.org",
+      "url": "https://www.comboni.org/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "compania-santa-teresa-stj",
+      "title": "EscudoTeresianas.png",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AEscudoTeresianas.png",
+      "referential": false,
+      "note": "Emblema de la Compañía de Santa Teresa. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "concepcionistas-oic",
+      "title": "concepcionistas-oic",
+      "author": "Anónimo",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/OrdoIC.jpg",
+      "referential": false,
+      "note": "Emblem of the Order of the Immaculate Conception, grabado del siglo XVIII."
+    },
+    {
+      "id": "congregacion-jesus-cj",
+      "title": "congregacion-jesus-cj",
+      "author": "Congregación de Jesús",
+      "license": "Derechos: Congregación de Jesús",
+      "source": "Sitio oficial (congregatiojesu.org)",
+      "url": "https://www.congregatiojesu.org/",
+      "referential": false,
+      "note": "Cruz con monograma del sitio oficial de la Congregación de Jesús (Congregatio Jesu, Mary Ward)."
+    },
+    {
+      "id": "consolata-imc",
+      "title": "consolata-imc",
+      "author": "Misioneros de la Consolata",
+      "license": "Derechos: Misioneros de la Consolata",
+      "source": "Sitio oficial (consolata.org)",
+      "url": "https://www.consolata.org/",
+      "referential": false,
+      "note": "Logo IMC de los Misioneros de la Consolata: C, cruz, paloma y cuatro franjas."
+    },
+    {
+      "id": "dehonianos-scj",
+      "title": "dehonianos-scj",
+      "author": "Anónimo",
+      "license": "CC BY-SA 4.0",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Herb-02-s.jpg",
+      "referential": false,
+      "note": "Escudo de la Congregación de los Sacerdotes del Sagrado Corazón (Dehonianos, SCJ)."
+    },
+    {
+      "id": "dominicas-contemplativas-op",
+      "title": "Coat of Arms of the Dominican Order.png",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Coat_of_Arms_of_the_Dominican_Order.png",
+      "referential": false,
+      "note": "Las monjas de la Orden de Predicadores usan el mismo escudo de la Orden; por eso se comparte."
+    },
+    {
+      "id": "escolapios-schp",
+      "title": "escolapios-schp",
+      "author": "Anónimo",
+      "license": "CC BY 3.0",
+      "source": "Wikimedia Commons",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Piarist.svg/960px-Piarist.svg.png",
+      "referential": false,
+      "note": "Escudo de los Padres Píos (Escolapios, SchP)."
+    },
+    {
+      "id": "franciscanos-conventuales-ofmconv",
+      "title": "franciscanos-conventuales-ofmconv",
+      "author": "Anónimo",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/FrancescoCoA_PioM.svg/960px-FrancescoCoA_PioM.svg.png",
+      "referential": false,
+      "note": "Escudo de los Frailes Menores Conventuales (OFM Conv)."
+    },
+    {
+      "id": "hermanas-cruz-hc",
+      "title": "hermanas-cruz-hc",
+      "author": "Anónimo",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Esc-hermanas_cruz2.jpg",
+      "referential": false,
+      "note": "Emblema de las Hermanas de la Compañía de la Cruz, grabado dehacia  1900."
+    },
+    {
+      "id": "hermanas-hospitalarias-hsc",
+      "title": "logo-es-1.svg",
+      "author": "",
+      "license": "Derechos: Hermanas Hospitalarias del Sagrado Corazón de Jesús",
+      "source": "hospitalarias.org",
+      "url": "http://www.hospitalarias.org",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "hermanas-misericordia-rsm",
+      "title": "hermanas-misericordia-rsm",
+      "author": "Hermanas de la Misericordia",
+      "license": "Derechos: Hermanas de la Misericordia",
+      "source": "Sitio oficial (institute.mercy.org.au)",
+      "url": "https://institute.mercy.org.au/our-symbol/",
+      "referential": false,
+      "note": "Cruz de la Misericordia, símbolo oficial de las Hermanas de la Misericordia."
+    },
+    {
+      "id": "hermanitas-ancianos-desamparados-had",
+      "title": "HAD-escut.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AHAD-escut.jpg",
+      "referential": false,
+      "note": "Escudo de la Congregación de las Hermanitas de los Ancianos Desamparados. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "hermanitas-pobres-psdp",
+      "title": "hermanitas-pobres-psdp",
+      "author": "Hermanitas de los Pobres",
+      "license": "Derechos: Hermanitas de los Pobres",
+      "source": "Sitio oficial (littlesistersofthepoor.org)",
+      "url": "https://littlesistersofthepoor.org/",
+      "referential": false,
+      "note": "Logo oficial de las Hermanitas de los Pobres: dos manos y una paloma dentro de una casa."
+    },
+    {
+      "id": "hermanos-cristianos-cfc",
+      "title": "apple-touch-icon.png",
+      "author": "",
+      "license": "Derechos: Congregación de los Hermanos Cristianos",
+      "source": "ercbna.org",
+      "url": "https://ercbna.org/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "hermanos-lasalle-fsc",
+      "title": "Signum Fidei.PNG",
+      "author": "",
+      "license": "CC BY-SA 3.0",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3ASignum%20Fidei.PNG",
+      "referential": false,
+      "note": "Emblema del Instituto de los Hermanos de las Escuelas Cristianas. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "hijas-san-pablo-fsp",
+      "title": "hijas-san-pablo-fsp",
+      "author": "Hijas de San Pablo",
+      "license": "Derechos: Hijas de San Pablo",
+      "source": "Sitio oficial (paoline.org)",
+      "url": "https://www.paoline.org/",
+      "referential": false,
+      "note": "Logotipo institucional de las Hijas de San Pablo (FSP) en su web generalizia."
+    },
+    {
+      "id": "hospitalarios-san-juan-dios-oh",
+      "title": "Blason de l'ordre hospitalier de Saint Jean de Dieu.svg",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3ABlason%20de%20l%27ordre%20hospitalier%20de%20Saint%20Jean%20de%20Dieu.svg",
+      "referential": false,
+      "note": "SVG rasterizado a PNG por Wikimedia."
+    },
+    {
+      "id": "javerianos-sx",
+      "title": "javerianos-sx",
+      "author": "Misioneros Javerianos SX",
+      "license": "Derechos: Misioneros Javerianos SX",
+      "source": "Sitio oficial (dg.saveriani.org)",
+      "url": "https://dg.saveriani.org/",
+      "referential": false,
+      "note": "Logotipo SX de la Dirección General de los Misioneros Javerianos (Saveriani)."
+    },
+    {
+      "id": "legionarios-cristo-lc",
+      "title": "cropped-favicon-300x300.png",
+      "author": "",
+      "license": "Derechos: Legionarios de Cristo",
+      "source": "legionariosdecristo.org",
+      "url": "https://www.legionariosdecristo.org",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "marianistas-sm",
+      "title": "marianistas-sm",
+      "author": "Anónimo",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Cruz_marianista.jpg",
+      "referential": false,
+      "note": "Cruz marianista de la Compañía de María de Chaminade (S.M.), no el emblema marista."
+    },
+    {
+      "id": "maryknoll-mm",
+      "title": "Maryknoll Order Logo.gif",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AMaryknoll%20Order%20Logo.gif",
+      "referential": false,
+      "note": "Logotipo de Maryknoll; GIF convertido a PNG con fondo blanco."
+    },
+    {
+      "id": "mercedarias-caridad-mc",
+      "title": "logo_ESCUDO_NUEVO_2.png",
+      "author": "",
+      "license": "Derechos: Hermanas Mercedarias de la Caridad",
+      "source": "mercedariasdelacaridad.org",
+      "url": "https://www.mercedariasdelacaridad.org/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "mercedarios-odem",
+      "title": "Emblem mercedarians.png",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AEmblem%20mercedarians.png",
+      "referential": false,
+      "note": "PNG con fondo transparente. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "minimos-om",
+      "title": "minimos-om",
+      "author": "Anónimo",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/MinimorumOrdo.jpg",
+      "referential": false,
+      "note": "Escudo de la Orden de los Mínimos de San Francisco de Paula (O.M.)."
+    },
+    {
+      "id": "misioneros-africa-mafr",
+      "title": "MAfr-logo-oficial.jpg",
+      "author": "",
+      "license": "Derechos: Misioneros de África",
+      "source": "misionerosafrica.com",
+      "url": "https://www.misionerosafrica.com/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "misioneros-sagrado-corazon-msc",
+      "title": "Brasão MSC.png",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3ABras%C3%A3o%20MSC.png",
+      "referential": false,
+      "note": "Brasão (escudo) de los Misioneros del Sagrado Corazón. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "misiones-africanas-sma",
+      "title": "misiones-africanas-sma",
+      "author": "Sociedad de Misiones Africanas",
+      "license": "Derechos: Sociedad de Misiones Africanas",
+      "source": "Sitio oficial (smainternational.site)",
+      "url": "https://smainternational.site/",
+      "referential": false,
+      "note": "Logo oficial de la Société des Missions Africaines (S.M.A.)."
+    },
+    {
+      "id": "misiones-extranjeras-pime",
+      "title": "pime_logo_003.png",
+      "author": "",
+      "license": "Derechos: Pontificio Instituto de Misiones Extranjeras",
+      "source": "pime.org",
+      "url": "https://www.pime.org/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "montfortianos-smm",
+      "title": "montfortianos-smm",
+      "author": "Anónimo",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://wsrv.nl/?url=upload.wikimedia.org/wikipedia/commons/b/bd/SMM-Montfort.jpg&w=400",
+      "referential": false,
+      "note": "Sello de los Misioneros Montfortianos (Compañía de María, S.M.M.)."
+    },
+    {
+      "id": "notre-dame-namur-sndden",
+      "title": "logo-5.svg",
+      "author": "",
+      "license": "Derechos: Hermanas de Nuestra Señora de Namur",
+      "source": "sndden.org",
+      "url": "https://www.sndden.org/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "oratorianos-co",
+      "title": "S. F. Nerist.JPG",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AS.%20F.%20Nerist.JPG",
+      "referential": false,
+      "note": "Emblema de la Congregación del Oratorio de San Felipe Neri. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "orionistas-fdp",
+      "title": "orionistas-fdp",
+      "author": "Orionistas FDP",
+      "license": "Derechos: Orionistas FDP",
+      "source": "Sitio oficial (donorione.org)",
+      "url": "https://www.donorione.org/",
+      "referential": false,
+      "note": "Escudo de los Hijos de la Divina Providencia (Orionistas, F.D.P.)."
+    },
+    {
+      "id": "palotinos-sac",
+      "title": "palotinos-sac",
+      "author": "Anónimo",
+      "license": "CC BY-SA 2.5",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Herb_sac.svg/1280px-Herb_sac.svg.png",
+      "referential": false,
+      "note": "Escudo de la Sociedad del Apostolado Católico (Palotinos, S.A.C.), no el de los sulpicianos."
+    },
+    {
+      "id": "premonstratenses-opraem",
+      "title": "COA Premonstratensians.svg",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3ACOA%20Premonstratensians.svg",
+      "referential": false,
+      "note": "SVG rasterizado a PNG por Wikimedia."
+    },
+    {
+      "id": "religiosas-asuncion-ra",
+      "title": "religiosas-asuncion-ra",
+      "author": "Religiosas de la Asunción",
+      "license": "Derechos: Religiosas de la Asunción",
+      "source": "Sitio oficial (assumpta-eu.org)",
+      "url": "https://assumpta-eu.org/",
+      "referential": false,
+      "note": "Emblema de las Religiosas de la Asunción (R.A.)."
+    },
+    {
+      "id": "religiosas-maria-inmaculada-rmi",
+      "title": "RMI-escut.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3ARMI-escut.jpg",
+      "referential": false,
+      "note": "Escudo de las Religiosas de María Inmaculada. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "religiosas-sagrado-corazon-rscj",
+      "title": "logo.png",
+      "author": "",
+      "license": "Derechos: Religiosas del Sagrado Corazón de Jesús",
+      "source": "rscjinternational.org",
+      "url": "https://rscjinternational.org",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "rogacionistas-rcj",
+      "title": "rogacionistas-rcj",
+      "author": "Rogacionistas del Corazón de Jesús",
+      "license": "Derechos: Rogacionistas del Corazón de Jesús",
+      "source": "Sitio oficial (rcj.org)",
+      "url": "https://www.rcj.org/",
+      "referential": false,
+      "note": "Logo de la Congregación de los Padres Rogacionistas del Corazón de Jesús (R.C.J.)."
+    },
+    {
+      "id": "sacramentinos-sss",
+      "title": "SSS logo.jpg",
+      "author": "",
+      "license": "CC BY-SA 4.0",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3ASSS%20logo.jpg",
+      "referential": false,
+      "note": "Logotipo de la Congregación del Santísimo Sacramento. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "sagrados-corazones-sscc",
+      "title": "sagrados-corazones-sscc",
+      "author": "Anónimo",
+      "license": "CC BY-SA 4.0",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/S.S.C.C.svg/1280px-S.S.C.C.svg.png",
+      "referential": false,
+      "note": "Escudo de la Congregación de los Sagrados Corazones de Jesús y María (SS.CC.)."
+    },
+    {
+      "id": "san-jose-cluny-sjc",
+      "title": "san-jose-cluny-sjc",
+      "author": "Hermanas de San José de Cluny",
+      "license": "Derechos: Hermanas de San José de Cluny",
+      "source": "Sitio oficial (sj-cluny.org)",
+      "url": "https://www.sj-cluny.org/",
+      "referential": false,
+      "note": "Logotipo oficial de las Hermanas de San José de Cluny (S.J.C.)."
+    },
+    {
+      "id": "servitas-osm",
+      "title": "OSMariaEscut.gif",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AOSMariaEscut.gif",
+      "referential": false,
+      "note": "Emblema del siglo XV; GIF convertido a PNG con fondo blanco. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "siervas-espiritu-santo-ssps",
+      "title": "logo2.png",
+      "author": "",
+      "license": "Derechos: Misioneras Siervas del Espíritu Santo",
+      "source": "worldssps.org",
+      "url": "https://www.worldssps.org/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "siervas-maria-enfermos-sdem",
+      "title": "Escudo color SM.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AEscudo%20color%20SM.jpg",
+      "referential": false,
+      "note": "Emblema de las Siervas de María, ministras de los enfermos. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "somascos-crs",
+      "title": "cropped-cropped-Propuesta-verde-vertical-verde-intermedio-e1697659749101-192x192.png",
+      "author": "",
+      "license": "Derechos: Orden de los Clérigos Regulares de Somasca",
+      "source": "somascos.org",
+      "url": "https://somascos.org/",
+      "referential": false,
+      "note": "Emblema oficial tomado de la web de la orden; uso autorizado por el dueño de la app con la mención de derechos."
+    },
+    {
+      "id": "teatinos-cr",
+      "title": "teatinos-cr",
+      "author": "Anónimo",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Stemma_teatini.jpg",
+      "referential": false,
+      "note": "Escudo heráldico de los Clérigos Regulares (Teatinos, C.R.), legible en la placa."
+    },
+    {
+      "id": "tercera-orden-regular-tor",
+      "title": "ESCUDO TOR.png",
+      "author": "",
+      "license": "CC0",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AESCUDO%20TOR.png",
+      "referential": false,
+      "note": "PNG con fondo transparente."
+    },
+    {
+      "id": "trinitarios-osst",
+      "title": "Emblem Trinitarian Order Rome.jpg",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3AEmblem%20Trinitarian%20Order%20Rome.jpg",
+      "referential": false,
+      "note": "Foto del emblema de piedra de la fachada de la casa general de Roma; fondo blanco. (sin transparencia: fondo blanco)."
+    },
+    {
+      "id": "vicentinos-cm",
+      "title": "CMPaul.png",
+      "author": "",
+      "license": "Public domain",
+      "source": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File%3ACMPaul.png",
+      "referential": false,
+      "note": "Sello de la Sociedad Vicentina (Congregación de la Misión)."
+    }
+  ]
 }
