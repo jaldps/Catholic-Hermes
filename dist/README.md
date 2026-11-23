@@ -2,6 +2,37 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.9.0
+
+**Solo en Releases:** columna derecha del repositorio → Releases → **v1.9.0**. La APK pesa 110 MB. Versión `1.9.0`, código 40. **Actualiza 1.8.1–1.8.30** y conserva el progreso.
+
+- **Rosario y Coronilla en horizontal:**
+  - a la izquierda, el hilo de cuentas y dónde estás;
+  - a la derecha, la oración entera y «Siguiente», al alcance del pulgar;
+  - al girar el teléfono no se pierde la cuenta ni se corta la voz.
+- **Pulido de 13 pantallas** con las reglas de diseño: el contenido ya no queda bajo la barra inferior, Hoy tiene una sola acción principal y los espacios son más ajustados.
+
+[Metadatos](../docs/quality/release-1.9.0/APK.json). No se ha probado en un teléfono físico.
+
+## Catholic Hermes 1.8.30
+
+**Solo en Releases:** columna derecha del repositorio → Releases → **v1.8.30**. La APK pesa 110 MB y GitHub no admite archivos de más de 100 MB en el repositorio. Versión `1.8.30`, código 39. **Actualiza 1.8.1–1.8.29** y conserva el progreso.
+
+- **Biblia en español más limpia:** 3.069 versículos ya no muestran un espacio antes de la puntuación («…era Dios.»).
+- **Imágenes nuevas:** 5 advocaciones marianas (Nazaré, Quinche, Loreto, Paz de El Salvador y Suyapa) y los emblemas de 26 órdenes que mostraban sus siglas.
+- **Accesibilidad:**
+  - con teclado se ve dónde está el foco;
+  - si desactivas las animaciones en Android, la app también las quita;
+  - lo enfocado ya no queda tapado por la barra inferior.
+- **Primeros cimientos del modo horizontal en el teléfono:**
+  - cabezal compacto en lugar de la imagen alta;
+  - pestañas en una barra lateral;
+  - ventanas que entran por la derecha.
+
+  Las pantallas se rediseñan una a una en las próximas versiones.
+
+[Metadatos](../docs/quality/release-1.8.30/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.29
 
 [Descargar Catholic Hermes 1.8.29](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.29.apk) · versión `1.8.29`, código 38. **Actualiza 1.8.1–1.8.28** y conserva el progreso. También en [Releases → v1.8.29](https://github.com/jaldps/Catholic-Hermes/releases/tag/v1.8.29).

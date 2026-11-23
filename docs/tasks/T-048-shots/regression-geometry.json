@@ -1,0 +1,30 @@
+{
+  "base": "e4a5cdd",
+  "comparisons": [
+    {
+      "file": "rosary_lumen_light_es.png",
+      "base_pixels_sha256": "f8bc89e34b11a30b55db59999164ff178da5bdb177116771eeb8edb65b92b582",
+      "current_pixels_sha256": "f8bc89e34b11a30b55db59999164ff178da5bdb177116771eeb8edb65b92b582",
+      "identical": true
+    },
+    {
+      "file": "rosary_lumen_light_es_w1280_h800.png",
+      "base_pixels_sha256": "603982bdf0092d344cb5b1761bbb42f9228d7441f4154ddf3d997c8c9c22bc22",
+      "current_pixels_sha256": "603982bdf0092d344cb5b1761bbb42f9228d7441f4154ddf3d997c8c9c22bc22",
+      "identical": true
+    },
+    {
+      "file": "rosary_sanctuary_light_es.png",
+      "base_pixels_sha256": "394e94359b2f0b92c561d0c68aef6301bdb132d2ba3e8d20acbe73775cda2628",
+      "current_pixels_sha256": "394e94359b2f0b92c561d0c68aef6301bdb132d2ba3e8d20acbe73775cda2628",
+      "identical": true
+    },
+    {
+      "file": "rosary_sanctuary_light_es_w1280_h800.png",
+      "base_pixels_sha256": "212271bc17c125a0295780bdb853486bab7510b121d4c20cc8610d4c34379c99",
+      "current_pixels_sha256": "212271bc17c125a0295780bdb853486bab7510b121d4c20cc8610d4c34379c99",
+      "identical": true
+    }
+  ],
+  "identical": 4
+}

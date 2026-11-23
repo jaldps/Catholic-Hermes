@@ -103,3 +103,35 @@ internal class NarrationController(private val sink: NarrationSink) {
         }
     }
 }
+
+/** Keeps both the state machine and its engine across Activity recreation. No Activity is retained. */
+internal class RosaryNarrationHolder : androidx.lifecycle.ViewModel() {
+    private var engine: com.example.data.audio.LiturgicalTtsManager? = null
+    private var lease: AutoCloseable? = null
+    private var sink: NarrationSink? = null
+    private var readyAnnounced = false
+    val controller = NarrationController(object : NarrationSink {
+        override fun speak(target: NarrationTarget) { sink?.speak(target) }
+        override fun stop() { engine?.stop() }
+    })
+    fun bind(candidate: com.example.data.audio.LiturgicalTtsManager): com.example.data.audio.LiturgicalTtsManager {
+        if (engine == null) {
+            engine = candidate
+            lease = candidate.retainForRosaryHolder()
+            readyAnnounced = false
+        }
+        return engine!!
+    }
+    fun connect(current: NarrationSink) { sink = current }
+    fun engineReady(ready: Boolean) {
+        if (ready && !readyAnnounced) controller.dispatch(NarrationEvent.EngineReady)
+        readyAnnounced = ready
+    }
+    fun detach(changingConfiguration: Boolean) {
+        sink = null
+        if (changingConfiguration) return
+        controller.dispatch(NarrationEvent.ScreenLeft)
+        lease?.close(); lease = null; engine = null; readyAnnounced = false
+    }
+    override fun onCleared() { detach(false) }
+}

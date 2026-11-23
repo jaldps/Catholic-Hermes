@@ -1,0 +1,25 @@
+{
+  "version_name": "1.9.0",
+  "version_code": 40,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.9.0",
+  "sha256": "3d83161fb9093ebcbf52494b351edb0fc2fbea624b5f5c52f69482e1c85a559a",
+  "bytes": 110600124,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.8.30 (same package and key)",
+  "built_from": "CatholicGPT at the version commit 4b4fd5f",
+  "published_as": "GitHub Release v1.9.0 only (APK above GitHub's 100 MiB file limit, not copied to dist/); Release SHA-256 identical to the local build",
+  "changes": [
+    "Landscape Rosary and Divine Mercy Chaplet (T-048, Codex + coordinator round 2): two-page folio with bead reel and context on the left, the whole prayer and Next on the right; guide inside the prayer panel; side sheets; session, sheet and voice survive rotation. Critic: all 9 rubric criteria at 9.",
+    "Skills-based UI pass over 13 portrait screens (T-062, Hermes): content no longer hides under the floating dock (Saints, Search, Plans, Confession, Questions), a single primary action on Today, tighter spacing."
+  ],
+  "tests": [
+    "Focused run on the release tree: 117/117 (AGENTS.md checks, Rosary, Saints, Orders, Search, Plans, Confession, Today priorities, Questions).",
+    "T-048 area run: 329 tests; 3 infrastructure flakes passed on re-run.",
+    "Full suite deferred at the owner's request (accelerated release)."
+  ],
+  "known_limitations": ["Not tested on a physical phone.", "Only the Rosary/Chaplet is redesigned for landscape; other areas come in L2-L7.", "T-062 screenshot review pending."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

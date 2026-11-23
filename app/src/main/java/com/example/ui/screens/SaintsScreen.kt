@@ -161,7 +161,7 @@ fun SaintsScreen(
             }
             val gutter = LocalAppDesign.current.spacing.gutter
             LazyColumn(
-                modifier = Modifier.fillMaxSize().padding(bottom = appScreenInsets().calculateBottomPadding()).testTag("saints_screen"),
+                modifier = Modifier.fillMaxSize().padding(bottom = appDockInset()).testTag("saints_screen"),
                 contentPadding = PaddingValues(bottom = 32.dp)
             ) {
                 item(key = "title") { headerItem(); Spacer(Modifier.height(6.dp)) }
@@ -286,7 +286,7 @@ private fun SaintDetail(
     val credit = remember(images, imagePath) { imagePath?.let { images.credit(celebration.key) } }
     LazyColumn(
         modifier = modifier.fillMaxSize().testTag("saint_detail"),
-        contentPadding = PaddingValues(bottom = appScreenInsets().calculateBottomPadding() + 32.dp),
+        contentPadding = PaddingValues(bottom = appDockInset() + 32.dp),
         verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
     ) {
         item {
@@ -300,7 +300,7 @@ private fun SaintDetail(
                 val url = credit.safeUrl
                 Text(
                     imageCreditLine(credit, language), style = styles.footnote, color = palette.textSecondary,
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = gutter).padding(bottom = 6.dp)
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = gutter).padding(top = 4.dp, bottom = 6.dp)
                         .then(if (url != null) Modifier.clickable(role = Role.Button) { runCatching { uriHandler.openUri(url) } } else Modifier)
                         .testTag("saint_image_credit")
                 )
