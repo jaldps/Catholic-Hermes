@@ -142,6 +142,8 @@ Un archivo por coronilla. El `id` es estable y en minúsculas con guiones (p. ej
   - **exactamente uno** de `prayerRef`, `text` o `vr`;
   - `repeat`: opcional, 1 por defecto. Cada repetición avanza una cuenta si el grupo tiene `count` > 1;
   - `meditation`: opcional, en los tres idiomas. Se muestra al entrar en el grupo.
+  - `rubric`: opcional, en los tres idiomas. Es **la instrucción** de la fuente: «En la medalla», «En las cuentas grandes», «Al final, tres veces». La app la muestra como guía, en pequeño y sin narrarla.
+    - **No** se mete en `meditation`, que queda solo para meditaciones reales: el misterio, el dolor, la llaga o la cita bíblica.
 - **`vr`:** versículo y respuesta para las dos voces (guía y respuesta), igual que en el Rosario.
 - **`variables`:** `["deceased_name", "deceased_gender", "intention"]`. El texto usa `{{nombre}}`, `{{intencion}}` y `{{el|ella}}` / `{{him|her}}` / `{{ele|ela}}`.
 - **`weekdays`:** días sugeridos (ISO 1–7). Además, `season` opcional: `lent` | `advent` | `easter`.

@@ -20,6 +20,8 @@ VARIABLES = {"deceased_name", "deceased_gender", "intention"}
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 HEX_RE = re.compile(r"^#[0-9A-Fa-f]{6}$")
 PLACEHOLDER_RE = re.compile(r"\{\{([^}]+)\}\}")
+# Instructions that belong in `rubric`, not `meditation` (es text).
+RUBRIC_RE = re.compile(r"^\s*(en (la|las|el|los|cada) |al (final|principio|inicio|comienzo)|cuenta (grande|peque)|se reza|rezar |repetir |tres veces|despu[eé]s de )", re.I)
 CURATED = {
     # Dios y Cristo
     "IVE-07", "IVE-09", "IVE-10", "IVE-15", "HZ-03", "HZ-04", "HZ-05", "CD-37", "CD-40", "CD-44", "CD-45", "CD-54", "HZ-02",
@@ -50,6 +52,25 @@ def app_prayer_ids():
     return ids
 
 
+# Rough language fingerprint: catches whole fields written in the wrong language (e.g. es/en swapped).
+STOP = {
+    "es": re.compile(r"\b(el|los|las|del|nuestro|nuestra|nosotros|señor|madre|con|y|ruega|santísima|vuestro)\b", re.I),
+    "en": re.compile(r"\b(the|and|thy|thee|thou|you|your|pray|holy|mother|lord|who|with|for|our|us)\b", re.I),
+    "pt": re.compile(r"\b(os|do|da|dos|das|nosso|nossa|nós|senhor|mãe|pelo|pela|com|e|rogai|vós|ó)\b", re.I),
+}
+
+
+def wrong_language(text, lang):
+    """The other language whose stop-words clearly dominate this field, or None."""
+    if len(text) < 40:
+        return None
+    own = len(STOP[lang].findall(text))
+    for other in LANGS:
+        if other != lang and len(STOP[other].findall(text)) >= max(4, 3 * (own + 1)):
+            return other
+    return None
+
+
 def lt(obj, where, latin_ok=False):
     """A localized text: exactly es/en/pt, none empty; en/pt differ from es unless latin_ok."""
     if not isinstance(obj, dict) or set(obj) != set(LANGS):
@@ -60,6 +81,11 @@ def lt(obj, where, latin_ok=False):
         if not isinstance(obj.get(lang), str) or not obj[lang].strip():
             errors.append(f"{where}.{lang}: empty")
             ok = False
+    if ok:
+        for lang in LANGS:
+            other = wrong_language(obj[lang], lang)
+            if other:
+                errors.append(f"{where}.{lang}: reads as {other.upper()}, not {lang.upper()} (swapped or untranslated?): {obj[lang][:50]!r}")
     if ok and not latin_ok and len(obj["es"]) > 25 and (obj["en"] == obj["es"] or obj["pt"] == obj["es"]):
         warns.append(f"{where}: en/pt identical to es (only acceptable for Latin; check the translation)")
     return ok
@@ -177,6 +203,11 @@ def check(path, prayer_ids, seen_ids, seen_sources, images=False, credits=None):
                 used_placeholders |= placeholders(vr["v"]) | placeholders(vr["r"])
         if "meditation" in s:
             lt(s["meditation"], f"{sw}.meditation")
+            med = s["meditation"]
+            if isinstance(med, dict) and RUBRIC_RE.match(med.get("es", "")):
+                errors.append(f"{sw}.meditation: looks like an instruction ({med['es'][:40]!r}); put it in rubric")
+        if "rubric" in s:
+            lt(s["rubric"], f"{sw}.rubric")
         rep = s.get("repeat", 1)
         if not isinstance(rep, int) or rep < 1:
             errors.append(f"{sw}.repeat: integer >= 1")

@@ -217,11 +217,26 @@ private fun SaintsList(
         }
         if (visible.isEmpty()) {
             item(key = "empty") {
-                AppEmptyState(
-                    title = tr("Sin resultados", "No results", "Sem resultados"),
-                    body = tr("Prueba con otro nombre o mes.", "Try another name or month.", "Tente outro nome ou mês."),
-                    modifier = Modifier.padding(horizontal = gutter, vertical = 32.dp)
-                )
+                Column(
+                    Modifier.fillMaxWidth().padding(horizontal = gutter, vertical = 32.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    AppEmptyState(
+                        title = tr("Nada coincide", "Nothing matches", "Nada corresponde"),
+                        body = tr(
+                            "Prueba con otra búsqueda o quita los filtros.",
+                            "Try another search or clear the filters.",
+                            "Tente outra busca ou limpe os filtros."
+                        ),
+                        modifier = Modifier.testTag("list_empty")
+                    )
+                    AppSecondaryCapsule(
+                        label = tr("Quitar filtros", "Clear filters", "Limpar filtros"),
+                        onClick = { query = ""; month = 0; profilesOnly = false },
+                        tag = "saints_clear_filters"
+                    )
+                }
             }
         } else {
             val byMonth = visible.groupBy { it.month }

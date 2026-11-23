@@ -174,19 +174,21 @@ internal fun DevotionsExplorerScreen(
 
         if (inRegion.isEmpty()) {
             item(key = "empty") {
-                AppEmptyState(
-                    title = language.tr("Sin resultados", "Nothing found", "Sem resultados"),
-                    body = language.tr(
-                        "Prueba otro nombre o elige otra región.",
-                        "Try another name, or choose a different region.",
-                        "Tente outro nome ou escolha outra região."
-                    ),
-                    icon = Icons.Outlined.Search
-                )
-                Column(Modifier.fillMaxWidth().padding(horizontal = 40.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+                    AppEmptyState(
+                        title = language.tr("Nada coincide", "Nothing matches", "Nada corresponde"),
+                        body = language.tr(
+                            "Prueba con otra búsqueda o quita los filtros.",
+                            "Try another search or clear the filters.",
+                            "Tente outra busca ou limpe os filtros."
+                        ),
+                        icon = Icons.Outlined.Search,
+                        modifier = Modifier.testTag("list_empty")
+                    )
                     AppSecondaryCapsule(
-                        label = language.tr("Ver todas", "Show all", "Ver todas"),
-                        onClick = { query = ""; region = EVERY_REGION }
+                        label = language.tr("Quitar filtros", "Clear filters", "Limpar filtros"),
+                        onClick = { query = ""; region = EVERY_REGION },
+                        tag = "devotions_clear_filters"
                     )
                 }
             }
