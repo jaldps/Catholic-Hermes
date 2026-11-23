@@ -366,8 +366,6 @@ data class AppPaneWidth(val fraction: Float, val min: Dp, val max: Dp) {
     fun resolve(available: Dp): Dp = (available * fraction).coerceIn(min, max)
 }
 
-internal data class ReaderPanelArt(val asset: String?, val url: String?, val titleHeight: Dp = 0.dp)
-internal val LocalReaderPanelArt = androidx.compose.runtime.compositionLocalOf<(ReaderPanelArt) -> Unit> { {} }
 internal val LocalAppPageKind = androidx.compose.runtime.compositionLocalOf { AppPageKind.Hub }
 internal val LocalHeaderPoster = androidx.compose.runtime.compositionLocalOf { false }
 internal val LocalAppInteriorWidth = androidx.compose.runtime.compositionLocalOf { Dp.Unspecified }
@@ -413,7 +411,6 @@ fun AppPageLayout(
     val design = LocalAppDesign.current
     val density = androidx.compose.ui.platform.LocalDensity.current
     val panelScroll = androidx.compose.foundation.rememberScrollState()
-    var readerArtwork by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(ReaderPanelArt(null, null)) }
     var titleOverflow by androidx.compose.runtime.remember { androidx.compose.runtime.mutableIntStateOf(0) }
     androidx.compose.runtime.LaunchedEffect(landscape, titleOverflow) {
         if (landscape) panelScroll.scrollTo(titleOverflow)
@@ -452,12 +449,10 @@ fun AppPageLayout(
             androidx.compose.runtime.CompositionLocalProvider(
                 LocalHeaderPlacement provides if (landscape) AppHeaderPlacement.SidePanel else AppHeaderPlacement.InList,
                 LocalHeaderPoster provides (supporting == null), LocalAppPageKind provides kind,
-                LocalReaderPanelArt provides { readerArtwork = it },
                 LocalPanelTitleOverflow provides { titleOverflow = it },
                 LocalHeaderPanelHeight provides with(density) { (height - panelBottom - panelFoot.height).toDp() }
             ) {
                 Box(Modifier.fillMaxWidth().then(if (landscape && kind == AppPageKind.Reader) Modifier.height(with(density) { (height - panelBottom - panelFoot.height).toDp() }) else Modifier)) {
-                if (landscape && kind == AppPageKind.Reader) AppReaderPanelArtwork(readerArtwork, Modifier.matchParentSize())
                 androidx.compose.foundation.layout.Column(Modifier.fillMaxWidth().then(if (landscape && kind == AppPageKind.Reader) Modifier.fillMaxHeight() else Modifier)
                     .onFocusChanged { panelFocused = it.hasFocus }.focusGroup().testTag("app_page_panel")
                     .then(if (landscape) Modifier.verticalScroll(panelScroll) else Modifier)

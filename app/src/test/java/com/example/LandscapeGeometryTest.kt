@@ -56,7 +56,7 @@ class LandscapeGeometryTest(private val identity: DesignLanguage, private val wi
         }
     }
     @Test fun hubKeepsTheSharedBaselineAndEverySupportingControlReachable() = measure(LandscapeShowcase.Hub)
-    @Test fun readerKeepsItsArtworkAndFooterWithinTheApprovedPanel() = measure(LandscapeShowcase.Reader)
+    @Test fun readerKeepsItsTitleAndFooterWithinTheApprovedPanel() = measure(LandscapeShowcase.Reader)
     companion object {
         @JvmStatic @ParameterizedRobolectricTestRunner.Parameters(name = "{0}-{1}x{2}")
         fun matrix(): List<Array<Any>> = listOf(DesignLanguage.APPLE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY).flatMap { id ->

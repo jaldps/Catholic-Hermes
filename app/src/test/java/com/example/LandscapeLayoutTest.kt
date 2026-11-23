@@ -9,6 +9,7 @@ import com.example.ui.design.*
 import com.example.data.models.FontChoice
 import com.example.data.models.AppLanguage
 import androidx.compose.ui.platform.LocalInspectionMode
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.*
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -63,6 +64,39 @@ class LandscapeLayoutTest {
         assertEquals(44f, dp(bounds("showcase_previous").height), 1f)
         assertEquals(48f, dp(bounds("showcase_next").height), 1f)
         assertTrue("The whole prayer is visible", dp(compose.onNodeWithTag("showcase_reading").getUnclippedBoundsInRoot().bottom.value * compose.density.density) <= dp(bounds("showcase_next").top))
+    }
+
+    @Test fun landscapeReaderDoesNotRenderItsSuppliedArtwork() {
+        var asset by mutableStateOf<String?>("heroes/lumen/prayers_lily.jpg")
+        compose.setContent {
+            SanctaFidesTheme(reduceMotion = true) {
+                CompositionLocalProvider(LocalInspectionMode provides true) {
+                    AppPageLayout(kind = AppPageKind.Reader, header = {
+                        AppDetailHeader("Padre Nuestro", assetPath = asset, meta = "Pater Noster")
+                    }, supporting = {
+                        androidx.compose.material3.Text("Oración ▾", modifier = Modifier.testTag("reader_test_outline"))
+                    }) { header ->
+                        androidx.compose.foundation.lazy.LazyColumn {
+                            item { header() }
+                            item { androidx.compose.material3.Text("Padre nuestro, que estás en el cielo") }
+                        }
+                    }
+                }
+            }
+        }
+        insets()
+        val before = java.io.File("build/screenshots/reader-no-art/with_asset.png")
+        landscapeCapture(compose, compose.activity, 891, 411, before)
+        val withAsset = android.graphics.BitmapFactory.decodeFile(before.path)
+        compose.runOnIdle { asset = null }
+        compose.waitForIdle()
+        val after = java.io.File("build/screenshots/reader-no-art/without_asset.png")
+        landscapeCapture(compose, compose.activity, 891, 411, after)
+        val withoutAsset = android.graphics.BitmapFactory.decodeFile(after.path)
+        assertTrue("Reader artwork must not change any rendered pixels in landscape", withAsset.sameAs(withoutAsset))
+        withAsset.recycle()
+        withoutAsset.recycle()
+        assertTrue(dp(bounds("reader_test_outline").top - bounds("side_panel_header").bottom) <= 24f)
     }
 
     @Test fun enlargedReaderCanReachTheEndWithoutMovingItsAdvanceButton() {
