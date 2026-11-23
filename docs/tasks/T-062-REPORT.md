@@ -188,6 +188,11 @@
 - **Puntuación:** `HomeScreen` ya normaliza `...` a `…` en los extractos (`:1058`).
 
 
+## Pendiente para la revisión completa
+
+- `com.example.Devotions*` quedó abortado por lentitud; se corre al final junto con la pasada completa de capturas.
+- Sin capturas nuevas para los lotes 4–13 (decisión del dueño, ver `T-062-NOTE.md`).
+
 ## Para la capa compartida
 
 
