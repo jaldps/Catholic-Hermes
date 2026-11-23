@@ -46,3 +46,11 @@ Los 4 fallos de `HomePrayerPrioritiesTest` son los mismos casos y la misma excep
 3. **`novena_clear_filters`**: el botón ya existía con esa etiqueta y varios tests la referenciaban; se conservó el tag aunque el texto pasó de «Ver todas» a «Quitar filtros».
 4. ** Sanctuary oscuro a 411 dp**: el botón «Quitar filtros» de `novena_filter_empty` está en el árbol y `assertIsDisplayed()` pasa, pero en la captura queda cubierto por el dock inferior (media 863 dp de 891 dp, frente a 807 dp en las otras tres identidades). Se añadió un `Spacer` de 64 dp debajo del botón para que en el uso real no quede bajo la barra; la captura sigue sin mostrarlo en esa identidad. Se reporta para que el coordinador evalúe el espaciado de `AppSecondaryCapsule` en Sanctuary, que no está en los archivos permitidos de este encargo.
 5. **T-052**: al terminar se consultó `origin/CatholicGPT:docs/tasks/README.md` y sigue marcada **EN COLA (tras T-047; en paralelo con Codex)**, no ABIERTA. No se ha empezado.
+
+
+## Petición menor de la revisión (capturas Lumen/Cristal claros)
+
+- `EmptyStatesScreenshotTest.capture()`: `reduceMotion = true` ya estaba en los dos puntos donde se aplica `SanctaFidesTheme`; se añade `compose.mainClock.advanceTimeBy(3_000L)` entre dos `waitForIdle()` antes de dibujar, para que cualquier animación de entrada esté terminada al capturar.
+- Repetida la clase completa: **24/24 tests, 0 fallos** (`BUILD SUCCESSFUL in 6m 36s`, Java 21).
+- Regeneradas las 24 capturas y la lámina `_contact.png`. Cambiaron tres PNG (los de filtro de novenas en tres identidades) y la lámina; el resto quedó byte-idéntico.
+- Revisadas visualmente `lumen_light_novena_filter_empty.png` y `glass_light_daily_missal_error.png`: textos y títulos con buen contraste y legibles. No se ha detectado el defecto de legibilidad que se veía en la lámina anterior.
