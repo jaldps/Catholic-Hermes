@@ -1,6 +1,6 @@
 # T-048 · Rosario y Coronilla en horizontal
 
-Entrega parcial 2/6. Base: `origin/CatholicGPT` @ `e4a5cdd`, con T-047 integrado y aprobado.
+Entrega parcial 3/6. Base: `origin/CatholicGPT` @ `e4a5cdd`, con T-047 integrado y aprobado.
 
 ## Geometría
 
@@ -16,8 +16,16 @@ Validación: `RosaryLandscapeGeometryTest`: **5/5**, incluidos 800 × 360, 891 �
 
 `RosaryReelInteractionTest`: **3/3**; geometría: **5/5**. [Resultado](T-048-shots/validation-reel.json). La primera ejecución conjunta dejó 12 fallos en la preparación de `RosaryFitTest`: la guía de prueba omitía la oración inicial de la Coronilla y sus índices no coincidían con la pantalla. Se corrigió esa preparación; no se declara aún verde el presupuesto.
 
+## Presupuesto de lectura
+
+`RosaryFitTest`: **12/12**, con seis oraciones por caso (**72 escenarios de texto real**): Padrenuestro, Avemaría, Gloria, Oh Jesús mío, Padre Eterno y Por su dolorosa Pasión, en ES/EN/PT, a 891 × 411 y 800 × 360, con y sin guía. Se comprueban `TextLayoutResult`, ausencia de elipsis, límites completos y rango de desplazamiento **0**.
+
+La instrucción está en el contexto izquierdo, según §4.3; así también cabe el Padrenuestro a 800 con guía, sin necesitar la excepción de desplazamiento de la tabla anterior. Las oraciones largas siguen pudiendo desplazarse, con pista y avance fijo. El progreso conserva 32 dp visuales y 44 dp de objetivo táctil. El salto de cuentas al terminar una decena recibe el háptico firme. El botón de voz anuncia «Pausar» mientras está activo.
+
+Perfil conjunto: **21/21** (12 presupuesto + 3 hilo + 5 geometría + 1 captura con ambas devociones). [Resultado](T-048-shots/validation-budget.json). Se revisaron las dos primeras capturas de Lumen a 800 × 360. Se detectó que el trazo del hilo necesita recorte a su región; queda pendiente esa corrección visual antes de las capturas finales.
+
 ## Pendiente
 
-Presupuesto de las oraciones y guía, hojas, continuidad del giro y la voz, matriz de capturas, auditoría y autoevaluación final. Esta entrega parcial no declara esos puntos terminados ni una calificación visual final.
+Hojas, continuidad del giro y la voz, matriz de capturas, auditoría y autoevaluación final. Esta entrega parcial no declara esos puntos terminados ni una calificación visual final.
 
 La suite completa corresponde al coordinador (regla 10); no se ejecuta para este encargo. No se ha probado en un teléfono físico.

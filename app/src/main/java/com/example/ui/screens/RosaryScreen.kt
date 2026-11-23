@@ -33,6 +33,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -221,9 +222,9 @@ internal class PrayerGuide(
 
     fun firstStepOn(bead: Int): Int = steps.indexOfFirst { it.bead == bead }
 
-    /** Moving one step forward from [from] to [to] completes a decade (a firmer haptic tick). */
+    /** Moving forward across a completed decade, including a bead-reel jump. */
     fun finishesDecade(from: Int, to: Int): Boolean =
-        to == from + 1 && steps[to].section != steps[from].section && steps[from].section in 1..decadeCount
+        to > from && steps[to].section > steps[from].section && steps[from].section in 1..decadeCount
 }
 
 private class GuideBuilder {
@@ -1472,12 +1473,15 @@ private fun LandscapeRosaryContext(
             verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Text(upNext ?: lang.pick("Fin de la oración", "End of prayer", "Fim da oração"), style = styles.caption, color = p.textSecondary,
                 modifier = Modifier.testTag("rosary_up_next"))
-            Column(Modifier.fillMaxWidth().heightIn(min = 32.dp).lumenPress(onOptions).testTag("page_dots")) {
+            Box(Modifier.fillMaxWidth().height(32.dp), contentAlignment = Alignment.Center) {
+            Column(Modifier.fillMaxWidth().requiredHeight(44.dp).lumenPress(onOptions).testTag("page_dots").padding(vertical = 6.dp)
+                .semantics { progressBarRangeInfo = ProgressBarRangeInfo((index + 1).toFloat(), 1f..guide.steps.size.toFloat()) }) {
                 Box(Modifier.fillMaxWidth().height(3.dp).background(p.separator)) {
                     Box(Modifier.fillMaxWidth((index + 1f) / guide.steps.size).fillMaxHeight().background(p.accent))
                 }
                 Text(stepText, style = styles.caption, color = p.textSecondary,
                     modifier = Modifier.testTag(if (isRosary) "rosary_hero_step_counter" else "mercy_hero_step_counter"))
+            }
             }
             LandscapePrayerPill(lang.pick("Anterior", "Back", "Anterior"),
                 if (isRosary) "prev_bead_button" else "prev_mercy_step_button", onPrevious, enabled = index > 0,
@@ -1528,7 +1532,7 @@ private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidanc
         Column(Modifier.align(Alignment.TopCenter).padding(top = window.height * 0.45f - safe.top - 28.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
             AppGlassIconButton(if (playing) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
-                lang.pick("Escuchar", "Listen", "Ouvir"), onAudio,
+                if (playing) lang.pick("Pausar", "Pause", "Pausar") else lang.pick("Escuchar", "Listen", "Ouvir"), onAudio,
                 tag = if (isRosary) "toggle_prayer_audio_button" else "toggle_mercy_audio_button")
             Text(lang.pick("Escuchar", "Listen", "Ouvir"), style = styles.caption, color = p.textSecondary, modifier = Modifier.clearAndSetSemantics {})
         }
@@ -1545,18 +1549,21 @@ private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidanc
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun LandscapeRosaryPrayer(step: GuideStep, key: String, lang: AppLanguage, count: String?, spoken: String?, onSkip: () -> Unit) {
     val safe = appSafeInsets()
     val p = LocalAppDesign.current.palette
     val scroll = rememberScrollState()
     LaunchedEffect(key) { scroll.scrollTo(0) }
+    val responseView = remember(key) { BringIntoViewRequester() }
+    LaunchedEffect(key, spoken) { if (spoken != null && spoken == step.response) responseView.bringIntoView() }
     Column(Modifier.fillMaxSize().background(p.canvasTop).padding(start = 20.dp, end = 12.dp, top = safe.top + 4.dp)) {
         PrayerTitleRow(step, count, lang, true, onSkip, padded = false)
         Spacer(Modifier.height(8.dp))
         Box(Modifier.weight(1f).fillMaxWidth()) {
             Column(Modifier.fillMaxSize().verticalScroll(scroll).testTag("prayer_content_scroll")) {
-                PrayerBody(step.copy(intention = null, meditation = null, detail = null), lang, spoken, instructionsOn = false)
+                PrayerBody(step.copy(intention = null, meditation = null, detail = null), lang, spoken, instructionsOn = false, responseModifier = Modifier.bringIntoViewRequester(responseView))
             }
             RosaryScrollHint(scroll.canScrollForward, 24.dp, "prayer_scroll_hint")
         }

@@ -1,0 +1,38 @@
+{
+  "classes": [
+    {
+      "name": "com.example.RosaryFitTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:02:55.182Z"
+    },
+    {
+      "name": "com.example.RosaryReelInteractionTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:03:24.723Z"
+    },
+    {
+      "name": "com.example.RosaryLandscapeScreenshotTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:02:42.640Z"
+    },
+    {
+      "name": "com.example.RosaryLandscapeGeometryTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-23T17:03:12.782Z"
+    }
+  ],
+  "total": 21,
+  "routine_layout_scenarios": 72
+}
