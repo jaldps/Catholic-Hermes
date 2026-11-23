@@ -38,3 +38,16 @@ El documento ya está actualizado (§2 P9, §5.1, §11 criterio 1). En L0 eso su
 5. **Capturas:** rehaz las de los composables de prueba y las láminas `_B_*`. En la autoevaluación, el criterio 1 incluye P9.
 
 Hazlo en el push C o en un commit propio antes de él.
+
+## Añadido (23-nov): dos fallos HIGH de la revisión de tableta, que también van en L0
+
+`docs/design/TABLET-REVIEW.md` revisó la interfaz con la skill `better-interface` en sus 7 dominios. Encontró dos fallos de **toda la app** en componentes que L0 ya toca. Inclúyelos en el push C:
+
+1. **Foco de teclado invisible.**
+   - **Dónde:** `ui/design/LumenFoundation.kt:143`. `lumenPress` usa `.clickable(source, indication = null, …)` y lo usan 72 controles: riel, barra, segmentos, filas, botones y tarjetas. Con un teclado (tableta con funda, Chromebook) no se ve dónde está el foco (WCAG 2.4.7).
+   - **Arreglo:** un `IndicationNodeFactory` propio que solo dibuja con `FocusInteraction` del mismo `source`. Pinta un anillo de 2 dp en `palette.textPrimary` (≥ 3:1 sobre cada superficie) con la forma del control. Sin ripple, conservando el resorte de presión.
+   - **Test:** `requestFocus()` en un control `lumenPress` y comprobar que el anillo se dibuja. Por ejemplo con una captura, o comprobando que el nodo de indicación está activo.
+2. **«Quitar animaciones» del sistema ignorado.**
+   - **Dónde:** `MainActivity.kt:78` pasa solo `preferences.reduceMotion` (falso por defecto). Solo `ui/components/SacredArt.kt:125` lee `ValueAnimator.areAnimatorsEnabled()`.
+   - **Arreglo:** `reduceMotion = preferences.reduceMotion || (Build.VERSION.SDK_INT >= 26 && !ValueAnimator.areAnimatorsEnabled())`, reevaluado al volver a la app (`onResume`).
+   - **Test:** con `ShadowValueAnimator.setDurationScale(0f)`, `LocalAppDesign.current.reduceMotion` es `true`.
