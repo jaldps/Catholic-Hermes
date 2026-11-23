@@ -1,5 +1,7 @@
 package com.example.screenshots
 
+import androidx.compose.ui.unit.dp
+import com.example.revealAboveDock
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.view.View
@@ -83,7 +85,8 @@ class ExploreScreenshotTest {
     }
 
     private fun tap(tag: String) {
-        compose.onNodeWithTag(tag, useUnmergedTree = true).performClick()
+        // Explore's last rows land under the floating dock after a minimal scroll; clear it before tapping.
+        compose.revealAboveDock(tag, clearance = 100.dp, useUnmergedTree = true).performClick()
         compose.waitForIdle()
     }
 
