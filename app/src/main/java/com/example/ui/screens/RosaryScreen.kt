@@ -22,6 +22,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.systemGestures
@@ -70,6 +71,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.layout.positionInParent
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
@@ -100,6 +105,7 @@ import androidx.compose.ui.semantics.progressBarRangeInfo
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.semantics.toggleableState
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
@@ -225,9 +231,9 @@ internal class PrayerGuide(
 
     fun firstStepOn(bead: Int): Int = steps.indexOfFirst { it.bead == bead }
 
-    /** Moving forward across a completed decade, including a bead-reel jump. */
+    /** Moving one step forward from [from] to [to] completes a decade (a firmer haptic tick). Jumps never do. */
     fun finishesDecade(from: Int, to: Int): Boolean =
-        to > from && steps[to].section > steps[from].section && steps[from].section in 1..decadeCount
+        to == from + 1 && steps[to].section != steps[from].section && steps[from].section in 1..decadeCount
 }
 
 private class GuideBuilder {
@@ -1205,7 +1211,7 @@ fun RosaryScreen(
                 selectedMysteryType, selectedTab, labelInDecade, decadeFruit, artPath, glassBackdrop,
                 panelBack, instructionsOn,
                 onSelect = { dispatch(RosaryEvent.SelectDevotion(Devotion.fromTab(it))) },
-                onPrevious = { go(index - 1) }, onBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let { go(it) } },
+                onPrevious = { go(index - 1) }, onNext = { go(index + 1) }, onBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let { go(it) } },
                 onOptions = { sheet = RosarySheet.OPTIONS }, onMysteries = { sheet = RosarySheet.MYSTERIES },
                 onMystery = { sheet = RosarySheet.MYSTERY }
             )
@@ -1219,7 +1225,7 @@ fun RosaryScreen(
     ) {
         if (landscape) {
             LandscapeRosaryPrayer(step, "$selectedTab/$selectedMysteryType/$index", lang, count,
-                currentlySpeaking, { dispatch(RosaryEvent.SkipOptional) }, contentScroll, readingAnchor)
+                currentlySpeaking, { dispatch(RosaryEvent.SkipOptional) }, contentScroll, readingAnchor, instructionsOn)
         } else BoxWithConstraints(
         Modifier.fillMaxSize()
     ) {
@@ -1488,7 +1494,7 @@ private fun LandscapeRosaryContext(
     section: GuideSection, where: String, count: String?, stepText: String, upNext: String?,
     mysteryType: RosaryMysteryType, selectedTab: Int, inDecade: Boolean, fruit: String?,
     art: String?, backdrop: DevotionalBackdrop, back: Pair<String, () -> Unit>?, guidance: Boolean,
-    onSelect: (Int) -> Unit, onPrevious: () -> Unit, onBead: (Int) -> Unit,
+    onSelect: (Int) -> Unit, onPrevious: () -> Unit, onNext: () -> Unit, onBead: (Int) -> Unit,
     onOptions: () -> Unit, onMysteries: () -> Unit, onMystery: () -> Unit
 ) {
     val window = appWindowSize()
@@ -1513,34 +1519,34 @@ private fun LandscapeRosaryContext(
             DevotionSwitch(lang, selectedTab, backdrop, design.isDark, onSelect, compact = true)
         }
         Spacer(Modifier.height(8.dp))
-        Row(Modifier.weight(1f).fillMaxWidth().padding(start = start, end = 12.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        Row(Modifier.weight(1f).fillMaxWidth().padding(start = start, end = 12.dp).semantics { isTraversalGroup = true }, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             val beadSteps = guide.steps.indices.filter { guide.steps[it].bead == step.bead }
             BeadReel(beads = guide.beads.map { it.kind }, activeBead = step.bead, onSelectBead = onBead,
                 subStepCount = beadSteps.size, subStepIndex = beadSteps.indexOf(index).coerceAtLeast(0),
                 orientation = androidx.compose.foundation.gestures.Orientation.Vertical,
                 modifier = Modifier.width(44.dp).fillMaxHeight().testTag(if (isRosary) "prayer_bead_counter" else "mercy_step_counter")
                     .semantics {
+                        traversalIndex = 1f
                         contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
                         stateDescription = stepText
                         customActions = listOf(
-                            CustomAccessibilityAction(lang.pick("Anterior", "Back", "Anterior")) { if (index > 0) { onBead((step.bead - 1).coerceAtLeast(0)); true } else false },
-                            CustomAccessibilityAction(lang.pick("Siguiente", "Next", "Seguinte")) { if (step.bead < guide.beads.lastIndex) { onBead(step.bead + 1); true } else false }
+                            CustomAccessibilityAction(lang.pick("Anterior", "Back", "Anterior")) { if (index > 0) { onPrevious(); true } else false },
+                            CustomAccessibilityAction(lang.pick("Siguiente", "Next", "Seguinte")) { if (index < guide.steps.lastIndex) { onNext(); true } else false }
                         )
                     })
-            Box(Modifier.weight(1f).fillMaxHeight()) {
-                Column(Modifier.fillMaxSize().verticalScroll(contextScroll).testTag("rosary_context_scroll").semantics { isTraversalGroup = true; traversalIndex = 0f }) {
+            Box(Modifier.weight(1f).fillMaxHeight().semantics { isTraversalGroup = true; traversalIndex = 0f }) {
+                Column(Modifier.fillMaxSize().rosaryScrollFade(contextScroll.canScrollForward, 16.dp).verticalScroll(contextScroll).testTag("rosary_context_scroll").semantics { isTraversalGroup = true; traversalIndex = 0f }) {
                     Text(if (isRosary && inDecade) mysteryAnnouncement(lang, mysteryType, step.section - 1, "").substringBefore(":") else if (!isRosary) lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia") else where, style = styles.caption, color = p.textSecondary)
                     Spacer(Modifier.height(4.dp))
                     Text(if (inDecade) section.subtitle else step.intention ?: if (isRosary) step.name else where,
                         style = styles.headline, color = p.textPrimary,
                         modifier = Modifier.testTag(if (isRosary) "rosary_hero_title" else "mercy_hero_title").semantics { heading() })
                     Spacer(Modifier.height(8.dp))
-                    if (guidance) { GuideHint(step, lang, compact = true); Spacer(Modifier.height(8.dp)) }
                     val thumbHeight = if (window.height < 400.dp) 56.dp else 102.dp
-                    Box(Modifier.fillMaxWidth().height(thumbHeight)
+                    if (art != null) Box(Modifier.fillMaxWidth().height(thumbHeight)
                         .testTag(if (isRosary) "rosary_hero_photo" else "mercy_hero_photo")
                         .semantics { credit?.let { contentDescription = listOf(it.title, it.artist).filter { it.isNotBlank() }.joinToString(", ") } }) {
-                        ArtThumb(art.orEmpty(), Modifier.fillMaxSize()
+                        ArtThumb(art, Modifier.fillMaxSize()
                             .then(if (inDecade) Modifier.testTag("mystery_hero_photo") else Modifier)
                             .then(if (design.isSanctuary) Modifier.border(0.75.dp, p.separator, RoundedCornerShape(8.dp)).padding(5.dp) else Modifier))
                     }
@@ -1583,24 +1589,41 @@ private fun LandscapeRosaryContext(
 }
 
 @Composable
-private fun LandscapePrayerPill(text: String, tag: String, action: () -> Unit, enabled: Boolean = true, modifier: Modifier = Modifier) {
+private fun LandscapePrayerPill(text: String, tag: String, action: () -> Unit, enabled: Boolean = true, modifier: Modifier = Modifier,
+                                switchState: Boolean? = null) {
     val design = LocalAppDesign.current
     val shape = if (design.isSanctuary) RoundedCornerShape(8.dp) else CircleShape
-    Box(modifier.heightIn(min = 44.dp).lumenPress(action, enabled = enabled, shape = shape)
-        .semantics { contentDescription = text }.testTag(tag)
-        .lumenGlass(shape).padding(horizontal = 12.dp), contentAlignment = Alignment.Center) {
-        Text(text, style = LocalAppTextStyles.current.caption, color = if (enabled) design.palette.textPrimary else design.palette.inkQuiet)
+    val on = switchState == true
+    Box(modifier.heightIn(min = 44.dp)
+        .lumenPress(action, enabled = enabled, shape = shape, role = if (switchState != null) Role.Switch else Role.Button)
+        .semantics {
+            contentDescription = text
+            if (switchState != null) toggleableState = androidx.compose.ui.state.ToggleableState(on)
+        }.testTag(tag)
+        .then(if (on) Modifier.background(design.palette.action, shape) else Modifier.lumenGlass(shape))
+        .padding(horizontal = 12.dp), contentAlignment = Alignment.Center) {
+        Text(text, style = LocalAppTextStyles.current.caption,
+            color = if (on) design.palette.onAction else if (enabled) design.palette.textPrimary else design.palette.inkQuiet)
     }
 }
+
+/** Fades the bottom edge of scrolling content out by masking it (no painted rectangle). */
+private fun Modifier.rosaryScrollFade(canScroll: Boolean, fade: Dp): Modifier = this
+    .graphicsLayer { compositingStrategy = androidx.compose.ui.graphics.CompositingStrategy.Offscreen }
+    .drawWithContent {
+        drawContent()
+        if (canScroll && size.height > 0f) {
+            val f = (fade.toPx() / size.height).coerceIn(0f, 1f)
+            drawRect(Brush.verticalGradient(0f to Color.Black, (1f - f) to Color.Black, 1f to Color.Transparent), blendMode = BlendMode.DstIn)
+        }
+    }
 
 @Composable
 private fun RosaryScrollHint(visible: Boolean, height: Dp, tag: String) {
     if (visible) {
         val p = LocalAppDesign.current.palette
-        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.BottomCenter) {
-            Box(Modifier.fillMaxWidth().height(height).background(Brush.verticalGradient(listOf(Color.Transparent, p.canvasTop)))
-                .testTag(tag).clearAndSetSemantics {})
-            Icon(Icons.Rounded.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.size(16.dp).clearAndSetSemantics {})
+        Box(Modifier.fillMaxSize().testTag(tag).clearAndSetSemantics {}, contentAlignment = Alignment.BottomEnd) {
+            Icon(Icons.Rounded.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.padding(end = 4.dp, bottom = 2.dp).size(16.dp))
         }
     }
 }
@@ -1614,9 +1637,10 @@ private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidanc
     val styles = LocalAppTextStyles.current
     val edge = maxOf(12.dp, safe.end + 8.dp)
     Box(Modifier.fillMaxHeight().padding(end = edge).width(72.dp).testTag("prayer_transport").semantics { isTraversalGroup = true; traversalIndex = 2f }) {
-        Column(Modifier.align(Alignment.TopCenter), horizontalAlignment = Alignment.CenterHorizontally) {
+        Column(Modifier.align(Alignment.TopCenter), horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp)) {
             LandscapePrayerPill(lang.pick("Guía", "Guide", "Guia"), "prayer_instructions_toggle", onGuide,
-                modifier = Modifier.semantics { selected = guidance })
+                modifier = Modifier.semantics { selected = guidance }, switchState = guidance)
             AppGlassIconButton(Icons.Outlined.MoreHoriz, lang.pick("Opciones", "Options", "Opções"), onOptions,
                 modifier = Modifier.size(44.dp), tag = "rosary_options_button")
         }
@@ -1625,15 +1649,15 @@ private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidanc
             AppGlassIconButton(if (playing) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
                 if (playing) lang.pick("Pausar", "Pause", "Pausar") else lang.pick("Escuchar", "Listen", "Ouvir"), onAudio,
                 tag = if (isRosary) "toggle_prayer_audio_button" else "toggle_mercy_audio_button")
-            Text(lang.pick("Escuchar", "Listen", "Ouvir"), style = styles.caption, color = p.textSecondary, modifier = Modifier.clearAndSetSemantics {})
+            Text(if (playing) lang.pick("Pausar", "Pause", "Pausar") else lang.pick("Escuchar", "Listen", "Ouvir"), style = styles.caption, color = p.textSecondary, modifier = Modifier.clearAndSetSemantics {})
         }
         Column(Modifier.align(Alignment.TopCenter).padding(top = window.height * 0.70f - safe.top - 32.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
             val shape = if (LocalAppDesign.current.isSanctuary) RoundedCornerShape(12.dp) else CircleShape
-            Box(Modifier.size(56.dp).background(p.action, shape).lumenPress(onNext, enabled = canNext, shape = shape)
+            Box(Modifier.size(56.dp).background(if (canNext) p.action else p.action.copy(alpha = .38f), shape).lumenPress(onNext, enabled = canNext, shape = shape)
                 .testTag(if (isRosary) "next_bead_button" else "next_mercy_step_button")
                 .semantics { contentDescription = lang.pick("Siguiente", "Next", "Seguinte") }, contentAlignment = Alignment.Center) {
-                Icon(Icons.Rounded.ChevronRight, null, tint = p.onAction, modifier = Modifier.size(28.dp))
+                Icon(Icons.Rounded.ChevronRight, null, tint = if (canNext) p.onAction else p.onAction.copy(alpha = .6f), modifier = Modifier.size(28.dp))
             }
             Text(lang.pick("Siguiente", "Next", "Seguinte"), style = styles.caption, color = p.textSecondary, modifier = Modifier.clearAndSetSemantics {})
         }
@@ -1642,18 +1666,29 @@ private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidanc
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun LandscapeRosaryPrayer(step: GuideStep, key: String, lang: AppLanguage, count: String?, spoken: String?, onSkip: () -> Unit, scroll: androidx.compose.foundation.ScrollState, readingAnchor: RosaryTextAnchor) {
+private fun LandscapeRosaryPrayer(step: GuideStep, key: String, lang: AppLanguage, count: String?, spoken: String?, onSkip: () -> Unit, scroll: androidx.compose.foundation.ScrollState, readingAnchor: RosaryTextAnchor, guidance: Boolean = false) {
     val safe = appSafeInsets()
     val p = LocalAppDesign.current.palette
     val responseView = remember(key) { BringIntoViewRequester() }
     LaunchedEffect(key, spoken) { if (spoken != null && spoken == step.response) responseView.bringIntoView() }
-    Column(Modifier.fillMaxSize().testTag("prayer_text_art").background(p.canvasTop).padding(start = 20.dp, end = 12.dp, top = safe.top + 4.dp)) {
-        PrayerTitleRow(step, count, lang, true, onSkip, padded = false)
+    // P9: the scroll area reaches the footer, but the opaque surface stops where the text does.
+    var viewportTop by remember { mutableStateOf(0f) }
+    var contentHeight by remember { mutableStateOf(0) }
+    Column(Modifier.fillMaxSize().testTag("prayer_text_art")
+        .drawBehind {
+            val h = minOf(viewportTop + (safe.top + 4.dp).toPx() + contentHeight + 24.dp.toPx(), size.height)
+            drawRect(p.canvasTop, size = androidx.compose.ui.geometry.Size(size.width, h))
+        }
+        .padding(start = 24.dp, end = 12.dp, top = safe.top + 4.dp)) {
+        PrayerTitleRow(step, count, lang, !nameRepeatsText(step), onSkip, padded = false)
         Spacer(Modifier.height(8.dp))
+        if (guidance) { GuideHint(step, lang, compact = true); Spacer(Modifier.height(8.dp)) }
         Box(Modifier.weight(1f).fillMaxWidth().testTag("prayer_reading_viewport")
-            .onGloballyPositioned { readingAnchor.viewport = it.boundsInRoot() }) {
-            Column(Modifier.fillMaxSize().verticalScroll(scroll).testTag("prayer_content_scroll")) {
-                PrayerBody(step.copy(intention = null, meditation = null, detail = null), lang, spoken, instructionsOn = false, responseModifier = Modifier.bringIntoViewRequester(responseView), readingAnchor = readingAnchor)
+            .onGloballyPositioned { readingAnchor.viewport = it.boundsInRoot(); viewportTop = it.positionInParent().y }) {
+            Column(Modifier.fillMaxSize().rosaryScrollFade(scroll.canScrollForward, 24.dp).verticalScroll(scroll).testTag("prayer_content_scroll")) {
+                Column(Modifier.onSizeChanged { contentHeight = it.height }) {
+                    PrayerBody(step.copy(intention = null, meditation = null, detail = null), lang, spoken, instructionsOn = false, responseModifier = Modifier.bringIntoViewRequester(responseView), readingAnchor = readingAnchor)
+                }
             }
             RosaryScrollHint(scroll.canScrollForward, 24.dp, "prayer_scroll_hint")
         }
@@ -1858,11 +1893,15 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
             LiquidGlassDevotionTrack(selected, false, darkArt, backdrop, Modifier.matchParentSize()) { }
             Row(Modifier.fillMaxSize()) {
                 short.forEachIndexed { i, text ->
+                    val isSel = i == selected
+                    val segShape = if (design.isSanctuary) RoundedCornerShape(8.dp) else CircleShape
                     Box(Modifier.weight(1f).fillMaxHeight()
-                        .clickable(sources[i], indication = com.example.ui.design.appFocusRing(sources[i], CircleShape), role = Role.Tab) { onSelect(i) }
-                        .semantics { this.selected = i == selected }, contentAlignment = Alignment.Center) {
-                        Text(text, style = styles.caption.copy(fontWeight = FontWeight.SemiBold),
-                            color = if ((design.isClassic || design.reduceTransparency || design.highContrast) && i == selected) p.onAction else p.textPrimary,
+                        .clickable(sources[i], indication = com.example.ui.design.appFocusRing(sources[i], segShape), role = Role.Tab) { onSelect(i) }
+                        .semantics { this.selected = isSel }
+                        .padding(3.dp)
+                        .then(if (isSel) Modifier.background(p.action, segShape) else Modifier), contentAlignment = Alignment.Center) {
+                        Text(text, style = styles.caption.copy(fontWeight = if (isSel) FontWeight.SemiBold else FontWeight.Medium),
+                            color = if (isSel) p.onAction else p.textPrimary,
                             textAlign = TextAlign.Center)
                     }
                 }
@@ -2245,7 +2284,7 @@ private fun PrayerBody(
 private fun HungVoice(mark: String, text: String, style: TextStyle, ink: Color, markInk: Color, modifier: Modifier = Modifier) {
     // 14dp hang: the mark starts 6dp from the screen edge and keeps 4dp clear of the text.
     // It is 0.72em; at large type (where it would pass 10dp) it steps down to 0.66em.
-    val hang = 14.dp
+    val hang = if (appWindowClass() == AppWindowClass.LandscapePhone) 16.dp else 14.dp
     val em = if (LocalDensity.current.fontScale > 1.15f) 0.66f else 0.72f
     val markStyle = LocalAppTextStyles.current.reading.let { it.copy(fontSize = it.fontSize * em, fontWeight = FontWeight.Medium) }
     Row(
@@ -2645,14 +2684,21 @@ private fun OptionsSheet(
             if (isRosary) lang.pick("Partes del Rosario", "Parts of the Rosary", "Partes do Rosário")
             else lang.pick("Pasos de la coronilla", "Steps of the chaplet", "Passos da coroinha")
         )
-        RosaryLoopMap(
-            beads = guide.beads.map { it.kind },
-            activeBead = step.bead,
-            onSelectBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let(onGo) },
-            modifier = Modifier
-                .padding(horizontal = if (landscape) 8.dp else 72.dp, vertical = 4.dp)
-                .testTag("rosary_loop_map")
-        )
+        val map: @Composable (Modifier) -> Unit = { m ->
+            RosaryLoopMap(
+                beads = guide.beads.map { it.kind },
+                activeBead = step.bead,
+                onSelectBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let(onGo) },
+                modifier = m.testTag("rosary_loop_map")
+            )
+        }
+        if (landscape) {
+            // The map is square: fit it to the column so it is never clipped.
+            BoxWithConstraints(Modifier.fillMaxWidth()) {
+                val side = minOf(maxWidth - 16.dp, LocalRosarySheetColumnHeight.current - 64.dp).coerceAtLeast(96.dp)
+                map(Modifier.size(side).align(Alignment.Center).padding(vertical = 4.dp))
+            }
+        } else map(Modifier.padding(horizontal = 72.dp, vertical = 4.dp))
         Spacer(Modifier.height(12.dp))
         val prayed = lang.pick("Rezado", "Prayed", "Rezado")
         val now = lang.pick("Ahora", "Now", "Agora")
@@ -2710,12 +2756,17 @@ private fun OptionsSheet(
     }
 }
 
+private val LocalRosarySheetColumnHeight = androidx.compose.runtime.compositionLocalOf { Dp.Infinity }
+
 /** Each sheet column has its own reachable text and a visible continuation hint. */
 @Composable
 private fun RosarySheetColumn(modifier: Modifier = Modifier, content: @Composable androidx.compose.foundation.layout.ColumnScope.() -> Unit) {
     val scroll = rememberScrollState()
-    Box(modifier.height((appWindowSize().height - 116.dp).coerceAtLeast(132.dp))) {
-        Column(Modifier.fillMaxSize().verticalScroll(scroll), content = content)
+    val columnHeight = (appWindowSize().height - 116.dp).coerceAtLeast(132.dp)
+    Box(modifier.height(columnHeight)) {
+        androidx.compose.runtime.CompositionLocalProvider(LocalRosarySheetColumnHeight provides columnHeight) {
+            Column(Modifier.fillMaxSize().rosaryScrollFade(scroll.canScrollForward, 16.dp).verticalScroll(scroll), content = content)
+        }
         RosaryScrollHint(scroll.canScrollForward, 16.dp, "rosary_sheet_scroll_hint")
     }
 }
@@ -2745,7 +2796,10 @@ private fun MysterySheet(
                 RosarySheetColumn(Modifier.weight(1f)) {
                     if (artPath != null) {
                         val bitmap = rememberAssetBitmap(artPath, 1080)
-                        Box(Modifier.fillMaxWidth().height(192.dp).border(.75.dp, p.separator).padding(5.dp)) {
+                        val ratio = bitmap?.let { it.width.toFloat() / it.height.coerceAtLeast(1) } ?: (4f / 3f)
+                        val frame = if (design.isSanctuary) Modifier.border(.75.dp, p.separator).padding(5.dp)
+                            else Modifier.clip(RoundedCornerShape(12.dp))
+                        Box(Modifier.align(Alignment.CenterHorizontally).aspectRatio(ratio).heightIn(max = 192.dp).then(frame)) {
                             if (bitmap != null) Image(bitmap, null, contentScale = ContentScale.Fit, modifier = Modifier.fillMaxSize())
                         }
                     }

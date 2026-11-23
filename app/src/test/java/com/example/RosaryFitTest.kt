@@ -13,6 +13,7 @@ import com.example.data.models.*
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.screens.*
 import com.example.ui.theme.SanctaFidesTheme
+import androidx.compose.ui.unit.dp
 import org.junit.*
 import org.junit.Assert.*
 import org.junit.runner.RunWith
@@ -61,7 +62,18 @@ class RosaryFitTest(private val width: Int, private val height: Int, private val
             compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, height) }; compose.waitForIdle()
             val pane = compose.onNodeWithTag("prayer_content_scroll")
             val range = pane.fetchSemanticsNode().config[SemanticsProperties.VerticalScrollAxisRange]
-            assertEquals("$lang $width guide=$guidance ${step.name} must fit", 0f, range.maxValue(), .5f)
+            // LANDSCAPE.md §14 decision 1: the guide sits between the title and the text and, with it on at
+            // 800 x 360, the Our Father may scroll (exception declared; it never loses the guide).
+            val declaredException = guidance && height < 400 && devotion == 0 && step.name == routine.first().third.name
+            if (!declaredException) assertEquals("$lang $width guide=$guidance ${step.name} must fit", 0f, range.maxValue(), .5f)
+            if (guidance) {
+                val hint = compose.onNodeWithTag("prayer_instructions_text", useUnmergedTree = true)
+                hint.assertIsDisplayed()
+                val hb = hint.getUnclippedBoundsInRoot()
+                val root = compose.onRoot().getUnclippedBoundsInRoot()
+                assertTrue("${step.name}: guide fully inside the window", hb.top >= root.top && hb.bottom <= root.bottom && hb.right <= root.right)
+                assertTrue("${step.name}: guide sits above the prayer text", hb.bottom <= viewportTop(pane))
+            }
             val viewport = pane.getUnclippedBoundsInRoot()
             for (text in listOf(step.leader, step.response).filter { it.isNotBlank() }) {
                 val node = compose.onNodeWithText(text, useUnmergedTree = true)
@@ -70,11 +82,12 @@ class RosaryFitTest(private val width: Int, private val height: Int, private val
                 assertEquals(1, layouts.size)
                 assertFalse("Prayer text must not be ellipsized", layouts.single().hasVisualOverflow)
                 val b = node.getUnclippedBoundsInRoot()
-                assertTrue("${step.name}: full text fits above gestures", b.top >= viewport.top && b.bottom <= viewport.bottom)
+                assertTrue("${step.name}: full text fits above gestures", declaredException || b.top >= viewport.top && b.bottom <= viewport.bottom)
             }
             compose.onNodeWithTag(if (devotion == 0) "next_bead_button" else "next_mercy_step_button").assertIsDisplayed()
         }
     }
+    private fun viewportTop(pane: SemanticsNodeInteraction) = pane.getUnclippedBoundsInRoot().top + 0.5.dp
     companion object {
         @JvmStatic @ParameterizedRobolectricTestRunner.Parameters(name = "{0}x{1}-{2}-guide{3}")
         fun cases() = listOf(891 to 411, 800 to 360).flatMap { (w,h) -> AppLanguage.entries.flatMap { l ->

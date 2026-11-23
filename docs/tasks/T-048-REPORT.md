@@ -62,3 +62,35 @@ La matriz amplia de capturas se detuvo por la petición del propietario. No se d
 - Si falta el recurso de arte, omitir el bloque vacío y su espacio asociado.
 
 Estas observaciones quedan documentadas para la próxima indicación. No se continuaron los cambios tras la orden de entregar y esperar.
+
+
+## Ronda 2 (coordinador)
+
+Correcciones aplicadas por el agente local del coordinador sobre la integración de `ext/T-048`, a partir de `docs/tasks/T-048-REVIEW.md`. Sin commit; todo en el árbol de trabajo.
+
+| # | Defecto | Arreglo (`RosaryScreen.kt`) |
+|---|---|---|
+| 1 | Matriz §12 | Regenerada con `RosaryLandscapeScreenshotTest` desde el código actual, al 60 %, más `_contact.png` (ver abajo). |
+| 2 | Selector sin estado | `DevotionSwitch` compacto: segmento elegido con `p.action`, `p.onAction`, padding 3 dp, `CircleShape` (8 dp en Sanctuary); Medium en el otro. Verificado visualmente en las 4 identidades. |
+| 3 | Guía | `GuideHint(compact)` sale de la columna de contexto y va en el panel de la oración entre título y texto (§14.1). `LandscapePrayerPill(switchState)`: fondo `p.action` + texto `p.onAction` y rol `Switch` con `toggleableState` (se usó `lumenPress(role = Switch)` y `toggleableState` en vez de `Modifier.toggleable` para no duplicar el manejador de clic). `RosaryFitTest` con guía comprueba que `prayer_instructions_text` queda entero dentro de la ventana y sobre el texto; excepción declarada: Padrenuestro con guía a 800 × 360 desplaza (se omiten solo sus comprobaciones de «cabe sin desplazar»). |
+| 4 | Fundido | `Modifier.rosaryScrollFade` (capa `Offscreen` + `DstIn`) sobre los 3 usos (contexto, oración, columnas de hoja); la flecha pasa a `BottomEnd`. |
+| 5 | «Guía» y «···» pegados | `Arrangement.spacedBy(8.dp)`. |
+| 6 | Título duplicado | `PrayerTitleRow(..., !nameRepeatsText(step), ...)`. |
+| 7 | TalkBack | Hilo `traversalIndex = 1f`, contexto 0 (grupo), pie 2; acciones Anterior/Siguiente del hilo mueven por paso (`onPrevious()` y nuevo `onNext = go(index + 1)`). |
+| 8 | «Escuchar» fijo | El rótulo visible pasa a «Pausar»/«Pause» mientras suena. |
+| 9 | Mapa recortado | En Opciones (horizontal) el mapa se dimensiona `min(ancho − 16, alto de columna − 64)` y se centra. Se usó 64 dp y no 40 dp porque el rótulo de sección y el relleno consumen ~48 dp (con 40 se veía cortado el colgante). La altura de la columna llega por un `CompositionLocal` desde `RosarySheetColumn`, porque dentro del desplazamiento `maxHeight` es infinito. |
+| 10 | Marcas V./R. | `start = 24 dp` en la tarjeta y `hang = 16 dp` en `LandscapePhone` (vertical sigue en 14). |
+| 11 | «Siguiente» deshabilitado | Fondo `p.action` a alfa .38 e icono atenuado. |
+| 12 | Arte ausente | Bloque de miniatura solo `if (art != null)`; `MysterySheet` horizontal usa `aspectRatio` + `heightIn(max = 192.dp)`, filete/passe-partout solo en Sanctuary y `clip(12.dp)` en el resto. |
+| 13 | Superficie vacía (P9) | El área de desplazamiento llega a H − B; el fondo `p.canvasTop` se dibuja con `drawBehind` solo hasta `min(contenido medido + 24 dp, H − B)`. Se corrigió en esta ronda que la posición del viewport ignoraba el relleno superior (safe.top + 4). |
+
+### Fallo extra: `RosarySessionTest.finishingADecadeIsTheLastHailMaryToTheNextDecade`
+
+Causa raíz: T-048 había cambiado `PrayerGuide.finishesDecade` de `to == from + 1 && sección distinta` a `to > from && sección posterior`, para que un salto del hilo también diera el háptico de «decena completada». El test (y el contrato original) dice que los saltos de más de un paso nunca son decena completada (`finishesDecade(20, 22)` falso). Arreglo: se restauró la definición original; la aserción no se tocó. Consecuencia: un salto largo del hilo que cruza una decena ya no da el háptico firme (sí el tic por cuenta).
+
+### Capturas
+`docs/tasks/T-048-shots/` (60 %): Rosario y Coronilla × 891 × 411 y 800 × 360 × Lumen, Tradicional, Cristal, Sanctuary × claro/oscuro; `_s130` (ES) y `_s130_pt` a 800 × 360 en las 4 identidades; `_pt` en 891 Lumen claro; `_cutL`, `_cutR`, `_navR` (Lumen claro, 800 × 360); hojas `_mysteries`, `_options`, `_mystery` (Lumen claro 891; Opciones también en Sanctuary); `_guia` (800 × 360, 4 identidades); regresión `l1_regresion_vertical_*` y `l1_regresion_tableta_*`; `_contact.png`. Regresión vertical 411 × 891 y tableta 1280 × 800: los 4 hashes de píxeles de `regression-geometry.json` (Lumen y Sanctuary) coinciden con la base `e4a5cdd` tras estos cambios.
+
+### Límites
+- Cristal y Tradicional: la hoja Opciones, `_cut*` y `_navR` solo en Lumen claro (§12 pide una identidad por estado).
+- Sin teléfono físico ni TalkBack real; el orden de recorrido está por semántica, no escuchado.
