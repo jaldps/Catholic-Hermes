@@ -56,6 +56,8 @@ import com.example.data.models.SaintProfile
 import com.example.data.repository.SaintsCatalog
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppTwoPane
+import com.example.ui.design.rememberAppListDetailState
+import com.example.ui.design.AppSheet
 import com.example.ui.design.appIsTwoPane
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppDivider
@@ -102,166 +104,149 @@ internal fun saintCelebrations(): List<GeneralCelebration> =
 fun SaintsScreen(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier,
-    /** The app's narrator: the profile can be read aloud (notification, focus, sleep timer). */
     ttsManager: LiturgicalTtsManager? = null,
-    /** Opens this celebration's profile on arrival (the global search); an unknown key shows the list. */
     initialKey: String? = null,
-    /** Back from the profile opened by [initialKey] leaves to the caller (the global search) instead of the list. */
     onExitContext: (() -> Unit)? = null
 ) {
     val catalog = remember { SaintsCatalog.default }
     val profiles = catalog.byKey
-    var selectedKey by rememberSaveable { mutableStateOf<String?>(initialKey?.takeIf { it in profiles }) }
-    val selected = selectedKey?.let { k -> saintCelebrations().firstOrNull { it.key == k } }
-
-    if (appIsTwoPane()) {
-        // Wide windows: the list stays on the left and the profile is on the right, so
-        // choosing another saint changes the right pane instead of pushing a page.
-        val all = remember { saintCelebrations() }
-        val shown = selected ?: all.firstOrNull { it.key in profiles }
-        // Only a profile opened from outside (the global search) has somewhere to go back to.
-        if (onExitContext != null && selectedKey == initialKey) AppBackHandler { onExitContext() }
-        AppTwoPane(
-            modifier = modifier,
-            list = { SaintsList(profiles, currentLanguage, { selectedKey = it }, Modifier, selectedRowKey = shown?.key) },
-            detail = {
-                if (shown != null) {
-                    androidx.compose.runtime.key(shown.key) {
-                        SaintDetail(shown, profiles[shown.key], currentLanguage, {}, Modifier, ttsManager, showBack = false)
-                    }
-                }
-            }
-        )
-    } else if (selected != null) {
-        val back = { if (onExitContext != null && selectedKey == initialKey) onExitContext() else selectedKey = null }
-        AppBackHandler { back() }
-        SaintDetail(selected, profiles[selected.key], currentLanguage, { back() }, modifier, ttsManager)
-    } else {
-        SaintsList(profiles, currentLanguage, { selectedKey = it }, modifier)
-    }
-}
-
-@Composable
-private fun SaintsList(
-    profiles: Map<String, SaintProfile>,
-    language: AppLanguage,
-    onOpen: (String) -> Unit,
-    modifier: Modifier,
-    /** The saint shown in the detail pane of a two-pane layout; its row is marked selected. */
-    selectedRowKey: String? = null
-) {
-    AppEdgeToEdge()
-    val design = LocalAppDesign.current
-    val gutter = design.spacing.gutter
-    var query by rememberSaveable { mutableStateOf("") }
-    var month by rememberSaveable { mutableIntStateOf(0) }
-    var profilesOnly by rememberSaveable { mutableStateOf(false) }
     val all = remember { saintCelebrations() }
+    val keys = remember(all, profiles) { all.filter { it.key in profiles }.map { it.key } }
+    val state = rememberAppListDetailState(keys, initialKey, key = "saints_list_detail")
+    var query by rememberSaveable(key = "saints_query") { mutableStateOf("") }
+    var month by rememberSaveable(key = "saints_month") { mutableIntStateOf(0) }
+    var profilesOnly by rememberSaveable(key = "saints_profiles_only") { mutableStateOf(false) }
+    var filtersOpen by rememberSaveable(key = "saints_filters_open") { mutableStateOf(false) }
+    fun tr(es: String, en: String, pt: String) = when (currentLanguage) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
 
-    val folded = fold(query.trim())
-    val visible = remember(folded, month, profilesOnly, language, profiles) {
-        all.filter { c ->
-            (month == 0 || c.month == month) &&
-                (!profilesOnly || c.key in profiles) &&
-                (folded.isEmpty() || fold(c.title.get(language)).contains(folded) ||
-                    profiles[c.key]?.let { fold(it.bio.get(language)).contains(folded) } == true)
-        }
-    }
-    fun tr(es: String, en: String, pt: String) = when (language) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
-    val monthLabel = if (month == 0) tr("Todos los meses", "All months", "Todos os meses") else saintMonthName(month, language)
-
-    LazyColumn(
-        // The header reaches the top edge; scroll-to and keyboard focus stop
-        // above the floating dock, where rows can be tapped.
-        modifier = modifier.fillMaxSize().padding(bottom = appScreenInsets().calculateBottomPadding()).testTag("saints_screen"),
-        contentPadding = PaddingValues(bottom = 32.dp)
-    ) {
-        item(key = "title") {
+    if (onExitContext != null && state.explicit && state.selectedKey == initialKey) AppBackHandler { onExitContext() }
+    AppTwoPane(
+        state = state,
+        modifier = modifier,
+        listHeader = {
             AppHeroHeader(
                 assetPath = "heroes/lumen/saints.jpg",
                 title = tr("Santos", "Saints", "Santos"),
                 eyebrow = tr("Calendario Romano General", "General Roman Calendar", "Calendário Romano Geral")
             )
-            Spacer(Modifier.height(6.dp))
-        }
-        item(key = "filters") {
-            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                AppSearchField(
-                    value = query,
-                    onValueChange = { query = it },
-                    placeholder = tr("Buscar un santo", "Search for a saint", "Buscar um santo"),
-                    modifier = Modifier.fillMaxWidth().testTag("saints_search")
-                )
-                Row(
-                    Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = gutter),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    AppMenuChip(
-                        label = monthLabel,
-                        tag = "saints_month_picker",
-                        items = listOf(AppMenuItem(tr("Todos los meses", "All months", "Todos os meses"), selected = month == 0, tag = "saints_month_0") { month = 0 }) +
-                            (1..12).map { m -> AppMenuItem(saintMonthName(m, language), selected = month == m, tag = "saints_month_$m") { month = m } }
-                    )
-                    if (profiles.isNotEmpty()) {
-                        AppChip(
-                            label = tr("Solo con ficha", "With profile only", "Só com ficha"),
-                            selected = profilesOnly,
-                            onClick = { profilesOnly = !profilesOnly },
-                            modifier = Modifier.testTag("saints_profiles_only")
-                        )
-                    }
-                }
-                Spacer(Modifier.height(6.dp))
-            }
-        }
-        if (visible.isEmpty()) {
-            item(key = "empty") {
-                Column(
-                    Modifier.fillMaxWidth().padding(horizontal = gutter, vertical = 32.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    AppEmptyState(
-                        title = tr("Nada coincide", "Nothing matches", "Nada corresponde"),
-                        body = tr(
-                            "Prueba con otra búsqueda o quita los filtros.",
-                            "Try another search or clear the filters.",
-                            "Tente outra busca ou limpe os filtros."
-                        ),
-                        modifier = Modifier.testTag("list_empty")
-                    )
-                    AppSecondaryCapsule(
-                        label = tr("Quitar filtros", "Clear filters", "Limpar filtros"),
-                        onClick = { query = ""; month = 0; profilesOnly = false },
-                        tag = "saints_clear_filters"
-                    )
+        },
+        search = {
+            AppSearchField(
+                value = query,
+                onValueChange = { query = it },
+                placeholder = tr("Buscar un santo", "Search for a saint", "Buscar um santo"),
+                modifier = Modifier.fillMaxWidth().testTag("saints_search")
+            )
+        },
+        onOpenFilters = { filtersOpen = true },
+        filterLabel = tr("Filtros", "Filters", "Filtros"),
+        activeFilters = {
+            if (month != 0) AppChip(label = saintMonthName(month, currentLanguage), selected = true, onClick = { month = 0 }, modifier = Modifier.testTag("saints_month_chip"))
+            if (profilesOnly) AppChip(
+                label = tr("Solo con ficha", "With profile only", "Só com ficha"),
+                selected = true,
+                onClick = { profilesOnly = false },
+                modifier = Modifier.testTag("saints_profiles_chip")
+            )
+        },
+        list = { headerItem ->
+            val folded = fold(query.trim())
+            val visible = remember(folded, month, profilesOnly, currentLanguage, profiles, all) {
+                all.filter { c ->
+                    (month == 0 || c.month == month) &&
+                        (!profilesOnly || c.key in profiles) &&
+                        (folded.isEmpty() || fold(c.title.get(currentLanguage)).contains(folded) ||
+                            profiles[c.key]?.let { fold(it.bio.get(currentLanguage)).contains(folded) } == true)
                 }
             }
-        } else {
-            val byMonth = visible.groupBy { it.month }
-            byMonth.forEach { (m, entries) ->
-                item(key = "month_$m") {
-                    AppSectionHeader(title = saintMonthName(m, language), modifier = Modifier.testTag("saints_month_header_$m"))
-                }
-                item(key = "group_$m") {
-                    AppListGroup {
-                        entries.forEach { c ->
-                            val has = c.key in profiles
-                            AppListRow(
-                                title = c.title.get(language),
-                                subtitle = saintDateLabel(c.month, c.day, language) + " · " + c.rank.displayName.get(language),
-                                showsNavigationAffordance = has,
-                                selected = c.key == selectedRowKey,
-                                onClick = if (has) ({ onOpen(c.key) }) else null,
-                                modifier = Modifier.testTag("saint_row_${c.key}")
-                                    .then(if (selectedRowKey != null) Modifier.semantics { selected = c.key == selectedRowKey } else Modifier)
+            val gutter = LocalAppDesign.current.spacing.gutter
+            LazyColumn(
+                modifier = Modifier.fillMaxSize().padding(bottom = appScreenInsets().calculateBottomPadding()).testTag("saints_screen"),
+                contentPadding = PaddingValues(bottom = 32.dp)
+            ) {
+                item(key = "title") { headerItem(); Spacer(Modifier.height(6.dp)) }
+                if (visible.isEmpty()) {
+                    item(key = "empty") {
+                        Column(
+                            Modifier.fillMaxWidth().padding(horizontal = gutter, vertical = 32.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.spacedBy(12.dp)
+                        ) {
+                            AppEmptyState(
+                                title = tr("Nada coincide", "Nothing matches", "Nada corresponde"),
+                                body = tr("Prueba con otra búsqueda o quita los filtros.", "Try another search or clear the filters.", "Tente outra busca ou limpe os filtros."),
+                                modifier = Modifier.testTag("list_empty")
+                            )
+                            AppSecondaryCapsule(
+                                label = tr("Quitar filtros", "Clear filters", "Limpar filtros"),
+                                onClick = { query = ""; month = 0; profilesOnly = false },
+                                tag = "saints_clear_filters"
                             )
                         }
                     }
-                    Spacer(Modifier.height(design.spacing.cardGap))
+                } else {
+                    visible.groupBy { it.month }.forEach { (m, entries) ->
+                        item(key = "month_$m") {
+                            AppSectionHeader(title = saintMonthName(m, currentLanguage), modifier = Modifier.testTag("saints_month_header_$m"))
+                        }
+                        item(key = "group_$m") {
+                            AppListGroup {
+                                entries.forEach { c ->
+                                    val has = c.key in profiles
+                                    AppListRow(
+                                        title = c.title.get(currentLanguage),
+                                        subtitle = saintDateLabel(c.month, c.day, currentLanguage) + " · " + c.rank.displayName.get(currentLanguage),
+                                        showsNavigationAffordance = has,
+                                        selected = c.key == state.selectedKey,
+                                        onClick = if (has) ({ state.select(c.key) }) else null,
+                                        modifier = Modifier.testTag("saint_row_${c.key}")
+                                            .then(if (state.selectedKey != null) Modifier.semantics { selected = c.key == state.selectedKey } else Modifier)
+                                    )
+                                }
+                            }
+                            Spacer(Modifier.height(LocalAppDesign.current.spacing.cardGap))
+                        }
+                    }
                 }
             }
+        },
+        detail = { key ->
+            val celebration = all.firstOrNull { it.key == key }
+            if (celebration != null) {
+                androidx.compose.runtime.key(celebration.key) {
+                    SaintDetail(celebration, profiles[celebration.key], currentLanguage, { state.showList() }, Modifier, ttsManager, showBack = !appIsTwoPane())
+                }
+            } else {
+                AppEmptyState(
+                    title = tr("Selecciona un santo", "Select a saint", "Selecione um santo"),
+                    body = tr("Elige una entrada de la lista para ver su ficha.", "Choose an entry from the list to see its profile.", "Escolha uma entrada da lista para ver o perfil."),
+                    modifier = Modifier.testTag("list_empty").padding(16.dp)
+                )
+            }
+        }
+    )
+    if (filtersOpen) {
+        AppSheet(
+            onDismiss = { filtersOpen = false },
+            title = tr("Filtros", "Filters", "Filtros"),
+            tag = "saints_filter_sheet"
+        ) {
+            AppMenuChip(
+                label = if (month == 0) tr("Todos los meses", "All months", "Todos os meses") else saintMonthName(month, currentLanguage),
+                tag = "saints_month_picker",
+                items = listOf(AppMenuItem(tr("Todos los meses", "All months", "Todos os meses"), selected = month == 0, tag = "saints_month_0") { month = 0 }) +
+                    (1..12).map { m -> AppMenuItem(saintMonthName(m, currentLanguage), selected = month == m, tag = "saints_month_$m") { month = m } }
+            )
+            if (profiles.isNotEmpty()) {
+                Spacer(Modifier.height(8.dp))
+                AppChip(
+                    label = tr("Solo con ficha", "With profile only", "Só com ficha"),
+                    selected = profilesOnly,
+                    onClick = { profilesOnly = !profilesOnly },
+                    modifier = Modifier.testTag("saints_profiles_only")
+                )
+            }
+            Spacer(Modifier.height(12.dp))
         }
     }
 }
