@@ -1030,7 +1030,7 @@ private fun EmptyCard(
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
             Icon(Icons.Outlined.SearchOff, null, tint = p.textSecondary, modifier = Modifier.size(28.dp))
             Spacer(Modifier.height(12.dp))
-            Text(title, style = styles.headline, color = p.textPrimary, textAlign = TextAlign.Center)
+            Text(title, style = styles.headline, color = p.textPrimary, textAlign = TextAlign.Center, modifier = Modifier.semantics { heading() })
             Spacer(Modifier.height(4.dp))
             Text(body, style = styles.subhead, color = p.textSecondary, textAlign = TextAlign.Center)
             Spacer(Modifier.height(18.dp))
@@ -2119,8 +2119,7 @@ private fun NovenaIndexView(
                         },
                         tag = "novena_clear_filters"
                     )
-                    // Keep the action clear of the bottom dock on every identity.
-                    Spacer(Modifier.height(64.dp))
+                    // contentPadding already uses appDockInset(); no extra dock spacer here.
                 }
             }
         } else {
