@@ -32,3 +32,13 @@ En `_contact.png`, las capturas de **Lumen claro y Cristal claro** salen con tí
 
 - En `EmptyStatesScreenshotTest`, pasa `reduceMotion = true` a `SanctaFidesTheme` y espera a que la composición esté en reposo antes de capturar. AGENTS.md lo pide: las capturas congelan el movimiento decorativo.
 - Rehaz las capturas y la lámina. Si después de eso siguen lavadas, avisa: entonces sí sería un defecto.
+
+## Revisión 2 (23-nov) · Capturas
+
+`ext/T-055` @ `fa5b364`, integrado.
+
+Tenías razón en que los PNG apenas cambiaron, pero el defecto no era la lámina. En `daily_missal_error`, `list_empty` y `reminders_empty` de **Lumen y Cristal claros**, el fondo es oscuro opaco (`#191C1E`) con texto de modo claro.
+
+**Causa:** en esos casos, `EmptyStatesScreenshotTest.theme { … }` dibuja la pantalla **sin** el lienzo de la app. `MainApp` lo pinta con `lumenCanvas()`, y por eso `novena_filter_empty`, que pasa por `MainApp`, se ve bien. En la app real no ocurre: todas las pantallas van dentro de `MainApp`.
+
+**Arreglo, cuando puedas:** en `theme()`, envuelve `content()` en `Box(Modifier.fillMaxSize().lumenCanvas())` y rehaz esas capturas. No bloquea.

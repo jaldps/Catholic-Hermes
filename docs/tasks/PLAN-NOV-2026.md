@@ -192,3 +192,22 @@ Esta sección **sustituye al reparto** de la actualización anterior. El dueño 
 - **T-056 (contenido):** pasa a Hermes tras T-055. Son archivos nuevos y no chocan con nada; T-052 tiene prioridad cuando se abra.
 - **T-057 (motor):** va justo después de T-048, porque toca la misma pantalla del Rosario que L1.
 - **T-058:** cada coronilla con **su propia imagen relevante, obligatoria**. El validador lo comprueba con `--images`.
+
+---
+
+## Actualización (23-nov): skills de interfaz y revisión de tableta
+
+- **Skills de `jakubkrehel/skills`:** instaladas en `.claude/skills/` (16 skills, MIT, @ `672ae44`). Se usan como **segunda lente** en cada revisión de área del horizontal: `better-interface`, con los hallazgos de evidencia en el `T-0NN-REVIEW.md` junto a los del crítico. La rúbrica §11 y P9 siguen mandando.
+- **Piloto en tableta:** `docs/design/TABLET-REVIEW.md`. Veredicto Approve en layout; dos hallazgos MEDIUM y uno LOW.
+  - **Columna de 680 a 1280 dp:** ya resuelto en el diseño. **T-050, T-051 y T-053 deben exigir capturas a 1280×800 y 840×1200 en las 4 identidades.**
+  - **Panel de arcos de la Biblia con un 40 % vacío sin versículo:** entra en **T-049 (L2)**.
+  - No se abre ningún encargo aparte de tableta.
+
+**Revisión completa de tableta (23-nov, los 7 dominios):** `docs/design/TABLET-REVIEW.md`. **Veredicto: Block**, por dos HIGH que afectan a toda la app.
+- **Foco de teclado invisible** (`lumenPress`) y **«Quitar animaciones» del sistema ignorado:** van a **T-047 (L0)**, añadidos a `T-047-REVIEW.md`.
+- **Bloques horizontales siguientes:**
+  - la medida de lectura con `appReadingMeasure()` y el panel de arcos van en T-049;
+  - el error genérico y la salida de la barra de la Biblia, también en T-049;
+  - el doble primario de Hoy va en T-050;
+  - las capturas de tableta son obligatorias en T-050, T-051 y T-053.
+- **Espacios antes de la puntuación en la Biblia ES** (3.048 versículos): encargo de datos aparte, propuesto al dueño.

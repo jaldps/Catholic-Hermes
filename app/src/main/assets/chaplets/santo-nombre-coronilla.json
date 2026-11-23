@@ -1,0 +1,160 @@
+{
+  "id": "santo-nombre-coronilla",
+  "sourceId": "CD-40",
+  "group": "god_christ",
+  "title": {
+    "es": "Coronilla del Santo Nombre",
+    "en": "Chaplet of the Holy Name",
+    "pt": "Coronilha do Santo Nome"
+  },
+  "summary": {
+    "es": "33 cuentas en tres decenas, con tres promesas de Cristo y la jaculatoria de auxilio.",
+    "en": "33 beads in three decades, with three promises of Christ and the prayer for help.",
+    "pt": "33 contas em três décadas, com três promessas de Cristo e a jaculatória de auxílio."
+  },
+  "instrument": {
+    "es": "Coronilla de 33 cuentas (3 decenas de 1 grande + 10 pequeñas); también chotki de 33 nudos.",
+    "en": "Chaplet of 33 beads (3 decades of 1 large + 10 small); a 33-knot chotki may also be used.",
+    "pt": "Coronilha de 33 contas (3 décadas de 1 grande + 10 pequenas); também se pode usar um chotki de 33 nós."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": null,
+      "prayerRef": "act_of_contrition"
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Incline unto my aid, O God.",
+          "en": "Inclínate a auxiliarme, oh Dios.",
+          "pt": "Inclinai-vos a auxiliar-me, ó Deus."
+        },
+        "r": {
+          "es": "O Lord, make haste to help me.",
+          "en": "Señor, date prisa en socorrerme.",
+          "pt": "Senhor, apressai-vos em socorrer-me."
+        }
+      }
+    },
+    {
+      "bead": 0,
+      "text": {
+        "es": "Señor, dijiste: «Pedid y recibiréis; buscad y hallaréis; llamad y se os abrirá». Busco, llamo, pido esta gracia [nombra tu intención].",
+        "en": "Lord, Thou hast said: 'Ask and ye shall receive; seek, and ye shall find; knock, and it shall be opened unto you,' I seek, I knock, I ask this favor [name your intention].",
+        "pt": "Senhor, disseste: «Pedi e recebereis; procurai e achareis; batei e vos será aberto». Procuro, bato, peço esta graça [nomeia a intenção]."
+      }
+    },
+    {
+      "bead": 1,
+      "vr": {
+        "v": {
+          "es": "Incline unto my aid, O God.",
+          "en": "Inclínate a auxiliarme, oh Dios.",
+          "pt": "Inclinai-vos a auxiliar-me, ó Deus."
+        },
+        "r": {
+          "es": "O Lord, make haste to help me.",
+          "en": "Señor, date prisa en socorrerme.",
+          "pt": "Senhor, apressai-vos em socorrer-me."
+        }
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Amén os digo: si pedís al Padre algo en mi nombre, os será concedido. Al Padre y en tu nombre, Señor, pido esta gracia.",
+        "en": "Amen, I say unto you, if ye ask the Father anything in My Name it shall be given unto you. It is of the Father and in Thy Name, Lord, I ask this favor.",
+        "pt": "Amém vos digo: se pedirdes ao Pai algo em meu nome, vos será concedido. Ao Pai e em teu nome, Senhor, peço esta graça."
+      }
+    },
+    {
+      "bead": 3,
+      "vr": {
+        "v": {
+          "es": "Incline unto my aid, O God.",
+          "en": "Inclínate a auxiliarme, oh Dios.",
+          "pt": "Inclinai-vos a auxiliar-me, ó Deus."
+        },
+        "r": {
+          "es": "O Lord, make haste to help me.",
+          "en": "Señor, date prisa en socorrerme.",
+          "pt": "Senhor, apressai-vos em socorrer-me."
+        }
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "Señor, dijiste: «El cielo y la tierra pasarán, pero mis palabras no pasarán». Tú me concederás esta gracia, porque lo dijiste y tu palabra es verdadera.",
+        "en": "Lord, Thou hast said: 'Heaven and earth shall pass away, but My Word shall not pass away,' Thou wilt grant me this favor because Thou hast said it and Thy word is true.",
+        "pt": "Senhor, disseste: «O céu e a terra passarão, mas as minhas palavras não passarão». Tu me concederás esta graça, porque o disseste e a tua palavra é verdadeira."
+      }
+    },
+    {
+      "bead": 5,
+      "vr": {
+        "v": {
+          "es": "Incline unto my aid, O God.",
+          "en": "Inclínate a auxiliarme, oh Dios.",
+          "pt": "Inclinai-vos a auxiliar-me, ó Deus."
+        },
+        "r": {
+          "es": "O Lord, make haste to help me.",
+          "en": "Señor, date prisa en socorrerme.",
+          "pt": "Senhor, apressai-vos em socorrer-me."
+        }
+      },
+      "repeat": 10
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. El marcador de intención se deja entre corchetes como en la fuente; no se declara variable porque la fuente no da un marcador explícito.",
+  "image": "santo-nombre-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of the Holy Name",
+      "url": "https://www.catholicdoors.com/prayers/english6/p03527.htm"
+    }
+  ]
+}

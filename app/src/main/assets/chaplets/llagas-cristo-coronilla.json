@@ -1,0 +1,254 @@
+{
+  "id": "llagas-cristo-coronilla",
+  "sourceId": "HZ-03",
+  "group": "god_christ",
+  "title": {
+    "es": "Coronilla de las llagas de Cristo",
+    "en": "Chaplet of the Wounds of Christ",
+    "pt": "Coronilha das Chagas de Cristo"
+  },
+  "summary": {
+    "es": "Rosario de las santas llagas, revelado a Sor María Martha Chambon, con ofrenda de las heridas de Cristo.",
+    "en": "Rosary of the holy wounds, revealed to Sister Mary Martha Chambon, offering the wounds of Christ.",
+    "pt": "Terço das santas chagas, revelado à Irmã Maria Marta Chambon, oferecendo as feridas de Cristo."
+  },
+  "instrument": {
+    "es": "Rosario tradicional de cinco decenas.",
+    "en": "Traditional five-decade rosary.",
+    "pt": "Terço tradicional de cinco décadas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "text": {
+        "es": "Oh Jesús, divino Redentor, ten misericordia de nosotros y del mundo entero. Amén.",
+        "en": "O Jesus, divine Redeemer, have mercy on us and on the whole world. Amen.",
+        "pt": "Ó Jesus, divino Redentor, tende misericórdia de nós e do mundo inteiro. Amém."
+      }
+    },
+    {
+      "bead": 0,
+      "text": {
+        "es": "Dios santo, Dios fuerte, Dios inmortal, ten piedad de nosotros y del mundo entero. Amén.",
+        "en": "Holy God, mighty God, immortal God, have mercy on us and on the whole world. Amen.",
+        "pt": "Deus santo, Deus forte, Deus imortal, tende piedade de nós e do mundo inteiro. Amém."
+      }
+    },
+    {
+      "bead": 0,
+      "text": {
+        "es": "Oh Padre Eterno, trátanos con misericordia a través de la sangre de Jesús, tu único hijo; trátanos con misericordia, te suplicamos. Te lo suplicamos. Amén.",
+        "en": "O Eternal Father, deal mercifully with us through the blood of Jesus, your only Son; deal mercifully with us, we implore you. We implore you. Amen.",
+        "pt": "Ó Pai Eterno, tratai-nos com misericórdia pelo sangue de Jesus, teu único Filho; tratai-nos com misericórdia, vos imploramos. Vos imploramos. Amém."
+      }
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo para sanar las heridas de nuestras almas.",
+        "en": "Eternal Father, I offer you the wounds of our Lord Jesus Christ to heal the wounds of our souls.",
+        "pt": "Pai Eterno, ofereço-vos as feridas do nosso Senhor Jesus Cristo para curar as feridas das nossas almas."
+      },
+      "rubric": {
+        "es": "Al principio de cada decena, nombrar una llaga: manos, pies, espalda, cabeza, corazón.",
+        "en": "At the start of each decade, name a wound: hands, feet, back, head, heart.",
+        "pt": "No início de cada década, nomear uma chaga: mãos, pés, costas, cabeça, coração."
+      }
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Jesús mío, perdón y misericordia, por los méritos de tus santas llagas",
+        "en": "My Jesus, pardon and mercy, through the merits of your holy wounds",
+        "pt": "Meu Jesus, perdão e misericórdia, pelos méritos das tuas santas chagas"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo para sanar las heridas de nuestras almas.",
+        "en": "Eternal Father, I offer you the wounds of our Lord Jesus Christ to heal the wounds of our souls.",
+        "pt": "Pai Eterno, ofereço-vos as feridas do nosso Senhor Jesus Cristo para curar as feridas das nossas almas."
+      },
+      "rubric": {
+        "es": "Al principio de cada decena, nombrar una llaga: manos, pies, espalda, cabeza, corazón.",
+        "en": "At the start of each decade, name a wound: hands, feet, back, head, heart.",
+        "pt": "No início de cada década, nomear uma chaga: mãos, pés, costas, cabeça, coração."
+      }
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Jesús mío, perdón y misericordia, por los méritos de tus santas llagas",
+        "en": "My Jesus, pardon and mercy, through the merits of your holy wounds",
+        "pt": "Meu Jesus, perdão e misericórdia, pelos méritos das tuas santas chagas"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo para sanar las heridas de nuestras almas.",
+        "en": "Eternal Father, I offer you the wounds of our Lord Jesus Christ to heal the wounds of our souls.",
+        "pt": "Pai Eterno, ofereço-vos as feridas do nosso Senhor Jesus Cristo para curar as feridas das nossas almas."
+      },
+      "rubric": {
+        "es": "Al principio de cada decena, nombrar una llaga: manos, pies, espalda, cabeza, corazón.",
+        "en": "At the start of each decade, name a wound: hands, feet, back, head, heart.",
+        "pt": "No início de cada década, nomear uma chaga: mãos, pés, costas, cabeça, coração."
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Jesús mío, perdón y misericordia, por los méritos de tus santas llagas",
+        "en": "My Jesus, pardon and mercy, through the merits of your holy wounds",
+        "pt": "Meu Jesus, perdão e misericórdia, pelos méritos das tuas santas chagas"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo para sanar las heridas de nuestras almas.",
+        "en": "Eternal Father, I offer you the wounds of our Lord Jesus Christ to heal the wounds of our souls.",
+        "pt": "Pai Eterno, ofereço-vos as feridas do nosso Senhor Jesus Cristo para curar as feridas das nossas almas."
+      },
+      "rubric": {
+        "es": "Al principio de cada decena, nombrar una llaga: manos, pies, espalda, cabeza, corazón.",
+        "en": "At the start of each decade, name a wound: hands, feet, back, head, heart.",
+        "pt": "No início de cada década, nomear uma chaga: mãos, pés, costas, cabeça, coração."
+      }
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "Jesús mío, perdón y misericordia, por los méritos de tus santas llagas",
+        "en": "My Jesus, pardon and mercy, through the merits of your holy wounds",
+        "pt": "Meu Jesus, perdão e misericórdia, pelos méritos das tuas santas chagas"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo para sanar las heridas de nuestras almas.",
+        "en": "Eternal Father, I offer you the wounds of our Lord Jesus Christ to heal the wounds of our souls.",
+        "pt": "Pai Eterno, ofereço-vos as feridas do nosso Senhor Jesus Cristo para curar as feridas das nossas almas."
+      },
+      "rubric": {
+        "es": "Al principio de cada decena, nombrar una llaga: manos, pies, espalda, cabeza, corazón.",
+        "en": "At the start of each decade, name a wound: hands, feet, back, head, heart.",
+        "pt": "No início de cada década, nomear uma chaga: mãos, pés, costas, cabeça, coração."
+      }
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "Jesús mío, perdón y misericordia, por los méritos de tus santas llagas",
+        "en": "My Jesus, pardon and mercy, through the merits of your holy wounds",
+        "pt": "Meu Jesus, perdão e misericórdia, pelos méritos das tuas santas chagas"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo, para sanar las heridas de nuestras almas.",
+        "en": "Eternal Father, I offer you the wounds of our Lord Jesus Christ, to heal the wounds of our souls.",
+        "pt": "Pai Eterno, ofereço-vos as feridas do nosso Senhor Jesus Cristo, para curar as feridas das nossas almas."
+      },
+      "repeat": 3,
+      "meditation": {
+        "es": "Al terminar, tres veces",
+        "en": "At the end, three times",
+        "pt": "No fim, três vezes"
+      }
+    }
+  ],
+  "historicalNote": {
+    "text": {
+      "es": "La fuente atribuye la devoción a Sor María Martha Chambon y la denomina también Rosario a la preciosa sangre de Cristo.",
+      "en": "The source attributes the devotion to Sister Mary Martha Chambon and also calls it the Rosary of the Precious Blood of Christ.",
+      "pt": "A fonte atribui a devoção à Irmã Maria Marta Chambon e também a chama Terço do Precioso Sangue de Cristo."
+    },
+    "source": "https://hozana.org/es/oracion/santo-rosario/de-las-llagas-de-cristo/"
+  },
+  "notes": "Texto literal de Hozana. Las oraciones complementarias (consagración a la Faz y llaga del hombro) no son pasos de la coronilla.",
+  "image": "llagas-cristo-coronilla",
+  "variables": [],
+  "promise": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Hozana · Santo Rosario",
+      "url": "https://hozana.org/es/oracion/santo-rosario/de-las-llagas-de-cristo"
+    }
+  ]
+}

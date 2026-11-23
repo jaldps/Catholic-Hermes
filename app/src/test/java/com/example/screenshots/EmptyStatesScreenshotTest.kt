@@ -80,6 +80,11 @@ class EmptyStatesScreenshotTest(private val identity: DesignLanguage, private va
         .allowMainThreadQueries().build().also { database = it }
 
     private fun capture(name: String) {
+        // Freeze decorative motion and let any entry animation finish before drawing.
+        // reduceMotion = true is already set on both SanctaFidesTheme call sites; on
+        // Lumen/Cristal light this was still captured mid-fade.
+        compose.waitForIdle()
+        compose.mainClock.advanceTimeBy(3_000L)
         compose.waitForIdle()
         compose.runOnIdle {
             val view = compose.activity.window.decorView

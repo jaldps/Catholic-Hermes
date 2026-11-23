@@ -1,0 +1,228 @@
+# -*- coding: utf-8 -*-
+"""Lote 2b: HZ-01, HZ-02, HZ-03, HZ-04, HZ-05, HZ-07, HZ-08, HZ-10."""
+from lib import L, B, P, T, V, rosary59, DL, DS
+
+CHAPLETS=[]
+
+CHAPLETS.append({
+ "id":"lourdes-rosario","sourceId":"HZ-01","group":"mary",
+ "title":L("Rosario de la Virgen de Lourdes","Rosary of Our Lady of Lourdes","Terço de Nossa Senhora de Lourdes"),
+ "summary":L("Rosario estándar rezado en comunión con Lourdes y por los enfermos.",
+   "The standard rosary prayed in union with Lourdes and for the sick.",
+   "O terço padrão rezado em união com Lourdes e pelos doentes."),
+ "instrument":L("Rosario mariano tradicional de 59 cuentas.","Traditional 59-bead Marian rosary.","Terço mariano tradicional de 59 contas."),
+ "when":L("Todos los días a las 15:30 en el santuario de Lourdes; uso libre en comunión con los enfermos.",
+   "Every day at 3:30 pm at the shrine of Lourdes; at any time in union with the sick.",
+   "Todos os dias às 15h30 no santuário de Lourdes; uso livre em união com os doentes."),
+ "weekdays":[],
+ "beads":rosary59(),
+ "steps":[
+   P(0,"sign_of_the_cross"),P(0,"creed"),
+   P(1,"our_father"),P(2,"hail_mary",3),P(3,"glory_be"),
+   *[s for i in range(5) for s in (P(DL[i],"our_father"),P(DS[i],"hail_mary",10),P(DL[i],"glory_be"))],
+ ],
+ "sources":[
+   {"title":"Hozana · Rosario de la Virgen de Lourdes","url":"https://hozana.org/es/oracion/santo-rosario/lourdes"},
+   {"title":"Hozana · Terço de Nossa Senhora de Lourdes (tradução publicada)","url":"https://hozana.org/pt/oracao/terco/lourdes"}],
+ "translation":{"es":"original","en":"traducción fiel de Hermes, 2026","pt":"traducción publicada por Hozana"}, "notes":"Fuente ES: Hozana; la versión PT de los pasos es la publicada por Hozana. La versión PT añade una Salve final que la fuente ES no menciona; no se añade para mantener igual contenido.",
+})
+
+CHAPLETS.append({
+ "id":"coronilla-liberacion","sourceId":"HZ-02","group":"god_christ",
+ "title":L("Coronilla de liberación","Chaplet of Liberation","Coronilha de Libertação"),
+ "summary":L("Rosario especial basado en Juan 8:36 para pedir liberación de miedos, adicciones y heridas.",
+   "Special rosary based on John 8:36, asking deliverance from fears, addictions and wounds.",
+   "Terço especial baseado em Jo 8,36, pedindo libertação de medos, vícios e feridas."),
+ "instrument":L("Rosario especial o coronilla, como el rosario tradicional de cinco decenas.",
+   "Special chaplet or rosary, like the traditional five-decade rosary.",
+   "Coronilha ou terço especial, como o terço tradicional de cinco décadas."),
+ "when":L("Uso libre; se recomienda confiar una intención precisa antes de empezar.",
+   "At any time; it is recommended to entrust a specific intention before beginning.",
+   "Uso livre; recomenda-se confiar uma intenção precisa antes de começar."),
+ "weekdays":[],
+ "beads":rosary59(),
+ "steps":[
+   P(0,"creed"),
+   *[s for i in range(5) for s in (
+      T(DL[i],L("si el Hijo los libera, ustedes serán realmente libres. (Juan 8:36)",
+        "If the Son sets you free, you will be free indeed (John 8:36).",
+        "Se o Filho vos libertar, sereis realmente livres (Jo 8,36).")),
+      T(DS[i],L("¡Jesús, ten piedad de mí! ¡Jesús, sáname! ¡Jesús, sálvame! ¡Jesús, libérame!",
+        "Jesus, have mercy on me! Jesus, heal me! Jesus, save me! Jesus, set me free!",
+        "Jesus, tende piedade de mim! Jesus, curai-me! Jesus, salvai-me! Jesus, libertai-me!"),rep=10))],
+   P(None,"salve_regina"),
+ ],
+ "sources":[
+   {"title":"Hozana · Coronilla de liberación","url":"https://hozana.org/es/oracion/santo-rosario/de-liberacion"},
+   {"title":"Hozana · The Rosary of Liberation (published English translation)","url":"https://hozana.org/en/prayer/rosary/liberation"}],
+ "translation":{"es":"original","en":"traducción publicada por Hozana","pt":"traducción fiel de Hermes, 2026"}, "notes":"Estatus eclesial: la página se apoya únicamente en Juan 8:36 y no menciona visionario, revelación privada ni fenómeno sobrenatural; no hay elemento que excluir según las Normas DDF de 2024. Sin reserva expresa de derechos en la página. El texto EN es el publicado por Hozana.",
+})
+
+CHAPLETS.append({
+ "id":"llagas-cristo-coronilla","sourceId":"HZ-03","group":"god_christ",
+ "title":L("Coronilla de las llagas de Cristo","Chaplet of the Wounds of Christ","Coronilha das Chagas de Cristo"),
+ "summary":L("Rosario de las santas llagas, revelado a Sor María Martha Chambon, con ofrenda de las heridas de Cristo.",
+   "Rosary of the holy wounds, revealed to Sister Mary Martha Chambon, offering the wounds of Christ.",
+   "Terço das santas chagas, revelado à Irmã Maria Marta Chambon, oferecendo as feridas de Cristo."),
+ "instrument":L("Rosario tradicional de cinco decenas.","Traditional five-decade rosary.","Terço tradicional de cinco décadas."),
+ "when":L("Uso libre.","At any time.","Uso livre."),
+ "weekdays":[],
+ "beads":rosary59(),
+ "steps":[
+   T(0,L("Oh Jesús, divino Redentor, ten misericordia de nosotros y del mundo entero. Amén.",
+     "O Jesus, divine Redeemer, have mercy on us and on the whole world. Amen.",
+     "Ó Jesus, divino Redentor, tende misericórdia de nós e do mundo inteiro. Amém.")),
+   T(0,L("Dios santo, Dios fuerte, Dios inmortal, ten piedad de nosotros y del mundo entero. Amén.",
+     "Holy God, mighty God, immortal God, have mercy on us and on the whole world. Amen.",
+     "Deus santo, Deus forte, Deus imortal, tende piedade de nós e do mundo inteiro. Amém.")),
+   T(0,L("Oh Padre Eterno, trátanos con misericordia a través de la sangre de Jesús, tu único hijo; trátanos con misericordia, te suplicamos. Te lo suplicamos. Amén.",
+     "O Eternal Father, deal mercifully with us through the blood of Jesus, your only Son; deal mercifully with us, we implore you. We implore you. Amen.",
+     "Ó Pai Eterno, tratai-nos com misericórdia pelo sangue de Jesus, teu único Filho; tratai-nos com misericórdia, vos imploramos. Vos imploramos. Amém.")),
+   *[s for i in range(5) for s in (
+      T(DL[i],L("Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo para sanar las heridas de nuestras almas.",
+        "Eternal Father, I offer you the wounds of our Lord Jesus Christ to heal the wounds of our souls.",
+        "Pai Eterno, ofereço-vos as feridas do nosso Senhor Jesus Cristo para curar as feridas das nossas almas."),
+        med=L("Al principio de cada decena, nombrar una llaga: manos, pies, espalda, cabeza, corazón.",
+          "At the start of each decade, name a wound: hands, feet, back, head, heart.",
+          "No início de cada década, nomear uma chaga: mãos, pés, costas, cabeça, coração.")),
+      T(DS[i],L("Jesús mío, perdón y misericordia, por los méritos de tus santas llagas",
+        "My Jesus, pardon and mercy, through the merits of your holy wounds",
+        "Meu Jesus, perdão e misericórdia, pelos méritos das tuas santas chagas"),rep=10))],
+   T(None,L("Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo, para sanar las heridas de nuestras almas.",
+     "Eternal Father, I offer you the wounds of our Lord Jesus Christ, to heal the wounds of our souls.",
+     "Pai Eterno, ofereço-vos as feridas do nosso Senhor Jesus Cristo, para curar as feridas das nossas almas."),rep=3,med=L("Al terminar, tres veces","At the end, three times","No fim, três vezes")),
+ ],
+ "historicalNote":{"text":L("La fuente atribuye la devoción a Sor María Martha Chambon y la denomina también Rosario a la preciosa sangre de Cristo.",
+   "The source attributes the devotion to Sister Mary Martha Chambon and also calls it the Rosary of the Precious Blood of Christ.",
+   "A fonte atribui a devoção à Irmã Maria Marta Chambon e também a chama Terço do Precioso Sangue de Cristo."),
+   "source":"https://hozana.org/es/oracion/santo-rosario/de-las-llagas-de-cristo/"},
+ "notes":"Texto literal de Hozana. Las oraciones complementarias (consagración a la Faz y llaga del hombro) no son pasos de la coronilla.",
+})
+
+CHAPLETS.append({
+ "id":"santisimo-meditar-adorar","sourceId":"HZ-04","group":"god_christ",
+ "title":L("Coronilla para meditar y adorar al Santísimo Sacramento","Chaplet for meditation and adoration of the Blessed Sacrament","Coronilha para meditar e adorar o Santíssimo Sacramento"),
+ "summary":L("Rosario tradicional con cinco misterios eucarísticos.",
+   "Traditional rosary with five Eucharistic mysteries.",
+   "Terço tradicional com cinco mistérios eucarísticos."),
+ "instrument":L("Rosario tradicional.","Traditional rosary.","Terço tradicional."),
+ "when":L("Uso libre.","At any time.","Uso livre."),
+ "weekdays":[],
+ "beads":rosary59(),
+ "steps":[
+   P(0,"sign_of_the_cross"),P(0,"our_father"),P(2,"hail_mary",3),P(3,"glory_be"),
+   *[s for i in range(5) for s in (
+      P(DL[i],"our_father"),
+      T(DS[i],L("Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
+        "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
+        "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."),rep=10,
+        med=[
+         L("Jesús instituyó el misterio de la Eucaristía en memoria de su pasión y muerte.","Jesus instituted the mystery of the Eucharist in memory of his passion and death.","Jesus instituiu o mistério da Eucaristia em memória da sua paixão e morte."),
+         L("Jesucristo instituyó el Santísimo Sacramento para que viva en nosotros cada día de nuestras vidas.","Christ instituted the Blessed Sacrament that he may live in us every day of our lives.","Cristo instituiu o Santíssimo Sacramento para que viva em nós cada dia das nossas vidas."),
+         L("Jesucristo instituyó el Santísimo Sacramento para perpetuar su sacrificio por nosotros en todos los altares de la cristiandad hasta el fin de los tiempos.","Christ instituted the Blessed Sacrament to perpetuate his sacrifice for us on every altar of Christendom until the end of time.","Cristo instituiu o Santíssimo Sacramento para perpetuar o seu sacrifício por nós em todos os altares da cristandade até ao fim dos tempos."),
+         L("Jesucristo instituyó el Santísimo Sacramento para ser el pan y el vino de nuestra alma, nuestro alimento espiritual.","Christ instituted the Blessed Sacrament to be the bread and wine of our soul, our spiritual food.","Cristo instituiu o Santíssimo Sacramento para ser o pão e o vinho da nossa alma, o nosso alimento espiritual."),
+         L("Jesucristo instituyó el Santísimo Sacramento para visitarnos en el momento de nuestra muerte y llevarnos con Él al cielo.","Christ instituted the Blessed Sacrament to visit us at the hour of our death and take us with him to heaven.","Cristo instituiu o Santíssimo Sacramento para nos visitar na hora da nossa morte e nos levar consigo ao céu.")][i]),
+      P(DL[i],"glory_be"))],
+ ],
+ "notes":"Texto literal de Hozana. Los cinco misterios son los que la fuente enumera; se usan como meditación literal.",
+})
+
+CHAPLETS.append({
+ "id":"sagrada-eucaristia-33","sourceId":"HZ-05","group":"god_christ",
+ "title":L("Coronilla de la Sagrada Eucaristía","Chaplet of the Holy Eucharist","Coronilha da Sagrada Eucaristia"),
+ "summary":L("33 cuentas con comunión espiritual y una invocación a Jesús en el Santísimo Sacramento.",
+   "33 beads with a spiritual communion and an invocation to Jesus in the Blessed Sacrament.",
+   "33 contas com comunhão espiritual e uma invocação a Jesus no Santíssimo Sacramento."),
+ "instrument":L("Coronilla de 33 cuentas; si no se tiene, rosario tradicional.",
+   "Chaplet of 33 beads; an ordinary rosary may be used instead.",
+   "Coronilha de 33 contas; na falta dela, usa-se o terço tradicional."),
+ "when":L("Cuando no se puede recibir la comunión en la Misa.","When Holy Communion cannot be received at Mass.","Quando não se pode receber a Comunhão na Missa."),
+ "weekdays":[],
+ "beads":[B("medal")]+[B("small") for _ in range(33)],
+ "steps":[
+   T(0,L("Como no puedo recibirte, Jesús mío, en la Santa Comunión, ven espiritualmente a mi corazón, y hazlo siempre tuyo.",
+     "Since I cannot receive you, my Jesus, in Holy Communion, come spiritually into my heart and make it always yours.",
+     "Como não posso receber-te, Jesus meu, na Santa Comunhão, vem espiritualmente ao meu coração e faze-o sempre teu.")),
+   T(1,L("Jesús, presente en el Santísimo Sacramento del altar, ten piedad de nosotros.",
+     "Jesus, present in the Blessed Sacrament of the altar, have mercy on us.",
+     "Jesus, presente no Santíssimo Sacramento do altar, tende piedade de nós."),rep=33),
+ ],
+ "notes":"Texto literal de Hozana. Las 33 cuentas representan los 33 años de Jesús en la Tierra.",
+})
+
+CHAPLETS.append({
+ "id":"coronilla-san-jose-hozana","sourceId":"HZ-07","group":"saints",
+ "title":L("Coronilla a San José","Chaplet of Saint Joseph","Coronilha de São José"),
+ "summary":L("Cuentas violetas en tríadas y cuentas grandes blancas para pedir protección a la familia y una buena muerte.",
+   "Violet beads in triads and white large beads, asking St Joseph for family protection and a good death.",
+   "Contas violeta em tríades e contas grandes brancas, pedindo a São José proteção da família e uma boa morte."),
+ "instrument":L("60 cuentas pequeñas violetas agrupadas en tríadas, separadas por cuentas grandes blancas; medalla y cruz.",
+   "60 small violet beads in triads, separated by white large beads; medal and cross.",
+   "60 contas pequenas violeta em tríades, separadas por contas grandes brancas; medalha e cruz."),
+ "when":L("Para ayuda y protección del hogar y la gracia de una buena muerte.",
+   "For help and protection of the home and the grace of a good death.",
+   "Para auxílio e proteção do lar e a graça de uma boa morte."),
+ "weekdays":[],
+ "beads":[B("large")]+[b for i in range(20) for b in (B("small",3,"#6A3D9A"),B("large",color="#FFFFFF"))],
+ "steps":[
+   T(0,L("San José, guardián de la sagrada familia, bendice nuestras familias.",
+     "St Joseph, guardian of the holy family, bless our families.",
+     "São José, guardião da sagrada família, abençoa as nossas famílias.")),
+   *[T(1+2*i,L("San José, ruega por nosotros.","St Joseph, pray for us.","São José, roga por nós."),rep=3) for i in range(20)],
+   T(None,L("Jesús, José y María, os doy mi corazón y el alma mía. Jesús, José y María, asistidme en mi última agonía. Jesús, José y María, en ustedes descance en paz el alma mía. Amén.",
+     "Jesus, Joseph and Mary, I give you my heart and my soul. Jesus, Joseph and Mary, assist me in my last agony. Jesus, Joseph and Mary, may my soul rest in peace in you. Amen.",
+     "Jesus, José e Maria, dou-vos o meu coração e a minha alma. Jesus, José e Maria, assisti-me na minha última agonia. Jesus, José e Maria, que a minha alma descanse em paz em vós. Amém."),med=L("En la medalla y la cruz","At the medal and cross","Na medalha e na cruz")),
+   T(None,L("Dios te salve, José, lleno de la gracia divina. Entre tus brazos descansó El Salvador y ante tus ojos creció. Bendito eres entre todos los hombres, y bendito es Jesús, el hijo divino de tu Virginal esposa. San José, padre adoptivo de Jesús, ayúdanos en nuestras necesidades familiares, de salud y de trabajo, hasta el fin de nuestros días, y socórrenos a la hora de nuestra muerte. Amén",
+     "Hail, Joseph, full of divine grace. The Saviour rested in your arms and grew before your eyes. Blessed are you among all men, and blessed is Jesus, the divine Son of your virginal spouse. St Joseph, adoptive father of Jesus, help us in our family, health and work needs until the end of our days, and succour us at the hour of our death. Amen.",
+     "Salve, José, cheio da graça divina. O Salvador descansou nos teus braços e cresceu diante dos teus olhos. Bendito és entre todos os homens, e bendito é Jesus, o Filho divino da tua esposa virginal. São José, pai adotivo de Jesus, ajuda-nos nas nossas necessidades familiares, de saúde e de trabalho, até ao fim dos nossos dias, e socorre-nos na hora da nossa morte. Amém."),med=L("Oración opcional final","Optional final prayer","Oração final opcional")),
+ ],
+ "notes":"Texto literal de Hozana. Se modelan 20 tríadas (60 cuentas pequeñas), con una cuenta grande separadora entre ellas; la fuente no da el número de grandes.",
+})
+
+CHAPLETS.append({
+ "id":"teresita-24-glorias","sourceId":"HZ-08","group":"saints",
+ "title":L("24 Glorias a Santa Teresita","24 Glories to Saint Thérèse","24 Glórias a Santa Teresinha"),
+ "summary":L("24 cuentas por los 24 años de Santa Teresita, con oraciones propias en cada cuenta.",
+   "24 beads for the 24 years of St Thérèse, with proper prayers on each bead.",
+   "24 contas pelos 24 anos de Santa Teresinha, com orações próprias em cada conta."),
+ "instrument":L("Rosario de 25 cuentas: 24 y una adicional separadas por una medalla de Santa Teresa.",
+   "Rosary of 25 beads: 24 plus one additional bead separated by a medal of St Thérèse.",
+   "Terço de 25 contas: 24 e uma adicional separadas por uma medalha de Santa Teresinha."),
+ "when":L("Uso libre.","At any time.","Uso livre."),
+ "weekdays":[],
+ "beads":[B("small",24),B("medal"),B("small")],
+ "steps":[
+   T(0,L("Santa Teresa del Niño Jesús y de la Santa Faz, recuerda tu promesa de hacer el bien en la tierra, derrama tu lluvia de rosas en abundancia sobre los que te invocan, y alcánzanos de Dios las gracias que esperamos de su infinita bondad. Amén",
+     "St Thérèse of the Child Jesus and the Holy Face, remember your promise to do good on earth, pour your rain of roses abundantly on those who invoke you, and obtain for us from God the graces we hope for from his infinite goodness. Amen",
+     "Santa Teresinha do Menino Jesus e da Sagrada Faz, lembra-te da tua promessa de fazer o bem na terra, derrama a tua chuva de rosas em abundância sobre os que te invocam e alcança-nos de Deus as graças que esperamos da sua infinita bondade. Amém"),rep=24),
+   T(1,L("Oh Padre nuestro celestial, que, por medio de santa Teresa del Niño Jesús, quieres recordar al mundo el Amor misericordioso que llena tu corazón y la confianza filial que debemos tener en ti, te damos humildemente gracias por haber colmado de tanta gloria a la que fue siempre tu hija más fiel, y por haberle dado un poder maravilloso para atraer hacia ti cada día un gran número de almas que te alabarán eternamente",
+     "O heavenly Father, who through St Thérèse of the Child Jesus wish to remind the world of the merciful Love that fills your heart and of the filial trust we ought to have in you, we humbly thank you for having filled with such glory her who was always your most faithful daughter, and for having given her a wonderful power to draw to you each day a great number of souls who will praise you eternally",
+     "Ó Pai celestial, que, por meio de Santa Teresinha do Menino Jesus, queres recordar ao mundo o Amor misericordioso que enche o teu coração e a confiança filial que devemos ter em ti, damos-te humildemente graças por teres colmado de tanta glória a que foi sempre a tua filha mais fiel, e por lhe teres dado um poder maravilhoso para atrair a ti cada dia um grande número de almas que te louvarão eternamente"),med=L("En la medalla","At the medal","Na medalha")),
+   T(2,L("Oh Santa Teresa del Niño Jesús y de la Santa Faz, que mereciste ser proclamada Patrona de las misiones católicas en todo el mundo y Doctora de la Iglesia, recuerda tu promesa de ayudar a los sacerdotes, a los misioneros y a toda la Iglesia",
+     "O St Thérèse of the Child Jesus and the Holy Face, who were worthy to be proclaimed Patroness of the Catholic missions throughout the world and Doctor of the Church, remember your promise to help priests, missionaries and the whole Church",
+     "Ó Santa Teresinha do Menino Jesus e da Sagrada Faz, que mereceste ser proclamada Padroeira das missões católicas em todo o mundo e Doutora da Igreja, lembra-te da tua promessa de ajudar os sacerdotes, os missionários e toda a Igreja"),med=L("En la última cuenta, seguida de un Padre Nuestro","On the last bead, followed by an Our Father","Na última conta, seguida de um Pai-Nosso")),
+   P(2,"our_father"),
+ ],
+ "notes":"Texto literal de Hozana. El título «24 Glorias» no coincide con el cuerpo, que prescribe oraciones propias; se conservan las oraciones literales y el título de la fuente.",
+})
+
+CHAPLETS.append({
+ "id":"rosario-difuntos-hozana","sourceId":"HZ-10","group":"departed",
+ "title":L("Rosario por los difuntos","Rosary for the Departed","Terço pelos Defuntos"),
+ "summary":L("Rosario tradicional con acto de fe, esperanza y caridad por los fieles difuntos.",
+   "Traditional rosary with an act of faith, hope and charity for the faithful departed.",
+   "Terço tradicional com ato de fé, esperança e caridade pelos fiéis defuntos."),
+ "instrument":L("Rosario tradicional.","Traditional rosary.","Terço tradicional."),
+ "when":L("Noviembre o cualquier momento del año.","November or any time of year.","Novembro ou qualquer outra época do ano."),
+ "weekdays":[],
+ "beads":rosary59(),
+ "steps":[
+   P(0,"creed"),P(1,"our_father"),P(2,"hail_mary",3),P(3,"glory_be"),
+   *[s for i in range(5) for s in (
+      T(DL[i],L("Dios mío, creo en Ti porque eres la verdad misma; espero en Ti porque eres infinitamente bueno e infinitamente amable; amo también a mi prójimo como a mí mismo por amor a Ti. Que las almas de los fieles difuntos descansen en paz, por la misericordia del Señor. Amén.",
+        "My God, I believe in you because you are truth itself; I hope in you because you are infinitely good and infinitely loving; I also love my neighbour as myself for your sake. May the souls of the faithful departed rest in peace, through the mercy of the Lord. Amen.",
+        "Meu Deus, creio em ti porque és a própria verdade; espero em ti porque és infinitamente bom e infinitamente amável; amo também o meu próximo como a mim mesmo por amor a ti. Que as almas dos fiéis defuntos descansem em paz, pela misericórdia do Senhor. Amém.")),
+      T(DS[i],L("Dulce Corazón de María, sé mi salvación","Sweet Heart of Mary, be my salvation","Doce Coração de Maria, sê a minha salvação"),rep=10))],
+ ],
+ "notes":"Texto literal de Hozana. Se usa solo HZ-10 de esta página; HZ-09 queda fuera del catálogo curado.",
+})

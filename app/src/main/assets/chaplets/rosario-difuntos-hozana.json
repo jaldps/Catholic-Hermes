@@ -1,0 +1,201 @@
+{
+  "id": "rosario-difuntos-hozana",
+  "sourceId": "HZ-10",
+  "group": "departed",
+  "title": {
+    "es": "Rosario por los difuntos",
+    "en": "Rosary for the Departed",
+    "pt": "Terço pelos Defuntos"
+  },
+  "summary": {
+    "es": "Rosario tradicional con acto de fe, esperanza y caridad por los fieles difuntos.",
+    "en": "Traditional rosary with an act of faith, hope and charity for the faithful departed.",
+    "pt": "Terço tradicional com ato de fé, esperança e caridade pelos fiéis defuntos."
+  },
+  "instrument": {
+    "es": "Rosario tradicional.",
+    "en": "Traditional rosary.",
+    "pt": "Terço tradicional."
+  },
+  "when": {
+    "es": "Noviembre o cualquier momento del año.",
+    "en": "November or any time of year.",
+    "pt": "Novembro ou qualquer outra época do ano."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Dios mío, creo en Ti porque eres la verdad misma; espero en Ti porque eres infinitamente bueno e infinitamente amable; amo también a mi prójimo como a mí mismo por amor a Ti. Que las almas de los fieles difuntos descansen en paz, por la misericordia del Señor. Amén.",
+        "en": "My God, I believe in you because you are truth itself; I hope in you because you are infinitely good and infinitely loving; I also love my neighbour as myself for your sake. May the souls of the faithful departed rest in peace, through the mercy of the Lord. Amen.",
+        "pt": "Meu Deus, creio em ti porque és a própria verdade; espero em ti porque és infinitamente bom e infinitamente amável; amo também o meu próximo como a mim mesmo por amor a ti. Que as almas dos fiéis defuntos descansem em paz, pela misericórdia do Senhor. Amém."
+      }
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Dulce Corazón de María, sé mi salvación",
+        "en": "Sweet Heart of Mary, be my salvation",
+        "pt": "Doce Coração de Maria, sê a minha salvação"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Dios mío, creo en Ti porque eres la verdad misma; espero en Ti porque eres infinitamente bueno e infinitamente amable; amo también a mi prójimo como a mí mismo por amor a Ti. Que las almas de los fieles difuntos descansen en paz, por la misericordia del Señor. Amén.",
+        "en": "My God, I believe in you because you are truth itself; I hope in you because you are infinitely good and infinitely loving; I also love my neighbour as myself for your sake. May the souls of the faithful departed rest in peace, through the mercy of the Lord. Amen.",
+        "pt": "Meu Deus, creio em ti porque és a própria verdade; espero em ti porque és infinitamente bom e infinitamente amável; amo também o meu próximo como a mim mesmo por amor a ti. Que as almas dos fiéis defuntos descansem em paz, pela misericórdia do Senhor. Amém."
+      }
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Dulce Corazón de María, sé mi salvación",
+        "en": "Sweet Heart of Mary, be my salvation",
+        "pt": "Doce Coração de Maria, sê a minha salvação"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Dios mío, creo en Ti porque eres la verdad misma; espero en Ti porque eres infinitamente bueno e infinitamente amable; amo también a mi prójimo como a mí mismo por amor a Ti. Que las almas de los fieles difuntos descansen en paz, por la misericordia del Señor. Amén.",
+        "en": "My God, I believe in you because you are truth itself; I hope in you because you are infinitely good and infinitely loving; I also love my neighbour as myself for your sake. May the souls of the faithful departed rest in peace, through the mercy of the Lord. Amen.",
+        "pt": "Meu Deus, creio em ti porque és a própria verdade; espero em ti porque és infinitamente bom e infinitamente amável; amo também o meu próximo como a mim mesmo por amor a ti. Que as almas dos fiéis defuntos descansem em paz, pela misericórdia do Senhor. Amém."
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Dulce Corazón de María, sé mi salvación",
+        "en": "Sweet Heart of Mary, be my salvation",
+        "pt": "Doce Coração de Maria, sê a minha salvação"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Dios mío, creo en Ti porque eres la verdad misma; espero en Ti porque eres infinitamente bueno e infinitamente amable; amo también a mi prójimo como a mí mismo por amor a Ti. Que las almas de los fieles difuntos descansen en paz, por la misericordia del Señor. Amén.",
+        "en": "My God, I believe in you because you are truth itself; I hope in you because you are infinitely good and infinitely loving; I also love my neighbour as myself for your sake. May the souls of the faithful departed rest in peace, through the mercy of the Lord. Amen.",
+        "pt": "Meu Deus, creio em ti porque és a própria verdade; espero em ti porque és infinitamente bom e infinitamente amável; amo também o meu próximo como a mim mesmo por amor a ti. Que as almas dos fiéis defuntos descansem em paz, pela misericórdia do Senhor. Amém."
+      }
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "Dulce Corazón de María, sé mi salvación",
+        "en": "Sweet Heart of Mary, be my salvation",
+        "pt": "Doce Coração de Maria, sê a minha salvação"
+      },
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Dios mío, creo en Ti porque eres la verdad misma; espero en Ti porque eres infinitamente bueno e infinitamente amable; amo también a mi prójimo como a mí mismo por amor a Ti. Que las almas de los fieles difuntos descansen en paz, por la misericordia del Señor. Amén.",
+        "en": "My God, I believe in you because you are truth itself; I hope in you because you are infinitely good and infinitely loving; I also love my neighbour as myself for your sake. May the souls of the faithful departed rest in peace, through the mercy of the Lord. Amen.",
+        "pt": "Meu Deus, creio em ti porque és a própria verdade; espero em ti porque és infinitamente bom e infinitamente amável; amo também o meu próximo como a mim mesmo por amor a ti. Que as almas dos fiéis defuntos descansem em paz, pela misericórdia do Senhor. Amém."
+      }
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "Dulce Corazón de María, sé mi salvación",
+        "en": "Sweet Heart of Mary, be my salvation",
+        "pt": "Doce Coração de Maria, sê a minha salvação"
+      },
+      "repeat": 10
+    }
+  ],
+  "notes": "Texto literal de Hozana. Se usa solo HZ-10 de esta página; HZ-09 queda fuera del catálogo curado.",
+  "image": "rosario-difuntos-hozana",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Hozana · Santo Rosario",
+      "url": "https://hozana.org/es/oracion/santo-rosario/almas-purgatorio"
+    }
+  ]
+}

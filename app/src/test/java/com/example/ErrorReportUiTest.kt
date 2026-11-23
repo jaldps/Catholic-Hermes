@@ -44,7 +44,7 @@ class ErrorReportUiTest {
                 CompositionLocalProvider(LocalInspectionMode provides true) {MainApp(repo,db.dao(),tts,store,prefs)}
             }}
             compose.onNodeWithTag("nav_more").performClick()
-            compose.onNodeWithTag("error_report_entry").performScrollTo().assertHasClickAction().performClick()
+            compose.revealAboveDock("error_report_entry").assertHasClickAction().performClick()
             compose.onNodeWithTag("error_report_sheet").assertExists()
             compose.onNodeWithText("You choose the app",substring=true).assertExists()
             assertNull(shadowOf(compose.activity).nextStartedActivity)

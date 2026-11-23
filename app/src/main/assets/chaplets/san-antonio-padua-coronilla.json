@@ -1,0 +1,460 @@
+{
+  "id": "san-antonio-padua-coronilla",
+  "sourceId": "IVE-14",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de San Antonio de Padua",
+    "en": "Chaplet of Saint Anthony of Padua",
+    "pt": "Coronilha de Santo António de Pádua"
+  },
+  "summary": {
+    "es": "Trece grupos de Padre Nuestro, Avemaría y Gloria con invocaciones a San Antonio, y responsorio final.",
+    "en": "Thirteen groups of Our Father, Hail Mary and Glory with invocations to St Anthony, and a final responsory.",
+    "pt": "Treze grupos de Pai-Nosso, Ave Maria e Glória com invocações a Santo António e responsório final."
+  },
+  "instrument": {
+    "es": "39 cuentas en 13 grupos de 3.",
+    "en": "39 beads in 13 groups of 3.",
+    "pt": "39 contas em 13 grupos de 3."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "sign_of_the_cross"
+    },
+    {
+      "bead": null,
+      "prayerRef": "act_of_contrition"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Abrid, Señor mis labios para bendecir vuestro Santo nombre y el de vuestra Santísima Madre, la Bienaventurada Virgen María al rezar los Trece Padrenuestros, Avemarías y Glorias en honor de vuestro siervo Antonio, cuyas virtudes deseo, con vuestra gracia, copiar en la tierra, para después gozar de vuestra gloria en el cielo. Amen.",
+        "en": "Open, Lord, my lips to bless your holy name and that of your Most Holy Mother, the blessed Virgin Mary, as I pray the thirteen Our Fathers, Hail Marys and Glories in honour of your servant Anthony, whose virtues I desire, by your grace, to copy on earth, so as afterwards to enjoy your glory in heaven. Amen.",
+        "pt": "Abri, Senhor, os meus lábios para bendizer o vosso santo nome e o da vossa Santíssima Mãe, a bem-aventurada Virgem Maria, ao rezar os treze Pai-Nossos, Ave Marias e Glórias em honra do vosso servo António, cujas virtudes desejo, pela vossa graça, copiar na terra, para depois gozar da vossa glória no céu. Amém."
+      },
+      "meditation": {
+        "es": "Oración preparatoria",
+        "en": "Preparatory prayer",
+        "pt": "Oração preparatória"
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, apóstol por la Fe, ruega por nosotros.",
+        "en": "St Anthony of Padua, apostle of Faith, pray for us.",
+        "pt": "Santo António de Pádua, apóstolo da Fé, roga por nós."
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 3,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, Patriarca por la Esperanza, ruega por nosotros.",
+        "en": "St Anthony of Padua, patriarch of Hope, pray for us.",
+        "pt": "Santo António de Pádua, patriarca da Esperança, roga por nós."
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 6,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, serafín por la Caridad, ruega por nosotros.",
+        "en": "St Anthony of Padua, seraph of Charity, pray for us.",
+        "pt": "Santo António de Pádua, serafim da Caridade, roga por nós."
+      }
+    },
+    {
+      "bead": 7,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 8,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, que practicasteis la Mansedumbre y la Humildad de Jesús, ruega por nosotros.",
+        "en": "St Anthony of Padua, who practised the meekness and humility of Jesus, pray for us.",
+        "pt": "Santo António de Pádua, que praticaste a mansidão e a humildade de Jesus, roga por nós."
+      }
+    },
+    {
+      "bead": 10,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 11,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 12,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, ángel por la Castidad, ruega por nosotros.",
+        "en": "St Anthony of Padua, angel of Chastity, pray for us.",
+        "pt": "Santo António de Pádua, anjo da Castidade, roga por nós."
+      }
+    },
+    {
+      "bead": 13,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 14,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 15,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, prodigio de Penitencia, ruega por nosotros.",
+        "en": "St Anthony of Padua, prodigy of Penitence, pray for us.",
+        "pt": "Santo António de Pádua, prodígio de Penitência, roga por nós."
+      }
+    },
+    {
+      "bead": 16,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 17,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 18,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua Espejo de Obediencia, ruega por nosotros.",
+        "en": "St Anthony of Padua, mirror of Obedience, pray for us.",
+        "pt": "Santo António de Pádua, espelho de Obediência, roga por nós."
+      }
+    },
+    {
+      "bead": 19,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 20,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 21,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, mártir por la Paciencia, ruega por nosotros.",
+        "en": "St Anthony of Padua, martyr of Patience, pray for us.",
+        "pt": "Santo António de Pádua, mártir da Paciência, roga por nós."
+      }
+    },
+    {
+      "bead": 22,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 23,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 24,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, querubín por la Oración, ruega por nosotros.",
+        "en": "St Anthony of Padua, cherub of Prayer, pray for us.",
+        "pt": "Santo António de Pádua, querubim da Oração, roga por nós."
+      }
+    },
+    {
+      "bead": 25,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 26,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 27,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, celador de la Justicia, ruega por nosotros.",
+        "en": "St Anthony of Padua, guardian of Justice, pray for us.",
+        "pt": "Santo António de Pádua, zelador da Justiça, roga por nós."
+      }
+    },
+    {
+      "bead": 28,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 29,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 30,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, dechado de Templanza, ruega por nosotros.",
+        "en": "St Anthony of Padua, model of Temperance, pray for us.",
+        "pt": "Santo António de Pádua, dechado de Temperança, roga por nós."
+      }
+    },
+    {
+      "bead": 31,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 32,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 33,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua, perla de Pobreza, ruega por nosotros.",
+        "en": "St Anthony of Padua, pearl of Poverty, pray for us.",
+        "pt": "Santo António de Pádua, pérola da Pobreza, roga por nós."
+      }
+    },
+    {
+      "bead": 34,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 35,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 36,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "San Antonio de Padua modelo de Constancia, ruega por nosotros.",
+        "en": "St Anthony of Padua, model of Constancy, pray for us.",
+        "pt": "Santo António de Pádua, modelo de Constância, roga por nós."
+      }
+    },
+    {
+      "bead": 37,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 38,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary",
+      "meditation": {
+        "es": "1ª Virgen purísima antes del parto, ruega por nosotros.",
+        "en": "1st Most pure Virgin before childbirth, pray for us.",
+        "pt": "1.ª Virgem puríssima antes do parto, roga por nós."
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary",
+      "meditation": {
+        "es": "2ª Virgen purísima en el parto, ruega por nosotros.",
+        "en": "2nd Most pure Virgin in childbirth, pray for us.",
+        "pt": "2.ª Virgem puríssima no parto, roga por nós."
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary",
+      "meditation": {
+        "es": "3ª Virgen purísima después del parto, ruega por nosotros.",
+        "en": "3rd Most pure Virgin after childbirth, pray for us.",
+        "pt": "3.ª Virgem puríssima depois do parto, roga por nós."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Si buscas milagros, mira:\nMuerte y error desterrados,\nMiseria y demonio huidos,\nLeprosos y enfermos sanos.\nEl mar sosiega su ira,\nRedímense encarcelados,\nMiembros y bienes perdidos\nRecobran mozos y ancianos.\nEl peligro se retira,\nLos pobres van remediados;\nCuéntenlo los socorridos,\nDíganlo los paduanos.\nEl mar sosiega su ira,\nRedímense encarcelados,\nMiembros y bienes perdidos\nRecobran mozos y ancianos.\nGloria al Padre, Gloria al Hijo, gloria al Espíritu Santo. Ruega a Cristo por nosotros, Antonio divino y santo, para que dignos así de sus promesas seamos.",
+        "en": "If you seek miracles, look:\nDeath and error banished,\nMisery and devils fled,\nLepers and the sick made whole.\nThe sea calms its rage,\nPrisoners are redeemed,\nLost limbs and goods\nAre recovered by young and old.\nDanger withdraws,\nThe poor are helped;\nLet the rescued tell it,\nLet the people of Padua proclaim it.\nThe sea calms its rage,\nPrisoners are redeemed,\nLost limbs and goods\nAre recovered by young and old.\nGlory to the Father, Glory to the Son, glory to the Holy Spirit. Pray to Christ for us, Anthony, holy and divine, that we may be worthy of his promises.",
+        "pt": "Se buscas milagres, olha:\nMorte e erro desterrados,\nMiséria e demónios fugidos,\nLeprosos e doentes curados.\nO mar sossega a sua ira,\nRedimem-se os presos,\nMembros e bens perdidos\nRecobram jovens e velhos.\nO perigo afasta-se,\nOs pobres são socorridos;\nContem-no os socorridos,\nDigam-no os paduanos.\nO mar sossega a sua ira,\nRedimem-se os presos,\nMembros e bens perdidos\nRecobram jovens e velhos.\nGlória ao Pai, Glória ao Filho, glória ao Espírito Santo. Roga a Cristo por nós, António divino e santo, para que dignos assim das suas promessas sejamos."
+      },
+      "meditation": {
+        "es": "Responsorio de San Antonio",
+        "en": "Responsory of St Anthony",
+        "pt": "Responsório de Santo António"
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Haced, oh Señor, que la intercesión de vuestro Confesor San Antonio, llene de alegría a vuestra Iglesia, para que siempre sea protegida con los auxilios espirituales y merezca alcanzar los eternos gozos. Por Cristo, nuestro Señor. Amen.",
+        "en": "Grant, O Lord, that the intercession of your confessor St Anthony may fill your Church with joy, so that she may always be protected with spiritual helps and deserve to attain eternal joys. Through Christ our Lord. Amen.",
+        "pt": "Fazei, ó Senhor, que a intercessão do vosso confessor Santo António encha de alegria a vossa Igreja, para que seja sempre protegida com os auxílios espirituais e mereça alcançar os gozos eternos. Por Cristo, nosso Senhor. Amém."
+      },
+      "meditation": {
+        "es": "Oración final",
+        "en": "Final prayer",
+        "pt": "Oração final"
+      }
+    }
+  ],
+  "notes": "Texto literal de IVE. Se corrige la errata «Si quieres ver milagros» → «Si buscas milagros, mira».",
+  "image": "san-antonio-padua-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "IVE · Rosarios y coronas",
+      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+    }
+  ]
+}
