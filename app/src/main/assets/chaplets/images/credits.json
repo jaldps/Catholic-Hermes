@@ -1,182 +1,182 @@
 {
-  "alabanzas-maria": {
-    "id": "alabanzas-maria",
-    "title": "Academia - Assumption of the Virgin by Veronese cat 541.jpg",
-    "author": "Didier Descouens",
-    "license": "Public domain",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3AAcademia_-_Assumption_of_the_Virgin_by_Veronese_cat_541.jpg",
-    "referential": false,
-    "note": "Asunción de la Virgen, imagen mariana para las alabanzas."
-  },
-  "almas-purgatorio-coronilla": {
-    "id": "almas-purgatorio-coronilla",
-    "title": "Souls in purgatory, looking up at the wounds of Christ and Wellcome V0033388.jpg",
-    "author": "",
-    "license": "CC BY 4.0",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3ASouls_in_purgatory%2C_looking_up_at_the_wounds_of_Christ_and_Wellcome_V0033388.jpg",
-    "referential": false,
-    "note": "Almas en el Purgatorio mirando las llagas de Cristo; imagen del mismo misterio."
-  },
-  "cabrini-coronilla": {
-    "id": "cabrini-coronilla",
-    "title": "Statue of Mother Cabrini 185.jpg",
-    "author": "Chris Light",
-    "license": "CC BY-SA 4.0",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3AStatue_of_Mother_Cabrini_185.jpg",
-    "referential": false,
-    "note": "Imagen del sujeto concreto."
-  },
-  "carmen-coronilla": {
-    "id": "carmen-coronilla",
-    "title": "Nuestra Señora del Carmen (Virgen del Monte Carmelo)",
-    "author": "Jerrydestiny",
+  "inmaculada-concepcion-coronilla": {
+    "id": "inmaculada-concepcion-coronilla",
+    "title": "Nuestra Señora de la Inmaculada Concepción",
+    "author": "Jl FilpoC",
     "license": "CC BY-SA 4.0",
     "source": "Imagen ya presente en la app (devotions)",
-    "url": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Mount_Carmel_Statue.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File:Inmaculada_Concepción,_la_Colosal_(Bartolomé_Esteban_Murillo).jpg",
     "referential": false,
     "note": "Imagen reutilizada de devotions."
   },
-  "confianza-tribulaciones": {
-    "id": "confianza-tribulaciones",
-    "title": "El Cristo de la Paciencia (Señor de la Paciencia)",
-    "author": "Francisco Rizi",
-    "license": "Public domain",
-    "source": "Imagen ya presente en la app (devotions)",
-    "url": "https://commons.wikimedia.org/wiki/File:El_Expolio_de_Cristo_(Cristo_de_la_Paciencia)_(1).jpg",
-    "referential": false,
-    "note": "Imagen reutilizada de devotions.  Imagen referencial de Cristo en la tribulación; la coronilla no tiene imagen propia documentada."
-  },
-  "conversion-coronilla": {
-    "id": "conversion-coronilla",
-    "title": "(Toulouse) Conversion de saint Paul de Tarse, 1670 - Bertholet Flemalle Musée des Augustins",
-    "author": "Didier Descouens",
-    "license": "Public domain",
-    "source": "Imagen ya presente en la app (saints)",
-    "url": "https://commons.wikimedia.org/wiki/File:(Toulouse)_Conversion_de_saint_Paul_de_Tarse,_1670_-_Bertholet_Flemalle_Musée_des_Augustins.jpg",
-    "referential": false,
-    "note": "Imagen reutilizada de saints."
-  },
-  "corona-san-miguel-raccolta": {
-    "id": "corona-san-miguel-raccolta",
-    "title": "San Miguel Arcangel statue.jpg",
-    "author": "Bruno Girin",
-    "license": "CC BY-SA 2.0",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3ASan_Miguel_Arcangel_statue.jpg",
-    "referential": false,
-    "note": "No usar la imagen de los tres arcángeles: la coronilla es solo San Miguel."
-  },
-  "coronilla-difuntos-45": {
-    "id": "coronilla-difuntos-45",
-    "title": "Pedro Machuca - The Virgin and Souls in Purgatory - WGA13802.jpg",
-    "author": "Pedro Machuca",
-    "license": "Public domain",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3APedro_Machuca_-_The_Virgin_and_Souls_in_Purgatory_-_WGA13802.jpg",
-    "referential": false,
-    "note": "Imagen del sujeto concreto."
-  },
-  "coronilla-lagrimas": {
-    "id": "coronilla-lagrimas",
-    "title": "Nossa Senhora das Lagrimas (Our Lady of Tears).jpg",
-    "author": "Unknown authorUnknown author",
-    "license": "Public domain",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3ANossa_Senhora_das_Lagrimas_%28Our_Lady_of_Tears%29.jpg",
-    "referential": false,
-    "note": "Nuestra Señora de las Lágrimas, advocación titular de la coronilla."
-  },
-  "coronilla-liberacion": {
-    "id": "coronilla-liberacion",
-    "title": "The Triumph Of Christianity Over Paganism.Gustave Doré.jpg",
-    "author": "Gustave Doré",
-    "license": "Public domain",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3AThe_Triumph_Of_Christianity_Over_Paganism.Gustave_Dor%C3%A9.jpg",
-    "referential": false,
-    "note": "Alegoría del triunfo del cristianismo; la coronilla se apoya en Jn 8,36."
-  },
-  "coronilla-san-jose-hozana": {
-    "id": "coronilla-san-jose-hozana",
-    "title": "Chapel, Saint Joseph and Jesus Christ as a child statue, 2020 Zebegény.jpg",
-    "author": "Globetrotter19",
-    "license": "CC BY-SA 3.0",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3AChapel%2C_Saint_Joseph_and_Jesus_Christ_as_a_child_statue%2C_2020_Zebeg%C3%A9ny.jpg",
-    "referential": false,
-    "note": "Elegir San José de Nazaret, no San José de Calasanz."
-  },
-  "czestochowa-coronilla": {
-    "id": "czestochowa-coronilla",
-    "title": "File:Czestochowa MB Czestochowska.jpg",
-    "author": "Andrzej Otrębski",
-    "license": "CC BY-SA 4.0",
-    "source": "Imagen ya presente en la app (devotions)",
-    "url": "https://commons.wikimedia.org/wiki/File:Czestochowa_MB_Czestochowska.jpg",
-    "referential": false,
-    "note": "Imagen reutilizada de devotions. El icono de la Madonna de Częstochowa."
-  },
-  "desagravio-maria": {
-    "id": "desagravio-maria",
+  "inmaculado-corazon-maria": {
+    "id": "inmaculado-corazon-maria",
     "title": "Sculpture of Immaculate Heart of Mary, Sint-Barbarakapel, Wetteren, 2026.jpg",
     "author": "DimiTalen",
     "license": "CC0",
     "source": "Wikimedia Commons",
     "url": "https://commons.wikimedia.org/wiki/File%3ASculpture_of_Immaculate_Heart_of_Mary%2C_Sint-Barbarakapel%2C_Wetteren%2C_2026.jpg",
     "referential": false,
-    "note": "Corazón Inmaculado de María, objeto del desagravio."
+    "note": "Imagen del sujeto concreto."
   },
-  "dos-corazones-coronilla": {
-    "id": "dos-corazones-coronilla",
-    "title": "Sagrados corazones de Jesús y María (Sacred Hearts of Jesus and Mary), workshop of Vicente López Portaña.jpg",
-    "author": "Vicente López Portaña",
+  "jesus-praga-coronilla": {
+    "id": "jesus-praga-coronilla",
+    "title": "El Santo Niño Jesús de Praga",
+    "author": "Fotobanka ČTK, René Fluger;",
+    "license": "CC BY-SA 3.0",
+    "source": "Imagen ya presente en la app (devotions)",
+    "url": "https://commons.wikimedia.org/wiki/File:Child_Jesus_of_Prague_(original_statue).jpg",
+    "referential": false,
+    "note": "Imagen reutilizada de devotions."
+  },
+  "kateri-coronilla": {
+    "id": "kateri-coronilla",
+    "title": "CatherinaeTekakwithaVirginis1690.jpg",
+    "author": "Father Claude Chauchetière, S.J.",
     "license": "Public domain",
     "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3ASagrados_corazones_de_Jes%C3%BAs_y_Mar%C3%ADa_%28Sacred_Hearts_of_Jesus_and_Mary%29%2C_workshop_of_Vicente_L%C3%B3pez_Porta%C3%B1a.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File%3ACatherinaeTekakwithaVirginis1690.jpg",
     "referential": false,
     "note": "Imagen del sujeto concreto."
   },
-  "estrella-mar-coronilla": {
-    "id": "estrella-mar-coronilla",
-    "title": "Madonna & child, Our Lady Star of the Sea, Seaforth.jpg",
-    "author": "Rodhullandemu",
+  "llagas-cristo-coronilla": {
+    "id": "llagas-cristo-coronilla",
+    "title": "Las Cinco Llagas de Cristo",
+    "author": "Mflito",
+    "license": "CC BY-SA 4.0",
+    "source": "Imagen ya presente en la app (devotions)",
+    "url": "https://commons.wikimedia.org/wiki/File:Santísimo_Cristo_de_las_Cinco_Llagas.jpg",
+    "referential": false,
+    "note": "Imagen reutilizada de devotions."
+  },
+  "lourdes-rosario": {
+    "id": "lourdes-rosario",
+    "title": "Estatua Virgen de Lourdes, Iglesia de San Agustín, Santiago 20240503.jpg",
+    "author": "Carlos Figueroa Rojas",
     "license": "CC BY-SA 4.0",
     "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3AMadonna_%26_child%2C_Our_Lady_Star_of_the_Sea%2C_Seaforth.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File%3AEstatua_Virgen_de_Lourdes%2C_Iglesia_de_San_Agust%C3%ADn%2C_Santiago_20240503.jpg",
     "referential": false,
-    "note": "Virgen Estrella del Mar con el Niño."
+    "note": "Seleccionada tras revisión visual: imagen del sujeto concreto."
   },
-  "familia-franciscana-coronilla": {
-    "id": "familia-franciscana-coronilla",
-    "title": "Chiesa del Nome di Gesù - Venice - Francis of Assisi by Lattanzio Querena.jpg",
-    "author": "Didier Descouens",
-    "license": "CC BY-SA 4.0",
+  "madre-eucaristia-coronilla": {
+    "id": "madre-eucaristia-coronilla",
+    "title": "Allegory of the Eucharist with the Virgin Mary and Saints by Gregorio Vásquez de Arce y Ceballos.jpg",
+    "author": "Gregorio Vásquez de Arce y Ceballos",
+    "license": "Public domain",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AAllegory_of_the_Eucharist_with_the_Virgin_Mary_and_Saints_by_Gregorio_V%C3%A1squez_de_Arce_y_Ceballos.jpg",
+    "referential": false,
+    "note": "Alegoría de la Eucaristía con la Virgen María y santos."
+  },
+  "maximiliano-coronilla": {
+    "id": "maximiliano-coronilla",
+    "title": "Fr.Maximilian Kolbe in 1936.jpg",
+    "author": "Unknown authorUnknown author",
+    "license": "Public domain",
     "source": "Imagen ya presente en la app (saints)",
-    "url": "https://commons.wikimedia.org/wiki/File:Chiesa_del_Nome_di_Gesù_-_Venice_-_Francis_of_Assisi_by_Lattanzio_Querena.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File%3AFr.Maximilian%20Kolbe%20in%201936.jpg",
     "referential": false,
     "note": "Imagen reutilizada de saints."
   },
-  "fe-coronilla": {
-    "id": "fe-coronilla",
-    "title": "The three virtues Hope, Faith and Charity are standing near Wellcome V0047944.jpg",
-    "author": "",
-    "license": "CC BY 4.0",
-    "source": "Wikimedia Commons",
-    "url": "https://commons.wikimedia.org/wiki/File%3AThe_three_virtues_Hope%2C_Faith_and_Charity_are_standing_near_Wellcome_V0047944.jpg",
-    "referential": false,
-    "note": "Alegoría de las tres virtudes teologales (Fe, Esperanza y Caridad)."
-  },
-  "guadalupe-coronilla": {
-    "id": "guadalupe-coronilla",
-    "title": "Nuestra Señora de Guadalupe",
-    "author": "",
+  "misericordia-perdon": {
+    "id": "misericordia-perdon",
+    "title": "Señor de la Divina Misericordia (Jesús Misericordioso)",
+    "author": "Eugeniusz Kazimirowski",
     "license": "Public domain",
     "source": "Imagen ya presente en la app (devotions)",
-    "url": "https://commons.wikimedia.org/wiki/File:1531_Nuestra_Señora_de_Guadalupe_anagoria.jpg",
+    "url": "https://commons.wikimedia.org/wiki/File:Divina_Misericordia_(Eugeniusz_Kazimirowski,_1934).jpg",
     "referential": false,
     "note": "Imagen reutilizada de devotions."
+  },
+  "padre-pio-coronilla": {
+    "id": "padre-pio-coronilla",
+    "title": "Padre Pio portrait.jpg",
+    "author": "The original uploader was Manfredonia at Italian Wikipedia.",
+    "license": "Public domain",
+    "source": "Imagen ya presente en la app (saints)",
+    "url": "https://commons.wikimedia.org/wiki/File:Padre_Pio_portrait.jpg",
+    "referential": false,
+    "note": "Imagen reutilizada de saints."
+  },
+  "pasiones-cristo-rosario": {
+    "id": "pasiones-cristo-rosario",
+    "title": "El Santo Cristo Yacente (Cristo Muerto)",
+    "author": "Rodelar",
+    "license": "CC BY-SA 3.0",
+    "source": "Imagen ya presente en la app (devotions)",
+    "url": "https://commons.wikimedia.org/wiki/File:Gregorio_Fernández,_Cristo_yacente,_1627.jpg",
+    "referential": false,
+    "note": "Imagen reutilizada de devotions."
+  },
+  "perpetuo-socorro-rosario": {
+    "id": "perpetuo-socorro-rosario",
+    "title": "Nuestra Señora del Perpetuo Socorro",
+    "author": "Bjankuloski06",
+    "license": "CC BY 4.0",
+    "source": "Imagen ya presente en la app (devotions)",
+    "url": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Perpetual_Help_icon,_Christ_the_King_Catholic_Church,_Auckland.jpg",
+    "referential": false,
+    "note": "Imagen reutilizada de devotions."
+  },
+  "reina-luz-coronilla": {
+    "id": "reina-luz-coronilla",
+    "title": "Nuestra Señora de la Asunción (Dormición y Asunción)",
+    "author": "Jl FilpoC",
+    "license": "CC BY-SA 4.0",
+    "source": "Imagen ya presente en la app (devotions)",
+    "url": "https://commons.wikimedia.org/wiki/File:Imagen_de_la_Asunción_de_María,_Convento_de_la_Asunción_(Sevilla).jpg",
+    "referential": false,
+    "note": "Imagen reutilizada de devotions.  Imagen referencial mariana; origen de la coronilla no documentado."
+  },
+  "rosario-difuntos-hozana": {
+    "id": "rosario-difuntos-hozana",
+    "title": "Día de Fieles Difuntos. Altares.JPG",
+    "author": "Hialmar.castillo",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AD%C3%ADa_de_Fieles_Difuntos._Altares.JPG",
+    "referential": false,
+    "note": "Imagen del sujeto concreto."
+  },
+  "rosario-espiritu-santo": {
+    "id": "rosario-espiritu-santo",
+    "title": "Descent of the Holy Spirit upon the Apostles.jpg",
+    "author": "Joseph Vladimirov / Иосиф Владимиров",
+    "license": "Public domain",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3ADescent_of_the_Holy_Spirit_upon_the_Apostles.jpg",
+    "referential": false,
+    "note": "Pentecostés: descendimiento del Espíritu Santo sobre los apóstoles."
+  },
+  "sagrada-eucaristia-33": {
+    "id": "sagrada-eucaristia-33",
+    "title": "Eucharistic Adoration.jpg",
+    "author": "Melchior2008",
+    "license": "Public domain",
+    "source": "Wikimedia Commons",
+    "url": "https://commons.wikimedia.org/wiki/File%3AEucharistic_Adoration.jpg",
+    "referential": false,
+    "note": "Imagen del sujeto concreto."
+  },
+  "sagrado-corazon-jesus": {
+    "id": "sagrado-corazon-jesus",
+    "title": "El Sagrado Corazón de Jesús",
+    "author": "Rodelar",
+    "license": "CC BY-SA 4.0",
+    "source": "Imagen ya presente en la app (devotions)",
+    "url": "https://commons.wikimedia.org/wiki/File:Sagrado_Corazón_de_Jesús,_Oviedo.jpg",
+    "referential": false,
+    "note": "Imagen reutilizada de devotions."
+  },
+  "san-antonio-padua-coronilla": {
+    "id": "san-antonio-padua-coronilla",
+    "title": "Saint Anthony de Padua.jpg",
+    "author": "Donna Alvita",
+    "license": "CC BY-SA 4.0",
+    "source": "Imagen ya presente en la app (saints)",
+    "url": "https://commons.wikimedia.org/wiki/File:Saint_Anthony_de_Padua.jpg",
+    "referential": false,
+    "note": "Imagen reutilizada de saints."
   }
 }
