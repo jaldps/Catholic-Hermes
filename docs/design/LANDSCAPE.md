@@ -815,7 +815,7 @@ Ya no van en el panel de la oración «Después», el progreso, la intención in
 
 **Panel del lector** (`clamp(0,30 W, 224, 280)`: 267 / 240), de arriba abajo:
 1. Atrás y acciones (marcador, más).
-2. **Sin arte (P9).** El panel del lector es un panel de título y la decisión vale para todos los lectores (oración, día de novena, Catecismo, doctrina, lección, día de plan, capítulo, Misa):
+2. **Sin arte (P9; ratificado por el dueño el 23-nov frente a la propuesta de ilustración en el apoyo).** El panel del lector es un panel de título y la decisión vale para todos los lectores (oración, día de novena, Catecismo, doctrina, lección, día de plan, capítulo, Misa):
    - el título (`title1`) va **arriba**, en `S + 52` bajo la fila de atrás, alineado con la primera línea del texto (±4);
    - es una **excepción declarada a la línea única del título** de §3.2 para `kind = Reader`;
    - el santo y la devoción conservan su imagen, que es contenido, como miniatura de 112 junto al título (`DetailPane`, §3.3).

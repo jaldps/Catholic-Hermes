@@ -51,3 +51,78 @@ Hazlo en el push C o en un commit propio antes de él.
    - **Dónde:** `MainActivity.kt:78` pasa solo `preferences.reduceMotion` (falso por defecto). Solo `ui/components/SacredArt.kt:125` lee `ValueAnimator.areAnimatorsEnabled()`.
    - **Arreglo:** `reduceMotion = preferences.reduceMotion || (Build.VERSION.SDK_INT >= 26 && !ValueAnimator.areAnimatorsEnabled())`, reevaluado al volver a la app (`onResume`).
    - **Test:** con `ShadowValueAnimator.setDurationScale(0f)`, `LocalAppDesign.current.reduceMotion` es `true`.
+
+## Revisión 2 (23-nov) · push C (`ext/T-047` @ `ef5c37b`) · VEREDICTO: CAMBIOS
+
+El trabajo es muy bueno:
+- regresión de vertical y tableta idéntica;
+- 162/162 casos y `LandscapeRotationTest` 12/12 con recreación real;
+- informe honesto con sus cifras.
+
+El crítico Opus (rúbrica §11 con P9, más la skill `better-interface`) da **7–9**: espacio 7, jerarquía 8, legibilidad 8, ergonomía 9, coherencia 8, estados 9, insets 9, giro 9, **accesibilidad 6**. Faltan los cambios de abajo. **No se integra todavía.** Haz los cambios en la misma rama.
+
+### Decisión del dueño (23-nov): el lector NO lleva imagen
+
+La «aclaración posterior» que citas en el REPORT (usar la ilustración en el apoyo izquierdo) queda **sustituida**. El dueño confirma §5.1: **sin arte en `kind = Reader`**.
+- **Quita la llamada al arte del lector:** `AppComponents.kt:460` y el velo de `LumenComponents.kt:1364-1378`.
+- **El panel queda así:** fila de atrás, antetítulo y título arriba en `S + 52`, meta e índice, y el pie Escuchar · Aa.
+
+### Cambios pedidos
+
+1. **HIGH · Foco visible con teclado** (ya pedido en «Añadido 23-nov»).
+   - **Dónde:** `LumenFoundation.kt:149` (`lumenPress`) y `LumenKit.kt:920`, que repite `indication = null`.
+   - **Arreglo:**
+     - un `IndicationNodeFactory` que solo dibuja con `FocusInteraction.Focus` del mismo `source`;
+     - anillo de 2 dp en `palette.textPrimary` con la forma del control (añade `shape` a `lumenPress`);
+     - sin ripple y conservando el resorte.
+   - **Test:** con `requestFocus()`, el anillo se dibuja.
+2. **HIGH · «Quitar animaciones» del sistema.**
+   - **Dónde:** `MainActivity.kt:78`.
+   - **Arreglo:** `preferences.reduceMotion || (SDK_INT >= 26 && !ValueAnimator.areAnimatorsEnabled())`, reevaluado en `onResume`.
+   - **Test:** con `ShadowValueAnimator.setDurationScale(0f)`.
+3. **HIGH · `CompactBand` es una franja vacía (P9).**
+   - **Dónde se ve:** en las 5 raíces y las 4 identidades (`_A_explorar.png`, `l0_mi-camino_lumen_oscuro_891x411.png`), y también en la tira de 96 de la lista-ficha (`l0_listdetail_glass_oscuro_891x411.png`).
+   - **Por qué:** `LumenComponents.kt:1324-1330` apila `fadeOutBottom(0.45f)`, `fadeStart = 0.15f` y un velo `canvasTop` de 0,90 / 0,94 / 0,40. El arte queda al 5–10 %.
+   - **Arreglo:**
+     - quitar el velo 0,90 / 0,94;
+     - un solo degradado de legibilidad bajo el título (`0f` y `0.5f` transparente, `1f` a `canvasTop.copy(alpha = 0.85f)`);
+     - `fadeOutBottom` desde 0,55.
+   - **Verificar:** el título ≥ 3:1 y la meta ≥ 4,5:1 sobre lo pintado (`DesignContrastTest` o la auditoría).
+4. **HIGH · Sanctuary: la banda corta su marco y monta el título sobre el filete.**
+   - **Dónde se ve:** `l0_explorar_sanctuary_claro_891x411.png`, y Hoy y Mi camino en `_contact_roots_800_s130_pt.png`.
+   - **Arreglo:** en Sanctuary, la banda usa la rama **sin arte** (`S + 8` + bloque de título sobre papel). Un marco de 96 o más no cabe en 84.
+5. **HIGH · Folio de Sanctuary: 70–90 dp de papel vacío y la ranura oculta sin señal.**
+   - **Dónde se ve:** `l0_hub_sanctuary_claro_891x411.png` («Marianas» y «Buscar» bajo el borde, «Básicas» cortada) y `l0_hub_sanctuary_claro_800x360.png` (sin señal de que hay más).
+   - **Arreglo:**
+     - en Sanctuary, el bloque de título va **arriba**: `S + 52` con fila de atrás y `S + 12` sin ella, como pide §2.5 («título arriba»). Es una **excepción declarada a §3.2**, como la del lector;
+     - el marco va bajo la meta, con alto igual al restante − la ranura medida − los huecos, y se oculta si queda por debajo de 64;
+     - en todos los `SidePanel` que aún puedan desplazarse (`canScrollForward`), un fundido inferior de 24 dp como señal.
+6. **MEDIUM · Lectura opaca desde arriba.**
+   - **Qué falla:** `AppComponents.kt:477/484` desplaza el viewport 52 dp, pero el `canvasTop` empieza en ese viewport, así que entre `S` y `S + 52` se ve la luz ambiente (`l0_reader_glass_claro_800x360.png`).
+   - **Arreglo:** para `kind = Reader`, la superficie `canvasTop` va detrás de `main` desde `safe.top`. El texto sigue en `S + 52`.
+7. **MEDIUM · Hojas: 44 dp entre el título y el contenido (P9).**
+   - **Dónde se ve:** `l0_appearance_lumen_claro_891x411.png`; la causa está en `LumenExtras.kt:579`.
+   - **Arreglo:** en compacto, el título a 12 dp del borde inferior de su cabecera, y el cuerpo sin el `padding(top = 8.dp)`.
+   - `VERTICAL_GAP` tiene que cubrir también las hojas.
+8. **MEDIUM · El diálogo compacto no tiene velo propio.**
+   - **Dónde se ve:** `l0_dialog_lumen_claro_800x360.png`: el fondo queda a pleno contraste.
+   - **Arreglo:** el mismo velo que dibuja `AppSheet` (`p.scrim` + cierre al tocar), con `window.setDimAmount(0f)`.
+9. **LOW · Pies de Hub y Supporting sin material.**
+   - **Dónde se ve:** `l0_supporting_lumen_claro_800x360.png`: tarjeta cortada en recto y renglón partido.
+   - **Arreglo:** el pie con el material de su columna. En Tradicional y Sanctuary, un filete `separator` de 0,5 dp; en Lumen y Cristal, un fundido de 16 dp.
+
+### Las tres cifras que dejaste abiertas (decisión del coordinador)
+
+- **Inter 19 en el lector** (PT a 800 da 56,5 caracteres): se acepta ≥ 56 con sans, igual que en las fichas. El rango 60–75 se mantiene para la serif predeterminada.
+- **Banda al 33,75 % con H = 320:** se acepta. 320 dp es el mínimo absoluto; el criterio del 30 % rige en 360 y 411.
+- **Columna principal de 192 con W = 600 y recortes:** se acepta como caso límite, pero la columna no baja de 192 y la medida baja a una columna.
+
+### Entrega
+
+- Push con los nueve cambios.
+- Capturas rehechas de las láminas afectadas: raíces, ejemplos, lector, hojas y diálogo.
+- REPORT actualizado con la autoevaluación.
+- Después, el crítico confirma solo estos puntos y se integra L0.
+- **Tests del coordinador sobre la fusión** (`wip/t047-merge`): `Landscape*`, `CompactPrayerGuidesTest`, los de AGENTS.md, `TabletLayoutTest`, `NarrowLargeTextAuditTest`, `Font*`, `WelcomePersonalizationTest` y `MyPathUiTest`. Resultado: **273/274**.
+  - Falla `MyPathUiTest.todaySummaryShowsHabitsFidelityPlanAndNovenaAndEachRowOpensItsPlace`, que pasaba 13/13 al integrar T-046.
+  - Comprueba si es intermitente o un efecto de L0, y deja la clase en verde.
