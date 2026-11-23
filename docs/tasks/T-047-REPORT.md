@@ -1,213 +1,144 @@
-# T-047 · L0 horizontal
+# T-047 · L0 horizontal · C y Revisión 2
 
-Entrega escalonada en `ext/T-047`. **A, B y C listas para revisión en esta rama, con P9 y la aclaración posterior del dueño incorporadas. El cierre e integración corresponden al coordinador.**
+Entrega en `ext/T-047`, actualizada desde `origin/CatholicGPT` (`43a3c80`). A y B siguen aceptadas. Esta actualización aplica los nueve cambios de **Revisión 2 (23-nov)**; la revisión e integración corresponden al coordinador. No se publicó APK ni se cambió versión, firma, ids, Room, datos o tema.
 
-La validación final aprobó **162/162 casos de matriz, 14/14 comprobaciones suplementarias y 17/17 de maquetación con insets laterales** (ejecuciones con casos solapados). `:app:assembleDebug` terminó con **BUILD SUCCESSFUL**. El crítico independiente aprobó las **24 variantes del lector** revisadas. Las bases compartidas están terminadas; las migraciones de pantallas siguen perteneciendo a L1–L7. No se ha publicado un APK nuevo.
+**Decisión final: el lector no lleva imagen, tampoco como fondo.** La variante ilustrada y su dictamen anterior quedan sustituidos. Los ejemplos de L0 son composables de test; las pantallas reales se adaptan en L1–L7.
 
-Evidencia final: [matriz y suplementos](T-047-shots/validation-P9-final.json), [maquetación con recorte/navegación lateral](T-047-shots/validation-P9-window-check.json), [compilación](T-047-shots/build-P9.json), [dictamen visual](T-047-shots/visual-review-reader.json). La suite general conserva nueve fallos de referencia; su desglose se explica abajo, sin presentarla como verde.
+## Respuesta a los nueve puntos
 
-Base inicial: `2a00060`. Se incorporó `origin/CatholicGPT` hasta `2e92076`: el coordinador corrigió dos clases de tests de T-046 y publicó 1.8.29. No hay diferencias de producción en `ui/` entre esas dos bases. Las capturas iniciales siguen siendo una referencia válida.
+| # | Cambio | Comprobación |
+|---|---|---|
+| 1 | `lumenPress` y las filas comparten una indicación de foco propia. Anillo de **2 dp** en `textPrimary`, con un halo de lienzo de 1 dp a cada lado; todo queda dentro del control para no recortarse. La fábrica conserva referencias a `State` y el nodo observa sus cambios: enfocar, cambiar tema/forma y transferir el foco no reemplazan el colector. Se pasa la forma real en los wrappers. Sin ripple; se conserva el resorte de presión. Un `BringIntoViewSpec` del scaffold reserva el dock más 8 dp. | `KeyboardFocusTest`: cuatro identidades × claro/oscuro × botón/fila/versículo/borrado de búsqueda (**32 casos**); píxeles del anillo y halo, contraste≥3:1, retintado con foco retenido y transferencia a otro control. `DockKeyboardFocusTest`: la última fila de Explorar recibe foco real y queda sobre el dock, sin empujón de test. Comprueba también el contraste de su anillo real (mínimos: Lumen16,95; Tradicional15,51; Cristal16,95). |
+| 2 | `MainActivity` usa la preferencia de la app **o** `!ValueAnimator.areAnimatorsEnabled()` (API≥26), leído de nuevo en `ON_RESUME`. También en la recuperación de copia de seguridad. | `SystemReduceMotionTest`: duración0 llega a `LocalAppDesign.reduceMotion`; cambio del sistema en ambas direcciones al regresar; la preferencia de la app sigue mandando si está activada. |
+| 3 | La pintura de `CompactBand` se ve: se eliminan los velos globales0,90/0,94, queda un degradado inferior transparente en0/0,5 → lienzo0,85 y fundido desde0,55. En oscuro se conserva el velo negro18 %. La leyenda lleva una **placa opaca localizada**, que abraza solo su texto. | `CompactBandContrastTest` mide los píxeles pintados detrás de los glifos en las cinco ilustraciones de raíz, tres identidades × dos modos. Sin la placa, algunas leyendas daban1–4:1; la placa evita volver a blanquear toda la banda. El título se mide contra una captura sin glifos; la placa contra sus píxeles adyacentes opacos. |
+| 4 | En Sanctuary compacto se reutiliza la rama de título **sin arte**, sobre papel. Su margen inferior es4 dp en compacto (14 en vertical/tableta); elimina10 dp heredados y evita huecos32/29 antes de pestañas. No se fuerza un marco dentro de 84 dp. La tira con ficha reserva la fila de Volver más4 dp (**S+56** antes del título), y omite el antetítulo vacío. Se corrigió una oclusión real de la «O» por el disco de Volver, detectada por el revisor visual. | Comparación nativa con recurso y sin recurso: píxeles idénticos. `LandscapeFolioListHeaderTest`: ocho casos ES/PT,100/130 %, ambos tamaños, con título completo separado del Back real y filtros contiguos. Capturas de raíces y lista-ficha. |
+| 5 | En el folio lateral, el título comienza en **S+12 sin atrás / S+52 con atrás**. La meta va después. El marco solo ocupa el espacio que queda tras medir la ranura y los huecos; se oculta si queda menos de64 dp. Los paneles desplazables de página muestran un fundido inferior de24; el ejemplo de apoyo con scroller propio usa el helper equivalente. | Geometría Sanctuary a ambos tamaños: tres segmentos y búsqueda visibles al 100 %, sin scroll del panel. Test positivo/negativo de la señal de más contenido; matriz130 %. |
+| 6 | El lienzo opaco del lector empieza en `safe.top`, detrás del viewport; el texto y el título siguen en **S+52 =76 dp**. No se compone arte del lector. | Comparación con/sin recurso; alineación±4; píxeles opacos entreS yS+52 en las cuatro identidades y ambos tamaños. |
+| 7 | Cabecera compacta: texto del título a12 dp del borde inferior; cuerpo sin margen superior8. En Apariencia, solo el primer `Label` baja de18 a12 en compacto. | `VERTICAL_GAP` se aplica también a la hoja real: **24 dp** en Lumen/Sanctuary, ambos tamaños. Con el margen propio18 daba30 (12+18); se conserva18 en vertical y en las demás secciones. |
+| 8 | El diálogo compacto pinta su propio `scrim`, igual que la hoja, cierra al tocar fuera y fija `dimAmount=0`. Al salir de compacto se restaura el valor anterior de la ventana. | Test de toque exterior, dim y ausencia de acción semántica/foco en el velo (solo recibe el toque); capturas de ambos tamaños e identidades, con/sin IME. |
+| 9 | Los cuatro pies de los wrappers tienen el material de su columna. Lienzo opaco en Reader; filete0,5 en Tradicional/Sanctuary; fundido16 en Lumen/Cristal, dibujado antes del recorte del material. | Matriz de centro, lector y apoyo; acciones fijas y alcanzables; comparación visual del borde de lectura. |
 
-## A · Ventana, respaldo y contenedores
+**Alcance adicional mínimo:** `GuiCustomizerModal.kt` no estaba en la lista original de archivos. Fue necesario ajustar solo su primer margen de etiqueta para resolver el punto7 sin solapar cuerpo/cabecera ni moverlos con offsets negativos. También se especifica la forma circular del foco de sus muestras de color (punto1). `MoreScreen.EntryRow` tenía un clic propio sin indicación: ahora usa el mismo anillo y su forma real; no cambia su disposición ni navegación. Esta segunda excepción mínima permite comprobar el foco **real** de Créditos, además de su posición sobre el dock. El borrado de búsqueda y los versículos clicables reciben el mismo tratamiento en los componentes compartidos. El resto del diseño y el vertical se conservan. El revisor independiente confirmó la necesidad de este ajuste localizado.
 
-- `AppComponents.kt`: cinco clases de ventana; manda la altura completa de 480 dp. Compose 1.7.2 no tiene `WindowInfo.containerSize` (comprobado en su API); se usa la alternativa autorizada `WindowMetricsCalculator`, versión fija `androidx.window:window:1.3.0`. `Configuration` únicamente invalida el recuerdo al cambiar la configuración; sus dimensiones no determinan la clase.
-- `LumenFoundation.kt`: `appSafeInsets()` toma el máximo de barras y recorte por borde. `ScreenFrame.insets` expone también inicio y final. El scaffold consume los bordes laterales para proteger las pantallas antiguas; los wrappers deben medir el espacio interior real sin volver a sumar ese mismo padding.
-- `LumenComponents.kt`: respaldo con arte de `S + 84` (108 dp con S=24), dentro del desplazamiento existente. Sin arte conserva el bloque natural de título. Se mantienen las firmas públicas y las etiquetas del llamante.
-- `LumenKit.kt`: riel de teléfono con reserva 80/76, cápsula 64, filas de 56 (72 si el rótulo necesita dos líneas), lente deslizante, desplazamiento y selección alcanzable. `AppHideTabBar` también oculta el riel de `LandscapePhone`; las tabletas conservan su decisión anterior.
-- `MainApp.kt`: solo columna de 680 para pantallas sin migrar y rótulos oficiales cortos al ampliar texto en el riel.
-- `LumenExtras.kt`: hojas laterales con `wide`, cabecera, cierre, pie opcional y traslado de ese pie a la cabecera al abrir IME. Diálogo con contexto `aside`, contenido desplazable y acciones fijas; confirmación compacta de 420. `AppNotice` anuncia con `liveRegion = Polite` y se coloca sobre el pie/teclado de la columna que lo aloja.
-- Las hojas y diálogos componen sus ranuras desde un único punto y usan políticas de `Layout`: cambiar orientación no mueve la llamada al contenido. Los diálogos siguen en una ventana modal nativa (foco, atrás y restauración de la ventana anterior); la hoja también admite velo, cierre y arrastre de 44 dp hacia el borde final. La comprobación de TalkBack y atrás predictivo en un teléfono sigue siendo la de §13.
+## Mi camino y estabilidad
 
-Los botones antiguos que una pantalla haya escrito dentro de su cuerpo siguen formando parte de ese cuerpo. El nuevo contrato `footer` permite fijarlos y subir la acción con IME sin adivinar callbacks ni editar pantallas; su adopción pertenece a las migraciones correspondientes. En A no se modificó `ui/screens/**` ni `GuiCustomizerModal.kt`; B incorpora la excepción de tarjetas solicitada después por Jose.
+`MyPathUiTest` comprobaba el texto al aparecer la fila, cuando Room/Flow todavía podía estar emitiendo el resumen inicial. `assertRowText` espera el mismo contenido esperado (máximo25 s) antes de ejecutar **la misma aserción**. No se modificó `MyPathScreen` ni se aceptan valores alternativos. La clase pasó **13/13** en la suite general, además del control anterior.
 
-## Validación de A
+`AppNavigationTest` esperaba «Matthew» tras ver una tarjeta independiente de continuar leyendo, antes de que el directorio completara sus recuentos por IO. Ahora espera primero el libro inicial real y confirma el canon seleccionado; después conserva el límite de15 s y la aserción de «Matthew». Pasó **5/5**, con todas las navegaciones y comprobaciones de fuentes originales. El filtro no se simula. El arreglo de las capturas de Explorar para despejar el dock llegó también del coordinador (`109b77e`); se conserva su implementación al fusionar `43a3c80`, sin duplicarla.
 
-Se ejecutaron ensamblado debug y los controles de AGENTS, más `TabletLayoutTest`, `NarrowLargeTextAuditTest`, `MyPathUiTest` y los nuevos fundamentos. El último resultado por caso suma **116/116 aprobados, 0 omitidos**; [desglose](T-047-shots/validation-A-latest.json).
+Los wrappers conservan una llamada por ranura, estado elevado, selección explícita/por defecto y ancla de lectura. Se mantiene el lint de `rememberSaveable`. El test de paridad fija la fuente bíblica incluida solo dentro de la prueba, evitando comparar traducciones distintas si llega una respuesta de red entre orientaciones. La diferencia bruta de longitud del extracto de Hoy sigue declarada para T-050; no se oculta contenido.
 
-La primera pasada enfocada tuvo 115 casos y dos fallos en `TabletLayoutTest` (selección de orden y una reentrada del motor de layout de Robolectric). Ambos se repitieron en las cuatro identidades y pasaron: **8/8**. No se cambió ni se eliminó ninguna aserción. [Primera pasada](T-047-shots/validation-A-first-run.json).
+## Validación
 
-`LandscapeFoundationsTest`: **7/7**. Comprueba límites de clase, ventana completa 891×411 con barras/recorte, insets 24/32/48, banda 108 y etiqueta antigua, título sin arte, cinco destinos a 800×360, pie de hoja con IME y acción de diálogo antiguo visible.
+**El dueño autorizó continuar con la entrega sin esperar las comprobaciones restantes** («asume que todas las pruebas fueron satisfactorias. Continúa con el proximo paso»). Se detuvieron las reejecuciones pendientes y se conservan a continuación los resultados observados. [Decisión y pendientes](T-047-shots/validation-R2-delivery-decision.json).
 
-`FullAppScreenshotTest.appleLight -Pshots.landscape=true` pasó y produjo las cinco raíces en **891×411 y 800×360** con S24/B16 y gestos laterales 32. Se revisaron las diez imágenes; las láminas `_A_*.png` reúnen ambos tamaños por raíz. La matriz completa de identidades y modos se entrega en C.
+- **Compilación:** `:app:assembleDebug` → `BUILD SUCCESSFUL`; APK de verificación sin publicar: [metadatos](T-047-shots/build-R2.json).
+- **Matriz L0 de base:** **167/167**, y **14/14** suplementos de ES/PT130 %, opacidad y PT. La matriz de base precede al último ajuste de separación de la tira; ese cambio tiene su perfil específico posterior: **31/31** (8 casos nuevos de cabecera,21 layouts y2 renders de Sanctuary). [Matriz](T-047-shots/validation-R2-matrix.json), [perfil de cabecera](T-047-shots/validation-R2-folio.json).
+- **Suite general final sin filtros:** **1157 aprobados, 7 omitidos opt-in, 2 fallos de inicialización, 0 errores**, 1166 casos registrados; `BUILD FAILED` en 2 h 7 min 10 s. Los dos fallos son `ExampleRobolectricTest.classMethod` y `LiquidGlassTest.classMethod`: Maven devolvió **HTTP429** al obtener sus runtimes y esas clases no arrancaron. No se observaron fallos de aserciones de la app. [Resultado bruto completo](T-047-shots/validation-R2-full-final.json). La recuperación de las clases se omitió por la instrucción final del dueño.
+- **Primera suite general:**1172 casos, 1146 aprobados, 19 fallidos, 7 omitidos. Los 16 fallos de disco/runtime se resolvieron en una reejecución de esas clases; se corrigió la espera de navegación y se incorporó la corrección de Explorar del coordinador. Se conserva el [resultado inicial](T-047-shots/validation-R2-full-raw.json) y la [primera reejecución](T-047-shots/validation-R2-recheck-raw.json).
+- **Regresión visual actual:**16/20 imágenes idénticas en píxeles nativos. Las cuatro de Hoy usan por error fecha/horario diferentes: una zona IANA inexistente fue sustituida silenciosamente por GMT. Se marcó ese ensayo como **inválido**, se añadió un guard al renderer y se preparó la repetición con un offset GMT válido; esa repetición se omitió por la instrucción del dueño. No se afirma 20/20 en esta entrega. [Registro](T-047-shots/regression-R2.json).
 
-Regresión: las cinco raíces a **411×891 y 1280×800**, Lumen y Sanctuary claros, son **20/20 idénticas píxel por píxel**. Se adjuntan base y A al 60 % del PNG nativo. [Medidas y hashes de píxeles originales](T-047-shots/regression-A.json).
+| Comprobación | Casos aprobados observados en la suite final |
+|---|---|
+| `LandscapeFolioListHeaderTest` | 8/8 |
+| `LandscapeLayoutTest` | 21/21 |
+| `LandscapeGeometryTest` | 16/16 |
+| `LandscapeAuditTest` | 32/32 |
+| `LandscapeAuditRulesTest` | 1/1 |
+| `LandscapeRotationTest` | 12/12 |
+| `LandscapeStateLintTest` | 2/2 |
+| `LandscapeParityTest` | 14/14 |
+| `LandscapeModalTest` | 12/12 |
+| `LandscapeReadingMeasureTest` | 16/16 |
+| `CompactPrayerGuidesTest` | 16/16 |
+| `KeyboardFocusTest` | 32/32 |
+| `DockKeyboardFocusTest` | 3/3 |
+| `SystemReduceMotionTest` | 3/3 |
+| `CompactBandContrastTest` | 6/6 |
+| `AppNavigationTest` | 5/5 |
+| `DesignNavigationTest` | 8/8 |
+| `RosaryInteractionTest` | 10/10 |
+| `DesignContrastTest` | 1/1 |
+| `TabletLayoutTest` | 44/44 |
+| `NarrowLargeTextAuditTest` | 8/8 |
+| `MyPathUiTest` | 13/13 |
+| Fuentes: `FontPickerInteractionTest`, `FontPreferencesTest`, `FontTypographyTest`, `ReaderFontChoiceTest` | 16/16 |
 
-Comandos (con el entorno preparado y siempre `flock /tmp/gradle.lock`):
+El auditor estrecho cubrió 8 casos × 50 escenarios =400: [cobertura real](T-047-shots/narrow-coverage-R2.json). No se atribuye esta cobertura a los filtros vacíos de A/B. El primer ensayo del nuevo matcher de canon apuntó al estado del hijo en lugar del contenedor; se corrigió para comprobar el texto seleccionado, manteniendo las aserciones anteriores.
 
-```sh
-gradle --no-daemon --max-workers=2 --no-configuration-cache --no-build-cache -I /tmp/t047-runner.gradle :app:assembleDebug :app:testDebugUnitTest \
-  --tests com.example.LandscapeFoundationsTest --tests com.example.AppNavigationTest \
-  --tests com.example.DesignNavigationTest --tests com.example.RosaryInteractionTest \
-  --tests com.example.DesignContrastTest --tests com.example.VaticanNavigationLayoutTest \
-  --tests com.example.FontPreferencesTest --tests com.example.FontTypographyTest \
-  --tests com.example.FontPickerInteractionTest --tests com.example.ReaderFontChoiceTest \
-  --tests com.example.TabletLayoutTest --tests com.example.NarrowLargeTextAuditTest \
-  --tests com.example.MyPathUiTest --tests com.example.screenshots.FullAppScreenshotTest \
-  -Pshots.only=home,prayers,bible,my_path,more -Pshots.lang=es -Pshots.mode=light
-```
 
-El init script local solo fija el hogar escribible, proxy/certificados de este entorno y el registro de resultados. No se incorpora a Git. Los renders horizontal y de regresión se ejecutaron en pasadas separadas; la repetición de los dos casos de tableta se conserva en el desglose.
+Los filtros y escenarios de cada ejecución se conservan en su evidencia. La suite general actual se ejecuta sin filtros de clase ni de capturas. La cobertura del auditor estrecho se comprueba a partir de sus registros; A/B habían pasado sus métodos con un filtro que no recorría escenarios, y no se les atribuye cobertura retrospectiva. Las comprobaciones reales de C sustituyen esa limitación.
 
-## Referencia anterior a los cambios
+`VaticanNavigationLayoutTest`, citado en el AGENTS histórico, no existe en este checkout. No se le atribuye una ejecución. No se han cambiado aserciones para ocultar regresiones.
 
-La suite completa de `2a00060` terminó en **915 casos: 885 aprobados, 23 fallidos, 7 omitidos**, antes de compilar A. [Resultados por clase y fallos](T-047-shots/validation-baseline.json).
+## Capturas y revisión
 
-Cinco fallos fueron de descarga de SDK de Robolectric (9 y 16), no de una aserción de la app. Otros incluyen tests que buscaban «Mi camino» en Explorar: el coordinador corrigió `AppNavigationTest` y `WelcomePersonalizationTest` después de la captura base. El fallo inicial de `MyPathUiTest` no se reprodujo en A (13/13). La suite completa final y la comparación por caso se incorporarán en C, incluyendo los fallos que persistan, sin filtrarlos ni convertirlos en aprobados.
-
-## Decisiones y límites
-
-- Para que los comandos exigidos con `-Pshots.landscape`, `ime`, `cutout`, `navbar` y `opaque` lleguen a la JVM, se amplió la lista de propiedades reenviadas en `app/build.gradle.kts`, además de añadir la dependencia permitida. Es una excepción mínima al límite de edición de ese archivo; no cambia la configuración de producción.
-- El arnés despacha `WindowInsetsCompat` reales a los hosts Compose de actividad y diálogo. Usa el gancho `@TestOnly setUseTestInsets` de AndroidX 1.7.2 y fija el suministro en los hosts para que Robolectric no los sustituya después por ceros. El listener de `AndroidComposeView` queda intacto. La prueba exige S24; no acepta una captura validada con S0.
-- A 320 dp de alto, una banda fija de 108 ocupa **33,75 %**, incompatible con exigir simultáneamente ≤30 %. En los dos tamaños obligatorios ocupa **26,28 % y 30 %**. Se conserva el valor de banda aprobado; La prueba de C registra también esa altura mínima.
-- En una ventana compacta de ancho menor que 376, no cabe una hoja mínima de 360 con márgenes de 8 a ambos lados. El ancho se limita al espacio seguro disponible; La medida de esa excepción se registra en C.
-- No se cambian contenido, datos, esquema Room, temas, identificadores, firma ni versiones. Los PNG históricos regenerados por la suite se restituyeron a HEAD; solo se entregan evidencias de T-047.
-
-Documentación consultada: `AGENTS.md`, protocolo, T-047, reglas editoriales, `LANDSCAPE.md` §2–§3/§11/§12 y las fuentes AndroidX de `WindowInsets.android.kt` 1.7.2 (artefacto de fuentes de Google Maven). La rúbrica de nueve criterios y las comprobaciones de giro, paridad y auditoría se completan en C.
-
-## B · Páginas, lectura, listas y ajuste solicitado en Orar
-
-- `AppPageLayout` y `AppSupportingPaneLayout` tienen las firmas de §3.4. Cada ranura mantiene un único punto de composición. La página usa un marcador medido en la lista vertical, sin cambiar el padre de su cabezal; en horizontal coloca panel y contenido mediante `SubcomposeLayout`. El apoyo conserva sus ranuras en una política de `Layout`. El estado de los ejemplos está elevado, con claves explícitas.
-- Paneles por `kind`, título medido con `TextMeasurer`, línea base aprobada, título largo hacia arriba y desplazamiento del panel, acciones y atrás dentro del panel. Póster extendido, velo constante inferior 70/85 %, velo oscuro 18 %, recorte al foco de `HeroMeta`, fundido final Lumen, filete Tradicional y marco/lomo Sanctuary. El contenido tiene su protección de barra de estado y desplazamiento independiente.
-- El viewport horizontal compartido conserva la medición de ventana completa, pero recorta dibujo y coordenadas accesibles a S/B incluso al desplazar, para que las filas no pasen por debajo de las barras. Las filas seleccionadas exponen `selected`. Segmentos verticales de al menos 44 dp con `Role.Tab` y `selected`; búsqueda compacta; `AppGrid` con fórmula de columnas y `AppFeedColumns` con carriles explícitos. Se corrigió, al mirar las capturas, el texto seleccionado blanco sobre papel claro de Sanctuary.
-- Nueva sobrecarga de `AppTwoPane` con selección explícita o por defecto, tira de 96, búsqueda/filtro adhesivos, chips activos y acceso al lector completo. La sobrecarga antigua y `appIsTwoPane()` mantienen las pantallas de tableta de T-043: L0 no activa una migración implícita de Santos, Órdenes ni Devociones.
-- `appReadingMeasure()` mide 66 caracteres del Juan 1 ya incluido en la app, con el estilo efectivo. `rememberReadingAnchor()` guarda bloque, índice y fracción. `AppNotice` descuenta el espacio que su host ya ha reservado para barras, teclado o pie, evitando aplicar el inset dos veces.
-- Cuatro ejemplos exclusivamente en tests (`LandscapeShowcase.kt`): centro con segmentos/búsqueda, lector con pies, apoyo/contenido y lista-detalle. Usan arte real y las oraciones oficiales existentes, sin redactar contenido ni añadir rutas al producto. [Ejemplos 891](T-047-shots/_B_fixtures_891x411.png) · [800](T-047-shots/_B_fixtures_800x360.png).
-
-**Excepción de alcance autorizada por Jose durante B:** pidió reducir las imágenes del Rosario y la Coronilla en Oraciones horizontal. En `PrayersAndNovenasScreen.kt` se cambia únicamente la llamada de las dos tarjetas destacadas a `AppGuidedPrayerCard`, conservando argumentos, etiquetas, callbacks y proporciones verticales. En altura compacta dibuja una miniatura de **56×72**, superficie de la identidad, título completo y señal de reproducción decorativa; la altura mínima es **96** y crece con la letra. La pareja reserva dos líneas para que los títulos portugueses no desalineen las tarjetas. En vertical/tableta delega al `AppImageCard` anterior con los mismos parámetros.
-
-`CompactPrayerGuidesTest`: **16/16**, cuatro identidades × ES/PT × 100/130 %, a 800×360 con S24/B16. Comprueba ambos accesos completos antes de desplazar, altura igual, texto sin elipsis ni líneas recortadas, objetivos ≥44 y apertura correcta de cada devoción. [Ejemplo Lumen PT130](T-047-shots/l0_guides_lumen_pt_130.png).
-
-Validación de B: ensamblado debug correcto; **137/137 aprobados en una sola ejecución final, 0 omitidos**, incluyendo los controles de AGENTS, las cuatro identidades de tableta, fuentes y `MyPathUiTest`, nueve pruebas de geometría, siete de fundamentos y los renders. [Desglose](T-047-shots/validation-B-latest.json). La primera ejecución tuvo 16 fallos del nuevo test por el indicador engañoso `didOverflowWidth` de Compose: el párrafo conserva el ancho máximo aunque `Text` encoja a su ancho intrínseco (Rosario: caja 124 px, párrafo 356). Se sustituyó esa comprobación por bordes reales de cada línea, altura, final íntegro y ausencia de elipsis; no se reduce la exigencia visual. También hubo un fallo asíncrono de «0 hechos» en Mi camino; su clase completa pasó después **13/13**. C comprueba además el giro y la paridad. La pasada final vuelve a ejecutar ensamblado, AGENTS, las cuatro identidades de tableta, fuentes, Mi camino, fundamentos, geometría y tarjetas, y termina en `BUILD SUCCESSFUL` (7 min 37 s).
-
-El filtro de capturas usado en la pasada conjunta no coincide con los nombres de escenarios de `NarrowLargeTextAuditTest`: sus métodos se ejecutaron sin escenarios. **No se presentan como prueba de la auditoría estrecha completa**. C lo ejecuta sin ese filtro y conserva su resultado real. La misma limitación afecta a la pasada conjunta de A; no a sus pruebas de tableta, fuentes, navegación ni regresión píxel a píxel.
-
-**Cifra incompatible observada:** respetar en Sanctuary la línea del título y el marco debajo de la meta da un cabezal de apoyo más alto que en Lumen; tres segmentos de 44 más búsqueda no caben todos sin desplazar a 360/411. Se conserva la geometría aprobada y el panel entero desplaza. C registra los tamaños reales; no se ocultan segmentos ni se reduce su letra para simular cumplimiento.
-
-## C · Auditoría y evidencia anterior a P9
-
-El merge `5008457` incorpora únicamente documentación del coordinador hasta `dc1e000`. T-048 sigue EN COLA. Entregas A `77dba52`, B `d28b7ea`; esta tercera entrega no migra las pantallas L1–L7.
-
-Se corrigieron tres problemas encontrados al probar los wrappers: el último renglón del panel de apoyo sin pie podía entrar en B; las acciones laterales podían empezar bajo S; y la nueva sobrecarga lista-detalle debía centrar su ficha de tableta a 680. El botón de prueba «Volver a Orar» ahora prueba la salida de la ruta, además del cambio de oración. En altura compacta, las acciones del pie de la hoja se alinean al final, también al subir a cabecera con IME; en vertical se conserva su alineación previa. El ejemplo de «Guardar» reserva140dp (112 recortaba la última letra con el padding del botón); el test final exige una línea completa y centro a≤120 del borde final.
-
-El arte lateral se funde de manera continua, también en Tradicional. La decoración que llega bajo la barra de estado se graba por separado del contenido: solo imágenes/velos, sin controles ni semántica. El scaffold mantiene un viewport rectangular seguro para texto, controles y coordenadas accesibles. Se usa `GraphicsLayer` en Canvas acelerado y `Picture` en Canvas de software; los renders nativos calientan la grabación con una pasada antes de capturar. La pasada adicional de `FullAppScreenshotTest` se limita a altura compacta para conservar el procedimiento de regresión de teléfono/tableta. No se ha medido el coste GPU en un teléfono.
-
-En el póster Sanctuary a 800×360, el espacio entre meta y marco pasa de 8 a **4 dp solo cuando hace falta** para respetar el marco mínimo de 96 y el pie fijo. El título no se mueve ni se reduce. Los ocho casos de lector de `LandscapeGeometryTest` tienen desplazamiento de panel **0** al 100 %.
-
-### Pruebas de L0
-
-La pasada principal de C terminó en **144/144 aprobadas, 0 fallos, 0 errores y 0 omitidas**: [desglose por clase](T-047-shots/validation-C-matrix.json). Las pasadas adicionales suman **34/34** aprobadas, sin omitidas: **16/16** mediciones nuevas de geometría y los renders afectados/adicionales. [Desglose](T-047-shots/validation-C-supplementary.json). La suite completa final, que vuelve a ejecutar estas clases sin filtros de clase, se registra abajo.
-
-- `LandscapeAuditTest`: **32 combinaciones** de cuatro identidades, ES/PT, dos tamaños, 100/130 %. Recorre las cinco raíces tanto al inicio como al final; Lumen ES100 añade recorte y navegación lateral a ambos lados. **Cero hallazgos** en los 32 TSV, incluidos `HEADER_TOO_TALL`, `UNDER_INSET` y `SHEET_GEOMETRY`. [TSV completos en JSON](T-047-shots/landscape-audit.json). Las raíces no abren hojas ni IME en esta prueba: esas geometrías se prueban en `LandscapeModalTest`; no se atribuye esa cobertura al recorrido de raíces.
-- `LandscapeAuditRulesTest`: casos positivos y negativos de los siete detectores. Las listas `ESSENTIAL_BELOW_FOLD` siguen vacías en L0. `MEASURE` se comprueba sobre las columnas de lectura reales de los ejemplos mediante `TextLayoutResult`, no sobre leyendas o tarjetas del inicio.
-- `LandscapeRotationTest`: **12/12**. Cambia las dimensiones de ventana y recrea una actividad de prueba, exigiendo otra instancia; conserva segmento, consulta, selección por defecto/explícita, ficha apilada, hoja abierta, bloque de lectura y fracción, también después de cambiar la letra. Lumen/Sanctuary. El atrás de una ventana modal se envía a su `ComponentDialog`.
-- `LandscapeParityTest`: **14/14**, unión de nodos alcanzables a lo largo del desplazamiento en los cuatro ejemplos y Hoy/Orar/Explorar, Lumen/Sanctuary. Se excluyen únicamente las etiquetas propias de la colocación y el título duplicado de la barra. **No es paridad literal completa de Hoy:** su `ExcerptText` anterior a L0 abrevia el mismo pasaje según la anchura. Se conserva la diferencia bruta y se exige el mismo prefijo de al menos 40 caracteres y paridad exacta del resto. [Diferencias sin ocultar](T-047-shots/node-parity.json). Editar Hoy pertenece a T-050.
-- `LandscapeStateLintTest`: **2/2**, analiza los slots de las pantallas, ignora comentarios y literales, y demuestra que detecta ejemplos anidados inválidos de `rememberSaveable`.
-- `LandscapeLayoutTest`: **14/14** en la matriz principal: ventana completa, riel, banda, hojas, continuidad del cabezal, panel sin pie, avance/salida, ficha de tableta y casos límite de 320/600. `LandscapeGeometryTest`: **16/16**, mide los dos sistemas tipográficos, anchuras, línea base ±1, altura del cabezal y desplazamiento real, y alcanza la búsqueda mediante scroll. [Mediciones](T-047-shots/panel-geometry.json).
-- `LandscapeModalTest`: **12/12**, Apariencia real y ejemplos de pie/campo y diálogo de dos columnas, con fondo Orar real, dos identidades y dos tamaños, ±IME. La acción del campo pasa a cabecera y queda visible; el campo escrito también. [Geometría](T-047-shots/modal-geometry.json). El IME es un inset inyectado: las capturas no muestran un teclado del sistema real.
-- `LandscapeReadingMeasureTest`: **16/16 con límite declarado**, ancho real y estilo efectivo, EB Garamond/Inter, ES/PT, ambos tamaños. El caso PT/Inter/800 conserva un mínimo de regresión de 56 caracteres y prueba que usa toda la anchura disponible; **no se cuenta como cumplimiento de 60**. [Valores](T-047-shots/reading-measure.json).
-- `LandscapeNoticeTest`: **2/2**, anuncio `Polite`, aviso encima del pie/IME y ausencia de descuento doble cuando el host ya se ha reducido.
-- `CompactPrayerGuidesTest`: **16/16**, conserva el ajuste autorizado de las tarjetas, sus textos completos y las aperturas correctas.
-
-### Capturas y revisión visual
-
-Todas son PNG al **60 %** de la captura Canvas nativa, fuera del APK. Se entregan y se revisan las cinco raíces y los cuatro ejemplos en 891×411/800×360, las cuatro identidades, claro/oscuro; 130 % ES/PT; material opaco Lumen/Cristal; PT891 Lumen; Apariencia/diálogo ±IME y hoja con campo; recortes y navegación lateral; y las regresiones.
+PNG al **60 %** del Canvas nativo, fuera del APK, con S24/B16/gestos32 en horizontal. La matriz incluye891×411 y800×360; cuatro identidades; claro/oscuro;130 % ES/PT; material opaco; PT; recorte32 a ambos lados y navegación48 a ambos lados; hojas/diálogo ±IME; tarjetas compactas; y regresión vertical/tableta. El teclado es un inset inyectado, no una imagen de un teclado físico.
 
 | Evidencia | Láminas |
 |---|---|
-| Primer vistazo del crítico | [_contact.png](T-047-shots/_contact.png) |
-| Raíces, 891 | [claro](T-047-shots/_contact_roots_891x411_claro.png) · [oscuro](T-047-shots/_contact_roots_891x411_oscuro.png) |
-| Raíces, 800 | [claro](T-047-shots/_contact_roots_800x360_claro.png) · [oscuro](T-047-shots/_contact_roots_800x360_oscuro.png) |
-| Ejemplos, 891 | [claro](T-047-shots/_contact_fixtures_891x411_claro.png) · [oscuro](T-047-shots/_contact_fixtures_891x411_oscuro.png) |
-| Ejemplos, 800 | [claro](T-047-shots/_contact_fixtures_800x360_claro.png) · [oscuro](T-047-shots/_contact_fixtures_800x360_oscuro.png) |
-| 130 %, raíces | [ES](T-047-shots/_contact_roots_800_s130.png) · [PT](T-047-shots/_contact_roots_800_s130_pt.png) |
-| 130 %, ejemplos | [ES](T-047-shots/_contact_fixtures_800_s130.png) · [PT](T-047-shots/_contact_fixtures_800_s130_pt.png) |
-| Transparencia reducida | [raíces](T-047-shots/_contact_roots_opaque.png) · [ejemplos](T-047-shots/_contact_fixtures_opaque.png) |
-| PT891 | [raíces](T-047-shots/_contact_roots_pt.png) · [ejemplos](T-047-shots/_contact_fixtures_pt.png) |
-| Hojas/diálogos | [±IME](T-047-shots/_contact_modals.png) |
-| Recorte L/R y navegación R/L | [891](T-047-shots/_contact_insets_891x411.png) · [800](T-047-shots/_contact_insets_800x360.png) |
-| Tarjetas Rosario/Coronilla | [ES/PT100/130](T-047-shots/_contact_guides.png) |
-| Regresión base/C | [411×891](T-047-shots/_contact_regression_411x891.png) · [1280×800](T-047-shots/_contact_regression_1280x800.png) |
+| Entrada y raíces | [Contacto](T-047-shots/_contact.png); [891 oscuro](T-047-shots/_contact_roots_891x411_oscuro.png); [800 claro](T-047-shots/_contact_roots_800x360_claro.png), [oscuro](T-047-shots/_contact_roots_800x360_oscuro.png) |
+| Wrappers rehechos | [B891](T-047-shots/_B_fixtures_891x411.png), [B800](T-047-shots/_B_fixtures_800x360.png); [891 oscuro](T-047-shots/_contact_fixtures_891x411_oscuro.png), [800 oscuro](T-047-shots/_contact_fixtures_800x360_oscuro.png) |
+| Tira sin arte y Volver | [ES/PT100/130 %](T-047-shots/_contact_R2_folio.png) |
+| Lector sin arte | [100 %](T-047-shots/_contact_reader_review_100.png), [130 % ES](T-047-shots/_contact_reader_review_130.png), [130 % PT](T-047-shots/_contact_reader_review_130_pt.png) |
+| Texto130 % | Raíces [ES](T-047-shots/_contact_roots_800_s130.png), [PT](T-047-shots/_contact_roots_800_s130_pt.png); ejemplos [ES](T-047-shots/_contact_fixtures_800_s130.png), [PT](T-047-shots/_contact_fixtures_800_s130_pt.png) |
+| Opaco / portugués | Raíces [opacas](T-047-shots/_contact_roots_opaque.png), [PT](T-047-shots/_contact_roots_pt.png); ejemplos [opacos](T-047-shots/_contact_fixtures_opaque.png), [PT](T-047-shots/_contact_fixtures_pt.png) |
+| Insets | [891](T-047-shots/_contact_insets_891x411.png), [800](T-047-shots/_contact_insets_800x360.png), con recorte y navegación a ambos lados |
+| Hojas y diálogo | [Matriz ±IME](T-047-shots/_contact_modals.png) |
+| Identidad y guías | [Tradicional](T-047-shots/_contact_classic_final.png), [Sanctuary](T-047-shots/_contact_sanctuary_final.png), [tarjetas de Orar](T-047-shots/_contact_guides.png) |
+| Foco y contraste | [32 controles](T-047-shots/_contact_R2_focus.png), [Créditos sobre el dock](T-047-shots/_contact_R2_dock.png); bandas [claras](T-047-shots/_contact_R2_contrast_light.png), [oscuras](T-047-shots/_contact_R2_contrast_dark.png) |
+| Regresión | [Vertical](T-047-shots/_contact_regression_411x891.png), [tableta](T-047-shots/_contact_regression_1280x800.png), con base y C lado a lado |
 
-La regresión C vuelve a dar **20/20 idénticas píxel por píxel** a la base. [Hashes y diferencias](T-047-shots/regression-C.json). La comparación fija la misma fecha/zona (noche del 21-nov) en ambos lados para evitar que la fecha diaria se confunda con un cambio de layout; las demás capturas muestran el 22-nov. El [manifiesto](T-047-shots/capture-manifest-C.json) enumera **359 capturas requeridas y suplementarias, sin ausencias**; también se incluyen las combinaciones adicionales capturadas por la auditoría. Se revisaron todas las láminas enlazadas, incluida la corrección final del fundido Tradicional y del marco Sanctuary.
 
-### Cifras incompatibles y propuestas para el coordinador
+El revisor independiente volvió a revisar código y capturas después de corregir tres omisiones de foco (Créditos, borrar búsqueda y versículos). **Aprobó visualmente los nueve puntos**, incluida la protección frente al dock, sin defectos pendientes en ese alcance. En el último pase detectó que Volver mordía la «O» de «Oraciones» en lista-ficha; la nueva regresión de ocho casos y las capturas cerraron esa oclusión. Su dictamen no sustituye la suite ni las pruebas físicas: [dictamen actual](T-047-shots/visual-review-R2.json).
 
-Se mantienen las cifras aprobadas salvo el ajuste de 4 dp del marco ya explicado; no se reduce la tipografía del usuario ni se oculta contenido.
+## Medidas y decisiones del coordinador
 
-| Restricción | Medida real | Propuesta, pendiente de diseño |
+| Caso | Medida / resultado | Estado |
 |---|---|---|
-| Banda 108 y ≤30 % a H320 | **33,75 %**. A H360:30 %; H411:26,28 %. | Declarar la excepción compacta o aprobar una banda de 96 para H320. |
-| Hoja mínima360 en ventana320, márgenes8 | **304 dp** de anchura disponible. | Mantener ajuste al espacio seguro; mínimo360 solo cuando quepa. |
-| Principal≥220 en W600 con cutL32/navR48/riel80 y panelHub≥248 | Wc440; panel248, principal **192 dp**. | Aprobar respaldo de una columna cuando el ancho útil sea insuficiente. |
-| Apoyo de centro sin scroll100, tres segmentos44+búsqueda44 | A800, Lumen/Tradicional/Cristal necesitan **5,5 dp** de scroll. Sanctuary: cabezal269,5 y scroll **109,5**; a891: cabezal314 y scroll **103**. Búsqueda y todos los segmentos alcanzables. | Ajustar el presupuesto del centro al migrarlo o aprobar scroll100; mantener el marco Sanctuary. |
-| Lector60–75 caracteres con estilo efectivo | PT/Inter19sp a800: **56,49**; usa todo el ancho principal menos márgenes40. ES/Inter800:60,32; PT/Inter891:63,39. | Aprobar una geometría distinta o declarar el límite para esa elección de letra. La tabla del diseño presupone Inter18; la app usa19. |
-| Ficha serif≥56, Inter≥45 | PT800: **55,12 /44,33**; el detector admite ±1 carácter por redondeo. | Aclarar esa tolerancia o ampliar el detalle. El lector completo sigue accesible. |
-| Diálogo con IME y pie fijo | Superficie **102,5 /125 dp**; viewport de cuerpo **26,5 /49 dp** a360/411. Acción visible; no cabe un campo56 en ese cuerpo. | En L7, usar hoja lateral para formularios o aprobar un presupuesto distinto con IME. El ejemplo es de lectura, no un formulario. |
-| Paridad textual literal de Hoy | Un extracto del mismo pasaje cambia de longitud por `ExcerptText`. | Resolver en T-050; raw diff adjunto, resto exacto. |
+| Banda con H320 |108/320 = **33,75 %**. Con H360:30 %; con H411:26,28 %. | Aceptado para el mínimo absoluto320. El30 % rige en360/411. |
+| Lector PT/Inter19 a800 | **56,49 caracteres**, usando todo el ancho disponible menos márgenes40. | Aceptado: mínimo56 con sans. Serif conserva60–75. El test ya aplica el umbral aprobado, sin `KNOWN_LIMIT` artificial. |
+| W600 con cutL32/navR48/riel80 | Wc440; panel248; principal **192 dp**. | Aceptado como límite inferior; una columna. |
+| Hoja en W320 con márgenes8 | **304 dp**, menor que el mínimo nominal360. | Aceptado en la revisión de A/B; se ajusta al ancho seguro real. |
+| Tira sin arte de lista-ficha Sanctuary | **110 dp al 100 %,124 dp al 130 %**, con inicio del títuloS+56 y separación real de 6 dp frente a Volver. | Excepción a96 de la tira de arte: sin pintura, reserva la fila52+4 y conserva la línea completa del título; aprobada visualmente. |
+| Folio de centro Sanctuary | Ancho293,5/260,5 dp a891/800; cabezal211/112 dp, línea del título74,5; `panel_scroll_max=0` en ambos tamaños. Los tres segmentos y la búsqueda están dentro del panel. | Resuelto: la ranura medida tiene prioridad sobre el marco. |
+| Ficha PT800 | Serif **55,12**, Inter **44,33** caracteres. | La tolerancia del detector es±1 carácter; existe apertura del lector completo. |
+| Diálogo con IME | Los viewports medidos con IME son **78,5/34,5 dp** a360 y **101/57 dp** a411 (apoyo/principal); las acciones permanecen visibles. La superficie mide **720×102,5** y **720×125 dp**, respectivamente. | No se declara que quepa un campo56. Los formularios reales se adaptan en L7, con hoja lateral cuando corresponda. |
+| Extracto de Hoy | El mismo pasaje usa una longitud distinta según el ancho. | Diff bruto declarado, pendiente de T-050. |
 
-`AppNotice` dispone el aviso sobre el espacio reservado por su host. Un llamante que coloque a la vez un campo alto, un pie fijo y un aviso debe reservar su espacio o usar un error inline en alturas mínimas; L0 no garantiza que tres bloques incompatibles quepan en cualquier host.
+La auditoría conserva **98 avisos**, con el desglose {'VERTICAL_GAP': 85, 'OBSCURED': 13}: [filas completas](T-047-shots/landscape-audit-R2.json). No se han suprimido ni cambiado los umbrales. Los huecos propios del wrapper de Sanctuary quedaron resueltos. Los avisos restantes provienen del espaciado de Explorar y, cuando aparecen, del contenedor clicable de Liturgia en Hoy (el heading heredado mide el contenedor completo).
 
-### Autoevaluación de §11
+Para L6 se propone reducir7–10 dp el primer margen horizontal de Explorar y volver a medir. En T-050 corresponde revisar el espaciado de las tarjetas de Hoy y la extensión común de su extracto. No se migran esas pantallas en L0. Esos límites explican las notas globales inferiores a9; la aprobación visual se limita a los nueve puntos solicitados.
 
-Estas notas se limitan a L0, los ejemplos y el ajuste explícito de Orar. **No constituyen aprobación del crítico ni certifican las áreas todavía sin migrar.** Las comprobaciones físicas de §13 siguen pendientes.
+Medidas: [paneles](T-047-shots/panel-geometry-R2.json), [modales](T-047-shots/modal-geometry-R2.json), [lectura](T-047-shots/reading-measure-R2.json), [tira sin arte y Volver](T-047-shots/folio-list-header-R2.json), [contraste real](T-047-shots/band-contrast-R2.json), [foco y dock](T-047-shots/dock-focus-R2.json), [paridad bruta](T-047-shots/node-parity-R2.json).
 
-| # | Criterio | Nota | Evidencia y límite |
+## Autoevaluación de §11
+
+Evaluación limitada a **L0 y los puntos de Revisión2**, no a las pantallas pendientes. Las excepciones numéricas aceptadas se aplican explícitamente. Las comprobaciones físicas de §13 siguen pendientes; no se presenta esto como certificación universal de accesibilidad, rendimiento ni calidad de toda la app.
+
+| # | Criterio | Nota | Evidencia / límite |
 |---|---|---|---|
-| 1 | Uso del espacio | **8** | P9: título y lectura alineados en S+52, imagen decorativa izquierda sin ocupar altura del texto, botones44/48 y lector aprobado en24 variantes. Límites H320/W600/apoyo100 y hueco propio de Explorar27,5–31 dp, pendientes de sus migraciones. |
-| 2 | Jerarquía y ritmo | **9** | `LandscapeGeometryTest`16, línea base175/151,5 ±1, carriles, un primario en cada ejemplo. |
-| 3 | Legibilidad | **8** | Lectura opaca y fuente efectiva; límite PT/Inter800, fichas PT y cuerpo mínimo del diálogo documentados. |
-| 4 | Ergonomía | **9** | Pies y botones alcanzables, avance a la derecha con centro y≥0,6H, targets; tarjetas16 y layout/modal verdes. La acción de hoja sube con IME conforme al contrato. |
-| 5 | Coherencia | **8** | Cuatro identidades×dos modos y regresión20; diferencia bruta del extracto de Hoy, sin editar su pantalla. |
-| 6 | Estados | **9 para L0** | Selección explícita/por defecto, ficha apilada, hoja abierta, query, IME y ancla probados. Estados específicos de áreas de §16 se entregan con L1–L7/T-055. |
-| 7 | Insets y teclado | **8** | Auditoría de raíces0 y hojas/campo seguros; diálogo con IME sin espacio para campo56. No se declara cumplimiento universal de formularios aún sin migrar. |
-| 8 | Giro | **9** | Recreación real de actividad de prueba,12/12, ida/vuelta y letra. Rosario/audio/Confesión pertenecen a sus tramos. |
-| 9 | Accesibilidad | **8** | `isTraversalGroup`, orden panel→contenido, `heading`/`paneTitle`/`selected`, diálogo modal y `Polite`; TalkBack, vuelta física del foco y atrás predictivo requieren §13 en dispositivo. |
-
-No se fuerzan notas≥9 para tapar límites que requieren cambiar el diseño aprobado o comprobar el teléfono. Las propuestas anteriores son para la revisión del coordinador; este encargo ordena conservar el diseño y registrar las cifras incompatibles.
-
-## Revisión P9 y aclaración posterior del dueño
-
-Se incorporó `T-047-REVIEW.md` y la actualización del diseño de `origin/CatholicGPT` (`1fc3b14`). A y B quedaron aceptadas como avance. **Esta sección sustituye las descripciones y mediciones anteriores del arte del lector:** su marco grande y su altura de póster ya no se usan en `kind = Reader` horizontal. Centros, pósteres de otras clases y miniaturas de fichas conservan su contrato.
-
-Jose aclaró después que no prohíbe toda imagen: la oración debe tener una superficie limpia, verse completa sin scroll cuando quepa con la letra elegida, y el título izquierdo puede tener una imagen difuminada de fondo. La revisión visual descartó el primer fondo limitado al título por dejar el panel casi vacío. El arte existente ocupa ahora **toda la altura útil del panel izquierdo**, como decoración independiente de la medición del cabezal: velo localizado detrás del título/meta, fundido lateral Lumen y marco de folio Sanctuary con margen propio. No añade altura al título ni reduce el ancho del texto derecho. La oración permanece sobre una superficie opaca continua con el pie, para que no parezca una tarjeta cortada. Este criterio se aplica de forma compartida a `AppPageKind.Reader`; orienta también las siguientes migraciones, sin borrar las diferencias de identidad ni trasladar ilustraciones al cuerpo de la oración. El título comienza en **S+52 =76**, y el texto del ejemplo empieza alineado. Se eliminó el padding vertical interior sobrante de ese ejemplo horizontal, manteniendo sus márgenes laterales y la disposición vertical anterior.
-
-`AppPrimaryCapsule` y `AppSecondaryCapsule` usan un mínimo de **44 dp** en `LandscapePhone`, con padding interior adaptado; `AppPrimaryButton(advancing = true)` reserva **48 dp** para avanzar. Las versiones verticales conservan sus valores anteriores. No se deduce la función del botón a partir de su texto traducido. El hilo y la tecla específica del Rosario siguen perteneciendo a T-048.
-
-El nuevo detector `VERTICAL_GAP` mide la distancia entre un `heading` y el siguiente texto de su grupo de recorrido. Tiene controles positivos/negativos y se incorpora al informe de raíces como hallazgo consultivo; las áreas todavía sin migrar conservan su contenido. El arte de una portada no es espacio vacío y requiere interpretación visual del hallazgo. La posición del título del lector es la excepción P9 a la línea de portada175/151,5.
-
-Primera validación P9: **107/107 aprobadas, sin omitidas** ([resultados](T-047-shots/validation-P9-check.json)): geometría, título alineado, oración completa antes del pie, botones44/48, hojas, paridad, giro, Mi camino y las dos clases de capturas repetidas por falta de disco. La comprobación de lectura completa se amplía a los dos tamaños y las cuatro identidades en `LandscapeGeometryTest`. No se promete que cualquier oración larga o cualquier aumento de letra quepa en una pantalla; el contenido nunca se elimina ni se reduce para simularlo.
-
-## Suite completa y comparación con la referencia
-
-Antes de la revisión P9 se ejecutó `:app:assembleDebug` correctamente y **toda la suite sin filtros de clase**: **1092 casos, 1056 aprobados, 29 fallidos, 7 omitidos**, en 1 h 3 min 20 s. [Resultado bruto](T-047-shots/validation-C-full-suite.json). No se presenta como suite verde.
-
-Se mantuvo `shots.only` con las cinco raíces y **todos** los prefijos de escenarios del auditor estrecho; no se filtraron identidad, modo ni idioma. `NarrowLargeTextAuditTest` pasó sus **8 casos**, y sus registros confirman **50 escenarios por caso, 400 en total, sin ausencias** ([cobertura comprobada](T-047-shots/narrow-coverage-C.json)). Esto corrige la falta de cobertura de A/B, ya declarada.
-
-Al final de la suite el disco del entorno se agotó:19 fallos corresponden a las capturas de tentaciones y bienvenida (incluida una inicialización incompleta). Se conservaron los resultados brutos, se liberaron únicamente archivos generados y se repitieron las clases completas. **Tentaciones8/8 y bienvenida16/16 pasaron**. También se repitió Mi camino: **13/13**, incluido el fallo asíncrono de resumen vacío que ya aparecía en la referencia.
-
-El último resultado por caso, combinando la suite y las validaciones enfocadas P9, suma **1079 aprobados, 9 fallidos y 7 omitidos**, incluidos los nuevos controles P9: [desglose con procedencia](T-047-shots/validation-C-latest.json). Esta combinación de ejecuciones no equivale a una sola suite completa verde ni a repetir toda la suite tras P9. Después de P9 se ejecutan los controles horizontales y renders afectados.
-
-Los nueve fallos restantes tienen el mismo nombre de caso y aserción que la referencia inicial: acceso de copia de seguridad desde Ajustes; transferencias de calendario; apertura de devoción mariana; acceso al informe de errores; regreso a la explicación de una pregunta; y cuatro capturas del índice del Catecismo que buscan `ccc_node_p2s2`. No se editaron esos encargos cerrados para obtener verde. Los siete omitidos se conservan en el resultado bruto.
-
-Controles pedidos: navegación5, navegación de diseño8, Rosario10, contraste1, fuentes4+2+8+2, tableta44, auditor estrecho8 y Mi camino13: **105 casos aprobados con la repetición de Mi camino**. `VaticanNavigationLayoutTest`, citado en el AGENTS histórico, ya no existe en este checkout; no se le atribuye una ejecución. Los tests presentes de Vaticano sí forman parte de la suite completa.
-
-### Incidencias de la revisión visual
-
-El revisor independiente rechazó la primera versión porque el arte tenue se perdía y sobraba espacio izquierdo. Tras ocupar el panel de apoyo, confirmó que la composición respondía al pedido de Jose, y señaló un filete de Sanctuary que tocaba el título. Se desplazó el marco hacia fuera conservando la posición del texto. Se añadió el fundido lateral Lumen de 24 dp. El revisor **aprobó visualmente las 24 variantes del lector**: dos tamaños×cuatro identidades×claro/oscuro al 100 %, más ES/PT al 130 % en 800. [Dictamen y alcance](T-047-shots/visual-review-reader.json). No encontró defectos visuales relevantes pendientes en esa matriz; al 130 % confirmó que el texto requiere desplazamiento, permitido por el contrato. No es una certificación de todas las secciones ni de TalkBack físico.
-
-Una primera matriz P9 dio144/145: al comparar Hoy, el feed de Vaticano llegó entre la captura vertical y la horizontal y sustituyó texto/referencias del pasaje incluido por otra traducción. [Resultado bruto](T-047-shots/validation-P9-first-matrix.json). El test de paridad usa ahora el `LocalReadingsLoader` que ya existe, fijado al contenido bíblico incluido, para comparar la disposición con la misma fuente. No se relajó la exigencia de paridad ni se cambió Home. Los renders generales y la app conservan su comportamiento de red.
-
-El criterio general pedido por Jose para las siguientes secciones es reservar la superficie principal a la tarea, y usar la ilustración en el apoyo izquierdo sin que participe en el cálculo de altura del contenido. El revisor recomendó un foco reconocible, velo localizado, controles legibles e identidad propia por material. En lectores esto se implementa en el wrapper compartido, no con excepciones por oración; en centros, fichas y otras áreas se aplica al migrarlas conforme a su contrato.
-
-La medición P9 final de las raíces conserva cero `HEADER_TOO_TALL`, `UNDER_INSET`, `SHEET_GEOMETRY`, `IME_HIDDEN` y `OBSCURED`. El nuevo detector produce 36 observaciones de `VERTICAL_GAP`, todas del mismo título de Explorar, repetido por tamaño, idioma, escala e insets: **27,5–31 dp entre cajas de texto**. Los 29 dp de los títulos de sección se corrigieron reduciendo su margen inferior compartido de 12 a 4 dp solo en horizontal. En la portada, la banda fija 108 y su línea base conviven con el espaciado y el relleno de la entrada propios de `MoreScreen`; se conserva esa pantalla para su migración L6. El detector mide texto a texto, por lo que parte del intervalo pertenece a la superficie del control siguiente. No se oculta el hallazgo ni se altera la banda aprobada para forzar cero.
-
-También se ajustó la base de anchura del panel Reader/Immersive: sus proporciones usan la ventana completa incluso con recorte y navegación lateral, mientras los centros usan el espacio útil. Una prueba específica comprueba 891×411 con recorte izquierdo 32 y navegación derecha 48, panel Reader≈267,3 y acción final fuera de ambos insets. No cambia los renders sin recortes.
+|1|Uso del espacio y P9|**8 global / 9 en wrappers revisados**|Reader sin arte, texto/títuloS+52, controles44/48; folio adapta el marco a sus controles; hojas24. Queda el hueco de Explorar producido por su propio espaciado de pantalla (L6), declarado abajo. Se aplican las excepciones numéricas aceptadas.|
+|2|Jerarquía y ritmo|**9**|Geometría de cuatro identidades; línea0,46H−14 donde corresponde y excepciones explícitas Reader/Sanctuary; un primario por ejemplo.|
+|3|Legibilidad|**9**|Lectura opaca desdeS, fuentes efectivas, medida serif60–75/sans≥56 según revisión; contraste nativo mínimo de bandas: título4,68:1 y leyenda5,17:1. Las fichas ofrecen abrir lector completo.|
+|4|Ergonomía|**9**|Objetivos≥44; avance48 cerca del borde seguro y en la franja inferior; acciones fijas y traslado del pie al cabezal con IME.|
+|5|Coherencia|**8 global / 9 en wrappers**|Cuatro identidades y modos; regresión y paridad de ejemplos. El extracto de Hoy cambia de longitud según el ancho; se entrega su diff bruto para T-050, sin atribuir paridad literal a esa raíz.|
+|6|Estados de L0|**9**|Selección explícita/por defecto, ficha apilada, hoja abierta, consulta escrita, aviso y desplazamiento. Los estados de las áreas se migran en sus encargos.|
+|7|Insets y teclado|**9**|ArnésS24/B16/gestos32; recorte32 y navegación48 a ambos lados; hojas/diálogo con IME0,56H y acciones visibles. No certifica que un formulario56 quepa en34,5.|
+|8|Giro|**9**|12 casos de recreación real; segmento, consulta, selección, ficha, hoja, texto y ancla conservados; lint de estado.|
+|9|Accesibilidad de L0|**9**|Foco nativo visible, forma real, retintado y transferencia; Créditos sobre el dock; movimiento del sistema al reanudar; grupos de recorrido y semántica. Prueba física de TalkBack pendiente (§13).|
 
 
-### Evidencia P9 final y alcance de entrega
+## Archivos
 
-La [auditoría P9](T-047-shots/landscape-audit-P9.json) sustituye la auditoría anterior para el estado entregado. Se adjuntan las mediciones finales de [paneles](T-047-shots/panel-geometry-P9.json), [lectura](T-047-shots/reading-measure-P9.json), [modales](T-047-shots/modal-geometry-P9.json) y [paridad](T-047-shots/node-parity-P9.json). Las láminas `_B_*` se regeneraron con P9; la revisión final incluye todas las láminas de la tabla, los tres contactos de las 24 variantes del lector y los renders individuales pedidos por el crítico.
+La producción de A/B/C se concentra en `AppComponents.kt`, `LiquidGlass.kt`, `LumenComponents.kt`, `LumenExtras.kt`, `LumenFoundation.kt`, `LumenKit.kt`, `MainApp.kt` y la dependencia fijada de ventana en `app/build.gradle.kts`. El ajuste compacto de tarjetas en `PrayersAndNovenasScreen.kt` fue autorizado en B. R2 añade el respeto al movimiento del sistema en `MainActivity.kt` y las dos excepciones localizadas ya justificadas: `GuiCustomizerModal.kt` y `MoreScreen.kt`.
 
-El control `enlargedReaderCanReachTheEndWithoutMovingItsAdvanceButton` confirma que una oración que necesita scroll al ampliar la letra puede leerse hasta el final sin desplazar su acción fija. `readerUsesFullWindowProportionAndClearsBothLateralInsets` comprueba las proporciones de ventana completa y los dos bordes seguros simultáneamente. Se conservan el contenido íntegro y el tamaño de letra elegido; no se garantiza ausencia de scroll para textos arbitrariamente largos.
+Se añaden cinco clases de test para los puntos HIGH: `LandscapeFolioListHeaderTest`, `KeyboardFocusTest`, `DockKeyboardFocusTest`, `SystemReduceMotionTest` y `CompactBandContrastTest`. Los tests de L0 cubren composición, geometría, capturas, auditoría, giro, paridad, medida, estado y modales. `MyPathUiTest` y `AppNavigationTest` conservan sus aserciones y esperan sus datos asíncronos reales. Las capturas frías del auditor esperan el mismo tiempo de decodificación que el renderer general. La relación exacta de fuentes y hashes está en [procedencia](T-047-shots/validation-R2-provenance.json); las imágenes de T-055 y sus cambios vienen de `CatholicGPT`, no son una reapertura de ese encargo.
 
-La última orientación del dueño se aplica a **todas las oraciones y secciones**: imágenes al servicio de la tarea, área principal útil y sin huecos innecesarios. El wrapper Reader ya lo implementa; la adopción concreta en Rosario/Coronilla y el resto de áreas se hará en los encargos sucesivos. Esta entrega no presenta los ejemplos de test como pantallas reales ya migradas. T-048 permanece EN COLA hasta integrar T-047, conforme al protocolo. No se ha hecho verificación en un teléfono físico.
+## Historial, fuentes y entrega
+
+A (`77dba52`) y B (`d28b7ea`) entregaron ventana/insets, respaldo, riel, contenedores, wrappers, medida y ancla, con116/116 y137/137 respectivamente. C anterior (`ef5c37b`) quedó en CAMBIOS. Su arte del lector y su aprobación visual corresponden a otro estado y ya no son la aceptación actual.
+
+Se consultaron `AGENTS.md`, el README de encargos, `T-047.md`, `T-047-REVIEW.md` (incluido el añadido del dock), `docs/design/LANDSCAPE.md` (§2–§3,§5.1,§11–§12), las reglas editoriales y las revisiones/validación del repositorio. Se aplicó la [skill local de accesibilidad](../../.claude/skills/better-accessibility/SKILL.md) a foco, movimiento y obstrucción, adaptándola a Compose. Los ejemplos usan textos e ilustraciones existentes; no se compusieron oraciones ni se añadieron datos religiosos.
+
+No hay comparación web en vivo, prueba de instalación física ni medición de GPU/TalkBack en un teléfono. No se escribe en `CatholicGPT` ni `main`. El cierre e integración son del coordinador. T-048 se inicia solo si el README actualizado lo marca ABIERTO.

@@ -22,5 +22,8 @@
     "_contact_reader_review_100.png",
     "_contact_reader_review_130.png",
     "_contact_reader_review_130_pt.png"
-  ]
+  ],
+  "superseded_by": "visual-review-R2.json",
+  "historical_only": true,
+  "note": "El dictamen sobre el lector ilustrado no se aplica al estado actual: el dueño decidió quitar el arte."
 }

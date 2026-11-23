@@ -1,0 +1,230 @@
+{
+  "base": "origin/CatholicGPT 2290bdf (latest source changes before this review; 1ef131b adds coordinator test/docs/assets updates)",
+  "date_control": "Timezone of current-only rendering selected to match the baseline local date and night period; no pixels masked or excluded.",
+  "comparisons": [
+    {
+      "screen": "home",
+      "identity": "lumen",
+      "size": "411x891",
+      "pixels_sha256": "bebcc8d6a8b2f0ddf5ca9c21ca0a883d1c1b06f03e785c82f917a4b69dcd5a29",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "50e11d21b872283b2eb9b94677bfef96d00c2581120f2f869a70ec9428d0d585",
+      "identical_native_pixels": false
+    },
+    {
+      "screen": "home",
+      "identity": "sanctuary",
+      "size": "411x891",
+      "pixels_sha256": "1a2f44c022f9135ea29105bf8f6ce210d539e8728689fb41d1823189983787cd",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "78f5c71d6d5e1da54a4eeda9eca97054c3f01720012d81e21c1456d331a68ecf",
+      "identical_native_pixels": false
+    },
+    {
+      "screen": "prayers",
+      "identity": "lumen",
+      "size": "411x891",
+      "pixels_sha256": "c7a0c30a5a3ea7e0c7c3c23e31417a8e074a0cd52aa1e40a6813ca64cf33cdfc",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "c7a0c30a5a3ea7e0c7c3c23e31417a8e074a0cd52aa1e40a6813ca64cf33cdfc",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "prayers",
+      "identity": "sanctuary",
+      "size": "411x891",
+      "pixels_sha256": "9597e2735b13cdc7c7b3c0e6bd5af2f7ad38a45a4379e7e11c5a05bec0133955",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "9597e2735b13cdc7c7b3c0e6bd5af2f7ad38a45a4379e7e11c5a05bec0133955",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "bible",
+      "identity": "lumen",
+      "size": "411x891",
+      "pixels_sha256": "739774b74f803ebcc0c4727e01e669d69161e0fb8e6b9bbc71306e494dc00dec",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "739774b74f803ebcc0c4727e01e669d69161e0fb8e6b9bbc71306e494dc00dec",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "bible",
+      "identity": "sanctuary",
+      "size": "411x891",
+      "pixels_sha256": "f62aef77df71620b5a36de886387cb6d71823ccbcd21231023b9de7d53f57787",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "f62aef77df71620b5a36de886387cb6d71823ccbcd21231023b9de7d53f57787",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "my_path",
+      "identity": "lumen",
+      "size": "411x891",
+      "pixels_sha256": "2570434972d7cee8ca7667b69ea3603b8805553604e75f3a6affdfe8f672d696",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "2570434972d7cee8ca7667b69ea3603b8805553604e75f3a6affdfe8f672d696",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "my_path",
+      "identity": "sanctuary",
+      "size": "411x891",
+      "pixels_sha256": "cc77c746101a676bb19734875bbec763900d53487376b22ea62dffb7befadbdc",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "cc77c746101a676bb19734875bbec763900d53487376b22ea62dffb7befadbdc",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "more",
+      "identity": "lumen",
+      "size": "411x891",
+      "pixels_sha256": "0e6eb6767a6974cc8cb4a5886f8694b75a92c5868a4241bd370a0d0580e7ac46",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "0e6eb6767a6974cc8cb4a5886f8694b75a92c5868a4241bd370a0d0580e7ac46",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "more",
+      "identity": "sanctuary",
+      "size": "411x891",
+      "pixels_sha256": "7599bbdb648f72b586d157300fe9d623096e25b98e65627ad56658f8d951b92f",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "7599bbdb648f72b586d157300fe9d623096e25b98e65627ad56658f8d951b92f",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "home",
+      "identity": "lumen",
+      "size": "1280x800",
+      "pixels_sha256": "e5a440382d8bf2c4d789127f2acea42752a7a346c6390ca92bb26b59d0b2cf38",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "2ba81d6b3d678ca831c55fb37a1d7cdb1cd54d0e43e5fcd3d9ee71a4ec7e8d88",
+      "identical_native_pixels": false
+    },
+    {
+      "screen": "home",
+      "identity": "sanctuary",
+      "size": "1280x800",
+      "pixels_sha256": "985a54090ce3f2f579080d104f136dcb871c28f92648e1c0275c50a655b9125e",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "21afe9ba44ad9d78f9b75e1b6a3c6cc9662c67df892f87b647115f6cec385e40",
+      "identical_native_pixels": false
+    },
+    {
+      "screen": "prayers",
+      "identity": "lumen",
+      "size": "1280x800",
+      "pixels_sha256": "e16d65bc06e936a406d9ac40fc920ce38c89ea0d08747319c27f84020ea45b37",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "e16d65bc06e936a406d9ac40fc920ce38c89ea0d08747319c27f84020ea45b37",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "prayers",
+      "identity": "sanctuary",
+      "size": "1280x800",
+      "pixels_sha256": "a21108e07801509df06ab97da4e809f9ff8151ca04c7a4d1f95b0cde44c157cb",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "a21108e07801509df06ab97da4e809f9ff8151ca04c7a4d1f95b0cde44c157cb",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "bible",
+      "identity": "lumen",
+      "size": "1280x800",
+      "pixels_sha256": "1939acf38e90449af5c1b806179065dc9d0c41974972afb6c41c0328946e656e",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "1939acf38e90449af5c1b806179065dc9d0c41974972afb6c41c0328946e656e",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "bible",
+      "identity": "sanctuary",
+      "size": "1280x800",
+      "pixels_sha256": "97da35a36c996f42476be0762f87671d6dbbd167585d0b267e189b31da6638bb",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "97da35a36c996f42476be0762f87671d6dbbd167585d0b267e189b31da6638bb",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "my_path",
+      "identity": "lumen",
+      "size": "1280x800",
+      "pixels_sha256": "d0fad00cd8248c25e127f4b6a4ec5516b4c1f63e3cb2f83b3f553706ed8676a4",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "d0fad00cd8248c25e127f4b6a4ec5516b4c1f63e3cb2f83b3f553706ed8676a4",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "my_path",
+      "identity": "sanctuary",
+      "size": "1280x800",
+      "pixels_sha256": "7eb37dbf819367de8f1a3154058ebf5d9a72ea413f7e4915e6eaf4baaac25802",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "7eb37dbf819367de8f1a3154058ebf5d9a72ea413f7e4915e6eaf4baaac25802",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "more",
+      "identity": "lumen",
+      "size": "1280x800",
+      "pixels_sha256": "26bdec534e96e5f1dd47b41b3d58f2532a73dbac6fe477bbcc4c03c0b58dca6c",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "26bdec534e96e5f1dd47b41b3d58f2532a73dbac6fe477bbcc4c03c0b58dca6c",
+      "identical_native_pixels": true
+    },
+    {
+      "screen": "more",
+      "identity": "sanctuary",
+      "size": "1280x800",
+      "pixels_sha256": "61f1380b3c948493b6a1bd99ff812f12f957002ba6180153b1c2927d6b0df73f",
+      "zone": "Etc/GMT+14",
+      "reference_local_date": "2026-11-22",
+      "reference_local_hour": 21,
+      "base_pixels_sha256": "61f1380b3c948493b6a1bd99ff812f12f957002ba6180153b1c2927d6b0df73f",
+      "identical_native_pixels": true
+    }
+  ],
+  "total": 20,
+  "identical": 16,
+  "valid": false,
+  "reason": "Etc/GMT+14 is not an IANA zone; Java silently fell back to GMT. The four Home differences are date/liturgy/prayer schedule. Superseded by a rerender with a validated custom GMT offset."
+}

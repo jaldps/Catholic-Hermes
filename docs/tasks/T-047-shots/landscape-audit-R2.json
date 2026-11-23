@@ -1,0 +1,695 @@
+{
+  "files": 32,
+  "counts": {
+    "VERTICAL_GAP": 85,
+    "OBSCURED": 13
+  },
+  "findings": [
+    {
+      "file": "landscape_classic_es_800x360_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_classic_es_800x360_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_classic_es_800x360_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_classic_es_800x360_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_classic_es_891x411_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_classic_es_891x411_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_classic_es_891x411_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_classic_es_891x411_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_classic_pt_800x360_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_classic_pt_800x360_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_classic_pt_800x360_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_classic_pt_800x360_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_classic_pt_891x411_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_classic_pt_891x411_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_classic_pt_891x411_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "bible_book_directory",
+      "details": "gap=43.5"
+    },
+    {
+      "file": "landscape_classic_pt_891x411_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_classic_pt_891x411_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_classic_pt_891x411_130.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_classic_pt_891x411_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_glass_es_800x360_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_glass_es_800x360_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_glass_es_800x360_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "bible_book_directory",
+      "details": "gap=43.5"
+    },
+    {
+      "file": "landscape_glass_es_800x360_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_glass_es_800x360_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_glass_es_800x360_130.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_glass_es_800x360_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_glass_es_891x411_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_glass_es_891x411_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_glass_es_891x411_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_glass_es_891x411_130.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_glass_es_891x411_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_glass_pt_800x360_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_glass_pt_800x360_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_glass_pt_800x360_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_glass_pt_800x360_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_glass_pt_891x411_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_glass_pt_891x411_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_glass_pt_891x411_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "bible_book_directory",
+      "details": "gap=43.5"
+    },
+    {
+      "file": "landscape_glass_pt_891x411_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_glass_pt_891x411_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_glass_pt_891x411_130.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_glass_pt_891x411_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_100.tsv",
+      "scenario": "home/end/left/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_100.tsv",
+      "scenario": "more/top/left/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_100.tsv",
+      "scenario": "home/end/right/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_100.tsv",
+      "scenario": "more/top/right/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_100.tsv",
+      "scenario": "home/end/none/right",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_100.tsv",
+      "scenario": "more/top/none/right",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_100.tsv",
+      "scenario": "home/end/none/left",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_100.tsv",
+      "scenario": "more/top/none/left",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_lumen_es_800x360_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "home/end/left/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "more/top/left/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "home/end/right/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "more/top/right/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "home/end/none/right",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "more/top/none/right",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "home/end/none/left",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_100.tsv",
+      "scenario": "more/top/none/left",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_lumen_es_891x411_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_lumen_pt_800x360_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_pt_800x360_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_pt_800x360_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_lumen_pt_800x360_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_lumen_pt_891x411_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_lumen_pt_891x411_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=31.0"
+    },
+    {
+      "file": "landscape_lumen_pt_891x411_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_lumen_pt_891x411_130.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_lumen_pt_891x411_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=28.0"
+    },
+    {
+      "file": "landscape_sanctuary_es_800x360_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_sanctuary_es_800x360_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=29.0"
+    },
+    {
+      "file": "landscape_sanctuary_es_800x360_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_sanctuary_es_800x360_130.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_sanctuary_es_800x360_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=29.0"
+    },
+    {
+      "file": "landscape_sanctuary_es_891x411_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_sanctuary_es_891x411_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_sanctuary_es_891x411_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "bible_book_directory",
+      "details": "gap=40.5"
+    },
+    {
+      "file": "landscape_sanctuary_es_891x411_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=29.0"
+    },
+    {
+      "file": "landscape_sanctuary_es_891x411_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_sanctuary_es_891x411_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=29.0"
+    },
+    {
+      "file": "landscape_sanctuary_pt_800x360_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_sanctuary_pt_800x360_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_sanctuary_pt_800x360_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "bible_book_directory",
+      "details": "gap=40.5"
+    },
+    {
+      "file": "landscape_sanctuary_pt_800x360_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=29.0"
+    },
+    {
+      "file": "landscape_sanctuary_pt_800x360_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_sanctuary_pt_800x360_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=29.0"
+    },
+    {
+      "file": "landscape_sanctuary_pt_891x411_100.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=39.0"
+    },
+    {
+      "file": "landscape_sanctuary_pt_891x411_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_sanctuary_pt_891x411_100.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "bible_book_directory",
+      "details": "gap=40.5"
+    },
+    {
+      "file": "landscape_sanctuary_pt_891x411_100.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=29.0"
+    },
+    {
+      "file": "landscape_sanctuary_pt_891x411_130.tsv",
+      "scenario": "home/end/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "daily_mass_card",
+      "details": "gap=38.0"
+    },
+    {
+      "file": "landscape_sanctuary_pt_891x411_130.tsv",
+      "scenario": "bible/end/none/bottom",
+      "detector": "OBSCURED",
+      "node": "bible_book_directory",
+      "details": "overlap with bible_search_input"
+    },
+    {
+      "file": "landscape_sanctuary_pt_891x411_130.tsv",
+      "scenario": "more/top/none/bottom",
+      "detector": "VERTICAL_GAP",
+      "node": "more_title",
+      "details": "gap=29.0"
+    }
+  ]
+}

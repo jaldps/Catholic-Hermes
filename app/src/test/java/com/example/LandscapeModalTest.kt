@@ -12,6 +12,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.test.*
 import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.getOrNull
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.unit.dp
 import androidx.test.core.app.ApplicationProvider
@@ -49,6 +50,19 @@ class LandscapeModalTest(private val identity: DesignLanguage, private val width
     }
     private fun bounds(tag: String) = compose.onNodeWithTag(tag).fetchSemanticsNode().boundsInRoot.let { androidx.compose.ui.geometry.Rect(it.left / 2, it.top / 2, it.right / 2, it.bottom / 2) }
     private fun inset(ime: Boolean = false) { compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, height, ime) }; compose.waitForIdle() }
+    private fun auditSheetVerticalGap(tag: String) {
+        val nodes = compose.onAllNodes(hasAnyAncestor(hasTestTag(tag)), useUnmergedTree = true).fetchSemanticsNodes()
+            .filter { it.boundsInRoot.height > 0 && it.config.contains(SemanticsActions.GetTextLayoutResult) }
+        val heading = nodes.first { it.config.getOrNull(SemanticsProperties.Heading) != null }
+        val next = nodes.filter { it.id != heading.id && it.boundsInRoot.top >= heading.boundsInRoot.bottom - 1f }.minByOrNull { it.boundsInRoot.top }
+        if (next != null) {
+            val gap = (next.boundsInRoot.top - heading.boundsInRoot.bottom) / 2f
+            File("build/audit/sheet_gap_${identity.id}_${width}.json").apply {
+                parentFile!!.mkdirs(); writeText("""{"identity":"${identity.id}","width":$width,"gap_dp":$gap}""")
+            }
+            assertFalse("VERTICAL_GAP in sheet: $gap dp", LandscapeAuditRules.verticalGap(0f, gap))
+        }
+    }
     private fun capture(name: String, ime: Boolean) {
         Thread.sleep(700)
         val tag = when (name) { "appearance" -> "gui_customizer_sheet"; "dialog" -> "modal_dialog"; else -> "modal_sheet" }
@@ -81,6 +95,7 @@ class LandscapeModalTest(private val identity: DesignLanguage, private val width
             assertEquals(width - if (identity == DesignLanguage.SANCTUARY) 0f else 8f, b.right, 1f)
             if (ime) assertTrue(b.bottom <= height * .44f)
             compose.onNodeWithTag("sheet_close").assertIsDisplayed().assertHasClickAction()
+            if (!ime) auditSheetVerticalGap("gui_customizer_sheet")
             capture("appearance", ime)
         }
     }

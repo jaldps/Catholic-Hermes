@@ -15,6 +15,7 @@ import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.layout.layout
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.semantics.isTraversalGroup
@@ -371,6 +372,7 @@ internal val LocalHeaderPoster = androidx.compose.runtime.compositionLocalOf { f
 internal val LocalAppInteriorWidth = androidx.compose.runtime.compositionLocalOf { Dp.Unspecified }
 internal val LocalCompactSearch = androidx.compose.runtime.compositionLocalOf { false }
 internal val LocalHeaderPanelHeight = androidx.compose.runtime.compositionLocalOf { Dp.Unspecified }
+internal val LocalPanelSupportingHeight = androidx.compose.runtime.compositionLocalOf { 0.dp }
 internal val LocalListArtStrip = androidx.compose.runtime.compositionLocalOf { false }
 internal val LocalPanelTitleOverflow = androidx.compose.runtime.compositionLocalOf<(Int) -> Unit> { {} }
 
@@ -381,7 +383,7 @@ internal fun appPanelWidth(kind: AppPageKind, available: Dp): Dp = when (kind) {
     AppPageKind.Immersive -> (available * 0.28f).coerceIn(224.dp, 280.dp)
 }
 
-private enum class PageSlot { Panel, Main, PanelFooter, ContentFooter, Edge, Spine }
+private enum class PageSlot { Panel, Main, PanelFooter, ContentFooter, Edge, Spine, ReadingSurface }
 
 /**
  * One stable subcomposition per slot in both postures. The portrait list gets
@@ -411,6 +413,7 @@ fun AppPageLayout(
     val design = LocalAppDesign.current
     val density = androidx.compose.ui.platform.LocalDensity.current
     val panelScroll = androidx.compose.foundation.rememberScrollState()
+    var supportingHeight by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(0.dp) }
     var titleOverflow by androidx.compose.runtime.remember { androidx.compose.runtime.mutableIntStateOf(0) }
     androidx.compose.runtime.LaunchedEffect(landscape, titleOverflow) {
         if (landscape) panelScroll.scrollTo(titleOverflow)
@@ -431,7 +434,7 @@ fun AppPageLayout(
         val contentBottom = if (landscape) maxOf(safe.bottom, if (mainFocused) keyboard else 0.dp).roundToPx()
             else if (contentFooter != null) screenBottom.roundToPx() else 0
         val panelFoot = subcompose(PageSlot.PanelFooter) {
-            Row(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)
+            Row(Modifier.fillMaxWidth().then(if (landscape && panelFooter != null) Modifier.appPaneFooter(kind == AppPageKind.Reader) else Modifier).padding(horizontal = design.spacing.gutter)
                 .semantics { isTraversalGroup = true; traversalIndex = 0f }, horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End,
                 verticalAlignment = Alignment.CenterVertically) { panelFooter?.invoke(this) }
         }.single().measure(loose.copy(minWidth = panelWidth, maxWidth = panelWidth,
@@ -439,7 +442,7 @@ fun AppPageLayout(
             maxHeight = if (panelFooter != null) 56.dp.roundToPx() else 0))
         val contentWidth = if (landscape) width - panelWidth else width
         val contentFoot = subcompose(PageSlot.ContentFooter) {
-            Row(Modifier.fillMaxWidth().then(if (landscape && kind == AppPageKind.Reader) Modifier.background(design.palette.canvasTop) else Modifier).padding(horizontal = design.spacing.gutter)
+            Row(Modifier.fillMaxWidth().then(if (landscape && contentFooter != null) Modifier.appPaneFooter(kind == AppPageKind.Reader) else Modifier).padding(horizontal = design.spacing.gutter)
                 .semantics { isTraversalGroup = true; traversalIndex = 1f }, horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End,
                 verticalAlignment = Alignment.CenterVertically) { contentFooter?.invoke(this) }
         }.single().measure(loose.copy(minWidth = contentWidth, maxWidth = contentWidth,
@@ -449,6 +452,7 @@ fun AppPageLayout(
             androidx.compose.runtime.CompositionLocalProvider(
                 LocalHeaderPlacement provides if (landscape) AppHeaderPlacement.SidePanel else AppHeaderPlacement.InList,
                 LocalHeaderPoster provides (supporting == null), LocalAppPageKind provides kind,
+                LocalPanelSupportingHeight provides supportingHeight,
                 LocalPanelTitleOverflow provides { titleOverflow = it },
                 LocalHeaderPanelHeight provides with(density) { (height - panelBottom - panelFoot.height).toDp() }
             ) {
@@ -459,12 +463,17 @@ fun AppPageLayout(
                     .semantics { isTraversalGroup = true; traversalIndex = 0f }) {
                     header()
                     // Slot is always composed from here; the layout hides it when not wanted in portrait.
-                    androidx.compose.ui.layout.Layout(content = { androidx.compose.foundation.layout.Column { supporting?.invoke(this) } }) { children, c ->
+                    androidx.compose.ui.layout.Layout(content = { androidx.compose.foundation.layout.Column { supporting?.invoke(this) } },
+                        modifier = Modifier.onSizeChanged { supportingHeight = with(density) { it.height.toDp() } }) { children, c ->
                         val visible = landscape || supportingInPortrait
                         val child = children.single().measure(c.copy(minHeight = 0))
                         layout(c.maxWidth, if (visible) child.height else 0) { if (visible) child.placeRelative(0, 0) }
                     }
                 }
+                if (landscape && panelScroll.canScrollForward) Box(Modifier.align(Alignment.BottomCenter)
+                    .fillMaxWidth().height(24.dp).background(androidx.compose.ui.graphics.Brush.verticalGradient(
+                        listOf(androidx.compose.ui.graphics.Color.Transparent, design.palette.canvasTop)))
+                    .testTag("panel_scroll_hint"))
                 }
             }
         }.single().measure(loose.copy(minWidth = panelWidth, maxWidth = panelWidth,
@@ -485,6 +494,9 @@ fun AppPageLayout(
                 }
             }
         }.single().measure(androidx.compose.ui.unit.Constraints.fixed(contentWidth, bodyHeight))
+        val readingSurface = subcompose(PageSlot.ReadingSurface) {
+            Box(Modifier.fillMaxSize().then(if (landscape && kind == AppPageKind.Reader) Modifier.background(design.palette.canvasTop) else Modifier))
+        }.single().measure(androidx.compose.ui.unit.Constraints.fixed(contentWidth, (height - safe.top.roundToPx()).coerceAtLeast(0)))
         val edge = subcompose(PageSlot.Edge) {
             if (design.opaqueMaterial()) androidx.compose.foundation.layout.Column {
                 Box(Modifier.fillMaxWidth().height(safe.top).background(design.palette.canvasTop.copy(alpha = 0.95f)))
@@ -502,6 +514,7 @@ fun AppPageLayout(
             }
         }.single().measure(loose.copy(maxWidth = 4.dp.roundToPx(), minHeight = height))
         layout(width, height) {
+            if (landscape && kind == AppPageKind.Reader) readingSurface.placeRelative(panelWidth, safe.top.roundToPx())
             main.placeRelative(if (landscape) panelWidth else 0, top)
             if (landscape) {
                 panel.placeRelative(0, 0)
@@ -556,8 +569,9 @@ fun AppSupportingPaneLayout(
                 layout(c.maxWidth, c.maxHeight) { child.placeRelative(0, -top) }
             } else Modifier)) { main() }
         androidx.compose.foundation.layout.Column { endActions?.invoke(this) }
-        Row(Modifier.padding(start = 20.dp, end = 20.dp, bottom = if (landscape) safe.bottom else 0.dp), horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End, verticalAlignment = Alignment.CenterVertically) { supportingFooter?.invoke(this) }
-        Row(Modifier.padding(start = 20.dp, end = 20.dp, bottom = if (landscape) safe.bottom else 0.dp), horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End, verticalAlignment = Alignment.CenterVertically) { mainFooter?.invoke(this) }
+        Row(Modifier.then(if (landscape && supportingFooter != null) Modifier.appPaneFooter() else Modifier).padding(start = 20.dp, end = 20.dp, bottom = if (landscape) safe.bottom else 0.dp), horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End, verticalAlignment = Alignment.CenterVertically) { supportingFooter?.invoke(this) }
+        Row(Modifier.then(if (landscape && mainFooter != null) Modifier.appPaneFooter() else Modifier)
+            .padding(start = 20.dp, end = 20.dp, bottom = if (landscape) safe.bottom else 0.dp), horizontalArrangement = androidx.compose.foundation.layout.Arrangement.End, verticalAlignment = Alignment.CenterVertically) { mainFooter?.invoke(this) }
         Row(Modifier.fillMaxHeight()) {
             if (design.opaqueMaterial()) {
                 Box(Modifier.width(0.5.dp).fillMaxHeight().background(design.palette.separator))

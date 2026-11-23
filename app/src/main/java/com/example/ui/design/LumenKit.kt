@@ -103,6 +103,7 @@ import com.example.ui.theme.LocalAppTextStyles
  * time, charcoal capsules for primary actions. The owner's floating six-tab
  * dock is kept as designed; only its material follows the glass tokens.
  */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 object LumenKit : AppKit {
 
     /** Height of the back/actions row under the status bar. */
@@ -250,7 +251,16 @@ object LumenKit : AppKit {
                                     })
                                     .nestedScroll(watcher)
                             ) {
-                                CompositionLocalProvider(LocalLiquidBackdrop provides null) { content(inner) }
+                                val inheritedBringIntoView = androidx.compose.foundation.gestures.LocalBringIntoViewSpec.current
+                                val clearance = with(density) { if (dockShown) (bottom + 8.dp).toPx() else 0f }
+                                val bringIntoView = remember(inheritedBringIntoView, clearance) {
+                                    object : androidx.compose.foundation.gestures.BringIntoViewSpec {
+                                        override fun calculateScrollDistance(offset: Float, size: Float, containerSize: Float): Float =
+                                            inheritedBringIntoView.calculateScrollDistance(offset, size, (containerSize - clearance).coerceAtLeast(1f))
+                                    }
+                                }
+                                CompositionLocalProvider(LocalLiquidBackdrop provides null,
+                                    androidx.compose.foundation.gestures.LocalBringIntoViewSpec provides bringIntoView) { content(inner) }
                             }
                         }
 
@@ -447,7 +457,7 @@ object LumenKit : AppKit {
                             Column(
                                 Modifier.weight(1f).heightIn(min = 56.dp)
                                     .clip(RoundedCornerShape(radius - inset))
-                                    .lumenPress({ onNavSelected(index) }, 0.94f, Role.Tab)
+                                    .lumenPress({ onNavSelected(index) }, 0.94f, Role.Tab, shape = RoundedCornerShape(radius - inset))
                                     .semantics { selected = active }
                                     .testTag(item.tag)
                                     .padding(horizontal = 4.dp, vertical = 6.dp),
@@ -491,7 +501,7 @@ object LumenKit : AppKit {
                         Column(
                             Modifier.weight(1f).heightIn(min = 64.dp)
                                 .clip(RoundedCornerShape(6.dp))
-                                .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab)
+                                .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab, shape = RoundedCornerShape(6.dp))
                                 .semantics { selected = active }
                                 .testTag(item.tag)
                                 .padding(horizontal = 4.dp, vertical = 6.dp),
@@ -588,7 +598,7 @@ object LumenKit : AppKit {
                         Column(
                             Modifier.fillMaxWidth().height(slot)
                                 .clip(RoundedCornerShape(radius - inset))
-                                .lumenPress({ onNavSelected(index) }, 0.94f, Role.Tab)
+                                .lumenPress({ onNavSelected(index) }, 0.94f, Role.Tab, shape = RoundedCornerShape(radius - inset))
                                 .semantics { selected = active }
                                 .testTag(item.tag)
                                 .padding(horizontal = 2.dp, vertical = 6.dp),
@@ -635,7 +645,7 @@ object LumenKit : AppKit {
                     Column(
                         Modifier.fillMaxWidth().height(slot).padding(horizontal = 6.dp)
                             .clip(RoundedCornerShape(6.dp))
-                            .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab)
+                            .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab, shape = RoundedCornerShape(6.dp))
                             .semantics { selected = active }
                             .testTag(item.tag)
                             .padding(horizontal = 2.dp, vertical = 6.dp),
@@ -711,7 +721,7 @@ object LumenKit : AppKit {
                         val tint = if (active && design.opaqueMaterial() && !sanctuary) p.onAction else if (active) p.accent else p.textSecondary
                         val rowShape = RoundedCornerShape(if (sanctuary) 4.dp else 28.dp)
                         Column(Modifier.fillMaxWidth().height(heights[index]).padding(horizontal = 4.dp)
-                            .clip(rowShape).lumenPress({ onNavSelected(index) }, role = Role.Tab)
+                            .clip(rowShape).lumenPress({ onNavSelected(index) }, role = Role.Tab, shape = rowShape)
                             .semantics { selected = active }.testTag(item.tag),
                             horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
                             Icon(if (active) solidGlyph(item.selectedIcon) else item.icon, null, tint = tint, modifier = Modifier.size(22.dp))
@@ -850,7 +860,7 @@ object LumenKit : AppKit {
         Column(
             modifier
                 .fillMaxWidth()
-                .lumenPress(onClick, 0.98f)
+                .lumenPress(onClick, 0.98f, shape = shape)
                 .appContentSurface(shape)
                 .clip(shape)
                 .padding(design.spacing.cardPadding)
@@ -917,7 +927,7 @@ object LumenKit : AppKit {
                     .fillMaxWidth()
                     .background(fill)
                     .then(
-                        if (onClick != null) Modifier.clickable(source, indication = null, role = Role.Button, onClick = onClick)
+                        if (onClick != null) Modifier.clickable(source, indication = appFocusRing(source, androidx.compose.ui.graphics.RectangleShape), role = Role.Button, onClick = onClick)
                         else Modifier
                     )
                     .heightIn(min = design.spacing.rowMinHeight)
@@ -1051,7 +1061,7 @@ object LumenKit : AppKit {
                     val active = index == selectedIndex
                     Box(Modifier.fillMaxWidth().heightIn(min = 44.dp)
                         .then(if (active) Modifier.liquidPane(design.shapes.buttonSmall, design.glassSpec(GlassRole.Thumb)) else Modifier)
-                        .lumenPress({ onSelect(index) }, role = Role.Tab).semantics { selected = active }
+                        .lumenPress({ onSelect(index) }, role = Role.Tab, shape = design.shapes.buttonSmall).semantics { selected = active }
                         .padding(horizontal = 12.dp, vertical = 8.dp), contentAlignment = Alignment.CenterStart) {
                         Text(label, style = styles.subhead.copy(fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
                             color = if (active && design.isSanctuary) p.accent else if (active && design.opaqueMaterial()) p.onAction else if (active) p.textPrimary else p.textSecondary)
@@ -1117,7 +1127,7 @@ object LumenKit : AppKit {
                                     else Modifier
                                 )
                                 .clip(shape)
-                                .lumenPress({ onSelect(index) }, role = Role.Tab)
+                                .lumenPress({ onSelect(index) }, role = Role.Tab, shape = shape)
                                 .semantics { selected = active }
                                 .padding(horizontal = 12.dp, vertical = 11.dp),
                             contentAlignment = Alignment.Center
@@ -1151,6 +1161,7 @@ object LumenKit : AppKit {
         val design = LocalAppDesign.current
         val p = design.palette
         val styles = LocalAppTextStyles.current
+        val source = remember { MutableInteractionSource() }
         val annotated = buildAnnotatedString {
             withStyle(
                 SpanStyle(
@@ -1165,7 +1176,7 @@ object LumenKit : AppKit {
         Row(
             modifier
                 .fillMaxWidth()
-                .then(if (onClick != null) Modifier.clickable(remember { MutableInteractionSource() }, null, onClick = onClick) else Modifier)
+                .then(if (onClick != null) Modifier.clickable(source, appFocusRing(source, androidx.compose.ui.graphics.RectangleShape), onClick = onClick) else Modifier)
                 .padding(horizontal = design.spacing.gutter, vertical = 4.dp)
         ) {
             // `scripture`, not `reading`: readers override this slot with the

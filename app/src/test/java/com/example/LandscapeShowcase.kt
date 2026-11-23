@@ -152,6 +152,7 @@ private fun ShowcaseReader(language: AppLanguage, initialId: String? = null, onE
 
 @Composable
 private fun ShowcaseSupporting(language: AppLanguage) {
+    val contextScroll = rememberScrollState()
     var query by rememberSaveable(key = "showcase_supporting_query") { mutableStateOf("") }
     var selected by rememberSaveable(key = "showcase_supporting_selection") { mutableIntStateOf(0) }
     val prayer = showcasePrayers[selected]
@@ -172,7 +173,7 @@ private fun ShowcaseSupporting(language: AppLanguage) {
     }
     AppHideTabBar()
     AppSupportingPaneLayout(supporting = {
-        Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState())) { contextBlock() }
+        Column(Modifier.fillMaxSize().appPanelScrollHint(contextScroll).verticalScroll(contextScroll)) { contextBlock() }
     }, supportingWidth = AppPaneWidth(0.28f, 224.dp, 280.dp), mainFooter = {
         next()
     }) {

@@ -53,7 +53,7 @@ class MainActivity : ComponentActivity() {
             val storedPreferences by preferencesStore.preferences.collectAsState<UserPreferences, UserPreferences?>(initial = null)
             val preferences = storedPreferences
             if (!appReady || preferences == null) {
-                if (backupRecoveryFailed) SanctaFidesTheme {
+                if (backupRecoveryFailed) SanctaFidesTheme(reduceMotion = com.example.ui.design.appReduceMotion(false)) {
                     com.example.ui.backup.BackupRecoverySheet(
                         com.example.data.models.AppLanguage.fromCode(""),
                         onRetry = { finishStartup() }, onExit = { finish() })
@@ -75,7 +75,7 @@ class MainActivity : ComponentActivity() {
                 isSerif = preferences.fontFamilyChoice == "SERIF",
                 fontScale = preferences.fontSizeScale,
                 fontFamilyChoice = preferences.fontFamilyChoice,
-                reduceMotion = preferences.reduceMotion,
+                reduceMotion = com.example.ui.design.appReduceMotion(preferences.reduceMotion),
                 reduceTransparency = preferences.reduceTransparency,
                 highContrast = preferences.highContrast
             ) {

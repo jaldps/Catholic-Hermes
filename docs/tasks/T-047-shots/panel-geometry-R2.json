@@ -1,0 +1,210 @@
+[
+  {
+    "file": "geometry_Hub_CLASSIC_800.json",
+    "data": {
+      "kind": "Hub",
+      "identity": "CLASSIC",
+      "width": 800,
+      "height": 360,
+      "panel_width": 259.0,
+      "header_height": 165.5,
+      "title_baseline": 151.5,
+      "panel_scroll_max": 5.5
+    }
+  },
+  {
+    "file": "geometry_Hub_CLASSIC_891.json",
+    "data": {
+      "kind": "Hub",
+      "identity": "CLASSIC",
+      "width": 891,
+      "height": 411,
+      "panel_width": 292.0,
+      "header_height": 189.0,
+      "title_baseline": 175.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Hub_GLASS_800.json",
+    "data": {
+      "kind": "Hub",
+      "identity": "GLASS",
+      "width": 800,
+      "height": 360,
+      "panel_width": 259.0,
+      "header_height": 165.5,
+      "title_baseline": 151.5,
+      "panel_scroll_max": 5.5
+    }
+  },
+  {
+    "file": "geometry_Hub_GLASS_891.json",
+    "data": {
+      "kind": "Hub",
+      "identity": "GLASS",
+      "width": 891,
+      "height": 411,
+      "panel_width": 292.0,
+      "header_height": 189.0,
+      "title_baseline": 175.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Hub_LUMEN_800.json",
+    "data": {
+      "kind": "Hub",
+      "identity": "LUMEN",
+      "width": 800,
+      "height": 360,
+      "panel_width": 259.0,
+      "header_height": 165.5,
+      "title_baseline": 151.5,
+      "panel_scroll_max": 5.5
+    }
+  },
+  {
+    "file": "geometry_Hub_LUMEN_891.json",
+    "data": {
+      "kind": "Hub",
+      "identity": "LUMEN",
+      "width": 891,
+      "height": 411,
+      "panel_width": 292.0,
+      "header_height": 189.0,
+      "title_baseline": 175.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Hub_SANCTUARY_800.json",
+    "data": {
+      "kind": "Hub",
+      "identity": "SANCTUARY",
+      "width": 800,
+      "height": 360,
+      "panel_width": 260.5,
+      "header_height": 112.0,
+      "title_baseline": 74.5,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Hub_SANCTUARY_891.json",
+    "data": {
+      "kind": "Hub",
+      "identity": "SANCTUARY",
+      "width": 891,
+      "height": 411,
+      "panel_width": 293.5,
+      "header_height": 211.0,
+      "title_baseline": 74.5,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Reader_CLASSIC_800.json",
+    "data": {
+      "kind": "Reader",
+      "identity": "CLASSIC",
+      "width": 800,
+      "height": 360,
+      "panel_width": 240.0,
+      "header_height": 138.0,
+      "title_baseline": 103.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Reader_CLASSIC_891.json",
+    "data": {
+      "kind": "Reader",
+      "identity": "CLASSIC",
+      "width": 891,
+      "height": 411,
+      "panel_width": 267.5,
+      "header_height": 138.0,
+      "title_baseline": 103.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Reader_GLASS_800.json",
+    "data": {
+      "kind": "Reader",
+      "identity": "GLASS",
+      "width": 800,
+      "height": 360,
+      "panel_width": 240.0,
+      "header_height": 138.0,
+      "title_baseline": 103.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Reader_GLASS_891.json",
+    "data": {
+      "kind": "Reader",
+      "identity": "GLASS",
+      "width": 891,
+      "height": 411,
+      "panel_width": 267.5,
+      "header_height": 138.0,
+      "title_baseline": 103.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Reader_LUMEN_800.json",
+    "data": {
+      "kind": "Reader",
+      "identity": "LUMEN",
+      "width": 800,
+      "height": 360,
+      "panel_width": 240.0,
+      "header_height": 138.0,
+      "title_baseline": 103.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Reader_LUMEN_891.json",
+    "data": {
+      "kind": "Reader",
+      "identity": "LUMEN",
+      "width": 891,
+      "height": 411,
+      "panel_width": 267.5,
+      "header_height": 138.0,
+      "title_baseline": 103.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Reader_SANCTUARY_800.json",
+    "data": {
+      "kind": "Reader",
+      "identity": "SANCTUARY",
+      "width": 800,
+      "height": 360,
+      "panel_width": 240.0,
+      "header_height": 146.0,
+      "title_baseline": 108.0,
+      "panel_scroll_max": 0.0
+    }
+  },
+  {
+    "file": "geometry_Reader_SANCTUARY_891.json",
+    "data": {
+      "kind": "Reader",
+      "identity": "SANCTUARY",
+      "width": 891,
+      "height": 411,
+      "panel_width": 267.5,
+      "header_height": 146.0,
+      "title_baseline": 108.0,
+      "panel_scroll_max": 0.0
+    }
+  }
+]

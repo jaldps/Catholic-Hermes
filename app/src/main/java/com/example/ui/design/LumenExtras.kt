@@ -24,6 +24,7 @@ import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.focus.focusProperties
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.unit.constrainHeight
 import androidx.compose.ui.semantics.paneTitle
@@ -104,6 +105,7 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -495,8 +497,9 @@ fun AppSearchBar(
             )
         }
         if (value.isNotEmpty()) {
+            val clearSource = remember { MutableInteractionSource() }
             Box(
-                Modifier.size(48.dp).clickable(remember { MutableInteractionSource() }, null, role = Role.Button) { onValueChange("") }
+                Modifier.size(48.dp).clickable(clearSource, appFocusRing(clearSource, androidx.compose.foundation.shape.CircleShape), role = Role.Button) { onValueChange("") }
                     .semantics { contentDescription = "Clear" },
                 contentAlignment = Alignment.Center
             ) { Icon(Icons.Filled.Cancel, null, tint = p.inkQuiet, modifier = Modifier.size(18.dp)) }
@@ -543,9 +546,20 @@ fun AppSheet(
     var drag by remember { androidx.compose.runtime.mutableFloatStateOf(0f) }
     LaunchedEffect(Unit) { shown = true }
     Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
+        if (compact) {
+            val host = androidx.compose.ui.platform.LocalView.current
+            androidx.compose.runtime.DisposableEffect(host) {
+                val dialogWindow = (host.parent as? androidx.compose.ui.window.DialogWindowProvider)?.window
+                val previousDim = dialogWindow?.attributes?.dimAmount
+                dialogWindow?.setDimAmount(0f)
+                onDispose { if (previousDim != null) dialogWindow?.setDimAmount(previousDim) }
+            }
+        }
         androidx.compose.runtime.CompositionLocalProvider(LocalLiquidBackdrop provides null) {
             Box(Modifier.fillMaxSize()) {
-                Box(Modifier.fillMaxSize().background(p.scrim).clickable(remember { MutableInteractionSource() }, null) { onDismiss() }.testTag("sheet_scrim"))
+                Box(Modifier.fillMaxSize().background(p.scrim).focusProperties { canFocus = false }
+                    .clearAndSetSemantics { this[androidx.compose.ui.semantics.SemanticsProperties.TestTag] = "sheet_scrim" }
+                    .clickable(remember { MutableInteractionSource() }, null) { onDismiss() })
                 AnimatedVisibility(shown,
                     enter = if (design.reduceMotion) androidx.compose.animation.EnterTransition.None else if (compact)
                         androidx.compose.animation.slideInHorizontally(tween(design.motion.mediumMillis)) { it }
@@ -567,13 +581,13 @@ fun AppSheet(
                                 if (compact) detectHorizontalDragGestures(
                                     onHorizontalDrag = { change, delta -> change.consume(); drag = (drag + delta).coerceAtLeast(0f) },
                                     onDragEnd = { if (drag > 48.dp.toPx()) onDismiss(); drag = 0f }, onDragCancel = { drag = 0f })
-                            }, contentAlignment = Alignment.CenterStart) {
+                            }, contentAlignment = if (compact) Alignment.BottomStart else Alignment.CenterStart) {
                             Text(title.orEmpty(), style = styles.headline, color = p.textPrimary,
                                 textAlign = if (compact) TextAlign.Start else TextAlign.Center,
                                 modifier = (if (compact) Modifier else Modifier.fillMaxWidth().padding(top = 14.dp, bottom = 8.dp)).semantics { heading() })
                         }
                         AppGlassIconButton(Icons.Outlined.Close, close, onDismiss, tag = "sheet_close")
-                        Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(top = 8.dp)) {
+                        Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(top = if (compact) 0.dp else 8.dp)) {
                             content()
                             Spacer(Modifier.height(if (compact || footer != null) 16.dp else navInset + 16.dp))
                         }
@@ -602,7 +616,7 @@ fun AppSheet(
                         val h = if (compact) constraints.maxHeight else constraints.constrainHeight(headingHeight + body.height + footerHeight)
                         layout(w, h) {
                             if (compact) {
-                                heading.placeRelative(20.dp.roundToPx(), (header - heading.height) / 2)
+                                heading.placeRelative(20.dp.roundToPx(), header - 12.dp.roundToPx() - heading.height)
                                 if (!inHeader) closeButton.placeRelative(w - closeButton.width - 12.dp.roundToPx(), (header - closeButton.height) / 2)
                             } else { handle.placeRelative(0, 0); if (title != null) heading.placeRelative(0, handle.height) }
                             body.placeRelative(0, headingHeight)
@@ -652,7 +666,20 @@ fun AppDialog(
     val width = minOf(720.dp, window.width - safe.start - safe.end - 48.dp)
     val height = (window.height - safe.top - maxOf(safe.bottom, ime) - 32.dp).coerceAtLeast(56.dp)
     Dialog(onDismissRequest = onDismiss, properties = DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = !compact)) {
+        if (compact) {
+            val host = androidx.compose.ui.platform.LocalView.current
+            androidx.compose.runtime.DisposableEffect(host) {
+                val dialogWindow = (host.parent as? androidx.compose.ui.window.DialogWindowProvider)?.window
+                val previousDim = dialogWindow?.attributes?.dimAmount
+                dialogWindow?.setDimAmount(0f)
+                onDispose { if (previousDim != null) dialogWindow?.setDimAmount(previousDim) }
+            }
+        }
         androidx.compose.runtime.CompositionLocalProvider(LocalLiquidBackdrop provides null) {
+            Box(Modifier.fillMaxSize()) {
+                if (compact) Box(Modifier.fillMaxSize().background(p.scrim).focusProperties { canFocus = false }
+                    .clearAndSetSemantics { this[androidx.compose.ui.semantics.SemanticsProperties.TestTag] = "dialog_scrim" }
+                    .clickable(remember { MutableInteractionSource() }, null) { onDismiss() })
             Box(Modifier.fillMaxSize().then(if (compact) Modifier.padding(start = safe.start + 24.dp, end = safe.end + 24.dp,
                 top = safe.top + 16.dp, bottom = maxOf(safe.bottom, ime) + 16.dp) else Modifier), contentAlignment = Alignment.Center) {
                 androidx.compose.ui.layout.Layout(content = {
@@ -692,6 +719,7 @@ fun AppDialog(
                         if (footer != null) foot.placeRelative(if (compact) asideWidth else 0, h - foot.height)
                     }
                 }
+            }
             }
         }
     }

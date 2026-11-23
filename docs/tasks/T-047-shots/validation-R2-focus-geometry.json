@@ -1,0 +1,301 @@
+{
+  "totals": {
+    "tests": 53,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "classes": [
+    {
+      "name": "com.example.KeyboardFocusTest",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": 14.512
+    },
+    {
+      "name": "com.example.LandscapeGeometryTest",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": 13.195
+    },
+    {
+      "name": "com.example.LandscapeLayoutTest",
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "time": 12.015
+    }
+  ],
+  "cases": [
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "listRowPaintsItsFocusRingFromItsOwnInteractionSource[APPLE-dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "sharedPressControlPaintsItsFocusRing[APPLE-dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "listRowPaintsItsFocusRingFromItsOwnInteractionSource[APPLE-dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "sharedPressControlPaintsItsFocusRing[APPLE-dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "listRowPaintsItsFocusRingFromItsOwnInteractionSource[CLASSIC-dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "sharedPressControlPaintsItsFocusRing[CLASSIC-dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "listRowPaintsItsFocusRingFromItsOwnInteractionSource[CLASSIC-dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "sharedPressControlPaintsItsFocusRing[CLASSIC-dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "listRowPaintsItsFocusRingFromItsOwnInteractionSource[GLASS-dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "sharedPressControlPaintsItsFocusRing[GLASS-dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "listRowPaintsItsFocusRingFromItsOwnInteractionSource[GLASS-dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "sharedPressControlPaintsItsFocusRing[GLASS-dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "listRowPaintsItsFocusRingFromItsOwnInteractionSource[SANCTUARY-dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "sharedPressControlPaintsItsFocusRing[SANCTUARY-dark=false]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "listRowPaintsItsFocusRingFromItsOwnInteractionSource[SANCTUARY-dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.KeyboardFocusTest",
+      "name": "sharedPressControlPaintsItsFocusRing[SANCTUARY-dark=true]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "readerKeepsItsTitleAndFooterWithinTheApprovedPanel[APPLE-891x411]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "hubKeepsTheSharedBaselineAndEverySupportingControlReachable[APPLE-891x411]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "readerKeepsItsTitleAndFooterWithinTheApprovedPanel[APPLE-800x360]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "hubKeepsTheSharedBaselineAndEverySupportingControlReachable[APPLE-800x360]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "readerKeepsItsTitleAndFooterWithinTheApprovedPanel[CLASSIC-891x411]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "hubKeepsTheSharedBaselineAndEverySupportingControlReachable[CLASSIC-891x411]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "readerKeepsItsTitleAndFooterWithinTheApprovedPanel[CLASSIC-800x360]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "hubKeepsTheSharedBaselineAndEverySupportingControlReachable[CLASSIC-800x360]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "readerKeepsItsTitleAndFooterWithinTheApprovedPanel[GLASS-891x411]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "hubKeepsTheSharedBaselineAndEverySupportingControlReachable[GLASS-891x411]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "readerKeepsItsTitleAndFooterWithinTheApprovedPanel[GLASS-800x360]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "hubKeepsTheSharedBaselineAndEverySupportingControlReachable[GLASS-800x360]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "readerKeepsItsTitleAndFooterWithinTheApprovedPanel[SANCTUARY-891x411]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "hubKeepsTheSharedBaselineAndEverySupportingControlReachable[SANCTUARY-891x411]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "readerKeepsItsTitleAndFooterWithinTheApprovedPanel[SANCTUARY-800x360]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeGeometryTest",
+      "name": "hubKeepsTheSharedBaselineAndEverySupportingControlReachable[SANCTUARY-800x360]",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "compactBandUsesExactlyThirtyPercentAtTheShortRequiredSize",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readingMeasureTracksTheUsersRealFontAndScale",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "sanctuaryCompactHeaderUsesItsPaperTitleBranchWithoutAFrame",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "minimumSupportedHeightRecordsTheApprovedBandsNumericalException",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "statefulListDetailKeepsTheTabletReadingColumnAt680Dp",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "coverArtworkDrawsUnderTheStatusBarAtRest",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "listDetailKeepsSearchStickyAndOpensSelectedPrayerInFullReader",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "enlargedReaderCanReachTheEndWithoutMovingItsAdvanceButton",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "landscapeReaderDoesNotRenderItsSuppliedArtwork",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "keyboardOnlyResizesTheFocusedSupportingLayoutsMainColumn",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "supportingContextWithoutFooterCanScrollItsLastLineAboveTheNavigationBar",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readerPanelFooterReturnsToItsParentRoute",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readerUsesFullWindowProportionAndClearsBothLateralInsets",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "tightestLandscapeBoundaryRecordsTheIncompatibleMinimumWidths",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "hubPanelUsesApprovedWidthAndTitleBaseline",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "portraitHeaderScrollsAwayInsteadOfRemainingAsAnOverlay",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "scrollableSidePanelSignalsMoreContentUntilTheEnd",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readerHidesRailAndKeepsNavigationAboveTheSafeBottom",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "readerAlignsTitleWithPrayerAndUsesCompactButtons",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "compactPhoneClampsTheSheetToItsActualSafeWidth",
+      "status": "passed"
+    },
+    {
+      "class": "com.example.LandscapeLayoutTest",
+      "name": "compactDialogOwnsItsScrimAndDismissesOnOutsideTouch",
+      "status": "passed"
+    }
+  ]
+}

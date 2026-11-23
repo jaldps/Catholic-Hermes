@@ -99,6 +99,50 @@ class LandscapeLayoutTest {
         assertTrue(dp(bounds("reader_test_outline").top - bounds("side_panel_header").bottom) <= 24f)
     }
 
+    @Test fun compactDialogOwnsItsScrimAndDismissesOnOutsideTouch() {
+        var open by mutableStateOf(true)
+        compose.setContent { SanctaFidesTheme(reduceMotion = true) {
+            if (open) AppDialog({ open = false }, title = "Oraciones", tag = "test_dialog") {
+                androidx.compose.material3.Text("Padre Nuestro")
+            }
+        } }
+        insets()
+        compose.onNodeWithTag("dialog_scrim").assertExists().assert(SemanticsMatcher("Backdrop is touch-only; modal actions remain accessible") { !it.config.contains(SemanticsActions.OnClick) })
+        val window = org.robolectric.shadows.ShadowDialog.getLatestDialog().window!!
+        assertEquals("Our own scrim must not be doubled by the native window dim", 0f, window.attributes.dimAmount, .001f)
+        compose.onNodeWithTag("dialog_scrim").performTouchInput { click(androidx.compose.ui.geometry.Offset(10f, 100f)) }
+        compose.onNodeWithTag("test_dialog").assertDoesNotExist()
+    }
+
+    @Test fun sanctuaryCompactHeaderUsesItsPaperTitleBranchWithoutAFrame() {
+        var asset by mutableStateOf<String?>("heroes/lumen/prayers_lily.jpg")
+        compose.setContent { SanctaFidesTheme(designLanguage = DesignLanguage.SANCTUARY.id, reduceMotion = true) {
+            AppHeroHeader(asset, "Oraciones", eyebrow = "Ora sin cesar")
+        } }
+        insets()
+        val before = java.io.File("build/screenshots/paper-band/with_asset.png")
+        landscapeCapture(compose, compose.activity, 891, 411, before)
+        compose.runOnIdle { asset = null }; compose.waitForIdle()
+        val after = java.io.File("build/screenshots/paper-band/without_asset.png")
+        landscapeCapture(compose, compose.activity, 891, 411, after)
+        val a = android.graphics.BitmapFactory.decodeFile(before.path); val b = android.graphics.BitmapFactory.decodeFile(after.path)
+        assertTrue("Sanctuary's compact band must use exactly the no-art paper branch", a.sameAs(b))
+        a.recycle(); b.recycle()
+    }
+
+    @Test fun scrollableSidePanelSignalsMoreContentUntilTheEnd() {
+        compose.setContent { SanctaFidesTheme(reduceMotion = true) {
+            AppPageLayout(header = { AppHeroHeader("heroes/lumen/prayers_lily.jpg", "Oraciones") }, supporting = {
+                repeat(30) { androidx.compose.material3.Text(showcasePrayers[it % showcasePrayers.size].title.get(AppLanguage.ES)) }
+            }) { header -> androidx.compose.foundation.lazy.LazyColumn { item { header() } } }
+        } }
+        insets()
+        compose.onNodeWithTag("panel_scroll_hint").assertExists()
+        compose.onNodeWithTag("app_page_panel").performSemanticsAction(SemanticsActions.ScrollBy) { it(0f, 100_000f) }
+        compose.waitForIdle()
+        compose.onNodeWithTag("panel_scroll_hint").assertDoesNotExist()
+    }
+
     @Test fun enlargedReaderCanReachTheEndWithoutMovingItsAdvanceButton() {
         landscapeViewport(compose, compose.activity, 800, 360)
         compose.setContent { SanctaFidesTheme(designLanguage = DesignLanguage.APPLE.id, darkModeSetting = "LIGHT", fontScale = 1.3f, reduceMotion = true) {

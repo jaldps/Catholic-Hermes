@@ -70,7 +70,12 @@ class FullAppScreenshotTest {
         }
         // Keep date-sensitive UI aligned with this review's client timezone,
         // rather than letting the UTC build host advance the liturgical day.
-        TimeZone.setDefault(TimeZone.getTimeZone(System.getProperty("shots.zone", "America/Sao_Paulo")))
+        val requestedZone = System.getProperty("shots.zone", "America/Sao_Paulo")
+        val zone = TimeZone.getTimeZone(requestedZone)
+        require(zone.id != "GMT" || requestedZone in setOf("GMT", "UTC")) {
+            "Unsupported screenshot timezone: $requestedZone (Java silently fell back to GMT)"
+        }
+        TimeZone.setDefault(zone)
     }
 
     @After fun restoreTimeZone() { TimeZone.setDefault(previousTimeZone) }

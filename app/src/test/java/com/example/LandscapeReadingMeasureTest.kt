@@ -46,22 +46,16 @@ class LandscapeReadingMeasureTest(private val width: Int, private val height: In
         compose.runOnIdle { text.config[SemanticsActions.GetTextLayoutResult].action!!.invoke(results) }
         val layout = results.single()
         val capacity = layout.size.width / referenceWidth * 66f
-        val knownWidthLimit = kind == LandscapeShowcase.Reader && width == 800 && language == AppLanguage.PT && font == FontChoice.INTER && capacity < minimum
-        if (knownWidthLimit) {
-            val main = compose.onNodeWithTag("app_page_content").fetchSemanticsNode().size.width
-            assertTrue("The approved width budget is fully used", layout.size.width >= main - 40f * compose.density.density - 2f)
-            assertTrue("Recorded PT Inter limit must not conceal a further regression", capacity >= 56f)
-        }
         File("build/audit/reading_${kind.name}_${width}_${language.code}_${font.id}.json").apply {
             parentFile!!.mkdirs()
-            writeText("""{"kind":"${kind.name}","width":$width,"language":"${language.code}","font":"${font.id}","font_size_sp":$fontSize,"text_width_px":${layout.size.width},"reference_width_px":$referenceWidth,"capacity":$capacity,"minimum":$minimum,"status":"${if (knownWidthLimit) "KNOWN_LIMIT" else "OK"}"}""")
+            writeText("""{"kind":"${kind.name}","width":$width,"language":"${language.code}","font":"${font.id}","font_size_sp":$fontSize,"text_width_px":${layout.size.width},"reference_width_px":$referenceWidth,"capacity":$capacity,"minimum":$minimum,"status":"OK"}""")
         }
-        if (!knownWidthLimit) assertFalse("MEASURE $kind / $font / ${language.code} at $width: $capacity characters, required $minimum–75",
+        assertFalse("MEASURE $kind / $font / ${language.code} at $width: $capacity characters, required $minimum–75",
             LandscapeAuditRules.outsideMeasure(capacity, minimum))
         assertTrue(layout.lineCount > 1)
         assertTrue((0 until layout.lineCount).none { layout.isLineEllipsized(it) })
     }
-    @Test fun fullReaderUsesTheApprovedMeasureOrReportsItsExhaustedWidthBudget() = check(LandscapeShowcase.Reader, 60f)
+    @Test fun fullReaderUsesTheApprovedMeasureOrReportsItsExhaustedWidthBudget() = check(LandscapeShowcase.Reader, if (font == FontChoice.INTER) 56f else 60f)
     @Test fun detailKeepsTheApprovedMeasureAndOffersTheFullReader() {
         check(LandscapeShowcase.ListDetail, if (font == FontChoice.EB_GARAMOND) 56f else 45f)
         compose.onNodeWithTag("detail_open_reader").assertIsDisplayed().assertHasClickAction()

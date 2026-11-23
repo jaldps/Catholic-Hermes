@@ -130,7 +130,9 @@ class LandscapeAuditTest(private val identity: DesignLanguage, private val langu
             compose.runOnUiThread { LandscapeInsetsHarness.dispatch(compose.activity, height, cutout = cutout, navbar = navbar) }; compose.waitForIdle()
             sample(root, cutout, navbar, "top")
             if (System.getProperty("audit.capture") == "all") {
-                Thread.sleep(600)
+                // Match the full-app renderer's cold-cache allowance for bundled art on Dispatchers.IO.
+                Thread.sleep(2500)
+                compose.waitForIdle()
                 val suffix = (if (scale == 1f) "" else "_s130") + (if (language == AppLanguage.PT) "_pt" else "") +
                     (cutout?.let { "_cut${it.first().uppercase()}" } ?: "") + (navbar?.let { "_nav${it.first().uppercase()}" } ?: "")
                 landscapeCapture(compose, compose.activity, width, height,

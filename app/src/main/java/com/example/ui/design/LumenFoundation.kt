@@ -11,6 +11,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.InteractionSource
+import androidx.compose.foundation.IndicationNodeFactory
+import androidx.compose.foundation.interaction.collectIsFocusedAsState
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
@@ -39,6 +42,7 @@ import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
@@ -47,7 +51,15 @@ import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.asAndroidPath
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.drawOutline
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
+import androidx.compose.ui.graphics.drawscope.ContentDrawScope
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.drawscope.inset
+import androidx.compose.ui.node.DrawModifierNode
+import androidx.compose.ui.node.ObserverModifierNode
+import androidx.compose.ui.node.observeReads
+import androidx.compose.ui.node.invalidateDraw
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.graphics.toArgb
@@ -124,6 +136,38 @@ fun Modifier.appContentSurface(shape: Shape): Modifier = composed {
     } else liquidPane(shape, design.glassSpec(GlassRole.Content))
 }
 
+/** Fixed pane footer: its own material and an explicit scroll edge, never a bare cut through text. */
+internal fun Modifier.appPaneFooter(reader: Boolean = false): Modifier = composed {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val material = if (reader || design.opaqueMaterial()) Modifier.background(p.canvasTop)
+        else Modifier.appContentSurface(androidx.compose.ui.graphics.RectangleShape)
+    drawBehind {
+        if (!design.opaqueMaterial()) {
+            val fade = 16.dp.toPx()
+            drawRect(Brush.verticalGradient(listOf(Color.Transparent, p.canvasTop), startY = -fade, endY = 0f),
+                topLeft = androidx.compose.ui.geometry.Offset(0f, -fade), size = androidx.compose.ui.geometry.Size(size.width, fade))
+        }
+    }.then(material).drawWithContent {
+        drawContent()
+        if (design.opaqueMaterial()) drawLine(p.separator, androidx.compose.ui.geometry.Offset.Zero,
+            androidx.compose.ui.geometry.Offset(size.width, 0f), 0.5.dp.toPx())
+    }
+}
+
+/** For a supporting slot that owns its own scroller (for example the Bible's study panel). */
+fun Modifier.appPanelScrollHint(scroll: androidx.compose.foundation.ScrollState): Modifier = composed {
+    val color = LocalAppDesign.current.palette.canvasTop
+    drawWithContent {
+        drawContent()
+        if (scroll.canScrollForward) {
+            val height = 24.dp.toPx()
+            drawRect(Brush.verticalGradient(listOf(Color.Transparent, color), startY = size.height - height, endY = size.height),
+                topLeft = androidx.compose.ui.geometry.Offset(0f, size.height - height), size = androidx.compose.ui.geometry.Size(size.width, height))
+        }
+    }
+}
+
 /**
  * A ripple-free target that gives under the finger on a spring, as glass
  * does, and answers with the system's quiet click (and a tick for
@@ -133,11 +177,13 @@ fun Modifier.lumenPress(
     onClick: (() -> Unit)?,
     scale: Float = 0.97f,
     role: Role = Role.Button,
-    enabled: Boolean = true
+    enabled: Boolean = true,
+    shape: Shape? = null
 ): Modifier = if (onClick == null) this else composed {
     val source = remember { MutableInteractionSource() }
     val pressed by source.collectIsPressedAsState()
-    val reduceMotion = LocalAppDesign.current.reduceMotion
+    val design = LocalAppDesign.current
+    val reduceMotion = design.reduceMotion
     val feedback = rememberGlassFeedback()
     val latest by rememberUpdatedState(onClick)
     val s by animateFloatAsState(
@@ -146,11 +192,63 @@ fun Modifier.lumenPress(
         label = "lumenPress"
     )
     graphicsLayer { scaleX = s; scaleY = s }
-        .clickable(source, indication = null, enabled = enabled, role = role) {
+        .clickable(source, indication = appFocusRing(source, shape ?: design.shapes.button), enabled = enabled, role = role) {
             if (role == Role.Tab || role == Role.Switch || role == Role.Checkbox || role == Role.RadioButton) feedback.tick()
             else feedback.click()
             latest()
         }
+}
+
+/** Keep both the source's state and the factory stable while focus, theme or shape changes. */
+@Composable
+internal fun appFocusRing(source: InteractionSource, shape: Shape): IndicationNodeFactory {
+    val focused = source.collectIsFocusedAsState()
+    val p = LocalAppDesign.current.palette
+    val color = rememberUpdatedState(p.textPrimary)
+    val halo = rememberUpdatedState(p.canvasTop)
+    val outline = rememberUpdatedState(shape)
+    return remember(source, focused) { AppFocusRing(color, halo, outline, focused) }
+}
+
+/** No ripple. A one-dp canvas halo makes the two-dp ring readable on filled controls. */
+internal data class AppFocusRing(
+    val color: androidx.compose.runtime.State<Color>, val halo: androidx.compose.runtime.State<Color>,
+    val shape: androidx.compose.runtime.State<Shape>, val focused: androidx.compose.runtime.State<Boolean>
+) : IndicationNodeFactory {
+    override fun create(interactionSource: InteractionSource): androidx.compose.ui.node.DelegatableNode = FocusRingNode(color, halo, shape, focused)
+}
+
+private class FocusRingNode(
+    val color: androidx.compose.runtime.State<Color>, val halo: androidx.compose.runtime.State<Color>,
+    val shape: androidx.compose.runtime.State<Shape>, val focused: androidx.compose.runtime.State<Boolean>
+) : Modifier.Node(), DrawModifierNode, ObserverModifierNode {
+    override fun onObservedReadsChanged() { invalidateDraw() }
+    override fun ContentDrawScope.draw() {
+        drawContent()
+        observeReads {
+            if (focused.value) inset(2.dp.toPx()) {
+                val outline = shape.value.createOutline(size, layoutDirection, this)
+                drawOutline(outline, halo.value, style = Stroke(4.dp.toPx()))
+                drawOutline(outline, color.value, style = Stroke(2.dp.toPx()))
+            }
+        }
+    }
+}
+
+/** Re-read the system setting on resume, including changes made while this app was paused. */
+@Composable
+fun appReduceMotion(preference: Boolean): Boolean {
+    val lifecycle = androidx.lifecycle.compose.LocalLifecycleOwner.current.lifecycle
+    fun systemDisabled() = Build.VERSION.SDK_INT >= 26 && !android.animation.ValueAnimator.areAnimatorsEnabled()
+    var disabled by remember { mutableStateOf(systemDisabled()) }
+    DisposableEffect(lifecycle) {
+        val observer = androidx.lifecycle.LifecycleEventObserver { _, event ->
+            if (event == androidx.lifecycle.Lifecycle.Event.ON_RESUME) disabled = systemDisabled()
+        }
+        lifecycle.addObserver(observer)
+        onDispose { lifecycle.removeObserver(observer) }
+    }
+    return preference || disabled
 }
 
 /** Full-screen canvas: ambient light for Lumen, paper for Sanctuary. */

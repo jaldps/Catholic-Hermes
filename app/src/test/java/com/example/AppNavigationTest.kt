@@ -10,6 +10,7 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.text.font.FontFamily
 import java.util.concurrent.atomic.AtomicReference
 import androidx.compose.ui.platform.LocalInspectionMode
+import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.assertHasClickAction
 import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.assertIsDisplayed
@@ -112,8 +113,19 @@ class AppNavigationTest(private val identity: DesignLanguage) {
                 // Lumen: the Bible opens on its large title and the
                 // continue-reading card instead of the identity illustration.
                 compose.onNodeWithTag("bible_continue_reading").assertIsDisplayed()
+                // The independent continue card appears before the IO chapter counts.
+                // Start the filter journey only once the real directory has its first book.
+                compose.waitUntil(30_000) {
+                    compose.runOnUiThread { androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications() }
+                    runCatching {
+                        compose.onNodeWithTag("bible_book_directory").performScrollToNode(hasTestTag("book_item_gen"))
+                        compose.onNodeWithTag("book_item_gen").assertExists()
+                    }.isSuccess
+                }
                 compose.onNodeWithTag("bible_canon_filter").performScrollTo().performClick()
                 compose.onNodeWithTag("bible_canon_2").performClick()
+                compose.onNodeWithTag("bible_canon_filter").assert(
+                    hasText("New Testament"))
                 compose.waitUntil(15_000) {
                     compose.runOnUiThread { androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications() }
                     runCatching {

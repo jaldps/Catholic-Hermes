@@ -96,8 +96,12 @@ class MyPathUiTest {
     private fun waitFor(tag: String, timeout: Long = 30_000) = compose.waitUntil(timeout) { exists(tag) }
     private fun gone(tag: String) = compose.waitUntil(15_000) { !exists(tag) }
     /** The row's texts live in its children; look for [text] among the descendants of [tag]. */
-    private fun assertRowText(tag: String, text: String) =
-        compose.onNode(hasText(text, substring = true) and hasAnyAncestor(hasTestTag(tag)), useUnmergedTree = true).assertExists()
+    private fun assertRowText(tag: String, text: String) {
+        val matcher = hasText(text, substring = true) and hasAnyAncestor(hasTestTag(tag))
+        // Room/Flow emits an initial summary before the seeded data arrives; a row tag alone is not readiness.
+        compose.waitUntil(25_000) { compose.onAllNodes(matcher, useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty() }
+        compose.onNode(matcher, useUnmergedTree = true).assertExists()
+    }
     private fun tag(tag: String) = compose.onNodeWithTag(tag, useUnmergedTree = true)
     private fun back() {
         compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }

@@ -1,0 +1,100 @@
+{
+  "base": "43a3c80",
+  "source_hashes": {
+    "app/build.gradle.kts": "242fdb727204ddde499b1250b1a4baa0dbb577e879f09695e9bbe22f41009822",
+    "app/src/main/java/com/example/MainActivity.kt": "d568915d4511dbfdc51dd326bb1e8cbe63aa9d4af627ca3e4faea2481429b9d2",
+    "app/src/main/java/com/example/ui/MainApp.kt": "5539ecd7ad8ed516956643b94588c688524016a799e0a020b589d13369ab9d45",
+    "app/src/main/java/com/example/ui/components/GuiCustomizerModal.kt": "bca1124d868d6fa5c1a792e4207609b580096012c104d6e62e42a6875e58b633",
+    "app/src/main/java/com/example/ui/design/AppComponents.kt": "e0960d055f7b19a020baa513b98f6b9ac72f83cb66e669f0ba999a9f67aad2f0",
+    "app/src/main/java/com/example/ui/design/LiquidGlass.kt": "eec1ec37096ae4d7cd92a38bec4cb8dfe939bf79f9a0e40b65a408b5ac63d29e",
+    "app/src/main/java/com/example/ui/design/LumenComponents.kt": "86c550079101bc33a6c339c6880eebd4273787d0160b58b0f1dd0bc07b5d6b87",
+    "app/src/main/java/com/example/ui/design/LumenExtras.kt": "1ac5be0c5e0c20c9fc1f61b4330c6eb64c45701c9f76e0963f27f1b34f81a54f",
+    "app/src/main/java/com/example/ui/design/LumenFoundation.kt": "61ac5a4fdc896478a09f705e05d27933d3ec1b89accb1b092c1f99d278c3762e",
+    "app/src/main/java/com/example/ui/design/LumenKit.kt": "20d8d6541b71b01b8cdc96449cf4fe039d40567642a63634b37a577f78500dd6",
+    "app/src/main/java/com/example/ui/screens/MoreScreen.kt": "17ab188a7d1f055bbf1a596be91eda8db46eb893824e856d8faef9bd7db6ed50",
+    "app/src/main/java/com/example/ui/screens/PrayersAndNovenasScreen.kt": "5c273c90a664142d78718b55de44b6ae62b2c29807eddc0e226daa7c44dc6769",
+    "app/src/test/java/com/example/AppNavigationTest.kt": "f018759d50ddd2cb106d6d0dabc17abae6ea8f518a9ea75ef446089166370230",
+    "app/src/test/java/com/example/CompactBandContrastTest.kt": "e30e719b3582157ab93cb505b068366ee64f693e39cfbf70ef90382838552ee9",
+    "app/src/test/java/com/example/CompactPrayerGuidesTest.kt": "2a682a5c902ed6f64a51d389d41ab276eee62feb2d7e0e9cb9ccec648ee33db5",
+    "app/src/test/java/com/example/DockKeyboardFocusTest.kt": "a6f9204eb4316456519f79f1b290f985774fae3b5e2f047088789387c5ad7590",
+    "app/src/test/java/com/example/KeyboardFocusTest.kt": "4af91bed921f4c36ba2d87c53aaf9c6a4db74ec15dc88c1a08aec5e71a6dabda",
+    "app/src/test/java/com/example/LandscapeAuditRulesTest.kt": "cac16df99afae9fde4c9be4d076f1b72d4adc4eca04247831e2571ba5d6d5690",
+    "app/src/test/java/com/example/LandscapeAuditTest.kt": "43fdeb59bfa796b76a39b6841deab780da69dcdf7e111680e0e8a54f2cc8c214",
+    "app/src/test/java/com/example/LandscapeFolioListHeaderTest.kt": "d88cd6f5ebd95639823dbb147680557f5b897b3e466762c7ddd6c151e30f6440",
+    "app/src/test/java/com/example/LandscapeFoundationsTest.kt": "e8f702d3ba650ca5f365b8137b2c53a52867fc895974d1916d6df5c33dbbbf3b",
+    "app/src/test/java/com/example/LandscapeGeometryTest.kt": "59f672079d24511e239d3fcf6e8f9532b76de8dd5f1d348ecd16e8314bc6cdb0",
+    "app/src/test/java/com/example/LandscapeInsetsHarness.kt": "0bf43fff50cc5c85b098feb7e5018f1c1404fdfdf05cf4241f6dcc17f77c451a",
+    "app/src/test/java/com/example/LandscapeLayoutTest.kt": "ffd0599a65237baf7d778631797e7f9f9830af298092d1722634e8fc069480a7",
+    "app/src/test/java/com/example/LandscapeModalTest.kt": "a4c8b1a5c5b53a8712158beb903c0b997956769bf74402650bb606906af86e3b",
+    "app/src/test/java/com/example/LandscapeNoticeTest.kt": "1f842f109b253bd0c36ce88489c92cc85070145dec27252bd7dd3e90ce8d69b7",
+    "app/src/test/java/com/example/LandscapeParityTest.kt": "23d6e9817512ca7dbc1925d26ac92cc222529efd29471e95851bf33ae4cd0bc4",
+    "app/src/test/java/com/example/LandscapeReadingMeasureTest.kt": "5bed1ce7e28623aa4cb197627bfdcb6e41f860a5d71aa35714f1b14a1381833f",
+    "app/src/test/java/com/example/LandscapeRotationTest.kt": "7ad78dd14a46838b0bb4e5f843bd0f4cc753e6e65932459ed2a0690fad9362db",
+    "app/src/test/java/com/example/LandscapeShowcase.kt": "7be0397f8b408b802cf781578fcb4831048f62d26fdcb3963f2c9d07796b532c",
+    "app/src/test/java/com/example/LandscapeShowcaseScreenshotTest.kt": "ef3114464a4431dae8f6573b32873054e0585828f8926b64038322ffa92e2015",
+    "app/src/test/java/com/example/LandscapeStateLintTest.kt": "242a1aa29c36d1acc258ec7c577ae3fef8e40b78052c99eab457fe055d0286c4",
+    "app/src/test/java/com/example/LandscapeTestSupport.kt": "10f585b032f3c99819b823a2b5e0189cf3b847eab403b3516c81a309fc1da0ee",
+    "app/src/test/java/com/example/MyPathUiTest.kt": "082eeeda4be92b3d22bf7e060e502068f748acd1746cb09ef61b2356f5e41bdd",
+    "app/src/test/java/com/example/SystemReduceMotionTest.kt": "ac84e9bf336819fe78f393301cfd8da65bcf8103e1ec8b0c9e927a34a79f85e8",
+    "app/src/test/java/com/example/screenshots/FullAppScreenshotTest.kt": "d3350343e1b80b63f961bcc91ee645b47abc936ae9a06afe84d5333d68e1ab4a"
+  },
+  "unfiltered_full": {
+    "tests": 1166,
+    "failures": 2,
+    "errors": 0,
+    "skipped": 7
+  },
+  "matrix": {
+    "tests": 167,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "matrix_before_last_folio_clearance": true,
+  "final_folio_profile": {
+    "tests": 31,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "supplements": [
+    {
+      "phase": "c-large-es",
+      "result": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "phase": "c-large-pt",
+      "result": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "phase": "c-opaque",
+      "result": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "phase": "c-portuguese",
+      "result": {
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "delivery_decision": "validation-R2-delivery-decision.json",
+  "first_full_raw": "validation-R2-full-raw.json"
+}

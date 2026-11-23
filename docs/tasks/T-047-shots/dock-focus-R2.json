@@ -1,0 +1,29 @@
+[
+  {
+    "file": "dock_focus_CLASSIC.json",
+    "data": {
+      "identity": "CLASSIC",
+      "row_bottom_px": 1578.0,
+      "dock_top_px": 1630.0,
+      "focus_contrast": 15.510934
+    }
+  },
+  {
+    "file": "dock_focus_GLASS.json",
+    "data": {
+      "identity": "GLASS",
+      "row_bottom_px": 1578.0,
+      "dock_top_px": 1630.0,
+      "focus_contrast": 16.949821
+    }
+  },
+  {
+    "file": "dock_focus_LUMEN.json",
+    "data": {
+      "identity": "LUMEN",
+      "row_bottom_px": 1578.0,
+      "dock_top_px": 1630.0,
+      "focus_contrast": 16.949821
+    }
+  }
+]
