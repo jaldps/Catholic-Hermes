@@ -3,6 +3,7 @@
 - **Rama:** `ext/T-062`, desde `origin/CatholicGPT` actualizado.
 - **Chuleta:** `docs/tasks/T-062-data/skills-notes.md` (5 reglas × 8 skills, traducidas a Compose).
 - **Método (ajuste por decisión del dueño):** se abandonan las capturas y suites NATIVE lentas de cada pantalla. El dueño decidió acelerar: aplicar las 8 skills con criterio perfeccionista en vertical **y** horizontal, verificar con tests ligeros (`createComposeRule`) y generar un **APK con `assembleDebug`**. La revisión completa con capturas se hará después, con el coordinador. Los lotes ya entregados (1–3) conservan sus capturas.
+- **Verificación final:** `assembleDebug` + `*CatalogTest` → `BUILD SUCCESSFUL in 6m 42s`; APK `app/build/outputs/apk/debug/app-debug.apk` (110 MB, 2026-11-23 18:02).
 - **Lista de 18 puntos:** la del encargo `docs/tasks/T-062.md`.
 
 ## Pantallas
