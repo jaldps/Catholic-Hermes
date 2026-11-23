@@ -683,7 +683,7 @@ fun HomeScreen(
 
         item(key = "today_invitation") {
             AppCard(Modifier.padding(horizontal = gutter).testTag("today_next_action")) {
-                Text(strings("Un momento con Dios", "A moment with God", "Um momento com Deus"), style = styles.title2, color = palette.textPrimary)
+                Text(strings("Un momento con Dios", "A moment with God", "Um momento com Deus"), style = styles.title2, color = palette.textPrimary, modifier = Modifier.semantics { heading() })
                 Spacer(Modifier.height(6.dp))
                 Text(strings("${journey.minutes} min · Un paso sencillo, a tu ritmo", "${journey.minutes} min · One simple step, at your pace", "${journey.minutes} min · Um passo simples, no seu ritmo"), style = styles.callout, color = palette.textSecondary)
                 Spacer(Modifier.height(16.dp))
