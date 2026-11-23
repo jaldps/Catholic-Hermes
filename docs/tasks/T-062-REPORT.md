@@ -206,7 +206,7 @@ Tras la entrega rápida, el dueño pidió revisar el código completo con las sk
 
 `EmblemPlate` sigue en «Para la capa compartida»: cambiar sus dos `Color(0xFF…)` por `palette.groupedSurface` alteraría la placa clara en modo oscuro; se requiere decisión de diseño.
 
-**Verificación:** `:app:compileDebugKotlin` → `BUILD SUCCESSFUL in 3m 9s`.
+**Verificación:** `:app:compileDebugKotlin` → `BUILD SUCCESSFUL in 3m 9s`; reconstrucción final `:app:assembleDebug` → `BUILD SUCCESSFUL in 31s`; APK `app/build/outputs/apk/debug/app-debug.apk` (110 MB, 2026-11-23 18:17).
 
 ## Pendiente para la revisión completa
 
