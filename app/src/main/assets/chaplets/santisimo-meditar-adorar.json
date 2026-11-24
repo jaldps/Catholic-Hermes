@@ -1,226 +1,251 @@
 {
-  "id": "santisimo-meditar-adorar",
-  "sourceId": "HZ-04",
-  "group": "god_christ",
-  "title": {
-    "es": "Coronilla para meditar y adorar al Santísimo Sacramento",
-    "en": "Chaplet for meditation and adoration of the Blessed Sacrament",
-    "pt": "Coronilha para meditar e adorar o Santíssimo Sacramento"
+ "id": "santisimo-meditar-adorar",
+ "sourceId": "HZ-04",
+ "group": "god_christ",
+ "title": {
+  "es": "Coronilla para meditar y adorar al Santísimo Sacramento",
+  "en": "Chaplet for meditation and adoration of the Blessed Sacrament",
+  "pt": "Coronilha para meditar e adorar o Santíssimo Sacramento"
+ },
+ "summary": {
+  "es": "Rosario tradicional con cinco misterios eucarísticos.",
+  "en": "Traditional rosary with five Eucharistic mysteries.",
+  "pt": "Terço tradicional com cinco mistérios eucarísticos."
+ },
+ "instrument": {
+  "es": "Rosario tradicional.",
+  "en": "Traditional rosary.",
+  "pt": "Terço tradicional."
+ },
+ "when": {
+  "es": "Uso libre.",
+  "en": "At any time.",
+  "pt": "Uso livre."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "cross"
   },
-  "summary": {
-    "es": "Rosario tradicional con cinco misterios eucarísticos.",
-    "en": "Traditional rosary with five Eucharistic mysteries.",
-    "pt": "Terço tradicional com cinco mistérios eucarísticos."
+  {
+   "kind": "large"
   },
-  "instrument": {
-    "es": "Rosario tradicional.",
-    "en": "Traditional rosary.",
-    "pt": "Terço tradicional."
+  {
+   "kind": "small",
+   "count": 3
   },
-  "when": {
-    "es": "Uso libre.",
-    "en": "At any time.",
-    "pt": "Uso livre."
+  {
+   "kind": "large"
   },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "cross"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 3
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    }
-  ],
-  "steps": [
-    {
-      "bead": 0,
-      "prayerRef": "sign_of_the_cross"
-    },
-    {
-      "bead": 0,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 2,
-      "prayerRef": "hail_mary",
-      "repeat": 3
-    },
-    {
-      "bead": 3,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 5,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 6,
-      "text": {
-        "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
-        "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
-        "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
-      },
-      "repeat": 10,
-      "meditation": {
-        "es": "Jesús instituyó el misterio de la Eucaristía en memoria de su pasión y muerte.",
-        "en": "Jesus instituted the mystery of the Eucharist in memory of his passion and death.",
-        "pt": "Jesus instituiu o mistério da Eucaristia em memória da sua paixão e morte."
-      }
-    },
-    {
-      "bead": 5,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 7,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 8,
-      "text": {
-        "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
-        "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
-        "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
-      },
-      "repeat": 10,
-      "meditation": {
-        "es": "Jesucristo instituyó el Santísimo Sacramento para que viva en nosotros cada día de nuestras vidas.",
-        "en": "Christ instituted the Blessed Sacrament that he may live in us every day of our lives.",
-        "pt": "Cristo instituiu o Santíssimo Sacramento para que viva em nós cada dia das nossas vidas."
-      }
-    },
-    {
-      "bead": 7,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 9,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 10,
-      "text": {
-        "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
-        "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
-        "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
-      },
-      "repeat": 10,
-      "meditation": {
-        "es": "Jesucristo instituyó el Santísimo Sacramento para perpetuar su sacrificio por nosotros en todos los altares de la cristiandad hasta el fin de los tiempos.",
-        "en": "Christ instituted the Blessed Sacrament to perpetuate his sacrifice for us on every altar of Christendom until the end of time.",
-        "pt": "Cristo instituiu o Santíssimo Sacramento para perpetuar o seu sacrifício por nós em todos os altares da cristandade até ao fim dos tempos."
-      }
-    },
-    {
-      "bead": 9,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 11,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 12,
-      "text": {
-        "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
-        "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
-        "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
-      },
-      "repeat": 10,
-      "meditation": {
-        "es": "Jesucristo instituyó el Santísimo Sacramento para ser el pan y el vino de nuestra alma, nuestro alimento espiritual.",
-        "en": "Christ instituted the Blessed Sacrament to be the bread and wine of our soul, our spiritual food.",
-        "pt": "Cristo instituiu o Santíssimo Sacramento para ser o pão e o vinho da nossa alma, o nosso alimento espiritual."
-      }
-    },
-    {
-      "bead": 11,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 13,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 14,
-      "text": {
-        "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
-        "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
-        "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
-      },
-      "repeat": 10,
-      "meditation": {
-        "es": "Jesucristo instituyó el Santísimo Sacramento para visitarnos en el momento de nuestra muerte y llevarnos con Él al cielo.",
-        "en": "Christ instituted the Blessed Sacrament to visit us at the hour of our death and take us with him to heaven.",
-        "pt": "Cristo instituiu o Santíssimo Sacramento para nos visitar na hora da nossa morte e nos levar consigo ao céu."
-      }
-    },
-    {
-      "bead": 13,
-      "prayerRef": "glory_be"
-    }
-  ],
-  "notes": "Texto literal de Hozana. Los cinco misterios son los que la fuente enumera; se usan como meditación literal.",
-  "image": "santisimo-meditar-adorar",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": null,
-  "translation": {
-    "es": "original",
-    "en": "traducción fiel de Hermes, 2026",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "kind": "medal"
   },
-  "sources": [
-    {
-      "title": "Hozana · Santo Rosario",
-      "url": "https://hozana.org/es/oracion/santo-rosario/santisimo-sacramento"
-    }
-  ]
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  }
+ ],
+ "steps": [
+  {
+   "bead": 0,
+   "prayerRef": "sign_of_the_cross"
+  },
+  {
+   "bead": 0,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 2,
+   "prayerRef": "hail_mary",
+   "repeat": 3
+  },
+  {
+   "bead": 3,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 5,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 6,
+   "text": {
+    "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
+    "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
+    "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
+   },
+   "repeat": 10,
+   "meditation": {
+    "es": "Jesús instituyó el misterio de la Eucaristía en memoria de su pasión y muerte.",
+    "en": "Jesus instituted the mystery of the Eucharist in memory of his passion and death.",
+    "pt": "Jesus instituiu o mistério da Eucaristia em memória da sua paixão e morte."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 5,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 7,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 8,
+   "text": {
+    "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
+    "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
+    "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
+   },
+   "repeat": 10,
+   "meditation": {
+    "es": "Jesucristo instituyó el Santísimo Sacramento para que viva en nosotros cada día de nuestras vidas.",
+    "en": "Christ instituted the Blessed Sacrament that he may live in us every day of our lives.",
+    "pt": "Cristo instituiu o Santíssimo Sacramento para que viva em nós cada dia das nossas vidas."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 7,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 9,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 10,
+   "text": {
+    "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
+    "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
+    "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
+   },
+   "repeat": 10,
+   "meditation": {
+    "es": "Jesucristo instituyó el Santísimo Sacramento para perpetuar su sacrificio por nosotros en todos los altares de la cristiandad hasta el fin de los tiempos.",
+    "en": "Christ instituted the Blessed Sacrament to perpetuate his sacrifice for us on every altar of Christendom until the end of time.",
+    "pt": "Cristo instituiu o Santíssimo Sacramento para perpetuar o seu sacrifício por nós em todos os altares da cristandade até ao fim dos tempos."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 9,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 11,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 12,
+   "text": {
+    "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
+    "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
+    "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
+   },
+   "repeat": 10,
+   "meditation": {
+    "es": "Jesucristo instituyó el Santísimo Sacramento para ser el pan y el vino de nuestra alma, nuestro alimento espiritual.",
+    "en": "Christ instituted the Blessed Sacrament to be the bread and wine of our soul, our spiritual food.",
+    "pt": "Cristo instituiu o Santíssimo Sacramento para ser o pão e o vinho da nossa alma, o nosso alimento espiritual."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 11,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 13,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 14,
+   "text": {
+    "es": "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.",
+    "en": "Jesus, blessed be you at every moment, in the Blessed Sacrament, today and always. Jesus, blessed be you in the Blessed Sacrament.",
+    "pt": "Jesus, louvado sejas em todo momento, no Santíssimo Sacramento, hoje e sempre. Jesus, louvado sejas no Santíssimo Sacramento."
+   },
+   "repeat": 10,
+   "meditation": {
+    "es": "Jesucristo instituyó el Santísimo Sacramento para visitarnos en el momento de nuestra muerte y llevarnos con Él al cielo.",
+    "en": "Christ instituted the Blessed Sacrament to visit us at the hour of our death and take us with him to heaven.",
+    "pt": "Cristo instituiu o Santíssimo Sacramento para nos visitar na hora da nossa morte e nos levar consigo ao céu."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 13,
+   "prayerRef": "glory_be"
+  }
+ ],
+ "notes": "Texto literal de Hozana. Los cinco misterios son los que enumera la fuente y se usan como meditación literal. La jaculatoria «Jesús, alabado seas…» se reza en conjunto en cada una de las diez cuentas pequeñas de cada decena; el Padre Nuestro en la cuenta grande y el Gloria al final de la decena.",
+ "image": "santisimo-meditar-adorar",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": null,
+ "translation": {
+  "es": "original",
+  "en": "traducción fiel de Hermes, 2026",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "Hozana · Santo Rosario",
+   "url": "https://hozana.org/es/oracion/santo-rosario/santisimo-sacramento"
+  }
+ ]
 }

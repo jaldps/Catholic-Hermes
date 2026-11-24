@@ -92,13 +92,18 @@
         "en": "Sweet Heart of Mary, be my salvation.",
         "pt": "Doce Coração de Maria, sê a minha salvação."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 2,
       "text": {
         "es": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
-        "en": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
+        "en": "Eternal Rest Grant unto (him/her) and let the perpetual light shine upon (him/her). May (he/she) rest in peace.",
         "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
       },
       "rubric": {
@@ -114,13 +119,18 @@
         "en": "Sweet Heart of Mary, be my salvation.",
         "pt": "Doce Coração de Maria, sê a minha salvação."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 4,
       "text": {
         "es": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
-        "en": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
+        "en": "Eternal Rest Grant unto (him/her) and let the perpetual light shine upon (him/her). May (he/she) rest in peace.",
         "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
       },
       "rubric": {
@@ -136,13 +146,18 @@
         "en": "Sweet Heart of Mary, be my salvation.",
         "pt": "Doce Coração de Maria, sê a minha salvação."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 6,
       "text": {
         "es": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
-        "en": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
+        "en": "Eternal Rest Grant unto (him/her) and let the perpetual light shine upon (him/her). May (he/she) rest in peace.",
         "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
       },
       "rubric": {
@@ -158,13 +173,18 @@
         "en": "Sweet Heart of Mary, be my salvation.",
         "pt": "Doce Coração de Maria, sê a minha salvação."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 8,
       "text": {
         "es": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
-        "en": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
+        "en": "Eternal Rest Grant unto (him/her) and let the perpetual light shine upon (him/her). May (he/she) rest in peace.",
         "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
       },
       "rubric": {
@@ -177,16 +197,69 @@
       "bead": null,
       "vr": {
         "v": {
-          "es": "V. Concede el descanso eterno a {{nombre}}, Señor.",
-          "en": "V. Eternal rest grant unto {{nombre}}, O Lord.",
-          "pt": "V. Concede o descanso eterno a {{nombre}}, Senhor."
+          "es": "Concede el descanso eterno a {{nombre}}, Señor.",
+          "en": "Eternal rest grant unto (him/her), O Lord.",
+          "pt": "Concede o descanso eterno a {{nombre}}, Senhor."
         },
         "r": {
-          "es": "R. Y haz que brille sobre {{nombre}} la luz perpetua.",
-          "en": "R. And let perpetual light shine upon {{nombre}}.",
-          "pt": "R. E faz brilhar sobre {{nombre}} a luz perpétua."
+          "es": "Y haz que brille sobre {{nombre}} la luz perpetua.",
+          "en": "And let perpetual light shine upon (him/her).",
+          "pt": "E faz brilhar sobre {{nombre}} a luz perpétua."
         }
       }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Que {{el|ella}} descanse en paz.",
+          "en": "May (he/she) rest in peace.",
+          "pt": "Que {{el|ella}} descanse em paz."
+        },
+        "r": {
+          "es": "Amén.",
+          "en": "Amen.",
+          "pt": "Amém."
+        }
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Que el alma de {{nombre}} y las almas de todos los fieles difuntos, por la misericordia de Dios, descansen en paz.",
+          "en": "May (his/her) soul and the souls of all the faithful departed, through the mercy of God, rest in peace.",
+          "pt": "Que a alma de {{nombre}} e as almas de todos os fiéis defuntos, pela misericórdia de Deus, descansem em paz."
+        },
+        "r": {
+          "es": "Amén.",
+          "en": "Amen.",
+          "pt": "Amém."
+        }
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Que el amor de Dios y la paz del Señor Jesucristo nos bendigan y nos consuelen y sequen suavemente cada lágrima de nuestros ojos. En el nombre del Padre, y del Hijo, y del Espíritu Santo.",
+          "en": "May the love of God and the peace of the Lord Jesus Christ bless us and console us and gently wipe every tear from our eyes. In the name of the Father, and of the Son, and of the Holy Spirit.",
+          "pt": "Que o amor de Deus e a paz do Senhor Jesus Cristo nos abençoe e nos console e enxugue suavemente cada lágrima dos nossos olhos. Em nome do Pai, e do Filho, e do Espírito Santo."
+        },
+        "r": {
+          "es": "Amén.",
+          "en": "Amen.",
+          "pt": "Amém."
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
     }
   ],
   "historicalNote": {
@@ -197,7 +270,7 @@
     },
     "source": "https://www.catholicdoors.com/prayers/chaplets/chap22.htm"
   },
-  "notes": "Texto literal de Catholic Doors. «De Profundis o Padre Nuestro y Avemaría»: se modela la segunda opción; el De Profundis queda como prayerRef alternativo no representado. La fuente dice 5 cuentas introductorias pero solo nombra tres actos (Fe, Esperanza y Caridad); se modelan esos tres. Marcadores de nombre y género según la spec.",
+  "notes": "Texto literal de Catholic Doors. «De Profundis o Padre Nuestro y Avemaría»: se modela la segunda opción; el De Profundis queda como prayerRef alternativo no representado. La fuente dice 5 cuentas introductorias pero solo nombra tres actos (Fe, Esperanza y Caridad); se modelan esos tres. Marcadores de nombre y género según la spec. Auditoría: el final estaba incompleto; se añaden los versículos «May he/she rest in peace», «May his/her soul...», la bendición final y el Padrenuestro y Avemaría con que también se cierra la devoción. Se quitan los prefijos V. y R. del contenido de los vr.",
   "image": "coronilla-difuntos-45",
   "promise": null,
   "season": null,

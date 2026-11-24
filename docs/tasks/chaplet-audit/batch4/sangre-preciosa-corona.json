@@ -1,0 +1,279 @@
+{
+  "id": "sangre-preciosa-corona",
+  "sourceId": "IVE-09",
+  "group": "god_christ",
+  "title": {
+    "es": "Corona a la Sangre Preciosa de Jesús",
+    "en": "Chaplet of the Precious Blood of Jesus",
+    "pt": "Coroa do Precioso Sangue de Jesus"
+  },
+  "summary": {
+    "es": "Siete misterios sobre las efusiones de la Preciosa Sangre, con 33 Padres Nuestros en total.",
+    "en": "Seven mysteries on the sheddings of the Precious Blood, with 33 Our Fathers in all.",
+    "pt": "Sete mistérios sobre as efusões do Precioso Sangue, com 33 Pai-Nossos no total."
+  },
+  "instrument": {
+    "es": "Corona de siete misterios: cinco Padres Nuestros por misterio y tres en el último.",
+    "en": "Chaplet of seven mysteries: five Our Fathers per mystery and three in the last.",
+    "pt": "Coroa de sete mistérios: cinco Pai-Nossos por mistério e três no último."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 1,
+      "prayerRef": "our_father",
+      "repeat": 5,
+      "meditation": {
+        "es": "PRIMER MISTERIO. Nuestro amabilísimo Redentor derramó por primera vez su preciosa sangre el octavo día de su nacimiento, cuando por cumplir la ley de Moisés fue circuncidado.",
+        "en": "FIRST MYSTERY. Our most loving Redeemer first shed his precious blood on the eighth day after his birth, when he was circumcised in fulfilment of the law of Moses.",
+        "pt": "PRIMEIRO MISTÉRIO. O nosso amabilíssimo Redentor derramou pela primeira vez o seu precioso sangue no oitavo dia do seu nascimento, quando foi circuncidado para cumprir a lei de Moisés."
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te rogamos, pues que vengas en ayuda de tus siervos, a quienes redimiste con tu preciosa sangre.",
+        "en": "We beseech you, Lord, help your servants, whom you redeemed with your precious blood.",
+        "pt": "Rogamo-vos, Senhor, que venhais em auxílio dos vossos servos, que resgatastes com o vosso precioso sangue."
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "our_father",
+      "repeat": 5,
+      "meditation": {
+        "es": "SEGUNDO MISTERIO. Jesús derramó sangre en el huerto de los Olivos, y en tanta cantidad, que el suelo quedó a su alrededor bañado de ella.",
+        "en": "SECOND MYSTERY. Jesus shed blood in the garden of Olives, and in such quantity that the ground around him was bathed in it.",
+        "pt": "SEGUNDO MISTÉRIO. Jesus derramou sangue no horto das Oliveiras, e em tanta quantidade que o solo à sua volta ficou banhado dele."
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te rogamos, pues que vengas en ayuda de tus siervos, a quienes redimiste con tu preciosa sangre.",
+        "en": "We beseech you, Lord, help your servants, whom you redeemed with your precious blood.",
+        "pt": "Rogamo-vos, Senhor, que venhais em auxílio dos vossos servos, que resgatastes com o vosso precioso sangue."
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father",
+      "repeat": 5,
+      "meditation": {
+        "es": "TERCER MISTERIO. El Señor derramó sangre en su cruel flagelación, cuando rasgada la piel y laceradas sus carnes, brotó por todas partes a ríos aquella Preciosa Sangre.",
+        "en": "THIRD MYSTERY. The Lord shed blood in his cruel scourging, when his skin was torn and his flesh lacerated and that Precious Blood flowed everywhere in streams.",
+        "pt": "TERCEIRO MISTÉRIO. O Senhor derramou sangue na sua cruel flagelação, quando, rasgada a pele e laceradas as carnes, aquele Precioso Sangue jorrou por toda a parte em rios."
+      }
+    },
+    {
+      "bead": 6,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te rogamos, pues que vengas en ayuda de tus siervos, a quienes redimiste con tu preciosa sangre.",
+        "en": "We beseech you, Lord, help your servants, whom you redeemed with your precious blood.",
+        "pt": "Rogamo-vos, Senhor, que venhais em auxílio dos vossos servos, que resgatastes com o vosso precioso sangue."
+      }
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father",
+      "repeat": 5,
+      "meditation": {
+        "es": "CUARTO MISTERIO. Brotó sangre de la sacratísima cabeza de Jesús cuando fue coronado de espinas, en pena de nuestra soberbia y de nuestros malos pensamientos.",
+        "en": "FOURTH MYSTERY. Blood flowed from the most holy head of Jesus when he was crowned with thorns, in atonement for our pride and our evil thoughts.",
+        "pt": "QUARTO MISTÉRIO. Brotou sangue da sacratíssima cabeça de Jesus quando foi coroado de espinhos, em pena da nossa soberba e dos nossos maus pensamentos."
+      }
+    },
+    {
+      "bead": 8,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te rogamos, pues que vengas en ayuda de tus siervos, a quienes redimiste con tu preciosa sangre.",
+        "en": "We beseech you, Lord, help your servants, whom you redeemed with your precious blood.",
+        "pt": "Rogamo-vos, Senhor, que venhais em auxílio dos vossos servos, que resgatastes com o vosso precioso sangue."
+      }
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father",
+      "repeat": 5,
+      "meditation": {
+        "es": "QUINTO MISTERIO. ¡Oh! Cuánta sangre derramó de sus venas nuestro amable Jesús en el dolorosísimo camino que hizo al Calvario cargado con el pesado leño de la cruz!",
+        "en": "FIFTH MYSTERY. Oh, how much blood our loving Jesus shed from his veins on the most painful journey he made to Calvary carrying the heavy wood of the cross!",
+        "pt": "QUINTO MISTÉRIO. Ó, quanto sangue derramou das suas veias o nosso amável Jesus no caminho dolorosíssimo que fez ao Calvário carregado com o pesado madeiro da cruz!"
+      }
+    },
+    {
+      "bead": 10,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te rogamos, pues que vengas en ayuda de tus siervos, a quienes redimiste con tu preciosa sangre.",
+        "en": "We beseech you, Lord, help your servants, whom you redeemed with your precious blood.",
+        "pt": "Rogamo-vos, Senhor, que venhais em auxílio dos vossos servos, que resgatastes com o vosso precioso sangue."
+      }
+    },
+    {
+      "bead": 11,
+      "prayerRef": "our_father",
+      "repeat": 5,
+      "meditation": {
+        "es": "SEXTO MISTERIO. El Redentor derramó la sangre sobre todo en su bárbara crucifixión, cuando rotas venas y arterias, brotó de sus manos y de sus pies como un torrente.",
+        "en": "SIXTH MYSTERY. The Redeemer shed blood above all in his barbarous crucifixion, when veins and arteries were broken and it flowed from his hands and feet like a torrent.",
+        "pt": "SEXTO MISTÉRIO. O Redentor derramou sangue sobretudo na sua bárbara crucifixão, quando, rotas as veias e artérias, jorrou das suas mãos e dos seus pés como uma torrente."
+      }
+    },
+    {
+      "bead": 12,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te rogamos, pues que vengas en ayuda de tus siervos, a quienes redimiste con tu preciosa sangre.",
+        "en": "We beseech you, Lord, help your servants, whom you redeemed with your precious blood.",
+        "pt": "Rogamo-vos, Senhor, que venhais em auxílio dos vossos servos, que resgatastes com o vosso precioso sangue."
+      }
+    },
+    {
+      "bead": 13,
+      "prayerRef": "our_father",
+      "repeat": 3,
+      "meditation": {
+        "es": "SÉPTIMO MISTERIO. Finalmente, Jesús derramó sangre después de su muerte, cuando con una lanza le abrieron el costado, e hirieron su amabilísimo corazón.",
+        "en": "SEVENTH MYSTERY. Finally, Jesus shed blood after his death, when they opened his side with a lance and wounded his most loving heart.",
+        "pt": "SÉTIMO MISTÉRIO. Finalmente, Jesus derramou sangue depois da sua morte, quando com uma lança lhe abriram o lado e feriram o seu amabilíssimo coração."
+      }
+    },
+    {
+      "bead": 14,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te rogamos, pues que vengas en ayuda de tus siervos, a quienes redimiste con tu preciosa sangre.",
+        "en": "We beseech you, Lord, help your servants, whom you redeemed with your precious blood.",
+        "pt": "Rogamo-vos, Senhor, que venhais em auxílio dos vossos servos, que resgatastes com o vosso precioso sangue."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "¡Oh sangre preciosísima de vida eterna, precio y rescate de todo el universo bebida y purificación de nuestras almas, que defiendes continuamente la causa de los hombres ante el trono de la suprema misericordia! Os adoro profundamente.",
+        "en": "O most precious blood of eternal life, price and ransom of the whole universe, drink and purification of our souls, you who continually defend the cause of men before the throne of supreme mercy! I adore you profoundly.",
+        "pt": "Ó sangue preciosíssimo de vida eterna, preço e resgate de todo o universo, bebida e purificação das nossas almas, que defendeis continuamente a causa dos homens ante o trono da suprema misericórdia! Adoro-vos profundamente."
+      },
+      "meditation": {
+        "es": "Oración final",
+        "en": "Final prayer",
+        "pt": "Oração final"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    }
+  ],
+  "historicalNote": {
+    "text": {
+      "es": "La fuente atribuye a Pío VII rescriptos de 31 de mayo de 1809 y 18 de octubre de 1815 con indulgencias; normativa vigente: Enchiridion Indulgentiarum, 4.ª ed., 1999.",
+      "en": "The source attributes to Pius VII rescripts of 31 May 1809 and 18 October 1815 with indulgences; current norms: Enchiridion Indulgentiarum, 4th ed., 1999.",
+      "pt": "A fonte atribui a Pio VII rescritos de 31 de maio de 1809 e 18 de outubro de 1815 com indulgências; norma vigente: Enchiridion Indulgentiarum, 4.ª ed., 1999."
+    },
+    "source": "https://iveinarabic.org/es/rosarios-y-coronas/"
+  },
+  "notes": "Texto literal de IVE. Se retira el signo de la cruz inicial que la fuente no prescribe y se corrige «TERCERA MISTERIO»→«TERCER MISTERIO». La fuente termina anunciando unas aspiraciones que no transcribe; no se inventan.",
+  "image": "sangre-preciosa-corona",
+  "variables": [],
+  "promise": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "IVE · Rosarios y coronas",
+      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+    }
+  ]
+}

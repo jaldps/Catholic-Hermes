@@ -414,15 +414,32 @@
     },
     {
       "bead": null,
-      "text": {
-        "es": "Si buscas milagros, mira:\nMuerte y error desterrados,\nMiseria y demonio huidos,\nLeprosos y enfermos sanos.\nEl mar sosiega su ira,\nRedímense encarcelados,\nMiembros y bienes perdidos\nRecobran mozos y ancianos.\nEl peligro se retira,\nLos pobres van remediados;\nCuéntenlo los socorridos,\nDíganlo los paduanos.\nEl mar sosiega su ira,\nRedímense encarcelados,\nMiembros y bienes perdidos\nRecobran mozos y ancianos.\nGloria al Padre, Gloria al Hijo, gloria al Espíritu Santo. Ruega a Cristo por nosotros, Antonio divino y santo, para que dignos así de sus promesas seamos.",
-        "en": "If you seek miracles, look:\nDeath and error banished,\nMisery and devils fled,\nLepers and the sick made whole.\nThe sea calms its rage,\nPrisoners are redeemed,\nLost limbs and goods\nAre recovered by young and old.\nDanger withdraws,\nThe poor are helped;\nLet the rescued tell it,\nLet the people of Padua proclaim it.\nThe sea calms its rage,\nPrisoners are redeemed,\nLost limbs and goods\nAre recovered by young and old.\nGlory to the Father, Glory to the Son, glory to the Holy Spirit. Pray to Christ for us, Anthony, holy and divine, that we may be worthy of his promises.",
-        "pt": "Se buscas milagres, olha:\nMorte e erro desterrados,\nMiséria e demónios fugidos,\nLeprosos e doentes curados.\nO mar sossega a sua ira,\nRedimem-se os presos,\nMembros e bens perdidos\nRecobram jovens e velhos.\nO perigo afasta-se,\nOs pobres são socorridos;\nContem-no os socorridos,\nDigam-no os paduanos.\nO mar sossega a sua ira,\nRedimem-se os presos,\nMembros e bens perdidos\nRecobram jovens e velhos.\nGlória ao Pai, Glória ao Filho, glória ao Espírito Santo. Roga a Cristo por nós, António divino e santo, para que dignos assim das suas promessas sejamos."
-      },
       "meditation": {
         "es": "Responsorio de San Antonio",
         "en": "Responsory of St Anthony",
         "pt": "Responsório de Santo António"
+      },
+      "rubric": {
+        "es": "Tomando la medalla del Santo en la mano",
+        "en": "Holding the Saint's medal in your hand",
+        "pt": "Segurando a medalha do Santo na mão"
+      },
+      "text": {
+        "es": "Si buscas milagros, mira:\nMuerte y error desterrados,\nMiseria y demonio huidos,\nLeprosos y enfermos sanos.\nEl mar sosiega su ira,\nRedímense encarcelados,\nMiembros y bienes perdidos\nRecobran mozos y ancianos.\nEl peligro se retira,\nLos pobres van remediados;\nCuéntenlo los socorridos,\nDíganlo los paduanos.\nEl mar sosiega su ira,\nRedímense encarcelados,\nMiembros y bienes perdidos\nRecobran mozos y ancianos.",
+        "en": "If you seek miracles, look:\nDeath and error banished,\nMisery and devils fled,\nLepers and the sick made whole.\nThe sea calms its rage,\nPrisoners are redeemed,\nLost limbs and goods\nAre recovered by young and old.\nDanger withdraws,\nThe poor are helped;\nLet the rescued tell it,\nLet the people of Padua proclaim it.\nThe sea calms its rage,\nPrisoners are redeemed,\nLost limbs and goods\nAre recovered by young and old.",
+        "pt": "Se buscas milagres, olha:\nMorte e erro desterrados,\nMiséria e demónios fugidos,\nLeprosos e doentes curados.\nO mar sossega a sua ira,\nRedimem-se os presos,\nMembros e bens perdidos\nRecobram jovens e velhos.\nO perigo afasta-se,\nOs pobres são socorridos;\nContem-no os socorridos,\nDigam-no os paduanos.\nO mar sossega a sua ira,\nRedimem-se os presos,\nMembros e bens perdidos\nRecobram jovens e velhos."
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Ruega a Cristo por nosotros, Antonio divino y santo, para que dignos así de sus promesas seamos.",
+        "en": "Pray to Christ for us, Anthony, holy and divine, that we may be worthy of his promises.",
+        "pt": "Roga a Cristo por nós, António divino e santo, para que dignos assim das suas promessas sejamos."
       }
     },
     {
@@ -436,10 +453,15 @@
         "es": "Oración final",
         "en": "Final prayer",
         "pt": "Oração final"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
     }
   ],
-  "notes": "Texto literal de IVE. Se corrige la errata «Si quieres ver milagros» → «Si buscas milagros, mira».",
+  "notes": "Texto literal de IVE. Se corrige la errata «Si quieres ver milagros» → «Si buscas milagros, mira». El responsorio se reza tomando la medalla del Santo; su Gloria se cita con prayerRef, no como texto.",
   "image": "san-antonio-padua-coronilla",
   "variables": [],
   "promise": null,

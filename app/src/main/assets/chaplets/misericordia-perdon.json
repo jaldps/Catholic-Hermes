@@ -80,10 +80,31 @@
     {
       "bead": 0,
       "text": {
-        "es": "Señor Jesús, creemos en ti, porque eres el Hijo de María y el Hijo del Dios vivo, Creador y Redentor. Viniste del cielo a la tierra para salvar a toda la humanidad. Tú eres el Salvador del mundo. Nos enseñaste a rezar: «Padre nuestro que estás en los cielos… Amén».",
-        "en": "Lord Jesus, we believe in You as You are the Son of Mary and the Son of the Living God, Creator and Redeemer. You came from heaven to earth to save all mankind. You are the Savior of the World. You taught us to pray: 'Our Father, who art in heaven… Amen.'",
-        "pt": "Senhor Jesus, cremos em ti, porque és o Filho de Maria e o Filho do Deus vivo, Criador e Redentor. Vieste do céu à terra para salvar toda a humanidade. Tu és o Salvador do mundo. Ensinaste-nos a rezar: «Pai nosso que estás nos céus… Amém»."
+        "es": "Señor Jesús, creemos en ti, porque eres el Hijo de María y el Hijo del Dios vivo, Creador y Redentor. Viniste del cielo a la tierra para salvar a toda la humanidad. Tú eres el Salvador del mundo. Nos enseñaste a rezar:",
+        "en": "Lord Jesus, we believe in You as You are the Son of Mary and the Son of the Living God, Creator and Redeemer. You came from heaven to earth to save all mankind. You are the Savior of the World. You taught us to pray:",
+        "pt": "Senhor Jesus, cremos em ti, porque és o Filho de Maria e o Filho do Deus vivo, Criador e Redentor. Vieste do céu à terra para salvar toda a humanidade. Tu és o Salvador do mundo. Ensinaste-nos a rezar:"
       }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 1,
+      "text": {
+        "es": "Jesús misericordioso, nuestro Redentor, dijiste: «pedid y recibiréis». Te pedimos humildemente que escuches nuestra oración, perdones nuestros pecados y nos concedas tu paz y salvación. Te alabamos ahora y siempre. Amén.",
+        "en": "Merciful Jesus, our Redeemer, You said, 'ask and you shall receive.' We humbly ask You to hear our prayer, forgive us our sins and grant us Your peace and salvation. We praise You now and forever. Amen.",
+        "pt": "Jesus misericordioso, nosso Redentor, disseste: «pedi e recebereis». Pedimos-te humildemente que ouças a nossa oração, perdoes os nossos pecados e nos concedas a tua paz e salvação. Louvamos-te agora e sempre. Amém."
+      }
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros.",
+        "en": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us.",
+        "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós."
+      },
+      "repeat": 3
     },
     {
       "bead": 5,
@@ -231,7 +252,7 @@
     },
     "source": "https://www.catholicdoors.com/prayers/chaplets/chap27.htm"
   },
-  "notes": "Texto literal de Catholic Doors. El Padre Nuestro dentro de la oración inicial se deja como texto continuo, no duplicado como prayerRef.",
+  "notes": "Texto literal de Catholic Doors. El Padre Nuestro citado en la oración inicial sobre el crucifijo se cita con prayerRef, no como texto literal. «Todas» las cuentas de Padre Nuestro y Avemaría incluyen también la cuenta grande y las tres pequeñas iniciales.",
   "image": "misericordia-perdon",
   "variables": [],
   "promise": null,

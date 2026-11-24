@@ -1,0 +1,251 @@
+{
+  "id": "san-judas-coronilla",
+  "sourceId": "CD-24",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de San Judas",
+    "en": "Chaplet of Saint Jude",
+    "pt": "Coronilha de São Judas"
+  },
+  "summary": {
+    "es": "Cruz, nueve cuentas y medalla, con Avemarías e invocaciones a San Judas.",
+    "en": "Cross, nine beads and medal, with Hail Marys and invocations to St Jude.",
+    "pt": "Cruz, nove contas e medalha, com Ave Marias e invocações a São Judas."
+  },
+  "instrument": {
+    "es": "Cruz, 9 cuentas y medalla de San Judas.",
+    "en": "Cross, 9 beads and St Jude medal.",
+    "pt": "Cruz, 9 contas e medalha de São Judas."
+  },
+  "when": {
+    "es": "Uso libre; causas desesperadas.",
+    "en": "At any time; desperate cases.",
+    "pt": "Uso livre; causas desesperadas."
+  },
+  "weekdays": [],
+  "variables": [
+    "intention"
+  ],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "medal"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "text": {
+        "es": "San Judas, apóstol glorioso, siervo fiel y amigo de Jesús, el nombre del traidor ha hecho que muchos te olviden, pero la Iglesia verdadera te invoca universalmente como patrono de las causas desesperadas; ruega por mí para que reciba finalmente los consuelos y el auxilio del cielo en todas mis necesidades, tribulaciones y sufrimientos, especialmente... {{intencion}}, y para que bendiga a Dios con los elegidos por toda la eternidad. Amén.",
+        "en": "Saint Jude pray for us and hear our prayers. Amen.",
+        "pt": "São Judas, apóstolo glorioso, servo fiel e amigo de Jesus, o nome do traidor fez com que muitos te esquecessem, mas a verdadeira Igreja te invoca universalmente como padroeiro das causas desesperadas; roga por mim para que receba finalmente os consolos e o auxílio do céu em todas as minhas necessidades, tribulações e sofrimentos, especialmente... {{intencion}}, e para que abençoe a Deus com os eleitos por toda a eternidade. Amém."
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 1,
+      "text": {
+        "es": "San Judas, apóstol mártir y pariente de nuestro Señor Jesucristo, de María y de José, intercede por nosotros.",
+        "en": "Saint Jude, Apostle martyr and relative of Our Lord Jesus Christ, Mary and of Joseph, intercede for us.",
+        "pt": "São Judas, apóstolo mártir e parente do nosso Senhor Jesus Cristo, de Maria e de José, intercede por nós."
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "San Judas, apóstol mártir y pariente de nuestro Señor Jesucristo, de María y de José, intercede por nosotros.",
+        "en": "Saint Jude, Apostle martyr and relative of Our Lord Jesus Christ, Mary and of Joseph, intercede for us.",
+        "pt": "São Judas, apóstolo mártir e parente do nosso Senhor Jesus Cristo, de Maria e de José, intercede por nós."
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "San Judas, apóstol mártir y pariente de nuestro Señor Jesucristo, de María y de José, intercede por nosotros.",
+        "en": "Saint Jude, Apostle martyr and relative of Our Lord Jesus Christ, Mary and of Joseph, intercede for us.",
+        "pt": "São Judas, apóstolo mártir e parente do nosso Senhor Jesus Cristo, de Maria e de José, intercede por nós."
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "San Judas, apóstol mártir y pariente de nuestro Señor Jesucristo, de María y de José, intercede por nosotros.",
+        "en": "Saint Jude, Apostle martyr and relative of Our Lord Jesus Christ, Mary and of Joseph, intercede for us.",
+        "pt": "São Judas, apóstolo mártir e parente do nosso Senhor Jesus Cristo, de Maria e de José, intercede por nós."
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "San Judas, apóstol mártir y pariente de nuestro Señor Jesucristo, de María y de José, intercede por nosotros.",
+        "en": "Saint Jude, Apostle martyr and relative of Our Lord Jesus Christ, Mary and of Joseph, intercede for us.",
+        "pt": "São Judas, apóstolo mártir e parente do nosso Senhor Jesus Cristo, de Maria e de José, intercede por nós."
+      }
+    },
+    {
+      "bead": 6,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "San Judas, apóstol mártir y pariente de nuestro Señor Jesucristo, de María y de José, intercede por nosotros.",
+        "en": "Saint Jude, Apostle martyr and relative of Our Lord Jesus Christ, Mary and of Joseph, intercede for us.",
+        "pt": "São Judas, apóstolo mártir e parente do nosso Senhor Jesus Cristo, de Maria e de José, intercede por nós."
+      }
+    },
+    {
+      "bead": 7,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "San Judas, apóstol mártir y pariente de nuestro Señor Jesucristo, de María y de José, intercede por nosotros.",
+        "en": "Saint Jude, Apostle martyr and relative of Our Lord Jesus Christ, Mary and of Joseph, intercede for us.",
+        "pt": "São Judas, apóstolo mártir e parente do nosso Senhor Jesus Cristo, de Maria e de José, intercede por nós."
+      }
+    },
+    {
+      "bead": 8,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "San Judas, apóstol mártir y pariente de nuestro Señor Jesucristo, de María y de José, intercede por nosotros.",
+        "en": "Saint Jude, Apostle martyr and relative of Our Lord Jesus Christ, Mary and of Joseph, intercede for us.",
+        "pt": "São Judas, apóstolo mártir e parente do nosso Senhor Jesus Cristo, de Maria e de José, intercede por nós."
+      }
+    },
+    {
+      "bead": 9,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "San Judas, apóstol mártir y pariente de nuestro Señor Jesucristo, de María y de José, intercede por nosotros.",
+        "en": "Saint Jude, Apostle martyr and relative of Our Lord Jesus Christ, Mary and of Joseph, intercede for us.",
+        "pt": "São Judas, apóstolo mártir e parente do nosso Senhor Jesus Cristo, de Maria e de José, intercede por nós."
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Que el Sagradísimo Corazón de Jesús sea adorado y amado en todos los sagrarios hasta el fin de los tiempos. Amén.",
+        "en": "May the Most Sacred Heart of Jesus be adored, and loved in all the tabernacles until the end of time. Amen.",
+        "pt": "Que o Sacratíssimo Coração de Jesus seja adorado e amado em todos os tabernáculos até ao fim dos tempos. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Que el Sagradísimo Corazón de Jesús sea alabado y glorificado ahora y siempre. Amén.",
+        "en": "May the most Sacred Heart of Jesus be praised and glorified now and forever. Amen.",
+        "pt": "Que o Sacratíssimo Coração de Jesus seja louvado e glorificado agora e sempre. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "San Judas, ruega por nosotros y escucha nuestras plegarias. Amén.",
+        "en": "Saint Jude pray for us and hear our prayers. Amen.",
+        "pt": "São Judas, roga por nós e ouve as nossas preces. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Bendito sea el Sagrado Corazón de Jesús. Bendito sea el Inmaculado Corazón de María. Bendito sea San Judas Tadeo, en todo el mundo y por toda la eternidad.",
+        "en": "Blessed be the Sacred Heart of Jesus. Blessed be the Immaculate Heart of Mary. Blessed be Saint Jude Thaddaeus, in all the world and for all Eternity.",
+        "pt": "Bendito seja o Sagrado Coração de Jesus. Bendito seja o Imaculado Coração de Maria. Bendito seja São Judas Tadeu, em todo o mundo e por toda a eternidade."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. La intención de la cruz usa {{intencion}} (variable declarada). Las cuatro oraciones finales de la fuente se separan en pasos distintos; se restaura el texto exacto «Saint Jude pray for us…» sin la coma añadida.",
+  "image": "san-judas-coronilla",
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Saint Jude",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap46.htm"
+    }
+  ]
+}

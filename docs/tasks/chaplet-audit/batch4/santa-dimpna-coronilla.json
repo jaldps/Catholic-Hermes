@@ -1,0 +1,120 @@
+{
+  "id": "santa-dimpna-coronilla",
+  "sourceId": "CD-19",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de Santa Dimpna",
+    "en": "Chaplet of Saint Dymphna",
+    "pt": "Coronilha de Santa Dimpna"
+  },
+  "summary": {
+    "es": "Medalla, dos cuentas y quince Glorias en colores por los 15 años de la santa.",
+    "en": "Medal, two beads and fifteen Glories in colours for the fifteen years of the saint.",
+    "pt": "Medalha, duas contas e quinze Glórias em cores pelos 15 anos da santa."
+  },
+  "instrument": {
+    "es": "Medalla + 2 cuentas + 5 rojas, 5 blancas y 5 verdes.",
+    "en": "Medal + 2 beads + 5 red, 5 white and 5 green.",
+    "pt": "Medalha + 2 contas + 5 vermelhas, 5 brancas e 5 verdes."
+  },
+  "when": {
+    "es": "Uso libre; intenciones personales al inicio o al final.",
+    "en": "At any time; personal intentions at the start or end.",
+    "pt": "Uso livre; intenções pessoais no início ou no fim."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 5,
+      "color": "#A52A2A"
+    },
+    {
+      "kind": "small",
+      "count": 5,
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 5,
+      "color": "#2E8B57"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 1,
+      "prayerRef": "our_father",
+      "rubric": {
+        "es": "Puedes exponer tus intenciones personales antes de empezar o al final.",
+        "en": "You may state your personal intentions before starting the Chaplet or at the end.",
+        "pt": "Podes apresentar as tuas intenções pessoais antes de começar ou no fim."
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "meditation": {
+        "es": "Por las intenciones del Papa.",
+        "en": "For the Holy Father's intentions.",
+        "pt": "Pelas intenções do Papa."
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be",
+      "repeat": 5,
+      "meditation": {
+        "es": "Las cuentas rojas honran el martirio de Santa Dimpna.",
+        "en": "The red beads honour the martyrdom of St Dymphna.",
+        "pt": "As contas vermelhas honram o martírio de Santa Dimpna."
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "glory_be",
+      "repeat": 5,
+      "meditation": {
+        "es": "Las cuentas blancas honran su virginidad.",
+        "en": "The white beads honour her virginity.",
+        "pt": "As contas brancas honram a sua virgindade."
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be",
+      "repeat": 5,
+      "meditation": {
+        "es": "Las cuentas verdes representan la esperanza de alivio de los trastornos emocionales.",
+        "en": "The green beads are for the hope of relief of emotional disorders.",
+        "pt": "As contas verdes representam a esperança de alívio dos transtornos emocionais."
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. No se afirma curación ni garantía: la fuente habla solo de «esperanza de alivio». Se recoge en la rúbrica la indicación de exponer las intenciones personales.",
+  "image": "santa-dimpna-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Saint Dymphna",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap48.htm"
+    }
+  ]
+}

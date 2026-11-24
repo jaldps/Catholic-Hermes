@@ -53,10 +53,20 @@
     {
       "bead": 2,
       "text": {
-        "es": "Santo, santo, santo Señor, Dios de los ejércitos. ¡El cielo y la tierra están llenos de tu gloria! Gloria al Padre, gloria al Hijo, gloria al Espíritu Santo.",
-        "en": "Holy, holy, holy Lord, God of Hosts. Heaven and earth are full of your Glory! Glory be to the Father: Glory be to the Son; Glory be to the Holy Spirit!",
-        "pt": "Santo, santo, santo Senhor, Deus dos Exércitos. O céu e a terra estão cheios da tua glória! Glória ao Pai, glória ao Filho, glória ao Espírito Santo."
+        "es": "Santo, santo, santo Señor, Dios de los ejércitos. ¡El cielo y la tierra están llenos de tu gloria!",
+        "en": "Holy, holy, holy Lord, God of Hosts. Heaven and earth are full of your Glory!",
+        "pt": "Santo, santo, santo Senhor, Deus dos Exércitos. O céu e a terra estão cheios da tua glória!"
       },
+      "repeat": 9,
+      "meditation": {
+        "es": "En honor de los nueve coros angélicos: ángeles, arcángeles, tronos, dominaciones, virtudes, principados, potestades, querubines y serafines.",
+        "en": "In honour of the nine angelic choirs: Angels, Archangels, Thrones, Dominations, Virtues, Principalities, Powers, Cherubim and Seraphim.",
+        "pt": "Em honra dos nove coros angélicos: anjos, arcanjos, tronos, dominações, virtudes, principados, potestades, querubins e serafins."
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "glory_be",
       "repeat": 9
     },
     {
@@ -65,10 +75,15 @@
         "es": "San Rafael, ángel de la salud, del amor, de la alegría y de la luz, ruega por nosotros.",
         "en": "Saint Raphael, angel of health, of love, of joy and light, pray for us.",
         "pt": "São Rafael, anjo da saúde, do amor, da alegria e da luz, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
     }
   ],
-  "notes": "Texto literal de Catholic Doors. Nueve cuentas por los nueve coros angélicos.",
+  "notes": "Texto literal de Catholic Doors. Nueve cuentas por los nueve coros angélicos, enumerados en la fuente y recogidos en la meditación del grupo. El Gloria Patri que la fuente incluye en cada cuenta se cita con prayerRef, no como texto.",
   "image": "san-rafael-coronilla",
   "variables": [],
   "promise": null,

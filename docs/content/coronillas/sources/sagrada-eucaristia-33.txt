@@ -1,0 +1,241 @@
+URL: https://hozana.org/es/oracion/santo-rosario/santisimo-sacramento
+
+Coronilla al Santísimo Sacramento
+- Hozana
+{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","headline":"Coronilla al Sant\u00edsimo Sacramento","inLanguage":"es","image":["https:\/\/hozana.org\/img\/hozana_share.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hozana.org\/es\/oracion\/santo-rosario\/santisimo-sacramento"},"publisher":{"@type":"Organization","name":"Hozana.org","logo":{"@type":"ImageObject","url":"https:\/\/hozana.org\/apple-touch-icon.png"}},"description":"Descubre dos maneras de rezar el Sant\u00edsimo Sacramento con un rosario, a meditar el misterio de la presencia real de Jes\u00fas en la hostia y a entrar en comuni\u00f3n cuando no podemos ir a una celebraci\u00f3n de la Eucarist\u00eda.","datePublished":"2020-10-23T15:44:37+00:00","dateModified":"2026-06-09T07:08:47+00:00"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https:\/\/hozana.org\/es"},{"@type":"ListItem","position":2,"name":"Consejos para orar","item":"https:\/\/hozana.org\/es\/oracion"},{"@type":"ListItem","position":3,"name":"Santo Rosario: m\u00e9todo y consejos","item":"https:\/\/hozana.org\/es\/oracion\/santo-rosario"},{"@type":"ListItem","position":4,"name":"Coronilla al Sant\u00edsimo Sacramento","item":"https:\/\/hozana.org\/es\/oracion\/santo-rosario\/santisimo-sacramento"}]},{"@type":"Organization","name":"Hozana","url":"https:\/\/hozana.org","logo":{"@type":"ImageObject","url":"https:\/\/hozana.org\/apple-touch-icon.png"}}]}
+window.sentryDsn = 'https://05545f841574d7190c078cc407d7a978@o86393.ingest.us.sentry.io/4510940097478656';
+/*
+Bienvenue à toi, visiteur du code source d'Hozana.org ! gauthier-seo
+Ici, nous bâtissons une cathédrale. Nous cherchons à mettre en oeuvre le meilleur de la techno afin de rassembler une immense communauté de prière sur Internet et mobile.
+Le site est développé par l'association Hozana, dont le modèle repose sur les dons, et le bénévolat. L'association compte une équipe de 20 permanents (dont 5 dev, un designer/intégrateur, un product owner), et plus de 90 bénévoles (dont une dizaine de dev).
+Nous cherchons en permanence des développeurs bénévoles pour nous aider à livrer rapidement des produits selon les meilleurs standards du Web. Si tu veux rejoindre un projet passionnant et nous aider à rendre le monde chaque jour un peu plus priant, n'hésite pas à nous écrire ici : https://hozana.org/contact.
+Nous cherchons également régulièrement à recruter des développeurs, donc n'hésite pas à nous écrire si cela peut t'intéresser !
+Notre stack :
+- Front : React, Typescript, NextJS, Redux, Service Workers (Hozana.org est une PWA), Storybook, Cypress
+- Server : API REST en Symfony, MySQL, Elasticsearch, Redis
+- Data : une application Metabase tourne avec une réplication quotidienne du MySQL de prod, après quelques adaptations d'un ETL écrit en python.
+- Tooling : CircleCI, Prometheus / Grafana, Sentry, Uptime. L'environnement de dev est sous Docker.
+- Tests : Jest, Storybook, Cypress
+« Nous, on est à peine une dizaine. C'est un tout petit navire. C'est pas un navire, c'est une barque. C'est pas une barque d'ailleurs, c'est un radeau. Mais sur le radeau, j'ai choisi les meilleurs. »
+.:+oo-
+':+ssssssso-
+':ossssssssssss+'
+-+sssssssssssssssss-
+'/sssssssssssssssssssss/
+'/ssssssssssssssssssssssss+'
+:ssssssssssssssssssssssssssso'
+.ossssssssssssssssssssssssssssso
+:ssssssssssssssssssssssssssssssss+
++ssssssssssssssssssssssssssssssssss-
++ssssssssssssssssssssssssssssssssssss
+/sssssssssssssssssssssssssssssssssssss:
+.sssssssssssssssssssssssssssssssssssssso
++ssssssssssssssssss+osssssssssssssssssss
+ssssssssssssssssss- -osssssssssssssssss'
+'sssssssssssssssss- :ssssssssssssssss
+ssssssssssssssss. 'ossssssssssssso
+/ssssssssssssso' '+ssssssssssss-
+'ssssssssssss+ 'ssssssssssso'
+.ssssssssss+ :ssssssssso'
+.sssssssso .sssssssso'
+'+ssssss: .sssssss/
+.+ssss: /sssss/'
+./oso' .ssso:'
+'-- .+/-
+*/
+window._vwo_code=window._vwo_code||(function(){
+var account_id=706531,
+version=1.5,
+settings_tolerance=1000,
+library_tolerance=2500,
+use_existing_jquery=false,
+is_spa=0,
+hide_element='body',
+hide_element_style='opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery},library_tolerance:function(){return library_tolerance},hide_element_style:function(){return'{'+hide_element_style+'}'},finish:function(){if(!f){f=true;var e=d.getElementById('_vis_opt_path_hides');if(e)e.parentNode.removeChild(e)}},finished:function(){return f},load:function(e){var t=d.createElement('script');t.fetchPriority='high';t.src=e;t.type='text/javascript';t.innerText;t.onerror=function(){window._vwo_code.finish()};d.getElementsByTagName('head')[0].appendChild(t)},getVersion:function(){return version},getMatchedCookies:function(e){var t=[];if(document.cookie){t=document.cookie.match(e)||[]}return t},getCombinationCookie:function(){var e=code.getMatchedCookies(/(?:^|;)\s?(vis_opt_exp\d+_combi=[^;$])/gi);e=e.map(function(e){try{var t=decodeURIComponent(e);if(!/vis_opt_exp\d+_combi=(?:\d+,?)+\s*$/.test(t)){return''}return t}catch(e){return''}});var i=[];e.forEach(function(e){var t=e.match(/([\d,]+)/g);t&&i.push(t.join('-'))});return i.join('|')},init:function(){if(d.URL.indexOf('vwo_disable')>-1)return;window.settings_timer=setTimeout(function(){window._vwo_code.finish()},settings_tolerance);var e=d.createElement('style'),t=hide_element?hide_element+'{'+hide_element_style+'}':'',i=d.getElementsByTagName('head')[0];e.setAttribute('id','_vis_opt_path_hides');e.setAttribute('type','text/css');if(e.styleSheet)e.styleSheet.cssText=t;else e.appendChild(d.createTextNode(t));i.appendChild(e);var n=this.getCombinationCookie();this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+is_spa+'&vn='+version+(n?'&c='+n:''));return settings_timer}};window._vwo_settings_timer=code.init();return code;}());
+window.gtmDL = window.gtmDL || [];
+window.gtmPush = function(args) { gtmDL.push(args); };
+gtmPush({
+event: 'gtm.js',
+'gtm.start': new Date().getTime(),
+appName: 'Hozana',
+appVersion: document.querySelector('meta[name="version"]')
+? document.querySelector('meta[name="version"]').getAttribute('content')
+: '1.0.0',
+isWidget: window.location.pathname.indexOf('/widget/') !== -1,
+ssr: true
+});
+(function(d, s) {
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s);
+j.async = true;
+j.src = 'https://www.googletagmanager.com/gtm.js?l=gtmDL'
++ '&id=GTM-PNXWBQW'
++ '>m_auth=A9O_skATQQerh6uBGBpvsg'
++ '>m_preview=env-3'
++ '>m_cookies_win=x';
+var n = d.querySelector('script[nonce]');
+if (n) { j.setAttribute('nonce', n.nonce || n.getAttribute('nonce')); }
+f.parentNode.insertBefore(j, f);
+})(document, 'script');
+window.lang = 'es';
+Consejos para orar
+Santo Rosario: método y consejos
+Coronilla al Santísimo Sacramento
+Coronilla al Santísimo Sacramento
+Los misterios del Santo Rosario
+Misterios dolorosos (Rosario de los martes y viernes)
+Misterios luminosos (Rosario de los jueves)
+Misterios gozosos (Rosario de los lunes y sábados)
+Misterios gloriosos (Rosario de los miércoles y los domingos)
+Rosario de la Virgen de Lourdes
+Coronilla de liberación
+Coronilla de las llagas de cristo
+Coronilla al Espíritu Santo
+Coronilla de la Divina Misericordia
+Coronilla a San Miguel Arcángel
+Coronilla a San José
+24 Glorias a Santa Teresita
+Rosario a las benditas almas del purgatorio
+El rosario de San Miguel
+document.addEventListener('DOMContentLoaded', function() {
+const button = document.getElementById('breadcrumb-dropdown-btn');
+const menu = document.getElementById('breadcrumb-dropdown-menu');
+const currentToggle = document.getElementById('breadcrumb-current-toggle');
+if (button && menu) {
+const chevron = button.querySelector('svg');
+function setOpen(open) {
+if (open) {
+menu.classList.remove('hidden');
+if (chevron) chevron.style.transform = 'rotate(180deg)';
+button.setAttribute('aria-expanded', 'true');
+if (currentToggle) currentToggle.setAttribute('aria-expanded', 'true');
+} else {
+menu.classList.add('hidden');
+if (chevron) chevron.style.transform = 'rotate(0deg)';
+button.setAttribute('aria-expanded', 'false');
+if (currentToggle) currentToggle.setAttribute('aria-expanded', 'false');
+}
+}
+function toggleMenu() {
+const open = menu.classList.contains('hidden');
+setOpen(open);
+}
+button.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+toggleMenu();
+});
+if (currentToggle) {
+currentToggle.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+toggleMenu();
+});
+}
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+if (!button.contains(e.target) && !menu.contains(e.target) && !(currentToggle && currentToggle.contains(e.target))) {
+setOpen(false);
+}
+});
+// Close dropdown on escape key
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+setOpen(false);
+button.focus();
+}
+});
+// Add transition to the chevron
+if (chevron) {
+chevron.style.transition = 'transform 0.2s ease-in-out';
+}
+}
+});
+Coronilla al Santísimo Sacramento
+El Santísimo Sacramento es uno de los misterios cristianos más maravillosos. A través de él, Jesús, totalmente presente en la hostia consagrada, se ofrece a nosotros para que nos convirtamos en un solo cuerpo con Él y con nuestros hermanos y hermanas en Cristo. La Eucaristía nos permite nutrirnos de este amor vivo, y la adoración del Santísimo Sacramento nos permite contemplar y exponer nuestros corazones a esta luz divina. Si no tenemos la oportunidad de comulgar en la misa o de ir a una iglesia para sentir la presencia de Jesús, podemos rezar al Santísimo Sacramento con un Rosario.
+Existen varios tipos de Rosarios especiales al Santísimo Sacramento, a continuación, dos de ellos.
+Actualizado el 09/06/2026|Tiempo de lectura : 4 min
+Sommaire
+Coronilla para meditar y adorar al Santísimo Sacramento
+Coronilla de la Sagrada Eucaristía
+¡Reza a Cristo con el rosario en Hozana!
+Reza el Rosario con la Virgen María
+9 días de meditaciones guiadas. Únete a 3.628 orantes.
+Sí, rezo el Rosario con ellos
+Coronilla para meditar y adorar al Santísimo Sacramento
+Esta oración también es conocida como Rosario (especial) al Santísimo Sacramento y se reza con un rosario tradicional (instrumento).
+Se comienza con:
+La señal de la santa cruz y el Padre Nuestro en el crucifijo
+Luego se rezan 3 Ave Marías
+Y 1 Gloria al Padre
+Acto seguido, en cada decena del rosario, se nos invita a meditar sobre un misterio del Santísimo Sacramento, mientras rezamos como sigue:
+En cada una de las cuentas o perlas pequeñas se reza: "Jesús, alabado seas en todo momento, en el Santísimo Sacramento, hoy y siempre. Jesús, alabado seas en el Santísimo Sacramento.”
+En la cuenta o perla grande: se reza un Padre Nuestro.
+Los 5 misterios
+Jesús instituyó el misterio de la Eucaristía en memoria de su pasión y muerte.
+Jesucristo instituyó el Santísimo Sacramento para que viva en nosotros cada día de nuestras vidas.
+Jesucristo instituyó el Santísimo Sacramento para perpetuar su sacrificio por nosotros en todos los altares de la cristiandad hasta el fin de los tiempos.
+Jesucristo instituyó el Santísimo Sacramento para ser el pan y el vino de nuestra alma, nuestro alimento espiritual.
+Jesucristo instituyó el Santísimo Sacramento para visitarnos en el momento de nuestra muerte y llevarnos con Él al cielo.
+Consagra tu corazón a Jesús cada día
+Meditaciones diarias con san Juan Pablo II. Empieza hoy.
+Sí, quiero consagrarme a Jesús
+Coronilla de la Sagrada Eucaristía
+Esta oración también se conoce como Rosario (especial) de la Sagrada Eucaristía y se reza con un rosario específico compuesto de 33 cuentas o perlas, las cuales representan los 33 años de Jesús en la Tierra, pero si no lo tienes, puedes usar el rosario tradicional. De hecho, este Rosario especial se reza cuando no podemos recibir la comunión durante una celebración eucarística.
+Mientras se sostiene la medalla (o cruz) decimos: "Como no puedo recibirte, Jesús mío, en la Santa Comunión, ven espiritualmente a mi corazón, y hazlo siempre tuyo".
+Luego, en cada uno de las 33 cuentas o granos, decimos: "Jesús, presente en el Santísimo Sacramento del altar, ten piedad de nosotros".
+¡Reza a Cristo con el rosario en Hozana!
+Descubre otros rosarios y oraciones para rezar a Jesucristo, por ejemplo, el Rosario a la Divina Misericordia, la hermosa novena al Sagrado Corazón de Jesús, etc.
+Recuerda que en Hozana, puedes descubrir diferentes propuestas espirituales para que te nutras del amor de Dios. ¡Únete a una de estas comunidades en línea o deposita tu intención de oración desde hoy mismo!
+Artículos relacionados
+Fiestas
+¿Qué tipo de ayuno debo hacer durante la Cuaresma?
+Oracion
+Oración al Espíritu Santo
+Oracion
+Oración de la mañana
+Biblia
+Versículos de la biblia para orar y meditar
+Artículos relacionados
+Fiestas
+¿Qué tipo de ayuno debo hacer durante la Cuaresma?
+Oracion
+Oración al Espíritu Santo
+Oracion
+Oración de la mañana
+Biblia
+Versículos de la biblia para orar y meditar
+×
+Unirse ahora
+No, gracias, sigo leyendo
+×
+Mantente fiel al rezo del rosario cada día con la aplicación Rosario
+•
+Reza todos los días con Rosario
+•
+La primera app del rosario viviente
+•
+Haz rezar a tus seres queridos
+Descargar gratis
+×
+Descubre la meditación cristiana con la aplicación Meditatio
+•
+Medita cada día con Meditatio
+•
+Meditaciones guiadas para profundizar tu fe
+•
+Encuentra la paz interior a través de la oración
+Descargar gratis
+Enviar una intención
+Association Hozana - 6 rue du Palais de Justice, 69005 Lyon.
+|
+Términos y Condiciones
+|
+Carta de Hozana
+|
+Preguntas Frecuentes
+|
+Protección de la infancia
+|
+Política de Privacidad

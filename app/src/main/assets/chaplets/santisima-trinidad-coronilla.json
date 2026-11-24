@@ -81,18 +81,38 @@
       "bead": 0,
       "text": {
         "es": "Inclínate a auxiliarme, oh Dios; Señor, date prisa en socorrerme.",
-        "en": "Incline unto mine aid, O God, O Lord, make haste to help me.",
+        "en": "Incline unto mine aid, O God, O Lord make haste to help me.",
         "pt": "Inclinai-vos a auxiliar-me, ó Deus; Senhor, apressai-vos em socorrer-me."
       }
     },
     {
-      "bead": 2,
-      "text": {
+      "bead": 1,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "prayerRef": "glory_be",
+      "meditation": {
         "es": "Gloria a ti, dulcísima, nobilísima, resplandeciente, pacífica e inefable Trinidad. Amén.",
         "en": "Glory be to Thee, O most sweet, most noble, resplendent, peaceful, ineffable Trinity. Amen",
         "pt": "Glória a ti, docíssima, nobilíssima, resplandecente, pacífica e inefável Trindade. Amém."
+      }
+    },
+    {
+      "bead": 2,
+      "repeat": 3,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       },
-      "repeat": 3
+      "prayerRef": "glory_be",
+      "meditation": {
+        "es": "Gloria a ti, dulcísima, nobilísima, resplandeciente, pacífica e inefable Trinidad. Amén.",
+        "en": "Glory be to Thee, O most sweet, most noble, resplendent, peaceful, ineffable Trinity. Amen",
+        "pt": "Glória a ti, docíssima, nobilíssima, resplandecente, pacífica e inefável Trindade. Amém."
+      }
     },
     {
       "bead": 6,
@@ -101,10 +121,15 @@
         "en": "Glory, honor and praise be to the great Eternal God. Amen.",
         "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
-      "bead": 5,
+      "bead": 7,
       "prayerRef": "glory_be"
     },
     {
@@ -114,10 +139,15 @@
         "en": "Glory, honor and praise be to the great Eternal God. Amen.",
         "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
-      "bead": 7,
+      "bead": 9,
       "prayerRef": "glory_be"
     },
     {
@@ -127,10 +157,15 @@
         "en": "Glory, honor and praise be to the great Eternal God. Amen.",
         "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
-      "bead": 9,
+      "bead": 11,
       "prayerRef": "glory_be"
     },
     {
@@ -140,10 +175,15 @@
         "en": "Glory, honor and praise be to the great Eternal God. Amen.",
         "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
-      "bead": 11,
+      "bead": 13,
       "prayerRef": "glory_be"
     },
     {
@@ -153,10 +193,15 @@
         "en": "Glory, honor and praise be to the great Eternal God. Amen.",
         "pt": "Glória, honra e louvor ao grande Deus Eterno. Amém."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
-      "bead": 13,
+      "bead": null,
       "prayerRef": "glory_be"
     },
     {
@@ -178,7 +223,7 @@
       }
     }
   ],
-  "notes": "Texto literal de Catholic Doors; errata corregida: «make hast»→«make haste». Las alabanzas divinas van como texto continuo.",
+  "notes": "Texto literal de Catholic Doors; errata de la fuente corregida: «make hast»→«make haste». La alabanza trinitaria se dice en las tres cuentas pequeñas y en una cuenta grande (se modela en la primera grande, junto a la cruz). «Gloria, honor y alabanza…» va en las diez cuentas pequeñas de cada decena y el Gloria al Padre DESPUÉS de cada decena. Se cierra con tres Glorias y las Alabanzas divinas. Estas jaculatorias se dicen en conjunto, sin diálogo V/R.",
   "image": "santisima-trinidad-coronilla",
   "variables": [],
   "promise": null,

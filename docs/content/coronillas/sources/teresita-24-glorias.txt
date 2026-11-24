@@ -1,0 +1,242 @@
+URL: https://hozana.org/es/oracion/santo-rosario/santa-teresita
+
+24 Glorias a Santa Teresita
+- Hozana
+{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","headline":"24 Glorias a Santa Teresita","inLanguage":"es","image":["https:\/\/hozana.org\/img\/hozana_share.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hozana.org\/es\/oracion\/santo-rosario\/santa-teresita"},"publisher":{"@type":"Organization","name":"Hozana.org","logo":{"@type":"ImageObject","url":"https:\/\/hozana.org\/apple-touch-icon.png"}},"description":"Descubre una gu\u00eda para rezar el rosario a Santa Teresita. Tambi\u00e9n encontrar\u00e1s una oraci\u00f3n complementaria, para rezar al final del rosario si lo deseas.","datePublished":"2023-10-30T10:41:19+00:00","dateModified":"2026-06-09T07:31:29+00:00"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https:\/\/hozana.org\/es"},{"@type":"ListItem","position":2,"name":"Consejos para orar","item":"https:\/\/hozana.org\/es\/oracion"},{"@type":"ListItem","position":3,"name":"Santo Rosario: m\u00e9todo y consejos","item":"https:\/\/hozana.org\/es\/oracion\/santo-rosario"},{"@type":"ListItem","position":4,"name":"24 Glorias a Santa Teresita","item":"https:\/\/hozana.org\/es\/oracion\/santo-rosario\/santa-teresita"}]},{"@type":"Organization","name":"Hozana","url":"https:\/\/hozana.org","logo":{"@type":"ImageObject","url":"https:\/\/hozana.org\/apple-touch-icon.png"}}]}
+window.sentryDsn = 'https://05545f841574d7190c078cc407d7a978@o86393.ingest.us.sentry.io/4510940097478656';
+/*
+Bienvenue à toi, visiteur du code source d'Hozana.org ! gauthier-seo
+Ici, nous bâtissons une cathédrale. Nous cherchons à mettre en oeuvre le meilleur de la techno afin de rassembler une immense communauté de prière sur Internet et mobile.
+Le site est développé par l'association Hozana, dont le modèle repose sur les dons, et le bénévolat. L'association compte une équipe de 20 permanents (dont 5 dev, un designer/intégrateur, un product owner), et plus de 90 bénévoles (dont une dizaine de dev).
+Nous cherchons en permanence des développeurs bénévoles pour nous aider à livrer rapidement des produits selon les meilleurs standards du Web. Si tu veux rejoindre un projet passionnant et nous aider à rendre le monde chaque jour un peu plus priant, n'hésite pas à nous écrire ici : https://hozana.org/contact.
+Nous cherchons également régulièrement à recruter des développeurs, donc n'hésite pas à nous écrire si cela peut t'intéresser !
+Notre stack :
+- Front : React, Typescript, NextJS, Redux, Service Workers (Hozana.org est une PWA), Storybook, Cypress
+- Server : API REST en Symfony, MySQL, Elasticsearch, Redis
+- Data : une application Metabase tourne avec une réplication quotidienne du MySQL de prod, après quelques adaptations d'un ETL écrit en python.
+- Tooling : CircleCI, Prometheus / Grafana, Sentry, Uptime. L'environnement de dev est sous Docker.
+- Tests : Jest, Storybook, Cypress
+« Nous, on est à peine une dizaine. C'est un tout petit navire. C'est pas un navire, c'est une barque. C'est pas une barque d'ailleurs, c'est un radeau. Mais sur le radeau, j'ai choisi les meilleurs. »
+.:+oo-
+':+ssssssso-
+':ossssssssssss+'
+-+sssssssssssssssss-
+'/sssssssssssssssssssss/
+'/ssssssssssssssssssssssss+'
+:ssssssssssssssssssssssssssso'
+.ossssssssssssssssssssssssssssso
+:ssssssssssssssssssssssssssssssss+
++ssssssssssssssssssssssssssssssssss-
++ssssssssssssssssssssssssssssssssssss
+/sssssssssssssssssssssssssssssssssssss:
+.sssssssssssssssssssssssssssssssssssssso
++ssssssssssssssssss+osssssssssssssssssss
+ssssssssssssssssss- -osssssssssssssssss'
+'sssssssssssssssss- :ssssssssssssssss
+ssssssssssssssss. 'ossssssssssssso
+/ssssssssssssso' '+ssssssssssss-
+'ssssssssssss+ 'ssssssssssso'
+.ssssssssss+ :ssssssssso'
+.sssssssso .sssssssso'
+'+ssssss: .sssssss/
+.+ssss: /sssss/'
+./oso' .ssso:'
+'-- .+/-
+*/
+window._vwo_code=window._vwo_code||(function(){
+var account_id=706531,
+version=1.5,
+settings_tolerance=1000,
+library_tolerance=2500,
+use_existing_jquery=false,
+is_spa=0,
+hide_element='body',
+hide_element_style='opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery},library_tolerance:function(){return library_tolerance},hide_element_style:function(){return'{'+hide_element_style+'}'},finish:function(){if(!f){f=true;var e=d.getElementById('_vis_opt_path_hides');if(e)e.parentNode.removeChild(e)}},finished:function(){return f},load:function(e){var t=d.createElement('script');t.fetchPriority='high';t.src=e;t.type='text/javascript';t.innerText;t.onerror=function(){window._vwo_code.finish()};d.getElementsByTagName('head')[0].appendChild(t)},getVersion:function(){return version},getMatchedCookies:function(e){var t=[];if(document.cookie){t=document.cookie.match(e)||[]}return t},getCombinationCookie:function(){var e=code.getMatchedCookies(/(?:^|;)\s?(vis_opt_exp\d+_combi=[^;$])/gi);e=e.map(function(e){try{var t=decodeURIComponent(e);if(!/vis_opt_exp\d+_combi=(?:\d+,?)+\s*$/.test(t)){return''}return t}catch(e){return''}});var i=[];e.forEach(function(e){var t=e.match(/([\d,]+)/g);t&&i.push(t.join('-'))});return i.join('|')},init:function(){if(d.URL.indexOf('vwo_disable')>-1)return;window.settings_timer=setTimeout(function(){window._vwo_code.finish()},settings_tolerance);var e=d.createElement('style'),t=hide_element?hide_element+'{'+hide_element_style+'}':'',i=d.getElementsByTagName('head')[0];e.setAttribute('id','_vis_opt_path_hides');e.setAttribute('type','text/css');if(e.styleSheet)e.styleSheet.cssText=t;else e.appendChild(d.createTextNode(t));i.appendChild(e);var n=this.getCombinationCookie();this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+is_spa+'&vn='+version+(n?'&c='+n:''));return settings_timer}};window._vwo_settings_timer=code.init();return code;}());
+window.gtmDL = window.gtmDL || [];
+window.gtmPush = function(args) { gtmDL.push(args); };
+gtmPush({
+event: 'gtm.js',
+'gtm.start': new Date().getTime(),
+appName: 'Hozana',
+appVersion: document.querySelector('meta[name="version"]')
+? document.querySelector('meta[name="version"]').getAttribute('content')
+: '1.0.0',
+isWidget: window.location.pathname.indexOf('/widget/') !== -1,
+ssr: true
+});
+(function(d, s) {
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s);
+j.async = true;
+j.src = 'https://www.googletagmanager.com/gtm.js?l=gtmDL'
++ '&id=GTM-PNXWBQW'
++ '>m_auth=A9O_skATQQerh6uBGBpvsg'
++ '>m_preview=env-3'
++ '>m_cookies_win=x';
+var n = d.querySelector('script[nonce]');
+if (n) { j.setAttribute('nonce', n.nonce || n.getAttribute('nonce')); }
+f.parentNode.insertBefore(j, f);
+})(document, 'script');
+window.lang = 'es';
+Consejos para orar
+Santo Rosario: método y consejos
+24 Glorias a Santa Teresita
+24 Glorias a Santa Teresita
+Los misterios del Santo Rosario
+Misterios dolorosos (Rosario de los martes y viernes)
+Misterios luminosos (Rosario de los jueves)
+Misterios gozosos (Rosario de los lunes y sábados)
+Misterios gloriosos (Rosario de los miércoles y los domingos)
+Rosario de la Virgen de Lourdes
+Coronilla de liberación
+Coronilla de las llagas de cristo
+Coronilla al Espíritu Santo
+Coronilla al Santísimo Sacramento
+Coronilla de la Divina Misericordia
+Coronilla a San Miguel Arcángel
+Coronilla a San José
+Rosario a las benditas almas del purgatorio
+El rosario de San Miguel
+document.addEventListener('DOMContentLoaded', function() {
+const button = document.getElementById('breadcrumb-dropdown-btn');
+const menu = document.getElementById('breadcrumb-dropdown-menu');
+const currentToggle = document.getElementById('breadcrumb-current-toggle');
+if (button && menu) {
+const chevron = button.querySelector('svg');
+function setOpen(open) {
+if (open) {
+menu.classList.remove('hidden');
+if (chevron) chevron.style.transform = 'rotate(180deg)';
+button.setAttribute('aria-expanded', 'true');
+if (currentToggle) currentToggle.setAttribute('aria-expanded', 'true');
+} else {
+menu.classList.add('hidden');
+if (chevron) chevron.style.transform = 'rotate(0deg)';
+button.setAttribute('aria-expanded', 'false');
+if (currentToggle) currentToggle.setAttribute('aria-expanded', 'false');
+}
+}
+function toggleMenu() {
+const open = menu.classList.contains('hidden');
+setOpen(open);
+}
+button.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+toggleMenu();
+});
+if (currentToggle) {
+currentToggle.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+toggleMenu();
+});
+}
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+if (!button.contains(e.target) && !menu.contains(e.target) && !(currentToggle && currentToggle.contains(e.target))) {
+setOpen(false);
+}
+});
+// Close dropdown on escape key
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+setOpen(false);
+button.focus();
+}
+});
+// Add transition to the chevron
+if (chevron) {
+chevron.style.transition = 'transform 0.2s ease-in-out';
+}
+}
+});
+24 Glorias a Santa Teresita
+Quizá has oído hablar del rosario pero ¿sabías que existen diferentes formas de rezar el rosario tradicional? ¿sabías que existe un rosario de 25 cuentas?: se tratan de rosarios diseñados específicamente para rezar a Santa Teresa. Tienen 24 cuentas para recordar los 24 años de vida de la pequeña Teresa, y una cuenta más, separada de las demás por una medalla de Santa Teresa.
+A continuación, te enseñamos cómo rezar las 24 glorias a Santa Teresa.
+Actualizado el 09/06/2026|Tiempo de lectura : 5 min
+Sommaire
+Rosario a Santa Teresita de Lisieux
+Oración complementaria al rosario de Santa Teresa
+Rezar el rosario en Hozana
+Más allá del rosario: frases de Teresita cada día
+Unos minutos diarios para crecer en santidad con su Caminito.
+Sí, quiero crecer con Teresita
+Rosario a Santa Teresita de Lisieux
+En cada una de las 24 cuentas
+"Santa Teresa del Niño Jesús y de la Santa Faz, recuerda tu promesa de hacer el bien en la tierra, derrama tu lluvia de rosas en abundancia sobre los que te invocan, y alcánzanos de Dios las gracias que esperamos de su infinita bondad. Amén".
+En la medalla
+"Oh Padre nuestro celestial, que, por medio de santa Teresa del Niño Jesús, quieres recordar al mundo el Amor misericordioso que llena tu corazón y la confianza filial que debemos tener en ti, te damos humildemente gracias por haber colmado de tanta gloria a la que fue siempre tu hija más fiel, y por haberle dado un poder maravilloso para atraer hacia ti cada día un gran número de almas que te alabarán eternamente".
+En la última cuenta
+"Oh Santa Teresa del Niño Jesús y de la Santa Faz, que mereciste ser proclamada Patrona de las misiones católicas en todo el mundo y Doctora de la Iglesia, recuerda tu promesa de ayudar a los sacerdotes, a los misioneros y a toda la Iglesia", y a continuación un Padre Nuestro.
+Oración complementaria al rosario de Santa Teresa
+Luego de rezar el rosario, se puede hacer una oración
+François Lugan, antiguo hermano de la Congregación de San Juan y actual responsable de la asociación “Apóstoles de Santa Teresa”, sugiere añadir una oración a Santa Teresa, que se reza al final del rosario.
+Novena: el rosario de Teresita en 9 días
+9 días de meditaciones desde el santuario de Alençon. Gratis.
+Sí, hago la novena con Teresita
+Oración propuesta por François Lugan
+"Santa Teresa del Niño Jesús y de la Santa Faz, tú que trajiste a la Iglesia el camino de la infancia espiritual, consíguenos el espíritu de la infancia, ese espíritu que nos hace vivir de Dios y sólo de Él;
+Santa Teresa del Niño Jesús y de la Santa Faz, tú que nos dijiste que cada minuto no vivido en el Amor es una pérdida de tiempo, enséñanos a hacerlo todo cada día con más Amor;
+Santa Teresa del Niño Jesús y de la Santa Faz, que viviste la vida de una familia cristiana antes de entrar en el Carmelo, pide a Dios que nuestra Iglesia y nuestro mundo tengan familias cristianas dignas de este nombre;
+Santa Teresa del Niño Jesús y de la Santa Faz, tú que tuviste padres cristianos, que todas las familias tengan padres más dignos del Cielo que de la Tierra, como tú misma dijiste de tu padre;
+Santa Teresa del Niño Jesús y de la Santa Faz, que entraste en el Carmelo para pedir por los sacerdotes, que tengamos el deseo de tener sacerdotes santos y, como dice Cristo en su Evangelio, que le pidamos que envíe obreros a su mies;
+Santa Teresa del Niño Jesús y de la Santa Faz, tú que perseveraste cuando el sufrimiento estaba presente, danos esta esperanza y este amor que nos impide hundirnos en la desesperación y la duda cuando todo parece ir mal o cuando el sufrimiento parece arrebatarnos todo;
+Santa Teresa del Niño Jesús y de la Santa Faz, tú que eres la patrona de las misiones, enséñanos a hacer del amor que tenemos a Dios un amor concreto a nuestros hermanos, a nuestros prójimos, como dice el Papa Benedicto XVI en su encíclica sobre el amor, tomando como ejemplo lo que vivió la Madre Teresa en la Tierra".
+Rezar el rosario en Hozana
+En Hozana, te ofrecemos diferentes propuestas espirituales para rezar diferentes rosarios con otros cristianos. De hecho, existen varias comunidades para rezar con Santa Teresita del Niño Jesús. Por ejemplo:
+Esta novena con Santa Teresita para caminar hacia la santidad, siguiendo el “caminito”
+Este retiro para recibir una capsulita de la espiritualidad de Santa teresita, y transformar nuestro cotidiano con una frase y una intención relacionada con la santa.
+También puedes dejar tus intenciones en este enlace y otras personas podrán apoyarte en oración.
+Artículos relacionados
+Fiestas
+¿Qué tipo de ayuno debo hacer durante la Cuaresma?
+Oracion
+Oración al Espíritu Santo
+Oracion
+Oración de la mañana
+Biblia
+Versículos de la biblia para orar y meditar
+Artículos relacionados
+Fiestas
+¿Qué tipo de ayuno debo hacer durante la Cuaresma?
+Oracion
+Oración al Espíritu Santo
+Oracion
+Oración de la mañana
+Biblia
+Versículos de la biblia para orar y meditar
+×
+Unirse ahora
+No, gracias, sigo leyendo
+×
+Mantente fiel al rezo del rosario cada día con la aplicación Rosario
+•
+Reza todos los días con Rosario
+•
+La primera app del rosario viviente
+•
+Haz rezar a tus seres queridos
+Descargar gratis
+×
+Descubre la meditación cristiana con la aplicación Meditatio
+•
+Medita cada día con Meditatio
+•
+Meditaciones guiadas para profundizar tu fe
+•
+Encuentra la paz interior a través de la oración
+Descargar gratis
+Enviar una intención
+Association Hozana - 6 rue du Palais de Justice, 69005 Lyon.
+|
+Términos y Condiciones
+|
+Carta de Hozana
+|
+Preguntas Frecuentes
+|
+Protección de la infancia
+|
+Política de Privacidad

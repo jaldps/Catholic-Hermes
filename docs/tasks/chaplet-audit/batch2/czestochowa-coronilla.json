@@ -1,0 +1,145 @@
+{
+  "id": "czestochowa-coronilla",
+  "sourceId": "CD-10",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla de Nuestra Señora de Czestochowa",
+    "en": "Chaplet of Our Lady of Czestochowa",
+    "pt": "Coronilha de Nossa Senhora de Czestochowa"
+  },
+  "summary": {
+    "es": "Cruz, nueve cuentas y medalla: tres Padres Nuestros, tres Avemarías y tres Glorias.",
+    "en": "Cross, nine beads and medal: three Our Fathers, three Hail Marys and three Glories.",
+    "pt": "Cruz, nove contas e medalha: três Pai-Nossos, três Ave Marias e três Glórias."
+  },
+  "instrument": {
+    "es": "Cruz, un grupo de 9 cuentas y medalla de Nuestra Señora de Czestochowa.",
+    "en": "Cross, one set of 9 beads and a medal of Our Lady of Czestochowa.",
+    "pt": "Cruz, um grupo de 9 contas e medalha de Nossa Senhora de Czestochowa."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "variables": [
+    "intention"
+  ],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "medal"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 4,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 6,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 8,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Oh Dios omnipotente y misericordioso, que diste a la nación polaca un auxilio y defensa maravillosos en la Virgen Santísima y honraste su imagen sagrada de Jasna Góra con singular veneración de los fieles. Concédenos por tu misericordia que, bajo su protección, luchemos con confianza toda la vida y seamos vencedores del enemigo en el momento de la muerte. Te lo pedimos por Cristo nuestro Señor. Amén.",
+        "en": "O Almighty and merciful God! You gave the Polish Nation a wondrous help and defense in the most holy Virgin Mary and You honoured Her sacred image at Jasna Gora with remarkable veneration of the faithful. Grant in Your mercy that, under Her protection, we may struggle confidently throughout our lives and at the moment of death be victorious over our enemy. We ask this through Christ our Lord. Amen.",
+        "pt": "Ó Deus omnipotente e misericordioso, que destes à nação polaca um auxílio e defesa maravilhosos na Virgem Santíssima e honrastes a sua imagem sagrada de Jasna Góra com singular veneração dos fiéis. Concedei-nos pela vossa misericórdia que, sob a sua proteção, lutemos com confiança toda a vida e sejamos vencedores do inimigo no momento da morte. Vo-lo pedimos por Cristo nosso Senhor. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Señora de Jasna Góra, Madre nuestra, Reina de la nación polaca. Confiando en tu bondad materna y poderosa intercesión ante tu Hijo, te presentamos nuestras humildes plegarias y peticiones. A ti encomendamos todas nuestras necesidades, en particular... (expón aquí tu intención) y a todos los hijos de la nación polaca, tanto en su tierra natal como en cualquier otro lugar del mundo.",
+        "en": "Lady of Jasna Gora, our Mother, Queen of the Polish Nation! Trusting in Your maternal goodness and powerful intercession with Your Son, we place before You our humble prayers and petitions. To You we commend all our needs, in particular... (State your intention here.) and all children of the Polish Nation whether in their native land or elsewhere in the world.",
+        "pt": "Senhora de Jasna Góra, Mãe nossa, Rainha da nação polaca! Confiando na vossa bondade materna e poderosa intercessão junto do vosso Filho, apresentamos-vos as nossas humildes preces e petições. A vós confiamos todas as nossas necessidades, em especial... (aqui a intenção) e todos os filhos da nação polaca, tanto na sua terra natal como em qualquer outro lugar do mundo."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. Se retira el Signo de la Cruz (la fuente no lo prescribe): 3 Padres Nuestros, 3 Avemarías y 3 Glorias en las nueve cuentas; las dos oraciones finales van en la medalla.",
+  "image": "czestochowa-coronilla",
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Our Lady of Czestochowa",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap45.htm"
+    }
+  ]
+}

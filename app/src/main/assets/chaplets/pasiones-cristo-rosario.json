@@ -1,293 +1,281 @@
 {
-  "id": "pasiones-cristo-rosario",
-  "sourceId": "IVE-15",
-  "group": "god_christ",
-  "title": {
-    "es": "Rosario de la Pasión de Jesús",
-    "en": "Rosary of the Passion of Jesus",
-    "pt": "Terço da Paixão de Jesus"
+ "id": "pasiones-cristo-rosario",
+ "sourceId": "IVE-15",
+ "group": "god_christ",
+ "title": {
+  "es": "Rosario de la Pasión de Jesús",
+  "en": "Rosary of the Passion of Jesus",
+  "pt": "Terço da Paixão de Jesus"
+ },
+ "summary": {
+  "es": "Adoración de la Pasión y petición de perdón en las cuentas del rosario.",
+  "en": "Adoration of the Passion and a plea for pardon on the beads of the rosary.",
+  "pt": "Adoração da Paixão e pedido de perdão nas contas do terço."
+ },
+ "instrument": {
+  "es": "Rosario común.",
+  "en": "An ordinary rosary.",
+  "pt": "Terço comum."
+ },
+ "when": {
+  "es": "Uso libre.",
+  "en": "At any time.",
+  "pt": "Uso livre."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "cross"
   },
-  "summary": {
-    "es": "Adoración de la Pasión y petición de perdón en las cuentas del rosario.",
-    "en": "Adoration of the Passion and a plea for pardon on the beads of the rosary.",
-    "pt": "Adoração da Paixão e pedido de perdão nas contas do terço."
+  {
+   "kind": "large"
   },
-  "instrument": {
-    "es": "Rosario común.",
-    "en": "An ordinary rosary.",
-    "pt": "Terço comum."
+  {
+   "kind": "small",
+   "count": 3
   },
-  "when": {
-    "es": "Uso libre.",
-    "en": "At any time.",
-    "pt": "Uso livre."
+  {
+   "kind": "large"
   },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "cross"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 3
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    }
-  ],
-  "steps": [
-    {
-      "bead": null,
-      "text": {
-        "es": "Miradme, hijos Míos, miradme Crucificado.\nVed lo que parezco, ved si veis en Mí a un hombre o a un ser que no se puede ni reconocer.\nMiradme, hijos Míos, miradme Crucificado.\nSoy Jesús, Vuestro Señor y Vuestro Redentor.",
-        "en": "Behold me, my children, behold me Crucified.\nSee what I look like, see whether you see in me a man or a being that cannot even be recognised.\nBehold me, my children, behold me Crucified.\nI am Jesus, your Lord and your Redeemer.",
-        "pt": "Olhai-me, filhos Meus, olhai-me Crucificado.\nVede o que pareço, vede se vedes em Mim um homem ou um ser que nem se pode reconhecer.\nOlhai-me, filhos Meus, olhai-me Crucificado.\nSou Jesus, vosso Senhor e vosso Redentor."
-      },
-      "meditation": {
-        "es": "Introducción de la fuente",
-        "en": "Source's introduction",
-        "pt": "Introdução da fonte"
-      }
-    },
-    {
-      "bead": 0,
-      "prayerRef": "sign_of_the_cross"
-    },
-    {
-      "bead": 1,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 2,
-      "prayerRef": "hail_mary",
-      "repeat": 3
-    },
-    {
-      "bead": 3,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 5,
-      "text": {
-        "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
-        "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
-        "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
-      }
-    },
-    {
-      "bead": 6,
-      "text": {
-        "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
-        "en": "By the merits of your Passion and Death, forgive us, Jesus!",
-        "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
-        "en": "Have mercy on us, Lord, have mercy on us!",
-        "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
-      },
-      "rubric": {
-        "es": "Al final de cada misterio",
-        "en": "At the end of each mystery",
-        "pt": "No fim de cada mistério"
-      }
-    },
-    {
-      "bead": 7,
-      "text": {
-        "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
-        "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
-        "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
-      }
-    },
-    {
-      "bead": 8,
-      "text": {
-        "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
-        "en": "By the merits of your Passion and Death, forgive us, Jesus!",
-        "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
-        "en": "Have mercy on us, Lord, have mercy on us!",
-        "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
-      },
-      "rubric": {
-        "es": "Al final de cada misterio",
-        "en": "At the end of each mystery",
-        "pt": "No fim de cada mistério"
-      }
-    },
-    {
-      "bead": 9,
-      "text": {
-        "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
-        "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
-        "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
-      }
-    },
-    {
-      "bead": 10,
-      "text": {
-        "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
-        "en": "By the merits of your Passion and Death, forgive us, Jesus!",
-        "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
-        "en": "Have mercy on us, Lord, have mercy on us!",
-        "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
-      },
-      "rubric": {
-        "es": "Al final de cada misterio",
-        "en": "At the end of each mystery",
-        "pt": "No fim de cada mistério"
-      }
-    },
-    {
-      "bead": 11,
-      "text": {
-        "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
-        "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
-        "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
-      }
-    },
-    {
-      "bead": 12,
-      "text": {
-        "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
-        "en": "By the merits of your Passion and Death, forgive us, Jesus!",
-        "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
-        "en": "Have mercy on us, Lord, have mercy on us!",
-        "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
-      },
-      "rubric": {
-        "es": "Al final de cada misterio",
-        "en": "At the end of each mystery",
-        "pt": "No fim de cada mistério"
-      }
-    },
-    {
-      "bead": 13,
-      "text": {
-        "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
-        "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
-        "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
-      }
-    },
-    {
-      "bead": 14,
-      "text": {
-        "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
-        "en": "By the merits of your Passion and Death, forgive us, Jesus!",
-        "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
-        "en": "Have mercy on us, Lord, have mercy on us!",
-        "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
-      },
-      "rubric": {
-        "es": "Al final de cada misterio",
-        "en": "At the end of each mystery",
-        "pt": "No fim de cada mistério"
-      }
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "¡Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.",
-        "en": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.",
-        "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós e do mundo inteiro."
-      },
-      "repeat": 3,
-      "rubric": {
-        "es": "En las tres últimas cuentas",
-        "en": "On the last three beads",
-        "pt": "Nas três últimas contas"
-      }
-    }
-  ],
-  "notes": "Texto literal de IVE. El Credo no aparece en la fuente; se empieza con Padre Nuestro, Avemaría y Gloria.",
-  "image": "pasiones-cristo-rosario",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": null,
-  "translation": {
-    "es": "original",
-    "en": "traducción fiel de Hermes, 2026",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "kind": "medal"
   },
-  "sources": [
-    {
-      "title": "IVE · Rosarios y coronas",
-      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
-    }
-  ]
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  }
+ ],
+ "steps": [
+  {
+   "bead": 1,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "Miradme, hijos Míos, miradme Crucificado.\nVed lo que parezco, ved si veis en Mí a un hombre o a un ser que no se puede ni reconocer.\nMiradme, hijos Míos, miradme Crucificado.\nSoy Jesús, Vuestro Señor y Vuestro Redentor.",
+    "en": "Behold me, my children, behold me Crucified.\nSee what I look like, see whether you see in me a man or a being that cannot even be recognised.\nBehold me, my children, behold me Crucified.\nI am Jesus, your Lord and your Redeemer.",
+    "pt": "Olhai-me, filhos Meus, olhai-me Crucificado.\nVede o que pareço, vede se vedes em Mim um homem ou um ser que nem se pode reconhecer.\nOlhai-me, filhos Meus, olhai-me Crucificado.\nSou Jesus, vosso Senhor e vosso Redentor."
+   }
+  },
+  {
+   "bead": 2,
+   "prayerRef": "hail_mary",
+   "repeat": 3
+  },
+  {
+   "bead": 3,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 5,
+   "text": {
+    "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
+    "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
+    "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
+   }
+  },
+  {
+   "bead": 6,
+   "text": {
+    "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
+    "en": "By the merits of your Passion and Death, forgive us, Jesus!",
+    "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
+    "en": "Have mercy on us, Lord, have mercy on us!",
+    "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
+   },
+   "rubric": {
+    "es": "Al final de cada misterio",
+    "en": "At the end of each mystery",
+    "pt": "No fim de cada mistério"
+   }
+  },
+  {
+   "bead": 7,
+   "text": {
+    "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
+    "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
+    "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
+   }
+  },
+  {
+   "bead": 8,
+   "text": {
+    "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
+    "en": "By the merits of your Passion and Death, forgive us, Jesus!",
+    "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
+    "en": "Have mercy on us, Lord, have mercy on us!",
+    "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
+   },
+   "rubric": {
+    "es": "Al final de cada misterio",
+    "en": "At the end of each mystery",
+    "pt": "No fim de cada mistério"
+   }
+  },
+  {
+   "bead": 9,
+   "text": {
+    "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
+    "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
+    "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
+   }
+  },
+  {
+   "bead": 10,
+   "text": {
+    "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
+    "en": "By the merits of your Passion and Death, forgive us, Jesus!",
+    "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
+    "en": "Have mercy on us, Lord, have mercy on us!",
+    "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
+   },
+   "rubric": {
+    "es": "Al final de cada misterio",
+    "en": "At the end of each mystery",
+    "pt": "No fim de cada mistério"
+   }
+  },
+  {
+   "bead": 11,
+   "text": {
+    "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
+    "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
+    "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
+   }
+  },
+  {
+   "bead": 12,
+   "text": {
+    "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
+    "en": "By the merits of your Passion and Death, forgive us, Jesus!",
+    "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
+    "en": "Have mercy on us, Lord, have mercy on us!",
+    "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
+   },
+   "rubric": {
+    "es": "Al final de cada misterio",
+    "en": "At the end of each mystery",
+    "pt": "No fim de cada mistério"
+   }
+  },
+  {
+   "bead": 13,
+   "text": {
+    "es": "¡Te adoramos y te alabamos, Divino Jesús, porque por Vuestra Pasión y Muerte, Redimiste al mundo!",
+    "en": "We adore and praise you, Divine Jesus, because by your Passion and Death you redeemed the world!",
+    "pt": "Adoramos e louvamos-vos, Divino Jesus, porque pela vossa Paixão e Morte resgatastes o mundo!"
+   }
+  },
+  {
+   "bead": 14,
+   "text": {
+    "es": "¡Por los merecimientos de Vuestra Pasión y Muerte, perdónanos Jesús!",
+    "en": "By the merits of your Passion and Death, forgive us, Jesus!",
+    "pt": "Pelos merecimentos da vossa Paixão e Morte, perdoa-nos, Jesus!"
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "¡Ten piedad de nosotros, Señor, ten piedad de nosotros!",
+    "en": "Have mercy on us, Lord, have mercy on us!",
+    "pt": "Tende piedade de nós, Senhor, tende piedade de nós!"
+   },
+   "rubric": {
+    "es": "Al final de cada misterio",
+    "en": "At the end of each mystery",
+    "pt": "No fim de cada mistério"
+   }
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "¡Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.",
+    "en": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.",
+    "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós e do mundo inteiro."
+   },
+   "repeat": 3,
+   "rubric": {
+    "es": "En las tres últimas cuentas",
+    "en": "On the last three beads",
+    "pt": "Nas três últimas contas"
+   }
+  }
+ ],
+ "notes": "Texto literal de IVE. La fuente no menciona Signo de la Cruz ni Credo: se empieza con Padre Nuestro, Avemaría y Gloria. Las palabras iniciales de Jesús se presentan como meditación de apertura.",
+ "image": "pasiones-cristo-rosario",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": null,
+ "translation": {
+  "es": "original",
+  "en": "traducción fiel de Hermes, 2026",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "IVE · Rosarios y coronas",
+   "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+  }
+ ]
 }

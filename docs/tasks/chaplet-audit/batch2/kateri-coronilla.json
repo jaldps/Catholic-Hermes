@@ -1,0 +1,93 @@
+{
+  "id": "kateri-coronilla",
+  "sourceId": "CD-25",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de Santa Kateri Tekakwitha",
+    "en": "Chaplet of Saint Kateri Tekakwitha",
+    "pt": "Coronilha de Santa Kateri Tekakwitha"
+  },
+  "summary": {
+    "es": "24 cuentas por los 24 años de la santa: Padre Nuestro, Avemaría y Gloria según el color.",
+    "en": "24 beads for the 24 years of the saint: Our Father, Hail Mary and Glory according to the colour.",
+    "pt": "24 contas pelos 24 anos da santa: Pai-Nosso, Ave Maria e Glória conforme a cor."
+  },
+  "instrument": {
+    "es": "8 cuentas marrones, 8 rojas y 8 transparentes.",
+    "en": "8 brown, 8 red and 8 crystal beads.",
+    "pt": "8 contas marrons, 8 vermelhas e 8 cristalinas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "small",
+      "count": 8,
+      "color": "#8B5A2B"
+    },
+    {
+      "kind": "small",
+      "count": 8,
+      "color": "#B22222"
+    },
+    {
+      "kind": "small",
+      "count": 8,
+      "color": "#B0E0E6"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "our_father",
+      "repeat": 8,
+      "meditation": {
+        "es": "Cuentas marrones, color de la tierra.",
+        "en": "Brown beads, the colour of the earth.",
+        "pt": "Contas marrons, cor da terra."
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "hail_mary",
+      "repeat": 8,
+      "meditation": {
+        "es": "Cuentas rojas, color de la sangre.",
+        "en": "Red beads, the colour of blood.",
+        "pt": "Contas vermelhas, cor do sangue."
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "glory_be",
+      "repeat": 8,
+      "meditation": {
+        "es": "Cuentas transparentes, claras como el agua.",
+        "en": "Crystal beads, clear like water.",
+        "pt": "Contas cristalinas, claras como a água."
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors; también llamada Kateri Indian Rosary. Se corrige el intercambio de idiomas en la meditación de las cuentas transparentes (tenía inglés en es y español en en).",
+  "image": "kateri-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Saint Kateri Tekakwitha",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap33.htm"
+    }
+  ]
+}

@@ -1,78 +1,83 @@
 {
-  "id": "san-patricio-coronilla",
-  "sourceId": "CD-29",
-  "group": "saints",
-  "title": {
-    "es": "Coronilla de San Patricio",
-    "en": "Chaplet of Saint Patrick",
-    "pt": "Coronilha de São Patrício"
+ "id": "san-patricio-coronilla",
+ "sourceId": "CD-29",
+ "group": "saints",
+ "title": {
+  "es": "Coronilla de San Patricio",
+  "en": "Chaplet of Saint Patrick",
+  "pt": "Coronilha de São Patrício"
+ },
+ "summary": {
+  "es": "Medalla y 12 cuentas verdes con Gloria, más la Coraza de San Patricio.",
+  "en": "Medal and 12 green beads with the Glory, plus the Breastplate of St Patrick.",
+  "pt": "Medalha e 12 contas verdes com a Glória, mais a Couraça de São Patrício."
+ },
+ "instrument": {
+  "es": "Medalla + 12 cuentas verdes.",
+  "en": "Medal + 12 green beads.",
+  "pt": "Medalha + 12 contas verdes."
+ },
+ "when": {
+  "es": "Uso libre; para fortalecer la fe.",
+  "en": "At any time; to strengthen faith.",
+  "pt": "Uso livre; para fortalecer a fé."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "medal"
   },
-  "summary": {
-    "es": "Medalla y 12 cuentas verdes con Gloria, más la Coraza de San Patricio.",
-    "en": "Medal and 12 green beads with the Glory, plus the Breastplate of St Patrick.",
-    "pt": "Medalha e 12 contas verdes com a Glória, mais a Couraça de São Patrício."
+  {
+   "kind": "small",
+   "count": 12,
+   "color": "#2E8B57"
+  }
+ ],
+ "steps": [
+  {
+   "bead": 0,
+   "prayerRef": "creed"
   },
-  "instrument": {
-    "es": "Medalla + 12 cuentas verdes.",
-    "en": "Medal + 12 green beads.",
-    "pt": "Medalha + 12 contas verdes."
+  {
+   "bead": 1,
+   "prayerRef": "glory_be",
+   "repeat": 12
   },
-  "when": {
-    "es": "Uso libre; para fortalecer la fe.",
-    "en": "At any time; to strengthen faith.",
-    "pt": "Uso livre; para fortalecer a fé."
-  },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "small",
-      "count": 12,
-      "color": "#2E8B57"
-    }
-  ],
-  "steps": [
-    {
-      "bead": 0,
-      "prayerRef": "creed"
-    },
-    {
-      "bead": 1,
-      "prayerRef": "glory_be",
-      "repeat": 12
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Cristo como luz, ilumíname y guíame. Cristo como escudo, cúbreme y protégeme. Cristo debajo de mí, Cristo encima de mí, Cristo a mi lado, a mi izquierda y a mi derecha. Cristo delante de mí, detrás de mí, a mi alrededor; Cristo, hoy, dentro y fuera de mí.",
-        "en": "Christ as a light, Illumine and guide me! Christ as a shield, overshadow and cover me! Christ be under me! Christ be over me! Christ be beside me, On the left hand and right! Christ be before me, behind me, about me; Christ this day, be within and without me!",
-        "pt": "Cristo como luz, ilumina e guia-me! Cristo como escudo, cobre e protege-me! Cristo debaixo de mim, Cristo sobre mim, Cristo ao meu lado, à esquerda e à direita! Cristo diante de mim, atrás de mim, à minha volta; Cristo, hoje, dentro e fora de mim!"
-      },
-      "meditation": {
-        "es": "Coraza de San Patricio",
-        "en": "Breastplate of St Patrick",
-        "pt": "Couraça de São Patrício"
-      }
-    }
-  ],
-  "notes": "Texto literal de Catholic Doors.",
-  "image": "san-patricio-coronilla",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": "Derechos: Catholic Doors Ministry",
-  "translation": {
-    "es": "traducción fiel de Hermes, 2026",
-    "en": "original",
-    "pt": "traducción fiel de Hermes, 2026"
-  },
-  "sources": [
-    {
-      "title": "Catholic Doors · Chaplet of Saint Patrick",
-      "url": "https://www.catholicdoors.com/prayers/chaplets/chap26.htm"
-    }
-  ]
+  {
+   "bead": null,
+   "text": {
+    "es": "¡Cristo como luz, ilumíname y guíame! ¡Cristo como escudo, cúbreme y protégeme! ¡Cristo debajo de mí, Cristo encima de mí! ¡Cristo a mi lado, a mi izquierda y a mi derecha! ¡Cristo delante de mí, detrás de mí, a mi alrededor; Cristo, hoy, dentro y fuera de mí!",
+    "en": "Christ as a light, Illumine and guide me! Christ as a shield, overshadow and cover me! Christ be under me! Christ be over me! Christ be beside me, On the left hand and right! Christ be before me, behind me, about me; Christ this day, be within and without me!",
+    "pt": "Cristo como luz, ilumina e guia-me! Cristo como escudo, cobre e protege-me! Cristo debaixo de mim, Cristo sobre mim, Cristo ao meu lado, à esquerda e à direita! Cristo diante de mim, atrás de mim, à minha volta; Cristo, hoje, dentro e fora de mim!"
+   },
+   "meditation": {
+    "es": "Coraza de San Patricio",
+    "en": "Breastplate of St Patrick",
+    "pt": "Couraça de São Patrício"
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  }
+ ],
+ "notes": "Texto literal de Catholic Doors. La Coraza se reza en conjunto al final; se restaura la puntuación exclamativa de la fuente en español.",
+ "image": "san-patricio-coronilla",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": "Derechos: Catholic Doors Ministry",
+ "translation": {
+  "es": "traducción fiel de Hermes, 2026",
+  "en": "original",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "Catholic Doors · Chaplet of Saint Patrick",
+   "url": "https://www.catholicdoors.com/prayers/chaplets/chap26.htm"
+  }
+ ]
 }

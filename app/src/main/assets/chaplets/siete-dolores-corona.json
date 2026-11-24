@@ -1,264 +1,264 @@
 {
-  "id": "siete-dolores-corona",
-  "sourceId": "IVE-11",
-  "group": "mary",
-  "title": {
-    "es": "Corona de los Siete Dolores",
-    "en": "Chaplet of the Seven Sorrows",
-    "pt": "Coroa das Sete Dores"
+ "id": "siete-dolores-corona",
+ "sourceId": "IVE-11",
+ "group": "mary",
+ "title": {
+  "es": "Corona de los Siete Dolores",
+  "en": "Chaplet of the Seven Sorrows",
+  "pt": "Coroa das Sete Dores"
+ },
+ "summary": {
+  "es": "Siete dolores de María: un Padre Nuestro, siete Avemarías y un Gloria en cada uno.",
+  "en": "Seven sorrows of Mary: an Our Father, seven Hail Marys and a Glory for each.",
+  "pt": "Sete dores de Maria: um Pai-Nosso, sete Ave Marias e uma Glória para cada."
+ },
+ "instrument": {
+  "es": "Corona de siete grupos de siete cuentas, con cuentas grandes separadoras.",
+  "en": "Chaplet of seven groups of seven beads, with separating large beads.",
+  "pt": "Coroa de sete grupos de sete contas, com contas grandes separadoras."
+ },
+ "when": {
+  "es": "Uso libre; rezar despacio.",
+  "en": "At any time; pray slowly.",
+  "pt": "Uso livre; rezar devagar."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "large"
   },
-  "summary": {
-    "es": "Siete dolores de María: un Padre Nuestro, siete Avemarías y un Gloria en cada uno.",
-    "en": "Seven sorrows of Mary: an Our Father, seven Hail Marys and a Glory for each.",
-    "pt": "Sete dores de Maria: um Pai-Nosso, sete Ave Marias e uma Glória para cada."
+  {
+   "kind": "small",
+   "count": 7
   },
-  "instrument": {
-    "es": "Corona de siete grupos de siete cuentas, con cuentas grandes separadoras.",
-    "en": "Chaplet of seven groups of seven beads, with separating large beads.",
-    "pt": "Coroa de sete grupos de sete contas, com contas grandes separadoras."
+  {
+   "kind": "large"
   },
-  "when": {
-    "es": "Uso libre; rezar despacio.",
-    "en": "At any time; pray slowly.",
-    "pt": "Uso livre; rezar devagar."
+  {
+   "kind": "large"
   },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 7
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 7
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 7
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 7
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 7
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 7
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 7
-    },
-    {
-      "kind": "large"
-    }
-  ],
-  "steps": [
-    {
-      "bead": null,
-      "text": {
-        "es": "El camino para penetrar en los sufrimientos del Hijo es penetrar en los sufrimientos de la Madre. Cardenal J. H. Newman",
-        "en": "The way to enter into the sufferings of the Son is to enter into the sufferings of the Mother. Cardinal J. H. Newman",
-        "pt": "O caminho para penetrar nos sofrimentos do Filho é penetrar nos sofrimentos da Mãe. Cardeal J. H. Newman"
-      },
-      "meditation": {
-        "es": "Cita inicial",
-        "en": "Opening quote",
-        "pt": "Citação inicial"
-      }
-    },
-    {
-      "bead": 0,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "1º Dolor: La profecía de Simeón en la presentación del Niño Jesús.",
-        "en": "1st Sorrow: The prophecy of Simeon at the presentation of the Child Jesus.",
-        "pt": "1.ª Dor: A profecia de Simeão na apresentação do Menino Jesus."
-      }
-    },
-    {
-      "bead": 1,
-      "prayerRef": "hail_mary",
-      "repeat": 7
-    },
-    {
-      "bead": 2,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 3,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "2º Dolor: La huida a Egipto con Jesús y José.",
-        "en": "2nd Sorrow: The flight into Egypt with Jesus and Joseph.",
-        "pt": "2.ª Dor: A fuga para o Egito com Jesus e José."
-      }
-    },
-    {
-      "bead": 4,
-      "prayerRef": "hail_mary",
-      "repeat": 7
-    },
-    {
-      "bead": 5,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 6,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "3º Dolor: La pérdida de Jesús.",
-        "en": "3rd Sorrow: The loss of Jesus.",
-        "pt": "3.ª Dor: A perda de Jesus."
-      }
-    },
-    {
-      "bead": 7,
-      "prayerRef": "hail_mary",
-      "repeat": 7
-    },
-    {
-      "bead": 8,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 9,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "4º Dolor: El encuentro de Jesús con la cruz a cuestas camino del calvario.",
-        "en": "4th Sorrow: Jesus meets his cross on the way to Calvary.",
-        "pt": "4.ª Dor: O encontro de Jesus com a cruz a caminho do Calvário."
-      }
-    },
-    {
-      "bead": 10,
-      "prayerRef": "hail_mary",
-      "repeat": 7
-    },
-    {
-      "bead": 11,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 12,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "5º Dolor: La crucifixión y la agonía de Jesús.",
-        "en": "5th Sorrow: The crucifixion and agony of Jesus.",
-        "pt": "5.ª Dor: A crucificação e a agonia de Jesus."
-      }
-    },
-    {
-      "bead": 13,
-      "prayerRef": "hail_mary",
-      "repeat": 7
-    },
-    {
-      "bead": 14,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 15,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "6º Dolor: La lanzada y el recibir en brazos a Jesús ya muerto.",
-        "en": "6th Sorrow: The piercing with the lance and receiving the dead Jesus in one's arms.",
-        "pt": "6.ª Dor: A lanceada e receber nos braços Jesus já morto."
-      }
-    },
-    {
-      "bead": 16,
-      "prayerRef": "hail_mary",
-      "repeat": 7
-    },
-    {
-      "bead": 17,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": 18,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "7º Dolor: El entierro de Jesús y la soledad de María.",
-        "en": "7th Sorrow: The burial of Jesus and the loneliness of Mary.",
-        "pt": "7.ª Dor: O sepultamento de Jesus e a solidão de Maria."
-      }
-    },
-    {
-      "bead": 19,
-      "prayerRef": "hail_mary",
-      "repeat": 7
-    },
-    {
-      "bead": 20,
-      "prayerRef": "glory_be"
-    }
-  ],
-  "historicalNote": {
-    "text": {
-      "es": "La fuente refiere que la Santísima Virgen manifestó a Santa Brígida siete gracias para quienes honren sus lágrimas y dolores rezando siete Avemarías al día.",
-      "en": "The source reports that the Blessed Virgin revealed to Saint Bridget seven graces for those who honour her tears and sorrows by praying seven Hail Marys a day.",
-      "pt": "A fonte relata que a Santíssima Virgem manifestou a Santa Brígida sete graças para quem honra as suas lágrimas e dores rezando sete Ave Marias por dia."
-    },
-    "source": "https://iveinarabic.org/es/rosarios-y-coronas/"
+  {
+   "kind": "small",
+   "count": 7
   },
-  "notes": "Texto literal de IVE. Se modelan los títulos de los siete dolores; las meditaciones largas de la fuente no se convierten en pasos para no parafrasearlas.",
-  "image": "siete-dolores-corona",
-  "variables": [],
-  "promise": null,
-  "season": null,
-  "rights": null,
-  "translation": {
-    "es": "original",
-    "en": "traducción fiel de Hermes, 2026",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "kind": "large"
   },
-  "sources": [
-    {
-      "title": "IVE · Rosarios y coronas",
-      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
-    }
-  ]
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 7
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 7
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 7
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 7
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 7
+  },
+  {
+   "kind": "large"
+  }
+ ],
+ "steps": [
+  {
+   "bead": null,
+   "text": {
+    "es": "El camino para penetrar en los sufrimientos del Hijo es penetrar en los sufrimientos de la Madre. Cardenal J. H. Newman",
+    "en": "The way to enter into the sufferings of the Son is to enter into the sufferings of the Mother. Cardinal J. H. Newman",
+    "pt": "O caminho para penetrar nos sofrimentos do Filho é penetrar nos sofrimentos da Mãe. Cardeal J. H. Newman"
+   },
+   "meditation": {
+    "es": "Cita inicial",
+    "en": "Opening quote",
+    "pt": "Citação inicial"
+   }
+  },
+  {
+   "bead": 0,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "1º Dolor: La profecía de Simeón en la presentación del Niño Jesús.",
+    "en": "1st Sorrow: The prophecy of Simeon at the presentation of the Child Jesus.",
+    "pt": "1.ª Dor: A profecia de Simeão na apresentação do Menino Jesus."
+   }
+  },
+  {
+   "bead": 1,
+   "prayerRef": "hail_mary",
+   "repeat": 7
+  },
+  {
+   "bead": 2,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 3,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "2º Dolor: La huida a Egipto con Jesús y José.",
+    "en": "2nd Sorrow: The flight into Egypt with Jesus and Joseph.",
+    "pt": "2.ª Dor: A fuga para o Egito com Jesus e José."
+   }
+  },
+  {
+   "bead": 4,
+   "prayerRef": "hail_mary",
+   "repeat": 7
+  },
+  {
+   "bead": 5,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 6,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "3º Dolor: La pérdida de Jesús.",
+    "en": "3rd Sorrow: The loss of Jesus.",
+    "pt": "3.ª Dor: A perda de Jesus."
+   }
+  },
+  {
+   "bead": 7,
+   "prayerRef": "hail_mary",
+   "repeat": 7
+  },
+  {
+   "bead": 8,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 9,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "4º Dolor: El encuentro de Jesús con la cruz a cuestas camino del calvario.",
+    "en": "4th Sorrow: Jesus meets his cross on the way to Calvary.",
+    "pt": "4.ª Dor: O encontro de Jesus com a cruz a caminho do Calvário."
+   }
+  },
+  {
+   "bead": 10,
+   "prayerRef": "hail_mary",
+   "repeat": 7
+  },
+  {
+   "bead": 11,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 12,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "5º Dolor: La crucifixión y la agonía de Jesús.",
+    "en": "5th Sorrow: The crucifixion and agony of Jesus.",
+    "pt": "5.ª Dor: A crucificação e a agonia de Jesus."
+   }
+  },
+  {
+   "bead": 13,
+   "prayerRef": "hail_mary",
+   "repeat": 7
+  },
+  {
+   "bead": 14,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 15,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "6º Dolor: La lanzada y el recibir en brazos a Jesús ya muerto.",
+    "en": "6th Sorrow: The piercing with the lance and receiving the dead Jesus in one's arms.",
+    "pt": "6.ª Dor: A lanceada e receber nos braços Jesus já morto."
+   }
+  },
+  {
+   "bead": 16,
+   "prayerRef": "hail_mary",
+   "repeat": 7
+  },
+  {
+   "bead": 17,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 18,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "7º Dolor: El entierro de Jesús y la soledad de María.",
+    "en": "7th Sorrow: The burial of Jesus and the loneliness of Mary.",
+    "pt": "7.ª Dor: O sepultamento de Jesus e a solidão de Maria."
+   }
+  },
+  {
+   "bead": 19,
+   "prayerRef": "hail_mary",
+   "repeat": 7
+  },
+  {
+   "bead": 20,
+   "prayerRef": "glory_be"
+  }
+ ],
+ "historicalNote": {
+  "text": {
+   "es": "La fuente refiere que la Santísima Virgen manifestó a Santa Brígida siete gracias para quienes honren sus lágrimas y dolores rezando siete Avemarías al día.",
+   "en": "The source reports that the Blessed Virgin revealed to Saint Bridget seven graces for those who honour her tears and sorrows by praying seven Hail Marys a day.",
+   "pt": "A fonte relata que a Santíssima Virgem manifestou a Santa Brígida sete graças para quem honra as suas lágrimas e dores rezando sete Ave Marias por dia."
+  },
+  "source": "https://iveinarabic.org/es/rosarios-y-coronas/"
+ },
+ "notes": "Texto literal de IVE. Se modelan los títulos de los siete dolores; las meditaciones largas de la fuente no se convierten en pasos para no parafrasearlas.",
+ "image": "siete-dolores-corona",
+ "variables": [],
+ "promise": null,
+ "season": null,
+ "rights": null,
+ "translation": {
+  "es": "original",
+  "en": "traducción fiel de Hermes, 2026",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "IVE · Rosarios y coronas",
+   "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+  }
+ ]
 }

@@ -1,204 +1,377 @@
 {
-  "id": "jesus-praga-coronilla",
-  "sourceId": "CD-44",
-  "group": "god_christ",
-  "title": {
-    "es": "Coronilla del Niño Jesús de Praga",
-    "en": "Chaplet of the Infant Jesus of Prague",
-    "pt": "Coronilha do Menino Jesus de Praga"
+ "id": "jesus-praga-coronilla",
+ "sourceId": "CD-44",
+ "group": "god_christ",
+ "title": {
+  "es": "Coronilla del Niño Jesús de Praga",
+  "en": "Chaplet of the Infant Jesus of Prague",
+  "pt": "Coronilha do Menino Jesus de Praga"
+ },
+ "summary": {
+  "es": "15 cuentas: 3 Padres Nuestros por la Sagrada Familia y 12 Avemarías por los años de la infancia.",
+  "en": "15 beads: 3 Our Fathers for the Holy Family and 12 Hail Marys for the years of the infancy.",
+  "pt": "15 contas: 3 Pai-Nossos pela Sagrada Família e 12 Ave Marias pelos anos da infância."
+ },
+ "instrument": {
+  "es": "Coronilla de 15 cuentas.",
+  "en": "Chaplet of 15 beads.",
+  "pt": "Coronilha de 15 contas."
+ },
+ "when": {
+  "es": "Uso libre.",
+  "en": "At any time.",
+  "pt": "Uso livre."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "medal"
   },
-  "summary": {
-    "es": "15 cuentas: 3 Padres Nuestros por la Sagrada Familia y 12 Avemarías por los años de la infancia.",
-    "en": "15 beads: 3 Our Fathers for the Holy Family and 12 Hail Marys for the years of the infancy.",
-    "pt": "15 contas: 3 Pai-Nossos pela Sagrada Família e 12 Ave Marias pelos anos da infância."
+  {
+   "kind": "large"
   },
-  "instrument": {
-    "es": "Coronilla de 15 cuentas.",
-    "en": "Chaplet of 15 beads.",
-    "pt": "Coronilha de 15 contas."
+  {
+   "kind": "large"
   },
-  "when": {
-    "es": "Uso libre.",
-    "en": "At any time.",
-    "pt": "Uso livre."
+  {
+   "kind": "large"
   },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    }
-  ],
-  "steps": [
-    {
-      "bead": 0,
-      "text": {
-        "es": "Divino Niño Jesús, adoro tu Cruz y acepto todas las cruces que quieras enviarme. Adorable Trinidad, te ofrezco para la gloria de tu santo Nombre de Dios todas las adoraciones del Sagrado Corazón del Niño Jesús.",
-        "en": "Divine Infant Jesus, I adore Thy Cross and I accept all the cross Thou wilt be pleased to send me. Adorable Trinity, I offer Thee for the glory of Thy Holy Name of God, all the adorations of the Sacred Heart of the Holy Infant Jesus.",
-        "pt": "Divino Menino Jesus, adoro a vossa Cruz e aceito todas as cruzes que queirais enviar-me. Adorável Trindade, ofereço-vos para a glória do vosso santo Nome de Deus todas as adorações do Sagrado Coração do Menino Jesus."
-      }
-    },
-    {
-      "bead": 1,
-      "text": {
-        "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
-        "en": "And the Word was made flesh and dwelt amongst us.",
-        "pt": "E o Verbo se fez carne e habitou entre nós."
-      }
-    },
-    {
-      "bead": 1,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 2,
-      "text": {
-        "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
-        "en": "And the Word was made flesh and dwelt amongst us.",
-        "pt": "E o Verbo se fez carne e habitou entre nós."
-      }
-    },
-    {
-      "bead": 2,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 3,
-      "text": {
-        "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
-        "en": "And the Word was made flesh and dwelt amongst us.",
-        "pt": "E o Verbo se fez carne e habitou entre nós."
-      }
-    },
-    {
-      "bead": 3,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 4,
-      "text": {
-        "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
-        "en": "And the Word was made flesh and dwelt amongst us.",
-        "pt": "E o Verbo se fez carne e habitou entre nós."
-      }
-    },
-    {
-      "bead": 4,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 5,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 6,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 7,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 8,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 9,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 10,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 11,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 12,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 13,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 14,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": 15,
-      "prayerRef": "hail_mary"
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Niño Jesús santo, bendícenos y protégenos.",
-        "en": "Holy Infant Jesus, bless and protect us.",
-        "pt": "Menino Jesus santo, abençoai-nos e protegei-nos."
-      }
-    }
-  ],
-  "notes": "Texto literal de Catholic Doors; la frase «And the Word was made flesh» precede a cada una de las 15 oraciones.",
-  "image": "jesus-praga-coronilla",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": "Derechos: Catholic Doors Ministry",
-  "translation": {
-    "es": "traducción fiel de Hermes, 2026",
-    "en": "original",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "kind": "small"
   },
-  "sources": [
-    {
-      "title": "Catholic Doors · Chaplet of the Infant Jesus of Prague",
-      "url": "https://www.catholicdoors.com/prayers/chaplets/chap14.htm"
-    }
-  ]
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  },
+  {
+   "kind": "small"
+  }
+ ],
+ "steps": [
+  {
+   "bead": 0,
+   "text": {
+    "es": "Divino Niño Jesús, adoro tu Cruz y acepto todas las cruces que quieras enviarme. Adorable Trinidad, te ofrezco para la gloria de tu santo Nombre de Dios todas las adoraciones del Sagrado Corazón del Niño Jesús.",
+    "en": "Divine Infant Jesus, I adore Thy Cross and I accept all the cross Thou wilt be pleased to send me. Adorable Trinity, I offer Thee for the glory of Thy Holy Name of God, all the adorations of the Sacred Heart of the Holy Infant Jesus.",
+    "pt": "Divino Menino Jesus, adoro a vossa Cruz e aceito todas as cruzes que queirais enviar-me. Adorável Trindade, ofereço-vos para a glória do vosso santo Nome de Deus todas as adorações do Sagrado Coração do Menino Jesus."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 1,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 1,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 2,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 2,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 3,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 3,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 4,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 4,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 5,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 5,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 6,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 6,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 7,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 7,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 8,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 8,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 9,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 9,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 10,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 10,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 11,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 11,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 12,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 12,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 13,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 13,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 14,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 14,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 15,
+   "text": {
+    "es": "Y el Verbo se hizo carne y habitó entre nosotros.",
+    "en": "And the Word was made flesh and dwelt amongst us.",
+    "pt": "E o Verbo se fez carne e habitou entre nós."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 15,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Niño Jesús santo, bendícenos y protégenos.",
+    "en": "Holy Infant Jesus, bless and protect us.",
+    "pt": "Menino Jesus santo, abençoai-nos e protegei-nos."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  }
+ ],
+ "notes": "Texto literal de Catholic Doors. La fuente prescribe «And the Word was made flesh…» antes de CADA Padre Nuestro y de CADA Avemaría (15 veces); la versión anterior solo lo tenía antes de tres Padres Nuestros y una Avemaría.",
+ "image": "jesus-praga-coronilla",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": "Derechos: Catholic Doors Ministry",
+ "translation": {
+  "es": "traducción fiel de Hermes, 2026",
+  "en": "original",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "Catholic Doors · Chaplet of the Infant Jesus of Prague",
+   "url": "https://www.catholicdoors.com/prayers/chaplets/chap14.htm"
+  }
+ ]
 }

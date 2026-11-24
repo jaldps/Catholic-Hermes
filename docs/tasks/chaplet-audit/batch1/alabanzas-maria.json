@@ -1,0 +1,519 @@
+{
+  "id": "alabanzas-maria",
+  "sourceId": "IVE-12",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla de Alabanzas a María",
+    "en": "Chaplet of Praises to Mary",
+    "pt": "Coronilha de Louvores a Maria"
+  },
+  "summary": {
+    "es": "Tres coronas —de excelencia, poder y bondad— con alabanzas a María y el responsorio «Regocíjate, Virgen María».",
+    "en": "Three crowns —of excellence, power and goodness— with praises to Mary and the response 'Rejoice, Virgin Mary'.",
+    "pt": "Três coroas —de excelência, poder e bondade— com louvores a Maria e o responsório «Regozija-te, Virgem Maria»."
+  },
+  "instrument": {
+    "es": "Tres coronas de cinco alabanzas, con Padre Nuestro, Avemaría y Gloria.",
+    "en": "Three crowns of five praises, with an Our Father, Hail Mary and Glory.",
+    "pt": "Três coroas de cinco louvores, com Pai-Nosso, Ave Maria e Glória."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [],
+  "steps": [
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Dígnate aceptar mis alabanzas Virgen Santísima",
+          "en": "Be pleased to accept my praises, most holy Virgin",
+          "pt": "Digna-te aceitar os meus louvores, Virgem Santíssima"
+        },
+        "r": {
+          "es": "Dame fuerzas contra tus enemigos",
+          "en": "Give me strength against your enemies",
+          "pt": "Dá-me forças contra os teus inimigos"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": null,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "1) CORONA DE EXCELENCIA",
+        "en": "1) CROWN OF EXCELLENCE",
+        "pt": "1) COROA DE EXCELÊNCIA"
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Bienaventurada eres, Virgen María, que llevaste en tu seno al Señor y creador del mundo, engendraste al que te formó permaneciendo siempre Virgen.",
+        "en": "Blessed are you, Virgin Mary, who bore in your womb the Lord and creator of the world; you begot the one who formed you, remaining ever a virgin.",
+        "pt": "Bem-aventurada és, Virgem Maria, que levaste no teu seio o Senhor e criador do mundo, geraste aquele que te formou, permanecendo sempre Virgem."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Oh Virgen Santa e Inmaculada, no sé con alabanzas honrarte dignamente, porque llevaste en tu seno al que no pueden contener los cielos.",
+        "en": "O holy and immaculate Virgin, I know not how to honour you worthily with praises, for you bore in your womb the one whom the heavens cannot contain.",
+        "pt": "Ó Virgem santa e imaculada, não sei como louvar-te dignamente, porque levaste no teu seio aquele que os céus não podem conter."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Muy hermosa eres oh María No hay en ti mancha alguna.",
+        "en": "You are very beautiful, O Mary; there is no stain in you.",
+        "pt": "Muito bela és, ó Maria; não há em ti mácula alguma."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Hay más virtudes en ti Virgen María Que estrellas en el cielo.",
+        "en": "There are more virtues in you, Virgin Mary, than stars in heaven.",
+        "pt": "Há mais virtudes em ti, Virgem Maria, do que estrelas no céu."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "2) CORONA DE PODER",
+        "en": "2) CROWN OF POWER",
+        "pt": "2) COROA DE PODER"
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Gloria a ti Reina del universo condúcenos contigo a la felicidad del cielo.",
+        "en": "Glory to you, Queen of the universe; lead us with you to the happiness of heaven.",
+        "pt": "Glória a ti, Rainha do universo; conduz-nos contigo à felicidade do céu."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Gloria a ti, Tesorera de las gracias del Señor, danos participar en los dones de Dios.",
+        "en": "Glory to you, treasurer of the Lord's graces; grant us a share in the gifts of God.",
+        "pt": "Glória a ti, tesoureira das graças do Senhor; dá-nos participar nos dons de Deus."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Gloria a ti mediadora entre Dios y los hombres haz que sea más intimo nuestro encuentro con Cristo.",
+        "en": "Glory to you, mediator between God and men; make our encounter with Christ more intimate.",
+        "pt": "Glória a ti, mediadora entre Deus e os homens; faze mais íntimo o nosso encontro com Cristo."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Gloria a ti triunfadora sobre las fuerzas del mal sé nuestra piadosa guía en el camino del Evangelio.",
+        "en": "Glory to you, triumphant over the forces of evil; be our loving guide on the way of the Gospel.",
+        "pt": "Glória a ti, triunfante sobre as forças do mal; sê a nossa guia piedosa no caminho do Evangelho."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "3) CORONA DE BONDAD",
+        "en": "3) CROWN OF GOODNESS",
+        "pt": "3) COROA DE BONDADE"
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Gloria a ti, refugio de los pecadores, Intercede por nosotros ante el Señor.",
+        "en": "Glory to you, refuge of sinners; intercede for us before the Lord.",
+        "pt": "Glória a ti, refúgio dos pecadores; intercede por nós diante do Senhor."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Gloria a ti, Madre de los hombres, Enséñanos a vivir como hijos de Dios.",
+        "en": "Glory to you, Mother of men; teach us to live as children of God.",
+        "pt": "Glória a ti, Mãe dos homens; ensina-nos a viver como filhos de Deus."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Gloria a ti, Alegría de los justos condúcenos contigo a las alegrías del cielo.",
+        "en": "Glory to you, joy of the just; lead us with you to the joys of heaven.",
+        "pt": "Glória a ti, alegria dos justos; conduz-nos contigo às alegrias do céu."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Gloria a ti, prestísima ayuda nuestra en la vida y en la muerte, llévanos contigo al reino de los cielos.",
+        "en": "Glory to you, our most ready help in life and in death; take us with you to the kingdom of heaven.",
+        "pt": "Glória a ti, auxílio nosso prontíssimo na vida e na morte; leva-nos contigo ao reino dos céus."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Regocíjate, Virgen María",
+          "en": "Rejoice, Virgin Mary",
+          "pt": "Regozija-te, Virgem Maria"
+        },
+        "r": {
+          "es": "Regocíjate mil veces",
+          "en": "Rejoice a thousand times",
+          "pt": "Regozija-te mil vezes"
+        }
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Dios te salve, María Hija de Dios Padre, Madre de Dios Hijo, Esposa del Espíritu Santo, Templo de la Santísima Trinidad. Dios te salve, María, Señora mía, Mi tesoro, mi Belleza, Reina de mi corazón, Madre, vida, dulzura y esperanza mía queridísima más aun, mi corazón y mi alma. Soy todo tuyo, oh Virgen benditísima, y todo lo mío es tuyo. More en mí tu alma para engrandecer al Señor, more en mí tu espíritu para regocijarse en Dios. Oh Virgen fidelísima, ponte como un sello sobre mi corazón para que en ti y por ti permanezca fiel en el Señor. Concédeme, por tu bondad la gracia de contarme en el número de los que amas, enseñas, diriges, nutres y proteges como hijos. Has que, despreciando por tu amor todos los consuelos terrenos, aspire continuamente a los bienes celestiales, Hasta que por medio del Espíritu Santo, Tu esposo fidelísimo, y de ti esposa suya fidelísima, Sea formado en mi Jesucristo, tu Hijo Para la gloria del Padre Celestial. Amén.",
+        "en": "Hail Mary, daughter of God the Father, Mother of God the Son, Spouse of the Holy Spirit, Temple of the Most Holy Trinity. Hail Mary, my Lady, my treasure, my beauty, Queen of my heart, Mother, life, sweetness and my most beloved hope, my heart and my soul. I am all yours, O most blessed Virgin, and all that I have is yours. Let your soul dwell in me to magnify the Lord, let your spirit dwell in me to rejoice in God. O most faithful Virgin, set yourself as a seal upon my heart, that in you and through you I may remain faithful in the Lord. Grant me, in your goodness, the grace to be counted among those you love, teach, guide, nourish and protect as children. Make me, despising all earthly consolations for your love, aspire continually to heavenly goods, until by the Holy Spirit, your most faithful spouse, and through you his most faithful spouse, Jesus Christ your Son is formed in me for the glory of the heavenly Father. Amen.",
+        "pt": "Salve, Maria, Filha de Deus Pai, Mãe de Deus Filho, Esposa do Espírito Santo, Templo da Santíssima Trindade. Salve, Maria, minha Senhora, meu tesouro, minha beleza, Rainha do meu coração, Mãe, vida, doçura e esperança minha queridíssima, meu coração e minha alma. Sou todo teu, ó Virgem benditíssima, e tudo o que tenho é teu. More em mim a tua alma para engrandecer o Senhor, more em mim o teu espírito para se regozijar em Deus. Ó Virgem fidelíssima, coloca-te como selo sobre o meu coração, para que em ti e por ti eu permaneça fiel no Senhor. Concede-me, pela tua bondade, a graça de ser contado entre os que amas, ensinas, diriges, nutres e proteges como filhos. Faz que, desprezando por teu amor todos os consolos terrenos, eu aspire continuamente aos bens celestiais, até que, pelo Espírito Santo, teu esposo fidelíssimo, e por ti, esposa sua fidelíssima, Jesus Cristo, teu Filho, seja formado em mim para a glória do Pai celestial. Amém."
+      },
+      "meditation": {
+        "es": "4) Oremos",
+        "en": "4) Let us pray",
+        "pt": "4) Oremos"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    }
+  ],
+  "notes": "Texto literal de IVE; la fuente no describe un hilo de cuentas, por lo que beads está vacío y las oraciones se cuentan como pasos. Erratas de puntuación conservadas. Auditoría: los rótulos de las tres coronas pasan de text a meditation (abren sección) y se quitan los prefijos V/ y R/ del contenido de las jaculatorias; el motor los dibuja.",
+  "image": "alabanzas-maria",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "IVE · Rosarios y coronas",
+      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+    }
+  ]
+}

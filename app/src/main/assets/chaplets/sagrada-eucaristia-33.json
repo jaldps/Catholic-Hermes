@@ -1,167 +1,82 @@
 {
-  "id": "sagrada-eucaristia-33",
-  "sourceId": "HZ-05",
-  "group": "god_christ",
-  "title": {
-    "es": "Coronilla de la Sagrada Eucaristía",
-    "en": "Chaplet of the Holy Eucharist",
-    "pt": "Coronilha da Sagrada Eucaristia"
+ "id": "sagrada-eucaristia-33",
+ "sourceId": "HZ-05",
+ "group": "god_christ",
+ "title": {
+  "es": "Coronilla de la Sagrada Eucaristía",
+  "en": "Chaplet of the Holy Eucharist",
+  "pt": "Coronilha da Sagrada Eucaristia"
+ },
+ "summary": {
+  "es": "33 cuentas con comunión espiritual y una invocación a Jesús en el Santísimo Sacramento.",
+  "en": "33 beads with a spiritual communion and an invocation to Jesus in the Blessed Sacrament.",
+  "pt": "33 contas com comunhão espiritual e uma invocação a Jesus no Santíssimo Sacramento."
+ },
+ "instrument": {
+  "es": "Coronilla de 33 cuentas; si no se tiene, rosario tradicional.",
+  "en": "Chaplet of 33 beads; an ordinary rosary may be used instead.",
+  "pt": "Coronilha de 33 contas; na falta dela, usa-se o terço tradicional."
+ },
+ "when": {
+  "es": "Cuando no se puede recibir la comunión en la Misa.",
+  "en": "When Holy Communion cannot be received at Mass.",
+  "pt": "Quando não se pode receber a Comunhão na Missa."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "medal"
   },
-  "summary": {
-    "es": "33 cuentas con comunión espiritual y una invocación a Jesús en el Santísimo Sacramento.",
-    "en": "33 beads with a spiritual communion and an invocation to Jesus in the Blessed Sacrament.",
-    "pt": "33 contas com comunhão espiritual e uma invocação a Jesus no Santíssimo Sacramento."
+  {
+   "kind": "small",
+   "count": 33
+  }
+ ],
+ "steps": [
+  {
+   "bead": 0,
+   "text": {
+    "es": "Como no puedo recibirte, Jesús mío, en la Santa Comunión, ven espiritualmente a mi corazón, y hazlo siempre tuyo.",
+    "en": "Since I cannot receive you, my Jesus, in Holy Communion, come spiritually into my heart and make it always yours.",
+    "pt": "Como não posso receber-te, Jesus meu, na Santa Comunhão, vem espiritualmente ao meu coração e faze-o sempre teu."
+   },
+   "rubric": {
+    "es": "Mientras se sostiene la medalla (o cruz)",
+    "en": "While holding the medal (or cross)",
+    "pt": "Enquanto se segura a medalha (ou a cruz)"
+   }
   },
-  "instrument": {
-    "es": "Coronilla de 33 cuentas; si no se tiene, rosario tradicional.",
-    "en": "Chaplet of 33 beads; an ordinary rosary may be used instead.",
-    "pt": "Coronilha de 33 contas; na falta dela, usa-se o terço tradicional."
-  },
-  "when": {
-    "es": "Cuando no se puede recibir la comunión en la Misa.",
-    "en": "When Holy Communion cannot be received at Mass.",
-    "pt": "Quando não se pode receber a Comunhão na Missa."
-  },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    },
-    {
-      "kind": "small"
-    }
-  ],
-  "steps": [
-    {
-      "bead": 0,
-      "text": {
-        "es": "Como no puedo recibirte, Jesús mío, en la Santa Comunión, ven espiritualmente a mi corazón, y hazlo siempre tuyo.",
-        "en": "Since I cannot receive you, my Jesus, in Holy Communion, come spiritually into my heart and make it always yours.",
-        "pt": "Como não posso receber-te, Jesus meu, na Santa Comunhão, vem espiritualmente ao meu coração e faze-o sempre teu."
-      }
-    },
-    {
-      "bead": 1,
-      "text": {
-        "es": "Jesús, presente en el Santísimo Sacramento del altar, ten piedad de nosotros.",
-        "en": "Jesus, present in the Blessed Sacrament of the altar, have mercy on us.",
-        "pt": "Jesus, presente no Santíssimo Sacramento do altar, tende piedade de nós."
-      },
-      "repeat": 33
-    }
-  ],
-  "notes": "Texto literal de Hozana. Las 33 cuentas representan los 33 años de Jesús en la Tierra.",
-  "image": "sagrada-eucaristia-33",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": null,
-  "translation": {
-    "es": "original",
-    "en": "traducción fiel de Hermes, 2026",
-    "pt": "traducción fiel de Hermes, 2026"
-  },
-  "sources": [
-    {
-      "title": "Hozana · Santo Rosario",
-      "url": "https://hozana.org/es/oracion/santo-rosario/santisimo-sacramento"
-    }
-  ]
+  {
+   "bead": 1,
+   "text": {
+    "es": "Jesús, presente en el Santísimo Sacramento del altar, ten piedad de nosotros.",
+    "en": "Jesus, present in the Blessed Sacrament of the altar, have mercy on us.",
+    "pt": "Jesus, presente no Santíssimo Sacramento do altar, tende piedade de nós."
+   },
+   "repeat": 33,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  }
+ ],
+ "notes": "Texto literal de Hozana. Las 33 cuentas se agrupan en un solo bloque para que el motor reparta las 33 repeticiones; representan los 33 años de Jesús. La fuente describe además otra coronilla distinta, que es entrada aparte.",
+ "image": "sagrada-eucaristia-33",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": null,
+ "translation": {
+  "es": "original",
+  "en": "traducción fiel de Hermes, 2026",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "Hozana · Santo Rosario",
+   "url": "https://hozana.org/es/oracion/santo-rosario/santisimo-sacramento"
+  }
+ ]
 }

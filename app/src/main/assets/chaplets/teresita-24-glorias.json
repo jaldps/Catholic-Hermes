@@ -47,15 +47,16 @@
     },
     {
       "bead": 1,
-      "text": {
-        "es": "Oh Padre nuestro celestial, que, por medio de santa Teresa del Niño Jesús, quieres recordar al mundo el Amor misericordioso que llena tu corazón y la confianza filial que debemos tener en ti, te damos humildemente gracias por haber colmado de tanta gloria a la que fue siempre tu hija más fiel, y por haberle dado un poder maravilloso para atraer hacia ti cada día un gran número de almas que te alabarán eternamente",
-        "en": "O heavenly Father, who through St Thérèse of the Child Jesus wish to remind the world of the merciful Love that fills your heart and of the filial trust we ought to have in you, we humbly thank you for having filled with such glory her who was always your most faithful daughter, and for having given her a wonderful power to draw to you each day a great number of souls who will praise you eternally",
-        "pt": "Ó Pai celestial, que, por meio de Santa Teresinha do Menino Jesus, queres recordar ao mundo o Amor misericordioso que enche o teu coração e a confiança filial que devemos ter em ti, damos-te humildemente graças por teres colmado de tanta glória a que foi sempre a tua filha mais fiel, e por lhe teres dado um poder maravilhoso para atrair a ti cada dia um grande número de almas que te louvarão eternamente"
-      },
       "rubric": {
         "es": "En la medalla",
         "en": "At the medal",
         "pt": "Na medalha"
+      },
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Oh Padre nuestro celestial, que, por medio de santa Teresa del Niño Jesús, quieres recordar al mundo el Amor misericordioso que llena tu corazón y la confianza filial que debemos tener en ti, te damos humildemente gracias por haber colmado de tanta gloria a la que fue siempre tu hija más fiel, y por haberle dado un poder maravilloso para atraer hacia ti cada día un gran número de almas que te alabarán eternamente",
+        "en": "O heavenly Father, who through St Thérèse of the Child Jesus wish to remind the world of the merciful Love that fills your heart and of the filial trust we ought to have in you, we humbly thank you for having filled with such glory her who was always your most faithful daughter, and for having given her a wonderful power to draw to you each day a great number of souls who will praise you eternally",
+        "pt": "Ó Pai celestial, que, por meio de Santa Teresinha do Menino Jesus, queres recordar ao mundo o Amor misericordioso que enche o teu coração e a confiança filial que devemos ter em ti, damos-te humildemente graças por teres colmado de tanta glória a que foi sempre a tua filha mais fiel, e por lhe teres dado um poder maravilhoso para atrair a ti cada dia um grande número de almas que te louvarão eternamente"
       }
     },
     {
@@ -76,7 +77,7 @@
       "prayerRef": "our_father"
     }
   ],
-  "notes": "Texto literal de Hozana. El título «24 Glorias» no coincide con el cuerpo, que prescribe oraciones propias; se conservan las oraciones literales y el título de la fuente.",
+  "notes": "Texto literal de Hozana. El título «24 Glorias» no coincide con el cuerpo, que prescribe oraciones propias: se conservan el título y las oraciones literales de la fuente. La «Oración complementaria» opcional de François Lugan no se añade porque la fuente no ofrece traducción publicada EN/PT y la regla de auditoría prohíbe inventarla; queda documentada aquí.",
   "image": "teresita-24-glorias",
   "variables": [],
   "promise": null,

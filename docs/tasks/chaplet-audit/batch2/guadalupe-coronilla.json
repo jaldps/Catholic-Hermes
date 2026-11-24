@@ -1,0 +1,265 @@
+{
+  "id": "guadalupe-coronilla",
+  "sourceId": "CD-11",
+  "group": "mary",
+  "title": {
+    "es": "Coronilla de Nuestra Señora de Guadalupe",
+    "en": "Chaplet of Our Lady of Guadalupe",
+    "pt": "Coronilha de Nossa Senhora de Guadalupe"
+  },
+  "summary": {
+    "es": "21 cuentas: cuatro Avemarías por las apariciones y cuatro grupos de tres por cada una.",
+    "en": "21 beads: four Hail Marys for the apparitions and four sets of three, one for each apparition.",
+    "pt": "21 contas: quatro Ave Marias pelas aparições e quatro grupos de três, um por cada aparição."
+  },
+  "instrument": {
+    "es": "Cruz, 21 cuentas y medalla: 1+4+1 y cuatro grupos de 3 separados por 1 cuenta.",
+    "en": "Cross, 21 beads and medal: 1+4+1 and four sets of 3 separated by 1 bead.",
+    "pt": "Cruz, 21 contas e medalha: 1+4+1 e quatro grupos de 3 separados por 1 conta."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 4
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "medal"
+    }
+  ],
+  "steps": [
+    {
+      "bead": null,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe, Rosa Mística, intercede por nuestra Santa Iglesia, protege al Sumo Pontífice, ayuda a todos los que te invocan en sus necesidades y, puesto que eres la Virgen perpetua y Madre del verdadero Dios, obtén de tu Santísimo Hijo la gracia de conservar nuestra fe, la dulce esperanza en medio de la amargura de la vida, la caridad ardiente y el precioso don de la perseverancia final. Amén.",
+        "en": "Our Lady of Guadalupe, Mystical Rose, make intercession for our Holy Church, protect the sovereign Pontiff, help all those who invoke you in their necessities, and since you are the ever Virgin Mary and Mother of the true God, obtain for us from your most Holy Son the grace of keeping our faith, of sweet hope in the midst of the bitterness of life, of burning charity, and the precious gift of final perseverance. Amen.",
+        "pt": "Nossa Senhora de Guadalupe, Rosa Mística, intercedei pela vossa Santa Igreja, protegei o Sumo Pontífice, auxiliai todos os que vos invocam nas suas necessidades e, sendo vós a Virgem perpétua e Mãe do verdadeiro Deus, obtende do vosso Santíssimo Filho a graça de conservarmos a fé, a doce esperança no meio da amargura da vida, a caridade ardente e o precioso dom da perseverança final. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 4
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 3,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Primera aparición: Nuestra Señora de Guadalupe se aparece al beato Juan Diego. Nuestra Señora pide un templo en su honor.",
+        "en": "The First Apparition: Our Lady of Guadalupe appears to Blessed Juan Diego. Our Lady requests a temple in her honour.",
+        "pt": "A Primeira Aparição: Nossa Senhora de Guadalupe aparece ao beato Juan Diego. Nossa Senhora pede um templo em sua honra."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe, Reina mía y Madre mía, te doy gracias por tu primera aparición al beato Juan Diego, cuando revelaste que eres la Virgen Purísima, María, Madre del verdadero Dios y Madre de todo el género humano. Te doy gracias por pedir que se construyera un templo donde te apareciste, para dar testimonio de tu amor, tu compasión, tu ayuda y tu protección a todos los que te aman, confían en ti e invocan tu auxilio.",
+        "en": "Our Lady of Guadalupe, my Queen and my Mother, I thank you for your first apparition to Blessed Juan Diego when you revealed that you are the Most Pure Virgin, Mary, Mother of the True God and Mother of all mankind. I thank you for requesting a temple to be built where you stood, to bear witness to your love, your compassion, your aid and your protection for all who would love you, trust you, and invoke your help.",
+        "pt": "Nossa Senhora de Guadalupe, minha Rainha e minha Mãe, dou-vos graças pela vossa primeira aparição ao beato Juan Diego, quando revelastes que sois a Virgem Puríssima, Maria, Mãe do verdadeiro Deus e Mãe de todo o género humano. Dou-vos graças por terdes pedido um templo no lugar onde aparecestes, para testemunhar o vosso amor, a vossa compaixão, o vosso auxílio e a vossa proteção a todos os que vos amam, confiam em vós e invocam o vosso socorro."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Segunda aparición: Nuestra Señora de Guadalupe da al beato Juan Diego aliento tras su regreso de la casa del obispo.",
+        "en": "The Second Apparition: Our Lady of Guadalupe gives Blessed Juan Diego encouragement after his return from the Bishop's house.",
+        "pt": "A Segunda Aparição: Nossa Senhora de Guadalupe dá ao beato Juan Diego encorajamento após o seu regresso da casa do bispo."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe, Reina mía y Madre mía, te doy gracias por tu segunda aparición al beato Juan Diego cuando, a su regreso de la casa del obispo, se arrodilló humillado y vencido ante ti, por no haber podido cumplir tu misión. Te doy gracias por el valor y el aliento que diste al beato Juan Diego para hacer una segunda petición al obispo.",
+        "en": "Our Lady of Guadalupe, my Queen and my Mother, I thank you for your second apparition to Blessed Juan Diego when, upon his return from the Bishop's house, he knelt in humiliation and defeat before you since he was unable to accomplish your mission. I thank you for the courage and encouragement you gave to Blessed Juan Diego to make a second appeal to the Bishop.",
+        "pt": "Nossa Senhora de Guadalupe, minha Rainha e minha Mãe, dou-vos graças pela vossa segunda aparição ao beato Juan Diego quando, ao regressar da casa do bispo, se ajoelhou humilhado e vencido perante vós, por não ter podido cumprir a vossa missão. Dou-vos graças pela coragem e pelo encorajamento que destes ao beato Juan Diego para fazer um segundo apelo ao bispo."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 6,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 7,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Tercera aparición: Nuestra Señora de Guadalupe promete una señal al beato Juan Diego para el obispo.",
+        "en": "The Third Apparition: Our Lady of Guadalupe promises a sign to Blessed Juan Diego for the Bishop.",
+        "pt": "A Terceira Aparição: Nossa Senhora de Guadalupe promete um sinal ao beato Juan Diego para o bispo."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Madre, te doy gracias por tu tercera aparición al beato Juan Diego cuando, tras este intento infructuoso de construir un templo, le dijiste: «Así sea, hijo. Regresa mañana para que obtengas del obispo la señal que ha pedido. Cuando la tengas en tu poder, te creerá; ya no dudará de tu palabra ni sospechará de tu buena fe. Ten por seguro que te recompensaré por todo lo que has sufrido».",
+        "en": "Mother, I thank you for your third apparition to Blessed Juan Diego when, after this unsuccessful attempt to have a temple built, you said to him, 'So be it, son. Return tomorrow in order that you may secure for the Bishop, the sign for which he has asked. When this is in your possession, he will believe you; he will no longer doubt your world and suspect your good faith. Be assured that I shall reward you for all that you have undergone.'",
+        "pt": "Mãe, dou-vos graças pela vossa terceira aparição ao beato Juan Diego quando, após esta tentativa frustrada de construir um templo, lhe dissestes: «Assim seja, filho. Regressa amanhã para que obtenhas do bispo o sinal que ele pediu. Quando o tiveres em teu poder, ele acreditará em ti; já não duvidará da tua palavra nem suspeitará da tua boa-fé. Estai certa de que te recompensarei por tudo o que sofreste»."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 8,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 9,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Cuarta aparición: Nuestra Señora de Guadalupe cumple su promesa mostrándose en la tilma del beato Juan Diego.",
+        "en": "The Fourth Apparition: Our Lady of Guadalupe fulfills her promise by showing herself on the tilma of Blessed Juan Diego.",
+        "pt": "A Quarta Aparição: Nossa Senhora de Guadalupe cumpre a sua promessa mostrando-se na tilma do beato Juan Diego."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe, Reina mía y Madre mía, te doy gracias por tu cuarta aparición al beato Juan Diego, cuando le ordenaste recoger las rosas que encontraría en la cima de la colina y traértelas. Te doy gracias por disponerlas en su tilma cuando dijiste: «Este ramo de rosas es la señal que llevarás al obispo. Debes decirle, en mi nombre, que en esto reconocerá mi voluntad y que debe cumplirla. Serás mi embajador, plenamente digno de mi confianza. Solo ante el obispo desplegarás tu manto y mostrarás lo que llevas». Te doy gracias por tu imagen impresa en la tilma, que apareció cuando se soltaron las rosas.",
+        "en": "Our Lady of Guadalupe, my Queen and my Mother, I thank you for your fourth apparition to Blessed Juan Diego when you ordered him to pick the roses he would find on the summit of the hill and bring them to you. I thank you for arranging them in his tilma when you said, 'This cluster of roses is the sign that you shall take to the Bishop. You are to tell him, in my name, that in this he will recognize my will and that he must fulfill it. You will be my ambassador, wholly worthy of my confidence. Only in the presence of the Bishop shall you unfold your mantle and disclose that which you carry.' I thank you for your image printed on the tilma which appeared when the roses were released.",
+        "pt": "Nossa Senhora de Guadalupe, minha Rainha e minha Mãe, dou-vos graças pela vossa quarta aparição ao beato Juan Diego, quando lhe ordenastes colher as rosas que encontraria no cume da colina e trazê-las a vós. Dou-vos graças por tê-las disposto na sua tilma quando dissestes: «Este ramo de rosas é o sinal que levais ao bispo. Deveis dizer-lhe, em meu nome, que nisto reconhecerá a minha vontade e que a deve cumprir. Sereis o meu embaixador, plenamente digno da minha confiança. Somente na presença do bispo desdobrareis o vosso manto e mostrareis o que trazeis». Dou-vos graças pela vossa imagem impressa na tilma, que apareceu quando as rosas foram soltas."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 10,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 11,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Recuerda, oh Virgen de Guadalupe llena de gracia, que en tu aparición celeste en el monte de Tepeyac prometiste mostrar tu compasión y piedad a todos los que, amándote y confiando en ti, buscan tu ayuda y te invocan en sus necesidades y aflicciones; también atender nuestras súplicas, enjugar nuestras lágrimas y darnos consuelo y alivio. Alentados con esta confianza, nos presentamos ante tu augusta presencia, seguros de que te dignarás cumplir tus misericordiosas promesas. Llenos de esperanza de que, bajo tu protección, nada nos turbará ni afligirá. Tú que quisiste permanecer con nosotros mediante tu admirable imagen, tú que eres nuestra Madre, nuestra salud y nuestra vida. Oh María, Madre de Dios, escucha nuestras peticiones y respóndenos con tu misericordia. Amén.",
+        "en": "Remember, 0 most gracious Virgin of Guadalupe, that in thy celestial apparition on the Mount of Tepeyac, thou didst promise to show thy compassion and pity towards all who, loving and trusting thee, seek thy help and call upon thee in their necessities and afflictions; also to hearken to our supplications, to dry our tears and to give us consolation and relief. Inspired with this confidence we come before thy august presence, certain that thou wilt deign to fulfill thy merciful promises. We are full of hope that, standing beneath thy protection nothing will trouble or afflict us. Thou has desired to remain with us through thy admirable image, thou who art our Mother, our health and our life. O Mary, Mother of God, hear our petitions and in thy mercy answer us. Amen",
+        "pt": "Recordai, ó Virgem de Guadalupe cheia de graça, que na vossa aparição celeste no monte de Tepeyac prometestes mostrar a vossa compaixão e piedade a todos os que, amando-vos e confiando em vós, buscam o vosso auxílio e vos invocam nas suas necessidades e aflições; também atender as nossas súplicas, enxugar as nossas lágrimas e dar-nos consolo e alívio. Animados com esta confiança, apresentamo-nos perante a vossa augusta presença, certos de que vos dignareis cumprir as vossas misericordiosas promesas. Cheios de esperança de que, sob a vossa proteção, nada nos perturbára nem afligirá. Vós que quisestes permanecer connosco através da vossa admirável imagem, vós que sois nossa Mãe, nossa saúde e nossa vida. Ó Maria, Mãe de Deus, ouvi as nossas petições e respondei-nos com a vossa misericórdia. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Nuestra Señora de Guadalupe, Madre mía, toma en tus manos unidas en oración mis plegarias, peticiones y esperanzas, y preséntalas a Jesús por mí. Recordando el amor y el cuidado que tus manos le prodigaron, no te negará lo que ahora sostienen, aunque venga de mí. Amén.",
+        "en": "Our Lady of Guadalupe, my mother, into your hands joined in prayer, take my prayers, petitions and hopes, and present them to Jesus for me. Remembering the love and care your hands rendered to Him, He will not refuse what they hold now, even though they are from me. Amen.",
+        "pt": "Nossa Senhora de Guadalupe, minha mãe, toma nas tuas mãos unidas em oração as minhas preces, petições e esperanças, e apresenta-as a Jesus por mim. Recordando o amor e o cuidado que as tuas mãos lhe dispensaram, não te recusará o que agora sustentam, embora venha de mim. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. Se restituyen las cuatro oraciones propias de las apariciones (la fuente solo conservaba la primera y sustituía las demás por resúmenes inventados); las descripciones de cada aparición pasan a la meditación, se añade la medalla declarada en la fuente y se corrige el intercambio de español/inglés en las etiquetas. Se conserva «your world» de la fuente (errata evidente por «your word»).",
+  "image": "guadalupe-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Our Lady of Guadalupe",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap28.htm"
+    }
+  ]
+}

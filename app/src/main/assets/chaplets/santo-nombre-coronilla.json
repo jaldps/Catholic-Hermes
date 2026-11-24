@@ -53,42 +53,38 @@
     },
     {
       "bead": null,
-      "vr": {
-        "v": {
-          "es": "Inclínate a auxiliarme, oh Dios.",
-          "en": "Incline unto my aid, O God.",
-          "pt": "Inclinai-vos a auxiliar-me, ó Deus."
-        },
-        "r": {
-          "es": "Señor, date prisa en socorrerme.",
-          "en": "O Lord, make haste to help me.",
-          "pt": "Senhor, apressai-vos em socorrer-me."
-        }
+      "text": {
+        "es": "Inclínate a auxiliarme, oh Dios; Señor, date prisa en socorrerme.",
+        "en": "Incline unto my aid, O God. O Lord, make haste to help me.",
+        "pt": "Inclinai-vos a auxiliar-me, ó Deus; Senhor, apressai-vos em socorrer-me."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
     },
     {
       "bead": 0,
       "text": {
-        "es": "Señor, dijiste: «Pedid y recibiréis; buscad y hallaréis; llamad y se os abrirá». Busco, llamo, pido esta gracia [nombra tu intención].",
-        "en": "Lord, Thou hast said: 'Ask and ye shall receive; seek, and ye shall find; knock, and it shall be opened unto you,' I seek, I knock, I ask this favor [name your intention].",
-        "pt": "Senhor, disseste: «Pedi e recebereis; procurai e achareis; batei e vos será aberto». Procuro, bato, peço esta graça [nomeia a intenção]."
+        "es": "Señor, dijiste: «Pedid y recibiréis; buscad y hallaréis; llamad y se os abrirá». Busco, llamo, pido esta gracia {{intencion}}.",
+        "en": "Lord, Thou hast said: \"Ask and ye shall receive; seek, and ye shall find; knock, and it shall be opened unto you,\" I seek, I knock, I ask this favor [name your intention].",
+        "pt": "Senhor, disseste: «Pedi e recebereis; procurai e achareis; batei e vos será aberto». Procuro, bato, peço esta graça {{intencion}}."
       }
     },
     {
       "bead": 1,
-      "vr": {
-        "v": {
-          "es": "Inclínate a auxiliarme, oh Dios.",
-          "en": "Incline unto my aid, O God.",
-          "pt": "Inclinai-vos a auxiliar-me, ó Deus."
-        },
-        "r": {
-          "es": "Señor, date prisa en socorrerme.",
-          "en": "O Lord, make haste to help me.",
-          "pt": "Senhor, apressai-vos em socorrer-me."
-        }
+      "text": {
+        "es": "Inclínate a auxiliarme, oh Dios; Señor, date prisa en socorrerme.",
+        "en": "Incline unto my aid, O God. O Lord, make haste to help me.",
+        "pt": "Inclinai-vos a auxiliar-me, ó Deus; Senhor, apressai-vos em socorrer-me."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 2,
@@ -100,48 +96,46 @@
     },
     {
       "bead": 3,
-      "vr": {
-        "v": {
-          "es": "Inclínate a auxiliarme, oh Dios.",
-          "en": "Incline unto my aid, O God.",
-          "pt": "Inclinai-vos a auxiliar-me, ó Deus."
-        },
-        "r": {
-          "es": "Señor, date prisa en socorrerme.",
-          "en": "O Lord, make haste to help me.",
-          "pt": "Senhor, apressai-vos em socorrer-me."
-        }
+      "text": {
+        "es": "Inclínate a auxiliarme, oh Dios; Señor, date prisa en socorrerme.",
+        "en": "Incline unto my aid, O God. O Lord, make haste to help me.",
+        "pt": "Inclinai-vos a auxiliar-me, ó Deus; Senhor, apressai-vos em socorrer-me."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 4,
       "text": {
         "es": "Señor, dijiste: «El cielo y la tierra pasarán, pero mis palabras no pasarán». Tú me concederás esta gracia, porque lo dijiste y tu palabra es verdadera.",
-        "en": "Lord, Thou hast said: 'Heaven and earth shall pass away, but My Word shall not pass away,' Thou wilt grant me this favor because Thou hast said it and Thy word is true.",
+        "en": "Lord, Thou hast said: \"Heaven and earth shall pass away, but My Word shall not pass away,\" Thou wilt grant me this favor because Thou hast said it and Thy word is true.",
         "pt": "Senhor, disseste: «O céu e a terra passarão, mas as minhas palavras não passarão». Tu me concederás esta graça, porque o disseste e a tua palavra é verdadeira."
       }
     },
     {
       "bead": 5,
-      "vr": {
-        "v": {
-          "es": "Inclínate a auxiliarme, oh Dios.",
-          "en": "Incline unto my aid, O God.",
-          "pt": "Inclinai-vos a auxiliar-me, ó Deus."
-        },
-        "r": {
-          "es": "Señor, date prisa en socorrerme.",
-          "en": "O Lord, make haste to help me.",
-          "pt": "Senhor, apressai-vos em socorrer-me."
-        }
+      "text": {
+        "es": "Inclínate a auxiliarme, oh Dios; Señor, date prisa en socorrerme.",
+        "en": "Incline unto my aid, O God. O Lord, make haste to help me.",
+        "pt": "Inclinai-vos a auxiliar-me, ó Deus; Senhor, apressai-vos em socorrer-me."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     }
   ],
-  "notes": "Texto literal de Catholic Doors. El marcador de intención se deja entre corchetes como en la fuente; no se declara variable porque la fuente no da un marcador explícito.",
+  "notes": "Texto literal de Catholic Doors. La fuente da «Incline unto my aid, O God. O Lord, make haste to help me» como oración en conjunto (sin réplica): se corrigen los cuatro pasos que estaban modelados como diálogo V/R. El marcador «[name your intention]» se conserva como {{intencion}} (variable intention).",
   "image": "santo-nombre-coronilla",
-  "variables": [],
+  "variables": [
+    "intention"
+  ],
   "promise": null,
   "historicalNote": null,
   "season": null,

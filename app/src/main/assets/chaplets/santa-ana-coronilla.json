@@ -1,122 +1,137 @@
 {
-  "id": "santa-ana-coronilla",
-  "sourceId": "CD-17",
-  "group": "saints",
-  "title": {
-    "es": "Coronilla de Santa Ana",
-    "en": "Chaplet of Saint Anne",
-    "pt": "Coronilha de Santa Ana"
+ "id": "santa-ana-coronilla",
+ "sourceId": "CD-17",
+ "group": "saints",
+ "title": {
+  "es": "Coronilla de Santa Ana",
+  "en": "Chaplet of Saint Anne",
+  "pt": "Coronilha de Santa Ana"
+ },
+ "summary": {
+  "es": "Tres bloques de un Padre Nuestro y cinco Avemarías en honor de Jesús, María y Santa Ana.",
+  "en": "Three blocks of an Our Father and five Hail Marys in honour of Jesus, Mary and St Anne.",
+  "pt": "Três blocos de um Pai-Nosso e cinco Ave Marias em honra de Jesus, Maria e Santa Ana."
+ },
+ "instrument": {
+  "es": "Sin instrumento: se cuentan oraciones, no cuentas.",
+  "en": "No instrument: prayers are counted, not beads.",
+  "pt": "Sem instrumento: contam-se orações, não contas."
+ },
+ "when": {
+  "es": "Uso libre; se le prometen favores espirituales y temporales.",
+  "en": "At any time; spiritual and temporal favours are promised.",
+  "pt": "Uso livre; prometem-se favores espirituais e temporais."
+ },
+ "weekdays": [],
+ "variables": [
+  "intention"
+ ],
+ "beads": [],
+ "steps": [
+  {
+   "bead": null,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "En honor de Jesús.",
+    "en": "In honour of Jesus.",
+    "pt": "Em honra de Jesus."
+   }
   },
-  "summary": {
-    "es": "Tres bloques de un Padre Nuestro y cinco Avemarías en honor de Jesús, María y Santa Ana.",
-    "en": "Three blocks of an Our Father and five Hail Marys in honour of Jesus, Mary and St Anne.",
-    "pt": "Três blocos de um Pai-Nosso e cinco Ave Marias em honra de Jesus, Maria e Santa Ana."
+  {
+   "bead": null,
+   "prayerRef": "hail_mary",
+   "repeat": 5
   },
-  "instrument": {
-    "es": "Sin instrumento: se cuentan oraciones, no cuentas.",
-    "en": "No instrument: prayers are counted, not beads.",
-    "pt": "Sem instrumento: contam-se orações, não contas."
+  {
+   "bead": null,
+   "text": {
+    "es": "Jesús, María y Santa Ana, concededme el favor que pido.",
+    "en": "Jesus, Mary and St. Anne, grant the favour I ask.",
+    "pt": "Jesus, Maria e Santa Ana, concedei-me o favor que peço."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
   },
-  "when": {
-    "es": "Uso libre; se le prometen favores espirituales y temporales.",
-    "en": "At any time; spiritual and temporal favours are promised.",
-    "pt": "Uso livre; prometem-se favores espirituais e temporais."
+  {
+   "bead": null,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "En honor de María.",
+    "en": "In honour of Mary.",
+    "pt": "Em honra de Maria."
+   }
   },
-  "weekdays": [],
-  "variables": [
-    "intention"
-  ],
-  "beads": [],
-  "steps": [
-    {
-      "bead": null,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "En honor de Jesús.",
-        "en": "In honour of Jesus.",
-        "pt": "Em honra de Jesus."
-      }
-    },
-    {
-      "bead": null,
-      "prayerRef": "hail_mary",
-      "repeat": 5
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Jesús, María y Santa Ana, concededme el favor que pido.",
-        "en": "Jesus, Mary and St. Anne, grant the favour I ask.",
-        "pt": "Jesus, Maria e Santa Ana, concedei-me o favor que peço."
-      }
-    },
-    {
-      "bead": null,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "En honor de María.",
-        "en": "In honour of Mary.",
-        "pt": "Em honra de Maria."
-      }
-    },
-    {
-      "bead": null,
-      "prayerRef": "hail_mary",
-      "repeat": 5
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Jesús, María y Santa Ana, concededme el favor que pido.",
-        "en": "Jesus, Mary and St. Anne, grant the favour I ask.",
-        "pt": "Jesus, Maria e Santa Ana, concedei-me o favor que peço."
-      }
-    },
-    {
-      "bead": null,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "En honor de Santa Ana.",
-        "en": "In honour of Saint Anne.",
-        "pt": "Em honra de Santa Ana."
-      }
-    },
-    {
-      "bead": null,
-      "prayerRef": "hail_mary",
-      "repeat": 5
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Jesús y Santa Ana, concededme el favor que pido.",
-        "en": "Jesus, and St. Anne, grant the favour I ask.",
-        "pt": "Jesus e Santa Ana, concedei-me o favor que peço."
-      }
-    }
-  ],
-  "historicalNote": {
-    "text": {
-      "es": "La fuente afirma que la coronilla promete gran número de favores espirituales y temporales, sin citar documento ni autoridad.",
-      "en": "The source states that the chaplet promises many spiritual and temporal favours, without citing a document or authority.",
-      "pt": "A fonte afirma que a coronilha promete grande número de favores espirituais e temporais, sem citar documento nem autoridade."
-    },
-    "source": "https://www.catholicdoors.com/prayers/chaplets/chap12.htm"
+  {
+   "bead": null,
+   "prayerRef": "hail_mary",
+   "repeat": 5
   },
-  "notes": "Texto literal de Catholic Doors. La fuente no describe cuentas: beads vacío, como exige la spec.",
-  "image": "santa-ana-coronilla",
-  "promise": null,
-  "season": null,
-  "rights": "Derechos: Catholic Doors Ministry",
-  "translation": {
-    "es": "traducción fiel de Hermes, 2026",
-    "en": "original",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "bead": null,
+   "text": {
+    "es": "Jesús, María y Santa Ana, concededme el favor que pido.",
+    "en": "Jesus, Mary and St. Anne, grant the favour I ask.",
+    "pt": "Jesus, Maria e Santa Ana, concedei-me o favor que peço."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
   },
-  "sources": [
-    {
-      "title": "Catholic Doors · Chaplet of Saint Anne",
-      "url": "https://www.catholicdoors.com/prayers/chaplets/chap12.htm"
-    }
-  ]
+  {
+   "bead": null,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "En honor de Santa Ana.",
+    "en": "In honour of Saint Anne.",
+    "pt": "Em honra de Santa Ana."
+   }
+  },
+  {
+   "bead": null,
+   "prayerRef": "hail_mary",
+   "repeat": 5
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Jesús y Santa Ana, concededme el favor que pido.",
+    "en": "Jesus, and St. Anne, grant the favour I ask.",
+    "pt": "Jesus e Santa Ana, concedei-me o favor que peço."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  }
+ ],
+ "historicalNote": {
+  "text": {
+   "es": "La fuente afirma que la coronilla promete gran número de favores espirituales y temporales, sin citar documento ni autoridad.",
+   "en": "The source states that the chaplet promises many spiritual and temporal favours, without citing a document or authority.",
+   "pt": "A fonte afirma que a coronilha promete grande número de favores espirituais e temporais, sem citar documento nem autoridade."
+  },
+  "source": "https://www.catholicdoors.com/prayers/chaplets/chap12.htm"
+ },
+ "notes": "Texto literal de Catholic Doors. La fuente no describe cuentas: beads vacío, como exige la spec. Las tres invocaciones se rezan en conjunto.",
+ "image": "santa-ana-coronilla",
+ "promise": null,
+ "season": null,
+ "rights": "Derechos: Catholic Doors Ministry",
+ "translation": {
+  "es": "traducción fiel de Hermes, 2026",
+  "en": "original",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "Catholic Doors · Chaplet of Saint Anne",
+   "url": "https://www.catholicdoors.com/prayers/chaplets/chap12.htm"
+  }
+ ]
 }

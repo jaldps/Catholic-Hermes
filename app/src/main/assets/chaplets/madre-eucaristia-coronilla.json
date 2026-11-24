@@ -1,247 +1,274 @@
 {
-  "id": "madre-eucaristia-coronilla",
-  "sourceId": "CD-57",
-  "group": "mary",
-  "title": {
-    "es": "Coronilla a la Madre de la Santísima Eucaristía",
-    "en": "Chaplet to the Mother of the Most Holy Eucharist",
-    "pt": "Coronilha à Mãe da Santíssima Eucaristia"
+ "id": "madre-eucaristia-coronilla",
+ "sourceId": "CD-57",
+ "group": "mary",
+ "title": {
+  "es": "Coronilla a la Madre de la Santísima Eucaristía",
+  "en": "Chaplet to the Mother of the Most Holy Eucharist",
+  "pt": "Coronilha à Mãe da Santíssima Eucaristia"
+ },
+ "summary": {
+  "es": "Rosario con profesión de fe eucarística y oraciones a María en cada decena. Origen no documentado; texto tal como lo publica Catholic Doors Ministry.",
+  "en": "Rosary with a profession of Eucharistic faith and prayers to Mary in each decade. Origin undocumented; text as published by Catholic Doors Ministry.",
+  "pt": "Terço com profissão de fé eucarística e orações a Maria em cada década. Origem não documentada; texto tal como publicado pela Catholic Doors Ministry."
+ },
+ "instrument": {
+  "es": "Rosario mariano de 59 cuentas.",
+  "en": "59-bead Marian rosary.",
+  "pt": "Terço mariano de 59 contas."
+ },
+ "when": {
+  "es": "Uso libre.",
+  "en": "At any time.",
+  "pt": "Uso livre."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "cross"
   },
-  "summary": {
-    "es": "Rosario con profesión de fe eucarística y oraciones a María en cada decena. Origen no documentado; texto tal como lo publica Catholic Doors Ministry.",
-    "en": "Rosary with a profession of Eucharistic faith and prayers to Mary in each decade. Origin undocumented; text as published by Catholic Doors Ministry.",
-    "pt": "Terço com profissão de fé eucarística e orações a Maria em cada década. Origem não documentada; texto tal como publicado pela Catholic Doors Ministry."
+  {
+   "kind": "large"
   },
-  "instrument": {
-    "es": "Rosario mariano de 59 cuentas.",
-    "en": "59-bead Marian rosary.",
-    "pt": "Terço mariano de 59 contas."
+  {
+   "kind": "small",
+   "count": 3
   },
-  "when": {
-    "es": "Uso libre.",
-    "en": "At any time.",
-    "pt": "Uso livre."
+  {
+   "kind": "large"
   },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "cross"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 3
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    }
-  ],
-  "steps": [
-    {
-      "bead": 0,
-      "prayerRef": "sign_of_the_cross"
-    },
-    {
-      "bead": 1,
-      "prayerRef": "creed"
-    },
-    {
-      "bead": 2,
-      "prayerRef": "hail_mary",
-      "repeat": 3
-    },
-    {
-      "bead": 3,
-      "text": {
-        "es": "Dios mío, te amo con todo mi corazón, me arrepiento de haberte ofendido, no permitas que vuelva a ofenderte, concédeme que te ame siempre y haz luego de mí lo que quieras. Amén.",
-        "en": "My God, I love you with my whole heart, I repent of ever having offended You, never permit me to offend You again, grant that I may love You always, and then do with me what You will. Amen",
-        "pt": "Meu Deus, amo-vos com todo o coração, arrependo-me de vos ter ofendido, não permitais que vos ofenda novamente, concedei-me que vos ame sempre e depois fazei de mim o que quiserdes. Amém."
-      }
-    },
-    {
-      "bead": 5,
-      "text": {
-        "es": "Dios te salve, oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
-        "en": "Hail Mary, O Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
-        "pt": "Salve, ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
-      }
-    },
-    {
-      "bead": 6,
-      "text": {
-        "es": "Oh Madre, ayúdame.",
-        "en": "O Mother, help me!",
-        "pt": "Ó Mãe, ajuda-me."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "prayerRef": "memorare"
-    },
-    {
-      "bead": 7,
-      "text": {
-        "es": "Dios te salve, oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
-        "en": "Hail Mary, O Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
-        "pt": "Salve, ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
-      }
-    },
-    {
-      "bead": 8,
-      "text": {
-        "es": "Oh Madre, ayúdame.",
-        "en": "O Mother, help me!",
-        "pt": "Ó Mãe, ajuda-me."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "prayerRef": "memorare"
-    },
-    {
-      "bead": 9,
-      "text": {
-        "es": "Dios te salve, oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
-        "en": "Hail Mary, O Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
-        "pt": "Salve, ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
-      }
-    },
-    {
-      "bead": 10,
-      "text": {
-        "es": "Oh Madre, ayúdame.",
-        "en": "O Mother, help me!",
-        "pt": "Ó Mãe, ajuda-me."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "prayerRef": "memorare"
-    },
-    {
-      "bead": 11,
-      "text": {
-        "es": "Dios te salve, oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
-        "en": "Hail Mary, O Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
-        "pt": "Salve, ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
-      }
-    },
-    {
-      "bead": 12,
-      "text": {
-        "es": "Oh Madre, ayúdame.",
-        "en": "O Mother, help me!",
-        "pt": "Ó Mãe, ajuda-me."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "prayerRef": "memorare"
-    },
-    {
-      "bead": 13,
-      "text": {
-        "es": "Dios te salve, oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
-        "en": "Hail Mary, O Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
-        "pt": "Salve, ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
-      }
-    },
-    {
-      "bead": 14,
-      "text": {
-        "es": "Oh Madre, ayúdame.",
-        "en": "O Mother, help me!",
-        "pt": "Ó Mãe, ajuda-me."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "prayerRef": "memorare"
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Madre queridísima, creo que Jesucristo, tu Hijo, está verdaderamente presente en el Sacramento de la Santísima Eucaristía, Cuerpo, Sangre, Alma y Divinidad. Creo que es el Hijo unigénito de Dios, que se hizo Hombre para salvarme a mí, pecador. Al participar de este Santísimo Sacramento, profeso: que creo en la Iglesia una, santa, católica y apostólica, y que sus enseñanzas y sacramentos fueron instituidos por Cristo; que, siendo verdaderamente su Cuerpo precioso y su Sangre que da vida, recibirlo en estado de gracia traerá curación a mi alma y a mi cuerpo, pero recibirlo conscientemente en estado de pecado mortal me traerá juicio y condenación. Virgen de vírgenes queridísima, declaro estas verdades ante ti como testigo, para que tú, que eres la gran Madre de Dios, te acuerdes de mí ante mi Señor y Maestro, ahora y en la hora de mi muerte. Amén.",
-        "en": "Dearest Mother, I believe that Jesus Christ, your Son, is truly present in the Sacrament of the Most Holy Eucharist, Body, Blood, Soul and Divinity. I believe that He is the only begotten Son of God, Who became Man to save me, a sinner. By partaking of this Most Holy Sacrament, I profess: That I believe in the One, Holy, Catholic and Apostolic Church and that Her teachings and sacraments were instituted by Christ. That because this is truly His Precious Body and life giving Blood, to receive Him in the state of grace will bring healing to both my soul and body but knowingly receive Him in the state of mortal sin will bring me judgement and condemnation. Dearest Virgin of Virgins, I declare these truths before You as my Witness, that You who are the great Mother of God. May you remember me before my Lord and Master, now and at the hour of my death. Amen.",
-        "pt": "Mãe queridíssima, creio que Jesus Cristo, teu Filho, está verdadeiramente presente no Sacramento da Santíssima Eucaristia, Corpo, Sangue, Alma e Divindade. Creio que é o Filho unigénito de Deus, que se fez Homem para me salvar a mim, pecador. Ao participar deste Santíssimo Sacramento, professo: que creio na Igreja una, santa, católica e apostólica, e que os seus ensinamentos e sacramentos foram instituídos por Cristo; que, sendo verdadeiramente o seu Corpo precioso e o seu Sangue que dá vida, recebê-lo em estado de graça trará cura à minha alma e ao meu corpo, mas recebê-lo conscientemente em estado de pecado mortal me trará juízo e condenação. Virgem das virgens queridíssima, declaro estas verdades diante de ti como testemunha, para que tu, que és a grande Mãe de Deus, te lembres de mim diante do meu Senhor e Mestre, agora e na hora da minha morte. Amém."
-      },
-      "meditation": {
-        "es": "Profesión de fe final",
-        "en": "Final profession of faith",
-        "pt": "Profissão de fé final"
-      }
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Oh Madre de la Santísima Eucaristía, ruega por nosotros.",
-        "en": "O Mother of the Most Holy Eucharist, pray for us.",
-        "pt": "Ó Mãe da Santíssima Eucaristia, roga por nós."
-      },
-      "repeat": 3
-    }
-  ],
-  "notes": "Texto literal de Catholic Doors; erratas corregidas: «0 Mother»→«O Mother» y puntuación de «I believe that He is the only begotten Son». Estatus eclesial: la página no menciona visionario ni revelación privada; el encuadre polémico de otras webs no se reproduce. No hay elemento que excluir según las Normas DDF 2024. Origen no documentado en la fuente: se conserva el texto tal como lo publica Catholic Doors Ministry; no se afirma revelación privada ni autoría.",
-  "image": "madre-eucaristia-coronilla",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": "Derechos: Catholic Doors Ministry",
-  "translation": {
-    "es": "traducción fiel de Hermes, 2026",
-    "en": "original",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "kind": "medal"
   },
-  "sources": [
-    {
-      "title": "Catholic Doors · Chaplet to the Mother of the Most Holy Eucharist",
-      "url": "https://www.catholicdoors.com/prayers/chaplets/chap35.htm"
-    }
-  ]
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  }
+ ],
+ "steps": [
+  {
+   "bead": 0,
+   "prayerRef": "sign_of_the_cross"
+  },
+  {
+   "bead": 1,
+   "prayerRef": "creed"
+  },
+  {
+   "bead": 2,
+   "prayerRef": "hail_mary",
+   "repeat": 3
+  },
+  {
+   "bead": 3,
+   "text": {
+    "es": "Dios mío, te amo con todo mi corazón, me arrepiento de haberte ofendido, no permitas que vuelva a ofenderte, concédeme que te ame siempre y haz luego de mí lo que quieras. Amén.",
+    "en": "My God, I love you with my whole heart, I repent of ever having offended You, never permit me to offend You again, grant that I may love You always, and then do with me what You will. Amen",
+    "pt": "Meu Deus, amo-vos com todo o coração, arrependo-me de vos ter ofendido, não permitais que vos ofenda novamente, concedei-me que vos ame sempre e depois fazei de mim o que quiserdes. Amém."
+   }
+  },
+  {
+   "bead": 5,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 5,
+   "text": {
+    "es": "Oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
+    "en": "0 Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
+    "pt": "Ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
+   }
+  },
+  {
+   "bead": 6,
+   "text": {
+    "es": "Oh Madre, ayúdame.",
+    "en": "O Mother, help me!",
+    "pt": "Ó Mãe, ajuda-me."
+   },
+   "repeat": 10
+  },
+  {
+   "bead": 7,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 7,
+   "text": {
+    "es": "Oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
+    "en": "0 Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
+    "pt": "Ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
+   }
+  },
+  {
+   "bead": 7,
+   "text": {
+    "es": "Dios te salve, oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
+    "en": "Hail Mary,\n0 Mother of the Most Holy Eucharist,\nhelp me to believe completely,\nhelp me to love completely,\nhelp me to live what I believe\nand love completely.",
+    "pt": "Salve, ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
+   }
+  },
+  {
+   "bead": 9,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 9,
+   "text": {
+    "es": "Oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
+    "en": "0 Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
+    "pt": "Ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
+   }
+  },
+  {
+   "bead": null,
+   "prayerRef": "memorare"
+  },
+  {
+   "bead": 11,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 11,
+   "text": {
+    "es": "Oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
+    "en": "0 Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
+    "pt": "Ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
+   }
+  },
+  {
+   "bead": 10,
+   "text": {
+    "es": "Oh Madre, ayúdame.",
+    "en": "O Mother, help me!",
+    "pt": "Ó Mãe, ajuda-me."
+   },
+   "repeat": 10
+  },
+  {
+   "bead": 13,
+   "prayerRef": "hail_mary"
+  },
+  {
+   "bead": 13,
+   "text": {
+    "es": "Oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
+    "en": "0 Mother of the Most Holy Eucharist, help me to believe completely, help me to love completely, help me to live what I believe and love completely.",
+    "pt": "Ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
+   }
+  },
+  {
+   "bead": 11,
+   "text": {
+    "es": "Dios te salve, oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
+    "en": "Hail Mary,\n0 Mother of the Most Holy Eucharist,\nhelp me to believe completely,\nhelp me to love completely,\nhelp me to live what I believe\nand love completely.",
+    "pt": "Salve, ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
+   }
+  },
+  {
+   "bead": 12,
+   "text": {
+    "es": "Oh Madre, ayúdame.",
+    "en": "O Mother, help me!",
+    "pt": "Ó Mãe, ajuda-me."
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "prayerRef": "memorare"
+  },
+  {
+   "bead": 13,
+   "text": {
+    "es": "Dios te salve, oh Madre de la Santísima Eucaristía, ayúdame a creer plenamente, a amar plenamente, a vivir plenamente lo que creo y amo.",
+    "en": "Hail Mary,\n0 Mother of the Most Holy Eucharist,\nhelp me to believe completely,\nhelp me to love completely,\nhelp me to live what I believe\nand love completely.",
+    "pt": "Salve, ó Mãe da Santíssima Eucaristia, ajuda-me a crer plenamente, a amar plenamente, a viver plenamente o que creio e amo."
+   }
+  },
+  {
+   "bead": 14,
+   "text": {
+    "es": "Oh Madre, ayúdame.",
+    "en": "O Mother, help me!",
+    "pt": "Ó Mãe, ajuda-me."
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "prayerRef": "memorare"
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Madre queridísima, creo que Jesucristo, tu Hijo, está verdaderamente presente en el Sacramento de la Santísima Eucaristía, Cuerpo, Sangre, Alma y Divinidad. Creo que es el Hijo unigénito de Dios, que se hizo Hombre para salvarme a mí, pecador. Al participar de este Santísimo Sacramento, profeso: que creo en la Iglesia una, santa, católica y apostólica, y que sus enseñanzas y sacramentos fueron instituidos por Cristo; que, siendo verdaderamente su Cuerpo precioso y su Sangre que da vida, recibirlo en estado de gracia traerá curación a mi alma y a mi cuerpo, pero recibirlo conscientemente en estado de pecado mortal me traerá juicio y condenación. Virgen de vírgenes queridísima, declaro estas verdades ante ti como testigo, para que tú, que eres la gran Madre de Dios, te acuerdes de mí ante mi Señor y Maestro, ahora y en la hora de mi muerte. Amén.",
+    "en": "Dearest Mother, I Believe, that Jesus Christ, your Son is truly present in the Sacrament of the Most Holy Eucharist, Body, Blood, Soul and Divinity. I Believe, that He is the, only begotten Son of God, Who became Man to save me, a sinner. By partaking of this Most Holy Sacrament, I profess: That I believe in the One, Holy, Catholic and Apostolic Church and that Her teachings and sacraments were instituted by Christ. That because this is truly His Precious Body and life giving Blood, to receive Him in the state of grace will bring healing to both my soul and body but knowingly receive Him in the state of mortal sin will bring me judgement and condemnation. Dearest Virgin of Virgins, I declare these truths before You as my Witness, that You who are the great Mother of God. May you remember me before my Lord and Master, now and at the hour of my death. Amen.",
+    "pt": "Mãe queridíssima, creio que Jesus Cristo, teu Filho, está verdadeiramente presente no Sacramento da Santíssima Eucaristia, Corpo, Sangue, Alma e Divindade. Creio que é o Filho unigénito de Deus, que se fez Homem para me salvar a mim, pecador. Ao participar deste Santíssimo Sacramento, professo: que creio na Igreja una, santa, católica e apostólica, e que os seus ensinamentos e sacramentos foram instituídos por Cristo; que, sendo verdadeiramente o seu Corpo precioso e o seu Sangue que dá vida, recebê-lo em estado de graça trará cura à minha alma e ao meu corpo, mas recebê-lo conscientemente em estado de pecado mortal me trará juízo e condenação. Virgem das virgens queridíssima, declaro estas verdades diante de ti como testemunha, para que tu, que és a grande Mãe de Deus, te lembres de mim diante do meu Senhor e Mestre, agora e na hora da minha morte. Amém."
+   },
+   "rubric": {
+    "es": "Al concluir",
+    "en": "At the conclusion",
+    "pt": "Ao concluir"
+   }
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Oh Madre de la Santísima Eucaristía, ruega por nosotros.",
+    "en": "0 Mother of the Most Holy Eucharist, Pray for us.",
+    "pt": "Ó Mãe da Santíssima Eucaristia, roga por nós."
+   },
+   "repeat": 3
+  }
+ ],
+ "notes": "Texto literal de Catholic Doors. «Hail Mary» se cita con prayerRef y la invocación propia «0 Mother of the Most Holy Eucharist...» se copia literalmente de la fuente (incluida la grafía «0» del original). La profesión de fe y la jaculatoria final también van en su texto EN literal. Estatus eclesial: la página no menciona visionario ni revelación privada; no hay elemento que excluir según las Normas DDF 2024. Origen no documentado en la fuente: se conserva el texto tal como lo publica Catholic Doors Ministry; no se afirma revelación privada ni autoría.",
+ "image": "madre-eucaristia-coronilla",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": "Derechos: Catholic Doors Ministry",
+ "translation": {
+  "es": "traducción fiel de Hermes, 2026",
+  "en": "original",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "Catholic Doors · Chaplet to the Mother of the Most Holy Eucharist",
+   "url": "https://www.catholicdoors.com/prayers/chaplets/chap35.htm"
+  }
+ ]
 }

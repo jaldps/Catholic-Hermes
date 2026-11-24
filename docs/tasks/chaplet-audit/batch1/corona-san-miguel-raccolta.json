@@ -1,0 +1,475 @@
+{
+  "id": "corona-san-miguel-raccolta",
+  "sourceId": "APP-ST-MICHAEL",
+  "group": "angels",
+  "title": {
+    "es": "Corona de San Miguel Arcángel",
+    "en": "Chaplet of St Michael the Archangel",
+    "pt": "Coroa de São Miguel Arcanjo"
+  },
+  "summary": {
+    "es": "Nueve salutaciones a los coros angélicos, cuatro Padres Nuestros y antífona final.",
+    "en": "Nine salutations to the angelic choirs, four Our Fathers and a final antiphon.",
+    "pt": "Nove saudações aos coros angélicos, quatro Pai-Nossos e antífona final."
+  },
+  "instrument": {
+    "es": "Corona con nueve grupos de tres cuentas y cuatro cuentas finales; también sirve el rosario tradicional.",
+    "en": "Chaplet with nine groups of three beads and four concluding beads; an ordinary rosary may also be used.",
+    "pt": "Coroa com nove grupos de três contas e quatro contas finais; também serve o terço tradicional."
+  },
+  "when": {
+    "es": "Como devoción personal o comunitaria a los nueve coros angélicos, para pedir a Dios conversión y protección.",
+    "en": "As a personal or communal devotion honoring the nine angelic choirs, asking God for conversion and protection.",
+    "pt": "Como devoção pessoal ou comunitária aos nove coros angélicos, pedindo a Deus conversão e proteção."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal",
+      "label": {
+        "es": "Medalla",
+        "en": "Medal",
+        "pt": "Medalha"
+      }
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "large"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "vr": {
+        "v": {
+          "es": "Dios mío, ven en mi auxilio.",
+          "en": "O God, come to my assistance!",
+          "pt": "Ó Deus, vinde em meu auxílio."
+        },
+        "r": {
+          "es": "Señor, date prisa en socorrerme.",
+          "en": "O Lord, make haste to help me!",
+          "pt": "Senhor, apressai-vos em socorrer-me."
+        }
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 1,
+      "text": {
+        "es": "Por la intercesión de san Miguel y del coro celestial de los serafines, dígnese Dios hacernos dignos de recibir en nuestros corazones el fuego de su perfecta caridad. Amén.",
+        "en": "By the intercession of St. Michael and the Celestial choir of Seraphim, may the Lord make us worthy to burn with the fire of perfect charity. Amen.",
+        "pt": "Pela intercessão de são Miguel e do coro celeste dos serafins, digne-se Deus tornar-nos dignos de receber em nossos corações o fogo de sua perfeita caridade. Amém."
+      },
+      "meditation": {
+        "es": "Salutación 1",
+        "en": "Salutation 1",
+        "pt": "Saudação 1"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 4,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "Por la intercesión de san Miguel y del coro celestial de los querubines, concédanos Dios la gracia de abandonar los caminos del pecado y seguir la senda de la perfección cristiana. Amén.",
+        "en": "By the intercession of St. Michael and the Celestial choir of Cherubim, may the Lord vouchsafe to grant us grace to leave the ways of wickedness and run in the paths of Christian perfection. Amen.",
+        "pt": "Pela intercessão de são Miguel e do coro celeste dos querubins, conceda-nos Deus a graça de abandonar os caminhos do pecado e seguir a vereda da perfeição cristã. Amém."
+      },
+      "meditation": {
+        "es": "Salutación 2",
+        "en": "Salutation 2",
+        "pt": "Saudação 2"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 6,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Por la intercesión de san Miguel y del sagrado coro de los tronos, dígnese Dios infundir en nuestros corazones un espíritu verdadero y fervoroso de humildad. Amén.",
+        "en": "By the intercession of St. Michael and the Celestial choir of Thrones, may the Lord infuse into our hearts a true and sincere spirit of humility. Amen.",
+        "pt": "Pela intercessão de são Miguel e do sagrado coro dos tronos, digne-se Deus infundir em nossos corações um espírito verdadeiro e fervoroso de humildade. Amém."
+      },
+      "meditation": {
+        "es": "Salutación 3",
+        "en": "Salutation 3",
+        "pt": "Saudação 3"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 8,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Por la intercesión de san Miguel y del coro celestial de las dominaciones, dígnese Dios concedernos la gracia de dominar nuestros sentidos y corregir nuestras pasiones desordenadas. Amén.",
+        "en": "By the intercession of St. Michael and the Celestial choir of Dominions, may the Lord give us grace to govern our senses and subdue our unruly passions. Amen.",
+        "pt": "Pela intercessão de são Miguel e do coro celeste das dominações, digne-se Deus conceder-nos a graça de dominar nossos sentidos e corrigir nossas paixões desordenadas. Amém."
+      },
+      "meditation": {
+        "es": "Salutación 4",
+        "en": "Salutation 4",
+        "pt": "Saudação 4"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 10,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Por la intercesión de san Miguel y del coro celestial de las potestades, dígnese Dios guardar nuestras almas de las astucias y tentaciones del diablo. Amén.",
+        "en": "By the intercession of St. Michael and the Celestial choir of Virtues, may the Lord preserve us from evil, an suffer us not to fall into temptation. Amen.",
+        "pt": "Pela intercessão de são Miguel e do coro celeste das potestades, digne-se Deus guardar nossas almas das astúcias e tentações do diabo. Amém."
+      },
+      "meditation": {
+        "es": "Salutación 5",
+        "en": "Salutation 5",
+        "pt": "Saudação 5"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 11,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 12,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Por la intercesión de san Miguel y del coro de las admirables virtudes celestiales, guárdenos nuestro Señor de caer en las tentaciones y líbrenos del mal. Amén.",
+        "en": "By the intercession of St. Michael and the Celestial choir of Powers, may the Lord vouchsafe to protect our souls against the snares and temptations of the devil. Amen.",
+        "pt": "Pela intercessão de são Miguel e do coro das admiráveis virtudes celestes, guarde-nos nosso Senhor de cair nas tentações e livre-nos do mal. Amém."
+      },
+      "meditation": {
+        "es": "Salutación 6",
+        "en": "Salutation 6",
+        "pt": "Saudação 6"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 13,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 14,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Por la intercesión de san Miguel y del coro celestial de los principados, dígnese Dios llenar nuestras almas del espíritu de una obediencia verdadera y de corazón. Amén.",
+        "en": "By the intercession of St. Michael and the Celestial choir of Principalities, may God fill our souls with a true spirit of obedience. Amen.",
+        "pt": "Pela intercessão de são Miguel e do coro celeste dos principados, digne-se Deus encher nossas almas do espírito de uma obediência verdadeira e de coração. Amém."
+      },
+      "meditation": {
+        "es": "Salutación 7",
+        "en": "Salutation 7",
+        "pt": "Saudação 7"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 15,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 16,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 15,
+      "text": {
+        "es": "Por la intercesión de san Miguel y del coro celestial de los arcángeles, dígnese Dios concedernos el don de perseverar en la fe y en todas las buenas obras, para que así podamos alcanzar la gloria del paraíso. Amén.",
+        "en": "By the intercession of St. Michael and the Celestial choir of Archangels, may the Lord give us perseverance in faith and in good works, in order that we gain the glory of Paradise. Amen.",
+        "pt": "Pela intercessão de são Miguel e do coro celeste dos arcanjos, digne-se Deus conceder-nos o dom de perseverar na fé e em todas as boas obras, para que assim possamos alcançar a glória do paraíso. Amém."
+      },
+      "meditation": {
+        "es": "Salutación 8",
+        "en": "Salutation 8",
+        "pt": "Saudação 8"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 17,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 18,
+      "prayerRef": "hail_mary",
+      "repeat": 3
+    },
+    {
+      "bead": 17,
+      "text": {
+        "es": "Por la intercesión de san Miguel y del coro celestial de los ángeles, dígnese Dios conceder que los santos ángeles nos protejan durante la vida y, después de la muerte, nos conduzcan a la gloria eterna del cielo. Amén.",
+        "en": "By the intercession of St. Michael and the Celestial choir of Angels, may the Lord grant us to be protected by them in this mortal life and conducted hereafter to eternal glory. Amen.",
+        "pt": "Pela intercessão de são Miguel e do coro celeste dos anjos, digne-se Deus conceder que os santos anjos nos protejam durante a vida e, depois da morte, nos conduzam à glória eterna do céu. Amém."
+      },
+      "meditation": {
+        "es": "Salutación 9",
+        "en": "Salutation 9",
+        "pt": "Saudação 9"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 19,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Padrenuestro final 1: san Miguel, san Gabriel, san Rafael y el Ángel de la Guarda",
+        "en": "Final Our Father 1: St Michael, St Gabriel, St Raphael and the Guardian Angel",
+        "pt": "Pai-Nosso final 1: São Miguel, São Gabriel, São Rafael e o Anjo da Guarda"
+      }
+    },
+    {
+      "bead": 20,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Padrenuestro final 2: san Miguel, san Gabriel, san Rafael y el Ángel de la Guarda",
+        "en": "Final Our Father 2: St Michael, St Gabriel, St Raphael and the Guardian Angel",
+        "pt": "Pai-Nosso final 2: São Miguel, São Gabriel, São Rafael e o Anjo da Guarda"
+      }
+    },
+    {
+      "bead": 21,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Padrenuestro final 3: san Miguel, san Gabriel, san Rafael y el Ángel de la Guarda",
+        "en": "Final Our Father 3: St Michael, St Gabriel, St Raphael and the Guardian Angel",
+        "pt": "Pai-Nosso final 3: São Miguel, São Gabriel, São Rafael e o Anjo da Guarda"
+      }
+    },
+    {
+      "bead": 22,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Padrenuestro final 4: san Miguel, san Gabriel, san Rafael y el Ángel de la Guarda",
+        "en": "Final Our Father 4: St Michael, St Gabriel, St Raphael and the Guardian Angel",
+        "pt": "Pai-Nosso final 4: São Miguel, São Gabriel, São Rafael e o Anjo da Guarda"
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Antífona\nMiguel, príncipe glorioso, jefe y campeón de la milicia celestial, guardián de las almas de los hombres, vencedor de los ángeles rebeldes, puesto al frente del palacio de Dios, nuestro digno capitán bajo Jesucristo, dotado de excelencia y virtud sobrehumanas: dígnate librarnos de todo mal a quienes recurrimos a ti con plena confianza y, mediante tu poderosa protección, haznos avanzar cada día en el fiel servicio de nuestro Dios.",
+        "en": "O glorious Prince St. Michael, chief and commander of the heavenly hosts, guardian of souls, vanquisher of rebel spirits, servant in the house of the Divine King, and our admirable conductor, thou who dost shine with excellence and superhuman virtue, vouchsafe to deliver us from all evil, who turn to thee with confidence, and enable us by thy gracious protection to serve God more and more faithfully every day. Amen.",
+        "pt": "Antífona\nMiguel, príncipe glorioso, chefe e campeão da milícia celeste, guardião das almas dos homens, vencedor dos anjos rebeldes, colocado à frente do palácio de Deus, nosso digno capitão sob Jesus Cristo, dotado de excelência e virtude sobre-humanas: dignai-vos livrar de todo mal aqueles que recorrem a vós com plena confiança e, mediante vossa poderosa proteção, fazei-nos avançar a cada dia no fiel serviço de nosso Deus."
+      },
+      "meditation": {
+        "es": "Antífona y oración final",
+        "en": "Antiphon and final prayer",
+        "pt": "Antífona e oração final"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "vr": {
+        "v": {
+          "es": "Ruega por nosotros, bienaventurado Miguel, príncipe de la Iglesia de Jesucristo.",
+          "en": "Pray for us, O Glorious St. Michael, Prince of the Church of Jesus Christ.",
+          "pt": "Rogai por nós, bem-aventurado Miguel, príncipe da Igreja de Jesus Cristo."
+        },
+        "r": {
+          "es": "Para que seamos dignos de sus promesas.",
+          "en": "That we may be made worthy of His Promises.",
+          "pt": "Para que sejamos dignos de suas promessas."
+        }
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Dios todopoderoso y eterno, que por tu admirable bondad y misericordia elegiste al glorioso arcángel Miguel como príncipe de tu Iglesia para la salvación común de los hombres: haznos dignos, te rogamos, de ser librados de todos nuestros enemigos por su benéfica protección, de modo que ninguno se acerque a dañarnos a la hora de nuestra muerte y que, por el mismo arcángel Miguel, seamos introducidos en la presencia de tu excelsa y celestial Majestad. Por los méritos de Jesucristo nuestro Señor. Amén.",
+        "en": "Almighty and everlasting God, who by a prodigy of Goodness and a merciful desire for the salvation of all men, has appointed the most glorious Archangel St. Michael, Prince of Thy Church, make us worthy, we beseech Thee, to be delivered by his powerful protection from all our enemies, that none of them may harass us at the hour of our death, but that we may be conducted by him into the august presence of Thy Divine Majesty. This we beg through the merits of Jesus Christ our Lord. Amen.",
+        "pt": "Deus todo-poderoso e eterno, que por vossa admirável bondade e misericórdia escolhestes o glorioso arcanjo Miguel como príncipe de vossa Igreja para a salvação comum dos homens: tornai-nos dignos, nós vos pedimos, de ser libertados de todos os nossos inimigos por sua benéfica proteção, de modo que nenhum deles se aproxime para nos ferir na hora de nossa morte e que, pelo mesmo arcanjo Miguel, sejamos introduzidos na presença de vossa excelsa e celeste Majestade. Pelos méritos de Jesus Cristo, nosso Senhor. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "The Raccolta, 1910, n.º 291, pp. 261–263 (texto de T-007)",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap08.htm"
+    }
+  ],
+  "translation": {
+    "es": "traducción fiel de T-007",
+    "en": "original",
+    "pt": "traducción fiel de T-007"
+  },
+  "rights": null,
+  "notes": "Texto inglés original de la Raccolta 1910 n.º 291, ya presente en text-overrides.json (T-007), tomado de los campos leaderText y responseText sin reescribirlo. No se usa la versión de ninguna otra web. Auditoría: la invocación inicial se dice en la medalla (no en la cruz); se quitan los prefijos V/ y R/ del contenido y el bloque final, que mezclaba antífona, versículo y oración en un solo text, se separa en antífona + vr + oración. Fidelidad: texto EN sustituido por el literal de Catholic Doors (chap08).",
+  "image": "corona-san-miguel-raccolta",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null
+}

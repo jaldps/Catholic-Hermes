@@ -1,247 +1,251 @@
 {
-  "id": "sagrado-corazon-jesus",
-  "sourceId": "IVE-07",
-  "group": "god_christ",
-  "title": {
-    "es": "Coronilla al Sagrado Corazón de Jesús",
-    "en": "Chaplet of the Sacred Heart of Jesus",
-    "pt": "Coronilha ao Sagrado Coração de Jesus"
+ "id": "sagrado-corazon-jesus",
+ "sourceId": "IVE-07",
+ "group": "god_christ",
+ "title": {
+  "es": "Coronilla al Sagrado Corazón de Jesús",
+  "en": "Chaplet of the Sacred Heart of Jesus",
+  "pt": "Coronilha ao Sagrado Coração de Jesus"
+ },
+ "summary": {
+  "es": "Consagración al Sagrado Corazón en las cuentas grandes y súplica de misericordia en las pequeñas.",
+  "en": "Consecration to the Sacred Heart on the large beads and a plea for mercy on the small ones.",
+  "pt": "Consagração ao Sagrado Coração nas contas grandes e pedido de misericórdia nas pequenas."
+ },
+ "instrument": {
+  "es": "Rosario común de cinco decenas.",
+  "en": "An ordinary five-decade rosary.",
+  "pt": "Terço comum de cinco décadas."
+ },
+ "when": {
+  "es": "A cada instante y todos los días.",
+  "en": "At every moment and every day.",
+  "pt": "A cada instante e todos os dias."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "cross"
   },
-  "summary": {
-    "es": "Consagración al Sagrado Corazón en las cuentas grandes y súplica de misericordia en las pequeñas.",
-    "en": "Consecration to the Sacred Heart on the large beads and a plea for mercy on the small ones.",
-    "pt": "Consagração ao Sagrado Coração nas contas grandes e pedido de misericórdia nas pequenas."
+  {
+   "kind": "large"
   },
-  "instrument": {
-    "es": "Rosario común de cinco decenas.",
-    "en": "An ordinary five-decade rosary.",
-    "pt": "Terço comum de cinco décadas."
+  {
+   "kind": "small",
+   "count": 3
   },
-  "when": {
-    "es": "A cada instante y todos los días.",
-    "en": "At every moment and every day.",
-    "pt": "A cada instante e todos os dias."
+  {
+   "kind": "large"
   },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "cross"
+  {
+   "kind": "medal"
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  }
+ ],
+ "steps": [
+  {
+   "bead": 5,
+   "text": {
+    "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
+    "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
+    "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
+   },
+   "rubric": {
+    "es": "Cuenta grande",
+    "en": "Large bead",
+    "pt": "Conta grande"
+   }
+  },
+  {
+   "bead": 6,
+   "vr": {
+    "v": {
+     "es": "Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
+     "en": "Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
+     "pt": "Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
     },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 3
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
+    "r": {
+     "es": "Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
+     "en": "Be our refuge and our shelter, now and at the hour of our death. Amen.",
+     "pt": "Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
     }
-  ],
-  "steps": [
-    {
-      "bead": 5,
-      "text": {
-        "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
-        "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
-        "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
-      },
-      "rubric": {
-        "es": "Cuenta grande",
-        "en": "Large bead",
-        "pt": "Conta grande"
-      }
-    },
-    {
-      "bead": 6,
-      "vr": {
-        "v": {
-          "es": "V/ Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
-          "en": "V/ Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
-          "pt": "V/ Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
-        },
-        "r": {
-          "es": "R/ Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
-          "en": "R/ Be our refuge and our shelter, now and at the hour of our death. Amen.",
-          "pt": "R/ Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
-        }
-      },
-      "repeat": 10
-    },
-    {
-      "bead": 7,
-      "text": {
-        "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
-        "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
-        "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
-      }
-    },
-    {
-      "bead": 8,
-      "vr": {
-        "v": {
-          "es": "V/ Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
-          "en": "V/ Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
-          "pt": "V/ Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
-        },
-        "r": {
-          "es": "R/ Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
-          "en": "R/ Be our refuge and our shelter, now and at the hour of our death. Amen.",
-          "pt": "R/ Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
-        }
-      },
-      "repeat": 10
-    },
-    {
-      "bead": 9,
-      "text": {
-        "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
-        "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
-        "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
-      }
-    },
-    {
-      "bead": 10,
-      "vr": {
-        "v": {
-          "es": "V/ Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
-          "en": "V/ Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
-          "pt": "V/ Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
-        },
-        "r": {
-          "es": "R/ Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
-          "en": "R/ Be our refuge and our shelter, now and at the hour of our death. Amen.",
-          "pt": "R/ Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
-        }
-      },
-      "repeat": 10
-    },
-    {
-      "bead": 11,
-      "text": {
-        "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
-        "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
-        "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
-      }
-    },
-    {
-      "bead": 12,
-      "vr": {
-        "v": {
-          "es": "V/ Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
-          "en": "V/ Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
-          "pt": "V/ Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
-        },
-        "r": {
-          "es": "R/ Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
-          "en": "R/ Be our refuge and our shelter, now and at the hour of our death. Amen.",
-          "pt": "R/ Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
-        }
-      },
-      "repeat": 10
-    },
-    {
-      "bead": 13,
-      "text": {
-        "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
-        "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
-        "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
-      }
-    },
-    {
-      "bead": 14,
-      "vr": {
-        "v": {
-          "es": "V/ Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
-          "en": "V/ Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
-          "pt": "V/ Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
-        },
-        "r": {
-          "es": "R/ Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
-          "en": "R/ Be our refuge and our shelter, now and at the hour of our death. Amen.",
-          "pt": "R/ Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
-        }
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Divino Corazón de Jesús, tened piedad de nosotros. Amén.",
-        "en": "Divine Heart of Jesus, have mercy on us. Amen.",
-        "pt": "Divino Coração de Jesus, tende piedade de nós. Amém."
-      },
-      "repeat": 3,
-      "rubric": {
-        "es": "Al final, tres veces",
-        "en": "At the end, three times",
-        "pt": "No final, três vezes"
-      }
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Ven Señor Jesús, Ven Señor Jesús, Ven Señor Jesús.",
-        "en": "Come, Lord Jesus, come, Lord Jesus, come, Lord Jesus.",
-        "pt": "Vem, Senhor Jesus, vem, Senhor Jesus, vem, Senhor Jesus."
-      },
-      "repeat": 3
-    }
-  ],
-  "notes": "Texto literal de IVE. La fuente no indica Credo inicial; se empieza en las cuentas grandes.",
-  "image": "sagrado-corazon-jesus",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": null,
-  "translation": {
-    "es": "original",
-    "en": "traducción fiel de Hermes, 2026",
-    "pt": "traducción fiel de Hermes, 2026"
+   },
+   "repeat": 10
   },
-  "sources": [
-    {
-      "title": "IVE · Rosarios y coronas",
-      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+  {
+   "bead": 7,
+   "text": {
+    "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
+    "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
+    "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
+   }
+  },
+  {
+   "bead": 8,
+   "vr": {
+    "v": {
+     "es": "Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
+     "en": "Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
+     "pt": "Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
+    },
+    "r": {
+     "es": "Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
+     "en": "Be our refuge and our shelter, now and at the hour of our death. Amen.",
+     "pt": "Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
     }
-  ]
+   },
+   "repeat": 10
+  },
+  {
+   "bead": 9,
+   "text": {
+    "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
+    "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
+    "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
+   }
+  },
+  {
+   "bead": 10,
+   "vr": {
+    "v": {
+     "es": "Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
+     "en": "Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
+     "pt": "Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
+    },
+    "r": {
+     "es": "Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
+     "en": "Be our refuge and our shelter, now and at the hour of our death. Amen.",
+     "pt": "Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
+    }
+   },
+   "repeat": 10
+  },
+  {
+   "bead": 11,
+   "text": {
+    "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
+    "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
+    "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
+   }
+  },
+  {
+   "bead": 12,
+   "vr": {
+    "v": {
+     "es": "Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
+     "en": "Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
+     "pt": "Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
+    },
+    "r": {
+     "es": "Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
+     "en": "Be our refuge and our shelter, now and at the hour of our death. Amen.",
+     "pt": "Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
+    }
+   },
+   "repeat": 10
+  },
+  {
+   "bead": 13,
+   "text": {
+    "es": "Oh Sacratísimo, Divino y Adorado Corazón de Jesús, a vos me doy y consagro todo y sin reserva.",
+    "en": "O Most Holy, Divine and Adored Heart of Jesus, to you I give and consecrate myself wholly and without reserve.",
+    "pt": "Ó Sacratíssimo, Divino e Adorado Coração de Jesus, a vós me dou e consagro tudo e sem reserva."
+   }
+  },
+  {
+   "bead": 14,
+   "vr": {
+    "v": {
+     "es": "Divino Corazón de Jesús fuente Inagotable de Amor y de bondad.",
+     "en": "Divine Heart of Jesus, inexhaustible fountain of love and goodness.",
+     "pt": "Divino Coração de Jesus, fonte inesgotável de amor e de bondade."
+    },
+    "r": {
+     "es": "Sed nuestro refugio y nuestro amparo, ahora y en la hora de nuestra muerte. Amén.",
+     "en": "Be our refuge and our shelter, now and at the hour of our death. Amen.",
+     "pt": "Sede o nosso refúgio e o nosso amparo, agora e na hora da nossa morte. Amém."
+    }
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Divino Corazón de Jesús, tened piedad de nosotros. Amén.",
+    "en": "Divine Heart of Jesus, have mercy on us. Amen.",
+    "pt": "Divino Coração de Jesus, tende piedade de nós. Amém."
+   },
+   "repeat": 3,
+   "rubric": {
+    "es": "Al final, tres veces",
+    "en": "At the end, three times",
+    "pt": "No final, três vezes"
+   }
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Ven Señor Jesús, Ven Señor Jesús, Ven Señor Jesús.",
+    "en": "Come, Lord Jesus, come, Lord Jesus, come, Lord Jesus.",
+    "pt": "Vem, Senhor Jesus, vem, Senhor Jesus, vem, Senhor Jesus."
+   },
+   "rubric": {
+    "es": "Repetid a cada instante y todos los días",
+    "en": "Repeat at every moment and every day",
+    "pt": "Repeti a cada instante e todos os dias"
+   }
+  }
+ ],
+ "notes": "Texto literal de IVE. Se quitan los prefijos V/ y R/ del contenido (el motor dibuja las marcas). «Ven Señor Jesús, Ven Señor Jesús, Ven Señor Jesús» se deja en un paso literal y sin repeat: la fuente no lo reparte entre cuentas.",
+ "image": "sagrado-corazon-jesus",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": null,
+ "translation": {
+  "es": "original",
+  "en": "traducción fiel de Hermes, 2026",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "IVE · Rosarios y coronas",
+   "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+  }
+ ]
 }

@@ -1,95 +1,113 @@
 {
-  "id": "padre-pio-coronilla",
-  "sourceId": "CD-28",
-  "group": "saints",
-  "title": {
-    "es": "Coronilla de San Pío de Pietrelcina",
-    "en": "Chaplet of Saint Padre Pio",
-    "pt": "Coronilha de São Pio de Pietrelcina"
+ "id": "padre-pio-coronilla",
+ "sourceId": "CD-28",
+ "group": "saints",
+ "title": {
+  "es": "Coronilla de San Pío de Pietrelcina",
+  "en": "Chaplet of Saint Padre Pio",
+  "pt": "Coronilha de São Pio de Pietrelcina"
+ },
+ "summary": {
+  "es": "Medalla, crucifijo y nueve cuentas marrones con una oración de petición.",
+  "en": "Medal, crucifix and nine brown beads with a prayer of petition.",
+  "pt": "Medalha, crucifixo e nove contas marrons com uma oração de petição."
+ },
+ "instrument": {
+  "es": "Medalla, crucifijo y 3 grupos de 3 cuentas marrones.",
+  "en": "Medal, crucifix and 3 sets of 3 brown beads.",
+  "pt": "Medalha, crucifixo e 3 grupos de 3 contas marrons."
+ },
+ "when": {
+  "es": "Uso libre.",
+  "en": "At any time.",
+  "pt": "Uso livre."
+ },
+ "weekdays": [],
+ "variables": [
+  "intention"
+ ],
+ "beads": [
+  {
+   "kind": "medal"
   },
-  "summary": {
-    "es": "Medalla, crucifijo y nueve cuentas marrones con una oración de petición.",
-    "en": "Medal, crucifix and nine brown beads with a prayer of petition.",
-    "pt": "Medalha, crucifixo e nove contas marrons com uma oração de petição."
+  {
+   "kind": "cross"
   },
-  "instrument": {
-    "es": "Medalla, crucifijo y 3 grupos de 3 cuentas marrones.",
-    "en": "Medal, crucifix and 3 sets of 3 brown beads.",
-    "pt": "Medalha, crucifixo e 3 grupos de 3 contas marrons."
+  {
+   "kind": "small",
+   "count": 3,
+   "color": "#8B5A2B"
   },
-  "when": {
-    "es": "Uso libre.",
-    "en": "At any time.",
-    "pt": "Uso livre."
+  {
+   "kind": "small",
+   "count": 3,
+   "color": "#8B5A2B"
   },
-  "weekdays": [],
-  "variables": [
-    "intention"
-  ],
-  "beads": [
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "cross"
-    },
-    {
-      "kind": "small",
-      "count": 3,
-      "color": "#8B5A2B"
-    },
-    {
-      "kind": "small",
-      "count": 3,
-      "color": "#8B5A2B"
-    },
-    {
-      "kind": "small",
-      "count": 3,
-      "color": "#8B5A2B"
-    }
-  ],
-  "steps": [
-    {
-      "bead": 2,
-      "text": {
-        "es": "Oh Jesús, lleno de gracia y caridad, víctima por los pecadores, tan movido por tu amor hacia nosotros que quisiste morir en la cruz, te ruego humildemente que glorifiques en el cielo y en la tierra al siervo de Dios, Padre Pío de Pietrelcina, que participó generosamente en tus sufrimientos, que te amó tanto y trabajó tan fielmente por la gloria de tu Padre celestial y por el bien de las almas. Con confianza te pido que me concedas, por su intercesión, (menciona aquí tu petición) que deseo ardientemente.",
-        "en": "Oh Jesus, full of grace and charity, victim for sinners, so impelled by Your love of us that You will to die on the cross, I humbly entreat Thee to glorify in heaven and on earth, the servant of God, Padre Pio of Pietrelcina, who generously participated in Your sufferings, who loved Thee so much and laboured so faithfully for the glory of Your heavenly Father and for the good of souls. With confidence, I beseech Thee to grant me, through his intercession, (Mention your request here...) which I ardently desire.",
-        "pt": "Ó Jesus, cheio de graça e caridade, vítima pelos pecadores, tão impelido pelo teu amor por nós que quiseste morrer na cruz, humildemente te suplico que glorifiques no céu e na terra o servo de Deus, Padre Pio de Pietrelcina, que participou generosamente nos teus sofrimentos, que tanto te amou e trabalhou tão fielmente pela glória do teu Pai celestial e pelo bem das almas. Com confiança te peço que me concedas, pela sua intercessão, (aqui a petição) que ardentemente desejo."
-      },
-      "repeat": 9
-    },
-    {
-      "bead": null,
-      "prayerRef": "our_father",
-      "repeat": 3
-    },
-    {
-      "bead": null,
-      "prayerRef": "hail_mary",
-      "repeat": 3
-    },
-    {
-      "bead": null,
-      "prayerRef": "glory_be",
-      "repeat": 3
-    }
-  ],
-  "notes": "Texto literal de Catholic Doors. El marcador de petición se deja como en la fuente, sin variable declarada.",
-  "image": "padre-pio-coronilla",
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": "Derechos: Catholic Doors Ministry",
-  "translation": {
-    "es": "traducción fiel de Hermes, 2026",
-    "en": "original",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "kind": "small",
+   "count": 3,
+   "color": "#8B5A2B"
+  }
+ ],
+ "steps": [
+  {
+   "bead": 2,
+   "text": {
+    "es": "Oh Jesús, lleno de gracia y caridad, víctima por los pecadores, tan movido por tu amor hacia nosotros que quisiste morir en la cruz, te ruego humildemente que glorifiques en el cielo y en la tierra al siervo de Dios, Padre Pío de Pietrelcina, que participó generosamente en tus sufrimientos, que te amó tanto y trabajó tan fielmente por la gloria de tu Padre celestial y por el bien de las almas. Con confianza te pido que me concedas, por su intercesión, {{intencion}} que deseo ardientemente.",
+    "en": "Oh Jesus, full of grace and charity, victim for sinners, so impelled by Your love of us that You will to die on the cross, I humbly entreat Thee to glorify in heaven and on earth, the servant of God, Padre Pio of Pietrelcina, who generously participated in Your sufferings, who loved Thee so much and laboured so faithfully for the glory of Your heavenly Father and for the good of souls. With confidence, I beseech Thee to grant me, through his intercession, {{intencion}} which I ardently desire.",
+    "pt": "Ó Jesus, cheio de graça e caridade, vítima pelos pecadores, tão impelido pelo teu amor por nós que quiseste morrer na cruz, humildemente te suplico que glorifiques no céu e na terra o servo de Deus, Padre Pio de Pietrelcina, que participou generosamente nos teus sofrimentos, que tanto te amou e trabalhou tão fielmente pela glória do teu Pai celestial e pelo bem das almas. Com confiança te peço que me concedas, pela sua intercessão, {{intencion}} que ardentemente desejo."
+   },
+   "repeat": 3
   },
-  "sources": [
-    {
-      "title": "Catholic Doors · Chaplet of Saint Padre Pio",
-      "url": "https://www.catholicdoors.com/prayers/chaplets/chap25.htm"
-    }
-  ]
+  {
+   "bead": 3,
+   "text": {
+    "es": "Oh Jesús, lleno de gracia y caridad, víctima por los pecadores, tan movido por tu amor hacia nosotros que quisiste morir en la cruz, te ruego humildemente que glorifiques en el cielo y en la tierra al siervo de Dios, Padre Pío de Pietrelcina, que participó generosamente en tus sufrimientos, que te amó tanto y trabajó tan fielmente por la gloria de tu Padre celestial y por el bien de las almas. Con confianza te pido que me concedas, por su intercesión, {{intencion}} que deseo ardientemente.",
+    "en": "Oh Jesus, full of grace and charity, victim for sinners, so impelled by Your love of us that You will to die on the cross, I humbly entreat Thee to glorify in heaven and on earth, the servant of God, Padre Pio of Pietrelcina, who generously participated in Your sufferings, who loved Thee so much and laboured so faithfully for the glory of Your heavenly Father and for the good of souls. With confidence, I beseech Thee to grant me, through his intercession, {{intencion}} which I ardently desire.",
+    "pt": "Ó Jesus, cheio de graça e caridade, vítima pelos pecadores, tão impelido pelo teu amor por nós que quiseste morrer na cruz, humildemente te suplico que glorifiques no céu e na terra o servo de Deus, Padre Pio de Pietrelcina, que participou generosamente nos teus sofrimentos, que tanto te amou e trabalhou tão fielmente pela glória do teu Pai celestial e pelo bem das almas. Com confiança te peço que me concedas, pela sua intercessão, {{intencion}} que ardentemente desejo."
+   },
+   "repeat": 3
+  },
+  {
+   "bead": 4,
+   "text": {
+    "es": "Oh Jesús, lleno de gracia y caridad, víctima por los pecadores, tan movido por tu amor hacia nosotros que quisiste morir en la cruz, te ruego humildemente que glorifiques en el cielo y en la tierra al siervo de Dios, Padre Pío de Pietrelcina, que participó generosamente en tus sufrimientos, que te amó tanto y trabajó tan fielmente por la gloria de tu Padre celestial y por el bien de las almas. Con confianza te pido que me concedas, por su intercesión, {{intencion}} que deseo ardientemente.",
+    "en": "Oh Jesus, full of grace and charity, victim for sinners, so impelled by Your love of us that You will to die on the cross, I humbly entreat Thee to glorify in heaven and on earth, the servant of God, Padre Pio of Pietrelcina, who generously participated in Your sufferings, who loved Thee so much and laboured so faithfully for the glory of Your heavenly Father and for the good of souls. With confidence, I beseech Thee to grant me, through his intercession, {{intencion}} which I ardently desire.",
+    "pt": "Ó Jesus, cheio de graça e caridade, vítima pelos pecadores, tão impelido pelo teu amor por nós que quiseste morrer na cruz, humildemente te suplico que glorifiques no céu e na terra o servo de Deus, Padre Pio de Pietrelcina, que participou generosamente nos teus sofrimentos, que tanto te amou e trabalhou tão fielmente pela glória do teu Pai celestial e pelo bem das almas. Com confiança te peço que me concedas, pela sua intercessão, {{intencion}} que ardentemente desejo."
+   },
+   "repeat": 3
+  },
+  {
+   "bead": null,
+   "prayerRef": "our_father",
+   "repeat": 3
+  },
+  {
+   "bead": null,
+   "prayerRef": "hail_mary",
+   "repeat": 3
+  },
+  {
+   "bead": null,
+   "prayerRef": "glory_be",
+   "repeat": 3
+  }
+ ],
+ "notes": "Texto literal de Catholic Doors. El marcador de petición de la fuente se expresa con {{intencion}}, variable ya declarada en el JSON.",
+ "image": "padre-pio-coronilla",
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": "Derechos: Catholic Doors Ministry",
+ "translation": {
+  "es": "traducción fiel de Hermes, 2026",
+  "en": "original",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "Catholic Doors · Chaplet of Saint Padre Pio",
+   "url": "https://www.catholicdoors.com/prayers/chaplets/chap25.htm"
+  }
+ ]
 }

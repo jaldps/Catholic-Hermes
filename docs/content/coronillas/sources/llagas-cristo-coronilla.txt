@@ -1,0 +1,246 @@
+URL: https://hozana.org/es/oracion/santo-rosario/de-las-llagas-de-cristo
+
+Coronilla de las llagas de cristo
+- Hozana
+{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","headline":"Coronilla de las llagas de cristo","inLanguage":"es","image":["https:\/\/hozana.org\/img\/hozana_share.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hozana.org\/es\/oracion\/santo-rosario\/de-las-llagas-de-cristo"},"publisher":{"@type":"Organization","name":"Hozana.org","logo":{"@type":"ImageObject","url":"https:\/\/hozana.org\/apple-touch-icon.png"}},"description":"Descubre la coronilla de las Santas Llagas de Jes\u00fas, c\u00f3mo rezarla y diferentes oraciones de devoci\u00f3n a las Santas Llagas de Cristo, para implorar la misericordia divina.","datePublished":"2020-10-23T11:45:44+00:00","dateModified":"2026-06-09T07:10:49+00:00"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https:\/\/hozana.org\/es"},{"@type":"ListItem","position":2,"name":"Consejos para orar","item":"https:\/\/hozana.org\/es\/oracion"},{"@type":"ListItem","position":3,"name":"Santo Rosario: m\u00e9todo y consejos","item":"https:\/\/hozana.org\/es\/oracion\/santo-rosario"},{"@type":"ListItem","position":4,"name":"Coronilla de las llagas de cristo","item":"https:\/\/hozana.org\/es\/oracion\/santo-rosario\/de-las-llagas-de-cristo"}]},{"@type":"Organization","name":"Hozana","url":"https:\/\/hozana.org","logo":{"@type":"ImageObject","url":"https:\/\/hozana.org\/apple-touch-icon.png"}}]}
+window.sentryDsn = 'https://05545f841574d7190c078cc407d7a978@o86393.ingest.us.sentry.io/4510940097478656';
+/*
+Bienvenue à toi, visiteur du code source d'Hozana.org ! gauthier-seo
+Ici, nous bâtissons une cathédrale. Nous cherchons à mettre en oeuvre le meilleur de la techno afin de rassembler une immense communauté de prière sur Internet et mobile.
+Le site est développé par l'association Hozana, dont le modèle repose sur les dons, et le bénévolat. L'association compte une équipe de 20 permanents (dont 5 dev, un designer/intégrateur, un product owner), et plus de 90 bénévoles (dont une dizaine de dev).
+Nous cherchons en permanence des développeurs bénévoles pour nous aider à livrer rapidement des produits selon les meilleurs standards du Web. Si tu veux rejoindre un projet passionnant et nous aider à rendre le monde chaque jour un peu plus priant, n'hésite pas à nous écrire ici : https://hozana.org/contact.
+Nous cherchons également régulièrement à recruter des développeurs, donc n'hésite pas à nous écrire si cela peut t'intéresser !
+Notre stack :
+- Front : React, Typescript, NextJS, Redux, Service Workers (Hozana.org est une PWA), Storybook, Cypress
+- Server : API REST en Symfony, MySQL, Elasticsearch, Redis
+- Data : une application Metabase tourne avec une réplication quotidienne du MySQL de prod, après quelques adaptations d'un ETL écrit en python.
+- Tooling : CircleCI, Prometheus / Grafana, Sentry, Uptime. L'environnement de dev est sous Docker.
+- Tests : Jest, Storybook, Cypress
+« Nous, on est à peine une dizaine. C'est un tout petit navire. C'est pas un navire, c'est une barque. C'est pas une barque d'ailleurs, c'est un radeau. Mais sur le radeau, j'ai choisi les meilleurs. »
+.:+oo-
+':+ssssssso-
+':ossssssssssss+'
+-+sssssssssssssssss-
+'/sssssssssssssssssssss/
+'/ssssssssssssssssssssssss+'
+:ssssssssssssssssssssssssssso'
+.ossssssssssssssssssssssssssssso
+:ssssssssssssssssssssssssssssssss+
++ssssssssssssssssssssssssssssssssss-
++ssssssssssssssssssssssssssssssssssss
+/sssssssssssssssssssssssssssssssssssss:
+.sssssssssssssssssssssssssssssssssssssso
++ssssssssssssssssss+osssssssssssssssssss
+ssssssssssssssssss- -osssssssssssssssss'
+'sssssssssssssssss- :ssssssssssssssss
+ssssssssssssssss. 'ossssssssssssso
+/ssssssssssssso' '+ssssssssssss-
+'ssssssssssss+ 'ssssssssssso'
+.ssssssssss+ :ssssssssso'
+.sssssssso .sssssssso'
+'+ssssss: .sssssss/
+.+ssss: /sssss/'
+./oso' .ssso:'
+'-- .+/-
+*/
+window._vwo_code=window._vwo_code||(function(){
+var account_id=706531,
+version=1.5,
+settings_tolerance=1000,
+library_tolerance=2500,
+use_existing_jquery=false,
+is_spa=0,
+hide_element='body',
+hide_element_style='opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery},library_tolerance:function(){return library_tolerance},hide_element_style:function(){return'{'+hide_element_style+'}'},finish:function(){if(!f){f=true;var e=d.getElementById('_vis_opt_path_hides');if(e)e.parentNode.removeChild(e)}},finished:function(){return f},load:function(e){var t=d.createElement('script');t.fetchPriority='high';t.src=e;t.type='text/javascript';t.innerText;t.onerror=function(){window._vwo_code.finish()};d.getElementsByTagName('head')[0].appendChild(t)},getVersion:function(){return version},getMatchedCookies:function(e){var t=[];if(document.cookie){t=document.cookie.match(e)||[]}return t},getCombinationCookie:function(){var e=code.getMatchedCookies(/(?:^|;)\s?(vis_opt_exp\d+_combi=[^;$])/gi);e=e.map(function(e){try{var t=decodeURIComponent(e);if(!/vis_opt_exp\d+_combi=(?:\d+,?)+\s*$/.test(t)){return''}return t}catch(e){return''}});var i=[];e.forEach(function(e){var t=e.match(/([\d,]+)/g);t&&i.push(t.join('-'))});return i.join('|')},init:function(){if(d.URL.indexOf('vwo_disable')>-1)return;window.settings_timer=setTimeout(function(){window._vwo_code.finish()},settings_tolerance);var e=d.createElement('style'),t=hide_element?hide_element+'{'+hide_element_style+'}':'',i=d.getElementsByTagName('head')[0];e.setAttribute('id','_vis_opt_path_hides');e.setAttribute('type','text/css');if(e.styleSheet)e.styleSheet.cssText=t;else e.appendChild(d.createTextNode(t));i.appendChild(e);var n=this.getCombinationCookie();this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+is_spa+'&vn='+version+(n?'&c='+n:''));return settings_timer}};window._vwo_settings_timer=code.init();return code;}());
+window.gtmDL = window.gtmDL || [];
+window.gtmPush = function(args) { gtmDL.push(args); };
+gtmPush({
+event: 'gtm.js',
+'gtm.start': new Date().getTime(),
+appName: 'Hozana',
+appVersion: document.querySelector('meta[name="version"]')
+? document.querySelector('meta[name="version"]').getAttribute('content')
+: '1.0.0',
+isWidget: window.location.pathname.indexOf('/widget/') !== -1,
+ssr: true
+});
+(function(d, s) {
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s);
+j.async = true;
+j.src = 'https://www.googletagmanager.com/gtm.js?l=gtmDL'
++ '&id=GTM-PNXWBQW'
++ '>m_auth=A9O_skATQQerh6uBGBpvsg'
++ '>m_preview=env-3'
++ '>m_cookies_win=x';
+var n = d.querySelector('script[nonce]');
+if (n) { j.setAttribute('nonce', n.nonce || n.getAttribute('nonce')); }
+f.parentNode.insertBefore(j, f);
+})(document, 'script');
+window.lang = 'es';
+Consejos para orar
+Santo Rosario: método y consejos
+Coronilla de las llagas de cristo
+Coronilla de las llagas de cristo
+Los misterios del Santo Rosario
+Misterios dolorosos (Rosario de los martes y viernes)
+Misterios luminosos (Rosario de los jueves)
+Misterios gozosos (Rosario de los lunes y sábados)
+Misterios gloriosos (Rosario de los miércoles y los domingos)
+Rosario de la Virgen de Lourdes
+Coronilla de liberación
+Coronilla al Espíritu Santo
+Coronilla al Santísimo Sacramento
+Coronilla de la Divina Misericordia
+Coronilla a San Miguel Arcángel
+Coronilla a San José
+24 Glorias a Santa Teresita
+Rosario a las benditas almas del purgatorio
+El rosario de San Miguel
+document.addEventListener('DOMContentLoaded', function() {
+const button = document.getElementById('breadcrumb-dropdown-btn');
+const menu = document.getElementById('breadcrumb-dropdown-menu');
+const currentToggle = document.getElementById('breadcrumb-current-toggle');
+if (button && menu) {
+const chevron = button.querySelector('svg');
+function setOpen(open) {
+if (open) {
+menu.classList.remove('hidden');
+if (chevron) chevron.style.transform = 'rotate(180deg)';
+button.setAttribute('aria-expanded', 'true');
+if (currentToggle) currentToggle.setAttribute('aria-expanded', 'true');
+} else {
+menu.classList.add('hidden');
+if (chevron) chevron.style.transform = 'rotate(0deg)';
+button.setAttribute('aria-expanded', 'false');
+if (currentToggle) currentToggle.setAttribute('aria-expanded', 'false');
+}
+}
+function toggleMenu() {
+const open = menu.classList.contains('hidden');
+setOpen(open);
+}
+button.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+toggleMenu();
+});
+if (currentToggle) {
+currentToggle.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+toggleMenu();
+});
+}
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+if (!button.contains(e.target) && !menu.contains(e.target) && !(currentToggle && currentToggle.contains(e.target))) {
+setOpen(false);
+}
+});
+// Close dropdown on escape key
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+setOpen(false);
+button.focus();
+}
+});
+// Add transition to the chevron
+if (chevron) {
+chevron.style.transition = 'transform 0.2s ease-in-out';
+}
+}
+});
+Coronilla de las llagas de cristo
+El Rosario (especial) o coronilla de las santas llagas de Cristo, también llamado Rosario a la preciosa sangre de Cristo, es una oración que invita a meditar en los sufrimientos de Cristo durante su calvario, a través de las diversas heridas de su cuerpo. Este rosario nos lo dio a conocer a Sor María Martha Chambon, quien recibió la petición de Jesús. Este rosario especial retoma los misterios dolorosos que se rezan en el Rosario. A través de esta devoción a las santas heridas de Jesús, imploramos la fuerza de su sacrificio, su amor por nosotros, y el poder de su misericordia.
+Actualizado el 09/06/2026|Tiempo de lectura : 5 min
+Sommaire
+¿Cómo rezar la coronilla de las santas llagas?
+La devoción a las santas llagas de Jesús
+Reza a Jesús, nuestro Salvador, con las Comunidades de oración de Hozana
+Reza el Rosario junto a miles de fieles
+Meditaciones guiadas con la Virgen María. Únete ahora, gratis.
+Sí, me uno al Rosario
+¿Cómo rezar la coronilla de las santas llagas?
+El Rosario de las santas llagas se reza como el Rosario tradicional.
+En la cruz, para empezar el rosario, rezamos:
+"Oh Jesús, divino Redentor, ten misericordia de nosotros y del mundo entero. Amén.”
+“Dios santo, Dios fuerte, Dios inmortal, ten piedad de nosotros y del mundo entero. Amén.”
+“Oh Padre Eterno, trátanos con misericordia a través de la sangre de Jesús, tu único hijo; trátanos con misericordia, te suplicamos. Te lo suplicamos. Amén.”
+En las cuentas o perlas grandes, decimos:
+"Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo para sanar las heridas de nuestras almas.”
+En las cuentas o perlas pequeñas, decimos:
+"Jesús mío, perdón y misericordia, por los méritos de tus santas llagas”
+Terminamos el rosario, repitiendo tres veces:
+"Padre Eterno, te ofrezco las heridas de nuestro Señor Jesucristo, para sanar las heridas de nuestras almas.”
+Al principio de cada decena, podemos confiar una intención específica y nombrar una de las santas llagas: manos, pies, espalda, cabeza, corazón.
+Vive la Pasión de Cristo día a día
+Viacrucis meditado con Fulton Sheen. 9 días para entrar en su amor.
+Sí, camino con Cristo
+La devoción a las santas llagas de Jesús
+Oración de consagración a las heridas de Jesucristo
+“¡Oh Faz amabilísima de Jesús!; Aquí vengo, atraído por tu dulce mirada, que, como divino imán, arrebata mi corazón aunque pobre y pecador! ¡Oh Jesús!, quisiera enjugar tu adorable Faz y consolarte de las injurias y olvido de los pecadores.
+¡Oh Rostro hermosísimo!, las lágrimas que brotan de tus ojos me parecen diamantes, que quiero recoger para comprar con ellos las almas de mis hermanos.
+¡Oh amado Jesús!, si yo tuviera el amor de todos los corazones, todo sería para Ti.
+Envía, Señor, almas, sobre todo almas de apóstoles y de mártires para abrasar en tu amor a la multitud de los desgraciados pecadores.
+¡Oh adorable Jesús!, mientras aguardo el día eterno en que contemplaré tu gloria infinita, mi único deseo es venerar tu Faz santísima, a la cual consagro desde ahora para siempre mi alma con sus potencias y mi cuerpo con sus sentidos.
+¡Oh mi Jesús!, haz que tu Rostro lastimado sea aquí abajo mi encanto y mi cielo. Amén.”
+Oración a la llaga del hombro de Jesús
+“Oh amantísimo Jesús, Cordero mansísimo de Dios, yo, miserable pecador, saludo y venero la llaga sacratísima del hombro en que llevaste tu pesada cruz, que desgarró tu carne y descubrió tus huesos causándote un dolor mayor que el de cualquiera otra llaga de tu sacratísimo cuerpo. Yo te adoro, oh afligidísimo Jesús: te alabo, bendigo y glorifico, y te doy gracias por esta sacratísima y dolorosísima llaga, rogándote por su excesivo dolor y por el enorme peso de tu cruz, tengas misericordia de mí pecador, me perdones todos los pecados mortales y veniales, y me conduzcas al cielo por el camino de tu cruz. Así sea.”
+Otras oraciones y plegarias a las santas llagas de Cristo
+Existen otras oraciones dedicadas a las santas llagas de Cristo: la novena a las siete llagas de Jesús, las 15 oraciones de Santa Brígida, etc. De hecho, Jesús, ya sea a través de Santa Brígida, Sor María Martha o de San Bernardo, nos ha revelado que se siente especialmente conmovido por estas oraciones y otorga toda su misericordia a quienes le rezan.
+Reza a Jesús, nuestro Salvador, con las Comunidades de oración de Hozana
+La agonía y el calvario de Cristo terminaron a las 3 p.m., la hora de su muerte, la hora de la misericordia. Al rezar a esa hora, nos sumergimos en la misericordia divina.
+Descubre esta promesa de Jesús a Santa Faustina con esta novena en línea o reza a Jesús, quien se ofreció por nuestra salvación con la novena al Sagrado Corazón de Jesús.
+Artículos relacionados
+Fiestas
+¿Qué tipo de ayuno debo hacer durante la Cuaresma?
+Oracion
+Oración al Espíritu Santo
+Oracion
+Oración de la mañana
+Biblia
+Versículos de la biblia para orar y meditar
+Artículos relacionados
+Fiestas
+¿Qué tipo de ayuno debo hacer durante la Cuaresma?
+Oracion
+Oración al Espíritu Santo
+Oracion
+Oración de la mañana
+Biblia
+Versículos de la biblia para orar y meditar
+×
+Unirse ahora
+No, gracias, sigo leyendo
+×
+Mantente fiel al rezo del rosario cada día con la aplicación Rosario
+•
+Reza todos los días con Rosario
+•
+La primera app del rosario viviente
+•
+Haz rezar a tus seres queridos
+Descargar gratis
+×
+Descubre la meditación cristiana con la aplicación Meditatio
+•
+Medita cada día con Meditatio
+•
+Meditaciones guiadas para profundizar tu fe
+•
+Encuentra la paz interior a través de la oración
+Descargar gratis
+Enviar una intención
+Association Hozana - 6 rue du Palais de Justice, 69005 Lyon.
+|
+Términos y Condiciones
+|
+Carta de Hozana
+|
+Preguntas Frecuentes
+|
+Protección de la infancia
+|
+Política de Privacidad

@@ -1,274 +1,303 @@
 {
-  "id": "almas-purgatorio-coronilla",
-  "sourceId": "IVE-06",
-  "group": "departed",
-  "title": {
-    "es": "Coronilla a las almas del Purgatorio",
-    "en": "Chaplet for the Souls in Purgatory",
-    "pt": "Coronilha pelas almas do Purgatório"
+ "id": "almas-purgatorio-coronilla",
+ "sourceId": "IVE-06",
+ "group": "departed",
+ "title": {
+  "es": "Coronilla a las almas del Purgatorio",
+  "en": "Chaplet for the Souls in Purgatory",
+  "pt": "Coronilha pelas almas do Purgatório"
+ },
+ "summary": {
+  "es": "Rosario tradicional con jaculatorias por las almas purgantes y oración por los difuntos.",
+  "en": "Traditional rosary with invocations for the souls in Purgatory and prayer for the departed.",
+  "pt": "Terço tradicional com jaculatórias pelas almas do Purgatório e oração pelos defuntos."
+ },
+ "instrument": {
+  "es": "Cuentas de un rosario tradicional.",
+  "en": "Beads of an ordinary rosary.",
+  "pt": "Contas de um terço tradicional."
+ },
+ "when": {
+  "es": "Cada día.",
+  "en": "Every day.",
+  "pt": "Todos os dias."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "cross"
   },
-  "summary": {
-    "es": "Rosario tradicional con jaculatorias por las almas purgantes y oración por los difuntos.",
-    "en": "Traditional rosary with invocations for the souls in Purgatory and prayer for the departed.",
-    "pt": "Terço tradicional com jaculatórias pelas almas do Purgatório e oração pelos defuntos."
+  {
+   "kind": "large"
   },
-  "instrument": {
-    "es": "Cuentas de un rosario tradicional.",
-    "en": "Beads of an ordinary rosary.",
-    "pt": "Contas de um terço tradicional."
+  {
+   "kind": "small",
+   "count": 3
   },
-  "when": {
-    "es": "Cada día.",
-    "en": "Every day.",
-    "pt": "Todos os dias."
+  {
+   "kind": "large"
   },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "cross"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 3
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    }
-  ],
-  "steps": [
-    {
-      "bead": null,
-      "text": {
-        "es": "Oh Sangre y Agua, que brotaron del Corazón de Jesús como una fuente de Misericordia para nosotros, en Ustedes confío.",
-        "en": "O Blood and Water that flowed from the Heart of Jesus as a fountain of mercy for us, in you I trust.",
-        "pt": "Ó Sangue e Água que brotastes do Coração de Jesus como fonte de misericórdia para nós, em vós confio."
-      },
-      "repeat": 3,
-      "meditation": {
-        "es": "Introducción, tres veces",
-        "en": "Introduction, three times",
-        "pt": "Introdução, três vezes"
-      }
-    },
-    {
-      "bead": 0,
-      "prayerRef": "creed"
-    },
-    {
-      "bead": 1,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 2,
-      "prayerRef": "hail_mary",
-      "repeat": 3
-    },
-    {
-      "bead": 3,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
-        "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
-        "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
-      },
-      "meditation": {
-        "es": "Jaculatoria antes de las cuentas pequeñas",
-        "en": "Invocation before the small beads",
-        "pt": "Jaculatória antes das contas pequenas"
-      }
-    },
-    {
-      "bead": 5,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 6,
-      "text": {
-        "es": "Jesús, María os amo, salvad las almas.",
-        "en": "Jesus, Mary, I love you; save the souls.",
-        "pt": "Jesus, Maria, amo-vos; salvai as almas."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
-        "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
-        "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
-      },
-      "meditation": {
-        "es": "Jaculatoria antes de las cuentas pequeñas",
-        "en": "Invocation before the small beads",
-        "pt": "Jaculatória antes das contas pequenas"
-      }
-    },
-    {
-      "bead": 7,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 8,
-      "text": {
-        "es": "Jesús, María os amo, salvad las almas.",
-        "en": "Jesus, Mary, I love you; save the souls.",
-        "pt": "Jesus, Maria, amo-vos; salvai as almas."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
-        "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
-        "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
-      },
-      "meditation": {
-        "es": "Jaculatoria antes de las cuentas pequeñas",
-        "en": "Invocation before the small beads",
-        "pt": "Jaculatória antes das contas pequenas"
-      }
-    },
-    {
-      "bead": 9,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 10,
-      "text": {
-        "es": "Jesús, María os amo, salvad las almas.",
-        "en": "Jesus, Mary, I love you; save the souls.",
-        "pt": "Jesus, Maria, amo-vos; salvai as almas."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
-        "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
-        "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
-      },
-      "meditation": {
-        "es": "Jaculatoria antes de las cuentas pequeñas",
-        "en": "Invocation before the small beads",
-        "pt": "Jaculatória antes das contas pequenas"
-      }
-    },
-    {
-      "bead": 11,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 12,
-      "text": {
-        "es": "Jesús, María os amo, salvad las almas.",
-        "en": "Jesus, Mary, I love you; save the souls.",
-        "pt": "Jesus, Maria, amo-vos; salvai as almas."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
-        "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
-        "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
-      },
-      "meditation": {
-        "es": "Jaculatoria antes de las cuentas pequeñas",
-        "en": "Invocation before the small beads",
-        "pt": "Jaculatória antes das contas pequenas"
-      }
-    },
-    {
-      "bead": 13,
-      "prayerRef": "our_father"
-    },
-    {
-      "bead": 14,
-      "text": {
-        "es": "Jesús, María os amo, salvad las almas.",
-        "en": "Jesus, Mary, I love you; save the souls.",
-        "pt": "Jesus, Maria, amo-vos; salvai as almas."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.",
-        "en": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.",
-        "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós e do mundo inteiro."
-      },
-      "repeat": 3,
-      "meditation": {
-        "es": "Tres últimas cuentas antes de la Cruz",
-        "en": "Last three beads before the Cross",
-        "pt": "Três últimas contas antes da Cruz"
-      }
-    }
-  ],
-  "notes": "Texto literal de IVE. La fuente dice «cuentas pequeñas (9 veces)» en IVE-06; aquí se modelan las diez cuentas de cada decena según el texto real. Omitida por la regla 4: la oración final atribuida a María Valtorta (24-10-1944) y su historicalNote; la CDF reiteró en 1985 que sus escritos no pueden considerarse de origen sobrenatural. El resto de la coronilla se conserva.",
-  "image": "almas-purgatorio-coronilla",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": null,
-  "translation": {
-    "es": "original",
-    "en": "traducción fiel de Hermes, 2026",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "kind": "medal"
   },
-  "sources": [
-    {
-      "title": "IVE · Rosarios y coronas",
-      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
-    }
-  ]
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "small",
+   "count": 3
+  }
+ ],
+ "steps": [
+  {
+   "bead": null,
+   "text": {
+    "es": "Oh Sangre y Agua, que brotaron del Corazón de Jesús como una fuente de Misericordia para nosotros, en Ustedes confío.",
+    "en": "O Blood and Water that flowed from the Heart of Jesus as a fountain of mercy for us, in you I trust.",
+    "pt": "Ó Sangue e Água que brotastes do Coração de Jesus como fonte de misericórdia para nós, em vós confio."
+   },
+   "repeat": 3,
+   "rubric": {
+    "es": "Introducción, tres veces",
+    "en": "Introduction, three times",
+    "pt": "Introdução, três vezes"
+   }
+  },
+  {
+   "bead": 0,
+   "prayerRef": "creed"
+  },
+  {
+   "bead": 1,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 2,
+   "prayerRef": "hail_mary",
+   "repeat": 3
+  },
+  {
+   "bead": 3,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
+    "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
+    "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
+   },
+   "rubric": {
+    "es": "Jaculatoria antes de las cuentas pequeñas",
+    "en": "Invocation before the small beads",
+    "pt": "Jaculatória antes das contas pequenas"
+   }
+  },
+  {
+   "bead": 5,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 6,
+   "text": {
+    "es": "Jesús, María os amo, salvad las almas.",
+    "en": "Jesus, Mary, I love you; save the souls.",
+    "pt": "Jesus, Maria, amo-vos; salvai as almas."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
+    "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
+    "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
+   },
+   "rubric": {
+    "es": "Jaculatoria antes de las cuentas pequeñas",
+    "en": "Invocation before the small beads",
+    "pt": "Jaculatória antes das contas pequenas"
+   }
+  },
+  {
+   "bead": 7,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 8,
+   "text": {
+    "es": "Jesús, María os amo, salvad las almas.",
+    "en": "Jesus, Mary, I love you; save the souls.",
+    "pt": "Jesus, Maria, amo-vos; salvai as almas."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
+    "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
+    "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
+   },
+   "rubric": {
+    "es": "Jaculatoria antes de las cuentas pequeñas",
+    "en": "Invocation before the small beads",
+    "pt": "Jaculatória antes das contas pequenas"
+   }
+  },
+  {
+   "bead": 9,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 10,
+   "text": {
+    "es": "Jesús, María os amo, salvad las almas.",
+    "en": "Jesus, Mary, I love you; save the souls.",
+    "pt": "Jesus, Maria, amo-vos; salvai as almas."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
+    "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
+    "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
+   },
+   "rubric": {
+    "es": "Jaculatoria antes de las cuentas pequeñas",
+    "en": "Invocation before the small beads",
+    "pt": "Jaculatória antes das contas pequenas"
+   }
+  },
+  {
+   "bead": 11,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 12,
+   "text": {
+    "es": "Jesús, María os amo, salvad las almas.",
+    "en": "Jesus, Mary, I love you; save the souls.",
+    "pt": "Jesus, Maria, amo-vos; salvai as almas."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Padre Eterno, te ofrezco el Preciosísimo Cuerpo, Sangre, Alma y Divinidad de Tu Amadísimo Hijo, nuestro Señor Jesucristo, en unión con las Misas celebradas hoy en todo el mundo, por las Benditas Almas del Purgatorio, y por los pecados y pecadores del mundo entero.",
+    "en": "Eternal Father, I offer you the most precious Body, Blood, Soul and Divinity of your beloved Son, our Lord Jesus Christ, in union with the Masses celebrated today throughout the world, for the blessed souls in Purgatory and for the sins and sinners of the whole world.",
+    "pt": "Pai Eterno, ofereço-vos o preciosíssimo Corpo, Sangue, Alma e Divindade do vosso amadíssimo Filho, nosso Senhor Jesus Cristo, em união com as Missas celebradas hoje em todo o mundo, pelas benditas almas do Purgatório e pelos pecados e pecadores do mundo inteiro."
+   },
+   "rubric": {
+    "es": "Jaculatoria antes de las cuentas pequeñas",
+    "en": "Invocation before the small beads",
+    "pt": "Jaculatória antes das contas pequenas"
+   }
+  },
+  {
+   "bead": 13,
+   "prayerRef": "our_father"
+  },
+  {
+   "bead": 14,
+   "text": {
+    "es": "Jesús, María os amo, salvad las almas.",
+    "en": "Jesus, Mary, I love you; save the souls.",
+    "pt": "Jesus, Maria, amo-vos; salvai as almas."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 15,
+   "text": {
+    "es": "Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.",
+    "en": "Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.",
+    "pt": "Santo Deus, Santo Forte, Santo Imortal, tende piedade de nós e do mundo inteiro."
+   },
+   "repeat": 3,
+   "rubric": {
+    "es": "Tres últimas cuentas antes de la Cruz",
+    "en": "Last three beads before the Cross",
+    "pt": "Três últimas contas antes da Cruz"
+   }
+  }
+ ],
+ "notes": "Texto literal de IVE. La fuente dice «cuentas pequeñas (9 veces)» en IVE-06; aquí se modelan las diez cuentas de cada decena según el texto real. Omitida por la regla 4: la oración final atribuida a María Valtorta (24-10-1944) y su historicalNote; la CDF reiteró en 1985 que sus escritos no pueden considerarse de origen sobrenatural. El resto de la coronilla se conserva. Auditoría: las indicaciones («tres veces», «antes de las cuentas pequeñas», «tres últimas cuentas antes de la Cruz») van en rubric, no en meditation; se añade el grupo de 3 cuentas finales que la fuente nombra antes de la Cruz.",
+ "image": "almas-purgatorio-coronilla",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": null,
+ "translation": {
+  "es": "original",
+  "en": "traducción fiel de Hermes, 2026",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "IVE · Rosarios y coronas",
+   "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+  }
+ ]
 }

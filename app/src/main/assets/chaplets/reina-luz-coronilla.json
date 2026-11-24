@@ -1,118 +1,114 @@
 {
-  "id": "reina-luz-coronilla",
-  "sourceId": "CD-47",
-  "group": "mary",
-  "title": {
-    "es": "Coronilla de la Reina de la Luz",
-    "en": "Chaplet of the Queen of Light",
-    "pt": "Coronilha da Rainha da Luz"
+ "id": "reina-luz-coronilla",
+ "sourceId": "CD-47",
+ "group": "mary",
+ "title": {
+  "es": "Coronilla de la Reina de la Luz",
+  "en": "Chaplet of the Queen of Light",
+  "pt": "Coronilha da Rainha da Luz"
+ },
+ "summary": {
+  "es": "Tres grupos de seis cuentas con un Padre Nuestro precedido de meditación y cinco Avemarías. Origen no documentado; texto tal como lo publica Catholic Doors Ministry.",
+  "en": "Three sets of six beads with an Our Father preceded by a meditation and five Hail Marys. Origin undocumented; text as published by Catholic Doors Ministry.",
+  "pt": "Três grupos de seis contas com um Pai-Nosso precedido de meditação e cinco Ave Marias. Origem não documentada; texto tal como publicado pela Catholic Doors Ministry."
+ },
+ "instrument": {
+  "es": "Medalla del Sagrado Corazón y 18 cuentas en 3 grupos de 6.",
+  "en": "Sacred Heart medal and 18 beads in 3 sets of 6.",
+  "pt": "Medalha do Sagrado Coração e 18 contas em 3 grupos de 6."
+ },
+ "when": {
+  "es": "Uso libre.",
+  "en": "At any time.",
+  "pt": "Uso livre."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "medal"
   },
-  "summary": {
-    "es": "Tres grupos de seis cuentas con un Padre Nuestro precedido de meditación y cinco Avemarías. Origen no documentado; texto tal como lo publica Catholic Doors Ministry.",
-    "en": "Three sets of six beads with an Our Father preceded by a meditation and five Hail Marys. Origin undocumented; text as published by Catholic Doors Ministry.",
-    "pt": "Três grupos de seis contas com um Pai-Nosso precedido de meditação e cinco Ave Marias. Origem não documentada; texto tal como publicado pela Catholic Doors Ministry."
+  {
+   "kind": "large"
   },
-  "instrument": {
-    "es": "Medalla del Sagrado Corazón y 18 cuentas en 3 grupos de 6.",
-    "en": "Sacred Heart medal and 18 beads in 3 sets of 6.",
-    "pt": "Medalha do Sagrado Coração e 18 contas em 3 grupos de 6."
+  {
+   "kind": "small",
+   "count": 5
   },
-  "when": {
-    "es": "Uso libre.",
-    "en": "At any time.",
-    "pt": "Uso livre."
+  {
+   "kind": "large"
   },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 5
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 5
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 5
-    }
-  ],
-  "steps": [
-    {
-      "bead": 0,
-      "prayerRef": "sign_of_the_cross"
-    },
-    {
-      "bead": 1,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "A thousand promises are not worth one small, meaningful prayer.",
-        "en": "Mil promesas no valen una pequeña oración significativa.",
-        "pt": "Mil promessas não valem uma pequena oração significativa."
-      }
-    },
-    {
-      "bead": 2,
-      "prayerRef": "hail_mary",
-      "repeat": 5
-    },
-    {
-      "bead": 3,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "Hijo mío, es necesario permanecer cerca de mi Hijo divino, especialmente en el Santísimo Sacramento.",
-        "en": "My child, it is necessary to keep close to My Divine Son, especially in the Blessed Sacrament.",
-        "pt": "Filho meu, é necessário permanecer perto do meu Filho divino, especialmente no Santíssimo Sacramento."
-      }
-    },
-    {
-      "bead": 4,
-      "prayerRef": "hail_mary",
-      "repeat": 5
-    },
-    {
-      "bead": 5,
-      "prayerRef": "our_father",
-      "meditation": {
-        "es": "Soy la Madre de los sin esperanza, Madre de los Dolores. Es importante que quienes sufren vengan a mí en busca de consuelo y aliento.",
-        "en": "I am the Mother of the hopeless; Mother of Sorrows. It is important for those that are suffering to come to me for consolation and for comfort.",
-        "pt": "Sou a Mãe dos sem esperança, Mãe das Dores. É importante que os que sofrem venham a mim em busca de consolo e conforto."
-      }
-    },
-    {
-      "bead": 6,
-      "prayerRef": "hail_mary",
-      "repeat": 5
-    }
-  ],
-  "notes": "Texto literal de Catholic Doors. Estatus eclesial: la página no identifica visionario, aparición ni revelación privada; las tres meditaciones se presentan como dichos sin atribución. No hay elemento que excluir según las Normas DDF 2024; se registra esta comprobación. Origen no documentado en la fuente: se conserva el texto tal como lo publica Catholic Doors Ministry; no se afirma revelación privada ni autoría.",
-  "image": "reina-luz-coronilla",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": "Derechos: Catholic Doors Ministry",
-  "translation": {
-    "es": "traducción fiel de Hermes, 2026",
-    "en": "original",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "kind": "small",
+   "count": 5
   },
-  "sources": [
-    {
-      "title": "Catholic Doors · Chaplet of the Queen of Light",
-      "url": "https://www.catholicdoors.com/prayers/chaplets/chap19.htm"
-    }
-  ]
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 5
+  }
+ ],
+ "steps": [
+  {
+   "bead": 1,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "Mil promesas no valen una pequeña oración significativa.",
+    "en": "A thousand promises are not worth one small, meaningful prayer.",
+    "pt": "Mil promessas não valem uma pequena oração significativa."
+   }
+  },
+  {
+   "bead": 2,
+   "prayerRef": "hail_mary",
+   "repeat": 5
+  },
+  {
+   "bead": 3,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "Hijo mío, es necesario permanecer cerca de mi Hijo divino, especialmente en el Santísimo Sacramento.",
+    "en": "My child, it is necessary to keep close to My Divine Son, especially in the Blessed Sacrament.",
+    "pt": "Filho meu, é necessário permanecer perto do meu Filho divino, especialmente no Santíssimo Sacramento."
+   }
+  },
+  {
+   "bead": 4,
+   "prayerRef": "hail_mary",
+   "repeat": 5
+  },
+  {
+   "bead": 5,
+   "prayerRef": "our_father",
+   "meditation": {
+    "es": "Soy la Madre de los sin esperanza, Madre de los Dolores. Es importante que quienes sufren vengan a mí en busca de consuelo y aliento.",
+    "en": "I am the Mother of the hopeless; Mother of Sorrows. It is important for those that are suffering to come to me for consolation and for comfort.",
+    "pt": "Sou a Mãe dos sem esperança, Mãe das Dores. É importante que os que sofrem venham a mim em busca de consolo e conforto."
+   }
+  },
+  {
+   "bead": 6,
+   "prayerRef": "hail_mary",
+   "repeat": 5
+  }
+ ],
+ "notes": "Texto literal de Catholic Doors. Estatus eclesial: la página no identifica visionario, aparición ni revelación privada; las tres meditaciones se presentan como dichos sin atribución. No hay elemento que excluir según las Normas DDF 2024; se registra esta comprobación. Origen no documentado en la fuente: se conserva el texto tal como lo publica Catholic Doors Ministry; no se afirma revelación privada ni autoría. La fuente no prescribe Signo de la Cruz; se ha retirado ese paso. Corregida la meditación primera, cuyos textos ES/EN estaban invertidos respecto de la fuente en inglés.",
+ "image": "reina-luz-coronilla",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": "Derechos: Catholic Doors Ministry",
+ "translation": {
+  "es": "traducción fiel de Hermes, 2026",
+  "en": "original",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "Catholic Doors · Chaplet of the Queen of Light",
+   "url": "https://www.catholicdoors.com/prayers/chaplets/chap19.htm"
+  }
+ ]
 }

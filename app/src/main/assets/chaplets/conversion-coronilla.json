@@ -32,7 +32,7 @@
     },
     {
       "kind": "small",
-      "count": 3
+      "count": 1
     },
     {
       "kind": "large"
@@ -87,8 +87,7 @@
     },
     {
       "bead": 2,
-      "prayerRef": "hail_mary",
-      "repeat": 3
+      "prayerRef": "hail_mary"
     },
     {
       "bead": 3,
@@ -100,6 +99,11 @@
         "es": "Oh Madre santa, me uno a ti al pie de la Cruz de tu Hijo para implorar misericordia y conversión para las almas del mundo. Contigo ofrezco al Padre las Llagas de tu Hijo Jesús, en reparación de los pecados del mundo, pasados, presentes y futuros.",
         "en": "O Holy Mother, I join you at the foot of your Son's Cross to implore mercy and conversion for the souls of the world. With you, I offer the Wounds of your Son, Jesus, to the Father, in atonement for the sins of the world past, present and to come.",
         "pt": "Ó Mãe santa, uno-me a ti ao pé da Cruz do teu Filho para implorar misericórdia e conversão para as almas do mundo. Contigo ofereço ao Pai as Chagas do teu Filho Jesus, em reparação dos pecados do mundo, passados, presentes e futuros."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
     },
     {
@@ -109,7 +113,12 @@
         "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
         "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 5,
@@ -117,7 +126,21 @@
         "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
         "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
         "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
+    },
+    {
+      "bead": 5,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "prayerRef": "hail_mary"
     },
     {
       "bead": 8,
@@ -126,7 +149,12 @@
         "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
         "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 7,
@@ -134,7 +162,21 @@
         "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
         "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
         "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
+    },
+    {
+      "bead": 7,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "prayerRef": "hail_mary"
     },
     {
       "bead": 10,
@@ -143,7 +185,12 @@
         "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
         "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 9,
@@ -151,7 +198,21 @@
         "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
         "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
         "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
+    },
+    {
+      "bead": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "prayerRef": "hail_mary"
     },
     {
       "bead": 12,
@@ -160,7 +221,12 @@
         "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
         "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 11,
@@ -168,7 +234,21 @@
         "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
         "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
         "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
+    },
+    {
+      "bead": 11,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "prayerRef": "hail_mary"
     },
     {
       "bead": 14,
@@ -177,7 +257,12 @@
         "en": "Through the Sorrowful, Bleeding, Immaculate Heart of Mary, and in union with the suffering of her Son, Jesus, on the Cross, I implore of the Father, the grace of the conversion for the world.",
         "pt": "Pelo Coração doloroso, sangrante e imaculado de Maria, e em união com o sofrimento do seu Filho Jesus na Cruz, imploro do Pai a graça da conversão do mundo."
       },
-      "repeat": 10
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 13,
@@ -185,7 +270,21 @@
         "es": "Santa Madre María, Medianera de todas las gracias, obtén de Dios para nosotros la conversión del mundo.",
         "en": "Holy Mother Mary, Mediatrix of all graces, obtain for us from God, the conversion of the world.",
         "pt": "Santa Mãe Maria, Mediadora de todas as graças, obtém de Deus para nós a conversão do mundo."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
+    },
+    {
+      "bead": 13,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "prayerRef": "hail_mary"
     },
     {
       "bead": null,
@@ -197,7 +296,7 @@
       "prayerRef": "salve_regina"
     }
   ],
-  "notes": "Texto literal de Catholic Doors. La fuente pide Avemaría en las cuentas grandes y Salve al principio y al final.",
+  "notes": "Texto literal de Catholic Doors. La fuente pide Avemaría en las cuentas grandes y Salve al principio y al final. Auditoría: la fuente pide Avemaría en TODAS las cuentas grandes y después la jaculatoria «Santa Madre María»; se añade la Avemaría que faltaba en las cinco grandes. En la introducción se reza una sola Avemaría en la segunda cuenta, como dice la fuente.",
   "image": "conversion-coronilla",
   "variables": [],
   "promise": null,

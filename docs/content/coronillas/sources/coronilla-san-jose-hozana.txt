@@ -1,0 +1,244 @@
+URL: https://hozana.org/es/oracion/santo-rosario/coronilla-san-jose
+
+Coronilla a San José
+- Hozana
+{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","headline":"Coronilla a San Jos\u00e9","inLanguage":"es","image":["https:\/\/hozana.org\/img\/hozana_share.jpg"],"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/hozana.org\/es\/oracion\/santo-rosario\/coronilla-san-jose"},"publisher":{"@type":"Organization","name":"Hozana.org","logo":{"@type":"ImageObject","url":"https:\/\/hozana.org\/apple-touch-icon.png"}},"description":"\u00bfQu\u00e9 es el rosario de San Jos\u00e9? Descubre c\u00f3mo rezarle al padre terrenal de Jesucristo y confiarle tu familia y tus preocupaciones diarias.","datePublished":"2020-10-23T16:08:04+00:00","dateModified":"2026-06-09T07:12:46+00:00"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https:\/\/hozana.org\/es"},{"@type":"ListItem","position":2,"name":"Consejos para orar","item":"https:\/\/hozana.org\/es\/oracion"},{"@type":"ListItem","position":3,"name":"Santo Rosario: m\u00e9todo y consejos","item":"https:\/\/hozana.org\/es\/oracion\/santo-rosario"},{"@type":"ListItem","position":4,"name":"Coronilla a San Jos\u00e9","item":"https:\/\/hozana.org\/es\/oracion\/santo-rosario\/coronilla-san-jose"}]},{"@type":"Organization","name":"Hozana","url":"https:\/\/hozana.org","logo":{"@type":"ImageObject","url":"https:\/\/hozana.org\/apple-touch-icon.png"}}]}
+window.sentryDsn = 'https://05545f841574d7190c078cc407d7a978@o86393.ingest.us.sentry.io/4510940097478656';
+/*
+Bienvenue à toi, visiteur du code source d'Hozana.org ! gauthier-seo
+Ici, nous bâtissons une cathédrale. Nous cherchons à mettre en oeuvre le meilleur de la techno afin de rassembler une immense communauté de prière sur Internet et mobile.
+Le site est développé par l'association Hozana, dont le modèle repose sur les dons, et le bénévolat. L'association compte une équipe de 20 permanents (dont 5 dev, un designer/intégrateur, un product owner), et plus de 90 bénévoles (dont une dizaine de dev).
+Nous cherchons en permanence des développeurs bénévoles pour nous aider à livrer rapidement des produits selon les meilleurs standards du Web. Si tu veux rejoindre un projet passionnant et nous aider à rendre le monde chaque jour un peu plus priant, n'hésite pas à nous écrire ici : https://hozana.org/contact.
+Nous cherchons également régulièrement à recruter des développeurs, donc n'hésite pas à nous écrire si cela peut t'intéresser !
+Notre stack :
+- Front : React, Typescript, NextJS, Redux, Service Workers (Hozana.org est une PWA), Storybook, Cypress
+- Server : API REST en Symfony, MySQL, Elasticsearch, Redis
+- Data : une application Metabase tourne avec une réplication quotidienne du MySQL de prod, après quelques adaptations d'un ETL écrit en python.
+- Tooling : CircleCI, Prometheus / Grafana, Sentry, Uptime. L'environnement de dev est sous Docker.
+- Tests : Jest, Storybook, Cypress
+« Nous, on est à peine une dizaine. C'est un tout petit navire. C'est pas un navire, c'est une barque. C'est pas une barque d'ailleurs, c'est un radeau. Mais sur le radeau, j'ai choisi les meilleurs. »
+.:+oo-
+':+ssssssso-
+':ossssssssssss+'
+-+sssssssssssssssss-
+'/sssssssssssssssssssss/
+'/ssssssssssssssssssssssss+'
+:ssssssssssssssssssssssssssso'
+.ossssssssssssssssssssssssssssso
+:ssssssssssssssssssssssssssssssss+
++ssssssssssssssssssssssssssssssssss-
++ssssssssssssssssssssssssssssssssssss
+/sssssssssssssssssssssssssssssssssssss:
+.sssssssssssssssssssssssssssssssssssssso
++ssssssssssssssssss+osssssssssssssssssss
+ssssssssssssssssss- -osssssssssssssssss'
+'sssssssssssssssss- :ssssssssssssssss
+ssssssssssssssss. 'ossssssssssssso
+/ssssssssssssso' '+ssssssssssss-
+'ssssssssssss+ 'ssssssssssso'
+.ssssssssss+ :ssssssssso'
+.sssssssso .sssssssso'
+'+ssssss: .sssssss/
+.+ssss: /sssss/'
+./oso' .ssso:'
+'-- .+/-
+*/
+window._vwo_code=window._vwo_code||(function(){
+var account_id=706531,
+version=1.5,
+settings_tolerance=1000,
+library_tolerance=2500,
+use_existing_jquery=false,
+is_spa=0,
+hide_element='body',
+hide_element_style='opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',
+f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery},library_tolerance:function(){return library_tolerance},hide_element_style:function(){return'{'+hide_element_style+'}'},finish:function(){if(!f){f=true;var e=d.getElementById('_vis_opt_path_hides');if(e)e.parentNode.removeChild(e)}},finished:function(){return f},load:function(e){var t=d.createElement('script');t.fetchPriority='high';t.src=e;t.type='text/javascript';t.innerText;t.onerror=function(){window._vwo_code.finish()};d.getElementsByTagName('head')[0].appendChild(t)},getVersion:function(){return version},getMatchedCookies:function(e){var t=[];if(document.cookie){t=document.cookie.match(e)||[]}return t},getCombinationCookie:function(){var e=code.getMatchedCookies(/(?:^|;)\s?(vis_opt_exp\d+_combi=[^;$])/gi);e=e.map(function(e){try{var t=decodeURIComponent(e);if(!/vis_opt_exp\d+_combi=(?:\d+,?)+\s*$/.test(t)){return''}return t}catch(e){return''}});var i=[];e.forEach(function(e){var t=e.match(/([\d,]+)/g);t&&i.push(t.join('-'))});return i.join('|')},init:function(){if(d.URL.indexOf('vwo_disable')>-1)return;window.settings_timer=setTimeout(function(){window._vwo_code.finish()},settings_tolerance);var e=d.createElement('style'),t=hide_element?hide_element+'{'+hide_element_style+'}':'',i=d.getElementsByTagName('head')[0];e.setAttribute('id','_vis_opt_path_hides');e.setAttribute('type','text/css');if(e.styleSheet)e.styleSheet.cssText=t;else e.appendChild(d.createTextNode(t));i.appendChild(e);var n=this.getCombinationCookie();this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+is_spa+'&vn='+version+(n?'&c='+n:''));return settings_timer}};window._vwo_settings_timer=code.init();return code;}());
+window.gtmDL = window.gtmDL || [];
+window.gtmPush = function(args) { gtmDL.push(args); };
+gtmPush({
+event: 'gtm.js',
+'gtm.start': new Date().getTime(),
+appName: 'Hozana',
+appVersion: document.querySelector('meta[name="version"]')
+? document.querySelector('meta[name="version"]').getAttribute('content')
+: '1.0.0',
+isWidget: window.location.pathname.indexOf('/widget/') !== -1,
+ssr: true
+});
+(function(d, s) {
+var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s);
+j.async = true;
+j.src = 'https://www.googletagmanager.com/gtm.js?l=gtmDL'
++ '&id=GTM-PNXWBQW'
++ '>m_auth=A9O_skATQQerh6uBGBpvsg'
++ '>m_preview=env-3'
++ '>m_cookies_win=x';
+var n = d.querySelector('script[nonce]');
+if (n) { j.setAttribute('nonce', n.nonce || n.getAttribute('nonce')); }
+f.parentNode.insertBefore(j, f);
+})(document, 'script');
+window.lang = 'es';
+Consejos para orar
+Santo Rosario: método y consejos
+Coronilla a San José
+Coronilla a San José
+Los misterios del Santo Rosario
+Misterios dolorosos (Rosario de los martes y viernes)
+Misterios luminosos (Rosario de los jueves)
+Misterios gozosos (Rosario de los lunes y sábados)
+Misterios gloriosos (Rosario de los miércoles y los domingos)
+Rosario de la Virgen de Lourdes
+Coronilla de liberación
+Coronilla de las llagas de cristo
+Coronilla al Espíritu Santo
+Coronilla al Santísimo Sacramento
+Coronilla de la Divina Misericordia
+Coronilla a San Miguel Arcángel
+24 Glorias a Santa Teresita
+Rosario a las benditas almas del purgatorio
+El rosario de San Miguel
+document.addEventListener('DOMContentLoaded', function() {
+const button = document.getElementById('breadcrumb-dropdown-btn');
+const menu = document.getElementById('breadcrumb-dropdown-menu');
+const currentToggle = document.getElementById('breadcrumb-current-toggle');
+if (button && menu) {
+const chevron = button.querySelector('svg');
+function setOpen(open) {
+if (open) {
+menu.classList.remove('hidden');
+if (chevron) chevron.style.transform = 'rotate(180deg)';
+button.setAttribute('aria-expanded', 'true');
+if (currentToggle) currentToggle.setAttribute('aria-expanded', 'true');
+} else {
+menu.classList.add('hidden');
+if (chevron) chevron.style.transform = 'rotate(0deg)';
+button.setAttribute('aria-expanded', 'false');
+if (currentToggle) currentToggle.setAttribute('aria-expanded', 'false');
+}
+}
+function toggleMenu() {
+const open = menu.classList.contains('hidden');
+setOpen(open);
+}
+button.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+toggleMenu();
+});
+if (currentToggle) {
+currentToggle.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+toggleMenu();
+});
+}
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+if (!button.contains(e.target) && !menu.contains(e.target) && !(currentToggle && currentToggle.contains(e.target))) {
+setOpen(false);
+}
+});
+// Close dropdown on escape key
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
+setOpen(false);
+button.focus();
+}
+});
+// Add transition to the chevron
+if (chevron) {
+chevron.style.transition = 'transform 0.2s ease-in-out';
+}
+}
+});
+Coronilla a San José
+El rezo del Rosario y la coronilla a San José forma parte de la devoción al esposo de la Virgen María y padre adoptivo de Jesús. La coronilla a San José es diferente del Rosario a San José, pues este último incita a meditar en los misterios de la vida de Cristo. Por su parte, la coronilla a San José se reza especialmente para pedir ayuda y protección en nuestro hogar a este maravilloso santo, quien además de ser el patrono de los padres de familia, también es quien da la gracia de una buena muerte.
+Actualizado el 09/06/2026|Tiempo de lectura : 4 min
+Sommaire
+¿Cómo se reza la coronilla a San José?
+Devoción a San José
+Oraciones para la familia
+Reza a San José con las comunidades de Hozana!
+Reza el Santo Rosario con la Virgen María
+Meditaciones del Laudato Si. Únete ahora, es gratis.
+Sí, rezo el Rosario con ellos
+¿Cómo se reza la coronilla a San José?
+El rezo de la coronilla a San José
+La coronilla a San José se reza a partir de un rosario específico compuesto de 60 cuentas pequeñas de color violeta, símbolo de la piedad de San José. Estas cuentas o perlas están agrupadas en secuencias de tres y separadas por cuentas grandes de color blanco, símbolo de la pureza de este maravilloso santo. A continuación te mostramos cómo rezar esta coronilla:
+- En las cuentas grandes, recitamos: "San José, guardián de la sagrada familia, bendice nuestras familias".
+- En las cuentas pequeñas , recitamos: "San José, ruega por nosotros".
+- Al final del rosario, en la medalla de San José y en la cruz, terminamos recitando:
+“Jesús, José y María, os doy mi corazón y el alma mía.
+Jesús, José y María, asistidme en mi última agonía.
+Jesús, José y María, en ustedes descance en paz el alma mía. Amén.”
+El “Dios te salve José”
+Es posible terminar el rosario añadiendo esta hermosa oración a San José:
+“Dios te salve, José, lleno de la gracia divina.
+Entre tus brazos descansó El Salvador y ante tus ojos creció.
+Bendito eres entre todos los hombres,
+y bendito es Jesús, el hijo divino de tu Virginal esposa.
+San José, padre adoptivo de Jesús,
+ayúdanos en nuestras necesidades familiares, de salud y de  trabajo,
+hasta el fin de nuestros días, y socórrenos a la hora de nuestra muerte. Amén”.
+Novena a San José en audio — 9 días
+Meditaciones en audio para confiarle tus peticiones a san José.
+Sí, quiero la novena en audio
+Devoción a San José
+San José, descrito como "justo" por las Escrituras, por lo tanto, es un ejemplo para nosotros los cristianos y un poderoso intercesor ante su hijo Jesús. Existen muchas oraciones a San José, patrono de los padres de familia y santo patrono de la Iglesia universal. Por ejemplo, podemos confiarle nuestros problemas relacionados con el trabajo, especialmente a través de novenas o rezar el Rosario a San José para meditar sobre ciertos episodios de la vida de Cristo con él.
+Oraciones para la familia
+Además de confiar nuestras familias a San José para que las proteja y nos guíe en nuestros problemas diarios, también podemos rezar otras hermosas oraciones para confiar la familia a Dios, por ejemplo, con la oración a San Antonio por la familia o la novena a la sagrada familia.
+Rezar por su familia también es también una buena oportunidad para rezar en familia: descubre las oraciones de la noche en familia y las oraciones de la mañana en familia.
+Reza a San José con las comunidades de Hozana!
+Haz de San José el compañero de tu vida diaria rezando con esta comunidad de oración a San José. Confía tus preocupaciones por el trabajo, la salud, la familia y la vivienda a San José e inspírate del ejemplo de este modelo de fe con la novena a San José, que, a través de audios y meditaciones, te invita a descubrir mejor a este maravilloso santo.
+Artículos relacionados
+Fiestas
+¿Qué tipo de ayuno debo hacer durante la Cuaresma?
+Oracion
+Oración al Espíritu Santo
+Oracion
+Oración de la mañana
+Biblia
+Versículos de la biblia para orar y meditar
+Artículos relacionados
+Fiestas
+¿Qué tipo de ayuno debo hacer durante la Cuaresma?
+Oracion
+Oración al Espíritu Santo
+Oracion
+Oración de la mañana
+Biblia
+Versículos de la biblia para orar y meditar
+×
+Unirse ahora
+No, gracias, sigo leyendo
+×
+Mantente fiel al rezo del rosario cada día con la aplicación Rosario
+•
+Reza todos los días con Rosario
+•
+La primera app del rosario viviente
+•
+Haz rezar a tus seres queridos
+Descargar gratis
+×
+Descubre la meditación cristiana con la aplicación Meditatio
+•
+Medita cada día con Meditatio
+•
+Meditaciones guiadas para profundizar tu fe
+•
+Encuentra la paz interior a través de la oración
+Descargar gratis
+Enviar una intención
+Association Hozana - 6 rue du Palais de Justice, 69005 Lyon.
+|
+Términos y Condiciones
+|
+Carta de Hozana
+|
+Preguntas Frecuentes
+|
+Protección de la infancia
+|
+Política de Privacidad

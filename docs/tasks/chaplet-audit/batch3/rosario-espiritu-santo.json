@@ -1,0 +1,212 @@
+{
+  "id": "rosario-espiritu-santo",
+  "sourceId": "IVE-10",
+  "group": "god_christ",
+  "title": {
+    "es": "El Rosario del Espíritu Santo",
+    "en": "The Rosary of the Holy Spirit",
+    "pt": "O Terço do Espírito Santo"
+  },
+  "summary": {
+    "es": "Cinco misterios bíblicos del Espíritu Santo, con lectura y Padre Nuestro, diez Avemarías y Gloria en cada uno.",
+    "en": "Five biblical mysteries of the Holy Spirit, each with a scripture reading, an Our Father, ten Hail Marys and a Glory.",
+    "pt": "Cinco mistérios bíblicos do Espírito Santo, cada um com leitura bíblica, Pai-Nosso, dez Ave Marias e Glória."
+  },
+  "instrument": {
+    "es": "Rosario de cinco misterios.",
+    "en": "A rosary of five mysteries.",
+    "pt": "Terço de cinco mistérios."
+  },
+  "when": {
+    "es": "Se sugiere el domingo, en que se recuerda la Pascua del Señor y el envío del Espíritu; o cuando se sienta el llamado.",
+    "en": "Sunday is suggested, recalling the Pascha of the Lord and the sending of the Spirit; or whenever one feels called to it.",
+    "pt": "Sugere-se o domingo, em que se recorda a Páscoa do Senhor e o envio do Espírito; ou quando se sentir o chamado."
+  },
+  "weekdays": [
+    7
+  ],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": null,
+      "text": {
+        "es": "Lave lo que esté manchado, Riegue lo que esté reseco, Sane lo que esté enfermo, Doblegue lo que esté rígido, Caliente lo que esté frío, Enderece lo que esté desviado, y dé los Siete Santos Dones…",
+        "en": "Wash what is stained, water what is dry, heal what is sick, bend what is rigid, warm what is cold, straighten what is crooked, and give the Seven Holy Gifts…",
+        "pt": "Lava o que está manchado, rega o que está seco, sana o que está doente, dobra o que está rígido, aquece o que está frio, endireita o que está desviado, e dá os Sete Santos Dons…"
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "La Encarnación de Jesús en el seno de María. «El Espíritu Santo vendrá sobre ti y el poder del Altísimo te cubrirá con su sombra». (Lc. 1,26-28).",
+        "en": "The incarnation of Jesus in the womb of Mary. 'The Holy Spirit will come upon you and the power of the Most High will overshadow you.' (Luke 1:26-28).",
+        "pt": "A Encarnação de Jesus no seio de Maria. «O Espírito Santo virá sobre ti e o poder do Altíssimo te cobrirá com a sua sombra». (Lc 1,26-28)."
+      }
+    },
+    {
+      "bead": 6,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Bautismo de Jesús en el Jordán. «Bautizado Jesús, bajó sobre él, el Espíritu Santo en forma de paloma y una voz del cielo: Tú eres mi Hijo». (Lc. 3,21-22).",
+        "en": "The baptism of Jesus in the Jordan. 'When Jesus was baptised, the Holy Spirit descended upon him in the form of a dove, and a voice from heaven said: You are my Son.' (Luke 3:21-22).",
+        "pt": "Batismo de Jesus no Jordão. «Batizado Jesus, desceu sobre ele o Espírito Santo em forma de pomba e uma voz do céu: Tu és o meu Filho». (Lc 3,21-22)."
+      }
+    },
+    {
+      "bead": 8,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 7,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Jesús muere en la cruz. «Inclinando la cabeza entregó el Espíritu» (In. 19,30).",
+        "en": "Jesus dies on the cross. 'Bowing his head, he gave up the Spirit' (John 19:30).",
+        "pt": "Jesus morre na cruz. «Inclinando a cabeça, entregou o Espírito» (Jo 19,30)."
+      }
+    },
+    {
+      "bead": 10,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 9,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 11,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Jesús resucitado se aparece a sus discípulos. «Sopló sobre ellos y dijo: Reciban el Espíritu Santo». (Jn. 20,22).",
+        "en": "The risen Jesus appears to his disciples. 'He breathed on them and said: Receive the Holy Spirit.' (John 20:22).",
+        "pt": "Jesus ressuscitado aparece aos seus discípulos. «Soprou sobre eles e disse: Recebei o Espírito Santo». (Jo 20,22)."
+      }
+    },
+    {
+      "bead": 12,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 11,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 13,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "La venida del Espíritu Santo sobre los apóstoles y María. «El día de Pentecostés, estaban todos reunidos orando; quedaron llenos del Espíritu Santo y se pusieron a hablar en lenguas». (Hch. 2,1-13)",
+        "en": "The coming of the Holy Spirit upon the apostles and Mary. 'On the day of Pentecost they were all gathered in prayer; they were filled with the Holy Spirit and began to speak in tongues.' (Acts 2:1-13)",
+        "pt": "A vinda do Espírito Santo sobre os apóstolos e Maria. «No dia de Pentecostes estavam todos reunidos em oração; ficaram cheios do Espírito Santo e começaram a falar em línguas». (At 2,1-13)"
+      }
+    },
+    {
+      "bead": 14,
+      "prayerRef": "hail_mary",
+      "repeat": 10
+    },
+    {
+      "bead": 13,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Ven, Espíritu Santo, a renovar la faz de la tierra.",
+        "en": "Come, Holy Spirit, to renew the face of the earth.",
+        "pt": "Vem, Espírito Santo, renovar a face da terra."
+      },
+      "rubric": {
+        "es": "Al terminar",
+        "en": "At the end",
+        "pt": "Ao fim"
+      }
+    }
+  ],
+  "notes": "Texto literal de IVE. Cada misterio enuncia el título, lee la cita bíblica y reza Padre Nuestro, 10 Avemarías y Gloria. El Gloria final se coloca en la cuenta grande del quinto misterio; la conclusión se expresa como rúbrica, no como meditación.",
+  "image": "rosario-espiritu-santo",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "IVE · Rosarios y coronas",
+      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+    }
+  ]
+}

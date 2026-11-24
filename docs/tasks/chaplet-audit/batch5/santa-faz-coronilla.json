@@ -1,0 +1,348 @@
+{
+  "id": "santa-faz-coronilla",
+  "sourceId": "CD-37",
+  "group": "god_christ",
+  "title": {
+    "es": "Coronilla de la Santa Faz",
+    "en": "Chaplet of the Holy Face",
+    "pt": "Coronilha da Sagrada Faz"
+  },
+  "summary": {
+    "es": "39 cuentas en honor de los cinco sentidos de Cristo y de las llagas de su rostro.",
+    "en": "39 beads in honour of the five senses of Christ and the wounds of his face.",
+    "pt": "39 contas em honra dos cinco sentidos de Cristo e das feridas do seu rosto."
+  },
+  "instrument": {
+    "es": "Medalla y 39 cuentas: 6 grandes y 33 pequeñas.",
+    "en": "Medal and 39 beads: 6 large and 33 small.",
+    "pt": "Medalha e 39 contas: 6 grandes e 33 pequenas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 6
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 6
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 6
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 6
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 6
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "sign_of_the_cross"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Oh Dios, inclínate a auxiliarme; Señor, date prisa en socorrerme.",
+        "en": "O God, incline unto my aid. O Lord, make haste to help me.",
+        "pt": "Ó Deus, inclinai-vos a auxiliar-me; Senhor, apressai-vos em socorrer-me."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 1,
+      "text": {
+        "es": "Jesús mío, misericordia.",
+        "en": "My Jesus, mercy.",
+        "pt": "Meu Jesus, misericórdia."
+      },
+      "meditation": {
+        "es": "Sentido 1",
+        "en": "Sense 1",
+        "pt": "Sentido 1"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Levántate, Señor, y sean dispersados tus enemigos, y huyan de tu presencia los que te odian.",
+        "en": "Arise, O Lord, and let Thy enemies be scattered, and let them that hate Thee flee before Thy Face!",
+        "pt": "Levai-vos, Senhor, e sejam dispersados os vossos inimigos, e fujam da vossa face os que vos odeiam."
+      },
+      "repeat": 6,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "Jesús mío, misericordia.",
+        "en": "My Jesus, mercy.",
+        "pt": "Meu Jesus, misericórdia."
+      },
+      "meditation": {
+        "es": "Sentido 2",
+        "en": "Sense 2",
+        "pt": "Sentido 2"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "Levántate, Señor, y sean dispersados tus enemigos, y huyan de tu presencia los que te odian.",
+        "en": "Arise, O Lord, and let Thy enemies be scattered, and let them that hate Thee flee before Thy Face!",
+        "pt": "Levai-vos, Senhor, e sejam dispersados os vossos inimigos, e fujam da vossa face os que vos odeiam."
+      },
+      "repeat": 6,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Jesús mío, misericordia.",
+        "en": "My Jesus, mercy.",
+        "pt": "Meu Jesus, misericórdia."
+      },
+      "meditation": {
+        "es": "Sentido 3",
+        "en": "Sense 3",
+        "pt": "Sentido 3"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Levántate, Señor, y sean dispersados tus enemigos, y huyan de tu presencia los que te odian.",
+        "en": "Arise, O Lord, and let Thy enemies be scattered, and let them that hate Thee flee before Thy Face!",
+        "pt": "Levai-vos, Senhor, e sejam dispersados os vossos inimigos, e fujam da vossa face os que vos odeiam."
+      },
+      "repeat": 6,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 7,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Jesús mío, misericordia.",
+        "en": "My Jesus, mercy.",
+        "pt": "Meu Jesus, misericórdia."
+      },
+      "meditation": {
+        "es": "Sentido 4",
+        "en": "Sense 4",
+        "pt": "Sentido 4"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Levántate, Señor, y sean dispersados tus enemigos, y huyan de tu presencia los que te odian.",
+        "en": "Arise, O Lord, and let Thy enemies be scattered, and let them that hate Thee flee before Thy Face!",
+        "pt": "Levai-vos, Senhor, e sejam dispersados os vossos inimigos, e fujam da vossa face os que vos odeiam."
+      },
+      "repeat": 6,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 9,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Jesús mío, misericordia.",
+        "en": "My Jesus, mercy.",
+        "pt": "Meu Jesus, misericórdia."
+      },
+      "meditation": {
+        "es": "Sentido 5",
+        "en": "Sense 5",
+        "pt": "Sentido 5"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Levántate, Señor, y sean dispersados tus enemigos, y huyan de tu presencia los que te odian.",
+        "en": "Arise, O Lord, and let Thy enemies be scattered, and let them that hate Thee flee before Thy Face!",
+        "pt": "Levai-vos, Senhor, e sejam dispersados os vossos inimigos, e fujam da vossa face os que vos odeiam."
+      },
+      "repeat": 6,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 11,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Jesús mío, misericordia.",
+        "en": "My Jesus, mercy.",
+        "pt": "Meu Jesus, misericórdia."
+      },
+      "meditation": {
+        "es": "Las llagas de su rostro.",
+        "en": "The wounds of His Face.",
+        "pt": "As feridas do seu rosto."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "Levántate, Señor, y sean dispersados tus enemigos, y huyan de tu presencia los que te odian.",
+        "en": "Arise, O Lord, and let Thy enemies be scattered, and let them that hate Thee flee before Thy Face!",
+        "pt": "Levai-vos, Senhor, e sejam dispersados os vossos inimigos, e fujam da vossa face os que vos odeiam."
+      },
+      "repeat": 3,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be",
+      "repeat": 7,
+      "rubric": {
+        "es": "Al final, siete veces, en honor de las últimas siete palabras de Jesús y de los siete dolores de la Virgen.",
+        "en": "At the end, seven times, in honour of the last seven words of Jesus and the seven dolors of the Virgin.",
+        "pt": "No final, sete vezes, em honra das últimas sete palavras de Jesus e das sete dores da Virgem."
+      }
+    },
+    {
+      "bead": 0,
+      "text": {
+        "es": "Oh Dios, nuestro Protector, míranos y vuelve tus ojos al rostro de tu Cristo.",
+        "en": "O God, our Protector, look down upon us and cast Thine eyes upon the Face of Thy Christ!",
+        "pt": "Ó Deus, nosso Protetor, olhai por nós e voltai os vossos olhos para a face do vosso Cristo."
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. Se modelan los seis grupos de la fuente: cinco sentidos (30 cuentas) más las llagas del rostro (3 cuentas). En cada cuenta grande, Gloria + «Jesús mío, misericordia»; en las pequeñas, «Levántate, Señor…». El versículo inicial y las jaculatorias se dicen en conjunto (no se inventa diálogo V/R). Los siete Glorias finales se agrupan en un paso conclusivo con su rúbrica y la oración final se reza en la medalla.",
+  "image": "santa-faz-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of the Holy Face",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap07.htm"
+    }
+  ]
+}

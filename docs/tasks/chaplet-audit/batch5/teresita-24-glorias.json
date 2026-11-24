@@ -1,0 +1,98 @@
+{
+  "id": "teresita-24-glorias",
+  "sourceId": "HZ-08",
+  "group": "saints",
+  "title": {
+    "es": "24 Glorias a Santa Teresita",
+    "en": "24 Glories to Saint Thérèse",
+    "pt": "24 Glórias a Santa Teresinha"
+  },
+  "summary": {
+    "es": "24 cuentas por los 24 años de Santa Teresita, con oraciones propias en cada cuenta.",
+    "en": "24 beads for the 24 years of St Thérèse, with proper prayers on each bead.",
+    "pt": "24 contas pelos 24 anos de Santa Teresinha, com orações próprias em cada conta."
+  },
+  "instrument": {
+    "es": "Rosario de 25 cuentas: 24 y una adicional separadas por una medalla de Santa Teresa.",
+    "en": "Rosary of 25 beads: 24 plus one additional bead separated by a medal of St Thérèse.",
+    "pt": "Terço de 25 contas: 24 e uma adicional separadas por uma medalha de Santa Teresinha."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "small",
+      "count": 24
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "text": {
+        "es": "Santa Teresa del Niño Jesús y de la Santa Faz, recuerda tu promesa de hacer el bien en la tierra, derrama tu lluvia de rosas en abundancia sobre los que te invocan, y alcánzanos de Dios las gracias que esperamos de su infinita bondad. Amén",
+        "en": "St Thérèse of the Child Jesus and the Holy Face, remember your promise to do good on earth, pour your rain of roses abundantly on those who invoke you, and obtain for us from God the graces we hope for from his infinite goodness. Amen",
+        "pt": "Santa Teresinha do Menino Jesus e da Sagrada Faz, lembra-te da tua promessa de fazer o bem na terra, derrama a tua chuva de rosas em abundância sobre os que te invocam e alcança-nos de Deus as graças que esperamos da sua infinita bondade. Amém"
+      },
+      "repeat": 24
+    },
+    {
+      "bead": 1,
+      "rubric": {
+        "es": "En la medalla",
+        "en": "At the medal",
+        "pt": "Na medalha"
+      },
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Oh Padre nuestro celestial, que, por medio de santa Teresa del Niño Jesús, quieres recordar al mundo el Amor misericordioso que llena tu corazón y la confianza filial que debemos tener en ti, te damos humildemente gracias por haber colmado de tanta gloria a la que fue siempre tu hija más fiel, y por haberle dado un poder maravilloso para atraer hacia ti cada día un gran número de almas que te alabarán eternamente",
+        "en": "O heavenly Father, who through St Thérèse of the Child Jesus wish to remind the world of the merciful Love that fills your heart and of the filial trust we ought to have in you, we humbly thank you for having filled with such glory her who was always your most faithful daughter, and for having given her a wonderful power to draw to you each day a great number of souls who will praise you eternally",
+        "pt": "Ó Pai celestial, que, por meio de Santa Teresinha do Menino Jesus, queres recordar ao mundo o Amor misericordioso que enche o teu coração e a confiança filial que devemos ter em ti, damos-te humildemente graças por teres colmado de tanta glória a que foi sempre a tua filha mais fiel, e por lhe teres dado um poder maravilhoso para atrair a ti cada dia um grande número de almas que te louvarão eternamente"
+      }
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "Oh Santa Teresa del Niño Jesús y de la Santa Faz, que mereciste ser proclamada Patrona de las misiones católicas en todo el mundo y Doctora de la Iglesia, recuerda tu promesa de ayudar a los sacerdotes, a los misioneros y a toda la Iglesia",
+        "en": "O St Thérèse of the Child Jesus and the Holy Face, who were worthy to be proclaimed Patroness of the Catholic missions throughout the world and Doctor of the Church, remember your promise to help priests, missionaries and the whole Church",
+        "pt": "Ó Santa Teresinha do Menino Jesus e da Sagrada Faz, que mereceste ser proclamada Padroeira das missões católicas em todo o mundo e Doutora da Igreja, lembra-te da tua promessa de ajudar os sacerdotes, os missionários e toda a Igreja"
+      },
+      "rubric": {
+        "es": "En la última cuenta, seguida de un Padre Nuestro",
+        "en": "On the last bead, followed by an Our Father",
+        "pt": "Na última conta, seguida de um Pai-Nosso"
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "our_father"
+    }
+  ],
+  "notes": "Texto literal de Hozana. El título «24 Glorias» no coincide con el cuerpo, que prescribe oraciones propias: se conservan el título y las oraciones literales de la fuente. La «Oración complementaria» opcional de François Lugan no se añade porque la fuente no ofrece traducción publicada EN/PT y la regla de auditoría prohíbe inventarla; queda documentada aquí.",
+  "image": "teresita-24-glorias",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Hozana · Santo Rosario",
+      "url": "https://hozana.org/es/oracion/santo-rosario/santa-teresita"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "fe-coronilla",
+  "sourceId": "CD-08",
+  "group": "intention",
+  "title": {
+    "es": "Coronilla de Fe",
+    "en": "Chaplet of Faith",
+    "pt": "Coronilha de Fé"
+  },
+  "summary": {
+    "es": "Credo en las cuentas grandes y jaculatoria de amor a Jesús y María en las pequeñas.",
+    "en": "Creed on the large beads and a short prayer of love for Jesus and Mary on the small ones.",
+    "pt": "Credo nas contas grandes e jaculatória de amor a Jesus e Maria nas pequenas."
+  },
+  "instrument": {
+    "es": "Rosario de cinco decenas.",
+    "en": "Five-decade rosary.",
+    "pt": "Terço de cinco décadas."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 10
+    }
+  ],
+  "steps": [
+    {
+      "bead": 5,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "Jesús, María, os amo; salvad las almas, salvad a los consagrados.",
+        "en": "Jesus, Mary, I love you, save souls, save the consecrated.",
+        "pt": "Jesus, Maria, amo-vos; salvai as almas, salvai os consagrados."
+      },
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 7,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "Jesús, María, os amo; salvad las almas, salvad a los consagrados.",
+        "en": "Jesus, Mary, I love you, save souls, save the consecrated.",
+        "pt": "Jesus, Maria, amo-vos; salvai as almas, salvai os consagrados."
+      },
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 9,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "Jesús, María, os amo; salvad las almas, salvad a los consagrados.",
+        "en": "Jesus, Mary, I love you, save souls, save the consecrated.",
+        "pt": "Jesus, Maria, amo-vos; salvai as almas, salvai os consagrados."
+      },
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 11,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "Jesús, María, os amo; salvad las almas, salvad a los consagrados.",
+        "en": "Jesus, Mary, I love you, save souls, save the consecrated.",
+        "pt": "Jesus, Maria, amo-vos; salvai as almas, salvai os consagrados."
+      },
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 13,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "Jesús, María, os amo; salvad las almas, salvad a los consagrados.",
+        "en": "Jesus, Mary, I love you, save souls, save the consecrated.",
+        "pt": "Jesus, Maria, amo-vos; salvai as almas, salvai os consagrados."
+      },
+      "repeat": 10,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "salve_regina",
+      "repeat": 5
+    }
+  ],
+  "historicalNote": {
+    "text": {
+      "es": "La fuente indica una indulgencia de 5 años; normativa vigente: Enchiridion Indulgentiarum, 4.ª ed., 1999.",
+      "en": "The source mentions an indulgence of 5 years; current norms: Enchiridion Indulgentiarum, 4th ed., 1999.",
+      "pt": "A fonte indica uma indulgência de 5 anos; norma vigente: Enchiridion Indulgentiarum, 4.ª ed., 1999."
+    },
+    "source": "https://www.catholicdoors.com/prayers/chaplets/chap03.htm"
+  },
+  "notes": "Texto literal de Catholic Doors. Credo en las cinco cuentas grandes, jaculatoria «Jesus, Mary, I love you…» en cada cuenta pequeña y Salve Regina cinco veces al final; la indulgencia de 5 años queda solo como nota histórica.",
+  "image": "fe-coronilla",
+  "variables": [],
+  "promise": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Faith",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap03.htm"
+    }
+  ]
+}

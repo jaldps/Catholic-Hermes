@@ -1,0 +1,186 @@
+{
+  "id": "cabrini-coronilla",
+  "sourceId": "CD-20",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de Santa Francisca Javier Cabrini",
+    "en": "Chaplet of Saint Frances Xavier Cabrini",
+    "pt": "Coronilha de Santa Francesca Xavier Cabrini"
+  },
+  "summary": {
+    "es": "25 cuentas en cinco grupos de cinco, con Avemarías y una oración al final de cada grupo.",
+    "en": "25 beads in five sets of five, with Hail Marys and a prayer at the end of each set.",
+    "pt": "25 contas em cinco grupos de cinco, com Ave Marias e uma oração no fim de cada grupo."
+  },
+  "instrument": {
+    "es": "25 cuentas, 5 grupos de 5, y medalla de Mother Cabrini.",
+    "en": "25 beads, 5 sets of 5, and a medal of Mother Cabrini.",
+    "pt": "25 contas, 5 grupos de 5, e medalha de Mother Cabrini."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "medal"
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "small",
+      "count": 5
+    },
+    {
+      "kind": "small",
+      "count": 5
+    }
+  ],
+  "steps": [
+    {
+      "bead": 1,
+      "prayerRef": "hail_mary",
+      "repeat": 5,
+      "rubric": {
+        "es": "En cada una de las 5 cuentas",
+        "en": "On each of the 5 beads",
+        "pt": "Em cada uma das 5 contas"
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Oh Salvador mío, escucha a Santa Francisca Javier Cabrini que ruega por mí.",
+        "en": "O My Saviour, hear Saint Frances Xavier Cabrini plead for me.",
+        "pt": "Ó meu Salvador, ouve Santa Francesca Xavier Cabrini que roga por mim."
+      },
+      "rubric": {
+        "es": "Al final de cada grupo de cinco",
+        "en": "At the end of each set of five",
+        "pt": "No fim de cada grupo de cinco"
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary",
+      "repeat": 5,
+      "rubric": {
+        "es": "En cada una de las 5 cuentas",
+        "en": "On each of the 5 beads",
+        "pt": "Em cada uma das 5 contas"
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Oh Salvador mío, escucha a Santa Francisca Javier Cabrini que ruega por mí.",
+        "en": "O My Saviour, hear Saint Frances Xavier Cabrini plead for me.",
+        "pt": "Ó meu Salvador, ouve Santa Francesca Xavier Cabrini que roga por mim."
+      },
+      "rubric": {
+        "es": "Al final de cada grupo de cinco",
+        "en": "At the end of each set of five",
+        "pt": "No fim de cada grupo de cinco"
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "hail_mary",
+      "repeat": 5,
+      "rubric": {
+        "es": "En cada una de las 5 cuentas",
+        "en": "On each of the 5 beads",
+        "pt": "Em cada uma das 5 contas"
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Oh Salvador mío, escucha a Santa Francisca Javier Cabrini que ruega por mí.",
+        "en": "O My Saviour, hear Saint Frances Xavier Cabrini plead for me.",
+        "pt": "Ó meu Salvador, ouve Santa Francesca Xavier Cabrini que roga por mim."
+      },
+      "rubric": {
+        "es": "Al final de cada grupo de cinco",
+        "en": "At the end of each set of five",
+        "pt": "No fim de cada grupo de cinco"
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "hail_mary",
+      "repeat": 5,
+      "rubric": {
+        "es": "En cada una de las 5 cuentas",
+        "en": "On each of the 5 beads",
+        "pt": "Em cada uma das 5 contas"
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Oh Salvador mío, escucha a Santa Francisca Javier Cabrini que ruega por mí.",
+        "en": "O My Saviour, hear Saint Frances Xavier Cabrini plead for me.",
+        "pt": "Ó meu Salvador, ouve Santa Francesca Xavier Cabrini que roga por mim."
+      },
+      "rubric": {
+        "es": "Al final de cada grupo de cinco",
+        "en": "At the end of each set of five",
+        "pt": "No fim de cada grupo de cinco"
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "hail_mary",
+      "repeat": 5,
+      "rubric": {
+        "es": "En cada una de las 5 cuentas",
+        "en": "On each of the 5 beads",
+        "pt": "Em cada uma das 5 contas"
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Oh Salvador mío, escucha a Santa Francisca Javier Cabrini que ruega por mí.",
+        "en": "O My Saviour, hear Saint Frances Xavier Cabrini plead for me.",
+        "pt": "Ó meu Salvador, ouve Santa Francesca Xavier Cabrini que roga por mim."
+      },
+      "rubric": {
+        "es": "Al final de cada grupo de cinco",
+        "en": "At the end of each set of five",
+        "pt": "No fim de cada grupo de cinco"
+      }
+    }
+  ],
+  "notes": "Texto literal de Catholic Doors. Auditoría: la fuente da 25 cuentas en 5 grupos de 5 y una medalla; se eliminan la Señal de la Cruz (no está en la fuente) y las cuentas grandes inventadas. La oración final se reza al terminar cada grupo, sobre la última cuenta.",
+  "image": "cabrini-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of Saint Frances Xavier Cabrini",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap34.htm"
+    }
+  ]
+}

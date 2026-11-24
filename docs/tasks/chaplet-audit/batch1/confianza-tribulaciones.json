@@ -1,0 +1,426 @@
+{
+  "id": "confianza-tribulaciones",
+  "sourceId": "IVE-17",
+  "group": "intention",
+  "title": {
+    "es": "Corona de confianza en grandes tribulaciones",
+    "en": "Chaplet of trust in great tribulations",
+    "pt": "Coroa de confiança nas grandes tribulações"
+  },
+  "summary": {
+    "es": "Diez misterios del Salmo 91 con nueve repeticiones de la jaculatoria de confianza en cada uno.",
+    "en": "Ten mysteries from Psalm 91 with nine repetitions of the prayer of trust in each.",
+    "pt": "Dez mistérios do Salmo 91 com nove repetições da jaculatória de confiança em cada um."
+  },
+  "instrument": {
+    "es": "Diez grupos de nueve cuentas pequeñas.",
+    "en": "Ten groups of nine small beads.",
+    "pt": "Dez grupos de nove contas pequenas."
+  },
+  "when": {
+    "es": "En grandes tribulaciones o presagios de peligros por venir.",
+    "en": "In great tribulations or forebodings of coming danger.",
+    "pt": "Nas grandes tribulações ou presságios de perigos vindouros."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 9
+    }
+  ],
+  "steps": [
+    {
+      "bead": null,
+      "prayerRef": "creed"
+    },
+    {
+      "bead": 0,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Él me librará de la red del cazador",
+        "en": "He will deliver me from the snare of the fowler",
+        "pt": "Ele me livrará da rede do caçador"
+      }
+    },
+    {
+      "bead": 1,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Él me librará de la peste mortal",
+        "en": "He will deliver me from the deadly pestilence",
+        "pt": "Ele me livrará da peste mortal"
+      }
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 4,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Él me cobijará bajo Sus alas y yo me refugiaré bajo sus plumas.",
+        "en": "He will cover me with his wings and I will take refuge under his feathers.",
+        "pt": "Ele me cobrirá com as suas asas e eu me refugiarei sob as suas penas."
+      }
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 6,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "No temeré el terror de la noche, ni la flecha que vuela en el día, ni la peste que avanza en las tinieblas, ni el azote que asola el mediodía.",
+        "en": "I will not fear the terror of night, nor the arrow that flies by day, nor the pestilence that stalks in darkness, nor the plague that lays waste at noon.",
+        "pt": "Não temerei o terror da noite, nem a flecha que voa de dia, nem a peste que avança nas trevas, nem o flagelo que devasta ao meio-dia."
+      }
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 6,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 8,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Aunque a mi lado caigan mil y diez mil a mi diestra, a mí no me alcanzarán.",
+        "en": "Though a thousand fall at my side and ten thousand at my right hand, they will not reach me.",
+        "pt": "Ainda que caiam mil ao meu lado e dez mil à minha direita, não me alcançarão."
+      }
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 8,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 10,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "No me alcanzará la desgracia, ni la plaga llegará a mi tienda.",
+        "en": "No evil shall befall me, nor shall any plague come near my tent.",
+        "pt": "Não me alcançará a desgraça, nem a praga chegará à minha tenda."
+      }
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 10,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 12,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Él ordenó a sus ángeles, que me guardaran en todos mis caminos.",
+        "en": "He has given his angels charge over me, to guard me in all my ways.",
+        "pt": "Ele ordenou aos seus anjos que me guardassem em todos os meus caminhos."
+      }
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 12,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 14,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Porque yo me he unido a mi Dios, Él me librará.",
+        "en": "Because I have joined myself to my God, he will deliver me.",
+        "pt": "Porque me uni ao meu Deus, Ele me livrará."
+      }
+    },
+    {
+      "bead": 15,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 14,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 16,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Me protegerá, porque conozco Su nombre.",
+        "en": "He will protect me, because I know his name.",
+        "pt": "Ele me protegerá, porque conheço o seu nome."
+      }
+    },
+    {
+      "bead": 17,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 16,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 18,
+      "prayerRef": "our_father",
+      "meditation": {
+        "es": "Él me responderá y estará conmigo en la desgracia, me librará y me llenará de honores, me dará una larga vida y me hará gozar de Su salvación.",
+        "en": "He will answer me and be with me in distress; he will deliver me and honour me, give me a long life and make me enjoy his salvation.",
+        "pt": "Ele me responderá e estará comigo na desgraça, me livrará e me encherá de honras, me dará longa vida e me fará gozar da sua salvação."
+      }
+    },
+    {
+      "bead": 19,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "repeat": 9,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 18,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Eres mi fortaleza y mi refugio, eres mi Dios en quien confío",
+        "en": "You are my strength and my refuge, my God in whom I trust",
+        "pt": "És a minha fortaleza e o meu refúgio, és o meu Deus em quem confio"
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": null,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Amén, Amén, Amén.",
+        "en": "Amen, Amen, Amen.",
+        "pt": "Amém, Amém, Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    }
+  ],
+  "notes": "Texto literal de IVE. La fuente afirma que se completan 91 repeticiones: 10×9 + la jaculatoria final. Auditoría: la jaculatoria se reza en conjunto en cada cuenta; se declara en rubric. Estructura de 10 misterios x 9 + final confirmada (91 repeticiones).",
+  "image": "confianza-tribulaciones",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "IVE · Rosarios y coronas",
+      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+    }
+  ]
+}

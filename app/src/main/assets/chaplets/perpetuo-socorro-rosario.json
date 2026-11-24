@@ -1,241 +1,241 @@
 {
-  "id": "perpetuo-socorro-rosario",
-  "sourceId": "CD-13",
-  "group": "mary",
-  "title": {
-    "es": "Coronilla de Nuestra Señora del Perpetuo Socorro",
-    "en": "Chaplet of Our Lady of Perpetual Help",
-    "pt": "Coronilha de Nossa Senhora do Perpétuo Socorro"
+ "id": "perpetuo-socorro-rosario",
+ "sourceId": "CD-13",
+ "group": "mary",
+ "title": {
+  "es": "Coronilla de Nuestra Señora del Perpetuo Socorro",
+  "en": "Chaplet of Our Lady of Perpetual Help",
+  "pt": "Coronilha de Nossa Senhora do Perpétuo Socorro"
+ },
+ "summary": {
+  "es": "Rosario de María con oración propia en la cuenta grande y jaculatoria en las pequeñas.",
+  "en": "Marian rosary with a proper prayer on the large bead and a short invocation on the small ones.",
+  "pt": "Terço mariano com oração própria na conta grande e jaculatória nas pequenas."
+ },
+ "instrument": {
+  "es": "Rosario de María.",
+  "en": "Marian rosary.",
+  "pt": "Terço mariano."
+ },
+ "when": {
+  "es": "Uso libre.",
+  "en": "At any time.",
+  "pt": "Uso livre."
+ },
+ "weekdays": [],
+ "beads": [
+  {
+   "kind": "cross"
   },
-  "summary": {
-    "es": "Rosario de María con oración propia en la cuenta grande y jaculatoria en las pequeñas.",
-    "en": "Marian rosary with a proper prayer on the large bead and a short invocation on the small ones.",
-    "pt": "Terço mariano com oração própria na conta grande e jaculatória nas pequenas."
+  {
+   "kind": "large"
   },
-  "instrument": {
-    "es": "Rosario de María.",
-    "en": "Marian rosary.",
-    "pt": "Terço mariano."
+  {
+   "kind": "small",
+   "count": 3
   },
-  "when": {
-    "es": "Uso libre.",
-    "en": "At any time.",
-    "pt": "Uso livre."
+  {
+   "kind": "large"
   },
-  "weekdays": [],
-  "beads": [
-    {
-      "kind": "cross"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 3
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "medal"
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    },
-    {
-      "kind": "large"
-    },
-    {
-      "kind": "small",
-      "count": 10
-    }
-  ],
-  "steps": [
-    {
-      "bead": 5,
-      "text": {
-        "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
-        "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
-        "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
-      }
-    },
-    {
-      "bead": 6,
-      "text": {
-        "es": "Oh María, ayúdanos.",
-        "en": "O Mary, help us!",
-        "pt": "Ó Maria, ajuda-nos."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
-        "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
-        "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
-      }
-    },
-    {
-      "bead": 7,
-      "text": {
-        "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
-        "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
-        "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
-      }
-    },
-    {
-      "bead": 8,
-      "text": {
-        "es": "Oh María, ayúdanos.",
-        "en": "O Mary, help us!",
-        "pt": "Ó Maria, ajuda-nos."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
-        "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
-        "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
-      }
-    },
-    {
-      "bead": 9,
-      "text": {
-        "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
-        "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
-        "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
-      }
-    },
-    {
-      "bead": 10,
-      "text": {
-        "es": "Oh María, ayúdanos.",
-        "en": "O Mary, help us!",
-        "pt": "Ó Maria, ajuda-nos."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
-        "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
-        "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
-      }
-    },
-    {
-      "bead": 11,
-      "text": {
-        "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
-        "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
-        "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
-      }
-    },
-    {
-      "bead": 12,
-      "text": {
-        "es": "Oh María, ayúdanos.",
-        "en": "O Mary, help us!",
-        "pt": "Ó Maria, ajuda-nos."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
-        "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
-        "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
-      }
-    },
-    {
-      "bead": 13,
-      "text": {
-        "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
-        "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
-        "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
-      }
-    },
-    {
-      "bead": 14,
-      "text": {
-        "es": "Oh María, ayúdanos.",
-        "en": "O Mary, help us!",
-        "pt": "Ó Maria, ajuda-nos."
-      },
-      "repeat": 10
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
-        "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
-        "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
-      }
-    },
-    {
-      "bead": 2,
-      "prayerRef": "hail_mary",
-      "repeat": 3
-    },
-    {
-      "bead": 3,
-      "prayerRef": "glory_be"
-    },
-    {
-      "bead": null,
-      "text": {
-        "es": "Acogiémonos a tu amparo, oh Santa Madre de Dios. No desprecies nuestras peticiones en nuestras necesidades, sino líbranos de todos los peligros, oh Virgen María, siempre gloriosa y bendita. Nuestra Señora del Perpetuo Socorro, ruega por nosotros.",
-        "en": "We fly to your patronage, O Holy Mother of God. Despise not our petitions in our necessities, but deliver us from all dangers, O ever glorious and blessed Virgin Mary. Our Lady of Perpetual Help, pray for us!",
-        "pt": "Refugiamo-nos sob a tua proteção, ó Santa Mãe de Deus. Não desprezes as nossas petições nas nossas necessidades, mas livra-nos de todos os perigos, ó Virgem Maria, sempre gloriosa e bendita. Nossa Senhora do Perpétuo Socorro, roga por nós."
-      }
-    }
-  ],
-  "notes": "Texto literal de Catholic Doors. Se conserva la variante #1; la #2 queda fuera del catálogo curado.",
-  "image": "perpetuo-socorro-rosario",
-  "variables": [],
-  "promise": null,
-  "historicalNote": null,
-  "season": null,
-  "rights": "Derechos: Catholic Doors Ministry",
-  "translation": {
-    "es": "traducción fiel de Hermes, 2026",
-    "en": "original",
-    "pt": "traducción fiel de Hermes, 2026"
+  {
+   "kind": "medal"
   },
-  "sources": [
-    {
-      "title": "Catholic Doors · Chaplet of Our Lady of Perpetual Help # 1",
-      "url": "https://www.catholicdoors.com/prayers/chaplets/chap10.htm"
-    }
-  ]
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  }
+ ],
+ "steps": [
+  {
+   "bead": 5,
+   "text": {
+    "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
+    "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
+    "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
+   }
+  },
+  {
+   "bead": 6,
+   "text": {
+    "es": "Oh María, ayúdanos.",
+    "en": "O Mary, help us!",
+    "pt": "Ó Maria, ajuda-nos."
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
+    "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
+    "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
+   }
+  },
+  {
+   "bead": 7,
+   "text": {
+    "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
+    "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
+    "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
+   }
+  },
+  {
+   "bead": 8,
+   "text": {
+    "es": "Oh María, ayúdanos.",
+    "en": "O Mary, help us!",
+    "pt": "Ó Maria, ajuda-nos."
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
+    "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
+    "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
+   }
+  },
+  {
+   "bead": 9,
+   "text": {
+    "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
+    "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
+    "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
+   }
+  },
+  {
+   "bead": 10,
+   "text": {
+    "es": "Oh María, ayúdanos.",
+    "en": "O Mary, help us!",
+    "pt": "Ó Maria, ajuda-nos."
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
+    "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
+    "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
+   }
+  },
+  {
+   "bead": 11,
+   "text": {
+    "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
+    "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
+    "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
+   }
+  },
+  {
+   "bead": 12,
+   "text": {
+    "es": "Oh María, ayúdanos.",
+    "en": "O Mary, help us!",
+    "pt": "Ó Maria, ajuda-nos."
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
+    "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
+    "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
+   }
+  },
+  {
+   "bead": 13,
+   "text": {
+    "es": "Oh Madre del Perpetuo Socorro, escucha nuestras almas suplicantes; tú puedes ayudarnos en nuestras necesidades; María, con esperanza te invocamos.",
+    "en": "O Mother of Perpetual Help, Listen to our pleading souls, You can help us in our needs, Mary, with hope, we call on you.",
+    "pt": "Ó Mãe do Perpétuo Socorro, escuta as nossas almas suplicantes; tu podes ajudar-nos nas nossas necessidades; Maria, com esperança te invocamos."
+   }
+  },
+  {
+   "bead": 14,
+   "text": {
+    "es": "Oh María, ayúdanos.",
+    "en": "O Mary, help us!",
+    "pt": "Ó Maria, ajuda-nos."
+   },
+   "repeat": 10
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "María nos ha ayudado, María quiere ayudarnos, María puede ayudarnos. María nos ayudará.",
+    "en": "Mary has helped us, Mary wants to help us, Mary can help us. Mary will help us.",
+    "pt": "Maria ajudou-nos, Maria quer ajudar-nos, Maria pode ajudar-nos. Maria ajudar-nos-á."
+   }
+  },
+  {
+   "bead": 2,
+   "prayerRef": "hail_mary",
+   "repeat": 3
+  },
+  {
+   "bead": 3,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Acogiémonos a tu amparo, oh Santa Madre de Dios. No desprecies nuestras peticiones en nuestras necesidades, sino líbranos de todos los peligros, oh Virgen María, siempre gloriosa y bendita. Nuestra Señora del Perpetuo Socorro, ruega por nosotros.",
+    "en": "We fly to your patronage, O Holy Mother of God. Despise not our petitions in our necessities, but deliver us from all dangers, O ever glorious and blessed Virgin Mary. Our Lady of Perpetual Help, pray for us!",
+    "pt": "Refugiamo-nos sob a tua proteção, ó Santa Mãe de Deus. Não desprezes as nossas petições nas nossas necessidades, mas livra-nos de todos os perigos, ó Virgem Maria, sempre gloriosa e bendita. Nossa Senhora do Perpétuo Socorro, roga por nós."
+   }
+  }
+ ],
+ "notes": "Texto literal de Catholic Doors. Se conserva la variante #1; la #2 queda fuera del catálogo curado.",
+ "image": "perpetuo-socorro-rosario",
+ "variables": [],
+ "promise": null,
+ "historicalNote": null,
+ "season": null,
+ "rights": "Derechos: Catholic Doors Ministry",
+ "translation": {
+  "es": "traducción fiel de Hermes, 2026",
+  "en": "original",
+  "pt": "traducción fiel de Hermes, 2026"
+ },
+ "sources": [
+  {
+   "title": "Catholic Doors · Chaplet of Our Lady of Perpetual Help # 1",
+   "url": "https://www.catholicdoors.com/prayers/chaplets/chap10.htm"
+  }
+ ]
 }

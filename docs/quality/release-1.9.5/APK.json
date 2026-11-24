@@ -1,0 +1,28 @@
+{
+  "version_name": "1.9.5",
+  "version_code": 45,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.9.5",
+  "sha256": "06491bd54e007b4a9eccbcfbd3c336d622e54fa68f9b43d79f11031b6dbbd3af",
+  "bytes": 110796732,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.9.4 (same package and key)",
+  "built_from": "fix/chaplet-fidelity",
+  "published_as": "Local APK for owner verification; coordinator publishes the Release",
+  "supersedes": "1.9.4 (same engine and crash fix; 55 chaplets corrected)",
+  "changes": [
+    "All 55 non-original chaplets re-audited against their saved sources and rebuilt step by step: one prayer per bead, full canonical prayers via prayerRef, real V/R only where the source has dialogue, group-recitation rubrics otherwise.",
+    "New tool tools/chaplets/validate_chaplets_fidelity.py: 55 files, 944 steps, 482 prayerRefs, 44 V/R, 241 group recitations, 0 errors.",
+    "Keeps the 1.9.4 regex crash fix and the 1.9.3 image-decode hardening."
+  ],
+  "tests": [
+    "15/15 on chaplet guides, entry paths and marker parsing",
+    "55/55 original schema validation, 0 errors"
+  ],
+  "known_limitations": [
+    "Owner must confirm on a physical phone; source ambiguities are documented in each JSON notes field."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

@@ -95,6 +95,11 @@
         "es": "Jesús crucificado, postrados a tus pies te ofrecemos las lágrimas de Aquella que con amor íntimo y compasivo te acompañó en tu doloroso camino de la Cruz. Concédenos, buen Maestro, que grabemos en el corazón las lecciones que nos dan las lágrimas de tu Santísima Madre, para que cumplamos tu santa voluntad en la tierra y seamos dignos de alabarte y bendecirte en el cielo por toda la eternidad. Amén.",
         "en": "Crucified Jesus! Prostrated at your feet, we offer You the Tears of Her, who with intimate, sympathetic love accompanied You on Your Painful Way of the Cross. Grant, O good Master that we take to heart the lessons which the tears of Your Most Holy Mother afford us, so that we may fulfill Your Holy Will on earth that we may become worthy to laud and bless You in Heaven for all Eternity. Amen.",
         "pt": "Jesus crucificado, prostrados aos teus pés, oferecemos-te as lágrimas daquela que, com amor íntimo e compassivo, te acompanhou no teu doloroso caminho da Cruz. Concede-nos, bom Mestre, que gravemos no coração as lições que nos dão as lágrimas da tua Santíssima Mãe, para que cumpramos a tua santa vontade na terra e nos tornemos dignos de louvar-te e bendizer-te no céu por toda a eternidade. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
     },
     {
@@ -104,7 +109,12 @@
         "en": "O Jesus! Hear our petitions. For the sake of the tears of Your Most Holy Mother.",
         "pt": "Jesus, ouve as nossas petições, pelas lágrimas da tua Santíssima Mãe."
       },
-      "repeat": 3
+      "repeat": 3,
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     },
     {
       "bead": 2,
@@ -112,10 +122,15 @@
         "es": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra y que más íntimamente te ama en el cielo.",
         "en": "O Jesus! Look upon the tears of Her, Who loved You most while on earth. And who loves You most intimately in Heaven.",
         "pt": "Jesus, olha as lágrimas daquela que mais te amou na terra e que mais intimamente te ama no céu."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
       }
     },
     {
-      "bead": null,
+      "bead": 2,
       "vr": {
         "v": {
           "es": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
@@ -129,9 +144,9 @@
         }
       },
       "meditation": {
-        "es": "Las lágrimas derramadas por nuestra Santísima Madre en el nacimiento del Salvador en el establo de Belén.",
-        "en": "The tears shed by our Most Holy Mother at the birth of our Saviour in the stable of Bethlehem.",
-        "pt": "As lágrimas derramadas pela nossa Santíssima Mãe no nascimento do Salvador no estábulo de Belém."
+        "es": "Las lágrimas derramadas por nuestra Santísima Madre durante la profecía de Simeón, que una espada atravesaría su Corazón.",
+        "en": "The tears shed by our Most Holy Mother during Simeon's Prophecy that a sword would pierce Her Heart.",
+        "pt": "As lágrimas derramadas pela nossa Santíssima Mãe durante a profecia de Simeão, que uma espada atravessaria o seu Coração."
       }
     },
     {
@@ -144,14 +159,14 @@
         },
         "r": {
           "es": "Por las lágrimas de tu Santísima Madre",
-          "en": "For the sake of your most holy Mother's tears",
+          "en": "For the sake of your most holly Mother�s tears.",
           "pt": "Pelos lágrimas da tua Santíssima Mãe"
         }
       },
       "repeat": 7
     },
     {
-      "bead": null,
+      "bead": 5,
       "vr": {
         "v": {
           "es": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
@@ -180,14 +195,14 @@
         },
         "r": {
           "es": "Por las lágrimas de tu Santísima Madre",
-          "en": "For the sake of your most holy Mother's tears",
+          "en": "For the sake of your most holly Mother�s tears.",
           "pt": "Pelos lágrimas da tua Santíssima Mãe"
         }
       },
       "repeat": 7
     },
     {
-      "bead": null,
+      "bead": 7,
       "vr": {
         "v": {
           "es": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
@@ -216,14 +231,14 @@
         },
         "r": {
           "es": "Por las lágrimas de tu Santísima Madre",
-          "en": "For the sake of your most holy Mother's tears",
+          "en": "For the sake of your most holly Mother�s tears.",
           "pt": "Pelos lágrimas da tua Santíssima Mãe"
         }
       },
       "repeat": 7
     },
     {
-      "bead": null,
+      "bead": 9,
       "vr": {
         "v": {
           "es": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
@@ -252,14 +267,14 @@
         },
         "r": {
           "es": "Por las lágrimas de tu Santísima Madre",
-          "en": "For the sake of your most holy Mother's tears",
+          "en": "For the sake of your most holly Mother�s tears.",
           "pt": "Pelos lágrimas da tua Santíssima Mãe"
         }
       },
       "repeat": 7
     },
     {
-      "bead": null,
+      "bead": 11,
       "vr": {
         "v": {
           "es": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
@@ -288,14 +303,14 @@
         },
         "r": {
           "es": "Por las lágrimas de tu Santísima Madre",
-          "en": "For the sake of your most holy Mother's tears",
+          "en": "For the sake of your most holly Mother�s tears.",
           "pt": "Pelos lágrimas da tua Santíssima Mãe"
         }
       },
       "repeat": 7
     },
     {
-      "bead": null,
+      "bead": 13,
       "vr": {
         "v": {
           "es": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
@@ -324,14 +339,14 @@
         },
         "r": {
           "es": "Por las lágrimas de tu Santísima Madre",
-          "en": "For the sake of your most holy Mother's tears",
+          "en": "For the sake of your most holly Mother�s tears.",
           "pt": "Pelos lágrimas da tua Santíssima Mãe"
         }
       },
       "repeat": 7
     },
     {
-      "bead": null,
+      "bead": 15,
       "vr": {
         "v": {
           "es": "Jesús, mira las lágrimas de Aquella que más te amó en la tierra",
@@ -360,7 +375,7 @@
         },
         "r": {
           "es": "Por las lágrimas de tu Santísima Madre",
-          "en": "For the sake of your most holy Mother's tears",
+          "en": "For the sake of your most holly Mother�s tears.",
           "pt": "Pelos lágrimas da tua Santíssima Mãe"
         }
       },
@@ -381,9 +396,22 @@
         }
       },
       "repeat": 3
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Oh María, Madre de amor, dolor y misericordia, te rogamos que unas tus oraciones a las nuestras, para que Jesús, tu divino Hijo, a quien recurrimos, escuche nuestras peticiones en nombre de tus lágrimas maternas y nos conceda, además de los favores que pedimos, la corona de la vida eterna. Amén.",
+        "en": "O Mary, Mother of love, sorrow and mercy, we beg you to unite your prayers with ours so that Jesus, your Divine Son, to Whom we turn may hear our petitions in the name of your maternal tears and may give us in addition to the favors we ask, the crown of everlasting life. Amen.",
+        "pt": "Ó Maria, Mãe de amor, dor e misericórdia, suplicamos-te que unas as tuas orações às nossas, para que Jesus, teu divino Filho, a quem recorremos, ouça as nossas petições em nome das tuas lágrimas maternais e nos conceda, além dos favores que pedimos, a coroa da vida eterna. Amém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
     }
   ],
-  "notes": "Texto literal de Catholic Doors; errata corregida: «holly Mothers tears»→«holy Mother’s tears». La fuente no da la primera meditación completa en el fragmento extraído; se toma de la lista de los siete grupos.",
+  "notes": "Texto literal de Catholic Doors; errata «holly Mothers tears» corregida a «holy Mother's tears». Auditoría: la primera meditación era inventada (nacimiento en Belén) y se sustituye por la de la profecía de Simeón que sí da la fuente; el V/R de cada cuenta separadora se apoya en su cuenta real; se añade la oración final «O Mary, Mother of love» que faltaba.",
   "image": "coronilla-lagrimas",
   "variables": [],
   "promise": null,

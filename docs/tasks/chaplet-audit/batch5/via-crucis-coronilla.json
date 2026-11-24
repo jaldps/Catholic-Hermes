@@ -1,0 +1,535 @@
+{
+  "id": "via-crucis-coronilla",
+  "sourceId": "CD-54",
+  "group": "god_christ",
+  "title": {
+    "es": "Coronilla del Vía Crucis",
+    "en": "Chaplet of the Way of the Cross",
+    "pt": "Coronilha da Via Crucis"
+  },
+  "summary": {
+    "es": "Catorce estaciones con la oración de adoración y Padre Nuestro, Avemaría y Gloria.",
+    "en": "Fourteen stations with the prayer of adoration and an Our Father, Hail Mary and Glory.",
+    "pt": "Catorze estações com a oração de adoração e um Pai-Nosso, Ave Maria e Glória."
+  },
+  "instrument": {
+    "es": "Coronilla con grupos de tres cuentas y medallas de las estaciones, más 6 cuentas y crucifijo.",
+    "en": "Chaplet with groups of three beads and medals of the stations, plus 6 beads and a crucifix.",
+    "pt": "Coronilha com grupos de três contas e medalhas das estações, mais 6 contas e crucifixo."
+  },
+  "when": {
+    "es": "Uso libre; Vía Crucis.",
+    "en": "At any time; Way of the Cross.",
+    "pt": "Uso livre; Via Crucis."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "cross"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "small",
+      "count": 6
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "prayerRef": "sign_of_the_cross"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús es condenado a muerte.",
+        "en": "Jesus is condemned to death.",
+        "pt": "Jesus é condenado à morte."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 1,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús carga con la cruz.",
+        "en": "Jesus is made to bear His Cross.",
+        "pt": "Jesus carrega a cruz."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 2,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús cae por primera vez.",
+        "en": "Jesus Falls the First Time.",
+        "pt": "Jesus cai pela primeira vez."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 3,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 3,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 3,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús encuentra a su Madre.",
+        "en": "Jesus is met by His Blessed Mother.",
+        "pt": "Jesus encontra a sua Mãe."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 4,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 4,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "La cruz es puesta sobre Simón de Cireneo.",
+        "en": "The cross is laid on Simon of Cyrene.",
+        "pt": "A cruz é posta sobre Simão de Cireneu."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 5,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Verónica enjuga el rostro de Jesús.",
+        "en": "Veronica wipes the face of Jesus.",
+        "pt": "Verónica enxuga o rosto de Jesus."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 6,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 6,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 6,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús cae por segunda vez.",
+        "en": "Jesus falls the second time.",
+        "pt": "Jesus cai pela segunda vez."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 7,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 7,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 7,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús habla a las mujeres de Jerusalén.",
+        "en": "Jesus speaks to the women of Jerusalem.",
+        "pt": "Jesus fala às mulheres de Jerusalém."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 8,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 8,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 8,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús cae por tercera vez.",
+        "en": "Jesus falls the third time.",
+        "pt": "Jesus cai pela terceira vez."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 9,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús es despojado y recibe hiel.",
+        "en": "Jesus is stripped and receives gall to drink.",
+        "pt": "Jesus é despojado e recebe fel."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 10,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 10,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 10,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús es clavado en la cruz.",
+        "en": "Jesus is nailed to the cross.",
+        "pt": "Jesus é cravado na cruz."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 11,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 11,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 11,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús muere en la cruz.",
+        "en": "Jesus dies on the cross.",
+        "pt": "Jesus morre na cruz."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 12,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 12,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 12,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús es bajado de la cruz.",
+        "en": "Jesus is taken down from the cross.",
+        "pt": "Jesus é descido da cruz."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 13,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 13,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 13,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Te adoramos, oh Cristo, y te bendecimos, porque por tu santa Cruz redimiste al mundo.",
+        "en": "We adore You, O Christ, and we bless You because by Your Holy Cross You have redeemed the World.",
+        "pt": "Adoramos-vos, ó Cristo, e vos bendizemos, porque pela vossa Santa Cruz resgatastes o mundo."
+      },
+      "meditation": {
+        "es": "Jesús es puesto en el sepulcro.",
+        "en": "Jesus is laid in the sepulchre.",
+        "pt": "Jesus é colocado no sepulcro."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 14,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 14,
+      "prayerRef": "hail_mary"
+    },
+    {
+      "bead": 14,
+      "prayerRef": "glory_be"
+    }
+  ],
+  "notes": "Incoherencia de la fuente resuelta con el texto real: anuncia 15 grupos de 3 cuentas pero enumera solo 14 estaciones; se modelan 14. La fuente añade que el uso de indulgencias del Crucifijo fue retirado por el Santo Oficio en 1912; no se reproduce como vigente. «Te adoramos, oh Cristo…» es una jaculatoria que se dice en conjunto antes de cada grupo de tres cuentas.",
+  "image": "via-crucis-coronilla",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": "Derechos: Catholic Doors Ministry",
+  "translation": {
+    "es": "traducción fiel de Hermes, 2026",
+    "en": "original",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Catholic Doors · Chaplet of the Way of the Cross",
+      "url": "https://www.catholicdoors.com/prayers/chaplets/chap06.htm"
+    }
+  ]
+}

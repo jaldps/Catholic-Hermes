@@ -1,0 +1,195 @@
+{
+  "id": "san-charbel",
+  "sourceId": "IVE-13",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla de San Charbel",
+    "en": "Chaplet of Saint Charbel",
+    "pt": "Coronilha de São Charbel"
+  },
+  "summary": {
+    "es": "Cinco grupos de tres Avemarías por los votos y devociones de San Charbel, con la plegaria maronita al Padre de la verdad.",
+    "en": "Five groups of three Hail Marys for the vows and devotions of St Charbel, with the Maronite prayer to the Father of truth.",
+    "pt": "Cinco grupos de três Ave Marias pelos votos e devoções de S. Charbel, com a oração maronita ao Pai da verdade."
+  },
+  "instrument": {
+    "es": "Cinco grupos de tres cuentas, separados por cuentas grandes; primera cuenta grande para la plegaria inicial.",
+    "en": "Five groups of three beads separated by large beads; the first large bead is for the opening prayer.",
+    "pt": "Cinco grupos de três contas, separados por contas grandes; a primeira conta grande para a oração inicial."
+  },
+  "when": {
+    "es": "Uso libre.",
+    "en": "At any time.",
+    "pt": "Uso livre."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    },
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "meditation": {
+        "es": "Plegaria al Padre de la Verdad, poema de S. Jacobo de Sarug (siglo V)",
+        "en": "Prayer to the Father of Truth, a poem by St Jacob of Sarug (5th c.)",
+        "pt": "Oração ao Pai da Verdade, poema de S. Jacobo de Sarug (séc. V)"
+      },
+      "text": {
+        "es": "Padre de la verdad, he aquí a tu Hijo, víctima agradable a ti. Acéptalo, Padre, ya que ha muerto por mí. He aquí su Sangre derramada en el Gólgota por mi salvación. Ella clama por mí. Por sus méritos acepta mi oblación. Siendo tantos mis pecados mucho más grandes es tu misericordia. Cuando es puesta en una balanza, tu misericordia sobrepasa el peso de los grandes montes, esos que solo tú conoces. Considera el pecado y considera la propiciación; el sacrificio de la Víctima excede a las deudas. Tu Amado Hijo sufrió los clavos y la lanza por mis pecados, por lo tanto con sus sufrimientos satisface mi deuda y me da vida.",
+        "en": "Father of truth, behold your Son, a pleasing victim to you. Accept him, Father, for he has died for me. Behold his Blood shed on Golgotha for my salvation. It cries out for me. By its merits accept my offering. However great my sins, your mercy is greater still. When placed on a balance, your mercy outweighs the great mountains that only you know. Consider the sin and consider the atonement; the sacrifice of the Victim exceeds the debts. Your beloved Son endured the nails and the lance for my sins, so by his sufferings he satisfies my debt and gives me life.",
+        "pt": "Pai da verdade, eis o teu Filho, vítima agradável a ti. Aceita-o, Pai, pois morreu por mim. Eis o seu Sangue derramado no Gólgota pela minha salvação. Ele clama por mim. Pelos seus méritos aceita a minha oblação. Sendo tantos os meus pecados, muito maior é a tua misericórdia. Quando posta numa balança, a tua misericórdia ultrapassa o peso das grandes montanhas, essas que só tu conheces. Considera o pecado e considera a propiciação; o sacrifício da Vítima excede as dívidas. O teu Amado Filho sofreu os cravos e a lança pelos meus pecados; portanto, com os seus sofrimentos satisfaz a minha dívida e me dá vida."
+      }
+    },
+    {
+      "bead": 0,
+      "prayerRef": "glory_be"
+    },
+    {
+      "bead": 0,
+      "text": {
+        "es": "Adoración al Hijo que a todos redimió por su crucifixión. Alabanza al Espíritu por quien fue consumado el misterio de nuestra salvación. Bendito sea quien nos vivificó, por su Amor. ¡A Él sea la gloria!",
+        "en": "Adoration to the Son who redeemed all by his crucifixion. Praise to the Spirit by whom the mystery of our salvation was accomplished. Blessed be he who gave us life, for his Love. To him be glory!",
+        "pt": "Adoração ao Filho que a todos resgatou pela sua crucificação. Louvor ao Espírito por quem foi consumado o mistério da nossa salvação. Bendito seja quem nos vivificou, pelo seu Amor. A ele seja a glória!"
+      }
+    },
+    {
+      "bead": 1,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "en honor a la fidelidad de S. Charbel a su voto de pobreza.",
+        "en": "in honour of St Charbel's faithfulness to his vow of poverty.",
+        "pt": "em honra da fidelidade de S. Charbel ao seu voto de pobreza."
+      }
+    },
+    {
+      "bead": 2,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 3,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "en honor a la fidelidad de S. Charbel a su voto de castidad.",
+        "en": "in honour of St Charbel's faithfulness to his vow of chastity.",
+        "pt": "em honra da fidelidade de S. Charbel ao seu voto de castidade."
+      }
+    },
+    {
+      "bead": 4,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 5,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "en honor a la fidelidad de S. Charbel a su voto de obediencia.",
+        "en": "in honour of St Charbel's faithfulness to his vow of obedience.",
+        "pt": "em honra da fidelidade de S. Charbel ao seu voto de obediência."
+      }
+    },
+    {
+      "bead": 6,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 7,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "El cuarto grupo de cuentas simboliza la devoción de San Charbel a la Sagrada Eucaristía. Oramos pidiendo que por su intercesión, crezcamos en amor a Jesús Eucarístico.",
+        "en": "The fourth group of beads symbolises St Charbel's devotion to the Holy Eucharist. We pray that through his intercession we may grow in love for the Eucharistic Jesus.",
+        "pt": "O quarto grupo de contas simboliza a devoção de S. Charbel à Sagrada Eucaristia. Oremos pedindo que, pela sua intercessão, cresçamos no amor a Jesus Eucarístico."
+      }
+    },
+    {
+      "bead": 8,
+      "prayerRef": "our_father"
+    },
+    {
+      "bead": 9,
+      "prayerRef": "hail_mary",
+      "repeat": 3,
+      "meditation": {
+        "es": "El quinto grupo de cuentas simboliza el amor y la devoción que San Charbel tenía a Nuestra Santísima Madre. Que por su intercesión crezcamos en devoción a la Virgen.",
+        "en": "The fifth group of beads symbolises the love and devotion St Charbel had for Our Most Holy Mother. May we grow in devotion to the Virgin through his intercession.",
+        "pt": "O quinto grupo de contas simboliza o amor e a devoção que S. Charbel tinha para com a Nossa Santíssima Mãe. Que pela sua intercessão cresçamos na devoção à Virgem."
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Dios infinitamente santo y glorificado en tus santos, Tú inspiraste a San Charbel a llevar una vida de unión perfecta con tu Hijo Jesucristo, según el Evangelio, y a desprenderse del mundo viviendo con heroísmo las virtudes monásticas: pobreza, obediencia y castidad, concédenos, te rogamos, la gracia de amarte y servirte siguiendo su ejemplo.",
+        "en": "Infinitely holy God, glorified in your saints, you inspired St Charbel to live a life of perfect union with your Son Jesus Christ according to the Gospel, and to detach himself from the world by heroically living the monastic virtues of poverty, obedience and chastity; grant us, we beg you, the grace to love and serve you following his example.",
+        "pt": "Deus infinitamente santo e glorificado nos teus santos, Tu inspiraste S. Charbel a levar uma vida de união perfeita com o teu Filho Jesus Cristo, segundo o Evangelho, e a desprender-se do mundo vivendo com heroísmo as virtudes monásticas: pobreza, obediência e castidade; concede-nos, te rogamos, a graça de te amar e servir seguindo o seu exemplo."
+      }
+    },
+    {
+      "bead": null,
+      "rubric": {
+        "es": "En la medalla de S. Charbel",
+        "en": "At St Charbel's medal",
+        "pt": "Na medalha de S. Charbel"
+      },
+      "text": {
+        "es": "Señor Dios Todopoderoso, Tú que has manifestado el poder de la intercesión de San Charbel a través de sus numerosos milagros y favores, como la conversión concédenos hoy la gracia que imploramos (pedir el favor) por su poderosa intercesión. Amén.",
+        "en": "Almighty Lord God, you who have shown the power of St Charbel's intercession through his many miracles and favours, such as conversions, grant us today the grace we implore (state the favour) through his powerful intercession. Amen.",
+        "pt": "Senhor Deus Todo-Poderoso, Tu que manifestaste o poder da intercessão de S. Charbel através dos seus numerosos milagres e favores, como as conversões, concede-nos hoje a graça que imploramos (pedir o favor) pela sua poderosa intercessão. Amém."
+      }
+    }
+  ],
+  "notes": "Texto literal de IVE. Se corrigen «cuesta»→«cuenta», «Las cuatro grupo»→«El cuarto grupo simboliza» y «Nuestra Santísima. Madre»→«Nuestra Santísima Madre». La Gloria de la plegaria se cita con prayerRef. Las dos oraciones finales se separan en pasos distintos.",
+  "image": "san-charbel",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "IVE · Rosarios y coronas",
+      "url": "https://iveinarabic.org/es/rosarios-y-coronas/"
+    }
+  ]
+}

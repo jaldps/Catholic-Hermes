@@ -1,0 +1,821 @@
+{
+  "id": "coronilla-san-jose-hozana",
+  "sourceId": "HZ-07",
+  "group": "saints",
+  "title": {
+    "es": "Coronilla a San José",
+    "en": "Chaplet of Saint Joseph",
+    "pt": "Coronilha de São José"
+  },
+  "summary": {
+    "es": "Cuentas violetas en tríadas y cuentas grandes blancas para pedir protección a la familia y una buena muerte.",
+    "en": "Violet beads in triads and white large beads, asking St Joseph for family protection and a good death.",
+    "pt": "Contas violeta em tríades e contas grandes brancas, pedindo a São José proteção da família e uma boa morte."
+  },
+  "instrument": {
+    "es": "60 cuentas pequeñas violetas agrupadas en tríadas, separadas por cuentas grandes blancas; medalla y cruz.",
+    "en": "60 small violet beads in triads, separated by white large beads; medal and cross.",
+    "pt": "60 contas pequenas violeta em tríades, separadas por contas grandes brancas; medalha e cruz."
+  },
+  "when": {
+    "es": "Para ayuda y protección del hogar y la gracia de una buena muerte.",
+    "en": "For help and protection of the home and the grace of a good death.",
+    "pt": "Para auxílio e proteção do lar e a graça de uma boa morte."
+  },
+  "weekdays": [],
+  "beads": [
+    {
+      "kind": "large"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "small",
+      "count": 3,
+      "color": "#6A3D9A"
+    },
+    {
+      "kind": "large",
+      "color": "#FFFFFF"
+    },
+    {
+      "kind": "medal",
+      "label": {
+        "es": "Medalla de San José",
+        "en": "St Joseph medal",
+        "pt": "Medalha de São José"
+      }
+    },
+    {
+      "kind": "cross"
+    }
+  ],
+  "steps": [
+    {
+      "bead": 0,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 1,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 2,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 3,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 4,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 5,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 6,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 7,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 8,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 9,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 10,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 11,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 12,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 13,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 14,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 15,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 16,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 17,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 18,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 19,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 20,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 21,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 22,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 23,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 24,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 25,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 26,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 27,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 28,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 29,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 30,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 31,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 32,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 33,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 34,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 35,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 36,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 37,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 38,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 39,
+      "text": {
+        "es": "San José, ruega por nosotros",
+        "en": "St Joseph, pray for us.",
+        "pt": "São José, roga por nós."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      },
+      "repeat": 3
+    },
+    {
+      "bead": 40,
+      "text": {
+        "es": "San José, guardián de la sagrada familia, bendice nuestras familias.",
+        "en": "St Joseph, guardian of the holy family, bless our families.",
+        "pt": "São José, guardião da sagrada família, abençoa as nossas famílias."
+      },
+      "rubric": {
+        "es": "Se reza en conjunto",
+        "en": "Said together",
+        "pt": "Rezado em conjunto"
+      }
+    },
+    {
+      "bead": 41,
+      "text": {
+        "es": "Jesús, José y María, os doy mi corazón y el alma mía. Jesús, José y María, asistidme en mi última agonía. Jesús, José y María, en ustedes descance en paz el alma mía. Amén.",
+        "en": "Jesus, Joseph and Mary, I give you my heart and my soul. Jesus, Joseph and Mary, assist me in my last agony. Jesus, Joseph and Mary, may my soul rest in peace in you. Amen.",
+        "pt": "Jesus, José e Maria, dou-vos o meu coração e a minha alma. Jesus, José e Maria, assisti-me na minha última agonia. Jesus, José e Maria, que a minha alma descanse em paz em vós. Amém."
+      },
+      "rubric": {
+        "es": "En la medalla y la cruz",
+        "en": "At the medal and cross",
+        "pt": "Na medalha e na cruz"
+      }
+    },
+    {
+      "bead": null,
+      "text": {
+        "es": "Dios te salve, José, lleno de la gracia divina. Entre tus brazos descansó El Salvador y ante tus ojos creció. Bendito eres entre todos los hombres, y bendito es Jesús, el hijo divino de tu Virginal esposa. San José, padre adoptivo de Jesús, ayúdanos en nuestras necesidades familiares, de salud y de trabajo, hasta el fin de nuestros días, y socórrenos a la hora de nuestra muerte. Amén",
+        "en": "Hail, Joseph, full of divine grace. The Saviour rested in your arms and grew before your eyes. Blessed are you among all men, and blessed is Jesus, the divine Son of your virginal spouse. St Joseph, adoptive father of Jesus, help us in our family, health and work needs until the end of our days, and succour us at the hour of our death. Amen.",
+        "pt": "Salve, José, cheio da graça divina. O Salvador descansou nos teus braços e cresceu diante dos teus olhos. Bendito és entre todos os homens, e bendito é Jesus, o Filho divino da tua esposa virginal. São José, pai adotivo de Jesus, ajuda-nos nas nossas necessidades familiares, de saúde e de trabalho, até ao fim dos nossos dias, e socorre-nos na hora da nossa morte. Amém."
+      },
+      "rubric": {
+        "es": "Oración opcional final",
+        "en": "Optional final prayer",
+        "pt": "Oração final opcional"
+      }
+    }
+  ],
+  "notes": "Texto literal de Hozana. Se modelan 20 tríadas (60 cuentas pequeñas), con una cuenta grande separadora entre ellas; la fuente no da el número de grandes. Auditoría: «San José, guardián...» se reza en cada cuenta grande (no solo en la primera); se añaden la medalla y la cruz que la fuente nombra al final; «Oración opcional final» es una instrucción y pasa de meditation a rubric. Fidelidad: orden de cuentas reconstruido (grande, tríada) y texto ES literal sin el punto fuera de la cita.",
+  "image": "coronilla-san-jose-hozana",
+  "variables": [],
+  "promise": null,
+  "historicalNote": null,
+  "season": null,
+  "rights": null,
+  "translation": {
+    "es": "original",
+    "en": "traducción fiel de Hermes, 2026",
+    "pt": "traducción fiel de Hermes, 2026"
+  },
+  "sources": [
+    {
+      "title": "Hozana · Santo Rosario",
+      "url": "https://hozana.org/es/oracion/santo-rosario/coronilla-san-jose"
+    }
+  ]
+}
