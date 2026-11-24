@@ -112,8 +112,29 @@
 | 8 | Tests de área | 9/10 | `CatechismLandscapeL5Test` 2/2. |
 | 9 | Identidades y estados | 8/10 | Theming y `ccc_search_empty` heredados. |
 
+## 6. Planes — `ReadingPlansScreen.kt`
+
+- En horizontal se usa `AppTwoPane` con `rememberAppListDetailState(planKeys, key = "plans_list_detail")`. La lista mantiene la cabecera y las tarjetas; la ficha se muestra a la derecha con «Empezar hoy» al pie (`plan_start`).
+- Sin barra de búsqueda ni hoja de filtros, según §8.2. El estado `selectedId` se sincroniza con la selección del wrapper.
+- En vertical la pantalla conserva exactamente su columna anterior.
+
+### Autoevaluación (rúbrica §11, 9 criterios)
+
+| # | Criterio | Nota | Evidencia |
+|---|---|---|---|
+| 1 | Barra y filas visibles | 8/10 | `two_pane` y lista en test 891×411. |
+| 2 | Teclado | No aplica | Sin campo de texto en esta pantalla. |
+| 3 | Medida de lectura | 8/10 | `PlanDetail` heredado. |
+| 4 | Selección sin apilar y atrás | 9/10 | `selectingAPlanKeepsTheDetailBesideTheList` 1/1. |
+| 5 | Giro | 8/10 | `selectedId` y estado del wrapper con claves. |
+| 6 | Cero `SMALL_TARGET` | 9/10 | Solo wrappers L0. |
+| 7 | Texto no elidido | 9/10 | Tarjetas y ficha heredadas. |
+| 8 | Tests de área | 9/10 | `PlansLandscapeL5Test` 2/2. |
+| 9 | Identidades y estados | 8/10 | Theming y `AppEmptyState` heredados. |
+
 ## Tests
 
+- `PlansLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m10s.
 - `CatechismLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m29s.
 - `QuestionsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m15s.
 - `DevotionsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m13s.

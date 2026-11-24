@@ -47,6 +47,10 @@ import com.example.ui.design.AppChip
 import com.example.ui.design.AppConfirmDialog
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
+import com.example.ui.design.rememberAppListDetailState
+import com.example.ui.design.appIsTwoPane
+import com.example.ui.design.appIsLandscapePhone
+import com.example.ui.design.AppTwoPane
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppHeroHeader
 import com.example.ui.design.AppListGroup
@@ -154,7 +158,55 @@ fun ReadingPlansScreen(
         return tr("Día $day de ${plan.totalDays} · $percent %", "Day $day of ${plan.totalDays} · $percent%", "Dia $day de ${plan.totalDays} · $percent %")
     }
 
-    Column(Modifier.fillMaxSize().padding(bottom = appDockInset())) {
+    val twoPane = appIsLandscapePhone() || appIsTwoPane()
+    if (twoPane) {
+        val planKeys = remember(loaded) { loaded?.map { it.id } ?: emptyList() }
+        val paneState = rememberAppListDetailState(planKeys, initialKey = selectedId ?: planKeys.firstOrNull(), key = "plans_list_detail")
+        LaunchedEffect(paneState.selectedKey, paneState.explicit) {
+            if (paneState.explicit) selectedId = paneState.selectedKey
+        }
+        AppTwoPane(
+            state = paneState,
+            list = {
+                LazyColumn(
+                    Modifier.fillMaxSize().testTag("plans_screen"),
+                    contentPadding = PaddingValues(bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(14.dp)
+                ) {
+                    item("header") { AppHeroHeader("heroes/lumen/bible.jpg", title,
+                        eyebrow = tr("Un día a la vez", "One day at a time", "Um dia de cada vez")) }
+                    if (loading) item("loading") { AppBanner(tr("Cargando…", "Loading…", "Carregando…")) }
+                    else if (loaded == null) item("failure") {
+                        Column {
+                            AppEmptyState(tr("No se pudo abrir el contenido", "Content could not be opened", "Não foi possível abrir o conteúdo"))
+                            AppSecondaryButton(tr("Reintentar", "Try again", "Tentar novamente"), { retry++ }, modifier = gutter.fillMaxWidth())
+                        }
+                    } else items(loaded, key = { it.id }) { plan ->
+                        AppCard(onClick = { selectedId = plan.id; paneState.select(plan.id) },
+                            modifier = Modifier.padding(horizontal = design.spacing.gutter).testTag("plan_card_${plan.id}")) {
+                            Text(plan.title.get(language), style = styles.headline, color = p.textPrimary, modifier = Modifier.semantics { heading() })
+                            Spacer(Modifier.height(6.dp))
+                            Text(plan.description.get(language), style = styles.body, color = p.textSecondary)
+                            Spacer(Modifier.height(10.dp))
+                            Text(progressLine(plan), style = styles.subhead, color = p.textPrimary, modifier = Modifier.testTag("plan_progress_${plan.id}"))
+                        }
+                    }
+                }
+            },
+            detail = {
+                val chosen = loaded?.firstOrNull { it.id == paneState.selectedKey }
+                if (chosen != null) PlanDetail(
+                    plan = chosen, state = progress[chosen.id] ?: PlanProgress(), todayEpochDay = todayEpochDay, language = language,
+                    progressLine = progressLine(chosen), bibleLabel = bibleLabel, eyebrow = title,
+                    onStart = { onStart(chosen.id) },
+                    onToggleDone = { day, done -> onToggleDone(chosen.id, day, done) },
+                    onRebase = { onRebase(chosen.id, chosen.totalDays) },
+                    onRestart = { onRestart(chosen.id) },
+                    onOpenBibleReading = onOpenBibleReading, onOpenCatechism = onOpenCatechism,
+                    repository = repository, onOpenCrossReference = onOpenCrossReference
+                ) else AppEmptyState(tr("Elige un plan de la lista", "Choose a plan from the list", "Escolha um plano da lista"))
+            }
+        )
+    } else     Column(Modifier.fillMaxSize().padding(bottom = appDockInset())) {
         if (selected == null) {
             LazyColumn(
                 Modifier.weight(1f).fillMaxWidth().testTag("plans_screen"),
