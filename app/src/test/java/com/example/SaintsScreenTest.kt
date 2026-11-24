@@ -65,10 +65,11 @@ class SaintsScreenTest {
     private fun scenario() {
         launch()
         compose.onNodeWithTag("saints_search").assertIsDisplayed()
-        compose.onNodeWithTag("list_filter_button").performClick()
         compose.onNodeWithTag("saints_month_picker").assertIsDisplayed()
+        compose.onNodeWithTag("saints_screen").performScrollToNode(hasTestTag("saint_row_agatha_of_sicily_virgin"))
+        compose.onNodeWithTag("saints_screen").performScrollToNode(hasTestTag("saints_month_picker"))
+        compose.onNodeWithTag("saints_month_picker").performClick()
         compose.onNodeWithTag("saints_month_1").performClick()
-        compose.onNodeWithTag("sheet_close").performClick()
         compose.onNodeWithTag("saints_screen").performScrollToNode(hasTestTag("saint_row_francis_de_sales_bishop"))
         compose.onNodeWithTag("saint_row_agatha_of_sicily_virgin").assertDoesNotExist()
         compose.onNodeWithTag("saint_row_francis_de_sales_bishop").performClick()
@@ -86,10 +87,8 @@ class SaintsScreenTest {
 
     @Test fun exploreFilterAndDetailInSanctuary() {
         launch("SANCTUARY")
-        compose.onNodeWithTag("list_filter_button").performClick()
         compose.onNodeWithTag("saints_month_picker").performClick()
         compose.onNodeWithTag("saints_month_2").performClick()
-        compose.onNodeWithTag("sheet_close").performClick()
         compose.onNodeWithTag("saints_screen").performScrollToNode(hasTestTag("saint_row_agatha_of_sicily_virgin"))
         compose.onNodeWithTag("saint_row_agatha_of_sicily_virgin").performClick()
         compose.onNodeWithTag("saint_detail").assertIsDisplayed()

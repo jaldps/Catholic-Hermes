@@ -48,7 +48,9 @@ import com.example.ui.design.AppConfirmDialog
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.rememberAppListDetailState
+import com.example.ui.design.AppWindowClass
 import com.example.ui.design.appIsTwoPane
+import com.example.ui.design.appWindowClass
 import com.example.ui.design.appIsLandscapePhone
 import com.example.ui.design.AppTwoPane
 import com.example.ui.design.AppEmptyState
@@ -158,7 +160,7 @@ fun ReadingPlansScreen(
         return tr("Día $day de ${plan.totalDays} · $percent %", "Day $day of ${plan.totalDays} · $percent%", "Dia $day de ${plan.totalDays} · $percent %")
     }
 
-    val twoPane = appIsLandscapePhone() || appIsTwoPane()
+    val twoPane = appWindowClass() == AppWindowClass.LandscapePhone
     if (twoPane) {
         val planKeys = remember(loaded) { loaded?.map { it.id } ?: emptyList() }
         val paneState = rememberAppListDetailState(planKeys, initialKey = selectedId ?: planKeys.firstOrNull(), key = "plans_list_detail")

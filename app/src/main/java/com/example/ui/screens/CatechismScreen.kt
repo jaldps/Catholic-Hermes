@@ -112,7 +112,9 @@ import com.example.data.repository.CompendiumQA
 import com.example.ui.components.InAppBrowserDialog
 import com.example.ui.design.AppActionBar
 import com.example.ui.design.rememberAppListDetailState
+import com.example.ui.design.AppWindowClass
 import com.example.ui.design.appIsTwoPane
+import com.example.ui.design.appWindowClass
 import com.example.ui.design.appIsLandscapePhone
 import com.example.ui.design.AppTwoPane
 import com.example.ui.design.AppSearchField
@@ -320,7 +322,7 @@ fun CatechismScreen(
             )
         }
     }
-    val twoPaneLists = appIsLandscapePhone() || appIsTwoPane()
+    val twoPaneLists = appWindowClass() == AppWindowClass.LandscapePhone
     if (twoPaneLists) {
         val cccKeys = remember(structure) { structure.all.map { "ccc:${it.id}" } }
         val paneState = rememberAppListDetailState(cccKeys, initialKey = cccKeys.firstOrNull(), key = "catechism_list_detail")

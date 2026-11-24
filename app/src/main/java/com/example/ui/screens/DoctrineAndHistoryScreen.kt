@@ -40,7 +40,9 @@ import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.design.AppSheet
 import com.example.ui.design.AppTwoPane
 import com.example.ui.design.appIsLandscapePhone
+import com.example.ui.design.AppWindowClass
 import com.example.ui.design.appIsTwoPane
+import com.example.ui.design.appWindowClass
 import com.example.ui.design.rememberAppListDetailState
 
 private val defaultNewsLoader: suspend (AppLanguage) -> NewsResult =
@@ -163,7 +165,8 @@ fun DoctrineAndHistoryScreen(
     // to its caller. Entries opened from inside that reader still pop first.
     // On a two-pane window the first entry is the selection beside the list, not a page
     // over it: back only unwinds what was opened from inside that page.
-    val twoPane = (appIsLandscapePhone() || appIsTwoPane()) && initialTopTab in TWO_PANE_TABS
+    val twoPane = (appWindowClass() == AppWindowClass.LandscapePhone && initialTopTab in TWO_PANE_TABS) ||
+        (appIsTwoPane() && initialTopTab in setOf(1, 4))
     AppBackHandler(enabled = if (twoPane) entries.size > 1 else entries.isNotEmpty() && (initialEntry == null || entries.size > 1)) {
         stack = stack.split('|').filter { it.isNotEmpty() }.dropLast(1).joinToString("|")
     }

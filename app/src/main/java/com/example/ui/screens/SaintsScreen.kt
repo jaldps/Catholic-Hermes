@@ -58,7 +58,9 @@ import com.example.ui.design.AppCard
 import com.example.ui.design.AppTwoPane
 import com.example.ui.design.rememberAppListDetailState
 import com.example.ui.design.AppSheet
+import com.example.ui.design.AppWindowClass
 import com.example.ui.design.appIsTwoPane
+import com.example.ui.design.appWindowClass
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppEmptyState
@@ -101,7 +103,7 @@ internal fun saintCelebrations(): List<GeneralCelebration> =
  * with an editorial profile open a detail page, the others show title and date.
  */
 @Composable
-fun SaintsScreen(
+fun SaintsScreenLandscape(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier,
     ttsManager: LiturgicalTtsManager? = null,
@@ -347,6 +349,189 @@ private fun SaintDetail(
                 Spacer(Modifier.height(6.dp))
                 Column(Modifier.testTag("saint_sources"), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     sources.forEach { Text(it, style = styles.footnote, color = palette.textSecondary) }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun SaintsScreenBase(
+    currentLanguage: AppLanguage,
+    modifier: Modifier = Modifier,
+    /** The app's narrator: the profile can be read aloud (notification, focus, sleep timer). */
+    ttsManager: LiturgicalTtsManager? = null,
+    /** Opens this celebration's profile on arrival (the global search); an unknown key shows the list. */
+    initialKey: String? = null,
+    /** Back from the profile opened by [initialKey] leaves to the caller (the global search) instead of the list. */
+    onExitContext: (() -> Unit)? = null
+) {
+    val catalog = remember { SaintsCatalog.default }
+    val profiles = catalog.byKey
+    var selectedKey by rememberSaveable { mutableStateOf<String?>(initialKey?.takeIf { it in profiles }) }
+    val selected = selectedKey?.let { k -> saintCelebrations().firstOrNull { it.key == k } }
+
+    if (appIsTwoPane()) {
+        // Wide windows: the list stays on the left and the profile is on the right, so
+        // choosing another saint changes the right pane instead of pushing a page.
+        val all = remember { saintCelebrations() }
+        val shown = selected ?: all.firstOrNull { it.key in profiles }
+        // Only a profile opened from outside (the global search) has somewhere to go back to.
+        if (onExitContext != null && selectedKey == initialKey) AppBackHandler { onExitContext() }
+        AppTwoPane(
+            modifier = modifier,
+            list = { SaintsList(profiles, currentLanguage, { selectedKey = it }, Modifier, selectedRowKey = shown?.key) },
+            detail = {
+                if (shown != null) {
+                    androidx.compose.runtime.key(shown.key) {
+                        SaintDetail(shown, profiles[shown.key], currentLanguage, {}, Modifier, ttsManager, showBack = false)
+                    }
+                }
+            }
+        )
+    } else if (selected != null) {
+        val back = { if (onExitContext != null && selectedKey == initialKey) onExitContext() else selectedKey = null }
+        AppBackHandler { back() }
+        SaintDetail(selected, profiles[selected.key], currentLanguage, { back() }, modifier, ttsManager)
+    } else {
+        SaintsList(profiles, currentLanguage, { selectedKey = it }, modifier)
+    }
+}
+
+@Composable
+fun SaintsScreen(
+    currentLanguage: AppLanguage,
+    modifier: Modifier = Modifier,
+    ttsManager: com.example.data.audio.LiturgicalTtsManager? = null,
+    initialKey: String? = null,
+    onExitContext: (() -> Unit)? = null
+) {
+    if (appWindowClass() == AppWindowClass.LandscapePhone) {
+        SaintsScreenLandscape(currentLanguage, modifier, ttsManager, initialKey, onExitContext)
+    } else {
+        SaintsScreenBase(currentLanguage, modifier, ttsManager, initialKey, onExitContext)
+    }
+}
+
+@Composable
+private fun SaintsList(
+    profiles: Map<String, SaintProfile>,
+    language: AppLanguage,
+    onOpen: (String) -> Unit,
+    modifier: Modifier,
+    /** The saint shown in the detail pane of a two-pane layout; its row is marked selected. */
+    selectedRowKey: String? = null
+) {
+    AppEdgeToEdge()
+    val design = LocalAppDesign.current
+    val gutter = design.spacing.gutter
+    var query by rememberSaveable { mutableStateOf("") }
+    var month by rememberSaveable { mutableIntStateOf(0) }
+    var profilesOnly by rememberSaveable { mutableStateOf(false) }
+    val all = remember { saintCelebrations() }
+
+    val folded = fold(query.trim())
+    val visible = remember(folded, month, profilesOnly, language, profiles) {
+        all.filter { c ->
+            (month == 0 || c.month == month) &&
+                (!profilesOnly || c.key in profiles) &&
+                (folded.isEmpty() || fold(c.title.get(language)).contains(folded) ||
+                    profiles[c.key]?.let { fold(it.bio.get(language)).contains(folded) } == true)
+        }
+    }
+    fun tr(es: String, en: String, pt: String) = when (language) { AppLanguage.ES -> es; AppLanguage.EN -> en; AppLanguage.PT -> pt }
+    val monthLabel = if (month == 0) tr("Todos los meses", "All months", "Todos os meses") else saintMonthName(month, language)
+
+    LazyColumn(
+        // The header reaches the top edge; scroll-to and keyboard focus stop
+        // above the floating dock, where rows can be tapped.
+        modifier = modifier.fillMaxSize().padding(bottom = appDockInset()).testTag("saints_screen"),
+        contentPadding = PaddingValues(bottom = 32.dp)
+    ) {
+        item(key = "title") {
+            AppHeroHeader(
+                assetPath = "heroes/lumen/saints.jpg",
+                title = tr("Santos", "Saints", "Santos"),
+                eyebrow = tr("Calendario Romano General", "General Roman Calendar", "Calendário Romano Geral")
+            )
+            Spacer(Modifier.height(6.dp))
+        }
+        item(key = "filters") {
+            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                AppSearchField(
+                    value = query,
+                    onValueChange = { query = it },
+                    placeholder = tr("Buscar un santo", "Search for a saint", "Buscar um santo"),
+                    modifier = Modifier.fillMaxWidth().testTag("saints_search")
+                )
+                Row(
+                    Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = gutter),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    AppMenuChip(
+                        label = monthLabel,
+                        tag = "saints_month_picker",
+                        items = listOf(AppMenuItem(tr("Todos los meses", "All months", "Todos os meses"), selected = month == 0, tag = "saints_month_0") { month = 0 }) +
+                            (1..12).map { m -> AppMenuItem(saintMonthName(m, language), selected = month == m, tag = "saints_month_$m") { month = m } }
+                    )
+                    if (profiles.isNotEmpty()) {
+                        AppChip(
+                            label = tr("Solo con ficha", "With profile only", "Só com ficha"),
+                            selected = profilesOnly,
+                            onClick = { profilesOnly = !profilesOnly },
+                            modifier = Modifier.testTag("saints_profiles_only")
+                        )
+                    }
+                }
+                Spacer(Modifier.height(6.dp))
+            }
+        }
+        if (visible.isEmpty()) {
+            item(key = "empty") {
+                Column(
+                    Modifier.fillMaxWidth().padding(horizontal = gutter, vertical = 32.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    AppEmptyState(
+                        title = tr("Nada coincide", "Nothing matches", "Nada corresponde"),
+                        body = tr(
+                            "Prueba con otra búsqueda o quita los filtros.",
+                            "Try another search or clear the filters.",
+                            "Tente outra busca ou limpe os filtros."
+                        ),
+                        modifier = Modifier.testTag("list_empty")
+                    )
+                    AppSecondaryCapsule(
+                        label = tr("Quitar filtros", "Clear filters", "Limpar filtros"),
+                        onClick = { query = ""; month = 0; profilesOnly = false },
+                        tag = "saints_clear_filters"
+                    )
+                }
+            }
+        } else {
+            val byMonth = visible.groupBy { it.month }
+            byMonth.forEach { (m, entries) ->
+                item(key = "month_$m") {
+                    AppSectionHeader(title = saintMonthName(m, language), modifier = Modifier.testTag("saints_month_header_$m"))
+                }
+                item(key = "group_$m") {
+                    AppListGroup {
+                        entries.forEach { c ->
+                            val has = c.key in profiles
+                            AppListRow(
+                                title = c.title.get(language),
+                                subtitle = saintDateLabel(c.month, c.day, language) + " · " + c.rank.displayName.get(language),
+                                showsNavigationAffordance = has,
+                                selected = c.key == selectedRowKey,
+                                onClick = if (has) ({ onOpen(c.key) }) else null,
+                                modifier = Modifier.testTag("saint_row_${c.key}")
+                                    .then(if (selectedRowKey != null) Modifier.semantics { selected = c.key == selectedRowKey } else Modifier)
+                            )
+                        }
+                    }
+                    Spacer(Modifier.height(design.spacing.cardGap))
                 }
             }
         }
