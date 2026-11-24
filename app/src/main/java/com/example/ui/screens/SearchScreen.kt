@@ -105,7 +105,8 @@ fun SearchScreen(
         val ready = index
         if (ready == null) { value = SearchUi.Building; return@produceState }
         val (reference, groups) = withContext(Dispatchers.Default) { search.reference(trimmed, language) to ready.search(trimmed) }
-        value = SearchUi.Ready(reference, groups, bibleBusy = true)
+        // Publish once: an intermediate Ready with bibleBusy=true makes rows disappear when the
+        // Bible results arrive, so a row the person (or a test) is scrolling to is removed.
         val bible = search.bible(trimmed, language)
         value = SearchUi.Ready(reference, groups + listOfNotNull(bible), bibleBusy = false)
     }
