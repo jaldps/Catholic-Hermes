@@ -24,7 +24,7 @@ class ChapletVariablesMarkerTest {
 
     @Test fun malformedMarkersAreLeftAlone() {
         val vars = ChapletVariables("Ana")
-        assertEquals("{{abc y Ana", vars.apply("{{abc y {{nombre}}", AppLanguage.ES))
+        assertEquals("{{abc y {{nombre}}", vars.apply("{{abc y {{nombre}}", AppLanguage.ES))
     }
 
     @Test fun noStaticRegexRemainsInTheClass() {

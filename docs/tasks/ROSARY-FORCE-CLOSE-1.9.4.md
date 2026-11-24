@@ -28,10 +28,14 @@ Antes de recibir el informe se corrigió un defecto distinto y real del decoder 
 
 ## Verificación 1.9.4
 
-- `ChapletVariablesMarkerTest`: 4/4.
-- `AssetDecodeBudgetTest` 2/2, `ChapletGuideAuditTest` 1/1 (55 coronillas).
-- `OtherChapletsEntryCrashTest` 2/2 y `OtherChapletsEntryMatrixTest` 8/8.
-- `CrashRecorderFormatTest` 1/1.
+- `./gradlew :app:testDebugUnitTest --tests ... --max-workers=4` → **BUILD SUCCESSFUL in 5m 13s**, **18 tests, 0 fallos**:
+  - `ChapletVariablesMarkerTest` 4/4;
+  - `AssetDecodeBudgetTest` 2/2;
+  - `ChapletGuideAuditTest` 1/1 (55 coronillas);
+  - `OtherChapletsEntryCrashTest` 2/2;
+  - `OtherChapletsEntryMatrixTest` 8/8;
+  - `CrashRecorderFormatTest` 1/1.
+- APK 1.9.4 firmado con el certificado Hermes Preview (`b634b6b8…`), `versionCode=44`, `application-label='Catholic Hermes 1.9.4'`, SHA-256 `1b17f4aba87c6432a4104800d0d836f379280107c3ea643d06ab135071d52405`, 110787368 bytes.
 
 ## Nota para el coordinador
 
