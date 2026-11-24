@@ -119,26 +119,38 @@ internal data class ChapletVariables(
     /** Replaces `{{nombre}}`, `{{intencion}}` and the `{{él|ella}}` / `{{him|her}}` / `{{ele|ela}}` forms. */
     fun apply(text: String, lang: AppLanguage): String {
         if (!text.contains("{{")) return text
-        return Marker.replace(text) { m ->
-            val key = m.groupValues[1].trim()
-            when {
-                key == "nombre" -> deceasedName.trim().ifEmpty { lang.pick("N.", "N.", "N.") }
-                key == "intencion" -> intention.trim().ifEmpty { lang.pick("esta intención", "this intention", "esta intenção") }
-                key.contains('|') -> {
-                    val (masculine, feminine) = key.split('|', limit = 2).map { it.trim() }
-                    when (deceasedGender) {
-                        DeceasedGender.MALE -> masculine
-                        DeceasedGender.FEMALE -> feminine
-                        null -> "$masculine/$feminine"
+        val out = StringBuilder(text.length)
+        var cursor = 0
+        while (true) {
+            val start = text.indexOf("{{", cursor)
+            if (start < 0) break
+            val end = text.indexOf("}}", start + 2)
+            if (end < 0) break
+            val key = text.substring(start + 2, end).trim()
+            out.append(text, cursor, start)
+            if (key.contains('}')) {
+                out.append(text, start, end + 2)
+            } else {
+                out.append(
+                    when {
+                        key == "nombre" -> deceasedName.trim().ifEmpty { lang.pick("N.", "N.", "N.") }
+                        key == "intencion" -> intention.trim().ifEmpty { lang.pick("esta intención", "this intention", "esta intenção") }
+                        key.contains('|') -> {
+                            val (masculine, feminine) = key.split('|', limit = 2).map { it.trim() }
+                            when (deceasedGender) {
+                                DeceasedGender.MALE -> masculine
+                                DeceasedGender.FEMALE -> feminine
+                                null -> "$masculine/$feminine"
+                            }
+                        }
+                        else -> text.substring(start, end + 2)
                     }
-                }
-                else -> m.value
+                )
             }
+            cursor = end + 2
         }
-    }
-
-    companion object {
-        private val Marker = Regex("""\{\{([^}]+)}}""")
+        out.append(text, cursor, text.length)
+        return out.toString()
     }
 }
 
