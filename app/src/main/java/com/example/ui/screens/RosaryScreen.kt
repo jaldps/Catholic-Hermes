@@ -1148,12 +1148,12 @@ fun RosaryScreen(
     }
 
     val isRosary = spec.isRosary
-    val guide = when (spec.devotion) { Devotion.ROSARY -> rosaryGuide; Devotion.MERCY -> mercyGuide; Devotion.OTHER -> chapletGuide!!.guide }
+    val guide = when (spec.devotion) { Devotion.ROSARY -> rosaryGuide; Devotion.MERCY -> mercyGuide; Devotion.OTHER -> chapletGuide?.guide ?: mercyGuide }
     val index = session.stepIn(spec.devotion).coerceIn(0, guide.steps.lastIndex)
     val step = guide.steps[index]
     val section = guide.sections.lastOrNull { it.index == step.section } ?: guide.sections.first()
     val selectedTab = spec.devotion.tab
-    val contentKey = if (spec.isOther) chaplet!!.id else selectedMysteryType.toString()
+    val contentKey = if (spec.isOther) chaplet?.id ?: "other" else selectedMysteryType.toString()
 
     fun narrate(s: GuideStep) {
         audio.setLanguage(lang)
