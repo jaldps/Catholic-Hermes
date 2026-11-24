@@ -1,0 +1,25 @@
+{
+  "version_name": "1.9.1",
+  "version_code": 41,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.9.1",
+  "sha256": "9fdb835ba99e2201494f122c5b26e262629e0f6d67a70febd20e8bbddd89e619",
+  "bytes": 110714808,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.9.0 (same package and key)",
+  "built_from": "CatholicGPT at the version commit c3e4056",
+  "published_as": "GitHub Release v1.9.1 only (APK above GitHub's 100 MiB file limit); Release SHA-256 identical to the local build (CI re-run after a transient D8 OutOfMemoryError)",
+  "changes": [
+    "Other chaplets (T-057): 55 chaplets with their own image, opened from «Otras ▾» next to Rosary | Chaplet and from Prayers; catalogue with search, 6 groups and «For today»; bead string per chaplet (7x7, coloured, none), V/R voices, guide; name/intention asked at start and never stored; St Michael row opens its chaplet. Portrait and landscape.",
+    "Chaplet content: 104 swapped Spanish/English fields fixed in 19 chaplets; validator now detects swaps.",
+    "Landscape Rosary follow-ups from the T-048 critic (fade arrow, V./R. at 130 %, map pendant, single filled primary with guide, firm haptic on large beads).",
+    "Today: the saint card grows with large text instead of clipping its meta line."
+  ],
+  "tests": [
+    "Area + AGENTS.md run: 392 tests, 1 failure (NarrowLargeTextAuditTest SANCTUARY PT, date-dependent saint card) fixed and re-verified in the following run."
+  ],
+  "known_limitations": ["Not tested on a physical phone.", "In landscape the image credit line in the context column is truncated.", "«For today» is empty most days (only one chaplet has suggested weekdays).", "T-052 (landscape lists) not included: changes requested."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

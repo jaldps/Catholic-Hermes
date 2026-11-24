@@ -2,6 +2,21 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.9.1
+
+**Solo en Releases:** columna derecha del repositorio → Releases → **v1.9.1**. La APK pesa 111 MB. Versión `1.9.1`, código 41. **Actualiza 1.8.1–1.9.0** y conserva el progreso.
+
+- **Otras coronillas:** 55 coronillas, cada una con su imagen.
+  - Se abren desde «Otras ▾», junto a Rosario | Coronilla, o desde Orar.
+  - El catálogo tiene búsqueda, grupos y una sección «Para hoy».
+  - Se rezan como el Rosario: cada una con su hilo de cuentas, voces V/R y guía, en vertical y en horizontal.
+  - El nombre del difunto o la intención se piden al empezar y no se guardan.
+- **Corona de San Miguel:** desde Orar abre ahora su coronilla.
+- **Rosario en horizontal:** cinco retoques de detalle.
+- **Hoy:** la tarjeta del santo ya no se corta con texto grande.
+
+[Metadatos](../docs/quality/release-1.9.1/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.9.0
 
 **Solo en Releases:** columna derecha del repositorio → Releases → **v1.9.0**. La APK pesa 110 MB. Versión `1.9.0`, código 40. **Actualiza 1.8.1–1.8.30** y conserva el progreso.
