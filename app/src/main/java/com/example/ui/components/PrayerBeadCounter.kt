@@ -68,7 +68,39 @@ import kotlin.math.sin
 // -----------------------------------------------------------------------------
 
 /** One physical bead on a rosary. */
-enum class BeadKind { CRUCIFIX, LARGE, SMALL, MEDAL }
+enum class BeadKind { CRUCIFIX, LARGE, SMALL, MEDAL,
+    /** Chaplets only: a spacer bead and a knot, drawn as small pearls. */
+    SEPARATOR, KNOT }
+
+/**
+ * How a chaplet's string differs from the plain rosary: [colors] tints beads (null keeps the
+ * theme's pearl) and [dimmed] marks beads of the instrument the devotion does not pray on, which are
+ * drawn pale and skipped by tap, drag and the accessibility actions. The default changes nothing.
+ */
+@androidx.compose.runtime.Immutable
+class BeadStyle(val colors: List<Color?> = emptyList(), val dimmed: Set<Int> = emptySet()) {
+    fun color(i: Int): Color? = colors.getOrNull(i)
+    /** The nearest selectable bead to [i], preferring the side of [direction] (+1 / -1 / 0 = nearest). */
+    fun nearest(i: Int, lastIndex: Int, direction: Int = 0): Int {
+        if (dimmed.isEmpty()) return i.coerceIn(0, lastIndex)
+        val start = i.coerceIn(0, lastIndex)
+        if (start !in dimmed) return start
+        for (d in 1..lastIndex + 1) {
+            val order = if (direction < 0) listOf(-d, d) else listOf(d, -d)
+            order.map { start + it }.firstOrNull { it in 0..lastIndex && it !in dimmed }?.let { return it }
+        }
+        return start
+    }
+    /** The next selectable bead after [i] in [direction], or [i] if none. */
+    fun step(i: Int, direction: Int, lastIndex: Int): Int {
+        var j = i + direction
+        while (j in 0..lastIndex && j in dimmed) j += direction
+        return if (j in 0..lastIndex) j else i
+    }
+    companion object { val Plain = BeadStyle() }
+}
+
+private fun isLight(c: Color) = (0.299f * c.red + 0.587f * c.green + 0.114f * c.blue) > 0.86f
 
 /** The colours of a strand, from the Lumen palette. */
 private class PearlInks(
@@ -199,6 +231,8 @@ private fun halfExtent(kind: BeadKind): Float = when (kind) {
     BeadKind.LARGE -> 10.5f
     BeadKind.SMALL -> 7f
     BeadKind.MEDAL -> 12f
+    BeadKind.SEPARATOR -> 8f
+    BeadKind.KNOT -> 5f
 }
 
 /** Radius (or half height) of a bead at rest, in dp. */
@@ -207,6 +241,8 @@ private fun restRadius(kind: BeadKind): Float = when (kind) {
     BeadKind.LARGE -> 10f
     BeadKind.SMALL -> 7f
     BeadKind.MEDAL -> 11f
+    BeadKind.SEPARATOR -> 8f
+    BeadKind.KNOT -> 5f
 }
 
 /**
@@ -265,10 +301,11 @@ fun BeadReel(
     subStepCount: Int = 1,
     subStepIndex: Int = 0,
     height: Dp = 70.dp,
-    orientation: Orientation = Orientation.Horizontal
+    orientation: Orientation = Orientation.Horizontal,
+    style: BeadStyle = BeadStyle.Plain
 ) {
     if (orientation == Orientation.Vertical) {
-        VerticalBeadReel(beads, activeBead, onSelectBead, modifier, subStepCount, subStepIndex)
+        VerticalBeadReel(beads, activeBead, onSelectBead, modifier, subStepCount, subStepIndex, style)
         return
     }
     if (beads.isEmpty()) return
@@ -319,7 +356,7 @@ fun BeadReel(
                 .pointerInput(beads, widthPx) {
                     detectTapGestures { tap ->
                         val hit = ReelGesture.hit(along, alongAt(position.value), density.density, widthPx, tap.x)
-                        if (hit != null) {
+                        if (hit != null && hit !in style.dimmed) {
                             view.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK)
                             select(hit)
                         }
@@ -330,7 +367,8 @@ fun BeadReel(
                     detectHorizontalDragGestures(
                         onDragStart = { lastTick = position.value.roundToInt() },
                         onDragEnd = {
-                            when (val end = ReelGesture.onDragEnd(position.value, target, beads.lastIndex)) {
+                            val landed = style.nearest(ReelGesture.landed(position.value, beads.lastIndex), beads.lastIndex)
+                            when (val end = ReelGesture.onDragEnd(landed.toFloat(), target, beads.lastIndex)) {
                                 is ReelGesture.DragEnd.Select -> select(end.bead)
                                 ReelGesture.DragEnd.SnapBack ->
                                     scope.launch { position.animateTo(target.toFloat(), spring(0.82f, 300f)) }
@@ -414,19 +452,23 @@ fun BeadReel(
                 val c = Offset(x, yOf(x))
                 val a = edge(x)
                 val todo = told < 0.5f && emphasis < 0.5f
-                val fill = lerp(lerp(inks.todoFill, inks.toldFill, told), inks.currentFill, emphasis)
+                var fill = lerp(lerp(inks.todoFill, inks.toldFill, told), inks.currentFill, emphasis)
+                val tint = style.color(i)
+                if (tint != null) fill = lerp(tint.copy(alpha = 0.42f), tint, maxOf(told, emphasis))
+                val shade = if (i in style.dimmed) a * 0.3f else a
+                val pale = todo || (tint != null && isLight(tint))
                 when (beads[i]) {
                     BeadKind.CRUCIFIX -> drawCrucifix(
                         c, r * 2f,
                         lerp(inks.toldFill, inks.currentFill, emphasis),
-                        a
+                        shade
                     )
-                    BeadKind.MEDAL -> drawMedal(c, r, fill, inks, todo, a)
-                    else -> drawPearl(c, r, fill, inks, todo, a)
+                    BeadKind.MEDAL -> drawMedal(c, r, fill, inks, pale, shade)
+                    else -> drawPearl(c, r, fill, inks, pale, shade)
                 }
                 if (emphasis > 0.02f) {
                     val ringR = r + (if (beads[i] == BeadKind.CRUCIFIX) 5f else 4.5f) * dpx
-                    drawCircle(
+                    if (i !in style.dimmed) drawCircle(
                         inks.ring.copy(alpha = inks.ring.alpha * emphasis * a),
                         radius = ringR, center = c,
                         style = Stroke(2f * dpx)
@@ -436,7 +478,7 @@ fun BeadReel(
 
             // Pips: how many prayers are said on the bead in hand.
             if (subStepCount > 1) {
-                val pitch = 8f * dpx
+                val pitch = (if (subStepCount > 12) 5f else 8f) * dpx
                 val total = pitch * (subStepCount - 1)
                 val y = size.height - 4.5f * dpx
                 for (k in 0 until subStepCount) {
@@ -478,10 +520,52 @@ private class LoopGeometry(
         BeadKind.LARGE -> large
         BeadKind.SMALL -> small
         BeadKind.MEDAL -> medal
+        BeadKind.SEPARATOR -> small * 1.3f
+        BeadKind.KNOT -> small * 0.8f
     } + small * 0.4f
 
     companion object {
-        fun layout(beads: List<BeadKind>, width: Float, density: Density): LoopGeometry = with(density) {
+        /**
+         * Any other chaplet: the whole strand closed in one ring, from the bottom, clockwise. Beads shrink
+         * together when the strand is long, so a hundred beads still fit.
+         */
+        private fun ringLayout(beads: List<BeadKind>, width: Float, density: Density, top: Float, radius: Float, centre: Offset): LoopGeometry = with(density) {
+            val circumference = (2 * PI).toFloat() * radius
+            fun base(kind: BeadKind) = when (kind) {
+                BeadKind.LARGE -> 6.4.dp.toPx()
+                BeadKind.MEDAL -> 8.5.dp.toPx()
+                BeadKind.CRUCIFIX -> 15.dp.toPx()
+                BeadKind.SMALL -> 4.4.dp.toPx()
+                BeadKind.SEPARATOR -> 5.6.dp.toPx()
+                BeadKind.KNOT -> 3.5.dp.toPx()
+            }
+            val total = beads.sumOf { 2.0 * base(it) }.toFloat()
+            val k = minOf(1f, 0.82f * circumference / total.coerceAtLeast(1f))
+            val small = 4.4.dp.toPx() * k
+            val large = 6.4.dp.toPx() * k
+            val medal = 8.5.dp.toPx() * k
+            val crucifixHeight = 30.dp.toPx() * k
+            fun r(i: Int) = base(beads[i]) * k
+            val spacing = (circumference - beads.indices.sumOf { 2.0 * r(it) }.toFloat()) / beads.size.coerceAtLeast(1)
+            val centres = MutableList(beads.size) { Offset.Zero }
+            val angles = mutableMapOf<Int, Float>()
+            var run = 0f
+            val bottom = (PI / 2).toFloat()
+            beads.indices.forEach { i ->
+                val angle = bottom + (run + r(i)) / radius
+                angles[i] = angle
+                centres[i] = Offset(centre.x + radius * cos(angle), centre.y + radius * sin(angle))
+                run += 2 * r(i) + spacing
+            }
+            val runs = beads.indices.zipWithNext().toMutableList()
+            if (beads.size > 2) runs += beads.lastIndex to 0
+            LoopGeometry(
+                centres, angles, runs, emptyList(), beads, centre, radius,
+                small, large, medal, crucifixHeight, top + 2 * radius + 14.dp.toPx()
+            )
+        }
+
+        fun layout(beads: List<BeadKind>, width: Float, density: Density, ring: Boolean = false): LoopGeometry = with(density) {
             val top = 10.dp.toPx()
             val radius = minOf(width / 2 - 14.dp.toPx(), 104.dp.toPx())
             val small = 4.4.dp.toPx()
@@ -489,6 +573,7 @@ private class LoopGeometry(
             val medal = 8.5.dp.toPx()
             val crucifixHeight = 30.dp.toPx()
             val centre = Offset(width / 2, top + radius)
+            if (ring) return@with ringLayout(beads, width, density, top, radius, centre)
             val medalIndex = beads.indexOfLast { it == BeadKind.MEDAL }
             // The pendant is everything before the first decade's large bead
             // after the opening (crucifix, its large bead, its small beads).
@@ -501,6 +586,8 @@ private class LoopGeometry(
                 BeadKind.MEDAL -> medal
                 BeadKind.CRUCIFIX -> crucifixHeight / 2
                 BeadKind.SMALL -> small
+                BeadKind.SEPARATOR -> small * 1.3f
+                BeadKind.KNOT -> small * 0.8f
             }
 
             val centres = MutableList(beads.size) { Offset.Zero }
@@ -555,7 +642,10 @@ fun RosaryLoopMap(
     beads: List<BeadKind>,
     activeBead: Int,
     onSelectBead: (Int) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    style: BeadStyle = BeadStyle.Plain,
+    /** The rosary's own shape (loop, medal, pendant) or, for other chaplets, one closed ring. */
+    ring: Boolean = false
 ) {
     if (beads.isEmpty()) return
     val inks = pearlInks()
@@ -564,7 +654,7 @@ fun RosaryLoopMap(
     val select by rememberUpdatedState(onSelectBead)
     BoxWithConstraints(modifier.fillMaxWidth()) {
         val widthPx = with(density) { maxWidth.toPx() }
-        val g = remember(beads, widthPx) { LoopGeometry.layout(beads, widthPx, density) }
+        val g = remember(beads, widthPx, ring) { LoopGeometry.layout(beads, widthPx, density, ring) }
         Canvas(
             Modifier
                 .fillMaxWidth()
@@ -572,7 +662,7 @@ fun RosaryLoopMap(
                 .pointerInput(g) {
                     detectTapGestures { tap ->
                         val hit = g.centres.indices.minByOrNull { (g.centres[it] - tap).getDistance() }
-                        if (hit != null && (g.centres[hit] - tap).getDistance() <= 20.dp.toPx()) {
+                        if (hit != null && hit !in style.dimmed && (g.centres[hit] - tap).getDistance() <= 20.dp.toPx()) {
                             view.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK)
                             select(hit)
                         }
@@ -608,13 +698,18 @@ fun RosaryLoopMap(
                 val c = g.centres[i]
                 val current = i == activeBead
                 val told = i < activeBead
-                val fill = when { current -> inks.currentFill; told -> inks.toldFill; else -> inks.todoFill }
-                val todo = !current && !told
+                val tint = style.color(i)
+                val dim = if (i in style.dimmed) 0.3f else 1f
+                var fill = when { current -> inks.currentFill; told -> inks.toldFill; else -> inks.todoFill }
+                if (tint != null) fill = if (told || current) tint else tint.copy(alpha = 0.42f)
+                val todo = (!current && !told) || (tint != null && isLight(tint))
                 when (kind) {
-                    BeadKind.CRUCIFIX -> drawCrucifix(c, g.crucifixHeight, if (current) inks.currentFill else inks.toldFill)
-                    BeadKind.MEDAL -> drawMedal(c, g.medal, fill, inks, todo)
-                    BeadKind.LARGE -> drawPearl(c, g.large, fill, inks, todo)
-                    BeadKind.SMALL -> drawPearl(c, g.small, fill, inks, todo)
+                    BeadKind.CRUCIFIX -> drawCrucifix(c, g.crucifixHeight, if (current) inks.currentFill else inks.toldFill, dim)
+                    BeadKind.MEDAL -> drawMedal(c, g.medal, fill, inks, todo, dim)
+                    BeadKind.LARGE -> drawPearl(c, g.large, fill, inks, todo, dim)
+                    BeadKind.SMALL -> drawPearl(c, g.small, fill, inks, todo, dim)
+                    BeadKind.SEPARATOR -> drawPearl(c, g.small * 1.3f, fill, inks, todo, dim)
+                    BeadKind.KNOT -> drawPearl(c, g.small * 0.8f, fill, inks, todo, dim)
                 }
                 if (current) {
                     val rr = when (kind) {
@@ -622,6 +717,8 @@ fun RosaryLoopMap(
                         BeadKind.LARGE -> g.large + 4.dp.toPx()
                         BeadKind.MEDAL -> g.medal + 4.dp.toPx()
                         BeadKind.SMALL -> g.small + 4.dp.toPx()
+                        BeadKind.SEPARATOR -> g.small * 1.3f + 4.dp.toPx()
+                        BeadKind.KNOT -> g.small * 0.8f + 4.dp.toPx()
                     }
                     drawCircle(inks.ring, rr, c, style = Stroke(2.dp.toPx()))
                 }
@@ -633,7 +730,7 @@ fun RosaryLoopMap(
 /** A single adjustable control; the drawn 24 dp beads are not separate tap targets. */
 @Composable
 private fun VerticalBeadReel(beads: List<BeadKind>, active: Int, onSelect: (Int) -> Unit,
-    modifier: Modifier, subSteps: Int, subIndex: Int) {
+    modifier: Modifier, subSteps: Int, subIndex: Int, style: BeadStyle = BeadStyle.Plain) {
     if (beads.isEmpty()) return
     val inks = pearlInks()
     val view = LocalView.current
@@ -647,14 +744,14 @@ private fun VerticalBeadReel(beads: List<BeadKind>, active: Int, onSelect: (Int)
         .indication(focus, com.example.ui.design.appFocusRing(focus, androidx.compose.foundation.shape.RoundedCornerShape(8.dp)))
         .onKeyEvent { key ->
             if (key.type != KeyEventType.KeyDown) false else when (key.key) {
-                Key.DirectionUp -> { select((current + 1).coerceAtMost(beads.lastIndex)); true }
-                Key.DirectionDown -> { select((current - 1).coerceAtLeast(0)); true }
+                Key.DirectionUp -> { select(style.step(current, 1, beads.lastIndex)); true }
+                Key.DirectionDown -> { select(style.step(current, -1, beads.lastIndex)); true }
                 else -> false
             }
         }.semantics {
         progressBarRangeInfo = ProgressBarRangeInfo(target.toFloat(), 0f..beads.lastIndex.toFloat(), (beads.size - 2).coerceAtLeast(0))
         setProgress { requested ->
-            if (!requested.isFinite()) false else { select(requested.roundToInt().coerceIn(beads.indices)); true }
+            if (!requested.isFinite()) false else { select(style.nearest(requested.roundToInt().coerceIn(beads.indices), beads.lastIndex)); true }
         }
     }.focusable(interactionSource = focus).pointerInput(beads) {
         val pitch = 24.dp.toPx()
@@ -685,9 +782,9 @@ private fun VerticalBeadReel(beads: List<BeadKind>, active: Int, onSelect: (Int)
                 pressed = change.pressed
             }
             if (!cancelled) {
-                val destination = if (dragging) position.roundToInt() else when {
-                    down.position.y < size.height / 2f - halfTarget -> current - 1
-                    down.position.y > size.height / 2f + halfTarget -> current + 1
+                val destination = if (dragging) style.nearest(position.roundToInt().coerceIn(beads.indices), beads.lastIndex, if (position > current) 1 else -1) else when {
+                    down.position.y < size.height / 2f - halfTarget -> style.step(current, -1, beads.lastIndex)
+                    down.position.y > size.height / 2f + halfTarget -> style.step(current, 1, beads.lastIndex)
                     else -> current
                 }.coerceIn(beads.indices)
                 position = destination.toFloat()
@@ -714,21 +811,29 @@ private fun VerticalBeadReel(beads: List<BeadKind>, active: Int, onSelect: (Int)
             if (y < -20.dp.toPx() || y > size.height + 20.dp.toPx()) return@forEach
             val emphasis = (1f - abs(i - position)).coerceIn(0f, 1f)
             val todo = i > position
-            val fill = if (emphasis > .5f) inks.currentFill else if (todo) inks.todoFill else inks.toldFill
-            val radius = (if (beads[i] == BeadKind.SMALL) 5f else 7f).dp.toPx() * (1f + .35f * emphasis)
+            var fill = if (emphasis > .5f) inks.currentFill else if (todo) inks.todoFill else inks.toldFill
+            val tint = style.color(i)
+            if (tint != null) fill = if (todo && emphasis <= .5f) tint.copy(alpha = 0.42f) else tint
+            val pale = todo || (tint != null && isLight(tint))
+            val radius = (if (beads[i] == BeadKind.SMALL || beads[i] == BeadKind.KNOT) 5f else 7f).dp.toPx() * (1f + .35f * emphasis)
             val c = Offset(x, y)
-            val a = opacity(y)
+            val a = if (i in style.dimmed) opacity(y) * 0.3f else opacity(y)
             when (beads[i]) {
                 BeadKind.CRUCIFIX -> drawCrucifix(c, radius * 2f, fill, a)
-                BeadKind.MEDAL -> drawMedal(c, radius, fill, inks, todo, a)
-                else -> drawPearl(c, radius, fill, inks, todo, a)
+                BeadKind.MEDAL -> drawMedal(c, radius, fill, inks, pale, a)
+                else -> drawPearl(c, radius, fill, inks, pale, a)
             }
-            if (emphasis > 0f) drawCircle(inks.ring, radius + 3.dp.toPx(), c,
+            if (emphasis > 0f && i !in style.dimmed) drawCircle(inks.ring, radius + 3.dp.toPx(), c,
                 style = Stroke(2.dp.toPx()), alpha = emphasis * a)
         }
-        if (subSteps > 1) repeat(subSteps) { i ->
-            drawCircle(if (i <= subIndex) inks.pipOn else inks.pip, 1.5.dp.toPx(),
-                Offset(size.width - 3.dp.toPx(), centre + (i - (subSteps - 1) / 2f) * 6.dp.toPx()))
+        if (subSteps > 1) {
+            // The medal carries eight; a long run (a chaplet's refrain) draws at most 8 and shows its share.
+            val shown = minOf(subSteps, 8)
+            val lit = if (subSteps > 8) ((subIndex + 1f) / subSteps * shown).roundToInt().coerceIn(1, shown) - 1 else subIndex
+            repeat(shown) { i ->
+                drawCircle(if (i <= lit) inks.pipOn else inks.pip, 1.5.dp.toPx(),
+                    Offset(size.width - 3.dp.toPx(), centre + (i - (shown - 1) / 2f) * 6.dp.toPx()))
+            }
         }
     }
 }
