@@ -741,8 +741,9 @@ fun HomeScreen(
                     .testTag("saint_of_the_day_card")
             ) {
                 Column {
-                    Box(Modifier.fillMaxWidth().height(150.dp)) {
-                        AppHeroImage(saintAsset, Modifier.fillMaxSize(), fadeStart = 0.15f, topVeil = false, maxWidthPx = 900)
+                    // Minimum height, not fixed: at 130 % a two-line title plus the meta line must not be clipped.
+                    Box(Modifier.fillMaxWidth().heightIn(min = 150.dp)) {
+                        AppHeroImage(saintAsset, Modifier.matchParentSize(), fadeStart = 0.15f, topVeil = false, maxWidthPx = 900)
                         // Architecture is a generic sacred setting, never a portrait of this saint.
                         Column(Modifier.align(Alignment.BottomStart).padding(horizontal = 20.dp, vertical = 4.dp)) {
                             Text(
