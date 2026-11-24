@@ -91,12 +91,12 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | T-049 | Codex | EN COLA (tras T-048) | L2 · Lectores en horizontal (§5) |
 | T-050 | Codex | EN COLA (tras T-049) | L3 · Hoy en horizontal (§6) |
 | T-051 | Codex | EN COLA (tras T-050) | L4 · Centros Orar y Leer en horizontal (§7) |
-| [T-052](T-052.md) | Hermes | ENTREGADO 7/7 (en revisión) | L5 · Listas con ficha en horizontal (§8) |
+| [T-052](T-052.md) | Hermes | CAMBIOS PEDIDOS ([revisión](T-052-REVIEW.md): 10 tests en rojo) | L5 · Listas con ficha en horizontal (§8) |
 | [T-053](T-053.md) | Hermes | ABIERTO | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
 | T-054 | Codex | EN COLA (al final) | L7 · Hojas, diálogos, bienvenida y ajustes en horizontal (§10) |
 | [T-055](T-055.md) | Hermes | CERRADO ([informe](T-055-REPORT.md), [revisión](T-055-REVIEW.md)) | Estados vacíos y de error que faltan, en vertical (preparación de §16 del diseño horizontal) |
 | [T-056](T-056.md) | Hermes | CERRADO ([informe](T-056-REPORT.md), [revisión](T-056-REVIEW.md)) | «Otras coronillas» · contenido: 55 coronillas curadas en ES/EN/PT ([especificación](../content/CORONILLAS-SPEC.md)) |
-| T-057 | Codex | EN COLA (justo tras T-048; no se cierra sin las 55 imágenes) | «Otras coronillas» · motor e interfaz (segmento «Otras ▾», catálogo, hilo según patrón, voces V/R) |
+| [T-057](T-057.md) | Coordinador (Sonnet local) | CERRADO en 1.9.1 ([informe](T-057-REPORT.md)) | «Otras coronillas» · motor e interfaz (segmento «Otras ▾», catálogo, hilo según patrón, voces V/R) |
 | [T-058](T-058.md) | Hermes | CERRADO ([informe](T-058-REPORT.md), [revisión](T-058-REVIEW.md)) | «Otras coronillas» · una imagen propia y relevante por coronilla (obligatoria), con créditos |
 | [T-060](T-060.md) | Hermes | CERRADO ([informe](T-060-REPORT.md), [revisión](T-060-REVIEW.md)) | Biblia española incluida: quitar el espacio antes de la puntuación en 3.048 versículos, con script y test |
 | [T-061](T-061.md) | Hermes | CERRADO ([revisión](T-061-REVIEW.md); petición menor: 4 logotipos con texto) | Imágenes que faltan: 5 advocaciones marianas y 26 emblemas de órdenes con monograma |
