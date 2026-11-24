@@ -7,8 +7,10 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
@@ -29,6 +31,7 @@ import com.example.data.news.VaticanNewsFetcher
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppBackHandler
 import com.example.ui.design.AppChip
+import com.example.ui.design.AppFilterMenu
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppInlineTitle
@@ -281,11 +284,118 @@ fun DoctrineAndHistoryScreen(
                                 )
                             }
                         }
+                    } else if (initialTopTab == 1) {
+                        var devotionsQuery by rememberSaveable(key = "devotions_query") { mutableStateOf("") }
+                        var devotionsCategory by rememberSaveable(key = "devotions_category") { mutableStateOf(0) }
+                        var devotionsRegion by rememberSaveable(key = "devotions_region") { mutableStateOf("ALL") }
+                        var devotionsFiltersOpen by rememberSaveable(key = "devotions_filters_open") { mutableStateOf(false) }
+                        val devotionKeys = remember(repository) {
+                            repository.marianApparitions.map { "devotion:${it.id}" } +
+                                repository.christManifestations.map { "devotion:${it.id}" }
+                        }
+                        val devotionState = rememberAppListDetailState(
+                            devotionKeys,
+                            initialKey = top?.takeIf { it in devotionKeys } ?: defaultEntry,
+                            key = "devotions_list_detail"
+                        )
+                        LaunchedEffect(devotionState.selectedKey, devotionState.explicit) {
+                            if (devotionState.explicit) stack = devotionState.selectedKey.orEmpty()
+                        }
+                        LaunchedEffect(top) {
+                            if (top != null && top in devotionKeys && top != devotionState.selectedKey) devotionState.select(top)
+                        }
+                        val regionKeys = listOf("ALL", "Americas", "Europe", "Asia_Africa", "Universal")
+                        AppTwoPane(
+                            state = devotionState,
+                            listHeader = { RootHeader(spec) },
+                            search = {
+                                AppSearchField(
+                                    value = devotionsQuery,
+                                    onValueChange = { devotionsQuery = it },
+                                    placeholder = currentLanguage.tr("Nombre, país o santuario", "Name, country or shrine", "Nome, país ou santuário"),
+                                    modifier = Modifier.fillMaxWidth().testTag("devotions_search")
+                                )
+                            },
+                            onOpenFilters = { devotionsFiltersOpen = true },
+                            filterLabel = currentLanguage.tr("Filtros", "Filters", "Filtros"),
+                            activeFilters = {
+                                if (devotionsCategory != 0) AppChip(
+                                    label = currentLanguage.tr("Cristo", "Christ", "Cristo"),
+                                    selected = true,
+                                    onClick = { devotionsCategory = 0 },
+                                    modifier = Modifier.testTag("devotions_category_chip")
+                                )
+                                if (devotionsRegion != "ALL") AppChip(
+                                    label = currentLanguage.tr("Región", "Region", "Região"),
+                                    selected = true,
+                                    onClick = { devotionsRegion = "ALL" },
+                                    modifier = Modifier.testTag("devotions_region_chip")
+                                )
+                            },
+                            list = { headerItem ->
+                                saveable.SaveableStateProvider(key = "two_pane_list") {
+                                    DevotionsExplorerScreen(
+                                        repository, currentLanguage, listNav, spec,
+                                        searchQuery = devotionsQuery,
+                                        categoryIndex = devotionsCategory,
+                                        regionFilter = devotionsRegion,
+                                        headerItem = headerItem,
+                                        onSelect = { devotionState.select(it) }
+                                    )
+                                }
+                            },
+                            detail = {
+                                AnimatedContent(
+                                    targetState = stack,
+                                    transitionSpec = { fadeIn(tween(200)) togetherWith fadeOut(tween(120)) },
+                                    label = "doctrineDetailPane"
+                                ) { s ->
+                                    saveable.SaveableStateProvider(key = "two_pane_detail:$s") {
+                                        val entry = s.substringAfterLast('|').takeIf { it.isNotEmpty() } ?: defaultEntry
+                                        if (entry != null) {
+                                            EntryPage(entry, repository, currentLanguage, nav) {
+                                                stack = stack.split('|').filter { e -> e.isNotEmpty() }.dropLast(1).joinToString("|")
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        )
+                        if (devotionsFiltersOpen) {
+                            AppSheet(
+                                onDismiss = { devotionsFiltersOpen = false },
+                                title = currentLanguage.tr("Filtros", "Filters", "Filtros"),
+                                tag = "devotions_filter_sheet"
+                            ) {
+                                AppSegmentedTabs(
+                                    options = listOf(
+                                        currentLanguage.tr("Nuestra Señora", "Our Lady", "Nossa Senhora"),
+                                        currentLanguage.tr("Cristo", "Christ", "Cristo")
+                                    ),
+                                    selectedIndex = devotionsCategory,
+                                    onSelect = { devotionsCategory = it },
+                                    modifier = Modifier.testTag("devotions_category_picker")
+                                )
+                                Spacer(Modifier.height(16.dp))
+                                AppFilterMenu(
+                                    prefix = currentLanguage.tr("Región", "Region", "Região"),
+                                    options = listOf(
+                                        currentLanguage.tr("Todas", "All", "Todas"),
+                                        currentLanguage.tr("Américas", "Americas", "Américas"),
+                                        currentLanguage.tr("Europa", "Europe", "Europa"),
+                                        currentLanguage.tr("Asia y África", "Asia & Africa", "Ásia e África"),
+                                        currentLanguage.tr("Universales", "Universal", "Universais")
+                                    ),
+                                    selectedIndex = regionKeys.indexOf(devotionsRegion).coerceAtLeast(0),
+                                    onSelect = { devotionsRegion = regionKeys[it] },
+                                    tag = "devotions_region_picker"
+                                )
+                            }
+                        }
                     } else AppTwoPane(
                         list = {
                             saveable.SaveableStateProvider(key = "two_pane_list") {
-                                if (initialTopTab == 1) DevotionsExplorerScreen(repository, currentLanguage, listNav, spec)
-                                else OrdersRoot(repository, currentLanguage, listNav, spec)
+                                OrdersRoot(repository, currentLanguage, listNav, spec)
                             }
                         },
                         detail = {

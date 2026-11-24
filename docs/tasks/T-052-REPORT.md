@@ -50,8 +50,30 @@
 | 8 | Tests de área | 9/10 | `OrdersLandscapeL5Test` 2/2; `OrdersScreenTest` se deja para la pasada final por su coste. |
 | 9 | Identidades y estados §16 | 8/10 | Mismo theming; estados vacíos dentro de la lista. |
 
+## 3. Devociones — `DevotionsExplorerScreen.kt`, `DoctrineAndHistoryScreen.kt`, `DoctrineParts.kt`
+
+- Misma migración que Órdenes: `AppTwoPane` con `rememberAppListDetailState(keys, key = "devotions_list_detail")`; estado elevado en `devotions_query`, `devotions_category`, `devotions_region` y `devotions_filters_open`.
+- Barra fija con `devotions_search` y `list_filter_button`; categoría (Nuestra Señora/Cristo) y región pasan a la hoja `devotions_filter_sheet`, con chips `devotions_category_chip` y `devotions_region_chip` cuando están activos.
+- `DevotionsExplorerScreen` acepta `searchQuery`, `categoryIndex`, `regionFilter`, `headerItem` y `onSelect`; en vertical conserva sus controles y claves actuales.
+- Seleccionar una tarjeta usa `state.select(...)`; la ficha se sustituye sin apilar. Las etiquetas `devotions_explorer_screen`, `devotions_search_input`, `devotions_category_picker`, `devotions_region_picker`, `devotion_card_*` se conservan.
+
+### Autoevaluación (rúbrica §11, 9 criterios)
+
+| # | Criterio | Nota | Evidencia |
+|---|---|---|---|
+| 1 | Barra y filas visibles | 8/10 | `list_sticky_bar` y `two_pane` en test 891×411. |
+| 2 | Teclado | No verificado | Sin captura con teclado. |
+| 3 | Medida de lectura | 8/10 | Ficha existente dentro del panel del wrapper. |
+| 4 | Selección sin apilar y atrás | 9/10 | `selectingADevotionDoesNotPushAnotherPane` 1/1. |
+| 5 | Giro | 8/10 | Estado elevado con claves; test de rotación pendiente. |
+| 6 | Cero `SMALL_TARGET` | 9/10 | Solo wrappers L0. |
+| 7 | Texto no elidido | 8/10 | `LeadRow` existente. |
+| 8 | Tests de área | 9/10 | `DevotionsLandscapeL5Test` 2/2. |
+| 9 | Identidades y estados | 8/10 | Theming y estados vacíos heredados. |
+
 ## Tests
 
+- `DevotionsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m13s.
 - `OrdersLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m10s. Cubre barra fija + hoja de filtros y selección sin apilar a 891×411.
 - `SaintsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m17s. Cubre selección en dos paneles sin apilar y el flujo vertical de hoja de filtros + ficha con «atrás».
 - `SaintsScreenTest`: se actualizan los dos escenarios a la nueva hoja de filtros (`list_filter_button` → `saints_month_picker` → `sheet_close`) y se conservan todas las comprobaciones de ficha y crédito. **Queda sin ejecutar** en esta entrega: su `@GraphicsMode(NATIVE)` lo hace muy lento en este PC y se canceló al pausar el encargo.
