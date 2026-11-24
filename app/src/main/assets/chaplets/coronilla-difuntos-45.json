@@ -88,8 +88,8 @@
     {
       "bead": 2,
       "text": {
-        "es": "Sweet Heart of Mary, be my salvation.",
-        "en": "Dulce Corazón de María, sé mi salvación.",
+        "es": "Dulce Corazón de María, sé mi salvación.",
+        "en": "Sweet Heart of Mary, be my salvation.",
         "pt": "Doce Coração de Maria, sê a minha salvação."
       },
       "repeat": 10
@@ -97,8 +97,8 @@
     {
       "bead": 2,
       "text": {
-        "es": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
-        "en": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "es": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "en": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
         "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
       },
       "rubric": {
@@ -110,8 +110,8 @@
     {
       "bead": 4,
       "text": {
-        "es": "Sweet Heart of Mary, be my salvation.",
-        "en": "Dulce Corazón de María, sé mi salvación.",
+        "es": "Dulce Corazón de María, sé mi salvación.",
+        "en": "Sweet Heart of Mary, be my salvation.",
         "pt": "Doce Coração de Maria, sê a minha salvação."
       },
       "repeat": 10
@@ -119,8 +119,8 @@
     {
       "bead": 4,
       "text": {
-        "es": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
-        "en": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "es": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "en": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
         "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
       },
       "rubric": {
@@ -132,8 +132,8 @@
     {
       "bead": 6,
       "text": {
-        "es": "Sweet Heart of Mary, be my salvation.",
-        "en": "Dulce Corazón de María, sé mi salvación.",
+        "es": "Dulce Corazón de María, sé mi salvación.",
+        "en": "Sweet Heart of Mary, be my salvation.",
         "pt": "Doce Coração de Maria, sê a minha salvação."
       },
       "repeat": 10
@@ -141,8 +141,8 @@
     {
       "bead": 6,
       "text": {
-        "es": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
-        "en": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "es": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "en": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
         "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
       },
       "rubric": {
@@ -154,8 +154,8 @@
     {
       "bead": 8,
       "text": {
-        "es": "Sweet Heart of Mary, be my salvation.",
-        "en": "Dulce Corazón de María, sé mi salvación.",
+        "es": "Dulce Corazón de María, sé mi salvación.",
+        "en": "Sweet Heart of Mary, be my salvation.",
         "pt": "Doce Coração de Maria, sê a minha salvação."
       },
       "repeat": 10
@@ -163,8 +163,8 @@
     {
       "bead": 8,
       "text": {
-        "es": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
-        "en": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "es": "Concede el descanso eterno a {{nombre}} y haz que brille sobre {{nombre}} la luz perpetua. Que {{el|ella}} descanse en paz.",
+        "en": "Eternal Rest Grant unto {{nombre}} and let the perpetual light shine upon {{nombre}}. May {{el|ella}} rest in peace.",
         "pt": "Concede o descanso eterno a {{nombre}} e faz brilhar sobre {{nombre}} a luz perpétua. Que {{el|ella}} descanse em paz."
       },
       "rubric": {
@@ -177,13 +177,13 @@
       "bead": null,
       "vr": {
         "v": {
-          "es": "V. Eternal rest grant unto {{nombre}}, O Lord.",
-          "en": "V. Concede el descanso eterno a {{nombre}}, Señor.",
+          "es": "V. Concede el descanso eterno a {{nombre}}, Señor.",
+          "en": "V. Eternal rest grant unto {{nombre}}, O Lord.",
           "pt": "V. Concede o descanso eterno a {{nombre}}, Senhor."
         },
         "r": {
-          "es": "R. And let perpetual light shine upon {{nombre}}.",
-          "en": "R. Y haz que brille sobre {{nombre}} la luz perpetua.",
+          "es": "R. Y haz que brille sobre {{nombre}} la luz perpetua.",
+          "en": "R. And let perpetual light shine upon {{nombre}}.",
           "pt": "R. E faz brilhar sobre {{nombre}} a luz perpétua."
         }
       }

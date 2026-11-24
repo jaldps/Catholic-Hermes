@@ -58,8 +58,8 @@
       "bead": 2,
       "prayerRef": "hail_mary",
       "meditation": {
-        "es": "For the Holy Father's intentions.",
-        "en": "Por las intenciones del Papa.",
+        "es": "Por las intenciones del Papa.",
+        "en": "For the Holy Father's intentions.",
         "pt": "Pelas intenções do Papa."
       }
     },
@@ -68,8 +68,8 @@
       "prayerRef": "glory_be",
       "repeat": 5,
       "meditation": {
-        "es": "The red beads honour the martyrdom of St Dymphna.",
-        "en": "Las cuentas rojas honran el martirio de Santa Dimpna.",
+        "es": "Las cuentas rojas honran el martirio de Santa Dimpna.",
+        "en": "The red beads honour the martyrdom of St Dymphna.",
         "pt": "As contas vermelhas honram o martírio de Santa Dimpna."
       }
     },
@@ -78,8 +78,8 @@
       "prayerRef": "glory_be",
       "repeat": 5,
       "meditation": {
-        "es": "The white beads honour her virginity.",
-        "en": "Las cuentas blancas honran su virginidad.",
+        "es": "Las cuentas blancas honran su virginidad.",
+        "en": "The white beads honour her virginity.",
         "pt": "As contas brancas honram a sua virgindade."
       }
     },
@@ -88,8 +88,8 @@
       "prayerRef": "glory_be",
       "repeat": 5,
       "meditation": {
-        "es": "The green beads are for the hope of relief of emotional disorders.",
-        "en": "Las cuentas verdes representan la esperanza de alivio de los trastornos emocionales.",
+        "es": "Las cuentas verdes representan la esperanza de alivio de los trastornos emocionales.",
+        "en": "The green beads are for the hope of relief of emotional disorders.",
         "pt": "As contas verdes representam a esperança de alívio dos transtornos emocionais."
       }
     }
