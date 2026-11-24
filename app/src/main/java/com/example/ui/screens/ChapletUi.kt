@@ -80,6 +80,10 @@ internal object ChapletLaunch {
     @Volatile private var pending: String? = null
     fun request(id: String) { pending = id }
     fun take(): String? = pending.also { pending = null }
+
+    /** Test hook: pins the weekday «Para hoy» uses (1 = Monday … 7 = Sunday). */
+    @Volatile internal var isoTodayOverride: Int? = null
+    fun isoToday(): Int = isoTodayOverride ?: java.time.LocalDate.now().dayOfWeek.value
 }
 
 internal fun groupTitle(group: ChapletGroup, lang: AppLanguage): String = when (group) {
@@ -94,7 +98,9 @@ internal fun groupTitle(group: ChapletGroup, lang: AppLanguage): String = when (
 /** «Imagen: …» or «Imagen referencial: …», from the credits file; the rights line when the file reserves them. */
 internal fun chapletCreditLine(chaplet: Chaplet, lang: AppLanguage): String {
     val credit = chaplet.credit ?: return ""
-    return imageCreditLine(credit, lang)
+    // «Imagen ya presente en la app (devotions)» is a production note, not a source for the reader.
+    val shown = if (credit.source.startsWith("Imagen ya presente", ignoreCase = true)) credit.copy(source = "") else credit
+    return imageCreditLine(shown, lang)
 }
 
 /** Lower-case, accent-free text for searching. */

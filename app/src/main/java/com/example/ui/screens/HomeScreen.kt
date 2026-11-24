@@ -154,6 +154,8 @@ fun HomeScreen(
     onNavigateToAngelus: () -> Unit = onNavigateToPrayers,
     onNavigateToMorningPrayers: () -> Unit = {},
     onNavigateToChaplet: () -> Unit = {},
+    /** Resumes the chaplet of «Otras coronillas» that was in progress. */
+    onNavigateToOtherChaplet: () -> Unit = {},
     onNavigateToNightPrayers: () -> Unit = {},
     onNavigateToDoctrine: () -> Unit,
     onNavigateToSpiritualLife: () -> Unit,
@@ -702,7 +704,7 @@ fun HomeScreen(
             val session = remember(now) { RosarySessionStore.load(context) }
             if (session != null && (session.rosaryStep > 0 || session.mercyStep > 0)) {
                 AppListGroup {
-                    AppListRow(strings("Continuar mi oración", "Continue my prayer", "Continuar minha oração"), strings("Tu lugar en el Rosario o la Coronilla está guardado", "Your place in the Rosary or Chaplet is saved", "Seu lugar no Terço ou na Coroa está salvo"), onClick = if (session.devotion == Devotion.MERCY) onNavigateToChaplet else onNavigateToRosary, modifier = Modifier.testTag("today_continue_prayer"))
+                    AppListRow(strings("Continuar mi oración", "Continue my prayer", "Continuar minha oração"), strings("Tu lugar en el Rosario o la Coronilla está guardado", "Your place in the Rosary or Chaplet is saved", "Seu lugar no Terço ou na Coroa está salvo"), onClick = when (session.devotion) { Devotion.MERCY -> onNavigateToChaplet; Devotion.OTHER -> onNavigateToOtherChaplet; else -> onNavigateToRosary }, modifier = Modifier.testTag("today_continue_prayer"))
                 }
                 Spacer(Modifier.height(ClusterGap))
             }

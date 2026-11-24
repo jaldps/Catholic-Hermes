@@ -8,6 +8,7 @@ import com.example.data.repository.ChapletIds
 import com.example.data.repository.ChapletPrayers
 import com.example.data.repository.PrayerAndNovenaData
 import com.example.data.repository.PrayerDetailsCatalog
+import com.example.ui.components.BeadStyle
 import com.example.ui.screens.ChapletPlan
 import com.example.ui.screens.buildChapletGuide
 import org.junit.Assert.assertEquals
@@ -113,5 +114,30 @@ class ChapletCatalogTest {
     @Test fun forTodayListsTheChapletsOfThatWeekday() {
         assertEquals(listOf("rosario-espiritu-santo"), catalog.forWeekday(7).map { it.id })
         assertTrue(catalog.forWeekday(3).isEmpty())
+    }
+
+    @Test fun rubricsAreShownButNeverNarrated() {
+        var withRubric = 0
+        catalog.all.forEach { c ->
+            AppLanguage.entries.forEach { lang ->
+                buildChapletGuide(c, lang, prayers).guide.steps.forEach { s ->
+                    val rubric = s.chapletRubric ?: return@forEach
+                    withRubric++
+                    assertFalse("${c.id} narrates its rubric", s.narration.contains(rubric))
+                    assertFalse("${c.id} voices its rubric", s.leader.contains(rubric) || s.response.contains(rubric))
+                }
+            }
+        }
+        assertTrue("some chaplets carry rubrics", withRubric > 0)
+    }
+
+    @Test fun dimmedBeadsAreSkippedByTheReelAndTheMap() {
+        val style = BeadStyle(dimmed = setOf(2, 3))
+        assertEquals(4, style.step(1, 1, 6))
+        assertEquals(1, style.step(4, -1, 6).let { if (it == 1) it else -1 })
+        assertEquals(1, style.nearest(2, 6, -1))
+        assertEquals(4, style.nearest(2, 6, 1))
+        assertEquals(5, BeadStyle.Plain.nearest(5, 6))
+        assertEquals(6, BeadStyle.Plain.step(6, 1, 6))
     }
 }

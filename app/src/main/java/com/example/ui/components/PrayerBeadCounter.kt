@@ -80,16 +80,22 @@ enum class BeadKind { CRUCIFIX, LARGE, SMALL, MEDAL,
 @androidx.compose.runtime.Immutable
 class BeadStyle(val colors: List<Color?> = emptyList(), val dimmed: Set<Int> = emptySet()) {
     fun color(i: Int): Color? = colors.getOrNull(i)
-    /** The nearest selectable bead to [i], preferring the side of [direction] (+1 / -1 / 0 = nearest). */
+    /** The nearest selectable bead to [i], looking first on the side of [direction] (+1 / -1; 0 = the closer one). */
     fun nearest(i: Int, lastIndex: Int, direction: Int = 0): Int {
-        if (dimmed.isEmpty()) return i.coerceIn(0, lastIndex)
         val start = i.coerceIn(0, lastIndex)
         if (start !in dimmed) return start
-        for (d in 1..lastIndex + 1) {
-            val order = if (direction < 0) listOf(-d, d) else listOf(d, -d)
-            order.map { start + it }.firstOrNull { it in 0..lastIndex && it !in dimmed }?.let { return it }
+        fun scan(d: Int): Int? {
+            var j = start + d
+            while (j in 0..lastIndex) { if (j !in dimmed) return j; j += d }
+            return null
         }
-        return start
+        val up = scan(1); val down = scan(-1)
+        return when {
+            direction > 0 -> up ?: down
+            direction < 0 -> down ?: up
+            up != null && down != null -> if (up - start <= start - down) up else down
+            else -> up ?: down
+        } ?: start
     }
     /** The next selectable bead after [i] in [direction], or [i] if none. */
     fun step(i: Int, direction: Int, lastIndex: Int): Int {
@@ -774,8 +780,15 @@ private fun VerticalBeadReel(beads: List<BeadKind>, active: Int, onSelect: (Int)
                     position = (origin - distance / pitch).coerceIn(0f, beads.lastIndex.toFloat())
                     val nextTick = position.roundToInt()
                     if (nextTick != tick) {
-                        // One tick for every crossed bead, even in a fast drag.
-                        repeat(kotlin.math.abs(nextTick - tick)) { view.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK) }
+                        // One tick for every crossed bead, even in a fast drag; a large bead is a firm one.
+                        val crossed = if (nextTick > tick) (tick + 1)..nextTick else (nextTick..tick - 1)
+                        for (k in crossed) {
+                            view.performHapticFeedback(
+                                if (beads.getOrNull(k) == BeadKind.LARGE) {
+                                    if (android.os.Build.VERSION.SDK_INT >= 30) HapticFeedbackConstants.CONFIRM else HapticFeedbackConstants.LONG_PRESS
+                                } else HapticFeedbackConstants.CLOCK_TICK
+                            )
+                        }
                         tick = nextTick
                     }
                 }

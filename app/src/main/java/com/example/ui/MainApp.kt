@@ -673,6 +673,7 @@ fun MainApp(
                         onNavigateToChaplet = {
                             openRosary(1)
                         },
+                        onNavigateToOtherChaplet = { openRosary(2) },
                         onNavigateToNightPrayers = {
                             prayersInitialPrayerId = null
                             prayersInitialTab = 2

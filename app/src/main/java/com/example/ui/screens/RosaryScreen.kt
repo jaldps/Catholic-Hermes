@@ -81,6 +81,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.text.TextStyle
@@ -1229,11 +1230,23 @@ fun RosaryScreen(
     var glassFrame by remember { mutableStateOf(androidx.compose.ui.geometry.Rect.Zero) }
     val glassImage = rememberAssetBitmap(artPath, 1080)
     val glassSoftImage = rememberAssetBitmap(artPath, 40)
+    // A chaplet's picture has no manifest entry: read its tone from the pixels behind the controls.
+    val chapletArtDark = remember(glassSoftImage, chaplet?.id) {
+        if (chaplet == null) null else glassSoftImage?.let { bitmap ->
+            runCatching {
+                val b = bitmap.asAndroidBitmap()
+                val h = (b.height * 0.45f).toInt().coerceAtLeast(1)
+                val pixels = IntArray(b.width * h).also { b.getPixels(it, 0, b.width, 0, 0, b.width, h) }
+                pixels.map { c -> (0.299f * ((c shr 16) and 255) + 0.587f * ((c shr 8) and 255) + 0.114f * (c and 255)) / 255f }.average() < 0.52
+            }.getOrNull()
+        }
+    }
+    val artIsDark = chapletArtDark ?: (artMeta.tone == "dark")
     val glassBackdrop = DevotionalBackdrop(glassImage, glassSoftImage, glassFrame,
         artMeta.focusX, artMeta.focusY, if (artPath?.endsWith("divine_mercy.jpg") == true) 1f else 0.92f,
         if (design.isDark) 0.81f else 1f)
 
-    AppStatusBarGlyphs(lightGlyphs = design.isDark || artMeta.tone == "dark")
+    AppStatusBarGlyphs(lightGlyphs = design.isDark || artIsDark)
 
     // A decade's label is the mystery (title and fruit); the opening, the
     // closing and every part of the chaplet are named by the part itself.
@@ -1312,7 +1325,7 @@ fun RosaryScreen(
                 lang = lang,
                 selected = selectedTab,
                 backdrop = glassBackdrop,
-                darkArt = design.isDark || artMeta.tone == "dark",
+                darkArt = design.isDark || artIsDark,
                 onSelect = selectTab
             )
         }
@@ -1508,7 +1521,7 @@ fun RosaryScreen(
             lang = lang,
             catalog = chapletCatalog,
             currentId = chaplet?.id,
-            isoToday = remember { java.time.LocalDate.now().dayOfWeek.value },
+            isoToday = remember { ChapletLaunch.isoToday() },
             onPick = { picked ->
                 if (picked.needsAnswers() && ChapletVariablesMemory.of(picked.id) == null) {
                     pendingChaplet = picked.id
@@ -1651,7 +1664,9 @@ private fun LandscapeRosaryContext(
                         )
                     })
             Box(Modifier.weight(1f).fillMaxHeight().semantics { isTraversalGroup = true; traversalIndex = 0f }) {
-                Column(Modifier.fillMaxSize().rosaryScrollFade(contextScroll.canScrollForward, 16.dp).verticalScroll(contextScroll).testTag("rosary_context_scroll").semantics { isTraversalGroup = true; traversalIndex = 0f }) {
+                Column(Modifier.fillMaxSize().rosaryScrollFade(contextScroll.canScrollForward, 16.dp).verticalScroll(contextScroll)
+                    // The scroll arrow sits at the bottom end: reserve 18 dp there while there is more to read (T-048 follow-up 1).
+                    .padding(end = if (contextScroll.canScrollForward) 18.dp else 0.dp).testTag("rosary_context_scroll").semantics { isTraversalGroup = true; traversalIndex = 0f }) {
                     Text(when {
                         isRosary && inDecade -> mysteryAnnouncement(lang, mysteryType, step.section - 1, "").substringBefore(":")
                         spec.isMercy -> lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia")
@@ -1738,10 +1753,12 @@ private fun LandscapePrayerPill(text: String, tag: String, action: () -> Unit, e
             contentDescription = text
             if (switchState != null) toggleableState = androidx.compose.ui.state.ToggleableState(on)
         }.testTag(tag)
-        .then(if (on) Modifier.background(design.palette.action, shape) else Modifier.lumenGlass(shape))
+        .then(if (on) Modifier.background(design.palette.accent.copy(alpha = .14f), shape)
+            .border(1.dp, design.palette.accent.copy(alpha = .55f), shape) else Modifier.lumenGlass(shape))
         .padding(horizontal = 12.dp), contentAlignment = Alignment.Center) {
+        // An active toggle is tinted with the accent, so «Siguiente» stays the one solid action (T-048 follow-up 4).
         Text(text, style = LocalAppTextStyles.current.caption,
-            color = if (on) design.palette.onAction else if (enabled) design.palette.textPrimary else design.palette.inkQuiet)
+            color = if (enabled) design.palette.textPrimary else design.palette.inkQuiet)
     }
 }
 
@@ -2044,16 +2061,16 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
                         Box(Modifier.weight(1f).fillMaxHeight()
                             .clickable(sources[i], indication = com.example.ui.design.appFocusRing(sources[i], segShape), role = Role.Tab) { onSelect(i) }
                             .semantics { this.selected = isSel }
-                            .padding(3.dp)
+                            .padding(horizontal = 1.dp, vertical = 3.dp)
                             .then(if (isSel) Modifier.background(p.action, segShape) else Modifier), contentAlignment = Alignment.Center) {
-                            Text(text, style = styles.caption.copy(fontWeight = if (isSel) FontWeight.SemiBold else FontWeight.Medium),
-                                color = if (isSel) p.onAction else p.textPrimary,
-                                textAlign = TextAlign.Center, maxLines = 1)
+                            FitLabel(text, styles.caption.copy(fontWeight = if (isSel) FontWeight.SemiBold else FontWeight.Medium),
+                                if (isSel) p.onAction else p.textPrimary, Modifier.fillMaxWidth())
                         }
                     }
                 }
             }
-            OtherSegment(otherLabel, otherSelected, trackShape, Modifier.width(60.dp).fillMaxHeight()) { onSelect(Devotion.OTHER.tab) }
+            OtherSegment(otherLabel, otherSelected, trackShape,
+                Modifier.width(if (LocalDensity.current.fontScale > 1.15f) 76.dp else 60.dp).fillMaxHeight()) { onSelect(Devotion.OTHER.tab) }
         }
         return
     }
@@ -2098,13 +2115,27 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
             }
         }
         if (otherSelected) {
-            Row(Modifier.fillMaxWidth().lumenGlass(trackShape, lifted = false).padding(4.dp), content = segments)
+            Row(Modifier.fillMaxWidth().lumenGlass(trackShape, lifted = false).padding(4.dp).height(IntrinsicSize.Min), content = segments)
         } else LiquidGlassDevotionTrack(
             selected = twoSelected, pressed = firstPressed || secondPressed,
             darkArt = darkArt, backdrop = backdrop, modifier = Modifier.fillMaxWidth(), content = segments
         )
     }
     OtherSegment(otherLabel, otherSelected, trackShape, Modifier.width(88.dp).height(56.dp)) { onSelect(Devotion.OTHER.tab) }
+    }
+}
+
+/** One line that steps its size down (to 78 %) until it fits the width it is given, never wrapping mid-word. */
+@Composable
+private fun FitLabel(text: String, style: TextStyle, color: Color, modifier: Modifier = Modifier) {
+    val measurer = rememberTextMeasurer()
+    BoxWithConstraints(modifier, contentAlignment = Alignment.Center) {
+        val fitted = remember(text, style, constraints.maxWidth) {
+            listOf(1f, 0.92f, 0.85f, 0.78f).map { f -> style.copy(fontSize = style.fontSize * f, lineHeight = androidx.compose.ui.unit.TextUnit.Unspecified) }
+                .firstOrNull { measurer.measure(text, it, maxLines = 1, softWrap = false).size.width <= constraints.maxWidth }
+                ?: style.copy(fontSize = style.fontSize * 0.78f, lineHeight = androidx.compose.ui.unit.TextUnit.Unspecified)
+        }
+        Text(text, style = fitted, color = color, maxLines = 1, softWrap = false, textAlign = TextAlign.Center, overflow = TextOverflow.Clip)
     }
 }
 
@@ -2120,15 +2151,14 @@ private fun OtherSegment(label: String, selected: Boolean, shape: androidx.compo
             .clip(shape)
             .then(if (selected) Modifier.background(p.action, shape) else Modifier.lumenGlass(shape, lifted = false))
             .clickable(source, indication = com.example.ui.design.appFocusRing(source, shape), role = Role.Tab) { onClick() }
-            .semantics { this.selected = selected }
-            .testTag("other_chaplets_segment")
+            .semantics { this.selected = selected; contentDescription = label }.testTag("other_chaplets_segment")
             .padding(horizontal = 6.dp),
         contentAlignment = Alignment.Center
     ) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(label, style = styles.caption.copy(fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Medium),
-                color = if (selected) p.onAction else p.textPrimary, maxLines = 1)
-            Icon(Icons.Rounded.KeyboardArrowDown, null, tint = if (selected) p.onAction else p.textSecondary, modifier = Modifier.size(16.dp))
+            FitLabel(label, styles.caption.copy(fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Medium),
+                if (selected) p.onAction else p.textPrimary, Modifier.weight(1f, fill = false))
+            Icon(Icons.Rounded.KeyboardArrowDown, null, tint = if (selected) p.onAction else p.textSecondary, modifier = Modifier.size(14.dp))
         }
     }
 }
@@ -2483,7 +2513,7 @@ private fun PrayerBody(
 private fun HungVoice(mark: String, text: String, style: TextStyle, ink: Color, markInk: Color, modifier: Modifier = Modifier) {
     // 14dp hang: the mark starts 6dp from the screen edge and keeps 4dp clear of the text.
     // It is 0.72em; at large type (where it would pass 10dp) it steps down to 0.66em.
-    val hang = if (appWindowClass() == AppWindowClass.LandscapePhone) 16.dp else 14.dp
+    val hang = if (LocalDensity.current.fontScale > 1.15f) 18.dp else if (appWindowClass() == AppWindowClass.LandscapePhone) 16.dp else 14.dp
     val em = if (LocalDensity.current.fontScale > 1.15f) 0.66f else 0.72f
     val markStyle = LocalAppTextStyles.current.reading.let { it.copy(fontSize = it.fontSize * em, fontWeight = FontWeight.Medium) }
     Row(
@@ -2902,7 +2932,8 @@ private fun OptionsSheet(
                 map(Modifier.size(side).align(Alignment.Center).padding(vertical = 4.dp))
             }
         } else map(Modifier.padding(horizontal = 72.dp, vertical = 4.dp))
-        Spacer(Modifier.height(12.dp))
+        // The pendant hangs below the map: keep it clear of the first row (T-048 follow-up 3).
+        Spacer(Modifier.height(if (landscape) 20.dp else 12.dp))
         val prayed = lang.pick("Rezado", "Prayed", "Rezado")
         val now = lang.pick("Ahora", "Now", "Agora")
         AppListGroup {
