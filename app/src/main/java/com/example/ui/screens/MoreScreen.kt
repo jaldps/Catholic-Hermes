@@ -49,6 +49,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
@@ -191,7 +192,7 @@ fun MoreScreen(
 
         item(key = "more_beginner") {
             com.example.ui.design.AppCard(Modifier.padding(horizontal = design.spacing.gutter).testTag("explore_start_here")) {
-                Text(pick("Empieza aquí", "Start here", "Comece aqui"), style = styles.title2, color = p.textPrimary)
+                Text(pick("Empieza aquí", "Start here", "Comece aqui"), style = styles.title2, color = p.textPrimary, modifier = Modifier.semantics { heading() })
                 Spacer(Modifier.height(8.dp))
                 Text(pick("Jesús, oración, primera Misa y confesión. Siete pasos a tu ritmo.", "Jesus, prayer, first Mass and confession. Seven steps at your pace.", "Jesus, oração, primeira Missa e confissão. Sete passos no seu ritmo."), style = styles.callout, color = p.textSecondary)
                 Spacer(Modifier.height(12.dp))

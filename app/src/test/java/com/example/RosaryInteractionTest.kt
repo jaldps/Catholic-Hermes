@@ -10,6 +10,7 @@ import androidx.compose.ui.test.assertWidthIsAtLeast
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.hasText
 import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.assertTextEquals
@@ -88,7 +89,8 @@ class RosaryInteractionTest(private val identity: DesignLanguage) {
 
         // Entering the chaplet starts its own guide, rather than reusing the
         // Rosary's current index or leaving its previous prayer on screen.
-        compose.onNodeWithText("Divine Mercy", ignoreCase = true)
+        // The third segment «Otras ▾» takes room from the track, so the labels may be the short ones.
+        compose.onNode(hasText("Divine Mercy", ignoreCase = true) or hasText("Chaplet", ignoreCase = true))
             .performScrollTo().performClick()
         compose.onNodeWithTag("current_prayer_title").assertTextEquals("Sign of the Cross")
         compose.onNodeWithText(signOfCross).assertExists()
@@ -99,7 +101,7 @@ class RosaryInteractionTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("prev_mercy_step_button").assertIsEnabled()
 
         // Switching devotions preserves the Rosary's position independently.
-        compose.onNodeWithText("The Holy Rosary", ignoreCase = true)
+        compose.onNode(hasText("The Holy Rosary", ignoreCase = true) or hasText("Rosary", ignoreCase = true))
             .performScrollTo().performClick()
         compose.onNodeWithTag("current_prayer_title").assertTextEquals("Apostles' Creed")
     }

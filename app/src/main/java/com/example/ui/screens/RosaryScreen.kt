@@ -81,6 +81,7 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.graphics.FilterQuality
 import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.text.TextStyle
@@ -122,6 +123,11 @@ import com.example.data.models.LocalizedText
 import com.example.data.models.RosaryMystery
 import com.example.data.models.RosaryMysteryType
 import com.example.data.repository.CatholicDataRepository
+import com.example.data.repository.Chaplet
+import com.example.data.repository.ChapletCatalog
+import com.example.data.repository.ChapletPrayers
+import com.example.ui.components.BeadStyle
+import androidx.compose.foundation.layout.IntrinsicSize
 import com.example.data.repository.LitanyLine
 import com.example.data.repository.LitanyOfLoreto
 import com.example.ui.components.BeadKind
@@ -141,6 +147,7 @@ import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.DevotionalBackdrop
 import com.example.ui.design.LiquidGlassDevotionTrack
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -177,7 +184,7 @@ private const val HailMarysPerDecade = 10
 
 
 /** One physical bead on the rail; [row] groups the pendant, each decade and the medal. */
-internal data class BeadSpec(val kind: BeadKind, val row: Int)
+internal data class BeadSpec(val kind: BeadKind, val row: Int, val color: Long? = null, val dimmed: Boolean = false)
 
 /**
  * One thing to pray, said once.
@@ -206,10 +213,15 @@ internal data class GuideStep(
     val section: Int,
     val repetition: Int = 1,
     val count: Int = 1,
-    val optional: Boolean = false
+    val optional: Boolean = false,
+    /** A chaplet's own rubric (the source's instruction): shown small above the text, never narrated. */
+    val chapletRubric: String? = null,
+    /** A chaplet's meditation introduces the prayer instead of following it. */
+    val meditationFirst: Boolean = false
 ) {
     /** What a single voice reads aloud when there is no leader/response split. */
-    val narration: String get() = listOfNotNull(leader, meditation).joinToString("\n\n")
+    val narration: String get() =
+        (if (meditationFirst) listOfNotNull(meditation, leader) else listOfNotNull(leader, meditation)).joinToString("\n\n")
 }
 
 internal data class GuideSection(
@@ -224,7 +236,11 @@ internal class PrayerGuide(
     val steps: List<GuideStep>,
     val beads: List<BeadSpec>,
     val sections: List<GuideSection>,
-    val decadeCount: Int
+    val decadeCount: Int,
+    /** A chaplet names its own parts (index = section); the Rosary and Mercy leave this null. */
+    val partLabels: List<String>? = null,
+    /** The meditation that opens each section of a chaplet, for the context column. */
+    val sectionMeditations: List<String?> = emptyList()
 ) : StepMap {
     override val stepCount: Int get() = steps.size
     override fun isOptional(index: Int): Boolean = steps[index].optional
@@ -932,6 +948,7 @@ internal fun buildMercyGuide(
 
 /** "Decade 3 of 5": the part of the devotion a step belongs to. */
 internal fun PrayerGuide.whereLine(step: GuideStep, lang: AppLanguage): String = when {
+    partLabels != null -> partLabels.getOrElse(step.section) { "" }
     step.section == 0 -> openingTitle(lang)
     step.section <= decadeCount -> lang.pick(
         "Década ${step.section} de $decadeCount",
@@ -963,7 +980,7 @@ internal fun countLine(step: GuideStep, lang: AppLanguage): String? =
 // the thumb zone. Everything reads the same GuideStep, so the painting, the
 // rail, the counters and the narration can never disagree.
 
-private enum class RosarySheet { MYSTERIES, OPTIONS, MYSTERY }
+private enum class RosarySheet { MYSTERIES, OPTIONS, MYSTERY, CHAPLETS, VARIABLES, INFO }
 
 /** The quiet "then …" line under the prayer text. */
 /** Title row to text, and text to the "then" line. */
@@ -1058,6 +1075,9 @@ fun RosaryScreen(
         onDispose { activity?.lifecycle?.removeObserver(observer) }
     }
     val todayMystery = remember { repository.getTodayRosaryMystery() }
+    val chapletCatalog = remember { ChapletCatalog.default }
+    // Orar can name the chaplet to open (the St Michael row); it is read once per entry.
+    val requestedChaplet = remember { ChapletLaunch.take() }
     // Rotation uses Compose state; a fresh process restores the same devotion,
     // mystery, exact prayer step and guidance choice from durable storage.
     var session by rememberSaveable(key = "rosary_session", stateSaver = RosarySession.Saver) {
@@ -1066,7 +1086,17 @@ fun RosaryScreen(
             // Explicit entry cards choose a devotion, while both saved step
             // positions remain intact. The other guide must not override it.
             val restored = it.copy(devotion = Devotion.fromTab(initialTab))
-            restored.copy(mysterySelection = MysterySelection.Picked(restored.mysterySet(todayMystery.type)))
+            val picked = restored.copy(mysterySelection = MysterySelection.Picked(restored.mysterySet(todayMystery.type)))
+            when {
+                requestedChaplet != null && chapletCatalog.get(requestedChaplet) != null ->
+                    picked.copy(
+                        devotion = Devotion.OTHER, chapletId = requestedChaplet,
+                        chapletStep = if (picked.chapletId == requestedChaplet) picked.chapletStep else 0
+                    )
+                // «Otras» with nothing in progress shows the catalogue instead of an empty screen.
+                picked.devotion == Devotion.OTHER && chapletCatalog.get(picked.chapletId) == null -> picked.copy(devotion = Devotion.ROSARY)
+                else -> picked
+            }
         })
     }
     var lastSavedSession by remember { mutableStateOf<RosarySession?>(null) }
@@ -1077,10 +1107,14 @@ fun RosaryScreen(
         }
     }
     val selectedMysteryType = session.mysterySet(todayMystery.type)
-    val selectedTab = session.devotion.tab
     // Beginner guidance stays on from step to step once turned on.
     val instructionsOn = session.instructionsOn
-    var sheet by rememberSaveable(key = "rosary_sheet") { mutableStateOf<RosarySheet?>(null) }
+    var sheet by rememberSaveable(key = "rosary_sheet") {
+        mutableStateOf<RosarySheet?>(
+            if (initialTab == Devotion.OTHER.tab && requestedChaplet == null && chapletCatalog.get(RosarySessionStore.load(context)?.chapletId) == null) RosarySheet.CHAPLETS else null
+        )
+    }
+    var pendingChaplet by rememberSaveable(key = "rosary_pending_chaplet") { mutableStateOf<String?>(null) }
 
     val voiceMode by audio.voiceMode.collectAsState()
     val currentlySpeaking by audio.currentlySpeaking.collectAsState()
@@ -1095,21 +1129,36 @@ fun RosaryScreen(
     val currentMystery = repository.getRosaryMystery(selectedMysteryType)
     val rosaryGuide = remember(selectedMysteryType, lang) { buildRosaryGuide(currentMystery, creed, lang) }
     val mercyGuide = remember(lang) { buildMercyGuide(creed, opening, lang) }
+    // Any other chaplet: the same guide, built from its file, with the person's answers (memory only).
+    val chaplet = if (session.devotion == Devotion.OTHER) chapletCatalog.get(session.chapletId) else null
+    val chapletAnswers = chaplet?.let { ChapletVariablesMemory.of(it.id) } ?: ChapletVariables()
+    val prayerSource = remember(repository) { ChapletPrayers.of(repository.vaticanPrayers) }
+    val chapletGuide = remember(chaplet?.id, lang, chapletAnswers) {
+        chaplet?.let { runCatching { buildChapletGuide(it, lang, prayerSource, chapletAnswers) }.getOrNull() }
+    }
+    val spec = when {
+        chaplet != null && chapletGuide != null -> remember(chaplet.id) { DevotionSpec.other(chaplet, ring = !chapletGuide.plan.rosaryShaped) }
+        session.devotion == Devotion.MERCY -> DevotionSpec.Mercy
+        else -> DevotionSpec.Rosary
+    }
+    val beadStyle = remember(chapletGuide, spec.devotion) {
+        chapletGuide?.takeIf { spec.isOther }?.let { g ->
+            BeadStyle(g.guide.beads.map { b -> b.color?.let { Color(it) } }, g.guide.beads.indices.filter { g.guide.beads[it].dimmed }.toSet())
+        } ?: BeadStyle.Plain
+    }
 
-    val rosaryIndex = session.rosaryStep.coerceIn(0, rosaryGuide.steps.lastIndex)
-    val mercyIndex = session.mercyStep.coerceIn(0, mercyGuide.steps.lastIndex)
-    val isRosary = session.devotion == Devotion.ROSARY
-    val guide = if (isRosary) rosaryGuide else mercyGuide
-    val index = if (isRosary) rosaryIndex else mercyIndex
+    val isRosary = spec.isRosary
+    val guide = when (spec.devotion) { Devotion.ROSARY -> rosaryGuide; Devotion.MERCY -> mercyGuide; Devotion.OTHER -> chapletGuide?.guide ?: mercyGuide }
+    val index = session.stepIn(spec.devotion).coerceIn(0, guide.steps.lastIndex)
     val step = guide.steps[index]
     val section = guide.sections.lastOrNull { it.index == step.section } ?: guide.sections.first()
+    val selectedTab = spec.devotion.tab
+    val contentKey = if (spec.isOther) chaplet?.id ?: "other" else selectedMysteryType.toString()
 
     fun narrate(s: GuideStep) {
         audio.setLanguage(lang)
         // «Santo Rosario · Misterios gozosos» / «Coronilla · Inicio», as the notification title.
-        val title = (if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
-            else lang.pick("Coronilla de la Divina Misericordia", "Chaplet of Divine Mercy", "Terço da Divina Misericórdia")) +
-            " · " + section.title
+        val title = spec.notificationName(lang) + " · " + section.title
         if (s.response.isBlank()) audio.speakSingle(s.narration, title = title)
         else audio.speakDialogue(s.leader, s.response, title)
     }
@@ -1126,11 +1175,12 @@ fun RosaryScreen(
         })
     }
     val narrationTarget = NarrationTarget(
-        devotion = session.devotion,
+        devotion = spec.devotion,
         mysterySet = selectedMysteryType.takeIf { isRosary },
         step = index,
         lang = lang,
-        voice = voiceMode
+        voice = voiceMode,
+        chapletId = chaplet?.id
     )
     LaunchedEffect(lang) { audio.setLanguage(lang) }
     LaunchedEffect(narrationTarget) { narration.dispatch(NarrationEvent.TargetChanged(narrationTarget)) }
@@ -1170,17 +1220,33 @@ fun RosaryScreen(
     val stepText = stepLabel(lang, index, guide.steps.size)
 
     // The painting for this part of the devotion.
-    val artCandidate = if (isRosary) mysteryArt(selectedMysteryType, (step.section - 1).coerceIn(0, guide.decadeCount - 1)) else MercyArt
+    val artCandidate = when {
+        isRosary -> mysteryArt(selectedMysteryType, (step.section - 1).coerceIn(0, guide.decadeCount - 1))
+        chaplet != null -> chaplet.imagePath
+        else -> MercyArt
+    }
     val artPath = rememberFirstAsset(artCandidate, if (isRosary) "heroes/lumen/rosary.jpg" else "heroes/divine_mercy.jpg", "heroes/mary_statue.jpg")
     val artMeta = rememberHeroMeta(artPath)
     var glassFrame by remember { mutableStateOf(androidx.compose.ui.geometry.Rect.Zero) }
     val glassImage = rememberAssetBitmap(artPath, 1080)
     val glassSoftImage = rememberAssetBitmap(artPath, 40)
+    // A chaplet's picture has no manifest entry: read its tone from the pixels behind the controls.
+    val chapletArtDark = remember(glassSoftImage, chaplet?.id) {
+        if (chaplet == null) null else glassSoftImage?.let { bitmap ->
+            runCatching {
+                val b = bitmap.asAndroidBitmap()
+                val h = (b.height * 0.45f).toInt().coerceAtLeast(1)
+                val pixels = IntArray(b.width * h).also { b.getPixels(it, 0, b.width, 0, 0, b.width, h) }
+                pixels.map { c -> (0.299f * ((c shr 16) and 255) + 0.587f * ((c shr 8) and 255) + 0.114f * (c and 255)) / 255f }.average() < 0.52
+            }.getOrNull()
+        }
+    }
+    val artIsDark = chapletArtDark ?: (artMeta.tone == "dark")
     val glassBackdrop = DevotionalBackdrop(glassImage, glassSoftImage, glassFrame,
         artMeta.focusX, artMeta.focusY, if (artPath?.endsWith("divine_mercy.jpg") == true) 1f else 0.92f,
         if (design.isDark) 0.81f else 1f)
 
-    AppStatusBarGlyphs(lightGlyphs = design.isDark || artMeta.tone == "dark")
+    AppStatusBarGlyphs(lightGlyphs = design.isDark || artIsDark)
 
     // A decade's label is the mystery (title and fruit); the opening, the
     // closing and every part of the chaplet are named by the part itself.
@@ -1193,7 +1259,7 @@ fun RosaryScreen(
 
     val stepsOnBead = remember(guide, step.bead) { guide.steps.indices.filter { guide.steps[it].bead == step.bead } }
 
-    val prayerKey = "$selectedTab/$selectedMysteryType/$index"
+    val prayerKey = "$selectedTab/$contentKey/$index"
     val contentScroll = rememberScrollState()
     val readingAnchor = rememberSaveable(prayerKey, key = "rosary_text_anchor", saver = RosaryTextAnchor.Saver) { RosaryTextAnchor() }
     LaunchedEffect(prayerKey) { contentScroll.scrollTo(0) }
@@ -1201,30 +1267,35 @@ fun RosaryScreen(
     val landscape = appWindowClass() == AppWindowClass.LandscapePhone
     val panelBack = if (landscape) rememberPanelBack() else null
     val landscapeWidth = AppPaneWidth(0.32f, 256.dp, 340.dp)
+    // «Otras» opens the catalogue; the two classic devotions switch in place.
+    val selectTab: (Int) -> Unit = { tab ->
+        if (tab == Devotion.OTHER.tab) sheet = RosarySheet.CHAPLETS
+        else dispatch(RosaryEvent.SelectDevotion(Devotion.fromTab(tab)))
+    }
     AppSupportingPaneLayout(
         modifier = modifier.testTag("rosary_screen"),
         supportingSide = AppPaneSide.Start,
         supportingWidth = landscapeWidth,
         supporting = {
             if (landscape) LandscapeRosaryContext(
-                lang, isRosary, guide, index, step, section, where, count, stepText, upNext,
+                lang, spec, chaplet, beadStyle, chapletAnswers, guide, index, step, section, where, count, stepText, upNext,
                 selectedMysteryType, selectedTab, labelInDecade, decadeFruit, artPath, glassBackdrop,
                 panelBack, instructionsOn,
-                onSelect = { dispatch(RosaryEvent.SelectDevotion(Devotion.fromTab(it))) },
+                onSelect = selectTab,
                 onPrevious = { go(index - 1) }, onNext = { go(index + 1) }, onBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let { go(it) } },
                 onOptions = { sheet = RosarySheet.OPTIONS }, onMysteries = { sheet = RosarySheet.MYSTERIES },
-                onMystery = { sheet = RosarySheet.MYSTERY }
+                onMystery = { sheet = RosarySheet.MYSTERY }, onInfo = { sheet = RosarySheet.INFO }
             )
         },
         endActions = if (!landscape) null else ({
-            LandscapeRosaryActions(lang, isRosary, instructionsOn, narration.isSpeaking,
+            LandscapeRosaryActions(lang, spec, instructionsOn, narration.isSpeaking,
                 index < guide.steps.lastIndex,
                 { dispatch(RosaryEvent.ToggleInstructions) }, { sheet = RosarySheet.OPTIONS },
                 { toggleNarration() }, { go(index + 1) })
         })
     ) {
         if (landscape) {
-            LandscapeRosaryPrayer(step, "$selectedTab/$selectedMysteryType/$index", lang, count,
+            LandscapeRosaryPrayer(step, "$selectedTab/$contentKey/$index", lang, count,
                 currentlySpeaking, { dispatch(RosaryEvent.SkipOptional) }, contentScroll, readingAnchor, instructionsOn)
         } else BoxWithConstraints(
         Modifier.fillMaxSize()
@@ -1254,21 +1325,33 @@ fun RosaryScreen(
                 lang = lang,
                 selected = selectedTab,
                 backdrop = glassBackdrop,
-                darkArt = design.isDark || artMeta.tone == "dark",
-                onSelect = { dispatch(RosaryEvent.SelectDevotion(Devotion.fromTab(it))) }
+                darkArt = design.isDark || artIsDark,
+                onSelect = selectTab
             )
         }
         val label: @Composable () -> Unit = {
             StageLabel(
                 lang = lang,
-                isRosary = isRosary,
+                spec = spec,
                 setName = selectedMysteryType.displayName.get(lang),
-                title = if (labelInDecade) section.subtitle else where,
-                subtitle = if (labelInDecade) decadeFruit else section.subtitle,
-                inDecade = labelInDecade,
+                title = when {
+                    labelInDecade -> section.subtitle
+                    chaplet != null -> chaplet.title.get(lang)
+                    else -> where
+                },
+                subtitle = when {
+                    labelInDecade -> decadeFruit
+                    chaplet != null -> listOf(where, chapletAnswers.intention.trim().takeIf { it.isNotEmpty() }).filterNotNull()
+                        .joinToString(" · ").takeIf { guide.sections.size > 1 || chapletAnswers.intention.isNotBlank() }
+                    else -> section.subtitle
+                },
+                inDecade = labelInDecade || chaplet != null,
                 onPickMysteries = { sheet = RosarySheet.MYSTERIES },
-                onOpenMystery = { sheet = RosarySheet.MYSTERY },
-                compactMetadata = compactReading
+                onOpenMystery = { sheet = if (chaplet != null) RosarySheet.INFO else RosarySheet.MYSTERY },
+                compactMetadata = compactReading,
+                detailLabel = if (chaplet != null) lang.pick("Sobre esta coronilla", "About this chaplet", "Sobre esta coroinha")
+                    else lang.pick("Ver el misterio", "About this mystery", "Ver o mistério"),
+                creditLine = chaplet?.let { chapletCreditLine(it, lang) }
             )
         }
         val progress: @Composable () -> Unit = {
@@ -1277,7 +1360,7 @@ fun RosaryScreen(
                 index = index,
                 stepText = stepText,
                 where = where.takeIf { labelInDecade },
-                counterTag = if (isRosary) "rosary_hero_step_counter" else "mercy_hero_step_counter",
+                counterTag = spec.stepCounterTag,
                 onClick = { sheet = RosarySheet.OPTIONS }
             )
         }
@@ -1288,8 +1371,9 @@ fun RosaryScreen(
                 onSelectBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let { go(it) } },
                 subStepCount = stepsOnBead.size,
                 subStepIndex = stepsOnBead.indexOf(index).coerceAtLeast(0),
+                style = beadStyle,
                 modifier = Modifier
-                    .testTag(if (isRosary) "prayer_bead_counter" else "mercy_step_counter")
+                    .testTag(spec.reelTag)
                     .semantics {
                         traversalIndex = 1f
                         contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
@@ -1308,7 +1392,7 @@ fun RosaryScreen(
         val prayer: @Composable () -> Unit = {
             PrayerArea(
                 step = step,
-                stepKey = "$selectedTab/$selectedMysteryType/$index",
+                stepKey = "$selectedTab/$contentKey/$index",
                 lang = lang,
                 spokenNow = currentlySpeaking,
                 instructionsOn = instructionsOn,
@@ -1336,9 +1420,9 @@ fun RosaryScreen(
                 onMore = { sheet = RosarySheet.OPTIONS },
                 previousLabel = previousLabel,
                 nextLabel = nextLabel,
-                previousTag = if (isRosary) "prev_bead_button" else "prev_mercy_step_button",
-                nextTag = if (isRosary) "next_bead_button" else "next_mercy_step_button",
-                audioTag = if (isRosary) "toggle_prayer_audio_button" else "toggle_mercy_audio_button"
+                previousTag = spec.prevTag,
+                nextTag = spec.nextTag,
+                audioTag = spec.audioTag
             )
         }
 
@@ -1404,7 +1488,10 @@ fun RosaryScreen(
         )
         RosarySheet.OPTIONS -> OptionsSheet(
             lang = lang,
-            isRosary = isRosary,
+            spec = spec,
+            beadStyle = beadStyle,
+            chaplet = chaplet,
+            onAnswers = if (chaplet?.needsAnswers() == true) ({ pendingChaplet = chaplet.id; sheet = RosarySheet.VARIABLES }) else null,
             guide = guide,
             step = step,
             voiceMode = voiceMode,
@@ -1430,6 +1517,45 @@ fun RosaryScreen(
                 )
             }
         }
+        RosarySheet.CHAPLETS -> ChapletCatalogSheet(
+            lang = lang,
+            catalog = chapletCatalog,
+            currentId = chaplet?.id,
+            isoToday = remember { ChapletLaunch.isoToday() },
+            onPick = { picked ->
+                if (picked.needsAnswers() && ChapletVariablesMemory.of(picked.id) == null) {
+                    pendingChaplet = picked.id
+                    sheet = RosarySheet.VARIABLES
+                } else {
+                    dispatch(RosaryEvent.PickChaplet(picked.id))
+                    sheet = null
+                }
+            },
+            onDismiss = { sheet = null }
+        )
+        RosarySheet.VARIABLES -> {
+            val asking = chapletCatalog.get(pendingChaplet)
+            if (asking == null) sheet = null
+            else ChapletVariablesSheet(
+                lang = lang,
+                chaplet = asking,
+                initial = ChapletVariablesMemory.of(asking.id) ?: ChapletVariables(),
+                onConfirm = { answers ->
+                    ChapletVariablesMemory.put(asking.id, answers)
+                    dispatch(RosaryEvent.PickChaplet(asking.id))
+                    pendingChaplet = null
+                    sheet = null
+                },
+                onDismiss = { pendingChaplet = null; sheet = null }
+            )
+        }
+        RosarySheet.INFO -> if (chaplet == null) sheet = null else ChapletInfoSheet(
+            lang = lang,
+            chaplet = chaplet,
+            hasAnswers = chaplet.needsAnswers(),
+            onChangeAnswers = { pendingChaplet = chaplet.id; sheet = RosarySheet.VARIABLES },
+            onDismiss = { sheet = null }
+        )
         null -> Unit
     }
 }
@@ -1490,13 +1616,15 @@ private fun BindRosaryTextAnchor(anchor: RosaryTextAnchor, scroll: androidx.comp
 // L1: one supporting-pane wrapper owns the split; these are its slot contents.
 @Composable
 private fun LandscapeRosaryContext(
-    lang: AppLanguage, isRosary: Boolean, guide: PrayerGuide, index: Int, step: GuideStep,
+    lang: AppLanguage, spec: DevotionSpec, chaplet: Chaplet?, beadStyle: BeadStyle, answers: ChapletVariables,
+    guide: PrayerGuide, index: Int, step: GuideStep,
     section: GuideSection, where: String, count: String?, stepText: String, upNext: String?,
     mysteryType: RosaryMysteryType, selectedTab: Int, inDecade: Boolean, fruit: String?,
     art: String?, backdrop: DevotionalBackdrop, back: Pair<String, () -> Unit>?, guidance: Boolean,
     onSelect: (Int) -> Unit, onPrevious: () -> Unit, onNext: () -> Unit, onBead: (Int) -> Unit,
-    onOptions: () -> Unit, onMysteries: () -> Unit, onMystery: () -> Unit
+    onOptions: () -> Unit, onMysteries: () -> Unit, onMystery: () -> Unit, onInfo: () -> Unit
 ) {
+    val isRosary = spec.isRosary
     val window = appWindowSize()
     val safe = appSafeInsets()
     val density = LocalDensity.current
@@ -1521,10 +1649,11 @@ private fun LandscapeRosaryContext(
         Spacer(Modifier.height(8.dp))
         Row(Modifier.weight(1f).fillMaxWidth().padding(start = start, end = 12.dp).semantics { isTraversalGroup = true }, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             val beadSteps = guide.steps.indices.filter { guide.steps[it].bead == step.bead }
-            BeadReel(beads = guide.beads.map { it.kind }, activeBead = step.bead, onSelectBead = onBead,
+            if (guide.beads.isNotEmpty()) BeadReel(beads = guide.beads.map { it.kind }, activeBead = step.bead, onSelectBead = onBead,
                 subStepCount = beadSteps.size, subStepIndex = beadSteps.indexOf(index).coerceAtLeast(0),
                 orientation = androidx.compose.foundation.gestures.Orientation.Vertical,
-                modifier = Modifier.width(44.dp).fillMaxHeight().testTag(if (isRosary) "prayer_bead_counter" else "mercy_step_counter")
+                style = beadStyle,
+                modifier = Modifier.width(44.dp).fillMaxHeight().testTag(spec.reelTag)
                     .semantics {
                         traversalIndex = 1f
                         contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
@@ -1535,16 +1664,26 @@ private fun LandscapeRosaryContext(
                         )
                     })
             Box(Modifier.weight(1f).fillMaxHeight().semantics { isTraversalGroup = true; traversalIndex = 0f }) {
-                Column(Modifier.fillMaxSize().rosaryScrollFade(contextScroll.canScrollForward, 16.dp).verticalScroll(contextScroll).testTag("rosary_context_scroll").semantics { isTraversalGroup = true; traversalIndex = 0f }) {
-                    Text(if (isRosary && inDecade) mysteryAnnouncement(lang, mysteryType, step.section - 1, "").substringBefore(":") else if (!isRosary) lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia") else where, style = styles.caption, color = p.textSecondary)
+                Column(Modifier.fillMaxSize().rosaryScrollFade(contextScroll.canScrollForward, 16.dp).verticalScroll(contextScroll)
+                    // The scroll arrow sits at the bottom end: reserve 18 dp there while there is more to read (T-048 follow-up 1).
+                    .padding(end = if (contextScroll.canScrollForward) 18.dp else 0.dp).testTag("rosary_context_scroll").semantics { isTraversalGroup = true; traversalIndex = 0f }) {
+                    Text(when {
+                        isRosary && inDecade -> mysteryAnnouncement(lang, mysteryType, step.section - 1, "").substringBefore(":")
+                        spec.isMercy -> lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia")
+                        else -> where
+                    }, style = styles.caption, color = p.textSecondary)
                     Spacer(Modifier.height(4.dp))
-                    Text(if (inDecade) section.subtitle else step.intention ?: if (isRosary) step.name else where,
+                    Text(when {
+                        inDecade -> section.subtitle
+                        chaplet != null -> chaplet.title.get(lang)
+                        else -> step.intention ?: if (isRosary) step.name else where
+                    },
                         style = styles.headline, color = p.textPrimary,
-                        modifier = Modifier.testTag(if (isRosary) "rosary_hero_title" else "mercy_hero_title").semantics { heading() })
+                        modifier = Modifier.testTag(spec.heroTitleTag).semantics { heading() })
                     Spacer(Modifier.height(8.dp))
                     val thumbHeight = if (window.height < 400.dp) 56.dp else 102.dp
                     if (art != null) Box(Modifier.fillMaxWidth().height(thumbHeight)
-                        .testTag(if (isRosary) "rosary_hero_photo" else "mercy_hero_photo")
+                        .testTag(spec.heroPhotoTag)
                         .semantics { credit?.let { contentDescription = listOf(it.title, it.artist).filter { it.isNotBlank() }.joinToString(", ") } }) {
                         ArtThumb(art, Modifier.fillMaxSize()
                             .then(if (inDecade) Modifier.testTag("mystery_hero_photo") else Modifier)
@@ -1553,9 +1692,23 @@ private fun LandscapeRosaryContext(
                     if (fruit != null) {
                         Spacer(Modifier.height(8.dp)); Text(fruit, style = styles.footnote, color = p.textSecondary)
                     }
-                    if (step.meditation != null) {
-                        Spacer(Modifier.height(8.dp)); Text(step.meditation, style = styles.reading, color = p.textPrimary)
+                    if (chaplet != null) {
+                        Spacer(Modifier.height(4.dp))
+                        Text(chapletCreditLine(chaplet, lang), style = styles.caption, color = p.textSecondary,
+                            modifier = Modifier.testTag("chaplet_image_credit"))
+                    }
+                    if (chaplet != null && answers.intention.isNotBlank()) {
+                        Spacer(Modifier.height(8.dp))
+                        Text(lang.pick("Intención: ", "Intention: ", "Intenção: ") + answers.intention.trim(), style = styles.footnote, color = p.textSecondary)
+                    }
+                    // A chaplet's meditation stays beside its whole part, not just its first prayer.
+                    val meditation = step.meditation ?: guide.sectionMeditations.getOrNull(step.section)
+                    if (meditation != null) {
+                        Spacer(Modifier.height(8.dp)); Text(meditation, style = styles.reading, color = p.textPrimary)
                         step.detail?.let { Text(it, style = styles.footnote, color = p.textSecondary) }
+                    }
+                    if (chaplet != null) {
+                        LandscapePrayerPill(lang.pick("Sobre esta coronilla", "About this chaplet", "Sobre esta coroinha"), "chaplet_info_button", onInfo)
                     }
                     if (isRosary) {
                         LandscapePrayerPill(mysteryType.displayName.get(lang), "rosary_mystery_picker", onMysteries)
@@ -1577,11 +1730,11 @@ private fun LandscapeRosaryContext(
                     Box(Modifier.fillMaxWidth((index + 1f) / guide.steps.size).fillMaxHeight().background(p.accent))
                 }
                 Text(stepText, style = styles.caption, color = p.textSecondary,
-                    modifier = Modifier.testTag(if (isRosary) "rosary_hero_step_counter" else "mercy_hero_step_counter"))
+                    modifier = Modifier.testTag(spec.stepCounterTag))
             }
             }
             LandscapePrayerPill(lang.pick("Anterior", "Back", "Anterior"),
-                if (isRosary) "prev_bead_button" else "prev_mercy_step_button", onPrevious, enabled = index > 0,
+                spec.prevTag, onPrevious, enabled = index > 0,
                 modifier = Modifier.widthIn(min = 120.dp))
             Spacer(Modifier.height(0.dp))
         }
@@ -1600,10 +1753,12 @@ private fun LandscapePrayerPill(text: String, tag: String, action: () -> Unit, e
             contentDescription = text
             if (switchState != null) toggleableState = androidx.compose.ui.state.ToggleableState(on)
         }.testTag(tag)
-        .then(if (on) Modifier.background(design.palette.action, shape) else Modifier.lumenGlass(shape))
+        .then(if (on) Modifier.background(design.palette.accent.copy(alpha = .14f), shape)
+            .border(1.dp, design.palette.accent.copy(alpha = .55f), shape) else Modifier.lumenGlass(shape))
         .padding(horizontal = 12.dp), contentAlignment = Alignment.Center) {
+        // An active toggle is tinted with the accent, so «Siguiente» stays the one solid action (T-048 follow-up 4).
         Text(text, style = LocalAppTextStyles.current.caption,
-            color = if (on) design.palette.onAction else if (enabled) design.palette.textPrimary else design.palette.inkQuiet)
+            color = if (enabled) design.palette.textPrimary else design.palette.inkQuiet)
     }
 }
 
@@ -1629,7 +1784,7 @@ private fun RosaryScrollHint(visible: Boolean, height: Dp, tag: String) {
 }
 
 @Composable
-private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidance: Boolean, playing: Boolean,
+private fun LandscapeRosaryActions(lang: AppLanguage, spec: DevotionSpec, guidance: Boolean, playing: Boolean,
     canNext: Boolean, onGuide: () -> Unit, onOptions: () -> Unit, onAudio: () -> Unit, onNext: () -> Unit) {
     val window = appWindowSize()
     val safe = appSafeInsets()
@@ -1648,14 +1803,14 @@ private fun LandscapeRosaryActions(lang: AppLanguage, isRosary: Boolean, guidanc
             horizontalAlignment = Alignment.CenterHorizontally) {
             AppGlassIconButton(if (playing) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
                 if (playing) lang.pick("Pausar", "Pause", "Pausar") else lang.pick("Escuchar", "Listen", "Ouvir"), onAudio,
-                tag = if (isRosary) "toggle_prayer_audio_button" else "toggle_mercy_audio_button")
+                tag = spec.audioTag)
             Text(if (playing) lang.pick("Pausar", "Pause", "Pausar") else lang.pick("Escuchar", "Listen", "Ouvir"), style = styles.caption, color = p.textSecondary, modifier = Modifier.clearAndSetSemantics {})
         }
         Column(Modifier.align(Alignment.TopCenter).padding(top = window.height * 0.70f - safe.top - 32.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
             val shape = if (LocalAppDesign.current.isSanctuary) RoundedCornerShape(12.dp) else CircleShape
             Box(Modifier.size(56.dp).background(if (canNext) p.action else p.action.copy(alpha = .38f), shape).lumenPress(onNext, enabled = canNext, shape = shape)
-                .testTag(if (isRosary) "next_bead_button" else "next_mercy_step_button")
+                .testTag(spec.nextTag)
                 .semantics { contentDescription = lang.pick("Siguiente", "Next", "Seguinte") }, contentAlignment = Alignment.Center) {
                 Icon(Icons.Rounded.ChevronRight, null, tint = if (canNext) p.onAction else p.onAction.copy(alpha = .6f), modifier = Modifier.size(28.dp))
             }
@@ -1687,7 +1842,7 @@ private fun LandscapeRosaryPrayer(step: GuideStep, key: String, lang: AppLanguag
             .onGloballyPositioned { readingAnchor.viewport = it.boundsInRoot(); viewportTop = it.positionInParent().y }) {
             Column(Modifier.fillMaxSize().rosaryScrollFade(scroll.canScrollForward, 24.dp).verticalScroll(scroll).testTag("prayer_content_scroll")) {
                 Column(Modifier.onSizeChanged { contentHeight = it.height }) {
-                    PrayerBody(step.copy(intention = null, meditation = null, detail = null), lang, spoken, instructionsOn = false, responseModifier = Modifier.bringIntoViewRequester(responseView), readingAnchor = readingAnchor)
+                    PrayerBody(step.copy(intention = null, meditation = null, detail = null, chapletRubric = step.chapletRubric.takeIf { !guidance }), lang, spoken, instructionsOn = false, responseModifier = Modifier.bringIntoViewRequester(responseView), readingAnchor = readingAnchor)
                 }
             }
             RosaryScrollHint(scroll.canScrollForward, 24.dp, "prayer_scroll_hint")
@@ -1879,6 +2034,10 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
     val p = design.palette
     val styles = LocalAppTextStyles.current
     val style = styles.subhead.copy(fontWeight = FontWeight.SemiBold)
+    val otherSelected = selected == Devotion.OTHER.tab
+    // The glass track only knows the two classic devotions; «Otras ▾» is a third segment beside it,
+    // and while another chaplet is open the track rests without a selection.
+    val twoSelected = selected.coerceAtMost(1)
     val full = listOf(
         lang.pick("Santo Rosario", "The Holy Rosary", "Santo Terço"),
         lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia")
@@ -1887,31 +2046,38 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
         lang.pick("Rosario", "Rosary", "Terço"),
         lang.pick("Coronilla", "Chaplet", "Coroinha")
     )
+    val otherLabel = lang.pick("Otras", "Others", "Outras")
+    val trackShape = if (design.isSanctuary) RoundedCornerShape(10.dp) else RoundedCornerShape(percent = 50)
     if (compact) {
         val sources = remember { List(2) { MutableInteractionSource() } }
-        Box(Modifier.fillMaxWidth().height(44.dp)) {
-            LiquidGlassDevotionTrack(selected, false, darkArt, backdrop, Modifier.matchParentSize()) { }
-            Row(Modifier.fillMaxSize()) {
-                short.forEachIndexed { i, text ->
-                    val isSel = i == selected
-                    val segShape = if (design.isSanctuary) RoundedCornerShape(8.dp) else CircleShape
-                    Box(Modifier.weight(1f).fillMaxHeight()
-                        .clickable(sources[i], indication = com.example.ui.design.appFocusRing(sources[i], segShape), role = Role.Tab) { onSelect(i) }
-                        .semantics { this.selected = isSel }
-                        .padding(3.dp)
-                        .then(if (isSel) Modifier.background(p.action, segShape) else Modifier), contentAlignment = Alignment.Center) {
-                        Text(text, style = styles.caption.copy(fontWeight = if (isSel) FontWeight.SemiBold else FontWeight.Medium),
-                            color = if (isSel) p.onAction else p.textPrimary,
-                            textAlign = TextAlign.Center)
+        Row(Modifier.fillMaxWidth().height(44.dp), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+            Box(Modifier.weight(1f).fillMaxHeight()) {
+                if (otherSelected) Box(Modifier.matchParentSize().lumenGlass(trackShape, lifted = false))
+                else LiquidGlassDevotionTrack(twoSelected, false, darkArt, backdrop, Modifier.matchParentSize()) { }
+                Row(Modifier.fillMaxSize()) {
+                    short.forEachIndexed { i, text ->
+                        val isSel = i == selected
+                        val segShape = if (design.isSanctuary) RoundedCornerShape(8.dp) else CircleShape
+                        Box(Modifier.weight(1f).fillMaxHeight()
+                            .clickable(sources[i], indication = com.example.ui.design.appFocusRing(sources[i], segShape), role = Role.Tab) { onSelect(i) }
+                            .semantics { this.selected = isSel }
+                            .padding(horizontal = 1.dp, vertical = 3.dp)
+                            .then(if (isSel) Modifier.background(p.action, segShape) else Modifier), contentAlignment = Alignment.Center) {
+                            FitLabel(text, styles.caption.copy(fontWeight = if (isSel) FontWeight.SemiBold else FontWeight.Medium),
+                                if (isSel) p.onAction else p.textPrimary, Modifier.fillMaxWidth())
+                        }
                     }
                 }
             }
+            OtherSegment(otherLabel, otherSelected, trackShape,
+                Modifier.width(if (LocalDensity.current.fontScale > 1.15f) 76.dp else 60.dp).fillMaxHeight()) { onSelect(Devotion.OTHER.tab) }
         }
         return
     }
     val measurer = rememberTextMeasurer()
     val density = LocalDensity.current
-    BoxWithConstraints(Modifier.fillMaxWidth().then(if (compact) Modifier else Modifier.padding(horizontal = design.spacing.gutter)), contentAlignment = Alignment.Center) {
+    Row(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter), horizontalArrangement = Arrangement.spacedBy(6.dp), verticalAlignment = Alignment.CenterVertically) {
+    BoxWithConstraints(Modifier.weight(1f), contentAlignment = Alignment.Center) {
         val room = with(density) { maxWidth.toPx() }
         val needed = remember(full, style, density) {
             full.sumOf { measurer.measure(it, style).size.width } + with(density) { (16.dp * 4 + 8.dp + 8.dp).toPx() }.toInt()
@@ -1922,10 +2088,7 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
         val firstPressed by sources[0].collectIsPressedAsState()
         val secondPressed by sources[1].collectIsPressedAsState()
         val opaque = design.isClassic || design.reduceTransparency || design.highContrast
-        LiquidGlassDevotionTrack(
-            selected = selected, pressed = firstPressed || secondPressed,
-            darkArt = darkArt, backdrop = backdrop, modifier = Modifier.fillMaxWidth()
-        ) {
+        val segments: @Composable androidx.compose.foundation.layout.RowScope.() -> Unit = {
             labels.forEachIndexed { i, text ->
                 val isSelected = i == selected
                 Box(
@@ -1951,6 +2114,52 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
                 }
             }
         }
+        if (otherSelected) {
+            Row(Modifier.fillMaxWidth().lumenGlass(trackShape, lifted = false).padding(4.dp).height(IntrinsicSize.Min), content = segments)
+        } else LiquidGlassDevotionTrack(
+            selected = twoSelected, pressed = firstPressed || secondPressed,
+            darkArt = darkArt, backdrop = backdrop, modifier = Modifier.fillMaxWidth(), content = segments
+        )
+    }
+    OtherSegment(otherLabel, otherSelected, trackShape, Modifier.width(88.dp).height(56.dp)) { onSelect(Devotion.OTHER.tab) }
+    }
+}
+
+/** One line that steps its size down (to 78 %) until it fits the width it is given, never wrapping mid-word. */
+@Composable
+private fun FitLabel(text: String, style: TextStyle, color: Color, modifier: Modifier = Modifier) {
+    val measurer = rememberTextMeasurer()
+    BoxWithConstraints(modifier, contentAlignment = Alignment.Center) {
+        val fitted = remember(text, style, constraints.maxWidth) {
+            listOf(1f, 0.92f, 0.85f, 0.78f).map { f -> style.copy(fontSize = style.fontSize * f, lineHeight = androidx.compose.ui.unit.TextUnit.Unspecified) }
+                .firstOrNull { measurer.measure(text, it, maxLines = 1, softWrap = false).size.width <= constraints.maxWidth }
+                ?: style.copy(fontSize = style.fontSize * 0.78f, lineHeight = androidx.compose.ui.unit.TextUnit.Unspecified)
+        }
+        Text(text, style = fitted, color = color, maxLines = 1, softWrap = false, textAlign = TextAlign.Center, overflow = TextOverflow.Clip)
+    }
+}
+
+/** «Otras ▾»: the third segment, which opens the chaplet catalogue. */
+@Composable
+private fun OtherSegment(label: String, selected: Boolean, shape: androidx.compose.ui.graphics.Shape, modifier: Modifier, onClick: () -> Unit) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val source = remember { MutableInteractionSource() }
+    Box(
+        modifier.heightIn(min = 44.dp)
+            .clip(shape)
+            .then(if (selected) Modifier.background(p.action, shape) else Modifier.lumenGlass(shape, lifted = false))
+            .clickable(source, indication = com.example.ui.design.appFocusRing(source, shape), role = Role.Tab) { onClick() }
+            .semantics { this.selected = selected; contentDescription = label }.testTag("other_chaplets_segment")
+            .padding(horizontal = 6.dp),
+        contentAlignment = Alignment.Center
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            FitLabel(label, styles.caption.copy(fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Medium),
+                if (selected) p.onAction else p.textPrimary, Modifier.weight(1f, fill = false))
+            Icon(Icons.Rounded.KeyboardArrowDown, null, tint = if (selected) p.onAction else p.textSecondary, modifier = Modifier.size(14.dp))
+        }
     }
 }
 
@@ -1963,18 +2172,23 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: Devotiona
 @Composable
 private fun StageLabel(
     lang: AppLanguage,
-    isRosary: Boolean,
+    spec: DevotionSpec,
     setName: String,
     title: String,
     subtitle: String?,
     inDecade: Boolean,
     onPickMysteries: () -> Unit,
     onOpenMystery: () -> Unit,
-    compactMetadata: Boolean = false
+    compactMetadata: Boolean = false,
+    /** What the chevron opens: the mystery of a decade, or a chaplet's information. */
+    detailLabel: String = lang.pick("Ver el misterio", "About this mystery", "Ver o mistério"),
+    /** «Imagen: …» of a chaplet's picture, kept in view under the title. */
+    creditLine: String? = null
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
+    val isRosary = spec.isRosary
     Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
         if (isRosary) {
             val shape = if (design.isSanctuary) RoundedCornerShape(8.dp) else RoundedCornerShape(percent = 50)
@@ -2013,12 +2227,12 @@ private fun StageLabel(
                     color = p.textPrimary,
                     modifier = Modifier
                         .weight(1f, fill = false)
-                        .testTag(if (isRosary) "rosary_hero_title" else "mercy_hero_title")
+                        .testTag(spec.heroTitleTag)
                 )
                 if (inDecade) {
                     Icon(
                         Icons.Rounded.ChevronRight,
-                        lang.pick("Ver el misterio", "About this mystery", "Ver o mistério"),
+                        detailLabel,
                         tint = p.textSecondary,
                         modifier = Modifier.padding(start = 2.dp, top = 4.dp).size(20.dp)
                     )
@@ -2032,6 +2246,10 @@ private fun StageLabel(
                     style = styles.footnote,
                     color = p.textSecondary
                 )
+            }
+            if (!creditLine.isNullOrBlank() && !compactMetadata) {
+                Spacer(Modifier.height(4.dp))
+                Text(creditLine, style = styles.caption, color = p.textSecondary, modifier = Modifier.testTag("chaplet_image_credit"))
             }
         }
     }
@@ -2245,6 +2463,17 @@ private fun PrayerBody(
             )
             Spacer(Modifier.height(4.dp))
         }
+        // A chaplet's own rubric: the source's instruction, small and never narrated.
+        step.chapletRubric?.takeIf { !instructionsOn && it.isNotBlank() }?.let {
+            Text(it, style = styles.footnote.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary,
+                modifier = Modifier.testTag("chaplet_rubric"))
+            Spacer(Modifier.height(6.dp))
+        }
+        if (step.meditationFirst) step.meditation?.let {
+            Text(it, style = reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary,
+                modifier = Modifier.testTag("chaplet_meditation").then(readingAnchor?.textModifier("meditation") ?: Modifier))
+            Spacer(Modifier.height(12.dp))
+        }
         step.intention?.takeIf { step.meditation == null }?.let {
             Text(it, style = styles.subhead.copy(fontWeight = FontWeight.Medium), color = p.textSecondary)
             Spacer(Modifier.height(6.dp))
@@ -2263,7 +2492,7 @@ private fun PrayerBody(
                     responseModifier.then(readingAnchor?.textModifier("response") ?: Modifier)
                 )
             }
-            step.meditation?.let {
+            if (!step.meditationFirst) step.meditation?.let {
                 Spacer(Modifier.height(14.dp))
                 Text(it, style = reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary, modifier = readingAnchor?.textModifier("meditation") ?: Modifier)
             }
@@ -2284,7 +2513,7 @@ private fun PrayerBody(
 private fun HungVoice(mark: String, text: String, style: TextStyle, ink: Color, markInk: Color, modifier: Modifier = Modifier) {
     // 14dp hang: the mark starts 6dp from the screen edge and keeps 4dp clear of the text.
     // It is 0.72em; at large type (where it would pass 10dp) it steps down to 0.66em.
-    val hang = if (appWindowClass() == AppWindowClass.LandscapePhone) 16.dp else 14.dp
+    val hang = if (LocalDensity.current.fontScale > 1.15f) 18.dp else if (appWindowClass() == AppWindowClass.LandscapePhone) 16.dp else 14.dp
     val em = if (LocalDensity.current.fontScale > 1.15f) 0.66f else 0.72f
     val markStyle = LocalAppTextStyles.current.reading.let { it.copy(fontSize = it.fontSize * em, fontWeight = FontWeight.Medium) }
     Row(
@@ -2600,9 +2829,9 @@ private fun MysteriesSheet(
 }
 
 @Composable
-private fun ArtThumb(path: String, modifier: Modifier) {
+internal fun ArtThumb(path: String, modifier: Modifier, maxWidthPx: Int = 240) {
     val p = LocalAppDesign.current.palette
-    val bitmap = rememberAssetBitmap(path, 240)
+    val bitmap = rememberAssetBitmap(path, maxWidthPx)
     val meta = rememberHeroMeta(path)
     Box(modifier.clip(RoundedCornerShape(12.dp)).background(p.glass)) {
         if (bitmap != null) {
@@ -2615,7 +2844,10 @@ private fun ArtThumb(path: String, modifier: Modifier) {
 @Composable
 private fun OptionsSheet(
     lang: AppLanguage,
-    isRosary: Boolean,
+    spec: DevotionSpec,
+    beadStyle: BeadStyle,
+    chaplet: Chaplet?,
+    onAnswers: (() -> Unit)?,
     guide: PrayerGuide,
     step: GuideStep,
     voiceMode: RecitationVoiceMode,
@@ -2626,6 +2858,7 @@ private fun OptionsSheet(
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
+    val isRosary = spec.isRosary
     val modes = listOf(RecitationVoiceMode.DUAL_DIALOGUE, RecitationVoiceMode.MALE, RecitationVoiceMode.FEMALE)
     val landscape = appWindowClass() == AppWindowClass.LandscapePhone
     val voices: @Composable () -> Unit = {
@@ -2680,26 +2913,27 @@ private fun OptionsSheet(
         )
     }
     val parts: @Composable () -> Unit = {
-        SheetLabel(
-            if (isRosary) lang.pick("Partes del Rosario", "Parts of the Rosary", "Partes do Rosário")
-            else lang.pick("Pasos de la coronilla", "Steps of the chaplet", "Passos da coroinha")
-        )
+        SheetLabel(spec.partsLabel(lang))
         val map: @Composable (Modifier) -> Unit = { m ->
             RosaryLoopMap(
                 beads = guide.beads.map { it.kind },
                 activeBead = step.bead,
                 onSelectBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let(onGo) },
-                modifier = m.testTag("rosary_loop_map")
+                modifier = m.testTag("rosary_loop_map"),
+                style = beadStyle,
+                ring = spec.ringMap
             )
         }
-        if (landscape) {
+        if (guide.beads.isEmpty()) Unit
+        else if (landscape) {
             // The map is square: fit it to the column so it is never clipped.
             BoxWithConstraints(Modifier.fillMaxWidth()) {
                 val side = minOf(maxWidth - 16.dp, LocalRosarySheetColumnHeight.current - 64.dp).coerceAtLeast(96.dp)
                 map(Modifier.size(side).align(Alignment.Center).padding(vertical = 4.dp))
             }
         } else map(Modifier.padding(horizontal = 72.dp, vertical = 4.dp))
-        Spacer(Modifier.height(12.dp))
+        // The pendant hangs below the map: keep it clear of the first row (T-048 follow-up 3).
+        Spacer(Modifier.height(if (landscape) 20.dp else 12.dp))
         val prayed = lang.pick("Rezado", "Prayed", "Rezado")
         val now = lang.pick("Ahora", "Now", "Agora")
         AppListGroup {
@@ -2719,7 +2953,14 @@ private fun OptionsSheet(
                 )
             }
         }
-        if (!isRosary) {
+        if (onAnswers != null) {
+            Spacer(Modifier.height(12.dp))
+            Box(Modifier.padding(horizontal = design.spacing.gutter)) {
+                AppSecondaryButton(lang.pick("Cambiar los datos", "Change the answers", "Alterar os dados"), onAnswers,
+                    modifier = Modifier.testTag("chaplet_change_answers"))
+            }
+        }
+        if (spec.isMercy) {
             Spacer(Modifier.height(24.dp))
             Column(Modifier.padding(horizontal = design.spacing.gutter + 8.dp)) {
                 Text(
@@ -2741,8 +2982,7 @@ private fun OptionsSheet(
     }
     AppSheet(
         onDismiss = onDismiss,
-        title = if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
-        else lang.pick("Coronilla", "Chaplet", "Coroinha"),
+        title = spec.optionsTitle(lang),
         tag = "rosary_options_sheet", wide = landscape
     ) {
         if (landscape) {

@@ -295,7 +295,9 @@ class RosarySessionTest {
         assertEquals(Devotion.ROSARY, RosarySession.opening(-3).devotion)
         assertEquals(Devotion.ROSARY, RosarySession.opening(0).devotion)
         assertEquals(Devotion.MERCY, RosarySession.opening(1).devotion)
-        assertEquals(Devotion.MERCY, RosarySession.opening(7).devotion)
+        // Tab 2 is «Otras coronillas»; deep links past the last tab are pulled into range, onto it.
+        assertEquals(Devotion.OTHER, RosarySession.opening(2).devotion)
+        assertEquals(Devotion.OTHER, RosarySession.opening(7).devotion)
     }
 
     @Test fun saverRoundTripsEveryField() {

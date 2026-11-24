@@ -71,6 +71,20 @@ def wrong_language(text, lang):
     return None
 
 
+# Pairwise check for short fields too (T-057 found 104 swapped es/en fields that the per-field check missed).
+SW_EN = re.compile(r"\b(the|and|of|you|your|who|have|with|for|our|us|we|grant|lord|holy|pray|me|my|is|in|to|be|this|ask)\b", re.I)
+SW_ES = re.compile(r"\b(el|la|los|las|del|que|nuestro|nuestra|nosotros|por|con|tu|para|y|señor|santa|santo|ruega|en|de|es|mi|pido)\b", re.I)
+SW_ESC = re.compile(r"[áéíóúñ¿¡]", re.I)
+
+
+def _en_score(text):
+    return len(SW_EN.findall(text)) - len(SW_ES.findall(text)) - 2 * len(SW_ESC.findall(text))
+
+
+def swapped_es_en(es, en):
+    return _en_score(es) > 0 and _en_score(en) < 0
+
+
 def lt(obj, where, latin_ok=False):
     """A localized text: exactly es/en/pt, none empty; en/pt differ from es unless latin_ok."""
     if not isinstance(obj, dict) or set(obj) != set(LANGS):
@@ -86,6 +100,8 @@ def lt(obj, where, latin_ok=False):
             other = wrong_language(obj[lang], lang)
             if other:
                 errors.append(f"{where}.{lang}: reads as {other.upper()}, not {lang.upper()} (swapped or untranslated?): {obj[lang][:50]!r}")
+    if ok and swapped_es_en(obj["es"], obj["en"]):
+        errors.append(f"{where}: es and en look swapped (es reads as English, en as Spanish): {obj['es'][:50]!r}")
     if ok and not latin_ok and len(obj["es"]) > 25 and (obj["en"] == obj["es"] or obj["pt"] == obj["es"]):
         warns.append(f"{where}: en/pt identical to es (only acceptable for Latin; check the translation)")
     return ok

@@ -189,6 +189,25 @@
 - **Puntuación:** `HomeScreen` ya normaliza `...` a `…` en los extractos (`:1058`).
 
 
+## Auditoría estática posterior (ampliación pedida por el dueño)
+
+Tras la entrega rápida, el dueño pidió revisar el código completo con las skills aunque no hubiera captura. Se hizo una pasada estática de los 16 archivos permitidos buscando literales de color/tipo, huecos >24 dp, truncate sin vía de vuelta, controles sin semántica y títulos de sección sin `heading()`.
+
+| Archivo | Antes | Ahora | Regla |
+|---|---|---|---|
+| `CatechismScreen.kt:1428,2179` | Títulos de sección del índice y de «siguiente» sin `heading()` | `Modifier.semantics { heading() }` | better-accessibility 3 |
+| `MoreScreen.kt:194` | «Empieza aquí» sin `heading()` | `Modifier.semantics { heading() }` | better-accessibility 3 |
+| `HomeScreen.kt:686` | «Un momento con Dios» sin `heading()` | `Modifier.semantics { heading() }` | better-accessibility 3 |
+| `SpiritualLifeScreen.kt:663` | Título del diario vacío sin `heading()` | `Modifier.semantics { heading() }` | better-accessibility 3 |
+| `PrayersAndNovenasScreen.kt:1033` | Título del estado vacío sin `heading()` | `Modifier.semantics { heading() }` | better-accessibility 3 |
+| `SpiritualLifeScreen.kt:833` | El velo del diálogo era un `clickable` sin nombre para TalkBack | `clearAndSetSemantics {}`; el cierre sigue en el botón del diálogo | better-accessibility 1 |
+| `DoctrineQuestions.kt:314` | `fontSize = styles.caption.fontSize * 0.85f` | `styles.caption` sin modificar | better-typography 1 |
+| `PrayersAndNovenasScreen.kt:2123` | `Spacer(64.dp)` de dock sumado al `appDockInset()` ya aplicado | Se elimina: el `contentPadding` ya despeja la barra | better-layout 4 |
+
+`EmblemPlate` sigue en «Para la capa compartida»: cambiar sus dos `Color(0xFF…)` por `palette.groupedSurface` alteraría la placa clara en modo oscuro; se requiere decisión de diseño.
+
+**Verificación:** `:app:compileDebugKotlin` → `BUILD SUCCESSFUL in 3m 9s`; reconstrucción final `:app:assembleDebug` → `BUILD SUCCESSFUL in 31s`; APK `app/build/outputs/apk/debug/app-debug.apk` (110 MB, 2026-11-23 18:17).
+
 ## Pendiente para la revisión completa
 
 - `com.example.Devotions*` quedó abortado por lentitud; se corre al final junto con la pasada completa de capturas.

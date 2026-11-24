@@ -18,16 +18,21 @@ import com.example.data.models.RosaryMysteryType
 // No Android or Compose-UI types here, so the whole file is JVM-testable.
 // ---------------------------------------------------------------------------
 
-/** The two devotions on the screen. [tab] is the legacy 0/1 tab number. */
+/**
+ * The devotions on the screen. [tab] is the tab number: 0 and 1 are the legacy Rosary / Mercy
+ * numbers (stored sessions and deep links rely on them), 2 is any of the other chaplets, whose
+ * identity is [RosarySession.chapletId].
+ */
 enum class Devotion {
     ROSARY,
-    MERCY;
+    MERCY,
+    OTHER;
 
     val tab: Int get() = ordinal
 
     companion object {
-        /** Deep links pass 0 or 1; anything else is pulled into range. */
-        fun fromTab(tab: Int): Devotion = values()[tab.coerceIn(0, 1)]
+        /** Deep links pass 0, 1 or 2; anything else is pulled into range. */
+        fun fromTab(tab: Int): Devotion = values()[tab.coerceIn(0, values().lastIndex)]
     }
 }
 
@@ -69,6 +74,8 @@ internal sealed interface RosaryEvent {
     /** Leave the optional prayer on screen for the next required one. */
     object SkipOptional : Move
     object ToggleInstructions : RosaryEvent
+    /** Starts (or, if already on it, resumes) another chaplet of the catalogue. */
+    data class PickChaplet(val id: String) : RosaryEvent
 }
 
 internal data class RosarySession(
@@ -77,13 +84,19 @@ internal data class RosarySession(
     val rosaryStep: Int = 0,
     val mercyStep: Int = 0,
     /** Beginner guidance: sticky from step to step once turned on. */
-    val instructionsOn: Boolean = false
+    val instructionsOn: Boolean = false,
+    /** The chaplet of [Devotion.OTHER]; kept when the person goes back to the Rosary. */
+    val chapletId: String? = null,
+    val chapletStep: Int = 0
 ) {
     /** Position in the devotion on screen. */
     val step: Int get() = stepIn(devotion)
 
-    fun stepIn(devotion: Devotion): Int =
-        if (devotion == Devotion.ROSARY) rosaryStep else mercyStep
+    fun stepIn(devotion: Devotion): Int = when (devotion) {
+        Devotion.ROSARY -> rosaryStep
+        Devotion.MERCY -> mercyStep
+        Devotion.OTHER -> chapletStep
+    }
 
     fun mysterySet(today: RosaryMysteryType): RosaryMysteryType = mysterySelection.resolve(today)
 
@@ -107,11 +120,19 @@ internal data class RosarySession(
         RosaryEvent.Previous -> withStep(step - 1, steps)
         RosaryEvent.SkipOptional -> steps.firstRequiredAfter(step)?.let { withStep(it, steps) } ?: this
         RosaryEvent.ToggleInstructions -> copy(instructionsOn = !instructionsOn)
+        // The same chaplet keeps its place; another one starts at its first prayer.
+        is RosaryEvent.PickChaplet ->
+            if (event.id == chapletId) copy(devotion = Devotion.OTHER)
+            else copy(devotion = Devotion.OTHER, chapletId = event.id, chapletStep = 0)
     }
 
     private fun withStep(target: Int, steps: StepMap): RosarySession {
         val clamped = target.coerceIn(0, (steps.stepCount - 1).coerceAtLeast(0))
-        return if (devotion == Devotion.ROSARY) copy(rosaryStep = clamped) else copy(mercyStep = clamped)
+        return when (devotion) {
+            Devotion.ROSARY -> copy(rosaryStep = clamped)
+            Devotion.MERCY -> copy(mercyStep = clamped)
+            Devotion.OTHER -> copy(chapletStep = clamped)
+        }
     }
 
     companion object {
@@ -126,7 +147,9 @@ internal data class RosarySession(
                     (it.mysterySelection as? MysterySelection.Picked)?.type?.name ?: "",
                     it.rosaryStep,
                     it.mercyStep,
-                    it.instructionsOn
+                    it.instructionsOn,
+                    it.chapletId.orEmpty(),
+                    it.chapletStep
                 )
             },
             restore = {
@@ -137,7 +160,10 @@ internal data class RosarySession(
                         ?: MysterySelection.ByDay,
                     rosaryStep = (it[2] as Int).coerceAtLeast(0),
                     mercyStep = (it[3] as Int).coerceAtLeast(0),
-                    instructionsOn = it[4] as Boolean
+                    instructionsOn = it[4] as Boolean,
+                    // Sessions saved before «Otras coronillas» have five values.
+                    chapletId = (it.getOrNull(5) as? String)?.takeIf(String::isNotEmpty),
+                    chapletStep = ((it.getOrNull(6) as? Int) ?: 0).coerceAtLeast(0)
                 )
             }
         )

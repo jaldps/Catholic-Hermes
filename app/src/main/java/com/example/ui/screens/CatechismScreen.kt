@@ -1478,7 +1478,7 @@ private fun ContinueCard(
                     color = p.textSecondary
                 )
                 Spacer(Modifier.height(2.dp))
-                Text(section.title.get(lang), style = styles.headline, color = p.textPrimary)
+                Text(section.title.get(lang), style = styles.headline, color = p.textPrimary, modifier = Modifier.semantics { heading() })
                 Spacer(Modifier.height(2.dp))
                 Text(
                     "§ $number · " + CccStructure.ordinal(part, lang),
@@ -2229,7 +2229,7 @@ private fun ReaderFooter(
                                 color = p.textSecondary
                             )
                             Spacer(Modifier.height(2.dp))
-                            Text(next.title.get(lang), style = styles.headline, color = p.textPrimary)
+                            Text(next.title.get(lang), style = styles.headline, color = p.textPrimary, modifier = Modifier.semantics { heading() })
                             Spacer(Modifier.height(2.dp))
                             Text(
                                 "§§ ${next.firstNumber}–${next.lastNumber}",

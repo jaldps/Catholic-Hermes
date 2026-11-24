@@ -428,8 +428,26 @@ data class HeroMeta(
     val alignment: Alignment get() = BiasAlignment(focusX * 2f - 1f, focusY * 2f - 1f)
 }
 
+/**
+ * Bundled images decode two at a time: a long list (e.g. the 55 chaplets) must not start dozens of
+ * decoders at once on a phone with a small heap.
+ */
+@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
+private val AssetDecoding = Dispatchers.IO.limitedParallelism(2)
+
+/** No bundled hero needs more than this many decoded pixels of width on a phone. */
+internal const val MaxAssetDecodeWidth = 720
+
+/** Powers of two only: the decoded width must never exceed [maxWidthPx]. */
+internal fun assetSampleSize(outWidth: Int, maxWidthPx: Int): Int {
+    if (maxWidthPx <= 0 || outWidth <= 0) return 1
+    var sample = 1
+    while (outWidth / sample > maxWidthPx) sample *= 2
+    return sample
+}
+
 private object HeroCache {
-    private val bitmaps = object : android.util.LruCache<String, ImageBitmap>(48 * 1024 * 1024) {
+    private val bitmaps = object : android.util.LruCache<String, ImageBitmap>(24 * 1024 * 1024) {
         override fun sizeOf(key: String, value: ImageBitmap) = value.width * value.height * 4
     }
     private val manifests = java.util.concurrent.ConcurrentHashMap<String, JSONObject>()
@@ -445,9 +463,7 @@ private object HeroCache {
             val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
             context.assets.open(path).use { BitmapFactory.decodeStream(it, null, bounds) }
             if (bounds.outWidth <= 0) return null
-            var sample = 1
-            while (bounds.outWidth / (sample * 2) >= maxWidthPx) sample *= 2
-            val opts = BitmapFactory.Options().apply { inSampleSize = sample }
+            val opts = BitmapFactory.Options().apply { inSampleSize = assetSampleSize(bounds.outWidth, maxWidthPx) }
             context.assets.open(path).use { BitmapFactory.decodeStream(it, null, opts) }?.asImageBitmap()
         }.getOrNull() ?: return null
         bitmaps.put(key, decoded)
@@ -486,15 +502,16 @@ private object HeroCache {
 @Composable
 fun rememberAssetBitmap(assetPath: String?, maxWidthPx: Int = 1080): ImageBitmap? {
     val context = LocalContext.current
-    val request = assetPath to maxWidthPx
+    val width = maxWidthPx.coerceAtMost(MaxAssetDecodeWidth)
+    val request = assetPath to width
     val state = produceState(
-        initialValue = request to assetPath?.let { HeroCache.peek(it, maxWidthPx) },
-        assetPath, maxWidthPx
+        initialValue = request to assetPath?.let { HeroCache.peek(it, width) },
+        assetPath, width
     ) {
-        val cached = assetPath?.let { HeroCache.peek(it, maxWidthPx) }
+        val cached = assetPath?.let { HeroCache.peek(it, width) }
         value = request to cached
         if (assetPath != null && cached == null) {
-            val decoded = withContext(Dispatchers.IO) { HeroCache.bitmap(context, assetPath, maxWidthPx) }
+            val decoded = withContext(AssetDecoding) { HeroCache.bitmap(context, assetPath, width) }
             value = request to decoded
         }
     }

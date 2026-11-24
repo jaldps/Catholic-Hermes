@@ -154,6 +154,8 @@ fun HomeScreen(
     onNavigateToAngelus: () -> Unit = onNavigateToPrayers,
     onNavigateToMorningPrayers: () -> Unit = {},
     onNavigateToChaplet: () -> Unit = {},
+    /** Resumes the chaplet of «Otras coronillas» that was in progress. */
+    onNavigateToOtherChaplet: () -> Unit = {},
     onNavigateToNightPrayers: () -> Unit = {},
     onNavigateToDoctrine: () -> Unit,
     onNavigateToSpiritualLife: () -> Unit,
@@ -683,7 +685,7 @@ fun HomeScreen(
 
         item(key = "today_invitation") {
             AppCard(Modifier.padding(horizontal = gutter).testTag("today_next_action")) {
-                Text(strings("Un momento con Dios", "A moment with God", "Um momento com Deus"), style = styles.title2, color = palette.textPrimary)
+                Text(strings("Un momento con Dios", "A moment with God", "Um momento com Deus"), style = styles.title2, color = palette.textPrimary, modifier = Modifier.semantics { heading() })
                 Spacer(Modifier.height(6.dp))
                 Text(strings("${journey.minutes} min · Un paso sencillo, a tu ritmo", "${journey.minutes} min · One simple step, at your pace", "${journey.minutes} min · Um passo simples, no seu ritmo"), style = styles.callout, color = palette.textSecondary)
                 Spacer(Modifier.height(16.dp))
@@ -702,7 +704,7 @@ fun HomeScreen(
             val session = remember(now) { RosarySessionStore.load(context) }
             if (session != null && (session.rosaryStep > 0 || session.mercyStep > 0)) {
                 AppListGroup {
-                    AppListRow(strings("Continuar mi oración", "Continue my prayer", "Continuar minha oração"), strings("Tu lugar en el Rosario o la Coronilla está guardado", "Your place in the Rosary or Chaplet is saved", "Seu lugar no Terço ou na Coroa está salvo"), onClick = if (session.devotion == Devotion.MERCY) onNavigateToChaplet else onNavigateToRosary, modifier = Modifier.testTag("today_continue_prayer"))
+                    AppListRow(strings("Continuar mi oración", "Continue my prayer", "Continuar minha oração"), strings("Tu lugar en el Rosario o la Coronilla está guardado", "Your place in the Rosary or Chaplet is saved", "Seu lugar no Terço ou na Coroa está salvo"), onClick = when (session.devotion) { Devotion.MERCY -> onNavigateToChaplet; Devotion.OTHER -> onNavigateToOtherChaplet; else -> onNavigateToRosary }, modifier = Modifier.testTag("today_continue_prayer"))
                 }
                 Spacer(Modifier.height(ClusterGap))
             }
@@ -739,8 +741,9 @@ fun HomeScreen(
                     .testTag("saint_of_the_day_card")
             ) {
                 Column {
-                    Box(Modifier.fillMaxWidth().height(150.dp)) {
-                        AppHeroImage(saintAsset, Modifier.fillMaxSize(), fadeStart = 0.15f, topVeil = false, maxWidthPx = 900)
+                    // Minimum height, not fixed: at 130 % a two-line title plus the meta line must not be clipped.
+                    Box(Modifier.fillMaxWidth().heightIn(min = 150.dp)) {
+                        AppHeroImage(saintAsset, Modifier.matchParentSize(), fadeStart = 0.15f, topVeil = false, maxWidthPx = 900)
                         // Architecture is a generic sacred setting, never a portrait of this saint.
                         Column(Modifier.align(Alignment.BottomStart).padding(horizontal = 20.dp, vertical = 4.dp)) {
                             Text(

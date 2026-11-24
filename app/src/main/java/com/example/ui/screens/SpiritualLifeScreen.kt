@@ -87,6 +87,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.selected
@@ -659,7 +660,7 @@ private fun JournalEmptyCard(language: AppLanguage, onCompose: (String?, String?
             Column(Modifier.padding(horizontal = design.spacing.cardPadding)) {
                 Icon(Icons.Outlined.EditNote, null, tint = p.textPrimary, modifier = Modifier.size(26.dp))
                 Spacer(Modifier.height(14.dp))
-                Text(language.pick("Tu diario está vacío", "Your journal is empty", "Seu diário está vazio"), style = styles.headline, color = p.textPrimary)
+                Text(language.pick("Tu diario está vacío", "Your journal is empty", "Seu diário está vazio"), style = styles.headline, color = p.textPrimary, modifier = Modifier.semantics { heading() })
                 Spacer(Modifier.height(4.dp))
                 Text(
                     language.pick(
@@ -830,6 +831,7 @@ private fun JournalComposer(
                 .fillMaxSize()
                 .background(Color.Black.copy(alpha = if (design.isDark) 0.5f else 0.28f))
                 .clickable(remember { MutableInteractionSource() }, null) { onDismiss() }
+                .clearAndSetSemantics {}
         )
         Box(Modifier.fillMaxSize().statusBarsPadding().imePadding(), contentAlignment = Alignment.BottomCenter) {
             Column(

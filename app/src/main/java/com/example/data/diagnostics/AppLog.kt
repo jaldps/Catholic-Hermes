@@ -24,6 +24,7 @@ enum class LogEvent(val tag: String, val description: String) {
     PRAYER_CATALOG("Assets", "Prayer catalog could not be read"),
     QUESTION_CATALOG("Assets", "Question catalog could not be read"),
     SAINT_CATALOG("Assets", "Saint catalog could not be read"),
+    CHAPLET_CATALOG("Assets", "Chaplet catalog could not be read"),
     ORDER_CATALOG("Assets", "Order catalog could not be read"),
     DEVOTION_CATALOG("Assets", "Devotion catalog could not be read"),
     CONFESSION_CATALOG("Assets", "Confession catalog could not be read"),
@@ -57,7 +58,8 @@ enum class LogEvent(val tag: String, val description: String) {
     TTS_LANGUAGE("Audio", "Narration language could not be applied"),
     TTS_ENGINE("Audio", "Speech engine initialization failed"),
     TTS_PLAYBACK("Audio", "Speech engine refused or failed an utterance"),
-    REPORT_SHARE("Diagnostics", "Error report could not be shared")
+    REPORT_SHARE("Diagnostics", "Error report could not be shared"),
+    CRASH("Crash", "The app closed because of an unexpected error")
 }
 
 enum class LogLevel { WARN, ERROR }
@@ -68,12 +70,15 @@ internal object SafeLogFormat {
     private fun symbol(value:String)=value.takeIf(identifier::matches) ?: "redacted"
 
     /** Never uses message, localizedMessage, toString, cause or suppressed exceptions. */
-    fun render(event:LogEvent, error:Throwable?, time:Instant, level:LogLevel):String = buildString {
+    fun render(event:LogEvent, error:Throwable?, time:Instant, level:LogLevel, frames:Int=4):String = buildString {
         val prefix="$time ${level.name} [${event.tag}] "
         append(prefix).append(event.description)
         error?.let {append("; ").append(symbol(it.javaClass.name))}
         append('\n')
-        error?.stackTrace?.take(4)?.forEach { frame ->
+        // A crash also names its causes (class names only) so the failing line can be found.
+        if(frames>4) generateSequence(error?.cause) {it.cause}.take(4).forEach {append(prefix).append("caused by ").append(symbol(it.javaClass.name)).append('\n')}
+        val trace=if(frames>4) (generateSequence(error) {it.cause}.lastOrNull() ?: error)?.stackTrace else error?.stackTrace
+        trace?.take(frames)?.forEach { frame ->
             val file=frame.fileName?.takeIf(source::matches) ?: "source"
             append(prefix).append("at ").append(symbol(frame.className)).append('.')
                 .append(symbol(frame.methodName)).append('(').append(file).append(':')
@@ -125,6 +130,7 @@ object AppLog {
             val dir=File(context.applicationContext.filesDir,"diagnostics")
             if(directory!=dir) {directory=dir;destination=RollingAppLog(dir)}
         } catch(_:Exception) {destination=null;directory=null}
+        installCrashRecorder()
     }
 
     /** Best effort, off the caller thread; a failed log must never change the operation's behavior. */
@@ -135,6 +141,23 @@ object AppLog {
             val entry=SafeLogFormat.render(event,error,Instant.now(),level)
             worker.execute {try {log.append(entry)} catch(_:Exception) { /* No recursion or logcat payloads. */ }}
         } catch(_:Exception) { /* Queue full or diagnostic unavailable: leave app behavior unchanged. */ }
+    }
+
+    /**
+     * Records an uncaught crash synchronously (the process is about to die), then lets the system handler
+     * close the app as before. Class and method names only: no messages, like every other entry.
+     */
+    @Synchronized fun installCrashRecorder() {
+        val previous=Thread.getDefaultUncaughtExceptionHandler()
+        if(previous is CrashRecorder)return
+        Thread.setDefaultUncaughtExceptionHandler(CrashRecorder(previous))
+    }
+
+    private class CrashRecorder(private val next:Thread.UncaughtExceptionHandler?):Thread.UncaughtExceptionHandler {
+        override fun uncaughtException(thread:Thread, error:Throwable) {
+            try {destination?.append(SafeLogFormat.render(LogEvent.CRASH,error,Instant.now(),LogLevel.ERROR,frames=40))} catch(_:Throwable) {}
+            next?.uncaughtException(thread,error)
+        }
     }
 
     /** Queued behind earlier events so the shared snapshot contains all accepted writes. */
