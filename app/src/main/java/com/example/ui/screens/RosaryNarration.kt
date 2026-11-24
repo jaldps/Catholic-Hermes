@@ -34,7 +34,9 @@ internal data class NarrationTarget(
     val mysterySet: RosaryMysteryType?,
     val step: Int,
     val lang: AppLanguage,
-    val voice: RecitationVoiceMode
+    val voice: RecitationVoiceMode,
+    /** Which chaplet of the catalogue, for [Devotion.OTHER]. */
+    val chapletId: String? = null
 )
 
 internal sealed interface NarrationState {
