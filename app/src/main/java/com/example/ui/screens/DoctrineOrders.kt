@@ -23,6 +23,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import com.example.ui.design.AppSearchField
 import androidx.compose.material3.Text
 import com.example.data.models.AppLanguage
 import com.example.data.models.LocalizedText
@@ -43,20 +46,31 @@ internal fun OrdersRoot(
     repository: CatholicDataRepository,
     language: AppLanguage,
     nav: DoctrineNav,
-    spec: RootSpec
+    spec: RootSpec,
+    searchQuery: String? = null,
+    segmentIndex: Int? = null,
+    headerItem: (@Composable () -> Unit)? = null,
+    onSelect: ((String) -> Unit)? = null
 ) {
     val state = rememberLazyListState()
-    var segment by rememberSaveable { mutableStateOf(0) }
+    var localSegment by rememberSaveable { mutableStateOf(0) }
+    val segment = segmentIndex ?: localSegment
     val orders = repository.religiousOrders
     val offices = repository.churchOffices
     val officeOrder = remember(offices) { officeDisplayOrder(offices.map { it.id }, offices.map { it.group }) }
+    val folded = remember(searchQuery) { searchQuery?.trim().orEmpty().lowercase() }
+    val shownOrders = remember(folded, orders, language) {
+        if (folded.isEmpty()) orders else orders.filter {
+            folded in it.name.get(language).lowercase() || folded in it.abbreviation.orEmpty().lowercase()
+        }
+    }
 
     LazyColumn(
         state = state,
         modifier = Modifier.fillMaxSize().testTag("orders_list"),
         contentPadding = PaddingValues(bottom = LocalBottomPad.current)
     ) {
-        item(key = "hero", contentType = "hero") { RootHeader(spec) }
+        item(key = "hero", contentType = "hero") { if (headerItem != null) headerItem() else RootHeader(spec) }
         item(key = "segments") {
             Spacer(Modifier.height(4.dp))
             AppSegmentedTabs(
@@ -65,7 +79,7 @@ internal fun OrdersRoot(
                     language.tr("Oficios", "Offices", "Ofícios")
                 ),
                 selectedIndex = segment,
-                onSelect = { segment = it },
+                onSelect = { if (segmentIndex == null) localSegment = it },
                 modifier = Modifier.testTag("orders_offices_tabs")
             )
             Spacer(Modifier.height(20.dp))
@@ -80,14 +94,14 @@ internal fun OrdersRoot(
                     )
                 }
             } else {
-                itemsIndexed(orders, key = { _, o -> "o_${o.id}" }, contentType = { _, _ -> "order" }) { i, order ->
+                itemsIndexed(shownOrders, key = { _, o -> "o_${o.id}" }, contentType = { _, _ -> "order" }) { i, order ->
                     LeadRow(
                         title = order.name.get(language),
                         subtitle = orderMeta(order.abbreviation, order.foundationYear),
                         leading = { EmblemPlate(order.id, 44.dp, abbreviation = order.abbreviation) },
                         leadingWidth = 44.dp,
                         position = groupPosition(i, orders.size),
-                        onClick = { nav.open("order:$i") },
+                        onClick = { val key = "order:$i"; nav.open(key); onSelect?.invoke(key) },
                         tag = "order_${order.id}",
                         selected = LocalOpenEntry.current == "order:$i"
                     )
@@ -103,7 +117,11 @@ internal fun OrdersRoot(
                 }
             } else {
                 OfficeGroup.entries.forEach { group ->
-                    val members = officeOrder.filter { officeGroup(offices[it].id, offices[it].group) == group }
+                    val members = officeOrder.filter {
+                        val office = offices[it]
+                        officeGroup(office.id, office.group) == group &&
+                            (folded.isEmpty() || folded in office.name.get(language).lowercase())
+                    }
                     if (members.isNotEmpty()) {
                         item(key = "og_${group.name}", contentType = "header") {
                             SectionHeader(officeGroupTitle(group, language), topGap = 8.dp)
@@ -113,7 +131,7 @@ internal fun OrdersRoot(
                             LeadRow(
                                 title = office.name.get(language),
                                 position = groupPosition(i, members.size),
-                                onClick = { nav.open("office:$m") },
+                                onClick = { val key = "office:$m"; nav.open(key); onSelect?.invoke(key) },
                                 tag = "office_${office.id}",
                                 selected = LocalOpenEntry.current == "office:$m"
                             )

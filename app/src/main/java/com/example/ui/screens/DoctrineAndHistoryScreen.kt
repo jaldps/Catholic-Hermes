@@ -8,6 +8,7 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
@@ -27,11 +28,17 @@ import com.example.data.news.NewsResult
 import com.example.data.news.VaticanNewsFetcher
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppBackHandler
+import com.example.ui.design.AppChip
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppInlineTitle
+import com.example.ui.design.AppSearchField
+import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.design.AppSheet
 import com.example.ui.design.AppTwoPane
+import com.example.ui.design.appIsLandscapePhone
 import com.example.ui.design.appIsTwoPane
+import com.example.ui.design.rememberAppListDetailState
 
 private val defaultNewsLoader: suspend (AppLanguage) -> NewsResult =
     { VaticanNewsFetcher().latest(it, limit = 25) }
@@ -153,7 +160,7 @@ fun DoctrineAndHistoryScreen(
     // to its caller. Entries opened from inside that reader still pop first.
     // On a two-pane window the first entry is the selection beside the list, not a page
     // over it: back only unwinds what was opened from inside that page.
-    val twoPane = appIsTwoPane() && initialTopTab in TWO_PANE_TABS
+    val twoPane = (appIsLandscapePhone() || appIsTwoPane()) && initialTopTab in TWO_PANE_TABS
     AppBackHandler(enabled = if (twoPane) entries.size > 1 else entries.isNotEmpty() && (initialEntry == null || entries.size > 1)) {
         stack = stack.split('|').filter { it.isNotEmpty() }.dropLast(1).joinToString("|")
     }
@@ -188,8 +195,93 @@ fun DoctrineAndHistoryScreen(
         Box(modifier.fillMaxSize().testTag("doctrine_and_history_screen")) {
             if (twoPane) {
                 val shown = top ?: defaultEntry
+                var ordersQuery by rememberSaveable(key = "orders_query") { mutableStateOf("") }
+                var ordersSegment by rememberSaveable(key = "orders_segment") { mutableStateOf(0) }
+                var ordersFiltersOpen by rememberSaveable(key = "orders_filters_open") { mutableStateOf(false) }
+                val orderKeys = remember(repository) {
+                    (0 until repository.religiousOrders.size).map { "order:$it" } +
+                        (0 until repository.churchOffices.size).map { "office:$it" }
+                }
+                val orderState = rememberAppListDetailState(
+                    orderKeys,
+                    initialKey = top?.takeIf { it in orderKeys } ?: defaultEntry,
+                    key = "orders_list_detail"
+                )
+                LaunchedEffect(orderState.selectedKey, orderState.explicit) {
+                    if (initialTopTab == 4 && orderState.explicit) stack = orderState.selectedKey.orEmpty()
+                }
+                LaunchedEffect(top) {
+                    if (initialTopTab == 4 && top != null && top in orderKeys && top != orderState.selectedKey) orderState.select(top)
+                }
                 CompositionLocalProvider(LocalOpenEntry provides shown) {
-                    AppTwoPane(
+                    if (initialTopTab == 4) {
+                        AppTwoPane(
+                            state = orderState,
+                            listHeader = { RootHeader(spec) },
+                            search = {
+                                AppSearchField(
+                                    value = ordersQuery,
+                                    onValueChange = { ordersQuery = it },
+                                    placeholder = currentLanguage.tr("Buscar una orden", "Search orders", "Buscar uma ordem"),
+                                    modifier = Modifier.fillMaxWidth().testTag("orders_search")
+                                )
+                            },
+                            onOpenFilters = { ordersFiltersOpen = true },
+                            filterLabel = currentLanguage.tr("Filtros", "Filters", "Filtros"),
+                            activeFilters = {
+                                if (ordersSegment != 0) AppChip(
+                                    label = currentLanguage.tr("Oficios", "Offices", "Ofícios"),
+                                    selected = true,
+                                    onClick = { ordersSegment = 0 },
+                                    modifier = Modifier.testTag("orders_segment_chip")
+                                )
+                            },
+                            list = { headerItem ->
+                                saveable.SaveableStateProvider(key = "two_pane_list") {
+                                    OrdersRoot(
+                                        repository, currentLanguage, listNav, spec,
+                                        searchQuery = ordersQuery,
+                                        segmentIndex = ordersSegment,
+                                        headerItem = headerItem,
+                                        onSelect = { orderState.select(it) }
+                                    )
+                                }
+                            },
+                            detail = {
+                                AnimatedContent(
+                                    targetState = stack,
+                                    transitionSpec = { fadeIn(tween(200)) togetherWith fadeOut(tween(120)) },
+                                    label = "doctrineDetailPane"
+                                ) { s ->
+                                    saveable.SaveableStateProvider(key = "two_pane_detail:$s") {
+                                        val entry = s.substringAfterLast('|').takeIf { it.isNotEmpty() } ?: defaultEntry
+                                        if (entry != null) {
+                                            EntryPage(entry, repository, currentLanguage, nav) {
+                                                stack = stack.split('|').filter { e -> e.isNotEmpty() }.dropLast(1).joinToString("|")
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        )
+                        if (ordersFiltersOpen) {
+                            AppSheet(
+                                onDismiss = { ordersFiltersOpen = false },
+                                title = currentLanguage.tr("Filtros", "Filters", "Filtros"),
+                                tag = "orders_filter_sheet"
+                            ) {
+                                AppSegmentedTabs(
+                                    options = listOf(
+                                        currentLanguage.tr("Órdenes", "Orders", "Ordens"),
+                                        currentLanguage.tr("Oficios", "Offices", "Ofícios")
+                                    ),
+                                    selectedIndex = ordersSegment,
+                                    onSelect = { ordersSegment = it },
+                                    modifier = Modifier.testTag("orders_offices_tabs")
+                                )
+                            }
+                        }
+                    } else AppTwoPane(
                         list = {
                             saveable.SaveableStateProvider(key = "two_pane_list") {
                                 if (initialTopTab == 1) DevotionsExplorerScreen(repository, currentLanguage, listNav, spec)
