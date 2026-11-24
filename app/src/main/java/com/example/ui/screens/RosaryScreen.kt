@@ -2829,9 +2829,9 @@ private fun MysteriesSheet(
 }
 
 @Composable
-internal fun ArtThumb(path: String, modifier: Modifier) {
+internal fun ArtThumb(path: String, modifier: Modifier, maxWidthPx: Int = 240) {
     val p = LocalAppDesign.current.palette
-    val bitmap = rememberAssetBitmap(path, 240)
+    val bitmap = rememberAssetBitmap(path, maxWidthPx)
     val meta = rememberHeroMeta(path)
     Box(modifier.clip(RoundedCornerShape(12.dp)).background(p.glass)) {
         if (bitmap != null) {

@@ -133,7 +133,7 @@ private fun ChapletRow(chaplet: Chaplet, lang: AppLanguage, selected: Boolean, t
             .padding(horizontal = 14.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        ArtThumb(chaplet.imagePath, Modifier.size(48.dp))
+        ArtThumb(chaplet.imagePath, Modifier.size(48.dp), maxWidthPx = 144)
         Spacer(Modifier.width(12.dp))
         Column(Modifier.weight(1f)) {
             Text(chaplet.title.get(lang), style = styles.body, color = p.textPrimary, maxLines = 2)

@@ -428,6 +428,13 @@ data class HeroMeta(
     val alignment: Alignment get() = BiasAlignment(focusX * 2f - 1f, focusY * 2f - 1f)
 }
 
+/**
+ * Bundled images decode two at a time: a long list (e.g. the 55 chaplets) must not start dozens of
+ * decoders at once on a phone with a small heap.
+ */
+@OptIn(kotlinx.coroutines.ExperimentalCoroutinesApi::class)
+private val AssetDecoding = Dispatchers.IO.limitedParallelism(2)
+
 private object HeroCache {
     private val bitmaps = object : android.util.LruCache<String, ImageBitmap>(48 * 1024 * 1024) {
         override fun sizeOf(key: String, value: ImageBitmap) = value.width * value.height * 4
@@ -494,7 +501,7 @@ fun rememberAssetBitmap(assetPath: String?, maxWidthPx: Int = 1080): ImageBitmap
         val cached = assetPath?.let { HeroCache.peek(it, maxWidthPx) }
         value = request to cached
         if (assetPath != null && cached == null) {
-            val decoded = withContext(Dispatchers.IO) { HeroCache.bitmap(context, assetPath, maxWidthPx) }
+            val decoded = withContext(AssetDecoding) { HeroCache.bitmap(context, assetPath, maxWidthPx) }
             value = request to decoded
         }
     }
