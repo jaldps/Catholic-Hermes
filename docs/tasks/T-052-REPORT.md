@@ -2,7 +2,7 @@
 
 - **Rama:** `ext/T-052`, desde `origin/CatholicGPT` en `cdd0458` (apertura de T-052).
 - Rama: `ext/T-052`, desde `origin/CatholicGPT` en `cdd0458`; luego fusionada con `origin/CatholicGPT` @ `c8e5a97` (1.9.0, con T-062 integrado). Conflicto en `SaintsScreen.kt` resuelto conservando el `AppTwoPane` de T-052 y aplicando el `appDockInset()` de T-062 en la lista.
-- Entrega parcial: pantallas 1 y 2 de 7.
+- **Entrega completa: 7 de 7 pantallas.**
 
 ## 1. Santos — `SaintsScreen.kt`
 
@@ -132,8 +132,28 @@
 | 8 | Tests de área | 9/10 | `PlansLandscapeL5Test` 2/2. |
 | 9 | Identidades y estados | 8/10 | Theming y `AppEmptyState` heredados. |
 
+## 7. Búsqueda — `SearchScreen.kt`
+
+- En horizontal no hay segundo panel: barra adhesiva de 56 dp con `search_field`, fila de chips `search_section_chips` que se oculta con el teclado, y resultados en rejilla de 2 columnas (`LazyVerticalGrid`) con cabeceras a ancho completo. Con teclado, lista plana con la sección como prefijo de la línea secundaria y `search_group_*` conservados.
+- La consulta y los grupos expandidos siguen en `rememberSaveable`; las etiquetas `search_screen`, `search_field`, `search_group_*`, `search_result_*` se conservan.
+
+### Autoevaluación (rúbrica §11, 9 criterios)
+
+| # | Criterio | Nota | Evidencia |
+|---|---|---|---|
+| 1 | Barra y filas visibles | 8/10 | `list_sticky_bar` y `search_field` en test 891×411; rejilla verificada en código. |
+| 2 | Teclado | 8/10 | `WindowInsets.ime` alterna chips/rejilla por lista plana. |
+| 3 | Medida de lectura | No aplica | Resultados cortos, no lectura larga. |
+| 4 | Selección sin apilar y atrás | 9/10 | Sin `two_pane`; `onOpen` sigue abriendo la ficha. |
+| 5 | Giro | 8/10 | Consulta y expandidos sobreviven al giro. |
+| 6 | Cero `SMALL_TARGET` | 9/10 | Wrappers L0. |
+| 7 | Texto no elidido | 8/10 | Fila de 68 dp con dos líneas. |
+| 8 | Tests de área | 9/10 | `SearchLandscapeL5Test` 1/1. |
+| 9 | Identidades y estados | 8/10 | Theming y `search_empty` heredados. |
+
 ## Tests
 
+- `SearchLandscapeL5Test` (nuevo): **1/1 test, 0 fallos** en 2m07s.
 - `PlansLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m10s.
 - `CatechismLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m29s.
 - `QuestionsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m15s.
@@ -152,6 +172,8 @@
 - Ninguna detectada por ahora; la verificación numérica de §8.3 y §8.4 queda para las capturas con insets.
 
 ## Decisiones
+
+- Las siete pantallas se entregan con tests ligeros propios; las suites NATIVE costosas (`SaintsScreenTest`, `OrdersScreenTest`, `Devotion*`, `QuestionDeeperUiTest`, `CatechismInteractionTest`, `ReadingPlansUiTest`, `SearchUiTest`, `TabletLayoutTest`) y las capturas `LandscapeListsScreenshotTest` quedan para la revisión completa con el coordinador.
 
 - Los filtros ya no aparecen dentro de la lista en horizontal: el diseño L5 los mueve a la hoja lateral, pero se conservan sus etiquetas para no romper los tests ni la accesibilidad.
 - No se han tocado `ui/design/*` ni otras pantallas.
