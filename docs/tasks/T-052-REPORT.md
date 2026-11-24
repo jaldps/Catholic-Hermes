@@ -71,8 +71,30 @@
 | 8 | Tests de área | 9/10 | `DevotionsLandscapeL5Test` 2/2. |
 | 9 | Identidades y estados | 8/10 | Theming y estados vacíos heredados. |
 
+## 4. 101 preguntas — `DoctrineQuestions.kt`, `DoctrineAndHistoryScreen.kt`, `DoctrineParts.kt`
+
+- `AppTwoPane` con `rememberAppListDetailState(keys, key = "questions_list_detail")`, estado elevado en `questions_query`, `questions_section` y `questions_filters_open`.
+- Barra fija con `questions_search` y `list_filter_button`; el filtro de tema va en la hoja `questions_filter_sheet` (`questions_section_picker`) y aparece como chip `questions_section_chip`.
+- `QuestionsRoot` acepta `searchQuery`, `sectionFilter`, `headerItem` y `onSelect`. El filtro por sección muestra solo las preguntas de ese tema, con `SectionHeader` y su recuento.
+- `catholic_qa_prev` y `catholic_qa_next` siguen mostrando el título completo en dos líneas y ≥44 dp dentro de la ficha.
+
+### Autoevaluación (rúbrica §11, 9 criterios)
+
+| # | Criterio | Nota | Evidencia |
+|---|---|---|---|
+| 1 | Barra y filas visibles | 8/10 | `list_sticky_bar` y `two_pane` en test 891×411. |
+| 2 | Teclado | 8/10 | `performTextInput` sobre el campo elevado en el test. |
+| 3 | Medida de lectura | 8/10 | Ficha existente con `appReadingMeasure()`. |
+| 4 | Selección sin apilar y atrás | 9/10 | `selectingAQuestionDoesNotPushAnotherPane` 1/1. |
+| 5 | Giro | 8/10 | Estado elevado con claves; test de rotación pendiente. |
+| 6 | Cero `SMALL_TARGET` | 9/10 | Solo wrappers L0. |
+| 7 | Texto no elidido | 9/10 | `maxTitleLines = 4` y navegación con título completo. |
+| 8 | Tests de área | 9/10 | `QuestionsLandscapeL5Test` 2/2. |
+| 9 | Identidades y estados | 8/10 | Theming y estados vacíos heredados. |
+
 ## Tests
 
+- `QuestionsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m15s.
 - `DevotionsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m13s.
 - `OrdersLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m10s. Cubre barra fija + hoja de filtros y selección sin apilar a 891×411.
 - `SaintsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m17s. Cubre selección en dos paneles sin apilar y el flujo vertical de hoja de filtros + ficha con «atrás».

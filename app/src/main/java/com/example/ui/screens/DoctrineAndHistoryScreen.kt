@@ -47,7 +47,7 @@ private val defaultNewsLoader: suspend (AppLanguage) -> NewsResult =
     { VaticanNewsFetcher().latest(it, limit = 25) }
 
 /** The list tabs that show their list and the chosen entry side by side on a wide window: Mary & Jesus (devotions) and Orders. */
-private val TWO_PANE_TABS = setOf(1, 4)
+private val TWO_PANE_TABS = setOf(1, 3, 4)
 
 /** What a destination's list page is called and pictured as. */
 internal data class RootSpec(val asset: String, val title: String, val eyebrow: String)
@@ -389,6 +389,89 @@ fun DoctrineAndHistoryScreen(
                                     selectedIndex = regionKeys.indexOf(devotionsRegion).coerceAtLeast(0),
                                     onSelect = { devotionsRegion = regionKeys[it] },
                                     tag = "devotions_region_picker"
+                                )
+                            }
+                        }
+                    } else if (initialTopTab == 3) {
+                        var questionsQuery by rememberSaveable(key = "questions_query") { mutableStateOf("") }
+                        var questionsSection by rememberSaveable(key = "questions_section") { mutableStateOf("") }
+                        var questionsFiltersOpen by rememberSaveable(key = "questions_filters_open") { mutableStateOf(false) }
+                        val questionKeys = remember(repository) { (0 until repository.catholicQuestions.size).map { "qa:$it" } }
+                        val questionState = rememberAppListDetailState(
+                            questionKeys,
+                            initialKey = top?.takeIf { it in questionKeys } ?: defaultEntry,
+                            key = "questions_list_detail"
+                        )
+                        LaunchedEffect(questionState.selectedKey, questionState.explicit) {
+                            if (questionState.explicit) stack = questionState.selectedKey.orEmpty()
+                        }
+                        LaunchedEffect(top) {
+                            if (top != null && top in questionKeys && top != questionState.selectedKey) questionState.select(top)
+                        }
+                        val sections = remember(repository, currentLanguage) {
+                            repository.catholicQuestions.map { it.section.get(currentLanguage) }.distinct()
+                        }
+                        AppTwoPane(
+                            state = questionState,
+                            listHeader = { RootHeader(spec) },
+                            search = {
+                                AppSearchField(
+                                    value = questionsQuery,
+                                    onValueChange = { questionsQuery = it },
+                                    placeholder = currentLanguage.tr("Buscar entre las 101 preguntas", "Search the 101 questions", "Buscar nas 101 perguntas"),
+                                    modifier = Modifier.fillMaxWidth().testTag("questions_search")
+                                )
+                            },
+                            onOpenFilters = { questionsFiltersOpen = true },
+                            filterLabel = currentLanguage.tr("Filtros", "Filters", "Filtros"),
+                            activeFilters = {
+                                if (questionsSection.isNotEmpty()) AppChip(
+                                    label = questionsSection,
+                                    selected = true,
+                                    onClick = { questionsSection = "" },
+                                    modifier = Modifier.testTag("questions_section_chip")
+                                )
+                            },
+                            list = { headerItem ->
+                                saveable.SaveableStateProvider(key = "two_pane_list") {
+                                    QuestionsRoot(
+                                        repository, currentLanguage, listNav, spec,
+                                        searchQuery = questionsQuery,
+                                        sectionFilter = questionsSection.ifEmpty { null },
+                                        headerItem = headerItem,
+                                        onSelect = { questionState.select(it) }
+                                    )
+                                }
+                            },
+                            detail = {
+                                AnimatedContent(
+                                    targetState = stack,
+                                    transitionSpec = { fadeIn(tween(200)) togetherWith fadeOut(tween(120)) },
+                                    label = "doctrineDetailPane"
+                                ) { s ->
+                                    saveable.SaveableStateProvider(key = "two_pane_detail:$s") {
+                                        val entry = s.substringAfterLast('|').takeIf { it.isNotEmpty() } ?: defaultEntry
+                                        if (entry != null) {
+                                            EntryPage(entry, repository, currentLanguage, nav) {
+                                                stack = stack.split('|').filter { e -> e.isNotEmpty() }.dropLast(1).joinToString("|")
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        )
+                        if (questionsFiltersOpen) {
+                            AppSheet(
+                                onDismiss = { questionsFiltersOpen = false },
+                                title = currentLanguage.tr("Filtros", "Filters", "Filtros"),
+                                tag = "questions_filter_sheet"
+                            ) {
+                                AppFilterMenu(
+                                    prefix = currentLanguage.tr("Tema", "Topic", "Tema"),
+                                    options = listOf(currentLanguage.tr("Todos", "All", "Todos")) + sections,
+                                    selectedIndex = sections.indexOf(questionsSection) + 1,
+                                    onSelect = { questionsSection = if (it == 0) "" else sections[it - 1] },
+                                    tag = "questions_section_picker"
                                 )
                             }
                         }
