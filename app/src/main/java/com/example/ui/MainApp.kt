@@ -819,6 +819,8 @@ fun MainApp(
                         initialNightOfficeTab = prayersInitialNightTab,
                         onOpenRosary = { openRosary(0) },
                         onOpenGuidedChaplet = { openRosary(1) },
+                        onOpenOtherChaplets = { openRosary(2) },
+                        onOpenChapletById = { id -> com.example.ui.screens.ChapletLaunch.request(id); openRosary(2) },
                         initialOpenChaplet = prayersInitialOpenChaplet,
                         onExitContext = if (stack.lastOrNull() == AppDestination.SEARCH || stack.lastOrNull() == AppDestination.MY_PATH) ({ pop() }) else null
                     )
