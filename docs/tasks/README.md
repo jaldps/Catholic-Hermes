@@ -91,8 +91,8 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | T-049 | Codex | EN COLA (tras T-048) | L2 · Lectores en horizontal (§5) |
 | T-050 | Codex | EN COLA (tras T-049) | L3 · Hoy en horizontal (§6) |
 | T-051 | Codex | EN COLA (tras T-050) | L4 · Centros Orar y Leer en horizontal (§7) |
-| [T-052](T-052.md) | Hermes | ABIERTO (sigue desde 1/7) | L5 · Listas con ficha en horizontal (§8) |
-| T-053 | Hermes | EN COLA (tras T-052) | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
+| [T-052](T-052.md) | Hermes | ENTREGADO 7/7 (en revisión) | L5 · Listas con ficha en horizontal (§8) |
+| [T-053](T-053.md) | Hermes | ABIERTO | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
 | T-054 | Codex | EN COLA (al final) | L7 · Hojas, diálogos, bienvenida y ajustes en horizontal (§10) |
 | [T-055](T-055.md) | Hermes | CERRADO ([informe](T-055-REPORT.md), [revisión](T-055-REVIEW.md)) | Estados vacíos y de error que faltan, en vertical (preparación de §16 del diseño horizontal) |
 | [T-056](T-056.md) | Hermes | CERRADO ([informe](T-056-REPORT.md), [revisión](T-056-REVIEW.md)) | «Otras coronillas» · contenido: 55 coronillas curadas en ES/EN/PT ([especificación](../content/CORONILLAS-SPEC.md)) |
