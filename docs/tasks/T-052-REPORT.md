@@ -153,6 +153,7 @@
 
 ## Tests
 
+- **Pasada final conjunta:** `./gradlew :app:testDebugUnitTest --tests '*LandscapeL5Test' :app:assembleDebug --max-workers=4` → `BUILD SUCCESSFUL in 5m 11s`; **13 tests, 0 fallos** (7 clases). APK `app/build/outputs/apk/debug/app-debug.apk` (113 MB, 2026-11-23 22:32).
 - `SearchLandscapeL5Test` (nuevo): **1/1 test, 0 fallos** en 2m07s.
 - `PlansLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m10s.
 - `CatechismLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m29s.
