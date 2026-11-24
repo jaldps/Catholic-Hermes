@@ -85,12 +85,20 @@ internal fun DevotionsExplorerScreen(
     repository: CatholicDataRepository,
     language: AppLanguage,
     nav: DoctrineNav,
-    spec: RootSpec
+    spec: RootSpec,
+    searchQuery: String? = null,
+    categoryIndex: Int? = null,
+    regionFilter: String? = null,
+    headerItem: (@Composable () -> Unit)? = null,
+    onSelect: ((String) -> Unit)? = null
 ) {
     val state = rememberLazyListState()
-    var category by rememberSaveable { mutableStateOf(0) }
-    var query by rememberSaveable { mutableStateOf("") }
-    var region by rememberSaveable { mutableStateOf(EVERY_REGION) }
+    var localCategory by rememberSaveable { mutableStateOf(0) }
+    var localQuery by rememberSaveable { mutableStateOf("") }
+    var localRegion by rememberSaveable { mutableStateOf(EVERY_REGION) }
+    val category = categoryIndex ?: localCategory
+    val query = searchQuery ?: localQuery
+    val region = regionFilter ?: localRegion
 
     val marian = repository.marianApparitions
     val christ = repository.christManifestations
@@ -143,8 +151,9 @@ internal fun DevotionsExplorerScreen(
         modifier = Modifier.fillMaxSize().testTag("devotions_explorer_screen"),
         contentPadding = PaddingValues(bottom = LocalBottomPad.current)
     ) {
-        item(key = "hero", contentType = "hero") { RootHeader(spec) }
+        item(key = "hero", contentType = "hero") { if (headerItem != null) headerItem() else RootHeader(spec) }
         item(key = "controls") {
+            if (categoryIndex == null && searchQuery == null && regionFilter == null) {
             Spacer(Modifier.height(4.dp))
             AppSegmentedTabs(
                 options = listOf(
@@ -152,13 +161,13 @@ internal fun DevotionsExplorerScreen(
                     language.tr("Cristo", "Christ", "Cristo")
                 ),
                 selectedIndex = category,
-                onSelect = { category = it },
+                onSelect = { localCategory = it },
                 modifier = Modifier.testTag("devotions_category_picker")
             )
             Spacer(Modifier.height(14.dp))
             AppSearchBar(
                 value = query,
-                onValueChange = { query = it },
+                onValueChange = { localQuery = it },
                 placeholder = language.tr("Nombre, país o santuario", "Name, country or shrine", "Nome, país ou santuário"),
                 tag = "devotions_search_input"
             )
@@ -167,9 +176,10 @@ internal fun DevotionsExplorerScreen(
                 prefix = language.tr("Región", "Region", "Região"),
                 options = regionKeys.map { regionLabel(it, language) },
                 selectedIndex = regionIndex,
-                onSelect = { region = regionKeys[it] },
+                onSelect = { localRegion = regionKeys[it] },
                 tag = "devotions_region_picker"
             )
+            }
         }
 
         if (inRegion.isEmpty()) {
@@ -187,7 +197,7 @@ internal fun DevotionsExplorerScreen(
                     )
                     AppSecondaryCapsule(
                         label = language.tr("Quitar filtros", "Clear filters", "Limpar filtros"),
-                        onClick = { query = ""; region = EVERY_REGION },
+                        onClick = { localQuery = ""; localRegion = EVERY_REGION },
                         tag = "devotions_clear_filters"
                     )
                 }
@@ -209,7 +219,7 @@ internal fun DevotionsExplorerScreen(
                         subtitle = m.subtitle,
                         trailingText = m.year,
                         position = groupPosition(i, members.size),
-                        onClick = { nav.open("devotion:${m.id}") },
+                        onClick = { val key = "devotion:${m.id}"; nav.open(key); onSelect?.invoke(key) },
                         tag = "devotion_card_${m.id}",
                         selected = LocalOpenEntry.current == "devotion:${m.id}"
                     )

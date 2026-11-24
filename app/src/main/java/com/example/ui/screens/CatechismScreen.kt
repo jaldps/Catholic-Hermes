@@ -111,6 +111,11 @@ import com.example.data.repository.CatechismCompendiumData
 import com.example.data.repository.CompendiumQA
 import com.example.ui.components.InAppBrowserDialog
 import com.example.ui.design.AppActionBar
+import com.example.ui.design.rememberAppListDetailState
+import com.example.ui.design.appIsTwoPane
+import com.example.ui.design.appIsLandscapePhone
+import com.example.ui.design.AppTwoPane
+import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppActionBarItem
 import com.example.ui.design.AppBackHandler
 import com.example.ui.design.AppChevron
@@ -229,13 +234,109 @@ fun CatechismScreen(
             .nestedScroll(noScroll, dispatcher)
             .testTag("catechism_screen")
     ) {
-        AnimatedContent(
-            targetState = top,
-            transitionSpec = { fadeIn(tween(if (design.reduceMotion) 0 else 250)) togetherWith fadeOut(tween(if (design.reduceMotion) 0 else 180)) },
-            label = "catechismPage"
-        ) { page ->
-            when (page) {
-                CccPage.Index -> CccIndexPage(
+    val pageContent: @Composable (CccPage) -> Unit = { page ->
+        when (page) {
+            CccPage.Index -> CccIndexPage(
+                repository = repository,
+                lang = lang,
+                insets = insets,
+                listState = indexState,
+                query = query,
+                onQueryChange = { query = it },
+                lastRead = lastRead,
+                structure = structure,
+                onOpenReader = { section, focus -> openReader(section, focus) },
+                onOpenPart = { push(CccPage.Part(it)) },
+                onOpenCompendium = { push(CccPage.Compendium) },
+                onOpenFormulas = { push(CccPage.Formulas) },
+                onOpenUrl = { webUrl = it }
+            )
+
+            is CccPage.Part -> CccPartPage(
+                repository = repository,
+                structure = structure,
+                lang = lang,
+                insets = insets,
+                part = page.part,
+                lastRead = lastRead,
+                expanded = expanded,
+                listState = partStates.getOrPut(page.part) { LazyListState() },
+                onToggle = { toggleNode(it) },
+                onOpenNode = { node ->
+                    val outlineHit = repository.catechismOutline
+                        .firstOrNull { it.firstNumber == node.first && it.lastNumber == node.last }
+                    if (outlineHit != null) openReader(outlineHit, null) else openNode(node)
+                },
+                onOpenReader = { section, focus -> openReader(section, focus) }
+            )
+
+            is CccPage.Reader -> {
+                val section = resolveSection(repository, structure, page.section, page.last)
+                CccReaderPage(
+                    repository = repository,
+                    structure = structure,
+                    lang = lang,
+                    insets = insets,
+                    section = section,
+                    focus = page.focus.takeIf { it > 0 },
+                    onOpenSection = { next, focus ->
+                        replaceTop(CccPage.Reader(next.firstNumber, focus ?: -1, next.lastNumber))
+                    },
+                    onOpenPart = { part, path ->
+                        // The index opens with the reader's own place unfolded.
+                        expandedRaw = (expanded + path).joinToString(",")
+                        replaceTop(CccPage.Part(part))
+                    },
+                    onIndex = { backToIndex() }
+                )
+            }
+
+            CccPage.Compendium -> CccCompendiumPage(
+                repository = repository,
+                lang = lang,
+                insets = insets,
+                query = compendiumQuery,
+                onQueryChange = { compendiumQuery = it },
+                partFilter = compendiumPart,
+                onPartFilter = { compendiumPart = it },
+                onOpenAnswer = { push(CccPage.Answer(it)) }
+            )
+
+            is CccPage.Answer -> CccAnswerPage(
+                repository = repository,
+                lang = lang,
+                insets = insets,
+                first = page.first,
+                onOpenAnswer = { replaceTop(CccPage.Answer(it)) },
+                onOpenParagraph = { n ->
+                    repository.catechismSectionFor(n)?.let { openReader(it, n) }
+                }
+            )
+
+            CccPage.Formulas -> CccFormulasPage(
+                repository = repository,
+                lang = lang,
+                insets = insets
+            )
+        }
+    }
+    val twoPaneLists = appIsLandscapePhone() || appIsTwoPane()
+    if (twoPaneLists) {
+        val cccKeys = remember(structure) { structure.all.map { "ccc:${it.id}" } }
+        val paneState = rememberAppListDetailState(cccKeys, initialKey = cccKeys.firstOrNull(), key = "catechism_list_detail")
+        AppTwoPane(
+            state = paneState,
+            search = {
+                AppSearchField(
+                    value = query,
+                    onValueChange = { query = it },
+                    placeholder = lang.tr("Buscar un tema o número", "Search a topic or number", "Buscar um tema ou número"),
+                    modifier = Modifier.fillMaxWidth().testTag("ccc_search")
+                )
+            },
+            filterLabel = lang.tr("Filtros", "Filters", "Filtros"),
+            list = {
+                CccIndexPage(
                     repository = repository,
                     lang = lang,
                     insets = insets,
@@ -244,81 +345,30 @@ fun CatechismScreen(
                     onQueryChange = { query = it },
                     lastRead = lastRead,
                     structure = structure,
-                    onOpenReader = { section, focus -> openReader(section, focus) },
+                    onOpenReader = { section, focus ->
+                        paneState.select("ccc:${section.firstNumber}")
+                        openReader(section, focus)
+                    },
                     onOpenPart = { push(CccPage.Part(it)) },
                     onOpenCompendium = { push(CccPage.Compendium) },
                     onOpenFormulas = { push(CccPage.Formulas) },
-                    onOpenUrl = { webUrl = it }
+                    onOpenUrl = { webUrl = it },
+                    showSearch = false
                 )
-
-                is CccPage.Part -> CccPartPage(
-                    repository = repository,
-                    structure = structure,
-                    lang = lang,
-                    insets = insets,
-                    part = page.part,
-                    lastRead = lastRead,
-                    expanded = expanded,
-                    listState = partStates.getOrPut(page.part) { LazyListState() },
-                    onToggle = { toggleNode(it) },
-                    onOpenNode = { node ->
-                        val outlineHit = repository.catechismOutline
-                            .firstOrNull { it.firstNumber == node.first && it.lastNumber == node.last }
-                        if (outlineHit != null) openReader(outlineHit, null) else openNode(node)
-                    },
-                    onOpenReader = { section, focus -> openReader(section, focus) }
-                )
-
-                is CccPage.Reader -> {
-                    val section = resolveSection(repository, structure, page.section, page.last)
-                    CccReaderPage(
-                        repository = repository,
-                        structure = structure,
-                        lang = lang,
-                        insets = insets,
-                        section = section,
-                        focus = page.focus.takeIf { it > 0 },
-                        onOpenSection = { next, focus ->
-                            replaceTop(CccPage.Reader(next.firstNumber, focus ?: -1, next.lastNumber))
-                        },
-                        onOpenPart = { part, path ->
-                            // The index opens with the reader's own place unfolded.
-                            expandedRaw = (expanded + path).joinToString(",")
-                            replaceTop(CccPage.Part(part))
-                        },
-                        onIndex = { backToIndex() }
-                    )
-                }
-
-                CccPage.Compendium -> CccCompendiumPage(
-                    repository = repository,
-                    lang = lang,
-                    insets = insets,
-                    query = compendiumQuery,
-                    onQueryChange = { compendiumQuery = it },
-                    partFilter = compendiumPart,
-                    onPartFilter = { compendiumPart = it },
-                    onOpenAnswer = { push(CccPage.Answer(it)) }
-                )
-
-                is CccPage.Answer -> CccAnswerPage(
-                    repository = repository,
-                    lang = lang,
-                    insets = insets,
-                    first = page.first,
-                    onOpenAnswer = { replaceTop(CccPage.Answer(it)) },
-                    onOpenParagraph = { n ->
-                        repository.catechismSectionFor(n)?.let { openReader(it, n) }
-                    }
-                )
-
-                CccPage.Formulas -> CccFormulasPage(
-                    repository = repository,
-                    lang = lang,
-                    insets = insets
-                )
+            },
+            detail = {
+                AnimatedContent(
+                    targetState = top,
+                    transitionSpec = { fadeIn(tween(if (design.reduceMotion) 0 else 250)) togetherWith fadeOut(tween(if (design.reduceMotion) 0 else 180)) },
+                    label = "catechismDetailPane"
+                ) { page -> pageContent(page) }
             }
-        }
+        )
+    } else AnimatedContent(
+        targetState = top,
+        transitionSpec = { fadeIn(tween(if (design.reduceMotion) 0 else 250)) togetherWith fadeOut(tween(if (design.reduceMotion) 0 else 180)) },
+        label = "catechismPage"
+    ) { page -> pageContent(page) }
     }
 
     webUrl?.let { url ->
@@ -985,7 +1035,8 @@ private fun CccIndexPage(
     onOpenPart: (Int) -> Unit,
     onOpenCompendium: () -> Unit,
     onOpenFormulas: () -> Unit,
-    onOpenUrl: (String) -> Unit
+    onOpenUrl: (String) -> Unit,
+    showSearch: Boolean = true
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -1040,7 +1091,7 @@ private fun CccIndexPage(
                 modifier = Modifier.testTag("catechism_hero_photo")
             )
         }
-        item(key = "ccc_search_row") {
+        if (showSearch) item(key = "ccc_search_row") {
             Column {
                 Spacer(Modifier.height(20.dp))
                 CatSearchField(

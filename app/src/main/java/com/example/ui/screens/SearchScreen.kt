@@ -3,6 +3,15 @@ package com.example.ui.screens
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.ime
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -31,6 +40,10 @@ import com.example.data.search.SearchResult
 import com.example.data.search.SearchTarget
 import com.example.data.search.SearchType
 import com.example.ui.design.AppBanner
+import com.example.ui.design.appIsLandscapePhone
+import com.example.ui.design.LocalCompactSearch
+import com.example.ui.design.AppSearchField
+import com.example.ui.design.AppChip
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppLargeTitleHeader
@@ -113,6 +126,91 @@ fun SearchScreen(
     }
 
     val gutter = Modifier.padding(horizontal = design.spacing.gutter)
+
+    if (appIsLandscapePhone()) {
+        val density = LocalDensity.current
+        val keyboardOpen = WindowInsets.ime.getBottom(density) > 0
+        var sectionFilter by rememberSaveable { mutableStateOf<String?>(null) }
+        Column(Modifier.fillMaxSize().testTag("search_screen")) {
+            Row(
+                Modifier.fillMaxWidth().padding(horizontal = 12.dp).height(56.dp).testTag("list_sticky_bar"),
+                verticalAlignment = androidx.compose.ui.Alignment.CenterVertically
+            ) {
+                androidx.compose.runtime.CompositionLocalProvider(LocalCompactSearch provides true) {
+                    Box(Modifier.weight(1f)) {
+                        AppSearchField(
+                            value = query,
+                            onValueChange = { query = it },
+                            placeholder = tr("Buscar en toda la app", "Search everything", "Buscar em todo o app"),
+                            modifier = Modifier.testTag("search_field")
+                        )
+                    }
+                }
+            }
+            val ready = ui as? SearchUi.Ready
+            val groupTypes = listOfNotNull(ready?.reference?.let { SearchType.REFERENCE }) +
+                (ready?.groups?.map { it.type } ?: emptyList())
+            if (!keyboardOpen && groupTypes.isNotEmpty()) Row(
+                Modifier.fillMaxWidth().height(44.dp).padding(horizontal = 12.dp).testTag("search_section_chips"),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                groupTypes.distinct().forEach { type ->
+                    AppChip(
+                        label = groupTitle(type),
+                        selected = sectionFilter == type.tag,
+                        onClick = { sectionFilter = if (sectionFilter == type.tag) null else type.tag },
+                        modifier = Modifier.testTag("search_section_${type.tag}")
+                    )
+                }
+            }
+            if (ready == null) {
+                Box(Modifier.fillMaxSize().padding(24.dp)) {
+                    if (ui is SearchUi.Building) AppBanner(tr("Preparando la búsqueda…", "Getting search ready…", "Preparando a busca…"))
+                    else Text(tr("Oraciones, santos, el Catecismo, la Biblia…", "Prayers, saints, the Catechism, the Bible…", "Orações, santos, o Catecismo, a Bíblia…"), style = styles.callout, color = p.textSecondary)
+                }
+            } else {
+                val groups = listOfNotNull(ready.reference?.let { SearchGroup(SearchType.REFERENCE, 1, listOf(it)) }) + ready.groups
+                val shownGroups = if (sectionFilter == null) groups else groups.filter { it.type.tag == sectionFilter }
+                if (keyboardOpen) LazyColumn(
+                    Modifier.fillMaxSize().padding(bottom = appDockInset()),
+                    contentPadding = PaddingValues(bottom = 32.dp),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    shownGroups.forEach { group ->
+                        group.results.forEach { r ->
+                            item("flat_${group.type.tag}_${r.id}") {
+                                AppListRow(title = r.title, subtitle = groupTitle(group.type) + " · " + (r.snippet ?: r.subtitle),
+                                    onClick = { onOpen(r.target) },
+                                    modifier = Modifier.testTag("search_result_${group.type.tag}_${r.id}"))
+                            }
+                        }
+                    }
+                } else LazyVerticalGrid(
+                    columns = GridCells.Fixed(2),
+                    modifier = Modifier.fillMaxSize().padding(bottom = appDockInset()),
+                    contentPadding = PaddingValues(horizontal = design.spacing.gutter, vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    shownGroups.forEach { group ->
+                        item(key = "group_${group.type.tag}", span = { GridItemSpan(2) }) {
+                            AppSectionHeader(groupTitle(group.type),
+                                if (group.total == 1) tr("1 resultado", "1 result", "1 resultado") else tr("${group.total} resultados", "${group.total} results", "${group.total} resultados"),
+                                Modifier.testTag("search_group_${group.type.tag}"))
+                        }
+                        group.results.forEach { r ->
+                            item(key = "grid_${group.type.tag}_${r.id}") {
+                                AppListRow(title = r.title, subtitle = r.snippet ?: r.subtitle,
+                                    onClick = { onOpen(r.target) },
+                                    modifier = Modifier.testTag("search_result_${group.type.tag}_${r.id}"))
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return
+    }
 
     LazyColumn(
         Modifier.fillMaxSize().padding(bottom = appDockInset()).testTag("search_screen"),

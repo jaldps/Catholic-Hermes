@@ -129,7 +129,11 @@ internal fun QuestionsRoot(
     repository: CatholicDataRepository,
     language: AppLanguage,
     nav: DoctrineNav,
-    spec: RootSpec
+    spec: RootSpec,
+    searchQuery: String? = null,
+    sectionFilter: String? = null,
+    headerItem: (@Composable () -> Unit)? = null,
+    onSelect: ((String) -> Unit)? = null
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -137,7 +141,8 @@ internal fun QuestionsRoot(
     val context = LocalContext.current
     val questions = repository.catholicQuestions
     val state = rememberLazyListState()
-    var query by rememberSaveable { mutableStateOf("") }
+    var localQuery by rememberSaveable { mutableStateOf("") }
+    val query = searchQuery ?: localQuery
     var answersCode by rememberSaveable { mutableStateOf("") }
     val answers = decodeAnswers(answersCode)
 
@@ -151,6 +156,9 @@ internal fun QuestionsRoot(
     }
 
     val folded = remember(query) { doctrineFold(query.trim()) }
+    val sectionIndices = remember(sectionFilter, language, questions) {
+        if (sectionFilter == null) emptyList() else questions.indices.filter { questions[it].section.get(language) == sectionFilter }
+    }
     val results = remember(folded, language, questions) {
         if (folded.isEmpty()) emptyList() else {
             val inQuestion = questions.indices.filter { doctrineFold(questions[it].question.get(language)).contains(folded) }
@@ -167,15 +175,32 @@ internal fun QuestionsRoot(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(bottom = LocalBottomPad.current)
     ) {
-        item(key = "hero", contentType = "hero") { RootHeader(spec) }
+        item(key = "hero", contentType = "hero") { if (headerItem != null) headerItem() else RootHeader(spec) }
 
-        item(key = "search") {
+        if (searchQuery == null) item(key = "search") {
             AppSearchBar(
                 value = query,
-                onValueChange = { query = it },
+                onValueChange = { localQuery = it },
                 placeholder = language.tr("Buscar entre las 101 preguntas", "Search the 101 questions", "Buscar nas 101 perguntas"),
                 tag = "qa_search_input"
             )
+        }
+
+        if (sectionFilter != null) {
+            item(key = "section_header") {
+                SectionHeader(sectionFilter, trailing = "${sectionIndices.size}", topGap = 20.dp)
+            }
+            items(sectionIndices, key = { "s$it" }, contentType = { "row" }) { qi ->
+                val q = questions[qi]
+                LeadRow(
+                    title = q.question.get(language),
+                    subtitle = q.section.get(language),
+                    onClick = { val key = "qa:$qi"; nav.open(key); onSelect?.invoke(key) },
+                    tag = "catholic_question_${q.number}",
+                    maxTitleLines = 4
+                )
+            }
+            return@LazyColumn
         }
 
         if (folded.isNotEmpty()) {
@@ -213,7 +238,7 @@ internal fun QuestionsRoot(
                         title = q.question.get(language),
                         subtitle = q.section.get(language),
                         position = groupPosition(pos, results.size),
-                        onClick = { nav.open("qa:$qi") },
+                        onClick = { val key = "qa:$qi"; nav.open(key); onSelect?.invoke(key) },
                         tag = "catholic_question_${q.number}",
                         maxTitleLines = 4
                     )
