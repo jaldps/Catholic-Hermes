@@ -92,8 +92,29 @@
 | 8 | Tests de área | 9/10 | `QuestionsLandscapeL5Test` 2/2. |
 | 9 | Identidades y estados | 8/10 | Theming y estados vacíos heredados. |
 
+## 5. Catecismo — `CatechismScreen.kt`
+
+- En horizontal se usa `AppTwoPane` con `rememberAppListDetailState(cccKeys, key = "catechism_list_detail")`. El índice queda en la lista con búsqueda fija `ccc_search`; el campo inline se oculta (`showSearch = false`) y el resultado abre el lector en el panel derecho sin apilar.
+- El estado de la pila (`stack`), consulta, expansiones y Compendio sigue elevado y sobrevive al giro. No hay hoja de filtros: el encargo no la pide para esta pantalla.
+- «Compendio» (`catechism_open_compendium`) sigue al pie del índice y el artículo abre el lector L2.
+
+### Autoevaluación (rúbrica §11, 9 criterios)
+
+| # | Criterio | Nota | Evidencia |
+|---|---|---|---|
+| 1 | Barra y filas visibles | 8/10 | `two_pane` y `list_sticky_bar` en test 891×411. |
+| 2 | Teclado | 8/10 | `performTextInput` + `waitUntil` de resultados en el test. |
+| 3 | Medida de lectura | 9/10 | `appReadingMeasure()` en el lector existente. |
+| 4 | Selección sin apilar y atrás | 9/10 | `openingASearchResultKeepsTheTwoPanes` 1/1. |
+| 5 | Giro | 8/10 | Pila y consulta sobreviven al giro. |
+| 6 | Cero `SMALL_TARGET` | 9/10 | Solo wrappers L0. |
+| 7 | Texto no elidido | 9/10 | Títulos de sección sin cortes nuevos. |
+| 8 | Tests de área | 9/10 | `CatechismLandscapeL5Test` 2/2. |
+| 9 | Identidades y estados | 8/10 | Theming y `ccc_search_empty` heredados. |
+
 ## Tests
 
+- `CatechismLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m29s.
 - `QuestionsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m15s.
 - `DevotionsLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m13s.
 - `OrdersLandscapeL5Test` (nuevo): **2/2 tests, 0 fallos** en 2m10s. Cubre barra fija + hoja de filtros y selección sin apilar a 891×411.
