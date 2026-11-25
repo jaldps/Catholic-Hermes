@@ -1,0 +1,21 @@
+{
+  "version_name": "1.9.2",
+  "version_code": 42,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.9.2",
+  "sha256": "d0e3fa14d663fd05d765fcb554fef855c5eda18b2ca2fbf27b5b42f43018cf4f",
+  "bytes": 110714808,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.9.1 (same package and key)",
+  "built_from": "CatholicGPT at the version commit 73e998e",
+  "published_as": "GitHub Release v1.9.2 only (APK above GitHub's 100 MiB file limit); Release SHA-256 identical to the local build (CI re-run after a transient D8 OutOfMemoryError)",
+  "changes": [
+    "Owner-reported force close on «Otras coronillas»: not reproducible under Robolectric (4 identities, light/dark, ES/PT, 130 %, accessibility options, Android 16, Orar row and «Otras ▾» segment, real assets and images). Hardening: bundled images decode two at a time and chaplet catalogue thumbnails decode at 144 px instead of 240 px.",
+    "Uncaught crashes are now recorded in the local error report (exception and cause class names and up to 40 frames; never messages or personal text), so 'Send error report' carries the failing line."
+  ],
+  "tests": ["171/171 on the affected areas (chaplets, Rosary, error report, navigation, Saints, devotions) plus new OtherChapletsEntry* and CrashRecorderFormatTest."],
+  "known_limitations": ["Not tested on a physical phone; the crash fix is unconfirmed until the owner retries."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

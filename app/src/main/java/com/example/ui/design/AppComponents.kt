@@ -589,7 +589,8 @@ fun AppSupportingPaneLayout(
         val measurePanelWidth = if (split) panelWidth else supportingWidth.resolve(width.toDp()).roundToPx().coerceAtMost(width)
         val loose = constraints.copy(minWidth = 0, minHeight = 0)
         val actionsTop = if (landscape) (safe.top + 4.dp).roundToPx() else 0
-        val actions = children[2].measure(loose.copy(maxWidth = if (split && endActions != null) (72.dp + maxOf(12.dp, safe.end + 8.dp)).roundToPx() else 0,
+        // safe.end is already reserved by AppScaffold; do not charge it again.
+        val actions = children[2].measure(loose.copy(maxWidth = if (split && endActions != null) (72.dp + maxOf(8.dp, 12.dp - safe.end)).roundToPx() else 0,
             maxHeight = if (landscape) (height - actionsTop - (safe.bottom + 4.dp).roundToPx()).coerceAtLeast(0) else height))
         val mainWidth = width - panelWidth - actions.width
         val footHeight = if (landscape) (56.dp + safe.bottom).roundToPx() else 0

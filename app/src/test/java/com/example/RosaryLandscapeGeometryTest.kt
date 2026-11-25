@@ -40,9 +40,11 @@ class RosaryLandscapeGeometryTest {
         val next = b("next_bead_button")
         assertEquals(56f, next.width, .5f); assertEquals(56f, next.height, .5f)
         assertEquals(height * .70f, next.center.y, 1f)
-        assertTrue(width - right - next.center.x <= 120f)
-        assertTrue(next.right <= width - right)
-        assertTrue(b("prayer_bead_counter").left >= maxOf(32, left) + 8f)
+        // Safe edges are applied once by AppScaffold, not by RosaryScreen itself;
+        // RosaryInsetsMainAppTest checks the absolute positions in the real frame.
+        assertTrue(width - right - next.center.x <= 120f + right)
+        assertTrue(next.right <= width - 12f)
+        assertEquals(maxOf(0, 32 - left) + 8f, b("prayer_bead_counter").left, 1f)
         assertEquals(44f, b("prev_bead_button").height, 1f)
         // The fixed 32 dp title row starts at S + 4; its 28 dp text is vertically centered.
         assertEquals(30f, b("current_prayer_title").top, 1f)

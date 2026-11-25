@@ -2,6 +2,15 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic Hermes 1.9.2
+
+**Solo en Releases:** columna derecha del repositorio → Releases → **v1.9.2**. Versión `1.9.2`, código 42. **Actualiza 1.8.1–1.9.1** y conserva el progreso.
+
+- **«Otras coronillas»:** contra el cierre al abrirlas, las imágenes se cargan de dos en dos y las miniaturas del catálogo son más ligeras.
+- **Registro de cierres:** si la app se cierra, «Enviar informe de errores» incluye el lugar del fallo, sin textos personales.
+
+[Metadatos](../docs/quality/release-1.9.2/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.9.1
 
 **Solo en Releases:** columna derecha del repositorio → Releases → **v1.9.1**. La APK pesa 111 MB. Versión `1.9.1`, código 41. **Actualiza 1.8.1–1.9.0** y conserva el progreso.

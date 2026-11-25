@@ -1630,7 +1630,8 @@ private fun LandscapeRosaryContext(
     val density = LocalDensity.current
     val direction = androidx.compose.ui.platform.LocalLayoutDirection.current
     val gestures = with(density) { WindowInsets.systemGestures.getLeft(this, direction).toDp() }
-    val start = maxOf(safe.start, gestures) + 8.dp
+    // Scaffold already applied safe.start; only the extra gesture zone beyond it is ours.
+    val start = maxOf(0.dp, gestures - safe.start) + 8.dp
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
@@ -1639,7 +1640,7 @@ private fun LandscapeRosaryContext(
     val contextScroll = rememberScrollState()
     LaunchedEffect(selectedTab, mysteryType, step.section) { contextScroll.scrollTo(0) }
     Column(Modifier.fillMaxSize().padding(top = safe.top).testTag("rosary_landscape_context")) {
-        Row(Modifier.fillMaxWidth().height(44.dp).padding(start = maxOf(16.dp, safe.start + 8.dp), end = 12.dp),
+        Row(Modifier.fillMaxWidth().height(44.dp).padding(start = maxOf(8.dp, 16.dp - safe.start), end = 12.dp),
             verticalAlignment = Alignment.CenterVertically) {
             if (back != null) AppGlassIconButton(Icons.Rounded.ArrowBack, back.first, back.second,
                 modifier = Modifier.size(44.dp), tag = "nav_back") else Spacer(Modifier.width(44.dp))
@@ -1790,7 +1791,8 @@ private fun LandscapeRosaryActions(lang: AppLanguage, spec: DevotionSpec, guidan
     val safe = appSafeInsets()
     val p = LocalAppDesign.current.palette
     val styles = LocalAppTextStyles.current
-    val edge = maxOf(12.dp, safe.end + 8.dp)
+    // The scaffold already reserved safe.end; keep only the baseline gutter here.
+    val edge = maxOf(8.dp, 12.dp - safe.end)
     Box(Modifier.fillMaxHeight().padding(end = edge).width(72.dp).testTag("prayer_transport").semantics { isTraversalGroup = true; traversalIndex = 2f }) {
         Column(Modifier.align(Alignment.TopCenter), horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(8.dp)) {
