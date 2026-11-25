@@ -2,10 +2,31 @@
 
 - **Rama:** `ext/T-053`, desde `CatholicGPT` y con la base 1.9.5 integrada (corrección del force close y 55 coronillas).
 - **Método:** el mismo de T-052 — un push por pantalla, tests ligeros propios, sin tocar `ui/design`, `ui/theme` ni `MainApp.kt`.
-- **Estado:** pantalla **4 de 6**.
+- **Estado:** pantalla **5 de 6**.
 
 
 
+
+
+## 5. Recordatorios — `RemindersScreen.kt`
+
+- En `AppWindowClass.LandscapePhone` se usa `AppPageLayout(kind = AppPageKind.Hub)`: los avisos de estado (permisos y fallos de escritura) van en el `supporting` y los recordatorios en rejilla de 2 columnas a 891 y 1 columna a 800.
+- La rueda de horas/miutos pasa de 40 a **44 dp** por ítem (`WheelItem`), cumpliendo el mínimo de objetivo táctil.
+- En vertical y tableta permanece la `LazyColumn` original. No se ha tocado `NoticeSettings.kt` ni la persistencia.
+
+### Autoevaluación (rúbrica §11, 9 criterios)
+
+| # | Criterio | Nota | Evidencia |
+|---|---|---|---|
+| 1 | Panel y rejilla | 9/10 | `RemindersLandscapeL6Test` verifica panel, cabecera y lista. |
+| 2 | Teclado | No aplica | Sin campo principal. |
+| 3 | Medida de lectura | 8/10 | Wrappers L0. |
+| 4 | Selección sin apilar y atrás | 8/10 | Navegación heredada. |
+| 5 | Giro | 8/10 | Estado de preferencias intacto. |
+| 6 | Cero `SMALL_TARGET` | 9/10 | Rueda a 44 dp. |
+| 7 | Texto no elidido | 9/10 | Textos cortos. |
+| 8 | Tests de área | 9/10 | `RemindersLandscapeL6Test` 1/1. |
+| 9 | Identidades y estados | 8/10 | Theme y estados heredados. |
 
 ## 4. Confesión — `ui/confession/ConfessionScreen.kt`
 
@@ -90,6 +111,7 @@
 
 ## Tests
 
+- `RemindersLandscapeL6Test`: **1/1 test, 0 fallos** en 2m09s.
 - `ConfessionLandscapeL6Test`: **1/1 test, 0 fallos** en 2m05s.
 - `SpiritualLandscapeL6Test`: **1/1 test, 0 fallos** en 2m15s.
 - `HabitsLandscapeL6Test`: **1/1 test, 0 fallos** en 2m09s.
@@ -97,5 +119,5 @@
 
 ## Pendiente
 
-- Pantallas 5–6: Hábitos, Diario/Tentaciones/Prácticas, Confesión, Recordatorios y Explorar.
+- Pantalla 6: Hábitos, Diario/Tentaciones/Prácticas, Confesión, Recordatorios y Explorar.
 - Suites pausadas de T-052: `SearchUiTest` (1 fallo), `TabletLayoutTest` y `NarrowLargeTextAuditTest` (colgados / hallazgo APPLE ES).
