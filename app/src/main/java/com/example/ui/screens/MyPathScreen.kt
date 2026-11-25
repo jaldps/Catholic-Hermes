@@ -7,10 +7,14 @@ import androidx.compose.animation.core.tween
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -38,6 +42,10 @@ import com.example.data.repository.CatholicDataRepository
 import com.example.data.repository.ReadingPlan
 import com.example.data.repository.ReadingPlansCatalog
 import com.example.ui.design.AppEdgeToEdge
+import com.example.ui.design.AppPageKind
+import com.example.ui.design.AppPageLayout
+import com.example.ui.design.LocalHeaderPoster
+import com.example.ui.design.appIsLandscapePhone
 import com.example.ui.design.AppHeroHeader
 import com.example.ui.design.AppIconSlot
 import com.example.ui.design.AppIcons
@@ -109,7 +117,73 @@ fun MyPathHub(
     val art = rememberFirstAsset("heroes/lumen/habits.jpg", "heroes/lumen/spiritual.jpg")
     val title = tr("Mi camino", "My path", "Meu caminho")
 
-    LazyColumn(
+    val landscape = appIsLandscapePhone()
+    AppPageLayout(
+        kind = AppPageKind.Today,
+        header = {
+            androidx.compose.runtime.CompositionLocalProvider(LocalHeaderPoster provides true) {
+                AppHeroHeader(assetPath = art, title = title, titleTag = "my_path_title")
+            }
+        },
+        supporting = if (landscape) {
+            {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Column(Modifier.weight(1f)) {
+                        AppSectionHeader(tr("Hoy en mi camino", "Today on my path", "Hoje no meu caminho"), modifier = Modifier.testTag("my_path_today_header"))
+                        AppListGroup(Modifier.testTag("my_path_today")) {
+                            AppListRow(
+                                title = tr("Hábitos", "Habits", "Hábitos"),
+                                subtitle = if (habits != null) tr("${habits.done} hechos · ${habits.pending} pendientes", "${habits.done} done · ${habits.pending} to go", "${habits.done} feitos · ${habits.pending} pendentes") else streak.toString(),
+                                leadingIcon = AppIcons.pair(AppIconSlot.HABITS).first,
+                                onClick = { onOpenSection(MyPathSection.HABITS) },
+                                modifier = Modifier.testTag("my_path_today_habits")
+                            )
+                            plansNow.take(1).forEach { now ->
+                                AppListRow(title = now.plan.title.get(language),
+                                    subtitle = tr("Día ${now.day} de ${now.plan.totalDays}", "Day ${now.day} of ${now.plan.totalDays}", "Dia ${now.day} de ${now.plan.totalDays}"),
+                                    leadingIcon = Icons.AutoMirrored.Outlined.MenuBook,
+                                    onClick = { onOpenPlan(now.plan.id) },
+                                    modifier = Modifier.testTag("my_path_today_plan_${now.plan.id}"))
+                            }
+                            novenasNow.take(1).forEach { now ->
+                                AppListRow(title = now.novena.title.get(language),
+                                    subtitle = tr("Novena · día ${now.nextDay} de ${now.total}", "Novena · day ${now.nextDay} of ${now.total}", "Novena · dia ${now.nextDay} de ${now.total}"),
+                                    leadingIcon = Icons.Outlined.VolunteerActivism,
+                                    onClick = { onOpenNovena(now.novena.id) },
+                                    modifier = Modifier.testTag("my_path_today_novena_${now.novena.id}"))
+                            }
+                        }
+                    }
+                    Column(Modifier.weight(1f)) {
+                        AppSectionHeader(tr("Secciones", "Sections", "Seções"))
+                        AppListGroup(Modifier.testTag("my_path_sections")) {
+                            listOf(
+                                MyPathSection.DIARY to Icons.Outlined.AutoStories,
+                                MyPathSection.TEMPTATIONS to Icons.Outlined.Shield,
+                                MyPathSection.PRACTICES to Icons.Outlined.Spa
+                            ).forEach { (section, icon) ->
+                                AppListRow(title = when (section) {
+                                    MyPathSection.DIARY -> tr("Diario", "Journal", "Diário")
+                                    MyPathSection.TEMPTATIONS -> tr("Tentaciones y victorias", "Temptations and victories", "Tentações e vitórias")
+                                    else -> tr("Prácticas", "Practices", "Práticas")
+                                }, leadingIcon = icon, onClick = { onOpenSection(section) },
+                                    modifier = Modifier.testTag("my_path_section_${section.name.lowercase()}"))
+                            }
+                        }
+                        Spacer(Modifier.height(12.dp))
+                        AppListGroup {
+                            AppListRow(title = tr("Confesión", "Confession", "Confissão"),
+                                subtitle = tr("Examen de conciencia y guía del sacramento", "Examination and guide", "Exame e guia"),
+                                leadingIcon = Icons.Outlined.Church, onClick = onOpenConfession,
+                                modifier = Modifier.testTag("my_path_confession_entry"))
+                        }
+                    }
+                }
+            }
+        } else null,
+        content = { _ ->
+            if (landscape) Box(Modifier.fillMaxSize()) else
+            LazyColumn(
         Modifier.fillMaxSize().testTag("my_path_screen"),
         contentPadding = PaddingValues(bottom = insets.calculateBottomPadding() + 24.dp)
     ) {
@@ -209,6 +283,8 @@ fun MyPathHub(
             }
         }
     }
+        }
+    )
 }
 
 /**
