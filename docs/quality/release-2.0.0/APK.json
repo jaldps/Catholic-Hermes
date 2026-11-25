@@ -1,0 +1,31 @@
+{
+  "version_name": "2.0.0",
+  "version_code": 47,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic1",
+  "sha256": "77d39a436aa521d37c7bdd3edab49ee01f8417d0a269e66f28d131bf080f04f0",
+  "bytes": 110915516,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-1.9.6 (same package and key)",
+  "built_from": "brand/catholic1",
+  "published_as": "Local APK for owner verification; coordinator publishes the Release",
+  "supersedes": "1.9.6 (same devotional content and landscape fixes; new Catholic1 identity)",
+  "changes": [
+    "Renamed the app label to Catholic1 in the preview overlay and the base string resource; the More footer now reads Catholic1.",
+    "New launcher icon generated from Catholic1_estrellas_simetricas.svg at all five densities, with navy background and an adaptive foreground.",
+    "Android 12+ system splash uses a combined drawable with the symbol and the Catholic1 typography on white.",
+    "Bumped the release to 2.0.0 (versionCode 47) to start the Catholic1 versioning series."
+  ],
+  "tests": [
+    "assembleDebug with the Hermes Preview signing overlay: BUILD SUCCESSFUL in 5m 37s",
+    "aapt badging: versionCode=47, versionName=2.0.0, label=Catholic1",
+    "apksigner: Hermes Preview certificate fingerprint verified"
+  ],
+  "known_limitations": [
+    "Custom splash artwork applies to Android 12+; older Android versions keep the platform default splash.",
+    "Physical-device verification pending."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

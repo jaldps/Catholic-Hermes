@@ -254,7 +254,7 @@ fun MoreScreen(
         }
         item(key = "more_footer") {
             Text(
-                text = "Sancta Fides · ${pick("Versión", "Version", "Versão")} ${BuildConfig.VERSION_NAME}",
+                text = "Catholic1 · ${pick("Versión", "Version", "Versão")} ${BuildConfig.VERSION_NAME}",
                 style = styles.footnote,
                 color = p.textSecondary,
                 textAlign = TextAlign.Center,
