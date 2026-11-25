@@ -2,9 +2,30 @@
 
 - **Rama:** `ext/T-053`, desde `CatholicGPT` y con la base 1.9.5 integrada (corrección del force close y 55 coronillas).
 - **Método:** el mismo de T-052 — un push por pantalla, tests ligeros propios, sin tocar `ui/design`, `ui/theme` ni `MainApp.kt`.
-- **Estado:** pantalla **3 de 6**.
+- **Estado:** pantalla **4 de 6**.
 
 
+
+
+## 4. Confesión — `ui/confession/ConfessionScreen.kt`
+
+- En `AppWindowClass.LandscapePhone` se usa `AppPageLayout(kind = AppPageKind.Immersive)`: segmentos verticales (`confession_tabs`), examen en el carril A (`confession_examen`) y lista privada en el B (`confession_private_list`), con el aviso de privacidad encabezando el carril B.
+- El borrador sigue en el holder existente: la lista y las notas no se escriben en disco y se vacían al salir. No se ha cambiado ese mecanismo.
+- En vertical y tableta permanece la `LazyColumn` original.
+
+### Autoevaluación (rúbrica §11, 9 criterios)
+
+| # | Criterio | Nota | Evidencia |
+|---|---|---|---|
+| 1 | Panel y carriles | 9/10 | `ConfessionLandscapeL6Test` verifica panel, pestañas, ambos carriles, aviso y notas. |
+| 2 | Teclado | 7/10 | `imePadding` heredado; medición de 2 líneas pendiente con arnés de teclado. |
+| 3 | Medida de lectura | 8/10 | Wrappers L0. |
+| 4 | Selección sin apilar y atrás | 8/10 | Navegación heredada. |
+| 5 | Giro | 9/10 | El holder ya conserva el borrador. |
+| 6 | Cero `SMALL_TARGET` | 9/10 | Botones y filas de 44 dp. |
+| 7 | Texto no elidido | 9/10 | Textos cortos. |
+| 8 | Tests de área | 9/10 | `ConfessionLandscapeL6Test` 1/1. |
+| 9 | Identidades y estados | 8/10 | Theme y estados heredados. |
 
 ## 3. Diario, Tentaciones y Prácticas — `SpiritualLifeScreen.kt`
 
@@ -69,11 +90,12 @@
 
 ## Tests
 
+- `ConfessionLandscapeL6Test`: **1/1 test, 0 fallos** en 2m05s.
 - `SpiritualLandscapeL6Test`: **1/1 test, 0 fallos** en 2m15s.
 - `HabitsLandscapeL6Test`: **1/1 test, 0 fallos** en 2m09s.
 - `MyPathLandscapeL6Test`: **1/1 test, 0 fallos** en 2m03s.
 
 ## Pendiente
 
-- Pantallas 4–6: Hábitos, Diario/Tentaciones/Prácticas, Confesión, Recordatorios y Explorar.
+- Pantallas 5–6: Hábitos, Diario/Tentaciones/Prácticas, Confesión, Recordatorios y Explorar.
 - Suites pausadas de T-052: `SearchUiTest` (1 fallo), `TabletLayoutTest` y `NarrowLargeTextAuditTest` (colgados / hallazgo APPLE ES).
