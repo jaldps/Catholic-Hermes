@@ -3,62 +3,106 @@
  "sourceId": "CD-32",
  "group": "saints",
  "title": {
-  "es": "Coronilla de Santa Rita",
-  "en": "Chaplet of Saint Rita",
-  "pt": "Coronilha de Santa Rita"
+  "es": "Rosario de Santa Rita de Casia",
+  "en": "Rosary of Saint Rita of Cascia",
+  "pt": "Terço de Santa Rita de Cássia"
  },
  "summary": {
-  "es": "Medalla, tres grupos de tres cuentas azules y cruz, con un Padre Nuestro, tres Avemarías y tres Glorias.",
-  "en": "Medal, three sets of three blue beads and a cross, with an Our Father, three Hail Marys and three Glories.",
-  "pt": "Medalha, três grupos de três contas azuis e uma cruz, com um Pai-Nosso, três Ave Marias e três Glórias."
+  "es": "Rosario de cinco misterios con ofrecimiento, jaculatorias y consagración a Santa Rita.",
+  "en": "Five-decade rosary with an offering, aspirations and a consecration to Saint Rita.",
+  "pt": "Terço de cinco mistérios com oferenda, jaculatórias e consagração a Santa Rita."
  },
  "instrument": {
-  "es": "Medalla + 3 + 3 + 3 cuentas azules + cruz.",
-  "en": "Medal + 3 + 3 + 3 blue beads + cross.",
-  "pt": "Medalha + 3 + 3 + 3 contas azuis + cruz."
+  "es": "Rosario común de cinco decenas.",
+  "en": "An ordinary five-decade rosary.",
+  "pt": "Terço comum de cinco décadas."
  },
  "when": {
-  "es": "Uso libre; patrona de lo imposible.",
-  "en": "At any time; patroness of impossible causes.",
-  "pt": "Uso livre; padroeira das causas impossíveis."
+  "es": "Todos los miércoles a las 18:30.",
+  "en": "Every Wednesday at 6:30 p.m.",
+  "pt": "Todas as quartas-feiras às 18h30."
  },
- "weekdays": [],
+ "weekdays": [
+  3
+ ],
  "beads": [
+  {
+   "kind": "cross"
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 3
+  },
+  {
+   "kind": "large"
+  },
   {
    "kind": "medal"
   },
   {
-   "kind": "small",
-   "count": 3,
-   "color": "#4169E1"
+   "kind": "large"
   },
   {
    "kind": "small",
-   "count": 3,
-   "color": "#4169E1"
+   "count": 10
+  },
+  {
+   "kind": "large"
   },
   {
    "kind": "small",
-   "count": 3,
-   "color": "#4169E1"
+   "count": 10
   },
   {
-   "kind": "cross"
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
+  },
+  {
+   "kind": "large"
+  },
+  {
+   "kind": "small",
+   "count": 10
   }
  ],
  "steps": [
   {
    "bead": 0,
+   "prayerRef": "persignarse"
+  },
+  {
+   "bead": null,
    "text": {
-    "es": "Oh santa Rita, ejemplar hermana agustina, te honramos por tu devoción a la Pasión de Cristo. Aunque tu primera vida estuvo llena de decepciones, frustraciones y tragedias incesantes, nunca perdiste la fe y la confianza en Dios. Por eso eres la patrona de lo imposible y nuestro aliento y abogada en las circunstancias desesperadas.",
-    "en": "O Holy St. Rita, exemplary Augustinian Sister, we honour you for your devotion to the Passion of Christ. Although your early life was filled with disappointment, frustration, and unceasing tragedy, you never lost faith and trust in God. For this you are the patroness of the impossible, and our inspiration and advocate in desperate circumstances.",
-    "pt": "Ó santa Rita, exemplar irmã agostiniana, honramo-te pela tua devoção à Paixão de Cristo. Embora a tua primeira vida tenha sido cheia de decepções, frustrações e tragédias incessantes, nunca perdeste a fé e a confiança em Deus. Por isso és a padroeira do impossível e o nosso incentivo e advogada nas circunstâncias desesperadas."
+    "es": "Mi gloriosa Santa Rita de lo imposible, así como no te fue imposible renovar el santo hábito que usaste durante 35 años y como no te fue imposible la curación repentina de una herida, tampoco te sea imposible lo que humildemente te pido.",
+    "en": "My glorious Saint Rita of the impossible, just as it was not impossible for you to renew the holy habit you wore for 35 years, and just as your sudden healing from a wound was not impossible, so may what I humbly ask of you not be impossible either.",
+    "pt": "Minha gloriosa Santa Rita dos impossíveis, como não vos foi impossível tornar novo o santo hábito que usastes durante os 35 anos e como não vos foi impossível a cura repentina de uma ferida, também não vos seja impossível o que humildemente vos peço."
+   },
+   "rubric": {
+    "es": "Haz tu petición",
+    "en": "Make your request",
+    "pt": "Faça seu pedido"
    }
   },
   {
+   "bead": 0,
+   "prayerRef": "creed"
+  },
+  {
    "bead": 1,
-   "prayerRef": "our_father",
-   "repeat": 3
+   "prayerRef": "our_father"
   },
   {
    "bead": 2,
@@ -67,26 +111,235 @@
   },
   {
    "bead": 3,
-   "prayerRef": "glory_be",
-   "repeat": 3
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 5,
+   "text": {
+    "es": "Mi gloriosa Santa Rita de lo imposible, así como no te fue imposible salvar a tu marido de las penas del infierno, y como no te fue imposible entrar en el convento después de viuda sin el consentimiento de las monjas, y amaneciste milagrosamente entre ellas, así, oh gloriosa Santa Rita, no me sea imposible alcanzar lo que humildemente te pido.",
+    "en": "My glorious Saint Rita of the impossible, just as it was not impossible for you to save your husband from the pains of hell, and just as it was not impossible for you to enter the convent after being widowed without the consent of the nuns, and you woke miraculously among them, so also, O glorious Saint Rita, may it not be impossible for me to obtain what I humbly ask of you.",
+    "pt": "Minha gloriosa Santa Rita dos Impossíveis, como não vos foi impossível salvardes o vosso marido das penas do inferno, como não vos foi impossível entrardes no convento depois de viúva sem o consentimento das freiras e amanhecestes milagrosamente no meio delas, assim ó gloriosa Santa Rita não me seja impossível alcançar o que humildemente vos peço."
+   },
+   "meditation": {
+    "es": "Santa Rita, hija obediente\nOremos a Santa Rita, que no quería casarse pero obedeció, para que los hijos obedezcan a sus padres y así obtengan la vida y la salvación.",
+    "en": "Saint Rita, obedient daughter\nLet us pray to Saint Rita, who did not want to marry but obeyed, that children may obey their parents and thus obtain life and salvation.",
+    "pt": "Santa Rita Filha Obediente\nRezemos à santa Rita que não queria se casar mas obedeceu, para que os filhos obedeçam aos pais e assim obtenham a vida e salvação."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 6,
+   "text": {
+    "es": "Santa Rita de lo imposible: nada te es imposible.",
+    "en": "Saint Rita of the impossible: nothing is impossible for you.",
+    "pt": "Santa Rita dos impossíveis: nada para vós é impossível."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 5,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 7,
+   "text": {
+    "es": "Mi gloriosa Santa Rita de lo imposible, así como no te fue imposible salvar a tu marido de las penas del infierno, y como no te fue imposible entrar en el convento después de viuda sin el consentimiento de las monjas, y amaneciste milagrosamente entre ellas, así, oh gloriosa Santa Rita, no me sea imposible alcanzar lo que humildemente te pido.",
+    "en": "My glorious Saint Rita of the impossible, just as it was not impossible for you to save your husband from the pains of hell, and just as it was not impossible for you to enter the convent after being widowed without the consent of the nuns, and you woke miraculously among them, so also, O glorious Saint Rita, may it not be impossible for me to obtain what I humbly ask of you.",
+    "pt": "Minha gloriosa Santa Rita dos Impossíveis, como não vos foi impossível salvardes o vosso marido das penas do inferno, como não vos foi impossível entrardes no convento depois de viúva sem o consentimento das freiras e amanhecestes milagrosamente no meio delas, assim ó gloriosa Santa Rita não me seja impossível alcançar o que humildemente vos peço."
+   },
+   "meditation": {
+    "es": "Santa Rita, esposa virtuosa\nAun con la infidelidad y un marido de genio difícil, Santa Rita amó y rezó por la conversión de su esposo",
+    "en": "Saint Rita, virtuous wife\nEven with the infidelity and a husband of difficult temper, Saint Rita loved and prayed for the conversion of her husband",
+    "pt": "Santa Rita Esposa Virtuosa\nMesmo com a infidelidade e um marido de gênio difícil, Santa Rita amou e rezou pela conversão de seu esposo"
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 8,
+   "text": {
+    "es": "Santa Rita de lo imposible: nada te es imposible.",
+    "en": "Saint Rita of the impossible: nothing is impossible for you.",
+    "pt": "Santa Rita dos impossíveis: nada para vós é impossível."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 7,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 9,
+   "text": {
+    "es": "Mi gloriosa Santa Rita de lo imposible, así como no te fue imposible salvar a tu marido de las penas del infierno, y como no te fue imposible entrar en el convento después de viuda sin el consentimiento de las monjas, y amaneciste milagrosamente entre ellas, así, oh gloriosa Santa Rita, no me sea imposible alcanzar lo que humildemente te pido.",
+    "en": "My glorious Saint Rita of the impossible, just as it was not impossible for you to save your husband from the pains of hell, and just as it was not impossible for you to enter the convent after being widowed without the consent of the nuns, and you woke miraculously among them, so also, O glorious Saint Rita, may it not be impossible for me to obtain what I humbly ask of you.",
+    "pt": "Minha gloriosa Santa Rita dos Impossíveis, como não vos foi impossível salvardes o vosso marido das penas do inferno, como não vos foi impossível entrardes no convento depois de viúva sem o consentimento das freiras e amanhecestes milagrosamente no meio delas, assim ó gloriosa Santa Rita não me seja impossível alcançar o que humildemente vos peço."
+   },
+   "meditation": {
+    "es": "Santa Rita, madre ejemplar\nOremos por las madres que oran insistentemente por la vida y salvación de sus hijos, para que se mantengan siempre fieles a la oración por sus hijos.",
+    "en": "Saint Rita, exemplary mother\nLet us pray for mothers who pray insistently for the life and salvation of their children, that they may always remain faithful in prayer for their children.",
+    "pt": "Santa Rita Mãe Exemplar\nRezemos pelas mães que oram insistentemente pela vida e salvação dos seus filhos, para que se mantenham sempre na fidelidade da oração pelos seus filhos."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 10,
+   "text": {
+    "es": "Santa Rita de lo imposible: nada te es imposible.",
+    "en": "Saint Rita of the impossible: nothing is impossible for you.",
+    "pt": "Santa Rita dos impossíveis: nada para vós é impossível."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 9,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 11,
+   "text": {
+    "es": "Mi gloriosa Santa Rita de lo imposible, así como no te fue imposible salvar a tu marido de las penas del infierno, y como no te fue imposible entrar en el convento después de viuda sin el consentimiento de las monjas, y amaneciste milagrosamente entre ellas, así, oh gloriosa Santa Rita, no me sea imposible alcanzar lo que humildemente te pido.",
+    "en": "My glorious Saint Rita of the impossible, just as it was not impossible for you to save your husband from the pains of hell, and just as it was not impossible for you to enter the convent after being widowed without the consent of the nuns, and you woke miraculously among them, so also, O glorious Saint Rita, may it not be impossible for me to obtain what I humbly ask of you.",
+    "pt": "Minha gloriosa Santa Rita dos Impossíveis, como não vos foi impossível salvardes o vosso marido das penas do inferno, como não vos foi impossível entrardes no convento depois de viúva sem o consentimento das freiras e amanhecestes milagrosamente no meio delas, assim ó gloriosa Santa Rita não me seja impossível alcançar o que humildemente vos peço."
+   },
+   "meditation": {
+    "es": "Santa Rita, viuda\nOremos por todas las viudas y todos los viudos que se sienten solos, para que encuentren en la amistad con Dios un bálsamo para su soledad.",
+    "en": "Saint Rita, widow\nLet us pray for all widows and widowers who feel alone, that they may find in friendship with God a balm for their loneliness.",
+    "pt": "Santa Rita Viúva\nRezemos por todas as viúvas e viúvos que se sentem sozinhos para que encontrem na amizade em Deus, um bálsamo para sua solidão."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 12,
+   "text": {
+    "es": "Santa Rita de lo imposible: nada te es imposible.",
+    "en": "Saint Rita of the impossible: nothing is impossible for you.",
+    "pt": "Santa Rita dos impossíveis: nada para vós é impossível."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 11,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": 13,
+   "text": {
+    "es": "Mi gloriosa Santa Rita de lo imposible, así como no te fue imposible salvar a tu marido de las penas del infierno, y como no te fue imposible entrar en el convento después de viuda sin el consentimiento de las monjas, y amaneciste milagrosamente entre ellas, así, oh gloriosa Santa Rita, no me sea imposible alcanzar lo que humildemente te pido.",
+    "en": "My glorious Saint Rita of the impossible, just as it was not impossible for you to save your husband from the pains of hell, and just as it was not impossible for you to enter the convent after being widowed without the consent of the nuns, and you woke miraculously among them, so also, O glorious Saint Rita, may it not be impossible for me to obtain what I humbly ask of you.",
+    "pt": "Minha gloriosa Santa Rita dos Impossíveis, como não vos foi impossível salvardes o vosso marido das penas do inferno, como não vos foi impossível entrardes no convento depois de viúva sem o consentimento das freiras e amanhecestes milagrosamente no meio delas, assim ó gloriosa Santa Rita não me seja impossível alcançar o que humildemente vos peço."
+   },
+   "meditation": {
+    "es": "Santa Rita, religiosa y sierva de Dios\nOremos por todas las vocaciones: que Santa Rita interceda para que surjan vocaciones en nuestras comunidades y en nuestras familias.",
+    "en": "Saint Rita, religious and servant of God\nLet us pray for all vocations: may Saint Rita intercede that vocations may arise in our communities and in our families.",
+    "pt": "Santa Rita Religiosa, Serva de Deus\nRezemos por todas as vocações  que Santa Rita interceda para surgir vocações em nossas comunidades e em nossas famílias."
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 14,
+   "text": {
+    "es": "Santa Rita de lo imposible: nada te es imposible.",
+    "en": "Saint Rita of the impossible: nothing is impossible for you.",
+    "pt": "Santa Rita dos impossíveis: nada para vós é impossível."
+   },
+   "repeat": 10,
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": 13,
+   "prayerRef": "glory_be"
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Poderosa Santa Rita, a quien Dios constituyó Auxiliadora de los cristianos, te elegimos como Señora y Protectora de nuestras casas y de nuestras familias. Dígnate mostrar aquí tu poderoso auxilio. Preserva nuestras casas de todos los peligros: del incendio, de la inundación, del rayo, de las tempestades, de los ladrones, de los malhechores, de la guerra y de todas las demás calamidades que conoces. Bendice, protege, defiende y guarda como cosa tuya nuestras casas. Sobre todo, concédenos la gracia más importante: la de vivir siempre en la amistad de Dios, evitando el pecado. Danos la fe que tuviste en la Palabra de Dios y el amor que sentiste por tu Salvador Jesucristo y por todos aquellos por los que Él murió en la cruz. Gloriosa Santa Rita, ruega y protege a todos los que participan en esta comunidad. Amén.",
+    "en": "Powerful Saint Rita, whom God appointed Helper of Christians, we choose you as Lady and Protector of our homes and our families. Deign to show here your powerful help. Preserve our homes from all dangers: from fire, from flood, from lightning, from storms, from thieves, from evildoers, from war and from all other calamities you know. Bless, protect, defend and guard our homes as your own. Above all, grant us the most important grace: that of always living in friendship with God, avoiding sin. Give us the faith you had in the Word of God and the love you felt for your Savior Jesus Christ and for all those for whom He died on the cross. Glorious Saint Rita, pray for and protect all who take part in this community. Amen.",
+    "pt": "Poderosa Santa Rita, a quem Deus constituiu Auxiliadora dos cristãos, nós vos escolhemos como Senhor e Protetora de nossas casas, de nossas famílias. Dignai-vos mostrar aqui o vosso poderoso auxilia. Preservai nossas casas de todos os perigos: do incêndio, da inundação, do raio, das tempestades, dos ladrões, dos malfeitores, da guerra e todas as outras calamidades que conheceis. Abençoai, protegei, defendei e guardai como coisa vossa as nossas casas. Sobretudo, concedei-nos a graça mais importante: a de vivermos sempre na amizade de Deus, evitando o pecado. Dai-nos a fé que tivestes na Palavra de Deus e o amor que nutristes para com o vosso Salvador Jesus Cristo e para com todos aqueles pelos quais Ele morreu na cruz. Gloriosa Santa Rita, rogai e protegei todos os que participam desta comunidade. Amém!"
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": null,
+   "text": {
+    "es": "Santa Rita de Casia: ruega por nosotros.",
+    "en": "Saint Rita of Cascia, pray for us.",
+    "pt": "Santa Rita de Cássia: rogai por nós!"
+   },
+   "rubric": {
+    "es": "Se reza en conjunto",
+    "en": "Said together",
+    "pt": "Rezado em conjunto"
+   }
+  },
+  {
+   "bead": null,
+   "prayerRef": "sign_of_the_cross"
   }
  ],
- "notes": "Texto literal de Catholic Doors. Las nueve cuentas azules (3 + 3 + 3) se reparten según el instrumento de la fuente: tres Padres Nuestros en el primer grupo, tres Avemarías en el segundo y tres Glorias en el tercero; la cruz cierra el hilo.",
+ "notes": "Fuente sustituida por petición del dueño: antes era la coronilla de 9 cuentas de Catholic Doors (CD-32); ahora se reza el Terço de Santa Rita de Cássia publicado por el Santuário Santa Rita de Cássia de Londrina. Se conserva el id y el sourceId CD-32 para no romper el catálogo. La fuente no indicaba Padre Nuestro en cada misterio: no se añade. El aviso web «Faça um pedido... clicando no relíquia» es una interacción del sitio, no parte del rezo, y no se incluye. El texto fuente dice «poderoso auxilia» (errata evidente por «auxílio»); se conserva en portugués y se traduce por el sentido. Cada jaculatoria y cada oración larga van en cuentas distintas, sin abreviaturas; donde la fuente no distingue voces se marca «Se reza en conjunto».",
  "image": "santa-rita-coronilla",
  "variables": [],
  "promise": null,
  "historicalNote": null,
  "season": null,
- "rights": "Derechos: Catholic Doors Ministry",
+ "rights": "Derechos: Futuro Santuário Santa Rita de Cássia - Londrina",
  "translation": {
-  "es": "traducción fiel de Hermes, 2026",
-  "en": "original",
-  "pt": "traducción fiel de Hermes, 2026"
+  "es": "traducción fiel de Hermes desde el portugués, 2026",
+  "en": "faithful translation by Hermes from the Portuguese, 2026",
+  "pt": "original"
  },
  "sources": [
   {
-   "title": "Catholic Doors · Chaplet of Saint Rita",
-   "url": "https://www.catholicdoors.com/prayers/chaplets/chap41.htm"
+   "title": "Santuário Santa Rita de Cássia · Terço de Santa Rita de Cássia",
+   "url": "https://santaritalondrina.com.br/p/terco-de-santa-rita-de-cassia"
   }
  ]
 }

@@ -588,20 +588,23 @@
   },
   {
     "id": "CD-32",
-    "nombre": "Chaplet of Saint Rita",
-    "fuente": "https://www.catholicdoors.com/prayers/chaplets/chap41.htm",
-    "sitio": "Catholic Doors",
-    "instrumento": "Coronilla: medalla + 3 tandas de 3 cuentas azules + cruz",
-    "cuentas": "9",
-    "grupos": "3x3",
+    "nombre": "Terço de Santa Rita de Cássia",
+    "fuente": "https://santaritalondrina.com.br/p/terco-de-santa-rita-de-cassia",
+    "sitio": "Santuário Santa Rita de Cássia - Londrina",
+    "instrumento": "Rosario común de cinco decenas (cruz, tres Avemarías iniciales y cinco grupos de diez).",
+    "cuentas": "59 (3 iniciales + 5x10) + 5 cuentas grandes + cruz y medalla",
+    "grupos": "5 misterios de 10 cuentas",
     "pasos": [
-      "Oración inicial a Santa Rita",
-      "3 Padres Nuestros, 3 Avemarías, 3 Glorias"
+      "Señal de la Cruz y persignación",
+      "Ofrecimiento a Santa Rita (con petición personal)",
+      "Credo, Padre Nuestro, 3 Avemarías y 1 Gloria",
+      "Cinco misterios: oración a Santa Rita, 10 jaculatorias «Santa Rita dos impossíveis: nada para vós é impossível» y Gloria",
+      "Consagración a Santa Rita, invocación final y Señal de la Cruz"
     ],
-    "dia_o_frecuencia": "Uso libre; patrona de lo imposible",
+    "dia_o_frecuencia": "Todos los miércoles a las 18:30",
     "variables_usuario": "—",
-    "meditacion_o_intenciones": "—",
-    "notas": "Cuentas azules; una de las coronillas más cortas."
+    "meditacion_o_intenciones": "5 misterios: hija obediente, esposa virtuosa, madre ejemplar, viuda, religiosa y sierva de Dios.",
+    "notas": "Sustituye a la coronilla CD-32 de Catholic Doors por petición del dueño. Se mantiene el id CD-32 del catálogo. Fuente en portugués; ES y EN son traducción fiel. El Padre Nuestro por decena no aparece en la fuente y no se añade."
   },
   {
     "id": "CD-33",

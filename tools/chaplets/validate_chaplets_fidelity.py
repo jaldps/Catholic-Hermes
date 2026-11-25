@@ -27,6 +27,11 @@ def norm(s: str) -> str:
 
 
 def source_lang(source_id: str) -> str:
+    # CD-32 originally used a Catholic Doors (English) chaplet; by the owner's
+    # request it now follows the Portuguese Terço published by the Londrina
+    # sanctuary, so its verbatim fragments must be checked against Portuguese.
+    if source_id == "CD-32":
+        return "pt"
     return "es" if source_id.startswith(("IVE-", "HZ-")) else "en"
 
 
