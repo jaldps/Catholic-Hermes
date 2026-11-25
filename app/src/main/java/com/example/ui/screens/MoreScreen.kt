@@ -23,6 +23,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Church
@@ -62,6 +64,10 @@ import com.example.ui.components.ImageCredits
 import com.example.ui.components.ImageCreditsSheet
 import com.example.ui.design.AppChevron
 import com.example.ui.design.AppEdgeToEdge
+import com.example.ui.design.appWindowSize
+import com.example.ui.design.appIsLandscapePhone
+import com.example.ui.design.AppPageLayout
+import com.example.ui.design.AppPageKind
 import com.example.ui.design.AppHeroHeader
 import com.example.ui.design.AppIconSlot
 import com.example.ui.design.AppIcons
@@ -156,6 +162,56 @@ fun MoreScreen(
 
     // Appearance value when the caller sends none: the mode in force.
     val modeFallback = if (design.isDark) pick("Oscuro", "Dark", "Escuro") else pick("Claro", "Light", "Claro")
+
+    if (appIsLandscapePhone()) {
+        val groups = listOf(
+            pick("Estudio", "Study", "Estudo") to study,
+            pick("Vida interior", "Inner life", "Vida interior") to innerLife,
+            pick("Misa y comunidad", "Mass & community", "Missa e comunidade") to churchToday,
+            pick("Ajustes", "Settings", "Ajustes") to settings
+        ).filter { it.second.isNotEmpty() }.map { it.first to it.second } + leftovers.map { it.title to it.entries }
+        val twoColumns = appWindowSize().width >= 891.dp
+        AppPageLayout(
+            kind = AppPageKind.Hub,
+            header = {
+                AppHeroHeader(heroAsset, pick("Explorar", "Explore", "Explorar"), height = 120.dp,
+                    titleTag = "more_title", modifier = Modifier.testTag("more_hero_photo"))
+            },
+            supporting = {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    if (search != null) Box(Modifier.weight(1f).testTag("more_search_landscape")) {
+                        EntryGroup(listOf(search), currentLanguage, modeFallback)
+                    }
+                    Box(Modifier.weight(1f).testTag("explore_start_here")) {
+                        com.example.ui.design.AppCard {
+                            Text(pick("Empieza aquí", "Start here", "Comece aqui"), style = styles.title2, color = p.textPrimary, modifier = Modifier.semantics { heading() })
+                            Spacer(Modifier.height(8.dp))
+                            com.example.ui.design.AppPrimaryCapsule(pick("Dar un primer paso", "Take a first step", "Dar um primeiro passo"), onClick = onOpenBeginner, tag = "nav_beginner")
+                        }
+                    }
+                }
+            },
+            content = {
+                LazyVerticalGrid(
+                    columns = if (twoColumns) GridCells.Fixed(2) else GridCells.Fixed(1),
+                    modifier = Modifier.fillMaxSize().testTag("more_sections_grid"),
+                    contentPadding = PaddingValues(horizontal = design.spacing.gutter, vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    groups.forEachIndexed { i, (title, entries) ->
+                        item(key = "group_$i") {
+                            Column {
+                                AppSectionHeader(title)
+                                EntryGroup(entries, currentLanguage, modeFallback)
+                            }
+                        }
+                    }
+                }
+            }
+        )
+        return
+    }
 
     LazyColumn(
         Modifier

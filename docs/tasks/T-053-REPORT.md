@@ -2,11 +2,31 @@
 
 - **Rama:** `ext/T-053`, desde `CatholicGPT` y con la base 1.9.5 integrada (corrección del force close y 55 coronillas).
 - **Método:** el mismo de T-052 — un push por pantalla, tests ligeros propios, sin tocar `ui/design`, `ui/theme` ni `MainApp.kt`.
-- **Estado:** pantalla **5 de 6**.
+- **Estado:** **6 de 6 (completo)**.
 
 
 
 
+
+
+## 6. Explorar — `MoreScreen.kt`
+
+- En `AppWindowClass.LandscapePhone` se usa `AppPageLayout(kind = AppPageKind.Hub)`: cabezal, «Buscar» y «Empieza aquí» en el `supporting`, y las secciones en rejilla (`LazyVerticalGrid`) de 2 columnas a 891 y 1 a 800.
+- En vertical y tableta permanece la `LazyColumn` original.
+
+### Autoevaluación (rúbrica §11, 9 criterios)
+
+| # | Criterio | Nota | Evidencia |
+|---|---|---|---|
+| 1 | Panel y rejilla | 9/10 | `ExploreLandscapeL6Test` verifica panel, cabecera, inicio y rejilla. |
+| 2 | Teclado | No aplica | Sin campo principal. |
+| 3 | Medida de lectura | 8/10 | Wrappers L0. |
+| 4 | Selección sin apilar y atrás | 8/10 | Navegación heredada. |
+| 5 | Giro | 8/10 | Rama condicionada a la clase de ventana. |
+| 6 | Cero `SMALL_TARGET` | 9/10 | Filas y cápsulas de 44 dp. |
+| 7 | Texto no elidido | 9/10 | Textos cortos. |
+| 8 | Tests de área | 9/10 | `ExploreLandscapeL6Test` 1/1. |
+| 9 | Identidades y estados | 8/10 | Theme y estados heredados. |
 
 ## 5. Recordatorios — `RemindersScreen.kt`
 
@@ -111,6 +131,7 @@
 
 ## Tests
 
+- `ExploreLandscapeL6Test`: **1/1 test, 0 fallos** en 3m48s.
 - `RemindersLandscapeL6Test`: **1/1 test, 0 fallos** en 2m09s.
 - `ConfessionLandscapeL6Test`: **1/1 test, 0 fallos** en 2m05s.
 - `SpiritualLandscapeL6Test`: **1/1 test, 0 fallos** en 2m15s.
@@ -119,5 +140,5 @@
 
 ## Pendiente
 
-- Pantalla 6: Hábitos, Diario/Tentaciones/Prácticas, Confesión, Recordatorios y Explorar.
+- Ninguna pantalla de T-053; quedan las suites pausadas compartidas con T-052. Hábitos, Diario/Tentaciones/Prácticas, Confesión, Recordatorios y Explorar.
 - Suites pausadas de T-052: `SearchUiTest` (1 fallo), `TabletLayoutTest` y `NarrowLargeTextAuditTest` (colgados / hallazgo APPLE ES).
