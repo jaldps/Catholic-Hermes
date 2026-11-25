@@ -123,6 +123,12 @@ import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppGlassSurface
 import com.example.ui.design.AppGrid
 import com.example.ui.design.AppInlineTitle
+import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.AppListRow
+import com.example.ui.design.AppHeroHeader
+import com.example.ui.design.appIsLandscapePhone
+import com.example.ui.design.AppPageLayout
+import com.example.ui.design.AppPageKind
 import com.example.ui.design.AppLargeTitleHeader
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppMenu
@@ -457,6 +463,53 @@ private fun SpiritualHub(
 
     val showJournal = focus != SpiritualFocus.PRACTICES
     val showPractices = focus != SpiritualFocus.JOURNAL
+
+    if (appIsLandscapePhone()) {
+        AppPageLayout(
+            kind = AppPageKind.Hub,
+            header = { AppHeroHeader(hero, language.pick("Vida espiritual", "Spiritual life", "Vida espiritual"), titleTag = "spiritual_life_title") },
+            supporting = {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    if (showJournal) Column(Modifier.weight(1f)) {
+                        AppSectionHeader(language.pick("Diario", "Journal", "Diário"), null)
+                        AppListGroup(Modifier.testTag("journal_landscape_list")) {
+                            if (entries.isNullOrEmpty()) JournalEmptyCard(language, onCompose)
+                            else entries.take(6).forEach { entry ->
+                                AppListRow(
+                                    title = entry.title,
+                                    subtitle = entry.category,
+                                    onClick = { onCompose(entry.title, entry.category) },
+                                    modifier = Modifier.testTag("journal_entry_${entry.id}")
+                                )
+                            }
+                        }
+                    }
+                    if (showPractices) Column(Modifier.weight(1f)) {
+                        AppSectionHeader(language.pick("Prácticas", "Practices", "Práticas"), null)
+                        AppListGroup(Modifier.testTag("practices_landscape_list")) {
+                            practices.forEach { practice ->
+                                AppListRow(
+                                    title = practice.label,
+                                    subtitle = practice.subtitle,
+                                    leadingIcon = practice.icon,
+                                    onClick = { onOpenPage(practice.page) },
+                                    modifier = Modifier.testTag("practice_${practice.page}")
+                                )
+                            }
+                            AppListRow(
+                                title = language.pick("Tentaciones y victorias", "Temptations and victories", "Tentações e vitórias"),
+                                subtitle = language.pick("Calendario y registro", "Calendar and record", "Calendário e registro"),
+                                onClick = onOpenConfession,
+                                modifier = Modifier.testTag("open_temptation_landscape")
+                            )
+                        }
+                    }
+                }
+            },
+            content = { Box(Modifier.fillMaxSize()) }
+        )
+        return
+    }
 
     Box(Modifier.fillMaxSize()) {
         LazyColumn(

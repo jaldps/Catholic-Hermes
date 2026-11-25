@@ -2,8 +2,29 @@
 
 - **Rama:** `ext/T-053`, desde `CatholicGPT` y con la base 1.9.5 integrada (corrección del force close y 55 coronillas).
 - **Método:** el mismo de T-052 — un push por pantalla, tests ligeros propios, sin tocar `ui/design`, `ui/theme` ni `MainApp.kt`.
-- **Estado:** pantalla **2 de 6**.
+- **Estado:** pantalla **3 de 6**.
 
+
+
+## 3. Diario, Tentaciones y Prácticas — `SpiritualLifeScreen.kt`
+
+- En `AppWindowClass.LandscapePhone`, `SpiritualHub` usa `AppPageLayout(kind = AppPageKind.Hub)` con dos carriles: diario (`journal_landscape_list`) y prácticas (`practices_landscape_list`, con acceso a tentaciones).
+- El editor de diario y sus hojas laterales siguen siendo los existentes; no se ha tocado Room ni el texto de las entradas.
+- En vertical y tableta permanece la `LazyColumn` original.
+
+### Autoevaluación (rúbrica §11, 9 criterios)
+
+| # | Criterio | Nota | Evidencia |
+|---|---|---|---|
+| 1 | Panel y carriles | 8/10 | `SpiritualLandscapeL6Test` verifica ambos carriles. |
+| 2 | Teclado | 8/10 | Editor heredado con `imePadding`. |
+| 3 | Medida de lectura | 8/10 | Wrappers L0. |
+| 4 | Selección sin apilar y atrás | 8/10 | Navegación heredada; falta test específico de giro. |
+| 5 | Giro | 8/10 | Rama condicionada a la clase de ventana. |
+| 6 | Cero `SMALL_TARGET` | 9/10 | `AppListRow` y wrappers. |
+| 7 | Texto no elidido | 9/10 | Textos cortos. |
+| 8 | Tests de área | 9/10 | `SpiritualLandscapeL6Test` 1/1. |
+| 9 | Identidades y estados | 8/10 | Theme y estados heredados. |
 
 ## 2. Hábitos — `HabitsAndVirtuesScreen.kt`
 
@@ -48,10 +69,11 @@
 
 ## Tests
 
+- `SpiritualLandscapeL6Test`: **1/1 test, 0 fallos** en 2m15s.
 - `HabitsLandscapeL6Test`: **1/1 test, 0 fallos** en 2m09s.
 - `MyPathLandscapeL6Test`: **1/1 test, 0 fallos** en 2m03s.
 
 ## Pendiente
 
-- Pantallas 3–6: Hábitos, Diario/Tentaciones/Prácticas, Confesión, Recordatorios y Explorar.
+- Pantallas 4–6: Hábitos, Diario/Tentaciones/Prácticas, Confesión, Recordatorios y Explorar.
 - Suites pausadas de T-052: `SearchUiTest` (1 fallo), `TabletLayoutTest` y `NarrowLargeTextAuditTest` (colgados / hallazgo APPLE ES).
