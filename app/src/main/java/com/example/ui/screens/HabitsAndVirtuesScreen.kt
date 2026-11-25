@@ -112,6 +112,9 @@ import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppHeroHeader
 import com.example.ui.design.AppInlineTitle
+import com.example.ui.design.appIsLandscapePhone
+import com.example.ui.design.AppPageLayout
+import com.example.ui.design.AppPageKind
 import com.example.ui.design.AppLargeTitleHeader
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
@@ -626,6 +629,51 @@ private fun HabitsRoot(
     val p = design.palette
     val styles = LocalAppTextStyles.current
     val title = lang.pick3("Hábitos", "Habits", "Hábitos")
+    if (appIsLandscapePhone()) {
+        AppPageLayout(
+            kind = AppPageKind.Today,
+            header = {
+                AppHeroHeader(
+                    assetPath = "heroes/lumen/habits.jpg",
+                    title = title,
+                    eyebrow = longDate(today, lang),
+                    height = 120.dp,
+                    titleTag = "habits_title"
+                )
+            },
+            supporting = {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Column(Modifier.weight(1f)) {
+                        GroupHeader(lang.pick3("Fidelidad", "Fidelity", "Fidelidade"), null, topGap = 0.dp)
+                        FidelityCalendar(
+                            counts = ruleCounts,
+                            currentLanguage = lang,
+                            dailyGoal = DailyRule.size,
+                            legacyDayTagPrefix = "habit_month_day_"
+                        )
+                    }
+                    Column(Modifier.weight(1f)) {
+                        GroupHeader(lang.pick3("Hábitos de hoy", "Today’s habits", "Hábitos de hoje"), null, topGap = 0.dp)
+                        TodayRing(done = keptIds.size, total = DailyRule.size, loaded = loaded, lang = lang)
+                        AppListGroup(Modifier.testTag("habits_checklist_card")) {
+                            DailyRule.groups.flatten().forEachIndexed { i, habit ->
+                                RuleRow(
+                                    habit = habit,
+                                    checked = habit.id in keptIds,
+                                    lang = lang,
+                                    onToggle = { onToggle(habit.id) },
+                                    onOpen = if (habit.action != DailyHabitAction.NONE) ({ onOpen(habit.action) }) else null,
+                                    showDivider = i < DailyRule.groups.flatten().lastIndex
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+            content = { Box(Modifier.fillMaxSize()) }
+        )
+    } else {
+    val title = lang.pick3("Hábitos", "Habits", "Hábitos")
     AppInlineTitle(title)
 
     LazyColumn(
@@ -774,6 +822,8 @@ private fun HabitsRoot(
             )
         }
     }
+    }
+
 }
 
 /** Today's ring: gradient arc, growing sprout, "3/12" and one line of encouragement. */
