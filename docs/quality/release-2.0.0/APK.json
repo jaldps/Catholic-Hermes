@@ -27,5 +27,7 @@
   ],
   "min_sdk": 24,
   "target_sdk": 36,
-  "device_installation_tested": false
+  "device_installation_tested": false,
+  "release_url": "https://github.com/joselanzd-hash/Catholic-Hermes/releases/tag/v2.0.0",
+  "asset_url": "https://github.com/joselanzd-hash/Catholic-Hermes/releases/download/v2.0.0/Catholic1-2.0.0.apk"
 }

@@ -29,3 +29,9 @@ La rama `brand/catholic1` nace de `fix/santa-rita-rosary` (1.9.6) e incorpora po
 ## Limitación
 
 El lockup personalizado del splash se aplica en **Android 12+** (`values-v31`); en versiones anteriores queda el splash del sistema. No se ha probado en teléfono físico.
+
+## Release
+
+Publicado en el fork: https://github.com/joselanzd-hash/Catholic-Hermes/releases/tag/v2.0.0
+Asset: `Catholic1-2.0.0.apk` (verificado con GET parcial: 206, `application/vnd.android.package-archive`).
+El repo `jaldps/Catholic-Hermes` no concede push a esta credencial; su Releases lo publica el coordinador.
