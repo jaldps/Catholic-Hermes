@@ -131,6 +131,7 @@
 
 ## Tests
 
+- **Pasada final conjunta:** `--tests '*LandscapeL6Test'` → **BUILD SUCCESSFUL in 4m41s**, **6 tests, 0 fallos**.
 - `ExploreLandscapeL6Test`: **1/1 test, 0 fallos** en 3m48s.
 - `RemindersLandscapeL6Test`: **1/1 test, 0 fallos** en 2m09s.
 - `ConfessionLandscapeL6Test`: **1/1 test, 0 fallos** en 2m05s.
