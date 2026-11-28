@@ -106,6 +106,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-064](T-064.md) | Chaty | EN PAUSA (el dueño no quiere tests por ahora) | Salud de los tests: `SearchUiTest`, `TabletLayoutTest`, `NarrowLargeTextAuditTest` y suite completa |
 | [T-065](T-065.md) | Hermes | ABIERTO | Coronillas: días sugeridos con fuente («Para hoy»); 4 emblemas solo símbolo |
 | [T-066](T-066.md) | Codex | EN PAUSA (decisión del dueño, 28-nov) | Revisión visual en vertical con capturas (cierre de T-062), 4 identidades |
+| [T-067](T-067.md) | Hermes | ABIERTO · PRIORIDAD | Subir los recursos de marca de Catholic1 (`Downloads/Catholic1`) para la identidad única |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |
