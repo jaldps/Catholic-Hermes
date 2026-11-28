@@ -60,3 +60,31 @@ La geometría es la misma que de Día; solo cambian los colores. Comprueba que e
 - Rehaz las cuatro láminas.
 - Actualiza el REPORT con las medidas visibles.
 - El crítico revisa otra vez solo las láminas.
+
+---
+
+# Revisión 2 (crítico, 28-nov · `ext/T-070` @ `4c91c97`)
+
+**Veredicto: CAMBIOS, acotados.** El detalle está en [`T-070-CRITICA-2.md`](T-070-CRITICA-2.md).
+
+Quedan resueltos H1, H2, H3, M2, M3 y M6, y la Noche invertida funciona. **Seis de las nueve están aprobadas:** libro, corazón, diario, lupa, vela y rosario de Noche.
+
+Faltan cuatro cosas, y la ronda 3 solo mira esas:
+
+1. **Paloma de Día (bloquea).** Es marfil sobre marfil (1,00:1), así que se lee como dibujo de línea.
+   - El cuerpo pasa al grupo `navy`: marino de Día y `#EDE6D8` de Noche, como el resto.
+   - El ala sigue en `warm`.
+   - El ojo y la línea del ala, en un rol que sea marfil de Día y marino de Noche.
+2. **Cruz de Noche.** El cuerpo `#EDE6D8` sobre el nimbo `#F8E8BC` da 1,02:1.
+   - De Noche, el cuerpo en `#10345C` y la sombra en `#0C2848`.
+   - Quita `details-cross`, que es un path muerto.
+3. **«Sin conexión» de Noche.** La barra marfil sobre la nube marfil da 1,00:1.
+   - De Noche, la barra en `#10345C` con filete oro.
+   - Que sobresalga 16 px como máximo; hoy son unos 40.
+4. **Rosario de Día.**
+   - Baja unos 12 px las cuentas de los extremos: la superior izquierda queda a 4,5 px de una estrella.
+   - El color de las cuentas lo decide Jose: oro limpio o `#B47C20`.
+
+**Pulido opcional:**
+- la vela de Día con el cuerpo en `warm`;
+- quita las líneas marinas de las páginas del libro de Día, que no se ven.
