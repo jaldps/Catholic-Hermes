@@ -29,6 +29,8 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
     - Ejecuta los tests que nombra tu encargo y los de las clases que tocas.
     - **La suite completa la ejecuta el coordinador** antes de integrar.
 
+11. **Sin tests por ahora** (decisión del dueño, 28-nov). No ejecutes `testDebugUnitTest` ni la suite. Basta con que compile: `./gradlew :app:assembleDebug`. Esta regla prevalece sobre la 10 y sobre lo que digan los encargos, hasta que el README diga lo contrario.
+
 ## Reglas fijas
 
 - No hagas push a `CatholicGPT` ni a `main`. No hagas force-push sobre ramas ajenas.
@@ -101,7 +103,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-060](T-060.md) | Hermes | CERRADO ([informe](T-060-REPORT.md), [revisión](T-060-REVIEW.md)) | Biblia española incluida: quitar el espacio antes de la puntuación en 3.048 versículos, con script y test |
 | [T-061](T-061.md) | Hermes | CERRADO ([revisión](T-061-REVIEW.md); petición menor: 4 logotipos con texto) | Imágenes que faltan: 5 advocaciones marianas y 26 emblemas de órdenes con monograma |
 | [T-062](T-062.md) | Hermes | INTEGRADO en 1.9.0 (revisión con capturas en T-066) | Pasada de interfaz de toda la app (vertical) con las skills de `.claude/skills/`: 13 pantallas y textos ES/EN/PT |
-| [T-064](T-064.md) | Chaty | ABIERTO | Salud de los tests: `SearchUiTest`, `TabletLayoutTest`, `NarrowLargeTextAuditTest` y suite completa |
+| [T-064](T-064.md) | Chaty | EN PAUSA (el dueño no quiere tests por ahora) | Salud de los tests: `SearchUiTest`, `TabletLayoutTest`, `NarrowLargeTextAuditTest` y suite completa |
 | [T-065](T-065.md) | Hermes | ABIERTO | Coronillas: días sugeridos con fuente («Para hoy»); 4 emblemas solo símbolo |
 | [T-066](T-066.md) | Codex | ABIERTO | Revisión visual en vertical con capturas (cierre de T-062), 4 identidades |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
