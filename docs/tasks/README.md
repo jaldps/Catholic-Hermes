@@ -100,7 +100,10 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-058](T-058.md) | Hermes | CERRADO ([informe](T-058-REPORT.md), [revisión](T-058-REVIEW.md)) | «Otras coronillas» · una imagen propia y relevante por coronilla (obligatoria), con créditos |
 | [T-060](T-060.md) | Hermes | CERRADO ([informe](T-060-REPORT.md), [revisión](T-060-REVIEW.md)) | Biblia española incluida: quitar el espacio antes de la puntuación en 3.048 versículos, con script y test |
 | [T-061](T-061.md) | Hermes | CERRADO ([revisión](T-061-REVIEW.md); petición menor: 4 logotipos con texto) | Imágenes que faltan: 5 advocaciones marianas y 26 emblemas de órdenes con monograma |
-| [T-062](T-062.md) | Hermes | INTEGRADO en 1.9.0 (revisión con capturas pendiente) | Pasada de interfaz de toda la app (vertical) con las skills de `.claude/skills/`: 13 pantallas y textos ES/EN/PT |
+| [T-062](T-062.md) | Hermes | INTEGRADO en 1.9.0 (revisión con capturas en T-066) | Pasada de interfaz de toda la app (vertical) con las skills de `.claude/skills/`: 13 pantallas y textos ES/EN/PT |
+| [T-064](T-064.md) | Chaty | ABIERTO | Salud de los tests: `SearchUiTest`, `TabletLayoutTest`, `NarrowLargeTextAuditTest` y suite completa |
+| [T-065](T-065.md) | Hermes | ABIERTO | Coronillas: días sugeridos con fuente («Para hoy»); 4 emblemas solo símbolo |
+| [T-066](T-066.md) | Codex | ABIERTO | Revisión visual en vertical con capturas (cierre de T-062), 4 identidades |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |

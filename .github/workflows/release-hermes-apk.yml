@@ -90,7 +90,9 @@ jobs:
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
           cp "$keystore" debug.keystore
           chmod +x gradlew
+          # The runner has 16 GB; D8 needs more than the 1.5 GB local default to dex material-icons-extended.
           ./gradlew --no-daemon --no-configuration-cache -I tools/hermes-preview.gradle \
+            -Dorg.gradle.jvmargs="-Xmx4g -Dfile.encoding=UTF-8" \
             -PhermesSigningKeystore="$keystore" :app:assembleDebug
           rm -f "$keystore" debug.keystore
 
