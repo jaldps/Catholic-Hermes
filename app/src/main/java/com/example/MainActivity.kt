@@ -77,7 +77,8 @@ class MainActivity : ComponentActivity() {
                 fontFamilyChoice = preferences.fontFamilyChoice,
                 reduceMotion = com.example.ui.design.appReduceMotion(preferences.reduceMotion),
                 reduceTransparency = preferences.reduceTransparency,
-                highContrast = preferences.highContrast
+                highContrast = preferences.highContrast,
+                dockIconTint = preferences.dockIconTint
             ) {
                 MainApp(
                     repository = repository,

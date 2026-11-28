@@ -30,6 +30,13 @@ object AppFonts {
         Font(R.font.inter_bold, FontWeight.Bold)
     )
 
+    /** Plus Jakarta Sans — Catholic1's display face, the open sans closest to the owner's logotype (OFL). */
+    val PlusJakarta = FontFamily(
+        Font(R.font.plusjakarta_semibold, FontWeight.SemiBold),
+        Font(R.font.plusjakarta_bold, FontWeight.Bold),
+        Font(R.font.plusjakarta_extrabold, FontWeight.ExtraBold)
+    )
+
     /** Roboto — the Material Design type family. */
     val Roboto = FontFamily(
         Font(R.font.roboto_regular, FontWeight.Normal),

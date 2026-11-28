@@ -50,6 +50,8 @@ fun SanctaFidesTheme(
      * Ordinary Time green.
      */
     liturgicalColorHex: Long? = null,
+    /** Catholic1 dock icons: "LITURGICAL" (today's colour) or "THEME" (navy / ivory). */
+    dockIconTint: String = "LITURGICAL",
     content: @Composable () -> Unit
 ) {
     val systemDark = isSystemInDarkTheme()
@@ -74,7 +76,10 @@ fun SanctaFidesTheme(
     // action fill and ambient light only in the liquid identities.
     val tintsChrome = identity != DesignLanguage.SANCTUARY && !(classic && themePreset == "LITURGICAL_DYNAMIC")
     val liquid = identity != DesignLanguage.SANCTUARY && !classic
-    val tinted = base.palette.copy(
+    val catholic1 = identity == DesignLanguage.CATHOLIC1
+    // Catholic1 is never tinted: its gold and navy are the brand. Today's colour
+    // reaches only the dock icons (LocalDockIconTint, CATHOLIC1.md §2.3).
+    val tinted = if (catholic1) base.palette else base.palette.copy(
         accent = accent,
         ringEnd = if (themePreset == "LITURGICAL_DYNAMIC" && season == null) base.palette.ringEnd else accent,
         ringStart = if (!tintsChrome || (themePreset == "LITURGICAL_DYNAMIC" && season == null)) base.palette.ringStart
@@ -108,7 +113,11 @@ fun SanctaFidesTheme(
         }
     }
 
+    val dockTint = if (catholic1 && dockIconTint != "THEME")
+        dockLiturgicalInk(LiturgicalLight.of(liturgicalColorHex) ?: LiturgicalLight.GREEN, isDark)
+        else design.palette.textPrimary
     CompositionLocalProvider(
+        LocalDockIconTint provides dockTint,
         LocalAppDesign provides design,
         LocalAppTextStyles provides textStyles,
         LocalAppFontScale provides fontScale
@@ -257,7 +266,7 @@ private fun buildColorScheme(
     val base = if (isDark) darkColorScheme() else lightColorScheme()
 
     return when (identity) {
-        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> base.copy(
+        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY, DesignLanguage.CATHOLIC1 -> base.copy(
             primary = accent,
             onPrimary = onAccent,
             primaryContainer = palette.accentMuted,
@@ -328,3 +337,19 @@ fun MyApplicationTheme(
 
 /** The ambient pools of a tint preset, for contrast tests. */
 internal fun lumenAmbientForTests(preset: String, isDark: Boolean): List<Color> = lumenAmbient(preset, isDark)
+
+
+/** Ink of the dock's idle icons: today's liturgical colour or the theme ink (CATHOLIC1.md §2.3). */
+val LocalDockIconTint = androidx.compose.runtime.staticCompositionLocalOf { Color(0xFF0C2848) }
+
+/**
+ * Liturgical icon inks measured against the dock (white by day, #162438 by night):
+ * each clears 4.7:1 or more. White vestments read as gold, since white on white vanishes.
+ */
+internal fun dockLiturgicalInk(season: LiturgicalLight, isDark: Boolean): Color = when (season) {
+    LiturgicalLight.GREEN -> if (isDark) Color(0xFF7CCB8A) else Color(0xFF2E7D32)
+    LiturgicalLight.VIOLET -> if (isDark) Color(0xFFB9A0E6) else Color(0xFF6A3D9A)
+    LiturgicalLight.RED -> if (isDark) Color(0xFFF28B82) else Color(0xFFB3261E)
+    LiturgicalLight.ROSE -> if (isDark) Color(0xFFF2A0C4) else Color(0xFFB0306A)
+    LiturgicalLight.WHITE -> if (isDark) Color(0xFFE3B65A) else Color(0xFF9A6A1A)
+}

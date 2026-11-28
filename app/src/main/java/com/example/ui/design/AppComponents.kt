@@ -58,7 +58,7 @@ import com.example.ui.theme.LocalAppDesign
 @Composable
 @ReadOnlyComposable
 fun appKit(): AppKit = when (LocalAppDesign.current.language) {
-    DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY -> LumenKit
+    DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.CLASSIC, DesignLanguage.GLASS, DesignLanguage.SANCTUARY, DesignLanguage.CATHOLIC1 -> LumenKit
 }
 
 /**

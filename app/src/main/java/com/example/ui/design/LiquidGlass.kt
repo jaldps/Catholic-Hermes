@@ -103,7 +103,7 @@ enum class GlassRole {
     Thumb
 }
 
-internal fun AppDesign.opaqueMaterial(): Boolean = isSanctuary || isClassic || reduceTransparency || highContrast
+internal fun AppDesign.opaqueMaterial(): Boolean = isCatholic1 || isSanctuary || isClassic || reduceTransparency || highContrast
 
 /** The spec for [role] in the current identity and mode. */
 fun AppDesign.glassSpec(role: GlassRole, lifted: Boolean = true): GlassSpec {
@@ -112,13 +112,18 @@ fun AppDesign.glassSpec(role: GlassRole, lifted: Boolean = true): GlassSpec {
     if (opaque) {
         val fill = when (role) {
             GlassRole.Content -> p.groupedSurface
-            GlassRole.Thumb -> if (isSanctuary) p.raised else p.action
+            GlassRole.Thumb -> if (isSanctuary) p.raised else if (isCatholic1) p.brand else p.action
             else -> p.raised
         }
         return GlassSpec(fill, fill, 0f, p.hairline, p.hairline,
             if (highContrast) 1.5.dp else 0.75.dp,
-            if (lifted && !isSanctuary && !highContrast) p.shadow.copy(alpha = if (isDark) 0.22f else 0.07f) else Color.Transparent,
-            20.dp, 5.dp)
+            when {
+                !lifted || isSanctuary || highContrast -> Color.Transparent
+                // Catholic1: soft navy shadow by day, none at night (hairline only), CATHOLIC1.md P3.
+                isCatholic1 -> if (isDark) Color.Transparent else p.shadow
+                else -> p.shadow.copy(alpha = if (isDark) 0.22f else 0.07f)
+            },
+            if (isCatholic1) 16.dp else 20.dp, if (isCatholic1) 4.dp else 5.dp)
     }
     if (isGlass) return clearGlassSpec(role, lifted)
     return when (role) {

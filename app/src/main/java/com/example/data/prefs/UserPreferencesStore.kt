@@ -52,6 +52,8 @@ data class UserPreferences(
     val reduceMotion: Boolean = false,
     val reduceTransparency: Boolean = false,
     val highContrast: Boolean = false,
+    /** Catholic1 dock icons: "LITURGICAL" (today's colour, default) or "THEME". */
+    val dockIconTint: String = DEFAULT_DOCK_ICON_TINT,
     val calendarRules: CalendarRules = CalendarRules(),
     /** False means preferences could not be read, not that the user reset them. */
     val storageAvailable: Boolean = true,
@@ -69,7 +71,9 @@ data class UserPreferences(
         val CONFESSION_PROFILES = setOf("children", "youth", "married", "single", "consecrated")
         /** Allowed sleep-timer lengths in minutes; 0 means off. */
         val SLEEP_TIMER_OPTIONS = listOf(0, 15, 30, 60)
-        const val DEFAULT_DESIGN_LANGUAGE = "LUMEN"
+        /** Catholic1 is the only identity since 3.0; every stored id reads as it. */
+        const val DEFAULT_DESIGN_LANGUAGE = "CATHOLIC1"
+        const val DEFAULT_DOCK_ICON_TINT = "LITURGICAL"
         const val DEFAULT_THEME_PRESET = "LITURGICAL_DYNAMIC"
         const val DEFAULT_DARK_MODE = "SYSTEM"
         const val DEFAULT_FONT_FAMILY = "IDENTITY_DEFAULT"
@@ -116,6 +120,7 @@ class UserPreferencesStore(
         val REDUCE_MOTION = booleanPreferencesKey("reduce_motion")
         val REDUCE_TRANSPARENCY = booleanPreferencesKey("reduce_transparency")
         val HIGH_CONTRAST = booleanPreferencesKey("high_contrast")
+        val DOCK_ICON_TINT = stringPreferencesKey("dock_icon_tint")
         val DARK_MODE = stringPreferencesKey("dark_mode_setting")
         val FONT_FAMILY = stringPreferencesKey("font_family_choice")
         val FONT_SCALE = floatPreferencesKey("font_size_scale")
@@ -268,6 +273,7 @@ class UserPreferencesStore(
                 reduceMotion = stored[Keys.REDUCE_MOTION] ?: false,
                 reduceTransparency = stored[Keys.REDUCE_TRANSPARENCY] ?: false,
                 highContrast = stored[Keys.HIGH_CONTRAST] ?: false,
+                dockIconTint = if (stored[Keys.DOCK_ICON_TINT] == "THEME") "THEME" else UserPreferences.DEFAULT_DOCK_ICON_TINT,
                 themePreset = stored[Keys.THEME_PRESET]
                     ?: UserPreferences.DEFAULT_THEME_PRESET,
                 darkModeSetting = stored[Keys.DARK_MODE]
@@ -319,11 +325,12 @@ class UserPreferencesStore(
         editPreference("setDesignLanguage") { it[Keys.DESIGN_LANGUAGE] = canonicalDesign(id) }
     }
 
-    private fun canonicalDesign(id: String?): String = when (id) {
-        "SANCTUARY", "VATICAN" -> "SANCTUARY"
-        "GLASS" -> "GLASS"
-        "CLASSIC" -> "CLASSIC"
-        else -> UserPreferences.DEFAULT_DESIGN_LANGUAGE
+    /** Catholic1 is the single identity: Lumen, Classic, Glass, Sanctuary and any old id read as it. */
+    @Suppress("UNUSED_PARAMETER")
+    private fun canonicalDesign(id: String?): String = UserPreferences.DEFAULT_DESIGN_LANGUAGE
+
+    suspend fun setDockIconTint(value: String) {
+        editPreference("setDockIconTint") { it[Keys.DOCK_ICON_TINT] = if (value == "THEME") "THEME" else UserPreferences.DEFAULT_DOCK_ICON_TINT }
     }
 
     suspend fun setReduceMotion(value: Boolean) {

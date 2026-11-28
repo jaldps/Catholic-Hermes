@@ -68,7 +68,8 @@ object AppTypographyFactory {
         fontFamilyChoice: String? = null
     ): Pair<Typography, AppTextStyles> {
         val readingSerif = if (fontFamilyChoice == null) serifPreferred else true
-        val base = if (language == DesignLanguage.SANCTUARY) sanctuary(readingSerif, scale) else lumen(readingSerif, scale)
+        val lumenBase = if (language == DesignLanguage.SANCTUARY) sanctuary(readingSerif, scale) else lumen(readingSerif, scale)
+        val base = if (language == DesignLanguage.CATHOLIC1) catholic1Titles(lumenBase) else lumenBase
         // Null retains the legacy Boolean API for existing callers.
         val family = fontFamilyChoice?.let {
             AppFonts.family(com.example.data.models.FontChoice.fromId(it))
@@ -118,6 +119,31 @@ object AppTypographyFactory {
             eyebrow = extras.eyebrow.withFamily(),
             caption = extras.caption.withFamily(),
             reading = extras.reading.withFamily()
+        )
+    }
+
+    /**
+     * Catholic1 (CATHOLIC1.md §3): Lumen's scale with every title set in Plus Jakarta
+     * Sans Bold, as in the owner's logotype. Body and UI stay Inter, reading EB Garamond.
+     * An explicit user font choice still overrides every slot (applied after this).
+     */
+    private fun catholic1Titles(base: Pair<Typography, AppTextStyles>): Pair<Typography, AppTextStyles> {
+        val (type, extras) = base
+        fun TextStyle.title() = copy(fontFamily = AppFonts.PlusJakarta, fontWeight = FontWeight.Bold)
+        return type.copy(
+            displayLarge = type.displayLarge.title(),
+            displayMedium = type.displayMedium.title(),
+            displaySmall = type.displaySmall.title(),
+            headlineLarge = type.headlineLarge.title(),
+            headlineMedium = type.headlineMedium.title(),
+            headlineSmall = type.headlineSmall.title()
+        ) to extras.copy(
+            screenTitle = extras.screenTitle.title(),
+            sectionTitle = extras.sectionTitle.title(),
+            display = extras.display.title(),
+            largeTitle = extras.largeTitle.title(),
+            title1 = extras.title1.title(),
+            title2 = extras.title2.title()
         )
     }
 

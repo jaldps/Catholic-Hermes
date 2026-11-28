@@ -39,16 +39,20 @@ enum class DesignLanguage(
     GLASS("GLASS", LocalizedText("Cristal", "Glass", "Vidro"),
         LocalizedText("Cristal líquido: transparencia, refracción y luz.", "Liquid glass: transparency, refraction and light.", "Vidro líquido: transparência, refração e luz.")),
     SANCTUARY("SANCTUARY", LocalizedText("Sanctuary", "Sanctuary", "Sanctuary"),
-        LocalizedText("La belleza de un misal personal.", "The beauty of a personal missal.", "A beleza de um missal pessoal."));
+        LocalizedText("La belleza de un misal personal.", "The beauty of a personal missal.", "A beleza de um missal pessoal.")),
+    /**
+     * The single identity since 3.0 (docs/design/CATHOLIC1.md): navy, gold and ivory,
+     * opaque surfaces, the brand banner. Every stored id resolves to it; the older
+     * entries above stay only so stored values and old code paths still compile.
+     */
+    CATHOLIC1("CATHOLIC1", LocalizedText("Catholic1", "Catholic1", "Catholic1"),
+        LocalizedText("Azul marino, oro y marfil.", "Navy, gold and ivory.", "Azul-marinho, ouro e marfim."));
 
     companion object {
-        val selectable = listOf(APPLE, CLASSIC, GLASS, SANCTUARY)
-        fun fromId(id: String?): DesignLanguage = when (id) {
-            "CLASSIC" -> CLASSIC
-            "GLASS" -> GLASS
-            "SANCTUARY", "VATICAN" -> SANCTUARY
-            else -> APPLE
-        }
+        val selectable = listOf(CATHOLIC1)
+        /** Catholic1 is the only identity: any stored id, old or unknown, opens it. */
+        @Suppress("UNUSED_PARAMETER")
+        fun fromId(id: String?): DesignLanguage = CATHOLIC1
     }
 }
 
@@ -176,7 +180,12 @@ data class AppPalette(
     /** Dense content glass (cards, groups); [groupedSurface] is its opaque twin. */
     val pane: Color = groupedSurface,
     /** Four pools of ambient light behind the glass; empty = plain canvas. */
-    val ambient: List<Color> = emptyList()
+    val ambient: List<Color> = emptyList(),
+    /** Catholic1 brand: the selected segment and the active dock pill, with its ink. */
+    val brand: Color = action,
+    val onBrand: Color = onAction,
+    /** Recessed fill: icon wells, fields, the date chip. */
+    val sunken: Color = selectionTint
 )
 
 @Immutable
@@ -198,10 +207,12 @@ data class AppDesign(
     val isGlass: Boolean get() = language == DesignLanguage.GLASS
     /** Tradicional: the original Lumen. Opaque, neutral, no ambient light, no icon wells. */
     val isClassic: Boolean get() = language == DesignLanguage.CLASSIC
+    /** Catholic1, the single identity: opaque, navy and gold, brand banner. */
+    val isCatholic1: Boolean get() = language == DesignLanguage.CATHOLIC1
 }
 
 val LocalAppDesign = staticCompositionLocalOf {
-    DesignTokens.of(DesignLanguage.APPLE, isDark = false)
+    DesignTokens.of(DesignLanguage.CATHOLIC1, isDark = false)
 }
 
 object DesignTokens {
@@ -478,6 +489,78 @@ object DesignTokens {
         pane = Color(0xFF2A2225), ambient = emptyList(), scrim = Color(0x8C000000)
     )
 
+    // -------------------------------------------------------------- Catholic1
+
+    /**
+     * Catholic1, day (docs/design/CATHOLIC1.md §2): ivory canvas, white cards, navy ink,
+     * gold action with navy text. Brand colours measured from the owner's logo SVG.
+     * Text pairs: navy 14.3:1 and slate 5.7:1 on canvas; navy on gold 6.9:1; link gold 5.5:1.
+     */
+    private val Catholic1Light = AppPalette(
+        canvas = Color(0xFFFCFAF6),
+        groupedSurface = Color(0xFFFFFFFF),
+        raised = Color(0xFFFFFFFF),
+        hairline = Color(0xFFE9E4DA),
+        accent = Color(0xFF8A5E14),
+        accentMuted = Color(0xFFFCF4E0),
+        gold = Color(0xFFDCA83C),
+        textPrimary = Color(0xFF0C2848),
+        textSecondary = Color(0xFF5B6475),
+        textTertiary = Color(0xFF5B6475),
+        scrim = Color(0x590C2848),
+        selectionTint = Color(0xFFF4EFE4),
+        glass = Color(0xFFFFFFFF),
+        glassStrong = Color(0xFFFFFFFF),
+        glassEdgeTop = Color(0xFFE9E4DA),
+        glassEdgeBottom = Color(0xFFE9E4DA),
+        shadow = Color(0x140C2848),
+        separator = Color(0xFFE9E4DA),
+        action = Color(0xFFDCA83C),
+        onAction = Color(0xFF0C2848),
+        success = Color(0xFF2E7D32),
+        ringStart = Color(0xFFF2E2B8),
+        ringEnd = Color(0xFFDCA83C),
+        inkQuiet = Color(0xFF9AA1AE),
+        pane = Color(0xFFFFFFFF),
+        ambient = emptyList(),
+        brand = Color(0xFF10345C),
+        onBrand = Color(0xFFFFFFFF),
+        sunken = Color(0xFFF4EFE4)
+    )
+
+    /** Catholic1, night: deep navy canvas, raised navy cards, ivory ink, warm gold; no shadows. */
+    private val Catholic1Dark = AppPalette(
+        canvas = Color(0xFF0E1A2B),
+        groupedSurface = Color(0xFF162438),
+        raised = Color(0xFF1D2D44),
+        hairline = Color(0xFF2A3A52),
+        accent = Color(0xFFE3B65A),
+        accentMuted = Color(0xFF2B2616),
+        gold = Color(0xFFE3B65A),
+        textPrimary = Color(0xFFEDE6D8),
+        textSecondary = Color(0xFFA9B4C6),
+        textTertiary = Color(0xFFA9B4C6),
+        scrim = Color(0x99000000),
+        selectionTint = Color(0xFF1D2D44),
+        glass = Color(0xFF162438),
+        glassStrong = Color(0xFF1D2D44),
+        glassEdgeTop = Color(0xFF2A3A52),
+        glassEdgeBottom = Color(0xFF2A3A52),
+        shadow = Color.Transparent,
+        separator = Color(0xFF2A3A52),
+        action = Color(0xFFE3B65A),
+        onAction = Color(0xFF0C2848),
+        success = Color(0xFF7CCB8A),
+        ringStart = Color(0xFF4A3E22),
+        ringEnd = Color(0xFFE3B65A),
+        inkQuiet = Color(0xFF6E7A8E),
+        pane = Color(0xFF162438),
+        ambient = emptyList(),
+        brand = Color(0xFFE3B65A),
+        onBrand = Color(0xFF0C2848),
+        sunken = Color(0xFF1D2D44)
+    )
+
     fun of(language: DesignLanguage, isDark: Boolean): AppDesign {
         val sanctuary = language == DesignLanguage.SANCTUARY
         return AppDesign(
@@ -490,6 +573,7 @@ object DesignTokens {
                 listStyle = if (sanctuary) ListStyle.RULED_FOLIO else ListStyle.INSET_GROUPED,
                 usesOrnaments = sanctuary, usesDropCaps = sanctuary, navIconSize = 24.dp, rowIconSize = 22.dp),
             palette = when {
+                language == DesignLanguage.CATHOLIC1 -> if (isDark) Catholic1Dark else Catholic1Light
                 sanctuary -> if (isDark) SanctuaryDark else SanctuaryLight
                 language == DesignLanguage.GLASS -> if (isDark) GlassDark else GlassLight
                 language == DesignLanguage.CLASSIC -> if (isDark) ClassicDark else ClassicLight
