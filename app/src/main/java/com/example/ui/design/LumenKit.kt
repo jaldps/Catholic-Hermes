@@ -451,9 +451,16 @@ object LumenKit : AppKit {
                     ) {
                         navItems.forEachIndexed { index, item ->
                             val active = index == selectedNavIndex
+                            val catholic1 = design.isCatholic1
                             val tint by animateColorAsState(
-                                if (active) (if (design.opaqueMaterial()) p.onAction else p.accent) else p.textSecondary,
+                                if (active) (if (catholic1) p.onBrand else if (design.opaqueMaterial()) p.onAction else p.accent)
+                                else if (catholic1) p.textPrimary else p.textSecondary,
                                 tween(design.motion.fastMillis), label = "tabTint")
+                            // Catholic1: idle icons carry today's liturgical colour (or the theme ink), CATHOLIC1.md §2.3.
+                            val dockIcon = com.example.ui.theme.LocalDockIconTint.current
+                            val iconTint by animateColorAsState(
+                                if (catholic1 && !active) dockIcon else tint,
+                                tween(design.motion.fastMillis), label = "tabIconTint")
                             Column(
                                 Modifier.weight(1f).heightIn(min = 56.dp)
                                     .clip(RoundedCornerShape(radius - inset))
@@ -465,7 +472,7 @@ object LumenKit : AppKit {
                                 verticalArrangement = Arrangement.Center
                             ) {
                                 Icon(if (active) solidGlyph(item.selectedIcon) else item.icon, null,
-                                    tint = tint, modifier = Modifier.size(24.dp))
+                                    tint = iconTint, modifier = Modifier.size(24.dp))
                                 Spacer(Modifier.height(3.dp))
                                 Text(item.label, style = styles.navLabel.copy(
                                     fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),

@@ -109,21 +109,8 @@ fun GuiCustomizerModal(
     }
 
     AppSheet(onDismiss = onDismiss, title = t("Apariencia", "Appearance", "Aparência"), tag = "gui_customizer_sheet") {
-        Label(t("Estilo", "Style", "Estilo"), firstInSheet = true)
-        val identities = DesignLanguage.selectable
-        AppSegmentedTabs(
-            options = identities.map { it.label.get(currentLanguage) },
-            selectedIndex = identities.indexOf(DesignLanguage.fromId(preferences.designLanguage)).coerceAtLeast(0),
-            onSelect = { i -> scope.launch { preferencesStore.setDesignLanguage(identities[i].id) } },
-            modifier = Modifier.testTag("appearance_identity")
-        )
-        Text(
-            DesignLanguage.fromId(preferences.designLanguage).tagline.get(currentLanguage),
-            style = styles.footnote, color = p.textSecondary,
-            modifier = Modifier.padding(horizontal = design.spacing.gutter + 4.dp, vertical = 8.dp)
-        )
-
-        Label(t("Modo", "Mode", "Modo"))
+        // Catholic1 is the single identity (CATHOLIC1.md §0): no style or accent pickers.
+        Label(t("Modo", "Mode", "Modo"), firstInSheet = true)
         val modes = listOf("SYSTEM", "LIGHT", "DARK")
         AppSegmentedTabs(
             options = listOf(t("Automático", "Automatic", "Automático"), t("Claro", "Light", "Claro"), t("Oscuro", "Dark", "Escuro")),
@@ -132,10 +119,18 @@ fun GuiCustomizerModal(
             modifier = Modifier.testTag("appearance_mode")
         )
 
-        Label(t("Color de acento", "Accent colour", "Cor de destaque"))
-        AccentPicker(
-            selectedPreset = preferences.themePreset, language = currentLanguage,
-            onSelect = { id -> scope.launch { preferencesStore.setThemePreset(id) } }
+        Label(t("Color de los iconos de la barra", "Tab bar icon colour", "Cor dos ícones da barra"))
+        val tints = listOf("LITURGICAL", "THEME")
+        AppSegmentedTabs(
+            options = listOf(t("Litúrgico", "Liturgical", "Litúrgico"), t("Del tema", "Theme", "Do tema")),
+            selectedIndex = tints.indexOf(preferences.dockIconTint).coerceAtLeast(0),
+            onSelect = { i -> scope.launch { preferencesStore.setDockIconTint(tints[i]) } },
+            modifier = Modifier.testTag("appearance_dock_icon_tint")
+        )
+        Text(
+            t("Litúrgico: los iconos toman el color litúrgico del día.", "Liturgical: the icons take the liturgical colour of the day.", "Litúrgico: os ícones assumem a cor litúrgica do dia."),
+            style = styles.footnote, color = p.textSecondary,
+            modifier = Modifier.padding(horizontal = design.spacing.gutter + 4.dp, vertical = 8.dp)
         )
 
         Label(t("Tamaño del texto", "Text size", "Tamanho do texto"))

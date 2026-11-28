@@ -375,6 +375,10 @@ private fun AppHeaderFrame(
         AppCompactHeader(title, root, modifier, assetPath, imageUrl, eyebrow, meta, metaIcon, titleTag, actions)
         return
     }
+    if (LocalAppDesign.current.isCatholic1) {
+        Catholic1Banner(title, root, edgeToEdge, modifier, eyebrow, meta, metaIcon, titleTag, actions)
+        return
+    }
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
@@ -513,6 +517,110 @@ private fun AppHeaderFrame(
         val lift = 8.dp.roundToPx()
         layout(placeable.width, (placeable.height - lift).coerceAtLeast(0)) { placeable.place(0, -lift) }
     })
+    }
+}
+
+/** Catholic1 banner height, status bar included (CATHOLIC1.md §5.1): the same on every screen. */
+val Catholic1BannerHeight: Dp = 176.dp
+
+/**
+ * The bottom edge of the Catholic1 banner: a gentle wave. The banner is CLIPPED to it,
+ * so nothing rectangular sits under the curve; the gold line is drawn on the same path.
+ */
+internal fun catholic1WavePath(w: Float, h: Float, close: Boolean): androidx.compose.ui.graphics.Path =
+    androidx.compose.ui.graphics.Path().apply {
+        if (close) { moveTo(0f, 0f); lineTo(w, 0f); lineTo(w, h * 0.875f) } else moveTo(w, h * 0.875f)
+        cubicTo(w * 0.667f, h * 0.795f, w * 0.308f, h * 1.023f, 0f, h * 0.898f)
+        if (close) close()
+    }
+
+private val Catholic1WaveShape = androidx.compose.foundation.shape.GenericShape { size, _ ->
+    addPath(catholic1WavePath(size.width, size.height, close = true))
+}
+
+/**
+ * Catholic1 header (CATHOLIC1.md §5.1): the owner's atmospheric navy background, the
+ * Virgin on the right and, on a section root, the logo; a wave edge with a gold line.
+ * The title always sits below, on the canvas. Same height on every screen.
+ */
+@Composable
+private fun Catholic1Banner(
+    title: String,
+    root: Boolean,
+    edgeToEdge: Boolean,
+    modifier: Modifier,
+    eyebrow: String?,
+    meta: String?,
+    metaIcon: ImageVector?,
+    titleTag: String?,
+    actions: @Composable RowScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val p = design.palette
+    val statusTop = statusBarHeight()
+    val contentTop = if (edgeToEdge) 0.dp else (LocalScreenFrame.current?.insets?.calculateTopPadding() ?: 0.dp)
+    // 176dp from the top of the screen, whether or not this content starts below the status bar.
+    val bannerHeight = (Catholic1BannerHeight - contentTop).coerceAtLeast(96.dp)
+    val night = design.isDark
+    val background = rememberAssetBitmap("brand/banner_background.webp", 1080)
+    val virgin = rememberAssetBitmap("brand/banner_virgin.webp", 640)
+    val symbol = rememberAssetBitmap("brand/logo_symbol.png", 144)
+    val wordmark = rememberAssetBitmap("brand/logo_wordmark_light.png", 420)
+    val gold = if (night) Color(0xFFE3B65A) else Color(0xFFDCA83C)
+    val reduce = design.reduceTransparency || design.highContrast
+    Column(modifier.fillMaxWidth()) {
+        Box(Modifier.fillMaxWidth().height(bannerHeight)) {
+            Box(
+                Modifier.matchParentSize().clip(Catholic1WaveShape)
+                    .background(if (night) Color(0xFF0C2848) else Color(0xFF10345C))
+            ) {
+                if (background != null && !reduce) androidx.compose.foundation.Image(background, null,
+                    contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+                    alpha = if (night) 0.7f else 1f, modifier = Modifier.fillMaxSize())
+                if (virgin != null) androidx.compose.foundation.Image(virgin, null,
+                    contentScale = androidx.compose.ui.layout.ContentScale.Fit, alignment = Alignment.TopCenter,
+                    alpha = if (night) 0.85f else 1f,
+                    modifier = Modifier.align(Alignment.TopEnd).offset(x = 14.dp, y = 4.dp)
+                        .size(width = 168.dp, height = 224.dp))
+            }
+            androidx.compose.foundation.Canvas(Modifier.matchParentSize()) {
+                drawPath(catholic1WavePath(size.width, size.height, close = false), gold,
+                    style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2.5.dp.toPx()))
+            }
+            if (root) Row(
+                Modifier.align(Alignment.TopStart)
+                    .padding(start = design.spacing.gutter, top = (statusTop - contentTop).coerceAtLeast(0.dp) + 14.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                if (symbol != null) androidx.compose.foundation.Image(symbol, null, Modifier.size(46.dp))
+                if (wordmark != null) androidx.compose.foundation.Image(wordmark, "Catholic1",
+                    Modifier.height(30.dp).width(140.dp), contentScale = androidx.compose.ui.layout.ContentScale.Fit)
+            }
+            Row(
+                Modifier.align(Alignment.TopEnd)
+                    .padding(top = (statusTop - contentTop).coerceAtLeast(0.dp) + 10.dp, end = design.spacing.gutter - 4.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                content = actions
+            )
+        }
+        Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).padding(top = 2.dp, bottom = 12.dp)) {
+            if (eyebrow != null) {
+                Text(eyebrow, style = styles.subhead, color = p.textSecondary, maxLines = appMaxLines(2), overflow = TextOverflow.Ellipsis)
+                Spacer(Modifier.height(2.dp))
+            }
+            Text(title, style = if (root) styles.largeTitle else styles.title1, color = p.textPrimary,
+                modifier = Modifier.semantics { heading() }.tagged(titleTag))
+            if (meta != null) Row(Modifier.padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                if (metaIcon != null) {
+                    Icon(metaIcon, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
+                    Spacer(Modifier.width(8.dp))
+                }
+                Text(meta, style = styles.subhead, color = p.textSecondary)
+            }
+        }
     }
 }
 
