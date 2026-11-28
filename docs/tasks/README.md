@@ -105,7 +105,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-062](T-062.md) | Hermes | INTEGRADO en 1.9.0 (revisión con capturas en T-066) | Pasada de interfaz de toda la app (vertical) con las skills de `.claude/skills/`: 13 pantallas y textos ES/EN/PT |
 | [T-064](T-064.md) | Chaty | EN PAUSA (el dueño no quiere tests por ahora) | Salud de los tests: `SearchUiTest`, `TabletLayoutTest`, `NarrowLargeTextAuditTest` y suite completa |
 | [T-065](T-065.md) | Hermes | ABIERTO | Coronillas: días sugeridos con fuente («Para hoy»); 4 emblemas solo símbolo |
-| [T-066](T-066.md) | Codex | ABIERTO | Revisión visual en vertical con capturas (cierre de T-062), 4 identidades |
+| [T-066](T-066.md) | Codex | EN PAUSA (decisión del dueño, 28-nov) | Revisión visual en vertical con capturas (cierre de T-062), 4 identidades |
 | [T-033](T-033.md) | Hermes | CERRADO ([revisión](T-033-REVIEW.md)) | M12.6 (contenido) · Textos del perfil de bienvenida por nivel |
 | [T-035](T-035.md) | Hermes | CERRADO ([revisión](T-035-REVIEW.md)) | M12.4 (contenido) · Textos de los avisos litúrgicos y recordatorios |
 | [T-036](T-036.md) | Hermes | CERRADO ([revisión](T-036-REVIEW.md)) | Índice completo del Catecismo (partes → artículos, con rangos) |
