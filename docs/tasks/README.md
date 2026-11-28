@@ -88,12 +88,12 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-046](T-046.md) | Hermes | CERRADO ([informe](T-046-REPORT.md), [revisión](T-046-REVIEW.md)) | «Mi camino» como 5.ª pestaña y una sola fila de hábitos |
 | [T-047](T-047.md) | Codex | CERRADO ([informe](T-047-REPORT.md), [revisión](T-047-REVIEW.md)) | L0 · Fundamentos de la interfaz horizontal (`docs/design/LANDSCAPE.md` §2–§3) |
 | [T-048](T-048.md) | Codex + coordinador | CERRADO (1.9.0) | L1 · Rosario y Coronilla en horizontal (§4) |
-| T-049 | Codex | EN COLA (tras T-048) | L2 · Lectores en horizontal (§5) |
-| T-050 | Codex | EN COLA (tras T-049) | L3 · Hoy en horizontal (§6) |
-| T-051 | Codex | EN COLA (tras T-050) | L4 · Centros Orar y Leer en horizontal (§7) |
-| [T-052](T-052.md) | Hermes | CAMBIOS PEDIDOS ([revisión](T-052-REVIEW.md): 10 tests en rojo) | L5 · Listas con ficha en horizontal (§8) |
-| [T-053](T-053.md) | Hermes | ABIERTO | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
-| T-054 | Codex | EN COLA (al final) | L7 · Hojas, diálogos, bienvenida y ajustes en horizontal (§10) |
+| T-049 | — | EN PAUSA (decisión del dueño, 28-nov: el horizontal espera nuevas instrucciones) | L2 · Lectores en horizontal (§5) |
+| T-050 | — | EN PAUSA (horizontal) | L3 · Hoy en horizontal (§6) |
+| T-051 | — | EN PAUSA (horizontal) | L4 · Centros Orar y Leer en horizontal (§7) |
+| [T-052](T-052.md) | Hermes | INTEGRADO en 2.0.1 (r2; revisión visual pendiente) | L5 · Listas con ficha en horizontal (§8) |
+| [T-053](T-053.md) | Hermes | INTEGRADO en 2.0.1 (revisión visual pendiente) | L6 · Mi camino, Confesión, Recordatorios y Explorar en horizontal (§9) |
+| T-054 | — | EN PAUSA (horizontal) | L7 · Hojas, diálogos, bienvenida y ajustes en horizontal (§10) |
 | [T-055](T-055.md) | Hermes | CERRADO ([informe](T-055-REPORT.md), [revisión](T-055-REVIEW.md)) | Estados vacíos y de error que faltan, en vertical (preparación de §16 del diseño horizontal) |
 | [T-056](T-056.md) | Hermes | CERRADO ([informe](T-056-REPORT.md), [revisión](T-056-REVIEW.md)) | «Otras coronillas» · contenido: 55 coronillas curadas en ES/EN/PT ([especificación](../content/CORONILLAS-SPEC.md)) |
 | [T-057](T-057.md) | Coordinador (Sonnet local) | CERRADO en 1.9.1 ([informe](T-057-REPORT.md)) | «Otras coronillas» · motor e interfaz (segmento «Otras ▾», catálogo, hilo según patrón, voces V/R) |

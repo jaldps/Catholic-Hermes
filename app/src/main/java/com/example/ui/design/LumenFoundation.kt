@@ -436,13 +436,16 @@ data class HeroMeta(
 private val AssetDecoding = Dispatchers.IO.limitedParallelism(2)
 
 /** No bundled hero needs more than this many decoded pixels of width on a phone. */
-internal const val MaxAssetDecodeWidth = 720
+internal const val MaxAssetDecodeWidth = 1080
 
-/** Powers of two only: the decoded width must never exceed [maxWidthPx]. */
+/**
+ * Powers of two only, and never below [maxWidthPx]: a bundled image is shrunk while it stays at least as wide
+ * as asked, so heroes are never upscaled (blurry). The 1.9.x force close was a Regex, not memory.
+ */
 internal fun assetSampleSize(outWidth: Int, maxWidthPx: Int): Int {
     if (maxWidthPx <= 0 || outWidth <= 0) return 1
     var sample = 1
-    while (outWidth / sample > maxWidthPx) sample *= 2
+    while (outWidth / (sample * 2) >= maxWidthPx) sample *= 2
     return sample
 }
 
