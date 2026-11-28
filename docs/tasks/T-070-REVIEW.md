@@ -88,3 +88,12 @@ Faltan cuatro cosas, y la ronda 3 solo mira esas:
 **Pulido opcional:**
 - la vela de Día con el cuerpo en `warm`;
 - quita las líneas marinas de las páginas del libro de Día, que no se ven.
+
+---
+
+# Revisión 3 (crítico, 28-nov · `ext/T-070` @ `448814d`)
+
+**Veredicto: APROBADO. T-070 CERRADO.** El detalle está en [`T-070-CRITICA-3.md`](T-070-CRITICA-3.md).
+- Las nueve medallas se integran en `CatholicGPT` (`docs/design/catholic1/illustrations/v2/`).
+- La paloma, la cruz, «sin conexión» y el rosario quedan resueltos, sin regresiones en las otras cinco.
+- **Pulido opcional** (se puede hacer junto con el punto 5 de T-073): alargar unos 10 px el extremo superior derecho de la barra de «sin conexión», para que **cruce** la nube.

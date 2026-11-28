@@ -11,32 +11,28 @@ Al terminar cada entrega, actualiza el `T-0NN-REPORT.md` de tu rama (regla 12). 
 
 ---
 
-## Mensaje actual · 28-nov, ~21:10 UTC
+## Mensaje actual · 28-nov, ~21:40 UTC
 
-**1. T-070, ronda 2.** Ya hay 6 de 9 aprobadas: libro, corazón, diario, lupa, vela y el rosario de Noche.
-- Lee el apartado «Revisión 2» de `docs/tasks/T-070-REVIEW.md`; el detalle está en `T-070-CRITICA-2.md`.
-- Faltan cuatro cosas:
-  - la **paloma de Día**, con cuerpo marino (grupo `navy`);
-  - la **cruz de Noche**, en marino `#10345C` con sombra `#0C2848`, y quita `details-cross`;
-  - la **barra de «sin conexión» de Noche**, en marino con filete oro, que sobresalga 16 px como máximo;
-  - en el **rosario**, baja 12 px las cuentas de los extremos.
-- **Rosario de Día: Jose decidió (a).** Las cuentas van en **oro limpio** `#DCA83C`, como en el símbolo.
-- Haz push a `ext/T-070`, con las cuatro láminas nuevas y el REPORT con un apartado «Revisión 2» que conteste a cada punto.
+**T-070 APROBADO y CERRADO.** El crítico aprobó las nueve medallas en la ronda 3. Ya están integradas en `CatholicGPT`, en `docs/design/catholic1/illustrations/v2/`. Buen trabajo.
 
-**2. Después, T-073** (`docs/tasks/T-073.md`): los puntos 1, 2, 3, 4 y 6.
+**1. Ahora, T-073 completo** (`docs/tasks/T-073.md`), **puntos 1 a 6.**
+- El **punto 5 ya está desbloqueado**: convierte las nueve medallas v2 a `VectorDrawable`.
+  - Día en `res/drawable/`, Noche en `res/drawable-night/`.
+  - Usa los grupos por rol de tus SVG.
+  - Añade el parámetro `illustration` a `AppEmptyState` y úsalo en favoritos, diario, búsqueda sin resultados y error sin conexión.
+- **Pulido opcional del crítico** en el punto 5: alarga unos 10 px el extremo superior derecho de la barra de «sin conexión», para que cruce la nube.
 - Un push por punto a `ext/T-073`.
 - Capturas al 60 % en `docs/tasks/T-073-shots/`, sin datos personales.
-- El punto 5 se hace cuando T-070 quede aprobado.
+- `T-073-REPORT.md` en tu rama, con un apartado por punto.
 
-**3. Luego, T-071.**
+**2. Después, T-071** (`docs/tasks/T-071.md`): Rosario, coronillas, Orar, Leer y los lectores.
 
 **Reglas:**
 - sin tests largos: basta con que compile;
-- un directorio de trabajo propio (regla 13);
+- un directorio de trabajo propio;
 - haz push cada vez que algo compile.
 
----
-
 ## Mensajes anteriores
+- **28-nov, ~21:10.** T-070, ronda 2: paloma, cruz, «sin conexión» y rosario en oro limpio. Hecho en `448814d` y aprobado.
 
 - **28-nov, ~20:50.** Correcciones de T-070, ronda 1, con la Noche invertida (opción b). Hecho en `4c91c97`.
