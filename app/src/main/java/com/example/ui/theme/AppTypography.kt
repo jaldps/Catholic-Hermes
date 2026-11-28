@@ -129,21 +129,25 @@ object AppTypographyFactory {
      */
     private fun catholic1Titles(base: Pair<Typography, AppTextStyles>): Pair<Typography, AppTextStyles> {
         val (type, extras) = base
-        fun TextStyle.title() = copy(fontFamily = AppFonts.PlusJakarta, fontWeight = FontWeight.Bold)
+        // Jakarta has its own spacing: never inherit Inter's negative optical tracking (it glued words: «SanJuan»).
+        fun TextStyle.title(weight: FontWeight = FontWeight.SemiBold, tracking: Double = 0.0) =
+            copy(fontFamily = AppFonts.PlusJakarta, fontWeight = weight, letterSpacing = tracking.sp)
         return type.copy(
-            displayLarge = type.displayLarge.title(),
-            displayMedium = type.displayMedium.title(),
-            displaySmall = type.displaySmall.title(),
+            displayLarge = type.displayLarge.title(FontWeight.Bold, -0.2),
+            displayMedium = type.displayMedium.title(FontWeight.Bold, -0.2),
+            displaySmall = type.displaySmall.title(FontWeight.Bold),
             headlineLarge = type.headlineLarge.title(),
             headlineMedium = type.headlineMedium.title(),
             headlineSmall = type.headlineSmall.title()
         ) to extras.copy(
-            screenTitle = extras.screenTitle.title(),
+            // CATHOLIC1.md §3: largeTitle Bold, every lower title SemiBold, all in Jakarta.
+            screenTitle = extras.screenTitle.title(FontWeight.Bold, -0.2),
             sectionTitle = extras.sectionTitle.title(),
-            display = extras.display.title(),
-            largeTitle = extras.largeTitle.title(),
+            display = extras.display.title(FontWeight.Bold, -0.2),
+            largeTitle = extras.largeTitle.title(FontWeight.Bold, -0.2),
             title1 = extras.title1.title(),
-            title2 = extras.title2.title()
+            title2 = extras.title2.title(),
+            title3 = extras.title3.title()
         )
     }
 

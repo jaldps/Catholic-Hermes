@@ -52,6 +52,7 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.runtime.remember
 import kotlin.math.roundToInt
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
@@ -108,6 +109,9 @@ fun AppGlassSurface(
     )
 }
 
+/** True inside the Catholic1 banner: icon buttons draw as outlined circles on the brand art. */
+val LocalOnBrandChrome = androidx.compose.runtime.compositionLocalOf { false }
+
 /**
  * The 44dp glass circle used for back, close, search, bell, bookmark and more
  * (48dp hit area). In the scaffold's chrome it blurs what scrolls beneath it;
@@ -126,6 +130,21 @@ fun AppGlassIconButton(
     val design = LocalAppDesign.current
     val p = design.palette
     val live = LocalLiquidBackdrop.current != null
+    if (LocalOnBrandChrome.current) {
+        // Catholic1 banner (CATHOLIC1.md §5.4): an outlined circle, never an opaque disc over the art.
+        Box(
+            modifier.size(48.dp).lumenPress(onClick, 0.9f, shape = CircleShape)
+                .semantics { if (contentDescription != null) this.contentDescription = contentDescription }
+                .tagged(tag),
+            contentAlignment = Alignment.Center
+        ) {
+            Box(Modifier.size(44.dp).background(Color(0x330C2848), CircleShape)
+                .border(1.5.dp, Color.White.copy(alpha = 0.6f), CircleShape), contentAlignment = Alignment.Center) {
+                Icon(icon, contentDescription = null, tint = tint ?: Color.White, modifier = Modifier.size(22.dp))
+            }
+        }
+        return
+    }
     Box(
         modifier
             .size(48.dp)
@@ -163,6 +182,14 @@ fun AppIconWell(icon: ImageVector, modifier: Modifier = Modifier, tint: Color? =
     val p = design.palette
     if (design.isSanctuary) {
         Icon(icon, null, tint = tint ?: p.textPrimary, modifier = modifier.size(24.dp))
+        return
+    }
+    if (design.isCatholic1) {
+        // CATHOLIC1.md §5.3: a 48dp solid sunken well, 24dp navy glyph (ivory at night); accent only when asked.
+        val well = maxOf(size, 48.dp)
+        Box(modifier.size(well).background(p.sunken, RoundedCornerShape(16.dp)), contentAlignment = Alignment.Center) {
+            Icon(icon, null, tint = tint ?: (if (design.isDark) p.textPrimary else Color(0xFF10345C)), modifier = Modifier.size(24.dp))
+        }
         return
     }
     if (design.isClassic) {
@@ -529,8 +556,9 @@ val Catholic1BannerHeight: Dp = 176.dp
  */
 internal fun catholic1WavePath(w: Float, h: Float, close: Boolean): androidx.compose.ui.graphics.Path =
     androidx.compose.ui.graphics.Path().apply {
-        if (close) { moveTo(0f, 0f); lineTo(w, 0f); lineTo(w, h * 0.875f) } else moveTo(w, h * 0.875f)
-        cubicTo(w * 0.667f, h * 0.795f, w * 0.308f, h * 1.023f, 0f, h * 0.898f)
+        // One sweep rising from left to right under the Virgin (the owner's renders), ~30dp of lift.
+        if (close) { moveTo(0f, 0f); lineTo(w, 0f); lineTo(w, h * 0.80f) } else moveTo(w, h * 0.80f)
+        cubicTo(w * 0.62f, h * 0.82f, w * 0.38f, h * 1.0f, 0f, h * 0.975f)
         if (close) close()
     }
 
@@ -569,6 +597,9 @@ private fun Catholic1Banner(
     val wordmark = rememberAssetBitmap("brand/logo_wordmark_light.png", 420)
     val gold = if (night) Color(0xFFE3B65A) else Color(0xFFDCA83C)
     val reduce = design.reduceTransparency || design.highContrast
+    // Light status-bar glyphs while the navy banner sits under them (restored on dispose).
+    AppStatusBarGlyphs(lightGlyphs = true)
+    val belowStatus = (statusTop - contentTop).coerceAtLeast(0.dp)
     Column(modifier.fillMaxWidth()) {
         Box(Modifier.fillMaxWidth().height(bannerHeight)) {
             Box(
@@ -577,34 +608,44 @@ private fun Catholic1Banner(
             ) {
                 if (background != null && !reduce) androidx.compose.foundation.Image(background, null,
                     contentScale = androidx.compose.ui.layout.ContentScale.Crop,
-                    alpha = if (night) 0.7f else 1f, modifier = Modifier.fillMaxSize())
+                    alpha = if (night) 0.5f else 1f, modifier = Modifier.fillMaxSize())
+                // Night: a navy veil from the left keeps the glow behind the Virgin, not behind the logotype.
+                if (night) Box(Modifier.fillMaxSize().background(Brush.horizontalGradient(listOf(Color(0x8C0C2848), Color.Transparent))))
+                // Her face sits below the action row (status bar + 44dp), so buttons never cover it.
                 if (virgin != null) androidx.compose.foundation.Image(virgin, null,
                     contentScale = androidx.compose.ui.layout.ContentScale.Fit, alignment = Alignment.TopCenter,
-                    alpha = if (night) 0.85f else 1f,
-                    modifier = Modifier.align(Alignment.TopEnd).offset(x = 14.dp, y = 4.dp)
+                    colorFilter = if (night) androidx.compose.ui.graphics.ColorFilter.tint(Color(0xFFD9D9D9), androidx.compose.ui.graphics.BlendMode.Modulate) else null,
+                    modifier = Modifier.align(Alignment.TopEnd).offset(x = 14.dp, y = belowStatus + 40.dp)
                         .size(width = 168.dp, height = 224.dp))
             }
             androidx.compose.foundation.Canvas(Modifier.matchParentSize()) {
-                drawPath(catholic1WavePath(size.width, size.height, close = false), gold,
-                    style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2.5.dp.toPx()))
+                // The gold line sits just inside the clipped edge, so no half of it bleeds onto the ivory.
+                translate(top = -1.25.dp.toPx()) {
+                    drawPath(catholic1WavePath(size.width, size.height, close = false), gold,
+                        style = androidx.compose.ui.graphics.drawscope.Stroke(width = 2.5.dp.toPx(),
+                            cap = androidx.compose.ui.graphics.StrokeCap.Round))
+                }
             }
             if (root) Row(
                 Modifier.align(Alignment.TopStart)
-                    .padding(start = design.spacing.gutter, top = (statusTop - contentTop).coerceAtLeast(0.dp) + 14.dp),
+                    .padding(start = design.spacing.gutter, top = belowStatus + 6.dp),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(10.dp)
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                if (symbol != null) androidx.compose.foundation.Image(symbol, null, Modifier.size(46.dp))
+                // Logotype at its renders' proportion to the symbol (≈1.65), not double.
+                if (symbol != null) androidx.compose.foundation.Image(symbol, null, Modifier.size(44.dp))
                 if (wordmark != null) androidx.compose.foundation.Image(wordmark, "Catholic1",
-                    Modifier.height(30.dp).width(140.dp), contentScale = androidx.compose.ui.layout.ContentScale.Fit)
+                    Modifier.height(20.dp).width(94.dp), contentScale = androidx.compose.ui.layout.ContentScale.Fit)
             }
-            Row(
-                Modifier.align(Alignment.TopEnd)
-                    .padding(top = (statusTop - contentTop).coerceAtLeast(0.dp) + 10.dp, end = design.spacing.gutter - 4.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                content = actions
-            )
+            androidx.compose.runtime.CompositionLocalProvider(LocalOnBrandChrome provides true) {
+                Row(
+                    Modifier.align(Alignment.TopEnd)
+                        .padding(top = belowStatus + 4.dp, end = design.spacing.gutter - 6.dp),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    content = actions
+                )
+            }
         }
         Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).padding(top = 2.dp, bottom = 12.dp)) {
             if (eyebrow != null) {
@@ -1112,7 +1153,9 @@ fun AppSecondaryCapsule(
             .heightIn(min = if (compact) 44.dp else 50.dp)
             .lumenPress(onClick, 0.97f, enabled = enabled, shape = shape)
             .then(
-                if (design.opaqueMaterial()) Modifier
+                // Catholic1 secondary (CATHOLIC1.md §5.4): a 1.5dp navy outline (ivory at night), no fill.
+                if (design.isCatholic1) Modifier.border(1.5.dp, if (design.isDark) p.textPrimary else Color(0xFF10345C), shape)
+                else if (design.opaqueMaterial()) Modifier
                     .background(if (design.isDark) Color.White.copy(alpha = 0.12f) else Color.Black.copy(alpha = 0.05f), shape)
                     .then(if (design.isDark) Modifier.border(1.dp,
                         Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.14f), Color.White.copy(alpha = 0.04f))), shape) else Modifier)
@@ -1123,12 +1166,12 @@ fun AppSecondaryCapsule(
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        val ink = if (enabled) p.textPrimary else p.inkQuiet
+        val ink = if (!enabled) p.inkQuiet else if (design.isCatholic1 && !design.isDark) Color(0xFF10345C) else p.textPrimary
         if (icon != null) {
             Icon(icon, null, tint = ink, modifier = Modifier.size(20.dp))
             Spacer(Modifier.width(10.dp))
         }
-        Text(label, style = styles.buttonLabel.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Medium), color = ink, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
+        Text(label, style = styles.buttonLabel.copy(fontWeight = if (design.isCatholic1) androidx.compose.ui.text.font.FontWeight.SemiBold else androidx.compose.ui.text.font.FontWeight.Medium), color = ink, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
     }
 }
 
@@ -1208,7 +1251,10 @@ fun AppProgressRing(
 ) {
     val p = LocalAppDesign.current.palette
     val animated by animateFloatAsState(progress.coerceIn(0f, 1f), tween(if (LocalAppDesign.current.reduceMotion) 0 else 600), label = "ring")
-    val trackColor = if (LocalAppDesign.current.isDark) Color.White.copy(alpha = 0.14f) else Color.Black.copy(alpha = 0.13f)
+    val trackDesign = LocalAppDesign.current
+    // Catholic1 ring track: the warm hairline (§5.9), never a cold grey.
+    val trackColor = if (trackDesign.isCatholic1) trackDesign.palette.hairline
+        else if (trackDesign.isDark) Color.White.copy(alpha = 0.14f) else Color.Black.copy(alpha = 0.13f)
     Box(modifier.size(size), contentAlignment = Alignment.Center) {
         Canvas(Modifier.fillMaxSize()) {
             val w = stroke.toPx()

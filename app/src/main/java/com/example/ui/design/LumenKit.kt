@@ -600,8 +600,12 @@ object LumenKit : AppKit {
                     navItems.forEachIndexed { index, item ->
                         val active = index == selectedNavIndex
                         val tint by animateColorAsState(
-                            if (active) (if (design.opaqueMaterial()) design.onThumb() else p.accent) else p.textSecondary,
+                            if (active) (if (design.opaqueMaterial()) design.onThumb() else p.accent)
+                            else if (design.isCatholic1) p.textPrimary else p.textSecondary,
                             tween(design.motion.fastMillis), label = "railTint")
+                        // Catholic1: the rail's idle icons follow the dock's liturgical tint.
+                        val railIcon = com.example.ui.theme.LocalDockIconTint.current
+                        val iconTint = if (design.isCatholic1 && !active) railIcon else tint
                         Column(
                             Modifier.fillMaxWidth().height(slot)
                                 .clip(RoundedCornerShape(radius - inset))
@@ -613,7 +617,7 @@ object LumenKit : AppKit {
                             verticalArrangement = Arrangement.Center
                         ) {
                             Icon(if (active) solidGlyph(item.selectedIcon) else item.icon, null,
-                                tint = tint, modifier = Modifier.size(24.dp))
+                                tint = iconTint, modifier = Modifier.size(24.dp))
                             Spacer(Modifier.height(3.dp))
                             Text(item.label, style = styles.navLabel.copy(
                                 fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
@@ -949,11 +953,12 @@ object LumenKit : AppKit {
                 // Large text: a trailing value would leave the title a sliver of width, so it joins the second line.
                 val stacked = appLargeText() && !trailingText.isNullOrBlank()
                 Column(Modifier.weight(1f)) {
-                    Text(title, style = styles.body, color = if (selected) scheme.primary else p.textPrimary)
+                    // Catholic1 (CATHOLIC1.md §5.3): SemiBold 17 title over a 15 subtitle, a clear two-step hierarchy.
+                    Text(title, style = if (design.isCatholic1) styles.headline else styles.body, color = if (selected) scheme.primary else p.textPrimary)
                     val second = if (stacked) listOfNotNull(subtitle, trailingText).joinToString(" · ") else subtitle
                     if (second != null) {
                         Spacer(Modifier.height(2.dp))
-                        Text(second, style = styles.footnote, color = p.textSecondary)
+                        Text(second, style = if (design.isCatholic1) styles.subhead else styles.footnote, color = p.textSecondary)
                     }
                 }
                 if (trailingText != null && !stacked) {
@@ -1124,7 +1129,8 @@ object LumenKit : AppKit {
                 ) {
                     options.forEachIndexed { index, label ->
                         val active = index == selectedIndex
-                        val ink by animateColorAsState(if (active) onThumb else p.textSecondary,
+                        // Catholic1 §5.5: idle segments in primary ink, Medium weight.
+                        val ink by animateColorAsState(if (active) onThumb else if (design.isCatholic1) p.textPrimary else p.textSecondary,
                             tween(design.motion.fastMillis), label = "segmentInk")
                         Box(
                             (if (scrolling) Modifier.widthIn(min = 48.dp) else Modifier.weight(1f)).heightIn(min = 48.dp)

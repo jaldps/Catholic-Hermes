@@ -118,8 +118,10 @@ fun AppDesign.glassSpec(role: GlassRole, lifted: Boolean = true): GlassSpec {
             GlassRole.Thumb -> if (isSanctuary) p.raised else if (isCatholic1) p.brand else p.action
             else -> p.raised
         }
-        return GlassSpec(fill, fill, 0f, p.hairline, p.hairline,
-            if (highContrast) 1.5.dp else 0.75.dp,
+        // Catholic1's brand thumb (active dock pill, segment) is a clean solid: no hairline ring.
+        val bareThumb = isCatholic1 && role == GlassRole.Thumb && !highContrast
+        return GlassSpec(fill, fill, 0f, if (bareThumb) fill else p.hairline, if (bareThumb) fill else p.hairline,
+            if (bareThumb) 0.dp else if (highContrast) 1.5.dp else 0.75.dp,
             when {
                 !lifted || isSanctuary || highContrast -> Color.Transparent
                 // Catholic1: soft navy shadow by day, none at night (hairline only), CATHOLIC1.md P3.
