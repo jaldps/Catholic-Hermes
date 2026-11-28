@@ -103,6 +103,9 @@ enum class GlassRole {
     Thumb
 }
 
+/** Ink on the selected thumb (segment, rail, dock): Catholic1's thumb is the brand colour. */
+internal fun AppDesign.onThumb(): androidx.compose.ui.graphics.Color = if (isCatholic1) palette.onBrand else palette.onAction
+
 internal fun AppDesign.opaqueMaterial(): Boolean = isCatholic1 || isSanctuary || isClassic || reduceTransparency || highContrast
 
 /** The spec for [role] in the current identity and mode. */

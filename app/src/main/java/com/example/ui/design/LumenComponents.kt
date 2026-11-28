@@ -565,7 +565,7 @@ private fun Catholic1Banner(
     val night = design.isDark
     val background = rememberAssetBitmap("brand/banner_background.webp", 1080)
     val virgin = rememberAssetBitmap("brand/banner_virgin.webp", 640)
-    val symbol = rememberAssetBitmap("brand/logo_symbol.png", 144)
+    val symbol = rememberAssetBitmap("brand/logo_symbol_light.png", 144)
     val wordmark = rememberAssetBitmap("brand/logo_wordmark_light.png", 420)
     val gold = if (night) Color(0xFFE3B65A) else Color(0xFFDCA83C)
     val reduce = design.reduceTransparency || design.highContrast

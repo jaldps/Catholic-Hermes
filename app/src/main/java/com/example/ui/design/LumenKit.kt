@@ -600,7 +600,7 @@ object LumenKit : AppKit {
                     navItems.forEachIndexed { index, item ->
                         val active = index == selectedNavIndex
                         val tint by animateColorAsState(
-                            if (active) (if (design.opaqueMaterial()) p.onAction else p.accent) else p.textSecondary,
+                            if (active) (if (design.opaqueMaterial()) design.onThumb() else p.accent) else p.textSecondary,
                             tween(design.motion.fastMillis), label = "railTint")
                         Column(
                             Modifier.fillMaxWidth().height(slot)
@@ -725,7 +725,7 @@ object LumenKit : AppKit {
                 Column(Modifier.fillMaxWidth().padding(vertical = 4.dp)) {
                     navItems.forEachIndexed { index, item ->
                         val active = index == selectedNavIndex
-                        val tint = if (active && design.opaqueMaterial() && !sanctuary) p.onAction else if (active) p.accent else p.textSecondary
+                        val tint = if (active && design.opaqueMaterial() && !sanctuary) design.onThumb() else if (active) p.accent else p.textSecondary
                         val rowShape = RoundedCornerShape(if (sanctuary) 4.dp else 28.dp)
                         Column(Modifier.fillMaxWidth().height(heights[index]).padding(horizontal = 4.dp)
                             .clip(rowShape).lumenPress({ onNavSelected(index) }, role = Role.Tab, shape = rowShape)
@@ -1071,7 +1071,7 @@ object LumenKit : AppKit {
                         .lumenPress({ onSelect(index) }, role = Role.Tab, shape = design.shapes.buttonSmall).semantics { selected = active }
                         .padding(horizontal = 12.dp, vertical = 8.dp), contentAlignment = Alignment.CenterStart) {
                         Text(label, style = styles.subhead.copy(fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
-                            color = if (active && design.isSanctuary) p.accent else if (active && design.opaqueMaterial()) p.onAction else if (active) p.textPrimary else p.textSecondary)
+                            color = if (active && design.isSanctuary) p.accent else if (active && design.opaqueMaterial()) design.onThumb() else if (active) p.textPrimary else p.textSecondary)
                     }
                 }
             }
@@ -1084,7 +1084,7 @@ object LumenKit : AppKit {
         if (options.isEmpty()) return
         val opaque = design.opaqueMaterial()
         val thumb = design.glassSpec(GlassRole.Thumb)
-        val onThumb = if (opaque && !design.isSanctuary) p.onAction else if (design.isSanctuary) p.onAction else p.textPrimary
+        val onThumb = if (opaque && !design.isSanctuary) design.onThumb() else if (design.isSanctuary) p.onAction else p.textPrimary
         BoxWithConstraints(modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
             val density = LocalDensity.current
             val measure = rememberTextMeasurer()
