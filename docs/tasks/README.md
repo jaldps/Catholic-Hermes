@@ -31,6 +31,11 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 
 11. **Sin tests por ahora** (decisión del dueño, 28-nov). No ejecutes `testDebugUnitTest` ni la suite. Basta con que compile: `./gradlew :app:assembleDebug`. Esta regla prevalece sobre la 10 y sobre lo que digan los encargos, hasta que el README diga lo contrario.
 
+12. **El informe va en tu rama** (añadida el 28-nov). Cada vez que entregues, también después de una revisión, actualiza `docs/tasks/T-0NN-REPORT.md` en tu rama `ext/T-0NN`, con lo que hiciste y lo que queda abierto. Cuando Jose avise de que has terminado, el coordinador lee ese archivo primero.
+    - Si es una revisión, pon arriba un apartado «Revisión N» que conteste a cada punto de `T-0NN-REVIEW.md`.
+    - **Nunca** subas capturas que muestren otras apps, el escritorio o datos personales del teléfono.
+13. **Un directorio de trabajo por agente** (añadida el 28-nov). No compartas el checkout con otro agente: al cambiar de rama se pierden los cambios del otro. Haz commit y push a tu rama (`ext/` o `wip/`) cada vez que algo compile.
+
 ## Reglas fijas
 
 - No hagas push a `CatholicGPT` ni a `main`. No hagas force-push sobre ramas ajenas.
