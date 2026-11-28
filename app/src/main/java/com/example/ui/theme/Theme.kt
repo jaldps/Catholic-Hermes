@@ -98,7 +98,7 @@ fun SanctaFidesTheme(
     val design = base.copy(palette = accessible, reduceMotion = reduceMotion,
         reduceTransparency = reduceTransparency, highContrast = highContrast,
         motion = if (reduceMotion) base.motion.copy(fastMillis = 0, mediumMillis = 0, slowMillis = 0) else base.motion)
-    val colorScheme = buildColorScheme(identity, design.palette, isDark, accent)
+    val colorScheme = buildColorScheme(identity, design.palette, isDark, if (catholic1) design.palette.accent else accent)
 
     // Edge-to-edge: system bar glyphs follow the app's own mode, not the
     // system's, so a light app on a dark phone still gets dark status icons.
