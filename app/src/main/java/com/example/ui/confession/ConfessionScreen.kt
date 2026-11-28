@@ -76,6 +76,54 @@ fun ConfessionScreen(
     val focus = LocalFocusManager.current
     fun basis(text: String) = if (language == AppLanguage.EN) text.replaceFirst("CIC", "CCC") else text
 
+    if (appIsLandscapePhone()) {
+        AppPageLayout(
+            kind = AppPageKind.Immersive,
+            header = { AppHeroHeader("heroes/lumen/spiritual.jpg", tr("Confesión", "Confession", "Confissão")) },
+            supporting = {
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Column(Modifier.weight(1f).testTag("confession_tabs")) {
+                        listOf(
+                            tr("Prepararme", "Prepare", "Preparar-me"),
+                            tr("Mi lista", "My list", "Minha lista"),
+                            tr("El sacramento", "The sacrament", "O sacramento")
+                        ).forEachIndexed { i, label ->
+                            AppSecondaryButton(label, { section = i }, modifier = Modifier.fillMaxWidth())
+                        }
+                    }
+                    if (section == 0) {
+                        Column(Modifier.weight(2f)) {
+                            if (!privacyAcknowledged) AppBanner(
+                                tr("Una lista temporal", "A temporary list", "Uma lista temporária"),
+                                tr("Tu lista y tus notas se borran al salir; nunca se guardan en disco.",
+                                    "Your list and notes are erased on exit; never written to disk.",
+                                    "Sua lista e notas são apagadas ao sair; nunca gravadas em disco."),
+                                modifier = Modifier.testTag("confession_privacy_notice")
+                            )
+                            Column(Modifier.testTag("confession_examen")) {
+                                AppSecondaryButton(tr("Elegir perfil", "Choose profile", "Escolher perfil"),
+                                    { chooseProfile = true }, modifier = gutter.fillMaxWidth().testTag("confession_profile_button"))
+                                profile?.let { Text(it.title.get(language), style = styles.headline, color = p.textPrimary,
+                                    modifier = gutter.testTag("confession_profile_title")) }
+                            }
+                        }
+                        Column(Modifier.weight(2f).testTag("confession_private_list")) {
+                            if (selected.isEmpty()) AppEmptyState(tr("Tu lista está vacía", "Your list is empty", "Sua lista está vazia"),
+                                tr("Marca preguntas en Prepararme.", "Mark questions in Prepare.", "Marque perguntas em Preparar-me."),
+                                modifier = Modifier.testTag("confession_empty_list"))
+                            else selected.forEach { q -> AppCheckRow(q.text.get(language), true, { draft.toggle(q.id) }) }
+                            AppNotesField(draft.notes, { draft.notes = it },
+                                tr("Notas personales (opcionales)", "Personal notes (optional)", "Notas pessoais (opcionais)"),
+                                Modifier.testTag("confession_notes"))
+                        }
+                    }
+                }
+            },
+            content = { Box(Modifier.fillMaxSize()) }
+        )
+        return
+    }
+
     Column(Modifier.fillMaxSize().padding(bottom = appDockInset()).imePadding()) {
     LazyColumn(
         Modifier.weight(1f).fillMaxWidth().testTag("confession_screen"),

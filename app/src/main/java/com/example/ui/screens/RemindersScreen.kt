@@ -34,6 +34,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -86,6 +88,11 @@ import com.example.data.reminders.ReminderScheduler
 import com.example.data.reminders.ReminderStore
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppBackHandler
+import com.example.ui.design.appWindowSize
+import com.example.ui.design.appIsLandscapePhone
+import com.example.ui.design.AppPageLayout
+import com.example.ui.design.AppPageKind
+import com.example.ui.design.AppBanner
 import com.example.ui.design.AppConfirmDialog
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
@@ -280,6 +287,56 @@ fun RemindersScreen(
                     shortTitle(r, languageCode) + ", " + clock(t.hour, t.minute, is24h, lang)
             } else active
         }
+    }
+
+    if (appIsLandscapePhone()) {
+        val twoColumns = appWindowSize().width >= 891.dp
+        AppPageLayout(
+            kind = AppPageKind.Hub,
+            header = {
+                AppDetailHeader(title = title, assetPath = "heroes/lumen/angelus.jpg", meta = summary,
+                    root = true, titleTag = "reminders_title")
+            },
+            supporting = {
+                Column(Modifier.fillMaxWidth()) {
+                    com.example.ui.components.SaveFailureNotice("reminders", lang)
+                    com.example.ui.components.SaveFailureNotice("calendar-sync", lang)
+                    if (!notificationGranted || !exactAlarmGranted) {
+                        AppBanner(lang.pick3("Permisos pendientes", "Permissions pending", "Permissões pendentes"),
+                            lang.pick3("Activa notificaciones y alarmas exactas.", "Turn on notifications and exact alarms.", "Ative notificações e alarmes exatos."),
+                            modifier = Modifier.testTag("permissions_status"))
+                    }
+                }
+            },
+            content = {
+                LazyVerticalGrid(
+                    columns = if (twoColumns) GridCells.Fixed(2) else GridCells.Fixed(1),
+                    modifier = Modifier.fillMaxSize().testTag("reminders_list"),
+                    contentPadding = PaddingValues(horizontal = design.spacing.gutter, vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    sorted.forEach { reminder ->
+                        val pref = prefs?.get(reminder.id)
+                        val (hour, minute) = timeOf(reminder)
+                        item(key = reminder.id) {
+                            ReminderRow(
+                                reminder = reminder, languageCode = languageCode,
+                                time = clock(hour, minute, is24h, lang),
+                                enabled = pref?.enabled ?: false,
+                                loaded = prefs != null && !readFailure,
+                                inCalendar = reminder.id in calendarEvents,
+                                lang = lang,
+                                onOpen = { if (!readFailure) sheetFor = reminder },
+                                onToggle = { onToggle(reminder, it) },
+                                showDivider = false
+                            )
+                        }
+                    }
+                }
+            }
+        )
+        return
     }
 
     Box(modifier.fillMaxSize()) {
@@ -870,7 +927,7 @@ private fun Footnote(text: String) {
 
 // ------------------------------------------------------------------ wheel
 
-private val WheelItem = 40.dp
+private val WheelItem = 44.dp
 private const val WheelRepeat = 200
 
 /**
