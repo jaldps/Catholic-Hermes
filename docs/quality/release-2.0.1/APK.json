@@ -1,0 +1,24 @@
+{
+  "version_name": "2.0.1",
+  "version_code": 48,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic1",
+  "sha256": "1a262a0bf0cb619cf42cf83034abd30359439f06cc73e04250eb90d653568aa2",
+  "bytes": 110957432,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1-2.0.0 (same package and key; also the fork's Catholic1 2.0.0, code 47)",
+  "built_from": "CatholicGPT at the version commit f433605",
+  "published_as": "GitHub Release v2.0.1 only (APK above GitHub's 100 MiB file limit); Release SHA-256 identical to the local build",
+  "changes": [
+    "Catholic1 identity: name, icon and splash (Hermes, fork 2.0.0).",
+    "«Otras coronillas» force close fixed: a Regex rejected by Android ICU replaced by plain text scanning (Hermes, found with the 1.9.2 crash recorder).",
+    "55 chaplets reviewed bead by bead against their sources (964 steps, 0 validator errors); Santa Rita rosary from the Londrina terço.",
+    "Landscape: lists with detail in two panes (T-052 r2) and My path, Confession, Reminders and Explore (T-053); rosary safe insets applied once.",
+    "Images sharp again: decoding capped at 1080 px instead of 720 px."
+  ],
+  "tests": ["Owner-accelerated release: only the build was run here; contributors' area tests per their reports. Full suite is T-064."],
+  "known_limitations": ["Not tested on a physical phone.", "Landscape work L2-L4/L7 paused by the owner; the existing landscape screens await a visual redesign brief."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

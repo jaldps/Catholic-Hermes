@@ -2,6 +2,17 @@
 
 Desde la 1.8.22, cada versión se publica también en **Releases** (columna derecha del repositorio). Las APK que pesen más de 100 MB estarán solo allí.
 
+## Catholic1 2.0.1
+
+**Solo en Releases:** columna derecha del repositorio → Releases → **v2.0.1**. Versión `2.0.1`, código 48. **Actualiza todas las anteriores**, incluida la 2.0.0 del fork, y conserva el progreso.
+
+- **Nuevo nombre e icono:** Catholic1.
+- **«Otras coronillas»:** ya no se cierran al abrirlas. Las 55 se revisaron cuenta por cuenta contra sus fuentes. Santa Rita sigue el terço de Londrina.
+- **Horizontal:** listas con ficha en dos paneles; Mi camino, Confesión, Recordatorios y Explorar adaptados.
+- **Imágenes** nítidas otra vez.
+
+[Metadatos](../docs/quality/release-2.0.1/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.9.2
 
 **Solo en Releases:** columna derecha del repositorio → Releases → **v1.9.2**. Versión `1.9.2`, código 42. **Actualiza 1.8.1–1.9.1** y conserva el progreso.
