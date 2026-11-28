@@ -36,6 +36,8 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
     - **Nunca** subas capturas que muestren otras apps, el escritorio o datos personales del teléfono.
 13. **Un directorio de trabajo por agente** (añadida el 28-nov). No compartas el checkout con otro agente: al cambiar de rama se pierden los cambios del otro. Haz commit y push a tu rama (`ext/` o `wip/`) cada vez que algo compile.
 
+14. **Buzón** (añadida el 28-nov). Cuando Jose te diga «continúa», lee tu buzón en `origin/CatholicGPT`: [`INBOX-Chaty.md`](INBOX-Chaty.md) o [`INBOX-Hermes.md`](INBOX-Hermes.md). El «Mensaje actual» de ese archivo es la instrucción del coordinador.
+
 ## Reglas fijas
 
 - No hagas push a `CatholicGPT` ni a `main`. No hagas force-push sobre ramas ajenas.

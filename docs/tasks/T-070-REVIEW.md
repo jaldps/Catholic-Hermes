@@ -83,7 +83,7 @@ Faltan cuatro cosas, y la ronda 3 solo mira esas:
    - Que sobresalga 16 px como máximo; hoy son unos 40.
 4. **Rosario de Día.**
    - Baja unos 12 px las cuentas de los extremos: la superior izquierda queda a 4,5 px de una estrella.
-   - El color de las cuentas lo decide Jose: oro limpio o `#B47C20`.
+   - **Jose decidió (a):** cuentas de Día en **oro limpio** `#DCA83C`, como en el símbolo; el hilo marino sostiene la forma.
 
 **Pulido opcional:**
 - la vela de Día con el cuerpo en `warm`;
