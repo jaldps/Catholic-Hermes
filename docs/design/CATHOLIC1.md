@@ -261,11 +261,11 @@ Cada pantalla, con el banner de §5.1 y lo de debajo.
 
 **Inicio**
 1. Saludo (`largeTitle` «¡Bienvenido!» más el subtítulo).
-2. Búsqueda.
+2. Búsqueda: solo la lupa del banner, sin fila aparte (decisión del dueño, 28-nov).
 3. Accesos rápidos: Catecismo, Santos, Novenas y Confesión. Son 4, sin repetir el dock.
 4. «Comienza aquí»: la tarjeta con el único botón principal. Desaparece cuando la persona completa los pasos.
 5. «Hoy en la Iglesia»: fecha con el punto litúrgico, celebración y «Liturgia del día» como fila.
-6. «Oración del momento»: Rosario y Coronilla, más la coronilla sugerida para hoy.
+6. «Oración del momento»: la oración de la hora y la siguiente, por ejemplo Ángelus ahora y Coronilla a las 15:00 (decisión del dueño, 28-nov).
 7. «Mis prácticas»: anillo de racha y una fila a Mi camino.
 
 **Orar**

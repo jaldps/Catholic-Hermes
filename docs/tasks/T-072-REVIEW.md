@@ -107,10 +107,12 @@ Vuelve a capturar y míralas antes de subirlas.
   - «Entendido» y «Elegir perfil» son dos botones de contorno iguales seguidos: el primero pasa a botón de texto;
   - el aviso de privacidad debe usar los wrappers.
 
-## Pendiente de decisión del dueño (no lo cambies todavía)
+## Decisiones del dueño (28-nov)
 
-- **M3.** El orden de Inicio frente a §7: la Liturgia del día como fila y «Oración del momento» (oración actual y siguiente, o Rosario y Coronilla).
-- **M4.** La búsqueda aparece dos veces en Inicio: la lupa del banner y la fila `home_search_row`.
+- **M3.**
+  - «Oración del momento» se queda como la hiciste: **la oración de la hora y la siguiente**.
+  - Lo que sí cambia es el orden de §7: la «Liturgia del día» pasa a ser una **fila dentro de «Hoy en la Iglesia»**, no una tarjeta grande después de «Mis prácticas».
+- **M4.** La búsqueda va **solo con la lupa del banner**. Quita la fila `home_search_row` y, si algún test la usa, apúntalo a la lupa.
 
 ## Para la capa compartida (no es tuyo)
 
