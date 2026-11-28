@@ -224,7 +224,7 @@ Píldora `surface` con sombra P3, lupa en `text.secondary` y marcador en `text.s
 
 ### 5.8 Estados
 
-- **Vacío y error:** ilustración lineal de 96 dp en `accent` y `brand` (P6), título `headline`, una línea de ayuda y **una** acción secundaria.
+- **Vacío y error:** una «medalla de marca» de 96 dp, en duotono relleno con filete dorado y en el mismo lenguaje que el símbolo, con versión de Noche (P6). Va con un título `headline`, una línea de ayuda y **una** acción secundaria.
 - **Cargando:** silueta de la tarjeta en `surface.sunken`, con pulso al 40 % (sin pulso si se reduce el movimiento).
 
 ### 5.9 Progreso
@@ -325,7 +325,7 @@ Cada pantalla, con el banner de §5.1 y lo de debajo.
 | Fondo y Virgen del banner | Los **originales del dueño** (`docs/design/catholic1/source/`), en WebP a 2× y 3× | Coordinador |
 | Logotipo «Catholic1» | Logotipo SVG del dueño | Coordinador |
 | Santos, devociones, misterios, coronillas, órdenes | Las imágenes actuales, que no cambian | — |
-| **P6:** ilustraciones lineales de los estados vacíos (vela, libro abierto, rosario, cruz sencilla, paloma) | **Chaty**, si el dueño lo aprueba: genéricas, de trazo en marino y oro sobre transparente | Chaty |
+| **P6:** ilustraciones de los estados vacíos | **Chaty**, con la dirección de arte de T-070: medallas de marca en duotono relleno con filete dorado, versión de Día y de Noche, genéricas y sin figuras humanas | Chaty |
 
 Las cabeceras pintadas por sección (`heroes/lumen/*`) dejan de usarse en la interfaz, pero se conservan en `assets` hasta la limpieza.
 
@@ -340,7 +340,7 @@ Las cabeceras pintadas por sección (`heroes/lumen/*`) dejan de usarse en la int
 | P3 | Sombra de las tarjetas | **Aprobado:** sombra suave de día, filete de noche |
 | P4 | Título fuera o dentro del banner | **Decidido:** fuera; banner de 176 dp en todas las pantallas |
 | P5 | Color litúrgico | **Decidido:** iconos del dock, con un ajuste «Litúrgico / Del tema» |
-| P6 | Ilustraciones de los estados vacíos | **Aprobado:** Chaty, con las indicaciones de §8 |
+| P6 | Ilustraciones de los estados vacíos | **Aprobado:** Chaty. Tras el crítico (28-nov) pasan de «lineales» a medallas en duotono relleno; ver T-070 |
 
 ---
 
