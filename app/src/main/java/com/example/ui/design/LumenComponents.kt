@@ -556,9 +556,10 @@ val Catholic1BannerHeight: Dp = 176.dp
  */
 internal fun catholic1WavePath(w: Float, h: Float, close: Boolean): androidx.compose.ui.graphics.Path =
     androidx.compose.ui.graphics.Path().apply {
-        // One sweep rising from left to right under the Virgin (the owner's renders), ~30dp of lift.
-        if (close) { moveTo(0f, 0f); lineTo(w, 0f); lineTo(w, h * 0.80f) } else moveTo(w, h * 0.80f)
-        cubicTo(w * 0.62f, h * 0.82f, w * 0.38f, h * 1.0f, 0f, h * 0.975f)
+        // One sweep (owner, 28-nov): narrow on the left, just under the logo, and deep on
+        // the right so the Virgin shows whole. It falls from the left to the right.
+        if (close) { moveTo(0f, 0f); lineTo(w, 0f); lineTo(w, h * 0.985f) } else moveTo(w, h * 0.985f)
+        cubicTo(w * 0.60f, h * 0.995f, w * 0.34f, h * 0.70f, 0f, h * 0.70f)
         if (close) close()
     }
 

@@ -556,7 +556,7 @@ object DesignTokens {
         inkQuiet = Color(0xFF6E7A8E),
         pane = Color(0xFF162438),
         ambient = emptyList(),
-        brand = Color(0xFFE3B65A),
+        brand = Color(0xFFEDE6D8),
         onBrand = Color(0xFF0C2848),
         sunken = Color(0xFF1D2D44)
     )

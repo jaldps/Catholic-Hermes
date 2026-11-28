@@ -97,7 +97,7 @@ enum class AppDestination(
     val iconSlot: AppIconSlot,
     val tag: String
 ) {
-    HOME("Hoy", "Today", "Hoje", AppIconSlot.HOME, "nav_home"),
+    HOME("Inicio", "Home", "Início", AppIconSlot.HOME, "nav_home"),
     HABITS_VIRTUES("Hábitos y Virtudes", "Habits & Virtues", "Hábitos e Virtudes", AppIconSlot.HABITS, "nav_habits"),
     MY_PATH("Mi camino", "My path", "Meu caminho", AppIconSlot.PATH, "nav_my_path"),
     BIBLE("Leer", "Read", "Ler", AppIconSlot.BIBLE, "nav_bible"),
@@ -155,9 +155,9 @@ enum class AppDestination(
      */
     fun tabLabel(language: AppLanguage): String = when (this) {
         HOME -> when (language) {
-            AppLanguage.ES -> "Hoy"
-            AppLanguage.EN -> "Today"
-            AppLanguage.PT -> "Hoje"
+            AppLanguage.ES -> "Inicio"
+            AppLanguage.EN -> "Home"
+            AppLanguage.PT -> "Início"
         }
         BIBLE -> when (language) {
             AppLanguage.ES -> "Leer"

@@ -347,9 +347,10 @@ val LocalDockIconTint = androidx.compose.runtime.staticCompositionLocalOf { Colo
  * each clears 4.7:1 or more. White vestments read as gold, since white on white vanishes.
  */
 internal fun dockLiturgicalInk(season: LiturgicalLight, isDark: Boolean): Color = when (season) {
-    LiturgicalLight.GREEN -> if (isDark) Color(0xFF7CCB8A) else Color(0xFF2E7D32)
-    LiturgicalLight.VIOLET -> if (isDark) Color(0xFFB9A0E6) else Color(0xFF6A3D9A)
-    LiturgicalLight.RED -> if (isDark) Color(0xFFF28B82) else Color(0xFFB3261E)
-    LiturgicalLight.ROSE -> if (isDark) Color(0xFFF2A0C4) else Color(0xFFB0306A)
-    LiturgicalLight.WHITE -> if (isDark) Color(0xFFE3B65A) else Color(0xFF9A6A1A)
+    // Sober vestment tones (owner, 28-nov), each ≥ 4.5:1 on the dock by day (#FFFFFF) and night (#162438/#1D2D44).
+    LiturgicalLight.GREEN -> if (isDark) Color(0xFF86B894) else Color(0xFF2C6B3E)
+    LiturgicalLight.VIOLET -> if (isDark) Color(0xFFB6A4D8) else Color(0xFF5B3A86)
+    LiturgicalLight.RED -> if (isDark) Color(0xFFE59A8E) else Color(0xFF9E2A2B)
+    LiturgicalLight.ROSE -> if (isDark) Color(0xFFE6A6BC) else Color(0xFFA8506E)
+    LiturgicalLight.WHITE -> if (isDark) Color(0xFFE3B65A) else Color(0xFF8A5E14)
 }

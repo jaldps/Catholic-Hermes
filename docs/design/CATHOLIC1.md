@@ -68,7 +68,7 @@ Neutros: vienen del lienzo y las tarjetas de los renders, a la espera de confirm
 | `surface.sunken` (pozo de icono, campo) | `#F4EFE4` | `#1D2D44` | — |
 | `text.primary` | `navy.950` | `#EDE6D8` | sobre `canvas`: **14,3 / 14,1** |
 | `text.secondary` | `slate.600` | `#A9B4C6` | sobre `canvas` y `surface`: **5,7 / 7,5** |
-| `brand` (banner, píldora activa del dock) | `navy.800` | `navy.950` | `text.onBrand`: **12,6** |
+| `brand` (banner, píldora activa del dock, segmento elegido) | `navy.800` | marfil `#EDE6D8` (decisión del dueño, 28-nov: de noche el oro queda solo para la acción) | `text.onBrand` `navy.950`: **12,6** |
 | `text.onBrand` | `#FFFFFF` | `#F2EBDC` | — |
 | `accent` (oro: estrellas, onda, iconos de acento) | `gold.500` | `#E3B65A` | Sobre marino: **5,8** (decorativo y grande) |
 | `action` (botón principal) | `gold.500` | `#E3B65A` | `text.onAction` = `navy.950`: **6,9 / 7,9** |
@@ -88,14 +88,14 @@ El color del día va **solo en los iconos de la barra inferior** (el dock): en l
 
 | Color del día | Icono de día (sobre `#FFFFFF`) | Icono de noche (sobre `#162438`) |
 |---|---|---|
-| Verde | `#2E7D32` · 5,1 | `#7CCB8A` · 8,0 |
-| Morado | `#6A3D9A` · 7,6 | `#B9A0E6` · 6,9 |
-| Rojo | `#B3261E` · 6,5 | `#F28B82` · 6,5 |
-| Rosa | `#B0306A` · 6,0 | `#F2A0C4` · 7,9 |
-| Blanco o dorado | `#9A6A1A` (oro) · 4,7 | `#E3B65A` · 8,3 |
+| Verde | `#2C6B3E` · 6,4 | `#86B894` · 6,9 |
+| Morado | `#5B3A86` · 8,8 | `#B6A4D8` · 6,9 |
+| Rojo | `#9E2A2B` · 7,5 | `#E59A8E` · 7,0 |
+| Rosa | `#A8506E` · 5,2 | `#E6A6BC` · 7,9 |
+| Blanco o dorado | `#8A5E14` (oro) · 5,7 | `#E3B65A` · 8,3 |
 | Del tema | `navy.950` · 14,9 | `#EDE6D8` · 12,6 |
 
-Todos los tonos superan 3:1 frente al dock; las etiquetas de texto siguen en `text.primary`. El color no lleva información por sí solo, porque los iconos son los mismos en cualquier tiempo litúrgico.
+Son tonos sobrios de casulla (decisión del dueño, 28-nov) y todos superan 4,5:1 frente al dock; las etiquetas de texto siguen en `text.primary`. El color no lleva información por sí solo, porque los iconos son los mismos en cualquier tiempo litúrgico.
 
 ### 2.4 Noche
 
@@ -173,6 +173,7 @@ Todas las cabeceras actuales lo usan: `AppHeroHeader`, `AppDetailHeader` y `AppL
 - **Altura: la misma en toda la app**, en raíz y en detalle (decisión del dueño): **176 dp** contando la barra de estado.
   - La raíz lleva el logo y el logotipo; el detalle, la flecha de volver.
   - El título nunca va dentro del banner.
+- **Forma de la onda (decisión del dueño, 28-nov):** estrecha a la izquierda, justo bajo el logo (70 % del alto), y honda a la derecha (98,5 %), para que la Virgen se vea entera y no quede espacio vacío entre el logo y la línea dorada.
 - **Borde en onda real:** el banner se **recorta** con la forma de la onda, mediante un `Shape` de Compose con `clip`. No se pinta un rectángulo y se tapa con un parche del color del lienzo, porque eso deja un filete recto visible bajo la curva. El trazo dorado de 2,5 dp va por encima, en la misma curva.
   - horizontal: banda compacta de 64 dp (la retomará el rediseño del horizontal).
 - **Título:** **fuera** del banner, en el lienzo, a 16 dp de la onda. Así el título siempre es legible y no compite con la imagen. Los renders 7–9 lo ponían dentro; los 5–6, fuera.
