@@ -1,6 +1,6 @@
 # Catholic1 · identidad visual única
 
-> **Estado:** BORRADOR v1 (28-nov). Espera la aprobación del dueño con el tablero de maquetas.
+> **Estado:** **APROBADO v2** (28-nov), con los ajustes del dueño: banner del mismo alto, onda recortada, color litúrgico en el dock y Plus Jakarta Sans.
 > **Maquetas:** https://claude.ai/artifact/PNffuMwHmzZtrgFCmXYKAi (Inicio, Orar, Rosario, lector y Mi camino de noche).
 
 ## 0. Decisión y alcance
@@ -80,12 +80,22 @@ Neutros: vienen del lienzo y las tarjetas de los renders, a la espera de confirm
 - **Por defecto:** oro `gold.500` con texto marino `navy.950`, que da 6,9:1.
 - **Alternativa:** oro oscuro `#9A6A1A` con texto blanco, que da 4,7:1 pero es menos luminoso.
 
-### 2.3 El color litúrgico
+### 2.3 El color litúrgico (decisión del dueño, 28-nov)
 
-Deja de teñir la app. Aparece como **detalle informativo**:
-- un punto de 10 dp del color del día junto a la fecha en «Hoy en la Iglesia»;
-- un filete de 3 dp en la ficha de la liturgia;
-- siempre con el nombre del color en texto, porque el color nunca va solo.
+El color del día va **solo en los iconos de la barra inferior** (el dock): en los iconos de los destinos no activos. El destino activo conserva su píldora `brand`. No tiñe nada más: ni fechas, ni banner, ni botones.
+
+**Ajuste nuevo** en Apariencia: «Color de los iconos de la barra», con dos opciones, **Litúrgico** (por defecto) o **Del tema** (marino de día, marfil de noche).
+
+| Color del día | Icono de día (sobre `#FFFFFF`) | Icono de noche (sobre `#162438`) |
+|---|---|---|
+| Verde | `#2E7D32` · 5,1 | `#7CCB8A` · 8,0 |
+| Morado | `#6A3D9A` · 7,6 | `#B9A0E6` · 6,9 |
+| Rojo | `#B3261E` · 6,5 | `#F28B82` · 6,5 |
+| Rosa | `#B0306A` · 6,0 | `#F2A0C4` · 7,9 |
+| Blanco o dorado | `#9A6A1A` (oro) · 4,7 | `#E3B65A` · 8,3 |
+| Del tema | `navy.950` · 14,9 | `#EDE6D8` · 12,6 |
+
+Todos los tonos superan 3:1 frente al dock; las etiquetas de texto siguen en `text.primary`. El color no lleva información por sí solo, porque los iconos son los mismos en cualquier tiempo litúrgico.
 
 ### 2.4 Noche
 
@@ -98,13 +108,14 @@ Deja de teñir la app. Aparece como **detalle informativo**:
 
 ## 3. Tipografía
 
-**Puerta P2 · fuente de títulos.** Los renders usan una sans geométrica gruesa en los títulos.
-- **Por defecto:** **Inter**, que la app ya incluye, en SemiBold y Bold para los títulos. No se añade ninguna fuente.
-- **Opción:** la fuente del logotipo «Catholic1», cuando se conozca por el SVG de T-067, solo si tiene licencia OFL. Se usaría únicamente en el título grande y en el banner.
+**Fuente de títulos (decisión del dueño, 28-nov): Plus Jakarta Sans**, con licencia OFL y en peso 700. Comparada con el logotipo SVG del dueño frente a otras 11 sans, es la más parecida: la «a» de dos pisos, la «t» con el corte inclinado, el «1» con bandera y la geometría redonda. Se incluye en la app (`res/font`).
+- Se usa en `largeTitle`, `title1` y `title2`, y en los títulos de tarjeta grandes.
+- La interfaz y el cuerpo siguen en **Inter**, y la lectura en **EB Garamond**.
+- En el banner, el logotipo no es texto: es el **SVG del dueño** en versión clara (blanco con el 1 dorado).
 
 | Rol | Tamaño / línea (sp) | Peso | Uso |
 |---|---|---|---|
-| `largeTitle` | 34/40 | Bold | Título de cada sección raíz («Meu caminho») |
+| `largeTitle` | 34/40 | Bold, en Plus Jakarta Sans | Título de cada sección raíz («Meu caminho») |
 | `title1` | 28/34 | SemiBold | Título de una página de detalle |
 | `title2` | 22/28 | SemiBold | Encabezado de sección («Hoy en la Iglesia») |
 | `headline` | 17/22 | SemiBold | Título de fila o de tarjeta |
@@ -159,9 +170,10 @@ Todas las cabeceras actuales lo usan: `AppHeroHeader`, `AppDetailHeader` y `AppL
 - **Virgen:** la **Virgen recortada** del dueño (`source/Virgem-Maria-em-Manto-Azul-Celestial-1-.png`), alineada a la derecha y arriba; la onda la corta por abajo. Es la misma en toda la app, así que es coherente con el logo y se reconoce al instante.
 - **Logo:** el símbolo (`Catholic1-logo.svg`, convertido a `VectorDrawable`) de 44 dp más el logotipo «Catholic1», en blanco con el 1 dorado.
 - **Noche:** el fondo al 70 % sobre `navy.950` y la Virgen al 85 %.
-- **Alturas:**
-  - raíz: 196 dp más la barra de estado;
-  - detalle: 118 dp, con la flecha de volver y la Virgen pequeña a la derecha (96 dp);
+- **Altura: la misma en toda la app**, en raíz y en detalle (decisión del dueño): **176 dp** contando la barra de estado.
+  - La raíz lleva el logo y el logotipo; el detalle, la flecha de volver.
+  - El título nunca va dentro del banner.
+- **Borde en onda real:** el banner se **recorta** con la forma de la onda, mediante un `Shape` de Compose con `clip`. No se pinta un rectángulo y se tapa con un parche del color del lienzo, porque eso deja un filete recto visible bajo la curva. El trazo dorado de 2,5 dp va por encima, en la misma curva.
   - horizontal: banda compacta de 64 dp (la retomará el rediseño del horizontal).
 - **Título:** **fuera** del banner, en el lienzo, a 16 dp de la onda. Así el título siempre es legible y no compite con la imagen. Los renders 7–9 lo ponían dentro; los 5–6, fuera.
 
@@ -323,12 +335,12 @@ Las cabeceras pintadas por sección (`heroes/lumen/*`) dejan de usarse en la int
 
 | | Decisión | Por defecto |
 |---|---|---|
-| P1 | Texto del botón dorado | Marino sobre oro (contraste 6,9) |
-| P2 | Fuente de los títulos | Inter (ya incluida), o la del logotipo si es OFL |
-| P3 | Sombra de las tarjetas | Sombra suave de día y filete de noche |
-| P4 | Título fuera o dentro del banner | Fuera, en el lienzo |
-| P5 | El color litúrgico como detalle (punto y filete) en lugar de tema | Sí |
-| P6 | Chaty genera ilustraciones lineales para los estados vacíos | Sí, con las indicaciones de §8 |
+| P1 | Texto del botón dorado | **Aprobado:** marino sobre oro (6,9) |
+| P2 | Fuente de los títulos | **Decidido:** Plus Jakarta Sans |
+| P3 | Sombra de las tarjetas | **Aprobado:** sombra suave de día, filete de noche |
+| P4 | Título fuera o dentro del banner | **Decidido:** fuera; banner de 176 dp en todas las pantallas |
+| P5 | Color litúrgico | **Decidido:** iconos del dock, con un ajuste «Litúrgico / Del tema» |
+| P6 | Ilustraciones de los estados vacíos | **Aprobado:** Chaty, con las indicaciones de §8 |
 
 ---
 
@@ -338,7 +350,8 @@ Las cabeceras pintadas por sección (`heroes/lumen/*`) dejan de usarse en la int
    - `DesignLanguage.CATHOLIC1` y su paleta de día y noche en `DesignTokens.of`;
    - `selectable = [CATHOLIC1]`;
    - `fromId` y `canonicalDesign` llevan todo id antiguo a CATHOLIC1;
-   - fuera los presets de acento, y el tinte litúrgico pasa a detalle.
+   - fuera los presets de acento; el color litúrgico solo en los iconos del dock, con el ajuste «Litúrgico / Del tema»;
+   - Plus Jakarta Sans en `res/font`, con su licencia OFL.
 2. **Componentes**, en `LumenKit`, `LumenComponents` y `LumenExtras`: banner, dock único, tarjeta con sombra, fila con pozo, botones, segmentado, hoja y estados.
 3. **Pantallas**, por lotes (Chaty y Hermes con encargos detallados): quitar los duplicados y aplicar el plano de §7.
 4. **Limpieza:** las ramas por identidad y las paletas muertas.
