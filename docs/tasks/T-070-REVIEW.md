@@ -45,7 +45,14 @@ El marino `#2C4A72` sobre el medallón `#1D2D44` da 1,54:1, así que de Noche la
 - **(a)** aceptar la silueta solo con el filete, una vez corregido H1;
 - **(b) recomendación del crítico:** invertir de Noche. Cuerpo marfil `#EDE6D8`, que es el `brand` de Noche; detalles en marino y filete en oro.
 
-**Pendiente de la respuesta del dueño.** Mientras tanto, corrige la versión de Día y la geometría, que valen para las dos opciones.
+**El dueño eligió (b)** (28-nov). De Noche:
+- **Cuerpo** en marfil `#EDE6D8`;
+- **sombra y segundo plano** en `#C9BFAE`;
+- **detalles interiores** en marino `#10345C`, de 8 px como mínimo;
+- **filete y estrellas** en oro `#E3B65A`;
+- **medallón** en `#1D2D44`.
+
+La geometría es la misma que de Día; solo cambian los colores. Comprueba que el marino interior sobre el marfil supere 4,5:1 y que el cuerpo sobre el medallón supere 3:1.
 
 ## Entrega
 
